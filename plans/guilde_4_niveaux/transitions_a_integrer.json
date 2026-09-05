@@ -1,0 +1,1211 @@
+[
+  {
+    "liaison": "EXT_N",
+    "origine": {
+      "zone": "TERRASSE",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "01",
+      "port": "nord"
+    },
+    "type": "exterieur",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      324,
+      202
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "EXT_N",
+    "origine": {
+      "zone": "01",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "TERRASSE",
+      "port": "sud"
+    },
+    "type": "exterieur",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      178
+    ],
+    "zone_action_origine": [
+      300,
+      166,
+      48,
+      24
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "N",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L31",
+    "origine": {
+      "zone": "01",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "P3",
+      "port": "nord"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      423
+    ],
+    "zone_action_origine": [
+      300,
+      416,
+      48,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L31",
+    "origine": {
+      "zone": "P3",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "01",
+      "port": "sud"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "N",
+    "arrivee": [
+      324,
+      399
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L32",
+    "origine": {
+      "zone": "P3",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "C3O",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L32",
+    "origine": {
+      "zone": "C3O",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "P3",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L33",
+    "origine": {
+      "zone": "C3O",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "06",
+      "port": "sud"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "N",
+    "arrivee": [
+      324,
+      399
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L33",
+    "origine": {
+      "zone": "06",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "C3O",
+      "port": "nord"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      423
+    ],
+    "zone_action_origine": [
+      300,
+      416,
+      48,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L34",
+    "origine": {
+      "zone": "P3",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "C3E",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L34",
+    "origine": {
+      "zone": "C3E",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "P3",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L35",
+    "origine": {
+      "zone": "C3E",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "11",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": [
+      32,
+      268
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L35",
+    "origine": {
+      "zone": "11",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "C3E",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      8,
+      268
+    ],
+    "zone_action_origine": [
+      0,
+      246,
+      16,
+      45
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V32",
+    "origine": {
+      "zone": "P3",
+      "port": "descente"
+    },
+    "destination": {
+      "zone": "02",
+      "port": "echelle_nord"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": null,
+    "zone_action_origine": [
+      0.37,
+      0.71,
+      0.26,
+      0.11
+    ],
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      640,
+      255
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V32",
+    "origine": {
+      "zone": "02",
+      "port": "echelle_nord"
+    },
+    "destination": {
+      "zone": "P3",
+      "port": "descente"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": [
+      640,
+      231
+    ],
+    "zone_action_origine": [
+      624,
+      219,
+      32,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      0.5,
+      0.91
+    ],
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "CHEF",
+    "origine": {
+      "zone": "02",
+      "port": "porte_maitre"
+    },
+    "destination": {
+      "zone": "12",
+      "port": "sud"
+    },
+    "type": "porte",
+    "declenchement": "action",
+    "repere_origine_px": [
+      1057,
+      233
+    ],
+    "zone_action_origine": [
+      1031,
+      225,
+      52,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "N",
+    "arrivee": [
+      324,
+      399
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "CHEF",
+    "origine": {
+      "zone": "12",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "02",
+      "port": "porte_maitre"
+    },
+    "type": "porte",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      423
+    ],
+    "zone_action_origine": [
+      300,
+      416,
+      48,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      1057,
+      257
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L21",
+    "origine": {
+      "zone": "02",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "C2R",
+      "port": "est_bas"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      8,
+      296
+    ],
+    "zone_action_origine": [
+      0,
+      261,
+      16,
+      70
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L21",
+    "origine": {
+      "zone": "C2R",
+      "port": "est_bas"
+    },
+    "destination": {
+      "zone": "02",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": [
+      32,
+      296
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L22",
+    "origine": {
+      "zone": "C2R",
+      "port": "est_haut"
+    },
+    "destination": {
+      "zone": "07",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": [
+      32,
+      268
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L22",
+    "origine": {
+      "zone": "07",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "C2R",
+      "port": "est_haut"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      8,
+      268
+    ],
+    "zone_action_origine": [
+      0,
+      246,
+      16,
+      45
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L23",
+    "origine": {
+      "zone": "02",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "P2",
+      "port": "nord"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      639,
+      535
+    ],
+    "zone_action_origine": [
+      615,
+      528,
+      48,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L23",
+    "origine": {
+      "zone": "P2",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "02",
+      "port": "sud"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "N",
+    "arrivee": [
+      639,
+      511
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V21",
+    "origine": {
+      "zone": "P2",
+      "port": "descente"
+    },
+    "destination": {
+      "zone": "03",
+      "port": "echelle_nord"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": null,
+    "zone_action_origine": [
+      0.37,
+      0.71,
+      0.26,
+      0.11
+    ],
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      324,
+      244
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V21",
+    "origine": {
+      "zone": "03",
+      "port": "echelle_nord"
+    },
+    "destination": {
+      "zone": "P2",
+      "port": "descente"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": [
+      324,
+      221
+    ],
+    "zone_action_origine": [
+      308,
+      208,
+      32,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      0.5,
+      0.91
+    ],
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L11",
+    "origine": {
+      "zone": "03",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "C1O",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      8,
+      265
+    ],
+    "zone_action_origine": [
+      0,
+      252,
+      16,
+      22
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L11",
+    "origine": {
+      "zone": "C1O",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "03",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": [
+      32,
+      263
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L12",
+    "origine": {
+      "zone": "C1O",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "04",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": [
+      615,
+      270
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L12",
+    "origine": {
+      "zone": "04",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "C1O",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      639,
+      267
+    ],
+    "zone_action_origine": [
+      632,
+      260,
+      16,
+      21
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L13",
+    "origine": {
+      "zone": "03",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "C1R",
+      "port": "ouest_haut"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      639,
+      263
+    ],
+    "zone_action_origine": [
+      632,
+      252,
+      16,
+      22
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L13",
+    "origine": {
+      "zone": "C1R",
+      "port": "ouest_haut"
+    },
+    "destination": {
+      "zone": "03",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": [
+      615,
+      263
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L14",
+    "origine": {
+      "zone": "C1R",
+      "port": "ouest_bas"
+    },
+    "destination": {
+      "zone": "P1",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L14",
+    "origine": {
+      "zone": "P1",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "C1R",
+      "port": "ouest_bas"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L15",
+    "origine": {
+      "zone": "03",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "P1",
+      "port": "nord"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      423
+    ],
+    "zone_action_origine": [
+      300,
+      416,
+      48,
+      16
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "S",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L15",
+    "origine": {
+      "zone": "P1",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "03",
+      "port": "sud"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "N",
+    "arrivee": [
+      324,
+      399
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L16",
+    "origine": {
+      "zone": "P1",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "05",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": [
+      615,
+      268
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L16",
+    "origine": {
+      "zone": "05",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "P1",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      639,
+      268
+    ],
+    "zone_action_origine": [
+      632,
+      246,
+      16,
+      45
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V10",
+    "origine": {
+      "zone": "P1",
+      "port": "descente"
+    },
+    "destination": {
+      "zone": "P0",
+      "port": "montee"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": null,
+    "zone_action_origine": [
+      0.37,
+      0.71,
+      0.26,
+      0.11
+    ],
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      0.5,
+      0.53
+    ],
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "V10",
+    "origine": {
+      "zone": "P0",
+      "port": "montee"
+    },
+    "destination": {
+      "zone": "P1",
+      "port": "descente"
+    },
+    "type": "vertical",
+    "declenchement": "action",
+    "repere_origine_px": null,
+    "zone_action_origine": [
+      0.4,
+      0.27,
+      0.2,
+      0.12
+    ],
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      0.5,
+      0.91
+    ],
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L01",
+    "origine": {
+      "zone": "P0",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "08",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "O",
+    "arrivee": [
+      615,
+      268
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L01",
+    "origine": {
+      "zone": "08",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "P0",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      639,
+      268
+    ],
+    "zone_action_origine": [
+      632,
+      246,
+      16,
+      45
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "E",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L02",
+    "origine": {
+      "zone": "P0",
+      "port": "est"
+    },
+    "destination": {
+      "zone": "10",
+      "port": "ouest"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "E",
+    "arrivee": [
+      32,
+      268
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L02",
+    "origine": {
+      "zone": "10",
+      "port": "ouest"
+    },
+    "destination": {
+      "zone": "P0",
+      "port": "est"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      8,
+      268
+    ],
+    "zone_action_origine": [
+      0,
+      246,
+      16,
+      45
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "O",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L03",
+    "origine": {
+      "zone": "P0",
+      "port": "sud"
+    },
+    "destination": {
+      "zone": "09",
+      "port": "nord"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": null,
+    "zone_action_origine": null,
+    "unite_zone": "normalisee_provisoire_ou_a_definir",
+    "face_apres_arrivee": "S",
+    "arrivee": [
+      324,
+      202
+    ],
+    "unite_arrivee": "pixels_asset_reference",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  },
+  {
+    "liaison": "L03",
+    "origine": {
+      "zone": "09",
+      "port": "nord"
+    },
+    "destination": {
+      "zone": "P0",
+      "port": "sud"
+    },
+    "type": "passage",
+    "declenchement": "franchissement",
+    "repere_origine_px": [
+      324,
+      178
+    ],
+    "zone_action_origine": [
+      300,
+      166,
+      48,
+      24
+    ],
+    "unite_zone": "pixels_asset_reference",
+    "face_apres_arrivee": "N",
+    "arrivee": null,
+    "unite_arrivee": "normalisee_provisoire_ou_a_definir",
+    "temporisation_ms": 300,
+    "rearmement": "Après sortie de zone et relâchement de la touche, si interaction.",
+    "statut": "Contrat à intégrer, pas trigger moteur installé"
+  }
+]

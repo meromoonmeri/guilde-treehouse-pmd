@@ -1,0 +1,120 @@
+{
+  "id": "galerie_est_ouest",
+  "methode": "image générée aplatie puis calques reconstruits",
+  "reference_workflow": "source/rebuild_kit.py à la révision 6c4ac5a",
+  "dimensions": [
+    648,
+    432
+  ],
+  "grille": 8,
+  "source_brute": "source/hallways/generations/galerie_est_ouest_retenue.png",
+  "sha256_source": "1f1d58fecd1efec24526e20d2cac4bf03730e4ab4862a48b9639aa7f4b975d44",
+  "natif": "source/hallways/generations/natifs/galerie_est_ouest.png",
+  "calques": [
+    {
+      "id": "00_exterieur",
+      "nom": "Extérieur — pas de fenêtre ici",
+      "non_vide": false
+    },
+    {
+      "id": "01_sol",
+      "nom": "Sol et continuité des passages",
+      "non_vide": true
+    },
+    {
+      "id": "02_structure",
+      "nom": "Murs et charpente générés",
+      "non_vide": true
+    },
+    {
+      "id": "03_cadres_fenetres",
+      "nom": "Cadres de fenêtres — vide",
+      "non_vide": false
+    },
+    {
+      "id": "04_tableaux",
+      "nom": "Tableaux — vide",
+      "non_vide": false
+    },
+    {
+      "id": "05_porte_maitre",
+      "nom": "Porte — vide",
+      "non_vide": false
+    },
+    {
+      "id": "06_decorations",
+      "nom": "Végétation haute extraite",
+      "non_vide": true
+    },
+    {
+      "id": "07_objets",
+      "nom": "Objets — vide",
+      "non_vide": false
+    },
+    {
+      "id": "08_ombres_acces",
+      "nom": "Ombres d’accès extraites",
+      "non_vide": true
+    },
+    {
+      "id": "09_eclairage_fixe",
+      "nom": "Éclairage ajouté — vide",
+      "non_vide": false
+    },
+    {
+      "id": "10_bordure_avant",
+      "nom": "Bordure, racines et feuillage avant",
+      "non_vide": true
+    }
+  ],
+  "fichiers": {
+    "jour": {
+      "base": "base_jour_transparente.png",
+      "magenta": "base_jour_magenta.png",
+      "apercu": "apercu_jour.png",
+      "aseprite": "galerie_jour.aseprite",
+      "tiled": "galerie_jour.tmj",
+      "calques": [
+        "calques/jour/00_exterieur.png",
+        "calques/jour/01_sol.png",
+        "calques/jour/02_structure.png",
+        "calques/jour/03_cadres_fenetres.png",
+        "calques/jour/04_tableaux.png",
+        "calques/jour/05_porte_maitre.png",
+        "calques/jour/06_decorations.png",
+        "calques/jour/07_objets.png",
+        "calques/jour/08_ombres_acces.png",
+        "calques/jour/09_eclairage_fixe.png",
+        "calques/jour/10_bordure_avant.png"
+      ]
+    },
+    "nuit": {
+      "base": "base_nuit_transparente.png",
+      "magenta": "base_nuit_magenta.png",
+      "apercu": "apercu_nuit.png",
+      "aseprite": "galerie_nuit.aseprite",
+      "tiled": "galerie_nuit.tmj",
+      "calques": [
+        "calques/nuit/00_exterieur.png",
+        "calques/nuit/01_sol.png",
+        "calques/nuit/02_structure.png",
+        "calques/nuit/03_cadres_fenetres.png",
+        "calques/nuit/04_tableaux.png",
+        "calques/nuit/05_porte_maitre.png",
+        "calques/nuit/06_decorations.png",
+        "calques/nuit/07_objets.png",
+        "calques/nuit/08_ombres_acces.png",
+        "calques/nuit/09_eclairage_fixe.png",
+        "calques/nuit/10_bordure_avant.png"
+      ]
+    }
+  },
+  "ecart_max_recomposition_natif": 0,
+  "statut": "Premier module généré traité ; les huit autres ne sont pas remplacés",
+  "limites": [
+    "Les calques sont extraits après génération, pas nativement créés par le générateur.",
+    "La végétation masquée peut laisser voir de la transparence : les surfaces cachées ne sont pas inventées.",
+    "Une partie des ombres reste intégrée aux textures ; ce n’est pas un matériau entièrement rééclairable.",
+    "Les cellules Tiled recomposent le dessin ; ce n’est pas un tileset de construction universel."
+  ]
+}

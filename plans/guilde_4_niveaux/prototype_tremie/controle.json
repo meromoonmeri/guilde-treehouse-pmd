@@ -1,0 +1,43 @@
+{
+  "statut": "Prototype généré arrondi, non posé dans les trois paliers",
+  "source_generee": "source/audit_jouabilite/tremie_descente_arrondie_brute.png",
+  "sha256_source": "78f3e3cd3b46ae116f5fcf9b2589231724310604563710a7f2a0e20e5186cfc6",
+  "dimensions": [
+    256,
+    112
+  ],
+  "grille_px": 8,
+  "traitements": [
+    "Voisin le plus proche",
+    "Palette native",
+    "Détourage",
+    "Sélections de pixels pour les trois plans"
+  ],
+  "decor_dessine_par_code": false,
+  "calques": [
+    "00_parquet_evide",
+    "01_puits_et_echelle",
+    "02_rebord_avant"
+  ],
+  "recomposition_exacte": true,
+  "vide_non_praticable": true,
+  "luminance_puits": 45.74751539833532,
+  "luminance_plancher": 138.12610998149557,
+  "gabarit_pieds_px": 16,
+  "point_action_px": [
+    128,
+    92
+  ],
+  "zone_action_centre_pieds_px": [
+    112,
+    88,
+    32,
+    8
+  ],
+  "arrivee_px": [
+    96,
+    96
+  ],
+  "rearmement": "Relâchement de la touche + sortie de la zone + temporisation 300 ms",
+  "limite": "Les coordonnées sont locales au prototype, pas les coordonnées des futurs paliers. Le masque doit être adapté à chaque intégration."
+}

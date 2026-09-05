@@ -1,0 +1,20 @@
+{
+  "source_generee": "source/hallways/generations/galerie_est_ouest_retenue.png",
+  "native": "source/hallways/generations/natifs/galerie_est_ouest.png",
+  "dimensions": [
+    648,
+    432
+  ],
+  "palette_native": "255 couleurs + magenta réservé",
+  "grille": 8,
+  "masque": "source/hallways/generations/masques/galerie_est_ouest.png",
+  "etiquettes": {
+    "0": "transparence",
+    "1": "sol",
+    "2": "murs",
+    "6": "végétation haute",
+    "10": "bordure avant"
+  },
+  "methode": "Normalisation du natif, détourage, GrabCut guidé et sélection de zones ; aucun décor peint par script.",
+  "masques_figes": true
+}

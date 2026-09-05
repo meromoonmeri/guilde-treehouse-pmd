@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-06",
+  "outil": "generate_image",
+  "modele_et_seed": "Non exposés par l’outil",
+  "statut": "Premier module généré traité selon le workflow initial ; les huit autres ne sont pas remplacés",
+  "generation_initiale": {
+    "fichier": "galerie_est_ouest_brute.png",
+    "images_reference": [
+      "source/natives/05.png",
+      "source/natives/12.png"
+    ],
+    "prompt": "Generate an ORIGINAL complete horizontal hallway for this exact warm wooden Treehouse explorer guild. Use the TWO supplied ORIGINAL guild rooms strictly as the art-direction reference: amber honey-colored wood, hand-pixelled brown outlines, the same wood rendering, scale of detail, cozy natural tree-house architecture. This is NEW GENERATED ART, not a diagram, not a flat vector construction, not a rigid procedural extrusion. Pixel-art environment in the overhead three-quarter room camera of classic Pokemon Mystery Dungeon, NOT an isometric diamond and NOT a side-scroller. One single wide EAST-WEST passage with a small chamfered central recess/landing. The walking floor has warm horizontal wooden boards like our guild. The REAR WALLS are real upright wooden panels, darker matte brown, natural irregular vertical grain with restrained knots, framed by timber posts and a narrow top beam. The wall motif must be visually DIFFERENT from the horizontal floor planks; no zebra-like identical sine waves. Angled wooden return walls join cleanly with the rear panels. The near/lower edge is cut away so we see the floor clearly. Add an immersive PMD scene border: irregular thick bark and gnarled tree roots at the cutaway edge, small integrated green leafy clumps and vines behind and in front of the perimeter. Plants must grow from the architecture, no floating bushes, no repeated identical pasted clumps, no grass replacing the wooden floor, no stone walls. Preserve readable wall/floor contact shadows and restrained warm rim highlights, no bloom. The east and west ends must be OPEN floor continuations, with no railings, posts, doors or beams crossing the walkable openings. Make the illustration harmonious and naturally hand-crafted, comparable in finish to the original guild images, not an assembly of primitive polygons. Empty passage: no characters, furniture, items, carpet, spiral, torches, labels or numbers. ALL space outside the architectural silhouette must be perfectly uniform solid pure magenta #ff00ff for later transparent extraction; do not put magenta inside the room. Landscape 3:2 composition, the complete hallway occupies most of the image, unclipped foliage at the upper and lower boundaries. No UI, no annotations, no grid."
+  },
+  "correction_generee": {
+    "fichier": "galerie_est_ouest_retenue.png",
+    "image_reference": "galerie_est_ouest_brute.png",
+    "prompt": "Revise this GENERATED hallway artwork, preserving its warm guild wood art direction, pixel-art treatment, colors and overhead three-quarter camera. IMPORTANT corrections: REMOVE the little raised central platform, its step, and the two narrow dark lines extending toward it from the rear wall. The entire walking floor must be ONE CONTINUOUS LEVEL of horizontal amber wooden planks, from the left open passage to the right open passage, and into the recessed central rear bay. No steps, stairs, raised dais, low beams or objects on the walking floor. Keep the beautiful real upright brown wood wall panels with natural VERTICAL grain and timber posts, distinct from the floor. Retain the back-wall recess and angled return walls, with wall-floor contact shading. Refine the immersive perimeter to be compact PMD-style bark, small tree roots and leaf clumps: do NOT show a gigantic trunk hanging underneath the floor, nor gigantic branches coming from the image corners. Keep an organic low cutaway front edge, with modest roots and leaves attached to it. Put small leaf clusters and vines along the upper wall corners. Leave a little pure magenta margin above and below the COMPLETE organic silhouette, with no cut-off foliage. The hallway remains open at both east and west edges. No doors, no side railings across the openings, no furniture, no spiral, no characters, no text or grid. Background pure uniform MAGENTA #ff00ff for later transparency. This is an image-generation correction, not a diagram; redraw the scene naturally while respecting these architectural requirements."
+  },
+  "essais_non_retenus": [
+    {
+      "type": "Planche 3 × 3 de neuf modules",
+      "raison": "Le générateur a reproduit surtout des salles ovales, sans respecter les sorties des couloirs ; non intégrée."
+    },
+    {
+      "type": "Coude nord-est, avec masque de sol comme guide",
+      "raison": "La branche est reste mal définie/fermée ; non intégrée."
+    }
+  ],
+  "post_traitement": [
+    "Suppression du fond magenta",
+    "Ajout d’un fond sombre à l’aperçu uniquement"
+  ],
+  "dessin_procedural_du_decor": false,
+  "calques_deja_separes": true,
+  "neuf_modules_remplaces": false,
+  "module_traite": "tilesheets/generes/galerie_est_ouest",
+  "workflow_post_traitement": {
+    "reference": "source/rebuild_kit.py à la révision 6c4ac5a",
+    "etapes": [
+      "Natif 648×432, 255 couleurs + clé magenta",
+      "Détourage et masques de sélection/GrabCut, figés",
+      "11 emplacements de calques dont 5 utiles",
+      "Extraction algébrique des ombres présentes, sans dessin d’éclairage neuf",
+      "Nuit par palette, sans nouvelle géométrie",
+      "PNG, Aseprite et Tiled 8 px"
+    ],
+    "limite": "Modèle et prompts originaux absents ; reprise du workflow vérifiable, pas des paramètres inconnus"
+  }
+}

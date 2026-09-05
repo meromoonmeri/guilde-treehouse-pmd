@@ -1,0 +1,1767 @@
+{
+  "salles": [
+    {
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 94431,
+      "acces": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "point_sol": [
+            324,
+            178
+          ],
+          "rectangle_repere": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "point_sol": [
+            324,
+            423
+          ],
+          "rectangle_repere": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 988,
+            "alpha_moyen_non_nul": 33.24291497975708
+          },
+          "09_eclairage_fixe": {
+            "pixels": 338,
+            "alpha_moyen_non_nul": 25.041420118343197
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 991,
+            "alpha_moyen_non_nul": 34.82139253279516
+          },
+          "09_eclairage_fixe": {
+            "pixels": 288,
+            "alpha_moyen_non_nul": 8.333333333333334
+          }
+        }
+      }
+    },
+    {
+      "id": "02",
+      "nom": "Hall des missions",
+      "dimensions": [
+        1280,
+        544
+      ],
+      "surface_sol_px": 262510,
+      "acces": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "point_sol": [
+            8,
+            296
+          ],
+          "rectangle_repere": [
+            0,
+            261,
+            16,
+            70
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                296
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                296
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                296
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                296
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                296
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                296
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 85
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "point_sol": [
+            639,
+            535
+          ],
+          "rectangle_repere": [
+            615,
+            528,
+            48,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                535
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                535
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                535
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                535
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                535
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                535
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "point_sol": [
+            640,
+            231
+          ],
+          "rectangle_repere": [
+            624,
+            219,
+            32,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                640,
+                231
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                640,
+                231
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                640,
+                231
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                640,
+                231
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                637,
+                235
+              ],
+              "distance_repositionnement_px": 5.0
+            }
+          }
+        },
+        {
+          "id": "porte_maitre",
+          "type": "porte_fermee",
+          "point_sol": [
+            1057,
+            233
+          ],
+          "rectangle_repere": [
+            1031,
+            212,
+            52,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                1057,
+                227
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                1057,
+                233
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                1057,
+                233
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                1057,
+                233
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 2911,
+            "alpha_moyen_non_nul": 37.32463071109584
+          },
+          "09_eclairage_fixe": {
+            "pixels": 738,
+            "alpha_moyen_non_nul": 24.937669376693766
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 2914,
+            "alpha_moyen_non_nul": 39.33150308853809
+          },
+          "09_eclairage_fixe": {
+            "pixels": 576,
+            "alpha_moyen_non_nul": 8.444444444444445
+          }
+        }
+      }
+    },
+    {
+      "id": "03",
+      "nom": "Grande salle commune",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 94268,
+      "acces": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "point_sol": [
+            8,
+            263
+          ],
+          "rectangle_repere": [
+            0,
+            252,
+            16,
+            22
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                263
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                263
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": [
+                8,
+                265
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                265
+              ],
+              "distance_repositionnement_px": 2.0
+            },
+            "32": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                73,
+                263
+              ],
+              "distance_repositionnement_px": 65.0
+            }
+          },
+          "largeur_visuelle_bord_px": 37
+        },
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "point_sol": [
+            639,
+            263
+          ],
+          "rectangle_repere": [
+            632,
+            252,
+            16,
+            22
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                263
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                263
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                263
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                263
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                576,
+                263
+              ],
+              "distance_repositionnement_px": 63.0
+            }
+          },
+          "largeur_visuelle_bord_px": 37
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "point_sol": [
+            324,
+            423
+          ],
+          "rectangle_repere": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "point_sol": [
+            324,
+            220
+          ],
+          "rectangle_repere": [
+            308,
+            208,
+            32,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                220
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                220
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": [
+                324,
+                221
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                221
+              ],
+              "distance_repositionnement_px": 1.0
+            },
+            "32": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                226
+              ],
+              "distance_repositionnement_px": 6.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 1803,
+            "alpha_moyen_non_nul": 37.706045479755964
+          },
+          "09_eclairage_fixe": {
+            "pixels": 302,
+            "alpha_moyen_non_nul": 26.264900662251655
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 1807,
+            "alpha_moyen_non_nul": 39.66131710016602
+          },
+          "09_eclairage_fixe": {
+            "pixels": 268,
+            "alpha_moyen_non_nul": 8.044776119402986
+          }
+        }
+      }
+    },
+    {
+      "id": "04",
+      "nom": "Cantine",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 83396,
+      "acces": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "point_sol": [
+            639,
+            270
+          ],
+          "rectangle_repere": [
+            632,
+            260,
+            16,
+            21
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                270
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                270
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": [
+                639,
+                267
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                267
+              ],
+              "distance_repositionnement_px": 3.0
+            },
+            "32": {
+              "pied_possible": false,
+              "relie_au_sol_principal": false,
+              "alternative_dans_rectangle": null,
+              "point_sur_sol_principal_le_plus_proche": [
+                570,
+                264
+              ],
+              "distance_repositionnement_px": 69.26
+            }
+          },
+          "largeur_visuelle_bord_px": 36
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 924,
+            "alpha_moyen_non_nul": 40.77056277056277
+          },
+          "09_eclairage_fixe": {
+            "pixels": 295,
+            "alpha_moyen_non_nul": 33.81694915254237
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 924,
+            "alpha_moyen_non_nul": 42.65800865800866
+          },
+          "09_eclairage_fixe": {
+            "pixels": 293,
+            "alpha_moyen_non_nul": 8.68259385665529
+          }
+        }
+      }
+    },
+    {
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 87969,
+      "acces": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "point_sol": [
+            639,
+            268
+          ],
+          "rectangle_repere": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 60
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 959,
+            "alpha_moyen_non_nul": 40.66319082377476
+          },
+          "09_eclairage_fixe": {
+            "pixels": 292,
+            "alpha_moyen_non_nul": 33.67123287671233
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 959,
+            "alpha_moyen_non_nul": 42.57768508863399
+          },
+          "09_eclairage_fixe": {
+            "pixels": 290,
+            "alpha_moyen_non_nul": 8.63448275862069
+          }
+        }
+      }
+    },
+    {
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 92829,
+      "acces": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "point_sol": [
+            324,
+            423
+          ],
+          "rectangle_repere": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 604,
+            "alpha_moyen_non_nul": 37.13245033112583
+          },
+          "09_eclairage_fixe": {
+            "pixels": 132,
+            "alpha_moyen_non_nul": 25.87878787878788
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 607,
+            "alpha_moyen_non_nul": 38.99835255354201
+          },
+          "09_eclairage_fixe": {
+            "pixels": 114,
+            "alpha_moyen_non_nul": 8.56140350877193
+          }
+        }
+      }
+    },
+    {
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 88327,
+      "acces": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "point_sol": [
+            8,
+            268
+          ],
+          "rectangle_repere": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 60
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 979,
+            "alpha_moyen_non_nul": 40.58835546475996
+          },
+          "09_eclairage_fixe": {
+            "pixels": 298,
+            "alpha_moyen_non_nul": 30.375838926174495
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 979,
+            "alpha_moyen_non_nul": 42.50051072522982
+          },
+          "09_eclairage_fixe": {
+            "pixels": 296,
+            "alpha_moyen_non_nul": 7.972972972972973
+          }
+        }
+      }
+    },
+    {
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 90282,
+      "acces": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "point_sol": [
+            639,
+            268
+          ],
+          "rectangle_repere": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                639,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                639,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 60
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 972,
+            "alpha_moyen_non_nul": 41.68724279835391
+          },
+          "09_eclairage_fixe": {
+            "pixels": 322,
+            "alpha_moyen_non_nul": 33.701863354037265
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 972,
+            "alpha_moyen_non_nul": 43.63786008230453
+          },
+          "09_eclairage_fixe": {
+            "pixels": 320,
+            "alpha_moyen_non_nul": 8.6375
+          }
+        }
+      }
+    },
+    {
+      "id": "09",
+      "nom": "Grand dortoir",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 87893,
+      "acces": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "point_sol": [
+            324,
+            178
+          ],
+          "rectangle_repere": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                164
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                178
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 421,
+            "alpha_moyen_non_nul": 29.339667458432302
+          },
+          "09_eclairage_fixe": {
+            "pixels": 206,
+            "alpha_moyen_non_nul": 24.50485436893204
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 421,
+            "alpha_moyen_non_nul": 30.555819477434678
+          },
+          "09_eclairage_fixe": {
+            "pixels": 174,
+            "alpha_moyen_non_nul": 8.183908045977011
+          }
+        }
+      }
+    },
+    {
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 89912,
+      "acces": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "point_sol": [
+            8,
+            268
+          ],
+          "rectangle_repere": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 60
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 993,
+            "alpha_moyen_non_nul": 41.591137965760325
+          },
+          "09_eclairage_fixe": {
+            "pixels": 328,
+            "alpha_moyen_non_nul": 30.402439024390244
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 993,
+            "alpha_moyen_non_nul": 43.54078549848943
+          },
+          "09_eclairage_fixe": {
+            "pixels": 326,
+            "alpha_moyen_non_nul": 7.975460122699387
+          }
+        }
+      }
+    },
+    {
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 88361,
+      "acces": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "point_sol": [
+            8,
+            268
+          ],
+          "rectangle_repere": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                8,
+                268
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                8,
+                268
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          },
+          "largeur_visuelle_bord_px": 60
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 979,
+            "alpha_moyen_non_nul": 40.58835546475996
+          },
+          "09_eclairage_fixe": {
+            "pixels": 298,
+            "alpha_moyen_non_nul": 30.375838926174495
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 979,
+            "alpha_moyen_non_nul": 42.50051072522982
+          },
+          "09_eclairage_fixe": {
+            "pixels": 296,
+            "alpha_moyen_non_nul": 7.972972972972973
+          }
+        }
+      }
+    },
+    {
+      "id": "12",
+      "nom": "Salle du chef",
+      "dimensions": [
+        648,
+        432
+      ],
+      "surface_sol_px": 85254,
+      "acces": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "point_sol": [
+            324,
+            423
+          ],
+          "rectangle_repere": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "gabarits": {
+            "16": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "24": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            },
+            "32": {
+              "pied_possible": true,
+              "relie_au_sol_principal": true,
+              "alternative_dans_rectangle": [
+                324,
+                423
+              ],
+              "point_sur_sol_principal_le_plus_proche": [
+                324,
+                423
+              ],
+              "distance_repositionnement_px": 0.0
+            }
+          }
+        }
+      ],
+      "effets": {
+        "jour": {
+          "08_ombres_acces": {
+            "pixels": 503,
+            "alpha_moyen_non_nul": 38.10735586481113
+          },
+          "09_eclairage_fixe": {
+            "pixels": 132,
+            "alpha_moyen_non_nul": 25.87878787878788
+          }
+        },
+        "nuit": {
+          "08_ombres_acces": {
+            "pixels": 505,
+            "alpha_moyen_non_nul": 40.039603960396036
+          },
+          "09_eclairage_fixe": {
+            "pixels": 114,
+            "alpha_moyen_non_nul": 8.56140350877193
+          }
+        }
+      }
+    }
+  ],
+  "proches": [
+    {
+      "a": "05",
+      "b": "07",
+      "iou": 1.0,
+      "miroir": true
+    },
+    {
+      "a": "05",
+      "b": "11",
+      "iou": 1.0,
+      "miroir": true
+    },
+    {
+      "a": "07",
+      "b": "11",
+      "iou": 1.0,
+      "miroir": false
+    },
+    {
+      "a": "08",
+      "b": "10",
+      "iou": 1.0,
+      "miroir": true
+    },
+    {
+      "a": "01",
+      "b": "06",
+      "iou": 0.9960503701745108,
+      "miroir": false
+    },
+    {
+      "a": "05",
+      "b": "08",
+      "iou": 0.9882498080929927,
+      "miroir": false
+    },
+    {
+      "a": "05",
+      "b": "10",
+      "iou": 0.9882498080929927,
+      "miroir": true
+    },
+    {
+      "a": "07",
+      "b": "08",
+      "iou": 0.9882498080929927,
+      "miroir": true
+    },
+    {
+      "a": "07",
+      "b": "10",
+      "iou": 0.9882498080929927,
+      "miroir": false
+    },
+    {
+      "a": "08",
+      "b": "11",
+      "iou": 0.9882498080929927,
+      "miroir": true
+    },
+    {
+      "a": "10",
+      "b": "11",
+      "iou": 0.9882498080929927,
+      "miroir": false
+    },
+    {
+      "a": "04",
+      "b": "08",
+      "iou": 0.9877673323564761,
+      "miroir": false
+    },
+    {
+      "a": "04",
+      "b": "10",
+      "iou": 0.9877673323564761,
+      "miroir": true
+    },
+    {
+      "a": "06",
+      "b": "12",
+      "iou": 0.983507830657949,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "12",
+      "iou": 0.9828216592690785,
+      "miroir": false
+    },
+    {
+      "a": "04",
+      "b": "05",
+      "iou": 0.9824014061298473,
+      "miroir": false
+    },
+    {
+      "a": "04",
+      "b": "07",
+      "iou": 0.9824014061298473,
+      "miroir": true
+    },
+    {
+      "a": "04",
+      "b": "11",
+      "iou": 0.9824014061298473,
+      "miroir": true
+    },
+    {
+      "a": "04",
+      "b": "09",
+      "iou": 0.9676690605256892,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "09",
+      "iou": 0.9633782629069159,
+      "miroir": false
+    },
+    {
+      "a": "06",
+      "b": "09",
+      "iou": 0.9627094564457244,
+      "miroir": false
+    },
+    {
+      "a": "08",
+      "b": "09",
+      "iou": 0.9594891973022066,
+      "miroir": false
+    },
+    {
+      "a": "09",
+      "b": "10",
+      "iou": 0.9594891973022066,
+      "miroir": true
+    },
+    {
+      "a": "05",
+      "b": "09",
+      "iou": 0.9565169571218812,
+      "miroir": false
+    },
+    {
+      "a": "07",
+      "b": "09",
+      "iou": 0.9565169571218812,
+      "miroir": true
+    },
+    {
+      "a": "09",
+      "b": "11",
+      "iou": 0.9565169571218812,
+      "miroir": true
+    },
+    {
+      "a": "09",
+      "b": "12",
+      "iou": 0.951682339511877,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "04",
+      "iou": 0.9411040967092008,
+      "miroir": false
+    },
+    {
+      "a": "04",
+      "b": "06",
+      "iou": 0.9401957522617758,
+      "miroir": false
+    },
+    {
+      "a": "03",
+      "b": "12",
+      "iou": 0.9401806562615215,
+      "miroir": false
+    },
+    {
+      "a": "06",
+      "b": "08",
+      "iou": 0.9332439278796006,
+      "miroir": false
+    },
+    {
+      "a": "06",
+      "b": "10",
+      "iou": 0.9332439278796006,
+      "miroir": true
+    },
+    {
+      "a": "01",
+      "b": "08",
+      "iou": 0.9331061110371455,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "10",
+      "iou": 0.9331061110371455,
+      "miroir": true
+    },
+    {
+      "a": "04",
+      "b": "12",
+      "iou": 0.929821214722496,
+      "miroir": false
+    },
+    {
+      "a": "03",
+      "b": "06",
+      "iou": 0.9282108834125069,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "03",
+      "iou": 0.9275014610439544,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "05",
+      "iou": 0.9272165387894288,
+      "miroir": false
+    },
+    {
+      "a": "01",
+      "b": "07",
+      "iou": 0.9272165387894288,
+      "miroir": true
+    },
+    {
+      "a": "01",
+      "b": "11",
+      "iou": 0.9272165387894288,
+      "miroir": true
+    },
+    {
+      "a": "05",
+      "b": "06",
+      "iou": 0.9263226795236119,
+      "miroir": false
+    },
+    {
+      "a": "06",
+      "b": "07",
+      "iou": 0.9263226795236119,
+      "miroir": true
+    },
+    {
+      "a": "06",
+      "b": "11",
+      "iou": 0.9263226795236119,
+      "miroir": true
+    },
+    {
+      "a": "08",
+      "b": "12",
+      "iou": 0.9253878212549201,
+      "miroir": false
+    },
+    {
+      "a": "10",
+      "b": "12",
+      "iou": 0.9253878212549201,
+      "miroir": true
+    },
+    {
+      "a": "03",
+      "b": "08",
+      "iou": 0.9223083592594482,
+      "miroir": true
+    },
+    {
+      "a": "03",
+      "b": "10",
+      "iou": 0.9223083592594482,
+      "miroir": false
+    },
+    {
+      "a": "03",
+      "b": "04",
+      "iou": 0.9199979531265992,
+      "miroir": true
+    },
+    {
+      "a": "05",
+      "b": "12",
+      "iou": 0.918534226464537,
+      "miroir": false
+    },
+    {
+      "a": "07",
+      "b": "12",
+      "iou": 0.918534226464537,
+      "miroir": true
+    },
+    {
+      "a": "11",
+      "b": "12",
+      "iou": 0.918534226464537,
+      "miroir": true
+    },
+    {
+      "a": "03",
+      "b": "05",
+      "iou": 0.915607166353024,
+      "miroir": false
+    },
+    {
+      "a": "03",
+      "b": "07",
+      "iou": 0.915607166353024,
+      "miroir": true
+    },
+    {
+      "a": "03",
+      "b": "11",
+      "iou": 0.915607166353024,
+      "miroir": true
+    },
+    {
+      "a": "03",
+      "b": "09",
+      "iou": 0.89810018157012,
+      "miroir": false
+    }
+  ],
+  "hypothese": "Empreintes carrées 16/24/32 px sur les masques de sol, sans mobilier. Erosion avec border_value=1 pour les sorties du cadre. Les résultats portent sur les repères actuels, pas sur un moteur ni sur tous les trajets possibles.",
+  "silhouettes": "IoU de la silhouette extérieure à taille égale, fenêtres rebouchées pour la mesure uniquement ; meilleur score normal/miroir. Les pixels des assets ne sont pas modifiés."
+}

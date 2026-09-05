@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-06",
+  "outil": "generate_image",
+  "images_reference": [
+    "source/audit_jouabilite/tremie_descente_brute.png",
+    "source/natives/05.png"
+  ],
+  "sortie_retenue": "source/audit_jouabilite/tremie_descente_arrondie_brute.png",
+  "sha256_sortie": "78f3e3cd3b46ae116f5fcf9b2589231724310604563710a7f2a0e20e5186cfc6",
+  "statut": "Prototype visuel arrondi et contrôlé, pas un palier déjà intégré.",
+  "correction_utilisateur": "Contours arrondis et organiques, pas de pièces en L ou à pans coupés.",
+  "essai_ecarte": "La proposition de chambre en L a été écartée après la correction utilisateur ; aucun natif du kit n’a été remplacé.",
+  "methode": "Décor généré ; post-traitement seulement pour natif, masques, calques, palette nuit et exports.",
+  "prompt_tremie_arrondie": "Revise this generated downward ladder shaft for our warm wooden Treehouse guild. Preserve the amber wood material, natural pixel-art detail, overhead three-quarter camera and the unmistakable depth of the ladder descending into darkness. IMPORTANT art-direction correction: the guild uses ROUND, organic forms. Replace the rectangular shaft opening and straight square rim with a smoothly ROUNDED OVAL opening, a continuous curved wooden lip and curved inner shaft sides. Round the outer floor patch too, like a small oval section of our guild's plank floor; no square corners, chamfers, angular octagons or L-shaped outlines. This must still look like a real HOLE CUT THROUGH THE FLOOR, not a raised round tub: its front lip sits at floor level, the inner cut has visible thickness below it, and four or five ladder rungs descend INSIDE the opening, fading into dark brown/navy depth. Only short ladder handholds project above the far rim. Keep a clear flat wooden landing in front/south of the hole. Soft contact shadow below the rim and a fine warm highlight on its upper-left edge; no glow or solid black stripe across the landing. No back wall, furniture, character, symbols or labels. Background outside the complete oval floor patch is uniform pure MAGENTA #ff00ff; the hole interior is dark, never magenta. Keep the whole patch fully inside the frame with a margin. New generated pixel-art asset, not a diagram."
+}

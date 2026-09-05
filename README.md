@@ -1,5 +1,9 @@
 # Guilde Treehouse — entrées et sorties PMD
 
+**Plan et audit actuels : [RDC + 3 étages, formes arrondies conservées](plans/guilde_4_niveaux/index.html).** Le plan de référence, les connexions, les contrôles de gabarit et les manques d’intégration sont détaillés dans ce dossier.
+
+> **Couloirs — changement de méthode :** la version procédurale a été rejetée. [Voir la première galerie réellement générée et ses calques](tilesheets/generes/galerie_est_ouest/apercu.html), traitée selon la méthode du kit d’origine. Les huit autres modules restent à remplacer.
+
 **Nouveau : [tilesheets et modules top view](tilesheets/README.md)** — 20 objets, 32 tuiles de parquet, 16 traces spiralées sur calque séparé et 9 couloirs/paliers jour/nuit. [Ouvrir leur atelier interactif](tilesheets/apercu.html). **Couloirs v2 : 13 calques, panneaux muraux distincts du parquet et bordures d’immersion.** [Voir leur séparation](tilesheets/apercus/separation_couloir.png). Ce kit est indépendant des douze intérieurs ci-dessous.
 
 **Version 2 — correction des accès, sans changement de direction artistique.**

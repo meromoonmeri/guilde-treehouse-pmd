@@ -1,5 +1,9 @@
 # Guilde Treehouse — tilesheets et couloirs PMD v2
 
+> **Sécurité de production :** les constructeurs procéduraux v2 sont bloqués par défaut. `GUILDE_REPRODUIRE_LEGACY=1` est réservé à reproduire l’archive rejetée, pas à fabriquer la version générative/arrondie. Le plan actuel est dans `plans/guilde_4_niveaux/`.
+
+> **Statut des couloirs :** l’architecture v2 décrite ci-dessous est la précédente construction procédurale, pas la nouvelle génération demandée. [Une première galerie générée, avec ses calques et exports jour/nuit, est disponible ici](generes/galerie_est_ouest/README.md). Elle suit le traitement du kit d’origine ; les huit autres modules restent à remplacer.
+
 **Architecture v2 : couloirs et paliers repris de zéro**, avec panneaux de bois debout et bordures d’immersion. Les objets, le parquet, les spirales et les douze salles existantes sont conservés sans modification.
 
 [Voir les plans séparés d’un couloir](apercus/separation_couloir.png).

@@ -1,0 +1,450 @@
+{
+  "plan_valide": true,
+  "niveaux": 4,
+  "pieces": 12,
+  "circulations": 9,
+  "zones": 22,
+  "liaisons_bidirectionnelles": 22,
+  "transitions_dirigees": 44,
+  "acces_piece_affectes": 19,
+  "paires_verticales": 3,
+  "trous_superieurs_requis": 3,
+  "nouvelle_echelle_basse_requise": 1,
+  "aucun_acces_orphelin": true,
+  "styles_arrondis": true,
+  "points_recales": 3,
+  "rectangles_action_recales": 3,
+  "constructeurs_historiques": {
+    "source/build_tilesheets.py": "bloqué par défaut ; reproduction historique explicite seulement",
+    "source/build_hallways.py": "bloqué par défaut ; reproduction historique explicite seulement"
+  },
+  "tests_negatifs": {
+    "sans_trou": "refusé",
+    "trou_anguleux": "refusé",
+    "piece_non_arrondie": "refusé",
+    "liaison_manquante": "refusé",
+    "double_destination": "refusé",
+    "saut_etage": "refusé"
+  },
+  "trajets": [
+    {
+      "depart": "05",
+      "arrivee": "02",
+      "zones": [
+        "05",
+        "P1",
+        "03",
+        "P2",
+        "02"
+      ],
+      "liaisons": [
+        "L16",
+        "L15",
+        "V21",
+        "L23"
+      ],
+      "changements_niveau": 1,
+      "transitions_scene_cibles": 1
+    },
+    {
+      "depart": "05",
+      "arrivee": "TERRASSE",
+      "zones": [
+        "05",
+        "P1",
+        "03",
+        "P2",
+        "02",
+        "P3",
+        "01",
+        "TERRASSE"
+      ],
+      "liaisons": [
+        "L16",
+        "L15",
+        "V21",
+        "L23",
+        "V32",
+        "L31",
+        "EXT_N"
+      ],
+      "changements_niveau": 2,
+      "transitions_scene_cibles": 3
+    },
+    {
+      "depart": "05",
+      "arrivee": "04",
+      "zones": [
+        "05",
+        "P1",
+        "03",
+        "C1O",
+        "04"
+      ],
+      "liaisons": [
+        "L16",
+        "L15",
+        "L11",
+        "L12"
+      ],
+      "changements_niveau": 0,
+      "transitions_scene_cibles": 0
+    },
+    {
+      "depart": "02",
+      "arrivee": "12",
+      "zones": [
+        "02",
+        "12"
+      ],
+      "liaisons": [
+        "CHEF"
+      ],
+      "changements_niveau": 0,
+      "transitions_scene_cibles": 0
+    },
+    {
+      "depart": "06",
+      "arrivee": "TERRASSE",
+      "zones": [
+        "06",
+        "C3O",
+        "P3",
+        "01",
+        "TERRASSE"
+      ],
+      "liaisons": [
+        "L33",
+        "L32",
+        "L31",
+        "EXT_N"
+      ],
+      "changements_niveau": 0,
+      "transitions_scene_cibles": 1
+    },
+    {
+      "depart": "08",
+      "arrivee": "03",
+      "zones": [
+        "08",
+        "P0",
+        "P1",
+        "03"
+      ],
+      "liaisons": [
+        "L01",
+        "V10",
+        "L15"
+      ],
+      "changements_niveau": 1,
+      "transitions_scene_cibles": 1
+    }
+  ],
+  "arrivees_assets_reference": [
+    {
+      "zone": "01",
+      "port": "nord",
+      "point_px": [
+        324,
+        202
+      ],
+      "repere_canonique_px": [
+        324,
+        178
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": true
+    },
+    {
+      "zone": "01",
+      "port": "sud",
+      "point_px": [
+        324,
+        399
+      ],
+      "repere_canonique_px": [
+        324,
+        423
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "06",
+      "port": "sud",
+      "point_px": [
+        324,
+        399
+      ],
+      "repere_canonique_px": [
+        324,
+        423
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "11",
+      "port": "ouest",
+      "point_px": [
+        32,
+        268
+      ],
+      "repere_canonique_px": [
+        8,
+        268
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "02",
+      "port": "ouest",
+      "point_px": [
+        32,
+        296
+      ],
+      "repere_canonique_px": [
+        8,
+        296
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "02",
+      "port": "sud",
+      "point_px": [
+        639,
+        511
+      ],
+      "repere_canonique_px": [
+        639,
+        535
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "02",
+      "port": "echelle_nord",
+      "point_px": [
+        640,
+        255
+      ],
+      "repere_canonique_px": [
+        640,
+        231
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "02",
+      "port": "porte_maitre",
+      "point_px": [
+        1057,
+        257
+      ],
+      "repere_canonique_px": [
+        1057,
+        233
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": true
+    },
+    {
+      "zone": "12",
+      "port": "sud",
+      "point_px": [
+        324,
+        399
+      ],
+      "repere_canonique_px": [
+        324,
+        423
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "07",
+      "port": "ouest",
+      "point_px": [
+        32,
+        268
+      ],
+      "repere_canonique_px": [
+        8,
+        268
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "03",
+      "port": "ouest",
+      "point_px": [
+        32,
+        263
+      ],
+      "repere_canonique_px": [
+        8,
+        265
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": true,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "03",
+      "port": "est",
+      "point_px": [
+        615,
+        263
+      ],
+      "repere_canonique_px": [
+        639,
+        263
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "03",
+      "port": "sud",
+      "point_px": [
+        324,
+        399
+      ],
+      "repere_canonique_px": [
+        324,
+        423
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "03",
+      "port": "echelle_nord",
+      "point_px": [
+        324,
+        244
+      ],
+      "repere_canonique_px": [
+        324,
+        221
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": true,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "04",
+      "port": "est",
+      "point_px": [
+        615,
+        270
+      ],
+      "repere_canonique_px": [
+        639,
+        267
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": true,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "05",
+      "port": "est",
+      "point_px": [
+        615,
+        268
+      ],
+      "repere_canonique_px": [
+        639,
+        268
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "08",
+      "port": "est",
+      "point_px": [
+        615,
+        268
+      ],
+      "repere_canonique_px": [
+        639,
+        268
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    },
+    {
+      "zone": "09",
+      "port": "nord",
+      "point_px": [
+        324,
+        202
+      ],
+      "repere_canonique_px": [
+        324,
+        178
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": true
+    },
+    {
+      "zone": "10",
+      "port": "ouest",
+      "point_px": [
+        32,
+        268
+      ],
+      "repere_canonique_px": [
+        8,
+        268
+      ],
+      "gabarit_24_valide": true,
+      "hors_rectangle_canonique": true,
+      "repere_recale": false,
+      "rectangle_recale": false
+    }
+  ],
+  "limite": "Validation du graphe et de repères sur assets existants. La géométrie des futurs couloirs/trémies et le moteur restent à valider."
+}

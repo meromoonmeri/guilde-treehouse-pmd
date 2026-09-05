@@ -10,6 +10,7 @@ from collections import defaultdict
 import hashlib
 import json
 import math
+import os
 import numpy as np
 from PIL import Image, ImageDraw
 from scipy.ndimage import distance_transform_edt
@@ -634,6 +635,8 @@ def boards(manifest):
 
 
 def build(manifest=None):
+    if os.environ.get("GUILDE_REPRODUIRE_LEGACY") != "1":
+        raise RuntimeError("Constructeur procédural v2 désactivé : conserver les arrondis et générer les décors. Voir plans/guilde_4_niveaux/plan_canonique.json. GUILDE_REPRODUIRE_LEGACY=1 permet uniquement de reproduire l’archive rejetée.")
     if manifest is None:
         manifest = json.loads((OUT / "kit.json").read_text())
     definitions = json.loads((SOURCE / "definitions.json").read_text())["modules"]

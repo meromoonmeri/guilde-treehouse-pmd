@@ -1,5 +1,9 @@
 # Couloirs et paliers — reconstruction PMD v2
 
+> **Sécurité de production :** les constructeurs procéduraux v2 sont bloqués par défaut. `GUILDE_REPRODUIRE_LEGACY=1` est réservé à reproduire l’archive rejetée, pas à fabriquer la version générative/arrondie. Le plan actuel est dans `plans/guilde_4_niveaux/`.
+
+> **Approche rejetée par l’utilisateur :** cette page décrit le constructeur procédural v2. Ne pas le réutiliser pour dessiner les prochains décors. La nouvelle approche passe par le générateur d’images ; voir [generations/README.md](generations/README.md).
+
 Cette architecture **remplace entièrement** les murets plats du premier kit. Les objets, les tuiles de parquet, les spirales et les douze salles ne sont pas redessinés.
 
 ## Sources

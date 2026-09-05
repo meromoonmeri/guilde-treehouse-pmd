@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "date": "2026-09-06",
+  "decision_utilisateur": "Garder les formes arrondies de la guilde, comme dans les références PMD fournies.",
+  "materiaux": "Bois ambré de notre guilde, écorce, racines et feuillage ; ne pas remplacer le bois par la pierre ou un sol d’herbe.",
+  "formes": {
+    "obligatoire": "Contours arrondis et organiques pour les pièces, paliers, couloirs et trémies.",
+    "variation": ["ovale large", "ovale profond", "petite pièce quasi ronde", "renfoncements et alcôves courbes", "asymétrie douce", "taille adaptée au rôle et aux couchages"],
+    "interdit": ["Transformer les chambres en L anguleux", "Pans coupés comme nouveau langage architectural", "Rectangle de pièce à angles droits", "Dupliquer toutes les chambres par simple miroir"]
+  },
+  "generation": "Le générateur crée les décors. Le code sert au plan technique, aux mesures, au détourage, aux masques, aux calques, aux variantes de palette et aux exports, pas à peindre les nouveaux décors.",
+  "echelles": "La descente montre une véritable ouverture arrondie dans le sol, son épaisseur, un intérieur sombre et des barreaux sous le plancher. Le vide est non praticable ; arrivée sur une zone sûre, hors déclencheur.",
+  "ombres_lumieres": "Contacts locaux sur les retours et les rebords, intérieur des puits sombre, reflets fins atténués la nuit ; aucun halo ni barre noire transversale qui bouche le passage.",
+  "plan_interne": "plans/guilde_4_niveaux/plan_canonique.json"
+}

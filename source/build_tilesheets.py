@@ -8,6 +8,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps, ImageFont
 import json
 import math
+import os
 import numpy as np
 
 from rebuild_kit import ase
@@ -261,7 +262,9 @@ def tile_set(name, file, width, height, count, columns, tiles=None):
 
 
 def build():
-    """Reconstruire les banques inchangées, puis l'architecture v2 autoritative."""
+    """Reproduction historique seulement ; la nouvelle production est générative."""
+    if os.environ.get("GUILDE_REPRODUIRE_LEGACY") != "1":
+        raise RuntimeError("Constructeur procédural v2 désactivé : méthode et formes rejetées. Utiliser source/hallways/generations/exporter_methode_origine.py pour la galerie générée. GUILDE_REPRODUIRE_LEGACY=1 est réservé à la reproduction historique.")
     for folder in ["objets", "parquet", "spirales", "architecture", "tiled", "modules", "apercus"]:
         (OUT / folder).mkdir(parents=True, exist_ok=True)
     objects, _, _ = extract_objects()

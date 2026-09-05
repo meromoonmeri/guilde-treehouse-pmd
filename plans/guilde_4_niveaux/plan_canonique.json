@@ -1,0 +1,1930 @@
+{
+  "titre": "Plan canonique interne — Guilde Treehouse",
+  "version": 1,
+  "date": "2026-09-06",
+  "statut": "Plan de référence, non intégré au moteur",
+  "decisions_utilisateur": {
+    "niveaux": "RDC + 3 étages",
+    "exterieur": "Conserver l’existant et proposer",
+    "formes": "Arrondies et organiques, pas de L anguleux ni de pans coupés"
+  },
+  "sources_prioritaires": [
+    "source/regles_acces.json",
+    "kit.json",
+    "source/base_kit.json"
+  ],
+  "arbitrages": [
+    "La porte 02 nord → 12 prévaut sur l’ancienne entrée 03 NE du base_kit historique.",
+    "Terrasse → 01 → 02 → 03 reste la chaîne héritée ; des paliers clarifient les changements d’étage.",
+    "Accueil en R+3, missions en R+2, vie commune en R+1, dortoirs au RDC : aucune nouvelle entrée extérieure au RDC.",
+    "Les couloirs en retour sont des courbes ; leur topologie en boucle n’impose pas un contour polygonal."
+  ],
+  "niveaux": [
+    {
+      "id": 3,
+      "nom": "R+3",
+      "usage": "Accueil / surveillance",
+      "pieces": [
+        "01",
+        "06",
+        "11"
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "R+2",
+      "usage": "Missions / administration",
+      "pieces": [
+        "02",
+        "12",
+        "07"
+      ]
+    },
+    {
+      "id": 1,
+      "nom": "R+1",
+      "usage": "Vie commune / équipe",
+      "pieces": [
+        "03",
+        "04",
+        "05"
+      ]
+    },
+    {
+      "id": 0,
+      "nom": "RDC",
+      "usage": "Dortoirs",
+      "pieces": [
+        "08",
+        "09",
+        "10"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "type": "piece",
+      "niveau": 3,
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "repere_asset_px": [
+            324,
+            178
+          ],
+          "repere_canonique_px": [
+            324,
+            178
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "rectangle_canonique_px": [
+            300,
+            166,
+            48,
+            24
+          ],
+          "rectangle_recale": true,
+          "arrivee_reference_px": [
+            324,
+            202
+          ],
+          "declenchement": "franchissement"
+        },
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "repere_asset_px": [
+            324,
+            423
+          ],
+          "repere_canonique_px": [
+            324,
+            423
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_canonique_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            324,
+            399
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        435,
+        130,
+        270,
+        145
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/01.png",
+      "image": "salles/01_accueil/salle_jour.png",
+      "masque_sol": "source/passages/masques/01.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_court",
+        "description": "Accueil en ovale court, deux accès dans l’axe",
+        "rapport_axes_cible": 1.55,
+        "brief": "Conserver les courbes et la silhouette accueillante."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "type": "piece",
+      "niveau": 3,
+      "ports": {
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "repere_asset_px": [
+            324,
+            423
+          ],
+          "repere_canonique_px": [
+            324,
+            423
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_canonique_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            324,
+            399
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        105,
+        150,
+        250,
+        150
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/06.png",
+      "image": "salles/06_chambre_veilleur/salle_jour.png",
+      "masque_sol": "source/passages/masques/06.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "quasi_rond",
+        "description": "Petite chambre quasi ronde",
+        "rapport_axes_cible": 1.1,
+        "brief": "Rendre le poste compact et distinct du vestibule."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "type": "piece",
+      "niveau": 3,
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "repere_asset_px": [
+            8,
+            268
+          ],
+          "repere_canonique_px": [
+            8,
+            268
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_canonique_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            32,
+            268
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        945,
+        380,
+        220,
+        165
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/11.png",
+      "image": "salles/11_chambre_eclaireurs/salle_jour.png",
+      "masque_sol": "source/passages/masques/11.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_compact",
+        "description": "Ovale compact, renflement arrondi vers la vue",
+        "rapport_axes_cible": 1.3,
+        "brief": "Ne plus dupliquer exactement 07 ; aucune pointe polygonale."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "02",
+      "nom": "Hall des missions",
+      "type": "piece",
+      "niveau": 2,
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "repere_asset_px": [
+            8,
+            296
+          ],
+          "repere_canonique_px": [
+            8,
+            296
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            0,
+            261,
+            16,
+            70
+          ],
+          "rectangle_canonique_px": [
+            0,
+            261,
+            16,
+            70
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            32,
+            296
+          ],
+          "declenchement": "franchissement"
+        },
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "repere_asset_px": [
+            639,
+            535
+          ],
+          "repere_canonique_px": [
+            639,
+            535
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            615,
+            528,
+            48,
+            16
+          ],
+          "rectangle_canonique_px": [
+            615,
+            528,
+            48,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            639,
+            511
+          ],
+          "declenchement": "franchissement"
+        },
+        "echelle_nord": {
+          "orientation": "N",
+          "type": "echelle_montante",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "repere_asset_px": [
+            640,
+            231
+          ],
+          "repere_canonique_px": [
+            640,
+            231
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            624,
+            219,
+            32,
+            16
+          ],
+          "rectangle_canonique_px": [
+            624,
+            219,
+            32,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            640,
+            255
+          ],
+          "declenchement": "action"
+        },
+        "porte_maitre": {
+          "orientation": "N",
+          "type": "porte",
+          "position_schema": [
+            0.82578125,
+            0
+          ],
+          "repere_asset_px": [
+            1057,
+            233
+          ],
+          "repere_canonique_px": [
+            1057,
+            233
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            1031,
+            212,
+            52,
+            16
+          ],
+          "rectangle_canonique_px": [
+            1031,
+            225,
+            52,
+            16
+          ],
+          "rectangle_recale": true,
+          "arrivee_reference_px": [
+            1057,
+            257
+          ],
+          "declenchement": "action"
+        }
+      },
+      "schema": [
+        380,
+        215,
+        775,
+        205
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/02.png",
+      "image": "salles/02_hall_missions/salle_jour.png",
+      "masque_sol": "source/passages/masques/02.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_tres_large",
+        "description": "Grand ovale horizontal à baies arrondies",
+        "rapport_axes_cible": 3.1,
+        "brief": "Conserver le grand hall identifiable et ses équipements encastrés."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "12",
+      "nom": "Salle du chef",
+      "type": "piece",
+      "niveau": 2,
+      "ports": {
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "repere_asset_px": [
+            324,
+            423
+          ],
+          "repere_canonique_px": [
+            324,
+            423
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_canonique_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            324,
+            399
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        900,
+        25,
+        240,
+        135
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/12.png",
+      "image": "salles/12_salle_chef/salle_jour.png",
+      "masque_sol": "source/passages/masques/12.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_autour_tronc",
+        "description": "Bureau arrondi autour du tronc",
+        "rapport_axes_cible": 1.75,
+        "brief": "Le tronc reste architectural ; aucune sortie ni échelle nord ajoutée."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "type": "piece",
+      "niveau": 2,
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "repere_asset_px": [
+            8,
+            268
+          ],
+          "repere_canonique_px": [
+            8,
+            268
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_canonique_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            32,
+            268
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        225,
+        30,
+        250,
+        145
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/07.png",
+      "image": "salles/07_chambre_residents/salle_jour.png",
+      "masque_sol": "source/passages/masques/07.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_asymetrique",
+        "description": "Ovale asymétrique, comme un galet",
+        "rapport_axes_cible": 1.7,
+        "brief": "Ne plus reprendre le miroir exact de 05."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "03",
+      "nom": "Grande salle commune",
+      "type": "piece",
+      "niveau": 1,
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "repere_asset_px": [
+            8,
+            263
+          ],
+          "repere_canonique_px": [
+            8,
+            265
+          ],
+          "recalage_sans_redessiner": true,
+          "rectangle_reference_px": [
+            0,
+            252,
+            16,
+            22
+          ],
+          "rectangle_canonique_px": [
+            0,
+            252,
+            16,
+            22
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            32,
+            263
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "repere_asset_px": [
+            639,
+            263
+          ],
+          "repere_canonique_px": [
+            639,
+            263
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            632,
+            252,
+            16,
+            22
+          ],
+          "rectangle_canonique_px": [
+            632,
+            252,
+            16,
+            22
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            615,
+            263
+          ],
+          "declenchement": "franchissement"
+        },
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "repere_asset_px": [
+            324,
+            423
+          ],
+          "repere_canonique_px": [
+            324,
+            423
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_canonique_px": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            324,
+            399
+          ],
+          "declenchement": "franchissement"
+        },
+        "echelle_nord": {
+          "orientation": "N",
+          "type": "echelle_montante",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "repere_asset_px": [
+            324,
+            220
+          ],
+          "repere_canonique_px": [
+            324,
+            221
+          ],
+          "recalage_sans_redessiner": true,
+          "rectangle_reference_px": [
+            308,
+            208,
+            32,
+            16
+          ],
+          "rectangle_canonique_px": [
+            308,
+            208,
+            32,
+            16
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            324,
+            244
+          ],
+          "declenchement": "action"
+        }
+      },
+      "schema": [
+        440,
+        150,
+        475,
+        195
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/03.png",
+      "image": "salles/03_salle_commune/salle_jour.png",
+      "masque_sol": "source/passages/masques/03.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_irregulier",
+        "description": "Grand ovale souple, élargi aux accès latéraux",
+        "rapport_axes_cible": 2.2,
+        "brief": "Élargir les raccords sans produire de T anguleux ni de pans coupés."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "04",
+      "nom": "Cantine",
+      "type": "piece",
+      "niveau": 1,
+      "ports": {
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "repere_asset_px": [
+            639,
+            270
+          ],
+          "repere_canonique_px": [
+            639,
+            267
+          ],
+          "recalage_sans_redessiner": true,
+          "rectangle_reference_px": [
+            632,
+            260,
+            16,
+            21
+          ],
+          "rectangle_canonique_px": [
+            632,
+            260,
+            16,
+            21
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            615,
+            270
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        20,
+        170,
+        245,
+        155
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/04.png",
+      "image": "salles/04_cantine/salle_jour.png",
+      "masque_sol": "source/passages/masques/04.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_allonge",
+        "description": "Ovale allongé pour la grande table",
+        "rapport_axes_cible": 2.65,
+        "brief": "Préserver une circulation périphérique ; pas de rectangle de cantine."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "type": "piece",
+      "niveau": 1,
+      "ports": {
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "repere_asset_px": [
+            639,
+            268
+          ],
+          "repere_canonique_px": [
+            639,
+            268
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "rectangle_canonique_px": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            615,
+            268
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        215,
+        440,
+        255,
+        140
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/05.png",
+      "image": "salles/05_chambre_equipe/salle_jour.png",
+      "masque_sol": "source/passages/masques/05.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_alcove_douce",
+        "description": "Petit ovale avec une alcôve courbe",
+        "rapport_axes_cible": 1.55,
+        "brief": "Aucune pièce en L ; une niche douce suffit à personnaliser la chambre."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "type": "piece",
+      "niveau": 0,
+      "ports": {
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "repere_asset_px": [
+            639,
+            268
+          ],
+          "repere_canonique_px": [
+            639,
+            268
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "rectangle_canonique_px": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            615,
+            268
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        30,
+        165,
+        310,
+        175
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/08.png",
+      "image": "salles/08_dortoir_trio/salle_jour.png",
+      "masque_sol": "source/passages/masques/08.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_lobes_doux",
+        "description": "Ovale large à trois petites niches courbes",
+        "rapport_axes_cible": 2.2,
+        "brief": "Trois couchages identifiables sans cloisonner le chemin central."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "09",
+      "nom": "Grand dortoir",
+      "type": "piece",
+      "niveau": 0,
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "repere_asset_px": [
+            324,
+            178
+          ],
+          "repere_canonique_px": [
+            324,
+            178
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "rectangle_canonique_px": [
+            300,
+            166,
+            48,
+            24
+          ],
+          "rectangle_recale": true,
+          "arrivee_reference_px": [
+            324,
+            202
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        530,
+        425,
+        315,
+        160
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/09.png",
+      "image": "salles/09_dortoir_quatre/salle_jour.png",
+      "masque_sol": "source/passages/masques/09.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_evase",
+        "description": "Ovale évasé au sud, entrée nord resserrée",
+        "rapport_axes_cible": 1.45,
+        "brief": "Quatre couchages autour d’un passage central libre."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "type": "piece",
+      "niveau": 0,
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "repere_asset_px": [
+            8,
+            268
+          ],
+          "repere_canonique_px": [
+            8,
+            268
+          ],
+          "recalage_sans_redessiner": false,
+          "rectangle_reference_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_canonique_px": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "rectangle_recale": false,
+          "arrivee_reference_px": [
+            32,
+            268
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "schema": [
+        955,
+        155,
+        220,
+        195
+      ],
+      "statut_asset": "existant_a_integrer",
+      "source_base": "source/passages/bases/10.png",
+      "image": "salles/10_dortoir_trio/salle_jour.png",
+      "masque_sol": "source/passages/masques/10.png",
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_profond",
+        "description": "Ovale profond nord-sud",
+        "rapport_axes_cible": 1.05,
+        "brief": "Différencier 10 de 08 par la profondeur, pas par un simple miroir."
+      },
+      "conformite_forme": "à vérifier / différencier les quasi-doublons, sans abandonner les arrondis"
+    },
+    {
+      "id": "TERRASSE",
+      "nom": "Terrasse nord existante",
+      "type": "exterieur",
+      "niveau": 3,
+      "schema": [
+        445,
+        12,
+        250,
+        70
+      ],
+      "ports": {
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "exterieur"
+      },
+      "statut_asset": "destination_historique_carte_jouable_absente",
+      "note": "Les six panoramas ne sont pas une carte de terrasse avec collisions."
+    },
+    {
+      "id": "P3",
+      "nom": "Palier d’accueil",
+      "type": "palier",
+      "niveau": 3,
+      "schema": [
+        450,
+        420,
+        240,
+        135
+      ],
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "declenchement": "franchissement"
+        },
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "descente": {
+          "orientation": "D",
+          "type": "tremie_descendante",
+          "position_schema": [
+            0.5,
+            0.52
+          ],
+          "declenchement": "action",
+          "profil_securite": {
+            "unite": "normalisee_provisoire",
+            "forme_ouverture": "ovale",
+            "centre_vide": [
+              0.5,
+              0.49
+            ],
+            "rayons_vide": [
+              0.18,
+              0.13
+            ],
+            "zone_action": [
+              0.37,
+              0.71,
+              0.26,
+              0.11
+            ],
+            "arrivee": [
+              0.5,
+              0.91
+            ],
+            "vide_non_praticable": true,
+            "ombre_interieure": true,
+            "epaisseur_rebord": true,
+            "barreaux_sous_plancher": true,
+            "masque_rebord_avant": true
+          }
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_court",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "C3O",
+      "nom": "Retour courbe du veilleur",
+      "type": "couloir",
+      "niveau": 3,
+      "schema": [
+        220,
+        395,
+        155,
+        120
+      ],
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "coude_courbe",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "C3E",
+      "nom": "Galerie des éclaireurs",
+      "type": "couloir",
+      "niveau": 3,
+      "schema": [
+        740,
+        435,
+        155,
+        90
+      ],
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "galerie_arrondie",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "prototype_a_adapter",
+      "source_candidate": "tilesheets/generes/galerie_est_ouest/kit.json",
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "P2",
+      "nom": "Palier des missions",
+      "type": "palier",
+      "niveau": 2,
+      "schema": [
+        615,
+        475,
+        305,
+        120
+      ],
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "declenchement": "franchissement"
+        },
+        "descente": {
+          "orientation": "D",
+          "type": "tremie_descendante",
+          "position_schema": [
+            0.5,
+            0.52
+          ],
+          "declenchement": "action",
+          "profil_securite": {
+            "unite": "normalisee_provisoire",
+            "forme_ouverture": "ovale",
+            "centre_vide": [
+              0.5,
+              0.49
+            ],
+            "rayons_vide": [
+              0.18,
+              0.13
+            ],
+            "zone_action": [
+              0.37,
+              0.71,
+              0.26,
+              0.11
+            ],
+            "arrivee": [
+              0.5,
+              0.91
+            ],
+            "vide_non_praticable": true,
+            "ombre_interieure": true,
+            "epaisseur_rebord": true,
+            "barreaux_sous_plancher": true,
+            "masque_rebord_avant": true
+          }
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "petit_ovale",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "C2R",
+      "nom": "Retour courbe des résidents",
+      "type": "couloir",
+      "niveau": 2,
+      "schema": [
+        40,
+        90,
+        145,
+        260
+      ],
+      "ports": {
+        "est_haut": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.12
+          ],
+          "declenchement": "franchissement"
+        },
+        "est_bas": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.88
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "retour_en_boucle_courbe",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "P1",
+      "nom": "Palier de l’aile commune",
+      "type": "palier",
+      "niveau": 1,
+      "schema": [
+        550,
+        455,
+        255,
+        125
+      ],
+      "ports": {
+        "nord": {
+          "orientation": "N",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            0
+          ],
+          "declenchement": "franchissement"
+        },
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "descente": {
+          "orientation": "D",
+          "type": "tremie_descendante",
+          "position_schema": [
+            0.5,
+            0.52
+          ],
+          "declenchement": "action",
+          "profil_securite": {
+            "unite": "normalisee_provisoire",
+            "forme_ouverture": "ovale",
+            "centre_vide": [
+              0.5,
+              0.49
+            ],
+            "rayons_vide": [
+              0.18,
+              0.13
+            ],
+            "zone_action": [
+              0.37,
+              0.71,
+              0.26,
+              0.11
+            ],
+            "arrivee": [
+              0.5,
+              0.91
+            ],
+            "vide_non_praticable": true,
+            "ombre_interieure": true,
+            "epaisseur_rebord": true,
+            "barreaux_sous_plancher": true,
+            "masque_rebord_avant": true
+          }
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_lobes_doux",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "C1O",
+      "nom": "Galerie de la cantine",
+      "type": "couloir",
+      "niveau": 1,
+      "schema": [
+        285,
+        197,
+        145,
+        110
+      ],
+      "ports": {
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "galerie_arrondie",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "prototype_a_adapter",
+      "source_candidate": "tilesheets/generes/galerie_est_ouest/kit.json",
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "C1R",
+      "nom": "Boucle de l’aile commune",
+      "type": "couloir",
+      "niveau": 1,
+      "schema": [
+        1000,
+        230,
+        150,
+        320
+      ],
+      "ports": {
+        "ouest_haut": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.1
+          ],
+          "declenchement": "franchissement"
+        },
+        "ouest_bas": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.87
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "retour_en_boucle_courbe",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    },
+    {
+      "id": "P0",
+      "nom": "Palier des dortoirs",
+      "type": "palier",
+      "niveau": 0,
+      "schema": [
+        535,
+        125,
+        295,
+        195
+      ],
+      "ports": {
+        "montee": {
+          "orientation": "U",
+          "type": "echelle_montante",
+          "position_schema": [
+            0.5,
+            0.23
+          ],
+          "declenchement": "action",
+          "profil_securite": {
+            "unite": "normalisee_provisoire",
+            "zone_action": [
+              0.4,
+              0.27,
+              0.2,
+              0.12
+            ],
+            "arrivee": [
+              0.5,
+              0.53
+            ],
+            "ombre_au_pied": true
+          }
+        },
+        "ouest": {
+          "orientation": "O",
+          "type": "passage",
+          "position_schema": [
+            0,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "est": {
+          "orientation": "E",
+          "type": "passage",
+          "position_schema": [
+            1,
+            0.5
+          ],
+          "declenchement": "franchissement"
+        },
+        "sud": {
+          "orientation": "S",
+          "type": "passage",
+          "position_schema": [
+            0.5,
+            1
+          ],
+          "declenchement": "franchissement"
+        }
+      },
+      "forme": {
+        "style": "arrondi",
+        "famille": "ovale_evase",
+        "description": "Courbes continues, aucun angle vif ni pan coupé."
+      },
+      "statut_asset": "a_generer",
+      "source_candidate": null,
+      "generation": "Générateur d’images puis natif, masques et exports ; pas de décor procédural."
+    }
+  ],
+  "liaisons": [
+    {
+      "id": "EXT_N",
+      "a": {
+        "zone": "TERRASSE",
+        "port": "sud"
+      },
+      "b": {
+        "zone": "01",
+        "port": "nord"
+      },
+      "type": "exterieur",
+      "bidirectionnel": true,
+      "note": "Unique destination extérieure documentée ; aucun accès bas inventé."
+    },
+    {
+      "id": "L31",
+      "a": {
+        "zone": "01",
+        "port": "sud"
+      },
+      "b": {
+        "zone": "P3",
+        "port": "nord"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L32",
+      "a": {
+        "zone": "P3",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "C3O",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L33",
+      "a": {
+        "zone": "C3O",
+        "port": "nord"
+      },
+      "b": {
+        "zone": "06",
+        "port": "sud"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L34",
+      "a": {
+        "zone": "P3",
+        "port": "est"
+      },
+      "b": {
+        "zone": "C3E",
+        "port": "ouest"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L35",
+      "a": {
+        "zone": "C3E",
+        "port": "est"
+      },
+      "b": {
+        "zone": "11",
+        "port": "ouest"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "V32",
+      "a": {
+        "zone": "P3",
+        "port": "descente"
+      },
+      "b": {
+        "zone": "02",
+        "port": "echelle_nord"
+      },
+      "type": "vertical",
+      "bidirectionnel": true,
+      "note": "Accueil → missions conservé, avec palier et trémie explicites.",
+      "axe_physique": "V32",
+      "alignement": "Les deux extrémités partagent le même axe XY dans le monde ; placement métrique à valider après génération."
+    },
+    {
+      "id": "CHEF",
+      "a": {
+        "zone": "02",
+        "port": "porte_maitre"
+      },
+      "b": {
+        "zone": "12",
+        "port": "sud"
+      },
+      "type": "porte",
+      "bidirectionnel": true,
+      "note": "Porte visuellement fermée, interaction autorisée ; pas de seconde porte dans 12."
+    },
+    {
+      "id": "L21",
+      "a": {
+        "zone": "02",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "C2R",
+        "port": "est_bas"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L22",
+      "a": {
+        "zone": "C2R",
+        "port": "est_haut"
+      },
+      "b": {
+        "zone": "07",
+        "port": "ouest"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L23",
+      "a": {
+        "zone": "02",
+        "port": "sud"
+      },
+      "b": {
+        "zone": "P2",
+        "port": "nord"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "V21",
+      "a": {
+        "zone": "P2",
+        "port": "descente"
+      },
+      "b": {
+        "zone": "03",
+        "port": "echelle_nord"
+      },
+      "type": "vertical",
+      "bidirectionnel": true,
+      "note": "Missions → salle commune conservé ; le trou est sur le palier supérieur.",
+      "axe_physique": "V21",
+      "alignement": "Les deux extrémités partagent le même axe XY dans le monde ; placement métrique à valider après génération."
+    },
+    {
+      "id": "L11",
+      "a": {
+        "zone": "03",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "C1O",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L12",
+      "a": {
+        "zone": "C1O",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "04",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L13",
+      "a": {
+        "zone": "03",
+        "port": "est"
+      },
+      "b": {
+        "zone": "C1R",
+        "port": "ouest_haut"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L14",
+      "a": {
+        "zone": "C1R",
+        "port": "ouest_bas"
+      },
+      "b": {
+        "zone": "P1",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L15",
+      "a": {
+        "zone": "03",
+        "port": "sud"
+      },
+      "b": {
+        "zone": "P1",
+        "port": "nord"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": "Raccourci direct ; la boucle est une alternative, pas un détour obligatoire."
+    },
+    {
+      "id": "L16",
+      "a": {
+        "zone": "P1",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "05",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "V10",
+      "a": {
+        "zone": "P1",
+        "port": "descente"
+      },
+      "b": {
+        "zone": "P0",
+        "port": "montee"
+      },
+      "type": "vertical",
+      "bidirectionnel": true,
+      "note": "Nouvelle paire pour le quatrième niveau ; puits supérieur et échelle basse à produire.",
+      "axe_physique": "V10",
+      "alignement": "Les deux extrémités partagent le même axe XY dans le monde ; placement métrique à valider après génération."
+    },
+    {
+      "id": "L01",
+      "a": {
+        "zone": "P0",
+        "port": "ouest"
+      },
+      "b": {
+        "zone": "08",
+        "port": "est"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L02",
+      "a": {
+        "zone": "P0",
+        "port": "est"
+      },
+      "b": {
+        "zone": "10",
+        "port": "ouest"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    },
+    {
+      "id": "L03",
+      "a": {
+        "zone": "P0",
+        "port": "sud"
+      },
+      "b": {
+        "zone": "09",
+        "port": "nord"
+      },
+      "type": "passage",
+      "bidirectionnel": true,
+      "note": ""
+    }
+  ],
+  "schema": {
+    "dimensions_par_niveau": [
+      1200,
+      620
+    ],
+    "unite": "diagramme uniquement, pas coordonnées moteur"
+  },
+  "contrat_jouabilite": {
+    "grille_px": 8,
+    "pied_test_px": 16,
+    "sprite_visuel_hypothese_px": 32,
+    "largeur_confort_passage_px": 48,
+    "palier_libre_devant_acces_px": 32,
+    "arrivee_hors_declencheur": true,
+    "temporisation_ms": 300,
+    "relachement_action_requis": true,
+    "triggers_par_centre_des_pieds": true,
+    "trou_non_praticable": true,
+    "scene_recommandee": "Une scène par étage ; pas un chargement par bout de couloir.",
+    "statut": "Hypothèses de conception ; gabarit réel du personnage et moteur absents du dépôt."
+  },
+  "eclairage": {
+    "source": "Généré dans les images maîtresses, puis séparé/contrôlé en post-traitement.",
+    "passages": "Contacts sur les joues et épaisseurs, centre du chemin lisible ; pas de bande noire transversale.",
+    "nord": "Renfoncement ombré et continuité du sol, pas une fausse porte ni un escalier mural.",
+    "tremies": "Vide plus sombre que le sol, épaisseur courbe, barreaux qui disparaissent en profondeur et rebord avant d’occultation.",
+    "nuit": "Même géométrie, reflets atténués ; pas de halos qui masquent les seuils."
+  },
+  "production": {
+    "methode": "Générateur d’images → natif magenta → masques/calques → jour/nuit → PNG/Aseprite/Tiled.",
+    "interdit": "Dessiner les décors par code ou réintroduire les modules procéduraux refusés.",
+    "reste": "Sept zones de circulation sans master conforme ; deux instances peuvent partir de l’unique galerie générée, avec raccords à adapter."
+  }
+}
