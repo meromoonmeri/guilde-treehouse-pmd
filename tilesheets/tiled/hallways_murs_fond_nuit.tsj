@@ -1,0 +1,77 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "murs_fond_nuit",
+  "tilewidth": 96,
+  "tileheight": 96,
+  "tilecount": 5,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../architecture/pieces/murs_fond/000_nuit.png",
+      "imagewidth": 72,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_64_0"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../architecture/pieces/murs_fond/001_nuit.png",
+      "imagewidth": 56,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_48_0"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../architecture/pieces/murs_fond/002_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_53_0"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../architecture/pieces/murs_fond/003_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_56_0"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../architecture/pieces/murs_fond/004_nuit.png",
+      "imagewidth": 48,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_40_0"
+        }
+      ]
+    }
+  ]
+}

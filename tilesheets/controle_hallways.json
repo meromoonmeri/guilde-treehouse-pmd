@@ -1,0 +1,123 @@
+{
+  "version_architecture": 2,
+  "calques_par_module": 13,
+  "fichiers_hors_perimetre_intacts": 684,
+  "matiere_murale_distincte": {
+    "gradient_x_mur": 12.524691358024693,
+    "gradient_y_mur": 3.9748427672955975,
+    "gradient_x_parquet": 0.6135752688172044,
+    "gradient_y_parquet": 28.95564516129032
+  },
+  "modules": [
+    {
+      "id": "couloir_horizontal",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 10
+    },
+    {
+      "id": "couloir_vertical",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 9
+    },
+    {
+      "id": "angle_nord_est",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 10
+    },
+    {
+      "id": "angle_sud_ouest",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 10
+    },
+    {
+      "id": "jonction_t",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 3,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 10
+    },
+    {
+      "id": "croisement",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 4,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 10
+    },
+    {
+      "id": "palier_baies",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 13
+    },
+    {
+      "id": "antichambre",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 12
+    },
+    {
+      "id": "halte_explorateurs",
+      "calques": 13,
+      "sol_connecte": true,
+      "acces": 2,
+      "degagement_probe_px": 16,
+      "fond_evide": true,
+      "murs_distincts_du_sol": true,
+      "bordures_2_plans": true,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques_non_vides": 13
+    }
+  ],
+  "raccords_sols": "E/O identiques ; joints N/S à phase cohérente ; axes congrus à 16 modulo 32",
+  "limites": "Validation des formats par code. Ni application Aseprite/Tiled, ni moteur exécuté. Les décors de raccord restent ajustables."
+}

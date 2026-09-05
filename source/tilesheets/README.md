@@ -4,7 +4,7 @@
 - `provenance.json` : prompt utilisé, images de la guilde données au générateur, description des références utilisateur et empreintes des salles à préserver.
 - `../build_tilesheets.py` : extraction, suppression du magenta, nettoyage des franges, tailles natives, palettes resserrées, correction des montants du premier fanion et variantes. Il fabrique aussi les ombres séparées.
 
-Le parquet, les motifs spiralés et les pièces de murs sont construits au pixel, de façon déterministe, avec une palette rapprochée du bois de la guilde. Les deux variantes d’éclairage gardent la même géométrie. Les couloirs et paliers sont assemblés depuis ces tuiles réutilisables, non par découpage d’images de salles générées.
+Le parquet et les motifs spiralés sont construits au pixel de façon déterministe. Les murs, couloirs et paliers ont été remplacés par la **nouvelle architecture à 13 plans** de `source/build_hallways.py`, dont les sources et règles sont dans `source/hallways/`. Le constructeur général appelle cette nouvelle version et ne recrée plus les murets refusés.
 
 Les quatre références utilisateur servent à l’interprétation graphique : bannières, lianes, paillasses, tapis, provisions et spirale claire sur le sol. Aucun sprite original du jeu n’a été copié dans le kit.
 

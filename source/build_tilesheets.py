@@ -6,7 +6,6 @@ Les douze salles existantes ne sont jamais réécrites par ce script.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps, ImageFont
-import hashlib
 import json
 import math
 import numpy as np
@@ -20,8 +19,6 @@ TILE = 32
 FRAME = 96
 MODES = ("jour", "nuit")
 SEED = 9052026
-NEIGHBORS = [(0, -1, 1), (1, 0, 2), (0, 1, 4), (-1, 0, 8),
-             (1, -1, 16), (1, 1, 32), (-1, 1, 64), (-1, -1, 128)]
 # Couleurs prélevées/rapprochées du plancher et du bois de notre guilde.
 WOOD = {"joint": (146, 69, 4), "ombre": (152, 76, 8), "fonce": (199, 124, 24),
         "miel": (221, 145, 25), "ambre": (234, 167, 33), "clair": (243, 172, 57),
@@ -231,67 +228,6 @@ def floor_tile(index):
     return im
 
 
-def canonical(mask):
-    for bit, adjacent in [(16, 1 | 2), (32, 2 | 4), (64, 4 | 8), (128, 8 | 1)]:
-        if mask & adjacent:
-            mask &= ~bit
-    return mask
-
-
-def distance_to_neighbors(mask):
-    yy, xx = np.indices((TILE, TILE), dtype=float)
-    xx += .5
-    yy += .5
-    distances = np.full((TILE, TILE), 100., dtype=float)
-    for dx, dy, bit in NEIGHBORS:
-        if not mask & bit:
-            continue
-        x0, y0 = dx * TILE, dy * TILE
-        delta_x = np.maximum(np.maximum(x0 - xx, xx - (x0 + TILE)), 0)
-        delta_y = np.maximum(np.maximum(y0 - yy, yy - (y0 + TILE)), 0)
-        distances = np.minimum(distances, np.hypot(delta_x, delta_y))
-    return np.floor(distances + 1e-8)
-
-
-def wall_tile(mask):
-    if mask == 0:
-        return Image.new("RGBA", (TILE, TILE))
-    d = distance_to_neighbors(mask)
-    yy, xx = np.indices(d.shape)
-    a = np.zeros((TILE, TILE, 4), np.uint8)
-    colors = [(78, 40, 15), (125, 69, 22), (165, 98, 33), (188, 123, 48), (211, 151, 70), (94, 48, 16)]
-    for mask2, col in [(d < 3, colors[0]), ((d >= 3) & (d < 8), colors[1]),
-                       ((d >= 8) & (d < 13), colors[2]), ((d >= 13) & (d < 20), colors[3]),
-                       ((d >= 20) & (d < 22), colors[4]), ((d >= 22) & (d < 24), colors[5])]:
-        a[mask2] = (*col, 255)
-    # Veines longues suivant le bois, plutôt qu'un bruit qui évoquerait du liège.
-    # Les bords de chaque tuile restent communs aux pièces de raccord.
-    gy, gx = np.gradient(d)
-    tangent = np.where(np.abs(gy) >= np.abs(gx), xx, yy)
-    inside = (d >= 8) & (d < 20) & (xx > 2) & (xx < 29) & (yy > 2) & (yy < 29)
-    bend = np.rint(np.sin(tangent / 31 * math.pi) * 1.3)
-    for level, lo, hi in [(10, 4, 21), (15, 8, 27), (18, 3, 16)]:
-        grain = inside & (d == level + bend) & (tangent >= lo) & (tangent <= hi)
-        a[grain, :3] = (146, 83, 26)
-        highlight = inside & (d == level + bend + 1) & (tangent >= lo + 2) & (tangent < hi)
-        a[highlight, :3] = (206, 142, 61)
-    # Le clair reste une arête, jamais un halo.
-    return Image.fromarray(a)
-
-
-def contact_tile(mask):
-    yy, xx = np.indices((TILE, TILE), dtype=float)
-    alpha = np.zeros((TILE, TILE), float)
-    for bit, distance, peak in [(1, yy, 88), (2, TILE - 1 - xx, 56), (4, TILE - 1 - yy, 52), (8, xx, 80)]:
-        if mask & bit:
-            alpha = np.maximum(alpha, peak * np.clip(1 - distance / 8, 0, 1) ** 1.4)
-    a = np.zeros((TILE, TILE, 4), np.uint8)
-    a[:, :, :3] = (34, 19, 7)
-    a[:, :, 3] = np.rint(alpha / 8).astype("uint8") * 8
-    a[a[:, :, 3] == 0] = 0
-    return Image.fromarray(a)
-
-
 def spiral(index):
     im = Image.new("RGBA", (64, 64))
     draw = ImageDraw.Draw(im)
@@ -324,89 +260,26 @@ def tile_set(name, file, width, height, count, columns, tiles=None):
     return result
 
 
-def layouts():
-    result = []
-    def add(ident, name, width, height, rectangles, exits, objects=(), motif=None):
-        mask = np.zeros((height, width), bool)
-        for x0, y0, x1, y1 in rectangles:
-            mask[y0:y1, x0:x1] = True
-        result.append({"id": ident, "nom": name, "largeur": width, "hauteur": height,
-                       "floor": mask, "exits": exits, "objects": list(objects), "motif": motif})
-    add("couloir_horizontal", "Couloir est-ouest", 9, 5, [(0, 1, 9, 4)], ["E", "O"])
-    add("couloir_vertical", "Couloir nord-sud", 5, 9, [(1, 0, 4, 9)], ["N", "S"])
-    add("angle_nord_est", "Angle nord-est", 7, 7, [(2, 0, 5, 5), (2, 2, 7, 5)], ["N", "E"])
-    add("angle_sud_ouest", "Angle sud-ouest", 7, 7, [(2, 2, 5, 7), (0, 2, 5, 5)], ["S", "O"])
-    add("jonction_t", "Jonction en T", 9, 7, [(0, 3, 9, 6), (3, 0, 6, 6)], ["N", "E", "O"])
-    add("croisement", "Croisement à quatre branches", 9, 9, [(0, 3, 9, 6), (3, 0, 6, 9)], ["N", "E", "S", "O"])
-    add("palier_baies", "Palier des provisions", 11, 9, [(2, 2, 9, 7), (0, 3, 11, 6)], ["E", "O"],
-        [(6, 176, 176), (10, 240, 119), (11, 112, 204), (9, 252, 204)], (5, 4, 5))
-    add("antichambre", "Antichambre nord-sud", 9, 11, [(2, 2, 7, 9), (3, 0, 6, 11)], ["N", "S"],
-        [(7, 144, 206), (4, 92, 134), (5, 196, 259), (12, 207, 114)], (8, 3, 3))
-    add("halte_explorateurs", "Halte des explorateurs", 11, 11, [(2, 2, 9, 9), (4, 0, 7, 9), (2, 4, 11, 7)], ["N", "E"],
-        [(19, 176, 220), (4, 100, 127), (5, 244, 260), (13, 114, 259), (14, 253, 117)], (10, 4, 3))
-    return result
-
-
-def neighbor_mask(floor, x, y, wanted=True, diagonals=True):
-    h, w = floor.shape
-    mask = 0
-    for dx, dy, bit in NEIGHBORS[:8 if diagonals else 4]:
-        nx, ny = x + dx, y + dy
-        if 0 <= nx < w and 0 <= ny < h and bool(floor[ny, nx]) == wanted:
-            mask |= bit
-    return mask
-
-
-def paint_tiles(ids, sheet, cols, size):
-    width, height = size
-    result = Image.new("RGBA", (width * TILE, height * TILE))
-    for y in range(height):
-        for x in range(width):
-            index = ids[y, x]
-            if index < 0:
-                continue
-            sx, sy = int(index) % cols * TILE, int(index) // cols * TILE
-            result.alpha_composite(sheet.crop((sx, sy, sx + TILE, sy + TILE)), (x * TILE, y * TILE))
-    return result
-
-
 def build():
+    """Reconstruire les banques inchangées, puis l'architecture v2 autoritative."""
     for folder in ["objets", "parquet", "spirales", "architecture", "tiled", "modules", "apercus"]:
         (OUT / folder).mkdir(parents=True, exist_ok=True)
-    objects, object_images, shadow_images = extract_objects()
+    objects, _, _ = extract_objects()
     horizontal = [floor_tile(i) for i in range(16)]
     floors = horizontal + [im.transpose(Image.Transpose.ROTATE_90) for im in horizontal]
-    valid_masks = sorted({canonical(i) for i in range(256)})
-    wall_lookup = {m: i for i, m in enumerate(valid_masks)}
-    walls = [wall_tile(m) for m in valid_masks]
-    contacts = [contact_tile(i) for i in range(16)]
     motifs = [spiral(i) for i in range(16)]
-    sheets, refs = {}, {}
     for mode in MODES:
         def variant(items, alpha=1.):
             return items if mode == "jour" else [night(q, alpha) for q in items]
-        sheets[mode] = {"parquet": atlas(variant(floors), 8, TILE),
-                        "structure": atlas(variant(walls), 8, TILE),
-                        "contacts": atlas(variant(contacts), 4, TILE),
-                        "spirales": atlas(variant(motifs, .55), 4, 64)}
-        specs = [("parquet", "parquet", 32, 8), ("structure", "architecture", math.ceil(len(walls) / 8) * 8, 8),
-                 ("contacts", "architecture", 16, 4), ("spirales", "spirales", 64, 8)]
-        refs[mode] = {}
-        first = 1
-        for key, folder, count, cols in specs:
-            im = sheets[mode][key]
-            filename = f"{folder}/{key}_{mode}.png"
+        sheets = {"parquet": atlas(variant(floors), 8, TILE), "spirales": atlas(variant(motifs, .55), 4, 64)}
+        for key, count in [("parquet", 32), ("spirales", 64)]:
+            im = sheets[key]
+            filename = f"{key}/{key}_{mode}.png"
             save(im, OUT / filename)
-            if key == "structure":
-                records = [{"id": i, "properties": [{"name": "voisins_sol", "type": "int", "value": m}]} for i, m in enumerate(valid_masks)]
-            elif key == "parquet":
+            records = None
+            if key == "parquet":
                 records = [{"id": i, "properties": [{"name": "orientation", "type": "string", "value": "horizontal" if i < 16 else "vertical"}]} for i in range(32)]
-            else:
-                records = None
-            ts = tile_set(f"{key}_{mode}", filename, *im.size, count, cols, records)
-            json_file(ts, OUT / "tiled" / f"{key}_{mode}.tsj")
-            refs[mode][key] = {"firstgid": first, "source": f"../../tiled/{key}_{mode}.tsj", "count": count}
-            first += count
+            json_file(tile_set(f"{key}_{mode}", filename, *im.size, count, 8, records), OUT / "tiled" / f"{key}_{mode}.tsj")
         for key, is_shadow in [("objets", False), ("ombres_objets", True)]:
             records = []
             for item in objects:
@@ -418,116 +291,22 @@ def build():
                   "tilewidth": FRAME, "tileheight": FRAME, "tilecount": len(objects), "columns": 0,
                   "objectalignment": "bottomleft", "tiles": records}
             json_file(ts, OUT / "tiled" / f"{key}_{mode}.tsj")
-            refs[mode][key] = {"firstgid": first, "source": f"../../tiled/{key}_{mode}.tsj", "count": len(objects)}
-            first += len(objects)
         for i, im in enumerate(variant(motifs, .55)):
             save(im, OUT / "spirales" / "individuelles" / f"spirale_{i + 1:02d}_{mode}.png")
-        # Un document de travail à deux vrais calques, pas des marques déjà peintes dans le parquet.
         floor_demo = Image.new("RGBA", (256, 256))
         for y in range(8):
             for x in range(8):
                 tile = floors[(x * 3 + y * 5) % 16]
                 floor_demo.alpha_composite(tile if mode == "jour" else night(tile), (x * TILE, y * TILE))
         grid_ase(OUT / "parquet" / f"parquet_et_spirales_{mode}.aseprite",
-                 [("Parquet sans motifs", floor_demo), ("Traces spiralées transparentes", sheets[mode]["spirales"])], (256, 256))
-
-    module_records = []
-    gids = {mode: {key: data["firstgid"] for key, data in refs[mode].items()} for mode in MODES}
-    for number, definition in enumerate(layouts()):
-        ident, width, height, floor = definition["id"], definition["largeur"], definition["hauteur"], definition["floor"]
-        fd = OUT / "modules" / ident
-        fd.mkdir(parents=True, exist_ok=True)
-        fields = {key: np.full((height, width), -1, dtype=int) for key in ["parquet", "structure", "contacts", "spirales"]}
-        for y in range(height):
-            for x in range(width):
-                if floor[y, x]:
-                    fields["parquet"][y, x] = (x * 7 + y * 11 + number * 3) % 16
-                    fields["contacts"][y, x] = neighbor_mask(floor, x, y, False, False)
-                else:
-                    mask = canonical(neighbor_mask(floor, x, y))
-                    if mask:
-                        fields["structure"][y, x] = wall_lookup[mask]
-        if definition["motif"]:
-            mi, mx, my = definition["motif"]
-            assert floor[my:my + 2, mx:mx + 2].all()
-            for dy in range(2):
-                for dx in range(2):
-                    fields["spirales"][my + dy, mx + dx] = (mi // 4 * 2 + dy) * 8 + mi % 4 * 2 + dx
-        exits = []
-        for direction in definition["exits"]:
-            edge = {"N": floor[0], "S": floor[-1], "O": floor[:, 0], "E": floor[:, -1]}[direction]
-            locations = np.where(edge)[0]
-            assert len(locations) == 3 and np.all(np.diff(locations) == 1)
-            center = float((locations[0] + locations[-1] + 1) * TILE / 2)
-            point = {"N": [center, 0], "S": [center, height * TILE], "O": [0, center], "E": [width * TILE, center]}[direction]
-            exits.append({"direction": direction, "ancrage_px": point, "largeur_px": 96,
-                          "cellules": [int(locations[0]), int(locations[-1])], "ouvert": True})
-        save(Image.fromarray(floor.astype("uint8") * 255).resize((width * TILE, height * TILE), Image.Resampling.NEAREST), fd / "sol_praticable.png")
-        rec = {"id": ident, "nom": definition["nom"], "cellules": [width, height], "dimensions": [width * TILE, height * TILE],
-               "acces": exits, "famille": "salle_intermediaire" if definition["objects"] else "couloir", "fichiers": {}}
-        for mode in MODES:
-            layers = [paint_tiles(fields[key], sheets[mode][key], 8 if key != "contacts" else 4, (width, height))
-                      for key in ["parquet", "structure", "contacts", "spirales"]]
-            extra = [Image.new("RGBA", rec["dimensions"]) for _ in range(2)]
-            tile_objects = [[], []]
-            for ordinal, (index, fx, fy) in enumerate(definition["objects"]):
-                item = objects[index]
-                px, py = item["pivot"]
-                x, y = fx - px, fy - py
-                assert x >= 0 and y >= 0
-                for k, source_images in enumerate([shadow_images, object_images]):
-                    im = source_images[mode][index]
-                    assert x + im.width <= width * TILE and y + im.height <= height * TILE
-                    extra[k].alpha_composite(im, (x, y))
-                    key = "ombres_objets" if k == 0 else "objets"
-                    tile_objects[k].append({"id": ordinal + 1 + k * len(definition["objects"]), "name": item["id"],
-                                            "gid": gids[mode][key] + index, "x": x, "y": y + im.height,
-                                            "width": im.width, "height": im.height, "rotation": 0, "visible": True})
-            layers += extra
-            names = ["00_parquet", "01_structure", "02_contacts", "03_spirales", "04_ombres_objets", "05_objets"]
-            composite = Image.new("RGBA", rec["dimensions"])
-            files = []
-            for name, im in zip(names, layers):
-                file = f"modules/{ident}/calques/{mode}/{name}.png"
-                save(im, OUT / file)
-                files.append(file)
-                composite.alpha_composite(im)
-            save(composite, fd / f"{mode}.png")
-            grid_ase(fd / f"{mode}.aseprite", list(zip(names, layers)), tuple(rec["dimensions"]))
-            map_layers = []
-            for i, key in enumerate(["parquet", "structure", "contacts", "spirales"]):
-                ids = fields[key]
-                data = np.where(ids < 0, 0, ids + gids[mode][key])
-                map_layers.append({"id": i + 1, "name": names[i], "type": "tilelayer", "width": width, "height": height,
-                                   "x": 0, "y": 0, "visible": True, "opacity": 1, "data": data.ravel().tolist()})
-            for k in range(2):
-                map_layers.append({"id": k + 5, "name": names[k + 4], "type": "objectgroup", "draworder": "index",
-                                   "visible": True, "opacity": 1, "objects": tile_objects[k]})
-            tm = {"type": "map", "version": "1.10", "tiledversion": "1.11.0", "orientation": "orthogonal", "renderorder": "right-down",
-                  "tilewidth": TILE, "tileheight": TILE, "width": width, "height": height, "infinite": False,
-                  "nextlayerid": 7, "nextobjectid": max(1, 2 * len(definition["objects"]) + 1), "layers": map_layers,
-                  "tilesets": [{"firstgid": v["firstgid"], "source": v["source"]} for v in refs[mode].values()]}
-            json_file(tm, fd / f"{mode}.tmj")
-            rec["fichiers"][mode] = {"png": f"modules/{ident}/{mode}.png", "aseprite": f"modules/{ident}/{mode}.aseprite",
-                                     "tiled": f"modules/{ident}/{mode}.tmj", "calques": files}
-        module_records.append(rec)
-
-    manifest = {"titre": "Guilde Treehouse — kit modulaire", "version": 1, "grille_px": TILE, "sous_grille_compatible_px": 8,
+                 [("Parquet sans motifs", floor_demo), ("Traces spiralées transparentes", sheets["spirales"])], (256, 256))
+    manifest = {"titre": "Guilde Treehouse — kit modulaire", "version": 2, "grille_px": TILE, "sous_grille_compatible_px": 8,
                 "palettes": list(MODES), "animation": False, "cellule_objets_px": FRAME, "objets": objects,
                 "parquet": {"tuiles": 32, "variantes_horizontales": 16, "variantes_verticales": 16, "colonnes": 8},
                 "spirales": {"motifs": 16, "taille_motif": [64, 64], "tuiles_par_motif": [2, 2], "tuiles": 64,
-                              "transparence": "alpha réel, aucun parquet intégré", "ordre": "au-dessus du parquet, avant les objets"},
-                "architecture": {"tuiles": math.ceil(len(walls) / 8) * 8, "configurations": len(valid_masks), "masques_voisins_sol": valid_masks,
-                                 "bits": {"N": 1, "E": 2, "S": 4, "O": 8, "NE": 16, "SE": 32, "SO": 64, "NO": 128},
-                                 "contacts": 16, "epaisseur_visible_px": 24},
-                "modules": module_records, "notes": ["Les objets et spirales sont optionnels et séparés.",
-                                                        "Les paliers meublés sont des exemples : leurs objets sont des tile objects Tiled déplaçables.",
-                                                        "Les modules ne sont pas insérés dans les 12 salles ; les accès donnent des ancrages pour le faire.",
-                                                        "Le masque sol_praticable ne décide pas des collisions des objets ; intégration moteur à configurer."]}
-    json_file(manifest, OUT / "kit.json")
-    create_boards(manifest, sheets)
-    print(f"Kit : {len(objects)} objets, 32 parquets, 16 spirales, {len(walls)} tuiles d'architecture, {len(module_records)} modules jour/nuit.")
-    return manifest
+                              "transparence": "alpha réel, aucun parquet intégré", "ordre": "au-dessus du parquet, avant les objets"}}
+    from build_hallways import build as build_hallways
+    return build_hallways(manifest)
 
 
 def font(size, bold=False):
@@ -577,16 +356,6 @@ def create_boards(manifest, sheets):
         bg.alpha_composite(im, ((326 - im.width) // 2, (256 - im.height) // 2))
         board.paste(bg, (32 + i * 346, 1190))
     save(board, OUT / "apercus" / "planche_kit.png")
-    for mode in MODES:
-        board = Image.new("RGB", (1232, 1250), (23, 27, 29))
-        d = ImageDraw.Draw(board)
-        d.text((24, 20), f"MODULES TOP VIEW / {mode.upper()} / 32 PX", font=font(23, True), fill=(237, 218, 173))
-        for i, r in enumerate(manifest["modules"]):
-            im = rgba(OUT / r["fichiers"][mode]["png"])
-            x, y = 16 + i % 3 * 408, 78 + i // 3 * 386
-            board.paste(im, (x + (392 - im.width) // 2, y + (352 - im.height) // 2), im)
-            d.text((x + 8, y + 355), r["nom"], font=font(13), fill=(237, 218, 173))
-        save(board, OUT / "apercus" / f"modules_{mode}.png")
 
 
 if __name__ == "__main__":

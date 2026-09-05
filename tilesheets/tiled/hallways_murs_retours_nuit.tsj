@@ -1,0 +1,441 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "murs_retours_nuit",
+  "tilewidth": 128,
+  "tileheight": 128,
+  "tilecount": 33,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../architecture/pieces/murs_retours/000_nuit.png",
+      "imagewidth": 48,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_32_-32"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../architecture/pieces/murs_retours/001_nuit.png",
+      "imagewidth": 48,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_32_32"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../architecture/pieces/murs_retours/002_nuit.png",
+      "imagewidth": 16,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../architecture/pieces/murs_retours/003_nuit.png",
+      "imagewidth": 16,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../architecture/pieces/murs_retours/004_nuit.png",
+      "imagewidth": 16,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../architecture/pieces/murs_retours/005_nuit.png",
+      "imagewidth": 16,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../architecture/pieces/murs_retours/006_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_64"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../architecture/pieces/murs_retours/007_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_64"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../architecture/pieces/murs_retours/008_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-64"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../architecture/pieces/murs_retours/009_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-64"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../architecture/pieces/murs_retours/010_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../architecture/pieces/murs_retours/011_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../architecture/pieces/murs_retours/012_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../architecture/pieces/murs_retours/013_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../architecture/pieces/murs_retours/014_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_53"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../architecture/pieces/murs_retours/015_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 88,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-40"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../architecture/pieces/murs_retours/016_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-59"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../architecture/pieces/murs_retours/017_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 88,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_40"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "../architecture/pieces/murs_retours/018_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_48"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "../architecture/pieces/murs_retours/019_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_48"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "../architecture/pieces/murs_retours/020_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-53"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "../architecture/pieces/murs_retours/021_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 120,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_48_48"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "image": "../architecture/pieces/murs_retours/022_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_56"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "image": "../architecture/pieces/murs_retours/023_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_56"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "image": "../architecture/pieces/murs_retours/024_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-56"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "image": "../architecture/pieces/murs_retours/025_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 104,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-56"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "image": "../architecture/pieces/murs_retours/026_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 120,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_fond_48_-48"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "image": "../architecture/pieces/murs_retours/027_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-48"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "image": "../architecture/pieces/murs_retours/028_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "image": "../architecture/pieces/murs_retours/029_nuit.png",
+      "imagewidth": 24,
+      "imageheight": 72,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "joint_de_panneaux"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "image": "../architecture/pieces/murs_retours/030_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 112,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_59"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "image": "../architecture/pieces/murs_retours/031_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_48"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "image": "../architecture/pieces/murs_retours/032_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 96,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "murs_retours_0_-48"
+        }
+      ]
+    }
+  ]
+}

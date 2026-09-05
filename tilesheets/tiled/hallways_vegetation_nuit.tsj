@@ -1,0 +1,142 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "name": "vegetation_nuit",
+  "tilewidth": 64,
+  "tileheight": 64,
+  "tilecount": 10,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../architecture/pieces/vegetation/000_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 36,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "canopée_1"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../architecture/pieces/vegetation/001_nuit.png",
+      "imagewidth": 58,
+      "imageheight": 43,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "canopée_2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../architecture/pieces/vegetation/002_nuit.png",
+      "imagewidth": 58,
+      "imageheight": 43,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "canopée_3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../architecture/pieces/vegetation/003_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 46,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "retombée_0"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../architecture/pieces/vegetation/004_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 46,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "retombée_1"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../architecture/pieces/vegetation/005_nuit.png",
+      "imagewidth": 64,
+      "imageheight": 36,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "canopée_0"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../architecture/pieces/vegetation/006_nuit.png",
+      "imagewidth": 45,
+      "imageheight": 54,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "bordure_végétale_5"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../architecture/pieces/vegetation/007_nuit.png",
+      "imagewidth": 39,
+      "imageheight": 54,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "bordure_végétale_6"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../architecture/pieces/vegetation/008_nuit.png",
+      "imagewidth": 39,
+      "imageheight": 54,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "bordure_végétale_7"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../architecture/pieces/vegetation/009_nuit.png",
+      "imagewidth": 45,
+      "imageheight": 54,
+      "properties": [
+        {
+          "name": "piece",
+          "type": "string",
+          "value": "bordure_végétale_4"
+        }
+      ]
+    }
+  ]
+}

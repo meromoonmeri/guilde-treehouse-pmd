@@ -1,6 +1,8 @@
-# Guilde Treehouse — tilesheets et modules top view
+# Guilde Treehouse — tilesheets et couloirs PMD v2
 
-Un **nouveau kit séparé** : objets inspirés de la finesse des références PMD, parquet ambré assorti à la guilde, traces spiralées transparentes et petites pièces en vue de dessus. Les douze salles existantes ne sont pas modifiées.
+**Architecture v2 : couloirs et paliers repris de zéro**, avec panneaux de bois debout et bordures d’immersion. Les objets, le parquet, les spirales et les douze salles existantes sont conservés sans modification.
+
+[Voir les plans séparés d’un couloir](apercus/separation_couloir.png).
 
 Ouvrir **[apercu.html](apercu.html)** : aperçu autonome, hors ligne, avec zoom, grille, variantes jour/nuit, contrôle des calques et essai des spirales sur le parquet.
 
@@ -11,8 +13,9 @@ Ouvrir **[apercu.html](apercu.html)** : aperçu autonome, hors ligne, avec zoom,
 | Objets | **20** | `objets/objets_jour.png`, `objets_nuit.png` |
 | Parquet | **32 tuiles** | `parquet/parquet_jour.png`, `parquet_nuit.png` |
 | Traces spiralées | **16 motifs** | `spirales/spirales_jour.png`, `spirales_nuit.png` |
-| Architecture en bois | **47 configurations** | `architecture/structure_jour.png`, `structure_nuit.png` |
-| Contacts des murs | **16 combinaisons** | `architecture/contacts_jour.png`, `contacts_nuit.png` |
+| Panneaux de bois | **Fond + retours séparés** | `architecture/murs_fond_jour.png`, `murs_retours_jour.png` |
+| Immersion | **Fond, écorce, racines, feuillage** | `architecture/` |
+| Ombres et reflets | **2 plans distincts** | `architecture/contacts_jour.png`, `reflets_jour.png` |
 | Couloirs et jonctions | **6** | `modules/` |
 | Paliers / salles intermédiaires | **3** | `modules/` |
 
@@ -57,49 +60,74 @@ Les joints reviennent tous les 8 px : la première et la dernière rangée d’u
 
 L’onglet « Parquet & spirales » de l’aperçu permet de choisir le motif, régler son opacité, retirer le parquet pour vérifier l’alpha et déplacer la trace par clic. Il s’agit d’un essai : il ne réécrit aucune salle.
 
-### 4. Architecture top view
+### 4. Nouvelle architecture — murs et immersion réellement séparés
 
-Le bois des murs est interprété en **murets vus de dessus**, avec une épaisseur visible de 24 px, des retours arrondis, de fins veinages et des arêtes claires. Ce n’est pas la copie en miniature des hauts murs en coupe des douze salles.
+La précédente version à murets bas est **remplacée**, pas simplement recolorée. Les nouveaux plans utilisent des pans coupés, des renfoncements et des couloirs traversants.
 
-- Grille : 32 px.
-- Atlas : **256 × 192 px**, 48 cases. Les 47 configurations comprennent le cas vide ; la dernière case est réservée.
-- `kit.json` associe les indices aux voisins de sol : N=1, E=2, S=4, O=8, NE=16, SE=32, SO=64, NO=128.
-- Les diagonales déjà couvertes par un voisin cardinal sont éliminées : on obtient les pièces droites, angles, retours et coins nécessaires aux exemples.
-- Les ombres des murs sont un **tileset distinct**, pas une bande sombre traversant les sorties.
+- **Parquet** : lames horizontales dorées, inchangées.
+- **Murs du fond** : panneaux bruns mats de 64 px de haut, fibres noueuses verticales, montants, plinthes et chaperons. Ce motif n’est ni une rotation ni une recoloration du parquet.
+- **Retours** : faces obliques de 64 px et parois latérales de 40 px, sur un autre calque. Des pièces de jonction ferment les angles sans laisser de fentes.
+- **Immersion** : fond sombre évidé sous le sol, soubassement d’écorce, racines et feuillages sur deux plans. Le chant avant passe devant les objets, comme une bordure de scène PMD.
+- Les feuilles de la bordure proviennent de la banque de la guilde. Les murs restent en bois : la référence ne sert pas à remplacer notre DA par une salle de pierre ou d’herbe.
 
-Les modules fournis sont un point de départ plus pratique que le choix manuel des configurations de voisinage.
+Il s’agit d’une **vue de dessus à murs relevés**, dans la lecture des scènes PMD, plutôt que d’un simple tracé de murs plats autour du sol.
 
-## Les 9 modules
+Les panneaux sont dans `architecture/murs_fond_<palette>.png` et `murs_retours_<palette>.png`. Leurs PNG individuels et les pièces de feuillage sont dans `architecture/pieces/`. Les rectangles et noms des pièces figurent dans les catalogues de `kit.json`.
+
+### Les 13 calques de chaque module
+
+| Ordre | Fichier PNG | Fonction |
+| --- | --- | --- |
+| 00 | `00_fond_immersion.png` | Extérieur sombre ; **transparent sous le parquet**, pas un rectangle de couleur caché sous toute la scène |
+| 01 | `01_soubassement.png` | Masse et chant d’écorce sous la scène |
+| 02 | `02_feuillage_arriere.png` | Canopée derrière les panneaux |
+| 03 | `03_parquet.png` | Sol seul, aucun mur ni végétation intégrés |
+| 04 | `04_murs_fond.png` | Panneaux du fond seuls |
+| 05 | `05_murs_retours.png` | Retours obliques, parois latérales et pièces de jonction |
+| 06 | `06_ombres_contact.png` | Contacts des parois sur le sol |
+| 07 | `07_reflets_seuils.png` | Petits reflets latéraux des seuils, atténués la nuit |
+| 08 | `08_spirales.png` | Motif optionnel, sans parquet incorporé |
+| 09 | `09_ombres_objets.png` | Ombres des accessoires |
+| 10 | `10_objets.png` | Accessoires et tentures, indépendants des murs |
+| 11 | `11_ecorce_racines_avant.png` | Chant et racines de premier plan |
+| 12 | `12_feuillage_avant.png` | Feuillages et retombées devant la scène |
+
+Les couloirs restent sans mobilier ni spirale ; les plans correspondants sont présents mais vides. Certains modules sans paroi droite au fond ont seulement des retours. Le soubassement peut être partiellement ou complètement caché dans la composition complète, mais reste disponible lorsque les murs sont masqués.
+
+L’atelier démarre sur la nouvelle galerie. Les boutons **Sol seul**, **Murs seuls**, **Bordures seules** et **Sans fond** permettent de vérifier la séparation sans cliquer treize fois.
+
+## Les 9 modules reconstruits
 
 | Module | Dimensions | Sorties |
 | --- | --- | --- |
-| Couloir est-ouest | 288 × 160 px | E / O |
-| Couloir nord-sud | 160 × 288 px | N / S |
-| Angle nord-est | 224 × 224 px | N / E |
-| Angle sud-ouest | 224 × 224 px | S / O |
-| Jonction en T | 288 × 224 px | N / E / O |
-| Croisement | 288 × 288 px | N / E / S / O |
-| Palier des provisions | 352 × 288 px | E / O |
-| Antichambre nord-sud | 288 × 352 px | N / S |
-| Halte des explorateurs | 352 × 352 px | N / E |
+| Galerie est-ouest | 448 × 352 px | E / O |
+| Galerie nord-sud | 320 × 448 px | N / S |
+| Coude nord-est | 384 × 384 px | N / E |
+| Coude sud-ouest | 384 × 384 px | S / O |
+| Carrefour en T | 512 × 416 px | N / E / O |
+| Croisement à pans coupés | 448 × 448 px | N / E / S / O |
+| Palier des provisions | 512 × 416 px | E / O |
+| Antichambre des racines | 416 × 512 px | N / S |
+| Halte des explorateurs | 512 × 480 px | N / E |
 
-Chaque dossier `modules/<nom>/` contient :
+Dans chaque dossier `modules/<nom>/` :
 
-- `jour.png` et `nuit.png` : compositions ;
-- `calques/<palette>/` : **six PNG séparés** — parquet, structure, contacts, spirales, ombres d’objets, objets ;
-- `jour.aseprite` et `nuit.aseprite` : six calques, une image fixe, grille 32 px ;
-- `jour.tmj` et `nuit.tmj` : vraies cartes Tiled utilisant les tilesets partagés ;
-- `sol_praticable.png` : masque indicatif du plancher, sans décider des collisions propres aux objets.
+- `jour.png` / `nuit.png` : compositions avec le fond d’immersion ;
+- `jour_transparent.png` / `nuit_transparent.png` : mêmes scènes **sans le fond sombre**, avec l’écorce et les feuillages conservés ;
+- `calques/<palette>/` : les **13 PNG séparés** ;
+- `jour.aseprite` / `nuit.aseprite` : les 13 calques, une image fixe, grille 32 px ;
+- `jour.tmj` / `nuit.tmj` : les 13 plans dans Tiled ;
+- `sol_praticable.png` : masque du sol, sans définir les collisions propres aux accessoires.
 
-Les couloirs sont vides. Les paliers sont présentés avec quelques objets et une trace **en calques optionnels** : dans Tiled, les accessoires sont des *tile objects* déplaçables, pas une image de mobilier aplatie.
+Les murs et les feuillages sont des **tile objects** utilisant des pièces réutilisables. Les spirales et les accessoires pointent vers leurs PNG individuels. Les fonds, sols découpés, ombres et chants d’écorce sont des couches de tuiles de 32 px. Les découpes de contour ne constituent pas un système de Wang universel : les plans livrés et `source/hallways/definitions.json` servent de modèles d’assemblage.
 
-### Raccorder les modules
+### Raccords
 
-Les ouvertures entre **ces nouveaux modules** font **96 px (3 tuiles)**. Leurs points d’ancrage sont dans `kit.json`.
+Les ouvertures font **96 px**. Tous leurs axes sont congrus à 16 modulo 32, donc les ancrages homologues se raccordent par translations entières de tuiles. Les 40 premiers pixels des bords ouverts restent sans feuillage coupé ; on peut végétaliser la jonction après assemblage.
 
-Exemple : le couloir horizontal a son axe à y=80, le palier est-ouest à y=144. Pour raccorder le bord droit du couloir au bord gauche du palier, placer le couloir **64 px plus bas** que le palier. Le joint a été comparé pixel par pixel, de jour et de nuit, sans changement d’échelle.
+Exemple : galerie est-ouest, axe y=208 ; palier des provisions, axe y=272. Placer la galerie **64 px plus bas** que le palier pour aligner leurs accès. Les pixels de leurs sols E/O se correspondent ; les joints des planches N/S gardent une phase cohérente. Les raccords décoratifs restent ajustables : il ne s’agit pas d’une promesse d’égalité de chaque pixel de mur ou de racine entre toutes les paires de modules.
 
-**Les sorties des douze salles historiques n’ont pas toutes cette largeur ni cette projection.** Prévoir un raccord de seuil adapté pour les relier aux nouveaux modules ; ils ne sont pas branchés automatiquement sur le plan existant. Collisions des objets, transitions, profondeur des personnages et éventuels changements de caméra restent à configurer dans le moteur.
+**Les sorties des douze salles historiques n’ont pas toutes cette largeur ni cette projection.** Aucun couloir n’est branché automatiquement sur le plan existant. Prévoir les adaptations de seuil, collisions, transitions et profondeur des personnages dans le moteur.
 
 ## Reconstruction et validation
 
@@ -109,6 +137,14 @@ Depuis la racine du dépôt :
 pip install -r source/requirements.txt
 python source/build_tilesheets.py
 python source/verify_tilesheets.py
+python source/build_tilesheets_preview.py
+```
+
+Pour reconstruire uniquement les couloirs, sans réexporter les autres banques :
+
+```bash
+python source/build_hallways.py
+python source/verify_hallways.py
 python source/build_tilesheets_preview.py
 ```
 
@@ -123,3 +159,5 @@ python source/verify_tilesheets_browser.py
 `PMD_CHROMIUM=/chemin/vers/chromium` permet d’utiliser un navigateur déjà installé.
 
 Le build ne rappelle jamais le générateur. Il ne réécrit pas les intérieurs existants. Les contrôles portent sur les transparences, les motifs indépendants, les raccords, les références des tilesets, les objets déplaçables, les recompositions PNG/Aseprite/Tiled et la conservation des salles existantes. Les formats Aseprite/Tiled sont relus par code, pas validés par une ouverture manuelle dans ces applications.
+
+Les résultats courants sont dans `controle_hallways.json`, `controle_qualite.json`, `controle_navigateur.json` et `controle_reconstruction.json`. La version refusée à murets plats n’est plus réexportée par le constructeur.

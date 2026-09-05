@@ -1,6 +1,6 @@
 # Guilde Treehouse — entrées et sorties PMD
 
-**Nouveau : [tilesheets et modules top view](tilesheets/README.md)** — 20 objets, 32 tuiles de parquet, 16 traces spiralées sur calque séparé et 9 couloirs/paliers jour/nuit. [Ouvrir leur atelier interactif](tilesheets/apercu.html). Ce kit est indépendant des douze intérieurs ci-dessous.
+**Nouveau : [tilesheets et modules top view](tilesheets/README.md)** — 20 objets, 32 tuiles de parquet, 16 traces spiralées sur calque séparé et 9 couloirs/paliers jour/nuit. [Ouvrir leur atelier interactif](tilesheets/apercu.html). **Couloirs v2 : 13 calques, panneaux muraux distincts du parquet et bordures d’immersion.** [Voir leur séparation](tilesheets/apercus/separation_couloir.png). Ce kit est indépendant des douze intérieurs ci-dessous.
 
 **Version 2 — correction des accès, sans changement de direction artistique.**
 
