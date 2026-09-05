@@ -1,0 +1,4542 @@
+{
+  "animation": false,
+  "grille": 8,
+  "atlas": [
+    1024,
+    1136
+  ],
+  "source": "Premier pack Guilde Treehouse, éléments natifs et éléments muraux détourés",
+  "sprites": [
+    {
+      "id": "coffre_feuille",
+      "nom": "Coffre feuillage",
+      "groupe": "mobilier",
+      "taille_originale": [
+        61,
+        44
+      ],
+      "pivot": [
+        30.5,
+        44
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "coffre_feuille.png"
+      },
+      "rect": [
+        8,
+        8,
+        64,
+        48
+      ],
+      "cellules": [
+        1,
+        1,
+        8,
+        6
+      ]
+    },
+    {
+      "id": "fanion",
+      "nom": "Fanion sur pied",
+      "groupe": "mobilier",
+      "taille_originale": [
+        50,
+        83
+      ],
+      "pivot": [
+        25.0,
+        83
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "fanion.png"
+      },
+      "rect": [
+        80,
+        8,
+        56,
+        88
+      ],
+      "cellules": [
+        10,
+        1,
+        7,
+        11
+      ]
+    },
+    {
+      "id": "fontaine_bois",
+      "nom": "Fontaine en bois",
+      "groupe": "mobilier",
+      "taille_originale": [
+        59,
+        84
+      ],
+      "pivot": [
+        29.5,
+        84
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "fontaine_bois.png"
+      },
+      "rect": [
+        144,
+        8,
+        64,
+        88
+      ],
+      "cellules": [
+        18,
+        1,
+        8,
+        11
+      ]
+    },
+    {
+      "id": "lanterne",
+      "nom": "Lanterne sur pied",
+      "groupe": "lampes",
+      "taille_originale": [
+        44,
+        87
+      ],
+      "pivot": [
+        22.0,
+        87
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "lanterne.png"
+      },
+      "emetteur": [
+        32,
+        30
+      ],
+      "rect": [
+        216,
+        8,
+        48,
+        88
+      ],
+      "cellules": [
+        27,
+        1,
+        6,
+        11
+      ]
+    },
+    {
+      "id": "nid_ambre",
+      "nom": "Paillasse ambre",
+      "groupe": "couchages",
+      "taille_originale": [
+        78,
+        56
+      ],
+      "pivot": [
+        39.0,
+        56
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "nid_ambre.png"
+      },
+      "rect": [
+        272,
+        8,
+        80,
+        56
+      ],
+      "cellules": [
+        34,
+        1,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "nid_menthe",
+      "nom": "Paillasse menthe",
+      "groupe": "couchages",
+      "taille_originale": [
+        78,
+        56
+      ],
+      "pivot": [
+        39.0,
+        56
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "nid_menthe.png"
+      },
+      "rect": [
+        360,
+        8,
+        80,
+        56
+      ],
+      "cellules": [
+        45,
+        1,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "nid_mousse",
+      "nom": "Paillasse vert tendre",
+      "groupe": "couchages",
+      "taille_originale": [
+        78,
+        56
+      ],
+      "pivot": [
+        39.0,
+        56
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "nid_mousse.png"
+      },
+      "rect": [
+        448,
+        8,
+        80,
+        56
+      ],
+      "cellules": [
+        56,
+        1,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "nid_sauge",
+      "nom": "Paillasse sauge",
+      "groupe": "couchages",
+      "taille_originale": [
+        78,
+        56
+      ],
+      "pivot": [
+        39.0,
+        56
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "nid_sauge.png"
+      },
+      "rect": [
+        536,
+        8,
+        80,
+        56
+      ],
+      "cellules": [
+        67,
+        1,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "panneau",
+      "nom": "Panneau sur pied",
+      "groupe": "mobilier",
+      "taille_originale": [
+        65,
+        97
+      ],
+      "pivot": [
+        32.5,
+        97
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "panneau.png"
+      },
+      "rect": [
+        624,
+        8,
+        72,
+        104
+      ],
+      "cellules": [
+        78,
+        1,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "plante_tonneau",
+      "nom": "Plante en tonneau",
+      "groupe": "mobilier",
+      "taille_originale": [
+        54,
+        79
+      ],
+      "pivot": [
+        27.0,
+        79
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "plante_tonneau.png"
+      },
+      "rect": [
+        704,
+        8,
+        56,
+        80
+      ],
+      "cellules": [
+        88,
+        1,
+        7,
+        10
+      ]
+    },
+    {
+      "id": "provisions",
+      "nom": "Réserves et provisions",
+      "groupe": "mobilier",
+      "taille_originale": [
+        84,
+        78
+      ],
+      "pivot": [
+        42.0,
+        78
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "provisions.png"
+      },
+      "rect": [
+        768,
+        8,
+        88,
+        80
+      ],
+      "cellules": [
+        96,
+        1,
+        11,
+        10
+      ]
+    },
+    {
+      "id": "table_banquet",
+      "nom": "Grande table de banquet",
+      "groupe": "mobilier",
+      "taille_originale": [
+        260,
+        113
+      ],
+      "pivot": [
+        130.0,
+        113
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "table_banquet.png"
+      },
+      "rect": [
+        8,
+        120,
+        264,
+        120
+      ],
+      "cellules": [
+        1,
+        15,
+        33,
+        15
+      ]
+    },
+    {
+      "id": "table_etude",
+      "nom": "Table de travail",
+      "groupe": "mobilier",
+      "taille_originale": [
+        100,
+        85
+      ],
+      "pivot": [
+        50.0,
+        85
+      ],
+      "origine": {
+        "archive": "Premier pack",
+        "fichier": "table_etude.png"
+      },
+      "rect": [
+        280,
+        120,
+        104,
+        88
+      ],
+      "cellules": [
+        35,
+        15,
+        13,
+        11
+      ]
+    },
+    {
+      "id": "banniere_maitre_rouge",
+      "nom": "Bannière rouge du maître",
+      "groupe": "textiles",
+      "taille_originale": [
+        70,
+        114
+      ],
+      "pivot": [
+        35.0,
+        114
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          190,
+          97,
+          260,
+          211
+        ]
+      },
+      "rect": [
+        392,
+        120,
+        72,
+        120
+      ],
+      "cellules": [
+        49,
+        15,
+        9,
+        15
+      ]
+    },
+    {
+      "id": "banniere_maitre_centrale",
+      "nom": "Bannière centrale du maître",
+      "groupe": "textiles",
+      "taille_originale": [
+        81,
+        125
+      ],
+      "pivot": [
+        40.5,
+        125
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          283,
+          87,
+          364,
+          212
+        ]
+      },
+      "rect": [
+        472,
+        120,
+        88,
+        128
+      ],
+      "cellules": [
+        59,
+        15,
+        11,
+        16
+      ]
+    },
+    {
+      "id": "banniere_maitre_verte",
+      "nom": "Bannière verte du maître",
+      "groupe": "textiles",
+      "taille_originale": [
+        65,
+        115
+      ],
+      "pivot": [
+        32.5,
+        115
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          391,
+          97,
+          456,
+          212
+        ]
+      },
+      "rect": [
+        568,
+        120,
+        72,
+        120
+      ],
+      "cellules": [
+        71,
+        15,
+        9,
+        15
+      ]
+    },
+    {
+      "id": "tapis_maitre",
+      "nom": "Tapis du maître, motif d’origine",
+      "groupe": "textiles",
+      "taille_originale": [
+        220,
+        95
+      ],
+      "pivot": [
+        110.0,
+        95
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          214,
+          222,
+          434,
+          317
+        ]
+      },
+      "rect": [
+        648,
+        120,
+        224,
+        96
+      ],
+      "cellules": [
+        81,
+        15,
+        28,
+        12
+      ]
+    },
+    {
+      "id": "embleme_feuille_bois",
+      "nom": "Motif feuille en bois d’origine",
+      "groupe": "ornements",
+      "taille_originale": [
+        99,
+        73
+      ],
+      "pivot": [
+        49.5,
+        73
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          274,
+          232,
+          373,
+          305
+        ]
+      },
+      "rect": [
+        880,
+        120,
+        104,
+        80
+      ],
+      "cellules": [
+        110,
+        15,
+        13,
+        10
+      ]
+    },
+    {
+      "id": "banniere_accueil_gauche",
+      "nom": "Bannière d’accueil gauche",
+      "groupe": "textiles",
+      "taille_originale": [
+        33,
+        73
+      ],
+      "pivot": [
+        16.5,
+        73
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          93,
+          122,
+          126,
+          195
+        ]
+      },
+      "rect": [
+        8,
+        256,
+        40,
+        80
+      ],
+      "cellules": [
+        1,
+        32,
+        5,
+        10
+      ]
+    },
+    {
+      "id": "banniere_accueil_droite",
+      "nom": "Bannière d’accueil droite",
+      "groupe": "textiles",
+      "taille_originale": [
+        35,
+        74
+      ],
+      "pivot": [
+        17.5,
+        74
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          523,
+          122,
+          558,
+          196
+        ]
+      },
+      "rect": [
+        56,
+        256,
+        40,
+        80
+      ],
+      "cellules": [
+        7,
+        32,
+        5,
+        10
+      ]
+    },
+    {
+      "id": "etagere_boissons",
+      "nom": "Étagère murale de boissons et fruits",
+      "groupe": "mobilier",
+      "taille_originale": [
+        83,
+        97
+      ],
+      "pivot": [
+        41.5,
+        97
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          67,
+          84,
+          150,
+          181
+        ]
+      },
+      "rect": [
+        104,
+        256,
+        88,
+        104
+      ],
+      "cellules": [
+        13,
+        32,
+        11,
+        13
+      ]
+    },
+    {
+      "id": "armoire_veilleur",
+      "nom": "Bibliothèque du veilleur",
+      "groupe": "mobilier",
+      "taille_originale": [
+        56,
+        112
+      ],
+      "pivot": [
+        28.0,
+        112
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          76,
+          126,
+          132,
+          238
+        ]
+      },
+      "rect": [
+        200,
+        256,
+        56,
+        112
+      ],
+      "cellules": [
+        25,
+        32,
+        7,
+        14
+      ]
+    },
+    {
+      "id": "seau_cantine",
+      "nom": "Seau de la cantine",
+      "groupe": "mobilier",
+      "taille_originale": [
+        51,
+        65
+      ],
+      "pivot": [
+        25.5,
+        65
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          506,
+          168,
+          557,
+          233
+        ]
+      },
+      "rect": [
+        264,
+        256,
+        56,
+        72
+      ],
+      "cellules": [
+        33,
+        32,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "porte_double_feuille",
+      "nom": "Battants feuillage, porte droite",
+      "groupe": "portes",
+      "taille_originale": [
+        76,
+        72
+      ],
+      "pivot": [
+        38.0,
+        72
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          394,
+          111,
+          470,
+          183
+        ]
+      },
+      "rect": [
+        328,
+        256,
+        80,
+        72
+      ],
+      "cellules": [
+        41,
+        32,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "porte_double_arrondie",
+      "nom": "Battants de porte arrondie",
+      "groupe": "portes",
+      "taille_originale": [
+        70,
+        86
+      ],
+      "pivot": [
+        35.0,
+        86
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          412,
+          104,
+          482,
+          190
+        ]
+      },
+      "rect": [
+        416,
+        256,
+        72,
+        88
+      ],
+      "cellules": [
+        52,
+        32,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "lampe_suspendue",
+      "nom": "Lampe suspendue",
+      "groupe": "lampes",
+      "taille_originale": [
+        18,
+        47
+      ],
+      "pivot": [
+        9.0,
+        47
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          188,
+          50,
+          206,
+          97
+        ]
+      },
+      "emetteur": [
+        9,
+        33
+      ],
+      "rect": [
+        496,
+        256,
+        24,
+        48
+      ],
+      "cellules": [
+        62,
+        32,
+        3,
+        6
+      ]
+    },
+    {
+      "id": "applique_bois",
+      "nom": "Applique en bois",
+      "groupe": "lampes",
+      "taille_originale": [
+        34,
+        47
+      ],
+      "pivot": [
+        17.0,
+        47
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          239,
+          79,
+          273,
+          126
+        ]
+      },
+      "emetteur": [
+        14,
+        21
+      ],
+      "rect": [
+        528,
+        256,
+        40,
+        48
+      ],
+      "cellules": [
+        66,
+        32,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_01_01",
+      "nom": "Feuillage 01.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        71,
+        86
+      ],
+      "pivot": [
+        35.5,
+        86
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          95,
+          69,
+          166,
+          155
+        ]
+      },
+      "rect": [
+        576,
+        256,
+        72,
+        88
+      ],
+      "cellules": [
+        72,
+        32,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_01_02",
+      "nom": "Feuillage 01.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        82,
+        107
+      ],
+      "pivot": [
+        41.0,
+        107
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          13,
+          120,
+          95,
+          227
+        ]
+      },
+      "rect": [
+        656,
+        256,
+        88,
+        112
+      ],
+      "cellules": [
+        82,
+        32,
+        11,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_01_03",
+      "nom": "Feuillage 01.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        81,
+        109
+      ],
+      "pivot": [
+        40.5,
+        109
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          181,
+          37,
+          262,
+          146
+        ]
+      },
+      "rect": [
+        752,
+        256,
+        88,
+        112
+      ],
+      "cellules": [
+        94,
+        32,
+        11,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_01_04",
+      "nom": "Feuillage 01.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        33,
+        69
+      ],
+      "pivot": [
+        16.5,
+        69
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          166,
+          68,
+          199,
+          137
+        ]
+      },
+      "rect": [
+        848,
+        256,
+        40,
+        72
+      ],
+      "cellules": [
+        106,
+        32,
+        5,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_01_05",
+      "nom": "Feuillage 01.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        110
+      ],
+      "pivot": [
+        38.0,
+        110
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          387,
+          36,
+          463,
+          146
+        ]
+      },
+      "rect": [
+        896,
+        256,
+        80,
+        112
+      ],
+      "cellules": [
+        112,
+        32,
+        10,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_01_06",
+      "nom": "Feuillage 01.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        70
+      ],
+      "pivot": [
+        22.0,
+        70
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          450,
+          68,
+          494,
+          138
+        ]
+      },
+      "rect": [
+        8,
+        376,
+        48,
+        72
+      ],
+      "cellules": [
+        1,
+        47,
+        6,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_01_07",
+      "nom": "Feuillage 01.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        60,
+        85
+      ],
+      "pivot": [
+        30.0,
+        85
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          494,
+          70,
+          554,
+          155
+        ]
+      },
+      "rect": [
+        64,
+        376,
+        64,
+        88
+      ],
+      "cellules": [
+        8,
+        47,
+        8,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_01_08",
+      "nom": "Feuillage 01.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        102
+      ],
+      "pivot": [
+        38.0,
+        102
+      ],
+      "origine": {
+        "salle": "01",
+        "rectangle": [
+          561,
+          125,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        136,
+        376,
+        80,
+        104
+      ],
+      "cellules": [
+        17,
+        47,
+        10,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_02_01",
+      "nom": "Feuillage 02.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        70,
+        56
+      ],
+      "pivot": [
+        35.0,
+        56
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          96,
+          69,
+          166,
+          125
+        ]
+      },
+      "rect": [
+        224,
+        376,
+        72,
+        56
+      ],
+      "cellules": [
+        28,
+        47,
+        9,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_02_02",
+      "nom": "Feuillage 02.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        99
+      ],
+      "pivot": [
+        33.5,
+        99
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          13,
+          128,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        304,
+        376,
+        72,
+        104
+      ],
+      "cellules": [
+        38,
+        47,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_02_03",
+      "nom": "Feuillage 02.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        10,
+        12
+      ],
+      "pivot": [
+        5.0,
+        12
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          146,
+          134,
+          156,
+          146
+        ]
+      },
+      "rect": [
+        384,
+        376,
+        16,
+        16
+      ],
+      "cellules": [
+        48,
+        47,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_02_04",
+      "nom": "Feuillage 02.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        58,
+        71
+      ],
+      "pivot": [
+        29.0,
+        71
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          204,
+          37,
+          262,
+          108
+        ]
+      },
+      "rect": [
+        408,
+        376,
+        64,
+        72
+      ],
+      "cellules": [
+        51,
+        47,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_02_05",
+      "nom": "Feuillage 02.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        33,
+        40
+      ],
+      "pivot": [
+        16.5,
+        40
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          166,
+          68,
+          199,
+          108
+        ]
+      },
+      "rect": [
+        480,
+        376,
+        40,
+        40
+      ],
+      "cellules": [
+        60,
+        47,
+        5,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_02_06",
+      "nom": "Feuillage 02.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        69
+      ],
+      "pivot": [
+        38.0,
+        69
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          387,
+          37,
+          463,
+          106
+        ]
+      },
+      "rect": [
+        528,
+        376,
+        80,
+        72
+      ],
+      "cellules": [
+        66,
+        47,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_02_07",
+      "nom": "Feuillage 02.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        40
+      ],
+      "pivot": [
+        22.0,
+        40
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          450,
+          68,
+          494,
+          108
+        ]
+      },
+      "rect": [
+        616,
+        376,
+        48,
+        40
+      ],
+      "cellules": [
+        77,
+        47,
+        6,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_02_08",
+      "nom": "Feuillage 02.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        59,
+        55
+      ],
+      "pivot": [
+        29.5,
+        55
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          494,
+          70,
+          553,
+          125
+        ]
+      },
+      "rect": [
+        672,
+        376,
+        64,
+        56
+      ],
+      "cellules": [
+        84,
+        47,
+        8,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_02_09",
+      "nom": "Feuillage 02.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        99
+      ],
+      "pivot": [
+        33.5,
+        99
+      ],
+      "origine": {
+        "salle": "02",
+        "rectangle": [
+          570,
+          128,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        744,
+        376,
+        72,
+        104
+      ],
+      "cellules": [
+        93,
+        47,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_03_01",
+      "nom": "Feuillage 03.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        55,
+        17
+      ],
+      "pivot": [
+        27.5,
+        17
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          103,
+          69,
+          158,
+          86
+        ]
+      },
+      "rect": [
+        824,
+        376,
+        56,
+        24
+      ],
+      "cellules": [
+        103,
+        47,
+        7,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_03_02",
+      "nom": "Feuillage 03.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        46,
+        50
+      ],
+      "pivot": [
+        23.0,
+        50
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          12,
+          129,
+          58,
+          179
+        ]
+      },
+      "rect": [
+        888,
+        376,
+        48,
+        56
+      ],
+      "cellules": [
+        111,
+        47,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_03_03",
+      "nom": "Feuillage 03.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        16,
+        18
+      ],
+      "pivot": [
+        8.0,
+        18
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          42,
+          184,
+          58,
+          202
+        ]
+      },
+      "rect": [
+        944,
+        376,
+        16,
+        24
+      ],
+      "cellules": [
+        118,
+        47,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_03_04",
+      "nom": "Feuillage 03.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        31,
+        20
+      ],
+      "pivot": [
+        15.5,
+        20
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          49,
+          207,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        968,
+        376,
+        32,
+        24
+      ],
+      "cellules": [
+        121,
+        47,
+        4,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_03_05",
+      "nom": "Feuillage 03.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        81,
+        49
+      ],
+      "pivot": [
+        40.5,
+        49
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          181,
+          37,
+          262,
+          86
+        ]
+      },
+      "rect": [
+        8,
+        488,
+        88,
+        56
+      ],
+      "cellules": [
+        1,
+        61,
+        11,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_03_06",
+      "nom": "Feuillage 03.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        9,
+        18
+      ],
+      "pivot": [
+        4.5,
+        18
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          173,
+          68,
+          182,
+          86
+        ]
+      },
+      "rect": [
+        104,
+        488,
+        16,
+        24
+      ],
+      "cellules": [
+        13,
+        61,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_03_07",
+      "nom": "Feuillage 03.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        76
+      ],
+      "pivot": [
+        38.0,
+        76
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          387,
+          37,
+          463,
+          113
+        ]
+      },
+      "rect": [
+        128,
+        488,
+        80,
+        80
+      ],
+      "cellules": [
+        16,
+        61,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "vegetation_03_08",
+      "nom": "Feuillage 03.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        68
+      ],
+      "pivot": [
+        22.0,
+        68
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          450,
+          68,
+          494,
+          136
+        ]
+      },
+      "rect": [
+        216,
+        488,
+        48,
+        72
+      ],
+      "cellules": [
+        27,
+        61,
+        6,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_03_09",
+      "nom": "Feuillage 03.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        13,
+        13
+      ],
+      "pivot": [
+        6.5,
+        13
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          417,
+          129,
+          430,
+          142
+        ]
+      },
+      "rect": [
+        272,
+        488,
+        16,
+        16
+      ],
+      "cellules": [
+        34,
+        61,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_03_10",
+      "nom": "Feuillage 03.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        14,
+        13
+      ],
+      "pivot": [
+        7.0,
+        13
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          435,
+          129,
+          449,
+          142
+        ]
+      },
+      "rect": [
+        296,
+        488,
+        16,
+        16
+      ],
+      "cellules": [
+        37,
+        61,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_03_11",
+      "nom": "Feuillage 03.11",
+      "groupe": "vegetation",
+      "taille_originale": [
+        12,
+        9
+      ],
+      "pivot": [
+        6.0,
+        9
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          482,
+          183,
+          494,
+          192
+        ]
+      },
+      "rect": [
+        320,
+        488,
+        16,
+        16
+      ],
+      "cellules": [
+        40,
+        61,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_03_12",
+      "nom": "Feuillage 03.12",
+      "groupe": "vegetation",
+      "taille_originale": [
+        59,
+        55
+      ],
+      "pivot": [
+        29.5,
+        55
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          494,
+          70,
+          553,
+          125
+        ]
+      },
+      "rect": [
+        344,
+        488,
+        64,
+        56
+      ],
+      "cellules": [
+        43,
+        61,
+        8,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_03_13",
+      "nom": "Feuillage 03.13",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        51
+      ],
+      "pivot": [
+        22.0,
+        51
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          593,
+          129,
+          637,
+          180
+        ]
+      },
+      "rect": [
+        416,
+        488,
+        48,
+        56
+      ],
+      "cellules": [
+        52,
+        61,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_03_14",
+      "nom": "Feuillage 03.14",
+      "groupe": "vegetation",
+      "taille_originale": [
+        11,
+        12
+      ],
+      "pivot": [
+        5.5,
+        12
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          494,
+          134,
+          505,
+          146
+        ]
+      },
+      "rect": [
+        472,
+        488,
+        16,
+        16
+      ],
+      "cellules": [
+        59,
+        61,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_03_15",
+      "nom": "Feuillage 03.15",
+      "groupe": "vegetation",
+      "taille_originale": [
+        11,
+        27
+      ],
+      "pivot": [
+        5.5,
+        27
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          494,
+          174,
+          505,
+          201
+        ]
+      },
+      "rect": [
+        496,
+        488,
+        16,
+        32
+      ],
+      "cellules": [
+        62,
+        61,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_03_16",
+      "nom": "Feuillage 03.16",
+      "groupe": "vegetation",
+      "taille_originale": [
+        15,
+        17
+      ],
+      "pivot": [
+        7.5,
+        17
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          593,
+          185,
+          608,
+          202
+        ]
+      },
+      "rect": [
+        520,
+        488,
+        16,
+        24
+      ],
+      "cellules": [
+        65,
+        61,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_03_17",
+      "nom": "Feuillage 03.17",
+      "groupe": "vegetation",
+      "taille_originale": [
+        30,
+        25
+      ],
+      "pivot": [
+        15.0,
+        25
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          570,
+          202,
+          600,
+          227
+        ]
+      },
+      "rect": [
+        544,
+        488,
+        32,
+        32
+      ],
+      "cellules": [
+        68,
+        61,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_03_18",
+      "nom": "Feuillage 03.18",
+      "groupe": "vegetation",
+      "taille_originale": [
+        90,
+        60
+      ],
+      "pivot": [
+        45.0,
+        60
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          63,
+          279,
+          153,
+          339
+        ]
+      },
+      "rect": [
+        584,
+        488,
+        96,
+        64
+      ],
+      "cellules": [
+        73,
+        61,
+        12,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_03_19",
+      "nom": "Feuillage 03.19",
+      "groupe": "vegetation",
+      "taille_originale": [
+        91,
+        61
+      ],
+      "pivot": [
+        45.5,
+        61
+      ],
+      "origine": {
+        "salle": "03",
+        "rectangle": [
+          496,
+          278,
+          587,
+          339
+        ]
+      },
+      "rect": [
+        688,
+        488,
+        96,
+        64
+      ],
+      "cellules": [
+        86,
+        61,
+        12,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_04_01",
+      "nom": "Feuillage 04.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        27,
+        8
+      ],
+      "pivot": [
+        13.5,
+        8
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          217,
+          59,
+          244,
+          67
+        ]
+      },
+      "rect": [
+        792,
+        488,
+        32,
+        8
+      ],
+      "cellules": [
+        99,
+        61,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "vegetation_04_02",
+      "nom": "Feuillage 04.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        20,
+        32
+      ],
+      "pivot": [
+        10.0,
+        32
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          166,
+          164,
+          186,
+          196
+        ]
+      },
+      "rect": [
+        832,
+        488,
+        24,
+        32
+      ],
+      "cellules": [
+        104,
+        61,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_04_03",
+      "nom": "Feuillage 04.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        25,
+        44
+      ],
+      "pivot": [
+        12.5,
+        44
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          300,
+          85,
+          325,
+          129
+        ]
+      },
+      "rect": [
+        864,
+        488,
+        32,
+        48
+      ],
+      "cellules": [
+        108,
+        61,
+        4,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_04_04",
+      "nom": "Feuillage 04.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        7,
+        18
+      ],
+      "pivot": [
+        3.5,
+        18
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          343,
+          170,
+          350,
+          188
+        ]
+      },
+      "rect": [
+        904,
+        488,
+        8,
+        24
+      ],
+      "cellules": [
+        113,
+        61,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_04_05",
+      "nom": "Feuillage 04.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        20,
+        21
+      ],
+      "pivot": [
+        10.0,
+        21
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          285,
+          171,
+          305,
+          192
+        ]
+      },
+      "rect": [
+        920,
+        488,
+        24,
+        24
+      ],
+      "cellules": [
+        115,
+        61,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_04_06",
+      "nom": "Feuillage 04.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        16,
+        16
+      ],
+      "pivot": [
+        8.0,
+        16
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          306,
+          184,
+          322,
+          200
+        ]
+      },
+      "rect": [
+        952,
+        488,
+        16,
+        16
+      ],
+      "cellules": [
+        119,
+        61,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_04_07",
+      "nom": "Feuillage 04.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        27,
+        8
+      ],
+      "pivot": [
+        13.5,
+        8
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          406,
+          59,
+          433,
+          67
+        ]
+      },
+      "rect": [
+        976,
+        488,
+        32,
+        8
+      ],
+      "cellules": [
+        122,
+        61,
+        4,
+        1
+      ]
+    },
+    {
+      "id": "vegetation_04_08",
+      "nom": "Feuillage 04.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        15,
+        46
+      ],
+      "pivot": [
+        7.5,
+        46
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          461,
+          62,
+          476,
+          108
+        ]
+      },
+      "rect": [
+        8,
+        576,
+        16,
+        48
+      ],
+      "cellules": [
+        1,
+        72,
+        2,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_04_09",
+      "nom": "Feuillage 04.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        26,
+        31
+      ],
+      "pivot": [
+        13.0,
+        31
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          465,
+          164,
+          491,
+          195
+        ]
+      },
+      "rect": [
+        32,
+        576,
+        32,
+        32
+      ],
+      "cellules": [
+        4,
+        72,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_04_10",
+      "nom": "Feuillage 04.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        38,
+        51
+      ],
+      "pivot": [
+        19.0,
+        51
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          58,
+          233,
+          96,
+          284
+        ]
+      },
+      "rect": [
+        72,
+        576,
+        40,
+        56
+      ],
+      "cellules": [
+        9,
+        72,
+        5,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_04_11",
+      "nom": "Feuillage 04.11",
+      "groupe": "vegetation",
+      "taille_originale": [
+        59,
+        34
+      ],
+      "pivot": [
+        29.5,
+        34
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          118,
+          309,
+          177,
+          343
+        ]
+      },
+      "rect": [
+        120,
+        576,
+        64,
+        40
+      ],
+      "cellules": [
+        15,
+        72,
+        8,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_04_12",
+      "nom": "Feuillage 04.12",
+      "groupe": "vegetation",
+      "taille_originale": [
+        8,
+        27
+      ],
+      "pivot": [
+        4.0,
+        27
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          214,
+          353,
+          222,
+          380
+        ]
+      },
+      "rect": [
+        192,
+        576,
+        8,
+        32
+      ],
+      "cellules": [
+        24,
+        72,
+        1,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_04_13",
+      "nom": "Feuillage 04.13",
+      "groupe": "vegetation",
+      "taille_originale": [
+        36,
+        57
+      ],
+      "pivot": [
+        18.0,
+        57
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          222,
+          344,
+          258,
+          401
+        ]
+      },
+      "rect": [
+        208,
+        576,
+        40,
+        64
+      ],
+      "cellules": [
+        26,
+        72,
+        5,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_04_14",
+      "nom": "Feuillage 04.14",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        57
+      ],
+      "pivot": [
+        22.0,
+        57
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          380,
+          346,
+          424,
+          403
+        ]
+      },
+      "rect": [
+        256,
+        576,
+        48,
+        64
+      ],
+      "cellules": [
+        32,
+        72,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_04_15",
+      "nom": "Feuillage 04.15",
+      "groupe": "vegetation",
+      "taille_originale": [
+        65,
+        39
+      ],
+      "pivot": [
+        32.5,
+        39
+      ],
+      "origine": {
+        "salle": "04",
+        "rectangle": [
+          463,
+          307,
+          528,
+          346
+        ]
+      },
+      "rect": [
+        312,
+        576,
+        72,
+        40
+      ],
+      "cellules": [
+        39,
+        72,
+        9,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_05_01",
+      "nom": "Feuillage 05.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        69,
+        31
+      ],
+      "pivot": [
+        34.5,
+        31
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          97,
+          69,
+          166,
+          100
+        ]
+      },
+      "rect": [
+        392,
+        576,
+        72,
+        32
+      ],
+      "cellules": [
+        49,
+        72,
+        9,
+        4
+      ]
+    },
+    {
+      "id": "vegetation_05_02",
+      "nom": "Feuillage 05.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        40,
+        49
+      ],
+      "pivot": [
+        20.0,
+        49
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          13,
+          129,
+          53,
+          178
+        ]
+      },
+      "rect": [
+        472,
+        576,
+        40,
+        56
+      ],
+      "cellules": [
+        59,
+        72,
+        5,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_05_03",
+      "nom": "Feuillage 05.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        11,
+        11
+      ],
+      "pivot": [
+        5.5,
+        11
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          42,
+          191,
+          53,
+          202
+        ]
+      },
+      "rect": [
+        520,
+        576,
+        16,
+        16
+      ],
+      "cellules": [
+        65,
+        72,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_05_04",
+      "nom": "Feuillage 05.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        31,
+        21
+      ],
+      "pivot": [
+        15.5,
+        21
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          49,
+          206,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        544,
+        576,
+        32,
+        24
+      ],
+      "cellules": [
+        68,
+        72,
+        4,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_05_05",
+      "nom": "Feuillage 05.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        81,
+        80
+      ],
+      "pivot": [
+        40.5,
+        80
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          181,
+          37,
+          262,
+          117
+        ]
+      },
+      "rect": [
+        584,
+        576,
+        88,
+        80
+      ],
+      "cellules": [
+        73,
+        72,
+        11,
+        10
+      ]
+    },
+    {
+      "id": "vegetation_05_06",
+      "nom": "Feuillage 05.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        33,
+        69
+      ],
+      "pivot": [
+        16.5,
+        69
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          166,
+          68,
+          199,
+          137
+        ]
+      },
+      "rect": [
+        680,
+        576,
+        40,
+        72
+      ],
+      "cellules": [
+        85,
+        72,
+        5,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_05_07",
+      "nom": "Feuillage 05.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        66,
+        40
+      ],
+      "pivot": [
+        33.0,
+        40
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          292,
+          34,
+          358,
+          74
+        ]
+      },
+      "rect": [
+        728,
+        576,
+        72,
+        40
+      ],
+      "cellules": [
+        91,
+        72,
+        9,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_05_08",
+      "nom": "Feuillage 05.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        76
+      ],
+      "pivot": [
+        38.0,
+        76
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          387,
+          37,
+          463,
+          113
+        ]
+      },
+      "rect": [
+        808,
+        576,
+        80,
+        80
+      ],
+      "cellules": [
+        101,
+        72,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "vegetation_05_09",
+      "nom": "Feuillage 05.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        60
+      ],
+      "pivot": [
+        22.0,
+        60
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          450,
+          68,
+          494,
+          128
+        ]
+      },
+      "rect": [
+        896,
+        576,
+        48,
+        64
+      ],
+      "cellules": [
+        112,
+        72,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_05_10",
+      "nom": "Feuillage 05.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        61,
+        85
+      ],
+      "pivot": [
+        30.5,
+        85
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          494,
+          70,
+          555,
+          155
+        ]
+      },
+      "rect": [
+        952,
+        576,
+        64,
+        88
+      ],
+      "cellules": [
+        119,
+        72,
+        8,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_05_11",
+      "nom": "Feuillage 05.11",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        103
+      ],
+      "pivot": [
+        38.0,
+        103
+      ],
+      "origine": {
+        "salle": "05",
+        "rectangle": [
+          561,
+          124,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        8,
+        672,
+        80,
+        104
+      ],
+      "cellules": [
+        1,
+        84,
+        10,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_06_01",
+      "nom": "Feuillage 06.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        71,
+        86
+      ],
+      "pivot": [
+        35.5,
+        86
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          95,
+          69,
+          166,
+          155
+        ]
+      },
+      "rect": [
+        96,
+        672,
+        72,
+        88
+      ],
+      "cellules": [
+        12,
+        84,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_06_02",
+      "nom": "Feuillage 06.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        65,
+        102
+      ],
+      "pivot": [
+        32.5,
+        102
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          13,
+          125,
+          78,
+          227
+        ]
+      },
+      "rect": [
+        176,
+        672,
+        72,
+        104
+      ],
+      "cellules": [
+        22,
+        84,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_06_03",
+      "nom": "Feuillage 06.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        101,
+        57
+      ],
+      "pivot": [
+        50.5,
+        57
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          181,
+          13,
+          282,
+          70
+        ]
+      },
+      "rect": [
+        256,
+        672,
+        104,
+        64
+      ],
+      "cellules": [
+        32,
+        84,
+        13,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_06_04",
+      "nom": "Feuillage 06.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        105,
+        54
+      ],
+      "pivot": [
+        52.5,
+        54
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          282,
+          10,
+          387,
+          64
+        ]
+      },
+      "rect": [
+        368,
+        672,
+        112,
+        56
+      ],
+      "cellules": [
+        46,
+        84,
+        14,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_06_05",
+      "nom": "Feuillage 06.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        51,
+        10
+      ],
+      "pivot": [
+        25.5,
+        10
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          299,
+          54,
+          350,
+          64
+        ]
+      },
+      "rect": [
+        488,
+        672,
+        56,
+        16
+      ],
+      "cellules": [
+        61,
+        84,
+        7,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_06_06",
+      "nom": "Feuillage 06.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        50
+      ],
+      "pivot": [
+        38.0,
+        50
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          387,
+          16,
+          463,
+          66
+        ]
+      },
+      "rect": [
+        552,
+        672,
+        80,
+        56
+      ],
+      "cellules": [
+        69,
+        84,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_06_07",
+      "nom": "Feuillage 06.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        10,
+        12
+      ],
+      "pivot": [
+        5.0,
+        12
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          393,
+          71,
+          403,
+          83
+        ]
+      },
+      "rect": [
+        640,
+        672,
+        16,
+        16
+      ],
+      "cellules": [
+        80,
+        84,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_06_08",
+      "nom": "Feuillage 06.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        16,
+        20
+      ],
+      "pivot": [
+        8.0,
+        20
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          478,
+          87,
+          494,
+          107
+        ]
+      },
+      "rect": [
+        664,
+        672,
+        16,
+        24
+      ],
+      "cellules": [
+        83,
+        84,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_06_09",
+      "nom": "Feuillage 06.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        61,
+        85
+      ],
+      "pivot": [
+        30.5,
+        85
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          494,
+          70,
+          555,
+          155
+        ]
+      },
+      "rect": [
+        688,
+        672,
+        64,
+        88
+      ],
+      "cellules": [
+        86,
+        84,
+        8,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_06_10",
+      "nom": "Feuillage 06.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        102
+      ],
+      "pivot": [
+        38.0,
+        102
+      ],
+      "origine": {
+        "salle": "06",
+        "rectangle": [
+          561,
+          125,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        760,
+        672,
+        80,
+        104
+      ],
+      "cellules": [
+        95,
+        84,
+        10,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_08_01",
+      "nom": "Feuillage 08.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        69,
+        39
+      ],
+      "pivot": [
+        34.5,
+        39
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          97,
+          69,
+          166,
+          108
+        ]
+      },
+      "rect": [
+        848,
+        672,
+        72,
+        40
+      ],
+      "cellules": [
+        106,
+        84,
+        9,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_08_02",
+      "nom": "Feuillage 08.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        41,
+        51
+      ],
+      "pivot": [
+        20.5,
+        51
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          13,
+          128,
+          54,
+          179
+        ]
+      },
+      "rect": [
+        928,
+        672,
+        48,
+        56
+      ],
+      "cellules": [
+        116,
+        84,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_08_03",
+      "nom": "Feuillage 08.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        12,
+        11
+      ],
+      "pivot": [
+        6.0,
+        11
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          42,
+          191,
+          54,
+          202
+        ]
+      },
+      "rect": [
+        984,
+        672,
+        16,
+        16
+      ],
+      "cellules": [
+        123,
+        84,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_08_04",
+      "nom": "Feuillage 08.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        31,
+        14
+      ],
+      "pivot": [
+        15.5,
+        14
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          49,
+          213,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        8,
+        784,
+        32,
+        16
+      ],
+      "cellules": [
+        1,
+        98,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_08_05",
+      "nom": "Feuillage 08.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        96,
+        109
+      ],
+      "pivot": [
+        48.0,
+        109
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          166,
+          37,
+          262,
+          146
+        ]
+      },
+      "rect": [
+        48,
+        784,
+        96,
+        112
+      ],
+      "cellules": [
+        6,
+        98,
+        12,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_08_06",
+      "nom": "Feuillage 08.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        71,
+        20
+      ],
+      "pivot": [
+        35.5,
+        20
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          290,
+          34,
+          361,
+          54
+        ]
+      },
+      "rect": [
+        152,
+        784,
+        72,
+        24
+      ],
+      "cellules": [
+        19,
+        98,
+        9,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_08_07",
+      "nom": "Feuillage 08.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        88,
+        57
+      ],
+      "pivot": [
+        44.0,
+        57
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          282,
+          89,
+          370,
+          146
+        ]
+      },
+      "rect": [
+        232,
+        784,
+        88,
+        64
+      ],
+      "cellules": [
+        29,
+        98,
+        11,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_08_08",
+      "nom": "Feuillage 08.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        72
+      ],
+      "pivot": [
+        38.0,
+        72
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          387,
+          37,
+          463,
+          109
+        ]
+      },
+      "rect": [
+        328,
+        784,
+        80,
+        72
+      ],
+      "cellules": [
+        41,
+        98,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_08_09",
+      "nom": "Feuillage 08.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        28,
+        38
+      ],
+      "pivot": [
+        14.0,
+        38
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          451,
+          68,
+          479,
+          106
+        ]
+      },
+      "rect": [
+        416,
+        784,
+        32,
+        40
+      ],
+      "cellules": [
+        52,
+        98,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_08_10",
+      "nom": "Feuillage 08.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        66,
+        60
+      ],
+      "pivot": [
+        33.0,
+        60
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          498,
+          116,
+          564,
+          176
+        ]
+      },
+      "rect": [
+        456,
+        784,
+        72,
+        64
+      ],
+      "cellules": [
+        57,
+        98,
+        9,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_08_11",
+      "nom": "Feuillage 08.11",
+      "groupe": "vegetation",
+      "taille_originale": [
+        44,
+        36
+      ],
+      "pivot": [
+        22.0,
+        36
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          78,
+          287,
+          122,
+          323
+        ]
+      },
+      "rect": [
+        536,
+        784,
+        48,
+        40
+      ],
+      "cellules": [
+        67,
+        98,
+        6,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_08_12",
+      "nom": "Feuillage 08.12",
+      "groupe": "vegetation",
+      "taille_originale": [
+        61,
+        49
+      ],
+      "pivot": [
+        30.5,
+        49
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          365,
+          316,
+          426,
+          365
+        ]
+      },
+      "rect": [
+        592,
+        784,
+        64,
+        56
+      ],
+      "cellules": [
+        74,
+        98,
+        8,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_08_13",
+      "nom": "Feuillage 08.13",
+      "groupe": "vegetation",
+      "taille_originale": [
+        58,
+        43
+      ],
+      "pivot": [
+        29.0,
+        43
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          226,
+          323,
+          284,
+          366
+        ]
+      },
+      "rect": [
+        664,
+        784,
+        64,
+        48
+      ],
+      "cellules": [
+        83,
+        98,
+        8,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_08_14",
+      "nom": "Feuillage 08.14",
+      "groupe": "vegetation",
+      "taille_originale": [
+        45,
+        36
+      ],
+      "pivot": [
+        22.5,
+        36
+      ],
+      "origine": {
+        "salle": "08",
+        "rectangle": [
+          526,
+          287,
+          571,
+          323
+        ]
+      },
+      "rect": [
+        736,
+        784,
+        48,
+        40
+      ],
+      "cellules": [
+        92,
+        98,
+        6,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_09_01",
+      "nom": "Feuillage 09.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        26,
+        23
+      ],
+      "pivot": [
+        13.0,
+        23
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          131,
+          69,
+          157,
+          92
+        ]
+      },
+      "rect": [
+        792,
+        784,
+        32,
+        24
+      ],
+      "cellules": [
+        99,
+        98,
+        4,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_09_02",
+      "nom": "Feuillage 09.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        99
+      ],
+      "pivot": [
+        33.5,
+        99
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          13,
+          128,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        832,
+        784,
+        72,
+        104
+      ],
+      "cellules": [
+        104,
+        98,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_09_03",
+      "nom": "Feuillage 09.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        81,
+        109
+      ],
+      "pivot": [
+        40.5,
+        109
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          181,
+          37,
+          262,
+          146
+        ]
+      },
+      "rect": [
+        912,
+        784,
+        88,
+        112
+      ],
+      "cellules": [
+        114,
+        98,
+        11,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_09_04",
+      "nom": "Feuillage 09.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        33,
+        70
+      ],
+      "pivot": [
+        16.5,
+        70
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          166,
+          68,
+          199,
+          138
+        ]
+      },
+      "rect": [
+        8,
+        904,
+        40,
+        72
+      ],
+      "cellules": [
+        1,
+        113,
+        5,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_09_05",
+      "nom": "Feuillage 09.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        110
+      ],
+      "pivot": [
+        38.0,
+        110
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          387,
+          36,
+          463,
+          146
+        ]
+      },
+      "rect": [
+        56,
+        904,
+        80,
+        112
+      ],
+      "cellules": [
+        7,
+        113,
+        10,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_09_06",
+      "nom": "Feuillage 09.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        37,
+        69
+      ],
+      "pivot": [
+        18.5,
+        69
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          450,
+          68,
+          487,
+          137
+        ]
+      },
+      "rect": [
+        144,
+        904,
+        40,
+        72
+      ],
+      "cellules": [
+        18,
+        113,
+        5,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_09_07",
+      "nom": "Feuillage 09.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        24,
+        22
+      ],
+      "pivot": [
+        12.0,
+        22
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          494,
+          70,
+          518,
+          92
+        ]
+      },
+      "rect": [
+        192,
+        904,
+        24,
+        24
+      ],
+      "cellules": [
+        24,
+        113,
+        3,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_09_08",
+      "nom": "Feuillage 09.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        100
+      ],
+      "pivot": [
+        33.5,
+        100
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          570,
+          127,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        224,
+        904,
+        72,
+        104
+      ],
+      "cellules": [
+        28,
+        113,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_09_09",
+      "nom": "Feuillage 09.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        115,
+        44
+      ],
+      "pivot": [
+        57.5,
+        44
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          107,
+          310,
+          222,
+          354
+        ]
+      },
+      "rect": [
+        304,
+        904,
+        120,
+        48
+      ],
+      "cellules": [
+        38,
+        113,
+        15,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_09_10",
+      "nom": "Feuillage 09.10",
+      "groupe": "vegetation",
+      "taille_originale": [
+        52,
+        22
+      ],
+      "pivot": [
+        26.0,
+        22
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          222,
+          335,
+          274,
+          357
+        ]
+      },
+      "rect": [
+        432,
+        904,
+        56,
+        24
+      ],
+      "cellules": [
+        54,
+        113,
+        7,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_09_11",
+      "nom": "Feuillage 09.11",
+      "groupe": "vegetation",
+      "taille_originale": [
+        50,
+        21
+      ],
+      "pivot": [
+        25.0,
+        21
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          376,
+          336,
+          426,
+          357
+        ]
+      },
+      "rect": [
+        496,
+        904,
+        56,
+        24
+      ],
+      "cellules": [
+        62,
+        113,
+        7,
+        3
+      ]
+    },
+    {
+      "id": "vegetation_09_12",
+      "nom": "Feuillage 09.12",
+      "groupe": "vegetation",
+      "taille_originale": [
+        116,
+        44
+      ],
+      "pivot": [
+        58.0,
+        44
+      ],
+      "origine": {
+        "salle": "09",
+        "rectangle": [
+          426,
+          310,
+          542,
+          354
+        ]
+      },
+      "rect": [
+        560,
+        904,
+        120,
+        48
+      ],
+      "cellules": [
+        70,
+        113,
+        15,
+        6
+      ]
+    },
+    {
+      "id": "vegetation_12_01",
+      "nom": "Feuillage 12.01",
+      "groupe": "vegetation",
+      "taille_originale": [
+        69,
+        55
+      ],
+      "pivot": [
+        34.5,
+        55
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          97,
+          70,
+          166,
+          125
+        ]
+      },
+      "rect": [
+        688,
+        904,
+        72,
+        56
+      ],
+      "cellules": [
+        86,
+        113,
+        9,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_12_02",
+      "nom": "Feuillage 12.02",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        97
+      ],
+      "pivot": [
+        33.5,
+        97
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          13,
+          130,
+          80,
+          227
+        ]
+      },
+      "rect": [
+        768,
+        904,
+        72,
+        104
+      ],
+      "cellules": [
+        96,
+        113,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_12_03",
+      "nom": "Feuillage 12.03",
+      "groupe": "vegetation",
+      "taille_originale": [
+        81,
+        52
+      ],
+      "pivot": [
+        40.5,
+        52
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          181,
+          37,
+          262,
+          89
+        ]
+      },
+      "rect": [
+        848,
+        904,
+        88,
+        56
+      ],
+      "cellules": [
+        106,
+        113,
+        11,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_12_04",
+      "nom": "Feuillage 12.04",
+      "groupe": "vegetation",
+      "taille_originale": [
+        22,
+        69
+      ],
+      "pivot": [
+        11.0,
+        69
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          166,
+          68,
+          188,
+          137
+        ]
+      },
+      "rect": [
+        944,
+        904,
+        24,
+        72
+      ],
+      "cellules": [
+        118,
+        113,
+        3,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_12_05",
+      "nom": "Feuillage 12.05",
+      "groupe": "vegetation",
+      "taille_originale": [
+        76,
+        52
+      ],
+      "pivot": [
+        38.0,
+        52
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          387,
+          37,
+          463,
+          89
+        ]
+      },
+      "rect": [
+        8,
+        1024,
+        80,
+        56
+      ],
+      "cellules": [
+        1,
+        128,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_12_06",
+      "nom": "Feuillage 12.06",
+      "groupe": "vegetation",
+      "taille_originale": [
+        26,
+        38
+      ],
+      "pivot": [
+        13.0,
+        38
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          468,
+          68,
+          494,
+          106
+        ]
+      },
+      "rect": [
+        96,
+        1024,
+        32,
+        40
+      ],
+      "cellules": [
+        12,
+        128,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "vegetation_12_07",
+      "nom": "Feuillage 12.07",
+      "groupe": "vegetation",
+      "taille_originale": [
+        13,
+        11
+      ],
+      "pivot": [
+        6.5,
+        11
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          474,
+          117,
+          487,
+          128
+        ]
+      },
+      "rect": [
+        136,
+        1024,
+        16,
+        16
+      ],
+      "cellules": [
+        17,
+        128,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "vegetation_12_08",
+      "nom": "Feuillage 12.08",
+      "groupe": "vegetation",
+      "taille_originale": [
+        59,
+        54
+      ],
+      "pivot": [
+        29.5,
+        54
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          494,
+          70,
+          553,
+          124
+        ]
+      },
+      "rect": [
+        160,
+        1024,
+        64,
+        56
+      ],
+      "cellules": [
+        20,
+        128,
+        8,
+        7
+      ]
+    },
+    {
+      "id": "vegetation_12_09",
+      "nom": "Feuillage 12.09",
+      "groupe": "vegetation",
+      "taille_originale": [
+        67,
+        98
+      ],
+      "pivot": [
+        33.5,
+        98
+      ],
+      "origine": {
+        "salle": "12",
+        "rectangle": [
+          570,
+          129,
+          637,
+          227
+        ]
+      },
+      "rect": [
+        232,
+        1024,
+        72,
+        104
+      ],
+      "cellules": [
+        29,
+        128,
+        9,
+        13
+      ]
+    },
+    {
+      "id": "embleme_oeuf_quatre_ailes",
+      "nom": "Œuf à quatre ailes",
+      "groupe": "ornements",
+      "taille_originale": [
+        64,
+        56
+      ],
+      "pivot": [
+        32.0,
+        56
+      ],
+      "origine": {
+        "ailes": 4
+      },
+      "rect": [
+        312,
+        1024,
+        64,
+        56
+      ],
+      "cellules": [
+        39,
+        128,
+        8,
+        7
+      ]
+    }
+  ]
+}

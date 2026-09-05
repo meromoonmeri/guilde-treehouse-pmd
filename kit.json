@@ -1,0 +1,683 @@
+{
+  "titre": "Guilde Treehouse — passages ouverts PMD",
+  "grille_px": 8,
+  "animation": false,
+  "ambiances": [
+    "jour",
+    "nuit",
+    "crepuscule",
+    "aube",
+    "soir",
+    "orageux"
+  ],
+  "regles_acces": {
+    "source": "premier pack, fonds vides",
+    "portes_autorisees": [
+      {
+        "salle": "02",
+        "orientation": "N",
+        "destination": "12",
+        "description": "Porte nord fermée du bureau du maître, seule porte visible."
+      }
+    ],
+    "passages": {
+      "01": [
+        "N",
+        "S"
+      ],
+      "02": [
+        "O",
+        "S",
+        "échelle N",
+        "porte N vers 12"
+      ],
+      "03": [
+        "O",
+        "E",
+        "S",
+        "échelle N"
+      ],
+      "04": [
+        "E"
+      ],
+      "05": [
+        "E"
+      ],
+      "06": [
+        "S"
+      ],
+      "07": [
+        "O"
+      ],
+      "08": [
+        "E"
+      ],
+      "09": [
+        "N"
+      ],
+      "10": [
+        "O"
+      ],
+      "11": [
+        "O"
+      ],
+      "12": [
+        "S"
+      ]
+    },
+    "interdictions": [
+      "Aucun battant aux accès ordinaires",
+      "Aucun portique ajouté aux côtés ou au sud",
+      "Pas de barre noire barrant le sol",
+      "Pas de porte sud visible",
+      "Pas de fausses portes de fond dans les chambres latérales"
+    ],
+    "fenetres": "Cadres conservés, vues sur calque extérieur séparé",
+    "grille": 8,
+    "images_fixes": true,
+    "guides": {
+      "01": "guides/01_guide.png",
+      "02": "guides/02_guide.png",
+      "03": "guides/03_guide.png",
+      "04": "guides/04_guide.png",
+      "05": "guides/05_guide.png",
+      "06": "guides/06_guide.png",
+      "08": "guides/08_guide.png",
+      "09": "guides/09_guide.png",
+      "12": "guides/12_guide.png"
+    }
+  },
+  "calques": [
+    {
+      "id": "00_exterieur",
+      "nom": "Paysage extérieur interchangeable"
+    },
+    {
+      "id": "01_sol",
+      "nom": "Sol et continuité des passages"
+    },
+    {
+      "id": "02_structure",
+      "nom": "Structure, murs et ouvertures"
+    },
+    {
+      "id": "03_cadres_fenetres",
+      "nom": "Cadres de fenêtres — sans paysage"
+    },
+    {
+      "id": "04_tableaux",
+      "nom": "Contenu des tableaux encastrés"
+    },
+    {
+      "id": "05_porte_maitre",
+      "nom": "Porte nord du bureau — hall uniquement"
+    },
+    {
+      "id": "06_decorations",
+      "nom": "Décorations — vide"
+    },
+    {
+      "id": "07_objets",
+      "nom": "Objets — vide"
+    },
+    {
+      "id": "08_ombres_acces",
+      "nom": "Ombres de contact des accès"
+    },
+    {
+      "id": "09_eclairage_fixe",
+      "nom": "Éclairage complémentaire — vide"
+    },
+    {
+      "id": "10_bordure_avant",
+      "nom": "Bordure avant interrompue aux passages"
+    }
+  ],
+  "salles": [
+    {
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "dossier": "01_accueil",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "N",
+        "S"
+      ],
+      "fenetres": [],
+      "trous_fenetres": 0,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/01_accueil/salle_jour.png",
+          "base": "salles/01_accueil/base_jour_transparente.png",
+          "magenta": "salles/01_accueil/base_jour_magenta.png",
+          "aseprite": "salles/01_accueil/01_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/01_accueil/salle_nuit.png",
+          "base": "salles/01_accueil/base_nuit_transparente.png",
+          "magenta": "salles/01_accueil/base_nuit_magenta.png",
+          "aseprite": "salles/01_accueil/01_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "02",
+      "nom": "Hall des missions",
+      "dossier": "02_hall_missions",
+      "dimensions": [
+        1280,
+        544
+      ],
+      "cellules": [
+        160,
+        68
+      ],
+      "acces": [
+        "O",
+        "S",
+        "échelle N",
+        "porte N vers 12"
+      ],
+      "fenetres": [
+        [
+          68,
+          145,
+          114,
+          223
+        ],
+        [
+          1166,
+          145,
+          1213,
+          225
+        ]
+      ],
+      "trous_fenetres": 2497,
+      "porte_nord": [
+        1019,
+        77,
+        1093,
+        214
+      ],
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/02_hall_missions/salle_jour.png",
+          "base": "salles/02_hall_missions/base_jour_transparente.png",
+          "magenta": "salles/02_hall_missions/base_jour_magenta.png",
+          "aseprite": "salles/02_hall_missions/02_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/02_hall_missions/salle_nuit.png",
+          "base": "salles/02_hall_missions/base_nuit_transparente.png",
+          "magenta": "salles/02_hall_missions/base_nuit_magenta.png",
+          "aseprite": "salles/02_hall_missions/02_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "03",
+      "nom": "Grande salle commune",
+      "dossier": "03_salle_commune",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "O",
+        "E",
+        "S",
+        "échelle N"
+      ],
+      "fenetres": [
+        [
+          72,
+          105,
+          119,
+          186
+        ],
+        [
+          158,
+          105,
+          267,
+          178
+        ],
+        [
+          531,
+          105,
+          578,
+          185
+        ]
+      ],
+      "trous_fenetres": 6954,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/03_salle_commune/salle_jour.png",
+          "base": "salles/03_salle_commune/base_jour_transparente.png",
+          "magenta": "salles/03_salle_commune/base_jour_magenta.png",
+          "aseprite": "salles/03_salle_commune/03_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/03_salle_commune/salle_nuit.png",
+          "base": "salles/03_salle_commune/base_nuit_transparente.png",
+          "magenta": "salles/03_salle_commune/base_nuit_magenta.png",
+          "aseprite": "salles/03_salle_commune/03_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "04",
+      "nom": "Cantine",
+      "dossier": "04_cantine",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "E"
+      ],
+      "fenetres": [
+        [
+          187,
+          71,
+          275,
+          148
+        ],
+        [
+          375,
+          71,
+          462,
+          148
+        ]
+      ],
+      "trous_fenetres": 6196,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/04_cantine/salle_jour.png",
+          "base": "salles/04_cantine/base_jour_transparente.png",
+          "magenta": "salles/04_cantine/base_jour_magenta.png",
+          "aseprite": "salles/04_cantine/04_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/04_cantine/salle_nuit.png",
+          "base": "salles/04_cantine/base_nuit_transparente.png",
+          "magenta": "salles/04_cantine/base_nuit_magenta.png",
+          "aseprite": "salles/04_cantine/04_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "dossier": "05_chambre_equipe",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "E"
+      ],
+      "fenetres": [
+        [
+          73,
+          107,
+          120,
+          178
+        ]
+      ],
+      "trous_fenetres": 1002,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/05_chambre_equipe/salle_jour.png",
+          "base": "salles/05_chambre_equipe/base_jour_transparente.png",
+          "magenta": "salles/05_chambre_equipe/base_jour_magenta.png",
+          "aseprite": "salles/05_chambre_equipe/05_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/05_chambre_equipe/salle_nuit.png",
+          "base": "salles/05_chambre_equipe/base_nuit_transparente.png",
+          "magenta": "salles/05_chambre_equipe/base_nuit_magenta.png",
+          "aseprite": "salles/05_chambre_equipe/05_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "dossier": "06_chambre_veilleur",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "S"
+      ],
+      "fenetres": [
+        [
+          282,
+          58,
+          367,
+          140
+        ]
+      ],
+      "trous_fenetres": 3166,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/06_chambre_veilleur/salle_jour.png",
+          "base": "salles/06_chambre_veilleur/base_jour_transparente.png",
+          "magenta": "salles/06_chambre_veilleur/base_jour_magenta.png",
+          "aseprite": "salles/06_chambre_veilleur/06_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/06_chambre_veilleur/salle_nuit.png",
+          "base": "salles/06_chambre_veilleur/base_nuit_transparente.png",
+          "magenta": "salles/06_chambre_veilleur/base_nuit_magenta.png",
+          "aseprite": "salles/06_chambre_veilleur/06_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "dossier": "07_chambre_residents",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "O"
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          575,
+          178
+        ]
+      ],
+      "trous_fenetres": 1002,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/07_chambre_residents/salle_jour.png",
+          "base": "salles/07_chambre_residents/base_jour_transparente.png",
+          "magenta": "salles/07_chambre_residents/base_jour_magenta.png",
+          "aseprite": "salles/07_chambre_residents/07_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/07_chambre_residents/salle_nuit.png",
+          "base": "salles/07_chambre_residents/base_nuit_transparente.png",
+          "magenta": "salles/07_chambre_residents/base_nuit_magenta.png",
+          "aseprite": "salles/07_chambre_residents/07_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "dossier": "08_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "E"
+      ],
+      "fenetres": [
+        [
+          72,
+          101,
+          130,
+          192
+        ]
+      ],
+      "trous_fenetres": 951,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/08_dortoir_trio/salle_jour.png",
+          "base": "salles/08_dortoir_trio/base_jour_transparente.png",
+          "magenta": "salles/08_dortoir_trio/base_jour_magenta.png",
+          "aseprite": "salles/08_dortoir_trio/08_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/08_dortoir_trio/salle_nuit.png",
+          "base": "salles/08_dortoir_trio/base_nuit_transparente.png",
+          "magenta": "salles/08_dortoir_trio/base_nuit_magenta.png",
+          "aseprite": "salles/08_dortoir_trio/08_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "09",
+      "nom": "Grand dortoir",
+      "dossier": "09_dortoir_quatre",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "N"
+      ],
+      "fenetres": [
+        [
+          86,
+          107,
+          123,
+          155
+        ],
+        [
+          526,
+          107,
+          563,
+          156
+        ]
+      ],
+      "trous_fenetres": 1416,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/09_dortoir_quatre/salle_jour.png",
+          "base": "salles/09_dortoir_quatre/base_jour_transparente.png",
+          "magenta": "salles/09_dortoir_quatre/base_jour_magenta.png",
+          "aseprite": "salles/09_dortoir_quatre/09_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/09_dortoir_quatre/salle_nuit.png",
+          "base": "salles/09_dortoir_quatre/base_nuit_transparente.png",
+          "magenta": "salles/09_dortoir_quatre/base_nuit_magenta.png",
+          "aseprite": "salles/09_dortoir_quatre/09_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "dossier": "10_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "O"
+      ],
+      "fenetres": [
+        [
+          518,
+          101,
+          576,
+          192
+        ]
+      ],
+      "trous_fenetres": 951,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/10_dortoir_trio/salle_jour.png",
+          "base": "salles/10_dortoir_trio/base_jour_transparente.png",
+          "magenta": "salles/10_dortoir_trio/base_jour_magenta.png",
+          "aseprite": "salles/10_dortoir_trio/10_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/10_dortoir_trio/salle_nuit.png",
+          "base": "salles/10_dortoir_trio/base_nuit_transparente.png",
+          "magenta": "salles/10_dortoir_trio/base_nuit_magenta.png",
+          "aseprite": "salles/10_dortoir_trio/10_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "dossier": "11_chambre_eclaireurs",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "O"
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          575,
+          178
+        ]
+      ],
+      "trous_fenetres": 1002,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/11_chambre_eclaireurs/salle_jour.png",
+          "base": "salles/11_chambre_eclaireurs/base_jour_transparente.png",
+          "magenta": "salles/11_chambre_eclaireurs/base_jour_magenta.png",
+          "aseprite": "salles/11_chambre_eclaireurs/11_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/11_chambre_eclaireurs/salle_nuit.png",
+          "base": "salles/11_chambre_eclaireurs/base_nuit_transparente.png",
+          "magenta": "salles/11_chambre_eclaireurs/base_nuit_magenta.png",
+          "aseprite": "salles/11_chambre_eclaireurs/11_nuit.aseprite"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "nom": "Salle du chef",
+      "dossier": "12_salle_chef",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "acces": [
+        "S"
+      ],
+      "fenetres": [
+        [
+          74,
+          104,
+          119,
+          179
+        ],
+        [
+          531,
+          103,
+          576,
+          178
+        ]
+      ],
+      "trous_fenetres": 2095,
+      "porte_nord": null,
+      "objets": [],
+      "decorations": [],
+      "fichiers": {
+        "jour": {
+          "png": "salles/12_salle_chef/salle_jour.png",
+          "base": "salles/12_salle_chef/base_jour_transparente.png",
+          "magenta": "salles/12_salle_chef/base_jour_magenta.png",
+          "aseprite": "salles/12_salle_chef/12_jour.aseprite"
+        },
+        "nuit": {
+          "png": "salles/12_salle_chef/salle_nuit.png",
+          "base": "salles/12_salle_chef/base_nuit_transparente.png",
+          "magenta": "salles/12_salle_chef/base_nuit_magenta.png",
+          "aseprite": "salles/12_salle_chef/12_nuit.aseprite"
+        }
+      }
+    }
+  ]
+}

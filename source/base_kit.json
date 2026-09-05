@@ -1,0 +1,560 @@
+{
+  "base": "Premier pack Guilde Treehouse, retouché pour un kit vide",
+  "animation": false,
+  "grille_px": 8,
+  "calques": [
+    {
+      "id": "01_sol",
+      "nom": "Sol"
+    },
+    {
+      "id": "02_structure",
+      "nom": "Murs, structure et ouvertures"
+    },
+    {
+      "id": "03_fenetres",
+      "nom": "Fenêtres et vitrages"
+    },
+    {
+      "id": "04_tableaux_quetes",
+      "nom": "Tableaux encastrés — hall"
+    },
+    {
+      "id": "05_decorations",
+      "nom": "Décorations — vide"
+    },
+    {
+      "id": "06_objets",
+      "nom": "Objets — vide"
+    },
+    {
+      "id": "07_eclairage_fixe",
+      "nom": "Éclairage fixe"
+    },
+    {
+      "id": "08_bordure_avant",
+      "nom": "Bordure de premier plan"
+    }
+  ],
+  "salles": [
+    {
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "dossier": "01_accueil",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "N": "terrasse",
+        "S": "02"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/01_accueil/salle_vide_jour.png",
+          "aseprite": "salles/01_accueil/01_jour_statique.aseprite",
+          "tiled": "tiled/01_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/01_accueil/salle_vide_nuit.png",
+          "aseprite": "salles/01_accueil/01_nuit_statique.aseprite",
+          "tiled": "tiled/01_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "02",
+      "nom": "Hall des missions",
+      "dossier": "02_hall_missions",
+      "dimensions": [
+        1280,
+        544
+      ],
+      "cellules": [
+        160,
+        68
+      ],
+      "fenetres": [
+        [
+          68,
+          145,
+          113,
+          222
+        ],
+        [
+          1167,
+          145,
+          1212,
+          219
+        ]
+      ],
+      "niches_quetes": [
+        [
+          371,
+          99,
+          518,
+          175
+        ],
+        [
+          781,
+          99,
+          927,
+          175
+        ]
+      ],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "échelle N": "01",
+        "S": "03"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/02_hall_missions/salle_vide_jour.png",
+          "aseprite": "salles/02_hall_missions/02_jour_statique.aseprite",
+          "tiled": "tiled/02_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/02_hall_missions/salle_vide_nuit.png",
+          "aseprite": "salles/02_hall_missions/02_nuit_statique.aseprite",
+          "tiled": "tiled/02_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "03",
+      "nom": "Grande salle commune",
+      "dossier": "03_salle_commune",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          74,
+          105,
+          119,
+          184
+        ],
+        [
+          159,
+          105,
+          267,
+          176
+        ],
+        [
+          531,
+          105,
+          576,
+          184
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "échelle N": "02",
+        "porte NE": "12",
+        "O": "04",
+        "E": "aile des chambres",
+        "S": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/03_salle_commune/salle_vide_jour.png",
+          "aseprite": "salles/03_salle_commune/03_jour_statique.aseprite",
+          "tiled": "tiled/03_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/03_salle_commune/salle_vide_nuit.png",
+          "aseprite": "salles/03_salle_commune/03_nuit_statique.aseprite",
+          "tiled": "tiled/03_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "04",
+      "nom": "Cantine",
+      "dossier": "04_cantine",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          188,
+          72,
+          274,
+          148
+        ],
+        [
+          376,
+          72,
+          462,
+          148
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "E": "03"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/04_cantine/salle_vide_jour.png",
+          "aseprite": "salles/04_cantine/04_jour_statique.aseprite",
+          "tiled": "tiled/04_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/04_cantine/salle_vide_nuit.png",
+          "aseprite": "salles/04_cantine/04_nuit_statique.aseprite",
+          "tiled": "tiled/04_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "dossier": "05_chambre_equipe",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          74,
+          107,
+          120,
+          178
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "E": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/05_chambre_equipe/salle_vide_jour.png",
+          "aseprite": "salles/05_chambre_equipe/05_jour_statique.aseprite",
+          "tiled": "tiled/05_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/05_chambre_equipe/salle_vide_nuit.png",
+          "aseprite": "salles/05_chambre_equipe/05_nuit_statique.aseprite",
+          "tiled": "tiled/05_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "dossier": "06_chambre_veilleur",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          275,
+          52,
+          374,
+          149
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "S": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/06_chambre_veilleur/salle_vide_jour.png",
+          "aseprite": "salles/06_chambre_veilleur/06_jour_statique.aseprite",
+          "tiled": "tiled/06_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/06_chambre_veilleur/salle_vide_nuit.png",
+          "aseprite": "salles/06_chambre_veilleur/06_nuit_statique.aseprite",
+          "tiled": "tiled/06_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "dossier": "07_chambre_residents",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          574,
+          178
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "O": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/07_chambre_residents/salle_vide_jour.png",
+          "aseprite": "salles/07_chambre_residents/07_jour_statique.aseprite",
+          "tiled": "tiled/07_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/07_chambre_residents/salle_vide_nuit.png",
+          "aseprite": "salles/07_chambre_residents/07_nuit_statique.aseprite",
+          "tiled": "tiled/07_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "dossier": "08_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          69,
+          96,
+          131,
+          203
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "E": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/08_dortoir_trio/salle_vide_jour.png",
+          "aseprite": "salles/08_dortoir_trio/08_jour_statique.aseprite",
+          "tiled": "tiled/08_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/08_dortoir_trio/salle_vide_nuit.png",
+          "aseprite": "salles/08_dortoir_trio/08_nuit_statique.aseprite",
+          "tiled": "tiled/08_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "09",
+      "nom": "Grand dortoir",
+      "dossier": "09_dortoir_quatre",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          87,
+          109,
+          116,
+          151
+        ],
+        [
+          533,
+          109,
+          562,
+          151
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "N": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/09_dortoir_quatre/salle_vide_jour.png",
+          "aseprite": "salles/09_dortoir_quatre/09_jour_statique.aseprite",
+          "tiled": "tiled/09_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/09_dortoir_quatre/salle_vide_nuit.png",
+          "aseprite": "salles/09_dortoir_quatre/09_nuit_statique.aseprite",
+          "tiled": "tiled/09_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "dossier": "10_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          517,
+          96,
+          579,
+          203
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "O": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/10_dortoir_trio/salle_vide_jour.png",
+          "aseprite": "salles/10_dortoir_trio/10_jour_statique.aseprite",
+          "tiled": "tiled/10_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/10_dortoir_trio/salle_vide_nuit.png",
+          "aseprite": "salles/10_dortoir_trio/10_nuit_statique.aseprite",
+          "tiled": "tiled/10_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "dossier": "11_chambre_eclaireurs",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          574,
+          178
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "O": "aile des chambres"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/11_chambre_eclaireurs/salle_vide_jour.png",
+          "aseprite": "salles/11_chambre_eclaireurs/11_jour_statique.aseprite",
+          "tiled": "tiled/11_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/11_chambre_eclaireurs/salle_vide_nuit.png",
+          "aseprite": "salles/11_chambre_eclaireurs/11_nuit_statique.aseprite",
+          "tiled": "tiled/11_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "12",
+      "nom": "Salle du chef",
+      "dossier": "12_salle_chef",
+      "dimensions": [
+        648,
+        432
+      ],
+      "cellules": [
+        81,
+        54
+      ],
+      "fenetres": [
+        [
+          74,
+          104,
+          119,
+          180
+        ],
+        [
+          531,
+          104,
+          576,
+          180
+        ]
+      ],
+      "niches_quetes": [],
+      "objets": [],
+      "decorations": [],
+      "entrees_originales": {
+        "S": "03"
+      },
+      "fichiers": {
+        "jour": {
+          "png": "salles/12_salle_chef/salle_vide_jour.png",
+          "aseprite": "salles/12_salle_chef/12_jour_statique.aseprite",
+          "tiled": "tiled/12_jour.tmj"
+        },
+        "nuit": {
+          "png": "salles/12_salle_chef/salle_vide_nuit.png",
+          "aseprite": "salles/12_salle_chef/12_nuit_statique.aseprite",
+          "tiled": "tiled/12_nuit.tmj"
+        }
+      }
+    }
+  ],
+  "base_originale_zip": "Guilde_Treehouse_12_Zones_Jour_Nuit.zip",
+  "base_originale_sha256": "514d91fb4f62af68b943b839fec6e2a7d902a5132fbf00f82c794eb685effefa",
+  "source_originale_modifiee": false
+}

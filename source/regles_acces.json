@@ -1,0 +1,77 @@
+{
+  "source": "premier pack, fonds vides",
+  "portes_autorisees": [
+    {
+      "salle": "02",
+      "orientation": "N",
+      "destination": "12",
+      "description": "Porte nord fermée du bureau du maître, seule porte visible."
+    }
+  ],
+  "passages": {
+    "01": [
+      "N",
+      "S"
+    ],
+    "02": [
+      "O",
+      "S",
+      "échelle N",
+      "porte N vers 12"
+    ],
+    "03": [
+      "O",
+      "E",
+      "S",
+      "échelle N"
+    ],
+    "04": [
+      "E"
+    ],
+    "05": [
+      "E"
+    ],
+    "06": [
+      "S"
+    ],
+    "07": [
+      "O"
+    ],
+    "08": [
+      "E"
+    ],
+    "09": [
+      "N"
+    ],
+    "10": [
+      "O"
+    ],
+    "11": [
+      "O"
+    ],
+    "12": [
+      "S"
+    ]
+  },
+  "interdictions": [
+    "Aucun battant aux accès ordinaires",
+    "Aucun portique ajouté aux côtés ou au sud",
+    "Pas de barre noire barrant le sol",
+    "Pas de porte sud visible",
+    "Pas de fausses portes de fond dans les chambres latérales"
+  ],
+  "fenetres": "Cadres conservés, vues sur calque extérieur séparé",
+  "grille": 8,
+  "images_fixes": true,
+  "guides": {
+    "01": "guides/01_guide.png",
+    "02": "guides/02_guide.png",
+    "03": "guides/03_guide.png",
+    "04": "guides/04_guide.png",
+    "05": "guides/05_guide.png",
+    "06": "guides/06_guide.png",
+    "08": "guides/08_guide.png",
+    "09": "guides/09_guide.png",
+    "12": "guides/12_guide.png"
+  }
+}
