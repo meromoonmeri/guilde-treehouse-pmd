@@ -1,0 +1,273 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "tiledversion": "1.11.0",
+  "name": "objets_nuit",
+  "tilewidth": 96,
+  "tileheight": 96,
+  "tilecount": 20,
+  "columns": 0,
+  "objectalignment": "bottomleft",
+  "tiles": [
+    {
+      "id": 0,
+      "image": "../objets/individuels/banniere_feuille_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 80,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "banniere_feuille"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "image": "../objets/individuels/banniere_guilde_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 48,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "banniere_guilde"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "../objets/individuels/liane_gauche_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "liane_gauche"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "../objets/individuels/guirlande_gauche_nuit.png",
+      "imagewidth": 56,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "guirlande_gauche"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "../objets/individuels/nid_paille_nuit.png",
+      "imagewidth": 56,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "nid_paille"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "../objets/individuels/nid_mousse_nuit.png",
+      "imagewidth": 56,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "nid_mousse"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "../objets/individuels/tapis_ocre_nuit.png",
+      "imagewidth": 72,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "tapis_ocre"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "../objets/individuels/tapis_mauve_nuit.png",
+      "imagewidth": 72,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "tapis_mauve"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "../objets/individuels/coffre_bleu_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "coffre_bleu"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "../objets/individuels/coffre_feuille_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "coffre_feuille"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "../objets/individuels/panier_baies_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "panier_baies"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "../objets/individuels/jarre_feuille_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "jarre_feuille"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "../objets/individuels/sac_explorateur_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "sac_explorateur"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "../objets/individuels/paillasses_roulees_nuit.png",
+      "imagewidth": 48,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "paillasses_roulees"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "../objets/individuels/seau_bois_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "seau_bois"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "../objets/individuels/buches_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "buches"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "../objets/individuels/liane_droite_nuit.png",
+      "imagewidth": 32,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "liane_droite"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "../objets/individuels/guirlande_droite_nuit.png",
+      "imagewidth": 56,
+      "imageheight": 40,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "guirlande_droite"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "../objets/individuels/nid_paille_petit_nuit.png",
+      "imagewidth": 40,
+      "imageheight": 32,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "nid_paille_petit"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "../objets/individuels/tapis_mousse_nuit.png",
+      "imagewidth": 72,
+      "imageheight": 64,
+      "properties": [
+        {
+          "name": "identifiant",
+          "type": "string",
+          "value": "tapis_mousse"
+        }
+      ]
+    }
+  ]
+}

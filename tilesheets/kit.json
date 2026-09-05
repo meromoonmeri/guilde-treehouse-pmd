@@ -1,0 +1,1387 @@
+{
+  "titre": "Guilde Treehouse — kit modulaire",
+  "version": 1,
+  "grille_px": 32,
+  "sous_grille_compatible_px": 8,
+  "palettes": [
+    "jour",
+    "nuit"
+  ],
+  "animation": false,
+  "cellule_objets_px": 96,
+  "objets": [
+    {
+      "id": "banniere_feuille",
+      "nom": "Bannière feuille sur deux montants",
+      "groupe": "mur",
+      "taille": [
+        40,
+        80
+      ],
+      "pivot": [
+        20,
+        76
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 0,
+      "rect_atlas": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/banniere_feuille_jour.png",
+          "ombre": "objets/ombres/banniere_feuille_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/banniere_feuille_nuit.png",
+          "ombre": "objets/ombres/banniere_feuille_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "banniere_guilde",
+      "nom": "Bannière verte et or",
+      "groupe": "mur",
+      "taille": [
+        40,
+        48
+      ],
+      "pivot": [
+        20,
+        44
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 1,
+      "rect_atlas": [
+        96,
+        0,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/banniere_guilde_jour.png",
+          "ombre": "objets/ombres/banniere_guilde_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/banniere_guilde_nuit.png",
+          "ombre": "objets/ombres/banniere_guilde_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "liane_gauche",
+      "nom": "Liane feuillue gauche",
+      "groupe": "mur",
+      "taille": [
+        32,
+        64
+      ],
+      "pivot": [
+        16,
+        60
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 2,
+      "rect_atlas": [
+        192,
+        0,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/liane_gauche_jour.png",
+          "ombre": "objets/ombres/liane_gauche_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/liane_gauche_nuit.png",
+          "ombre": "objets/ombres/liane_gauche_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "guirlande_gauche",
+      "nom": "Guirlande de lierre gauche",
+      "groupe": "mur",
+      "taille": [
+        56,
+        40
+      ],
+      "pivot": [
+        28,
+        36
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 3,
+      "rect_atlas": [
+        288,
+        0,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/guirlande_gauche_jour.png",
+          "ombre": "objets/ombres/guirlande_gauche_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/guirlande_gauche_nuit.png",
+          "ombre": "objets/ombres/guirlande_gauche_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "nid_paille",
+      "nom": "Paillasse de paille dorée",
+      "groupe": "sol",
+      "taille": [
+        56,
+        40
+      ],
+      "pivot": [
+        28,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 4,
+      "rect_atlas": [
+        0,
+        96,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/nid_paille_jour.png",
+          "ombre": "objets/ombres/nid_paille_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/nid_paille_nuit.png",
+          "ombre": "objets/ombres/nid_paille_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "nid_mousse",
+      "nom": "Paillasse de mousse",
+      "groupe": "sol",
+      "taille": [
+        56,
+        40
+      ],
+      "pivot": [
+        28,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 5,
+      "rect_atlas": [
+        96,
+        96,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/nid_mousse_jour.png",
+          "ombre": "objets/ombres/nid_mousse_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/nid_mousse_nuit.png",
+          "ombre": "objets/ombres/nid_mousse_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "tapis_ocre",
+      "nom": "Tapis tissé ocre",
+      "groupe": "tapis",
+      "taille": [
+        72,
+        64
+      ],
+      "pivot": [
+        36,
+        60
+      ],
+      "ancrage": "bas-centre",
+      "index": 6,
+      "rect_atlas": [
+        192,
+        96,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/tapis_ocre_jour.png",
+          "ombre": "objets/ombres/tapis_ocre_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/tapis_ocre_nuit.png",
+          "ombre": "objets/ombres/tapis_ocre_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "tapis_mauve",
+      "nom": "Tapis tissé mauve",
+      "groupe": "tapis",
+      "taille": [
+        72,
+        64
+      ],
+      "pivot": [
+        36,
+        60
+      ],
+      "ancrage": "bas-centre",
+      "index": 7,
+      "rect_atlas": [
+        288,
+        96,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/tapis_mauve_jour.png",
+          "ombre": "objets/ombres/tapis_mauve_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/tapis_mauve_nuit.png",
+          "ombre": "objets/ombres/tapis_mauve_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "coffre_bleu",
+      "nom": "Coffre cerclé bleu",
+      "groupe": "sol",
+      "taille": [
+        40,
+        40
+      ],
+      "pivot": [
+        20,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 8,
+      "rect_atlas": [
+        0,
+        192,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/coffre_bleu_jour.png",
+          "ombre": "objets/ombres/coffre_bleu_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/coffre_bleu_nuit.png",
+          "ombre": "objets/ombres/coffre_bleu_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "coffre_feuille",
+      "nom": "Coffre de bois et feuille",
+      "groupe": "sol",
+      "taille": [
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        28
+      ],
+      "ancrage": "bas-centre",
+      "index": 9,
+      "rect_atlas": [
+        96,
+        192,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/coffre_feuille_jour.png",
+          "ombre": "objets/ombres/coffre_feuille_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/coffre_feuille_nuit.png",
+          "ombre": "objets/ombres/coffre_feuille_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "panier_baies",
+      "nom": "Panier de baies",
+      "groupe": "sol",
+      "taille": [
+        40,
+        40
+      ],
+      "pivot": [
+        20,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 10,
+      "rect_atlas": [
+        192,
+        192,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/panier_baies_jour.png",
+          "ombre": "objets/ombres/panier_baies_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/panier_baies_nuit.png",
+          "ombre": "objets/ombres/panier_baies_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "jarre_feuille",
+      "nom": "Jarre à bouchon feuille",
+      "groupe": "sol",
+      "taille": [
+        32,
+        40
+      ],
+      "pivot": [
+        16,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 11,
+      "rect_atlas": [
+        288,
+        192,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/jarre_feuille_jour.png",
+          "ombre": "objets/ombres/jarre_feuille_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/jarre_feuille_nuit.png",
+          "ombre": "objets/ombres/jarre_feuille_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "sac_explorateur",
+      "nom": "Sac et carte roulée",
+      "groupe": "sol",
+      "taille": [
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        28
+      ],
+      "ancrage": "bas-centre",
+      "index": 12,
+      "rect_atlas": [
+        0,
+        288,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/sac_explorateur_jour.png",
+          "ombre": "objets/ombres/sac_explorateur_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/sac_explorateur_nuit.png",
+          "ombre": "objets/ombres/sac_explorateur_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "paillasses_roulees",
+      "nom": "Paillasses roulées",
+      "groupe": "sol",
+      "taille": [
+        48,
+        40
+      ],
+      "pivot": [
+        24,
+        36
+      ],
+      "ancrage": "bas-centre",
+      "index": 13,
+      "rect_atlas": [
+        96,
+        288,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/paillasses_roulees_jour.png",
+          "ombre": "objets/ombres/paillasses_roulees_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/paillasses_roulees_nuit.png",
+          "ombre": "objets/ombres/paillasses_roulees_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "seau_bois",
+      "nom": "Seau de bois",
+      "groupe": "sol",
+      "taille": [
+        32,
+        32
+      ],
+      "pivot": [
+        16,
+        28
+      ],
+      "ancrage": "bas-centre",
+      "index": 14,
+      "rect_atlas": [
+        192,
+        288,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/seau_bois_jour.png",
+          "ombre": "objets/ombres/seau_bois_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/seau_bois_nuit.png",
+          "ombre": "objets/ombres/seau_bois_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "buches",
+      "nom": "Fagot de bûches",
+      "groupe": "sol",
+      "taille": [
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        28
+      ],
+      "ancrage": "bas-centre",
+      "index": 15,
+      "rect_atlas": [
+        288,
+        288,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/buches_jour.png",
+          "ombre": "objets/ombres/buches_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/buches_nuit.png",
+          "ombre": "objets/ombres/buches_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "liane_droite",
+      "nom": "Liane feuillue droite",
+      "groupe": "mur",
+      "taille": [
+        32,
+        64
+      ],
+      "pivot": [
+        16,
+        60
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 16,
+      "rect_atlas": [
+        0,
+        384,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/liane_droite_jour.png",
+          "ombre": "objets/ombres/liane_droite_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/liane_droite_nuit.png",
+          "ombre": "objets/ombres/liane_droite_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "guirlande_droite",
+      "nom": "Guirlande de lierre droite",
+      "groupe": "mur",
+      "taille": [
+        56,
+        40
+      ],
+      "pivot": [
+        28,
+        36
+      ],
+      "ancrage": "mur, ancrage à adapter",
+      "index": 17,
+      "rect_atlas": [
+        96,
+        384,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/guirlande_droite_jour.png",
+          "ombre": "objets/ombres/guirlande_droite_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/guirlande_droite_nuit.png",
+          "ombre": "objets/ombres/guirlande_droite_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "nid_paille_petit",
+      "nom": "Petite paillasse",
+      "groupe": "sol",
+      "taille": [
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        28
+      ],
+      "ancrage": "bas-centre",
+      "index": 18,
+      "rect_atlas": [
+        192,
+        384,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/nid_paille_petit_jour.png",
+          "ombre": "objets/ombres/nid_paille_petit_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/nid_paille_petit_nuit.png",
+          "ombre": "objets/ombres/nid_paille_petit_nuit.png"
+        }
+      }
+    },
+    {
+      "id": "tapis_mousse",
+      "nom": "Tapis tissé mousse",
+      "groupe": "tapis",
+      "taille": [
+        72,
+        64
+      ],
+      "pivot": [
+        36,
+        60
+      ],
+      "ancrage": "bas-centre",
+      "index": 19,
+      "rect_atlas": [
+        288,
+        384,
+        96,
+        96
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "objets/individuels/tapis_mousse_jour.png",
+          "ombre": "objets/ombres/tapis_mousse_jour.png"
+        },
+        "nuit": {
+          "png": "objets/individuels/tapis_mousse_nuit.png",
+          "ombre": "objets/ombres/tapis_mousse_nuit.png"
+        }
+      }
+    }
+  ],
+  "parquet": {
+    "tuiles": 32,
+    "variantes_horizontales": 16,
+    "variantes_verticales": 16,
+    "colonnes": 8
+  },
+  "spirales": {
+    "motifs": 16,
+    "taille_motif": [
+      64,
+      64
+    ],
+    "tuiles_par_motif": [
+      2,
+      2
+    ],
+    "tuiles": 64,
+    "transparence": "alpha réel, aucun parquet intégré",
+    "ordre": "au-dessus du parquet, avant les objets"
+  },
+  "architecture": {
+    "tuiles": 48,
+    "configurations": 47,
+    "masques_voisins_sol": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      24,
+      28,
+      32,
+      33,
+      40,
+      41,
+      48,
+      56,
+      64,
+      65,
+      66,
+      67,
+      80,
+      96,
+      97,
+      112,
+      128,
+      130,
+      132,
+      134,
+      144,
+      148,
+      160,
+      176,
+      192,
+      194,
+      208,
+      224,
+      240
+    ],
+    "bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "O": 8,
+      "NE": 16,
+      "SE": 32,
+      "SO": 64,
+      "NO": 128
+    },
+    "contacts": 16,
+    "epaisseur_visible_px": 24
+  },
+  "modules": [
+    {
+      "id": "couloir_horizontal",
+      "nom": "Couloir est-ouest",
+      "cellules": [
+        9,
+        5
+      ],
+      "dimensions": [
+        288,
+        160
+      ],
+      "acces": [
+        {
+          "direction": "E",
+          "ancrage_px": [
+            288,
+            80.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            1,
+            3
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "O",
+          "ancrage_px": [
+            0,
+            80.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            1,
+            3
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/couloir_horizontal/jour.png",
+          "aseprite": "modules/couloir_horizontal/jour.aseprite",
+          "tiled": "modules/couloir_horizontal/jour.tmj",
+          "calques": [
+            "modules/couloir_horizontal/calques/jour/00_parquet.png",
+            "modules/couloir_horizontal/calques/jour/01_structure.png",
+            "modules/couloir_horizontal/calques/jour/02_contacts.png",
+            "modules/couloir_horizontal/calques/jour/03_spirales.png",
+            "modules/couloir_horizontal/calques/jour/04_ombres_objets.png",
+            "modules/couloir_horizontal/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/couloir_horizontal/nuit.png",
+          "aseprite": "modules/couloir_horizontal/nuit.aseprite",
+          "tiled": "modules/couloir_horizontal/nuit.tmj",
+          "calques": [
+            "modules/couloir_horizontal/calques/nuit/00_parquet.png",
+            "modules/couloir_horizontal/calques/nuit/01_structure.png",
+            "modules/couloir_horizontal/calques/nuit/02_contacts.png",
+            "modules/couloir_horizontal/calques/nuit/03_spirales.png",
+            "modules/couloir_horizontal/calques/nuit/04_ombres_objets.png",
+            "modules/couloir_horizontal/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "couloir_vertical",
+      "nom": "Couloir nord-sud",
+      "cellules": [
+        5,
+        9
+      ],
+      "dimensions": [
+        160,
+        288
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            80.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            1,
+            3
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "S",
+          "ancrage_px": [
+            80.0,
+            288
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            1,
+            3
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/couloir_vertical/jour.png",
+          "aseprite": "modules/couloir_vertical/jour.aseprite",
+          "tiled": "modules/couloir_vertical/jour.tmj",
+          "calques": [
+            "modules/couloir_vertical/calques/jour/00_parquet.png",
+            "modules/couloir_vertical/calques/jour/01_structure.png",
+            "modules/couloir_vertical/calques/jour/02_contacts.png",
+            "modules/couloir_vertical/calques/jour/03_spirales.png",
+            "modules/couloir_vertical/calques/jour/04_ombres_objets.png",
+            "modules/couloir_vertical/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/couloir_vertical/nuit.png",
+          "aseprite": "modules/couloir_vertical/nuit.aseprite",
+          "tiled": "modules/couloir_vertical/nuit.tmj",
+          "calques": [
+            "modules/couloir_vertical/calques/nuit/00_parquet.png",
+            "modules/couloir_vertical/calques/nuit/01_structure.png",
+            "modules/couloir_vertical/calques/nuit/02_contacts.png",
+            "modules/couloir_vertical/calques/nuit/03_spirales.png",
+            "modules/couloir_vertical/calques/nuit/04_ombres_objets.png",
+            "modules/couloir_vertical/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "angle_nord_est",
+      "nom": "Angle nord-est",
+      "cellules": [
+        7,
+        7
+      ],
+      "dimensions": [
+        224,
+        224
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            112.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            2,
+            4
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "E",
+          "ancrage_px": [
+            224,
+            112.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            2,
+            4
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/angle_nord_est/jour.png",
+          "aseprite": "modules/angle_nord_est/jour.aseprite",
+          "tiled": "modules/angle_nord_est/jour.tmj",
+          "calques": [
+            "modules/angle_nord_est/calques/jour/00_parquet.png",
+            "modules/angle_nord_est/calques/jour/01_structure.png",
+            "modules/angle_nord_est/calques/jour/02_contacts.png",
+            "modules/angle_nord_est/calques/jour/03_spirales.png",
+            "modules/angle_nord_est/calques/jour/04_ombres_objets.png",
+            "modules/angle_nord_est/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/angle_nord_est/nuit.png",
+          "aseprite": "modules/angle_nord_est/nuit.aseprite",
+          "tiled": "modules/angle_nord_est/nuit.tmj",
+          "calques": [
+            "modules/angle_nord_est/calques/nuit/00_parquet.png",
+            "modules/angle_nord_est/calques/nuit/01_structure.png",
+            "modules/angle_nord_est/calques/nuit/02_contacts.png",
+            "modules/angle_nord_est/calques/nuit/03_spirales.png",
+            "modules/angle_nord_est/calques/nuit/04_ombres_objets.png",
+            "modules/angle_nord_est/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "angle_sud_ouest",
+      "nom": "Angle sud-ouest",
+      "cellules": [
+        7,
+        7
+      ],
+      "dimensions": [
+        224,
+        224
+      ],
+      "acces": [
+        {
+          "direction": "S",
+          "ancrage_px": [
+            112.0,
+            224
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            2,
+            4
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "O",
+          "ancrage_px": [
+            0,
+            112.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            2,
+            4
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/angle_sud_ouest/jour.png",
+          "aseprite": "modules/angle_sud_ouest/jour.aseprite",
+          "tiled": "modules/angle_sud_ouest/jour.tmj",
+          "calques": [
+            "modules/angle_sud_ouest/calques/jour/00_parquet.png",
+            "modules/angle_sud_ouest/calques/jour/01_structure.png",
+            "modules/angle_sud_ouest/calques/jour/02_contacts.png",
+            "modules/angle_sud_ouest/calques/jour/03_spirales.png",
+            "modules/angle_sud_ouest/calques/jour/04_ombres_objets.png",
+            "modules/angle_sud_ouest/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/angle_sud_ouest/nuit.png",
+          "aseprite": "modules/angle_sud_ouest/nuit.aseprite",
+          "tiled": "modules/angle_sud_ouest/nuit.tmj",
+          "calques": [
+            "modules/angle_sud_ouest/calques/nuit/00_parquet.png",
+            "modules/angle_sud_ouest/calques/nuit/01_structure.png",
+            "modules/angle_sud_ouest/calques/nuit/02_contacts.png",
+            "modules/angle_sud_ouest/calques/nuit/03_spirales.png",
+            "modules/angle_sud_ouest/calques/nuit/04_ombres_objets.png",
+            "modules/angle_sud_ouest/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "jonction_t",
+      "nom": "Jonction en T",
+      "cellules": [
+        9,
+        7
+      ],
+      "dimensions": [
+        288,
+        224
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            144.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "E",
+          "ancrage_px": [
+            288,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "O",
+          "ancrage_px": [
+            0,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/jonction_t/jour.png",
+          "aseprite": "modules/jonction_t/jour.aseprite",
+          "tiled": "modules/jonction_t/jour.tmj",
+          "calques": [
+            "modules/jonction_t/calques/jour/00_parquet.png",
+            "modules/jonction_t/calques/jour/01_structure.png",
+            "modules/jonction_t/calques/jour/02_contacts.png",
+            "modules/jonction_t/calques/jour/03_spirales.png",
+            "modules/jonction_t/calques/jour/04_ombres_objets.png",
+            "modules/jonction_t/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/jonction_t/nuit.png",
+          "aseprite": "modules/jonction_t/nuit.aseprite",
+          "tiled": "modules/jonction_t/nuit.tmj",
+          "calques": [
+            "modules/jonction_t/calques/nuit/00_parquet.png",
+            "modules/jonction_t/calques/nuit/01_structure.png",
+            "modules/jonction_t/calques/nuit/02_contacts.png",
+            "modules/jonction_t/calques/nuit/03_spirales.png",
+            "modules/jonction_t/calques/nuit/04_ombres_objets.png",
+            "modules/jonction_t/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "croisement",
+      "nom": "Croisement à quatre branches",
+      "cellules": [
+        9,
+        9
+      ],
+      "dimensions": [
+        288,
+        288
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            144.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "E",
+          "ancrage_px": [
+            288,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "S",
+          "ancrage_px": [
+            144.0,
+            288
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "O",
+          "ancrage_px": [
+            0,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "couloir",
+      "fichiers": {
+        "jour": {
+          "png": "modules/croisement/jour.png",
+          "aseprite": "modules/croisement/jour.aseprite",
+          "tiled": "modules/croisement/jour.tmj",
+          "calques": [
+            "modules/croisement/calques/jour/00_parquet.png",
+            "modules/croisement/calques/jour/01_structure.png",
+            "modules/croisement/calques/jour/02_contacts.png",
+            "modules/croisement/calques/jour/03_spirales.png",
+            "modules/croisement/calques/jour/04_ombres_objets.png",
+            "modules/croisement/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/croisement/nuit.png",
+          "aseprite": "modules/croisement/nuit.aseprite",
+          "tiled": "modules/croisement/nuit.tmj",
+          "calques": [
+            "modules/croisement/calques/nuit/00_parquet.png",
+            "modules/croisement/calques/nuit/01_structure.png",
+            "modules/croisement/calques/nuit/02_contacts.png",
+            "modules/croisement/calques/nuit/03_spirales.png",
+            "modules/croisement/calques/nuit/04_ombres_objets.png",
+            "modules/croisement/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "palier_baies",
+      "nom": "Palier des provisions",
+      "cellules": [
+        11,
+        9
+      ],
+      "dimensions": [
+        352,
+        288
+      ],
+      "acces": [
+        {
+          "direction": "E",
+          "ancrage_px": [
+            352,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "O",
+          "ancrage_px": [
+            0,
+            144.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "salle_intermediaire",
+      "fichiers": {
+        "jour": {
+          "png": "modules/palier_baies/jour.png",
+          "aseprite": "modules/palier_baies/jour.aseprite",
+          "tiled": "modules/palier_baies/jour.tmj",
+          "calques": [
+            "modules/palier_baies/calques/jour/00_parquet.png",
+            "modules/palier_baies/calques/jour/01_structure.png",
+            "modules/palier_baies/calques/jour/02_contacts.png",
+            "modules/palier_baies/calques/jour/03_spirales.png",
+            "modules/palier_baies/calques/jour/04_ombres_objets.png",
+            "modules/palier_baies/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/palier_baies/nuit.png",
+          "aseprite": "modules/palier_baies/nuit.aseprite",
+          "tiled": "modules/palier_baies/nuit.tmj",
+          "calques": [
+            "modules/palier_baies/calques/nuit/00_parquet.png",
+            "modules/palier_baies/calques/nuit/01_structure.png",
+            "modules/palier_baies/calques/nuit/02_contacts.png",
+            "modules/palier_baies/calques/nuit/03_spirales.png",
+            "modules/palier_baies/calques/nuit/04_ombres_objets.png",
+            "modules/palier_baies/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "antichambre",
+      "nom": "Antichambre nord-sud",
+      "cellules": [
+        9,
+        11
+      ],
+      "dimensions": [
+        288,
+        352
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            144.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "S",
+          "ancrage_px": [
+            144.0,
+            352
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            3,
+            5
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "salle_intermediaire",
+      "fichiers": {
+        "jour": {
+          "png": "modules/antichambre/jour.png",
+          "aseprite": "modules/antichambre/jour.aseprite",
+          "tiled": "modules/antichambre/jour.tmj",
+          "calques": [
+            "modules/antichambre/calques/jour/00_parquet.png",
+            "modules/antichambre/calques/jour/01_structure.png",
+            "modules/antichambre/calques/jour/02_contacts.png",
+            "modules/antichambre/calques/jour/03_spirales.png",
+            "modules/antichambre/calques/jour/04_ombres_objets.png",
+            "modules/antichambre/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/antichambre/nuit.png",
+          "aseprite": "modules/antichambre/nuit.aseprite",
+          "tiled": "modules/antichambre/nuit.tmj",
+          "calques": [
+            "modules/antichambre/calques/nuit/00_parquet.png",
+            "modules/antichambre/calques/nuit/01_structure.png",
+            "modules/antichambre/calques/nuit/02_contacts.png",
+            "modules/antichambre/calques/nuit/03_spirales.png",
+            "modules/antichambre/calques/nuit/04_ombres_objets.png",
+            "modules/antichambre/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    },
+    {
+      "id": "halte_explorateurs",
+      "nom": "Halte des explorateurs",
+      "cellules": [
+        11,
+        11
+      ],
+      "dimensions": [
+        352,
+        352
+      ],
+      "acces": [
+        {
+          "direction": "N",
+          "ancrage_px": [
+            176.0,
+            0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            4,
+            6
+          ],
+          "ouvert": true
+        },
+        {
+          "direction": "E",
+          "ancrage_px": [
+            352,
+            176.0
+          ],
+          "largeur_px": 96,
+          "cellules": [
+            4,
+            6
+          ],
+          "ouvert": true
+        }
+      ],
+      "famille": "salle_intermediaire",
+      "fichiers": {
+        "jour": {
+          "png": "modules/halte_explorateurs/jour.png",
+          "aseprite": "modules/halte_explorateurs/jour.aseprite",
+          "tiled": "modules/halte_explorateurs/jour.tmj",
+          "calques": [
+            "modules/halte_explorateurs/calques/jour/00_parquet.png",
+            "modules/halte_explorateurs/calques/jour/01_structure.png",
+            "modules/halte_explorateurs/calques/jour/02_contacts.png",
+            "modules/halte_explorateurs/calques/jour/03_spirales.png",
+            "modules/halte_explorateurs/calques/jour/04_ombres_objets.png",
+            "modules/halte_explorateurs/calques/jour/05_objets.png"
+          ]
+        },
+        "nuit": {
+          "png": "modules/halte_explorateurs/nuit.png",
+          "aseprite": "modules/halte_explorateurs/nuit.aseprite",
+          "tiled": "modules/halte_explorateurs/nuit.tmj",
+          "calques": [
+            "modules/halte_explorateurs/calques/nuit/00_parquet.png",
+            "modules/halte_explorateurs/calques/nuit/01_structure.png",
+            "modules/halte_explorateurs/calques/nuit/02_contacts.png",
+            "modules/halte_explorateurs/calques/nuit/03_spirales.png",
+            "modules/halte_explorateurs/calques/nuit/04_ombres_objets.png",
+            "modules/halte_explorateurs/calques/nuit/05_objets.png"
+          ]
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Les objets et spirales sont optionnels et séparés.",
+    "Les paliers meublés sont des exemples : leurs objets sont des tile objects Tiled déplaçables.",
+    "Les modules ne sont pas insérés dans les 12 salles ; les accès donnent des ancrages pour le faire.",
+    "Le masque sol_praticable ne décide pas des collisions des objets ; intégration moteur à configurer."
+  ]
+}

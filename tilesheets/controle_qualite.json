@@ -1,0 +1,84 @@
+{
+  "grille": 32,
+  "objets": 20,
+  "motifs_spirales": 16,
+  "salles_existantes_intactes": true,
+  "modules": [
+    {
+      "id": "couloir_horizontal",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "couloir_vertical",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "angle_nord_est",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "angle_sud_ouest",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "jonction_t",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "croisement",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "palier_baies",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "antichambre",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    },
+    {
+      "id": "halte_explorateurs",
+      "sol_connecte": true,
+      "acces_px": 96,
+      "PNG_Aseprite_Tiled": "identiques",
+      "calques": 6,
+      "jour_nuit": true
+    }
+  ],
+  "raccord_couloir_palier_pixel_exact": true,
+  "parquet_bords_communs": true,
+  "spirales_sans_parquet": true,
+  "limite": "Formats relus par code, sans ouverture dans l'interface Aseprite/Tiled. Les modules ne sont pas intégrés à un moteur."
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-05",
+  "base_git": "44eeafd",
+  "references": "Les quatre images jointes dans la conversation : fanions/lianes, paillasses/tapis/provisions et trace spiralée sur parquet. Interprétation graphique, pas un rip du jeu.",
+  "references_transmises_au_generateur": [
+    "sprites/decorations_jour.png",
+    "source/natives/05.png"
+  ],
+  "outil": "generate_image",
+  "modele_et_seed": "Non exposés par l’outil",
+  "prompt_objets": "Create a NEW production sprite sheet of 16 separate small pixel-art decorative objects for a warm wooden explorer guild, inspired by the readable pixel clusters of classic Pokémon Mystery Dungeon Nintendo DS room objects. The supplied atlas is our established guild's material/color reference: amber wood, straw, leaf greens, muted golden highlights. The second image is our wooden room; match its warm materials but draw the objects with clean, compact old-school pixel clusters, not a blurry painting. No characters, no text, no labels, no numbers, no floor/background scene, no shadows cast onto the background. STRICT evenly spaced 4 columns by 4 rows, exactly one isolated object per equal square cell, generous empty margins, nothing touching another cell. All backgrounds uniformly solid pure MAGENTA #ff00ff, not white, not checkerboard. All objects share an overhead RPG sprite camera, not isometric: horizontal floor objects, front-visible small containers. Content in reading order: Row 1: long green leaf-emblem hanging pennant between two thin wooden rods with gold pointed cloth tip; a second shorter green-and-gold cloth wall banner; a slender hanging vine with a few distinct green leaf clusters; an asymmetric short leafy wall garland. Row 2: oval golden straw sleeping nest with a shallow center; round moss-green straw sleeping nest; square mustard-yellow woven rug with subtle repeated leaf weave and fringe; square muted lilac woven rug with cream/gold border and fringe. Row 3: small teal-blue metal-banded treasure chest; small amber wood storage chest with leaf-green fittings; a wicker basket of red/orange/green berries; a small round ochre ceramic provision jar with green leaf stopper. Row 4: tan explorer satchel with a tiny rolled map tied to its side; two neatly rolled straw sleeping mats tied with green cord; a small wooden bucket viewed from above; a bundle of short firewood logs with clear circular cut ends. Crisp stepped silhouettes and controlled 1-2-pixel outlines, restrained highlights, no soft glow, no ambient watercolor smudges. Consistent pixel density across all cells. Preserve adequate magenta margin around each object so it can be extracted with full silhouette intact.",
+  "sortie_objets": "source/tilesheets/objets_source.png",
+  "traitement_objets": "Découpage des 16 cellules, suppression du fond magenta et de ses franges, réduction au plus proche voisin, palettes de 32 ou 64 couleurs, montants de la première bannière repris en pixels. Quatre variantes supplémentaires dérivées (miroirs, petite paillasse, tapis mousse). Ombres de contact sur un plan séparé.",
+  "parquet_murs_spirales": "Construction déterministe au pixel par source/build_tilesheets.py ; palette prélevée/rapprochée du bois de la guilde ; graine fixe 9052026 ; aucun appel au générateur pendant le build.",
+  "salles_preservees_sha256": {
+    "salles/01_accueil/salle_jour.png": "3a18e105f15715076ad34f10dcbfce75fb38c8fb30304256bf425fbe24daf688",
+    "salles/01_accueil/salle_nuit.png": "da62941edd1c1a19bf0601f7af6b427f14d669b3feec93af088e44a2546453fb",
+    "salles/02_hall_missions/salle_jour.png": "bc906e8575129a9426fa06f314a8e6c27221a078e4fe0f931cb73119223f8029",
+    "salles/02_hall_missions/salle_nuit.png": "1bd4deed31c030cac6108060093e5f9ccac726638f2b4a16677195f2e660df26",
+    "salles/03_salle_commune/salle_jour.png": "933a1164ec62e33fb7c9c663961c03e8cc2a4dc69a611b3038ba8161f5b02b12",
+    "salles/03_salle_commune/salle_nuit.png": "bf30873d50f7a7140cea86b77d6e761b128a48bc3d4e06118c9f6ba866a70b57",
+    "salles/04_cantine/salle_jour.png": "0fb3e7d8159f3f861eadf6cecfadc02d8eb2df1124a8d0e9ca53b6b9bacc71ce",
+    "salles/04_cantine/salle_nuit.png": "ba67522210107609b1a61449447e620a2617aa5fbb3022b932644d47813481e5",
+    "salles/05_chambre_equipe/salle_jour.png": "cc060b7abca1f90cce2ddba8f954d85335285fcf130216ece4651cd55379411c",
+    "salles/05_chambre_equipe/salle_nuit.png": "4d019878ea69f9495de7d8a1256c2eb2aabbbc53c844461ff17667b2a07cb386",
+    "salles/06_chambre_veilleur/salle_jour.png": "d4f67a7373a21b3ece4720f3a74ec789c0031803b0ad409ef359c33512ed302e",
+    "salles/06_chambre_veilleur/salle_nuit.png": "161bd0e60b6a0a57889b6568e92981b26eac27a8ffe95fc541ce3080bdb7be49",
+    "salles/07_chambre_residents/salle_jour.png": "bdfdbdb6cdf365fc4f0e710aa7b534977b1e2134412696f07f7d663e3520144f",
+    "salles/07_chambre_residents/salle_nuit.png": "22cd893e66441b267f795e43f26e7f4aa5dcfe6681e1ed9d9bb6a6e1b31d03a1",
+    "salles/08_dortoir_trio/salle_jour.png": "cdd6ff4575700defb7e93fd6f6ad4c0d21040c95806a337a6271ec2f1aa9bccb",
+    "salles/08_dortoir_trio/salle_nuit.png": "021eac09a2570b8f64602c7f1212e435b412590dd6201d5fddee05eb71e4c311",
+    "salles/09_dortoir_quatre/salle_jour.png": "f44a3af87bf49bccdf5a0ce450e57a6c1f9b2b4d781de200ca1ae7ba9256b193",
+    "salles/09_dortoir_quatre/salle_nuit.png": "bbf9751d55deb932e46b1d6f09aeff58b2c4a8e41d373ced17f984c30ca96600",
+    "salles/10_dortoir_trio/salle_jour.png": "22da7596a91fbce4b26184690bf5ffa7adfc632c85e6994fabad258001a9251e",
+    "salles/10_dortoir_trio/salle_nuit.png": "4bdbd9680d552809a824e2f9b60947adca2dbef02419172ab633817ee5be8340",
+    "salles/11_chambre_eclaireurs/salle_jour.png": "bdfdbdb6cdf365fc4f0e710aa7b534977b1e2134412696f07f7d663e3520144f",
+    "salles/11_chambre_eclaireurs/salle_nuit.png": "22cd893e66441b267f795e43f26e7f4aa5dcfe6681e1ed9d9bb6a6e1b31d03a1",
+    "salles/12_salle_chef/salle_jour.png": "6db349957d93c499229cc0a88c162d6076afe710a92bf984a3ab4628d5462b94",
+    "salles/12_salle_chef/salle_nuit.png": "bc8f994502cd98129cd3aa55333738dce5e3cdc1c9ad6e6ffee7b9987e898064",
+    "kit.json": "cddab68528862b8a92b5bfa7f77f24eb4cc6242a95aa9e12f97eaad468bd158a",
+    "apercu_pmd.html": "13d5143ecbe2fa9a7555ccf94bc91244558e8ef9cee276e760bf5361b3a86ebd"
+  }
+}
