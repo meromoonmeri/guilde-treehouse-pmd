@@ -15,7 +15,8 @@ for room in M['salles']:
   target=Image.open(R/room['fichiers'][mode]['png']).convert('RGBA');comp=Image.new('RGBA',(w,h))
   for i,l in enumerate(M['calques']):
    q=Image.open(R/'calques'/room['dossier']/mode/(l['id']+'.png')).convert('RGBA');assert q.size==(w,h)
-   if i in [6,7,9]:assert q.getbbox() is None
+   if i in [6,7]:assert q.getbbox() is None
+   if i in [8,9]:assert q.getbbox() is not None
    if i==5 and room['id']!='02':assert q.getbbox() is None
    comp.alpha_composite(q)
   assert np.array_equal(np.array(comp),np.array(target)),'Layer reconstruction mismatch'

@@ -1,0 +1,1327 @@
+{
+  "revision": "6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78",
+  "environnement": {
+    "python": "3.11.2",
+    "pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "opencv": "5.0.0"
+  },
+  "comptages_par_extension": {
+    "salles": {
+      ".aseprite": 24,
+      ".png": 72
+    },
+    "calques": {
+      ".png": 264
+    },
+    "source": {
+      ".json": 2,
+      ".py": 5,
+      ".png": 28,
+      ".txt": 1
+    },
+    "sprites": {
+      ".json": 2,
+      ".png": 139
+    },
+    "exterieur": {
+      ".png": 6
+    },
+    "fenetres_exterieur": {
+      ".png": 84
+    },
+    "tiled": {
+      ".tmj": 24
+    },
+    "apercus": {
+      ".png": 2
+    }
+  },
+  "images_natives": [
+    {
+      "fichier": "source/natives/01.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "9777f72cdc9df0b343615372db64cb9fc9a8e220fda5b33fc38e7445a7bfcb93"
+    },
+    {
+      "fichier": "source/natives/02.png",
+      "dimensions": [
+        1280,
+        544
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "95614e2ff0f261f8fd4c36d3fead52d33a5a7d66db6b150112d871e2587e8e9d"
+    },
+    {
+      "fichier": "source/natives/03.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "ac0303eab1e1ac3da7c65a5bf163800884da7f6351fa7a5982a2f09952af21d2"
+    },
+    {
+      "fichier": "source/natives/04.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "beac9e73cda7901dcdce296e3460654ba9f06d81a961cc10931d88240a8e2ff2"
+    },
+    {
+      "fichier": "source/natives/05.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "bf54aded920d66c099be2c8f4f9c2d7970a6a2339f5f2bdfd37a7b8bc80dc99b"
+    },
+    {
+      "fichier": "source/natives/06.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "2d1efc92498e281f8c5a37a80d81c425c013c3d1f7fd32de325d4b6a1d607a8e"
+    },
+    {
+      "fichier": "source/natives/08.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "5887c73328356729a23ba01593bb0076627753885ec882536d36c151c8ad80cd"
+    },
+    {
+      "fichier": "source/natives/09.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 256,
+      "cles_metadonnees_pillow": [],
+      "sha256": "90674628d9383799fa5219d0dfde0503f636c5cfcd775516ea5f831dcd34f422"
+    },
+    {
+      "fichier": "source/natives/12.png",
+      "dimensions": [
+        648,
+        432
+      ],
+      "mode_png": "P",
+      "couleurs_rgba_utilisees": 255,
+      "cles_metadonnees_pillow": [],
+      "sha256": "07299c00a42650d3cd61ae0f7cfaa8bda9573d87bb07a7ead28d841516600b5f"
+    }
+  ],
+  "salles": [
+    {
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "dossier": "01_accueil",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "N",
+        "S"
+      ],
+      "groupes_fenetres": 0,
+      "pixels_ouvertures_fenetres": 0,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 113.72,
+      "luminance_codee_moyenne_nuit": 49.45,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 104840
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 70732
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 42742
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 6926
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "nom": "Hall des missions",
+      "dossier": "02_hall_missions",
+      "dimensions": [
+        1280,
+        544
+      ],
+      "acces": [
+        "O",
+        "S",
+        "échelle N",
+        "porte N vers 12"
+      ],
+      "groupes_fenetres": 2,
+      "pixels_ouvertures_fenetres": 2497,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 116.47,
+      "luminance_codee_moyenne_nuit": 50.8,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 1,
+        "composantes": 1,
+        "boites_xywh_et_aires": [
+          [
+            1194,
+            415,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 2497
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 260072
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 188856
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 4231
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 22268
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 10214
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 52812
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 25888
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "nom": "Grande salle commune",
+      "dossier": "03_salle_commune",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "O",
+        "E",
+        "S",
+        "échelle N"
+      ],
+      "groupes_fenetres": 3,
+      "pixels_ouvertures_fenetres": 6954,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 109.34,
+      "luminance_codee_moyenne_nuit": 48.13,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 6954
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 93221
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 78395
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 7144
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 36453
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 6704
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "nom": "Cantine",
+      "dossier": "04_cantine",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "E"
+      ],
+      "groupes_fenetres": 2,
+      "pixels_ouvertures_fenetres": 6196,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 111.84,
+      "luminance_codee_moyenne_nuit": 49.23,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 6196
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 83037
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 69879
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 5283
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 9857
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 11825
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "dossier": "05_chambre_equipe",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "E"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 1002,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 113.48,
+      "luminance_codee_moyenne_nuit": 49.79,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 1002
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 88425
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 76067
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 1908
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 8990
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 9909
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "dossier": "06_chambre_veilleur",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "S"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 3166,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 112.11,
+      "luminance_codee_moyenne_nuit": 49.35,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 3166
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 91605
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 77015
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 2849
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 11275
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 6905
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "dossier": "07_chambre_residents",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "O"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 1002,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 113.48,
+      "luminance_codee_moyenne_nuit": 49.79,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 1002
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 88818
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 75940
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 1911
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 9133
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 9640
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "dossier": "08_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "E"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 951,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 118.45,
+      "luminance_codee_moyenne_nuit": 51.55,
+      "pixels_roses_signales_par_seuil": 78,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 55,
+        "composantes": 9,
+        "boites_xywh_et_aires": [
+          [
+            86,
+            135,
+            3,
+            3,
+            7
+          ],
+          [
+            106,
+            134,
+            3,
+            3,
+            4
+          ],
+          [
+            94,
+            139,
+            6,
+            4,
+            11
+          ],
+          [
+            82,
+            149,
+            3,
+            2,
+            5
+          ],
+          [
+            108,
+            152,
+            5,
+            4,
+            8
+          ],
+          [
+            93,
+            160,
+            5,
+            4,
+            8
+          ],
+          [
+            122,
+            164,
+            2,
+            3,
+            5
+          ],
+          [
+            88,
+            184,
+            2,
+            2,
+            4
+          ],
+          [
+            77,
+            187,
+            2,
+            2,
+            3
+          ]
+        ]
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 951
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 90787
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 73130
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 3394
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 9159
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 9829
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "nom": "Grand dortoir",
+      "dossier": "09_dortoir_quatre",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "N"
+      ],
+      "groupes_fenetres": 2,
+      "pixels_ouvertures_fenetres": 1416,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 114.92,
+      "luminance_codee_moyenne_nuit": 49.96,
+      "pixels_roses_signales_par_seuil": 3,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 1416
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 98238
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 66847
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 1799
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 31608
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 8752
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "dossier": "10_dortoir_trio",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "O"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 951,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 118.45,
+      "luminance_codee_moyenne_nuit": 51.55,
+      "pixels_roses_signales_par_seuil": 78,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 55,
+        "composantes": 9,
+        "boites_xywh_et_aires": [
+          [
+            539,
+            134,
+            3,
+            3,
+            4
+          ],
+          [
+            559,
+            135,
+            3,
+            3,
+            7
+          ],
+          [
+            548,
+            139,
+            6,
+            4,
+            11
+          ],
+          [
+            563,
+            149,
+            3,
+            2,
+            5
+          ],
+          [
+            535,
+            152,
+            5,
+            4,
+            8
+          ],
+          [
+            550,
+            160,
+            5,
+            4,
+            8
+          ],
+          [
+            524,
+            164,
+            2,
+            3,
+            5
+          ],
+          [
+            558,
+            184,
+            2,
+            2,
+            4
+          ],
+          [
+            569,
+            187,
+            2,
+            2,
+            3
+          ]
+        ]
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 951
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 90376
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 73193
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 3397
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 9203
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 10174
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "dossier": "11_chambre_eclaireurs",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "O"
+      ],
+      "groupes_fenetres": 1,
+      "pixels_ouvertures_fenetres": 1002,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 113.48,
+      "luminance_codee_moyenne_nuit": 49.79,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 0,
+        "composantes": 0,
+        "boites_xywh_et_aires": []
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 1002
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 88855
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 75937
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 1911
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 9133
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 9606
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "nom": "Salle du chef",
+      "dossier": "12_salle_chef",
+      "dimensions": [
+        648,
+        432
+      ],
+      "acces": [
+        "S"
+      ],
+      "groupes_fenetres": 2,
+      "pixels_ouvertures_fenetres": 2095,
+      "alpha_base_jour_nuit_identique": true,
+      "valeurs_alpha_base_jour": [
+        0,
+        255
+      ],
+      "luminance_codee_moyenne_jour": 117.2,
+      "luminance_codee_moyenne_nuit": 51.17,
+      "pixels_roses_signales_par_seuil": 0,
+      "trous_internes_hors_masque_paysage": {
+        "pixels": 10,
+        "composantes": 10,
+        "boites_xywh_et_aires": [
+          [
+            87,
+            138,
+            1,
+            1,
+            1
+          ],
+          [
+            541,
+            147,
+            1,
+            1,
+            1
+          ],
+          [
+            543,
+            148,
+            1,
+            1,
+            1
+          ],
+          [
+            94,
+            152,
+            1,
+            1,
+            1
+          ],
+          [
+            87,
+            155,
+            1,
+            1,
+            1
+          ],
+          [
+            89,
+            154,
+            1,
+            1,
+            1
+          ],
+          [
+            559,
+            154,
+            1,
+            1,
+            1
+          ],
+          [
+            561,
+            155,
+            1,
+            1,
+            1
+          ],
+          [
+            84,
+            156,
+            1,
+            1,
+            1
+          ],
+          [
+            539,
+            166,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "calques_jour": [
+        {
+          "id": "00_exterieur",
+          "pixels_alpha_non_nuls": 2095
+        },
+        {
+          "id": "01_sol",
+          "pixels_alpha_non_nuls": 84375
+        },
+        {
+          "id": "02_structure",
+          "pixels_alpha_non_nuls": 81202
+        },
+        {
+          "id": "03_cadres_fenetres",
+          "pixels_alpha_non_nuls": 3972
+        },
+        {
+          "id": "04_tableaux",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "05_porte_maitre",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "06_decorations",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "07_objets",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "08_ombres_acces",
+          "pixels_alpha_non_nuls": 7823
+        },
+        {
+          "id": "09_eclairage_fixe",
+          "pixels_alpha_non_nuls": 0
+        },
+        {
+          "id": "10_bordure_avant",
+          "pixels_alpha_non_nuls": 10509
+        }
+      ]
+    }
+  ],
+  "comparaisons_reutilisation": [
+    {
+      "source": "05",
+      "cible": "07",
+      "miroir_horizontal": true,
+      "bases": {
+        "jour": {
+          "pixels_differents": 0,
+          "ecart_max_par_canal": 0,
+          "pixels_alpha_differents": 0
+        },
+        "nuit": {
+          "pixels_differents": 143,
+          "ecart_max_par_canal": 7,
+          "pixels_alpha_differents": 0
+        }
+      }
+    },
+    {
+      "source": "05",
+      "cible": "11",
+      "miroir_horizontal": true,
+      "bases": {
+        "jour": {
+          "pixels_differents": 0,
+          "ecart_max_par_canal": 0,
+          "pixels_alpha_differents": 0
+        },
+        "nuit": {
+          "pixels_differents": 143,
+          "ecart_max_par_canal": 7,
+          "pixels_alpha_differents": 0
+        }
+      }
+    },
+    {
+      "source": "08",
+      "cible": "10",
+      "miroir_horizontal": true,
+      "bases": {
+        "jour": {
+          "pixels_differents": 0,
+          "ecart_max_par_canal": 0,
+          "pixels_alpha_differents": 0
+        },
+        "nuit": {
+          "pixels_differents": 90,
+          "ecart_max_par_canal": 7,
+          "pixels_alpha_differents": 0
+        }
+      }
+    },
+    {
+      "source": "07",
+      "cible": "11",
+      "miroir_horizontal": false,
+      "bases": {
+        "jour": {
+          "pixels_differents": 0,
+          "ecart_max_par_canal": 0,
+          "pixels_alpha_differents": 0
+        },
+        "nuit": {
+          "pixels_differents": 0,
+          "ecart_max_par_canal": 0,
+          "pixels_alpha_differents": 0
+        }
+      }
+    }
+  ],
+  "banque_sprites": {
+    "total": 135,
+    "groupes": {
+      "mobilier": 11,
+      "lampes": 3,
+      "couchages": 4,
+      "textiles": 6,
+      "ornements": 2,
+      "portes": 2,
+      "vegetation": 107
+    }
+  },
+  "guides_non_retrouves": [
+    "guides/01_guide.png",
+    "guides/02_guide.png",
+    "guides/03_guide.png",
+    "guides/04_guide.png",
+    "guides/05_guide.png",
+    "guides/06_guide.png",
+    "guides/08_guide.png",
+    "guides/09_guide.png",
+    "guides/12_guide.png"
+  ],
+  "prudence": "Le seuil de pixels roses est un indicateur, pas une preuve automatique de défaut. La luminance indiquée est une moyenne pondérée des canaux sRGB codés, non une mesure photométrique linéaire."
+}

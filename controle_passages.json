@@ -1,0 +1,210 @@
+{
+  "natifs_originaux_intacts": true,
+  "salles": [
+    {
+      "id": "01",
+      "passages": [
+        {
+          "id": "nord",
+          "sol_connecte": true,
+          "degagement_px": 38.47076812334269
+        },
+        {
+          "id": "sud",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "02",
+      "passages": [
+        {
+          "id": "ouest",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        },
+        {
+          "id": "sud",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        },
+        {
+          "id": "echelle_nord",
+          "sol_connecte": true,
+          "degagement_px": 17.0
+        },
+        {
+          "id": "porte_maitre",
+          "sol_connecte": true,
+          "degagement_px": 17.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "03",
+      "passages": [
+        {
+          "id": "ouest",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        },
+        {
+          "id": "est",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        },
+        {
+          "id": "sud",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        },
+        {
+          "id": "echelle_nord",
+          "sol_connecte": true,
+          "degagement_px": 12.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "04",
+      "passages": [
+        {
+          "id": "est",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "05",
+      "passages": [
+        {
+          "id": "est",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "06",
+      "passages": [
+        {
+          "id": "sud",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "07",
+      "passages": [
+        {
+          "id": "ouest",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "08",
+      "passages": [
+        {
+          "id": "est",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "09",
+      "passages": [
+        {
+          "id": "nord",
+          "sol_connecte": true,
+          "degagement_px": 38.47076812334269
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "10",
+      "passages": [
+        {
+          "id": "ouest",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "11",
+      "passages": [
+        {
+          "id": "ouest",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    },
+    {
+      "id": "12",
+      "passages": [
+        {
+          "id": "sud",
+          "sol_connecte": true,
+          "degagement_px": 9.0
+        }
+      ],
+      "petits_trous_couverts": true,
+      "alpha_jour_nuit_identique": true,
+      "lumiere_nuit_attenuee": true,
+      "effets_uniquement_locaux": true
+    }
+  ],
+  "reperes_verifies": 19,
+  "limite": "Contrôle d'assets : aucune collision, transition ou animation n'est installée dans un moteur de jeu."
+}

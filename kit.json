@@ -1,5 +1,6 @@
 {
-  "titre": "Guilde Treehouse — passages ouverts PMD",
+  "titre": "Guilde Treehouse — entrées et sorties PMD",
+  "version_passages": 2,
   "grille_px": 8,
   "animation": false,
   "ambiances": [
@@ -11,7 +12,7 @@
     "orageux"
   ],
   "regles_acces": {
-    "source": "premier pack, fonds vides",
+    "source": "Premier pack conservé ; corrections localisées suivant la référence PMD fournie le 5 septembre 2026",
     "portes_autorisees": [
       {
         "salle": "02",
@@ -76,15 +77,26 @@
     "grille": 8,
     "images_fixes": true,
     "guides": {
-      "01": "guides/01_guide.png",
-      "02": "guides/02_guide.png",
-      "03": "guides/03_guide.png",
-      "04": "guides/04_guide.png",
-      "05": "guides/05_guide.png",
-      "06": "guides/06_guide.png",
-      "08": "guides/08_guide.png",
-      "09": "guides/09_guide.png",
-      "12": "guides/12_guide.png"
+      "01": "source/passages/masques/01_retouches.png",
+      "02": "source/passages/masques/02_retouches.png",
+      "03": "source/passages/masques/03_retouches.png",
+      "04": "source/passages/masques/04_retouches.png",
+      "05": "source/passages/masques/05_retouches.png",
+      "06": "source/passages/masques/06_retouches.png",
+      "07": "source/passages/masques/07_retouches.png",
+      "08": "source/passages/masques/08_retouches.png",
+      "09": "source/passages/masques/09_retouches.png",
+      "10": "source/passages/masques/10_retouches.png",
+      "11": "source/passages/masques/11_retouches.png",
+      "12": "source/passages/masques/12_retouches.png"
+    },
+    "construction_pmd": {
+      "N": "Salles 01/09 : passage de plain-pied en retrait dans le mur, sans escalier montant hors cadre.",
+      "E_O": "Sol jusqu’au bord de caméra, mur arrière raccordé et tranche avant continue ; aucun portique.",
+      "S": "Sol jusqu’au bord inférieur ; joues basses, aucune porte ni poteaux ajoutés.",
+      "echelles": "02/03 : le tronc et l’échelle se prolongent hors champ. 12 : tronc architectural sans échelle factice.",
+      "eclairage": "Contacts géométriques et fins reflets locaux ; pas de barre transversale ni de halo. Nuit atténuée.",
+      "reperes": "source/passages/definitions.json"
     }
   },
   "calques": [
@@ -94,15 +106,15 @@
     },
     {
       "id": "01_sol",
-      "nom": "Sol et continuité des passages"
+      "nom": "Sol continu et passages"
     },
     {
       "id": "02_structure",
-      "nom": "Structure, murs et ouvertures"
+      "nom": "Structure et retours des passages"
     },
     {
       "id": "03_cadres_fenetres",
-      "nom": "Cadres de fenêtres — sans paysage"
+      "nom": "Cadres et persiennes — sans paysage"
     },
     {
       "id": "04_tableaux",
@@ -126,11 +138,11 @@
     },
     {
       "id": "09_eclairage_fixe",
-      "nom": "Éclairage complémentaire — vide"
+      "nom": "Lumière et reflets des seuils"
     },
     {
       "id": "10_bordure_avant",
-      "nom": "Bordure avant interrompue aux passages"
+      "nom": "Bordure avant et joues basses"
     }
   ],
   "salles": [
@@ -155,6 +167,53 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "orientation": "N",
+          "ouverture": [
+            283,
+            89,
+            364,
+            183
+          ],
+          "zone_transition": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "point_sol": [
+            324,
+            178
+          ],
+          "description": "Passage creusé dans le mur : sol continu sous un renfoncement ombré, sans battant."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            370,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ],
+      "source_base": "source/passages/bases/01.png",
+      "source_masque": "source/passages/masques/01.png",
       "fichiers": {
         "jour": {
           "png": "salles/01_accueil/salle_jour.png",
@@ -211,6 +270,89 @@
       ],
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            254,
+            338
+          ],
+          "racine": 54,
+          "zone_transition": [
+            0,
+            261,
+            16,
+            70
+          ],
+          "point_sol": [
+            8,
+            296
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            590,
+            689,
+            455
+          ],
+          "zone_transition": [
+            615,
+            528,
+            48,
+            16
+          ],
+          "point_sol": [
+            639,
+            535
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "orientation": "N",
+          "pied": [
+            640,
+            219
+          ],
+          "zone_transition": [
+            624,
+            219,
+            32,
+            16
+          ],
+          "point_sol": [
+            640,
+            231
+          ],
+          "description": "Échelle réelle prolongée au-delà du bord supérieur, avec ombre de contact au pied."
+        },
+        {
+          "id": "porte_maitre",
+          "type": "porte_fermee",
+          "orientation": "N",
+          "destination": "12",
+          "zone_transition": [
+            1031,
+            212,
+            52,
+            16
+          ],
+          "point_sol": [
+            1057,
+            233
+          ],
+          "description": "Seule porte fermée de la guilde ; seuil au pied, pas de seconde porte dans le bureau."
+        }
+      ],
+      "source_base": "source/passages/bases/02.png",
+      "source_masque": "source/passages/masques/02.png",
       "fichiers": {
         "jour": {
           "png": "salles/02_hall_missions/salle_jour.png",
@@ -268,6 +410,93 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            245,
+            281
+          ],
+          "racine": 8,
+          "zone_transition": [
+            0,
+            252,
+            16,
+            22
+          ],
+          "point_sol": [
+            8,
+            263
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            245,
+            281
+          ],
+          "racine": 640,
+          "zone_transition": [
+            632,
+            252,
+            16,
+            22
+          ],
+          "point_sol": [
+            639,
+            263
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            371,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "orientation": "N",
+          "pied": [
+            324,
+            208
+          ],
+          "zone_transition": [
+            308,
+            208,
+            32,
+            16
+          ],
+          "point_sol": [
+            324,
+            220
+          ],
+          "description": "Échelle réelle prolongée au-delà du bord supérieur, avec ombre de contact au pied."
+        }
+      ],
+      "source_base": "source/passages/bases/03.png",
+      "source_masque": "source/passages/masques/03.png",
       "fichiers": {
         "jour": {
           "png": "salles/03_salle_commune/salle_jour.png",
@@ -316,6 +545,31 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            253,
+            288
+          ],
+          "racine": 599,
+          "zone_transition": [
+            632,
+            260,
+            16,
+            21
+          ],
+          "point_sol": [
+            639,
+            270
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/04.png",
+      "source_masque": "source/passages/masques/04.png",
       "fichiers": {
         "jour": {
           "png": "salles/04_cantine/salle_jour.png",
@@ -358,6 +612,31 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 600,
+          "zone_transition": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            639,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/05.png",
+      "source_masque": "source/passages/masques/05.png",
       "fichiers": {
         "jour": {
           "png": "salles/05_chambre_equipe/salle_jour.png",
@@ -400,6 +679,31 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            370,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ],
+      "source_base": "source/passages/bases/06.png",
+      "source_masque": "source/passages/masques/06.png",
       "fichiers": {
         "jour": {
           "png": "salles/06_chambre_veilleur/salle_jour.png",
@@ -442,6 +746,31 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 48,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/07.png",
+      "source_masque": "source/passages/masques/07.png",
       "fichiers": {
         "jour": {
           "png": "salles/07_chambre_residents/salle_jour.png",
@@ -480,10 +809,35 @@
           192
         ]
       ],
-      "trous_fenetres": 951,
+      "trous_fenetres": 1084,
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 595,
+          "zone_transition": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            639,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/08.png",
+      "source_masque": "source/passages/masques/08.png",
       "fichiers": {
         "jour": {
           "png": "salles/08_dortoir_trio/salle_jour.png",
@@ -532,6 +886,32 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "orientation": "N",
+          "ouverture": [
+            283,
+            89,
+            364,
+            183
+          ],
+          "zone_transition": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "point_sol": [
+            324,
+            178
+          ],
+          "description": "Passage creusé dans le mur : sol continu sous un renfoncement ombré, sans battant."
+        }
+      ],
+      "source_base": "source/passages/bases/09.png",
+      "source_masque": "source/passages/masques/09.png",
       "fichiers": {
         "jour": {
           "png": "salles/09_dortoir_quatre/salle_jour.png",
@@ -570,10 +950,35 @@
           192
         ]
       ],
-      "trous_fenetres": 951,
+      "trous_fenetres": 1084,
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 53,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/10.png",
+      "source_masque": "source/passages/masques/10.png",
       "fichiers": {
         "jour": {
           "png": "salles/10_dortoir_trio/salle_jour.png",
@@ -616,6 +1021,31 @@
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 48,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ],
+      "source_base": "source/passages/bases/11.png",
+      "source_masque": "source/passages/masques/11.png",
       "fichiers": {
         "jour": {
           "png": "salles/11_chambre_eclaireurs/salle_jour.png",
@@ -660,10 +1090,35 @@
           178
         ]
       ],
-      "trous_fenetres": 2095,
+      "trous_fenetres": 2105,
       "porte_nord": null,
       "objets": [],
       "decorations": [],
+      "passages_pmd": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            371,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ],
+      "source_base": "source/passages/bases/12.png",
+      "source_masque": "source/passages/masques/12.png",
       "fichiers": {
         "jour": {
           "png": "salles/12_salle_chef/salle_jour.png",

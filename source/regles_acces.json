@@ -1,5 +1,5 @@
 {
-  "source": "premier pack, fonds vides",
+  "source": "Premier pack conservé ; corrections localisées suivant la référence PMD fournie le 5 septembre 2026",
   "portes_autorisees": [
     {
       "salle": "02",
@@ -64,14 +64,25 @@
   "grille": 8,
   "images_fixes": true,
   "guides": {
-    "01": "guides/01_guide.png",
-    "02": "guides/02_guide.png",
-    "03": "guides/03_guide.png",
-    "04": "guides/04_guide.png",
-    "05": "guides/05_guide.png",
-    "06": "guides/06_guide.png",
-    "08": "guides/08_guide.png",
-    "09": "guides/09_guide.png",
-    "12": "guides/12_guide.png"
+    "01": "source/passages/masques/01_retouches.png",
+    "02": "source/passages/masques/02_retouches.png",
+    "03": "source/passages/masques/03_retouches.png",
+    "04": "source/passages/masques/04_retouches.png",
+    "05": "source/passages/masques/05_retouches.png",
+    "06": "source/passages/masques/06_retouches.png",
+    "07": "source/passages/masques/07_retouches.png",
+    "08": "source/passages/masques/08_retouches.png",
+    "09": "source/passages/masques/09_retouches.png",
+    "10": "source/passages/masques/10_retouches.png",
+    "11": "source/passages/masques/11_retouches.png",
+    "12": "source/passages/masques/12_retouches.png"
+  },
+  "construction_pmd": {
+    "N": "Salles 01/09 : passage de plain-pied en retrait dans le mur, sans escalier montant hors cadre.",
+    "E_O": "Sol jusqu’au bord de caméra, mur arrière raccordé et tranche avant continue ; aucun portique.",
+    "S": "Sol jusqu’au bord inférieur ; joues basses, aucune porte ni poteaux ajoutés.",
+    "echelles": "02/03 : le tronc et l’échelle se prolongent hors champ. 12 : tronc architectural sans échelle factice.",
+    "eclairage": "Contacts géométriques et fins reflets locaux ; pas de barre transversale ni de halo. Nuit atténuée.",
+    "reperes": "source/passages/definitions.json"
   }
 }

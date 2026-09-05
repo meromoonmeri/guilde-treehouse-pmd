@@ -1,0 +1,386 @@
+{
+  "date": "2026-09-05",
+  "revision_auditee": "6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78",
+  "methode": "Copies de git archive HEAD dans .cache/audit-original et .cache/audit-rebuild ; les originaux du dépôt ne sont pas réécrits.",
+  "verification_fichiers_existants": {
+    "salles": [
+      {
+        "id": "01",
+        "acces": [
+          "N",
+          "S"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "02",
+        "acces": [
+          "O",
+          "S",
+          "échelle N",
+          "porte N vers 12"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "03",
+        "acces": [
+          "O",
+          "E",
+          "S",
+          "échelle N"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "04",
+        "acces": [
+          "E"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "05",
+        "acces": [
+          "E"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "06",
+        "acces": [
+          "S"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "07",
+        "acces": [
+          "O"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "08",
+        "acces": [
+          "E"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "09",
+        "acces": [
+          "N"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "10",
+        "acces": [
+          "O"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "11",
+        "acces": [
+          "O"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      },
+      {
+        "id": "12",
+        "acces": [
+          "S"
+        ],
+        "modes": {
+          "jour": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          },
+          "nuit": {
+            "calques": 11,
+            "frames": 1,
+            "PNG_Aseprite_Tiled": "identiques",
+            "base_fenetres_transparentes": true,
+            "magenta_exact": true
+          }
+        }
+      }
+    ],
+    "animation": false,
+    "unique_porte_fermee": "02 — nord vers le bureau 12",
+    "ambiances": [
+      "jour",
+      "nuit",
+      "crepuscule",
+      "aube",
+      "soir",
+      "orageux"
+    ],
+    "grille": 8
+  },
+  "verification_navigateur_rejouee": {
+    "comparaisons": 144,
+    "erreur_max_par_canal": 0,
+    "bases_fenetres_transparentes": true,
+    "magenta_verifie": true,
+    "fixe_dans_le_temps": true,
+    "mobile_390px": "sans débordement",
+    "hors_ligne": true,
+    "sandbox_allow_scripts": true,
+    "erreurs_js": []
+  },
+  "reconstruction": {
+    "total": {
+      "salles": 96,
+      "calques": 264,
+      "fenetres_exterieur": 84,
+      "exterieur": 6,
+      "tiled": 24,
+      "apercus": 2
+    },
+    "byte_identical": {
+      "salles": 94,
+      "calques": 260,
+      "fenetres_exterieur": 84,
+      "exterieur": 6,
+      "tiled": 22
+    },
+    "changed": {
+      "salles": 2,
+      "calques": 4,
+      "tiled": 2,
+      "apercus": 2
+    },
+    "pixel_differences": [
+      {
+        "file": "calques/12_salle_chef/jour/01_sol.png",
+        "different_pixels": 10,
+        "max_delta": 255,
+        "alpha_diff_pixels": 10
+      },
+      {
+        "file": "calques/12_salle_chef/jour/02_structure.png",
+        "different_pixels": 10,
+        "max_delta": 255,
+        "alpha_diff_pixels": 10
+      },
+      {
+        "file": "calques/12_salle_chef/nuit/01_sol.png",
+        "different_pixels": 10,
+        "max_delta": 255,
+        "alpha_diff_pixels": 10
+      },
+      {
+        "file": "calques/12_salle_chef/nuit/02_structure.png",
+        "different_pixels": 10,
+        "max_delta": 255,
+        "alpha_diff_pixels": 10
+      },
+      {
+        "file": "apercus/planche_jour.png",
+        "different_pixels": 13035,
+        "max_delta": 219,
+        "alpha_diff_pixels": 0
+      },
+      {
+        "file": "apercus/planche_nuit.png",
+        "different_pixels": 12967,
+        "max_delta": 219,
+        "alpha_diff_pixels": 0
+      }
+    ],
+    "new_files": [
+      "apercus/paysages_six_ambiances.png",
+      "exterieur/ambiances.json"
+    ]
+  },
+  "dependances": {
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "opencv-python-headless": "5.0.0.93",
+    "playwright": "1.62.0"
+  },
+  "navigateur": "Chromium 149, distribution @sparticuz/chromium 149.0.0, lancement Playwright avec executable_path ; assertions du script inchangées.",
+  "limites": "Aucune interface Aseprite ou Tiled lancée ; les fichiers sont relus et recomposés par le vérificateur Python. La génération IA en amont ne peut pas être rejouée sans ses prompts, paramètres et références originales.",
+  "verification_livrable": {
+    "figures": 7,
+    "sections": 8,
+    "erreurs_js": [],
+    "mobile_390px": "sans débordement",
+    "zoom": "fonctionnel",
+    "hors_ligne": true,
+    "chromium": "149.0.7827.0",
+    "pdf_pages": 13
+  }
+}

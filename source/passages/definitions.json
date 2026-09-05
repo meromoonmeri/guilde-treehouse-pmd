@@ -1,0 +1,623 @@
+{
+  "version": 2,
+  "convention": "Coordonnées pixels natifs ; rectangles x,y,largeur,hauteur pour les déclencheurs proposés. Pas de collisions moteur imposées.",
+  "source_visuelle": "Référence PMD fournie par l’utilisateur dans la conversation ; motifs de sol/murs conservés de notre guilde.",
+  "salles": {
+    "01": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [],
+      "passages": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "orientation": "N",
+          "ouverture": [
+            283,
+            89,
+            364,
+            183
+          ],
+          "zone_transition": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "point_sol": [
+            324,
+            178
+          ],
+          "description": "Passage creusé dans le mur : sol continu sous un renfoncement ombré, sans battant."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            370,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ]
+    },
+    "02": {
+      "dimensions": [
+        1280,
+        544
+      ],
+      "fenetres": [
+        [
+          68,
+          145,
+          114,
+          223
+        ],
+        [
+          1166,
+          145,
+          1213,
+          225
+        ]
+      ],
+      "passages": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            254,
+            338
+          ],
+          "racine": 54,
+          "zone_transition": [
+            0,
+            261,
+            16,
+            70
+          ],
+          "point_sol": [
+            8,
+            296
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            590,
+            689,
+            455
+          ],
+          "zone_transition": [
+            615,
+            528,
+            48,
+            16
+          ],
+          "point_sol": [
+            639,
+            535
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "orientation": "N",
+          "pied": [
+            640,
+            219
+          ],
+          "zone_transition": [
+            624,
+            219,
+            32,
+            16
+          ],
+          "point_sol": [
+            640,
+            231
+          ],
+          "description": "Échelle réelle prolongée au-delà du bord supérieur, avec ombre de contact au pied."
+        },
+        {
+          "id": "porte_maitre",
+          "type": "porte_fermee",
+          "orientation": "N",
+          "destination": "12",
+          "zone_transition": [
+            1031,
+            212,
+            52,
+            16
+          ],
+          "point_sol": [
+            1057,
+            233
+          ],
+          "description": "Seule porte fermée de la guilde ; seuil au pied, pas de seconde porte dans le bureau."
+        }
+      ]
+    },
+    "03": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          72,
+          105,
+          119,
+          186
+        ],
+        [
+          158,
+          105,
+          267,
+          178
+        ],
+        [
+          531,
+          105,
+          578,
+          185
+        ]
+      ],
+      "passages": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            245,
+            281
+          ],
+          "racine": 8,
+          "zone_transition": [
+            0,
+            252,
+            16,
+            22
+          ],
+          "point_sol": [
+            8,
+            263
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            245,
+            281
+          ],
+          "racine": 640,
+          "zone_transition": [
+            632,
+            252,
+            16,
+            22
+          ],
+          "point_sol": [
+            639,
+            263
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        },
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            371,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        },
+        {
+          "id": "echelle_nord",
+          "type": "echelle",
+          "orientation": "N",
+          "pied": [
+            324,
+            208
+          ],
+          "zone_transition": [
+            308,
+            208,
+            32,
+            16
+          ],
+          "point_sol": [
+            324,
+            220
+          ],
+          "description": "Échelle réelle prolongée au-delà du bord supérieur, avec ombre de contact au pied."
+        }
+      ]
+    },
+    "04": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          187,
+          71,
+          275,
+          148
+        ],
+        [
+          375,
+          71,
+          462,
+          148
+        ]
+      ],
+      "passages": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            253,
+            288
+          ],
+          "racine": 599,
+          "zone_transition": [
+            632,
+            260,
+            16,
+            21
+          ],
+          "point_sol": [
+            639,
+            270
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "05": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          73,
+          107,
+          120,
+          178
+        ]
+      ],
+      "passages": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 600,
+          "zone_transition": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            639,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "06": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          282,
+          58,
+          367,
+          140
+        ]
+      ],
+      "passages": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            370,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ]
+    },
+    "07": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          575,
+          178
+        ]
+      ],
+      "passages": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 48,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "08": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          72,
+          101,
+          130,
+          192
+        ]
+      ],
+      "passages": [
+        {
+          "id": "est",
+          "type": "passage_lateral",
+          "orientation": "E",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 595,
+          "zone_transition": [
+            632,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            639,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "09": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          86,
+          107,
+          123,
+          155
+        ],
+        [
+          526,
+          107,
+          563,
+          156
+        ]
+      ],
+      "passages": [
+        {
+          "id": "nord",
+          "type": "passage_nord",
+          "orientation": "N",
+          "ouverture": [
+            283,
+            89,
+            364,
+            183
+          ],
+          "zone_transition": [
+            300,
+            141,
+            48,
+            24
+          ],
+          "point_sol": [
+            324,
+            178
+          ],
+          "description": "Passage creusé dans le mur : sol continu sous un renfoncement ombré, sans battant."
+        }
+      ]
+    },
+    "10": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          518,
+          101,
+          576,
+          192
+        ]
+      ],
+      "passages": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 53,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "11": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          528,
+          107,
+          575,
+          178
+        ]
+      ],
+      "passages": [
+        {
+          "id": "ouest",
+          "type": "passage_lateral",
+          "orientation": "O",
+          "sol_bord": [
+            239,
+            298
+          ],
+          "racine": 48,
+          "zone_transition": [
+            0,
+            246,
+            16,
+            45
+          ],
+          "point_sol": [
+            8,
+            268
+          ],
+          "description": "Sol jusqu’au bord de caméra, mur arrière continu et retour avant de même épaisseur que le contour."
+        }
+      ]
+    },
+    "12": {
+      "dimensions": [
+        648,
+        432
+      ],
+      "fenetres": [
+        [
+          74,
+          104,
+          119,
+          179
+        ],
+        [
+          531,
+          103,
+          576,
+          178
+        ]
+      ],
+      "passages": [
+        {
+          "id": "sud",
+          "type": "passage_sud",
+          "orientation": "S",
+          "bouche": [
+            278,
+            371,
+            358
+          ],
+          "zone_transition": [
+            300,
+            416,
+            48,
+            16
+          ],
+          "point_sol": [
+            324,
+            423
+          ],
+          "description": "Rupture basse du contour ; joues courtes, ombres latérales et sol prolongé hors caméra, sans porte ni poteaux."
+        }
+      ]
+    }
+  }
+}

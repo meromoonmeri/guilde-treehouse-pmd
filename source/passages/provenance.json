@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-05",
+  "revision_de_depart": "6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78",
+  "reference_pmd": "Planche fournie dans la conversation par l’utilisateur. Référence de construction et de lumière uniquement ; aucun pixel de cette planche n’est collé dans les salles.",
+  "natifs_originaux_sha256": {
+    "source/natives/01.png": "9777f72cdc9df0b343615372db64cb9fc9a8e220fda5b33fc38e7445a7bfcb93",
+    "source/natives/02.png": "95614e2ff0f261f8fd4c36d3fead52d33a5a7d66db6b150112d871e2587e8e9d",
+    "source/natives/03.png": "ac0303eab1e1ac3da7c65a5bf163800884da7f6351fa7a5982a2f09952af21d2",
+    "source/natives/04.png": "beac9e73cda7901dcdce296e3460654ba9f06d81a961cc10931d88240a8e2ff2",
+    "source/natives/05.png": "bf54aded920d66c099be2c8f4f9c2d7970a6a2339f5f2bdfd37a7b8bc80dc99b",
+    "source/natives/06.png": "2d1efc92498e281f8c5a37a80d81c425c013c3d1f7fd32de325d4b6a1d607a8e",
+    "source/natives/08.png": "5887c73328356729a23ba01593bb0076627753885ec882536d36c151c8ad80cd",
+    "source/natives/09.png": "90674628d9383799fa5219d0dfde0503f636c5cfcd775516ea5f831dcd34f422",
+    "source/natives/12.png": "07299c00a42650d3cd61ae0f7cfaa8bda9573d87bb07a7ead28d841516600b5f"
+  },
+  "generateur": {
+    "outil": "generate_image",
+    "modele": "Non exposé par l’outil",
+    "seed": "Non exposée par l’outil"
+  },
+  "retouches_retenues": [
+    {
+      "source": "source/natives/01.png",
+      "sortie_brute": "source/passages/retouche_nord/proposition.png",
+      "sortie_preparee": "source/passages/retouche_nord/retenue_palette.png",
+      "usage": [
+        "01",
+        "09"
+      ],
+      "zone_native": [
+        254,
+        0,
+        141,
+        191
+      ],
+      "prompt": "Edit the supplied existing game room image, do not redesign or restyle it. This is an established warm amber wooden treehouse interior, detailed raster pixel-art style, magenta chroma-key background. Preserve the exact oval wooden room, floor boards, brown outlined wood grain, camera, color palette, empty room, lower south opening. The ONLY required change is the central NORTHERN entrance: remove the long narrow staircase that currently climbs vertically out of the top of the picture. In that same central back-wall bay make a small recessed OPEN WOODEN PASSAGE at floor level, like the readable rear passage of a Pokémon Mystery Dungeon room, but made entirely of the existing amber wood of THIS image, not rock, grass, brick or bamboo. The wall continues above the opening and ends on the same rounded roof contour as the adjoining wall, with magenta above that roof. A simple organically rounded opening is CUT INTO the thick wooden wall; NO door leaf, NO attached decorative doorway, NO freestanding arch, NO sign. Its width is about the existing staircase width. The opening is darker toward its upper/rear interior, but not a flat black rectangle: there is a visible short continuous wooden floor receding into the shadow, warm-brown shadow under the lintel and along inner cheeks, subtle amber rim light on the upper-left bevel. Keep all other pixels and features as close as possible to the input; do not add objects, windows, leaves or lights, do not repaint the whole room. Entire scene at same framing and 3:2 aspect ratio. Keep the solid magenta backdrop."
+    },
+    {
+      "source": "source/natives/12.png",
+      "sortie_brute": "source/passages/retouche_tronc/proposition.png",
+      "sortie_preparee": "source/passages/retouche_tronc/retenue_palette.png",
+      "usage": [
+        "12"
+      ],
+      "zone_native": [
+        287,
+        0,
+        79,
+        190
+      ],
+      "prompt": "Localized correction of the supplied EXISTING game-room image, not a redesign. Preserve exactly this warm amber wooden treehouse pixel-art direction, floor, bark rim, camera, the two magenta empty windows, floor-level south opening, all contours outside the central trunk. The ONLY subject to change is the top part of the central wooden trunk: it currently has a tiny ladder that leads nowhere and a visible saw-cut oval top. Remove that short ladder completely, exposing coherent vertical wood grain in the very same style. Extend the central trunk upward THROUGH THE TOP EDGE OF THE IMAGE, like a continuous structural tree column continuing off camera; do not show any oval cut top or cap. The lower trunk and its foot/roots are unchanged. No ladder rungs left, no door, no new opening or additional route, no decoration or vegetation, no change to the lighting of the rest of the room. Keep the exact same 3:2 image framing and flat magenta backdrop. Only the central strip around the trunk may be modified."
+    }
+  ],
+  "post_traitement": "Normalisation au plus proche voisin à 648×432, projection sur la palette du natif (plus proche couleur en Lab), application locale sous masque. Crête du passage nord reprise de la salle 05. Tronc 12 : raccord inférieur sur le natif. La génération globale hors masque n’est pas utilisée.",
+  "retouches_sans_generation": [
+    "Côtés : petits murs de retour échantillonnés dans la salle 03 et tranche de bois dans la salle 05.",
+    "Sud 06 : joues basses réemployées depuis 01 ; prolongement du sol dans les 5 accès sud.",
+    "Échelle 03 : prolongement de son propre tronc et de ses barreaux jusqu’au bord supérieur.",
+    "Persiennes 08/10 : retrait des 78 pixels roses par salle et récupération de tous les petits interstices.",
+    "Masques de sol : petits îlots mal classés corrigés et raccord nord validé par connectivité."
+  ],
+  "essais_non_retenus": [
+    "Proposition du côté est de 05 : ajoutait un poteau haut non souhaité.",
+    "Proposition du sud de 06 : conservait des poteaux trop hauts."
+  ],
+  "sources_artistiques_figees": "bases/*.png et masques/*.png sont les sources validées de la version 2. La reconstruction des exports ne rappelle jamais le générateur.",
+  "limites": "Les ombres ambiantes existantes des matériaux restent dans la base. Les nouveaux calques ne prétendent pas reconstituer un éclairage physique complet. Les déclencheurs sont des propositions de placement, pas une intégration moteur."
+}
