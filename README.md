@@ -59,6 +59,7 @@ Chaque salle a une version jour et une version nuit, avec **une seule image par 
 - `source/passages/` : bases corrigées, masques sémantiques validés, retouches génératives retenues, prompts et provenance. Voir [le détail de la méthode](source/passages/README.md).
 - `source/natives/` : **les neuf natifs de départ, inchangés**.
 - `sprites/` : banque indépendante du premier kit ; aucun de ses éléments n’est posé automatiquement.
+- `portraits/falinks/` : **16 portraits d’émotions de Falinks au format PMDCollab** (40 × 40, ≤ 15 couleurs, planche SpriteBot 200 × 320 avec versions retournées), dérivés par retouche pixel du portrait Normal d’Emmuffin. Voir [leur README](portraits/falinks/README.md).
 - `rapports/audit_interieurs_guilde/` : rapport **historique**, sur l’état initial `6c4ac5a`, avant ces corrections.
 
 Le hall mesure **1280 × 544 px**, les autres pièces **648 × 432 px**. La grille de 8 px est une grille de travail, pas une pixellisation du dessin en gros blocs.

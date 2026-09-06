@@ -1,0 +1,132 @@
+{
+ "portraits": {
+  "Normal": {
+   "couleurs": 15,
+   "pixels_modifies": 0,
+   "personnage_conserve": 1.0,
+   "miroir_ok": true
+  },
+  "Happy": {
+   "couleurs": 14,
+   "pixels_modifies": 276,
+   "personnage_conserve": 0.9636,
+   "miroir_ok": true
+  },
+  "Pain": {
+   "couleurs": 15,
+   "pixels_modifies": 272,
+   "personnage_conserve": 0.9665,
+   "miroir_ok": true
+  },
+  "Angry": {
+   "couleurs": 15,
+   "pixels_modifies": 263,
+   "personnage_conserve": 0.9731,
+   "miroir_ok": true
+  },
+  "Worried": {
+   "couleurs": 15,
+   "pixels_modifies": 262,
+   "personnage_conserve": 0.9738,
+   "miroir_ok": true
+  },
+  "Sad": {
+   "couleurs": 15,
+   "pixels_modifies": 282,
+   "personnage_conserve": 0.9592,
+   "miroir_ok": true
+  },
+  "Crying": {
+   "couleurs": 15,
+   "pixels_modifies": 307,
+   "personnage_conserve": 0.941,
+   "miroir_ok": true
+  },
+  "Shouting": {
+   "couleurs": 15,
+   "pixels_modifies": 258,
+   "personnage_conserve": 0.9767,
+   "miroir_ok": true
+  },
+  "Teary-Eyed": {
+   "couleurs": 15,
+   "pixels_modifies": 259,
+   "personnage_conserve": 0.976,
+   "miroir_ok": true
+  },
+  "Determined": {
+   "couleurs": 15,
+   "pixels_modifies": 254,
+   "personnage_conserve": 0.9796,
+   "miroir_ok": true
+  },
+  "Joyous": {
+   "couleurs": 15,
+   "pixels_modifies": 273,
+   "personnage_conserve": 0.9658,
+   "miroir_ok": true
+  },
+  "Inspired": {
+   "couleurs": 15,
+   "pixels_modifies": 275,
+   "personnage_conserve": 0.9643,
+   "miroir_ok": true
+  },
+  "Surprised": {
+   "couleurs": 14,
+   "pixels_modifies": 289,
+   "personnage_conserve": 0.9541,
+   "miroir_ok": true
+  },
+  "Dizzy": {
+   "couleurs": 14,
+   "pixels_modifies": 283,
+   "personnage_conserve": 0.9585,
+   "miroir_ok": true
+  },
+  "Sigh": {
+   "couleurs": 15,
+   "pixels_modifies": 286,
+   "personnage_conserve": 0.9563,
+   "miroir_ok": true
+  },
+  "Stunned": {
+   "couleurs": 15,
+   "pixels_modifies": 270,
+   "personnage_conserve": 0.968,
+   "miroir_ok": true
+  }
+ },
+ "planche": {
+  "taille": [
+   200,
+   320
+  ],
+  "cases_pleines": 32,
+  "cases_vides": 8,
+  "ordre": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Angry",
+   "Worried",
+   "Sad",
+   "Crying",
+   "Shouting",
+   "Teary-Eyed",
+   "Determined",
+   "Joyous",
+   "Inspired",
+   "Surprised",
+   "Dizzy",
+   "Special0",
+   "Special1",
+   "Sigh",
+   "Stunned",
+   "Special2",
+   "Special3"
+  ]
+ },
+ "erreurs": [],
+ "statut": "ok"
+}

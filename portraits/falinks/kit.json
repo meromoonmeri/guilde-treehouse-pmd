@@ -1,0 +1,1153 @@
+{
+ "pokemon": {
+  "numero": "0870",
+  "nom": "Falinks",
+  "forme": "0000"
+ },
+ "base": {
+  "fichier": "source/portraits/reference/0870_Normal.png",
+  "auteur": "Emmuffin (<@!356635814668664832>)",
+  "licence": "PMDCollab_2",
+  "source": "https://sprites.pmdcollab.org/#/0870"
+ },
+ "format": {
+  "portrait": [
+   40,
+   40
+  ],
+  "planche": [
+   200,
+   320
+  ],
+  "grille": [
+   5,
+   8
+  ],
+  "ordre": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Angry",
+   "Worried",
+   "Sad",
+   "Crying",
+   "Shouting",
+   "Teary-Eyed",
+   "Determined",
+   "Joyous",
+   "Inspired",
+   "Surprised",
+   "Dizzy",
+   "Special0",
+   "Special1",
+   "Sigh",
+   "Stunned",
+   "Special2",
+   "Special3"
+  ],
+  "moitie_basse": "versions retournées « ^ » : miroir horizontal exact de chaque portrait",
+  "cases_vides": [
+   "Special0",
+   "Special1",
+   "Special2",
+   "Special3"
+  ]
+ },
+ "palette_base": {
+  "0": "#343238",
+  "5": "#474750",
+  "2": "#57575f",
+  "1": "#9a2223",
+  "8": "#cb3d3f",
+  "6": "#8f7020",
+  "4": "#d5a733",
+  "7": "#f5d153",
+  "A": "#3a9bca",
+  "E": "#96e2e3",
+  "B": "#ffffff",
+  "3": "#77c7d7",
+  "D": "#b2ddc9",
+  "9": "#efffc8",
+  "C": "#c4c3b0"
+ },
+ "boites_yeux": {
+  "gauche": [
+   16,
+   22,
+   5,
+   8
+  ],
+  "droite": [
+   26,
+   22,
+   5,
+   8
+  ],
+  "troupiers": [
+   [
+    0,
+    26
+   ],
+   [
+    0,
+    27
+   ],
+   [
+    0,
+    28
+   ],
+   [
+    39,
+    22
+   ],
+   [
+    39,
+    23
+   ],
+   [
+    39,
+    24
+   ],
+   [
+    39,
+    25
+   ]
+  ]
+ },
+ "emotions": {
+  "Normal": {
+   "fond": null,
+   "yeux": [],
+   "effets": [],
+   "troupiers": "ouverts",
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#77c7d7",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#b2ddc9",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#efffc8",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Happy": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      239,
+      119
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 24,
+     "largeur": 4,
+     "hauteur": 4
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 24,
+     "largeur": 3,
+     "hauteur": 4
+    }
+   ],
+   "effets": [],
+   "troupiers": "fermes",
+   "pixels_retouches_hors_fond": 40,
+   "zone_retouchee": [
+    0,
+    22,
+    39,
+    28
+   ],
+   "couleurs": 14,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#9a2223",
+    "#9a987c",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffef77",
+    "#ffffbf",
+    "#ffffff"
+   ]
+  },
+  "Pain": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      111,
+      135,
+      183
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 24,
+     "largeur": 4,
+     "hauteur": 3
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 25,
+     "largeur": 3,
+     "hauteur": 4
+    }
+   ],
+   "effets": [
+    {
+     "x": 33,
+     "y": 0,
+     "largeur": 5,
+     "hauteur": 6,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 55,
+   "zone_retouchee": [
+    17,
+    0,
+    37,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#525c78",
+    "#57575f",
+    "#6f87b7",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#a7cfdf",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Angry": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      247,
+      111,
+      143
+     ],
+     [
+      223,
+      127,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 24,
+     "largeur": 4,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 24,
+     "largeur": 3,
+     "hauteur": 5
+    }
+   ],
+   "effets": [
+    {
+     "x": 32,
+     "y": 0,
+     "largeur": 7,
+     "hauteur": 7,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 49,
+   "zone_retouchee": [
+    17,
+    0,
+    38,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#965064",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#df7faf",
+    "#f5d153",
+    "#f76f8f",
+    "#ffffff"
+   ]
+  },
+  "Worried": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      143,
+      167,
+      207
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 24,
+     "largeur": 4,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 24,
+     "largeur": 3,
+     "hauteur": 5
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 34,
+   "zone_retouchee": [
+    17,
+    23,
+    28,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#626c84",
+    "#8f7020",
+    "#8fa7cf",
+    "#96e2e3",
+    "#9a2223",
+    "#a7cfdf",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Sad": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      135,
+      183
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 26,
+     "largeur": 4,
+     "hauteur": 4
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 26,
+     "largeur": 3,
+     "hauteur": 4
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 40,
+   "zone_retouchee": [
+    17,
+    23,
+    28,
+    29
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#565c78",
+    "#57575f",
+    "#7787b7",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#a7cfdf",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Crying": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      135,
+      175
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 5
+    }
+   ],
+   "effets": [
+    {
+     "x": 17,
+     "y": 29,
+     "largeur": 1,
+     "hauteur": 5,
+     "mode": "over"
+    },
+    {
+     "x": 29,
+     "y": 29,
+     "largeur": 1,
+     "hauteur": 4,
+     "mode": "over"
+    },
+    {
+     "x": 14,
+     "y": 23,
+     "largeur": 2,
+     "hauteur": 2,
+     "mode": "over"
+    },
+    {
+     "x": 30,
+     "y": 23,
+     "largeur": 2,
+     "hauteur": 2,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "fermes",
+   "pixels_retouches_hors_fond": 61,
+   "zone_retouchee": [
+    0,
+    22,
+    39,
+    33
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#565c74",
+    "#57575f",
+    "#7787af",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#a7cfdf",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Shouting": {
+   "fond": {
+    "type": "rayons",
+    "couleurs": [
+     [
+      135,
+      199,
+      247
+     ],
+     [
+      191,
+      247,
+      191
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 22,
+     "largeur": 4,
+     "hauteur": 7
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 22,
+     "largeur": 3,
+     "hauteur": 7
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 38,
+   "zone_retouchee": [
+    17,
+    22,
+    28,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#5e7c98",
+    "#87c7f7",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#bff7bf",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Teary-Eyed": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      247,
+      191,
+      199
+     ],
+     [
+      231,
+      143,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 6
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 3,
+     "hauteur": 6
+    }
+   ],
+   "effets": [
+    {
+     "x": 16,
+     "y": 28,
+     "largeur": 2,
+     "hauteur": 2,
+     "mode": "over"
+    },
+    {
+     "x": 29,
+     "y": 28,
+     "largeur": 2,
+     "hauteur": 2,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 39,
+   "zone_retouchee": [
+    16,
+    23,
+    30,
+    29
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#967880",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#e78faf",
+    "#f5d153",
+    "#f7bfc7",
+    "#ffffff"
+   ]
+  },
+  "Determined": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      239,
+      143,
+      191
+     ],
+     [
+      247,
+      111,
+      151
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 6
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 3,
+     "hauteur": 6
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 35,
+   "zone_retouchee": [
+    17,
+    23,
+    28,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#92607c",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#ef8fbf",
+    "#f5d153",
+    "#f76f97",
+    "#ffffff"
+   ]
+  },
+  "Joyous": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      231,
+      127
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 3,
+     "hauteur": 5
+    }
+   ],
+   "effets": [
+    {
+     "x": 1,
+     "y": 0,
+     "largeur": 6,
+     "hauteur": 6,
+     "mode": "bg"
+    },
+    {
+     "x": 33,
+     "y": 0,
+     "largeur": 6,
+     "hauteur": 6,
+     "mode": "bg"
+    }
+   ],
+   "troupiers": "fermes",
+   "pixels_retouches_hors_fond": 89,
+   "zone_retouchee": [
+    0,
+    0,
+    39,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#9a2223",
+    "#9a987c",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ff8f87",
+    "#ffe77f",
+    "#ffffbf",
+    "#ffffff"
+   ]
+  },
+  "Inspired": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      239,
+      135
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 16,
+     "y": 23,
+     "largeur": 5,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 3,
+     "hauteur": 5
+    }
+   ],
+   "effets": [
+    {
+     "x": 2,
+     "y": 0,
+     "largeur": 5,
+     "hauteur": 5,
+     "mode": "bg"
+    },
+    {
+     "x": 33,
+     "y": 0,
+     "largeur": 5,
+     "hauteur": 5,
+     "mode": "bg"
+    },
+    {
+     "x": 12,
+     "y": 1,
+     "largeur": 1,
+     "hauteur": 1,
+     "mode": "bg"
+    }
+   ],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 53,
+   "zone_retouchee": [
+    2,
+    0,
+    37,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#9a987c",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffef87",
+    "#ffffbf",
+    "#ffffff"
+   ]
+  },
+  "Surprised": {
+   "fond": {
+    "type": "zigzag",
+    "couleurs": [
+     [
+      223,
+      231,
+      239
+     ],
+     [
+      119,
+      135,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 16,
+     "y": 22,
+     "largeur": 5,
+     "hauteur": 7
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 22,
+     "largeur": 4,
+     "hauteur": 7
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 55,
+   "zone_retouchee": [
+    16,
+    22,
+    29,
+    28
+   ],
+   "couleurs": 14,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#7787af",
+    "#8f7020",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#dfe7ef",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Dizzy": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      143,
+      207,
+      199
+     ],
+     [
+      143,
+      207,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 16,
+     "y": 23,
+     "largeur": 5,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 5,
+     "hauteur": 5
+    }
+   ],
+   "effets": [],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 44,
+   "zone_retouchee": [
+    16,
+    23,
+    30,
+    28
+   ],
+   "couleurs": 14,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#628080",
+    "#8f7020",
+    "#8fcfc7",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  },
+  "Sigh": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      253,
+      241,
+      165
+     ],
+     [
+      253,
+      229,
+      120
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 25,
+     "largeur": 4,
+     "hauteur": 2
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 25,
+     "largeur": 3,
+     "hauteur": 2
+    }
+   ],
+   "effets": [
+    {
+     "x": 7,
+     "y": 0,
+     "largeur": 5,
+     "hauteur": 6,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "fermes",
+   "pixels_retouches_hors_fond": 62,
+   "zone_retouchee": [
+    0,
+    0,
+    39,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#57575f",
+    "#8f7020",
+    "#96e2e3",
+    "#98926e",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#fde578",
+    "#fdf1a5",
+    "#ffffff"
+   ]
+  },
+  "Stunned": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      134,
+      177
+     ],
+     [
+      143,
+      207,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "cote": "left",
+     "x": 17,
+     "y": 23,
+     "largeur": 4,
+     "hauteur": 5
+    },
+    {
+     "cote": "right",
+     "x": 26,
+     "y": 23,
+     "largeur": 3,
+     "hauteur": 5
+    }
+   ],
+   "effets": [
+    {
+     "x": 33,
+     "y": 0,
+     "largeur": 5,
+     "hauteur": 6,
+     "mode": "over"
+    }
+   ],
+   "troupiers": "ouverts",
+   "pixels_retouches_hors_fond": 56,
+   "zone_retouchee": [
+    17,
+    0,
+    37,
+    28
+   ],
+   "couleurs": 15,
+   "palette": [
+    "#343238",
+    "#3a9bca",
+    "#474750",
+    "#565c74",
+    "#57575f",
+    "#7786b1",
+    "#8f7020",
+    "#8fcfc7",
+    "#96e2e3",
+    "#9a2223",
+    "#c4c3b0",
+    "#cb3d3f",
+    "#d5a733",
+    "#f5d153",
+    "#ffffff"
+   ]
+  }
+ }
+}
