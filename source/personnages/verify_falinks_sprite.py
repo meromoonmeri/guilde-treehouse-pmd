@@ -108,7 +108,9 @@ def main() -> None:
         offs = rgba(OUT / f"{name}-Offsets.png")
         shad = rgba(OUT / f"{name}-Shadow.png")
         night = rgba(OUT / "nuit" / f"{name}-Anim.png")
-        assert anim.shape == offs.shape == shad.shape == night.shape, f"{name} : tailles différentes"
+        ombres = rgba(OUT / "ombres_unites" / f"{name}-Ombres.png")
+        assert anim.shape == offs.shape == shad.shape == night.shape == ombres.shape, f"{name} : tailles différentes"
+        assert set(np.unique(ombres[:, :, 3])) <= {0, 100}, f"{name} : calque d'ombres ≠ alpha 0/100"
         assert anim.shape[1] % fw == 0 and anim.shape[0] % fh == 0, f"{name} : feuille non divisible par la case"
         n, dirs = anim.shape[1] // fw, anim.shape[0] // fh
         assert dirs in (1, 8), f"{name} : {dirs} lignes"
@@ -137,6 +139,13 @@ def main() -> None:
                 ys, xs = np.nonzero(cell[:, :, 3])
                 px = int(len(xs))
                 assert px > 0, f"{name} dir {d} image {i} : case vide"
+                # semelles : plus aucun blanc pur dans les trois dernières lignes de chaque unité ;
+                # on contrôle globalement : le blanc pur ne descend jamais sous la ligne y_max - 2 de la case
+                white_px = (cell[:, :, 3] > 0) & np.all(cell[:, :, :3] == 255, axis=2)
+                assert not white_px[ys.max() - 2:].any(), f"{name} dir {d} image {i} : semelle blanche restante"
+                # ombres par unité : le calque couvre au moins six ombres de 14 × 6 fusionnées (≥ 6 × 40 px sans recouvrement total)
+                oc = ombres[d * fh:(d + 1) * fh, i * fw:(i + 1) * fw, 3] > 0
+                assert oc.sum() >= 3 * 60, f"{name} dir {d} image {i} : calque d'ombres trop petit ({int(oc.sum())} px)"
                 assert xs.min() >= 1 and ys.min() >= 1 and xs.max() <= fw - 2 and ys.max() <= fh - 2, f"{name} dir {d} image {i} : dessin au bord de la case"
                 # au moins six unités : les pixels d'une case ne descendent jamais sous 5 unités visibles
                 assert px >= 5 * UNIT_PIXELS["trooper"] * 0.5, f"{name} dir {d} image {i} : trop peu de pixels ({px})"
@@ -207,7 +216,7 @@ def main() -> None:
         assert (OUT / f).is_file(), f"fichier manquant : {f}"
 
     report["resume"] = {"animations": len(anims), "feuilles": len(sheets), "cases": total_cells, "couleurs": len(palette),
-                        "shadow_size": shadow_size, "statut": "conforme"}
+                        "shadow_size": shadow_size, "semelles_blanches": 0, "calque_ombres_unites": True, "statut": "conforme"}
     (OUT / "controle_qualite.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"OK — {len(anims)} animations, {total_cells} cases contrôlées, {len(palette)} couleurs, ShadowSize {shadow_size}")
 

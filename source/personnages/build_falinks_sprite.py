@@ -59,6 +59,9 @@ WALK_PHASE_PER_RANK = 1        # décalage de phase (en images) par rang dans la
 IDLE_WAVE_DELAY = 2            # ticks entre deux rangs dans la vague de l'attente
 IDLE_TOTAL = 60                # durée du cycle d'attente (ticks de 1/60 s)
 SHADOW_SIZE = 2                # ombre large : la formation couvre deux cases
+SOLE_COLOUR = (74, 82, 82)     # semelle du pied levé : gris du pied au lieu du blanc pur des unités
+SOLE_ROWS = 3                  # les semelles sont dans les trois dernières lignes de la silhouette
+UNIT_SHADOW_ALPHA = 100        # calque d'ombres par unité (hors format SpriteCollab)
 
 ANIM_ORDER = [("Walk", 0), ("Attack", 1), ("Strike", 2), ("Shoot", 3), ("Sleep", 5), ("Hurt", 6),
               ("Idle", 7), ("Swing", 8), ("Double", 9), ("Hop", 10), ("Charge", 11), ("Rotate", 12)]
@@ -107,6 +110,7 @@ class Composed:
     hit: int | None = None
     ret: int | None = None
     anchors: list[list[tuple[int, int]]] = field(default_factory=list)
+    unit_shadows: list[list[np.ndarray]] = field(default_factory=list)   # calque hors format : une ombre par unité
     notes: str = ""
 
 
@@ -135,8 +139,21 @@ def split_cell(sheet: np.ndarray, fw: int, fh: int, d: int, i: int) -> np.ndarra
     return sheet[d * fh:(d + 1) * fh, i * fw:(i + 1) * fw]
 
 
+def recolour_soles(cell: np.ndarray) -> np.ndarray:
+    """Les unités d'origine peignent la semelle du pied levé en blanc pur ; sur six unités en file,
+    ces deux pixels clignotent. On les ramène au gris du pied (même palette, aucune couleur ajoutée)."""
+    alpha = cell[:, :, 3] > 0
+    if not alpha.any():
+        return cell
+    bottom = int(np.nonzero(alpha)[0].max())
+    white = alpha & np.all(cell[:, :, :3] == 255, axis=2)
+    white[:max(0, bottom - SOLE_ROWS + 1)] = False
+    cell[white, :3] = SOLE_COLOUR
+    return cell
+
+
 def extract(anim: np.ndarray, offs: np.ndarray, shad: np.ndarray, fw: int, fh: int, d: int, i: int) -> UnitFrame:
-    cell = split_cell(anim, fw, fh, d, i).copy()
+    cell = recolour_soles(split_cell(anim, fw, fh, d, i).copy())
     o = split_cell(offs, fw, fh, d, i)
     s = split_cell(shad, fw, fh, d, i)
     white = np.argwhere((s[:, :, 3] > 0) & (s[:, :, 0] == 255) & (s[:, :, 1] == 255) & (s[:, :, 2] == 255))
@@ -288,6 +305,9 @@ class Composer:
         s = np.array(Image.open(REF / BRASS / "Walk-Shadow.png").convert("RGBA"))
         ax, ay = template.frames[0][0].anchor
         self.shadow_template = s[ay - 4:ay + 4, ax - 12:ax + 12].copy()   # 24 × 8, blanc en (12, 4)
+        t = self.shadow_template
+        # ombre « normale » d'une unité (ShadowSize 1) : zones rouge + verte + blanc du gabarit, 14 × 6
+        self.unit_shadow_mask = (t[:, :, 3] > 0) & ((t[:, :, 0] == 255) | (t[:, :, 1] == 255))
         self.palette = self.collect_palette()
 
     def collect_palette(self) -> set[tuple[int, int, int]]:
@@ -322,6 +342,8 @@ class Composer:
             xs0.append(p.x + x0); ys0.append(p.y + y0); xs1.append(p.x + x1); ys1.append(p.y + y1)
             for ox, oy in p.frame.offsets.values():
                 xs0.append(p.x + ox); ys0.append(p.y + oy); xs1.append(p.x + ox); ys1.append(p.y + oy)
+            if p.layer == 0:
+                xs0.append(p.x - 12); xs1.append(p.x + 11); ys0.append(p.y - 4); ys1.append(p.y + 3)
         ax, ay = anchor
         xs0.append(ax - 12); xs1.append(ax + 11); ys0.append(ay - 4); ys1.append(ay + 3)
         return min(xs0), min(ys0), max(xs1), max(ys1)
@@ -341,12 +363,16 @@ class Composer:
         cx, cy = fw // 2, fh // 2 + 4
         comp = Composed(name, fw, fh, list(durations), rush=rush, hit=hit, ret=ret, notes=notes)
         for row in plan:
-            cells, anchors = [], []
+            cells, anchors, unit_shadows = [], [], []
             for pls, (adx, ady) in row:
                 anim = np.zeros((fh, fw, 4), np.uint8)
                 offs = np.zeros((fh, fw, 4), np.uint8)
                 shad = np.zeros((fh, fw, 4), np.uint8)
+                ombres = np.zeros((fh, fw), bool)
                 for p in pls:
+                    if p.layer == 0:
+                        ox, oy = cx + p.x - 12, cy + p.y - 4
+                        ombres[oy:oy + 8, ox:ox + 24] |= self.unit_shadow_mask
                     ax, ay = p.frame.anchor
                     bx0, by0, bx1, by1 = p.frame.bbox
                     img = p.frame.image[ay + by0:ay + by1 + 1, ax + bx0:ax + bx1 + 1]
@@ -368,8 +394,12 @@ class Composer:
                 shad[sy:sy + 8, sx:sx + 24] = self.shadow_template
                 cells.append((anim, offs, shad))
                 anchors.append((cx + adx, cy + ady))
+                layer = np.zeros((fh, fw, 4), np.uint8)
+                layer[ombres, 3] = UNIT_SHADOW_ALPHA
+                unit_shadows.append(layer)
             comp.cells.append(cells)
             comp.anchors.append(anchors)
+            comp.unit_shadows.append(unit_shadows)
         return comp
 
     # -- animations -------------------------------------------------------------------
@@ -495,11 +525,13 @@ class Composer:
 # Exports
 # ---------------------------------------------------------------------------
 def sheet(comp: Composed, which: int) -> Image.Image:
+    """which : 0 Anim, 1 Offsets, 2 Shadow, 3 calque d'ombres par unité."""
     dirs, n = len(comp.cells), len(comp.durations)
     canvas = np.zeros((dirs * comp.fh, n * comp.fw, 4), np.uint8)
     for d, row in enumerate(comp.cells):
         for i, cell in enumerate(row):
-            canvas[d * comp.fh:(d + 1) * comp.fh, i * comp.fw:(i + 1) * comp.fw] = cell[which]
+            src = comp.unit_shadows[d][i] if which == 3 else cell[which]
+            canvas[d * comp.fh:(d + 1) * comp.fh, i * comp.fw:(i + 1) * comp.fw] = src
     return Image.fromarray(canvas, "RGBA")
 
 
@@ -597,11 +629,16 @@ def ground_shadow(draw: ImageDraw.ImageDraw, x: int, y: int, zoom: int) -> None:
     draw.ellipse([x - 12 * zoom, y - 4 * zoom, x + 11 * zoom, y + 3 * zoom], fill=(40, 24, 8, 90))
 
 
+def unit_shadow_image(c: Composed, d: int, i: int, zoom: int) -> Image.Image:
+    layer = c.unit_shadows[d][i].copy()
+    layer[:, :, :3] = (40, 24, 8)
+    return Image.fromarray(layer, "RGBA").resize((c.fw * zoom, c.fh * zoom), Image.NEAREST)
+
+
 def cell_image(c: Composed, d: int, i: int, zoom: int, bg=(26, 26, 46, 255), shadow=True) -> Image.Image:
     img = Image.new("RGBA", (c.fw * zoom, c.fh * zoom), bg)
     if shadow:
-        ax, ay = c.anchors[d][i]
-        ground_shadow(ImageDraw.Draw(img), ax * zoom, ay * zoom, zoom)
+        img.alpha_composite(unit_shadow_image(c, d, i, zoom))
     cell = Image.fromarray(c.cells[d][i][0], "RGBA").resize((c.fw * zoom, c.fh * zoom), Image.NEAREST)
     img.alpha_composite(cell)
     return img
@@ -690,7 +727,6 @@ def gif(comps: dict[str, Composed], names: list[str], directions: list[int], pat
     for k, t in enumerate(events):
         nxt = events[k + 1] if k + 1 < len(events) else span
         img = bg.copy()
-        d = ImageDraw.Draw(img)
         for r, n in enumerate(names):
             c = comps[n]
             i = max(i for tt, i in tick_frames[n] if tt <= t)
@@ -699,7 +735,7 @@ def gif(comps: dict[str, Composed], names: list[str], directions: list[int], pat
                 cell = Image.fromarray(c.cells[dd][i][0], "RGBA").resize((c.fw * zoom, c.fh * zoom), Image.NEAREST)
                 ax, ay = c.anchors[dd][i]
                 cx, cy = col * cw + cw // 2, r * ch + ch * 2 // 3
-                ground_shadow(d, cx, cy, zoom)
+                img.alpha_composite(unit_shadow_image(c, dd, i, zoom), (cx - ax * zoom, cy - ay * zoom))
                 img.alpha_composite(cell, (cx - ax * zoom, cy - ay * zoom))
         frames_out.append(img.convert("RGB").quantize(colors=128, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
         durations_out.append(int(round((nxt - t) * 1000 / 60)))
@@ -726,11 +762,11 @@ canvas{{image-rendering:pixelated;background:#2a2a3e;display:block;border:1px so
 .grid div{{text-align:center;font-size:12px;color:#aab}} .grid canvas{{margin:4px auto}}
 </style></head><body>
 <header><h1>Falinks #0870 — sprite d'escouade, format SpriteCollab</h1>
-<p>Lecture hors ligne des feuilles <code>*-Anim.png</code>. Les images sont alignées sur le pixel blanc de <code>*-Shadow.png</code>, comme dans le jeu. Case du donjon = 24 px.</p></header>
+<p>Lecture hors ligne des feuilles <code>*-Anim.png</code>. Les images sont alignées sur le pixel blanc de <code>*-Shadow.png</code>, comme dans le jeu. Case du donjon = 24 px. Le mode « une par unité » lit le calque <code>ombres_unites/*-Ombres.png</code> (hors format SpriteCollab).</p></header>
 <div class="bar">
 <label>Animation <select id="anim">{''.join(f'<option>{n}</option>' for n in names)}</select></label>
 <label>Zoom <input id="zoom" type="range" min="2" max="8" value="4"></label>
-<label><input id="shadow" type="checkbox" checked> ombre</label>
+<label>Ombre <select id="shadow"><option value="units">une par unité (ombres_unites/)</option><option value="one">une seule (jeu, ShadowSize 2)</option><option value="none">aucune</option></select></label>
 <label><input id="offsets" type="checkbox"> repères</label>
 <label><input id="grid" type="checkbox" checked> grille 24 px</label>
 <button id="pause">Pause</button>
@@ -761,7 +797,7 @@ function frameAt(m, ticks) {{
 }}
 function draw() {{
   const name = document.getElementById('anim').value, m = M[name], z = +document.getElementById('zoom').value;
-  const anim = load(name, 'Anim'), offs = load(name, 'Offsets');
+  const anim = load(name, 'Anim'), offs = load(name, 'Offsets'), units = load('ombres_unites/' + name, 'Ombres');
   const now = paused ? pauseAt : performance.now();
   const ticks = Math.floor((now - t0) / 1000 * 60);
   const i = frameAt(m, ticks);
@@ -776,9 +812,12 @@ function draw() {{
       for (let x = (W / 2) % (24 * z); x < W; x += 24 * z) {{ g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); }}
       for (let y = (H * 0.62) % (24 * z); y < H; y += 24 * z) {{ g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }}
     }}
-    if (document.getElementById('shadow').checked) {{
+    const mode = document.getElementById('shadow').value;
+    if (mode === 'one') {{
       g.fillStyle = 'rgba(0,0,0,0.35)'; g.beginPath();
       g.ellipse(ox + ax * z, oy + ay * z, 12 * z, 4 * z, 0, 0, Math.PI * 2); g.fill();
+    }} else if (mode === 'units') {{
+      g.drawImage(units, i * m.fw, dd * m.fh, m.fw, m.fh, ox, oy, m.fw * z, m.fh * z);
     }}
     g.drawImage(anim, i * m.fw, dd * m.fh, m.fw, m.fh, ox, oy, m.fw * z, m.fh * z);
     if (document.getElementById('offsets').checked) g.drawImage(offs, i * m.fw, dd * m.fh, m.fw, m.fh, ox, oy, m.fw * z, m.fh * z);
@@ -813,10 +852,12 @@ def main() -> None:
     (OUT / "nuit").mkdir(exist_ok=True)
     composer = Composer()
     comps = composer.build_all()
+    (OUT / "ombres_unites").mkdir(exist_ok=True)
     for name, c in comps.items():
         for which, kind in enumerate(["Anim", "Offsets", "Shadow"]):
             sheet(c, which).save(OUT / f"{name}-{kind}.png", optimize=True)
         night(sheet(c, 0)).save(OUT / "nuit" / f"{name}-Anim.png", optimize=True)
+        sheet(c, 3).save(OUT / "ombres_unites" / f"{name}-Ombres.png", optimize=True)
     write_animdata(comps, OUT / "AnimData.xml")
     ase_info = write_aseprite(comps, OUT / "falinks.aseprite")
     contact_sheet(comps, OUT / "apercu.png")
@@ -850,6 +891,10 @@ def main() -> None:
         "copies": {"Strike": "Attack"},
         "aseprite": ase_info,
         "nuit": "nuit/<Anim>-Anim.png : même filtre que les salles (source/rebuild_kit.py night) ; Offsets et Shadow inchangés",
+        "ombres_unites": {"fichiers": "ombres_unites/<Anim>-Ombres.png", "alpha": UNIT_SHADOW_ALPHA,
+                          "description": "calque hors format SpriteCollab : une ombre normale (14 × 6) sous chaque unité, même grille que <Anim>-Anim.png ; "
+                                         "à dessiner sous le sprite à la place de l'ombre unique du jeu"},
+        "semelles": {"couleur": "#%02x%02x%02x" % SOLE_COLOUR, "description": "les semelles blanches du pied levé des unités d'origine sont ramenées au gris du pied"},
         "palette": sorted("#%02x%02x%02x" % c for c in used),
         "couleurs": len(used),
     }

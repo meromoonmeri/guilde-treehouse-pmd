@@ -59,7 +59,12 @@ La bonne approche a été une **composition scriptée** (`build_falinks_sprite.p
 5. **Réassemblage** : case = 2 × (demi-étendue max + 1), arrondie au multiple de 8 ; ancre à
    (fw/2, fh/2+4) + déplacement du brass d'origine ; gabarit d'ombre 24 × 8 recopié tel quel autour
    de l'ancre ; repères du brass reportés (max des couleurs si superposition).
-6. **Aucun pixel repeint** : la palette finale est exactement celle des unités (13 couleurs).
+6. **Aucun pixel repeint**, à une exception près demandée par l'utilisateur : la semelle blanche du pied
+   levé (deux pixels dans les trois dernières lignes de chaque unité) est ramenée au gris du pied, car elle
+   clignotait sur six unités. La palette finale reste celle des unités (13 couleurs).
+7. **Ombres par unité** : le format du jeu n'accepte qu'une ombre par sprite. `-Shadow.png` garde l'ombre
+   unique ; un calque hors format `ombres_unites/<Anim>-Ombres.png` (alpha 100, même grille) pose une ombre
+   normale 14 × 6 sous chaque unité pour les moteurs qui dessinent l'ombre eux-mêmes. Les aperçus l'utilisent.
 
 Décisions à retenir : `ShadowSize` 2 (emprise de deux cases, comme Onix), étincelles de Hurt gardées
 une seule fois (composante non principale de l'image du brass, séparée avec `scipy.ndimage.label`),

@@ -2,7 +2,7 @@
  "animations": {
   "Walk": {
    "case": [
-    64,
+    72,
     64
    ],
    "images": 6,
@@ -10,13 +10,13 @@
    "pixels_min": 643,
    "pixels_max": 701,
    "ancre_repos": [
-    32,
+    36,
     36
    ]
   },
   "Attack": {
    "case": [
-    104,
+    112,
     112
    ],
    "images": 10,
@@ -24,13 +24,13 @@
    "pixels_min": 631,
    "pixels_max": 733,
    "ancre_repos": [
-    52,
+    56,
     59
    ]
   },
   "Shoot": {
    "case": [
-    64,
+    72,
     80
    ],
    "images": 13,
@@ -38,13 +38,13 @@
    "pixels_min": 592,
    "pixels_max": 731,
    "ancre_repos": [
-    32,
+    36,
     44
    ]
   },
   "Sleep": {
    "case": [
-    56,
+    64,
     40
    ],
    "images": 2,
@@ -52,7 +52,7 @@
    "pixels_min": 825,
    "pixels_max": 845,
    "ancre_repos": [
-    28,
+    32,
     24
    ]
   },
@@ -72,7 +72,7 @@
   },
   "Idle": {
    "case": [
-    64,
+    72,
     80
    ],
    "images": 13,
@@ -80,13 +80,13 @@
    "pixels_min": 633,
    "pixels_max": 717,
    "ancre_repos": [
-    32,
+    36,
     44
    ]
   },
   "Swing": {
    "case": [
-    104,
+    112,
     112
    ],
    "images": 9,
@@ -94,7 +94,7 @@
    "pixels_min": 620,
    "pixels_max": 769,
    "ancre_repos": [
-    52,
+    56,
     60
    ]
   },
@@ -114,7 +114,7 @@
   },
   "Hop": {
    "case": [
-    64,
+    72,
     112
    ],
    "images": 10,
@@ -122,13 +122,13 @@
    "pixels_min": 651,
    "pixels_max": 745,
    "ancre_repos": [
-    32,
+    36,
     60
    ]
   },
   "Charge": {
    "case": [
-    64,
+    72,
     64
    ],
    "images": 10,
@@ -136,13 +136,13 @@
    "pixels_min": 659,
    "pixels_max": 696,
    "ancre_repos": [
-    33,
+    37,
     36
    ]
   },
   "Rotate": {
    "case": [
-    64,
+    72,
     64
    ],
    "images": 9,
@@ -150,7 +150,7 @@
    "pixels_min": 618,
    "pixels_max": 728,
    "ancre_repos": [
-    32,
+    36,
     36
    ]
   }
@@ -161,7 +161,7 @@
    "calques": 8,
    "etiquettes": 11,
    "toile": [
-    104,
+    112,
     112
    ]
   }
@@ -172,6 +172,8 @@
   "cases": 786,
   "couleurs": 13,
   "shadow_size": 2,
+  "semelles_blanches": 0,
+  "calque_ombres_unites": true,
   "statut": "conforme"
  }
 }

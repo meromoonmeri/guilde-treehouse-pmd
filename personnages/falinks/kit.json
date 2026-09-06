@@ -315,7 +315,7 @@
   "Walk": {
    "index": 0,
    "case": [
-    64,
+    72,
     64
    ],
    "images": 6,
@@ -337,7 +337,7 @@
   "Idle": {
    "index": 7,
    "case": [
-    64,
+    72,
     80
    ],
    "images": 13,
@@ -366,7 +366,7 @@
   "Shoot": {
    "index": 3,
    "case": [
-    64,
+    72,
     80
    ],
    "images": 13,
@@ -413,7 +413,7 @@
   "Sleep": {
    "index": 5,
    "case": [
-    56,
+    64,
     40
    ],
    "images": 2,
@@ -431,7 +431,7 @@
   "Attack": {
    "index": 1,
    "case": [
-    104,
+    112,
     112
    ],
    "images": 10,
@@ -457,7 +457,7 @@
   "Swing": {
    "index": 8,
    "case": [
-    104,
+    112,
     112
    ],
    "images": 9,
@@ -514,7 +514,7 @@
   "Hop": {
    "index": 10,
    "case": [
-    64,
+    72,
     112
    ],
    "images": 10,
@@ -540,7 +540,7 @@
   "Charge": {
    "index": 11,
    "case": [
-    64,
+    72,
     64
    ],
    "images": 10,
@@ -566,7 +566,7 @@
   "Rotate": {
    "index": 12,
    "case": [
-    64,
+    72,
     64
    ],
    "images": 9,
@@ -594,7 +594,7 @@
  },
  "aseprite": {
   "canvas": [
-   104,
+   112,
    112
   ],
   "images": 100,
@@ -622,11 +622,20 @@
    "Rotate"
   ],
   "ancre": [
-   52,
+   56,
    60
   ]
  },
  "nuit": "nuit/<Anim>-Anim.png : même filtre que les salles (source/rebuild_kit.py night) ; Offsets et Shadow inchangés",
+ "ombres_unites": {
+  "fichiers": "ombres_unites/<Anim>-Ombres.png",
+  "alpha": 100,
+  "description": "calque hors format SpriteCollab : une ombre normale (14 × 6) sous chaque unité, même grille que <Anim>-Anim.png ; à dessiner sous le sprite à la place de l'ombre unique du jeu"
+ },
+ "semelles": {
+  "couleur": "#4a5252",
+  "description": "les semelles blanches du pied levé des unités d'origine sont ramenées au gris du pied"
+ },
  "palette": [
   "#000000",
   "#212929",
