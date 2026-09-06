@@ -60,7 +60,7 @@ Chaque salle a une version jour et une version nuit, avec **une seule image par 
 - `source/natives/` : **les neuf natifs de départ, inchangés**.
 - `sprites/` : banque indépendante du premier kit ; aucun de ses éléments n’est posé automatiquement.
 - `portraits/falinks/` : **16 portraits d’émotions de Falinks au format PMDCollab** (40 × 40, ≤ 15 couleurs, planche SpriteBot 200 × 320 avec versions retournées), dérivés par retouche pixel du portrait Normal d’Emmuffin. Voir [leur README](portraits/falinks/README.md).
-- `personnages/falinks/` : **sprite de donjon de Falinks au complet (forme 0000) au format SpriteCollab** — set donjon complet (Idle, Walk, Sleep, Hurt, Attack, Charge, Shoot, Strike, Swing, Double, Rotate, Hop), 8 directions, `AnimData.xml`, feuilles Anim / Offsets / Shadow, Aseprite animé, variantes nuit, composé à partir des unités Brass et Trooper publiées sur PMDCollab. Voir [leur README](personnages/falinks/README.md).
+- `personnages/falinks/` : **sprite de donjon de Falinks au complet (forme 0000) au format SpriteCollab** — set donjon complet (Idle, Walk, Sleep, Hurt, Attack, Charge, Shoot, Strike, Swing, Double, Rotate, Hop), 8 directions, `AnimData.xml`, feuilles Anim / Offsets / Shadow, Aseprite animé, variantes nuit, composé à partir des unités Brass et Trooper publiées sur PMDCollab. Voir [leur README](personnages/falinks/README.md) et, pour produire le prochain personnage, [la méthode](source/personnages/METHODE_SPRITES_PMD.md).
 - `rapports/audit_interieurs_guilde/` : rapport **historique**, sur l’état initial `6c4ac5a`, avant ces corrections.
 
 Le hall mesure **1280 × 544 px**, les autres pièces **648 × 432 px**. La grille de 8 px est une grille de travail, pas une pixellisation du dessin en gros blocs.
