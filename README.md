@@ -72,6 +72,10 @@ calques de décor sont vides là où Halcyon couvre 24 à 59 % du sol. Un facteu
 (chambres ≈ 408 × 264 px, salles ≈ 432 – 480 × 288 – 312 px, hall ≈ 840 × 360 px).
 
 Scripts de mesure et planches de comparaison : `analyse_echelle/`.
+Gabarits de retravail salle par salle (grille 24 px, bande mobilier, passages,
+sprites posés à 1:1) : `analyse_echelle/guides/`.
+Base de dessin déjà mise à l'échelle cible : `calques_reduits/` et `salles_reduites/`
+(brouillon à reprendre à la main, le rééchantillonnage adoucit le pixel art).
 
 ## Reproduction et contrôles
 

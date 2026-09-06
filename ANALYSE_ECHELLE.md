@@ -260,7 +260,69 @@ Ces règles sont extraites du comportement observé chez Halcyon, pas inventées
 
 ---
 
-## 7. Reproduire l'analyse
+## 7. Gabarits de travail salle par salle
+
+Tout est généré : `python3 analyse_echelle/guides.py` puis `python3 analyse_echelle/reduire.py`.
+
+### `analyse_echelle/guides/NN_gabarit.png`
+
+Un calque de référence **exactement à la taille cible**, à charger tel quel dans Aseprite
+au-dessus du dessin. Il contient : la grille 24 px (repère épais toutes les 4 cases), le
+contour du sol praticable, la **bande rose de 1,5 case le long des murs** où doit aller le
+mobilier, la zone bleue de circulation à garder libre, les passages ramenés à 2 cases, la
+ligne orange de hauteur de mur visée (4 cases), le cadre du viewport 320 × 240, et
+4 sprites Pokémon posés à 1:1 pour juger du rapport à l'œil.
+
+| Salle | Toile cible | Sol | Réf. Halcyon | Vide max | Props à poser | Passages |
+|---|---|---|---|---|---|---|
+| 01 Accueil de la guilde | 432 × 288 (18 × 12 cases) | 81 cases² | 75 – 110 | 5,4 | 12 | N 1,9 c |
+| 02 Hall des missions | 840 × 360 (35 × 15) | 196 cases² | 150 – 200 | 6,8 | 28 | O 2,6 c |
+| 03 Grande salle commune | 456 × 312 (19 × 13) | 82 cases² | 75 – 110 | 4,7 | 12 | — |
+| 04 Cantine | 480 × 312 (20 × 13) | 76 cases² | 75 – 110 | 5,5 | 11 | — |
+| 05 Chambre de l'équipe | 408 × 288 (17 × 12) | 65 cases² | 50 – 60 | 5,2 | 9 | E 1,9 c |
+| 06 Chambre du veilleur | 408 × 264 (17 × 11) | 61 cases² | 50 – 60 | 4,8 | 9 | S 3,6 c → 2 c |
+| 07 Chambre des résidents | 408 × 288 (17 × 12) | 65 cases² | 50 – 60 | 5,2 | 9 | O 1,9 c |
+| 08 Dortoir des apprentis | 408 × 264 (17 × 11) | 61 cases² | 50 – 60 | 5,1 | 9 | E 1,7 c |
+| 09 Grand dortoir | 432 × 288 (18 × 12) | 76 cases² | 75 – 110 | 5,4 | 11 | N 1,5 c |
+| 10 Dortoir des explorateurs | 408 × 264 (17 × 11) | 60 cases² | 50 – 60 | 4,9 | 9 | O 1,7 c |
+| 11 Chambre des éclaireurs | 408 × 288 (17 × 12) | 65 cases² | 50 – 60 | 5,2 | 9 | O 1,9 c |
+| 12 Salle du chef | 480 × 312 (20 × 13) | 78 cases² | 75 – 110 | 5,4 | 11 | — |
+
+Toutes les salles retombent dans la fourchette Halcyon, les poches de vide passent sous la
+limite (≤ 6 cases hors hub, ≤ 8 dans le hall) et aucun îlot central n'est nécessaire.
+Seul le passage sud de la salle 06 reste à resserrer (3,6 → 2 cases).
+
+### `analyse_echelle/guides/NN_plan.json`
+
+Les mêmes chiffres en données, pour scripter la reconstruction des maps : toile en px et
+en cases, facteur appliqué, surface de sol, vide maximal, nombre de props, rectangle
+d'îlot central s'il y a lieu, liste des passages (côté, position, largeur actuelle et
+largeur cible), hauteur de mur visée. `guides/plans.json` regroupe les 12.
+
+### `calques_reduits/` et `salles_reduites/`
+
+Base de départ concrète : les **11 calques de chaque salle, jour et nuit**, ramenés à la
+toile cible, plus un composite de contrôle par salle. À traiter comme un brouillon —
+le rééchantillonnage non entier adoucit le pixel art, il faut reprendre à la main les
+contours, les lattes de plancher, les croisillons de fenêtre et les cadres.
+
+### Ordre de travail conseillé
+
+1. Ouvrir `guides/NN_gabarit.png` en calque de référence au-dessus de
+   `calques_reduits/<salle>/jour/`.
+2. Reprendre `02_structure` : ramener le bandeau de mur sur la ligne orange (4 cases),
+   casser les grands arcs de l'ellipse par deux ou trois retours de cloison.
+3. Reprendre `01_sol` : resserrer les passages à 2 cases, découper le contour en angles
+   plutôt qu'en ovale.
+4. Remplir `06_decorations` et `07_objets` : le nombre de props de la colonne du tableau,
+   posés en priorité dans la bande rose, en réduisant les sprites du banc actuel à
+   24 – 56 px (1 – 2,5 cases), 150 px maximum pour une grande table.
+5. Contrôler : relancer `mesures.py` sur la salle refaite et vérifier que la largeur locale
+   médiane est retombée entre 1,0 et 1,7 case.
+
+---
+
+## 8. Reproduire l'analyse
 
 ```bash
 pip install pillow numpy scipy
@@ -270,6 +332,8 @@ export HALCYON_DIR=/chemin/halcyon
 python3 analyse_echelle/mesures.py   # -> analyse_echelle/mesures.json
 python3 analyse_echelle/apercus.py   # -> analyse_echelle/img/*.png
 python3 analyse_echelle/cibles.py    # -> analyse_echelle/cibles.json
+python3 analyse_echelle/guides.py    # -> analyse_echelle/guides/*.png + *_plan.json
+python3 analyse_echelle/reduire.py   # -> calques_reduits/ + salles_reduites/
 ```
 
 Les rendus de cartes Halcyon reconstruits sont mis en cache dans

@@ -1,0 +1,38 @@
+{
+  "id": "02",
+  "nom": "Hall des missions",
+  "type": "hub",
+  "toile_px": [
+    840,
+    360
+  ],
+  "toile_cases": [
+    35.0,
+    15.0
+  ],
+  "facteur": [
+    0.656,
+    0.662
+  ],
+  "sol_cases2": 195.8,
+  "sol_reference_halcyon_cases2": [
+    150,
+    200
+  ],
+  "vide_max_cases": 6.8,
+  "vide_max_tolere": 8,
+  "bande_mobilier_cases": 1.5,
+  "props_a_poser": 28,
+  "ilot_central_px": null,
+  "passages": [
+    {
+      "cote": "O",
+      "debut_px": 170,
+      "largeur_px": 62,
+      "largeur_cases": 2.6,
+      "cible_px": 48
+    }
+  ],
+  "hauteur_mur_visee_px": 96,
+  "ligne_haute_du_sol_px": 141
+}
