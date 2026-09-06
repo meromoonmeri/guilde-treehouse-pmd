@@ -59,6 +59,20 @@ Le hall mesure **1280 × 544 px** ; les autres pièces **648 × 432 px**. Les gr
 
 Les cartes ne sont pas un jeu intégré : collisions, transitions et déclencheurs de porte doivent être configurés dans le moteur. Les accès sont décrits dans `kit.json` et `source/regles_acces.json`.
 
+## Échelle des salles — analyse comparative
+
+Une analyse chiffrée du rapport **sprite ↔ salle**, avec les guildes de
+*PMD: Halcyon* (Palikadude) comme référence, est disponible dans
+[`ANALYSE_ECHELLE.md`](ANALYSE_ECHELLE.md).
+
+Résumé : nos chambres font **×3 la surface de sol** d'une chambre de Halcyon
+(×1,73 en linéaire), le hall **×2,3** la plus grande salle du jeu de référence, et nos
+calques de décor sont vides là où Halcyon couvre 24 à 59 % du sol. Un facteur global de
+**×0,65** sur le kit remet chaque salle dans les fourchettes de référence
+(chambres ≈ 408 × 264 px, salles ≈ 432 – 480 × 288 – 312 px, hall ≈ 840 × 360 px).
+
+Scripts de mesure et planches de comparaison : `analyse_echelle/`.
+
 ## Reproduction et contrôles
 
 ```bash

@@ -1,0 +1,2077 @@
+{
+  "unites": {
+    "case_px": 24,
+    "bloc_collision_px": 8,
+    "collider_perso_px": 16,
+    "sprite_moyen_px": [
+      20,
+      22
+    ]
+  },
+  "projet": [
+    {
+      "nom": "01_accueil",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        557,
+        422
+      ],
+      "bbox_sol_cases24": [
+        23.2,
+        17.6
+      ],
+      "bbox_sol_blocs8": [
+        70,
+        53
+      ],
+      "aire_sol_px2": 104839,
+      "aire_sol_cases24": 182.0,
+      "aire_sol_colliders16": 409.5,
+      "taux_remplissage_bbox": 0.446,
+      "largeur_circulation_px": {
+        "mediane": 83,
+        "p90": 500,
+        "max": 531
+      },
+      "hauteur_circulation_px": {
+        "mediane": 93,
+        "p90": 184,
+        "max": 422
+      },
+      "distance_mur_px": {
+        "max": 100.7,
+        "moyenne": 34.4
+      },
+      "distance_mur_cases24": {
+        "max": 4.2,
+        "moyenne": 1.43
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.57,
+        "max": 8.39
+      },
+      "mobilier_trous_px2": 362,
+      "mobilier_trous_cases24": 0.6,
+      "mobilier_nb_ilots": 19,
+      "ratio_aire_sol_sur_sprite": 238.3,
+      "largeur_en_sprites": 27.8,
+      "hauteur_en_sprites": 19.2,
+      "ecrans_320x240": 3.06,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "01",
+      "titre": "Accueil de la guilde"
+    },
+    {
+      "nom": "02_hall_missions",
+      "canvas_px": [
+        1280,
+        544
+      ],
+      "bbox_sol_px": [
+        1230,
+        319
+      ],
+      "bbox_sol_cases24": [
+        51.2,
+        13.3
+      ],
+      "bbox_sol_blocs8": [
+        154,
+        40
+      ],
+      "aire_sol_px2": 260070,
+      "aire_sol_cases24": 451.5,
+      "aire_sol_colliders16": 1015.9,
+      "taux_remplissage_bbox": 0.663,
+      "largeur_circulation_px": {
+        "mediane": 1005,
+        "p90": 1223,
+        "max": 1230
+      },
+      "hauteur_circulation_px": {
+        "mediane": 145,
+        "p90": 236,
+        "max": 319
+      },
+      "distance_mur_px": {
+        "max": 124.0,
+        "moyenne": 43.7
+      },
+      "distance_mur_cases24": {
+        "max": 5.17,
+        "moyenne": 1.82
+      },
+      "largeur_locale_cases24": {
+        "mediane": 3.17,
+        "max": 10.34
+      },
+      "mobilier_trous_px2": 823,
+      "mobilier_trous_cases24": 1.4,
+      "mobilier_nb_ilots": 2,
+      "ratio_aire_sol_sur_sprite": 591.1,
+      "largeur_en_sprites": 61.5,
+      "hauteur_en_sprites": 14.5,
+      "ecrans_320x240": 5.11,
+      "carte_px": [
+        1280,
+        544
+      ],
+      "carte_cases24": [
+        53.3,
+        22.7
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "02",
+      "titre": "Hall des missions"
+    },
+    {
+      "nom": "03_salle_commune",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        645,
+        245
+      ],
+      "bbox_sol_cases24": [
+        26.9,
+        10.2
+      ],
+      "bbox_sol_blocs8": [
+        81,
+        31
+      ],
+      "aire_sol_px2": 93168,
+      "aire_sol_cases24": 161.8,
+      "aire_sol_colliders16": 363.9,
+      "taux_remplissage_bbox": 0.59,
+      "largeur_circulation_px": {
+        "mediane": 140,
+        "p90": 541,
+        "max": 645
+      },
+      "hauteur_circulation_px": {
+        "mediane": 116,
+        "p90": 180,
+        "max": 232
+      },
+      "distance_mur_px": {
+        "max": 87.2,
+        "moyenne": 33.2
+      },
+      "distance_mur_cases24": {
+        "max": 3.63,
+        "moyenne": 1.38
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.5,
+        "max": 7.27
+      },
+      "mobilier_trous_px2": 208,
+      "mobilier_trous_cases24": 0.4,
+      "mobilier_nb_ilots": 9,
+      "ratio_aire_sol_sur_sprite": 211.7,
+      "largeur_en_sprites": 32.2,
+      "hauteur_en_sprites": 11.1,
+      "ecrans_320x240": 2.06,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "03",
+      "titre": "Grande salle commune"
+    },
+    {
+      "nom": "04_cantine",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        600,
+        185
+      ],
+      "bbox_sol_cases24": [
+        25.0,
+        7.7
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        23
+      ],
+      "aire_sol_px2": 82150,
+      "aire_sol_cases24": 142.6,
+      "aire_sol_colliders16": 320.9,
+      "taux_remplissage_bbox": 0.74,
+      "largeur_circulation_px": {
+        "mediane": 298,
+        "p90": 527,
+        "max": 599
+      },
+      "hauteur_circulation_px": {
+        "mediane": 150,
+        "p90": 177,
+        "max": 185
+      },
+      "distance_mur_px": {
+        "max": 88.5,
+        "moyenne": 36.1
+      },
+      "distance_mur_cases24": {
+        "max": 3.69,
+        "moyenne": 1.5
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.81,
+        "max": 7.37
+      },
+      "mobilier_trous_px2": 170,
+      "mobilier_trous_cases24": 0.3,
+      "mobilier_nb_ilots": 10,
+      "ratio_aire_sol_sur_sprite": 186.7,
+      "largeur_en_sprites": 30.0,
+      "hauteur_en_sprites": 8.4,
+      "ecrans_320x240": 1.45,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "04",
+      "titre": "Cantine"
+    },
+    {
+      "nom": "05_chambre_equipe",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        602,
+        186
+      ],
+      "bbox_sol_cases24": [
+        25.1,
+        7.8
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        23
+      ],
+      "aire_sol_px2": 88422,
+      "aire_sol_cases24": 153.5,
+      "aire_sol_colliders16": 345.4,
+      "taux_remplissage_bbox": 0.79,
+      "largeur_circulation_px": {
+        "mediane": 143,
+        "p90": 584,
+        "max": 593
+      },
+      "hauteur_circulation_px": {
+        "mediane": 67,
+        "p90": 176,
+        "max": 177
+      },
+      "distance_mur_px": {
+        "max": 89.0,
+        "moyenne": 35.2
+      },
+      "distance_mur_cases24": {
+        "max": 3.71,
+        "moyenne": 1.47
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.67,
+        "max": 7.42
+      },
+      "mobilier_trous_px2": 806,
+      "mobilier_trous_cases24": 1.4,
+      "mobilier_nb_ilots": 22,
+      "ratio_aire_sol_sur_sprite": 201.0,
+      "largeur_en_sprites": 30.1,
+      "hauteur_en_sprites": 8.5,
+      "ecrans_320x240": 1.46,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "05",
+      "titre": "Chambre de l’équipe"
+    },
+    {
+      "nom": "06_chambre_veilleur",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        557,
+        254
+      ],
+      "bbox_sol_cases24": [
+        23.2,
+        10.6
+      ],
+      "bbox_sol_blocs8": [
+        70,
+        32
+      ],
+      "aire_sol_px2": 91564,
+      "aire_sol_cases24": 159.0,
+      "aire_sol_colliders16": 357.7,
+      "taux_remplissage_bbox": 0.647,
+      "largeur_circulation_px": {
+        "mediane": 121,
+        "p90": 536,
+        "max": 555
+      },
+      "hauteur_circulation_px": {
+        "mediane": 161,
+        "p90": 254,
+        "max": 254
+      },
+      "distance_mur_px": {
+        "max": 90.0,
+        "moyenne": 35.5
+      },
+      "distance_mur_cases24": {
+        "max": 3.75,
+        "moyenne": 1.48
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.78,
+        "max": 7.5
+      },
+      "mobilier_trous_px2": 49,
+      "mobilier_trous_cases24": 0.1,
+      "mobilier_nb_ilots": 8,
+      "ratio_aire_sol_sur_sprite": 208.1,
+      "largeur_en_sprites": 27.8,
+      "hauteur_en_sprites": 11.5,
+      "ecrans_320x240": 1.84,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "06",
+      "titre": "Chambre du veilleur"
+    },
+    {
+      "nom": "07_chambre_residents",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        602,
+        186
+      ],
+      "bbox_sol_cases24": [
+        25.1,
+        7.8
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        23
+      ],
+      "aire_sol_px2": 88728,
+      "aire_sol_cases24": 154.0,
+      "aire_sol_colliders16": 346.6,
+      "taux_remplissage_bbox": 0.792,
+      "largeur_circulation_px": {
+        "mediane": 393,
+        "p90": 587,
+        "max": 595
+      },
+      "hauteur_circulation_px": {
+        "mediane": 113,
+        "p90": 177,
+        "max": 183
+      },
+      "distance_mur_px": {
+        "max": 89.0,
+        "moyenne": 35.8
+      },
+      "distance_mur_cases24": {
+        "max": 3.71,
+        "moyenne": 1.49
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.74,
+        "max": 7.42
+      },
+      "mobilier_trous_px2": 525,
+      "mobilier_trous_cases24": 0.9,
+      "mobilier_nb_ilots": 12,
+      "ratio_aire_sol_sur_sprite": 201.7,
+      "largeur_en_sprites": 30.1,
+      "hauteur_en_sprites": 8.5,
+      "ecrans_320x240": 1.46,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "07",
+      "titre": "Chambre des résidents"
+    },
+    {
+      "nom": "08_dortoir_trio",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        602,
+        196
+      ],
+      "bbox_sol_cases24": [
+        25.1,
+        8.2
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        24
+      ],
+      "aire_sol_px2": 90787,
+      "aire_sol_cases24": 157.6,
+      "aire_sol_colliders16": 354.6,
+      "taux_remplissage_bbox": 0.769,
+      "largeur_circulation_px": {
+        "mediane": 326,
+        "p90": 587,
+        "max": 593
+      },
+      "hauteur_circulation_px": {
+        "mediane": 132,
+        "p90": 196,
+        "max": 196
+      },
+      "distance_mur_px": {
+        "max": 98.0,
+        "moyenne": 38.1
+      },
+      "distance_mur_cases24": {
+        "max": 4.08,
+        "moyenne": 1.59
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.83,
+        "max": 8.17
+      },
+      "mobilier_trous_px2": 222,
+      "mobilier_trous_cases24": 0.4,
+      "mobilier_nb_ilots": 19,
+      "ratio_aire_sol_sur_sprite": 206.3,
+      "largeur_en_sprites": 30.1,
+      "hauteur_en_sprites": 8.9,
+      "ecrans_320x240": 1.54,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "08",
+      "titre": "Dortoir des apprentis"
+    },
+    {
+      "nom": "09_dortoir_quatre",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        557,
+        365
+      ],
+      "bbox_sol_cases24": [
+        23.2,
+        15.2
+      ],
+      "bbox_sol_blocs8": [
+        70,
+        46
+      ],
+      "aire_sol_px2": 98185,
+      "aire_sol_cases24": 170.5,
+      "aire_sol_colliders16": 383.5,
+      "taux_remplissage_bbox": 0.483,
+      "largeur_circulation_px": {
+        "mediane": 88,
+        "p90": 525,
+        "max": 549
+      },
+      "hauteur_circulation_px": {
+        "mediane": 171,
+        "p90": 329,
+        "max": 365
+      },
+      "distance_mur_px": {
+        "max": 98.0,
+        "moyenne": 36.7
+      },
+      "distance_mur_cases24": {
+        "max": 4.08,
+        "moyenne": 1.53
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.75,
+        "max": 8.17
+      },
+      "mobilier_trous_px2": 74,
+      "mobilier_trous_cases24": 0.1,
+      "mobilier_nb_ilots": 4,
+      "ratio_aire_sol_sur_sprite": 223.1,
+      "largeur_en_sprites": 27.8,
+      "hauteur_en_sprites": 16.6,
+      "ecrans_320x240": 2.65,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "09",
+      "titre": "Grand dortoir"
+    },
+    {
+      "nom": "10_dortoir_trio",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        602,
+        196
+      ],
+      "bbox_sol_cases24": [
+        25.1,
+        8.2
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        24
+      ],
+      "aire_sol_px2": 90376,
+      "aire_sol_cases24": 156.9,
+      "aire_sol_colliders16": 353.0,
+      "taux_remplissage_bbox": 0.766,
+      "largeur_circulation_px": {
+        "mediane": 240,
+        "p90": 584,
+        "max": 593
+      },
+      "hauteur_circulation_px": {
+        "mediane": 67,
+        "p90": 187,
+        "max": 196
+      },
+      "distance_mur_px": {
+        "max": 94.0,
+        "moyenne": 36.7
+      },
+      "distance_mur_cases24": {
+        "max": 3.92,
+        "moyenne": 1.53
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.75,
+        "max": 7.83
+      },
+      "mobilier_trous_px2": 607,
+      "mobilier_trous_cases24": 1.1,
+      "mobilier_nb_ilots": 23,
+      "ratio_aire_sol_sur_sprite": 205.4,
+      "largeur_en_sprites": 30.1,
+      "hauteur_en_sprites": 8.9,
+      "ecrans_320x240": 1.54,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "10",
+      "titre": "Dortoir des explorateurs"
+    },
+    {
+      "nom": "11_chambre_eclaireurs",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        602,
+        186
+      ],
+      "bbox_sol_cases24": [
+        25.1,
+        7.8
+      ],
+      "bbox_sol_blocs8": [
+        75,
+        23
+      ],
+      "aire_sol_px2": 88765,
+      "aire_sol_cases24": 154.1,
+      "aire_sol_colliders16": 346.7,
+      "taux_remplissage_bbox": 0.793,
+      "largeur_circulation_px": {
+        "mediane": 405,
+        "p90": 588,
+        "max": 596
+      },
+      "hauteur_circulation_px": {
+        "mediane": 119,
+        "p90": 177,
+        "max": 183
+      },
+      "distance_mur_px": {
+        "max": 89.0,
+        "moyenne": 35.9
+      },
+      "distance_mur_cases24": {
+        "max": 3.71,
+        "moyenne": 1.5
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.75,
+        "max": 7.42
+      },
+      "mobilier_trous_px2": 488,
+      "mobilier_trous_cases24": 0.8,
+      "mobilier_nb_ilots": 9,
+      "ratio_aire_sol_sur_sprite": 201.7,
+      "largeur_en_sprites": 30.1,
+      "hauteur_en_sprites": 8.5,
+      "ecrans_320x240": 1.46,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "11",
+      "titre": "Chambre des éclaireurs"
+    },
+    {
+      "nom": "12_salle_chef",
+      "canvas_px": [
+        648,
+        432
+      ],
+      "bbox_sol_px": [
+        531,
+        248
+      ],
+      "bbox_sol_cases24": [
+        22.1,
+        10.3
+      ],
+      "bbox_sol_blocs8": [
+        66,
+        31
+      ],
+      "aire_sol_px2": 84364,
+      "aire_sol_cases24": 146.5,
+      "aire_sol_colliders16": 329.5,
+      "taux_remplissage_bbox": 0.641,
+      "largeur_circulation_px": {
+        "mediane": 277,
+        "p90": 525,
+        "max": 531
+      },
+      "hauteur_circulation_px": {
+        "mediane": 166,
+        "p90": 223,
+        "max": 248
+      },
+      "distance_mur_px": {
+        "max": 87.0,
+        "moyenne": 35.5
+      },
+      "distance_mur_cases24": {
+        "max": 3.62,
+        "moyenne": 1.48
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.75,
+        "max": 7.25
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 191.7,
+      "largeur_en_sprites": 26.6,
+      "hauteur_en_sprites": 11.3,
+      "ecrans_320x240": 1.71,
+      "carte_px": [
+        648,
+        432
+      ],
+      "carte_cases24": [
+        27.0,
+        18.0
+      ],
+      "pixels_decor_poses": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "id": "12",
+      "titre": "Salle du chef"
+    }
+  ],
+  "halcyon": [
+    {
+      "nom": "guild_bedroom_hallway",
+      "canvas_px": [
+        480,
+        256
+      ],
+      "bbox_sol_px": [
+        478,
+        254
+      ],
+      "bbox_sol_cases24": [
+        19.9,
+        10.6
+      ],
+      "bbox_sol_blocs8": [
+        60,
+        32
+      ],
+      "aire_sol_px2": 36464,
+      "aire_sol_cases24": 63.3,
+      "aire_sol_colliders16": 142.4,
+      "taux_remplissage_bbox": 0.3,
+      "largeur_circulation_px": {
+        "mediane": 32,
+        "p90": 96,
+        "max": 478
+      },
+      "hauteur_circulation_px": {
+        "mediane": 40,
+        "p90": 254,
+        "max": 254
+      },
+      "distance_mur_px": {
+        "max": 40.6,
+        "moyenne": 11.9
+      },
+      "distance_mur_cases24": {
+        "max": 1.69,
+        "moyenne": 0.5
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.92,
+        "max": 3.38
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 82.9,
+      "largeur_en_sprites": 23.9,
+      "hauteur_en_sprites": 11.5,
+      "ecrans_320x240": 1.58,
+      "decor_blocs8": 23,
+      "decor_cases24": 2.6,
+      "decor_pct_du_sol": 4.1,
+      "carte_px": [
+        480,
+        256
+      ],
+      "carte_cases24": [
+        20.0,
+        10.7
+      ],
+      "nb_calques_tuiles": 4,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Objects",
+        "Supports"
+      ],
+      "nb_objets_sol": 6,
+      "nb_pnj": 0,
+      "nb_marqueurs": 11,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_bottom_left_bedroom",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        224,
+        327
+      ],
+      "bbox_sol_cases24": [
+        9.3,
+        13.6
+      ],
+      "bbox_sol_blocs8": [
+        28,
+        41
+      ],
+      "aire_sol_px2": 29216,
+      "aire_sol_cases24": 50.7,
+      "aire_sol_colliders16": 114.1,
+      "taux_remplissage_bbox": 0.399,
+      "largeur_circulation_px": {
+        "mediane": 64,
+        "p90": 192,
+        "max": 216
+      },
+      "hauteur_circulation_px": {
+        "mediane": 104,
+        "p90": 327,
+        "max": 327
+      },
+      "distance_mur_px": {
+        "max": 51.4,
+        "moyenne": 16.9
+      },
+      "distance_mur_cases24": {
+        "max": 2.14,
+        "moyenne": 0.71
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.17,
+        "max": 4.29
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 66.4,
+      "largeur_en_sprites": 11.2,
+      "hauteur_en_sprites": 14.9,
+      "ecrans_320x240": 0.95,
+      "decor_blocs8": 165,
+      "decor_cases24": 18.4,
+      "decor_pct_du_sol": 36.3,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 6,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Objects Over",
+        "Supports"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 0,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_bottom_right_bedroom",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        224,
+        327
+      ],
+      "bbox_sol_cases24": [
+        9.3,
+        13.6
+      ],
+      "bbox_sol_blocs8": [
+        28,
+        41
+      ],
+      "aire_sol_px2": 28576,
+      "aire_sol_cases24": 49.6,
+      "aire_sol_colliders16": 111.6,
+      "taux_remplissage_bbox": 0.39,
+      "largeur_circulation_px": {
+        "mediane": 40,
+        "p90": 184,
+        "max": 200
+      },
+      "hauteur_circulation_px": {
+        "mediane": 56,
+        "p90": 258,
+        "max": 327
+      },
+      "distance_mur_px": {
+        "max": 57.0,
+        "moyenne": 16.6
+      },
+      "distance_mur_cases24": {
+        "max": 2.38,
+        "moyenne": 0.69
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.08,
+        "max": 4.75
+      },
+      "mobilier_trous_px2": 1024,
+      "mobilier_trous_cases24": 1.8,
+      "mobilier_nb_ilots": 2,
+      "ratio_aire_sol_sur_sprite": 64.9,
+      "largeur_en_sprites": 11.2,
+      "hauteur_en_sprites": 14.9,
+      "ecrans_320x240": 0.95,
+      "decor_blocs8": 167,
+      "decor_cases24": 18.6,
+      "decor_pct_du_sol": 37.4,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 6,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Objects Over",
+        "Supports"
+      ],
+      "nb_objets_sol": 4,
+      "nb_pnj": 0,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_dining_room",
+      "canvas_px": [
+        448,
+        288
+      ],
+      "bbox_sol_px": [
+        367,
+        104
+      ],
+      "bbox_sol_cases24": [
+        15.3,
+        4.3
+      ],
+      "bbox_sol_blocs8": [
+        46,
+        13
+      ],
+      "aire_sol_px2": 22040,
+      "aire_sol_cases24": 38.3,
+      "aire_sol_colliders16": 86.1,
+      "taux_remplissage_bbox": 0.577,
+      "largeur_circulation_px": {
+        "mediane": 159,
+        "p90": 216,
+        "max": 232
+      },
+      "hauteur_circulation_px": {
+        "mediane": 40,
+        "p90": 72,
+        "max": 104
+      },
+      "distance_mur_px": {
+        "max": 25.0,
+        "moyenne": 9.1
+      },
+      "distance_mur_cases24": {
+        "max": 1.04,
+        "moyenne": 0.38
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.75,
+        "max": 2.08
+      },
+      "mobilier_trous_px2": 6528,
+      "mobilier_trous_cases24": 11.3,
+      "mobilier_nb_ilots": 1,
+      "ratio_aire_sol_sur_sprite": 50.1,
+      "largeur_en_sprites": 18.4,
+      "hauteur_en_sprites": 4.7,
+      "ecrans_320x240": 0.5,
+      "decor_blocs8": 202,
+      "decor_cases24": 22.4,
+      "decor_pct_du_sol": 58.7,
+      "carte_px": [
+        448,
+        288
+      ],
+      "carte_cases24": [
+        18.7,
+        12.0
+      ],
+      "nb_calques_tuiles": 7,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Objects Over",
+        "Fringe",
+        "Supports"
+      ],
+      "nb_objets_sol": 14,
+      "nb_pnj": 0,
+      "nb_marqueurs": 13,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_first_floor",
+      "canvas_px": [
+        320,
+        240
+      ],
+      "bbox_sol_px": [
+        160,
+        200
+      ],
+      "bbox_sol_cases24": [
+        6.7,
+        8.3
+      ],
+      "bbox_sol_blocs8": [
+        20,
+        25
+      ],
+      "aire_sol_px2": 18470,
+      "aire_sol_cases24": 32.1,
+      "aire_sol_colliders16": 72.1,
+      "taux_remplissage_bbox": 0.577,
+      "largeur_circulation_px": {
+        "mediane": 68,
+        "p90": 136,
+        "max": 136
+      },
+      "hauteur_circulation_px": {
+        "mediane": 72,
+        "p90": 150,
+        "max": 160
+      },
+      "distance_mur_px": {
+        "max": 39.2,
+        "moyenne": 13.1
+      },
+      "distance_mur_cases24": {
+        "max": 1.63,
+        "moyenne": 0.55
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.0,
+        "max": 3.27
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 42.0,
+      "largeur_en_sprites": 8.0,
+      "hauteur_en_sprites": 9.1,
+      "ecrans_320x240": 0.42,
+      "decor_blocs8": 0,
+      "decor_cases24": 0.0,
+      "decor_pct_du_sol": 0.0,
+      "carte_px": [
+        320,
+        240
+      ],
+      "carte_cases24": [
+        13.3,
+        10.0
+      ],
+      "nb_calques_tuiles": 1,
+      "calques": [
+        "New Layer"
+      ],
+      "nb_objets_sol": 2,
+      "nb_pnj": 0,
+      "nb_marqueurs": 4,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_guildmasters_room",
+      "canvas_px": [
+        384,
+        384
+      ],
+      "bbox_sol_px": [
+        288,
+        287
+      ],
+      "bbox_sol_cases24": [
+        12.0,
+        12.0
+      ],
+      "bbox_sol_blocs8": [
+        36,
+        36
+      ],
+      "aire_sol_px2": 45824,
+      "aire_sol_cases24": 79.6,
+      "aire_sol_colliders16": 179.0,
+      "taux_remplissage_bbox": 0.554,
+      "largeur_circulation_px": {
+        "mediane": 160,
+        "p90": 256,
+        "max": 280
+      },
+      "hauteur_circulation_px": {
+        "mediane": 132,
+        "p90": 287,
+        "max": 287
+      },
+      "distance_mur_px": {
+        "max": 91.9,
+        "moyenne": 28.1
+      },
+      "distance_mur_cases24": {
+        "max": 3.83,
+        "moyenne": 1.17
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.92,
+        "max": 7.66
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 104.1,
+      "largeur_en_sprites": 14.4,
+      "hauteur_en_sprites": 13.0,
+      "ecrans_320x240": 1.08,
+      "decor_blocs8": 391,
+      "decor_cases24": 43.5,
+      "decor_pct_du_sol": 54.7,
+      "carte_px": [
+        384,
+        384
+      ],
+      "carte_cases24": [
+        16.0,
+        16.0
+      ],
+      "nb_calques_tuiles": 6,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Objects Over",
+        "Supports"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 1,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_heros_room",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        319,
+        168
+      ],
+      "bbox_sol_cases24": [
+        13.3,
+        7.0
+      ],
+      "bbox_sol_blocs8": [
+        40,
+        21
+      ],
+      "aire_sol_px2": 30040,
+      "aire_sol_cases24": 52.2,
+      "aire_sol_colliders16": 117.3,
+      "taux_remplissage_bbox": 0.561,
+      "largeur_circulation_px": {
+        "mediane": 128,
+        "p90": 287,
+        "max": 295
+      },
+      "hauteur_circulation_px": {
+        "mediane": 40,
+        "p90": 168,
+        "max": 168
+      },
+      "distance_mur_px": {
+        "max": 65.5,
+        "moyenne": 20.5
+      },
+      "distance_mur_cases24": {
+        "max": 2.73,
+        "moyenne": 0.85
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.34,
+        "max": 5.45
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 68.3,
+      "largeur_en_sprites": 16.0,
+      "hauteur_en_sprites": 7.6,
+      "ecrans_320x240": 0.7,
+      "decor_blocs8": 186,
+      "decor_cases24": 20.7,
+      "decor_pct_du_sol": 39.7,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 6,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Objects Over",
+        "Supports"
+      ],
+      "nb_objets_sol": 3,
+      "nb_pnj": 0,
+      "nb_marqueurs": 4,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_second_floor",
+      "canvas_px": [
+        672,
+        448
+      ],
+      "bbox_sol_px": [
+        576,
+        264
+      ],
+      "bbox_sol_cases24": [
+        24.0,
+        11.0
+      ],
+      "bbox_sol_blocs8": [
+        72,
+        33
+      ],
+      "aire_sol_px2": 91136,
+      "aire_sol_cases24": 158.2,
+      "aire_sol_colliders16": 356.0,
+      "taux_remplissage_bbox": 0.599,
+      "largeur_circulation_px": {
+        "mediane": 128,
+        "p90": 544,
+        "max": 576
+      },
+      "hauteur_circulation_px": {
+        "mediane": 120,
+        "p90": 256,
+        "max": 264
+      },
+      "distance_mur_px": {
+        "max": 90.4,
+        "moyenne": 29.4
+      },
+      "distance_mur_cases24": {
+        "max": 3.77,
+        "moyenne": 1.22
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.14,
+        "max": 7.54
+      },
+      "mobilier_trous_px2": 512,
+      "mobilier_trous_cases24": 0.9,
+      "mobilier_nb_ilots": 1,
+      "ratio_aire_sol_sur_sprite": 207.1,
+      "largeur_en_sprites": 28.8,
+      "hauteur_en_sprites": 12.0,
+      "ecrans_320x240": 1.98,
+      "decor_blocs8": 518,
+      "decor_cases24": 57.6,
+      "decor_pct_du_sol": 36.4,
+      "carte_px": [
+        672,
+        448
+      ],
+      "carte_cases24": [
+        28.0,
+        18.7
+      ],
+      "nb_calques_tuiles": 8,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Objects Under",
+        "Objects",
+        "Objects Over",
+        "Shadows",
+        "Fringe",
+        "Supports"
+      ],
+      "nb_objets_sol": 5,
+      "nb_pnj": 1,
+      "nb_marqueurs": 27,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_storage_hallway",
+      "canvas_px": [
+        352,
+        384
+      ],
+      "bbox_sol_px": [
+        350,
+        199
+      ],
+      "bbox_sol_cases24": [
+        14.6,
+        8.3
+      ],
+      "bbox_sol_blocs8": [
+        44,
+        25
+      ],
+      "aire_sol_px2": 20368,
+      "aire_sol_cases24": 35.4,
+      "aire_sol_colliders16": 79.6,
+      "taux_remplissage_bbox": 0.292,
+      "largeur_circulation_px": {
+        "mediane": 32,
+        "p90": 350,
+        "max": 350
+      },
+      "hauteur_circulation_px": {
+        "mediane": 40,
+        "p90": 72,
+        "max": 199
+      },
+      "distance_mur_px": {
+        "max": 36.9,
+        "moyenne": 11.0
+      },
+      "distance_mur_cases24": {
+        "max": 1.54,
+        "moyenne": 0.46
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.83,
+        "max": 3.07
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 46.3,
+      "largeur_en_sprites": 17.5,
+      "hauteur_en_sprites": 9.0,
+      "ecrans_320x240": 0.91,
+      "decor_blocs8": 14,
+      "decor_cases24": 1.6,
+      "decor_pct_du_sol": 4.4,
+      "carte_px": [
+        352,
+        384
+      ],
+      "carte_cases24": [
+        14.7,
+        16.0
+      ],
+      "nb_calques_tuiles": 4,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Objects",
+        "Supports"
+      ],
+      "nb_objets_sol": 3,
+      "nb_pnj": 0,
+      "nb_marqueurs": 3,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_storage_room",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        333,
+        242
+      ],
+      "bbox_sol_cases24": [
+        13.9,
+        10.1
+      ],
+      "bbox_sol_blocs8": [
+        42,
+        30
+      ],
+      "aire_sol_px2": 44339,
+      "aire_sol_cases24": 77.0,
+      "aire_sol_colliders16": 173.2,
+      "taux_remplissage_bbox": 0.55,
+      "largeur_circulation_px": {
+        "mediane": 53,
+        "p90": 263,
+        "max": 331
+      },
+      "hauteur_circulation_px": {
+        "mediane": 58,
+        "p90": 120,
+        "max": 155
+      },
+      "distance_mur_px": {
+        "max": 37.0,
+        "moyenne": 12.3
+      },
+      "distance_mur_cases24": {
+        "max": 1.54,
+        "moyenne": 0.51
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.92,
+        "max": 3.08
+      },
+      "mobilier_trous_px2": 4864,
+      "mobilier_trous_cases24": 8.4,
+      "mobilier_nb_ilots": 1,
+      "ratio_aire_sol_sur_sprite": 100.8,
+      "largeur_en_sprites": 16.6,
+      "hauteur_en_sprites": 11.0,
+      "ecrans_320x240": 1.05,
+      "decor_blocs8": 315,
+      "decor_cases24": 35.0,
+      "decor_pct_du_sol": 45.5,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 8,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects Under",
+        "Objects",
+        "Objects Over",
+        "Fringe",
+        "Supports"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 0,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_third_floor_lobby",
+      "canvas_px": [
+        800,
+        448
+      ],
+      "bbox_sol_px": [
+        798,
+        319
+      ],
+      "bbox_sol_cases24": [
+        33.2,
+        13.3
+      ],
+      "bbox_sol_blocs8": [
+        100,
+        40
+      ],
+      "aire_sol_px2": 111184,
+      "aire_sol_cases24": 193.0,
+      "aire_sol_colliders16": 434.3,
+      "taux_remplissage_bbox": 0.437,
+      "largeur_circulation_px": {
+        "mediane": 128,
+        "p90": 608,
+        "max": 798
+      },
+      "hauteur_circulation_px": {
+        "mediane": 136,
+        "p90": 256,
+        "max": 296
+      },
+      "distance_mur_px": {
+        "max": 101.0,
+        "moyenne": 32.2
+      },
+      "distance_mur_cases24": {
+        "max": 4.21,
+        "moyenne": 1.34
+      },
+      "largeur_locale_cases24": {
+        "mediane": 2.25,
+        "max": 8.41
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 252.7,
+      "largeur_en_sprites": 39.9,
+      "hauteur_en_sprites": 14.5,
+      "ecrans_320x240": 3.31,
+      "decor_blocs8": 417,
+      "decor_cases24": 46.4,
+      "decor_pct_du_sol": 24.0,
+      "carte_px": [
+        800,
+        448
+      ],
+      "carte_cases24": [
+        33.3,
+        18.7
+      ],
+      "nb_calques_tuiles": 8,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects Under",
+        "Objects",
+        "Objects Over",
+        "Fringe",
+        "Supports"
+      ],
+      "nb_objets_sol": 6,
+      "nb_pnj": 0,
+      "nb_marqueurs": 21,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_top_left_bedroom",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        224,
+        223
+      ],
+      "bbox_sol_cases24": [
+        9.3,
+        9.3
+      ],
+      "bbox_sol_blocs8": [
+        28,
+        28
+      ],
+      "aire_sol_px2": 30752,
+      "aire_sol_cases24": 53.4,
+      "aire_sol_colliders16": 120.1,
+      "taux_remplissage_bbox": 0.616,
+      "largeur_circulation_px": {
+        "mediane": 120,
+        "p90": 200,
+        "max": 224
+      },
+      "hauteur_circulation_px": {
+        "mediane": 120,
+        "p90": 207,
+        "max": 223
+      },
+      "distance_mur_px": {
+        "max": 67.6,
+        "moyenne": 22.2
+      },
+      "distance_mur_cases24": {
+        "max": 2.82,
+        "moyenne": 0.93
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.54,
+        "max": 5.63
+      },
+      "mobilier_trous_px2": 256,
+      "mobilier_trous_cases24": 0.4,
+      "mobilier_nb_ilots": 1,
+      "ratio_aire_sol_sur_sprite": 69.9,
+      "largeur_en_sprites": 11.2,
+      "hauteur_en_sprites": 10.1,
+      "ecrans_320x240": 0.65,
+      "decor_blocs8": 181,
+      "decor_cases24": 20.2,
+      "decor_pct_du_sol": 37.8,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 5,
+      "calques": [
+        "Floors",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Supports"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 0,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "guild_top_right_bedroom",
+      "canvas_px": [
+        352,
+        352
+      ],
+      "bbox_sol_px": [
+        224,
+        223
+      ],
+      "bbox_sol_cases24": [
+        9.3,
+        9.3
+      ],
+      "bbox_sol_blocs8": [
+        28,
+        28
+      ],
+      "aire_sol_px2": 31456,
+      "aire_sol_cases24": 54.6,
+      "aire_sol_colliders16": 122.9,
+      "taux_remplissage_bbox": 0.63,
+      "largeur_circulation_px": {
+        "mediane": 128,
+        "p90": 224,
+        "max": 224
+      },
+      "hauteur_circulation_px": {
+        "mediane": 128,
+        "p90": 199,
+        "max": 223
+      },
+      "distance_mur_px": {
+        "max": 69.9,
+        "moyenne": 23.5
+      },
+      "distance_mur_cases24": {
+        "max": 2.91,
+        "moyenne": 0.98
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.67,
+        "max": 5.83
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 71.5,
+      "largeur_en_sprites": 11.2,
+      "hauteur_en_sprites": 10.1,
+      "ecrans_320x240": 0.65,
+      "decor_blocs8": 172,
+      "decor_cases24": 19.2,
+      "decor_pct_du_sol": 35.1,
+      "carte_px": [
+        352,
+        352
+      ],
+      "carte_cases24": [
+        14.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 5,
+      "calques": [
+        "Floor",
+        "Walls",
+        "Shadows",
+        "Objects",
+        "Supports"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 0,
+      "nb_marqueurs": 3,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "metano_inn",
+      "canvas_px": [
+        448,
+        352
+      ],
+      "bbox_sol_px": [
+        48,
+        24
+      ],
+      "bbox_sol_cases24": [
+        2.0,
+        1.0
+      ],
+      "bbox_sol_blocs8": [
+        6,
+        3
+      ],
+      "aire_sol_px2": 1152,
+      "aire_sol_cases24": 2.0,
+      "aire_sol_colliders16": 4.5,
+      "taux_remplissage_bbox": 1.0,
+      "largeur_circulation_px": {
+        "mediane": 48,
+        "p90": 48,
+        "max": 48
+      },
+      "hauteur_circulation_px": {
+        "mediane": 24,
+        "p90": 24,
+        "max": 24
+      },
+      "distance_mur_px": {
+        "max": 12.0,
+        "moyenne": 5.5
+      },
+      "distance_mur_cases24": {
+        "max": 0.5,
+        "moyenne": 0.23
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.42,
+        "max": 1.0
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 2.6,
+      "largeur_en_sprites": 2.4,
+      "hauteur_en_sprites": 1.1,
+      "ecrans_320x240": 0.02,
+      "decor_blocs8": 23,
+      "decor_cases24": 2.6,
+      "decor_pct_du_sol": 129.6,
+      "carte_px": [
+        448,
+        352
+      ],
+      "carte_cases24": [
+        18.7,
+        14.7
+      ],
+      "nb_calques_tuiles": 5,
+      "calques": [
+        "Base",
+        "Floor Decor",
+        "Shadows",
+        "Objects",
+        "Objects Over"
+      ],
+      "nb_objets_sol": 3,
+      "nb_pnj": 0,
+      "nb_marqueurs": 3,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "metano_cafe",
+      "canvas_px": [
+        456,
+        320
+      ],
+      "bbox_sol_px": [
+        392,
+        231
+      ],
+      "bbox_sol_cases24": [
+        16.3,
+        9.6
+      ],
+      "bbox_sol_blocs8": [
+        49,
+        29
+      ],
+      "aire_sol_px2": 53064,
+      "aire_sol_cases24": 92.1,
+      "aire_sol_colliders16": 207.3,
+      "taux_remplissage_bbox": 0.586,
+      "largeur_circulation_px": {
+        "mediane": 72,
+        "p90": 256,
+        "max": 344
+      },
+      "hauteur_circulation_px": {
+        "mediane": 64,
+        "p90": 160,
+        "max": 192
+      },
+      "distance_mur_px": {
+        "max": 48.0,
+        "moyenne": 13.2
+      },
+      "distance_mur_cases24": {
+        "max": 2.0,
+        "moyenne": 0.55
+      },
+      "largeur_locale_cases24": {
+        "mediane": 0.92,
+        "max": 4.0
+      },
+      "mobilier_trous_px2": 8960,
+      "mobilier_trous_cases24": 15.6,
+      "mobilier_nb_ilots": 5,
+      "ratio_aire_sol_sur_sprite": 120.6,
+      "largeur_en_sprites": 19.6,
+      "hauteur_en_sprites": 10.5,
+      "ecrans_320x240": 1.18,
+      "decor_blocs8": 560,
+      "decor_cases24": 62.3,
+      "decor_pct_du_sol": 67.6,
+      "carte_px": [
+        456,
+        320
+      ],
+      "carte_cases24": [
+        19.0,
+        13.3
+      ],
+      "nb_calques_tuiles": 5,
+      "calques": [
+        "Base",
+        "Objects Under",
+        "Objects",
+        "Objects Over",
+        "Fringe"
+      ],
+      "nb_objets_sol": 3,
+      "nb_pnj": 1,
+      "nb_marqueurs": 18,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "ledian_dojo",
+      "canvas_px": [
+        408,
+        312
+      ],
+      "bbox_sol_px": [
+        216,
+        215
+      ],
+      "bbox_sol_cases24": [
+        9.0,
+        9.0
+      ],
+      "bbox_sol_blocs8": [
+        27,
+        27
+      ],
+      "aire_sol_px2": 25848,
+      "aire_sol_cases24": 44.9,
+      "aire_sol_colliders16": 101.0,
+      "taux_remplissage_bbox": 0.557,
+      "largeur_circulation_px": {
+        "mediane": 72,
+        "p90": 152,
+        "max": 176
+      },
+      "hauteur_circulation_px": {
+        "mediane": 112,
+        "p90": 215,
+        "max": 215
+      },
+      "distance_mur_px": {
+        "max": 61.4,
+        "moyenne": 19.2
+      },
+      "distance_mur_cases24": {
+        "max": 2.56,
+        "moyenne": 0.8
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.33,
+        "max": 5.12
+      },
+      "mobilier_trous_px2": 0,
+      "mobilier_trous_cases24": 0.0,
+      "mobilier_nb_ilots": 0,
+      "ratio_aire_sol_sur_sprite": 58.7,
+      "largeur_en_sprites": 10.8,
+      "hauteur_en_sprites": 9.8,
+      "ecrans_320x240": 0.6,
+      "decor_blocs8": 163,
+      "decor_cases24": 18.2,
+      "decor_pct_du_sol": 40.5,
+      "carte_px": [
+        408,
+        312
+      ],
+      "carte_cases24": [
+        17.0,
+        13.0
+      ],
+      "nb_calques_tuiles": 6,
+      "calques": [
+        "Floor",
+        "Objects Under",
+        "Objects",
+        "Objects Over",
+        "Shadows",
+        "Ceiling"
+      ],
+      "nb_objets_sol": 2,
+      "nb_pnj": 2,
+      "nb_marqueurs": 1,
+      "nb_decors_animes": 0
+    },
+    {
+      "nom": "metano_normal_home",
+      "canvas_px": [
+        360,
+        280
+      ],
+      "bbox_sol_px": [
+        232,
+        184
+      ],
+      "bbox_sol_cases24": [
+        9.7,
+        7.7
+      ],
+      "bbox_sol_blocs8": [
+        29,
+        23
+      ],
+      "aire_sol_px2": 26944,
+      "aire_sol_cases24": 46.8,
+      "aire_sol_colliders16": 105.2,
+      "taux_remplissage_bbox": 0.631,
+      "largeur_circulation_px": {
+        "mediane": 80,
+        "p90": 144,
+        "max": 168
+      },
+      "hauteur_circulation_px": {
+        "mediane": 72,
+        "p90": 168,
+        "max": 168
+      },
+      "distance_mur_px": {
+        "max": 36.2,
+        "moyenne": 13.2
+      },
+      "distance_mur_cases24": {
+        "max": 1.51,
+        "moyenne": 0.55
+      },
+      "largeur_locale_cases24": {
+        "mediane": 1.0,
+        "max": 3.02
+      },
+      "mobilier_trous_px2": 1920,
+      "mobilier_trous_cases24": 3.3,
+      "mobilier_nb_ilots": 1,
+      "ratio_aire_sol_sur_sprite": 61.2,
+      "largeur_en_sprites": 11.6,
+      "hauteur_en_sprites": 8.4,
+      "ecrans_320x240": 0.56,
+      "decor_blocs8": 254,
+      "decor_cases24": 28.2,
+      "decor_pct_du_sol": 60.4,
+      "carte_px": [
+        360,
+        280
+      ],
+      "carte_cases24": [
+        15.0,
+        11.7
+      ],
+      "nb_calques_tuiles": 2,
+      "calques": [
+        "Base",
+        "Objects"
+      ],
+      "nb_objets_sol": 1,
+      "nb_pnj": 0,
+      "nb_marqueurs": 2,
+      "nb_decors_animes": 0
+    }
+  ]
+}

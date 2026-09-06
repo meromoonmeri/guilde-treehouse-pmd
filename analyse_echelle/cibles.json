@@ -1,0 +1,480 @@
+{
+  "facteur_echelle": 0.65,
+  "case_px": 24,
+  "reference": {
+    "chambre": {
+      "sol_cases2": [
+        50,
+        60
+      ],
+      "emprise": [
+        [
+          9,
+          13
+        ],
+        [
+          7,
+          14
+        ]
+      ]
+    },
+    "salle": {
+      "sol_cases2": [
+        75,
+        110
+      ],
+      "emprise": [
+        [
+          12,
+          16
+        ],
+        [
+          9,
+          12
+        ]
+      ]
+    },
+    "hub": {
+      "sol_cases2": [
+        150,
+        200
+      ],
+      "emprise": [
+        [
+          24,
+          33
+        ],
+        [
+          11,
+          14
+        ]
+      ]
+    },
+    "couloir": {
+      "sol_cases2": [
+        35,
+        65
+      ],
+      "emprise": [
+        [
+          15,
+          20
+        ],
+        [
+          8,
+          11
+        ]
+      ]
+    }
+  },
+  "salles": [
+    {
+      "ajustement": 1.0,
+      "note": "dans la fourchette Halcyon",
+      "toile_ajustee_px": [
+        432,
+        288
+      ],
+      "toile_ajustee_cases": [
+        18.0,
+        12.0
+      ],
+      "id": "01",
+      "nom": "Accueil de la guilde",
+      "type": "salle",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 182.0,
+      "sol_cible_cases2": 77.0,
+      "sol_reference_halcyon_cases2": [
+        75,
+        110
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 1.0,
+      "note": "dans la fourchette Halcyon",
+      "toile_ajustee_px": [
+        840,
+        360
+      ],
+      "toile_ajustee_cases": [
+        35.0,
+        15.0
+      ],
+      "id": "02",
+      "nom": "Hall des missions",
+      "type": "hub",
+      "toile_actuelle_px": [
+        1280,
+        544
+      ],
+      "toile_cible_px": [
+        840,
+        360
+      ],
+      "toile_cible_cases": [
+        35.0,
+        15.0
+      ],
+      "sol_actuel_cases2": 451.5,
+      "sol_cible_cases2": 191.0,
+      "sol_reference_halcyon_cases2": [
+        150,
+        200
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 1.05,
+      "note": "elargir de x1.05 apres reduction (sol vise 75 cases2)",
+      "toile_ajustee_px": [
+        456,
+        312
+      ],
+      "toile_ajustee_cases": [
+        19.0,
+        13.0
+      ],
+      "id": "03",
+      "nom": "Grande salle commune",
+      "type": "salle",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 161.8,
+      "sol_cible_cases2": 68.0,
+      "sol_reference_halcyon_cases2": [
+        75,
+        110
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 1.12,
+      "note": "elargir de x1.12 apres reduction (sol vise 75 cases2)",
+      "toile_ajustee_px": [
+        480,
+        312
+      ],
+      "toile_ajustee_cases": [
+        20.0,
+        13.0
+      ],
+      "id": "04",
+      "nom": "Cantine",
+      "type": "salle",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 142.6,
+      "sol_cible_cases2": 60.0,
+      "sol_reference_halcyon_cases2": [
+        75,
+        110
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.96,
+      "note": "reduire encore de x0.96 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        288
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        12.0
+      ],
+      "id": "05",
+      "nom": "Chambre de l’équipe",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 153.5,
+      "sol_cible_cases2": 65.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.95,
+      "note": "reduire encore de x0.95 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        264
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        11.0
+      ],
+      "id": "06",
+      "nom": "Chambre du veilleur",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 159.0,
+      "sol_cible_cases2": 67.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.96,
+      "note": "reduire encore de x0.96 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        288
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        12.0
+      ],
+      "id": "07",
+      "nom": "Chambre des résidents",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 154.0,
+      "sol_cible_cases2": 65.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.95,
+      "note": "reduire encore de x0.95 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        264
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        11.0
+      ],
+      "id": "08",
+      "nom": "Dortoir des apprentis",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 157.6,
+      "sol_cible_cases2": 67.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 1.02,
+      "note": "elargir de x1.02 apres reduction (sol vise 75 cases2)",
+      "toile_ajustee_px": [
+        432,
+        288
+      ],
+      "toile_ajustee_cases": [
+        18.0,
+        12.0
+      ],
+      "id": "09",
+      "nom": "Grand dortoir",
+      "type": "salle",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 170.5,
+      "sol_cible_cases2": 72.0,
+      "sol_reference_halcyon_cases2": [
+        75,
+        110
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.95,
+      "note": "reduire encore de x0.95 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        264
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        11.0
+      ],
+      "id": "10",
+      "nom": "Dortoir des explorateurs",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 156.9,
+      "sol_cible_cases2": 66.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 0.96,
+      "note": "reduire encore de x0.96 (sol vise 60 cases2)",
+      "toile_ajustee_px": [
+        408,
+        288
+      ],
+      "toile_ajustee_cases": [
+        17.0,
+        12.0
+      ],
+      "id": "11",
+      "nom": "Chambre des éclaireurs",
+      "type": "chambre",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 154.1,
+      "sol_cible_cases2": 65.0,
+      "sol_reference_halcyon_cases2": [
+        50,
+        60
+      ],
+      "reduction_surface": 0.423
+    },
+    {
+      "ajustement": 1.1,
+      "note": "elargir de x1.10 apres reduction (sol vise 75 cases2)",
+      "toile_ajustee_px": [
+        480,
+        312
+      ],
+      "toile_ajustee_cases": [
+        20.0,
+        13.0
+      ],
+      "id": "12",
+      "nom": "Salle du chef",
+      "type": "salle",
+      "toile_actuelle_px": [
+        648,
+        432
+      ],
+      "toile_cible_px": [
+        432,
+        288
+      ],
+      "toile_cible_cases": [
+        18.0,
+        12.0
+      ],
+      "sol_actuel_cases2": 146.5,
+      "sol_cible_cases2": 62.0,
+      "sol_reference_halcyon_cases2": [
+        75,
+        110
+      ],
+      "reduction_surface": 0.423
+    }
+  ]
+}
