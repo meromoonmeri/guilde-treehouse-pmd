@@ -225,8 +225,9 @@ def halcyon_room(path):
 def projet_room(folder):
     sol = os.path.join(REPO, 'calques', folder, 'jour', '01_sol.png')
     im = Image.open(sol).convert('RGBA')
-    a = np.array(im)[:, :, 3]
-    walk = a > 8
+    q = np.array(im)
+    # un trou de plancher (pixels tres sombres) n'est pas de la surface jouable
+    walk = (q[:, :, 3] > 8) & (q[:, :, :3].mean(2) > 70)
     lbl, n = ndimage.label(walk)
     if n > 1:
         sizes = ndimage.sum(walk, lbl, range(1, n + 1))

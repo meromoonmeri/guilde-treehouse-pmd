@@ -4,35 +4,35 @@
   "type": "chambre",
   "toile_px": [
     408,
-    264
+    288
   ],
   "toile_cases": [
     17.0,
-    11.0
+    12.0
   ],
   "facteur": [
     0.63,
-    0.611
+    0.667
   ],
-  "sol_cases2": 60.2,
+  "sol_cases2": 65.1,
   "sol_reference_halcyon_cases2": [
     50,
     60
   ],
-  "vide_max_cases": 4.8,
+  "vide_max_cases": 5.5,
   "vide_max_tolere": 6,
   "bande_mobilier_cases": 1.5,
-  "props_a_poser": 10,
+  "props_a_poser": 11,
   "ilot_central_px": null,
   "passages": [
     {
       "cote": "O",
-      "debut_px": 148,
-      "largeur_px": 41,
-      "largeur_cases": 1.7,
+      "debut_px": 161,
+      "largeur_px": 45,
+      "largeur_cases": 1.9,
       "cible_px": 48
     }
   ],
   "hauteur_mur_visee_px": 96,
-  "ligne_haute_du_sol_px": 103
+  "ligne_haute_du_sol_px": 112
 }

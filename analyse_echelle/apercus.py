@@ -81,7 +81,8 @@ def put_sprite(canvas, spr, fx, fy):
 
 def projet_floor(folder):
     p = os.path.join(REPO, 'calques', folder, 'jour', '01_sol.png')
-    a = np.array(Image.open(p).convert('RGBA'))[:, :, 3] > 8
+    q = np.array(Image.open(p).convert('RGBA'))
+    a = (q[:, :, 3] > 8) & (q[:, :, :3].mean(2) > 70)
     lbl, n = ndimage.label(a)
     if n > 1:
         sizes = ndimage.sum(a, lbl, range(1, n + 1))

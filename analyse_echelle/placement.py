@@ -82,8 +82,13 @@ def vegetation_pour(idx, n, props):
 
 
 def masque_sol(dossier):
+    """Sol praticable : pixels opaques du calque de sol, hors zones tres sombres
+    (trou vers l'etage inferieur, cage d'escalier)."""
     p = os.path.join(REPO, 'calques_reduits', dossier, 'jour', '01_sol.png')
-    return np.array(Image.open(p).convert('RGBA'))[:, :, 3] > 8
+    a = np.array(Image.open(p).convert('RGBA'))
+    plein = a[:, :, 3] > 8
+    clair = a[:, :, :3].mean(2) > 70
+    return plein & clair
 
 
 def zones_passages(mask):

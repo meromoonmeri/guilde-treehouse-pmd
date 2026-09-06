@@ -6,8 +6,8 @@
     288
   ],
   "props_demandes": 11,
-  "props_poses": 11,
-  "couverture_du_sol_pct": 29.0,
+  "props_poses": 10,
+  "couverture_du_sol_pct": 30.2,
   "cible_couverture_pct": [
     30,
     45
@@ -17,67 +17,67 @@
       "sprite": "table_etude",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 317,
-      "y": 146,
+      "x": 190,
+      "y": 87,
       "w": 65,
       "h": 55,
       "pieds": [
-        349,
-        201
+        222,
+        142
       ],
       "case": [
-        13.21,
-        6.08
+        7.92,
+        3.62
       ]
     },
     {
       "sprite": "nid_mousse",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 103,
-      "y": 190,
+      "x": 39,
+      "y": 152,
       "w": 51,
       "h": 36,
       "pieds": [
-        128,
-        226
+        64,
+        188
       ],
       "case": [
-        4.29,
-        7.92
+        1.62,
+        6.33
       ]
     },
     {
       "sprite": "nid_ambre",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 201,
-      "y": 93,
+      "x": 331,
+      "y": 156,
       "w": 51,
       "h": 36,
       "pieds": [
-        226,
-        129
+        356,
+        192
       ],
       "case": [
-        8.38,
-        3.88
+        13.79,
+        6.5
       ]
     },
     {
       "sprite": "vegetation_06_04",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 212,
+      "x": 141,
       "y": 206,
       "w": 56,
       "h": 29,
       "pieds": [
-        240,
+        169,
         235
       ],
       "case": [
-        8.83,
+        5.88,
         8.58
       ]
     },
@@ -85,119 +85,102 @@
       "sprite": "lanterne",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 112,
-      "y": 68,
+      "x": 257,
+      "y": 172,
       "w": 28,
       "h": 56,
       "pieds": [
-        126,
-        124
+        271,
+        228
       ],
       "case": [
-        4.67,
-        2.83
+        10.71,
+        7.17
       ]
     },
     {
       "sprite": "coffre_feuille",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 284,
-      "y": 102,
+      "x": 117,
+      "y": 106,
       "w": 40,
       "h": 29,
       "pieds": [
-        304,
-        131
+        137,
+        135
       ],
       "case": [
-        11.83,
-        4.25
+        4.88,
+        4.42
       ]
     },
     {
       "sprite": "vegetation_05_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 33,
-      "y": 164,
+      "x": 287,
+      "y": 107,
       "w": 43,
       "h": 26,
       "pieds": [
-        54,
-        190
+        308,
+        133
       ],
       "case": [
-        1.38,
-        6.83
+        11.96,
+        4.46
       ]
     },
     {
       "sprite": "vegetation_04_14",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 283,
-      "y": 188,
+      "x": 99,
+      "y": 176,
       "w": 29,
       "h": 37,
       "pieds": [
-        297,
-        225
+        113,
+        213
       ],
       "case": [
-        11.79,
-        7.83
+        4.12,
+        7.33
       ]
     },
     {
       "sprite": "vegetation_05_02",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 169,
-      "y": 200,
+      "x": 209,
+      "y": 206,
       "w": 26,
       "h": 32,
       "pieds": [
-        182,
-        232
+        222,
+        238
       ],
       "case": [
-        7.04,
-        8.33
+        8.71,
+        8.58
       ]
     },
     {
       "sprite": "vegetation_06_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 61,
+      "x": 66,
       "y": 134,
       "w": 8,
       "h": 8,
       "pieds": [
-        65,
+        70,
         142
       ],
       "case": [
-        2.54,
+        2.75,
         5.58
-      ]
-    },
-    {
-      "sprite": "applique_bois",
-      "pose": "mural",
-      "calque": "06_decorations",
-      "x": 168,
-      "y": 71,
-      "w": 22,
-      "h": 31,
-      "pieds": [
-        179,
-        102
-      ],
-      "case": [
-        7.0,
-        2.96
       ]
     }
   ]

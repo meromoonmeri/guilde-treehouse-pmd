@@ -5,7 +5,7 @@
       "salle": "02",
       "orientation": "N",
       "destination": "12",
-      "description": "Porte nord fermée du bureau du maître, seule porte visible."
+      "description": "Arche de guilde ouverte au nord du hall, vers le bureau du maitre. Variante a battants sculptes fournie a part (05_porte_maitre_battants.png)."
     }
   ],
   "passages": {
@@ -17,7 +17,8 @@
       "O",
       "S",
       "échelle N",
-      "porte N vers 12"
+      "arche N vers 12",
+      "trou central vers étage inférieur"
     ],
     "03": [
       "O",
@@ -73,5 +74,8 @@
     "08": "guides/08_guide.png",
     "09": "guides/09_guide.png",
     "12": "guides/12_guide.png"
+  },
+  "retouches": {
+    "02": "source/retouche_hall_02.py : passage ouest au gabarit commun, trou de plancher sous le tronc, arche de guilde. A rejouer apres tout rebuild_kit.py."
   }
 }

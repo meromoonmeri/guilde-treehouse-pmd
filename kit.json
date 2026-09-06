@@ -186,7 +186,8 @@
         "O",
         "S",
         "échelle N",
-        "porte N vers 12"
+        "arche N vers 12",
+        "trou central vers étage inférieur"
       ],
       "fenetres": [
         [
@@ -204,10 +205,10 @@
       ],
       "trous_fenetres": 2497,
       "porte_nord": [
-        1019,
-        77,
-        1093,
-        214
+        1011,
+        78,
+        1103,
+        217
       ],
       "objets": [],
       "decorations": [],
@@ -224,6 +225,11 @@
           "magenta": "salles/02_hall_missions/base_nuit_magenta.png",
           "aseprite": "salles/02_hall_missions/02_nuit.aseprite"
         }
+      },
+      "notes": {
+        "passage_ouest": "ouverture de 67 px, gabarit commun aux autres salles",
+        "arche_nord": "arche de guilde ouverte ; variante a battants dans calques/02_hall_missions/<palette>/05_porte_maitre_battants.png",
+        "trou_central": "trou de plancher au pied du tronc, echelle descendante, ellipse 192 x 92 px centree en (650, 261)"
       }
     },
     {

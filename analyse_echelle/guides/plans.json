@@ -15,12 +15,12 @@
       0.667,
       0.667
     ],
-    "sol_cases2": 80.8,
+    "sol_cases2": 75.6,
     "sol_reference_halcyon_cases2": [
       75,
       110
     ],
-    "vide_max_cases": 5.6,
+    "vide_max_cases": 4.3,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
     "props_a_poser": 13,
@@ -28,9 +28,9 @@
     "passages": [
       {
         "cote": "N",
-        "debut_px": 194,
-        "largeur_px": 45,
-        "largeur_cases": 1.9,
+        "debut_px": 200,
+        "largeur_px": 33,
+        "largeur_cases": 1.4,
         "cible_px": 48
       }
     ],
@@ -53,27 +53,27 @@
       0.656,
       0.662
     ],
-    "sol_cases2": 195.8,
+    "sol_cases2": 182.5,
     "sol_reference_halcyon_cases2": [
       150,
       200
     ],
-    "vide_max_cases": 6.8,
+    "vide_max_cases": 5.7,
     "vide_max_tolere": 8,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 33,
+    "props_a_poser": 30,
     "ilot_central_px": null,
     "passages": [
       {
         "cote": "O",
-        "debut_px": 170,
-        "largeur_px": 62,
-        "largeur_cases": 2.6,
+        "debut_px": 179,
+        "largeur_px": 44,
+        "largeur_cases": 1.8,
         "cible_px": 48
       }
     ],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 141
+    "ligne_haute_du_sol_px": 142
   },
   {
     "id": "03",
@@ -91,12 +91,12 @@
       0.704,
       0.722
     ],
-    "sol_cases2": 82.1,
+    "sol_cases2": 81.2,
     "sol_reference_halcyon_cases2": [
       75,
       110
     ],
-    "vide_max_cases": 5.3,
+    "vide_max_cases": 3.8,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
     "props_a_poser": 14,
@@ -110,30 +110,30 @@
     "nom": "Cantine",
     "type": "salle",
     "toile_px": [
-      480,
-      312
+      504,
+      336
     ],
     "toile_cases": [
-      20.0,
-      13.0
+      21.0,
+      14.0
     ],
     "facteur": [
-      0.741,
-      0.722
+      0.778,
+      0.778
     ],
-    "sol_cases2": 76.2,
+    "sol_cases2": 82.4,
     "sol_reference_halcyon_cases2": [
       75,
       110
     ],
-    "vide_max_cases": 5.3,
+    "vide_max_cases": 2.8,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 13,
+    "props_a_poser": 14,
     "ilot_central_px": null,
     "passages": [],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 129
+    "ligne_haute_du_sol_px": 138
   },
   {
     "id": "05",
@@ -151,12 +151,12 @@
       0.63,
       0.667
     ],
-    "sol_cases2": 64.5,
+    "sol_cases2": 64.1,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 5.2,
+    "vide_max_cases": 4.2,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
     "props_a_poser": 11,
@@ -178,38 +178,38 @@
     "nom": "Chambre du veilleur",
     "type": "chambre",
     "toile_px": [
-      408,
-      264
+      432,
+      288
     ],
     "toile_cases": [
-      17.0,
-      11.0
+      18.0,
+      12.0
     ],
     "facteur": [
-      0.63,
-      0.611
+      0.667,
+      0.667
     ],
-    "sol_cases2": 61.2,
+    "sol_cases2": 65.4,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 4.6,
+    "vide_max_cases": 4.1,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 10,
+    "props_a_poser": 11,
     "ilot_central_px": null,
     "passages": [
       {
         "cote": "S",
-        "debut_px": 161,
-        "largeur_px": 86,
-        "largeur_cases": 3.6,
+        "debut_px": 171,
+        "largeur_px": 90,
+        "largeur_cases": 3.8,
         "cible_px": 48
       }
     ],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 109
+    "ligne_haute_du_sol_px": 119
   },
   {
     "id": "07",
@@ -227,12 +227,12 @@
       0.63,
       0.667
     ],
-    "sol_cases2": 64.7,
+    "sol_cases2": 64.1,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 5.2,
+    "vide_max_cases": 4.2,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
     "props_a_poser": 11,
@@ -255,75 +255,67 @@
     "type": "chambre",
     "toile_px": [
       408,
-      264
+      288
     ],
     "toile_cases": [
       17.0,
-      11.0
+      12.0
     ],
     "facteur": [
       0.63,
-      0.611
+      0.667
     ],
-    "sol_cases2": 60.5,
+    "sol_cases2": 65.1,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 5.0,
+    "vide_max_cases": 5.5,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 10,
+    "props_a_poser": 11,
     "ilot_central_px": null,
     "passages": [
       {
         "cote": "E",
-        "debut_px": 148,
-        "largeur_px": 41,
-        "largeur_cases": 1.7,
+        "debut_px": 161,
+        "largeur_px": 45,
+        "largeur_cases": 1.9,
         "cible_px": 48
       }
     ],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 103
+    "ligne_haute_du_sol_px": 112
   },
   {
     "id": "09",
     "nom": "Grand dortoir",
     "type": "salle",
     "toile_px": [
-      432,
-      288
+      456,
+      312
     ],
     "toile_cases": [
-      18.0,
-      12.0
+      19.0,
+      13.0
     ],
     "facteur": [
-      0.667,
-      0.667
+      0.704,
+      0.722
     ],
-    "sol_cases2": 75.7,
+    "sol_cases2": 81.2,
     "sol_reference_halcyon_cases2": [
       75,
       110
     ],
-    "vide_max_cases": 5.4,
+    "vide_max_cases": 2.8,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 13,
+    "props_a_poser": 14,
     "ilot_central_px": null,
-    "passages": [
-      {
-        "cote": "N",
-        "debut_px": 199,
-        "largeur_px": 35,
-        "largeur_cases": 1.5,
-        "cible_px": 48
-      }
-    ],
+    "passages": [],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 0
+    "ligne_haute_du_sol_px": 42
   },
   {
     "id": "10",
@@ -331,37 +323,37 @@
     "type": "chambre",
     "toile_px": [
       408,
-      264
+      288
     ],
     "toile_cases": [
       17.0,
-      11.0
+      12.0
     ],
     "facteur": [
       0.63,
-      0.611
+      0.667
     ],
-    "sol_cases2": 60.2,
+    "sol_cases2": 65.1,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 4.8,
+    "vide_max_cases": 5.5,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
-    "props_a_poser": 10,
+    "props_a_poser": 11,
     "ilot_central_px": null,
     "passages": [
       {
         "cote": "O",
-        "debut_px": 148,
-        "largeur_px": 41,
-        "largeur_cases": 1.7,
+        "debut_px": 161,
+        "largeur_px": 45,
+        "largeur_cases": 1.9,
         "cible_px": 48
       }
     ],
     "hauteur_mur_visee_px": 96,
-    "ligne_haute_du_sol_px": 103
+    "ligne_haute_du_sol_px": 112
   },
   {
     "id": "11",
@@ -379,12 +371,12 @@
       0.63,
       0.667
     ],
-    "sol_cases2": 64.8,
+    "sol_cases2": 64.1,
     "sol_reference_halcyon_cases2": [
       50,
       60
     ],
-    "vide_max_cases": 5.2,
+    "vide_max_cases": 4.2,
     "vide_max_tolere": 6,
     "bande_mobilier_cases": 1.5,
     "props_a_poser": 11,

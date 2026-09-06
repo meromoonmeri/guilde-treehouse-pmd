@@ -3,11 +3,11 @@
   "nom": "Dortoir des explorateurs",
   "toile_px": [
     408,
-    264
+    288
   ],
-  "props_demandes": 10,
-  "props_poses": 10,
-  "couverture_du_sol_pct": 25.7,
+  "props_demandes": 11,
+  "props_poses": 11,
+  "couverture_du_sol_pct": 25.1,
   "cible_couverture_pct": [
     30,
     45
@@ -17,170 +17,187 @@
       "sprite": "nid_sauge",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 101,
-      "y": 173,
+      "x": 137,
+      "y": 202,
       "w": 51,
       "h": 36,
       "pieds": [
-        126,
-        209
+        162,
+        238
       ],
       "case": [
-        4.21,
-        7.21
+        5.71,
+        8.42
       ]
     },
     {
       "sprite": "nid_ambre",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 308,
-      "y": 150,
+      "x": 322,
+      "y": 142,
       "w": 51,
       "h": 36,
       "pieds": [
-        333,
-        186
+        347,
+        178
       ],
       "case": [
-        12.83,
-        6.25
+        13.42,
+        5.92
       ]
     },
     {
       "sprite": "nid_mousse",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 183,
-      "y": 72,
+      "x": 187,
+      "y": 81,
       "w": 51,
       "h": 36,
       "pieds": [
-        208,
-        108
+        212,
+        117
       ],
       "case": [
-        7.62,
-        3.0
+        7.79,
+        3.38
       ]
     },
     {
       "sprite": "vegetation_03_05",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 209,
-      "y": 186,
+      "x": 24,
+      "y": 155,
       "w": 53,
       "h": 32,
       "pieds": [
-        235,
-        218
+        50,
+        187
       ],
       "case": [
-        8.71,
-        7.75
+        1.0,
+        6.46
       ]
     },
     {
       "sprite": "vegetation_02_01",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 26,
-      "y": 117,
+      "x": 237,
+      "y": 194,
       "w": 46,
       "h": 36,
       "pieds": [
-        49,
-        153
+        260,
+        230
       ],
       "case": [
-        1.08,
-        4.88
+        9.88,
+        8.08
       ]
     },
     {
       "sprite": "lanterne",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 276,
-      "y": 59,
+      "x": 104,
+      "y": 70,
       "w": 28,
       "h": 56,
       "pieds": [
-        290,
-        115
+        118,
+        126
       ],
       "case": [
-        11.5,
-        2.46
+        4.33,
+        2.92
       ]
     },
     {
       "sprite": "coffre_feuille",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 109,
-      "y": 85,
+      "x": 260,
+      "y": 95,
       "w": 40,
       "h": 29,
       "pieds": [
-        129,
-        114
+        280,
+        124
       ],
       "case": [
-        4.54,
-        3.54
+        10.83,
+        3.96
       ]
     },
     {
       "sprite": "vegetation_03_02",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 272,
-      "y": 175,
+      "x": 84,
+      "y": 189,
       "w": 30,
       "h": 32,
       "pieds": [
-        287,
-        207
+        99,
+        221
       ],
       "case": [
-        11.33,
-        7.29
+        3.5,
+        7.88
       ]
     },
     {
       "sprite": "vegetation_02_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 169,
-      "y": 190,
+      "x": 303,
+      "y": 191,
       "w": 29,
       "h": 26,
       "pieds": [
-        183,
-        216
+        317,
+        217
       ],
       "case": [
-        7.04,
-        7.92
+        12.62,
+        7.96
       ]
     },
     {
       "sprite": "vegetation_12_06",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 68,
-      "y": 169,
+      "x": 198,
+      "y": 213,
       "w": 17,
       "h": 25,
       "pieds": [
-        76,
-        194
+        206,
+        238
       ],
       "case": [
-        2.83,
-        7.04
+        8.25,
+        8.88
+      ]
+    },
+    {
+      "sprite": "vegetation_03_10",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 66,
+      "y": 132,
+      "w": 9,
+      "h": 8,
+      "pieds": [
+        70,
+        140
+      ],
+      "case": [
+        2.75,
+        5.5
       ]
     }
   ]

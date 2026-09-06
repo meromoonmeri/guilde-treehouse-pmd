@@ -5,9 +5,9 @@
     840,
     360
   ],
-  "props_demandes": 33,
-  "props_poses": 32,
-  "couverture_du_sol_pct": 20.8,
+  "props_demandes": 30,
+  "props_poses": 30,
+  "couverture_du_sol_pct": 22.8,
   "cible_couverture_pct": [
     30,
     45
@@ -17,33 +17,33 @@
       "sprite": "table_etude",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 51,
-      "y": 181,
+      "x": 657,
+      "y": 151,
       "w": 65,
       "h": 55,
       "pieds": [
-        83,
-        236
+        689,
+        206
       ],
       "case": [
-        2.12,
-        7.54
+        27.38,
+        6.29
       ]
     },
     {
       "sprite": "provisions",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 628,
+      "x": 49,
       "y": 185,
       "w": 55,
       "h": 51,
       "pieds": [
-        655,
+        76,
         236
       ],
       "case": [
-        26.17,
+        2.04,
         7.71
       ]
     },
@@ -51,118 +51,101 @@
       "sprite": "panneau",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 313,
-      "y": 232,
+      "x": 351,
+      "y": 235,
       "w": 42,
       "h": 63,
       "pieds": [
-        334,
-        295
+        372,
+        298
       ],
       "case": [
-        13.04,
-        9.67
+        14.62,
+        9.79
       ]
     },
     {
       "sprite": "fontaine_bois",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 453,
-      "y": 95,
+      "x": 485,
+      "y": 97,
       "w": 38,
       "h": 55,
       "pieds": [
-        472,
-        150
+        504,
+        152
       ],
       "case": [
-        18.88,
-        3.96
+        20.21,
+        4.04
       ]
     },
     {
       "sprite": "vegetation_03_18",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 201,
-      "y": 115,
+      "x": 227,
+      "y": 116,
       "w": 56,
       "h": 37,
       "pieds": [
-        229,
-        152
+        255,
+        153
       ],
       "case": [
-        8.38,
-        4.79
-      ]
-    },
-    {
-      "sprite": "vegetation_12_03",
-      "pose": "sol",
-      "calque": "07_objets",
-      "x": 465,
-      "y": 260,
-      "w": 53,
-      "h": 34,
-      "pieds": [
-        491,
-        294
-      ],
-      "case": [
-        19.38,
-        10.83
+        9.46,
+        4.83
       ]
     },
     {
       "sprite": "plante_tonneau",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 772,
-      "y": 165,
+      "x": 551,
+      "y": 240,
       "w": 35,
       "h": 51,
       "pieds": [
-        789,
-        216
+        568,
+        291
       ],
       "case": [
-        32.17,
-        6.88
+        22.96,
+        10.0
       ]
     },
     {
       "sprite": "fanion",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 188,
-      "y": 229,
+      "x": 201,
+      "y": 234,
       "w": 32,
       "h": 54,
       "pieds": [
-        204,
-        283
+        217,
+        288
       ],
       "case": [
-        7.83,
-        9.54
+        8.38,
+        9.75
       ]
     },
     {
       "sprite": "vegetation_08_10",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 329,
+      "x": 120,
       "y": 112,
       "w": 43,
       "h": 39,
       "pieds": [
-        350,
+        141,
         151
       ],
       "case": [
-        13.71,
+        5.0,
         4.67
       ]
     },
@@ -170,374 +153,357 @@
       "sprite": "vegetation_06_04",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 553,
-      "y": 120,
+      "x": 438,
+      "y": 210,
       "w": 56,
       "h": 29,
       "pieds": [
-        581,
-        149
+        466,
+        239
       ],
       "case": [
-        23.04,
-        5.0
+        18.25,
+        8.75
       ]
     },
     {
       "sprite": "lanterne",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 687,
-      "y": 95,
+      "x": 345,
+      "y": 94,
       "w": 28,
       "h": 56,
       "pieds": [
-        701,
-        151
+        359,
+        150
       ],
       "case": [
-        28.62,
-        3.96
+        14.38,
+        3.92
       ]
     },
     {
       "sprite": "vegetation_03_12",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 570,
-      "y": 255,
+      "x": 767,
+      "y": 182,
       "w": 38,
       "h": 36,
       "pieds": [
-        589,
-        291
+        786,
+        218
       ],
       "case": [
-        23.75,
-        10.62
+        31.96,
+        7.58
       ]
     },
     {
       "sprite": "coffre_feuille",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 121,
-      "y": 122,
+      "x": 278,
+      "y": 211,
       "w": 40,
       "h": 29,
       "pieds": [
-        141,
-        151
+        298,
+        240
       ],
       "case": [
-        5.04,
-        5.08
+        11.58,
+        8.79
       ]
     },
     {
       "sprite": "vegetation_05_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 407,
-      "y": 322,
+      "x": 571,
+      "y": 123,
       "w": 43,
       "h": 26,
       "pieds": [
-        428,
-        348
+        592,
+        149
       ],
       "case": [
-        16.96,
-        13.42
+        23.79,
+        5.12
       ]
     },
     {
       "sprite": "vegetation_04_14",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 139,
-      "y": 199,
+      "x": 431,
+      "y": 308,
       "w": 29,
       "h": 37,
       "pieds": [
-        153,
-        236
+        445,
+        345
       ],
       "case": [
-        5.79,
-        8.29
+        17.96,
+        12.83
       ]
     },
     {
       "sprite": "vegetation_08_13",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 707,
-      "y": 220,
+      "x": 652,
+      "y": 258,
       "w": 38,
       "h": 28,
       "pieds": [
-        726,
-        248
+        671,
+        286
       ],
       "case": [
-        29.46,
-        9.17
+        27.17,
+        10.75
       ]
     },
     {
       "sprite": "vegetation_08_02",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 34,
-      "y": 144,
+      "x": 154,
+      "y": 203,
       "w": 27,
       "h": 33,
       "pieds": [
-        47,
-        177
+        167,
+        236
       ],
       "case": [
-        1.42,
-        6.0
+        6.42,
+        8.46
       ]
     },
     {
       "sprite": "vegetation_04_11",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 662,
-      "y": 263,
+      "x": 575,
+      "y": 204,
       "w": 38,
       "h": 22,
       "pieds": [
-        681,
-        285
+        594,
+        226
       ],
       "case": [
-        27.58,
-        10.96
+        23.96,
+        8.5
       ]
     },
     {
       "sprite": "vegetation_05_02",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 110,
-      "y": 245,
+      "x": 487,
+      "y": 262,
       "w": 26,
       "h": 32,
       "pieds": [
-        123,
-        277
+        500,
+        294
       ],
       "case": [
-        4.58,
-        10.21
+        20.29,
+        10.92
       ]
     },
     {
       "sprite": "vegetation_08_06",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 231,
-      "y": 279,
+      "x": 707,
+      "y": 253,
       "w": 46,
       "h": 13,
       "pieds": [
-        254,
-        292
+        730,
+        266
       ],
       "case": [
-        9.62,
-        11.62
+        29.46,
+        10.54
       ]
     },
     {
       "sprite": "vegetation_09_11",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 386,
-      "y": 136,
+      "x": 106,
+      "y": 262,
       "w": 32,
       "h": 14,
       "pieds": [
-        402,
-        150
+        122,
+        276
       ],
       "case": [
-        16.08,
-        5.67
+        4.42,
+        10.92
       ]
     },
     {
       "sprite": "vegetation_04_08",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 388,
-      "y": 277,
+      "x": 730,
+      "y": 131,
       "w": 10,
       "h": 30,
       "pieds": [
-        393,
-        307
+        735,
+        161
       ],
       "case": [
-        16.17,
-        11.54
+        30.42,
+        5.46
       ]
     },
     {
       "sprite": "vegetation_04_02",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 283,
-      "y": 135,
+      "x": 385,
+      "y": 186,
       "w": 13,
       "h": 21,
       "pieds": [
-        289,
-        156
+        391,
+        207
       ],
       "case": [
-        11.79,
-        5.62
+        16.04,
+        7.75
       ]
     },
     {
       "sprite": "vegetation_09_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 643,
-      "y": 135,
+      "x": 517,
+      "y": 211,
       "w": 16,
       "h": 14,
       "pieds": [
-        651,
-        149
+        525,
+        225
       ],
       "case": [
-        26.79,
-        5.62
+        21.54,
+        8.79
       ]
     },
     {
       "sprite": "vegetation_04_05",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 743,
-      "y": 159,
+      "x": 73,
+      "y": 163,
       "w": 13,
       "h": 14,
       "pieds": [
-        749,
-        173
+        79,
+        177
       ],
       "case": [
-        30.96,
-        6.62
+        3.04,
+        6.79
       ]
     },
     {
       "sprite": "vegetation_03_15",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 522,
-      "y": 135,
+      "x": 387,
+      "y": 330,
       "w": 8,
       "h": 18,
       "pieds": [
-        526,
-        153
+        391,
+        348
       ],
       "case": [
-        21.75,
-        5.62
+        16.12,
+        13.75
       ]
     },
     {
       "sprite": "vegetation_06_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 533,
-      "y": 282,
+      "x": 314,
+      "y": 286,
       "w": 8,
       "h": 8,
       "pieds": [
-        537,
-        290
+        318,
+        294
       ],
       "case": [
-        22.21,
-        11.75
+        13.08,
+        11.92
       ]
     },
     {
-      "sprite": "vegetation_12_07",
-      "pose": "sol",
-      "calque": "07_objets",
-      "x": 440,
-      "y": 292,
-      "w": 8,
-      "h": 8,
+      "sprite": "embleme_feuille_bois",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 384,
+      "y": 88,
+      "w": 64,
+      "h": 47,
       "pieds": [
-        444,
-        300
+        416,
+        135
       ],
       "case": [
-        18.33,
-        12.17
-      ]
-    },
-    {
-      "sprite": "vegetation_02_03",
-      "pose": "sol",
-      "calque": "07_objets",
-      "x": 634,
-      "y": 280,
-      "w": 8,
-      "h": 8,
-      "pieds": [
-        638,
-        288
-      ],
-      "case": [
-        26.42,
-        11.67
+        16.0,
+        3.67
       ]
     },
     {
       "sprite": "applique_bois",
       "pose": "mural",
       "calque": "06_decorations",
-      "x": 424,
-      "y": 103,
+      "x": 648,
+      "y": 104,
       "w": 22,
       "h": 31,
       "pieds": [
-        435,
-        134
+        659,
+        135
       ],
       "case": [
-        17.67,
-        4.29
+        27.0,
+        4.33
       ]
     },
     {
       "sprite": "applique_bois",
       "pose": "mural",
       "calque": "06_decorations",
-      "x": 728,
-      "y": 103,
+      "x": 176,
+      "y": 104,
       "w": 22,
       "h": 31,
       "pieds": [
-        739,
-        134
+        187,
+        135
       ],
       "case": [
-        30.33,
-        4.29
+        7.33,
+        4.33
       ]
     },
     {
@@ -545,16 +511,16 @@
       "pose": "suspendu",
       "calque": "06_decorations",
       "x": 414,
-      "y": 37,
+      "y": 38,
       "w": 12,
       "h": 31,
       "pieds": [
         420,
-        68
+        69
       ],
       "case": [
         17.25,
-        1.54
+        1.58
       ]
     }
   ]

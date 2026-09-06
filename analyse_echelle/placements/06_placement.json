@@ -2,12 +2,12 @@
   "id": "06",
   "nom": "Chambre du veilleur",
   "toile_px": [
-    408,
-    264
+    432,
+    288
   ],
-  "props_demandes": 10,
-  "props_poses": 10,
-  "couverture_du_sol_pct": 19.7,
+  "props_demandes": 11,
+  "props_poses": 11,
+  "couverture_du_sol_pct": 21.4,
   "cible_couverture_pct": [
     30,
     45
@@ -17,170 +17,187 @@
       "sprite": "armoire_veilleur",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 228,
-      "y": 129,
+      "x": 238,
+      "y": 65,
       "w": 36,
       "h": 73,
       "pieds": [
-        246,
-        202
+        256,
+        138
       ],
       "case": [
-        9.5,
-        5.38
+        9.92,
+        2.71
       ]
     },
     {
       "sprite": "vegetation_08_07",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 27,
-      "y": 122,
+      "x": 66,
+      "y": 172,
       "w": 56,
       "h": 36,
       "pieds": [
-        55,
-        158
+        94,
+        208
       ],
       "case": [
-        1.12,
-        5.08
+        2.75,
+        7.17
       ]
     },
     {
       "sprite": "nid_sauge",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 149,
-      "y": 82,
+      "x": 340,
+      "y": 145,
       "w": 51,
       "h": 36,
       "pieds": [
-        174,
-        118
+        365,
+        181
       ],
       "case": [
-        6.21,
-        3.42
+        14.17,
+        6.04
       ]
     },
     {
       "sprite": "lanterne",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 349,
-      "y": 110,
+      "x": 183,
+      "y": 175,
       "w": 28,
       "h": 56,
       "pieds": [
-        363,
-        166
+        197,
+        231
       ],
       "case": [
-        14.54,
-        4.58
+        7.62,
+        7.29
       ]
     },
     {
       "sprite": "coffre_feuille",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 115,
-      "y": 185,
+      "x": 138,
+      "y": 106,
       "w": 40,
       "h": 29,
       "pieds": [
-        135,
-        214
+        158,
+        135
       ],
       "case": [
-        4.79,
-        7.71
+        5.75,
+        4.42
       ]
     },
     {
       "sprite": "vegetation_05_09",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 265,
-      "y": 76,
+      "x": 266,
+      "y": 182,
       "w": 29,
       "h": 39,
       "pieds": [
-        279,
-        115
+        280,
+        221
       ],
       "case": [
-        11.04,
-        3.17
+        11.08,
+        7.58
+      ]
+    },
+    {
+      "sprite": "vegetation_08_11",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 80,
+      "y": 118,
+      "w": 29,
+      "h": 23,
+      "pieds": [
+        94,
+        141
+      ],
+      "case": [
+        3.33,
+        4.92
       ]
     },
     {
       "sprite": "vegetation_06_05",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 301,
-      "y": 198,
+      "x": 309,
+      "y": 124,
       "w": 33,
       "h": 8,
       "pieds": [
-        317,
-        206
+        325,
+        132
       ],
       "case": [
-        12.54,
-        8.25
+        12.88,
+        5.17
       ]
     },
     {
       "sprite": "vegetation_06_08",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 104,
-      "y": 103,
+      "x": 138,
+      "y": 209,
       "w": 10,
       "h": 13,
       "pieds": [
-        109,
-        116
+        143,
+        222
       ],
       "case": [
-        4.33,
-        4.29
+        5.75,
+        8.71
       ]
     },
     {
       "sprite": "vegetation_08_03",
       "pose": "sol",
       "calque": "07_objets",
-      "x": 76,
-      "y": 194,
+      "x": 51,
+      "y": 161,
       "w": 8,
       "h": 8,
       "pieds": [
-        80,
-        202
+        55,
+        169
       ],
       "case": [
-        3.17,
-        8.08
+        2.12,
+        6.71
       ]
     },
     {
       "sprite": "applique_bois",
       "pose": "mural",
       "calque": "06_decorations",
-      "x": 232,
-      "y": 66,
+      "x": 280,
+      "y": 76,
       "w": 22,
       "h": 31,
       "pieds": [
-        243,
-        97
+        291,
+        107
       ],
       "case": [
-        9.67,
-        2.75
+        11.67,
+        3.17
       ]
     }
   ]

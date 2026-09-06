@@ -59,6 +59,26 @@ Le hall mesure **1280 × 544 px** ; les autres pièces **648 × 432 px**. Les gr
 
 Les cartes ne sont pas un jeu intégré : collisions, transitions et déclencheurs de porte doivent être configurés dans le moteur. Les accès sont décrits dans `kit.json` et `source/regles_acces.json`.
 
+## Retouches du hall des missions (salle 02)
+
+`python3 source/retouche_hall_02.py` applique trois corrections et regénère les
+composites, l'Aseprite et les cartes Tiled de la salle :
+
+- **Passage ouest** ramené au gabarit commun : ouverture de **67 px** comme les
+  chambres, contour de pièce restitué de part et d'autre, arêtes marquées
+  (dessous de mur au nord, rebord avant au sud) et ombre de contact recadrée.
+- **Trou au pied du tronc** : le plancher est percé (ellipse 192 × 92 px centrée
+  en 650, 261), bordé par le chant des planches, et **l'échelle descend dedans**
+  vers l'étage inférieur — principe du deuxième étage de Halcyon.
+- **Arche de guilde au nord** à la place de l'ancienne porte à cadre rose :
+  encadrement de bois cintré, ouverture sombre, emblème feuille sur la clef.
+  La variante à battants sculptés est écrite à côté, en
+  `calques/02_hall_missions/<palette>/05_porte_maitre_battants.png`.
+
+Les calques d'avant retouche sont conservés dans `source/hall_02_avant_retouche/` :
+le script repart toujours d'eux, il est donc rejouable à l'identique, y compris
+après un `rebuild_kit.py`.
+
 ## Échelle des salles — analyse comparative
 
 Une analyse chiffrée du rapport **sprite ↔ salle**, avec les guildes de
