@@ -1,0 +1,177 @@
+{
+ "animations": {
+  "Walk": {
+   "case": [
+    64,
+    64
+   ],
+   "images": 6,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 701,
+   "ancre_repos": [
+    32,
+    36
+   ]
+  },
+  "Attack": {
+   "case": [
+    104,
+    112
+   ],
+   "images": 10,
+   "directions": 8,
+   "pixels_min": 631,
+   "pixels_max": 733,
+   "ancre_repos": [
+    52,
+    59
+   ]
+  },
+  "Shoot": {
+   "case": [
+    64,
+    80
+   ],
+   "images": 13,
+   "directions": 8,
+   "pixels_min": 592,
+   "pixels_max": 731,
+   "ancre_repos": [
+    32,
+    44
+   ]
+  },
+  "Sleep": {
+   "case": [
+    56,
+    40
+   ],
+   "images": 2,
+   "directions": 1,
+   "pixels_min": 825,
+   "pixels_max": 845,
+   "ancre_repos": [
+    28,
+    24
+   ]
+  },
+  "Hurt": {
+   "case": [
+    72,
+    72
+   ],
+   "images": 2,
+   "directions": 8,
+   "pixels_min": 668,
+   "pixels_max": 692,
+   "ancre_repos": [
+    36,
+    38
+   ]
+  },
+  "Idle": {
+   "case": [
+    64,
+    80
+   ],
+   "images": 13,
+   "directions": 8,
+   "pixels_min": 633,
+   "pixels_max": 717,
+   "ancre_repos": [
+    32,
+    44
+   ]
+  },
+  "Swing": {
+   "case": [
+    104,
+    112
+   ],
+   "images": 9,
+   "directions": 8,
+   "pixels_min": 620,
+   "pixels_max": 769,
+   "ancre_repos": [
+    52,
+    60
+   ]
+  },
+  "Double": {
+   "case": [
+    88,
+    72
+   ],
+   "images": 16,
+   "directions": 8,
+   "pixels_min": 649,
+   "pixels_max": 702,
+   "ancre_repos": [
+    44,
+    40
+   ]
+  },
+  "Hop": {
+   "case": [
+    64,
+    112
+   ],
+   "images": 10,
+   "directions": 8,
+   "pixels_min": 651,
+   "pixels_max": 745,
+   "ancre_repos": [
+    32,
+    60
+   ]
+  },
+  "Charge": {
+   "case": [
+    64,
+    64
+   ],
+   "images": 10,
+   "directions": 8,
+   "pixels_min": 659,
+   "pixels_max": 696,
+   "ancre_repos": [
+    33,
+    36
+   ]
+  },
+  "Rotate": {
+   "case": [
+    64,
+    64
+   ],
+   "images": 9,
+   "directions": 8,
+   "pixels_min": 618,
+   "pixels_max": 728,
+   "ancre_repos": [
+    32,
+    36
+   ]
+  }
+ },
+ "fichiers": {
+  "aseprite": {
+   "images": 100,
+   "calques": 8,
+   "etiquettes": 11,
+   "toile": [
+    104,
+    112
+   ]
+  }
+ },
+ "resume": {
+  "animations": 12,
+  "feuilles": 11,
+  "cases": 786,
+  "couleurs": 13,
+  "shadow_size": 2,
+  "statut": "conforme"
+ }
+}

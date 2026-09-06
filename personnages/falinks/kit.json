@@ -1,0 +1,646 @@
+{
+ "pokemon": {
+  "numero": "0870",
+  "nom": "Falinks",
+  "forme": "0000",
+  "unites": {
+   "brass": "0870/0002",
+   "trooper": "0870/0003"
+  }
+ },
+ "format": {
+  "convention": "SpriteCollab / SkyTemple : <Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png + AnimData.xml",
+  "directions": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos",
+  "shadow_size": 2,
+  "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu), repris du brass",
+  "cases": "paires, multiples de 8"
+ },
+ "formation": {
+  "rangs": 6,
+  "pas_vertical": 8,
+  "pas_horizontal": 8,
+  "pas_diagonal": [
+   7,
+   4
+  ],
+  "decalage_alterne": {
+   "Bas": [
+    2,
+    0
+   ],
+   "Haut": [
+    2,
+    0
+   ],
+   "Droite": [
+    0,
+    0
+   ],
+   "Gauche": [
+    0,
+    0
+   ],
+   "Bas-droite": [
+    0,
+    0
+   ],
+   "Bas-gauche": [
+    0,
+    0
+   ],
+   "Haut-droite": [
+    0,
+    0
+   ],
+   "Haut-gauche": [
+    0,
+    0
+   ]
+  },
+  "positions_par_direction": {
+   "Bas": [
+    [
+     0,
+     20
+    ],
+    [
+     2,
+     12
+    ],
+    [
+     -2,
+     4
+    ],
+    [
+     2,
+     -4
+    ],
+    [
+     -2,
+     -12
+    ],
+    [
+     2,
+     -20
+    ]
+   ],
+   "Bas-droite": [
+    [
+     18,
+     10
+    ],
+    [
+     11,
+     6
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     -3,
+     -2
+    ],
+    [
+     -10,
+     -6
+    ],
+    [
+     -17,
+     -10
+    ]
+   ],
+   "Droite": [
+    [
+     20,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     -4,
+     0
+    ],
+    [
+     -12,
+     0
+    ],
+    [
+     -20,
+     0
+    ]
+   ],
+   "Haut-droite": [
+    [
+     18,
+     -10
+    ],
+    [
+     11,
+     -6
+    ],
+    [
+     4,
+     -2
+    ],
+    [
+     -3,
+     2
+    ],
+    [
+     -10,
+     6
+    ],
+    [
+     -17,
+     10
+    ]
+   ],
+   "Haut": [
+    [
+     0,
+     -20
+    ],
+    [
+     2,
+     -12
+    ],
+    [
+     -2,
+     -4
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     -2,
+     12
+    ],
+    [
+     2,
+     20
+    ]
+   ],
+   "Haut-gauche": [
+    [
+     -18,
+     -10
+    ],
+    [
+     -11,
+     -6
+    ],
+    [
+     -4,
+     -2
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     10,
+     6
+    ],
+    [
+     17,
+     10
+    ]
+   ],
+   "Gauche": [
+    [
+     -20,
+     0
+    ],
+    [
+     -12,
+     0
+    ],
+    [
+     -4,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ],
+   "Bas-gauche": [
+    [
+     -18,
+     10
+    ],
+    [
+     -11,
+     6
+    ],
+    [
+     -4,
+     2
+    ],
+    [
+     3,
+     -2
+    ],
+    [
+     10,
+     -6
+    ],
+    [
+     17,
+     -10
+    ]
+   ]
+  },
+  "sommeil": {
+   "pas": [
+    16,
+    -10
+   ],
+   "positions": [
+    [
+     0,
+     0
+    ],
+    [
+     -16,
+     0
+    ],
+    [
+     16,
+     0
+    ],
+    [
+     -16,
+     -10
+    ],
+    [
+     0,
+     -10
+    ],
+    [
+     16,
+     -10
+    ]
+   ]
+  },
+  "ordre_de_dessin": "du plus lointain (haut) au plus proche (bas) ; à égalité la tête de file au-dessus"
+ },
+ "animations": {
+  "Walk": {
+   "index": 0,
+   "case": [
+    64,
+    64
+   ],
+   "images": 6,
+   "directions": 8,
+   "durees": [
+    6,
+    2,
+    6,
+    6,
+    2,
+    6
+   ],
+   "ticks": 28,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "pas cadencé en vague : chaque rang a 1 image de retard sur le précédent"
+  },
+  "Idle": {
+   "index": 7,
+   "case": [
+    64,
+    80
+   ],
+   "images": 13,
+   "directions": 8,
+   "durees": [
+    40,
+    1,
+    1,
+    2,
+    2,
+    2,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 60,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "garde-à-vous 40 ticks puis petit bond du brass repris de rang en rang (2 ticks d'écart)"
+  },
+  "Shoot": {
+   "index": 3,
+   "case": [
+    64,
+    80
+   ],
+   "images": 13,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    6,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 29,
+   "rush": null,
+   "hit": 3,
+   "return": 7,
+   "composition": "cadence du trooper (élan, tir, recul, retour) ; le brass fixe la cible, son Shoot est réparti sur ces images : [0, 1, 2, 3, 3, 3, 4, 5, 6, 7, 9, 10, 12]"
+  },
+  "Hurt": {
+   "index": 6,
+   "case": [
+    72,
+    72
+   ],
+   "images": 2,
+   "directions": 8,
+   "durees": [
+    2,
+    8
+   ],
+   "ticks": 10,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "toutes les unités encaissent ; les étincelles d'impact sont gardées une seule fois, sur le brass"
+  },
+  "Sleep": {
+   "index": 5,
+   "case": [
+    56,
+    40
+   ],
+   "images": 2,
+   "directions": 1,
+   "durees": [
+    30,
+    35
+   ],
+   "ticks": 65,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "bivouac sur deux rangs de trois, brass au centre du premier rang ; une seule direction"
+  },
+  "Attack": {
+   "index": 1,
+   "case": [
+    104,
+    112
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    4,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 19,
+   "rush": 1,
+   "hit": 3,
+   "return": 6,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  },
+  "Swing": {
+   "index": 8,
+   "case": [
+    104,
+    112
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    2,
+    3,
+    2,
+    2,
+    1,
+    1
+   ],
+   "ticks": 16,
+   "rush": null,
+   "hit": 5,
+   "return": 5,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  },
+  "Double": {
+   "index": 9,
+   "case": [
+    88,
+    72
+   ],
+   "images": 16,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 36,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  },
+  "Hop": {
+   "index": 10,
+   "case": [
+    64,
+    112
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    3,
+    4,
+    4,
+    3,
+    2,
+    1,
+    2
+   ],
+   "ticks": 24,
+   "rush": null,
+   "hit": 9,
+   "return": null,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  },
+  "Charge": {
+   "index": 11,
+   "case": [
+    64,
+    64
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 20,
+   "rush": null,
+   "hit": 5,
+   "return": 9,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  },
+  "Rotate": {
+   "index": 12,
+   "case": [
+    64,
+    64
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 18,
+   "rush": null,
+   "hit": 8,
+   "return": null,
+   "composition": "toute la formation exécute le mouvement à l'unisson (cadence du brass)"
+  }
+ },
+ "copies": {
+  "Strike": "Attack"
+ },
+ "aseprite": {
+  "canvas": [
+   104,
+   112
+  ],
+  "images": 100,
+  "calques": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "etiquettes": [
+   "Walk",
+   "Attack",
+   "Shoot",
+   "Sleep",
+   "Hurt",
+   "Idle",
+   "Swing",
+   "Double",
+   "Hop",
+   "Charge",
+   "Rotate"
+  ],
+  "ancre": [
+   52,
+   60
+  ]
+ },
+ "nuit": "nuit/<Anim>-Anim.png : même filtre que les salles (source/rebuild_kit.py night) ; Offsets et Shadow inchangés",
+ "palette": [
+  "#000000",
+  "#212929",
+  "#31bdf7",
+  "#4a5252",
+  "#733900",
+  "#73ffff",
+  "#9c0000",
+  "#a56b00",
+  "#d63900",
+  "#d6dede",
+  "#deb500",
+  "#fff700",
+  "#ffffff"
+ ],
+ "couleurs": 13
+}
