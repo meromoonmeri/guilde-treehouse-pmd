@@ -76,6 +76,9 @@ Gabarits de retravail salle par salle (grille 24 px, bande mobilier, passages,
 sprites posés à 1:1) : `analyse_echelle/guides/`.
 Base de dessin déjà mise à l'échelle cible : `calques_reduits/` et `salles_reduites/`
 (brouillon à reprendre à la main, le rééchantillonnage adoucit le pixel art).
+Banc de props ramené aux tailles PMD : `sprites_reduits/`. Proposition de mise en place
+du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
+`analyse_echelle/placements/`.
 
 ## Reproduction et contrôles
 

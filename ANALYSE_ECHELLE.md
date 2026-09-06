@@ -322,7 +322,81 @@ contours, les lattes de plancher, les croisillons de fenêtre et les cadres.
 
 ---
 
-## 8. Reproduire l'analyse
+## 8. Banc de props à l'échelle et placement proposé
+
+### `sprites_reduits/` — les props ramenés aux tailles PMD
+
+`python3 analyse_echelle/props.py` applique le facteur 0,65 puis des **plafonds par
+famille**, calés sur ce que fait Halcyon : plante ≤ 2 cases, nid ≈ 2,5 × 1,8 cases,
+mobilier courant ≤ 120 × 80 px, grande pièce centrale ≤ 150 px, bannière murale ≤ 2,7
+cases. Les 135 props sont réécrits en jour et en nuit, avec `props.json`
+(taille avant/après, taille en cases, pivot aux pieds, type de pose : sol, mural,
+suspendu, tapis).
+
+| Prop | Avant | Après | En cases |
+|---|---|---|---|
+| table_banquet | 260 × 113 | **150 × 65** | 6,2 × 2,7 |
+| tapis_maitre | 220 × 95 | **143 × 62** | 6,0 × 2,6 |
+| table_etude | 100 × 85 | **65 × 55** | 2,7 × 2,3 |
+| etagere_boissons | 83 × 97 | **54 × 63** | 2,2 × 2,6 |
+| armoire_veilleur | 56 × 112 | **36 × 73** | 1,5 × 3,0 |
+| nid_* (couchages) | 78 × 56 | **51 × 36** | 2,1 × 1,5 |
+| banniere_maitre_centrale | 81 × 125 | **41 × 64** | 1,7 × 2,7 |
+| végétation (typique) | 76 – 110 de haut | **≤ 48 de haut** | ≤ 2 cases |
+
+Pour mémoire : mobilier médian chez Halcyon **40 × 56 px**, caisse = 1 case,
+grosses pièces 128 – 216 px. On est désormais dans la même famille de tailles.
+
+### `analyse_echelle/placements/` — la proposition de mise en place
+
+`python3 analyse_echelle/placement.py` pose, salle par salle, le nombre de props
+recommandé par le gabarit, avec ces règles :
+
+- **grandes pièces centrales** (tapis du chef, table de banquet) au centre du sol ;
+- **mobilier au sol** : pieds dans la bande de 1,5 case le long des murs, placement le
+  plus étalé possible (échantillonnage du point le plus éloigné), sans chevauchement ;
+- **2 cases dégagées devant chaque passage** ;
+- **éléments muraux** (bannières, emblèmes, appliques) sur le bandeau de mur, en évitant
+  les fenêtres déclarées dans `kit.json` ;
+- **suspensions** en haut du bandeau, à partir du centre ;
+- palette thématique par salle (nids dans les dortoirs, étagère et seau à la cantine,
+  bannières et tapis chez le chef, etc.), complétée par la végétation.
+
+| Salle | Props posés | Couverture du sol | État |
+|---|---|---|---|
+| 01 Accueil de la guilde | 12 | 18 % | ajouter 2-3 props |
+| 02 Hall des missions | 32 | 21 % | ajouter 2-3 props |
+| 03 Grande salle commune | 14 | 21 % | ajouter 2-3 props |
+| 04 Cantine | 12 | 38 % | ok |
+| 05 Chambre de l’équipe | 11 | 29 % | ajouter 2-3 props |
+| 06 Chambre du veilleur | 10 | 20 % | ajouter 2-3 props |
+| 07 Chambre des résidents | 11 | 19 % | ajouter 2-3 props |
+| 08 Dortoir des apprentis | 10 | 23 % | ajouter 2-3 props |
+| 09 Grand dortoir | 13 | 28 % | ajouter 2-3 props |
+| 10 Dortoir des explorateurs | 10 | 26 % | ajouter 2-3 props |
+| 11 Chambre des éclaireurs | 11 | 21 % | ajouter 2-3 props |
+| 12 Salle du chef | 12 | 34 % | ok |
+
+La couverture visée est de 30 – 45 %. Les salles encore en dessous sont celles où la
+palette est surtout végétale : il leur manque deux ou trois meubles pour arriver dans la
+fourchette — c'est le complément à faire à la main.
+
+**Ce que le script écrit vraiment :**
+
+- `analyse_echelle/placements/NN_placement.json` : chaque prop avec sa position en px et
+  en cases, son calque de destination et son type de pose → éditable, réinjectable ;
+- `calques_reduits/<salle>/<jour|nuit>/06_decorations.png` et `07_objets.png` : les
+  calques de décor, jusqu'ici vides, sont désormais remplis ;
+- `salles_reduites/<salle>_<jour|nuit>.png` : les composites sont recomposés ;
+- `analyse_echelle/placements/NN_apercu.png` + `planche_placements.png` : les aperçus avec
+  4 sprites Pokémon posés à 1:1 sur le sol resté libre.
+
+Rien n'est figé : les positions sont dans le JSON, il suffit de les corriger et de
+relancer le script pour régénérer les calques.
+
+---
+
+## 9. Reproduire l'analyse
 
 ```bash
 pip install pillow numpy scipy
@@ -334,6 +408,8 @@ python3 analyse_echelle/apercus.py   # -> analyse_echelle/img/*.png
 python3 analyse_echelle/cibles.py    # -> analyse_echelle/cibles.json
 python3 analyse_echelle/guides.py    # -> analyse_echelle/guides/*.png + *_plan.json
 python3 analyse_echelle/reduire.py   # -> calques_reduits/ + salles_reduites/
+python3 analyse_echelle/props.py     # -> sprites_reduits/ (banc de props a l'echelle)
+python3 analyse_echelle/placement.py # -> placements/ + calques 06/07 remplis
 ```
 
 Les rendus de cartes Halcyon reconstruits sont mis en cache dans

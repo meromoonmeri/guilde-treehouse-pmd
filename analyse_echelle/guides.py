@@ -35,7 +35,7 @@ BANDE_MOBILIER = 1.5 * TILE      # profondeur de la bande de meubles le long des
 PASSAGE_CIBLE = 2 * TILE         # largeur de passage visee
 VIDE_MAX_CASES = 6               # diametre de poche vide tolere hors hub
 VIDE_MAX_HUB = 8
-PROP_PAR_CASES2 = 7              # 1 prop pour ~7 cases2 de sol
+PROP_PAR_CASES2 = 6              # 1 prop pour ~6 cases2 de sol (Halcyon : 5 a 10)
 
 try:
     FONT = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 11)

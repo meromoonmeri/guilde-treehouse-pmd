@@ -1,0 +1,221 @@
+{
+  "id": "01",
+  "nom": "Accueil de la guilde",
+  "toile_px": [
+    432,
+    288
+  ],
+  "props_demandes": 13,
+  "props_poses": 12,
+  "couverture_du_sol_pct": 17.7,
+  "cible_couverture_pct": [
+    30,
+    45
+  ],
+  "placements": [
+    {
+      "sprite": "panneau",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 116,
+      "y": 164,
+      "w": 42,
+      "h": 63,
+      "pieds": [
+        137,
+        227
+      ],
+      "case": [
+        4.83,
+        6.83
+      ]
+    },
+    {
+      "sprite": "plante_tonneau",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 337,
+      "y": 158,
+      "w": 35,
+      "h": 51,
+      "pieds": [
+        354,
+        209
+      ],
+      "case": [
+        14.04,
+        6.58
+      ]
+    },
+    {
+      "sprite": "lanterne",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 216,
+      "y": 1,
+      "w": 28,
+      "h": 56,
+      "pieds": [
+        230,
+        57
+      ],
+      "case": [
+        9.0,
+        0.04
+      ]
+    },
+    {
+      "sprite": "coffre_feuille",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 212,
+      "y": 248,
+      "w": 40,
+      "h": 29,
+      "pieds": [
+        232,
+        277
+      ],
+      "case": [
+        8.83,
+        10.33
+      ]
+    },
+    {
+      "sprite": "vegetation_03_17",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 77,
+      "y": 119,
+      "w": 20,
+      "h": 16,
+      "pieds": [
+        87,
+        135
+      ],
+      "case": [
+        3.21,
+        4.96
+      ]
+    },
+    {
+      "sprite": "vegetation_04_01",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 291,
+      "y": 118,
+      "w": 18,
+      "h": 8,
+      "pieds": [
+        300,
+        126
+      ],
+      "case": [
+        12.12,
+        4.92
+      ]
+    },
+    {
+      "sprite": "vegetation_03_03",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 170,
+      "y": 113,
+      "w": 10,
+      "h": 12,
+      "pieds": [
+        175,
+        125
+      ],
+      "case": [
+        7.08,
+        4.71
+      ]
+    },
+    {
+      "sprite": "vegetation_03_06",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 63,
+      "y": 192,
+      "w": 8,
+      "h": 12,
+      "pieds": [
+        67,
+        204
+      ],
+      "case": [
+        2.62,
+        8.0
+      ]
+    },
+    {
+      "sprite": "vegetation_04_04",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 284,
+      "y": 223,
+      "w": 8,
+      "h": 12,
+      "pieds": [
+        288,
+        235
+      ],
+      "case": [
+        11.83,
+        9.29
+      ]
+    },
+    {
+      "sprite": "vegetation_03_11",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 363,
+      "y": 137,
+      "w": 8,
+      "h": 8,
+      "pieds": [
+        367,
+        145
+      ],
+      "case": [
+        15.12,
+        5.71
+      ]
+    },
+    {
+      "sprite": "vegetation_03_14",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 235,
+      "y": 111,
+      "w": 8,
+      "h": 8,
+      "pieds": [
+        239,
+        119
+      ],
+      "case": [
+        9.79,
+        4.62
+      ]
+    },
+    {
+      "sprite": "banniere_accueil_droite",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 184,
+      "y": 0,
+      "w": 23,
+      "h": 48,
+      "pieds": [
+        195,
+        48
+      ],
+      "case": [
+        7.67,
+        0.0
+      ]
+    }
+  ]
+}

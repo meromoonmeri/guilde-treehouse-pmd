@@ -1,0 +1,204 @@
+{
+  "id": "11",
+  "nom": "Chambre des éclaireurs",
+  "toile_px": [
+    408,
+    288
+  ],
+  "props_demandes": 11,
+  "props_poses": 11,
+  "couverture_du_sol_pct": 20.6,
+  "cible_couverture_pct": [
+    30,
+    45
+  ],
+  "placements": [
+    {
+      "sprite": "table_etude",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 17,
+      "y": 148,
+      "w": 65,
+      "h": 55,
+      "pieds": [
+        49,
+        203
+      ],
+      "case": [
+        0.71,
+        6.17
+      ]
+    },
+    {
+      "sprite": "nid_menthe",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 255,
+      "y": 191,
+      "w": 51,
+      "h": 36,
+      "pieds": [
+        280,
+        227
+      ],
+      "case": [
+        10.62,
+        7.96
+      ]
+    },
+    {
+      "sprite": "nid_mousse",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 146,
+      "y": 92,
+      "w": 51,
+      "h": 36,
+      "pieds": [
+        171,
+        128
+      ],
+      "case": [
+        6.08,
+        3.83
+      ]
+    },
+    {
+      "sprite": "vegetation_02_08",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 141,
+      "y": 195,
+      "w": 38,
+      "h": 36,
+      "pieds": [
+        160,
+        231
+      ],
+      "case": [
+        5.88,
+        8.12
+      ]
+    },
+    {
+      "sprite": "coffre_feuille",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 260,
+      "y": 96,
+      "w": 40,
+      "h": 29,
+      "pieds": [
+        280,
+        125
+      ],
+      "case": [
+        10.83,
+        4.0
+      ]
+    },
+    {
+      "sprite": "vegetation_03_17",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 352,
+      "y": 158,
+      "w": 20,
+      "h": 16,
+      "pieds": [
+        362,
+        174
+      ],
+      "case": [
+        14.67,
+        6.58
+      ]
+    },
+    {
+      "sprite": "vegetation_03_03",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 87,
+      "y": 117,
+      "w": 10,
+      "h": 12,
+      "pieds": [
+        92,
+        129
+      ],
+      "case": [
+        3.62,
+        4.88
+      ]
+    },
+    {
+      "sprite": "vegetation_03_06",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 99,
+      "y": 210,
+      "w": 8,
+      "h": 12,
+      "pieds": [
+        103,
+        222
+      ],
+      "case": [
+        4.12,
+        8.75
+      ]
+    },
+    {
+      "sprite": "vegetation_03_11",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 213,
+      "y": 228,
+      "w": 8,
+      "h": 8,
+      "pieds": [
+        217,
+        236
+      ],
+      "case": [
+        8.88,
+        9.5
+      ]
+    },
+    {
+      "sprite": "vegetation_03_14",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 226,
+      "y": 116,
+      "w": 8,
+      "h": 8,
+      "pieds": [
+        230,
+        124
+      ],
+      "case": [
+        9.42,
+        4.83
+      ]
+    },
+    {
+      "sprite": "applique_bois",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 216,
+      "y": 25,
+      "w": 22,
+      "h": 31,
+      "pieds": [
+        227,
+        56
+      ],
+      "case": [
+        9.0,
+        1.04
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "id": "12",
+  "nom": "Salle du chef",
+  "toile_px": [
+    480,
+    312
+  ],
+  "props_demandes": 13,
+  "props_poses": 12,
+  "couverture_du_sol_pct": 34.1,
+  "cible_couverture_pct": [
+    30,
+    45
+  ],
+  "placements": [
+    {
+      "sprite": "tapis_maitre",
+      "pose": "tapis",
+      "calque": "07_objets",
+      "x": 168,
+      "y": 168,
+      "w": 143,
+      "h": 62,
+      "pieds": [
+        239,
+        230
+      ],
+      "case": [
+        7.0,
+        7.0
+      ]
+    },
+    {
+      "sprite": "table_etude",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 374,
+      "y": 138,
+      "w": 65,
+      "h": 55,
+      "pieds": [
+        406,
+        193
+      ],
+      "case": [
+        15.58,
+        5.75
+      ]
+    },
+    {
+      "sprite": "vegetation_03_18",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 44,
+      "y": 165,
+      "w": 56,
+      "h": 37,
+      "pieds": [
+        72,
+        202
+      ],
+      "case": [
+        1.83,
+        6.88
+      ]
+    },
+    {
+      "sprite": "fanion",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 153,
+      "y": 82,
+      "w": 32,
+      "h": 54,
+      "pieds": [
+        169,
+        136
+      ],
+      "case": [
+        6.38,
+        3.42
+      ]
+    },
+    {
+      "sprite": "vegetation_03_12",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 286,
+      "y": 99,
+      "w": 38,
+      "h": 36,
+      "pieds": [
+        305,
+        135
+      ],
+      "case": [
+        11.92,
+        4.12
+      ]
+    },
+    {
+      "sprite": "coffre_feuille",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 317,
+      "y": 216,
+      "w": 40,
+      "h": 29,
+      "pieds": [
+        337,
+        245
+      ],
+      "case": [
+        13.21,
+        9.0
+      ]
+    },
+    {
+      "sprite": "vegetation_04_02",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 271,
+      "y": 281,
+      "w": 13,
+      "h": 21,
+      "pieds": [
+        277,
+        302
+      ],
+      "case": [
+        11.29,
+        11.71
+      ]
+    },
+    {
+      "sprite": "vegetation_03_15",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 153,
+      "y": 227,
+      "w": 8,
+      "h": 18,
+      "pieds": [
+        157,
+        245
+      ],
+      "case": [
+        6.38,
+        9.46
+      ]
+    },
+    {
+      "sprite": "vegetation_03_09",
+      "pose": "sol",
+      "calque": "07_objets",
+      "x": 200,
+      "y": 292,
+      "w": 8,
+      "h": 8,
+      "pieds": [
+        204,
+        300
+      ],
+      "case": [
+        8.33,
+        12.17
+      ]
+    },
+    {
+      "sprite": "banniere_maitre_centrale",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 224,
+      "y": 58,
+      "w": 41,
+      "h": 64,
+      "pieds": [
+        244,
+        122
+      ],
+      "case": [
+        9.33,
+        2.42
+      ]
+    },
+    {
+      "sprite": "banniere_maitre_rouge",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 96,
+      "y": 58,
+      "w": 39,
+      "h": 64,
+      "pieds": [
+        115,
+        122
+      ],
+      "case": [
+        4.0,
+        2.42
+      ]
+    },
+    {
+      "sprite": "banniere_maitre_verte",
+      "pose": "mural",
+      "calque": "06_decorations",
+      "x": 352,
+      "y": 58,
+      "w": 36,
+      "h": 64,
+      "pieds": [
+        370,
+        122
+      ],
+      "case": [
+        14.67,
+        2.42
+      ]
+    }
+  ]
+}
