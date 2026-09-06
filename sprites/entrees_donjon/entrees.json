@@ -1,0 +1,57 @@
+{
+  "titre": "Entrée de donjon — forêt avec chemin (style PMD Sky / Rescue Team)",
+  "grille": 8,
+  "animation": false,
+  "methode": [
+    "références PMD (Spriters Resource)",
+    "génération brute",
+    "détourage magenta",
+    "palette médiane <=28 couleurs",
+    "réduction vote majoritaire",
+    "nettoyage parasites",
+    "3 calques",
+    "PNG + Aseprite",
+    "nuit = formule du kit"
+  ],
+  "sprites": [
+    {
+      "id": "entree_foret_chemin",
+      "nom": "Entrée de forêt avec chemin",
+      "groupe": "entree_donjon",
+      "taille": [
+        160,
+        88
+      ],
+      "pivot": [
+        80.0,
+        88
+      ],
+      "calques": [
+        "00_sol_chemin",
+        "01_ouverture_sombre",
+        "02_massif_foret"
+      ],
+      "fichiers": {
+        "jour": {
+          "png": "sprites/entrees_donjon/entree_foret_chemin_jour.png",
+          "aseprite": "sprites/entrees_donjon/entree_foret_chemin_jour.aseprite",
+          "calques": [
+            "sprites/entrees_donjon/calques/00_sol_chemin_jour.png",
+            "sprites/entrees_donjon/calques/01_ouverture_sombre_jour.png",
+            "sprites/entrees_donjon/calques/02_massif_foret_jour.png"
+          ]
+        },
+        "nuit": {
+          "png": "sprites/entrees_donjon/entree_foret_chemin_nuit.png",
+          "aseprite": "sprites/entrees_donjon/entree_foret_chemin_nuit.aseprite",
+          "calques": [
+            "sprites/entrees_donjon/calques/00_sol_chemin_nuit.png",
+            "sprites/entrees_donjon/calques/01_ouverture_sombre_nuit.png",
+            "sprites/entrees_donjon/calques/02_massif_foret_nuit.png"
+          ]
+        }
+      },
+      "source": "source/_gen/entree_foret_brut.png"
+    }
+  ]
+}

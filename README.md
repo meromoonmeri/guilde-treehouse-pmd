@@ -2,6 +2,18 @@
 
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
+## Entrée de donjon — forêt avec chemin (ajout PMD Sky / Rescue Team)
+
+`sprites/entrees_donjon/` : entrée de forêt avec chemin, style entrées de donjons PMD
+Sky / Rescue Team — 160 × 88 px, grille 8, 26 couleurs, fond transparent, chemin collé
+au bord bas (continuité de sol). Livrée en jour et nuit (formule du kit), en 3 calques
+(sol & chemin, ouverture sombre, massif forestier), PNG + Aseprite + manifeste
+`entrees.json`. Aperçus : `apercus/apercu_entree_foret.html` (zoom, calques, mode) et
+`apercus/planche_entree_foret.png`. Contrôle : `controle_entree_foret.json`
+(calques = PNG = Aseprite, PASS). Références de style : `source/_refs_pmd/` ;
+pipeline complet reproductible : `source/rebuild_entree_foret.py` et
+**`METHODE_SPRITER.md`** pour générer les prochains sprites avec la même méthode.
+
 ## Règles effectivement appliquées
 
 - **Est / Ouest :** le plancher traverse une interruption de la bordure latérale. Pas de battant, de portique ni d’arche ajoutée sur ces accès.
