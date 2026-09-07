@@ -1,0 +1,241 @@
+{
+ "animations": {
+  "Walk": {
+   "case": [
+    48,
+    64
+   ],
+   "images": 4,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    64
+   ],
+   "ancre_repos": [
+    24,
+    36
+   ]
+  },
+  "Attack": {
+   "case": [
+    72,
+    88
+   ],
+   "images": 13,
+   "directions": 8,
+   "pixels_min": 611,
+   "pixels_max": 757,
+   "case_reference": [
+    72,
+    88
+   ],
+   "ancre_repos": [
+    36,
+    48
+   ]
+  },
+  "Shoot": {
+   "case": [
+    48,
+    64
+   ],
+   "images": 11,
+   "directions": 8,
+   "pixels_min": 550,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    64
+   ],
+   "ancre_repos": [
+    24,
+    34
+   ]
+  },
+  "Sing": {
+   "case": [
+    48,
+    64
+   ],
+   "images": 16,
+   "directions": 8,
+   "pixels_min": 568,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    64
+   ],
+   "ancre_repos": [
+    24,
+    36
+   ]
+  },
+  "Sleep": {
+   "case": [
+    40,
+    40
+   ],
+   "images": 2,
+   "directions": 1,
+   "pixels_min": 471,
+   "pixels_max": 487,
+   "case_reference": [
+    40,
+    40
+   ],
+   "ancre_repos": [
+    20,
+    24
+   ]
+  },
+  "Hurt": {
+   "case": [
+    48,
+    72
+   ],
+   "images": 2,
+   "directions": 8,
+   "pixels_min": 585,
+   "pixels_max": 607,
+   "case_reference": [
+    48,
+    72
+   ],
+   "ancre_repos": [
+    24,
+    37
+   ]
+  },
+  "Idle": {
+   "case": [
+    40,
+    64
+   ],
+   "images": 1,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 724,
+   "case_reference": [
+    40,
+    64
+   ],
+   "ancre_repos": [
+    20,
+    36
+   ]
+  },
+  "Swing": {
+   "case": [
+    88,
+    104
+   ],
+   "images": 9,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 724,
+   "case_reference": [
+    80,
+    96
+   ],
+   "ancre_repos": [
+    44,
+    56
+   ]
+  },
+  "Double": {
+   "case": [
+    72,
+    88
+   ],
+   "images": 16,
+   "directions": 8,
+   "pixels_min": 617,
+   "pixels_max": 693,
+   "case_reference": [
+    72,
+    88
+   ],
+   "ancre_repos": [
+    36,
+    48
+   ]
+  },
+  "Hop": {
+   "case": [
+    48,
+    104
+   ],
+   "images": 10,
+   "directions": 8,
+   "pixels_min": 617,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    104
+   ],
+   "ancre_repos": [
+    24,
+    56
+   ]
+  },
+  "Charge": {
+   "case": [
+    48,
+    64
+   ],
+   "images": 10,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    64
+   ],
+   "ancre_repos": [
+    25,
+    36
+   ]
+  },
+  "Rotate": {
+   "case": [
+    48,
+    64
+   ],
+   "images": 9,
+   "directions": 8,
+   "pixels_min": 643,
+   "pixels_max": 724,
+   "case_reference": [
+    48,
+    64
+   ],
+   "ancre_repos": [
+    24,
+    36
+   ]
+  }
+ },
+ "fichiers": {
+  "aseprite": {
+   "images": 103,
+   "calques": 8,
+   "etiquettes": 12,
+   "toile": [
+    88,
+    104
+   ]
+  }
+ },
+ "resume": {
+  "animations": 13,
+  "feuilles": 12,
+  "cases": 810,
+  "couleurs": 13,
+  "shadow_size": 2,
+  "squelette": "0812 Rillaboom",
+  "miroirs_exacts": true,
+  "statut": "conforme"
+ }
+}

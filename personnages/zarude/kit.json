@@ -1,0 +1,394 @@
+{
+ "pokemon": {
+  "numero": "0893",
+  "nom": "Zarude",
+  "forme": "0000",
+  "base_squelette": "0812 Rillaboom forme 0 (baronessfaron, CC BY-NC 4.0)"
+ },
+ "format": {
+  "convention": "SpriteCollab / SkyTemple : <Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png + AnimData.xml",
+  "directions": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos, déplacée comme dans la référence",
+  "shadow_size": 2,
+  "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu)",
+  "cases": "celles de la référence"
+ },
+ "dessin": {
+  "orientations_dessinees": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut"
+  ],
+  "miroirs": {
+   "Gauche": "Droite",
+   "Haut-gauche": "Haut-droite",
+   "Bas-gauche": "Bas-droite"
+  },
+  "pieces": "tête, crinière, torse, queue, deux jambes, deux bras (repos / levé / tendu / poing au poitrail), lianes du dos, griffures, ondes",
+  "hauteur_repos": 35,
+  "source": "source/personnages/zarude_pieces.py"
+ },
+ "animations": {
+  "Walk": {
+   "index": 0,
+   "case": [
+    48,
+    64
+   ],
+   "images": 4,
+   "directions": 8,
+   "durees": [
+    8,
+    14,
+    8,
+    14
+   ],
+   "ticks": 44,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "repos / pas gauche / repos / pas droit ; le corps descend d'un pixel sur les pas"
+  },
+  "Attack": {
+   "index": 1,
+   "case": [
+    72,
+    88
+   ],
+   "images": 13,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    4,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 26,
+   "rush": 2,
+   "hit": 3,
+   "return": 6,
+   "composition": "bras levés au-dessus de la tête (charge), frappe au sol accroupi avec griffures à l'image d'impact, retour"
+  },
+  "Shoot": {
+   "index": 3,
+   "case": [
+    48,
+    64
+   ],
+   "images": 11,
+   "directions": 8,
+   "durees": [
+    2,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 26,
+   "rush": null,
+   "hit": 1,
+   "return": 3,
+   "composition": "rebond (ancre de la référence), puis accroupi bras tendus devant, secousse d'un pixel copiée de la référence"
+  },
+  "Sing": {
+   "index": 4,
+   "case": [
+    48,
+    64
+   ],
+   "images": 16,
+   "directions": 8,
+   "durees": [
+    4,
+    6,
+    4,
+    4,
+    4,
+    2,
+    2,
+    2,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    6,
+    4
+   ],
+   "ticks": 48,
+   "rush": null,
+   "hit": 5,
+   "return": 10,
+   "composition": "hurlement : bras levés, six coups de poing sur le poitrail (accélérés), tête levée bras au ciel avec ondes"
+  },
+  "Sleep": {
+   "index": 5,
+   "case": [
+    40,
+    40
+   ],
+   "images": 2,
+   "directions": 1,
+   "durees": [
+    30,
+    35
+   ],
+   "ticks": 65,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "couché sur le flanc, deux images (respiration)"
+  },
+  "Hurt": {
+   "index": 6,
+   "case": [
+    48,
+    72
+   ],
+   "images": 2,
+   "directions": 8,
+   "durees": [
+    2,
+    8
+   ],
+   "ticks": 10,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "bras écartés (de profil : rejetés en arrière), tête baissée, deux étincelles, recul copié de la référence"
+  },
+  "Idle": {
+   "index": 7,
+   "case": [
+    40,
+    64
+   ],
+   "images": 1,
+   "directions": 8,
+   "durees": [
+    32
+   ],
+   "ticks": 32,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "pose de repos, une image (comme la référence)"
+  },
+  "Swing": {
+   "index": 8,
+   "case": [
+    88,
+    104
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    2,
+    3,
+    2,
+    2,
+    1,
+    1
+   ],
+   "ticks": 16,
+   "rush": null,
+   "hit": 5,
+   "return": 5,
+   "composition": "tour complet sur soi-même en décrivant un cercle : l'image i regarde la direction (d − i) mod 8 ; case agrandie (80 × 96 chez Rillaboom)"
+  },
+  "Double": {
+   "index": 9,
+   "case": [
+    72,
+    88
+   ],
+   "images": 16,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 36,
+   "rush": null,
+   "hit": null,
+   "return": null,
+   "composition": "accroupi, aller-retour latéral de l'ancre copié de la référence"
+  },
+  "Hop": {
+   "index": 10,
+   "case": [
+    48,
+    104
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    3,
+    4,
+    4,
+    3,
+    2,
+    1,
+    2
+   ],
+   "ticks": 24,
+   "rush": null,
+   "hit": 9,
+   "return": null,
+   "composition": "accroupi, saut (corps levé jusqu'à 23 px), réception accroupie"
+  },
+  "Charge": {
+   "index": 11,
+   "case": [
+    48,
+    64
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 20,
+   "rush": null,
+   "hit": 5,
+   "return": 9,
+   "composition": "pose de repos, tremblement d'un pixel copié de la référence"
+  },
+  "Rotate": {
+   "index": 12,
+   "case": [
+    48,
+    64
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 18,
+   "rush": null,
+   "hit": 8,
+   "return": null,
+   "composition": "tour complet sur place, même sens que Swing"
+  }
+ },
+ "copies": {
+  "Strike": "Attack"
+ },
+ "aseprite": {
+  "canvas": [
+   88,
+   104
+  ],
+  "images": 103,
+  "calques": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "etiquettes": [
+   "Walk",
+   "Attack",
+   "Shoot",
+   "Sing",
+   "Sleep",
+   "Hurt",
+   "Idle",
+   "Swing",
+   "Double",
+   "Hop",
+   "Charge",
+   "Rotate"
+  ],
+  "ancre": [
+   44,
+   56
+  ]
+ },
+ "nuit": "nuit/<Anim>-Anim.png : même filtre que les salles (source/rebuild_kit.py night) ; Offsets et Shadow inchangés",
+ "palette": [
+  "#000000",
+  "#28262e",
+  "#286438",
+  "#36303c",
+  "#44404a",
+  "#4e984c",
+  "#625e6a",
+  "#84c660",
+  "#8e8e96",
+  "#c6c6ce",
+  "#ce2a2a",
+  "#f08c30",
+  "#ffffff"
+ ],
+ "couleurs": 13
+}

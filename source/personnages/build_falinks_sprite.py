@@ -564,10 +564,12 @@ def _chunk(kind: int, data: bytes) -> bytes:
     return struct.pack("<IH", len(data) + 6, kind) + data
 
 
-def write_aseprite(comps: dict[str, Composed], path: Path) -> dict:
+def write_aseprite(comps: dict[str, Composed], path: Path, order: list[str] | None = None) -> dict:
+    """Aseprite RGBA : un calque par direction, une image par case, une étiquette par animation.
+    `order` : noms d'animations à écrire (par défaut ANIM_ORDER sans Strike) ; réutilisé par les autres sprites."""
     W = max(c.fw for c in comps.values())
     H = max(c.fh for c in comps.values())
-    order = [n for n, _ in ANIM_ORDER if n != "Strike"]
+    order = order or [n for n, _ in ANIM_ORDER if n != "Strike"]
     frames, tags, cursor = [], [], 0
     for name in order:
         c = comps[name]
