@@ -1,0 +1,92 @@
+{
+ "pokemon": {
+  "nom": "Ambipom",
+  "numero": "0424",
+  "source": "https://sprites.pmdcollab.org/#/0424?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "trait_anime": "la bouche en dents d'Ambipom s'ouvre en rond, les dents restant visibles en haut",
+ "origine_du_dessin": [
+  10,
+  17
+ ],
+ "roles_de_couleur": {
+  "a": "#000000",
+  "d": "#af6fb7",
+  "e": "#bf7727",
+  "i": "#dfaf67",
+  "j": "#ffe79f",
+  "k": "#ffffff",
+  "f": "#d73f00",
+  "c": "#873f87"
+ },
+ "bouches": {
+  "fermee": [
+   "         ",
+   "         ",
+   "         "
+  ],
+  "entrouverte": [
+   " ajjjjja ",
+   " aiddia  ",
+   "  aiia   "
+  ],
+  "grande_ouverte": [
+   " ajjjja  ",
+   " aiddia  ",
+   " aaiiaa  "
+  ]
+ },
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  40,
+  64
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 12,
+ "couleurs_employees": 11,
+ "aseprite": {
+  "canvas": [
+   40,
+   64
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   20,
+   36
+  ]
+ }
+}

@@ -401,3 +401,38 @@ rejette tout dégradé), et bande de transition contenant bien les deux teintes.
 effets (goutte de sueur, larmes, étincelles de `Joyous`) sont dessinés **par-dessus** le fond et
 peuvent dominer une ligne entière ; le contrôle raisonne donc en teinte **majoritaire** et tolère une
 ligne aberrante, au lieu d'énumérer des boîtes d'effet qui seraient vite fausses.
+
+## 16. Généraliser le dessin à la main, et livrer au format officiel
+
+Dernière étape : dessiner la bouche de quatre Pokémon de plus (`dessine_eat_officiel.py`) et
+produire une arborescence déposable sur SpriteCollab (`source/export_spritecollab.py`).
+
+**Un trait par personnage, jamais une recette.** Le § 13 disait que la bouche de Politoed ne se
+transpose pas ; c'est confirmé. Il faut dumper chaque case `Idle` en ASCII et repérer ce qui fait
+le personnage : la bouche en dents d'Ambipom, la grande gueule rouge de Gible, le museau de
+Pawmot, et pour Dedenne — 17 px de haut — une ouverture de deux pixels, c'est tout ce que la
+taille permet sans bouillie. Les dessins sont des grilles de caractères avec des **rôles de
+couleur** (`gorge`, `dent`, `levre`) résolus dans la palette du sprite : le constructeur refuse
+au démarrage toute teinte absente de l'original, ce qui a immédiatement attrapé une palette
+Dedenne inventée de mémoire.
+
+**Le seuil d'ombrage doit être mesuré, pas supposé.** Premier contrôle écrit : « la teinte la plus
+claire ne touche jamais la plus sombre ». Il rejetait des dessins corrects. En mesurant l'écart de
+valeur (somme RVB) entre pixels voisins sur les `Eat` officiels : **487 chez Pichu, 430 chez
+Riolu**. Les artistes s'autorisent donc des contrastes francs. Le contrôle est devenu « écart ≤ 487 »
+— et il a alors trouvé de vraies fautes (548 sur Pawmot, 574 sur Dedenne, dents blanches posées
+contre du brun sombre), corrigées en bordant de la teinte intermédiaire.
+
+Deux pièges de contrôle, tous deux résolus en restreignant la mesure :
+- comparer des **familles de teintes sans rapport** (le bleu de peau de Gible est plus clair que
+  son rouge de gorge) → ne comparer que les couleurs réellement posées par le dessin ;
+- mesurer des contrastes **du sprite d'origine** (le museau blanc de Pawmot jouxte déjà un brun à
+  548 d'écart) → exiger que les deux pixels de la paire soient dans la zone dessinée. On ne peut
+  pas être tenu responsable de ce qu'on n'a pas peint.
+
+**L'export officiel** (`spritecollab/`) ne contient que ce que connaît le dépôt : `AnimData.xml`,
+les trois feuilles par animation, `credits.txt`, et les portraits 40 × 40. Détails de forme
+reproduits sur les fichiers officiels : **CRLF**, indentation à **deux espaces**, déclaration
+`<?xml version="1.0"?>` sans espace avant `?>`. Sans importance pour SkyTemple, mais un diff propre
+compte pour une contribution. Les `credits.txt` conservent toutes les lignes d'origine et
+reprennent la licence déjà déclarée sur le sprite.

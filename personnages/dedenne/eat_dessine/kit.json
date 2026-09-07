@@ -1,0 +1,87 @@
+{
+ "pokemon": {
+  "nom": "Dedenne",
+  "numero": "0702",
+  "source": "https://sprites.pmdcollab.org/#/0702?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "trait_anime": "à 17 pixels de haut, la bouche de Dedenne ne peut s'ouvrir que de deux pixels",
+ "origine_du_dessin": [
+  7,
+  11
+ ],
+ "roles_de_couleur": {
+  "a": "#000000",
+  "h": "#c85663",
+  "m": "#ffffff",
+  "f": "#b71a03",
+  "k": "#f74228",
+  "j": "#e8b43f"
+ },
+ "bouches": {
+  "fermee": [
+   "   ",
+   "   "
+  ],
+  "entrouverte": [
+   "hhh",
+   "afa"
+  ],
+  "grande_ouverte": [
+   "afa",
+   "aka"
+  ]
+ },
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  24,
+  40
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 14,
+ "couleurs_employees": 13,
+ "aseprite": {
+  "canvas": [
+   24,
+   40
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   12,
+   24
+  ]
+ }
+}

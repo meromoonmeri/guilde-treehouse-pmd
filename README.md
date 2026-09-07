@@ -75,7 +75,8 @@ Chaque salle a une version jour et une version nuit, avec **une seule image par 
   [Slurpuff #0685](personnages/slurpuff/animations_scenes/README.md) ·
   [Dedenne #0702](personnages/dedenne/animations_scenes/README.md).
   Chaque dossier contient le sprite **entier** (animations d'origine recopiées à l'identique + les 22 ajoutées) et s'importe tel quel dans SkyTemple.
-- `personnages/politoed/eat_dessine/` : **un `Eat` dont la bouche est dessinée à la main**, à la manière des artistes Chunsoft — trois états de bouche (fermée, entrouverte, grande ouverte avec langue) peints en pixel art dans la palette du sprite, d'après la technique relevée caractère par caractère sur les `Eat` de Pichu #0172 et Riolu #0447. Seul lot du dépôt où des pixels sont inventés, et donc le plus sévèrement vérifié (palette fermée, cerne noir, ombrage ordonné, changement local). Voir [son README](personnages/politoed/eat_dessine/README.md).
+- **`spritecollab/`** : **l'export au format exact du dépôt PMDCollab/SpriteCollab** — `sprite/<num>/` et `portrait/<num>/`, rien que les fichiers du format officiel (`AnimData.xml` en CRLF, feuilles Anim/Offsets/Shadow, `credits.txt`, portraits 40 × 40 et leurs miroirs `^`). C'est ce dossier qu'on déposerait sur le dépôt officiel. Voir [le rapport](spritecollab/RAPPORT.md).
+- **`Eat` dessinés à la main** (bouche qui s'ouvre vraiment, peinte dans la palette du sprite à la manière des artistes Chunsoft) pour [Politoed #0186](personnages/politoed/eat_dessine/README.md), Ambipom #0424, Gible #0443, Pawmot #0923 et Dedenne #0702 — chacun sur son trait caractéristique, contrôlés par une grammaire graphique mesurée sur les `Eat` de Pichu #0172 et Riolu #0447.
 - **Quatre planches de portraits complétées à 16 émotions** (40 × 40, ≤ 15 couleurs, versions `^`, planche SpriteBot 200 × 320), par retouche pixel du portrait Normal officiel :
   [Politoed #0186](portraits/politoed/README.md) ·
   [Hariyama #0297](portraits/hariyama/README.md) ·

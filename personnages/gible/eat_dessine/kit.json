@@ -1,0 +1,92 @@
+{
+ "pokemon": {
+  "nom": "Gible",
+  "numero": "0443",
+  "source": "https://sprites.pmdcollab.org/#/0443?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "trait_anime": "la grande gueule de Gible s'ouvre en grand, dents blanches et gorge sombre",
+ "origine_du_dessin": [
+  5,
+  15
+ ],
+ "roles_de_couleur": {
+  "a": "#000000",
+  "h": "#971f00",
+  "j": "#cf471f",
+  "l": "#ff7737",
+  "m": "#ffffff"
+ },
+ "bouches": {
+  "fermee": [
+   "           ",
+   "           ",
+   "           ",
+   "           "
+  ],
+  "entrouverte": [
+   "ajjaaaaajja",
+   "ajlllllllja",
+   "ajjlllljjja",
+   "aajjjjjjjaa"
+  ],
+  "grande_ouverte": [
+   "ajmmaaammja",
+   "ajjlllljjja",
+   "ajjjhhhjjja",
+   "aajjjjjjjaa"
+  ]
+ },
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  32,
+  56
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 13,
+ "couleurs_employees": 13,
+ "aseprite": {
+  "canvas": [
+   32,
+   56
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   16,
+   32
+  ]
+ }
+}

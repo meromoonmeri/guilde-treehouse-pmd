@@ -1,0 +1,88 @@
+{
+ "pokemon": {
+  "nom": "Pawmot",
+  "numero": "0923",
+  "source": "https://sprites.pmdcollab.org/#/0923?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "trait_anime": "le museau de Pawmot s'ouvre en ovale sous le nez",
+ "origine_du_dessin": [
+  10,
+  11
+ ],
+ "roles_de_couleur": {
+  "a": "#000000",
+  "c": "#763a29",
+  "d": "#d1a76a",
+  "e": "#d35723",
+  "f": "#f9d39b",
+  "h": "#ffcc00",
+  "i": "#ffecc9"
+ },
+ "bouches": {
+  "fermee": [
+   "     ",
+   "     "
+  ],
+  "entrouverte": [
+   " aea ",
+   " afa "
+  ],
+  "grande_ouverte": [
+   "aeea ",
+   "aeca "
+  ]
+ },
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  32,
+  56
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 12,
+ "couleurs_employees": 10,
+ "aseprite": {
+  "canvas": [
+   32,
+   56
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   16,
+   32
+  ]
+ }
+}
