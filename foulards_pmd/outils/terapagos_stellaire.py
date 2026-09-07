@@ -47,6 +47,7 @@ AVEC_DOME = False        # dôme de cristal au sol
 AVEC_GEMMES = False      # gemmes de type en orbite (elles ceinturaient le dôme)
 AVEC_ETINCELLES = False  # scintillements flottants
 ICONES_CYAN = False      # passer les symboles de la carapace au cyan
+CARAPACE_CONTRASTEE = True  # cerner les cellules et grossir les gemmes de type
 AVEC_ASTRE = True        # Terapagos miniature au sommet de la couronne
 AVEC_SYMBOLE = False     # symbole Terastal détaché au-dessus (illisible à cette échelle)
 
@@ -312,6 +313,42 @@ def dessiner_etincelles(cal, cx, cy, rx, hd, phase, ech):
                 cal.set(px + dx, py + dy, CRISTAL["base"])
 
 
+ACCENTS = list(VERS_CYAN.keys())
+
+
+def rehausser_carapace(cell):
+    """
+    Renforce la lecture de la carapace : les cellules sont cernées d'un trait
+    plus sombre et les gemmes de type sont saturées puis épaissies d'un pixel.
+    Sans cela, les motifs se noient dans le bleu du corps à l'échelle PMD.
+    """
+    out = cell.copy()
+    rgb = out[..., :3].astype(np.int16)
+    a = out[..., 3] > 0
+
+    # cernes : la teinte la plus sombre de la carapace est encore assombrie
+    for src in ((0x17, 0x1F, 0x77), (0x0F, 0x3F, 0xCF)):
+        m = a & (rgb[..., 0] == src[0]) & (rgb[..., 1] == src[1]) & (rgb[..., 2] == src[2])
+        out[m, 0], out[m, 1], out[m, 2] = _melange(src, (4, 6, 34), 0.55)
+
+    # gemmes : saturation et épaississement d'un pixel vers le bas-droite
+    h, w = a.shape
+    for src in ACCENTS:
+        m = a & (rgb[..., 0] == src[0]) & (rgb[..., 1] == src[1]) & (rgb[..., 2] == src[2])
+        if not m.any():
+            continue
+        vif = _melange(src, (255, 255, 255), 0.18)
+        out[m, 0], out[m, 1], out[m, 2] = vif
+        ys, xs = np.nonzero(m)
+        sombre = _melange(src, (0, 0, 40), 0.42)
+        for y, x in zip(ys, xs):
+            for dx, dy in ((1, 0), (0, 1)):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < w and 0 <= ny < h and a[ny, nx] and not m[ny, nx]:
+                    out[ny, nx, 0:3] = sombre
+    return out
+
+
 def recolorer_corps(cell):
     """Symboles de type au cyan, corps légèrement irisé."""
     out = cell.copy()
@@ -426,6 +463,8 @@ def rendre_anim(nom, a, ombre_src):
 
             # corps
             corps = cell
+            if CARAPACE_CONTRASTEE:
+                corps = rehausser_carapace(corps)
             if ICONES_CYAN:
                 corps = recolorer_corps(corps)
             corps = aura_irisee(corps, phase)
