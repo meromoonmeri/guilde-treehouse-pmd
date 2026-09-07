@@ -76,6 +76,7 @@
     "12": "guides/12_guide.png"
   },
   "retouches": {
-    "02": "source/retouche_hall_02.py : passage ouest au gabarit commun, trou de plancher sous le tronc, arche de guilde. A rejouer apres tout rebuild_kit.py."
+    "02": "source/retouche_hall_02.py : passage ouest au gabarit commun, trou de plancher en demi-cercle au pied du tronc (diametre = largeur de l'arbre-echelle), arche de guilde. A rejouer apres tout rebuild_kit.py.",
+    "toutes": "source/cadre_feuillage.py : cadre d'immersion en feuillage sur l'extremite des bordures de bois des 12 salles, ecrit dans le calque 10_bordure_avant. S'arrete aux passages et aux fenetres. A rejouer apres retouche_hall_02.py."
   }
 }

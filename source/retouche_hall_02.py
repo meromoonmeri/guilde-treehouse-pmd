@@ -41,7 +41,10 @@ LABELS = [
 ZONE_Y = (238, 378)          # bande retravaillee a l'ouest
 OUVERTURE_H = 67             # hauteur d'ouverture des autres salles
 CENTRE_OUVERTURE = 303
-TROU = {'rx': 96, 'ry': 46, 'cy': 261}
+# Trou de l'echelle : demi-disque pose au pied du tronc. Le diametre est pris
+# sur la largeur reelle de l'arbre (mesuree sur le calque de structure), le
+# cote plat est cale sur la ligne de contact tronc / plancher.
+TROU = {'marge_diametre': 0, 'y_plat': None}
 PORTE = {'x0': 1011, 'x1': 1103, 'y0': 78, 'y1': 217}
 
 
@@ -198,17 +201,30 @@ def passage_ouest(L):
 # ---------------------------------------------------- 2. trou sous le tronc
 
 def bornes_tronc(L):
+    """Largeur reelle de l'arbre-echelle. Le tronc est la seule structure qui
+    sort par le haut du cadre : ses colonnes a la ligne 0 donnent la longee."""
     st = L['02_structure']
-    bande = st[150:205, :, 3] > 8
-    xs = np.nonzero(bande.any(0))[0]
-    xs = xs[(xs > 520) & (xs < 780)]
+    xs = np.nonzero(st[0, :, 3] > 8)[0]
+    if len(xs) < 8:
+        xs = np.nonzero((st[0:24, :, 3] > 8).all(0))[0]
     return int(xs.min()), int(xs.max())
 
 
+def ligne_contact_tronc(L):
+    """Ligne ou le pied du tronc rencontre le plancher : c'est la qu'on pose le
+    diametre du demi-cercle."""
+    sol = L['01_sol'][:, :, 3] > 8
+    tx0, tx1 = bornes_tronc(L)
+    hauts = [np.nonzero(sol[:, x])[0] for x in range(tx0, tx1 + 1)]
+    hauts = [int(c.min()) for c in hauts if len(c)]
+    return int(np.median(hauts)) if hauts else 218
+
+
 def echelle_bornes(L):
+    """Montants de l'echelle : les colonnes claires a l'interieur du tronc."""
     st = L['02_structure']
     tx0, tx1 = bornes_tronc(L)
-    bande = st[150:200, tx0:tx1 + 1]
+    bande = st[60:170, tx0:tx1 + 1]
     lum = bande[:, :, :3].mean(2) * (bande[:, :, 3] > 8)
     profil = lum.mean(0)
     seuil = profil.mean() + profil.std() * 0.5
@@ -220,42 +236,49 @@ def echelle_bornes(L):
 
 
 def trou_sous_tronc(L):
-    """Perce le plancher au pied du tronc et fait descendre l'echelle dedans."""
+    """Perce le plancher au pied du tronc et fait descendre l'echelle dedans.
+
+    Geometrie corrigee : ce n'est plus une ellipse flottante au milieu du sol
+    mais un **demi-disque** dont le diametre vaut la largeur de l'arbre-echelle
+    et dont le cote plat est cale sur la ligne de contact tronc / plancher. Le
+    tronc masque le diametre, on ne voit que la moitie sud de l'ouverture.
+    """
     sol, st = L['01_sol'], L['02_structure']
     H, W = sol.shape[:2]
     tx0, tx1 = bornes_tronc(L)
     cx = (tx0 + tx1) // 2
-    cy, rx, ry = TROU['cy'], TROU['rx'], TROU['ry']
+    R = (tx1 - tx0 + 1) / 2.0 + TROU['marge_diametre']
+    y0 = TROU['y_plat'] if TROU['y_plat'] else ligne_contact_tronc(L)
 
     bois = st[172, tx0 + 8][:3].astype(float)
 
     yy, xx = np.mgrid[0:H, 0:W]
-    e = np.sqrt(((xx - cx) / float(rx)) ** 2 + ((yy - cy) / float(ry)) ** 2)
-    interieur = e <= 1.0
-    lisiere = (e > 1.0) & (e <= 1.10)      # chant du plancher, garde son grain
-    lippe = (e > 1.10) & (e <= 1.17)
+    d = np.sqrt((xx - cx) ** 2.0 + (yy - y0) ** 2.0) / R
+    sud = yy >= y0
+    interieur = (d <= 1.0) & sud
+    lisiere = (d > 1.0) & (d <= 1.10) & sud      # chant du plancher
+    lippe = (d > 1.10) & (d <= 1.17) & sud
 
-    # --- le puits : degrade sombre, plus profond en haut
-    t = np.clip((yy - (cy - ry)) / float(2 * ry), 0, 1)[:, :, None]
-    fond = np.array([13, 9, 7]) * (1 - t) + np.array([48, 32, 21]) * t
+    # --- le puits : degrade sombre, le fond remonte vers le sud
+    t = np.clip((yy - y0) / (R * 1.15), 0, 1)[:, :, None]
+    fond = np.array([12, 8, 6]) * (1 - t) + np.array([74, 50, 32]) * t
     sol[interieur, :3] = fond[interieur].astype('uint8')
     sol[interieur, 3] = 255
 
-    # paroi arriere : bois du tronc, eclaire par l'ouverture
-    dv = np.clip(((cy + ry * 0.15) - yy) / (ry * 1.15), 0, 1)[:, :, None]
-    paroi = (bois * 0.55 + np.array([16, 10, 7]))
+    # paroi arriere sous le tronc : bois du tronc, a peine effleure par la lumiere
+    dv = np.clip(((y0 + R * 0.55) - yy) / (R * 0.7), 0, 1)[:, :, None]
+    paroi = bois * 0.42 + np.array([12, 8, 5])
     melange = fond * (1 - dv) + paroi * dv
-    haut = interieur & (yy < cy + ry * 0.15)
+    haut = interieur & (yy < y0 + R * 0.42)
     sol[haut, :3] = np.clip(melange, 0, 255)[haut].astype('uint8')
 
-    # ombre portee de la levre nord
-    ombre = np.clip(((cy - ry * 0.25) - yy) / (ry * 0.8), 0, 1)[:, :, None]
-    f = (1 - 0.45 * ombre)
-    sol[interieur, :3] = np.rint(sol[interieur, :3] * f[interieur]).astype('uint8')
+    # ombre portee de la levre nord (le tronc bouche la lumiere)
+    ombre = np.clip(((y0 + R * 0.25) - yy) / (R * 0.8), 0, 1)[:, :, None]
+    sol[interieur, :3] = np.rint(
+        sol[interieur, :3] * (1 - 0.35 * ombre)[interieur]).astype('uint8')
 
-    # --- l'echelle plonge dans le trou
+    # --- l'echelle plonge dans le trou, dans l'axe de celle du tronc
     lx0, lx1 = echelle_bornes(L)
-    # on ne garde que le coeur de l'echelle : les bords du tronc feraient des trainees
     milieu = (lx0 + lx1) // 2
     demi = max(18, int((lx1 - lx0) * 0.34))
     lx0, lx1 = milieu - demi, milieu + demi
@@ -269,37 +292,37 @@ def trou_sous_tronc(L):
         if len(lignes) > 12:
             h0 = int(lignes[0])
             motif = motif[h0:h0 + 24]
-        hauteur = int(ry * 1.85)
-        y_depart = cy - ry + 3
+        hauteur = int(R * 1.35)
+        y_depart = y0 - 2
         tuile = np.tile(motif, (hauteur // max(1, motif.shape[0]) + 2, 1, 1))[:hauteur]
-        prof = np.linspace(0.95, 0.42, hauteur)[:, None, None]
+        prof = np.linspace(1.15, 0.62, hauteur)[:, None, None]
         rgba = np.concatenate([prof, prof, prof, np.ones_like(prof)], axis=2)
-        tuile = (tuile * rgba).astype('uint8')
+        tuile = np.clip(tuile * rgba, 0, 255).astype('uint8')
         zone = sol[y_depart:y_depart + hauteur, lx0:lx1 + 1]
         dedans = interieur[y_depart:y_depart + hauteur, lx0:lx1 + 1] & (tuile[:, :, 3] > 8)
         zone[dedans, :3] = tuile[dedans, :3]
         zone[dedans, 3] = 255
 
     # --- chant du plancher : on garde le grain des planches, on le nuance
-    nord = lisiere & (yy < cy)
-    sud = lisiere & (yy >= cy)
-    sol[nord, :3] = np.rint(sol[nord, :3] * 0.45).astype('uint8')
-    sol[sud, :3] = np.clip(np.rint(sol[sud, :3] * 0.92 + 12), 0, 255).astype('uint8')
-    lp_sud = lippe & (yy > cy + ry * 0.2)
-    sol[lp_sud, :3] = np.clip(np.rint(sol[lp_sud, :3] * 1.06 + 8), 0, 255).astype('uint8')
-    lp_nord = lippe & (yy < cy - ry * 0.2)
-    sol[lp_nord, :3] = np.rint(sol[lp_nord, :3] * 0.82).astype('uint8')
+    proche = lisiere & (yy < y0 + R * 0.45)          # joues laterales
+    avant = lisiere & (yy >= y0 + R * 0.45)          # rebord face au joueur
+    sol[proche, :3] = np.rint(sol[proche, :3] * 0.5).astype('uint8')
+    sol[avant, :3] = np.rint(sol[avant, :3] * 0.86).astype('uint8')
     # trait sombre a l'aplomb de l'ouverture : donne la profondeur
-    bord_noir = (e > 0.965) & (e <= 1.0)
+    bord_noir = (d > 0.965) & (d <= 1.0) & sud
     sol[bord_noir, :3] = np.rint(sol[bord_noir, :3] * 0.30).astype('uint8')
+    # chant du diametre, sous le pied du tronc (visible entre les racines)
+    plat = (np.abs(xx - cx) <= R) & (yy >= y0) & (yy < y0 + 2)
+    sol[plat, :3] = np.rint(sol[plat, :3] * 0.22).astype('uint8')
+    sol[plat, 3] = 255
 
     # --- ombre de contact autour du trou
     om = L['08_ombres_acces']
-    halo = (e > 1.17) & (e <= 1.55) & (yy > cy - ry * 0.3)
-    a = np.rint(np.clip((1.55 - e) / 0.38, 0, 1) * 40)[halo].astype('uint8')
+    halo = (d > 1.17) & (d <= 1.62) & sud
+    a = np.rint(np.clip((1.62 - d) / 0.45, 0, 1) * 44)[halo].astype('uint8')
     om[halo, 3] = np.maximum(om[halo, 3], a)
     om[halo, :3] = 0
-    return cx, cy
+    return cx, y0, R
 
 
 # --------------------------------------------------------- 3. porte / arche
@@ -431,10 +454,11 @@ def ecrire(L, palette):
 def main():
     J = charger('jour')
     y0, y1 = passage_ouest(J)
-    cx, cy = trou_sous_tronc(J)
+    cx, cy, R = trou_sous_tronc(J)
     porte(J)
     print('ouverture ouest y=%d..%d (%d px)' % (y0, y1, y1 - y0 + 1))
-    print('trou centre sur x=%d y=%d (%d x %d px)' % (cx, cy, TROU['rx'] * 2, TROU['ry'] * 2))
+    print('trou : demi-cercle de diametre %d px (largeur du tronc), '
+          'centre x=%d, ligne plate y=%d' % (int(R * 2), cx, cy))
 
     N = {}
     for n in J:

@@ -67,9 +67,14 @@ composites, l'Aseprite et les cartes Tiled de la salle :
 - **Passage ouest** ramené au gabarit commun : ouverture de **67 px** comme les
   chambres, contour de pièce restitué de part et d'autre, arêtes marquées
   (dessous de mur au nord, rebord avant au sud) et ombre de contact recadrée.
-- **Trou au pied du tronc** : le plancher est percé (ellipse 192 × 92 px centrée
-  en 650, 261), bordé par le chant des planches, et **l'échelle descend dedans**
-  vers l'étage inférieur — principe du deuxième étage de Halcyon.
+- **Trou de l'échelle au pied du tronc** : le plancher est percé d'un
+  **demi-disque** — le côté plat est calé sur la ligne de contact tronc /
+  plancher (y = 219) et le **diamètre vaut la largeur réelle de l'arbre-échelle**
+  (98 px, mesurée sur le calque de structure), centré sur le tronc (x = 642). Le
+  pied du tronc masque le diamètre : on ne voit que la moitié sud de l'ouverture,
+  bordée du chant des planches, avec **l'échelle qui descend dedans** vers
+  l'étage inférieur — principe du deuxième étage de Halcyon. L'ancienne ellipse
+  192 × 92 px flottait au milieu du sol, décalée de l'axe du tronc.
 - **Arche de guilde au nord** à la place de l'ancienne porte à cadre rose :
   encadrement de bois cintré, ouverture sombre, emblème feuille sur la clef.
   La variante à battants sculptés est écrite à côté, en
@@ -78,6 +83,30 @@ composites, l'Aseprite et les cartes Tiled de la salle :
 Les calques d'avant retouche sont conservés dans `source/hall_02_avant_retouche/` :
 le script repart toujours d'eux, il est donc rejouable à l'identique, y compris
 après un `rebuild_kit.py`.
+
+## Cadre d'immersion en feuillage
+
+`python3 source/cadre_feuillage.py` borde **les douze salles** d'une couronne de
+feuilles à l'extrémité des bordures de bois, pour que la pièce ne soit plus une
+découpe nette posée sur le noir :
+
+- une **frange continue** de petites masses de feuilles festonne l'arête du
+  contour, en aplats francs (pixel art, aucun dégradé lissé) ;
+- des **bouquets** de la banque `sprites/individuels/vegetation_*.png` pendent
+  du toit, s'accrochent aux joues et courent en guirlande sur le rebord avant,
+  avec de plus grosses touffes aux quatre extrémités du cadre ;
+- tout est **assombri en fonction de la distance au bois** : encore vivant sur
+  la bordure, vert profond puis presque noir à la pointe des feuilles, donc
+  **fondu dans le fond noir** ; une accroche chaude côté salle rappelle la
+  lumière du bois ;
+- le feuillage **s'arrête aux passages** (langues de plancher, repérées par les
+  accès de `kit.json`) et **aux fenêtres**, qui restent traversantes.
+
+Le feuillage est écrit dans le calque **`10_bordure_avant`** : le kit garde ses
+onze calques, ses 24 Aseprite, ses cartes Tiled et passe `verify_pmd.py` tel
+quel. Les bordures d'avant feuillage sont conservées dans
+`source/feuillage_avant_cadre/` et la salle 02 est reconstruite en rejouant
+`retouche_hall_02.py`, le script est donc rejouable à l'identique.
 
 ## Échelle des salles — analyse comparative
 
@@ -106,9 +135,15 @@ du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
 pip install -r source/requirements.txt
 python source/rebuild_landscapes.py
 python source/rebuild_kit.py
+python source/retouche_hall_02.py
+python source/cadre_feuillage.py
 python source/build_preview.py
 python source/verify_pmd.py
 ```
+
+`rebuild_kit.py` reconstruit le kit nu : les deux retouches se rejouent
+ensuite, dans cet ordre. `cadre_feuillage.py` rejoue de lui-même les retouches
+du hall pour la salle 02.
 
 Le contrôle relit et recompose les PNG, Aseprite et cartes Tiled ; vérifie les bases transparentes/magenta, les 6 vues alignées, les calques vides et l’unique porte nord. Validation par code, pas par ouverture dans l’interface d’Aseprite.
 
