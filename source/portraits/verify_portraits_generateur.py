@@ -15,12 +15,21 @@ Format SpriteCollab
 - planche 200 × 320 (5 × 8 cases), ordre officiel, cases `Special` vides.
 
 Les deux couches
-1. **Le fond est canonique au pixel près** : tout pixel portant une teinte de fond doit être
-   exactement celui qu'un fond canonique reconstruit y placerait. C'est le point qui avait été
-   signalé comme faux à plusieurs reprises ; il est maintenant mesuré, pas supposé.
-2. **Aucun résidu du décor d'origine** : le générateur reprend le ciel du `Normal` qu'on lui
-   donne. Si une seule teinte de ce décor subsiste dans l'image finale, le découpage a laissé
-   passer quelque chose — c'était le cas des poches enfermées entre les oreilles de Capidextre.
+1. **Hors de la silhouette, TOUT est le fond canonique** — pixel par pixel, sans exception.
+   Le contrôle parcourt la zone située hors du masque de silhouette du portrait officiel et
+   exige que chaque pixel soit exactement celui qu'un fond canonique reconstruit y placerait.
+
+   La version précédente de ce test ne vérifiait que les pixels **déjà** aux couleurs
+   canoniques : elle était circulaire et validait des images où des bouts de personnage
+   (saumon, orange) traînaient dans les coins. C'est le défaut que l'utilisateur a vu et que
+   le contrôle ne voyait pas. Il faut partir de la **position**, jamais de la couleur.
+
+2. **Aucune teinte de décor ne subsiste dans la silhouette** : le générateur peint parfois son
+   propre ciel *à l'intérieur* du personnage (entre les oreilles de Capidextre, sur les épaules
+   de Hariyama). Ces pixels-là ne sont pas rattrapables par la position — il faut les repérer
+   par la couleur. Les deux critères sont donc nécessaires, chacun traitant ce que l'autre
+   laisse passer.
+
 3. **Les émotions officielles sont reprises à l'identique**, octet pour octet.
 """
 from __future__ import annotations
@@ -35,6 +44,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "source" / "portraits"))
 from build_portraits_manquants import BACKGROUNDS, SIZE, load        # noqa: E402
+from build_portraits_manquants import background_mask                # noqa: E402
 from portraits_generateur import (                                    # noqa: E402
     ORDRE, REF, RETENUES, SUJETS, decor_du_portrait, fond_pur,
 )
@@ -54,7 +64,7 @@ def controler(num: str) -> dict:
     log: list[str] = []
     officiel = load(REF / num / "Normal.png")
     palette_off = {tuple(int(v) for v in c) for c in officiel.reshape(-1, 3)}
-    teintes_decor = decor_du_portrait(officiel)
+    perso_officiel = ~background_mask(officiel)
     publiees = {p.stem for p in (REF / num).glob("*.png")}
 
     presentes = sorted(p.stem for p in out.glob("*.png")
@@ -84,20 +94,23 @@ def controler(num: str) -> dict:
         fail(couleurs <= admises,
              f"#{num} {nom} palette fermée : aucune couleur du générateur n'a survécu", log)
 
-        # --- couche 1 : le fond est canonique au pixel près ------------------------
-        ciel, sol = BACKGROUNDS[nom]
+        # --- couche 1 : hors de la silhouette, tout est le fond canonique -----------
+        # Contrôle par la POSITION, pas par la couleur : on compare chaque pixel hors du
+        # masque de silhouette à ce qu'un fond canonique y placerait. Un seul écart = échec.
         ref = fond_pur(nom)
-        est_fond = np.all(a[:, :, :3] == ciel, axis=2) | np.all(a[:, :, :3] == sol, axis=2)
-        fail(est_fond.any(), f"#{num} {nom} le fond canonique est présent", log)
-        fail(bool((a[:, :, :3][est_fond] == ref[est_fond]).all()),
-             f"#{num} {nom} fond canonique exact ({int(est_fond.sum())} pixels)", log)
+        hors = ~perso_officiel
+        ecarts = int((~(a[:, :, :3][hors] == ref[hors]).all(axis=1)).sum())
+        fail(ecarts == 0,
+             f"#{num} {nom} : les {int(hors.sum())} pixels hors silhouette sont tous le fond "
+             f"canonique ({ecarts} écart(s))", log)
 
-        # --- couche 2 : aucun résidu du décor d'origine -----------------------------
+        # --- couche 2 : pas de décor resté dans la silhouette -----------------------
         residu = 0
-        for couleur in teintes_decor:
+        for couleur in decor_du_portrait(officiel):
             residu += int(np.all(a[:, :, :3] == couleur, axis=2).sum())
         fail(residu == 0,
-             f"#{num} {nom} aucun résidu du décor d'origine ({residu} pixels)", log)
+             f"#{num} {nom} : aucune teinte de décor d'origine dans la silhouette "
+             f"({residu} pixel(s))", log)
 
         fail(not np.array_equal(a[:, :, :3], officiel),
              f"#{num} {nom} diffère bien du portrait Normal", log)

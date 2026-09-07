@@ -540,3 +540,28 @@ expression et une pose différentes.
 **À retenir :** demander au générateur ce qu'il fait bien (une expression), pas ce que le code
 fait exactement (un fond canonique). Et soumettre chaque sortie à l'œil de l'utilisateur : le
 taux de conservation ne dit rien du « ça fait IA ».
+
+## 20. Un fond vraiment propre demande DEUX critères (correction du § 19)
+
+Le § 19 découpait le personnage par les teintes de décor. L'utilisateur a vu qu'il restait
+« des bouts de couleur dans les fonds » — et il avait raison. Deux causes distinctes, qu'aucun
+critère unique ne rattrape :
+
+1. **Le générateur déborde la silhouette** et sème des pixels de personnage dans les coins
+   (saumon `#f9857e` chez Capidextre, orange `#d68850` chez Hariyama). Ces teintes appartiennent
+   aussi au personnage : aucun test de couleur ne peut les distinguer. Seule la **position** le
+   peut → hors du masque de silhouette du portrait officiel, on ne reprend **rien** du générateur.
+2. **Le générateur peint son ciel à l'intérieur** de la silhouette (entre les oreilles, sur les
+   épaules). Ces pixels sont dans la bonne position : seule la **couleur** les trahit → toute
+   teinte de décor du portrait officiel trouvée dans la silhouette est rendue au fond.
+
+Les deux ensemble, et seulement les deux ensemble, donnent un fond canonique intégral.
+
+**Le contrôle était circulaire.** L'ancien test vérifiait que « les pixels portant une couleur de
+fond sont bien à la bonne place » — il ne pouvait par construction jamais voir un pixel saumon
+dans un coin. Refait à l'envers : on parcourt la zone hors silhouette et on exige que **chaque**
+pixel soit exactement celui du fond reconstruit. Vérifié sur l'ancienne sortie : le nouveau test
+la rejette (26 écarts), la nouvelle passe (0).
+
+**Leçon.** Un contrôle qui part de la couleur pour juger la couleur ne prouve rien. Partir de la
+position, qui est indépendante de ce qu'on veut vérifier.

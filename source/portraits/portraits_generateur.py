@@ -28,11 +28,19 @@ LA DISCIPLINE, EN QUATRE TEMPS
      n'a donc rien à apporter ici, et on ne le lui demande pas.
    * **couche 2, le personnage** — découpé dans la sortie du générateur, puis posé par-dessus.
 
-   Le découpage se fait par les **teintes de décor du portrait officiel** (celles qui occupent
-   son fond et que le personnage n'emploie jamais) : tout pixel qui les porte est du fond,
-   qu'il touche le bord ou non. C'est ce dernier point qui compte — les poches de ciel
-   enfermées entre les oreilles de Capidextre ne sont reliées à aucun bord, et une simple
-   propagation depuis le cadre les laissait en place. C'était le défaut visible signalé.
+   Le découpage se fait par le **masque de silhouette du portrait officiel**, et par rien
+   d'autre. C'est une position fixe, connue et canonique. Tout ce qui est hors de ce masque
+   est du fond reconstruit, **sans exception et sans négociation**.
+
+   Deux approches par les couleurs ont été essayées et abandonnées, parce qu'elles laissaient
+   toutes deux des « bouts de couleur » dans le fond — le défaut signalé par l'utilisateur :
+     * propagation depuis le bord sur la sortie du générateur → rate les poches enfermées
+       (le ciel coincé entre les oreilles de Capidextre ne touche aucun bord) ;
+     * remplacement de toutes les teintes de décor de l'officiel → rate les pixels que le
+       générateur a peints d'une **autre** couleur dans la zone du fond : il déborde la
+       silhouette et sème du saumon (`#f9857e`) ou de l'orange (`#d68850`) dans les coins.
+   Aucun critère de couleur ne peut rattraper cela, puisque ces teintes appartiennent aussi
+   au personnage. Seul un critère de **position** le peut.
 4. **Miroir `^`** produit par retournement exact, comme l'exige le format.
 
 Ce qui reste du générateur : l'**expression** seule. Le fond, la palette et la géométrie sont
@@ -141,17 +149,23 @@ def composer(num: str, emotion: str) -> tuple[np.ndarray, dict] | None:
         return None
     officiel = load(REF / num / "Normal.png")
     snap, brutes = rabattre(Image.open(brut_path), officiel)
-    # Couche 2 : le personnage, découpé dans la sortie du générateur. Tout pixel portant une
-    # teinte de décor du portrait officiel appartient au fond — y compris les poches enfermées
-    # (entre les oreilles de Capidextre par exemple), qu'une propagation depuis le bord raterait.
-    teintes = decor_du_portrait(officiel)
-    decor = np.zeros((SIZE, SIZE), bool)
-    for couleur in teintes:
-        decor |= np.all(snap == couleur, axis=2)
-    perso = ~decor
-
+    # Couche 2 : le personnage, découpé au masque de silhouette du portrait officiel.
+    # Hors de ce masque, on ne reprend RIEN du générateur — c'est la seule façon de garantir
+    # qu'aucun bout de personnage ne traîne dans le fond.
+    perso = ~background_mask(officiel)
     out = np.dstack([fond_pur(emotion), np.full((SIZE, SIZE, 1), 255, np.uint8)])
     out[perso, :3] = snap[perso]
+
+    # ... et à l'intérieur de la silhouette, le générateur peint parfois son propre ciel
+    # (entre les oreilles de Capidextre, sur les épaules de Hariyama). Ces pixels portent une
+    # teinte de décor du portrait officiel, que le personnage n'emploie jamais : on les rend
+    # au fond canonique. Position ET couleur, chacune traitant ce que l'autre ne peut pas.
+    decor = decor_du_portrait(officiel)
+    fond = fond_pur(emotion)
+    interieur = np.zeros((SIZE, SIZE), bool)
+    for couleur in decor:
+        interieur |= np.all(out[:, :, :3] == couleur, axis=2)
+    out[interieur, :3] = fond[interieur]
 
     # Le fond canonique ajoute ses deux teintes : sur certaines émotions la planche passe à 16
     # alors que le SpriteBot en accepte 15. On rabat alors les couleurs les plus rares du
