@@ -45,23 +45,47 @@ EMOTIONS = ["Normal", "Happy", "Pain", "Angry", "Worried",
 PRODUCED = [e for e in EMOTIONS if not e.startswith("Special")]
 
 # Fonds Chunsoft (haut, bas), relevés sur les portraits officiels — mêmes valeurs que Falinks.
+# ---------------------------------------------------------------------------
+# FONDS CANONIQUES
+#
+# Les fonds de portrait de PMDCollab ne sont ni libres ni dégradés : ce sont des **paires de
+# couleurs fixes par émotion**, identiques d'un Pokémon à l'autre. Relevées ici sur les huit
+# jeux de référence du dépôt (ligne 0 pour le ciel, coins bas pour le sol), en prenant la
+# valeur majoritaire — les variantes à ±2 par canal viennent de retouches d'auteurs.
+#
+# La STRUCTURE est tout aussi canonique, et c'est là que la version précédente se trompait :
+#
+#   • le ciel occupe le haut sur toute la largeur, en **bandes horizontales** ;
+#   • le sol occupe le bas, également en bandes horizontales ;
+#   • la transition se fait par un **damier** de quelques lignes (`1.1.1.1.`), jamais par un
+#     dégradé continu ni par la silhouette du ciel d'origine ;
+#   • l'horizon est vers **y = 8**, donc haut dans l'image (le personnage le masque en grande
+#     partie ; il n'est visible que sur les bords gauche et droit).
+#
+# Vérifié sur `0674/Crying`, `0674/Normal`, `0674/Sad` : les lignes 0-7 sont pleines de ciel,
+# les lignes 8-12 alternent, le bas est plein de sol. L'ancienne version peignait un dégradé
+# épousant le ciel d'origine, ce qui ne ressemblait à aucun portrait officiel.
+# ---------------------------------------------------------------------------
+HORIZON = 8          # dernière ligne de ciel plein
+DAMIER = 4           # hauteur de la bande en damier sous l'horizon
+
 BACKGROUNDS = {
-    "Normal": None,
-    "Happy": ((255, 255, 191), (255, 239, 119)),
-    "Pain": ((111, 135, 183), (167, 207, 223)),
-    "Angry": ((247, 111, 143), (223, 127, 175)),
-    "Worried": ((143, 167, 207), (167, 207, 223)),
-    "Sad": ((119, 135, 183), (167, 207, 223)),
-    "Crying": ((119, 135, 175), (167, 207, 223)),
-    "Teary-Eyed": ((247, 191, 199), (231, 143, 175)),
-    "Determined": ((239, 143, 191), (247, 111, 151)),
-    "Joyous": ((255, 255, 191), (255, 231, 127)),
-    "Inspired": ((255, 255, 191), (255, 239, 135)),
-    "Sigh": ((253, 241, 165), (253, 229, 120)),
-    "Stunned": ((119, 134, 177), (143, 207, 199)),
-    "Dizzy": ((143, 207, 199), (143, 207, 199)),
-    "Surprised": ((223, 231, 239), (223, 231, 239)),
-    "Shouting": ((135, 199, 247), (191, 247, 191)),
+    "Normal": None,                                        # base d'origine, fond non repeint
+    "Happy": ((255, 255, 175), (255, 231, 119)),
+    "Pain": ((119, 135, 183), (143, 207, 191)),
+    "Angry": ((247, 103, 135), (223, 127, 175)),
+    "Worried": ((119, 151, 191), (159, 215, 239)),
+    "Sad": ((119, 151, 191), (167, 207, 223)),
+    "Crying": ((111, 127, 183), (159, 215, 239)),
+    "Teary-Eyed": ((247, 191, 199), (237, 132, 177)),
+    "Determined": ((239, 159, 191), (247, 103, 133)),
+    "Joyous": ((255, 255, 199), (255, 231, 119)),
+    "Inspired": ((255, 255, 175), (255, 231, 127)),
+    "Sigh": ((254, 241, 164), (255, 207, 79)),
+    "Stunned": ((120, 135, 177), (163, 199, 219)),
+    "Dizzy": ((151, 207, 207), (183, 215, 191)),
+    "Surprised": ((223, 231, 239), (167, 207, 223)),
+    "Shouting": ((135, 199, 255), (191, 247, 199)),
 }
 ZIGZAG = (119, 135, 175)
 SALMON = (255, 143, 135)
@@ -144,40 +168,60 @@ def load(path: Path) -> np.ndarray:
     return a[:, :, :3].astype(np.uint8).copy()
 
 
-def background_mask(rgb: np.ndarray) -> np.ndarray:
-    """Fond = pixels atteignables depuis le bord en ne traversant que des couleurs de décor.
+# Couleurs canoniques du fond « Normal » : c'est le décor de toutes les bases officielles
+# utilisées ici. Les auteurs les emploient à ±3 par canal près, d'où la tolérance.
+FOND_NORMAL = ((119, 199, 215), (231, 247, 183), (215, 255, 191))
+TOLERANCE = 6
 
-    Une couleur est « de décor » si elle apparaît sur le cadre extérieur de l'image **et jamais**
-    dans le carré central 20 × 20, entièrement occupé par le personnage sur les portraits PMD.
-    Ce double critère écarte les teintes que le personnage partage avec le ciel ou le sol : la
-    propagation s'arrête donc exactement sur sa silhouette, anticrénelage compris.
+
+def background_mask(rgb: np.ndarray) -> np.ndarray:
+    """Fond = le décor canonique « Normal » de la base, repéré par ses couleurs officielles.
+
+    Toutes les bases de ce lot sont des portraits `Normal` de PMDCollab : leur décor est donc
+    la paire canonique `#77c7d7` / `#e7f7b7` (avec la variante `#d7ffbf`), aux retouches
+    d'auteur près. Plutôt que de deviner le fond par propagation depuis le bord — ce qui n'en
+    trouvait que 14 à 30 % et laissait des plaques de l'ancien ciel autour du personnage —, on
+    part de ces **couleurs connues**, puis on ne garde que ce qui est relié au bord.
+
+    Le rattrapage d'anticrénelage reste nécessaire : la frange entre le décor et la silhouette
+    emploie des teintes intermédiaires qui ne sont dans aucune des deux listes.
     """
+    # (a) les couleurs canoniques connues du décor Normal
+    approx = np.zeros((SIZE, SIZE), bool)
+    for colour in FOND_NORMAL:
+        approx |= (np.abs(rgb.astype(int) - np.array(colour)).max(axis=2) <= TOLERANCE)
+
+    # (b) toute couleur qui borde l'image sans jamais apparaître au centre : c'est du décor,
+    #     même si l'auteur a employé une teinte hors de la paire canonique (cas de Pawmot,
+    #     dont le sol est plus jaune que la référence). Les deux critères sont réunis, car
+    #     pris séparément ils ne trouvaient que 6 à 30 % du fond.
     ring: set[tuple] = set()
     for line in (rgb[0], rgb[-1], rgb[:, 0], rgb[:, -1]):
         ring |= set(map(tuple, line.tolist()))
-    core = set(map(tuple, rgb[10:30, 10:30].reshape(-1, 3).tolist()))
-    allowed = np.zeros((SIZE, SIZE), bool)
-    for colour in ring - core:
-        allowed |= np.all(rgb == colour, axis=2)
+    centre = set(map(tuple, rgb[12:32, 12:32].reshape(-1, 3).tolist()))
+    for colour in ring - centre:
+        approx |= np.all(rgb == colour, axis=2)
+
+    # relier au bord : un pixel de décor enfermé dans le personnage n'est pas du fond
     seen = np.zeros((SIZE, SIZE), bool)
     stack = [(y, x) for y in (0, SIZE - 1) for x in range(SIZE)] + \
             [(y, x) for x in (0, SIZE - 1) for y in range(SIZE)]
     while stack:
         y, x = stack.pop()
-        if not (0 <= y < SIZE and 0 <= x < SIZE) or seen[y, x] or not allowed[y, x]:
+        if not (0 <= y < SIZE and 0 <= x < SIZE) or seen[y, x] or not approx[y, x]:
             continue
         seen[y, x] = True
         stack += [(y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)]
 
-    # Rattrapage de l'anticrénelage : une couleur absente du centre dont presque tous les pixels
-    # touchent déjà le fond en fait partie (frange ciel/silhouette). Sans cela il resterait des
-    # pixels de l'ancien ciel autour du personnage après le changement de fond.
+    # Rattrapage de l'anticrénelage : une couleur absente du carré central (donc étrangère au
+    # personnage) dont presque tous les pixels touchent déjà le fond en fait partie.
+    core = set(map(tuple, rgb[12:32, 12:32].reshape(-1, 3).tolist()))
     for _ in range(4):
         near = ndimage.binary_dilation(seen, np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], bool))
         grown = False
         for colour in {tuple(v) for v in rgb.reshape(-1, 3).tolist()} - core:
             mask = np.all(rgb == colour, axis=2)
-            if mask.sum() and not (mask & seen).all() and (mask & near).sum() / mask.sum() >= 0.85:
+            if mask.sum() and not (mask & seen).all() and (mask & near).sum() / mask.sum() >= 0.8:
                 seen |= mask
                 grown = True
         if not grown:
@@ -203,32 +247,43 @@ def sky_mask(rgb: np.ndarray, bg: np.ndarray) -> np.ndarray:
     return bg & (np.arange(SIZE)[:, None] <= limit)
 
 
-def paint_background(rgb: np.ndarray, bg: np.ndarray, sky: np.ndarray, name: str, flat: bool = False) -> dict:
-    """Repeint le fond aux couleurs Chunsoft de l'émotion.
+def paint_background(rgb: np.ndarray, bg: np.ndarray, sky: np.ndarray, name: str,
+                     flat: bool = False) -> dict:
+    """Repeint le fond selon la **structure canonique** des portraits PMDCollab.
 
-    `flat` : n'employer qu'une seule teinte. Le SpriteBot refuse au-delà de 15 couleurs ; quand
-    le personnage partage déjà des teintes avec son ciel d'origine, le dégradé à deux tons ferait
-    passer la planche à 16. On retombe alors sur un aplat, comme le font plusieurs portraits
-    officiels (Dizzy, Surprised).
+    Ciel plein en haut jusqu'à `HORIZON`, sol plein en bas, et entre les deux une bande de
+    `DAMIER` lignes en damier — exactement ce que font les portraits officiels. L'argument
+    `sky` (la forme du ciel d'origine) n'est plus utilisé pour la géométrie : c'est ce qui
+    rendait les fonds précédents non canoniques, puisqu'ils épousaient la silhouette du décor
+    de départ au lieu d'être horizontaux.
+
+    `flat` : n'employer que le ciel. Le SpriteBot refuse au-delà de 15 couleurs ; quand le
+    personnage partage déjà des teintes avec son décor, la paire ferait passer la planche à 16.
+    On retombe alors sur un aplat, comme le font plusieurs portraits officiels.
     """
     top, bottom = BACKGROUNDS[name]
     if flat:
         bottom = top
     ys, xs = np.nonzero(bg)
+
     if name == "Shouting" and not flat:
+        # Shouting est le seul fond radial officiel : des rayons depuis le visage.
         cx, cy = 20.0, 24.0
         for y, x in zip(ys, xs):
-            sector = int(np.floor((np.arctan2(y - cy, x - cx) + np.pi) / (2 * np.pi / 14)))
-            rgb[y, x] = top if sector % 2 == 0 else bottom
+            secteur = int(np.floor((np.arctan2(y - cy, x - cx) + np.pi) / (2 * np.pi / 14)))
+            rgb[y, x] = top if secteur % 2 == 0 else bottom
         return {"type": "rayons", "couleurs": [list(top), list(bottom)]}
-    if name == "Surprised" and not flat:
-        tri = [0, 1, 2, 3, 3, 2, 1, 0]
-        for y, x in zip(ys, xs):
-            rgb[y, x] = ZIGZAG if (y + tri[x % 8]) % 6 < 3 else top
-        return {"type": "zigzag", "couleurs": [list(top), list(ZIGZAG)]}
+
     for y, x in zip(ys, xs):
-        rgb[y, x] = top if sky[y, x] else bottom
-    return {"type": "uni" if top == bottom else "degrade", "couleurs": [list(top), list(bottom)]}
+        if y < HORIZON:
+            rgb[y, x] = top                                   # ciel plein
+        elif y < HORIZON + DAMIER:
+            rgb[y, x] = top if (x + y) % 2 == 0 else bottom   # damier de transition
+        else:
+            rgb[y, x] = bottom                                # sol plein
+    return {"type": "ciel/sol canonique" if top != bottom else "aplat",
+            "couleurs": [list(top), list(bottom)],
+            "horizon": HORIZON, "damier": DAMIER}
 
 
 # ---------------------------------------------------------------------------

@@ -365,3 +365,39 @@ Après discipline : 14 couleurs, 92,1 % conservé — mais **2 règles de gramma
 livrables : la discipline ramène la palette et la zone, mais ne répare pas la grammaire. Il reste
 une reprise manuelle — et à ce stade on a refait le travail de `dessine_eat_politoed.py` en moins
 bien et sans contrôle. Un résultat négatif mesuré vaut mieux qu'un refus de principe.
+
+## 15. Les fonds de portrait sont canoniques (correction)
+
+Erreur signalée par l'utilisateur, et bien réelle : les fonds produits par
+`build_portraits_manquants.py` n'étaient pas canoniques. Ils étaient **dégradés et épousaient la
+silhouette du décor d'origine**, ce que ne fait aucun portrait officiel.
+
+**Ce que sont vraiment les fonds PMDCollab**, relevé sur les huit jeux de référence :
+
+- une **paire de couleurs fixe par émotion**, la même d'un Pokémon à l'autre (aux retouches
+  d'auteur près, ±3 par canal) — `Happy` = `#ffffaf` / `#ffe777`, `Crying` = `#6f7fb7` / `#9fd7ef`… ;
+- une **géométrie imposée** : ciel plein sur toute la largeur jusque vers `y = 8`, sol plein en bas,
+  et entre les deux une bande de ~4 lignes en **damier** (`1.1.1.1.`), jamais un dégradé continu ;
+- une seule exception, `Shouting`, dont le fond est radial (rayons depuis le visage).
+
+Vérifié en dumpant `0674/Crying`, `0674/Normal`, `0674/Sad` ligne à ligne : lignes 0-7 pleines de
+ciel, 8-12 en damier, bas plein de sol.
+
+**Détection du décor d'origine.** L'ancienne méthode (propagation depuis le bord en n'autorisant que
+les couleurs absentes du centre) ne trouvait que 14 à 30 % du fond. La corriger a demandé de
+**réunir deux critères** :
+1. les **couleurs canoniques connues** — toutes les bases sont des portraits `Normal`, donc leur
+   décor est `#77c7d7` / `#e7f7b7` / `#d7ffbf` à ±6 ;
+2. les couleurs qui **bordent l'image sans jamais apparaître au centre**, pour les auteurs qui ont
+   employé une teinte hors de la paire (le sol de Pawmot est plus jaune que la référence).
+
+Pris séparément : 6 % (couleurs canoniques seules, sur Pawmot) et 14-30 % (bord seul). Réunis :
+14 à 34 %, et surtout un fond correct là où le personnage ne remplit pas le cadre. Hariyama et
+Ambipom restent bas parce que leur personnage occupe presque toute l'image — c'est légitime.
+
+**Contrôle.** `verify_portraits_manquants.py` vérifie désormais la canonicité : teinte majoritaire du
+ciel et du sol égale à la valeur officielle de l'émotion, ciel en bandes horizontales unies (ce qui
+rejette tout dégradé), et bande de transition contenant bien les deux teintes. Piège rencontré : les
+effets (goutte de sueur, larmes, étincelles de `Joyous`) sont dessinés **par-dessus** le fond et
+peuvent dominer une ligne entière ; le contrôle raisonne donc en teinte **majoritaire** et tolère une
+ligne aberrante, au lieu d'énumérer des boîtes d'effet qui seraient vite fausses.

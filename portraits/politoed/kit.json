@@ -150,19 +150,21 @@
   },
   "Happy": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       255,
       255,
-      191
+      175
      ],
      [
       255,
-      239,
+      231,
       119
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -191,25 +193,27 @@
     "#dea0cf",
     "#e4f3b9",
     "#f5be47",
-    "#ffef77",
-    "#ffffbf"
+    "#ffe777",
+    "#ffffaf"
    ]
   },
   "Pain": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      111,
+      119,
       135,
       183
      ],
      [
-      167,
+      143,
       207,
-      223
+      191
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -233,12 +237,12 @@
    "palette": [
     "#41462d",
     "#697a48",
-    "#6f87b7",
     "#709f3c",
+    "#7787b7",
     "#85b74d",
+    "#8fcfbf",
     "#98cb61",
     "#996e35",
-    "#a7cfdf",
     "#dea0cf",
     "#e4f3b9",
     "#f5be47",
@@ -247,19 +251,21 @@
   },
   "Angry": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       247,
-      111,
-      143
+      103,
+      135
      ],
      [
       223,
       127,
       175
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -291,25 +297,27 @@
     "#df7faf",
     "#e4f3b9",
     "#f5be47",
-    "#f76f8f",
+    "#f76787",
     "#ffffff"
    ]
   },
   "Worried": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      143,
-      167,
-      207
+      119,
+      151,
+      191
      ],
      [
-      167,
-      207,
-      223
+      159,
+      215,
+      239
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -332,11 +340,11 @@
     "#41462d",
     "#697a48",
     "#709f3c",
+    "#7797bf",
     "#85b74d",
-    "#8fa7cf",
     "#98cb61",
     "#996e35",
-    "#a7cfdf",
+    "#9fd7ef",
     "#dea0cf",
     "#e4f3b9",
     "#f5be47"
@@ -344,19 +352,21 @@
   },
   "Sad": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       119,
-      135,
-      183
+      151,
+      191
      ],
      [
       167,
       207,
       223
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -379,7 +389,7 @@
     "#41462d",
     "#697a48",
     "#709f3c",
-    "#7787b7",
+    "#7797bf",
     "#85b74d",
     "#98cb61",
     "#996e35",
@@ -391,19 +401,21 @@
   },
   "Crying": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      119,
-      135,
-      175
+      111,
+      127,
+      183
      ],
      [
-      167,
-      207,
-      223
+      159,
+      215,
+      239
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -427,12 +439,12 @@
    "palette": [
     "#41462d",
     "#697a48",
+    "#6f7fb7",
     "#709f3c",
-    "#7787af",
     "#85b74d",
     "#98cb61",
     "#996e35",
-    "#a7cfdf",
+    "#9fd7ef",
     "#dea0cf",
     "#e4f3b9",
     "#f5be47",
@@ -461,7 +473,7 @@
   },
   "Teary-Eyed": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       247,
@@ -469,11 +481,13 @@
       199
      ],
      [
-      231,
-      143,
-      175
+      237,
+      132,
+      177
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -503,7 +517,7 @@
     "#996e35",
     "#dea0cf",
     "#e4f3b9",
-    "#e78faf",
+    "#ed84b1",
     "#f5be47",
     "#f7bfc7",
     "#ffffff"
@@ -511,19 +525,21 @@
   },
   "Determined": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       239,
-      143,
+      159,
       191
      ],
      [
       247,
-      111,
-      151
+      103,
+      133
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -551,26 +567,28 @@
     "#996e35",
     "#dea0cf",
     "#e4f3b9",
-    "#ef8fbf",
+    "#ef9fbf",
     "#f5be47",
-    "#f76f97"
+    "#f76785"
    ]
   },
   "Joyous": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
       255,
       255,
-      191
+      199
      ],
      [
       255,
       231,
-      127
+      119
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -602,8 +620,8 @@
     "#e4f3b9",
     "#f5be47",
     "#ff8f87",
-    "#ffe77f",
-    "#ffffbf"
+    "#ffe777",
+    "#ffffc7"
    ]
   },
   "Inspired": {
@@ -649,19 +667,21 @@
   },
   "Dizzy": {
    "fond": {
-    "type": "uni",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      143,
+      151,
       207,
-      199
+      207
      ],
      [
-      143,
-      207,
-      199
+      183,
+      215,
+      191
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -679,15 +699,16 @@
    "effets": [],
    "pixels_retouches_hors_fond": 99,
    "origine": "retouche de la base Normal",
-   "couleurs": 10,
+   "couleurs": 11,
    "palette": [
     "#41462d",
     "#697a48",
     "#709f3c",
     "#85b74d",
-    "#8fcfc7",
+    "#97cfcf",
     "#98cb61",
     "#996e35",
+    "#b7d7bf",
     "#dea0cf",
     "#e4f3b9",
     "#f5be47"
@@ -695,19 +716,21 @@
   },
   "Sigh": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      253,
+      254,
       241,
-      165
+      164
      ],
      [
-      253,
-      229,
-      120
+      255,
+      207,
+      79
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -738,26 +761,28 @@
     "#dea0cf",
     "#e4f3b9",
     "#f5be47",
-    "#fde578",
-    "#fdf1a5",
+    "#fef1a4",
+    "#ffcf4f",
     "#ffffff"
    ]
   },
   "Stunned": {
    "fond": {
-    "type": "degrade",
+    "type": "ciel/sol canonique",
     "couleurs": [
      [
-      119,
-      134,
+      120,
+      135,
       177
      ],
      [
-      143,
-      207,
-      199
+      163,
+      199,
+      219
      ]
-    ]
+    ],
+    "horizon": 8,
+    "damier": 4
    },
    "yeux": [
     {
@@ -782,11 +807,11 @@
     "#41462d",
     "#697a48",
     "#709f3c",
-    "#7786b1",
+    "#7887b1",
     "#85b74d",
-    "#8fcfc7",
     "#98cb61",
     "#996e35",
+    "#a3c7db",
     "#dea0cf",
     "#e4f3b9",
     "#f5be47",

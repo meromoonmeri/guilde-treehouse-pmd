@@ -16,7 +16,10 @@ Méthode
 - hors du fond, une émotion ne modifie que les boîtes des yeux et les zones d'effet déclarées ;
 - le personnage (tout ce qui n'est pas le fond détecté) garde sa palette d'origine, sauf dans
   les boîtes des yeux et sous les larmes ;
-- toutes les émotions du gabarit sont produites.
+- toutes les émotions du gabarit sont produites ;
+- **le fond est canonique** : les deux teintes sont exactement celles relevées sur les portraits
+  officiels de l'émotion, et leur disposition est celle de PMDCollab — ciel plein en haut,
+  sol plein en bas, damier de transition entre les deux, jamais un dégradé libre.
 
 Écrit `controle_qualite.json` dans chaque dossier.
 """
@@ -33,7 +36,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "source" / "portraits"))
 from build_portraits_manquants import (   # noqa: E402
-    EMOTIONS, MAX_COLOURS, PRODUCED, REF, SIZE, TARGETS, background_mask, load,
+    BACKGROUNDS, DAMIER, EMOTIONS, HORIZON, MAX_COLOURS, PRODUCED, REF, SIZE, TARGETS,
+    background_mask, load,
 )
 
 
@@ -84,6 +88,61 @@ def check(t) -> dict:
         changed = np.any(rgb != base, axis=2)
         fail(bool((changed & ~free).sum() == 0),
              f"#{t.num} {name} ne modifie que le fond, les yeux et les zones d'effet", log)
+        # --- fond canonique ---------------------------------------------------------
+        # Le fond doit être celui de PMDCollab : deux teintes fixes par émotion, ciel plein en
+        # haut, sol plein en bas, damier entre les deux. On mesure la teinte MAJORITAIRE de
+        # chaque bande — les effets (goutte, larmes, étincelles) sont dessinés par-dessus le
+        # fond et forment une minorité de pixels qu'on ne cherche pas à énumérer.
+        if BACKGROUNDS.get(name) and name != "Shouting":
+            ciel, sol = BACKGROUNDS[name]
+            if kit["emotions"][name].get("fond", {}).get("type") == "aplat":
+                sol = ciel
+            peint = bg & np.any(rgb != base, axis=2)
+
+            def majoritaire(zone: np.ndarray):
+                px = rgb[zone]
+                if not len(px):
+                    return None
+                uniq, cnt = np.unique(px, axis=0, return_counts=True)
+                return tuple(int(v) for v in uniq[cnt.argmax()])
+
+            haut = peint.copy(); haut[HORIZON:] = False
+            bas = peint.copy(); bas[:HORIZON + DAMIER] = False
+            m_haut, m_bas = majoritaire(haut), majoritaire(bas)
+            if m_haut is not None:
+                fail(m_haut == ciel,
+                     f"#{t.num} {name} : le ciel est la teinte canonique de l'émotion "
+                     f"(#{ciel[0]:02x}{ciel[1]:02x}{ciel[2]:02x})", log)
+            if m_bas is not None:
+                fail(m_bas == sol,
+                     f"#{t.num} {name} : le sol est la teinte canonique de l'émotion "
+                     f"(#{sol[0]:02x}{sol[1]:02x}{sol[2]:02x})", log)
+            # Bandes horizontales : dans le ciel plein, chaque ligne repeinte est unie à la
+            # teinte du ciel, effets exclus. Le décompte se fait sur l'ensemble des lignes —
+            # une ligne peut être entièrement occupée par une étincelle (Joyous), ce qui est
+            # légitime ; ce qui ne le serait pas, c'est un dégradé, donc plusieurs lignes de
+            # ciel différentes entre elles.
+            lignes = []
+            for y in range(HORIZON):
+                px = rgb[y][peint[y]]
+                if len(px) >= 4:
+                    uniq, cnt = np.unique(px, axis=0, return_counts=True)
+                    lignes.append(tuple(int(v) for v in uniq[cnt.argmax()]))
+            if lignes:
+                fail(lignes.count(ciel) >= len(lignes) - 1,
+                     f"#{t.num} {name} : le ciel est une bande horizontale unie, pas un dégradé "
+                     f"({lignes.count(ciel)}/{len(lignes)} lignes à la teinte canonique)", log)
+            # le damier alterne réellement les deux teintes quand elles diffèrent
+            if ciel != sol:
+                zone = peint.copy()
+                zone[:HORIZON] = False
+                zone[HORIZON + DAMIER:] = False
+                px = rgb[zone]
+                if len(px) >= 8:
+                    teintes = {tuple(int(v) for v in c) for c in px}
+                    fail(ciel in teintes and sol in teintes,
+                         f"#{t.num} {name} : la bande de transition est un damier des deux teintes", log)
+
         kept = {tuple(int(v) for v in c) for c in rgb[~free]}
         fail(kept <= base_palette, f"#{t.num} {name} le personnage garde sa palette d'origine", log)
         fail(changed.any(), f"#{t.num} {name} diffère bien de la base", log)

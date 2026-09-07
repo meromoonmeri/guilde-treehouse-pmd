@@ -10,3 +10,10 @@
 - `verify_portraits_manquants.py` : relecture indépendante (format, 15 couleurs, planche, miroirs exacts, émotions officielles reprises à l'identique, personnage inchangé hors des zones déclarées).
 
 Sorties dans `portraits/falinks/`, `portraits/politoed/`, `portraits/hariyama/`, `portraits/ambipom/` et `portraits/pawmot/`. Voir leurs README pour la méthode et la licence.
+
+## Fonds canoniques
+
+Les fonds de portrait PMDCollab sont **imposés par l'émotion**, pas libres : une paire de couleurs
+fixe, identique d'un Pokémon à l'autre, disposée en ciel plein / damier de transition / sol plein.
+`build_portraits_manquants.py` en tient la table (`BACKGROUNDS`, `HORIZON`, `DAMIER`), relevée sur les
+huit jeux de référence du dépôt, et `verify_portraits_manquants.py` contrôle que le résultat s'y tient.

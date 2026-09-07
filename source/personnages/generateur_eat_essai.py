@@ -39,12 +39,35 @@ disait explicitement de n'y pas toucher. Il ne « conserve » pas — il redessi
 image qui ressemble à l'entrée.
 
 ────────────────────────────────────────────────────────────────────────────────
+SECOND ESSAI — NE DONNER QUE LE RECTANGLE DE LA BOUCHE
+────────────────────────────────────────────────────────────────────────────────
+Hypothèse issue du premier essai : le générateur redessine tout parce qu'on lui donne tout.
+On lui envoie donc **uniquement le rectangle de la bouche** (14 × 8 pixels), pas le sprite
+entier, avec la même consigne. Résultat, après la même discipline :
+
+    80 % des pixels de la zone conservés          (contre 18,7 % sur le sprite entier)
+    14 couleurs, palette fermée                   ✔ règle 1
+    gorge correctement cernée de noir             ✔ règle 2  ← échouait au premier essai
+    2 sauts de valeur clair→sombre                ✘ règle 3
+    22 pixels retouchés, bords intacts            ✔ règle 4
+    → 3 règles sur 4, contre 2 sur 4
+
+L'hypothèse était bonne : **restreindre le champ de vision du générateur améliore nettement
+sa fidélité**. Les bords gauche et droit de la zone sont conservés au pixel près, ce qui
+n'arrivait jamais sur le sprite entier.
+
+────────────────────────────────────────────────────────────────────────────────
 CONCLUSION
 ────────────────────────────────────────────────────────────────────────────────
-Le générateur est **utilisable comme source d'idées de forme**, pas comme producteur d'images
-livrables. La discipline de post-traitement le ramène dans la palette et dans la zone, mais elle
-ne peut pas réparer la grammaire : il faut encore corriger le cerne et l'ombrage à la main, et à
-ce stade on a fait le travail de `dessine_eat_politoed.py` en moins bien et sans contrôle.
+Le générateur est **utilisable comme source d'idées de forme**, et, cadré sur une petite zone,
+il produit une base retouchable. Il reste malgré tout à un défaut de grammaire près (l'ombrage),
+qu'il faut corriger à la main — et à ce stade on a fait le travail de `dessine_eat_politoed.py`
+en moins bien et sans contrôle.
+
+La leçon utile n'est pas « le générateur est mauvais » mais **« plus le champ est étroit, plus il
+est fidèle »** : 18,7 % de conservation sur le sprite entier, 80 % sur le seul rectangle de la
+bouche. Pour un usage sérieux il faudrait découper chaque geste en zones minuscules, ce qui
+revient à faire soi-même la composition — le dessin direct reste plus court et vérifiable.
 
 C'est pourquoi le lot livré reste celui dessiné à la main. Cet essai est conservé parce qu'un
 résultat négatif mesuré vaut mieux qu'un refus de principe — et parce que si un futur modèle
