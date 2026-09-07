@@ -565,3 +565,25 @@ la rejette (26 écarts), la nouvelle passe (0).
 
 **Leçon.** Un contrôle qui part de la couleur pour juger la couleur ne prouve rien. Partir de la
 position, qui est indépendante de ce qu'on veut vérifier.
+
+## 21. Terapagos : formes alternatives et repères de membres trompeurs
+
+**Les formes vivent dans des sous-dossiers.** Sur SpriteCollab, `sprite/1024/` contient le sprite
+de base *et* un sous-dossier `0001/` pour la forme Terastal, avec son propre `AnimData.xml` et
+ses propres portraits. Ce sont deux sprites distincts — celui de Terastal a 15 couleurs contre 10,
+un `Idle` de 13 images contre 4, et une animation `SpAttack` que l'autre n'a pas. L'export
+reproduit cette imbrication : la clé `"1024/0001"` crée `spritecollab/sprite/1024/0001/`.
+
+**Un repère `lhand` n'est pas toujours une main.** Le contrôle physiologique a rejeté le `Eat` de
+Terapagos avec « les appuis au sol ne bougent pas » — à raison. Ses repères `lhand`/`rhand` sont
+à `y = 0`, c'est-à-dire **à un pixel du bas de la silhouette** : ce ne sont pas des mains levables
+mais les bords de sa carapace. Les déplacer décollait le sprite du sol.
+
+Correctif (`limb_is_a_foot`) : un repère situé dans le **dernier quart de la hauteur** est un
+appui, pas un membre — on ne le bouge pas. Terapagos garde donc ses appuis fixes et n'anime que
+sa déformation à charnière. Aucun autre Pokémon du lot n'est affecté, leurs mains étant plus haut.
+
+**Trois expressions sur dix écartées.** Sur la forme Terastal, le générateur a produit dix
+émotions ; `Shouting`, `Sigh` et `Stunned` ont été rejetées au contrôle visuel — il y perd la
+structure de la tête (facettes en bouillie, œil remplacé par un disque blanc). Le taux de
+conservation ne l'avait pas signalé : il faut regarder.

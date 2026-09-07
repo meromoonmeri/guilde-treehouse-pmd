@@ -23,6 +23,8 @@ spritecollab/
 | 0685 | Slurpuff | 34 | 22 | généré puis discipliné | CC_BY-NC_4 |
 | 0702 | Dedenne | 33 | 22 | dessiné à la main | CC_BY-NC_4 |
 | 0923 | Pawmot | 35 | 22 | dessiné à la main | PMDCollab_1 |
+| 1024 | Terapagos | 35 | 22 | composé | CC_BY-NC_4 |
+| 1024/0001 | Terapagos_terastal | 35 | 22 | composé | Unspecified |
 
 Les 22 animations ajoutées : `EventSleep`, `Wake`, `Eat`, `Tumble`, `Pose`, `Pull`, `Pain`, `Float`, `DeepBreath`, `Nod`, `Sit`, `LookUp`, `Sink`, `Trip`, `Laying`, `LeapForth`, `Head`, `Cringe`, `LostBalance`, `TumbleBack`, `HitGround`, `Faint`.
 
@@ -34,6 +36,9 @@ Les 22 animations ajoutées : `EventSleep`, `Wake`, `Eat`, `Tumble`, `Pose`, `Pu
 | 0297 | Hariyama | 32 | Unspecified |
 | 0424 | Ambipom | 32 | PMDCollab_1 |
 | 0923 | Pawmot | 32 | PMDCollab_1 |
+| 0297 | Hariyama | 6 | voir credits.txt |
+| 0424 | Ambipom | 10 | voir credits.txt |
+| 1024/0001 | Terapagos_terastal | 26 | voir credits.txt |
 
 ## Comment c'est fait
 
@@ -68,10 +73,12 @@ sprite/0674 : 35 animations, format officiel
 sprite/0685 : 34 animations, format officiel
 sprite/0702 : 33 animations, format officiel
 sprite/0923 : 35 animations, format officiel
+sprite/1024 : 35 animations, format officiel
 portrait/0186 : 32 images 40 × 40, miroirs exacts
 portrait/0297 : 32 images 40 × 40, miroirs exacts
 portrait/0424 : 32 images 40 × 40, miroirs exacts
 portrait/0923 : 32 images 40 × 40, miroirs exacts
+portrait/0001 : 26 images 40 × 40, miroirs exacts
 ```
 
 Vérifié à l'export : `AnimData.xml` en CRLF, feuilles aux dimensions déclarées, alpha 0 ou 255,

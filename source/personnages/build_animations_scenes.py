@@ -52,6 +52,9 @@ POKEMON = {
     "0674": ("pancham", "Pancham", "Pandespiègle"),
     "0685": ("slurpuff", "Slurpuff", "Aromatisse"),
     "0702": ("dedenne", "Dedenne", "Dedenne"),
+    "1024": ("terapagos", "Terapagos", "Terapagos"),
+    # Forme Terastal (dossier 0001 du dépôt) — sprite distinct, 15 couleurs.
+    "1024_0001": ("terapagos_terastal", "Terapagos Terastal", "Terapagos (Terastal)"),
 }
 
 
@@ -137,6 +140,21 @@ def limb_radius(bbox: tuple[int, int, int, int]) -> int:
     return max(2, round(min(x1 - x0 + 1, y1 - y0 + 1) * 0.13))
 
 
+def limb_is_a_foot(mark: str, marks: dict, bbox: tuple[int, int, int, int]) -> bool:
+    """Le repère est-il si bas qu'il désigne un appui au sol plutôt qu'une main ?
+
+    Chez Terapagos #1024, `lhand` et `rhand` sont à `y = 0`, c'est-à-dire à un pixel du bas de
+    la silhouette : ce ne sont pas des mains levables mais les bords de sa carapace. Les
+    déplacer décolle ses appuis du sol, ce que le contrôle physiologique rejette à juste titre.
+    On ne bouge donc pas un « membre » situé dans le dernier quart de la hauteur.
+    """
+    if mark not in marks:
+        return False
+    _, y0, _, y1 = bbox
+    hauteur = y1 - y0 + 1
+    return (y1 - marks[mark][1]) <= max(1, hauteur // 4)
+
+
 def move_limbs(src: np.ndarray, origin: tuple[int, int], marks: dict,
                limbs: list[Limb], bbox: tuple[int, int, int, int]) -> np.ndarray:
     """Déplace les membres marqués dans `src`, sans créer ni recolorer un seul pixel.
@@ -154,6 +172,8 @@ def move_limbs(src: np.ndarray, origin: tuple[int, int], marks: dict,
     for lb in limbs:
         if lb.mark not in marks:
             continue                       # ce sprite n'a pas ce repère : on n'invente rien
+        if limb_is_a_foot(lb.mark, marks, bbox):
+            continue                       # repère au ras du sol : c'est un appui, pas une main
         mx, my = marks[lb.mark]
         cx, cy = ox + mx, oy + my
         r = lb.radius or limb_radius(bbox)

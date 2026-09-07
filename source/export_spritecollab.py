@@ -58,9 +58,18 @@ OUT = ROOT / "spritecollab"
 SPRITES = {
     "0186": "politoed", "0241": "miltank", "0282": "gardevoir", "0297": "hariyama",
     "0424": "ambipom", "0443": "gible", "0674": "pancham", "0685": "slurpuff",
-    "0702": "dedenne", "0923": "pawmot",
+    "0702": "dedenne", "0923": "pawmot", "1024": "terapagos",
+    # Terapagos forme Terastal : sur SpriteCollab elle vit dans le sous-dossier `1024/0001`.
+    "1024/0001": "terapagos_terastal",
 }
 PORTRAITS = {"0186": "politoed", "0297": "hariyama", "0424": "ambipom", "0923": "pawmot"}
+
+# Planches assemblées par `portraits_generateur.py` (émotions officielles reprises telles quelles
+# + émotions produites par générateur, retenues au contrôle visuel). Le dossier de sortie porte
+# déjà les `<Emotion>.png`, leurs miroirs `^` et `credits.txt` au format du dépôt.
+PORTRAITS_GENERES = {
+    "0424": "ambipom", "0297": "hariyama", "1024/0001": "terapagos_terastal",
+}
 
 # Le `Eat` dessiné à la main remplace le `Eat` composé pour ces Pokémon : leur bouche s'ouvre
 # vraiment, dessinée dans la palette du sprite (voir `dessine_eat_politoed.py` et
@@ -146,6 +155,24 @@ def licence_du_sprite(credits: Path) -> str:
     return "Unspecified"
 
 
+def exporter_portraits_generes(num: str, dossier: str, rapport: list) -> None:
+    """Recopie une planche assemblée (officiels + générés) au format du dépôt."""
+    src = ROOT / "portraits" / dossier / "emotions_officielles"
+    if not src.is_dir():
+        return
+    dst = OUT / "portrait" / num
+    dst.mkdir(parents=True, exist_ok=True)
+    noms = []
+    for f in sorted(src.glob("*.png")):
+        if f.stem == "planche_spritebot":
+            continue
+        png_propre(f, dst / f.name)
+        noms.append(f.stem)
+    shutil.copyfile(src / "credits.txt", dst / "credits.txt")
+    rapport.append({"type": "portrait", "num": num, "nom": dossier,
+                    "emotions": len(noms), "licence": "voir credits.txt"})
+
+
 def exporter_sprite(num: str, dossier: str, rapport: list) -> None:
     src = ROOT / "personnages" / dossier / "animations_scenes"
     dst = OUT / "sprite" / num
@@ -227,7 +254,8 @@ def controler(rapport: list) -> list[str]:
             couleurs = len({tuple(c) for c in a[a[:, :, 3] > 0][:, :3].tolist()})
             assert couleurs <= 15, f"{d.name}/{nom} {couleurs} couleurs"
         journal.append(f"sprite/{d.name} : {len(list(root.find('Anims').iter('Anim')))} animations, format officiel")
-    for d in sorted((OUT / "portrait").iterdir()):
+    for d in sorted(p for p in (OUT / "portrait").rglob("*") if p.is_dir()
+                    and any(p.glob("*.png"))):
         n = 0
         for f in d.glob("*.png"):
             im = Image.open(f)
@@ -237,6 +265,8 @@ def controler(rapport: list) -> list[str]:
             assert len({tuple(c) for c in a[:, :, :3].reshape(-1, 3).tolist()}) <= 15, f"{f} palette"
             n += 1
         for emo in EMOTIONS:
+            if not (d / f"{emo}.png").is_file():
+                continue          # planche partielle : seules les émotions présentes comptent
             droit, gauche = np.array(Image.open(d / f"{emo}.png")), np.array(Image.open(d / f"{emo}^.png"))
             assert np.array_equal(gauche, droit[:, ::-1]), f"{d.name}/{emo}^ miroir"
         journal.append(f"portrait/{d.name} : {n} images 40 × 40, miroirs exacts")
@@ -251,6 +281,8 @@ def main() -> None:
         exporter_sprite(num, dossier, rapport)
     for num, dossier in sorted(PORTRAITS.items()):
         exporter_portrait(num, dossier, rapport)
+    for num, dossier in sorted(PORTRAITS_GENERES.items()):
+        exporter_portraits_generes(num, dossier, rapport)
     journal = controler(rapport)
 
     sprites = [r for r in rapport if r["type"] == "sprite"]

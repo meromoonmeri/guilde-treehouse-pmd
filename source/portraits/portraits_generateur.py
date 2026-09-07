@@ -71,6 +71,8 @@ MAX_COLOURS = 15
 SUJETS = {
     "0424": ("ambipom", "Ambipom (Capidextre)", "purple monkey Pokemon"),
     "0297": ("hariyama", "Hariyama", "orange sumo wrestler Pokemon"),
+    # Terapagos forme **Terastal** (0001) — c'est cette forme qui est demandée, pas la 0000.
+    "1024_0001": ("terapagos_terastal", "Terapagos (Terastal)", "crystal turtle Pokemon"),
 }
 
 # Émotions demandées au générateur, avec la consigne d'expression.
@@ -83,6 +85,13 @@ SUJETS = {
 RETENUES = {
     "0424": ["Inspired", "Teary-Eyed"],
     "0297": ["Happy", "Angry"],
+    # Terapagos Terastal : six portraits sont déjà publiés (Normal, Happy, Sad, Worried,
+    # Dizzy, Teary-Eyed), les dix autres sont produits ici.
+    # `Shouting`, `Sigh` et `Stunned` ont été produits puis **écartés au contrôle visuel** :
+    # le générateur y perd la structure de la tête (bouillie de facettes, œil remplacé par un
+    # disque blanc). Sept expressions sur dix tiennent le style PMD, trois non.
+    "1024_0001": ["Pain", "Angry", "Crying", "Determined", "Joyous",
+                  "Inspired", "Surprised"],
 }
 
 EXPRESSIONS = {
@@ -90,6 +99,16 @@ EXPRESSIONS = {
     "Happy": "eyes closed into cheerful upward arcs, broad open smile",
     "Teary-Eyed": "big watery shining eyes brimming with tears",
     "Inspired": "bright sparkling wide eyes looking up",
+    "Pain": "eyes squeezed shut, strained brows, grimacing mouth",
+    "Worried": "brows raised anxiously, uneasy eyes, small wavy mouth",
+    "Sad": "eyes looking down, drooping brows, downturned mouth",
+    "Crying": "eyes shut tight, tears running down, sobbing mouth",
+    "Shouting": "mouth wide open yelling, fierce open eyes",
+    "Determined": "focused narrowed eyes, firm brows",
+    "Surprised": "eyes wide open in shock, small round open mouth",
+    "Sigh": "half lidded weary eyes, mouth exhaling",
+    "Joyous": "eye closed in a happy arc, wide beaming smile",
+    "Stunned": "blank staring eye, slack open mouth",
 }
 
 
