@@ -63,7 +63,7 @@ Chaque salle a une version jour et une version nuit, avec **une seule image par 
 - `personnages/falinks/` : **sprite de donjon de Falinks au complet (forme 0000) au format SpriteCollab** — set donjon complet (Idle, Walk, Sleep, Hurt, Attack, Charge, Shoot, Strike, Swing, Double, Rotate, Hop), 8 directions, `AnimData.xml`, feuilles Anim / Offsets / Shadow, Aseprite animé, variantes nuit, composé à partir des unités Brass et Trooper publiées sur PMDCollab. Voir [leur README](personnages/falinks/README.md) et, pour produire le prochain personnage, [la méthode](source/personnages/METHODE_SPRITES_PMD.md).
 - `personnages/zarude/` : **sprite de donjon de Zarude au format SpriteCollab** — dessin original en pixel art (13 couleurs) sur le squelette d'animation de Rillaboom #0812, set donjon complet avec Sing (13 animations), 8 directions, `AnimData.xml`, feuilles Anim / Offsets / Shadow, Aseprite animé, variantes nuit, aperçus et vérificateur. Voir [leur README](personnages/zarude/README.md).
 - `personnages/zarude_fourni/` : **le dessin de Zarude fourni par l'utilisateur** (`IMG_4840.png`, 4 orientations × 4 images) mis au format SpriteCollab sur le squelette de Rillaboom #0812 — 12 animations + `Strike`, 8 directions, 15 couleurs, Aseprite, nuit, aperçus. Limite connue : sans vue diagonale dessinée, les diagonales reprennent le profil. Voir [son README](personnages/zarude_fourni/README.md).
-- **Huit sprites officiels complétés — 22 animations de scène chacun** (Eat, Wake, Sit, LookUp, Sink, Nod, Pose, Pull, Pain, Float, DeepBreath, Trip, Laying, LeapForth, Head, Cringe, LostBalance, Tumble, TumbleBack, HitGround, Faint, EventSleep), composées de leurs propres cases officielles sur le squelette de Bayleef #0155, **sans repeindre un seul pixel** :
+- **Dix sprites officiels complétés — 22 animations de scène chacun** (Eat, Wake, Sit, LookUp, Sink, Nod, Pose, Pull, Pain, Float, DeepBreath, Trip, Laying, LeapForth, Head, Cringe, LostBalance, Tumble, TumbleBack, HitGround, Faint, EventSleep), composées de leurs propres cases officielles sur le squelette de Bayleef #0155, **sans repeindre un seul pixel** :
   [Politoed #0186](personnages/politoed/animations_scenes/README.md) ·
   [Miltank #0241](personnages/miltank/animations_scenes/README.md) ·
   [Hariyama #0297](personnages/hariyama/animations_scenes/README.md) ·
@@ -71,7 +71,9 @@ Chaque salle a une version jour et une version nuit, avec **une seule image par 
   [Gible #0443](personnages/gible/animations_scenes/README.md) ·
   [Ambipom #0424](personnages/ambipom/animations_scenes/README.md) ·
   [Pawmot #0923](personnages/pawmot/animations_scenes/README.md) ·
-  [Pancham #0674](personnages/pancham/animations_scenes/README.md).
+  [Pancham #0674](personnages/pancham/animations_scenes/README.md) ·
+  [Slurpuff #0685](personnages/slurpuff/animations_scenes/README.md) ·
+  [Dedenne #0702](personnages/dedenne/animations_scenes/README.md).
   Chaque dossier contient le sprite **entier** (animations d'origine recopiées à l'identique + les 22 ajoutées) et s'importe tel quel dans SkyTemple.
 - **Quatre planches de portraits complétées à 16 émotions** (40 × 40, ≤ 15 couleurs, versions `^`, planche SpriteBot 200 × 320), par retouche pixel du portrait Normal officiel :
   [Politoed #0186](portraits/politoed/README.md) ·

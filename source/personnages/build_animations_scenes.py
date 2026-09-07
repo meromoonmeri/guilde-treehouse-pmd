@@ -49,6 +49,8 @@ POKEMON = {
     "0424": ("ambipom", "Ambipom", "Capidextre"),
     "0923": ("pawmot", "Pawmot", "Pawmot"),
     "0674": ("pancham", "Pancham", "Pandespiègle"),
+    "0685": ("slurpuff", "Slurpuff", "Aromatisse"),
+    "0702": ("dedenne", "Dedenne", "Dedenne"),
 }
 
 

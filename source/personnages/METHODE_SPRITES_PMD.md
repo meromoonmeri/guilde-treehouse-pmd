@@ -155,9 +155,10 @@ passes), le reste est mécanique une fois le pipeline Falinks/Zarude en place.
 
 ## 8. Compléter un sprite officiel : animations de scène (méthode retenue, lot de huit)
 
-Huit Pokémon demandés (#0186, #0241, #0297, #0282, #0443, #0424, #0923, #0674) avaient le set de donjon
-publié sur SpriteCollab mais **aucune** des 22 animations de scène du set complet (Eat, Wake, Sit, Sink,
-Faint…). `build_animations_scenes.py` les ajoute pour les huit d'un coup. Ce qui a marché :
+Dix Pokémon demandés (#0186, #0241, #0297, #0282, #0443, #0424, #0923, #0674, puis #0685 et #0702) avaient
+le set de donjon publié sur SpriteCollab mais **aucune** des 22 animations de scène du set complet (Eat,
+Wake, Sit, Sink, Faint…). `build_animations_scenes.py` les ajoute pour tous d'un coup — ajouter un Pokémon
+au lot se réduit à **une ligne dans `POKEMON`**, ce qui est le signe que la méthode tient. Ce qui a marché :
 
 1. **Ne rien dessiner.** Chaque image d'une animation manquante est une **case officielle du même Pokémon**
    (Idle, Hurt, Hop, Charge, Rotate, Sleep…), replacée par rapport à son ancre : décalage de quelques pixels,
@@ -171,8 +172,8 @@ Faint…). `build_animations_scenes.py` les ajoute pour les huit d'un coup. Ce q
 3. **Recopier les animations d'origine octet pour octet** dans le même dossier et les redéclarer dans
    `AnimData.xml` : le dossier s'importe alors directement dans SkyTemple, sans réassemblage.
 4. **Recettes plutôt que code par Pokémon.** Un dictionnaire `RECIPES` décrit chaque animation par une liste
-   de `Step(src, frame, dx, dy, dir_mode, sink, fade_top)`. Les huit Pokémon partagent ces recettes ; seule
-   la lecture des cases change. Résultat : un seul constructeur, 176 animations produites, aucun cas particulier.
+   de `Step(src, frame, dx, dy, dir_mode, sink, fade_top)`. Les dix Pokémon partagent ces recettes ; seule
+   la lecture des cases change. Résultat : un seul constructeur, 220 animations produites, aucun cas particulier.
 5. **Ne coller que la boîte du dessin**, jamais la case entière (même piège que Falinks), et recalculer la
    case par pas de 8 autour de l'étendue réelle.
 
