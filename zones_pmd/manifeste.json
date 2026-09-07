@@ -1,0 +1,1966 @@
+{
+ "format": "zones PMD, tuiles d'origine, animation par rotation de palette",
+ "taille": [
+  480,
+  360
+ ],
+ "tuile": 24,
+ "grille": [
+  20,
+  15
+ ],
+ "images_par_cycle": 8,
+ "zones": [
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d28p44a",
+   "origine_tuiles": [
+    1,
+    6
+   ],
+   "dossier": "zones/001_d28_v1"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d30p33a",
+   "origine_tuiles": [
+    0,
+    4
+   ],
+   "dossier": "zones/002_d30_v1"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v1",
+   "liquide": "eau",
+   "praticable_pct": 0.35,
+   "source": "d53p41a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/003_d53_v1"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d17p45a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/004_d17_v1"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d42p41a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/005_d42_v1"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d54p31a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/006_d54_v1"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d73p41a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/007_d73_v1"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d02p11a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/008_d02_v1"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d03p41a",
+   "origine_tuiles": [
+    3,
+    3
+   ],
+   "dossier": "zones/009_d03_v1"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d04p31a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/010_d04_v1"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d16p31a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/011_d16_v1"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": "lave",
+   "praticable_pct": 0.35,
+   "source": "d26p43a",
+   "origine_tuiles": [
+    3,
+    14
+   ],
+   "dossier": "zones/012_d26_v1"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p41a",
+   "origine_tuiles": [
+    3,
+    3
+   ],
+   "dossier": "zones/013_d31_v1"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.38,
+   "source": "d45p42a",
+   "origine_tuiles": [
+    0,
+    4
+   ],
+   "dossier": "zones/014_d45_v1"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d55p11a",
+   "origine_tuiles": [
+    0,
+    5
+   ],
+   "dossier": "zones/015_d55_v1"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/016_d07_v1"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    1,
+    6
+   ],
+   "dossier": "zones/017_d09_v1"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    2,
+    2
+   ],
+   "dossier": "zones/018_d12_v1"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/019_d14_v1"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.367,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    4,
+    5
+   ],
+   "dossier": "zones/020_d15_v1"
+  },
+  {
+   "cle": "d21",
+   "biome": "cristal",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d21p41a",
+   "origine_tuiles": [
+    5,
+    1
+   ],
+   "dossier": "zones/021_d21_v1"
+  },
+  {
+   "cle": "d36",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d36p41a",
+   "origine_tuiles": [
+    0,
+    5
+   ],
+   "dossier": "zones/022_d36_v1"
+  },
+  {
+   "cle": "d44",
+   "biome": "desert",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d44p31a",
+   "origine_tuiles": [
+    7,
+    3
+   ],
+   "dossier": "zones/023_d44_v1"
+  },
+  {
+   "cle": "d51",
+   "biome": "pierre",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d51p41a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/024_d51_v1"
+  },
+  {
+   "cle": "d56",
+   "biome": "cristal",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d56p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/025_d56_v1"
+  },
+  {
+   "cle": "d57",
+   "biome": "lave",
+   "variante": "v1",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d57p43a",
+   "origine_tuiles": [
+    8,
+    4
+   ],
+   "dossier": "zones/026_d57_v1"
+  },
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d28p31a",
+   "origine_tuiles": [
+    9,
+    0
+   ],
+   "dossier": "zones/027_d28_v2"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d30p32a",
+   "origine_tuiles": [
+    0,
+    9
+   ],
+   "dossier": "zones/028_d30_v2"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d53p41a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/029_d53_v2"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v2",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d17p11a",
+   "origine_tuiles": [
+    4,
+    1
+   ],
+   "dossier": "zones/030_d17_v2"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d42p31a",
+   "origine_tuiles": [
+    6,
+    3
+   ],
+   "dossier": "zones/031_d42_v2"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d54p32a",
+   "origine_tuiles": [
+    3,
+    4
+   ],
+   "dossier": "zones/032_d54_v2"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d73p11a",
+   "origine_tuiles": [
+    3,
+    0
+   ],
+   "dossier": "zones/033_d73_v2"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d02p11a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/034_d02_v2"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d03p11a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/035_d03_v2"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d04p31a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/036_d04_v2"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d16p31a",
+   "origine_tuiles": [
+    1,
+    4
+   ],
+   "dossier": "zones/037_d16_v2"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": "lave",
+   "praticable_pct": 0.35,
+   "source": "d26p43a",
+   "origine_tuiles": [
+    1,
+    16
+   ],
+   "dossier": "zones/038_d26_v2"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p41a",
+   "origine_tuiles": [
+    3,
+    2
+   ],
+   "dossier": "zones/039_d31_v2"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d45p31a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/040_d45_v2"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d55p11a",
+   "origine_tuiles": [
+    2,
+    2
+   ],
+   "dossier": "zones/041_d55_v2"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/042_d07_v2"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/043_d09_v2"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    2,
+    4
+   ],
+   "dossier": "zones/044_d12_v2"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    2,
+    0
+   ],
+   "dossier": "zones/045_d14_v2"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    3,
+    6
+   ],
+   "dossier": "zones/046_d15_v2"
+  },
+  {
+   "cle": "d21",
+   "biome": "cristal",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d21p41a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/047_d21_v2"
+  },
+  {
+   "cle": "d36",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d36p41a",
+   "origine_tuiles": [
+    0,
+    4
+   ],
+   "dossier": "zones/048_d36_v2"
+  },
+  {
+   "cle": "d44",
+   "biome": "desert",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d44p31a",
+   "origine_tuiles": [
+    7,
+    5
+   ],
+   "dossier": "zones/049_d44_v2"
+  },
+  {
+   "cle": "d51",
+   "biome": "pierre",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d51p41a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/050_d51_v2"
+  },
+  {
+   "cle": "d56",
+   "biome": "cristal",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d56p11a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/051_d56_v2"
+  },
+  {
+   "cle": "d57",
+   "biome": "lave",
+   "variante": "v2",
+   "liquide": null,
+   "praticable_pct": 0.353,
+   "source": "d57p43a",
+   "origine_tuiles": [
+    12,
+    1
+   ],
+   "dossier": "zones/052_d57_v2"
+  },
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d28p44a",
+   "origine_tuiles": [
+    0,
+    5
+   ],
+   "dossier": "zones/053_d28_v3"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d30p32a",
+   "origine_tuiles": [
+    3,
+    7
+   ],
+   "dossier": "zones/054_d30_v3"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d53p11b",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/055_d53_v3"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d17p34a",
+   "origine_tuiles": [
+    0,
+    6
+   ],
+   "dossier": "zones/056_d17_v3"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.37,
+   "source": "d42p31a",
+   "origine_tuiles": [
+    2,
+    6
+   ],
+   "dossier": "zones/057_d42_v3"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d54p11a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/058_d54_v3"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.367,
+   "source": "d73p41a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/059_d73_v3"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d02p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/060_d02_v3"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.353,
+   "source": "d03p11a",
+   "origine_tuiles": [
+    2,
+    3
+   ],
+   "dossier": "zones/061_d03_v3"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d04p11a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/062_d04_v3"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d16p11a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/063_d16_v3"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d26p43a",
+   "origine_tuiles": [
+    0,
+    12
+   ],
+   "dossier": "zones/064_d26_v3"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p11a",
+   "origine_tuiles": [
+    4,
+    0
+   ],
+   "dossier": "zones/065_d31_v3"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.467,
+   "source": "d45p42a",
+   "origine_tuiles": [
+    0,
+    6
+   ],
+   "dossier": "zones/066_d45_v3"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d55p11a",
+   "origine_tuiles": [
+    2,
+    2
+   ],
+   "dossier": "zones/067_d55_v3"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    3,
+    0
+   ],
+   "dossier": "zones/068_d07_v3"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    1,
+    5
+   ],
+   "dossier": "zones/069_d09_v3"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/070_d12_v3"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    3,
+    0
+   ],
+   "dossier": "zones/071_d14_v3"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/072_d15_v3"
+  },
+  {
+   "cle": "d21",
+   "biome": "cristal",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d21p41a",
+   "origine_tuiles": [
+    4,
+    6
+   ],
+   "dossier": "zones/073_d21_v3"
+  },
+  {
+   "cle": "d36",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d36p41a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/074_d36_v3"
+  },
+  {
+   "cle": "d44",
+   "biome": "desert",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d44p31a",
+   "origine_tuiles": [
+    8,
+    4
+   ],
+   "dossier": "zones/075_d44_v3"
+  },
+  {
+   "cle": "d51",
+   "biome": "pierre",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d51p41a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/076_d51_v3"
+  },
+  {
+   "cle": "d56",
+   "biome": "cristal",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d56p11a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/077_d56_v3"
+  },
+  {
+   "cle": "d57",
+   "biome": "lave",
+   "variante": "v3",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d57p43a",
+   "origine_tuiles": [
+    1,
+    3
+   ],
+   "dossier": "zones/078_d57_v3"
+  },
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d28p44a",
+   "origine_tuiles": [
+    1,
+    6
+   ],
+   "dossier": "zones/079_d28_v4"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d30p34a",
+   "origine_tuiles": [
+    3,
+    1
+   ],
+   "dossier": "zones/080_d30_v4"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d53p11a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/081_d53_v4"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d17p34a",
+   "origine_tuiles": [
+    3,
+    10
+   ],
+   "dossier": "zones/082_d17_v4"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d42p42a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/083_d42_v4"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d54p31a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/084_d54_v4"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d73p11a",
+   "origine_tuiles": [
+    3,
+    4
+   ],
+   "dossier": "zones/085_d73_v4"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d02p11a",
+   "origine_tuiles": [
+    2,
+    1
+   ],
+   "dossier": "zones/086_d02_v4"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.353,
+   "source": "d03p41a",
+   "origine_tuiles": [
+    1,
+    7
+   ],
+   "dossier": "zones/087_d03_v4"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d04p31a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/088_d04_v4"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d16p31a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/089_d16_v4"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d26p43a",
+   "origine_tuiles": [
+    2,
+    6
+   ],
+   "dossier": "zones/090_d26_v4"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p11a",
+   "origine_tuiles": [
+    2,
+    0
+   ],
+   "dossier": "zones/091_d31_v4"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.36,
+   "source": "d45p31a",
+   "origine_tuiles": [
+    14,
+    1
+   ],
+   "dossier": "zones/092_d45_v4"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d55p11a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/093_d55_v4"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/094_d07_v4"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/095_d09_v4"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    2,
+    2
+   ],
+   "dossier": "zones/096_d12_v4"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/097_d14_v4"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    5,
+    1
+   ],
+   "dossier": "zones/098_d15_v4"
+  },
+  {
+   "cle": "d21",
+   "biome": "cristal",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d21p41a",
+   "origine_tuiles": [
+    6,
+    1
+   ],
+   "dossier": "zones/099_d21_v4"
+  },
+  {
+   "cle": "d36",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d36p41a",
+   "origine_tuiles": [
+    1,
+    4
+   ],
+   "dossier": "zones/100_d36_v4"
+  },
+  {
+   "cle": "d44",
+   "biome": "desert",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d44p31a",
+   "origine_tuiles": [
+    0,
+    4
+   ],
+   "dossier": "zones/101_d44_v4"
+  },
+  {
+   "cle": "d51",
+   "biome": "pierre",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d51p41a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/102_d51_v4"
+  },
+  {
+   "cle": "d56",
+   "biome": "cristal",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d56p11a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/103_d56_v4"
+  },
+  {
+   "cle": "d57",
+   "biome": "lave",
+   "variante": "v4",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d57p43a",
+   "origine_tuiles": [
+    5,
+    0
+   ],
+   "dossier": "zones/104_d57_v4"
+  },
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d28p31a",
+   "origine_tuiles": [
+    2,
+    0
+   ],
+   "dossier": "zones/105_d28_v5"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d30p33a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/106_d30_v5"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d53p41b",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/107_d53_v5"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v5",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d17p11a",
+   "origine_tuiles": [
+    4,
+    3
+   ],
+   "dossier": "zones/108_d17_v5"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d42p31a",
+   "origine_tuiles": [
+    1,
+    5
+   ],
+   "dossier": "zones/109_d42_v5"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d54p32a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/110_d54_v5"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d73p31a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/111_d73_v5"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d02p31a",
+   "origine_tuiles": [
+    0,
+    1
+   ],
+   "dossier": "zones/112_d02_v5"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.367,
+   "source": "d03p41a",
+   "origine_tuiles": [
+    8,
+    8
+   ],
+   "dossier": "zones/113_d03_v5"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d04p31a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/114_d04_v5"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d16p31a",
+   "origine_tuiles": [
+    2,
+    3
+   ],
+   "dossier": "zones/115_d16_v5"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d26p31a",
+   "origine_tuiles": [
+    3,
+    6
+   ],
+   "dossier": "zones/116_d26_v5"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p41a",
+   "origine_tuiles": [
+    3,
+    0
+   ],
+   "dossier": "zones/117_d31_v5"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.39,
+   "source": "d45p42a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/118_d45_v5"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d55p41a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/119_d55_v5"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/120_d07_v5"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/121_d09_v5"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/122_d12_v5"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/123_d14_v5"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.353,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    5,
+    6
+   ],
+   "dossier": "zones/124_d15_v5"
+  },
+  {
+   "cle": "d21",
+   "biome": "cristal",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d21p41a",
+   "origine_tuiles": [
+    7,
+    1
+   ],
+   "dossier": "zones/125_d21_v5"
+  },
+  {
+   "cle": "d36",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d36p41a",
+   "origine_tuiles": [
+    0,
+    4
+   ],
+   "dossier": "zones/126_d36_v5"
+  },
+  {
+   "cle": "d44",
+   "biome": "desert",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d44p31a",
+   "origine_tuiles": [
+    13,
+    4
+   ],
+   "dossier": "zones/127_d44_v5"
+  },
+  {
+   "cle": "d51",
+   "biome": "pierre",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d51p41a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/128_d51_v5"
+  },
+  {
+   "cle": "d56",
+   "biome": "cristal",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d56p11a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/129_d56_v5"
+  },
+  {
+   "cle": "d57",
+   "biome": "lave",
+   "variante": "v5",
+   "liquide": null,
+   "praticable_pct": 0.363,
+   "source": "d57p43a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/130_d57_v5"
+  },
+  {
+   "cle": "d28",
+   "biome": "foret",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d28p33c",
+   "origine_tuiles": [
+    4,
+    0
+   ],
+   "dossier": "zones/131_d28_v6"
+  },
+  {
+   "cle": "d30",
+   "biome": "lave",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.353,
+   "source": "d30p33a",
+   "origine_tuiles": [
+    3,
+    9
+   ],
+   "dossier": "zones/132_d30_v6"
+  },
+  {
+   "cle": "d53",
+   "biome": "glace",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d53p11b",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/133_d53_v6"
+  },
+  {
+   "cle": "d17",
+   "biome": "glace",
+   "variante": "v6",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d17p11a",
+   "origine_tuiles": [
+    1,
+    0
+   ],
+   "dossier": "zones/134_d17_v6"
+  },
+  {
+   "cle": "d42",
+   "biome": "eau",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d42p41a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/135_d42_v6"
+  },
+  {
+   "cle": "d54",
+   "biome": "foret",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d54p32a",
+   "origine_tuiles": [
+    2,
+    4
+   ],
+   "dossier": "zones/136_d54_v6"
+  },
+  {
+   "cle": "d73",
+   "biome": "foret",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.367,
+   "source": "d73p41a",
+   "origine_tuiles": [
+    0,
+    6
+   ],
+   "dossier": "zones/137_d73_v6"
+  },
+  {
+   "cle": "d02",
+   "biome": "foret",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d02p31a",
+   "origine_tuiles": [
+    0,
+    0
+   ],
+   "dossier": "zones/138_d02_v6"
+  },
+  {
+   "cle": "d03",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.357,
+   "source": "d03p41a",
+   "origine_tuiles": [
+    7,
+    3
+   ],
+   "dossier": "zones/139_d03_v6"
+  },
+  {
+   "cle": "d04",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d04p31a",
+   "origine_tuiles": [
+    0,
+    2
+   ],
+   "dossier": "zones/140_d04_v6"
+  },
+  {
+   "cle": "d16",
+   "biome": "lave",
+   "variante": "v6",
+   "liquide": "eau",
+   "praticable_pct": 0.343,
+   "source": "d16p31a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/141_d16_v6"
+  },
+  {
+   "cle": "d26",
+   "biome": "lave",
+   "variante": "v6",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d26p31a",
+   "origine_tuiles": [
+    2,
+    1
+   ],
+   "dossier": "zones/142_d26_v6"
+  },
+  {
+   "cle": "d31",
+   "biome": "foret",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d31p11a",
+   "origine_tuiles": [
+    3,
+    1
+   ],
+   "dossier": "zones/143_d31_v6"
+  },
+  {
+   "cle": "d45",
+   "biome": "eau",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.347,
+   "source": "d45p31a",
+   "origine_tuiles": [
+    11,
+    0
+   ],
+   "dossier": "zones/144_d45_v6"
+  },
+  {
+   "cle": "d55",
+   "biome": "lave",
+   "variante": "v6",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d55p11a",
+   "origine_tuiles": [
+    3,
+    5
+   ],
+   "dossier": "zones/145_d55_v6"
+  },
+  {
+   "cle": "d07",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": "lave",
+   "praticable_pct": 0.343,
+   "source": "d07p11a",
+   "origine_tuiles": [
+    3,
+    0
+   ],
+   "dossier": "zones/146_d07_v6"
+  },
+  {
+   "cle": "d09",
+   "biome": "lave",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d09p11a",
+   "origine_tuiles": [
+    1,
+    2
+   ],
+   "dossier": "zones/147_d09_v6"
+  },
+  {
+   "cle": "d12",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d12p41a",
+   "origine_tuiles": [
+    1,
+    1
+   ],
+   "dossier": "zones/148_d12_v6"
+  },
+  {
+   "cle": "d14",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.343,
+   "source": "d14p12a",
+   "origine_tuiles": [
+    4,
+    1
+   ],
+   "dossier": "zones/149_d14_v6"
+  },
+  {
+   "cle": "d15",
+   "biome": "desert",
+   "variante": "v6",
+   "liquide": null,
+   "praticable_pct": 0.35,
+   "source": "d15p41a",
+   "origine_tuiles": [
+    0,
+    3
+   ],
+   "dossier": "zones/150_d15_v6"
+  }
+ ],
+ "total": 150
+}

@@ -1,0 +1,42 @@
+{
+ "principe": "rotation de palette, une permutation par image",
+ "images": 8,
+ "duree_ms": 110,
+ "liquide": {
+  "type": "eau",
+  "palette": [
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#000000",
+   "#17272F"
+  ],
+  "plage_cyclee": [
+   3,
+   10
+  ],
+  "pas_par_image": 1
+ },
+ "lumiere": {
+  "palette": [
+   "#000000",
+   "#0A0603",
+   "#130D07",
+   "#26190D",
+   "#302010",
+   "#392614",
+   "#432C17",
+   "#4C331B"
+  ],
+  "plage_cyclee": [
+   4,
+   8
+  ],
+  "pas_par_image": 0.5
+ }
+}

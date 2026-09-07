@@ -1,0 +1,42 @@
+{
+ "principe": "rotation de palette, une permutation par image",
+ "images": 8,
+ "duree_ms": 110,
+ "liquide": {
+  "type": "lave",
+  "palette": [
+   "#000000",
+   "#9F7F47",
+   "#B78F4F",
+   "#BF974F",
+   "#C79757",
+   "#DF9757",
+   "#D79F5F",
+   "#E79F5F",
+   "#E7AF5F",
+   "#EFAF6F"
+  ],
+  "plage_cyclee": [
+   3,
+   10
+  ],
+  "pas_par_image": 1
+ },
+ "lumiere": {
+  "palette": [
+   "#000000",
+   "#0A0906",
+   "#13110C",
+   "#1C1A12",
+   "#252218",
+   "#383224",
+   "#413B2A",
+   "#4B4330"
+  ],
+  "plage_cyclee": [
+   4,
+   8
+  ],
+  "pas_par_image": 0.5
+ }
+}
