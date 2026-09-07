@@ -53,21 +53,27 @@ PRODUCED = [e for e in EMOTIONS if not e.startswith("Special")]
 # jeux de référence du dépôt (ligne 0 pour le ciel, coins bas pour le sol), en prenant la
 # valeur majoritaire — les variantes à ±2 par canal viennent de retouches d'auteurs.
 #
-# La STRUCTURE est tout aussi canonique, et c'est là que la version précédente se trompait :
+# La STRUCTURE est tout aussi canonique, et deux versions successives se sont trompées :
 #
-#   • le ciel occupe le haut sur toute la largeur, en **bandes horizontales** ;
-#   • le sol occupe le bas, également en bandes horizontales ;
-#   • la transition se fait par un **damier** de quelques lignes (`1.1.1.1.`), jamais par un
-#     dégradé continu ni par la silhouette du ciel d'origine ;
-#   • l'horizon est vers **y = 8**, donc haut dans l'image (le personnage le masque en grande
-#     partie ; il n'est visible que sur les bords gauche et droit).
+#   • le ciel clair occupe le HAUT sur toute la largeur, en bandes horizontales ;
+#   • le sol occupe le BAS, également en bandes horizontales ;
+#   • la transition est un **damier** (`1.1.1.1.`), jamais un dégradé continu ni la silhouette
+#     du décor d'origine ;
+#   • la séparation est **au milieu de l'image**, vers y = 16, et le damier est **large** —
+#     environ 8 lignes. La première version le plaçait à y = 8 sur 4 lignes : trop haut et
+#     trop étroit, ce qui donnait un fond qui ne ressemblait à aucun portrait officiel même
+#     avec les bonnes couleurs.
 #
-# Vérifié sur `0674/Crying`, `0674/Normal`, `0674/Sad` : les lignes 0-7 sont pleines de ciel,
-# les lignes 8-12 alternent, le bas est plein de sol. L'ancienne version peignait un dégradé
-# épousant le ciel d'origine, ce qui ne ressemblait à aucun portrait officiel.
-# ---------------------------------------------------------------------------
-HORIZON = 8          # dernière ligne de ciel plein
-DAMIER = 4           # hauteur de la bande en damier sous l'horizon
+# Mesuré sur Magcargo #0219 (signalé par l'utilisateur), Pancham #0674 et Gardevoir #0282, en
+# isolant le décor puis en relevant les lignes où chaque teinte apparaît seule ou mélangée :
+#
+#     0219 Happy : clair pur 0-21 · damier 16-23 · sol pur 18-39
+#     0674 Happy : clair pur 0-15 · damier 16-23 · sol pur 24-39
+#     0282 Happy : clair pur 0-12 · damier 13-21 · sol pur 22-39
+#
+# Le décor n'est d'ailleurs visible que dans les coins : le personnage occupe tout le centre.
+HORIZON = 16         # dernière ligne de ciel plein (milieu de l'image, pas le haut)
+DAMIER = 8           # hauteur de la bande en damier sous l'horizon
 
 BACKGROUNDS = {
     "Normal": None,                                        # base d'origine, fond non repeint

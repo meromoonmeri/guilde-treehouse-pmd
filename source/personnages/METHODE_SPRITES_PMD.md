@@ -475,3 +475,33 @@ maximal du personnage concerné, ce qui est plus juste et plus sévère quand le
    sinon on mesure 38 % et on ne juge que le décalage ;
 2. le trajet des mains vient de `move_limbs` → l'exclure du calcul de conservation ;
 3. le contraste natif du sprite → n'évaluer que les paires de pixels **dans** la zone dessinée.
+
+## 18. Fonds de portrait : la géométrie était fausse (correction du § 15)
+
+Le § 15 avait relevé les bonnes **couleurs** par émotion, mais posé une géométrie inventée :
+horizon à `y = 8`, damier de 4 lignes. L'utilisateur a renvoyé à **Magcargo #0219**, et la mesure
+lui donne raison — le résultat ne ressemblait à aucun portrait officiel malgré les bonnes teintes.
+
+**Méthode de mesure.** Le décor ne s'isole pas à l'œil : sur ces portraits le personnage occupe
+presque tout le cadre et le fond n'apparaît que dans les coins. On l'isole en empilant les dix
+émotions d'un même Pokémon et en gardant les pixels qui **changent d'une émotion à l'autre** : le
+personnage est constant, le décor non. Puis, pour chaque teinte du décor, on relève les lignes où
+elle apparaît seule et celles où les deux coexistent (le damier) :
+
+    0219 Happy : clair pur 0-21 · damier 16-23 · sol pur 18-39
+    0674 Happy : clair pur 0-15 · damier 16-23 · sol pur 24-39
+    0282 Happy : clair pur 0-12 · damier 13-21 · sol pur 22-39
+
+**Le partage est au milieu de l'image, vers `y = 16`, et le damier est large — environ 8 lignes.**
+`HORIZON = 16`, `DAMIER = 8` au lieu de 8 et 4.
+
+**Contrôle revu, deux fois.** Vérifier « le ciel descend au moins jusqu'au tiers » échoue sur
+Hariyama, dont le personnage remplit le cadre : son décor n'existe qu'en lignes 0-8 et 30-39, avec
+rien au milieu. On contrôle donc **chaque ligne de décor selon sa hauteur** (ciel au-dessus de
+l'horizon, sol sous le damier), en tolérant une ligne aberrante — les étincelles de `Joyous`
+peuvent dominer une ligne entière puisqu'elles sont dessinées par-dessus le fond.
+
+**Leçon générale.** Deux versions de suite se sont trompées sur ce fond, chaque fois parce qu'une
+structure a été supposée au lieu d'être mesurée. Quand l'utilisateur dit « ce n'est pas canonique »
+alors que les couleurs sont bonnes, c'est la **géométrie** qu'il faut aller relever sur les
+originaux, en isolant le décor par la variance entre émotions plutôt qu'à l'œil.

@@ -18,8 +18,9 @@ Méthode
   les boîtes des yeux et sous les larmes ;
 - toutes les émotions du gabarit sont produites ;
 - **le fond est canonique** : les deux teintes sont exactement celles relevées sur les portraits
-  officiels de l'émotion, et leur disposition est celle de PMDCollab — ciel plein en haut,
-  sol plein en bas, damier de transition entre les deux, jamais un dégradé libre.
+  officiels de l'émotion, et leur disposition est celle de PMDCollab — clair en haut, sombre en
+  bas, large damier de transition **au milieu de l'image** (vers y = 16, sur ~8 lignes), jamais
+  un dégradé libre. Géométrie relevée sur Magcargo #0219, Pancham #0674 et Gardevoir #0282.
 
 Écrit `controle_qualite.json` dans chaque dossier.
 """
@@ -132,6 +133,40 @@ def check(t) -> dict:
                 fail(lignes.count(ciel) >= len(lignes) - 1,
                      f"#{t.num} {name} : le ciel est une bande horizontale unie, pas un dégradé "
                      f"({lignes.count(ciel)}/{len(lignes)} lignes à la teinte canonique)", log)
+            # la séparation clair/sombre est au milieu de l'image, comme sur les officiels :
+            # le ciel doit couvrir le haut bien au-delà du quart supérieur
+            # Le partage clair/sombre suit-il la ligne officielle ? Plutôt que de chercher
+            # une ligne absolue — le décor n'est pas visible partout : sur Hariyama il n'existe
+            # qu'en haut (0-8) et en bas (30-39), le personnage occupant tout le milieu — on
+            # vérifie que **chaque ligne de décor** porte la bonne teinte selon sa hauteur :
+            # ciel au-dessus de l'horizon, sol en dessous du damier.
+            # Les effets (étincelles de Joyous, larmes, goutte) sont posés PAR-DESSUS le fond
+            # et peuvent dominer une ligne entière : on compte donc les lignes conformes et on
+            # tolère les rares exceptions, plutôt que d'exiger chaque ligne.
+            hautes, hautes_ok, basses, basses_ok = 0, 0, 0, 0
+            for y in range(SIZE):
+                if not peint[y].any():
+                    continue
+                px = rgb[y][peint[y]]
+                if len(px) < 4:
+                    continue
+                uniq, cnt = np.unique(px, axis=0, return_counts=True)
+                domine = tuple(int(v) for v in uniq[cnt.argmax()])
+                if y < HORIZON:
+                    hautes += 1
+                    hautes_ok += int(domine == ciel)
+                elif y >= HORIZON + DAMIER and ciel != sol:
+                    basses += 1
+                    basses_ok += int(domine == sol)
+            if hautes:
+                fail(hautes_ok >= hautes - 1,
+                     f"#{t.num} {name} : au-dessus de l'horizon, {hautes_ok}/{hautes} lignes "
+                     f"portent le ciel canonique", log)
+            if basses:
+                fail(basses_ok >= basses - 1,
+                     f"#{t.num} {name} : sous le damier, {basses_ok}/{basses} lignes "
+                     f"portent le sol canonique", log)
+
             # le damier alterne réellement les deux teintes quand elles diffèrent
             if ciel != sol:
                 zone = peint.copy()

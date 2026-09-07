@@ -15,7 +15,7 @@ spritecollab/
 | --- | --- | --- | --- | --- | --- |
 | 0186 | Politoed | 35 | 22 | dessiné à la main | Unspecified |
 | 0241 | Miltank | 36 | 22 | composé | Unspecified |
-| 0282 | Gardevoir | 36 | 22 | généré puis discipliné | Unspecified |
+| 0282 | Gardevoir | 36 | 22 | composé | Unspecified |
 | 0297 | Hariyama | 35 | 22 | composé | Unspecified |
 | 0424 | Ambipom | 36 | 22 | dessiné à la main | Unspecified |
 | 0443 | Gible | 36 | 22 | dessiné à la main | Unspecified |

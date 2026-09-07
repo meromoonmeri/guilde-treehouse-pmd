@@ -1,0 +1,87 @@
+{
+ "pokemon": {
+  "nom": "Gardevoir",
+  "numero": "0282",
+  "source": "https://sprites.pmdcollab.org/#/0282?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "trait_anime": "Gardevoir mange avec retenue : bouche à peine ouverte, une seule main portée devant",
+ "origine_du_dessin": [
+  7,
+  13
+ ],
+ "roles_de_couleur": {
+  "a": "#000000",
+  "g": "#e73f67",
+  "h": "#ff8faf",
+  "f": "#afb7bf",
+  "i": "#ffffff",
+  "d": "#7f8f97"
+ },
+ "bouches": {
+  "fermee": [
+   "   ",
+   "   "
+  ],
+  "entrouverte": [
+   "aha",
+   "aga"
+  ],
+  "grande_ouverte": [
+   "aga",
+   "aga"
+  ]
+ },
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  24,
+  48
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 10,
+ "couleurs_employees": 9,
+ "aseprite": {
+  "canvas": [
+   24,
+   48
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   12,
+   28
+  ]
+ }
+}

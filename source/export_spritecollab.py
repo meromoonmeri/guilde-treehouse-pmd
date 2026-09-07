@@ -75,7 +75,7 @@ EAT_DESSINE = {
 # celle du sprite, masque limité à la bouche) et vérifiés — voir `eat_generateur.py`.
 EAT_GENERE = {
     num: ROOT / "personnages" / nom / "eat_generateur"
-    for num, nom in [("0282", "gardevoir"), ("0674", "pancham"), ("0685", "slurpuff")]
+    for num, nom in [("0674", "pancham"), ("0685", "slurpuff")]
 }
 EAT_DESSINE.update(EAT_GENERE)
 

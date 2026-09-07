@@ -47,7 +47,13 @@ sys.path.insert(0, str(ROOT / "source"))
 sys.path.insert(0, str(ROOT / "source" / "personnages"))
 import pmd_sprite as P                                                    # noqa: E402
 from rebuild_kit import night                                            # noqa: E402
-from build_animations_scenes import HANDS_TO_MOUTH, move_limbs, physiology, step_limbs, Step  # noqa: E402
+from build_animations_scenes import (                                      # noqa: E402
+    HANDS_TO_MOUTH, Limb, move_limbs, physiology, step_limbs, Step,
+)
+from build_animations_scenes import B as AMP_BOB, E as AMP_EAT              # noqa: E402
+
+# Geste raffiné : une seule main montre vers la bouche, l'autre reste au repos.
+UNE_MAIN = (Limb("rhand", dx=-AMP_BOB, dy=-AMP_EAT),)
 
 SKELETON = ROOT / "source" / "personnages" / "reference" / "0155"
 
@@ -172,7 +178,41 @@ DEDENNE = Dessin(
     "à 17 pixels de haut, la bouche de Dedenne ne peut s'ouvrir que de deux pixels",
 )
 
-DESSINS = [AMBIPOM, GIBLE, PAWMOT, DEDENNE]
+
+# ---------------------------------------------------------------------------
+# GARDEVOIR #0282 — un repas **raffiné**, demandé explicitement par l'utilisateur.
+#
+# Gardevoir est un Pokémon élégant : elle ne se jette pas sur la nourriture à deux mains comme
+# Miltank ou Slurpuff. Le geste juste est celui d'une personne bien élevée à table — une petite
+# bouche à peine ouverte, et **une seule main** portée délicatement devant, l'autre au repos.
+# Le générateur d'images, essayé d'abord, plaquait des taches roses sur le buste au lieu d'un
+# geste : sur un détail aussi fin, le dessin à la main reste plus sûr.
+#
+# Anatomie relevée : le menton est en `y=13` (`ff8faf`, rose de la bouche déjà présent),
+# le buste blanc commence en `y=16`. La bouche s'ouvre donc en `y=13..14`, très petite —
+# deux pixels de large, pas plus : c'est ce qui fait la retenue du geste.
+GARDEVOIR = Dessin(
+    "0282", "gardevoir", "Gardevoir", (7, 13),
+    {"a": "#000000", "g": "#e73f67", "h": "#ff8faf", "f": "#afb7bf", "i": "#ffffff",
+     "d": "#7f8f97"},
+    {
+        "fermee": ["   ", "   "],
+        # à peine entrouverte : un seul pixel de rose sombre, la lèvre reste dessinée
+        "entrouverte": [
+            "aha",
+            "aga",
+        ],
+        # « grande » ouverte reste petite : deux pixels. Une bouche béante ne serait pas
+        # Gardevoir. La retenue est le sujet du dessin.
+        "grande_ouverte": [
+            "aga",
+            "aga",
+        ],
+    },
+    "Gardevoir mange avec retenue : bouche à peine ouverte, une seule main portée devant",
+)
+
+DESSINS = [AMBIPOM, GIBLE, PAWMOT, DEDENNE, GARDEVOIR]
 
 # Cycle : repos, grande bouchée, repos, petite bouchée — l'artiste ne répète jamais
 # deux fois la même image, il varie l'amplitude pour que le cycle respire.
@@ -235,7 +275,8 @@ def construire(d: Dessin) -> tuple[P.Built, dict, int]:
                 crop = peindre(crop, d, etape["bouche"])
                 dessinees += 1
             if etape["mains"]:
-                lbs = step_limbs(Step("Idle", 0, limbs=(HANDS_TO_MOUTH,)), amp)
+                gestes = UNE_MAIN if d.num == "0282" else HANDS_TO_MOUTH
+                lbs = step_limbs(Step("Idle", 0, limbs=(gestes,)), amp)
                 crop = move_limbs(crop, (-x0, -y0), f.marks, lbs, f.bbox)
 
             cx, cy = fw // 2 + disp[i][0], fh // 2 + 4 + disp[i][1]
