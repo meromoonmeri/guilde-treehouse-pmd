@@ -505,3 +505,38 @@ peuvent dominer une ligne entière puisqu'elles sont dessinées par-dessus le fo
 structure a été supposée au lieu d'être mesurée. Quand l'utilisateur dit « ce n'est pas canonique »
 alors que les couleurs sont bonnes, c'est la **géométrie** qu'il faut aller relever sur les
 originaux, en isolant le décor par la variance entre émotions plutôt qu'à l'œil.
+
+## 19. Portraits en deux couches : fond canonique par code, personnage par générateur
+
+Architecture proposée par l'utilisateur — « fais les fonds canoniques, on placera les Pokémon
+par-dessus » — et c'est la bonne. `portraits_generateur.py` la met en œuvre.
+
+**Le fond n'a pas besoin du générateur.** Vérification faite avant de lui demander quoi que ce
+soit : sur les 245 pixels de décor visibles dans les coins d'un portrait officiel, une
+reconstruction par code aux couleurs canoniques est **identique au pixel près (245/245)**. Le
+fond est donc entièrement reconstruit, jamais négocié.
+
+**Le générateur ne sert plus qu'à l'expression.** On lui envoie le `Normal` officiel, on découpe
+le personnage dans sa sortie, on le pose sur le fond reconstruit. Palette rabattue sur celle du
+portrait officiel au passage.
+
+**Le découpage se fait par les teintes, pas par la géométrie.** Trois tentatives :
+1. réutiliser le masque de fond de l'officiel → faux, le générateur change la pose ;
+2. redétecter le fond par propagation depuis le bord sur sa sortie → laisse les **poches
+   enfermées** (le ciel coincé entre les oreilles de Capidextre ne touche aucun bord) ;
+3. **retenu** : est du fond tout pixel portant une teinte de décor du portrait officiel — celles
+   qui occupent son fond et que le personnage n'emploie jamais — qu'elle touche le bord ou non.
+
+Résultat mesuré : fond canonique exact (438/438, 452/452, 288/288, 372/372 pixels), **zéro
+résidu** du ciel d'origine, 13 à 14 couleurs.
+
+**Ce que le générateur réussit et rate.** Sur dix expressions produites pour Capidextre, deux ont
+été validées par l'utilisateur (`Inspired`, `Teary-Eyed`) et huit rejetées — « ça fait IA ». Il
+lisse les traits et perd le style Chunsoft dès que l'expression est appuyée. En revanche il est
+précieux quand la retouche à la main échoue : les portraits de Hariyama produits par opérations
+sur les yeux étaient glitchés et figés dans la même pose ; le générateur lui donne enfin une
+expression et une pose différentes.
+
+**À retenir :** demander au générateur ce qu'il fait bien (une expression), pas ce que le code
+fait exactement (un fond canonique). Et soumettre chaque sortie à l'œil de l'utilisateur : le
+taux de conservation ne dit rien du « ça fait IA ».
