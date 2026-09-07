@@ -2978,12 +2978,113 @@
      "defauts": []
     }
    ]
+  },
+  "1024/0002": {
+   "nom": "Terapagos_Stellaire",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.078,
+     "hauteur_rel": 0.526,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -19.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.511,
+     "largeur_rel": 0.229,
+     "hors_corps": 0.0,
+     "sous_pieds": -19.0,
+     "ecart_tete": 0.129,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.182,
+     "hauteur_rel": 0.445,
+     "largeur_rel": 0.167,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.236,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.105,
+     "hauteur_rel": 0.399,
+     "largeur_rel": 0.235,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.162,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.018,
+     "hauteur_rel": 0.373,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -16.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.105,
+     "hauteur_rel": 0.399,
+     "largeur_rel": 0.242,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.167,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.182,
+     "hauteur_rel": 0.445,
+     "largeur_rel": 0.171,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.243,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.511,
+     "largeur_rel": 0.242,
+     "hors_corps": 0.0,
+     "sous_pieds": -19.0,
+     "ecart_tete": 0.136,
+     "defauts": []
+    }
+   ]
   }
  },
  "resume": {
-  "vues": 232,
+  "vues": 240,
   "hors_tolerance": 9,
-  "taux_conforme": 96.1,
+  "taux_conforme": 96.2,
   "par_defaut": {
    "hauteur": 5,
    "largeur": 6

@@ -1,12 +1,12 @@
-# Foulards d'exploration — 29 Pokémon, format PMDCollab
+# Foulards d'exploration — 30 Pokémon, format PMDCollab
 
 Pack de foulards en pixel art pour les Pokémon de départ des générations 1 à 3
-et leurs évolutions, plus **Terapagos** (formes Normale et Terastal), au format
+et leurs évolutions, plus **Terapagos** (formes Normale, Terastal et Stellaire), au format
 **PMDCollab / SpriteCollab**. Le foulard suit chaque Pokémon dans **toutes** ses
-animations, ses 8 directions et ses 28 162 cases — pas seulement sur une pose de
+animations, ses 8 directions et ses 28 986 cases — pas seulement sur une pose de
 présentation.
 
-Le cadrage du col est vérifié automatiquement : **96,1 % des 232 vues sont
+Le cadrage du col est vérifié automatiquement : **96,2 % des 240 vues sont
 conformes** aux tolérances géométriques (voir « Auto-audit du cadrage »).
 
 ![Planche de contact](apercus/planche_contact.png)
@@ -17,7 +17,7 @@ conformes** aux tolérances géométriques (voir « Auto-audit du cadrage »).
 
 | Chemin | Contenu |
 |---|---|
-| `calques/<id>_<Nom>/` | 29 dossiers, **655 planches de foulard seul** en PNG RGBA transparent, plus un `AnimData.xml` |
+| `calques/<id>_<Nom>/` | 30 dossiers, **666 planches de foulard seul** en PNG RGBA transparent, plus un `AnimData.xml` |
 | `fusionnes/` | Terapagos déjà composé (sprite + foulard + `Offsets`/`Shadow`), prêt à charger |
 | `apercus/` | GIF animés (Idle, Walk, Attack) et la planche de contact |
 | `manifeste.json` | palettes, rampes, réglages, liste des animations, comptes de cases |
@@ -133,7 +133,7 @@ cible, et écrivent le `dy` correspondant dans `reglages.json`.
 
 | | avant | après |
 |---|---|---|
-| Vues conformes | 18,5 % | **96,1 %** |
+| Vues conformes | 18,5 % | **96,2 %** |
 | Défaut `hauteur` | 170 | 5 |
 | Défaut `sous-pieds` | 64 | 0 |
 | Défaut `hors-corps` | 45 | 0 |
@@ -164,7 +164,7 @@ les couleurs dominantes des trois stades).
 | Arcko → Jungko | Plante | `rose_aurore` | `#E1548E` |
 | Poussifeu → Braségali | Feu | `indigo_nuit` | `#4451B0` |
 | Gobou → Laggron | Eau | `prune_profonde` | `#7A2E5C` |
-| Terapagos (Normale + Terastal) | Normal | `grenat_ancien` | `#A82B40` |
+| Terapagos (Normale, Terastal, Stellaire) | Normal | `grenat_ancien` | `#A82B40` |
 
 Treize rampes sont disponibles dans `outils/foulard.py`. Pour changer une
 attribution, modifier `FORCE` dans `outils/lignees.py`, ou mettre `FORCE = None`
@@ -188,9 +188,10 @@ Dépendances : `Pillow`, `numpy`.
 
 ## Portée et limites
 
-* Couverture : **29 Pokémon** — les 27 starters gen 1-3 en forme de base, plus
-  Terapagos en formes Normale et Terastal (sa forme Stellaire n'a pas encore de
-  sprites dans SpriteCollab). Les formes alternatives
+* Couverture : **30 Pokémon** — les 27 starters gen 1-3 en forme de base, plus
+  Terapagos en formes Normale, Terastal et Stellaire. La forme Stellaire n'existe
+  pas dans SpriteCollab : elle est construite par ce dépôt, voir
+  `../terapagos_stellaire/`. Les formes alternatives
   (`sprite/0006/0001/`…) ont leurs propres planches et ne sont pas traitées ;
   les versions chromatiques réutilisent le calque tel quel.
 * Les animations déclarées `<CopyOf>` n'ont pas de planche, conformément au

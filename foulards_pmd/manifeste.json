@@ -2707,10 +2707,87 @@
      ],
      "cases": 824,
      "dossier": "calques/1024-0001_Terapagos_Terastal"
+    },
+    {
+     "id": "1024/0002",
+     "nom_en": "Terapagos Stellar Form",
+     "nom_fr": "Terapagos_Stellaire",
+     "palette": "grenat_ancien",
+     "rampe": {
+      "lumiere": "#E3747A",
+      "base": "#A82B40",
+      "ombre": "#6F142B",
+      "contour": "#320C18"
+     },
+     "echelle_corps": 33.0,
+     "reglage": {
+      "dx": 0.0,
+      "dy": -3.0,
+      "largeur": 1.0,
+      "descente": 1.0,
+      "echelle": 1.0,
+      "vers_corps": 0.18,
+      "fenetre_cou": 2,
+      "largeur_cou": 10.56,
+      "rayon_tete": 7.92,
+      "biais": [
+       [
+        0.0,
+        3.6826923076923075
+       ],
+       [
+        11.0,
+        2.7596153846153846
+       ],
+       [
+        14.0,
+        3.7596153846153846
+       ],
+       [
+        13.0,
+        -3.2403846153846154
+       ],
+       [
+        0.0,
+        -10.240384615384615
+       ],
+       [
+        -13.0,
+        -3.2403846153846154
+       ],
+       [
+        -14.0,
+        3.7596153846153846
+       ],
+       [
+        -11.0,
+        2.7596153846153846
+       ]
+      ]
+     },
+     "animations_rendues": [
+      "Walk",
+      "Attack",
+      "Shoot",
+      "Sleep",
+      "Hurt",
+      "Idle",
+      "Swing",
+      "Double",
+      "Hop",
+      "Charge",
+      "Rotate"
+     ],
+     "animations_copiees": [
+      "Strike",
+      "SpAttack"
+     ],
+     "cases": 824,
+     "dossier": "calques/1024-0002_Terapagos_Stellaire"
     }
    ]
   }
  ],
- "total_cases_rendues": 28162,
- "total_pokemon": 29
+ "total_cases_rendues": 28986,
+ "total_pokemon": 30
 }

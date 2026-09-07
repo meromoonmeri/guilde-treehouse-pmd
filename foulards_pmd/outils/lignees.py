@@ -26,7 +26,8 @@ LIGNEES = [
     # Terastal. La forme Stellaire n'y a pas encore de sprites.
     {"cle": "terapagos", "type": "Normal",
      "membres": [("1024","Terapagos","Terapagos"),
-                 ("1024/0001","Terapagos Terastal Form","Terapagos_Terastal")]},
+                 ("1024/0001","Terapagos Terastal Form","Terapagos_Terastal"),
+                 ("1024/0002","Terapagos Stellar Form","Terapagos_Stellaire")]},
 ]
 
 # Choix retenu : une couleur par lignée (le foulard est l'identité du membre
