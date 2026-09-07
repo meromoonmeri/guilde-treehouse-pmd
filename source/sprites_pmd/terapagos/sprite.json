@@ -1,0 +1,87 @@
+{
+  "pokemon": "Terapagos",
+  "forme": "Normale",
+  "cellule": 64,
+  "largeur_utile": 54,
+  "marge_sol": 4,
+  "directions": [
+    "Bas",
+    "BasDroite",
+    "Droite",
+    "HautDroite",
+    "Haut",
+    "HautGauche",
+    "Gauche",
+    "BasGauche"
+  ],
+  "miroirs": {
+    "BasGauche": "BasDroite",
+    "Gauche": "Droite",
+    "HautGauche": "HautDroite"
+  },
+  "palette": [
+    "#C4DBE5",
+    "#8DE7BD",
+    "#86E5B1",
+    "#86E0AF",
+    "#83E4AF",
+    "#80E4AE",
+    "#81DFAC",
+    "#96B9C3",
+    "#61A68F",
+    "#57A48D",
+    "#687186",
+    "#46427F",
+    "#364B72",
+    "#4C2D68",
+    "#2D345E",
+    "#2C345D",
+    "#2A305C",
+    "#261F55",
+    "#1D2442",
+    "#131337",
+    "#01012A",
+    "#010121",
+    "#000010",
+    "#FFFFFF",
+    "#D88205",
+    "#F6B033",
+    "#DE1FC1",
+    "#BF6A02",
+    "#C99922",
+    "#B20C9F"
+  ],
+  "animations": [
+    {
+      "nom": "Idle",
+      "frames": 4,
+      "durees": [
+        12,
+        10,
+        12,
+        10
+      ],
+      "boucle": true
+    },
+    {
+      "nom": "Walk",
+      "frames": 4,
+      "durees": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "boucle": true
+    },
+    {
+      "nom": "Hurt",
+      "frames": 2,
+      "durees": [
+        8,
+        10
+      ],
+      "boucle": false
+    }
+  ]
+}
