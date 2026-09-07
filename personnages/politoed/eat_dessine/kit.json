@@ -1,0 +1,71 @@
+{
+ "pokemon": {
+  "nom": "Politoed",
+  "numero": "0186",
+  "source": "https://sprites.pmdcollab.org/#/0186?form=0"
+ },
+ "demarche": "pixels dessinés à la main, à la manière des artistes Chunsoft",
+ "regles_relevees_sur_0172_et_0447": [
+  "la palette ne s'élargit jamais : on repeint avec les teintes déjà présentes",
+  "tout trait est cerné de noir (0,0,0)",
+  "l'ombrage va du clair au sombre par la teinte moyenne, jamais de saut",
+  "le changement est local et légèrement asymétrique"
+ ],
+ "bouches_dessinees": [
+  "fermee",
+  "entrouverte",
+  "grande_ouverte"
+ ],
+ "plan": [
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "grande_ouverte",
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": "fermee",
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": "entrouverte",
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  32,
+  56
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "palette_du_sprite": 15,
+ "couleurs_employees": 14,
+ "aseprite": {
+  "canvas": [
+   32,
+   56
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   16,
+   32
+  ]
+ }
+}

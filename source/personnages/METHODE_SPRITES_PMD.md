@@ -292,3 +292,41 @@ ce qui garantit qu'on ne peut pas régresser vers la version du § 8.
 **Limite restante :** la bouche ne s'ouvre pas. Chez Pichu, le museau change de forme parce que l'artiste a
 dessiné deux états ; on ne peut pas l'inventer sans repeindre. Déplacer les mains devant la bouche donne
 l'essentiel de la lecture du geste ; ouvrir la mâchoire demanderait un dessin, pas un déplacement.
+
+## 13. Dessiner comme un artiste Chunsoft (franchir le pas du repeint)
+
+Les § 8 à 12 refusaient par principe de peindre un pixel. Cette section documente le passage à
+l'imitation directe : `dessine_eat_politoed.py` **dessine** une bouche qui s'ouvre.
+
+**Étudier avant de dessiner.** Le visage de Pichu #0172 a été dumpé caractère par caractère, repos
+contre bouchée. Constat : l'artiste **redessine la tête entière** (la mâchoire, le museau, l'ombre
+du menton), pas seulement quelques pixels. Quatre règles observables en sortent :
+
+1. la palette ne s'élargit jamais — pas une teinte nouvelle dans la bouchée ;
+2. tout trait est cerné de noir `(0,0,0)` ;
+3. l'ombrage passe du clair au sombre **par la teinte moyenne**, jamais de saut ;
+4. le changement est local et légèrement asymétrique (jamais de symétrie parfaite).
+
+**Dessiner en clair, pas en hexadécimal.** Les bouches sont écrites dans le source sous forme de
+grilles de caractères (`a` = noir, `d` = lèvre claire, `j` = gorge…), avec une entrée `" "` qui
+signifie « garder le pixel d'origine ». C'est lisible, modifiable par un humain, et diffable en git —
+très supérieur à des coordonnées codées en dur.
+
+**Choisir le bon trait.** Ne pas dessiner « une bouche générique » : repérer d'abord le trait
+caractéristique du personnage. Politoed a une grande bouche fermée en trait noir (`y=16, x=9..13`
+dans sa boîte Idle) ; c'est elle qu'un artiste ouvrirait. Il faut dumper la case en ASCII et la
+regarder en grille zoomée avec les coordonnées, sinon on dessine au mauvais endroit — première
+version placée 1 px trop bas et trop carrée, corrigée après contrôle visuel.
+
+**Le vérificateur doit contrôler la grammaire, pas seulement le format.** `verify_eat_politoed.py`
+teste les quatre règles ci-dessus. Il a attrapé une vraie faute : la gorge touchait la peau verte
+sans cerne noir.
+
+**Piège du contrôle** : Politoed emploie les mêmes rouges pour ses pupilles et pour la gorge, et le
+léger `squash` fait que *tous* les pixels diffèrent entre deux images. Restreindre le contrôle « aux
+pixels qui ont changé » ne marche donc pas — il faut le restreindre **au rectangle réellement
+dessiné**, dérivé de `ORIGINE_X/Y` et de la taille de la grille.
+
+**Conclusion.** Imiter Chunsoft est faisable dès lors qu'on traite leur travail comme une
+spécification mesurable plutôt que comme un style à ressentir. Le coût est qu'il faut le faire
+personnage par personnage : la bouche de Politoed ne se transpose pas sur Hariyama.
