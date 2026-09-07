@@ -16,10 +16,38 @@ sol, piliers, cercle, effets et sons sont produits par
 | `aseprite/` | sources éditables, **multi-calques et multi-images** |
 | `sons/` | six effets de synthèse en WAV 16 bits 44,1 kHz stéréo |
 | `apercus/` | GIF de contrôle |
+| `sources_ia/` | planches peintes servant de base au décor, avant pixelisation |
 
 L'arène fait **768 × 512**, multiple de la grille 8 px du projet
 (`kit.json: grille_px = 8`), et suit la convention de nommage des calques des
 salles existantes.
+
+## De la peinture au pixel art
+
+Le fond de la caverne part d'une planche peinte (`sources_ia/fond_caverne.png`),
+convertie par `outils/pixelisation.py`. Une image générée n'est pas du pixel
+art : elle est lissée, dégradée et compte des milliers de couleurs. La chaîne
+fait quatre choses, dans cet ordre, et l'ordre compte :
+
+1. **Cadrage** au rapport de la salle, puis réduction à 768 × 512 — un pixel de
+   l'image devient un pixel du jeu.
+2. **Recalage colorimétrique** : la génération tire au magenta ; la dominante
+   est ramenée vers l'indigo et la luminosité baissée. Sans ce passage le fond
+   jure avec la palette de Terapagos et écrase les effets posés dessus.
+3. **Filtre médian puis postérisation** : le médian retire le moucheté, la
+   postérisation écrase les dégradés en paliers francs.
+4. **Quantification adaptative sur 30 couleurs, sans tramage.** Le tramage est
+   volontairement désactivé : à cette échelle il produit un bruit qui ne se lit
+   pas comme du pixel art.
+
+Les **veines lumineuses** ne sont pas redessinées : elles sont extraites de la
+planche peinte par détection des pixels cyan clairs, puis animées là où le
+peintre les a placées. Le procédural épouse ainsi le dessin au lieu de le
+contredire.
+
+Les piliers, eux, restent procéduraux : la découpe automatique de la planche de
+références n'a pas su les isoler proprement, et les grappes générées se
+composent mieux avec la caverne peinte.
 
 ## Les onze calques de l'arène
 
@@ -37,8 +65,26 @@ salles existantes.
 | `09_sphere` | sphère d'enveloppement, vide hors transformation |
 | `10_eclairage` | vignette froide, posée en dernier |
 
-`aseprite/arene.aseprite` contient les onze calques sur **12 images**, donc la
-boucle d'ambiance complète s'ouvre et se scrube directement dans Aseprite.
+### Ce que contient réellement le fichier Aseprite
+
+`aseprite/arene.aseprite` n'est pas un simple empilement d'images. L'écrivain
+du dépôt a été étendu pour produire :
+
+* **des groupes de calques** — `DECOR`, `SCENE`, `LUMIERE` — repliables ;
+* **des modes de fusion par calque** : les veines, le cercle rituel, les
+  colonnes, la foudre et la sphère sont en **Addition**, l'éclairage en
+  **Multiply**. La lumière s'accumule donc réellement dans Aseprite, comme dans
+  le moteur, au lieu d'être aplatie à l'export ;
+* **des opacités par calque** (sphère à 235, éclairage à 210) ;
+* **une palette embarquée** : les 30 couleurs du décor plus 12 teintes
+  arc-en-ciel de référence ;
+* **des tags d'animation**. `arene.aseprite` porte le tag `ambiance` sur ses
+  12 images ; `transformation.aseprite` porte **un tag par phase** — `appel`,
+  `montee`, `enveloppe`, `suspens`, `eclat`, `revelation` — donc chaque temps
+  de la séquence se rejoue isolément depuis la barre de tags.
+
+Le rendu PNG composé applique les mêmes modes de fusion que le fichier
+Aseprite, les deux restent donc cohérents.
 
 ## Comment le décor est fabriqué
 

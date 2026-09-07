@@ -26,6 +26,7 @@ sys.path.insert(0, ICI)
 sys.path.insert(0, os.path.join(ICI, "..", "..", "foulards_pmd", "outils"))
 import aseprite
 import sons as S
+import pixelisation as PX
 
 RACINE = os.path.abspath(os.path.join(ICI, ".."))
 SC = os.environ.get("SPRITECOLLAB", "/home/user/sc_tmp")
@@ -263,10 +264,13 @@ def pilier(hauteur, largeur, teinte=0.58, eclat=1.0, graine=3):
     # contour sombre : sans lui, le cristal se dilue dans le sol
     a = t.a
     plein = a[..., 3] > 0
+    # dilatation par décalage *avec* remplissage : np.roll reboucle sur les
+    # bords de la tuile et fabriquerait un cadre parasite autour du pilier.
+    pad = np.pad(plein, 1, mode="constant", constant_values=False)
     voisin = np.zeros_like(plein)
-    for dy in (-1, 0, 1):
-        for dx in (-1, 0, 1):
-            voisin |= np.roll(np.roll(plein, dy, 0), dx, 1)
+    for dy in (0, 1, 2):
+        for dx in (0, 1, 2):
+            voisin |= pad[dy:dy + plein.shape[0], dx:dx + plein.shape[1]]
     bord = voisin & ~plein
     a[bord, :3] = np.array((6, 8, 26), dtype=np.float32)
     a[bord, 3] = 235
@@ -280,11 +284,9 @@ def placer_piliers():
     """Disposition en couronne autour de l'aire de combat."""
     plan = [
         # (x, y au sol, hauteur, largeur, teinte, avant/arrière)
-        (96, 250, 118, 34, 0.72, False), (208, 214, 92, 26, 0.60, False),
-        (382, 196, 150, 42, 0.55, False), (556, 214, 92, 26, 0.46, False),
-        (668, 250, 118, 34, 0.34, False),
-        (44, 372, 150, 44, 0.80, True), (232, 418, 104, 30, 0.66, True),
-        (536, 418, 104, 30, 0.20, True), (724, 372, 150, 44, 0.08, True),
+        (128, 246, 104, 32, 0.72, False), (382, 200, 138, 40, 0.55, False),
+        (640, 246, 104, 32, 0.34, False),
+        (52, 396, 142, 42, 0.80, True), (716, 396, 142, 42, 0.08, True),
     ]
     arriere, avant = Toile(), Toile()
     for i, (x, y, hh, lw, te, av) in enumerate(plan):
@@ -731,12 +733,84 @@ def eclairage():
     return Image.fromarray(a, "RGBA")
 
 
+SOURCES = os.path.join(RACINE, "sources_ia")
+
+
+def base_peinte():
+    """
+    Charge la planche peinte de la caverne, la convertit en pixel art et la
+    sépare en deux calques : parois du fond et aire de jeu.
+    """
+    chemin = os.path.join(SOURCES, "fond_caverne.png")
+    if not os.path.isfile(chemin):
+        return None, None, None
+    im, pal = PX.convertir(chemin, LARG, HAUT, n_couleurs=30, niveaux=7)
+    veines_m = PX.masque_veines(im)
+    fond, sol = PX.separer_fond_sol(im, 150)
+    return (fond, sol), veines_m, pal
+
+
+def veines_peintes(masque, phase):
+    """Anime la lueur des joints repérés dans la planche peinte."""
+    t = Toile()
+    ys, xs = np.nonzero(masque)
+    for y, x in zip(ys, xs):
+        h = ((x * 0.0013 + y * 0.0021) + phase) % 1.0
+        onde = 0.5 + 0.5 * math.sin((x * 0.02 + y * 0.03)
+                                    - phase * 2 * math.pi * 2.0)
+        t.ajouter(x, y, arc_en_ciel(h, 0.45, 1.0), 0.28 + 0.42 * onde)
+    return t.img()
+
+
+# structure Aseprite : groupes, modes de fusion, opacités
+STRUCTURE = [
+    {"nom": "DECOR", "type": "groupe"},
+    {"nom": "00_caverne", "niveau": 1},
+    {"nom": "01_sol_cristal", "niveau": 1},
+    {"nom": "02_veines", "niveau": 1, "fusion": aseprite.ADDITION},
+    {"nom": "03_piliers_arriere", "niveau": 1},
+    {"nom": "SCENE", "type": "groupe"},
+    {"nom": "04_cercle_rituel", "niveau": 1, "fusion": aseprite.ADDITION},
+    {"nom": "05_boss", "niveau": 1},
+    {"nom": "06_piliers_avant", "niveau": 1},
+    {"nom": "LUMIERE", "type": "groupe"},
+    {"nom": "07_colonnes_lumiere", "niveau": 1, "fusion": aseprite.ADDITION},
+    {"nom": "08_cercle_foudre", "niveau": 1, "fusion": aseprite.ADDITION},
+    {"nom": "09_sphere", "niveau": 1, "fusion": aseprite.ADDITION, "opacite": 235},
+    {"nom": "10_eclairage", "fusion": aseprite.MULTIPLIER, "opacite": 210},
+]
+ADDITIFS = {c["nom"] for c in STRUCTURE if c.get("fusion") == aseprite.ADDITION}
+
+
+def composer_avance(jeu):
+    """Compose en respectant la fusion additive des calques de lumière."""
+    out = np.zeros((HAUT, LARG, 4), dtype=np.float32)
+    for c in STRUCTURE:
+        if c.get("type") == "groupe":
+            continue
+        im = jeu.get(c["nom"])
+        if im is None:
+            continue
+        a = np.asarray(im, dtype=np.float32)
+        if c["nom"] in ADDITIFS:
+            k = (a[..., 3:4] / 255.0)
+            out[..., :3] = np.minimum(255.0, out[..., :3] + a[..., :3] * k)
+            out[..., 3] = np.minimum(255.0, out[..., 3] + a[..., 3])
+        else:
+            k = a[..., 3:4] / 255.0
+            out[..., :3] = a[..., :3] * k + out[..., :3] * (1 - k)
+            out[..., 3] = np.minimum(255.0, a[..., 3] + out[..., 3] * (1 - k[..., 0]))
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8), "RGBA")
+
+
 def main():
     for d in ("decor", "vfx", "aseprite", "apercus", "sons"):
         os.makedirs(os.path.join(RACINE, d), exist_ok=True)
 
+    print("base peinte…")
+    peint, veines_m, pal_ia = base_peinte()
     print("sol de cristal…")
-    sol, cell, arete, lum = sol_cristal()
+    sol_proc, cell, arete, lum = sol_cristal()
     pil_arr, pil_av, plan = placer_piliers()
     vide = fond_vide()
     ecl = eclairage()
@@ -757,9 +831,15 @@ def main():
     images = []
     for i in range(N_BOUCLE):
         ph = i / N_BOUCLE
+        if peint is not None:
+            c_fond, c_sol = peint
+            c_veines = veines_peintes(veines_m, ph)
+        else:
+            c_fond, c_sol = vide, sol_proc
+            c_veines = veines(cell, arete, ph)
         jeu = {
-            "00_vide": vide, "01_sol_cristal": sol,
-            "02_veines": veines(cell, arete, ph),
+            "00_caverne": c_fond, "01_sol_cristal": c_sol,
+            "02_veines": c_veines,
             "03_piliers_arriere": pil_arr,
             "04_cercle_rituel": cercle_rituel(ph),
             "05_boss": boss,
@@ -778,13 +858,16 @@ def main():
     # décor : PNG par calque, sur la première image
     for nom, im in images[0].items():
         im.save(os.path.join(RACINE, "decor", f"{nom}.png"), optimize=True)
-    composer(list(images[0].items())).save(
+    composer_avance(images[0]).save(
         os.path.join(RACINE, "decor", "arene.png"), optimize=True)
 
-    aseprite.ecrire_anime(os.path.join(RACINE, "aseprite", "arene.aseprite"),
-                          CALQUES, images, (LARG, HAUT), duree_ms=90)
+    aseprite.ecrire_avance(
+        os.path.join(RACINE, "aseprite", "arene.aseprite"),
+        STRUCTURE, images, (LARG, HAUT), duree_ms=90,
+        palette=(pal_ia or []) + [arc_en_ciel(i / 12) for i in range(12)],
+        tags=[("ambiance", 0, N_BOUCLE - 1, aseprite.AVANT, (90, 160, 255))])
 
-    fr = [composer(list(j.items())) for j in images]
+    fr = [composer_avance(j) for j in images]
     gif = [f.resize((LARG // 2, HAUT // 2), Image.LANCZOS).convert(
         "P", palette=Image.ADAPTIVE, colors=255) for f in fr]
     gif[0].save(os.path.join(RACINE, "apercus", "arene.gif"), save_all=True,
@@ -800,10 +883,15 @@ def main():
         feuille.paste(im, (i * VW, 0), im)
     feuille.save(os.path.join(RACINE, "vfx", "transformation-Anim.png"),
                  optimize=True)
-    aseprite.ecrire_anime(
+    bornes, b = [], 0
+    for nom, n in PHASES:
+        bornes.append((nom, b, b + n - 1, aseprite.AVANT, (220, 180, 90)))
+        b += n
+    aseprite.ecrire_avance(
         os.path.join(RACINE, "aseprite", "transformation.aseprite"),
-        ["transformation"], [{"transformation": im} for im in trans],
-        (VW, VH), duree_ms=[110] * total)
+        [{"nom": "transformation"}], [{"transformation": im} for im in trans],
+        (VW, VH), duree_ms=[110] * total,
+        palette=[arc_en_ciel(i / 16) for i in range(16)], tags=bornes)
     g = [im.convert("RGBA") for im in trans]
     fond_g = Image.new("RGBA", (VW, VH), (18, 18, 28, 255))
     g = [Image.alpha_composite(fond_g, im).convert("P", palette=Image.ADAPTIVE,
