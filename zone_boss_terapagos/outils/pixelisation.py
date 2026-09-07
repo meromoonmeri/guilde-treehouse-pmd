@@ -198,3 +198,66 @@ def masque_veines(im, seuil_cyan=0.30):
     lum = (r + g + b) / 3.0
     cyan = np.minimum(g, b) - r
     return (cyan > seuil_cyan) & (lum > 0.30)
+
+
+def decouper_objets(chemin, ech_travail=4, n_couleurs=16, marge=2,
+                    aire_min=0.0015):
+    """
+    Isole les objets d'une planche de références, quel que soit son fond.
+
+    La découpe par projection en colonnes échoue dès que la planche a
+    plusieurs rangées ou un fond clair. On détecte donc la couleur de fond aux
+    quatre coins, puis on étiquette les composantes connexes par parcours en
+    largeur sur une version réduite, avant de reporter les boîtes.
+    """
+    from collections import deque
+    im = Image.open(chemin).convert("RGB")
+    W, H = im.size
+    pet = im.resize((max(1, W // ech_travail), max(1, H // ech_travail)),
+                    Image.LANCZOS)
+    a = np.asarray(pet, dtype=np.float32)
+    coins = np.array([a[0, 0], a[0, -1], a[-1, 0], a[-1, -1]])
+    fond = np.median(coins, axis=0)
+    m = np.linalg.norm(a - fond, axis=2) > 46
+
+    h, w = m.shape
+    vus = np.zeros_like(m, dtype=bool)
+    boites = []
+    for y0 in range(h):
+        for x0 in range(w):
+            if not m[y0, x0] or vus[y0, x0]:
+                continue
+            q = deque([(y0, x0)])
+            vus[y0, x0] = True
+            xs0 = xs1 = x0
+            ys0 = ys1 = y0
+            n = 0
+            while q:
+                y, x = q.popleft()
+                n += 1
+                xs0, xs1 = min(xs0, x), max(xs1, x)
+                ys0, ys1 = min(ys0, y), max(ys1, y)
+                for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1),
+                               (1, 1), (1, -1), (-1, 1), (-1, -1)):
+                    ny, nx = y + dy, x + dx
+                    if 0 <= ny < h and 0 <= nx < w and m[ny, nx] and not vus[ny, nx]:
+                        vus[ny, nx] = True
+                        q.append((ny, nx))
+            if n >= aire_min * h * w:
+                boites.append((xs0, ys0, xs1, ys1))
+
+    boites.sort(key=lambda b: (b[1] // max(1, h // 6), b[0]))
+    objets = []
+    for (x0, y0, x1, y1) in boites:
+        b = (max(0, (x0 - marge) * ech_travail), max(0, (y0 - marge) * ech_travail),
+             min(W, (x1 + 1 + marge) * ech_travail),
+             min(H, (y1 + 1 + marge) * ech_travail))
+        sub = im.crop(b)
+        q = posteriser(sub, 6).quantize(colors=n_couleurs,
+                                        method=Image.Quantize.MAXCOVERAGE,
+                                        dither=Image.Dither.NONE).convert("RGBA")
+        arr = np.array(q)
+        d = np.linalg.norm(arr[..., :3].astype(np.float32) - fond, axis=2)
+        arr[..., 3] = np.where(d > 46, 255, 0)
+        objets.append(Image.fromarray(arr, "RGBA"))
+    return objets

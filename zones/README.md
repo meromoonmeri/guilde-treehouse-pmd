@@ -83,3 +83,42 @@ python3 outils/generer_zones.py
   autres.
 * Les décors sont des images fixes, pas des tilesets, conformément à la
   convention des salles de la guilde.
+
+---
+
+## Version vue de dessus, direction artistique PMD
+
+Deux zones supplémentaires, `foret_entree_pmd` et `foret_coeur_pmd`, en vue de
+dessus stricte et dans la direction artistique de *Explorers of Sky* : pixels
+francs, palette courte, aplats cel-shadés et contours sombres.
+
+Différence de méthode importante : elles ne sont pas une planche peinte
+découpée après coup, elles sont **montées**. Le script assemble trois familles
+d'éléments produits séparément — un sol répétable, des rochers et accessoires,
+des arbres — et les place lui-même. Les calques sont donc réellement
+indépendants, et la disposition se change en éditant deux listes de
+coordonnées.
+
+| Calque | Contenu | Fusion |
+|---|---|---|
+| `00_sol` | tuile de sol pavée | normal |
+| `01_ombres` | ombres portées de tous les éléments | **Multiply** |
+| `02_rochers` | rochers, souches, troncs, fougères | normal |
+| `03_arbres_arriere` | rideau d'arbres du fond | normal |
+| `04_arbres_avant` | arbres du premier plan | normal |
+| `05_particules` | pollen en dérive | **Addition** |
+| `06_rais` | rais de lumière | **Addition** |
+| `07_eclairage` | vignette | **Multiply** |
+
+Le sol est rendu répétable par fondu croisé sur ses bords avant pavage : sans
+ce fondu, la répétition ferait apparaître une grille très visible.
+
+### Ce qui a coincé
+
+Ma première découpe des planches d'éléments cherchait des colonnes noires
+entre les objets. Elle n'a isolé qu'un seul arbre sur huit : la planche est
+sortie sur fond **blanc**, et sur **deux rangées**. Une projection en colonnes
+ne peut rien voir dans ce cas. Remplacée par `pixelisation.decouper_objets`,
+qui détecte la couleur de fond aux quatre coins puis étiquette les composantes
+connexes par parcours en largeur. Huit arbres et huit accessoires isolés,
+quelle que soit la disposition de la planche.
