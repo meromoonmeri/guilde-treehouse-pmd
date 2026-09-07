@@ -220,3 +220,44 @@ def rayon_tete(dossier, anims=None):
     if not vals:
         return 0.16 * tc
     return float(min(max(float(np.median(vals)), 0.10 * tc), 0.24 * tc))
+
+
+def biais_direction(dossier, anims=None):
+    """
+    Biais de projection du marqueur de tête, direction par direction.
+
+    Le marqueur noir est la tête en 3D projetée : de face elle penche vers la
+    caméra et descend, de dos elle s'éloigne et remonte (Salamèche : y=16 en S,
+    y=8 en N, sur la même image). Le cou, lui, reste sur l'axe du corps et ne
+    subit pas ce basculement.
+
+    On mesure l'écart de chaque direction à la moyenne des huit directions
+    **de la même image**. Recentrer image par image est indispensable : sur des
+    Idle très mobiles (Kaiminus, dont la tête monte de 24 à 2 px), une moyenne
+    globale annulerait complètement le signal recherché.
+    """
+    if anims is None:
+        _, anims = lire_animdata(dossier)
+    a = next(x for x in anims if x["nom"] == "Idle" and not x["copie_de"])
+    anim, off = charger_planche(dossier, "Idle")
+    if anim is None:
+        return [(0.0, 0.0)] * 8
+    w, h = a["w"], a["h"]
+    rows, cols = anim.shape[0] // h, anim.shape[1] // w
+    if rows != 8:
+        return [(0.0, 0.0)] * 8
+    ecarts = [[] for _ in range(8)]
+    for c in range(cols):
+        pts = []
+        for d in range(8):
+            mk = F.marqueurs_case(off, c * w, d * h, w, h)
+            pts.append(mk["tete"])
+        val = [p for p in pts if p]
+        if len(val) < 8:
+            continue
+        mx = float(np.mean([p[0] for p in val]))
+        my = float(np.mean([p[1] for p in val]))
+        for d in range(8):
+            ecarts[d].append((pts[d][0] - mx, pts[d][1] - my))
+    return [(float(np.mean([e[0] for e in ed])), float(np.mean([e[1] for e in ed])))
+            if ed else (0.0, 0.0) for ed in ecarts]

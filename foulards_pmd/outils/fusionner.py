@@ -20,7 +20,7 @@ def main(filtre=None):
     os.makedirs(OUT, exist_ok=True)
     n = 0
     for d in sorted(os.listdir(CAL)):
-        pid = d.split("_")[0]
+        pid = d.split("_")[0].replace("-", "/")
         if filtre and pid not in filtre:
             continue
         src = os.path.join(P.DOS_SPRITE, pid)

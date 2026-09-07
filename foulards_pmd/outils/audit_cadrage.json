@@ -1,0 +1,2992 @@
+{
+ "tolerances": {
+  "releve_epaule": [
+   -0.02,
+   0.26
+  ],
+  "largeur_rel_f": [
+   0.28,
+   0.8
+  ],
+  "largeur_rel_d": [
+   0.18,
+   0.64
+  ],
+  "largeur_rel_p": [
+   0.1,
+   0.46
+  ],
+  "hors_corps": [
+   0.0,
+   0.16
+  ],
+  "sous_pieds": [
+   -99.0,
+   1.5
+  ],
+  "ecart_tete": [
+   0.0,
+   0.3
+  ]
+ },
+ "pokemon": {
+  "0001": {
+   "nom": "Bulbizarre",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.141,
+     "hauteur_rel": 0.752,
+     "largeur_rel": 0.412,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.662,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.108,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.145,
+     "hauteur_rel": 0.615,
+     "largeur_rel": 0.19,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.167,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.08,
+     "hauteur_rel": 0.516,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.167,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": -0.051,
+     "hauteur_rel": 0.319,
+     "largeur_rel": 0.412,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": [
+      "hauteur -0.051"
+     ]
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.08,
+     "hauteur_rel": 0.516,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.167,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.145,
+     "hauteur_rel": 0.615,
+     "largeur_rel": 0.19,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.167,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.662,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.108,
+     "defauts": []
+    }
+   ]
+  },
+  "0002": {
+   "nom": "Herbizarre",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.151,
+     "hauteur_rel": 0.73,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.118,
+     "hauteur_rel": 0.644,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.114,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.129,
+     "hauteur_rel": 0.594,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.185,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.049,
+     "hauteur_rel": 0.443,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.087,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": -0.003,
+     "hauteur_rel": 0.425,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.049,
+     "hauteur_rel": 0.443,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.087,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.129,
+     "hauteur_rel": 0.594,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.185,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.118,
+     "hauteur_rel": 0.644,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.114,
+     "defauts": []
+    }
+   ]
+  },
+  "0003": {
+   "nom": "Florizarre",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.662,
+     "largeur_rel": 0.44,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.138,
+     "hauteur_rel": 0.705,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.135,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.667,
+     "largeur_rel": 0.222,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.204,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.068,
+     "hauteur_rel": 0.51,
+     "largeur_rel": 0.32,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.13,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.038,
+     "hauteur_rel": 0.476,
+     "largeur_rel": 0.44,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.068,
+     "hauteur_rel": 0.51,
+     "largeur_rel": 0.32,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.13,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.667,
+     "largeur_rel": 0.222,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.204,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.138,
+     "hauteur_rel": 0.705,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.135,
+     "defauts": []
+    }
+   ]
+  },
+  "0004": {
+   "nom": "Salamèche",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.09,
+     "hauteur_rel": 0.585,
+     "largeur_rel": 0.421,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.013,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.103,
+     "hauteur_rel": 0.502,
+     "largeur_rel": 0.316,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.053,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.163,
+     "hauteur_rel": 0.495,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.163,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.431,
+     "largeur_rel": 0.316,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.066,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.149,
+     "hauteur_rel": 0.389,
+     "largeur_rel": 0.6,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.017,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.431,
+     "largeur_rel": 0.316,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.092,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.163,
+     "hauteur_rel": 0.495,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.138,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.103,
+     "hauteur_rel": 0.502,
+     "largeur_rel": 0.316,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.079,
+     "defauts": []
+    }
+   ]
+  },
+  "0005": {
+   "nom": "Reptincel",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.047,
+     "hauteur_rel": 0.71,
+     "largeur_rel": 0.444,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.002,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.048,
+     "hauteur_rel": 0.654,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.186,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.508,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.139,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.17,
+     "hauteur_rel": 0.385,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.094,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.119,
+     "hauteur_rel": 0.421,
+     "largeur_rel": 0.5,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.044,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.17,
+     "hauteur_rel": 0.385,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.09,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.508,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.179,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.048,
+     "hauteur_rel": 0.654,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.182,
+     "defauts": []
+    }
+   ]
+  },
+  "0006": {
+   "nom": "Dracaufeu",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.062,
+     "hauteur_rel": 0.493,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.015,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.08,
+     "hauteur_rel": 0.512,
+     "largeur_rel": 0.28,
+     "hors_corps": 0.0,
+     "sous_pieds": -8.0,
+     "ecart_tete": 0.114,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.081,
+     "hauteur_rel": 0.456,
+     "largeur_rel": 0.207,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.219,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.073,
+     "hauteur_rel": 0.335,
+     "largeur_rel": 0.241,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.124,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.126,
+     "hauteur_rel": 0.307,
+     "largeur_rel": 0.185,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.015,
+     "defauts": [
+      "largeur 0.185"
+     ]
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.073,
+     "hauteur_rel": 0.335,
+     "largeur_rel": 0.207,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.126,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.081,
+     "hauteur_rel": 0.456,
+     "largeur_rel": 0.207,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.212,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.08,
+     "hauteur_rel": 0.512,
+     "largeur_rel": 0.28,
+     "hors_corps": 0.0,
+     "sous_pieds": -8.0,
+     "ecart_tete": 0.106,
+     "defauts": []
+    }
+   ]
+  },
+  "0007": {
+   "nom": "Carapuce",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.046,
+     "hauteur_rel": 0.593,
+     "largeur_rel": 0.529,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.087,
+     "hauteur_rel": 0.57,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.548,
+     "largeur_rel": 0.174,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.152,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.114,
+     "hauteur_rel": 0.458,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.075,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.107,
+     "hauteur_rel": 0.437,
+     "largeur_rel": 0.6,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.114,
+     "hauteur_rel": 0.458,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.075,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.548,
+     "largeur_rel": 0.174,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.152,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.087,
+     "hauteur_rel": 0.57,
+     "largeur_rel": 0.3,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    }
+   ]
+  },
+  "0008": {
+   "nom": "Carabaffe",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.122,
+     "hauteur_rel": 0.528,
+     "largeur_rel": 0.455,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.045,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.135,
+     "hauteur_rel": 0.559,
+     "largeur_rel": 0.444,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.139,
+     "hauteur_rel": 0.531,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.237,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.087,
+     "hauteur_rel": 0.446,
+     "largeur_rel": 0.318,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.068,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.073,
+     "hauteur_rel": 0.434,
+     "largeur_rel": 0.5,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.074,
+     "hauteur_rel": 0.436,
+     "largeur_rel": 0.444,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.153,
+     "hauteur_rel": 0.541,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.225,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.549,
+     "largeur_rel": 0.381,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.095,
+     "defauts": []
+    }
+   ]
+  },
+  "0009": {
+   "nom": "Tortank",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.133,
+     "hauteur_rel": 0.577,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.015,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.119,
+     "hauteur_rel": 0.526,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.163,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.135,
+     "hauteur_rel": 0.434,
+     "largeur_rel": 0.222,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.245,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.063,
+     "hauteur_rel": 0.329,
+     "largeur_rel": 0.348,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.141,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.054,
+     "hauteur_rel": 0.339,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.01,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.063,
+     "hauteur_rel": 0.329,
+     "largeur_rel": 0.304,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.153,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.135,
+     "hauteur_rel": 0.434,
+     "largeur_rel": 0.222,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.237,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.119,
+     "hauteur_rel": 0.526,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.154,
+     "defauts": []
+    }
+   ]
+  },
+  "0152": {
+   "nom": "Germignon",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.136,
+     "hauteur_rel": 0.831,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.002,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.818,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.112,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.127,
+     "hauteur_rel": 0.777,
+     "largeur_rel": 0.19,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.215,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.117,
+     "hauteur_rel": 0.629,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.147,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.093,
+     "hauteur_rel": 0.651,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.011,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.117,
+     "hauteur_rel": 0.629,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.145,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.127,
+     "hauteur_rel": 0.777,
+     "largeur_rel": 0.19,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.213,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.818,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.11,
+     "defauts": []
+    }
+   ]
+  },
+  "0153": {
+   "nom": "Macronium",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.178,
+     "hauteur_rel": 0.828,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.003,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.077,
+     "hauteur_rel": 0.871,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.148,
+     "hauteur_rel": 0.809,
+     "largeur_rel": 0.179,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.212,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.094,
+     "hauteur_rel": 0.658,
+     "largeur_rel": 0.227,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.143,
+     "hauteur_rel": 0.702,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.003,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.094,
+     "hauteur_rel": 0.658,
+     "largeur_rel": 0.227,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.116,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.148,
+     "hauteur_rel": 0.809,
+     "largeur_rel": 0.214,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.217,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.077,
+     "hauteur_rel": 0.871,
+     "largeur_rel": 0.227,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.139,
+     "defauts": []
+    }
+   ]
+  },
+  "0154": {
+   "nom": "Méganium",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.155,
+     "hauteur_rel": 0.837,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.101,
+     "hauteur_rel": 0.851,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.115,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.177,
+     "hauteur_rel": 0.791,
+     "largeur_rel": 0.207,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.207,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.119,
+     "hauteur_rel": 0.702,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.149,
+     "hauteur_rel": 0.728,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.119,
+     "hauteur_rel": 0.702,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.177,
+     "hauteur_rel": 0.791,
+     "largeur_rel": 0.207,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.207,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.101,
+     "hauteur_rel": 0.851,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.156,
+     "defauts": []
+    }
+   ]
+  },
+  "0155": {
+   "nom": "Héricendre",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.094,
+     "hauteur_rel": 0.656,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.09,
+     "hauteur_rel": 0.567,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.094,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.138,
+     "hauteur_rel": 0.517,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.132,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.117,
+     "hauteur_rel": 0.401,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.062,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.148,
+     "hauteur_rel": 0.432,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.117,
+     "hauteur_rel": 0.401,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.062,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.138,
+     "hauteur_rel": 0.517,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.132,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.09,
+     "hauteur_rel": 0.567,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.094,
+     "defauts": []
+    }
+   ]
+  },
+  "0156": {
+   "nom": "Feurisson",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.077,
+     "hauteur_rel": 0.863,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": [
+      "largeur 0.2"
+     ]
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.029,
+     "hauteur_rel": 0.809,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.137,
+     "defauts": [
+      "largeur 0.158"
+     ]
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.014,
+     "hauteur_rel": 0.788,
+     "largeur_rel": 0.208,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.192,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.063,
+     "hauteur_rel": 0.489,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.158,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.044,
+     "hauteur_rel": 0.558,
+     "largeur_rel": 0.538,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.063,
+     "hauteur_rel": 0.489,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.158,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.014,
+     "hauteur_rel": 0.788,
+     "largeur_rel": 0.208,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.192,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.029,
+     "hauteur_rel": 0.809,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.137,
+     "defauts": [
+      "largeur 0.158"
+     ]
+    }
+   ]
+  },
+  "0157": {
+   "nom": "Typhlosion",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.028,
+     "hauteur_rel": 0.602,
+     "largeur_rel": 0.579,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.081,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.102,
+     "hauteur_rel": 0.518,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -10.0,
+     "ecart_tete": 0.027,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.137,
+     "hauteur_rel": 0.41,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.099,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.192,
+     "hauteur_rel": 0.395,
+     "largeur_rel": 0.35,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.064,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.226,
+     "hauteur_rel": 0.41,
+     "largeur_rel": 0.579,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.09,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.192,
+     "hauteur_rel": 0.395,
+     "largeur_rel": 0.35,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.061,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.096,
+     "hauteur_rel": 0.443,
+     "largeur_rel": 0.13,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.096,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.102,
+     "hauteur_rel": 0.518,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -10.0,
+     "ecart_tete": 0.023,
+     "defauts": []
+    }
+   ]
+  },
+  "0158": {
+   "nom": "Kaiminus",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": -0.034,
+     "hauteur_rel": 0.612,
+     "largeur_rel": 0.5,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.026,
+     "defauts": [
+      "hauteur -0.034"
+     ]
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.033,
+     "hauteur_rel": 0.589,
+     "largeur_rel": 0.421,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.063,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.122,
+     "hauteur_rel": 0.509,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.148,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.155,
+     "hauteur_rel": 0.427,
+     "largeur_rel": 0.444,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.051,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.212,
+     "hauteur_rel": 0.272,
+     "largeur_rel": 0.556,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.045,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.155,
+     "hauteur_rel": 0.427,
+     "largeur_rel": 0.444,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.045,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.122,
+     "hauteur_rel": 0.509,
+     "largeur_rel": 0.217,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.144,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.033,
+     "hauteur_rel": 0.589,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.084,
+     "defauts": []
+    }
+   ]
+  },
+  "0159": {
+   "nom": "Crocrodil",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.081,
+     "hauteur_rel": 0.533,
+     "largeur_rel": 0.455,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.011,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.094,
+     "hauteur_rel": 0.499,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -8.0,
+     "ecart_tete": 0.087,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.151,
+     "hauteur_rel": 0.448,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.15,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.388,
+     "largeur_rel": 0.381,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.107,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.156,
+     "hauteur_rel": 0.38,
+     "largeur_rel": 0.5,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.013,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.105,
+     "hauteur_rel": 0.39,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.083,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.164,
+     "hauteur_rel": 0.458,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.15,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.107,
+     "hauteur_rel": 0.488,
+     "largeur_rel": 0.35,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.087,
+     "defauts": []
+    }
+   ]
+  },
+  "0160": {
+   "nom": "Aligatueur",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.065,
+     "hauteur_rel": 0.411,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -10.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.153,
+     "hauteur_rel": 0.312,
+     "largeur_rel": 0.345,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.103,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.34,
+     "largeur_rel": 0.219,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.198,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.335,
+     "largeur_rel": 0.417,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.118,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.191,
+     "hauteur_rel": 0.257,
+     "largeur_rel": 0.357,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.335,
+     "largeur_rel": 0.417,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.118,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.34,
+     "largeur_rel": 0.219,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.198,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.153,
+     "hauteur_rel": 0.312,
+     "largeur_rel": 0.345,
+     "hors_corps": 0.0,
+     "sous_pieds": -14.0,
+     "ecart_tete": 0.103,
+     "defauts": []
+    }
+   ]
+  },
+  "0252": {
+   "nom": "Arcko",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.058,
+     "hauteur_rel": 0.444,
+     "largeur_rel": 0.429,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.048,
+     "hauteur_rel": 0.527,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.053,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.196,
+     "hauteur_rel": 0.603,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.053,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.11,
+     "hauteur_rel": 0.429,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.075,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.095,
+     "hauteur_rel": 0.371,
+     "largeur_rel": 0.524,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.11,
+     "hauteur_rel": 0.429,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.075,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.206,
+     "hauteur_rel": 0.595,
+     "largeur_rel": 0.158,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.053,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.048,
+     "hauteur_rel": 0.527,
+     "largeur_rel": 0.368,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.053,
+     "defauts": []
+    }
+   ]
+  },
+  "0253": {
+   "nom": "Massko",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.096,
+     "hauteur_rel": 0.463,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.44,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.172,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.173,
+     "hauteur_rel": 0.406,
+     "largeur_rel": 0.24,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.245,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.115,
+     "hauteur_rel": 0.296,
+     "largeur_rel": 0.292,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.151,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.116,
+     "hauteur_rel": 0.302,
+     "largeur_rel": 0.308,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.115,
+     "hauteur_rel": 0.296,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -6.0,
+     "ecart_tete": 0.161,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.173,
+     "hauteur_rel": 0.406,
+     "largeur_rel": 0.24,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.235,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.44,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.161,
+     "defauts": []
+    }
+   ]
+  },
+  "0254": {
+   "nom": "Jungko",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.554,
+     "largeur_rel": 0.36,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.103,
+     "hauteur_rel": 0.509,
+     "largeur_rel": 0.292,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.13,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.093,
+     "hauteur_rel": 0.459,
+     "largeur_rel": 0.143,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.201,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.124,
+     "hauteur_rel": 0.394,
+     "largeur_rel": 0.259,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.134,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.174,
+     "hauteur_rel": 0.326,
+     "largeur_rel": 0.391,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.124,
+     "hauteur_rel": 0.394,
+     "largeur_rel": 0.259,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.093,
+     "hauteur_rel": 0.459,
+     "largeur_rel": 0.179,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.21,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.487,
+     "largeur_rel": 0.292,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.12,
+     "defauts": []
+    }
+   ]
+  },
+  "0255": {
+   "nom": "Poussifeu",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.069,
+     "hauteur_rel": 0.661,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.1,
+     "hauteur_rel": 0.662,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.059,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.62,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.118,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.217,
+     "hauteur_rel": 0.528,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.056,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.199,
+     "hauteur_rel": 0.601,
+     "largeur_rel": 0.385,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.217,
+     "hauteur_rel": 0.528,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.056,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.131,
+     "hauteur_rel": 0.62,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.118,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.1,
+     "hauteur_rel": 0.662,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.059,
+     "defauts": []
+    }
+   ]
+  },
+  "0256": {
+   "nom": "Galifeu",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": -0.05,
+     "hauteur_rel": 0.876,
+     "largeur_rel": 0.19,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.071,
+     "defauts": [
+      "hauteur -0.05",
+      "largeur 0.19"
+     ]
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.044,
+     "hauteur_rel": 0.728,
+     "largeur_rel": 0.438,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.062,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.733,
+     "largeur_rel": 0.286,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.107,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.693,
+     "largeur_rel": 0.467,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.067,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.15,
+     "hauteur_rel": 0.721,
+     "largeur_rel": 0.429,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.693,
+     "largeur_rel": 0.467,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.067,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.733,
+     "largeur_rel": 0.286,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.107,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.044,
+     "hauteur_rel": 0.728,
+     "largeur_rel": 0.438,
+     "hors_corps": 0.0,
+     "sous_pieds": -4.0,
+     "ecart_tete": 0.062,
+     "defauts": []
+    }
+   ]
+  },
+  "0257": {
+   "nom": "Braségali",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.098,
+     "hauteur_rel": 0.563,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -7.0,
+     "ecart_tete": 0.014,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.53,
+     "largeur_rel": 0.391,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.092,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.13,
+     "hauteur_rel": 0.485,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": -8.0,
+     "ecart_tete": 0.21,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.057,
+     "hauteur_rel": 0.49,
+     "largeur_rel": 0.348,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.071,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.114,
+     "hauteur_rel": 0.479,
+     "largeur_rel": 0.522,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.057,
+     "hauteur_rel": 0.49,
+     "largeur_rel": 0.391,
+     "hors_corps": 0.0,
+     "sous_pieds": -5.0,
+     "ecart_tete": 0.082,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.13,
+     "hauteur_rel": 0.485,
+     "largeur_rel": 0.273,
+     "hors_corps": 0.0,
+     "sous_pieds": -8.0,
+     "ecart_tete": 0.199,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.53,
+     "largeur_rel": 0.391,
+     "hors_corps": 0.0,
+     "sous_pieds": -9.0,
+     "ecart_tete": 0.082,
+     "defauts": []
+    }
+   ]
+  },
+  "0258": {
+   "nom": "Gobou",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.069,
+     "hauteur_rel": 0.872,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.778,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.151,
+     "hauteur_rel": 0.761,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.158,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.122,
+     "hauteur_rel": 0.707,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.094,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.123,
+     "hauteur_rel": 0.695,
+     "largeur_rel": 0.294,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.122,
+     "hauteur_rel": 0.707,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.094,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.151,
+     "hauteur_rel": 0.761,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.158,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.134,
+     "hauteur_rel": 0.778,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.111,
+     "defauts": []
+    }
+   ]
+  },
+  "0259": {
+   "nom": "Flobio",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": -0.057,
+     "hauteur_rel": 0.949,
+     "largeur_rel": 0.474,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.105,
+     "defauts": [
+      "hauteur -0.057"
+     ]
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.057,
+     "hauteur_rel": 0.827,
+     "largeur_rel": 0.412,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.059,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.783,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.188,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.152,
+     "hauteur_rel": 0.769,
+     "largeur_rel": 0.412,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.059,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.148,
+     "hauteur_rel": 0.749,
+     "largeur_rel": 0.474,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.152,
+     "hauteur_rel": 0.769,
+     "largeur_rel": 0.412,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.059,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.783,
+     "largeur_rel": 0.312,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.188,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": -0.061,
+     "hauteur_rel": 0.927,
+     "largeur_rel": 0.176,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.118,
+     "defauts": [
+      "hauteur -0.061",
+      "largeur 0.176"
+     ]
+    }
+   ]
+  },
+  "0260": {
+   "nom": "Laggron",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.12,
+     "hauteur_rel": 0.722,
+     "largeur_rel": 0.417,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.005,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.126,
+     "hauteur_rel": 0.729,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.137,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.104,
+     "hauteur_rel": 0.641,
+     "largeur_rel": 0.179,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.177,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.548,
+     "largeur_rel": 0.28,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.132,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.141,
+     "hauteur_rel": 0.457,
+     "largeur_rel": 0.364,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.006,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.121,
+     "hauteur_rel": 0.548,
+     "largeur_rel": 0.28,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.122,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.104,
+     "hauteur_rel": 0.641,
+     "largeur_rel": 0.179,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.168,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.126,
+     "hauteur_rel": 0.729,
+     "largeur_rel": 0.292,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.148,
+     "defauts": []
+    }
+   ]
+  },
+  "1024": {
+   "nom": "Terapagos",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.061,
+     "hauteur_rel": 0.86,
+     "largeur_rel": 0.333,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.108,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.145,
+     "hauteur_rel": 0.712,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": -3.0,
+     "ecart_tete": 0.125,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.176,
+     "hauteur_rel": 0.696,
+     "largeur_rel": 0.154,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.149,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.146,
+     "hauteur_rel": 0.651,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.076,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.052,
+     "hauteur_rel": 0.615,
+     "largeur_rel": 0.4,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.008,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.146,
+     "hauteur_rel": 0.651,
+     "largeur_rel": 0.278,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.09,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.176,
+     "hauteur_rel": 0.696,
+     "largeur_rel": 0.192,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.139,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.033,
+     "hauteur_rel": 0.837,
+     "largeur_rel": 0.263,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.138,
+     "defauts": []
+    }
+   ]
+  },
+  "1024/0001": {
+   "nom": "Terapagos_Terastal",
+   "mesures": [
+    {
+     "dir": "S",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.085,
+     "hauteur_rel": 0.694,
+     "largeur_rel": 0.44,
+     "hors_corps": 0.0,
+     "sous_pieds": -2.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "SE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.125,
+     "hauteur_rel": 0.661,
+     "largeur_rel": 0.258,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.145,
+     "defauts": []
+    },
+    {
+     "dir": "E",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.139,
+     "hauteur_rel": 0.581,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.229,
+     "defauts": []
+    },
+    {
+     "dir": "NE",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.109,
+     "hauteur_rel": 0.328,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.172,
+     "defauts": []
+    },
+    {
+     "dir": "N",
+     "profil": false,
+     "diag": false,
+     "releve_epaule": 0.052,
+     "hauteur_rel": 0.219,
+     "largeur_rel": 0.44,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.0,
+     "defauts": []
+    },
+    {
+     "dir": "NO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.109,
+     "hauteur_rel": 0.328,
+     "largeur_rel": 0.25,
+     "hors_corps": 0.0,
+     "sous_pieds": 0.0,
+     "ecart_tete": 0.172,
+     "defauts": []
+    },
+    {
+     "dir": "O",
+     "profil": true,
+     "diag": false,
+     "releve_epaule": 0.139,
+     "hauteur_rel": 0.581,
+     "largeur_rel": 0.2,
+     "hors_corps": 0.0,
+     "sous_pieds": 1.0,
+     "ecart_tete": 0.229,
+     "defauts": []
+    },
+    {
+     "dir": "SO",
+     "profil": false,
+     "diag": true,
+     "releve_epaule": 0.125,
+     "hauteur_rel": 0.661,
+     "largeur_rel": 0.258,
+     "hors_corps": 0.0,
+     "sous_pieds": -1.0,
+     "ecart_tete": 0.145,
+     "defauts": []
+    }
+   ]
+  }
+ },
+ "resume": {
+  "vues": 232,
+  "hors_tolerance": 9,
+  "taux_conforme": 96.1,
+  "par_defaut": {
+   "hauteur": 5,
+   "largeur": 6
+  }
+ }
+}

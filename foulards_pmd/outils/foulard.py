@@ -39,7 +39,7 @@ DIRECTIONS = [
 NOMS_DIRECTIONS = ["S", "SE", "E", "NE", "N", "NO", "O", "SO"]
 
 # Raccourci apparent du col selon la direction (vue de profil = plus étroit).
-RACCOURCI = [1.00, 0.86, 0.72, 0.86, 1.00, 0.86, 0.72, 0.86]
+RACCOURCI = [1.00, 0.74, 0.38, 0.74, 1.00, 0.74, 0.38, 0.74]
 
 MARQUEURS = {
     "tete": (0, 0, 0),
@@ -89,6 +89,7 @@ PALETTES = {
     "vert_lierre":        (0x46, 0xA5, 0x45),
     "prune_profonde":     (0x7A, 0x2E, 0x5C),
     "ocre_parchemin":     (0xC8, 0x8A, 0x3C),
+    "grenat_ancien":      (0xA8, 0x2B, 0x40),
 }
 
 # Léger avantage aux couleurs emblématiques de la franchise.
@@ -210,16 +211,16 @@ def largeur_ligne(masque, y, x):
     return None if s is None else (s[1] - s[0] + 1, s)
 
 
-def point_cou(masque, mk, reglage, tc):
+def point_cou(masque, mk, reglage, tc, direction=0):
     """
     Position du cou dans la case.
 
-    Modèle : le marqueur noir d'Offsets.png est la position 3D de la tête
-    projetée à l'écran (vérifié : de face elle descend, de dos elle remonte).
-    Le cou se trouve sous la tête dans l'espace 3D, ce qui se projette en
-    « plus bas à l'écran » quelle que soit la direction. On ajoute une part
-    du vecteur tête -> centre du corps pour les Pokémon à port de tête avancé
-    (quadrupèdes), puis on affine sur la ligne où la silhouette se resserre.
+    Le marqueur noir d'Offsets.png est la tête en 3D projetée : elle bascule
+    fortement selon la direction (Salamèche : y=16 de face, y=8 de dos). Le cou
+    n'a pas ce basculement, il reste sur l'axe du corps. On retire donc le biais
+    de projection propre à la direction (mesuré par pipeline.biais_direction),
+    ce qui ramène l'ancre sur l'axe tout en gardant le mouvement réel de la
+    tête image par image, puis on descend d'une fraction de la taille du corps.
     """
     tete, centre = mk.get("tete"), mk.get("centre")
     if tete is None and centre is None:
@@ -229,13 +230,30 @@ def point_cou(masque, mk, reglage, tc):
     if centre is None:
         centre = tete
 
-    # rayon de tête mesuré sur l'espèce (cf. pipeline.rayon_tete)
-    rt = reglage.get("rayon_tete", 0.20 * tc)
-    b_axe = reglage.get("vers_corps", 0.18)     # correction de profondeur
+    bi = reglage.get("biais") or [(0.0, 0.0)] * 8
+    bx0, by0 = bi[direction % 8] if len(bi) == 8 else (0.0, 0.0)
 
-    bx = tete[0] + b_axe * (centre[0] - tete[0]) + reglage.get("dx", 0.0)
-    by = (tete[1] + rt * reglage.get("descente", 1.0)
-          + b_axe * (centre[1] - tete[1]) + reglage.get("dy", 0.0))
+    ax = tete[0] - bx0
+    ay = tete[1] - by0
+
+    fx, fy = DIRECTIONS[direction % 8]
+    av = reglage.get("avance", 0.11) * tc
+
+    # Deuxième ancre, indépendante : la ligne d'épaules, milieu des deux
+    # marqueurs de mains. Elle suit l'animation image par image et reste
+    # juste sous le cou, y compris chez les Pokémon à très grosse tête.
+    cou_x = ax
+    cou_y = ay + reglage.get("descente_cou", 0.10) * tc * reglage.get("descente", 1.0)
+    mg, md = mk.get("main_g"), mk.get("main_d")
+    w_ep = reglage.get("poids_epaules", 0.45)
+    if mg is not None and md is not None and w_ep > 0:
+        ep_x = (mg[0] + md[0]) / 2.0
+        ep_y = (mg[1] + md[1]) / 2.0 - reglage.get("releve_epaules", 0.13) * tc
+        cou_x = cou_x * (1 - w_ep * 0.7) + ep_x * (w_ep * 0.7)
+        cou_y = cou_y * (1 - w_ep) + ep_y * w_ep
+
+    bx = cou_x + fx * av + reglage.get("dx", 0.0)
+    by = cou_y + fy * av * 0.40 + reglage.get("dy", 0.0)
 
     fen = int(reglage.get("fenetre_cou", 2))
     meilleur = None
@@ -244,7 +262,7 @@ def point_cou(masque, mk, reglage, tc):
         if r is None:
             continue
         lg, seg = r
-        note = lg + 2.6 * abs(dy)
+        note = lg + 3.2 * abs(dy)
         if meilleur is None or note < meilleur[0]:
             meilleur = (note, by + dy, seg)
     if meilleur is None:
@@ -265,7 +283,9 @@ class Toile:
         self.px = np.zeros((h, w, 4), dtype=np.uint8)
         self.z = np.full((h, w), -1, dtype=np.int16)
 
-    def poser(self, x, y, couleur, z=0):
+    def poser(self, x, y, couleur, z=0, y_max=None):
+        if y_max is not None and y > y_max:
+            return
         x, y = int(round(x)), int(round(y))
         if 0 <= x < self.w and 0 <= y < self.h and z >= self.z[y, x]:
             self.px[y, x, 0:3] = couleur
@@ -273,12 +293,17 @@ class Toile:
             self.z[y, x] = z
 
 
+def _signe(v):
+    return 1.0 if v > 0 else (-1.0 if v < 0 else 0.0)
+
+
 def _norm(vx, vy):
     n = math.hypot(vx, vy)
     return (vx / n, vy / n) if n > 1e-6 else (0.0, 1.0)
 
 
-def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_corps):
+def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_corps,
+                     infos=None):
     """
     Dessine le foulard d'une case et renvoie la toile RGBA (transparente ailleurs).
 
@@ -296,10 +321,12 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
     y_sol = float(lignes[-1]) if len(lignes) else h - 1.0
 
     tc = taille_corps * reglage.get("echelle", 1.0)
-    cou = point_cou(masque, mk, reglage, tc)
+    cou = point_cou(masque, mk, reglage, tc, direction)
     if cou is None:
         return toile.px
     nx, ny, x0, x1 = cou
+    if infos is not None:
+        infos.update(nx=nx, ny=ny, run=(x0, x1), y_sol=y_sol)
 
     fx, fy = DIRECTIONS[direction % 8]
 
@@ -321,13 +348,17 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
     demi = lc / 2.0 * RACCOURCI[direction % 8] * reglage.get("largeur", 1.0)
     demi = min(demi, (x1 - x0 + 1) / 2.0)
     demi = max(demi, 1.5)
+    prof = abs(fx)
     cx = (x0 + x1) / 2.0
-    bx = nx * 0.55 + cx * 0.45
+    w_cx = 0.45 * (1.0 - prof)
+    bx = nx * (1.0 - w_cx) + cx * w_cx
 
-    amp_arc = 0.55 + 0.45 * k          # creux/bombé du collier
+    amp_arc = (0.9 + 0.55 * ep) * abs(fy) + 0.35   # creux de face, bombé de dos
 
     contour, ombre, base, lumiere = (pal["contour"], pal["ombre"],
                                      pal["base"], pal["lumiere"])
+    if infos is not None:
+        infos.update(bx=bx, demi=demi, ep=ep, k=k)
 
     # --- bandeau, plaqué sur la silhouette ----------------------------------
     xd, xf = int(math.floor(bx - demi)), int(math.ceil(bx + demi))
@@ -337,7 +368,7 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
         u = (x - bx) / max(demi, 1e-6)
         if abs(u) > 1.02:
             continue
-        arc = -fy * (u * u - 0.36) * amp_arc + fx * u * 0.22 * amp_arc
+        arc = -_signe(fy) * (u * u - 0.36) * amp_arc + fx * u * 0.45
         # les extrémités se replient légèrement vers le bas
         ytop = ny + arc - (ep - 1) / 2.0
         bord = abs(u) > 0.80
@@ -366,22 +397,31 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
     vis_noeud = (1.0 + fy) / 2.0                       # 1 de face, 0 de dos
     if vis_noeud > 0.20:
         rn = 1 if k < 1.35 else (2 if k < 2.2 else 3)
-        kx = bx + fx * demi * 0.55 + (0.0 if abs(fx) < 0.3 else fx * 0.5)
-        ky = ny + fy * (ep * 0.45) + ep * 0.45 + rn * 0.25
-        for dy in range(-rn, rn + 1):
-            for dx in range(-rn, rn + 1):
-                if abs(dx) + abs(dy) > rn + max(0, rn - 1):
-                    continue
-                x, y = int(round(kx)) + dx, int(round(ky)) + dy
-                if not (0 <= x < w and 0 <= y < h):
-                    continue
-                if dx < 0 and dy < 0:
-                    c = lumiere
-                elif dx >= rn or dy >= rn:
-                    c = ombre
-                else:
-                    c = base
-                toile.poser(x, y, c, z=5)
+        # le nœud est ramené sur la silhouette : sur les vues de profil, le
+        # point « devant le cou » peut tomber dans le vide à côté du corps.
+        kx = ky = None
+        for t in (1.0, 0.72, 0.45, 0.20, 0.0):
+            cx_ = bx + (fx * demi * 0.55 + (0.0 if abs(fx) < 0.3 else fx * 0.5)) * t
+            cy_ = ny + (fy * (ep * 0.45) + ep * 0.45 + rn * 0.25) * t
+            xi, yi = int(round(cx_)), int(round(cy_))
+            if 0 <= xi < w and 0 <= yi < h and masque[yi, xi]:
+                kx, ky = cx_, cy_
+                break
+        if kx is not None:
+            for dy in range(-rn, rn + 1):
+                for dx in range(-rn, rn + 1):
+                    if abs(dx) + abs(dy) > rn + max(0, rn - 1):
+                        continue
+                    x, y = int(round(kx)) + dx, int(round(ky)) + dy
+                    if not (0 <= x < w and 0 <= y < h) or not masque[y, x]:
+                        continue
+                    if dx < 0 and dy < 0:
+                        c = lumiere
+                    elif dx >= rn or dy >= rn:
+                        c = ombre
+                    else:
+                        c = base
+                    toile.poser(x, y, c, z=5)
 
     # --- pans ---------------------------------------------------------------
     vis_pans = (1.0 - fy) / 2.0                        # 0 de face, 1 de dos
@@ -396,22 +436,25 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
                 fl = math.sin(phase * 2 * math.pi + i * 0.85 + signe) * nrj
                 x = sx + signe * (0.75 + 0.55 * i + fl * 0.35)
                 y = sy + i * 0.75
-                if y > y_sol + 1.0:
+                if y > y_sol + 0.5:
                     break
-                toile.poser(x, y, base if i < lg - 1 else ombre, z=1)
+                toile.poser(x, y, base if i < lg - 1 else ombre, z=1, y_max=y_sol + 1)
+        if infos is not None:
+            infos['bandeau'] = toile.z >= 3
         return toile.px
 
     # Deux rubans distincts qui partent de la nuque, s'écartent en tombant et
     # ondulent d'autant plus que l'animation est vive.
     dx_t, dy_t = _norm(-fx * 0.80, 0.85)
     ang0 = math.atan2(dy_t, dx_t)
-    lg = max(5, int(round((5.5 + 6.5 * nrj) * k * (0.55 + 0.60 * vis_pans))))
+    lg = max(4, int(round((5.5 + 6.5 * nrj) * k
+                          * (0.55 + 0.60 * vis_pans) * (1.0 - 0.30 * prof))))
     ecart = demi * 0.78
     # un pan flotte, mais ne balaie pas le sol sous les pieds
-    marge_sol = 1.0 + 2.6 * nrj * k
+    marge_sol = 0.4 + 1.1 * nrj * k
 
     for signe in (-1, 1):
-        px_ = bx - fx * demi * 0.20 + signe * ecart
+        px_ = bx - fx * (demi * 0.55 + 0.9) + signe * ecart
         py_ = ny + ep * 0.55
         ang = ang0 + signe * 0.26
         for i in range(lg):
@@ -423,11 +466,13 @@ def dessiner_foulard(masque, mk, direction, phase, nrj, pal, reglage, taille_cor
             if py_ > y_sol + marge_sol:
                 break
             perp = (-math.sin(ang), math.cos(ang))
-            toile.poser(px_, py_, base if s < 0.72 else ombre, z=1)
+            toile.poser(px_, py_, base if s < 0.72 else ombre, z=1, y_max=y_sol + 1)
             if k >= 1.55 and s < 0.86:
-                toile.poser(px_ + perp[0], py_ + perp[1], ombre, z=1)
+                toile.poser(px_ + perp[0], py_ + perp[1], ombre, z=1, y_max=y_sol + 1)
             if k >= 2.30 and s < 0.55:
-                toile.poser(px_ - perp[0], py_ - perp[1], lumiere, z=1)
-        toile.poser(px_, py_ + 1, contour, z=0)
+                toile.poser(px_ - perp[0], py_ - perp[1], lumiere, z=1, y_max=y_sol + 1)
+        toile.poser(px_, py_ + 1, contour, z=0, y_max=y_sol + 1)
 
+    if infos is not None:
+        infos['bandeau'] = toile.z >= 3
     return toile.px

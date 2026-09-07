@@ -116,16 +116,25 @@ C'est le constat le plus utile de cet audit. Sur Salamèche au repos, il est à
 penchée vers la caméra se projette plus bas, la tête qui s'éloigne se projette
 plus haut. Le rendu PMD est une vue oblique, et ce marqueur en tient compte.
 
-Conséquence exploitée par le générateur de foulards : le cou est **sous la tête
-dans l'espace 3D**, ce qui se projette en « plus bas à l'écran » quelle que soit
-la direction. La formule retenue est donc
+Conséquence pour tout ce qui doit se fixer au corps (foulard, collier, sac) :
+**ce marqueur ne peut pas servir d'ancre tel quel**, sinon l'accessoire glisse
+vers le ventre en vue de face et remonte sur le crâne en vue de dos.
 
-```
-cou = tête + (0, rayon_de_tête) + 0.18 × (centre − tête)
-```
+Le basculement est purement directionnel : il suffit de mesurer, sur `Idle`,
+l'écart de chaque direction à la moyenne des huit directions **de la même
+image**, puis de le retirer. Recentrer image par image est indispensable : sur
+un `Idle` très mobile comme celui de Kaiminus, dont la tête monte de 24 à 2 px
+au fil de l'animation, une moyenne globale annule complètement le signal
+recherché.
 
-affinée sur la ligne où la silhouette se resserre. Le marqueur rouge/bleu donne
-en prime l'écartement des épaules, qui sert à dimensionner le col.
+Une fois le biais retiré, le marqueur se stabilise sur l'axe du corps
+(Salamèche : 13,5 px dans les huit directions) et redevient une ancre fiable,
+tout en conservant les mouvements réels de la tête d'une image à l'autre.
+
+Les marqueurs rouge et bleu servent de **seconde ancre indépendante** : leur
+milieu donne la ligne d'épaules, qui suit l'animation et reste juste sous le
+cou, y compris chez les Pokémon à très grosse tête. Leur écartement donne en
+prime la carrure, qui sert à dimensionner un col.
 
 Handedness : ligne 0 (de face), rouge est à gauche de l'écran ; ligne 4 (de dos),
 rouge passe à droite. Les deux marqueurs sont donc bien liés au corps et non à

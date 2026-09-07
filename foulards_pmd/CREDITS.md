@@ -9,10 +9,10 @@ reprennent aucun pixel des sprites de SpriteCollab.
 
 ## Sprites d'origine — SpriteCollab (CC BY-NC 4.0)
 
-Les aperçus de `apercus/` et les planches produites par `outils/fusionner.py`
-composent ces foulards par-dessus les sprites de PMDCollab/SpriteCollab.
-Dépôt : https://github.com/PMDCollab/SpriteCollab — licence Creative Commons
-Attribution-NonCommercial 4.0. Usage non commercial, attribution requise.
+Les aperçus de `apercus/` et les planches de `fusionnes/` composent ces foulards
+par-dessus les sprites de PMDCollab/SpriteCollab, et `fusionnes/` en redistribue
+une copie. Dépôt : https://github.com/PMDCollab/SpriteCollab — licence Creative
+Commons Attribution-NonCommercial 4.0. Usage non commercial, attribution requise.
 Les sprites originaux de la série Pokémon Mystery Dungeon appartiennent à
 Spike Chunsoft / The Pokémon Company / Nintendo.
 
@@ -45,5 +45,7 @@ Spike Chunsoft / The Pokémon Company / Nintendo.
 - **0258 Gobou** (Mudkip) — CHUNSOFT
 - **0259 Flobio** (Marshtomp) — CHUNSOFT
 - **0260 Laggron** (Swampert) — CHUNSOFT, <@!356635814668664832>
+- **1024 Terapagos** (Terapagos) — <@!350050109741858829>
+- **1024/0001 Terapagos_Terastal** (Terapagos Terastal Form) — <@!350050109741858829>, <@!702275233125630042>
 
-Total : 8 contributeurs et contributrices crédités.
+Total : 9 contributeurs et contributrices crédités.

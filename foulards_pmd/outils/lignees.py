@@ -22,6 +22,11 @@ LIGNEES = [
      "membres": [("0255","Torchic","Poussifeu"),("0256","Combusken","Galifeu"),("0257","Blaziken","Braségali")]},
     {"cle": "gobou", "type": "Eau",
      "membres": [("0258","Mudkip","Gobou"),("0259","Marshtomp","Flobio"),("0260","Swampert","Laggron")]},
+    # Terapagos (gen 9). Deux formes présentes dans SpriteCollab : Normale et
+    # Terastal. La forme Stellaire n'y a pas encore de sprites.
+    {"cle": "terapagos", "type": "Normal",
+     "membres": [("1024","Terapagos","Terapagos"),
+                 ("1024/0001","Terapagos Terastal Form","Terapagos_Terastal")]},
 ]
 
 # Choix retenu : une couleur par lignée (le foulard est l'identité du membre
@@ -29,6 +34,7 @@ LIGNEES = [
 # en contraste sur les trois stades. Mettre FORCE à None pour laisser le
 # scoring automatique décider.
 FORCE = {
+    "terapagos":  "grenat_ancien",
     "bulbizarre": "rouge_explorateur",
     "salameche":  "azur_ciel",
     "carapuce":   "or_guilde",

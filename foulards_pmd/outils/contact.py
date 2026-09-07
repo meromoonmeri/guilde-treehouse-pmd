@@ -16,6 +16,8 @@ def contexte(pid, reglages):
     tc = P.taille_corps(im, a["w"], a["h"], im.shape[1]//a["w"], im.shape[0]//a["h"])
     r = dict(reglages.get("_defaut", {})); r.update(reglages.get(pid, {}))
     r.setdefault("largeur_cou", P.largeur_cou(d, anims))
+    r.setdefault("rayon_tete", P.rayon_tete(d, anims))
+    r.setdefault("biais", P.biais_direction(d, anims))
     return d, anims, tc, r
 
 def sheet(anim_nom="Idle", dirs=(0,1,2,4,6), S=6, col=0):

@@ -31,6 +31,7 @@ def reglage_pour(pid, reglages, dossier, anims):
     r.update({k: v for k, v in reglages.get(pid, {}).items() if not k.startswith("_")})
     r.setdefault("largeur_cou", P.largeur_cou(dossier, anims))
     r.setdefault("rayon_tete", P.rayon_tete(dossier, anims))
+    r.setdefault("biais", P.biais_direction(dossier, anims))
     return r
 
 
@@ -94,7 +95,7 @@ def main(filtre=None):
             if filtre and pid not in filtre:
                 continue
             src = os.path.join(P.DOS_SPRITE, pid)
-            dst = os.path.join(DOS_CALQUES, f"{pid}_{fr.replace(' ', '_')}")
+            dst = os.path.join(DOS_CALQUES, f"{pid.replace('/', '-')}_{fr.replace(' ', '_')}")
             _, anims = P.lire_animdata(src)
             r = reglage_pour(pid, reglages, src, anims)
             if os.path.isdir(dst):
@@ -107,7 +108,7 @@ def main(filtre=None):
                   f"{info['cases']:>5} cases  ({nom_pal})")
 
             for an in ("Walk", "Idle", "Attack"):
-                g = os.path.join(DOS_APERCUS, f"{pid}_{fr.replace(' ', '_')}_{an}.gif")
+                g = os.path.join(DOS_APERCUS, f"{pid.replace('/', '-')}_{fr.replace(' ', '_')}_{an}.gif")
                 try:
                     gif_animation(src, dst, an, g)
                 except Exception as e:
