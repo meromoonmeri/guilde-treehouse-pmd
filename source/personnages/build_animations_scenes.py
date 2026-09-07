@@ -67,60 +67,175 @@ class Step:
                              # "spin" = direction (d − frame) mod 8, comme Rotate
     sink: int = 0            # lignes retirées par le bas (enfoncement / évanouissement)
     fade_top: int = 0        # lignes retirées par le haut (glissement dans le sol)
+    # --- déformations physiologiques (voir DÉFORMATIONS ci-dessous) ---
+    squash: int = 0          # écrasement : le haut descend de n px, les pieds restent posés
+    stretch: int = 0         # étirement : le haut monte de n px, les pieds restent posés
+    lean: int = 0            # penché : le haut part de n px sur le côté, les pieds restent posés
+    pivot: float = 0.45      # hauteur de la charnière (0 = pieds, 1 = sommet) : le bas de la
+                             # silhouette ne bouge pas, le haut prend tout le mouvement
+
+
+# ---------------------------------------------------------------------------
+# DÉFORMATIONS PHYSIOLOGIQUES
+#
+# Un « Eat » ne se fabrique pas en descendant tout le sprite de 2 px : les pattes restent
+# posées et c'est le buste et la tête qui plongent vers la nourriture. C'est exactement ce
+# que font les animations officielles de Chunsoft. Relevé ligne par ligne sur l'`Eat` de
+# Bayleef #0155 (source de vérité de ce fichier) :
+#
+#     image 0 : lignes 2→19, 188 pixels        (repos)
+#     image 1 : lignes 5→19, 162 pixels        (la tête descend de 3 px, le sol ne bouge pas,
+#                                               et le sprite PERD 26 pixels : il s'écrase)
+#
+# Une simple translation garderait 188 pixels et ferait bouger les pieds : c'est faux.
+# On reproduit donc l'écrasement par un rééchantillonnage vertical de la seule partie haute
+# de la silhouette, la partie basse (pattes, socle) restant intacte — `pivot` fixe la césure.
+# Même principe pour l'étirement (LookUp, DeepBreath) et l'inclinaison (LostBalance, Trip).
+#
+# Aucune couleur n'est créée : on ne fait que supprimer ou dupliquer des lignes/colonnes de
+# pixels existants, donc la palette reste celle du sprite d'origine.
+# ---------------------------------------------------------------------------
+def deform(src: np.ndarray, squash: int, stretch: int, lean: int, pivot: float) -> tuple[np.ndarray, int]:
+    """Déforme une silhouette autour d'une charnière basse. Renvoie (image, décalage du haut).
+
+    `squash` / `stretch` : le haut du corps descend / monte de n pixels, la partie basse ne
+    bouge pas — le corps se tasse ou se tend, comme sur les animations officielles.
+    `lean` : le haut se décale latéralement, proportionnellement à la hauteur.
+    """
+    h, w = src.shape[:2]
+    if h < 4 or (squash == 0 and stretch == 0 and lean == 0):
+        return src, 0
+    cut = max(1, min(h - 1, int(round(h * (1.0 - pivot)))))   # lignes du haut concernées
+    top, bottom = src[:cut], src[cut:]
+    delta = squash - stretch
+    new_h = max(1, cut - delta)
+    # rééchantillonnage au plus proche voisin : on ne fait que garder ou répéter des lignes
+    idx = np.clip((np.arange(new_h) * cut) // max(1, new_h), 0, cut - 1)
+    top = top[idx]
+    if lean:
+        # élargir la boîte des deux côtés puis décaler chaque ligne : un `np.roll` ferait
+        # réapparaître les pixels sortis par le bord opposé, ce qui couperait la silhouette.
+        pad = abs(lean)
+        top = np.pad(top, ((0, 0), (pad, pad), (0, 0)))
+        bottom = np.pad(bottom, ((0, 0), (pad, pad), (0, 0)))
+        rows = []
+        for j in range(new_h):
+            shift = int(round(lean * (new_h - 1 - j) / max(1, new_h - 1)))
+            line = np.zeros_like(top[j])
+            if shift >= 0:
+                line[shift:] = top[j][:top.shape[1] - shift] if shift else top[j]
+            else:
+                line[:shift] = top[j][-shift:]
+            rows.append(line)
+        top = np.stack(rows)
+    return np.concatenate([top, bottom]), delta
+
+
+# Physionomies : quelle charnière et quelle amplitude conviennent au gabarit du Pokémon.
+# Un petit rongeur trapu ne plonge pas comme un grand lutteur : l'amplitude est relative
+# à la hauteur de la silhouette, mesurée sur la case d'attente.
+def physiology(height: int) -> dict:
+    """Amplitudes de déformation adaptées à la taille du sprite au repos."""
+    return {
+        "eat": max(2, round(height * 0.13)),      # plongée de la tête vers le sol
+        "bob": max(1, round(height * 0.07)),      # respiration, hochement
+        "sit": max(3, round(height * 0.22)),      # affaissement assis
+        "look": max(1, round(height * 0.06)),     # étirement vers le haut
+        "lean": max(2, round(height * 0.10)),     # inclinaison latérale
+    }
 
 
 # Chaque recette : nom -> (lignes, [Step]). Les durées et les déplacements d'ancre
 # viennent du squelette de Bayleef, jamais d'une invention.
+# Les amplitudes notées `E`, `B`, `S`, `L`, `N` sont résolues par Pokémon au moment de la
+# construction (voir `physiology`) : un Dedenne de 20 px ne plonge pas de la même hauteur
+# qu'un Hariyama de 40 px. Les durées et déplacements d'ancre restent ceux du squelette.
+class Amp(str):
+    """Amplitude symbolique ("eat", "bob"…), résolue en pixels par Pokémon.
+
+    Se comporte comme un nombre pour la négation et la multiplication, de sorte que les
+    recettes s'écrivent `lean=-L` ou `squash=S * 2` sans connaître la valeur finale.
+    """
+    factor = 1
+
+    def _with(self, factor):
+        a = Amp(str(self))
+        a.factor = self.factor * factor
+        return a
+
+    def __neg__(self):
+        return self._with(-1)
+
+    def __mul__(self, k):
+        return self._with(k)
+
+    __rmul__ = __mul__
+
+
+E, B, S, L = Amp("eat"), Amp("bob"), Amp("sit"), Amp("look")
+N = Amp("lean")
+
 RECIPES: dict[str, tuple[int, list[Step]]] = {
     # Sommeil de scène : la pose de sommeil officielle, disponible dans les huit directions.
     "EventSleep": (8, [Step("Sleep", 0, dir_mode="down"), Step("Sleep", 1, dir_mode="down")]),
-    # Réveil : sommeil, sommeil, redressement accroupi, redressement, debout.
+    # Réveil : sommeil, sommeil, le corps se déplie et se redresse (écrasement qui se relâche).
     "Wake": (8, [Step("Sleep", 0, dir_mode="down"), Step("Sleep", 1, dir_mode="down"),
-                 Step("Idle", 0, dy=2), Step("Idle", 0, dy=1), Step("Idle", 0)]),
-    # Repas : deux plongées de tête, cadence 6/8/6/8 du squelette.
-    "Eat": (1, [Step("Idle", 0), Step("Idle", 0, dy=2), Step("Idle", 0), Step("Idle", 0, dy=2)]),
+                 Step("Idle", 0, squash=S), Step("Idle", 0, squash=B), Step("Idle", 0)]),
+    # REPAS — relevé sur l'Eat officiel de Bayleef : le buste et la tête plongent vers le sol,
+    # les pattes ne bougent pas, la silhouette se tasse. Deux bouchées, cadence 6/8/6/8.
+    "Eat": (1, [Step("Idle", 0),
+                Step("Idle", 0, squash=E, pivot=0.35),
+                Step("Idle", 0),
+                Step("Idle", 0, squash=E, pivot=0.35)]),
     # Culbute avant : le tour complet de Rotate lu sur la ligne Bas.
     "Tumble": (1, [Step("Rotate", i, dir_mode="spin") for i in range(8)]),
-    # Pose : attente, appui, tenue.
-    "Pose": (8, [Step("Idle", 0), Step("Charge", 0, dy=-1), Step("Charge", 1, dy=-1)]),
-    # Tirer : va-et-vient d'appui, sept temps longs.
-    "Pull": (1, [Step("Charge", i % 2, dx=-(i % 3)) for i in range(7)]),
-    # Douleur : la case blessée qui tremble, douze temps.
-    "Pain": (8, [Step("Hurt", 1, dx=(1 if i % 2 else 0), dy=(1 if i % 4 == 2 else 0)) for i in range(12)]),
-    # Flotter : léger sur-place au-dessus du sol.
+    # Pose : attente, puis le buste se cambre et tient.
+    "Pose": (8, [Step("Idle", 0), Step("Idle", 0, stretch=B, lean=N), Step("Idle", 0, stretch=B, lean=N)]),
+    # Tirer : le corps se penche en arrière et se redresse, en appui sur les pattes.
+    "Pull": (1, [Step("Idle", 0, lean=-N if i % 2 else 0, squash=B if i % 2 else 0) for i in range(7)]),
+    # Douleur : la case blessée qui tremble et se recroqueville par à-coups.
+    "Pain": (8, [Step("Hurt", 1, dx=(1 if i % 2 else 0), squash=(B if i % 4 == 2 else 0)) for i in range(12)]),
+    # Flotter : léger sur-place au-dessus du sol — ici tout le corps monte (il ne touche plus terre),
+    # donc c'est bien une translation, pas une déformation.
     "Float": (8, [Step("Idle", 0, dy=-3), Step("Idle", 0, dy=-4), Step("Idle", 0, dy=-3), Step("Idle", 0, dy=-2)]),
-    # Grande inspiration : gonflement lent, appuis alternés du squelette.
-    "DeepBreath": (1, [Step("Idle", 0), Step("Charge", 0), Step("Charge", 1, dx=-1), Step("Charge", 0),
-                       Step("Charge", 1, dx=-1), Step("Charge", 0), Step("Charge", 1, dx=-1),
-                       Step("Idle", 0), Step("Idle", 0)]),
-    # Hochement : tête qui plonge puis remonte.
-    "Nod": (8, [Step("Idle", 0), Step("Idle", 0, dy=2), Step("Idle", 0)]),
-    # S'asseoir : descente en trois temps, tenue basse.
-    "Sit": (1, [Step("Idle", 0, dy=1), Step("Idle", 0, dy=3), Step("Idle", 0, dy=3)]),
-    # Lever les yeux : le corps se redresse d'un pixel et tient.
-    "LookUp": (1, [Step("Idle", 0), Step("Idle", 0, dy=-1), Step("Idle", 0, dy=-1)]),
+    # Grande inspiration : le torse se gonfle et se tend, en cadence, pieds au sol.
+    "DeepBreath": (1, [Step("Idle", 0),
+                       Step("Idle", 0, stretch=L), Step("Idle", 0, stretch=L, dx=-1),
+                       Step("Idle", 0, stretch=L), Step("Idle", 0, stretch=L, dx=-1),
+                       Step("Idle", 0, stretch=L), Step("Idle", 0, stretch=L, dx=-1),
+                       Step("Idle", 0), Step("Idle", 0, squash=B)]),
+    # Hochement : la tête plonge et remonte, le corps reste planté.
+    "Nod": (8, [Step("Idle", 0), Step("Idle", 0, squash=B, pivot=0.3), Step("Idle", 0)]),
+    # S'asseoir : le corps s'affaisse sur son train arrière en trois temps.
+    "Sit": (1, [Step("Idle", 0, squash=B), Step("Idle", 0, squash=S, pivot=0.55),
+                Step("Idle", 0, squash=S, pivot=0.55, dy=1)]),
+    # Lever les yeux : le corps se tend vers le haut et tient.
+    "LookUp": (1, [Step("Idle", 0), Step("Idle", 0, stretch=L), Step("Idle", 0, stretch=L)]),
     # S'enfoncer : douze paliers, le sprite disparaît par le bas dans le sol.
     "Sink": (1, [Step("Idle", 0, sink=i * 2, dy=0) for i in range(12)]),
-    # Trébucher : déséquilibre puis chute.
-    "Trip": (8, [Step("Hurt", 0), Step("Hurt", 1, dx=1), Step("Hurt", 1, dy=2), Step("Hurt", 1, dy=3), Step("Hurt", 1, dy=3)]),
+    # Trébucher : le corps part en avant, bascule, puis tombe.
+    "Trip": (8, [Step("Hurt", 0), Step("Hurt", 1, lean=N), Step("Hurt", 1, lean=N * 2, squash=B),
+                 Step("Hurt", 1, squash=S, dy=2), Step("Hurt", 1, squash=S, dy=3)]),
     # Étendu : la pose de sommeil, tenue une image.
     "Laying": (8, [Step("Sleep", 1, dir_mode="down")]),
     # Bond en avant : la parabole officielle de Hop, six temps.
     "LeapForth": (1, [Step("Hop", i) for i in (0, 1, 3, 5, 6, 8)]),
-    # Coup de tête : une seule image, appui avant.
-    "Head": (8, [Step("Charge", 1, dy=-1)]),
-    # Reculer : les deux cases de blessure.
-    "Cringe": (1, [Step("Hurt", 0), Step("Hurt", 1)]),
-    # Perte d'équilibre : bascule d'un côté puis de l'autre.
-    "LostBalance": (1, [Step("Hurt", 0, dx=-2), Step("Hurt", 0, dx=2)]),
+    # Coup de tête : le buste projeté en avant, une image.
+    "Head": (8, [Step("Idle", 0, squash=B, lean=N, pivot=0.3)]),
+    # Reculer : le corps se recroqueville sur les deux cases de blessure.
+    "Cringe": (1, [Step("Hurt", 0), Step("Hurt", 1, squash=B)]),
+    # Perte d'équilibre : le haut du corps bascule d'un côté puis de l'autre, pieds ancrés.
+    "LostBalance": (1, [Step("Idle", 0, lean=-N * 2), Step("Idle", 0, lean=N * 2)]),
     # Culbute arrière : le tour de Rotate à l'envers.
     "TumbleBack": (1, [Step("Rotate", (8 - i) % 8, dir_mode="spin") for i in range(10)]),
-    # Chute au sol : impact, rebond, immobilisation.
-    "HitGround": (1, [Step("Hurt", 1, dy=3), Step("Hurt", 1, dy=4), Step("Hurt", 1, dy=3), Step("Hurt", 1, dy=4),
-                      Step("Hurt", 1, dy=4), Step("Hurt", 1, dy=4), Step("Hurt", 1, dy=4), Step("Hurt", 1, dy=4)]),
-    # K.O. : le corps s'affaisse et s'efface par le haut, comme dans le jeu.
-    "Faint": (8, [Step("Hurt", 1, dy=2), Step("Hurt", 1, dy=3, fade_top=4),
-                  Step("Hurt", 1, dy=4, fade_top=10), Step("Hurt", 1, dy=5, fade_top=18)]),
+    # Chute au sol : impact, le corps s'écrase puis rebondit faiblement.
+    "HitGround": (1, [Step("Hurt", 1, squash=S, dy=3), Step("Hurt", 1, squash=S, dy=4),
+                      Step("Hurt", 1, squash=B, dy=3), Step("Hurt", 1, squash=S, dy=4),
+                      Step("Hurt", 1, squash=S, dy=4), Step("Hurt", 1, squash=S, dy=4),
+                      Step("Hurt", 1, squash=S, dy=4), Step("Hurt", 1, squash=S, dy=4)]),
+    # K.O. : le corps s'affaisse, s'aplatit et s'efface par le haut.
+    "Faint": (8, [Step("Hurt", 1, squash=B, dy=2), Step("Hurt", 1, squash=S, dy=3, fade_top=4),
+                  Step("Hurt", 1, squash=S, dy=4, fade_top=10), Step("Hurt", 1, squash=S, dy=5, fade_top=18)]),
 }
 
 
@@ -152,10 +267,33 @@ def pick(anims: dict[str, P.Anim], step: Step, d: int) -> P.Frame:
     return a.frames[row][col]
 
 
+def amplitudes(anims: dict[str, P.Anim]) -> dict:
+    """Amplitudes de déformation de CE Pokémon, d'après la hauteur de sa silhouette au repos."""
+    f = anims["Idle"].frames[0][0]
+    x0, y0, x1, y1 = f.bbox
+    return physiology(y1 - y0 + 1)
+
+
+def resolved(st: Step, amp: dict) -> tuple[int, int, int]:
+    """Remplace les amplitudes symboliques ("eat", "bob"…) par leur valeur en pixels."""
+    def val(v):
+        if isinstance(v, Amp):
+            return int(round(amp[str(v)] * v.factor))
+        if isinstance(v, str):
+            return amp[v]
+        return v
+    return val(st.squash), val(st.stretch), val(st.lean)
+
+
 def build_anim(name: str, anims: dict[str, P.Anim], skel: P.Anim) -> P.Built:
     """`skel` est l'animation homonyme du squelette : elle fournit les durées, le nombre
     d'images, les déplacements d'ancre **et le numéro de créneau** (`<Index>`), qui suit dans
-    tous les sprites Chunsoft complets la même numérotation 13 → 34 après Rotate."""
+    tous les sprites Chunsoft complets la même numérotation 13 → 34 après Rotate.
+
+    Les déformations physiologiques (`squash`, `stretch`, `lean`) sont appliquées ici : elles
+    modifient la silhouette autour d'une charnière basse, de sorte que les appuis au sol
+    restent fixes et que seul le haut du corps bouge — comportement des animations Chunsoft."""
+    amp = amplitudes(anims)
     rows, steps = RECIPES[name]
     n = len(steps)
     assert n == len(skel.durations), f"{name} : {n} images pour {len(skel.durations)} durées du squelette"
@@ -166,7 +304,12 @@ def build_anim(name: str, anims: dict[str, P.Anim], skel: P.Anim) -> P.Built:
     for d in range(rows):
         for i, st in enumerate(steps):
             f = pick(anims, st, d)
+            sq, stre, ln = resolved(st, amp)
             x0, y0, x1, y1 = f.bbox
+            # la déformation garde le bas en place et déplace le haut de `delta`
+            y0 += sq - stre
+            x0 -= abs(ln)
+            x1 += abs(ln)
             x0 += st.dx + disp[i][0]
             x1 += st.dx + disp[i][0]
             y0 += st.dy + disp[i][1] + st.fade_top
@@ -192,6 +335,12 @@ def build_anim(name: str, anims: dict[str, P.Anim], skel: P.Anim) -> P.Built:
             # dessin : uniquement la boîte du contenu, collée par rapport à l'ancre (§4 des ratés)
             sx0, sy0, sx1, sy1 = f.bbox
             src = f.image[f.anchor[1] + sy0:f.anchor[1] + sy1 + 1, f.anchor[0] + sx0:f.anchor[0] + sx1 + 1]
+            # déformation physiologique : le bas de la silhouette reste en place, le haut bouge.
+            # `delta` > 0 = corps tassé, donc la boîte commence plus bas de `delta` pixels.
+            sq, stre, ln = resolved(st, amp)
+            if sq or stre or ln:
+                src, delta = deform(src, sq, stre, ln, st.pivot)
+                sy0 += delta
             if st.sink:
                 src = src[:max(0, src.shape[0] - st.sink)]
             if st.fade_top:

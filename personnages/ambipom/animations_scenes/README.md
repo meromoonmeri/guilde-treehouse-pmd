@@ -8,17 +8,57 @@ ajoute, sans toucher à ce qui existait.
 
 ## Méthode
 
-**Composer, ne pas générer** — la méthode de Falinks, appliquée à un seul personnage.
+**Composer, ne pas générer** — la méthode de Falinks, poussée d'un cran : les mouvements sont
+maintenant **physiologiques**, pas de simples translations.
 
-1. Chaque image d'une animation ajoutée est une **case officielle de Ambipom lui-même** (Idle, Hurt, Hop,
-   Charge, Rotate, Sleep…), replacée par rapport à son ancre : décalage de quelques pixels, changement de
-   direction, ou troncature par le bas pour l'enfoncement dans le sol. **Aucun pixel n'est repeint** :
-   la palette des nouvelles feuilles est incluse dans celle du sprite d'origine (11 couleurs).
-2. Le **squelette du temps** — nombre d'images, durées en 1/60 s, déplacements de l'ancre, nombre de lignes,
-   numéro de créneau `<Index>` — est relu tel quel sur le sprite officiel **#0155** (Bayleef), qui possède
-   le jeu Chunsoft complet. Rien n'est inventé côté cadence.
-3. Les animations d'origine sont recopiées **octet pour octet** et déclarées dans le même `AnimData.xml` :
-   le dossier s'importe directement dans SkyTemple, sans réassembler quoi que ce soit.
+### 1. Des cases officielles, jamais un pixel repeint
+
+Chaque image part d'une **case officielle de Ambipom lui-même** (Idle, Hurt, Hop, Charge, Rotate,
+Sleep…). La palette des nouvelles feuilles est incluse dans celle du sprite d'origine
+(11 couleurs) — le vérificateur le refuse sinon.
+
+### 2. Le mouvement est relevé sur la bibliothèque SpriteCollab
+
+Un « manger » ne se fabrique pas en descendant tout le sprite de 2 px. Relevé ligne par ligne sur
+l'`Eat` officiel de **Bayleef #0155** :
+
+| | haut de la silhouette | bas (appuis au sol) | pixels |
+| --- | --- | --- | --- |
+| repos | ligne 2 | ligne 19 | 188 |
+| bouchée | ligne 5 (**−3**) | ligne 19 (**inchangé**) | 162 (**−14 %**) |
+
+Les pattes **ne bougent pas** et la silhouette **perd des pixels** : le corps s'écrase, la tête
+plonge vers la nourriture. Une translation garderait 188 pixels et ferait décoller les pieds.
+
+Ce comportement est reproduit par une déformation autour d'une **charnière basse** : la partie
+haute est rééchantillonnée (des lignes de pixels existantes sont retirées ou répétées), la partie
+basse reste intacte. Trois gestes en découlent — écrasement (`squash`), étirement (`stretch`),
+inclinaison (`lean`) — qui servent à Eat, Nod, Sit, LookUp, DeepBreath, Pose, Pull, Trip,
+LostBalance, Head, Cringe, HitGround et Faint.
+
+### 3. L'amplitude suit la physionomie du Pokémon
+
+Un Dedenne de 20 px ne plonge pas de la même hauteur qu'un Hariyama de 40 px. Les amplitudes sont
+donc calculées sur la hauteur réelle de la silhouette au repos de **Ambipom** (29 px) :
+
+| Geste | Amplitude |
+| --- | --- |
+| plongée du repas | 4 px |
+| respiration, hochement | 2 px |
+| affaissement assis | 6 px |
+| étirement vers le haut | 2 px |
+| inclinaison latérale | 3 px |
+
+### 4. Le temps vient du squelette
+
+Nombre d'images, durées en 1/60 s, déplacements de l'ancre, nombre de lignes et numéro de créneau
+`<Index>` sont relus tels quels sur **#0155** (Bayleef), qui possède le jeu Chunsoft complet.
+Rien n'est inventé côté cadence.
+
+### 5. Le sprite reste entier
+
+Les animations d'origine sont recopiées **octet pour octet** et déclarées dans le même
+`AnimData.xml` : le dossier s'importe directement dans SkyTemple.
 
 ## Ce qui est livré
 
@@ -72,7 +112,9 @@ Animations d'origine conservées telles quelles : `Walk`, `Attack`, `MultiStrike
 divisibles, 1 ou 8 lignes, durées = colonnes, alpha 0 ou 255, un seul pixel blanc et un seul repère par
 couleur et par case, 15 couleurs au plus) **et** les contrôles de méthode : durées et déplacements d'ancre
 identiques au squelette #0155, palette incluse dans celle du sprite d'origine, animations d'origine
-inchangées. Résultat dans `controle_qualite.json`.
+inchangées, **et la signature physiologique** : sur Eat, Nod, Sit et LookUp, il mesure le déplacement du
+haut, du bas et le nombre de pixels, puis exige qu'ils aillent dans le même sens que sur le squelette
+officiel — un contrôle qu'une simple translation échouerait. Résultat dans `controle_qualite.json`.
 
 ## Licence
 

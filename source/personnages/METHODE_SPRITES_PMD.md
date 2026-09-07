@@ -209,3 +209,48 @@ Quand l'utilisateur fournit une planche (ici 4 orientations × 4 images de 64 ×
 - **avouer la limite** : sans vue diagonale dessinée, les quatre diagonales reprennent le profil. Le
   vérificateur contrôle que chaque silhouette produite est, au pixel près, une pose fournie ou son miroir —
   c'est la garantie que rien n'a été inventé.
+
+## 11. Rendre les animations physiologiques (correction majeure du § 8)
+
+La première version du § 8 fabriquait `Eat` en descendant **tout le sprite** de 2 px. C'est faux, et
+l'utilisateur l'a signalé à juste titre : un Pokémon qui mange ne saute pas, il **plonge la tête** en
+gardant ses appuis au sol. La bibliothèque SpriteCollab sert de mine de templates pour trouver le bon
+geste — encore faut-il mesurer ce que fait vraiment l'original.
+
+**Mesurer avant de coder.** Relevé ligne par ligne de l'`Eat` de Bayleef #0155 :
+
+```
+image 0 (repos)   lignes 2→19, 188 pixels
+image 1 (bouchée) lignes 5→19, 162 pixels
+```
+
+Trois faits en découlent, et ce sont eux la spécification :
+1. le **bas ne bouge pas d'un pixel** (19 = 19) — les pattes restent posées ;
+2. le **haut descend** de 3 px — la tête plonge ;
+3. la silhouette **perd 14 % de ses pixels** — elle s'écrase, elle ne se translate pas.
+
+Une translation aurait conservé 188 pixels et fait bouger le bas : le test discrimine parfaitement.
+
+**Implémentation : déformation à charnière basse** (`deform`). La silhouette est coupée à une hauteur
+`pivot` ; la partie haute est rééchantillonnée au plus proche voisin sur `hauteur − delta` lignes, la
+partie basse est laissée intacte. Comme on ne fait que retirer ou répéter des lignes de pixels existantes,
+**aucune couleur n'est créée** — la contrainte du § 8 (palette incluse dans celle de l'original) tient
+toujours. Trois gestes : `squash`, `stretch`, `lean`. Pour `lean`, ne surtout pas utiliser `np.roll` :
+les pixels sortis d'un côté réapparaissent de l'autre et coupent la silhouette ; il faut élargir la boîte
+puis décaler.
+
+**Amplitude relative à la physionomie** (`physiology`). Un Dedenne de 20 px et un Hariyama de 40 px ne
+plongent pas de la même hauteur. Les recettes ne portent donc pas des pixels mais des amplitudes
+symboliques (`E`, `B`, `S`, `L`, `N`), résolues par Pokémon à partir de la hauteur de la silhouette au
+repos. La classe `Amp` accepte `-L` et `S * 2` pour que les recettes restent lisibles.
+
+**Vérifier un comportement, pas une valeur.** `verify_animations_scenes.py` mesure, sur Eat, Nod, Sit et
+LookUp, le déplacement du haut, celui du bas et la variation du nombre de pixels, puis exige qu'ils aillent
+**dans le même sens que sur le squelette officiel**. Ne jamais coder la valeur attendue en dur : sur `Sit`,
+le squelette lui-même descend d'1 px, ce qu'un seuil rigide aurait signalé à tort. Attention aussi à viser
+la bonne image de comparaison (`LookUp` culmine à l'image 1, pas 2).
+
+**Reste à faire si on veut aller plus loin :** les gestes qui demandent de bouger un membre séparément
+(mâchoire qui s'ouvre, bras qui porte la nourriture à la bouche) ne sont pas atteignables par déformation
+globale. Il faudrait segmenter la silhouette en parties, comme `zarude_pieces.py` le fait pour un dessin
+original. La déformation à charnière est le meilleur rapport fidélité/risque tant qu'on refuse de repeindre.

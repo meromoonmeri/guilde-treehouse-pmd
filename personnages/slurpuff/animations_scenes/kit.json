@@ -118,7 +118,6 @@
    ],
    "ticks": 22,
    "sources": [
-    "Charge",
     "Idle"
    ]
   },
@@ -141,7 +140,7 @@
    ],
    "ticks": 76,
    "sources": [
-    "Charge"
+    "Idle"
    ]
   },
   "Pain": {
@@ -211,7 +210,6 @@
    ],
    "ticks": 62,
    "sources": [
-    "Charge",
     "Idle"
    ]
   },
@@ -237,7 +235,7 @@
    "index": 23,
    "case": [
     24,
-    48
+    40
    ],
    "images": 3,
    "directions": 1,
@@ -299,7 +297,7 @@
   "Trip": {
    "index": 26,
    "case": [
-    48,
+    56,
     64
    ],
    "images": 5,
@@ -357,7 +355,7 @@
    "index": 29,
    "case": [
     32,
-    48
+    40
    ],
    "images": 1,
    "directions": 8,
@@ -366,7 +364,7 @@
    ],
    "ticks": 4,
    "sources": [
-    "Charge"
+    "Idle"
    ]
   },
   "Cringe": {
@@ -389,8 +387,8 @@
   "LostBalance": {
    "index": 31,
    "case": [
-    40,
-    56
+    32,
+    48
    ],
    "images": 2,
    "directions": 1,
@@ -400,7 +398,7 @@
    ],
    "ticks": 16,
    "sources": [
-    "Hurt"
+    "Idle"
    ]
   },
   "TumbleBack": {
@@ -432,7 +430,7 @@
    "index": 34,
    "case": [
     32,
-    56
+    48
    ],
    "images": 8,
    "directions": 1,
@@ -455,7 +453,7 @@
    "index": 33,
    "case": [
     56,
-    64
+    56
    ],
    "images": 4,
    "directions": 8,

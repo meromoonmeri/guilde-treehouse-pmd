@@ -18,7 +18,11 @@ Composition
   ceux du squelette #0155 ;
 - la palette des animations ajoutées est incluse dans celle du sprite d'origine
   (aucun pixel n'a été repeint) ;
-- les feuilles nuit ont la taille des feuilles de jour.
+- les feuilles nuit ont la taille des feuilles de jour ;
+- **signature physiologique** : sur Eat, Nod, Sit et LookUp, le bas de la silhouette ne bouge pas
+  d'un pixel entre le repos et la pose déformée, le haut du corps descend (ou monte pour LookUp)
+  et le nombre de pixels varie en conséquence — exactement le comportement relevé sur les
+  animations officielles de Chunsoft, et ce qu'une simple translation ne produirait jamais.
 
 Écrit `controle_qualite.json` dans chaque dossier et sort en erreur au premier manquement.
 """
@@ -37,6 +41,26 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "source" / "personnages"))
 import pmd_sprite as P                    # noqa: E402
 from build_animations_scenes import POKEMON, RECIPES, SKELETON   # noqa: E402
+
+# Signature physiologique relevée sur les animations officielles de Chunsoft (Eat de Bayleef
+# #0155 : le bas de la silhouette ne bouge pas d'un pixel entre le repos et la bouchée, le haut
+# descend, et le nombre de pixels diminue). C'est ce qui distingue un vrai mouvement d'une
+# simple translation du sprite entier, et c'est vérifié ici animation par animation.
+# nom : (image de repos, image déformée). Le sens attendu (bas fixe, haut qui descend ou qui
+# monte, silhouette qui se tasse ou se tend) n'est pas codé en dur : il est **mesuré sur le
+# squelette officiel #0155** puis exigé du sprite produit. Le contrôle compare donc un
+# comportement à un comportement, jamais à une valeur inventée.
+PHYSIO = {"Eat": (0, 1), "Nod": (0, 1), "Sit": (0, 2), "LookUp": (0, 1)}
+
+
+def silhouette(cell: np.ndarray) -> tuple[int, int, int]:
+    """(première ligne occupée, dernière ligne occupée, nombre de pixels) d'une case."""
+    ys, xs = np.nonzero(cell[:, :, 3])
+    return int(ys.min()), int(ys.max()), int(len(ys))
+
+
+def sign(v: int) -> int:
+    return (v > 0) - (v < 0)
 
 REF = ROOT / "source" / "personnages" / "reference"
 MAX_COLOURS = 15
@@ -121,6 +145,24 @@ def check(num: str) -> dict:
                 for key, colour in P.MARK_COLOURS.items():
                     found = np.argwhere((o[:, :, 3] == 255) & np.all(o[:, :, :3] == colour, axis=2))
                     fail(len(found) <= 1, f"#{num} {name} un repère {key} au plus (dir {d}, image {i})", log)
+
+        if name in PHYSIO:
+            rest, moved = PHYSIO[name]
+            (t0, b0, n0) = silhouette(anim[0:fh, rest * fw:(rest + 1) * fw])
+            (t1, b1, n1) = silhouette(anim[0:fh, moved * fw:(moved + 1) * fw])
+            # comportement de la même animation sur le squelette officiel
+            sk_anim = skel[name].frames[0]
+            (r0, s0, q0) = silhouette(sk_anim[rest].image)
+            (r1, s1, q1) = silhouette(sk_anim[moved].image)
+            fail(b1 - b0 == s1 - s0,
+                 f"#{num} {name} les appuis au sol suivent le squelette "
+                 f"({b1 - b0} px, comme #{SKELETON} : {s1 - s0} px)", log)
+            fail(sign(t1 - t0) == sign(r1 - r0),
+                 f"#{num} {name} le haut du corps va dans le sens du squelette "
+                 f"({t0} → {t1}, comme #{SKELETON} : {r0} → {r1})", log)
+            fail(sign(n1 - n0) == sign(q1 - q0),
+                 f"#{num} {name} la silhouette se déforme comme celle du squelette "
+                 f"({n0} → {n1} pixels, comme #{SKELETON} : {q0} → {q1})", log)
 
         if name in RECIPES:
             added += 1
