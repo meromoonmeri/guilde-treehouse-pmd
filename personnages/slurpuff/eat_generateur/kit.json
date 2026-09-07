@@ -1,0 +1,72 @@
+{
+ "pokemon": {
+  "nom": "Slurpuff",
+  "numero": "0685",
+  "source": "https://sprites.pmdcollab.org/#/0685?form=0"
+ },
+ "demarche": "générateur d'images + discipline (grille, palette, zone)",
+ "trait_anime": "la grande bouche de Slurpuff s'ouvre dans la crème blanche",
+ "mesures": {
+  "couleurs_brutes": 211,
+  "conservation": 87.0,
+  "pixels_modifies": 47,
+  "zone": [
+   2,
+   12,
+   18,
+   19
+  ],
+  "couleurs": 11,
+  "palette_base": 13
+ },
+ "plan": [
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  32,
+  48
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "aseprite": {
+  "canvas": [
+   32,
+   48
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   16,
+   28
+  ]
+ }
+}

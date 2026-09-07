@@ -1,0 +1,72 @@
+{
+ "pokemon": {
+  "nom": "Gardevoir",
+  "numero": "0282",
+  "source": "https://sprites.pmdcollab.org/#/0282?form=0"
+ },
+ "demarche": "générateur d'images + discipline (grille, palette, zone)",
+ "trait_anime": "la bouche s'ouvre sous les yeux rouges, dans le blanc du visage",
+ "mesures": {
+  "couleurs_brutes": 251,
+  "conservation": 86.0,
+  "pixels_modifies": 42,
+  "zone": [
+   2,
+   9,
+   15,
+   16
+  ],
+  "couleurs": 9,
+  "palette_base": 10
+ },
+ "plan": [
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  24,
+  48
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "aseprite": {
+  "canvas": [
+   24,
+   48
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   12,
+   28
+  ]
+ }
+}

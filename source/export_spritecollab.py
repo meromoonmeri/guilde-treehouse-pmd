@@ -71,6 +71,13 @@ EAT_DESSINE = {
     for num, nom in [("0186", "politoed"), ("0424", "ambipom"), ("0443", "gible"),
                      ("0923", "pawmot"), ("0702", "dedenne")]
 }
+# Produits par un **générateur d'images**, puis disciplinés (grille exacte, palette rabattue sur
+# celle du sprite, masque limité à la bouche) et vérifiés — voir `eat_generateur.py`.
+EAT_GENERE = {
+    num: ROOT / "personnages" / nom / "eat_generateur"
+    for num, nom in [("0282", "gardevoir"), ("0674", "pancham"), ("0685", "slurpuff")]
+}
+EAT_DESSINE.update(EAT_GENERE)
 
 AUTEUR = "Guilde Treehouse"
 EMOTIONS = ["Normal", "Happy", "Pain", "Angry", "Worried", "Sad", "Crying", "Shouting",
@@ -174,7 +181,8 @@ def exporter_sprite(num: str, dossier: str, rapport: list) -> None:
     credits_officiels(origine, dst / "credits.txt", ajout, licence)
     rapport.append({"type": "sprite", "num": num, "nom": dossier, "animations": n,
                     "ajoutees": len(SCENES), "licence": licence,
-                    "eat": "dessiné à la main" if remplace else "composé"})
+                    "eat": ("généré puis discipliné" if num in EAT_GENERE
+                            else "dessiné à la main" if remplace else "composé")})
 
 
 def exporter_portrait(num: str, dossier: str, rapport: list) -> None:
@@ -288,9 +296,14 @@ def main() -> None:
         "  restent fixes) et membres articulés repérés par les ancres `lhand`/`rhand` de",
         "  `-Offsets.png`. Cadences, cases et créneaux `<Index>` relus sur Bayleef #0155.",
         "  **Aucun pixel repeint** : la palette est incluse dans celle du sprite d'origine.",
-        "- **`Eat` de Politoed** : la bouche est **dessinée à la main** dans la palette du sprite,",
-        "  à la manière relevée sur les `Eat` de Pichu #0172 et Riolu #0447 (palette fermée, cerne",
-        "  noir, ombrage clair → moyen → sombre, changement local).",
+        "- **`Eat` dessinés à la main** (Politoed, Ambipom, Gible, Pawmot, Dedenne) : la bouche est",
+        "  peinte dans la palette du sprite, à la manière relevée sur les `Eat` de Pichu #0172 et",
+        "  Riolu #0447 (palette fermée, cerne noir, ombrage ordonné, changement local).",
+        "- **`Eat` produits par générateur d'images** (Gardevoir, Pancham, Slurpuff) : le PNG du sprite",
+        "  officiel a été soumis à un générateur, dont la sortie a été ramenée sur la grille exacte,",
+        "  rabattue sur la palette du sprite (178 à 251 couleurs → 9 à 11) et limitée au rectangle de",
+        "  la bouche. 86 à 90 % du sprite conservé. Hariyama et Miltank, essayés de la même façon,",
+        "  ont été **écartés** (68 % et 15 % de conservation : personnage méconnaissable).",
         "- **Portraits** : le `Normal` officiel sert de base et n'est jamais redessiné. Le fond est",
         "  repeint aux **couleurs canoniques de l'émotion** dans la géométrie officielle (ciel plein,",
         "  damier de transition, sol plein) ; les yeux sont transformés par opérations sur leurs",

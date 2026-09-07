@@ -1,0 +1,72 @@
+{
+ "pokemon": {
+  "nom": "Pancham",
+  "numero": "0674",
+  "source": "https://sprites.pmdcollab.org/#/0674?form=0"
+ },
+ "demarche": "générateur d'images + discipline (grille, palette, zone)",
+ "trait_anime": "la bouche s'ouvre entre les taches noires des yeux",
+ "mesures": {
+  "couleurs_brutes": 178,
+  "conservation": 90.3,
+  "pixels_modifies": 30,
+  "zone": [
+   2,
+   13,
+   16,
+   20
+  ],
+  "couleurs": 11,
+  "palette_base": 13
+ },
+ "plan": [
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  },
+  {
+   "bouche": false,
+   "mains": false,
+   "squash": 0
+  },
+  {
+   "bouche": true,
+   "mains": true,
+   "squash": 1
+  }
+ ],
+ "case": [
+  24,
+  48
+ ],
+ "durees": [
+  6,
+  8,
+  6,
+  8
+ ],
+ "creneau": 15,
+ "aseprite": {
+  "canvas": [
+   24,
+   48
+  ],
+  "images": 4,
+  "calques": [
+   "Sans direction"
+  ],
+  "etiquettes": [
+   "Eat"
+  ],
+  "ancre": [
+   12,
+   28
+  ]
+ }
+}

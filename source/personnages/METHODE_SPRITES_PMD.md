@@ -436,3 +436,42 @@ reproduits sur les fichiers officiels : **CRLF**, indentation à **deux espaces*
 `<?xml version="1.0"?>` sans espace avant `?>`. Sans importance pour SkyTemple, mais un diff propre
 compte pour une contribution. Les `credits.txt` conservent toutes les lignes d'origine et
 reprennent la licence déjà déclarée sur le sprite.
+
+## 17. Le générateur d'images, employé pour de bon
+
+Les § 14 et 16 concluaient que le générateur n'était pas exploitable. C'était vrai avec un cadrage
+serré sur un rectangle de bouche ; ça ne l'est plus quand on lui envoie **le sprite entier** et
+qu'on discipline la sortie. `eat_generateur.py` produit ainsi trois `Eat` livrés.
+
+**Protocole.** Le PNG de la case `Idle` officielle, agrandi ×24 sur fond magenta, est soumis avec
+la consigne : « même sprite, en train de manger, bouche ouverte, mains levées ». Cinq Pokémon
+essayés, mesurés après rabattement sur la palette :
+
+| | conservation | verdict |
+| --- | --- | --- |
+| Pancham | 87,1 % | retenu |
+| Slurpuff | 87,0 % | retenu |
+| Gardevoir | 80,6 % | retenu |
+| Hariyama | 68,5 % | **écarté** — visage déformé |
+| Miltank | 15,1 % | **écarté** — sprite détruit |
+
+Le contrôle visuel confirme la mesure : sous ~80 %, le personnage n'est plus lui-même. Un seuil
+n'a d'intérêt que s'il sait dire non ; deux des cinq sont rejetés.
+
+**La discipline reste indispensable** — grille exacte en moyenne de bloc, palette rabattue (178 à
+471 couleurs en sortie, 15 autorisées), masque limité au rectangle de la bouche.
+
+**Choisir la zone par la mesure, pas à l'œil.** Les rectangles repérés à la main donnaient des
+écarts de valeur de 591 (Gardevoir) et 612 (Pancham). Une recherche exhaustive sur les rectangles
+plausibles retient le plus grand qui reste sous le plafond de contraste.
+
+**Le plafond de contraste est propre à chaque sprite.** Le § 16 avait fixé 487, relevé sur Pichu et
+Riolu. Faux comme référence absolue : mesuré case par case, **chaque sprite officiel le dépasse** —
+Gardevoir 591, Pancham 650, Slurpuff 543, Politoed 606. On compare donc l'ajout au contraste
+maximal du personnage concerné, ce qui est plus juste et plus sévère quand le sprite est doux.
+
+**Trois pièges de mesure**, tous dus à des effets dont le générateur n'est pas responsable :
+1. le `squash` décale l'ensemble d'un pixel → comparer **silhouette contre silhouette** (recadrée),
+   sinon on mesure 38 % et on ne juge que le décalage ;
+2. le trajet des mains vient de `move_limbs` → l'exclure du calcul de conservation ;
+3. le contraste natif du sprite → n'évaluer que les paires de pixels **dans** la zone dessinée.

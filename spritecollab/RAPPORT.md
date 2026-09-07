@@ -15,12 +15,12 @@ spritecollab/
 | --- | --- | --- | --- | --- | --- |
 | 0186 | Politoed | 35 | 22 | dessiné à la main | Unspecified |
 | 0241 | Miltank | 36 | 22 | composé | Unspecified |
-| 0282 | Gardevoir | 36 | 22 | composé | Unspecified |
+| 0282 | Gardevoir | 36 | 22 | généré puis discipliné | Unspecified |
 | 0297 | Hariyama | 35 | 22 | composé | Unspecified |
 | 0424 | Ambipom | 36 | 22 | dessiné à la main | Unspecified |
 | 0443 | Gible | 36 | 22 | dessiné à la main | Unspecified |
-| 0674 | Pancham | 35 | 22 | composé | CC_BY-NC_4 |
-| 0685 | Slurpuff | 34 | 22 | composé | CC_BY-NC_4 |
+| 0674 | Pancham | 35 | 22 | généré puis discipliné | CC_BY-NC_4 |
+| 0685 | Slurpuff | 34 | 22 | généré puis discipliné | CC_BY-NC_4 |
 | 0702 | Dedenne | 33 | 22 | dessiné à la main | CC_BY-NC_4 |
 | 0923 | Pawmot | 35 | 22 | dessiné à la main | PMDCollab_1 |
 
@@ -42,9 +42,14 @@ Les 22 animations ajoutées : `EventSleep`, `Wake`, `Eat`, `Tumble`, `Pose`, `Pu
   restent fixes) et membres articulés repérés par les ancres `lhand`/`rhand` de
   `-Offsets.png`. Cadences, cases et créneaux `<Index>` relus sur Bayleef #0155.
   **Aucun pixel repeint** : la palette est incluse dans celle du sprite d'origine.
-- **`Eat` de Politoed** : la bouche est **dessinée à la main** dans la palette du sprite,
-  à la manière relevée sur les `Eat` de Pichu #0172 et Riolu #0447 (palette fermée, cerne
-  noir, ombrage clair → moyen → sombre, changement local).
+- **`Eat` dessinés à la main** (Politoed, Ambipom, Gible, Pawmot, Dedenne) : la bouche est
+  peinte dans la palette du sprite, à la manière relevée sur les `Eat` de Pichu #0172 et
+  Riolu #0447 (palette fermée, cerne noir, ombrage ordonné, changement local).
+- **`Eat` produits par générateur d'images** (Gardevoir, Pancham, Slurpuff) : le PNG du sprite
+  officiel a été soumis à un générateur, dont la sortie a été ramenée sur la grille exacte,
+  rabattue sur la palette du sprite (178 à 251 couleurs → 9 à 11) et limitée au rectangle de
+  la bouche. 86 à 90 % du sprite conservé. Hariyama et Miltank, essayés de la même façon,
+  ont été **écartés** (68 % et 15 % de conservation : personnage méconnaissable).
 - **Portraits** : le `Normal` officiel sert de base et n'est jamais redessiné. Le fond est
   repeint aux **couleurs canoniques de l'émotion** dans la géométrie officielle (ciel plein,
   damier de transition, sol plein) ; les yeux sont transformés par opérations sur leurs
