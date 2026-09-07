@@ -9,7 +9,7 @@
   20,
   15
  ],
- "images_par_cycle": 8,
+ "images_par_cycle": 12,
  "zones": [
   {
    "cle": "d28",
@@ -197,7 +197,7 @@
    "cle": "d55",
    "biome": "lave",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d55p11a",
    "origine_tuiles": [
@@ -210,7 +210,7 @@
    "cle": "d07",
    "biome": "desert",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d07p11a",
    "origine_tuiles": [
@@ -366,7 +366,7 @@
    "cle": "d30",
    "biome": "lave",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.35,
    "source": "d30p32a",
    "origine_tuiles": [
@@ -405,7 +405,7 @@
    "cle": "d42",
    "biome": "eau",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.363,
    "source": "d42p31a",
    "origine_tuiles": [
@@ -535,7 +535,7 @@
    "cle": "d55",
    "biome": "lave",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d55p11a",
    "origine_tuiles": [
@@ -834,7 +834,7 @@
    "cle": "d26",
    "biome": "lave",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.35,
    "source": "d26p43a",
    "origine_tuiles": [
@@ -1016,7 +1016,7 @@
    "cle": "d57",
    "biome": "lave",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.363,
    "source": "d57p43a",
    "origine_tuiles": [
@@ -1042,7 +1042,7 @@
    "cle": "d30",
    "biome": "lave",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d30p34a",
    "origine_tuiles": [
@@ -1237,7 +1237,7 @@
    "cle": "d09",
    "biome": "lave",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d09p11a",
    "origine_tuiles": [
@@ -1354,7 +1354,7 @@
    "cle": "d57",
    "biome": "lave",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d57p43a",
    "origine_tuiles": [
@@ -1380,7 +1380,7 @@
    "cle": "d30",
    "biome": "lave",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d30p33a",
    "origine_tuiles": [
@@ -1731,7 +1731,7 @@
    "cle": "d53",
    "biome": "glace",
    "variante": "v6",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.347,
    "source": "d53p11b",
    "origine_tuiles": [
@@ -1913,7 +1913,7 @@
    "cle": "d09",
    "biome": "lave",
    "variante": "v6",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d09p11a",
    "origine_tuiles": [

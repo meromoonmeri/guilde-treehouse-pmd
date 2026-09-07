@@ -1,28 +1,7 @@
 {
- "principe": "rotation de palette, une permutation par image",
- "images": 8,
- "duree_ms": 110,
- "liquide": {
-  "type": "eau",
-  "palette": [
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#000000",
-   "#17272F"
-  ],
-  "plage_cyclee": [
-   3,
-   10
-  ],
-  "pas_par_image": 1
- },
+ "liquide": null,
  "lumiere": {
+  "methode": "rotation d'indices, approximation",
   "palette": [
    "#000000",
    "#0A0603",
@@ -38,5 +17,7 @@
    8
   ],
   "pas_par_image": 0.5
- }
+ },
+ "images_rendues": 12,
+ "duree_ms": 110
 }

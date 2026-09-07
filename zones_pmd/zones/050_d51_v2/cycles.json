@@ -1,9 +1,7 @@
 {
- "principe": "rotation de palette, une permutation par image",
- "images": 8,
- "duree_ms": 110,
  "liquide": null,
  "lumiere": {
+  "methode": "rotation d'indices, approximation",
   "palette": [
    "#000000",
    "#1A1B1E",
@@ -19,5 +17,7 @@
    8
   ],
   "pas_par_image": 0.5
- }
+ },
+ "images_rendues": 12,
+ "duree_ms": 110
 }

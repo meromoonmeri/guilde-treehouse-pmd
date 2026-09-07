@@ -1,23 +1,29 @@
 {
- "principe": "rotation de palette, une permutation par image",
- "images": 8,
- "duree_ms": 110,
- "liquide": null,
+ "liquide": {
+  "type": "lave",
+  "methode": "DPLA — substitution de palette, format Chunsoft",
+  "palette_cible": 10,
+  "periode_tics": 72,
+  "table": "dpla.json"
+ },
  "lumiere": {
+  "methode": "rotation d'indices, approximation",
   "palette": [
    "#000000",
-   "#0A0603",
-   "#130D07",
-   "#1D130A",
-   "#271A0D",
-   "#312011",
-   "#3A2714",
-   "#4D331B"
+   "#160F08",
+   "#22160C",
+   "#2D1E0F",
+   "#382513",
+   "#432C17",
+   "#4E341B",
+   "#593B1F"
   ],
   "plage_cyclee": [
    4,
    8
   ],
   "pas_par_image": 0.5
- }
+ },
+ "images_rendues": 12,
+ "duree_ms": 110
 }

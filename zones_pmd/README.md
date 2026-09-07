@@ -8,10 +8,10 @@ poussière animées à la manière des consoles Nintendo.
 
 | Dossier | Contenu |
 |---|---|
-| `zones/<NNN>_<donjon>_<variante>/` | 7 calques PNG, `compose.png`, `zone.aseprite`, `cycles.json` |
+| `zones/<NNN>_<donjon>_<variante>/` | 7 calques PNG, `compose.png`, `zone.aseprite`, `cycles.json`, `dpla.json` |
 | `apercus/` | 16 GIF de démonstration et la planche des 150 |
 | `manifeste.json` | biome, donjon source, liquide, taux de praticabilité de chaque zone |
-| `outils/` | `banque.py`, `generer_zones_pmd.py` |
+| `outils/` | `banque.py`, `dpla.py`, `generer_zones_pmd.py` |
 
 Chaque zone fait **480 × 360**, soit 20 × 15 tuiles de 24 px — le pas de
 tuile réel de PMD.
@@ -41,30 +41,66 @@ Prélever une fenêtre garantit au contraire une cohérence parfaite : l'agencem
 vient du jeu lui-même. La variété vient du nombre de cartes, des positions de
 découpe et des symétries.
 
-## L'animation, à la manière du matériel
+## L'eau est animée exactement comme chez Chunsoft : le format DPLA
 
-Rien n'est redessiné d'une image à l'autre : c'est la **palette qui tourne**.
-Les liquides et les puits de lumière sont convertis en couleurs indexées,
-triées par luminance, et chaque image permute un petit groupe d'indices. C'est
-la technique d'origine du GBA et de la DS — coût quasi nul, et c'est
-exactement ce scintillement qui signe l'eau et la lave de ces jeux.
+Les planches de Spriters Resource ne montrent que des images fixes — elles ne
+disent rien du mécanisme. La réponse est dans le format lui-même, **DPLA**
+(*Dungeon Palette Animation*), tel que l'a décompilé SkyTemple
+(`skytemple_files/graphics/dpla`, GPLv3). Le module `outils/dpla.py` le
+réimplémente fidèlement.
 
-Chaque zone livre son `cycles.json` :
+Ce que fait réellement le jeu :
+
+* un jeu de tuiles possède 16 palettes de 16 couleurs, et **seules deux sont
+  animées**, aux indices 10 et 11. Tout le reste est figé ;
+* le fichier DPLA contient jusqu'à 32 entrées, une par emplacement de couleur :
+  les 16 premières alimentent la palette 10, les 16 suivantes la palette 11 ;
+* chaque entrée porte **son propre nombre d'images** (le champ `NbColors`, qui
+  est bien par entrée) **et sa propre durée** ;
+* la couleur affichée vaut `images[n % len(images)]`. Aucun pixel ne bouge :
+  ce sont les valeurs RVB des emplacements qui sont **remplacées**.
+
+### Ce que j'avais faux
+
+Ma première version faisait tourner les *indices* dans la palette. C'est
+l'approximation habituelle, et elle donne un défilement régulier, mécanique.
+Ce n'est pas ce que fait le jeu, pour une raison précise : les emplacements
+n'ayant ni le même nombre d'images ni la même durée, **ils se
+désynchronisent**. Le miroitement de PMD n'est pas un cycle unique, c'est la
+superposition de plusieurs cycles de longueurs différentes, et la période
+visible est leur plus petit commun multiple.
+
+C'est exactement ce que produit `dpla.py` : les longueurs par défaut
+(3, 4, 6, 4) ont un PPCM de 12, donc la nappe ne se répète qu'au bout de douze
+pas alors qu'aucun emplacement ne compte plus de six images. À six tics par
+pas, la période est de **72 images de jeu**.
+
+La rampe de couleurs n'est pas inventée : elle est **relevée sur les tuiles
+d'eau et de lave du jeu**, triée par luminance. L'emplacement *i* la parcourt
+en partant de sa propre position, si bien que les reflets voyagent le long du
+dégradé au lieu de clignoter sur place.
+
+Chaque zone concernée livre sa table complète dans `dpla.json` :
 
 ```json
 {
-  "principe": "rotation de palette, une permutation par image",
-  "images": 8, "duree_ms": 110,
-  "liquide": { "type": "eau", "palette": ["#1A3A5E", "…"],
-               "plage_cyclee": [3, 10], "pas_par_image": 1 },
-  "lumiere": { "plage_cyclee": [4, 8], "pas_par_image": 0.5 }
+  "palettes_animees": [10, 11],
+  "couleurs_par_palette": 16,
+  "emplacements": [
+    { "images": ["#14285A", "#3C6EAF", "#87C8F0"], "duree": 6 },
+    { "images": ["#1E3C78", "#508CC8", "#AAE1FA", "#3C6EAF"], "duree": 6 }
+  ]
 }
 ```
 
-Le moteur n'a donc qu'à faire tourner ces indices : aucune image
-supplémentaire à charger. C'est aussi pour cette raison que le `.aseprite` ne
-contient **qu'une seule image** — les huit dupliquaient le calque de sol et
-faisaient passer le dossier de 38 à 124 Mo sans rien apporter.
+Le moteur n'a qu'à substituer ces valeurs : aucune image supplémentaire à
+charger. C'est aussi pour cette raison que le `.aseprite` ne contient **qu'une
+seule image** — en dupliquer douze faisait passer le dossier de 44 à plus de
+150 Mo sans rien apporter.
+
+Les puits de lumière, eux, gardent une simple rotation d'indices : ce n'est pas
+un mécanisme du jeu d'origine, et `cycles.json` le signale explicitement comme
+une approximation.
 
 ## Les sept calques
 

@@ -1,0 +1,139 @@
+{
+ "format": "DPLA — animation de palette de donjon PMD",
+ "reference": "SkyTemple, skytemple_files/graphics/dpla",
+ "palettes_animees": [
+  10,
+  11
+ ],
+ "couleurs_par_palette": 16,
+ "principe": "chaque emplacement de couleur possède sa propre liste d'images et sa propre durée ; la couleur affichée vaut images[n % len(images)]",
+ "emplacements": [
+  {
+   "images": [
+    "#272F37",
+    "#2F5777",
+    "#2F6F9F"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#27475F",
+    "#2F5777",
+    "#2F6F97",
+    "#377FA7"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#274F6F",
+    "#2F5777",
+    "#2F678F",
+    "#2F6F9F",
+    "#377FA7",
+    "#272F37"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#275787",
+    "#2F678F",
+    "#2F779F",
+    "#272F37"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F5777",
+    "#2F6F9F",
+    "#272F37"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F5F87",
+    "#2F6F9F",
+    "#3787AF",
+    "#274F6F"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F678F",
+    "#2F6F9F",
+    "#377FA7",
+    "#272F37",
+    "#274F6F",
+    "#2F5777"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F6F97",
+    "#377FA7",
+    "#27475F",
+    "#2F5777"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F6F9F",
+    "#272F37",
+    "#2F5777"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#2F779F",
+    "#272F37",
+    "#275787",
+    "#2F678F"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#377FA7",
+    "#272F37",
+    "#274F6F",
+    "#2F5777",
+    "#2F678F",
+    "#2F6F9F"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [
+    "#3787AF",
+    "#274F6F",
+    "#2F5F87",
+    "#2F6F9F"
+   ],
+   "duree": 6
+  },
+  {
+   "images": [],
+   "duree": 1
+  },
+  {
+   "images": [],
+   "duree": 1
+  },
+  {
+   "images": [],
+   "duree": 1
+  },
+  {
+   "images": [],
+   "duree": 1
+  }
+ ]
+}

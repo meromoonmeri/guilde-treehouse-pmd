@@ -31,13 +31,14 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ICI)
 sys.path.insert(0, os.path.join(ICI, "..", "..", "foulards_pmd", "outils"))
 import banque as B
+import dpla as DPLA
 import aseprite
 
 RACINE = os.path.abspath(os.path.join(ICI, ".."))
 T = B.T
 COLS, LIGNES = 20, 15
 LARG, HAUT = COLS * T, LIGNES * T          # 480 x 360
-N_IMG = 8                                   # images du cycle
+N_IMG = 12                                  # un cycle DPLA complet (PPCM 12)
 
 CALQUES = [
     {"nom": "GROUPE_TERRAIN", "type": "groupe"},
@@ -274,8 +275,8 @@ def zone_liquide(g, rng, forme="mare"):
     if forme == "mare":
         cx = rng.uniform(COLS * 0.35, COLS * 0.65)
         cy = rng.uniform(LIGNES * 0.35, LIGNES * 0.65)
-        rx = rng.uniform(0.14, 0.24) * COLS
-        ry = rng.uniform(0.14, 0.24) * LIGNES
+        rx = rng.uniform(0.22, 0.34) * COLS
+        ry = rng.uniform(0.20, 0.32) * LIGNES
         for y in range(LIGNES):
             for x in range(COLS):
                 if math.hypot((x - cx) / rx, (y - cy) / ry) < 1.0:
@@ -284,7 +285,7 @@ def zone_liquide(g, rng, forme="mare"):
         per = rng.uniform(0.18, 0.36)
         for x in range(COLS):
             cy = LIGNES / 2 + math.sin(x * per + rng.uniform(0, 3)) * LIGNES * 0.18
-            for dy in (-1, 0, 1):
+            for dy in (-2, -1, 0, 1, 2):
                 y = int(cy + dy)
                 if 0 <= y < LIGNES:
                     L[y, x] = True
@@ -294,6 +295,45 @@ def zone_liquide(g, rng, forme="mare"):
 # --------------------------------------------------------------------------
 # Animation par rotation de palette
 # --------------------------------------------------------------------------
+
+def rendre_liquide_dpla(c_liq, tuiles, n_img=N_IMG):
+    """
+    Anime la nappe de liquide selon le format DPLA de Chunsoft.
+
+    La rampe de couleurs est relevée sur les tuiles d'eau ou de lave du jeu,
+    triée par luminance, et sert de palette indexée à la nappe. Chaque image
+    substitue ensuite les valeurs de la palette, sans jamais toucher aux
+    pixels — c'est le mécanisme du matériel.
+    """
+    rampe = DPLA.rampe_depuis_tuiles(tuiles, n_couleurs=12)
+    if len(rampe) < 3:
+        return [c_liq] * n_img, None
+    table = DPLA.table_depuis_rampe(rampe)
+
+    a = np.array(c_liq.convert("RGBA"))
+    plein = a[..., 3] > 0
+    if not plein.any():
+        return [c_liq] * n_img, None
+    r = np.array(rampe, dtype=np.float32)
+    px = a[plein][:, :3].astype(np.float32)
+    idx = np.argmin(np.linalg.norm(px[:, None, :] - r[None, :, :], axis=2), axis=1)
+    carte = np.zeros(a.shape[:2], dtype=np.int32)
+    carte[plein] = idx
+
+    periode = table.periode(0)
+    pas = max(1, periode // n_img)
+    images = []
+    for k in range(n_img):
+        pal = table.palette_a_l_image(0, k * pas)
+        tab = np.array(pal[:len(rampe)] if len(pal) >= len(rampe)
+                       else pal + [(0, 0, 0)] * (len(rampe) - len(pal)),
+                       dtype=np.uint8)
+        out = np.zeros_like(a)
+        out[..., :3] = tab[np.clip(carte, 0, len(tab) - 1)]
+        out[..., 3] = np.where(plein, 255, 0)
+        images.append(Image.fromarray(out, "RGBA"))
+    return images, table
+
 
 def indexer(im, n=12):
     """Réduit un calque à une palette indexée et renvoie (indices, palette)."""
@@ -590,7 +630,7 @@ def batir_zone(cle, cartes, liquides, biome, nom_variante, graine, dossier):
                     appui = sum(1 for dy in (-1, 0, 1) for dx in (-1, 0, 1)
                                 if 0 <= y + dy < LIGNES and 0 <= x + dx < COLS
                                 and base_liq[y + dy, x + dx])
-                    if appui < 7:
+                    if appui < 6:
                         continue
                     c_liq.paste(lot[int(rng.integers(0, len(lot)))].convert("RGBA"),
                                 (x * T, y * T))
@@ -623,15 +663,9 @@ def batir_zone(cle, cartes, liquides, biome, nom_variante, graine, dossier):
                    n=int(rng.integers(1, 4)))
     ecl = vignette()
 
-    idx_l = pal_l = plein_l = None
+    liq_images, table_dpla = ([c_liq] * N_IMG, None)
     if type_liq:
-        idx_l, pal_l, plein_l = indexer(c_liq, 10)
-        if pal_l:
-            pal_l, table = trier_palette_par_luminance(pal_l)
-            remap = np.zeros(16, dtype=np.int64)
-            for o, i in table.items():
-                remap[o] = i
-            idx_l = remap[np.clip(idx_l, 0, 15)]
+        liq_images, table_dpla = rendre_liquide_dpla(c_liq, liquides[type_liq])
     idx_r, pal_r, plein_r = indexer(c_lum, 8)
     if pal_r:
         pal_r, table_r = trier_palette_par_luminance(pal_r)
@@ -643,8 +677,7 @@ def batir_zone(cle, cartes, liquides, biome, nom_variante, graine, dossier):
     images = []
     for i in range(N_IMG):
         ph = i / N_IMG
-        liq = (cycler(idx_l, pal_l, plein_l, i, (3, 10))
-               if pal_l is not None else c_liq)
+        liq = liq_images[i]
         lum = (cycler(idx_r, pal_r, plein_r, i // 2, (4, 8))
                if pal_r is not None else c_lum)
         images.append({
@@ -667,23 +700,30 @@ def batir_zone(cle, cartes, liquides, biome, nom_variante, graine, dossier):
     # Une seule image dans le .aseprite : l'animation étant une rotation de
     # palette décrite par cycles.json, dupliquer huit fois le calque de sol
     # multipliait le poids du dossier par six sans rien apporter.
-    pal_ase = (pal_l or []) + (pal_r or [])
+    pal_ase = ([tuple(c) for c in (table_dpla.palette_a_l_image(0, 0)
+                                   if table_dpla else [])] + (pal_r or []))
     aseprite.ecrire_avance(
         os.path.join(dossier, "zone.aseprite"), CALQUES, images[:1],
         (LARG, HAUT), duree_ms=110, palette=pal_ase[:64] or None)
 
     cycles = {
-        "principe": "rotation de palette, une permutation par image",
-        "images": N_IMG, "duree_ms": 110,
-        "liquide": ({"type": type_liq, "palette": ["#%02X%02X%02X" % c for c in pal_l],
-                     "plage_cyclee": [3, 10], "pas_par_image": 1}
-                    if pal_l is not None else None),
-        "lumiere": ({"palette": ["#%02X%02X%02X" % c for c in pal_r],
+        "liquide": {
+            "type": type_liq,
+            "methode": "DPLA — substitution de palette, format Chunsoft",
+            "palette_cible": DPLA.PALETTES_ANIMEES[0],
+            "periode_tics": table_dpla.periode(0) if table_dpla else None,
+            "table": "dpla.json",
+        } if table_dpla else None,
+        "lumiere": ({"methode": "rotation d'indices, approximation",
+                     "palette": ["#%02X%02X%02X" % c for c in pal_r],
                      "plage_cyclee": [4, 8], "pas_par_image": 0.5}
                     if pal_r is not None else None),
+        "images_rendues": N_IMG, "duree_ms": 110,
     }
     json.dump(cycles, open(os.path.join(dossier, "cycles.json"), "w"),
               indent=1, ensure_ascii=False)
+    if table_dpla:
+        table_dpla.ecrire_json(os.path.join(dossier, "dpla.json"))
 
     return {"cle": cle, "biome": biome, "variante": nom_variante,
             "liquide": type_liq, "praticable_pct": round(float(g.mean()), 3),
@@ -729,6 +769,7 @@ def main(limite=150, gifs=16):
                            "de palette", "taille": [LARG, HAUT], "tuile": T,
                  "grille": [COLS, LIGNES], "images_par_cycle": N_IMG, "zones": []}
     faits, i_plan, vignettes, cache_liq = 0, 0, [], {}
+    gifs_faits = []
     tours = 0
     while faits < limite and tours < 12:
         tours += 1
@@ -751,12 +792,14 @@ def main(limite=150, gifs=16):
             frames = info.pop("frames")
             info["dossier"] = f"zones/{nom_zone}"
             manifeste["zones"].append(info)
-            if len(vignettes) < gifs:
+            if len(gifs_faits) < gifs and (info.get("liquide")
+                                           or len(gifs_faits) < 4):
                 g8 = [f.convert("P", palette=Image.ADAPTIVE, colors=128)
                       for f in frames]
                 g8[0].save(os.path.join(RACINE, "apercus", f"{nom_zone}.gif"),
                            save_all=True, append_images=g8[1:], duration=110,
                            loop=0, disposal=2, optimize=True)
+                gifs_faits.append(nom_zone)
             vignettes.append((nom_zone, frames[0]))
             faits += 1
             if faits % 25 == 0:
