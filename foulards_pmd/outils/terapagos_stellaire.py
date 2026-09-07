@@ -41,7 +41,16 @@ RACINE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..",
 DST = os.path.join(RACINE, "sprite", "1024", "0002")
 DOS_ASE = os.path.join(RACINE, "aseprite")
 
-PADX, PADT, PADB = 8, 22, 8
+# Composition. La référence fournie par l'auteur du jeu fait foi : pas de dôme
+# sous Terapagos, et la carapace conserve ses motifs de type colorés.
+AVEC_DOME = False        # dôme de cristal au sol
+AVEC_GEMMES = False      # gemmes de type en orbite (elles ceinturaient le dôme)
+AVEC_ETINCELLES = False  # scintillements flottants
+ICONES_CYAN = False      # passer les symboles de la carapace au cyan
+AVEC_ASTRE = True        # Terapagos miniature au sommet de la couronne
+AVEC_SYMBOLE = False     # symbole Terastal détaché au-dessus (illisible à cette échelle)
+
+PADX, PADT, PADB = (8, 22, 8) if AVEC_DOME else (4, 16, 2)
 
 # --------------------------------------------------------------------------
 # Palettes
@@ -221,30 +230,34 @@ def dessiner_gemmes(cal_arr, cal_av, cx, cy, rx, hd, rb, phase, ech):
 
 
 def dessiner_couronne(cal, cx, cy, larg, ech, phase):
-    """Couronne sertie qui prolonge la gemme centrale de la carapace."""
-    demi = max(2, int(round(larg * 0.17)))
+    """
+    Couronne sertie posée *au contact* de la carapace : bandeau de gemmes puis
+    pointes de cristal soudées au bandeau. Aucun élément flottant, pour éviter
+    l'effet de pixels détachés.
+    """
+    demi = max(3, int(round(larg * 0.21)))
+    # bandeau, directement sur la silhouette
     for x in range(-demi - 1, demi + 2):
-        cal.set(cx + x, cy + 1, CRISTAL["contour"])
-        cal.set(cx + x, cy + 2, CRISTAL["contour"])
+        cal.set(cx + x, cy, CRISTAL["contour"])
     for x in range(-demi, demi + 1):
-        cal.set(cx + x, cy, CRISTAL["base"] if x <= 0 else CRISTAL["ombre"])
+        cal.set(cx + x, cy - 1, CRISTAL["base"] if x <= 0 else CRISTAL["ombre"])
     nb = max(3, demi + 1)
     for i in range(nb):
         t = (i + 0.5) / nb
-        cal.set(cx - demi + t * 2 * demi, cy, TYPES[(i * 4 + 2) % len(TYPES)][1])
+        cal.set(cx - demi + t * 2 * demi, cy - 1,
+                TYPES[(i * 4 + 2) % len(TYPES)][1])
 
-    h_max = max(4, int(round(4.4 * ech)))
-    profils = [0.45, 0.78, 1.0, 0.78, 0.45] if demi >= 4 else [0.62, 1.0, 0.62]
-    # teintes prismatiques, comme la couronne de l'artwork officiel
+    h_max = max(2, int(round(2.5 * ech)))
+    profils = ([0.50, 0.80, 1.0, 0.80, 0.50] if demi >= 5
+               else [0.65, 1.0, 0.65])
     teintes = [(0x9A, 0x7C, 0xF0), (0x6F, 0xD8, 0xF0), (0xE8, 0xFF, 0xFF),
                (0x8F, 0xF0, 0xC8), (0xF0, 0xA8, 0xD8)]
     n = len(profils)
     pas = max(1, int(round(demi * 2 / (n - 1))))
-    sommet = cy
+    sommet = cy - 1
     for i, p in enumerate(profils):
         px = cx + (i - (n - 1) / 2) * pas
         haut = max(2, int(round(h_max * p)))
-        sommet = min(sommet, cy - haut)
         teinte = teintes[i * len(teintes) // n]
         for j in range(haut):
             t = j / max(haut - 1, 1)
@@ -256,35 +269,32 @@ def dessiner_couronne(cal, cx, cy, larg, ech, phase):
                     c = _melange(CRISTAL["base"], teinte, 0.55)
                 else:
                     c = _melange(CRISTAL["ombre"], teinte, 0.35)
-                cal.set(px + dx, cy - 1 - j, c)
-        cal.set(px, cy - haut, CRISTAL["lumiere"])
+                cal.set(px + dx, cy - 2 - j, c)
+        sommet = min(sommet, cy - 2 - (haut - 1))
     return cy - sommet
 
 
 def dessiner_astre(cal, cx, cy, ech, phase):
-    """Terapagos miniature en cristal, surmonté du symbole Terastal."""
-    flot = math.sin(phase * 2 * math.pi) * 0.8
-    my = cy + flot
-    # carapace
+    """
+    Terapagos miniature en cristal, posé au contact du sommet de la couronne,
+    surmonté du symbole Terastal collé à lui. Rien ne flotte.
+    """
+    if not AVEC_ASTRE:
+        return
+    my = cy - 1                       # posé sur la pointe, sans interstice
     for dx in range(-2, 3):
         cal.set(cx + dx, my, CRISTAL["base"] if dx <= 0 else CRISTAL["ombre"])
     cal.set(cx - 1, my - 1, CRISTAL["lumiere"])
     cal.set(cx, my - 1, CRISTAL["lumiere"])
-    cal.set(cx + 1, my - 1, CRISTAL["base"])
-    # petite tête à gauche, pattes dessous, liseré sombre
-    cal.set(cx - 3, my, CRISTAL["lumiere"])
-    cal.set(cx - 2, my + 1, DOME["ombre"])
-    cal.set(cx + 1, my + 1, DOME["ombre"])
+    cal.set(cx - 3, my, CRISTAL["base"])             # petite tête
     for dx in range(-3, 3):
-        if dx not in (-2, 1):
-            cal.set(cx + dx, my + 1, DOME["contour"])
+        cal.set(cx + dx, my + 1, CRISTAL["contour"])
 
-    sy = my - 5 + flot * 0.5
-    for dx, dy in ((0, -2), (0, 2), (-2, -1), (2, -1), (-2, 1), (2, 1)):
-        cal.set(cx + dx, sy + dy, CRISTAL["lumiere"])
-    for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-        cal.set(cx + dx, sy + dy, CRISTAL["base"])
-    cal.set(cx, sy, CRISTAL["lumiere"])
+    if AVEC_SYMBOLE:
+        sy = my - 3
+        for dx, dy in ((0, -1), (-1, 0), (1, 0), (0, 1)):
+            cal.set(cx + dx, sy + dy, CRISTAL["base"])
+        cal.set(cx, sy, CRISTAL["lumiere"])
 
 
 def dessiner_etincelles(cal, cx, cy, rx, hd, phase, ech):
@@ -323,8 +333,8 @@ def aura_irisee(cell, phase):
     out = cell.copy()
     for x, y in zip(xs, ys):
         t = (x / max(w - 1, 1) + phase) % 1.0
-        c = _hsv(t, 0.38, 1.0)
-        out[y, x, 0:3] = _melange(tuple(int(v) for v in out[y, x, 0:3]), c, 0.45)
+        c = _hsv(t, 0.30, 1.0)
+        out[y, x, 0:3] = _melange(tuple(int(v) for v in out[y, x, 0:3]), c, 0.22)
     return out
 
 
@@ -377,6 +387,9 @@ def rendre_anim(nom, a, ombre_src):
     # direction, pour ne pas écraser le mouvement de l'animation.
     dy_par_dir = {}
     for rr in range(rows):
+        if not AVEC_DOME:
+            dy_par_dir[rr] = 0          # sans dôme, le corps ne se soulève pas
+            continue
         mm = src_anim[rr * h:(rr + 1) * h, 0:w, 3] > 0
         if not mm.any():
             dy_par_dir[rr] = 0
@@ -404,12 +417,18 @@ def rendre_anim(nom, a, ombre_src):
 
             cals = {n: Calque(W, H) for n in noms_calques}
             dy_corps = dy_par_dir[r]
-            hd_r = dessiner_dome(cals["dome"], cx, cy, rx, hd, rb, phase)
-            dessiner_gemmes(cals["gemmes_arriere"], cals["gemmes_avant"],
-                            cx, cy, rx, hd, rb, phase, ech)
+            hd_r = hd
+            if AVEC_DOME:
+                hd_r = dessiner_dome(cals["dome"], cx, cy, rx, hd, rb, phase)
+            if AVEC_GEMMES:
+                dessiner_gemmes(cals["gemmes_arriere"], cals["gemmes_avant"],
+                                cx, cy, rx, hd, rb, phase, ech)
 
             # corps
-            corps = aura_irisee(recolorer_corps(cell), phase)
+            corps = cell
+            if ICONES_CYAN:
+                corps = recolorer_corps(corps)
+            corps = aura_irisee(corps, phase)
             bob = int(round(math.sin(phase * 2 * math.pi) * 0.9))
             cal_corps = Calque(W, H)
             ys, xs = np.nonzero(corps[..., 3] > 0)
@@ -424,8 +443,10 @@ def rendre_anim(nom, a, ombre_src):
             cxc = int(round((xs.min() + xs.max()) / 2)) + PADX
             hk = dessiner_couronne(cals["couronne"], cxc, haut_corps + 1,
                                    largeur_corps, ech, phase)
-            dessiner_astre(cals["astre"], cxc, haut_corps + 1 - hk - 3, ech, phase)
-            dessiner_etincelles(cals["etincelles"], cx, cy, rx, hd_r, phase, ech)
+            dessiner_astre(cals["astre"], cxc, haut_corps + 1 - hk, ech, phase)
+            if AVEC_ETINCELLES:
+                dessiner_etincelles(cals["etincelles"], cx, cy, rx, hd_r,
+                                    phase, ech)
 
             base = Image.new("RGBA", (W, H))
             for n in noms_calques:
@@ -442,7 +463,15 @@ def rendre_anim(nom, a, ombre_src):
                 if 0 <= xx < W and 0 <= yy < H:
                     off[r * H + yy, c * W + xx] = so[y, x]
 
-            # ombre : reconstruite à l'emprise du dôme
+            # ombre
+            if not AVEC_DOME:
+                ss = src_sh[r * h:(r + 1) * h, c * w:(c + 1) * w]
+                ys3, xs3 = np.nonzero(ss[..., 3] > 0)
+                for y, x in zip(ys3, xs3):
+                    yy, xx = y + PADT + dy_corps + bob, x + PADX
+                    if 0 <= xx < W and 0 <= yy < H:
+                        sha[r * H + yy, c * W + xx] = ss[y, x]
+                continue
             for y in range(H):
                 for x in range(W):
                     dx = (x - cx) / rx
@@ -463,7 +492,7 @@ def rendre_anim(nom, a, ombre_src):
 
 
 def main():
-    _, anims = P.lire_animdata(SRC)
+    ombre_src, anims = P.lire_animdata(SRC)
     # On ne vide que ce que ce script produit : le dossier contient aussi
     # le README et les aperçus, qui ne doivent pas disparaître à chaque appel.
     for dossier in (DST, DOS_ASE):
@@ -490,7 +519,7 @@ def main():
     for a in anims:
         if not a["copie_de"]:
             a["w"], a["h"] = dims[a["nom"]]
-    P.ecrire_animdata(f"{DST}/AnimData.xml", 2, anims)
+    P.ecrire_animdata(f"{DST}/AnimData.xml", 2 if AVEC_DOME else ombre_src, anims)
 
     shutil.copy(f"{SRC}/../credits.txt", f"{DST}/credits.txt")
     print(f"\n{len(faites)} animations écrites dans {DST}")
