@@ -106,17 +106,39 @@ d'origine.
   **408 × 288** à **504 × 336 px**, hall des missions **840 × 360 px**, salle du chef
   **480 × 312 px**.
 - `calques_reduits/` : les 11 calques par salle et par palette, mêmes noms et même
-  ordre que le kit plein format. Les calques `06_decorations`, `07_objets` et
-  `09_eclairage_fixe` restent **vides**.
+  ordre que le kit plein format, **plus le calque `11_immersion_feuilles`** (voir
+  ci-dessous). Les calques `06_decorations`, `07_objets` et `09_eclairage_fixe`
+  restent **vides**.
 - `sprites_reduits/` : le banc de props ramené aux tailles PMD, fourni **séparément** ;
   rien n'en est posé dans les salles.
 - `apercu_echelle_pmdo.html` : aperçu autonome hors ligne des 24 salles à l'échelle,
-  avec bascule jour/nuit, paysage de fenêtres, grille 24 px et repère de sprite.
+  sur **fond noir** — avec bascule jour/nuit, paysage de fenêtres, cadre d'immersion,
+  damier de transparence, grille 24 px, repère de sprite et zoom ×2.
 
-`python3 analyse_echelle/reduire.py` régénère ce kit réduit depuis les calques
-plein format de `calques/` (rééchantillonnage LANCZOS : les contours restent à
-reprendre à la main si besoin). Le script `analyse_echelle/placement.py` est conservé
-dans la chaîne d'analyse mais **n'est plus appliqué au livrable**.
+## Cadre d'immersion PMD — feuillage fondu dans le noir
+
+Le calque **`11_immersion_feuilles`** entoure l'extrémité des bordures de bois
+d'un feuillage olive (palette reprise des végétations du kit : `#4f6714`,
+`#718c1c`, `#9ab541`), posé en deux étages : une couronne suspendue au ras du
+bord du canvas et des bouquets ancrés sur l'arête même des murs, plus des
+touffes de premier plan aux coins et quelques lianes.
+
+- **Fondu dans le fond noir :** une bande noire de 6–10 px au ras du canvas,
+  sous le feuillage, fait que le bord de l'image devient noir — posé sur le fond
+  noir du jeu, il n'y a aucune couture ; la pièce semble flotter dans le noir.
+- **Passages et fenêtres totalement dégagés :** le feuillage ne recouvre jamais
+  un accès (le contenu touchant un bord définit une zone interdite) ni une
+  fenêtre ; il ne descend jamais au centre de la pièce.
+- **Jour et nuit :** la variante nuit est le calque jour passé par la conversion
+  nuit du kit (même transform que `rebuild_kit.py`).
+- Généré par `python3 analyse_echelle/immersion.py` (déterministe, rejouable),
+  qui recompose aussi les `salles_reduites/` avec le calque 11 par-dessus.
+
+`python3 analyse_echelle/reduire.py` puis `python3 analyse_echelle/immersion.py`
+régénèrent ce kit réduit depuis les calques plein format de `calques/`
+(rééchantillonnage LANCZOS : les contours restent à reprendre à la main si
+besoin). Le script `analyse_echelle/placement.py` est conservé dans la chaîne
+d'analyse mais **n'est plus appliqué au livrable**.
 
 ## Reproduction et contrôles
 

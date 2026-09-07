@@ -347,6 +347,26 @@ suspendu, tapis).
 Pour mémoire : mobilier médian chez Halcyon **40 × 56 px**, caisse = 1 case,
 grosses pièces 128 – 216 px. On est désormais dans la même famille de tailles.
 
+### `11_immersion_feuilles` — le cadre d'immersion PMD
+
+`python3 analyse_echelle/immersion.py` ajoute, par salle et par palette, un calque
+de premier plan qui fond la pièce dans le noir :
+
+- **couronne suspendue** au ras du bord supérieur (bouquets tous les 8–12 px,
+  renforcés aux coins) et **bouquets ancrés sur l'arête des murs** : le feuillage
+  mord l'extrémité des bordures de bois (~5–12 % des feuilles sur le contenu),
+  puis s'estompe vers une **bande noire de 6–10 px** collée au canvas — le bord
+  de l'image devient noir, même couleur que le fond :aucune couture en jeu ;
+- palette olive du kit (`#4f6714` / `#718c1c` / `#9ab541` + tons sombres vers le
+  noir), pixel art rasterisé sans antialiasing, tiges et lianes tombantes ;
+- **zones interdites calculées** : tout contenu touchant un bord (= un passage)
+  dégage 26 px devant et 18 px de part et d'autre, les fenêtres sont évitées avec
+  une marge de 6 px, et rien ne pousse au centre de la pièce ni à plus de
+  ~22 % de la hauteur du bord ;
+- la variante **nuit** est le calque jour passé par la conversion nuit du kit ;
+- le script recompose `salles_reduites/` avec le calque 11 et est **déterministe**
+  (graine par salle) : relancer redonne les mêmes fichiers au bit près.
+
 ### `analyse_echelle/placement.py` — le placement automatique, retiré du livrable
 
 > **Retiré sur demande :** le mobilier n'est plus posé dans les salles. Les livrables
@@ -415,6 +435,7 @@ python3 analyse_echelle/apercus.py   # -> analyse_echelle/img/*.png
 python3 analyse_echelle/cibles.py    # -> analyse_echelle/cibles.json
 python3 analyse_echelle/guides.py    # -> analyse_echelle/guides/*.png + *_plan.json
 python3 analyse_echelle/reduire.py   # -> calques_reduits/ + salles_reduites/ (VIDES)
+python3 analyse_echelle/immersion.py # -> calque 11_immersion_feuilles + composites
 python3 analyse_echelle/props.py     # -> sprites_reduits/ (banc de props a l'echelle)
 python3 analyse_echelle/placement.py # (optionnel) proposition de mobilier, NON livree
 ```

@@ -49,15 +49,19 @@ def fig(salle, cible):
             REPO, 'salles_reduites', '%s_%s.png' % (salle['dossier'], pal)))
         imgs[pal]['ext'] = datauri(os.path.join(
             REPO, 'calques_reduits', salle['dossier'], pal, '00_exterieur.png'))
+        imgs[pal]['imm'] = datauri(os.path.join(
+            REPO, 'calques_reduits', salle['dossier'], pal,
+            '11_immersion_feuilles.png'))
     # verification de contenu : dimensions reelles des composites
     ref = Image.open(os.path.join(
         REPO, 'salles_reduites', '%s_jour.png' % salle['dossier']))
     assert (ref.width, ref.height) == (W, H), (salle['id'], ref.size, (W, H))
 
     couches = []
-    alt_txt = {'ext': u'paysage des fenêtres', 'base': u'salle vide'}
+    alt_txt = {'ext': u'paysage des fenêtres', 'base': u'salle vide',
+               'imm': u'cadre de feuillage'}
     for pal in ('jour', 'nuit'):
-        for kind in ('ext', 'base'):
+        for kind in ('ext', 'base', 'imm'):
             uri = imgs[pal][kind]
             if uri:
                 couches.append(
@@ -138,9 +142,12 @@ HTML = u'''<!DOCTYPE html>
   .rcases { color: #7fe0ff; font-size: 12.5px; }
   .stage {
     position: relative; width: calc(var(--w) * var(--z)); height: calc(var(--h) * var(--z));
+    background: #000;
+    border: 1px solid #2c2740; border-radius: 4px;
+  }
+  body.damier .stage {
     background:
       repeating-conic-gradient(#171420 0% 25%, #1c1928 0% 50%) 0 0 / 16px 16px;
-    border: 1px solid #2c2740; border-radius: 4px;
   }
   .lyr { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
   .ov { position: absolute; inset: 0; pointer-events: none; }
@@ -162,6 +169,7 @@ HTML = u'''<!DOCTYPE html>
   body.g24 .g24 { opacity: 1; }
   body.g8 .g8 { opacity: 1; }
   body:not(.paysage) .ext { visibility: hidden; }
+  body:not(.imm) .imm { display: none; }
   body:not(.nuit) .nuit { display: none; }
   body.nuit .jour { display: none; }
   body.ref .ref { display: flex; }
@@ -182,6 +190,8 @@ HTML = u'''<!DOCTYPE html>
       <button data-pal="jour" class="on">Jour</button><button data-pal="nuit">Nuit</button>
     </span>
     <label class="chk"><input type="checkbox" id="chk-paysage"> Paysage des fenêtres</label>
+    <label class="chk"><input type="checkbox" id="chk-imm" checked> Immersion feuilles</label>
+    <label class="chk"><input type="checkbox" id="chk-damier"> Damier (transparence)</label>
     <label class="chk"><input type="checkbox" id="chk-g24" checked> Grille 24 px</label>
     <label class="chk"><input type="checkbox" id="chk-g8"> Grille 8 px</label>
     <label class="chk"><input type="checkbox" id="chk-ref"> Repère sprite</label>
@@ -196,6 +206,12 @@ HTML = u'''<!DOCTYPE html>
   posé : les calques <em>décorations</em>, <em>objets</em> et <em>éclairage</em> restent
   transparents. Le banc de props à l&#8217;échelle PMD est fourni séparément dans
   <code>sprites_reduits/</code>.</p>
+  <p><strong>Cadre d&#8217;immersion.</strong> Le calque <code>11_immersion_feuilles</code>
+  entoure l&#8217;extrémité des bordures de bois d&#8217;un feuillage olive (palette du kit)
+  fondu dans une bande noire au ras du canvas : posé sur un fond noir, la pièce semble
+  flotter dans le noir, sans couture. Les passages et les fenêtres restent totalement
+  dégagés. Le fond de cet aperçu est noir pour montrer ce fondu ; activez le damier
+  pour contrôler la transparence.</p>
   <p>Chaque image est le composite des calques 01 à 10 à l&#8217;échelle cible
   (le paysage des fenêtres, calque 00, est indépendant). Références PMDO/Halcyon :
   case de 24 px, sprite de starter ≈ 20 × 22 px, viewport 320 × 240 px.
@@ -225,6 +241,8 @@ HTML = u'''<!DOCTYPE html>
   }
   seg('seg-palette', 'nuit');
   chk('chk-paysage', 'paysage');
+  chk('chk-imm', 'imm');
+  chk('chk-damier', 'damier');
   chk('chk-g24', 'g24');
   chk('chk-g8', 'g8');
   chk('chk-ref', 'ref');
