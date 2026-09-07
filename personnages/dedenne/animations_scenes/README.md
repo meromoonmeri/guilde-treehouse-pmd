@@ -17,7 +17,24 @@ Chaque image part d'une **case officielle de Dedenne lui-même** (Idle, Hurt, Ho
 Sleep…). La palette des nouvelles feuilles est incluse dans celle du sprite d'origine
 (14 couleurs) — le vérificateur le refuse sinon.
 
-### 2. Le mouvement est relevé sur la bibliothèque SpriteCollab
+### 2. Les membres bougent séparément (mains, tête)
+
+Un vrai repas, ce sont les **mains qui montent vers la bouche**. Mesuré sur l'`Eat` officiel de
+**Pichu #0172** — 165 pixels changent, mais ils sont concentrés : les colonnes des flancs
+(x 0-3 et 19-22) se vident pendant que le centre, autour de la bouche, se garnit. La largeur
+passe de **23 à 18 px**. Même chose chez **Riolu #0447**.
+
+C'est reproductible sans rien repeindre, parce que Chunsoft livre lui-même la segmentation :
+`-Offsets.png` marque `head`, `lhand` et `rhand` sur chaque case. Pour Dedenne, les repères
+disponibles sont : **lhand, rhand, head**. Un disque de pixels est prélevé autour du repère, sa composante
+reliée au repère seulement (sinon on emporte un bout d'oreille ou de queue), puis recollé plus
+haut et vers le centre. La bande centrale du visage est protégée du découpage — sans quoi le
+museau de Gible ou les joues d'Ambipom partaient avec la main.
+
+Les pixels déplacés sont **exactement ceux du sprite d'origine** : la palette est inchangée par
+construction.
+
+### 3. Le mouvement d'ensemble est relevé sur la bibliothèque SpriteCollab
 
 Un « manger » ne se fabrique pas en descendant tout le sprite de 2 px. Relevé ligne par ligne sur
 l'`Eat` officiel de **Bayleef #0155** :
@@ -36,7 +53,7 @@ basse reste intacte. Trois gestes en découlent — écrasement (`squash`), éti
 inclinaison (`lean`) — qui servent à Eat, Nod, Sit, LookUp, DeepBreath, Pose, Pull, Trip,
 LostBalance, Head, Cringe, HitGround et Faint.
 
-### 3. L'amplitude suit la physionomie du Pokémon
+### 4. L'amplitude suit la physionomie du Pokémon
 
 Un Dedenne de 20 px ne plonge pas de la même hauteur qu'un Hariyama de 40 px. Les amplitudes sont
 donc calculées sur la hauteur réelle de la silhouette au repos de **Dedenne** (17 px) :
@@ -49,13 +66,13 @@ donc calculées sur la hauteur réelle de la silhouette au repos de **Dedenne** 
 | étirement vers le haut | 1 px |
 | inclinaison latérale | 2 px |
 
-### 4. Le temps vient du squelette
+### 5. Le temps vient du squelette
 
 Nombre d'images, durées en 1/60 s, déplacements de l'ancre, nombre de lignes et numéro de créneau
 `<Index>` sont relus tels quels sur **#0155** (Bayleef), qui possède le jeu Chunsoft complet.
 Rien n'est inventé côté cadence.
 
-### 5. Le sprite reste entier
+### 6. Le sprite reste entier
 
 Les animations d'origine sont recopiées **octet pour octet** et déclarées dans le même
 `AnimData.xml` : le dossier s'importe directement dans SkyTemple.
@@ -112,9 +129,11 @@ Animations d'origine conservées telles quelles : `Walk`, `Attack`, `QuickStrike
 divisibles, 1 ou 8 lignes, durées = colonnes, alpha 0 ou 255, un seul pixel blanc et un seul repère par
 couleur et par case, 15 couleurs au plus) **et** les contrôles de méthode : durées et déplacements d'ancre
 identiques au squelette #0155, palette incluse dans celle du sprite d'origine, animations d'origine
-inchangées, **et la signature physiologique** : sur Eat, Nod, Sit et LookUp, il mesure le déplacement du
-haut, du bas et le nombre de pixels, puis exige qu'ils aillent dans le même sens que sur le squelette
-officiel — un contrôle qu'une simple translation échouerait. Résultat dans `controle_qualite.json`.
+inchangées, **et la signature physiologique** : sur Nod, Sit et LookUp, il mesure le déplacement du haut, du bas
+et le nombre de pixels, puis exige qu'ils aillent dans le même sens que sur le squelette officiel.
+Sur `Eat`, il vérifie la signature relevée sur Pichu — la silhouette **se resserre en largeur** (les
+mains se rapprochent), les appuis au sol ne bougent pas, et le mouvement est **localisé** : moins de
+pixels changent qu'il n'y en a dans le sprite, ce qu'une translation d'ensemble ne peut pas satisfaire. Résultat dans `controle_qualite.json`.
 
 ## Portraits
 

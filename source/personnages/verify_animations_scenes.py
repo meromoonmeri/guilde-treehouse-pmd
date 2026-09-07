@@ -50,7 +50,12 @@ from build_animations_scenes import POKEMON, RECIPES, SKELETON   # noqa: E402
 # monte, silhouette qui se tasse ou se tend) n'est pas codé en dur : il est **mesuré sur le
 # squelette officiel #0155** puis exigé du sprite produit. Le contrôle compare donc un
 # comportement à un comportement, jamais à une valeur inventée.
-PHYSIO = {"Eat": (0, 1), "Nod": (0, 1), "Sit": (0, 2), "LookUp": (0, 1)}
+PHYSIO = {"Nod": (0, 1), "Sit": (0, 2), "LookUp": (0, 1)}
+
+# Signature du REPAS, mesurée sur les Eat officiels de Pichu #0172 et Riolu #0447 : les mains
+# montent vers la bouche, donc la silhouette **se resserre en largeur**, les colonnes des flancs
+# se vident et la zone centrale du visage se garnit. Contrôlé ici image 0 → image 1.
+EAT_REST, EAT_BITE = 0, 1
 
 
 def silhouette(cell: np.ndarray) -> tuple[int, int, int]:
@@ -145,6 +150,25 @@ def check(num: str) -> dict:
                 for key, colour in P.MARK_COLOURS.items():
                     found = np.argwhere((o[:, :, 3] == 255) & np.all(o[:, :, :3] == colour, axis=2))
                     fail(len(found) <= 1, f"#{num} {name} un repère {key} au plus (dir {d}, image {i})", log)
+
+        if name == "Eat":
+            c0 = anim[0:fh, EAT_REST * fw:(EAT_REST + 1) * fw]
+            c1 = anim[0:fh, EAT_BITE * fw:(EAT_BITE + 1) * fw]
+            y0s, x0s = np.nonzero(c0[:, :, 3])
+            y1s, x1s = np.nonzero(c1[:, :, 3])
+            w0 = int(x0s.max() - x0s.min() + 1)
+            w1 = int(x1s.max() - x1s.min() + 1)
+            fail(w1 <= w0, f"#{num} Eat les mains se rapprochent du corps "
+                           f"(largeur {w0} → {w1} px, comme Pichu #0172 : 23 → 18)", log)
+            fail(int(y1s.max()) == int(y0s.max()),
+                 f"#{num} Eat les appuis au sol ne bougent pas pendant la bouchée", log)
+            fail(len(y1s) < len(y0s),
+                 f"#{num} Eat les membres quittent leur place ({len(y0s)} → {len(y1s)} pixels)", log)
+            # le mouvement est concentré, pas global : une translation changerait TOUT le sprite
+            changed = int(np.any(c0 != c1, axis=2).sum())
+            fail(changed < len(y0s),
+                 f"#{num} Eat le mouvement est localisé sur les membres "
+                 f"({changed} pixels changés pour {len(y0s)} pixels de sprite)", log)
 
         if name in PHYSIO:
             rest, moved = PHYSIO[name]

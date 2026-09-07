@@ -29,6 +29,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
+from scipy import ndimage
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -73,6 +74,8 @@ class Step:
     lean: int = 0            # penché : le haut part de n px sur le côté, les pieds restent posés
     pivot: float = 0.45      # hauteur de la charnière (0 = pieds, 1 = sommet) : le bas de la
                              # silhouette ne bouge pas, le haut prend tout le mouvement
+    limbs: tuple = ()        # membres déplacés séparément (mains vers la bouche, tête qui
+                             # s'incline…), repérés par les ancres officielles de -Offsets.png
 
 
 # ---------------------------------------------------------------------------
@@ -95,6 +98,118 @@ class Step:
 # Aucune couleur n'est créée : on ne fait que supprimer ou dupliquer des lignes/colonnes de
 # pixels existants, donc la palette reste celle du sprite d'origine.
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# MEMBRES ARTICULÉS
+#
+# Une déformation globale ne suffit pas pour un vrai repas : chez Pichu #0172 et Riolu #0447,
+# ce sont les **mains qui montent vers la bouche** et la **bouche qui s'ouvre**, le reste du
+# corps bougeant à peine. Mesuré sur l'`Eat` officiel de Pichu, image 0 → image 1 :
+#
+#     165 pixels changent, mais ils sont concentrés : les colonnes extérieures (x 0-3 et 19-22)
+#     se vident — les bras quittent les flancs — pendant que les colonnes centrales autour de la
+#     bouche (x 9-14, y 11-17) se remplissent. La largeur totale passe de 23 à 18 px.
+#
+# Autrement dit : les mains se translatent vers le centre et vers le haut, et la zone de la
+# bouche change d'aspect. C'est un mouvement de MEMBRES, pas de silhouette.
+#
+# On peut le reproduire sans rien repeindre, parce que Chunsoft livre lui-même la segmentation :
+# `-Offsets.png` marque `head`, `lhand` et `rhand` sur CHAQUE case officielle. Ces repères
+# donnent la position des mains et de la tête du Pokémon considéré. Il suffit de découper un
+# disque de pixels autour de chaque repère et de le redéplacer.
+# ---------------------------------------------------------------------------
+@dataclass
+class Limb:
+    """Déplacement d'un membre repéré par son ancre officielle (`lhand`, `rhand`, `head`)."""
+    mark: str                # repère de `-Offsets.png` : "lhand", "rhand" ou "head"
+    dx: int = 0              # déplacement du membre, en pixels
+    dy: int = 0
+    radius: int = 0          # rayon du disque de pixels emporté (0 = calculé sur la taille)
+    mirror_x: bool = False   # sur "lhand"/"rhand", inverser dx pour l'autre côté
+
+
+def limb_radius(bbox: tuple[int, int, int, int]) -> int:
+    """Rayon de découpe d'une main, proportionné au gabarit du sprite.
+
+    Volontairement petit : un rayon large emporte le museau ou une joue avec la main
+    (constaté sur Gible et Ambipom, dont les repères `lhand`/`rhand` sont proches du visage).
+    """
+    x0, y0, x1, y1 = bbox
+    return max(2, round(min(x1 - x0 + 1, y1 - y0 + 1) * 0.13))
+
+
+def move_limbs(src: np.ndarray, origin: tuple[int, int], marks: dict,
+               limbs: list[Limb], bbox: tuple[int, int, int, int]) -> np.ndarray:
+    """Déplace les membres marqués dans `src`, sans créer ni recolorer un seul pixel.
+
+    `src` est la boîte du dessin, `origin` la position de l'ancre du sprite dans cette boîte.
+    Pour chaque membre : on prélève un disque de pixels centré sur le repère officiel, on
+    efface la zone d'origine (les pixels retirés laissent voir le fond, comme quand un bras
+    quitte le flanc), puis on recolle le disque à sa nouvelle place. Les pixels déplacés sont
+    exactement ceux du sprite d'origine — la palette est donc inchangée par construction.
+    """
+    out = src.copy()
+    h, w = out.shape[:2]
+    ox, oy = origin
+    taken: list[tuple[np.ndarray, int, int]] = []
+    for lb in limbs:
+        if lb.mark not in marks:
+            continue                       # ce sprite n'a pas ce repère : on n'invente rien
+        mx, my = marks[lb.mark]
+        cx, cy = ox + mx, oy + my
+        r = lb.radius or limb_radius(bbox)
+        y0, y1 = max(0, cy - r), min(h, cy + r + 1)
+        x0, x1 = max(0, cx - r), min(w, cx + r + 1)
+        if y0 >= y1 or x0 >= x1:
+            continue
+        patch = out[y0:y1, x0:x1].copy()
+        yy, xx = np.ogrid[y0 - cy:y1 - cy, x0 - cx:x1 - cx]
+        disc = (yy * yy + xx * xx) <= r * r
+        patch[~disc] = 0
+        # ne garder que la partie du disque reliée au repère : sans cela on emporte des
+        # morceaux voisins (bout d'oreille, queue) qui se retrouvent détachés dans le vide.
+        solid = patch[:, :, 3] > 0
+        if not solid.any():
+            continue
+        labels, _ = ndimage.label(solid)
+        seed = labels[min(max(cy - y0, 0), labels.shape[0] - 1),
+                      min(max(cx - x0, 0), labels.shape[1] - 1)]
+        if seed == 0:                      # le repère tombe dans le vide : prendre le plus gros bloc
+            sizes = ndimage.sum(solid, labels, range(1, labels.max() + 1))
+            if not len(sizes):
+                continue
+            seed = int(np.argmax(sizes)) + 1
+        patch[labels != seed] = 0
+        disc = disc & (labels == seed)
+        # Ne jamais emporter le visage : la bande centrale haute du sprite (tête, museau, yeux)
+        # est protégée. Une main qui s'y trouve est déjà devant la bouche — on ne la bouge pas.
+        face_x0, face_x1 = ox - max(2, (bbox[2] - bbox[0]) // 5), ox + max(2, (bbox[2] - bbox[0]) // 5)
+        face_y1 = oy + marks.get("head", (0, 0))[1] + max(2, (bbox[3] - bbox[1]) // 6)
+        prot = np.zeros_like(disc)
+        py0, py1 = max(0, -y0), max(0, min(y1, face_y1) - y0)
+        px0, px1 = max(0, face_x0 - x0), max(0, min(x1, face_x1 + 1) - x0)
+        if py1 > py0 and px1 > px0:
+            prot[py0:py1, px0:px1] = True
+        if prot.any():
+            patch[prot] = 0
+            disc = disc & ~prot
+        if not (patch[:, :, 3] > 0).any():
+            continue
+        out[y0:y1, x0:x1][disc & (out[y0:y1, x0:x1, 3] > 0)] = 0     # le membre quitte sa place
+        taken.append((patch, x0 + lb.dx, y0 + lb.dy))
+    for patch, px, py in taken:                                      # recollage à la nouvelle place
+        ph, pw = patch.shape[:2]
+        sx0, sy0 = max(0, -px), max(0, -py)
+        px, py = max(0, px), max(0, py)
+        pw, ph = min(pw - sx0, w - px), min(ph - sy0, h - py)
+        if pw <= 0 or ph <= 0:
+            continue
+        piece = patch[sy0:sy0 + ph, sx0:sx0 + pw]
+        block = out[py:py + ph, px:px + pw]
+        m = piece[:, :, 3] > 0
+        block[m] = piece[m]
+    return out
+
+
 def deform(src: np.ndarray, squash: int, stretch: int, lean: int, pivot: float) -> tuple[np.ndarray, int]:
     """Déforme une silhouette autour d'une charnière basse. Renvoie (image, décalage du haut).
 
@@ -175,18 +290,28 @@ class Amp(str):
 E, B, S, L = Amp("eat"), Amp("bob"), Amp("sit"), Amp("look")
 N = Amp("lean")
 
+# Gestes de membres réutilisables, calqués sur les Eat de Pichu #0172 et Riolu #0447.
+# `mirror_x` fait partir la main gauche vers la droite et inversement : les deux se rejoignent
+# devant la bouche. Les amplitudes sont symboliques, donc adaptées au gabarit de chaque Pokémon.
+HANDS_TO_MOUTH = (Limb("lhand", dx=B, dy=-E, mirror_x=False),
+                  Limb("rhand", dx=-B, dy=-E, mirror_x=False))
+HANDS_DOWN = (Limb("lhand", dy=B), Limb("rhand", dy=B))
+HEAD_DIP = (Limb("head", dy=B),)
+HEAD_UP = (Limb("head", dy=-B),)
+
 RECIPES: dict[str, tuple[int, list[Step]]] = {
     # Sommeil de scène : la pose de sommeil officielle, disponible dans les huit directions.
     "EventSleep": (8, [Step("Sleep", 0, dir_mode="down"), Step("Sleep", 1, dir_mode="down")]),
     # Réveil : sommeil, sommeil, le corps se déplie et se redresse (écrasement qui se relâche).
     "Wake": (8, [Step("Sleep", 0, dir_mode="down"), Step("Sleep", 1, dir_mode="down"),
                  Step("Idle", 0, squash=S), Step("Idle", 0, squash=B), Step("Idle", 0)]),
-    # REPAS — relevé sur l'Eat officiel de Bayleef : le buste et la tête plongent vers le sol,
-    # les pattes ne bougent pas, la silhouette se tasse. Deux bouchées, cadence 6/8/6/8.
+    # REPAS — mesuré sur l'Eat officiel de Pichu #0172 et de Riolu #0447 : les MAINS montent
+    # vers la bouche (les flancs se vident, le centre se remplit, la largeur se resserre) et la
+    # tête plonge légèrement à leur rencontre. Le corps, lui, bouge à peine. Deux bouchées.
     "Eat": (1, [Step("Idle", 0),
-                Step("Idle", 0, squash=E, pivot=0.35),
+                Step("Idle", 0, squash=B, pivot=0.3, limbs=(HANDS_TO_MOUTH,)),
                 Step("Idle", 0),
-                Step("Idle", 0, squash=E, pivot=0.35)]),
+                Step("Idle", 0, squash=B, pivot=0.3, limbs=(HANDS_TO_MOUTH,))]),
     # Culbute avant : le tour complet de Rotate lu sur la ligne Bas.
     "Tumble": (1, [Step("Rotate", i, dir_mode="spin") for i in range(8)]),
     # Pose : attente, puis le buste se cambre et tient.
@@ -274,6 +399,21 @@ def amplitudes(anims: dict[str, P.Anim]) -> dict:
     return physiology(y1 - y0 + 1)
 
 
+def step_limbs(st: Step, amp: dict) -> list[Limb]:
+    """Aplatit `Step.limbs` (des groupes comme HANDS_TO_MOUTH) et résout les amplitudes."""
+    def val(v):
+        if isinstance(v, Amp):
+            return int(round(amp[str(v)] * v.factor))
+        return v
+
+    out: list[Limb] = []
+    for item in st.limbs:
+        group = item if isinstance(item, tuple) else (item,)
+        for lb in group:
+            out.append(Limb(lb.mark, val(lb.dx), val(lb.dy), val(lb.radius), lb.mirror_x))
+    return out
+
+
 def resolved(st: Step, amp: dict) -> tuple[int, int, int]:
     """Remplace les amplitudes symboliques ("eat", "bob"…) par leur valeur en pixels."""
     def val(v):
@@ -306,6 +446,10 @@ def build_anim(name: str, anims: dict[str, P.Anim], skel: P.Anim) -> P.Built:
             f = pick(anims, st, d)
             sq, stre, ln = resolved(st, amp)
             x0, y0, x1, y1 = f.bbox
+            # marge pour le trajet des membres (ils restent dans la boîte, mais pas toujours)
+            for lb in step_limbs(st, amp):
+                x0, x1 = min(x0, x0 + lb.dx), max(x1, x1 + lb.dx)
+                y0, y1 = min(y0, y0 + lb.dy), max(y1, y1 + lb.dy)
             # la déformation garde le bas en place et déplace le haut de `delta`
             y0 += sq - stre
             x0 -= abs(ln)
@@ -335,6 +479,13 @@ def build_anim(name: str, anims: dict[str, P.Anim], skel: P.Anim) -> P.Built:
             # dessin : uniquement la boîte du contenu, collée par rapport à l'ancre (§4 des ratés)
             sx0, sy0, sx1, sy1 = f.bbox
             src = f.image[f.anchor[1] + sy0:f.anchor[1] + sy1 + 1, f.anchor[0] + sx0:f.anchor[0] + sx1 + 1]
+            # membres articulés : les mains montent vers la bouche, la tête s'incline… Le
+            # découpage se fait autour des repères officiels de `-Offsets.png`, donc dans le
+            # repère de l'ancre : on passe la position de l'ancre dans la boîte extraite.
+            lbs = step_limbs(st, amp)
+            if lbs:
+                src = move_limbs(src, (-sx0, -sy0), f.marks, lbs, f.bbox)
+
             # déformation physiologique : le bas de la silhouette reste en place, le haut bouge.
             # `delta` > 0 = corps tassé, donc la boîte commence plus bas de `delta` pixels.
             sq, stre, ln = resolved(st, amp)

@@ -254,3 +254,41 @@ la bonne image de comparaison (`LookUp` culmine à l'image 1, pas 2).
 (mâchoire qui s'ouvre, bras qui porte la nourriture à la bouche) ne sont pas atteignables par déformation
 globale. Il faudrait segmenter la silhouette en parties, comme `zarude_pieces.py` le fait pour un dessin
 original. La déformation à charnière est le meilleur rapport fidélité/risque tant qu'on refuse de repeindre.
+
+## 12. Membres articulés : mains vers la bouche (suite du § 11)
+
+Le § 11 faisait plonger la silhouette entière. L'utilisateur a demandé mieux : « ils doivent bouger leurs
+mains et leur bouche comme Pichu ou Riolu quand ils mangent ». C'est le bon exemple, et la bibliothèque
+SpriteCollab donne la réponse.
+
+**Mesure de l'`Eat` de Pichu #0172** (image 0 → image 1) : 165 pixels changent, mais la répartition est
+parlante — les colonnes des flancs (x 0-3 et 19-22) se vident, le centre autour de la bouche se garnit, et
+la **largeur passe de 23 à 18 px**. Le haut *monte* (y 3 → 1) au lieu de descendre. Ce ne sont pas les
+épaules qui plongent : ce sont **les bras qui se lèvent**. Riolu #0447 : même signature, −50 pixels.
+
+**La segmentation est fournie par Chunsoft.** Inutile de deviner où sont les mains : `-Offsets.png` marque
+`head`, `lhand` et `rhand` sur **chaque case de chaque sprite**. C'est la clé qui rend l'articulation
+possible sans dessiner. `pmd_sprite.load_sprite` les expose déjà dans `Frame.marks`.
+
+**`move_limbs`** prélève un disque de pixels autour du repère, l'efface de sa position d'origine et le
+recolle ailleurs. Trois pièges rencontrés, tous corrigés :
+
+1. **Ne garder que la composante connexe reliée au repère** (`ndimage.label`) : sinon le disque emporte un
+   bout d'oreille ou de queue qui se retrouve flottant dans le vide.
+2. **Rayon petit** (13 % du plus petit côté, pas 22 %) : sur Gible et Ambipom, les repères de mains sont
+   proches du visage et un disque large emportait le museau.
+3. **Protéger la bande centrale du visage** : au-dessus du repère `head`, aucun pixel n'est prélevé. Une
+   main déjà devant la bouche ne bouge pas — c'est physiquement juste, et ça sauve les visages.
+
+Bouger le repère `head` lui-même a été **essayé puis abandonné** : découper la tête d'un sprite 40 px la
+détache visiblement du cou. La plongée de la tête reste faite par la déformation à charnière du § 11, qui
+étire le cou au lieu de le couper.
+
+**Contrôle.** Le vérificateur exige sur `Eat` la signature de Pichu : largeur qui se resserre, appuis au sol
+fixes, moins de pixels, et surtout **mouvement localisé** — le nombre de pixels modifiés doit rester
+inférieur au nombre de pixels du sprite. Une translation d'ensemble échoue ce dernier test par construction,
+ce qui garantit qu'on ne peut pas régresser vers la version du § 8.
+
+**Limite restante :** la bouche ne s'ouvre pas. Chez Pichu, le museau change de forme parce que l'artiste a
+dessiné deux états ; on ne peut pas l'inventer sans repeindre. Déplacer les mains devant la bouche donne
+l'essentiel de la lecture du geste ; ouvrir la mâchoire demanderait un dessin, pas un déplacement.
