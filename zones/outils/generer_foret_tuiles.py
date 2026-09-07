@@ -185,6 +185,94 @@ def plan_clairiere():
     return g
 
 
+def _lisser(g, tours=2):
+    """Automate cellulaire : arrondit les contours, supprime les pixels seuls."""
+    for _ in range(tours):
+        n = g.copy()
+        for y in range(LIGNES):
+            for x in range(COLS):
+                v = 0
+                for dy in (-1, 0, 1):
+                    for dx in (-1, 0, 1):
+                        if dx == 0 and dy == 0:
+                            continue
+                        yy, xx = y + dy, x + dx
+                        v += 1 if not (0 <= yy < LIGNES and 0 <= xx < COLS) \
+                            else int(g[yy, xx])
+                n[y, x] = 1 if v >= 5 else (0 if v <= 3 else g[y, x])
+        g = n
+    return g
+
+
+def _bordure(g, ep=2):
+    g[:ep, :] = 1
+    g[-ep:, :] = 1
+    g[:, :ep] = 1
+    g[:, -ep:] = 1
+    return g
+
+
+def plan_couloir():
+    """Couloir sinueux qui traverse la salle en S."""
+    g = np.ones((LIGNES, COLS), dtype=np.int8)
+    for x in range(COLS):
+        cy = LIGNES / 2 + math.sin(x * 0.20) * (LIGNES * 0.26)
+        demi = 2.6 + 1.1 * math.sin(x * 0.11 + 1.0)
+        for y in range(LIGNES):
+            if abs(y - cy) <= demi:
+                g[y, x] = 0
+    return _bordure(_lisser(g, 1))
+
+
+def plan_carrefour():
+    """Carrefour à quatre branches, salle centrale ouverte."""
+    g = np.ones((LIGNES, COLS), dtype=np.int8)
+    cx, cy = COLS // 2, LIGNES // 2
+    for y in range(LIGNES):
+        for x in range(COLS):
+            if math.hypot((x - cx) / 7.0, (y - cy) / 4.6) < 1.0:
+                g[y, x] = 0
+    g[cy - 2:cy + 3, :] = 0
+    g[:, cx - 2:cx + 3] = 0
+    return _bordure(_lisser(g, 1))
+
+
+def plan_grotte():
+    """Salle organique creusée au bruit, avec des îlots de végétation."""
+    rng = np.random.default_rng(12)
+    g = (rng.random((LIGNES, COLS)) < 0.46).astype(np.int8)
+    g = _lisser(g, 4)
+    cx, cy = COLS / 2, LIGNES / 2
+    for y in range(LIGNES):
+        for x in range(COLS):
+            if math.hypot((x - cx) / 9.0, (y - cy) / 6.0) < 1.0:
+                g[y, x] = 0
+    return _bordure(g)
+
+
+def plan_arene():
+    """Grande arène ovale, deux entrées, quatre îlots de racines."""
+    g = np.ones((LIGNES, COLS), dtype=np.int8)
+    cx, cy = COLS / 2, LIGNES / 2
+    for y in range(LIGNES):
+        for x in range(COLS):
+            d = math.hypot((x - cx) / (COLS * 0.42), (y - cy) / (LIGNES * 0.40))
+            if d < 1.0:
+                g[y, x] = 0
+    for k in range(4):
+        a = math.pi / 4 + k * math.pi / 2
+        ix = int(cx + math.cos(a) * COLS * 0.26)
+        iy = int(cy + math.sin(a) * LIGNES * 0.24)
+        for dy in range(-1, 2):
+            for dx in range(-1, 2):
+                if 0 <= iy + dy < LIGNES and 0 <= ix + dx < COLS:
+                    g[iy + dy, ix + dx] = 1
+    ci = int(cx)
+    g[:4, ci - 2:ci + 3] = 0
+    g[-4:, ci - 2:ci + 3] = 0
+    return _bordure(g, 1)
+
+
 def poser_salle(g, sol, feuille, bord):
     """
     Pose les tuiles. Le rebord n'est dessiné que sous une case de mur dont la
@@ -280,13 +368,28 @@ def batir(cle, g, part_c):
     return frames[0]
 
 
+LAYOUTS = [
+    ("foret_entree_tuiles", plan_lisiere, (0xD8, 0xCE, 0x9A)),
+    ("foret_coeur_tuiles", plan_clairiere, (0x9C, 0xC0, 0x60)),
+    ("foret_couloir", plan_couloir, (0xD8, 0xCE, 0x9A)),
+    ("foret_carrefour", plan_carrefour, (0xB4, 0x9A, 0x68)),
+    ("foret_grotte", plan_grotte, (0x9C, 0xC0, 0x60)),
+    ("foret_arene_zarude", plan_arene, (0x9C, 0xC0, 0x60)),
+]
+
+
 def main():
     os.makedirs(os.path.join(RACINE, "apercus"), exist_ok=True)
-    a = batir("foret_entree_tuiles", plan_lisiere(), (0xD8, 0xCE, 0x9A))
-    b = batir("foret_coeur_tuiles", plan_clairiere(), (0x9C, 0xC0, 0x60))
-    o = Image.new("RGB", (LARG, HAUT * 2))
-    o.paste(a.convert("RGB"), (0, 0))
-    o.paste(b.convert("RGB"), (0, HAUT))
+    rendus = []
+    for cle, fn, coul in LAYOUTS:
+        rendus.append(batir(cle, fn(), coul))
+    n = len(rendus)
+    cols = 2
+    lig = (n + cols - 1) // cols
+    o = Image.new("RGB", (LARG // 2 * cols, HAUT // 2 * lig))
+    for i, r in enumerate(rendus):
+        o.paste(r.convert("RGB").resize((LARG // 2, HAUT // 2), Image.NEAREST),
+                ((i % cols) * (LARG // 2), (i // cols) * (HAUT // 2)))
     o.save(os.path.join(RACINE, "apercus", "foret_tuiles.png"))
 
 
