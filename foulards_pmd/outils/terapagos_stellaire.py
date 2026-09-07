@@ -180,6 +180,11 @@ def dessiner_dome(cal, cx, cy, rx, hd, rb, phase):
             c = DOME["contour"]
         cal.set(x, y, c)
 
+    # bourrelet sombre à la base : le dôme se pose au sol au lieu de flotter
+    for x in range(int(cx - rx), int(cx + rx) + 1):
+        for y in range(int(cy + rb) - 1, int(cy + rb) + 1):
+            if (x, y) in pts:
+                cal.set(x, y, DOME["contour"])
     # reflet sur la calotte
     for i in range(9):
         t = i / 8.0
@@ -228,8 +233,11 @@ def dessiner_couronne(cal, cx, cy, larg, ech, phase):
         t = (i + 0.5) / nb
         cal.set(cx - demi + t * 2 * demi, cy, TYPES[(i * 4 + 2) % len(TYPES)][1])
 
-    h_max = max(4, int(round(4.2 * ech)))
+    h_max = max(4, int(round(4.4 * ech)))
     profils = [0.45, 0.78, 1.0, 0.78, 0.45] if demi >= 4 else [0.62, 1.0, 0.62]
+    # teintes prismatiques, comme la couronne de l'artwork officiel
+    teintes = [(0x9A, 0x7C, 0xF0), (0x6F, 0xD8, 0xF0), (0xE8, 0xFF, 0xFF),
+               (0x8F, 0xF0, 0xC8), (0xF0, 0xA8, 0xD8)]
     n = len(profils)
     pas = max(1, int(round(demi * 2 / (n - 1))))
     sommet = cy
@@ -237,13 +245,19 @@ def dessiner_couronne(cal, cx, cy, larg, ech, phase):
         px = cx + (i - (n - 1) / 2) * pas
         haut = max(2, int(round(h_max * p)))
         sommet = min(sommet, cy - haut)
+        teinte = teintes[i * len(teintes) // n]
         for j in range(haut):
             t = j / max(haut - 1, 1)
             l = 0 if t > 0.60 else 1
             for dx in range(-l, l + 1):
-                c = CRISTAL["lumiere"] if t > 0.55 else (
-                    CRISTAL["base"] if dx <= 0 else CRISTAL["ombre"])
+                if t > 0.62:
+                    c = _melange(CRISTAL["lumiere"], teinte, 0.45)
+                elif dx <= 0:
+                    c = _melange(CRISTAL["base"], teinte, 0.55)
+                else:
+                    c = _melange(CRISTAL["ombre"], teinte, 0.35)
                 cal.set(px + dx, cy - 1 - j, c)
+        cal.set(px, cy - haut, CRISTAL["lumiere"])
     return cy - sommet
 
 
@@ -251,13 +265,19 @@ def dessiner_astre(cal, cx, cy, ech, phase):
     """Terapagos miniature en cristal, surmonté du symbole Terastal."""
     flot = math.sin(phase * 2 * math.pi) * 0.8
     my = cy + flot
+    # carapace
     for dx in range(-2, 3):
         cal.set(cx + dx, my, CRISTAL["base"] if dx <= 0 else CRISTAL["ombre"])
-    for dx in range(-1, 2):
-        cal.set(cx + dx, my - 1, CRISTAL["lumiere"])
+    cal.set(cx - 1, my - 1, CRISTAL["lumiere"])
+    cal.set(cx, my - 1, CRISTAL["lumiere"])
+    cal.set(cx + 1, my - 1, CRISTAL["base"])
+    # petite tête à gauche, pattes dessous, liseré sombre
+    cal.set(cx - 3, my, CRISTAL["lumiere"])
     cal.set(cx - 2, my + 1, DOME["ombre"])
-    cal.set(cx + 2, my + 1, DOME["ombre"])
-    cal.set(cx, my + 1, DOME["contour"])
+    cal.set(cx + 1, my + 1, DOME["ombre"])
+    for dx in range(-3, 3):
+        if dx not in (-2, 1):
+            cal.set(cx + dx, my + 1, DOME["contour"])
 
     sy = my - 5 + flot * 0.5
     for dx, dy in ((0, -2), (0, 2), (-2, -1), (2, -1), (-2, 1), (2, 1)):
@@ -303,8 +323,8 @@ def aura_irisee(cell, phase):
     out = cell.copy()
     for x, y in zip(xs, ys):
         t = (x / max(w - 1, 1) + phase) % 1.0
-        c = _hsv(t, 0.30, 1.0)
-        out[y, x, 0:3] = _melange(tuple(int(v) for v in out[y, x, 0:3]), c, 0.28)
+        c = _hsv(t, 0.38, 1.0)
+        out[y, x, 0:3] = _melange(tuple(int(v) for v in out[y, x, 0:3]), c, 0.45)
     return out
 
 
@@ -444,10 +464,12 @@ def rendre_anim(nom, a, ombre_src):
 
 def main():
     _, anims = P.lire_animdata(SRC)
-    if os.path.isdir(RACINE):
-        shutil.rmtree(RACINE)
-    os.makedirs(DST, exist_ok=True)
-    os.makedirs(DOS_ASE, exist_ok=True)
+    # On ne vide que ce que ce script produit : le dossier contient aussi
+    # le README et les aperçus, qui ne doivent pas disparaître à chaque appel.
+    for dossier in (DST, DOS_ASE):
+        if os.path.isdir(dossier):
+            shutil.rmtree(dossier)
+        os.makedirs(dossier, exist_ok=True)
 
     faites, dims = [], {}
     for a in anims:

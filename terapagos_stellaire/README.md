@@ -80,6 +80,9 @@ export SPRITECOLLAB=~/sc_tmp
 python3 ../foulards_pmd/outils/terapagos_stellaire.py
 ```
 
+Le script ne vide que `sprite/` et `aseprite/`, les deux dossiers qu'il produit :
+le README et les aperçus sont préservés d'un appel à l'autre.
+
 ## Portée et limites
 
 * Le corps réutilise les planches Terastal de SpriteCollab. C'est fidèle aux
