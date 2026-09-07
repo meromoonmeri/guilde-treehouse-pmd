@@ -280,6 +280,26 @@ def pilier(hauteur, largeur, teinte=0.58, eclat=1.0, graine=3):
     return t.img()
 
 
+def harmoniser(im, palette, force=0.5, assombrir=1.0):
+    """
+    Rapproche les couleurs d'un élément rapporté de la palette du décor, puis
+    l'assombrit légèrement. Sans ce passage l'élément reste plaqué : c'est
+    l'écart de gamme, pas la forme, qui trahit un collage.
+    """
+    if not palette:
+        return im
+    a = np.array(im, dtype=np.float32)
+    m = a[..., 3] > 0
+    if not m.any():
+        return im
+    pal = np.array(palette, dtype=np.float32)
+    px = a[m][:, :3]
+    d = np.linalg.norm(px[:, None, :] - pal[None, :, :], axis=2)
+    proche = pal[np.argmin(d, axis=1)]
+    a[m, :3] = (px * (1 - force) + proche * force) * assombrir
+    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), "RGBA")
+
+
 def piliers_peints():
     """
     Tente d'isoler les piliers de la planche peinte v2, tirée sur fond noir.
@@ -298,7 +318,7 @@ def piliers_peints():
     return objets if len(objets) >= 4 else None
 
 
-def placer_piliers(peints=None):
+def placer_piliers(peints=None, pal_decor=None):
     """Disposition en couronne autour de l'aire de combat."""
     plan = [
         # (x, y au sol, hauteur, largeur, teinte, avant/arrière)
@@ -307,19 +327,38 @@ def placer_piliers(peints=None):
         (52, 396, 142, 42, 0.80, True), (716, 396, 142, 42, 0.08, True),
     ]
     arriere, avant = Toile(), Toile()
+    contact = Toile()
     for i, (x, y, hh, lw, te, av) in enumerate(plan):
         if peints:
             src = peints[i % len(peints)]
             k = hh / max(src.size[1], 1)
             im = src.resize((max(4, int(src.size[0] * k)), hh), Image.NEAREST)
             im = teinter(im, arc_en_ciel(te, 0.45, 1.0), 0.18)
+            im = harmoniser(im, pal_decor, 0.55, assombrir=0.78 if not av else 0.90)
         else:
             im = pilier(hh, lw, te, 1.0 if av else 0.82, graine=3 + i)
+        # ancrage au sol : ombre de contact puis débordement lumineux
+        r = max(10.0, im.size[0] * 0.62)
+        for dy in range(int(-r * 0.34), int(r * 0.34) + 1):
+            for dx in range(int(-r), int(r) + 1):
+                d = math.hypot(dx / r, dy / (r * 0.34))
+                if d > 1:
+                    continue
+                contact.poser(x + dx, y + dy - 1, (5, 6, 20),
+                              (1 - d) ** 1.6 * 0.62)
+        c_lueur = arc_en_ciel(te, 0.42, 1.0)
+        for dy in range(int(-r * 0.30), int(r * 0.30) + 1):
+            for dx in range(int(-r * 0.9), int(r * 0.9) + 1):
+                d = math.hypot(dx / (r * 0.9), dy / (r * 0.30))
+                if d > 1:
+                    continue
+                contact.ajouter(x + dx, y + dy - 2, c_lueur, (1 - d) ** 2.4 * 0.20)
+
         cible = avant if av else arriere
         buf = Image.new("RGBA", (LARG, HAUT), (0, 0, 0, 0))
         buf.paste(im, (int(x - im.size[0] // 2), int(y - im.size[1] + 6)), im)
         cible.a = np.maximum(cible.a, np.array(buf, dtype=np.float32))
-    return arriere.img(), avant.img(), plan
+    return arriere.img(), avant.img(), plan, contact.img()
 
 
 def halo_piliers(plan, phase):
@@ -674,6 +713,26 @@ PHASES = [
 ]
 
 
+_ECLATS_PEINTS = None
+
+
+def eclats_peints():
+    """Charge et pixelise la planche d'éclat peinte, si elle existe."""
+    global _ECLATS_PEINTS
+    if _ECLATS_PEINTS is None:
+        chemin = os.path.join(SOURCES, "vfx_eclat.png")
+        if os.path.isfile(chemin):
+            try:
+                _ECLATS_PEINTS = PX.decouper_bandes(chemin, 200, 200,
+                                                    n_couleurs=24, seuil=30)
+            except Exception:
+                _ECLATS_PEINTS = []
+        else:
+            _ECLATS_PEINTS = []
+        print(f"  éclats peints isolés : {len(_ECLATS_PEINTS)}")
+    return _ECLATS_PEINTS
+
+
 def image_transformation(i, total, terastal, stellaire):
     """Une image de la séquence, sur fond transparent."""
     ph = i / max(total - 1, 1)
@@ -771,6 +830,18 @@ def image_transformation(i, total, terastal, stellaire):
             dtype=np.float32))
         dessus.a = np.maximum(dessus.a, np.array(
             eclats(k, 44, VW, VH, VCX, VCY - 44, 130), dtype=np.float32))
+        peints = eclats_peints()
+        if peints:
+            src = peints[min(len(peints) - 1, int(k * (len(peints) - 1)))]
+            ech = 0.7 + 0.9 * k
+            sp2 = src.resize((max(8, int(src.size[0] * ech)),
+                              max(8, int(src.size[1] * ech))), Image.NEAREST)
+            lame = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
+            lame.paste(sp2, (VCX - sp2.size[0] // 2,
+                             VCY - 44 - sp2.size[1] // 2), sp2)
+            la = np.array(lame, dtype=np.float32)
+            la[..., 3] *= max(0.0, 1.0 - k * 0.55)
+            dessus.a = np.minimum(255.0, dessus.a + la * 0.85)
         for y in range(VH):
             for x in range(VW):
                 dessus.ajouter(x, y, (255, 255, 255), max(0.0, 0.55 - k * 0.8))
@@ -950,7 +1021,7 @@ def main():
     peint, veines_m, pal_ia = base_peinte()
     print("sol de cristal…")
     sol_proc, cell, arete, lum = sol_cristal()
-    pil_arr, pil_av, plan = placer_piliers(piliers_peints())
+    pil_arr, pil_av, plan, pil_sol = placer_piliers(piliers_peints(), pal_ia)
     vide = fond_vide()
     ecl = eclairage()
 
@@ -972,6 +1043,7 @@ def main():
         ph = i / N_BOUCLE
         if peint is not None:
             c_fond, c_sol = peint
+            c_sol = Image.alpha_composite(c_sol, pil_sol)
             c_veines = veines_peintes(veines_m, ph)
         else:
             c_fond, c_sol = vide, sol_proc

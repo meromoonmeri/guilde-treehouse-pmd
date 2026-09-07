@@ -41,6 +41,59 @@ def palette_fixe(im, couleurs):
     return im.convert("RGB").quantize(palette=pal, dither=Image.Dither.NONE)
 
 
+def purger_magenta(im, cible=0.655, tolerance=0.13):
+    """
+    Ramène toute teinte magenta ou pourpre vers l'indigo.
+
+    Un simple rééquilibrage de canaux ne suffit pas : il assombrit sans
+    déplacer la teinte. On travaille donc en TSV et on replie l'arc des
+    magentas (secteur 0,74 à 0,98) sur le bleu, en conservant saturation et
+    valeur pour ne pas aplatir le modelé.
+    """
+    a = np.asarray(im.convert("RGB"), dtype=np.float32) / 255.0
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    mx, mn = a.max(axis=2), a.min(axis=2)
+    d = mx - mn
+    h = np.zeros_like(mx)
+    m = d > 1e-6
+    idx = (mx == r) & m
+    h[idx] = ((g - b)[idx] / d[idx]) % 6
+    idx = (mx == g) & m
+    h[idx] = ((b - r)[idx] / d[idx]) + 2
+    idx = (mx == b) & m
+    h[idx] = ((r - g)[idx] / d[idx]) + 4
+    h = (h / 6.0) % 1.0
+    v = mx
+    sat = np.where(mx > 1e-6, d / np.maximum(mx, 1e-6), 0.0)
+
+    # Rabattement de toute la plage violet-magenta-pourpre sur l'indigo.
+    # Cibler le seul magenta pur laissait passer les pourpres voisins, qui
+    # sont précisément ce qui donnait la dominante mauve aux dalles.
+    bas, haut_, arrivee_bas, arrivee_haut = 0.66, 1.00, 0.585, 0.665
+    dedans = (h >= bas) & (h <= haut_)
+    u = (h - bas) / (haut_ - bas)
+    h = np.where(dedans, arrivee_bas + u * (arrivee_haut - arrivee_bas), h)
+    # les rouges franchement chauds (h < 0.06) sont eux aussi ramenés au bleu
+    chaud = h < 0.055
+    h = np.where(chaud, arrivee_haut, h)
+    sat = np.where(dedans | chaud, sat * 0.72, sat)
+
+    i = np.floor(h * 6.0)
+    f = h * 6.0 - i
+    p = v * (1 - sat)
+    q = v * (1 - f * sat)
+    t2 = v * (1 - (1 - f) * sat)
+    i = i.astype(int) % 6
+    out = np.zeros_like(a)
+    for k, (rr, gg, bb) in enumerate(((v, t2, p), (q, v, p), (p, v, t2),
+                                      (p, q, v), (t2, p, v), (v, p, q))):
+        m2 = i == k
+        out[..., 0][m2] = rr[m2]
+        out[..., 1][m2] = gg[m2]
+        out[..., 2][m2] = bb[m2]
+    return Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8), "RGB")
+
+
 def refroidir(im, force=0.22, assombrir=0.86):
     """
     Ramène la dominante vers l'indigo et baisse la luminosité. Une image
@@ -66,6 +119,7 @@ def convertir(chemin, larg, haut, n_couleurs=28, niveaux=7,
     im = cadrer(im, larg, haut)
     im = ImageEnhance.Color(im).enhance(saturation)
     im = ImageEnhance.Contrast(im).enhance(contraste)
+    im = purger_magenta(im)
     im = refroidir(im)
     im = im.filter(ImageFilter.MedianFilter(3))     # retire le moucheté
     im = posteriser(im, niveaux)

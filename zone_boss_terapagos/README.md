@@ -32,9 +32,14 @@ fait quatre choses, dans cet ordre, et l'ordre compte :
 
 1. **Cadrage** au rapport de la salle, puis réduction à 768 × 512 — un pixel de
    l'image devient un pixel du jeu.
-2. **Recalage colorimétrique** : la génération tire au magenta ; la dominante
-   est ramenée vers l'indigo et la luminosité baissée. Sans ce passage le fond
-   jure avec la palette de Terapagos et écrase les effets posés dessus.
+2. **Rabattement des teintes** : la génération tire au magenta. Toute la plage
+   violet-magenta-pourpre (0,66 à 1,00 en teinte) est repliée sur l'indigo
+   (0,585 à 0,665), saturation réduite d'un quart, et les rouges francs sont
+   ramenés au bleu. Un simple rééquilibrage de canaux, essayé d'abord, ne
+   déplaçait pas la teinte : il assombrissait sans corriger la dominante, et
+   les dalles restaient mauves. Contrôle automatique après rendu : moins de
+   0,5 % de pixels violets subsistent, et ce sont ceux des effets arc-en-ciel,
+   qui doivent y rester.
 3. **Filtre médian puis postérisation** : le médian retire le moucheté, la
    postérisation écrase les dégradés en paliers francs.
 4. **Quantification adaptative sur 30 couleurs, sans tramage.** Le tramage est
@@ -46,9 +51,17 @@ planche peinte par détection des pixels cyan clairs, puis animées là où le
 peintre les a placées. Le procédural épouse ainsi le dessin au lieu de le
 contredire.
 
-Les piliers, eux, restent procéduraux : la découpe automatique de la planche de
-références n'a pas su les isoler proprement, et les grappes générées se
-composent mieux avec la caverne peinte.
+Les **piliers** viennent d'une seconde planche peinte, tirée sur fond
+strictement noir pour que la découpe par projection en colonnes les isole. Ils
+ne sont pas simplement collés : chacun passe par une **harmonisation** — ses
+couleurs sont rapprochées de la palette du décor, il est légèrement assombri,
+puis ancré au sol par une ombre de contact et un débordement lumineux à sa
+base. C'est l'écart de gamme, pas la forme, qui trahit un élément rapporté.
+Repli automatique sur les piliers procéduraux si la découpe donne moins de
+quatre objets nets.
+
+Les **éclats de la transformation** viennent d'une troisième planche peinte,
+découpée en six états et posée en additif sur la phase d'éclatement.
 
 ## Les onze calques de l'arène
 
