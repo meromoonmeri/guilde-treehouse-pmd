@@ -94,11 +94,29 @@ calques de décor sont vides là où Halcyon couvre 24 à 59 % du sol. Un facteu
 Scripts de mesure et planches de comparaison : `analyse_echelle/`.
 Gabarits de retravail salle par salle (grille 24 px, bande mobilier, passages,
 sprites posés à 1:1) : `analyse_echelle/guides/`.
-Base de dessin déjà mise à l'échelle cible : `calques_reduits/` et `salles_reduites/`
-(brouillon à reprendre à la main, le rééchantillonnage adoucit le pixel art).
-Banc de props ramené aux tailles PMD : `sprites_reduits/`. Proposition de mise en place
-du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
-`analyse_echelle/placements/`.
+
+## Kit à l'échelle PMDO — les douze salles, vides
+
+**Toutes les pièces sont livrées à l'échelle cible PMDO/Halcyon, vides.** La
+proposition de placement automatique du mobilier a été **retirée** : aucun meuble,
+tapis, plante, bannière ou lampe n'est posé dans les fonds, comme dans le pack
+d'origine.
+
+- `salles_reduites/` : les 12 salles composées, jour et nuit — chambres et dortoirs
+  **408 × 288** à **504 × 336 px**, hall des missions **840 × 360 px**, salle du chef
+  **480 × 312 px**.
+- `calques_reduits/` : les 11 calques par salle et par palette, mêmes noms et même
+  ordre que le kit plein format. Les calques `06_decorations`, `07_objets` et
+  `09_eclairage_fixe` restent **vides**.
+- `sprites_reduits/` : le banc de props ramené aux tailles PMD, fourni **séparément** ;
+  rien n'en est posé dans les salles.
+- `apercu_echelle_pmdo.html` : aperçu autonome hors ligne des 24 salles à l'échelle,
+  avec bascule jour/nuit, paysage de fenêtres, grille 24 px et repère de sprite.
+
+`python3 analyse_echelle/reduire.py` régénère ce kit réduit depuis les calques
+plein format de `calques/` (rééchantillonnage LANCZOS : les contours restent à
+reprendre à la main si besoin). Le script `analyse_echelle/placement.py` est conservé
+dans la chaîne d'analyse mais **n'est plus appliqué au livrable**.
 
 ## Reproduction et contrôles
 

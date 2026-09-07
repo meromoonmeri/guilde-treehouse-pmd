@@ -322,7 +322,7 @@ contours, les lattes de plancher, les croisillons de fenêtre et les cadres.
 
 ---
 
-## 8. Banc de props à l'échelle et placement proposé
+## 8. Banc de props à l'échelle
 
 ### `sprites_reduits/` — les props ramenés aux tailles PMD
 
@@ -347,10 +347,16 @@ suspendu, tapis).
 Pour mémoire : mobilier médian chez Halcyon **40 × 56 px**, caisse = 1 case,
 grosses pièces 128 – 216 px. On est désormais dans la même famille de tailles.
 
-### `analyse_echelle/placements/` — la proposition de mise en place
+### `analyse_echelle/placement.py` — le placement automatique, retiré du livrable
 
-`python3 analyse_echelle/placement.py` pose, salle par salle, le nombre de props
-recommandé par le gabarit, avec ces règles :
+> **Retiré sur demande :** le mobilier n'est plus posé dans les salles. Les livrables
+> `calques_reduits/` et `salles_reduites/` sont régénérés **vides** par
+> `reduire.py` (calques `06`/`07`/`09` transparents). Le script reste dans la chaîne
+> d'analyse si l'on veut un jour produire une proposition de positionnement, mais il
+> n'est plus appliqué au kit.
+
+Le script pose, salle par salle, le nombre de props recommandé par le gabarit,
+avec ces règles :
 
 - **grandes pièces centrales** (tapis du chef, table de banquet) au centre du sol ;
 - **mobilier au sol** : pieds dans la bande de 1,5 case le long des murs, placement le
@@ -381,18 +387,19 @@ La couverture visée est de 30 – 45 %. Les salles encore en dessous sont celle
 palette est surtout végétale : il leur manque deux ou trois meubles pour arriver dans la
 fourchette — c'est le complément à faire à la main.
 
-**Ce que le script écrit vraiment :**
+**Ce que le script écrit quand on l'exécute :**
 
 - `analyse_echelle/placements/NN_placement.json` : chaque prop avec sa position en px et
   en cases, son calque de destination et son type de pose → éditable, réinjectable ;
 - `calques_reduits/<salle>/<jour|nuit>/06_decorations.png` et `07_objets.png` : les
-  calques de décor, jusqu'ici vides, sont désormais remplis ;
-- `salles_reduites/<salle>_<jour|nuit>.png` : les composites sont recomposés ;
+  calques de décor y seraient remplis ;
+- `salles_reduites/<salle>_<jour|nuit>.png` : les composites seraient recomposés ;
 - `analyse_echelle/placements/NN_apercu.png` + `planche_placements.png` : les aperçus avec
   4 sprites Pokémon posés à 1:1 sur le sol resté libre.
 
 Rien n'est figé : les positions sont dans le JSON, il suffit de les corriger et de
-relancer le script pour régénérer les calques.
+relancer le script pour régénérer les calques. **Par défaut, on ne le lance pas :**
+le kit réduit livré est régénéré vide par `reduire.py` seul.
 
 ---
 
@@ -407,9 +414,9 @@ python3 analyse_echelle/mesures.py   # -> analyse_echelle/mesures.json
 python3 analyse_echelle/apercus.py   # -> analyse_echelle/img/*.png
 python3 analyse_echelle/cibles.py    # -> analyse_echelle/cibles.json
 python3 analyse_echelle/guides.py    # -> analyse_echelle/guides/*.png + *_plan.json
-python3 analyse_echelle/reduire.py   # -> calques_reduits/ + salles_reduites/
+python3 analyse_echelle/reduire.py   # -> calques_reduits/ + salles_reduites/ (VIDES)
 python3 analyse_echelle/props.py     # -> sprites_reduits/ (banc de props a l'echelle)
-python3 analyse_echelle/placement.py # -> placements/ + calques 06/07 remplis
+python3 analyse_echelle/placement.py # (optionnel) proposition de mobilier, NON livree
 ```
 
 Les rendus de cartes Halcyon reconstruits sont mis en cache dans
