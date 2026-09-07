@@ -15,10 +15,13 @@ palette indexée à 3 tons par matière.
 | `0001` | Normale | `sprite/0001` | `portrait/0001` |
 | `0002` | Stellaire | `sprite/0002` | `portrait/0002` |
 
-Design respecté : dôme de cristal bleu à facettes portant sept pointes,
-liseré doré à la base de la carapace, corps et tête ivoire, yeux ambre à
-pupille sombre, quatre pattes courtes, petite queue cristalline. Aucun
-détail inventé hors du design officiel.
+Design respecté d'après l'artwork officiel fourni : **carapace basse et large
+en vitrail polygonal** (cellules bleu nuit, violettes, roses, vertes, cyan
+séparées par des nervures menthe claires, motif d'éclair jaune sur le dessus),
+**fourrure vaporeuse menthe/crème** en mèches pointues tout autour de la
+carapace, **petite tête bleu nuit** à l'avant avec œil cerclé de rouge à iris
+cyan et bouche en zigzag, **queue-panache fourchue** claire relevée à l'arrière.
+Pas de pattes visibles : le corps repose au sol. Aucun détail inventé.
 
 ## Cadre et ancrage
 
@@ -48,8 +51,8 @@ Par animation et par forme :
 
 ## Portraits (20 émotions + miroirs)
 
-Format canonique **40 × 40**, cadrage PMD (visage large, dôme débordant en
-haut). Émotions SpriteCollab : `Normal, Happy, Pain, Angry, Worried, Sad,
+Format canonique **40 × 40**, cadrage PMD : tête bleu nuit au premier plan,
+carapace de vitrail et fourrure débordant en haut du cadre. Émotions SpriteCollab : `Normal, Happy, Pain, Angry, Worried, Sad,
 Crying, Shouting, Teary-Eyed, Determined, Joyous, Inspired, Surprised, Dizzy,
 Special0-3, Sigh, Stunned`, chacune avec sa variante miroir `^`.
 Feuille regroupée : `Portraits.png` (grille 5 × 8).

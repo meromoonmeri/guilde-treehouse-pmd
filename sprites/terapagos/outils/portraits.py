@@ -14,6 +14,7 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
 from moteur import Toile, PAL
+from modele import CELL
 
 T = 40  # taille canonique des portraits PMD
 
@@ -57,139 +58,152 @@ def fond(im, rgb):
 
 
 def visage(t, emo):
-    """Dessine la tête de Terapagos en gros plan, style portrait PMD."""
-    cx, cy = 20.0, 24.0
-    rx, ry = 13.0, 11.5
+    """Gros plan PMD : tête bleu nuit devant, carapace vitrail derrière,
+    fourrure menthe débordante — d'après l'artwork officiel."""
+    import math as _m
 
-    # --- tête ivoire -----------------------------------------------------
-    t.disque(cx, cy, rx, ry, "corp_mid")
+    # --- carapace en vitrail, en arrière-plan haut -------------------------
+    dcx, dcy, drx, dry = 20.0, 9.0, 18.0, 10.5
+    t.disque(dcx, dcy, drx, dry, "vit_bas")
     for y in range(T):
         for x in range(T):
-            if t.get(x, y) != "corp_mid":
-                continue
-            u, v = (x - cx) / rx, (y - cy) / ry
-            l = -0.55 * u - 0.8 * v
-            if l > 0.62:
-                t.set(x, y, "corp_hau")
-            elif l < -0.5:
-                t.set(x, y, "corp_omb")
-            elif l < -0.05:
-                t.set(x, y, "corp_bas")
-
-    # --- dôme de cristal, débordant du cadre en haut ----------------------
-    dcx, dcy, drx, dry = 20.0, 7.0, 15.5, 10.5
-    t.disque(dcx, dcy, drx, dry, "cri_mid")
-    for y in range(T):
-        for x in range(T):
-            if t.get(x, y) != "cri_mid":
+            if t.get(x, y) != "vit_bas":
                 continue
             u, v = (x - dcx) / drx, (y - dcy) / dry
-            lum = -0.7 * u - 0.85 * v
-            bande = math.floor((u * 2.4 + v * 1.3) * 1.1)
-            lum += 0.14 * ((bande % 3) - 1)
-            if lum > 0.9:
-                c = "cri_ecl"
-            elif lum > 0.38:
-                c = "cri_hau"
-            elif lum > -0.05:
-                c = "cri_mid"
-            elif lum > -0.55:
-                c = "cri_bas"
-            else:
-                c = "cri_omb"
+            a = _m.atan2(v, u)
+            r = _m.sqrt(u * u + v * v)
+            sect = int((a + _m.pi) / (2 * _m.pi) * 8) % 8
+            idx = (sect + (0 if r < 0.5 else 5)) % len(CELL)
+            c = CELL[idx]
+            lum = -0.55 * u - 0.8 * v
+            if lum > 0.5 and c in ("vit_omb", "vit_bas"):
+                c = "vit_mid"
+            elif lum < -0.5 and c in ("vit_mid", "vit_cya", "vit_ver"):
+                c = "vit_bas"
             t.set(x, y, c)
-    # arêtes internes
-    for a in (-125, -30):
-        r = math.radians(a)
-        t.ligne(dcx + math.cos(r) * drx * 0.2, dcy + math.sin(r) * dry * 0.2,
-                dcx + math.cos(r) * drx * 0.8, dcy + math.sin(r) * dry * 0.8,
-                "cont_cri")
-    t.set(int(dcx - 6), int(dcy - 2), "cri_ecl")
-    t.set(int(dcx - 5), int(dcy - 2), "cri_ecl")
-    t.set(int(dcx - 5), int(dcy - 3), "cri_ecl")
-    # pointes de cristal
-    for u, h in ((-0.82, 3), (-0.45, 4), (0.0, 5), (0.45, 4), (0.82, 3)):
-        px = dcx + u * drx * 0.9
-        py = dcy - dry * 0.62 + abs(u) * 4
-        h = h + 2
-        for i in range(h):
-            w = max(0, int(round(2 * (1 - i / h))))
-            for dx in range(-w, w + 1):
-                t.set(px + dx, py - i, "cri_hau" if dx <= 0 else "cri_bas")
-    # liseré doré continu à la base du dôme (bandeau, pas de pointillé)
-    for x in range(T):
-        u = (x - dcx) / drx
-        if abs(u) > 0.86:
-            continue
-        yb = dcy + dry * math.sqrt(max(0.0, 1 - u * u))
-        t.set(x, yb, "or_mid")
-        t.set(x, yb - 1, "or_hau" if x < dcx else "or_mid")
-        t.set(x, yb + 1, "or_omb")
+    # nervures menthe
+    for y in range(T):
+        for x in range(T):
+            c = t.get(x, y)
+            if c is None or not c.startswith("vit"):
+                continue
+            for dx, dy in ((1, 0), (0, 1)):
+                n = t.get(x + dx, y + dy)
+                if n is not None and n.startswith("vit") and n != c:
+                    t.set(x, y, "nerv_hau" if y < dcy else "nerv_mid")
+    for y in range(T):
+        for x in range(T):
+            c = t.get(x, y)
+            if c is None or not c.startswith(("vit", "nerv")):
+                continue
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                n = t.get(x + dx, y + dy)
+                if n is None or not n.startswith(("vit", "nerv")):
+                    t.set(x, y, "nerv_hau" if y < dcy else "nerv_mid")
+                    break
+    # éclair jaune
+    for dx, dy, c in ((0, -2, "or_hau"), (-1, -1, "or_mid"), (0, -1, "or_hau"),
+                      (-1, 0, "or_mid"), (0, 0, "or_mid"), (1, 0, "or_hau"),
+                      (0, 1, "or_mid"), (1, 1, "or_omb"), (0, 2, "or_omb")):
+        t.set(dcx - 4 + dx, dcy - 2 + dy, c)
+    t.set(int(dcx - 8), int(dcy - 4), "vit_ecl")
+    t.set(int(dcx - 7), int(dcy - 4), "vit_ecl")
 
-    # --- yeux --------------------------------------------------------------
+    # --- fourrure vaporeuse autour de la carapace --------------------------
+    for i in range(22):
+        a = _m.pi * (i / 21.0) + _m.pi  # demi-couronne supérieure
+        ca, sa = _m.cos(a), _m.sin(a)
+        lon = 5.0 + 3.0 * abs(ca)
+        x0, y0 = dcx + ca * drx, dcy + sa * dry
+        x1, y1 = dcx + ca * (drx + lon), dcy + sa * (dry + lon * 0.8)
+        pas = max(1, int(max(abs(x1 - x0), abs(y1 - y0))))
+        for k in range(pas + 1):
+            u = k / pas
+            x, y = x0 + (x1 - x0) * u, y0 + (y1 - y0) * u
+            c = "four_cre" if u > 0.65 else ("four_hau" if u > 0.3 else "four_mid")
+            w = max(0, int(round(2.0 * (1 - u * 0.6))))
+            for dx in range(-w, w + 1):
+                for dy in range(-1, 1):
+                    if t.get(x + dx, y + dy) is None:
+                        t.set(x + dx, y + dy, c)
+    for y in range(T):
+        for x in range(T):
+            u, v = (x - dcx) / (drx + 3.0), (y - dcy) / (dry + 3.0)
+            dd = u * u + v * v
+            if 0.72 <= dd <= 1.0 and t.get(x, y) is None:
+                lum = -0.6 * u - 0.85 * v
+                t.set(x, y, "four_hau" if lum > 0.4 else
+                      ("four_mid" if lum > -0.1 else "four_bas"))
+
+    # --- tête bleu nuit au premier plan ------------------------------------
+    cx, cy = 20.0, 28.0
+    rx, ry = 11.5, 9.0
+    t.disque(cx, cy, rx, ry, "tet_mid")
+    for y in range(T):
+        for x in range(T):
+            if t.get(x, y) != "tet_mid":
+                continue
+            u, v = (x - cx) / rx, (y - cy) / ry
+            lum = -0.5 * u - 0.85 * v
+            if lum > 0.55:
+                t.set(x, y, "tet_hau")
+            elif lum < -0.35:
+                t.set(x, y, "tet_omb")
+
+    # --- yeux : anneau rouge, iris cyan ------------------------------------
     ferme = emo in ("Sigh",)
     plisse = emo in ("Happy", "Joyous", "Pain")
     grand = emo in ("Surprised", "Stunned", "Special1")
     larme = emo in ("Crying", "Teary-Eyed")
-    oy = 25.5
+    oy = 27.5
     for s in (-1, 1):
-        ox = cx + s * 6.2
+        ox = cx + s * 5.6
         if ferme:
-            t.ligne(ox - 3, oy, ox + 3, oy, "contour")
+            t.ligne(ox - 3, oy, ox + 3, oy, "oeil_rou")
             continue
         if plisse:
-            t.ligne(ox - 3, oy + 1, ox, oy - 1, "contour")
-            t.ligne(ox, oy - 1, ox + 3, oy + 1, "contour")
+            t.ligne(ox - 3, oy + 1, ox, oy - 1, "oeil_rou")
+            t.ligne(ox, oy - 1, ox + 3, oy + 1, "oeil_rou")
             continue
-        hh = 5.0 if grand else 4.0
-        t.disque(ox, oy, 3.4, hh, "oeil_bl")
+        hh = 4.6 if grand else 3.9
+        t.disque(ox, oy, 3.5, hh, "oeil_rou")
         px_ = ox + (0.8 * s if emo in ("Angry", "Determined", "Shouting") else 0)
         py_ = oy + (1.0 if emo in ("Sad", "Worried", "Crying") else 0)
-        t.disque(px_, py_, 2.5, hh * 0.86, "oeil_ir")
-        t.disque(px_, py_ + 0.6, 1.5, hh * 0.5, "oeil_pu")
+        t.disque(px_, py_, 2.3, hh * 0.72, "oeil_cya")
+        t.disque(px_, py_ + 0.4, 1.5, hh * 0.52, "oeil_ver")
+        t.disque(px_, py_ + 0.5, 1.1, hh * 0.36, "oeil_pu")
         t.set(int(px_ - 2), int(py_ - 2), "oeil_bl")
         t.set(int(px_ - 1), int(py_ - 2), "oeil_bl")
         if emo == "Dizzy":
             t.disque(px_, py_, 1.4, 1.4, "oeil_bl")
         if larme:
-            t.set(int(ox + 3 * s), int(oy + 3), "cri_hau")
-            t.set(int(ox + 3 * s), int(oy + 4), "cri_mid")
+            t.set(int(ox + 4 * s), int(oy + 3), "four_hau")
+            t.set(int(ox + 4 * s), int(oy + 4), "four_mid")
             if emo == "Crying":
-                t.set(int(ox + 3 * s), int(oy + 5), "cri_mid")
-        # sourcils
+                t.set(int(ox + 4 * s), int(oy + 5), "four_mid")
         if emo in ("Angry", "Shouting", "Determined"):
-            t.ligne(ox - 4 * s, oy - 6, ox + 3 * s, oy - 4, "contour")
+            t.ligne(ox - 4 * s, oy - 6, ox + 3 * s, oy - 5, "tet_omb")
         elif emo in ("Sad", "Worried", "Pain", "Crying", "Teary-Eyed"):
-            t.ligne(ox - 4 * s, oy - 4, ox + 3 * s, oy - 6, "contour")
+            t.ligne(ox - 4 * s, oy - 5, ox + 3 * s, oy - 6, "tet_omb")
 
-    # --- bouche -------------------------------------------------------------
-    bx, by = cx, 32.5
-    if emo in ("Happy", "Joyous", "Inspired"):
-        t.ligne(bx - 3, by - 1, bx - 1, by + 1, "bouche")
-        t.ligne(bx - 1, by + 1, bx + 1, by + 1, "bouche")
-        t.ligne(bx + 1, by + 1, bx + 3, by - 1, "bouche")
-        if emo == "Joyous":
-            t.disque(bx, by, 2.6, 1.8, "bouche")
-    elif emo in ("Shouting", "Surprised", "Stunned", "Special1"):
-        t.disque(bx, by, 2.4, 2.2, "bouche")
-        t.set(int(bx), int(by + 1), "oeil_pu")
+    # --- bouche en zigzag ---------------------------------------------------
+    bx, by = cx, 34.5
+    if emo in ("Shouting", "Surprised", "Stunned", "Special1"):
+        t.disque(bx, by, 2.6, 2.2, "nerv_hau")
+        t.set(int(bx), int(by + 1), "tet_omb")
     elif emo in ("Sad", "Worried", "Crying", "Teary-Eyed", "Pain"):
-        t.ligne(bx - 2, by + 1, bx, by - 1, "bouche")
-        t.ligne(bx, by - 1, bx + 2, by + 1, "bouche")
-    elif emo == "Angry":
-        t.ligne(bx - 3, by, bx + 3, by, "bouche")
-        t.set(int(bx - 1), int(by - 1), "bouche")
-        t.set(int(bx + 1), int(by - 1), "bouche")
+        for dx, dy in ((-3, 1), (-2, 0), (-1, 0), (0, 0), (1, 0), (2, 0), (3, 1)):
+            t.set(bx + dx, by + dy, "nerv_hau")
+    elif emo in ("Happy", "Joyous", "Inspired"):
+        for dx, dy in ((-4, 0), (-3, 1), (-2, 2), (-1, 2), (0, 2),
+                       (1, 2), (2, 2), (3, 1), (4, 0)):
+            t.set(bx + dx, by + dy, "nerv_hau")
     elif emo == "Sigh":
-        t.ligne(bx - 2, by, bx + 2, by, "bouche")
-    else:
-        t.ligne(bx - 2, by, bx + 2, by, "bouche")
-
-    # joues rosées légères des émotions chaudes (2 px, sans dégradé)
-    if emo in ("Happy", "Joyous", "Special0"):
-        for s in (-1, 1):
-            t.set(int(cx + s * 10), 30, "or_mid")
-            t.set(int(cx + s * 10), 31, "or_omb")
+        t.ligne(bx - 3, by, bx + 3, by, "nerv_hau")
+    else:  # zigzag caractéristique
+        for dx, dy in ((-4, 0), (-3, 1), (-2, 0), (-1, 1), (0, 0),
+                       (1, 1), (2, 0), (3, 1), (4, 0)):
+            t.set(bx + dx, by + dy, "nerv_hau")
 
 
 def portrait(emo):

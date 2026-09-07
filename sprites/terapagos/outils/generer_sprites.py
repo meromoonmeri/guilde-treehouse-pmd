@@ -57,17 +57,18 @@ def teinter(im, variante):
             if a == 0:
                 continue
             if variante == "normale":
-                # dôme bleu -> carapace verte/écaille sobre de la forme normale
+                # forme Normale : carapace verte opaque, fourrure crème sobre
                 if b > r + 20:
-                    px[x, y] = (int(g * 0.62), int(g * 0.86), int(b * 0.52), a)
+                    px[x, y] = (int(r * 0.85), min(255, int(g * 1.05)),
+                                int(b * 0.68), a)
             elif variante == "stellaire":
-                # forme stellaire : cristal cyan très clair + or intense
+                # forme Stellaire : vitrail saturé, nervures et or plus vifs
                 if b > r + 20:
-                    px[x, y] = (min(255, int(r * 1.15)), min(255, int(g * 1.05)),
-                                min(255, int(b * 1.02)), a)
+                    px[x, y] = (min(255, int(r * 1.12)), min(255, int(g * 0.95)),
+                                min(255, int(b * 1.10)), a)
                 elif r > b + 40:
-                    px[x, y] = (min(255, r), min(255, int(g * 0.92)),
-                                max(0, int(b * 0.6)), a)
+                    px[x, y] = (min(255, r), min(255, int(g * 0.95)),
+                                max(0, int(b * 0.65)), a)
     return im
 
 

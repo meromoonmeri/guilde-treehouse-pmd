@@ -12,31 +12,47 @@ import math
 # yeux ambre, marques dorées). 16 teintes utiles, style PMD (3 tons/matiere).
 PAL = {
     "vide":      (0, 0, 0, 0),
-    "contour":   (26, 24, 46, 255),   # outline sombre unique, jamais noir pur
-    "cont_cri":  (30, 52, 96, 255),   # outline interne du cristal
-    "cri_omb":   (44, 96, 158, 255),
-    "cri_bas":   (63, 143, 208, 255),
-    "cri_mid":   (111, 195, 232, 255),
-    "cri_hau":   (176, 231, 247, 255),
-    "cri_ecl":   (233, 251, 255, 255),
-    "corp_omb":  (150, 146, 138, 255),
-    "corp_bas":  (198, 195, 182, 255),
-    "corp_mid":  (231, 228, 214, 255),
-    "corp_hau":  (250, 249, 240, 255),
-    "or_omb":    (176, 116, 32, 255),
-    "or_mid":    (238, 176, 58, 255),
-    "or_hau":    (255, 219, 128, 255),
-    "oeil_bl":   (252, 252, 248, 255),
-    "oeil_ir":   (240, 158, 42, 255),
-    "oeil_pu":   (40, 34, 40, 255),
-    "bouche":    (108, 60, 74, 255),
+    "contour":   (24, 30, 52, 255),   # outline sombre unique, jamais noir pur
+
+    # --- carapace : vitrail polygonal sombre, nervures claires -------------
+    "nerv_hau":  (196, 232, 186, 255),  # nervures menthe claires du vitrail
+    "nerv_mid":  (140, 196, 156, 255),
+    "vit_omb":   (34, 38, 74, 255),     # cellules de vitrail, base sombre
+    "vit_bas":   (52, 56, 104, 255),
+    "vit_mid":   (74, 80, 136, 255),
+    "vit_vio":   (98, 76, 138, 255),    # cellule violette
+    "vit_ros":   (150, 92, 128, 255),   # cellule rose
+    "vit_ver":   (70, 124, 110, 255),   # cellule verte
+    "vit_cya":   (62, 122, 158, 255),   # cellule cyan
+    "vit_ecl":   (186, 226, 240, 255),  # éclat de facette
+
+    # --- fourrure vaporeuse menthe / crème ---------------------------------
+    "four_omb":  (128, 186, 176, 255),
+    "four_bas":  (170, 214, 196, 255),
+    "four_mid":  (206, 234, 206, 255),
+    "four_hau":  (238, 246, 214, 255),
+    "four_cre":  (248, 248, 208, 255),  # pointes crème/jaune pâle
+
+    # --- tête bleu nuit -----------------------------------------------------
+    "tet_omb":   (26, 32, 62, 255),
+    "tet_mid":   (44, 54, 96, 255),
+    "tet_hau":   (68, 84, 132, 255),
+
+    # --- oeil : anneau rouge, iris cyan ------------------------------------
+    "oeil_rou":  (206, 62, 74, 255),
+    "oeil_cya":  (96, 220, 214, 255),
+    "oeil_ver":  (56, 168, 150, 255),
+    "oeil_pu":   (20, 26, 46, 255),
+    "oeil_bl":   (236, 248, 246, 255),
+
+    "or_mid":    (238, 206, 96, 255),   # éclair jaune de la carapace
+    "or_hau":    (252, 238, 150, 255),
+    "or_omb":    (192, 152, 52, 255),
+    "bouche":    (30, 36, 66, 255),
     "ombre":     (40, 38, 60, 90),
 }
 
-ORDRE_PAL = ["vide", "contour", "cont_cri", "cri_omb", "cri_bas", "cri_mid",
-             "cri_hau", "cri_ecl", "corp_omb", "corp_bas", "corp_mid",
-             "corp_hau", "or_omb", "or_mid", "or_hau", "oeil_bl", "oeil_ir",
-             "oeil_pu", "bouche"]
+ORDRE_PAL = [k for k in PAL if k not in ("vide", "ombre")]
 
 
 class Toile:
@@ -52,6 +68,7 @@ class Toile:
             self.px[y][x] = c
 
     def get(self, x, y):
+        x, y = int(x), int(y)
         if 0 <= x < self.l and 0 <= y < self.h:
             return self.px[y][x]
         return None
