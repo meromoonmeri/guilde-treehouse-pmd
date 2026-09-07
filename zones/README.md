@@ -122,3 +122,38 @@ ne peut rien voir dans ce cas. Remplacée par `pixelisation.decouper_objets`,
 qui détecte la couleur de fond aux quatre coins puis étiquette les composantes
 connexes par parcours en largeur. Huit arbres et huit accessoires isolés,
 quelle que soit la disposition de la planche.
+
+---
+
+## Version en tuiles — `foret_entree_tuiles`, `foret_coeur_tuiles`
+
+Les versions précédentes étaient trop illustrées. Une salle de PMD n'est pas
+une image peinte : c'est une **grille de tuiles de 24 px**, en basse
+résolution, avec une palette très courte et des aplats sans dégradé. Le mur
+n'est pas une collection d'arbres posés, c'est une **masse pleine dotée d'un
+rebord**.
+
+Ces deux zones sont donc bâties comme un donjon : 32 × 21 tuiles de 24 px, un
+plan de salle booléen, et une pose par autotuilage. La palette est **imposée à
+16 couleurs**, toutes les tuiles y sont projetées.
+
+| Calque | Rôle |
+|---|---|
+| `00_sol` | tuiles de sol, variantes tirées au sort |
+| `01_rebord` | face verticale sombre sous chaque case de mur bordant le sol |
+| `02_mur_feuillage` | masse de canopée |
+| `03_contour` | trait sombre cernant la masse de mur |
+| `04_particules` | pollen — **Addition** |
+| `05_eclairage` | vignette — **Multiply** |
+
+Le rebord n'est posé que sous une case de mur dont la voisine du dessous est du
+sol. C'est ce seul liseré qui donne le relief des donjons PMD ; sans lui la
+masse de feuillage paraît plate.
+
+Le `tileset.png` extrait est enregistré dans chaque dossier de zone, il peut
+donc servir dans Tiled.
+
+Deux filtres se sont avérés nécessaires : le tri automatique des tuiles en sol,
+canopée et rebord d'après leur teinte et leur luminance, et le **rejet des
+tuiles polluées par les gouttières blanches** de la planche source — sans lui
+elles se répètent en barres claires sur tout le sol.
