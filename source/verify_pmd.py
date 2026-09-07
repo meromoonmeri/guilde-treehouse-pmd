@@ -31,18 +31,18 @@ for room in M['salles']:
     k,x,y,op,typ,zi=struct.unpack_from('<HhhBHh',p);cw,ch=struct.unpack_from('<HH',p,16);assert typ==2 and op==255
     cel[k]=(x,y,Image.frombytes('RGBA',(cw,ch),zlib.decompress(p[20:])))
    pos+=length
-  assert pos==len(data) and layers==11
+  assert pos==len(data) and layers==12
   c=Image.new('RGBA',(w,h))
   for _,(x,y,q) in sorted(cel.items()):c.alpha_composite(q,(x,y))
   assert np.array_equal(np.array(c),np.array(target)),'Aseprite reconstruction mismatch'
-  tm=json.loads((R/'tiled'/f'{room["id"]}_{mode}.tmj').read_text());assert tm['tilewidth']==tm['tileheight']==8 and len(tm['layers'])==11
+  tm=json.loads((R/'tiled'/f'{room["id"]}_{mode}.tmj').read_text());assert tm['tilewidth']==tm['tileheight']==8 and len(tm['layers'])==12
   c=Image.new('RGBA',(w,h));cols,rows=w//8,h//8
   for la,ts in zip(tm['layers'],tm['tilesets']):
    arr=np.array(Image.open((R/'tiled'/ts['image']).resolve()).convert('RGBA'));tiles=arr.reshape(rows,8,cols,8,4).transpose(0,2,1,3,4).reshape(-1,8,8,4)
    ids=np.array(la['data']);out=np.zeros_like(tiles);ok=ids>0;out[ok]=tiles[ids[ok]-ts['firstgid']];out=out.reshape(rows,cols,8,8,4).transpose(0,2,1,3,4).reshape(h,w,4);c.alpha_composite(Image.fromarray(out,'RGBA'))
   assert np.array_equal(np.array(c),np.array(target)),'Tiled reconstruction mismatch'
-  rec['modes'][mode]={'calques':11,'frames':1,'PNG_Aseprite_Tiled':'identiques','base_fenetres_transparentes':True,'magenta_exact':True}
+  rec['modes'][mode]={'calques':12,'frames':1,'PNG_Aseprite_Tiled':'identiques','base_fenetres_transparentes':True,'magenta_exact':True}
  report['salles'].append(rec)
 report['unique_porte_fermee']='02 — nord vers le bureau 12'
 report['ambiances']=M['ambiances'];report['grille']=8
-(R/'controle_qualite.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print('PASS: 12 salles, 24 Aseprite fixes, 11 calques, 6 vues, fenêtres transparentes, magenta exact, Tiled identique.')
+(R/'controle_qualite.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print('PASS: 12 salles, 24 Aseprite fixes, 12 calques, 6 vues, fenêtres transparentes, magenta exact, Tiled identique.')

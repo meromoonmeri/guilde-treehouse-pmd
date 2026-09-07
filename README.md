@@ -27,7 +27,7 @@ Ambiances : **jour, nuit, crépuscule, aube, soir et orageux**. Les montagnes, l
 
 La salle 01 n’a pas de fenêtre vitrée : son accès nord est désormais une continuité de sol. Les persiennes des salles 08/10 conservent leurs lattes, avec une vue interchangeable dans leurs interstices.
 
-## Onze calques séparés
+## Douze calques séparés
 
 1. Paysage extérieur interchangeable
 2. Sol et continuité des passages
@@ -40,8 +40,29 @@ La salle 01 n’a pas de fenêtre vitrée : son accès nord est désormais une c
 9. Ombres de contact des accès
 10. Éclairage complémentaire — **vide**
 11. Bordure de premier plan, interrompue aux passages
+12. Feuillage d’immersion — cadre PMD
 
 Chaque salle est disponible en **jour et nuit**, avec une seule image par fichier Aseprite. Il n’y a aucune animation dans cette version.
+
+## Cadre de feuillage d’immersion (calque 12)
+
+`python source/retouche_feuillage.py` ajoute par salle et par palette le
+calque `11_feuillage_immersion.png`, posé **au-dessus de la bordure avant** :
+
+- une guirlande continue de feuillage festonné qui suit l’extrémité des
+  bordures de bois et des parois, plus épaisse en bas et sur les épaules
+  de la pièce, autour du tronc (hall) et aux extrémités des segments de
+  bordure ;
+- un dégradé vers le presque-noir sur la frange externe, plus quelques
+  masses d’arrière-plan fondues : le feuillage **se marie au fond noir** ;
+- les passages N/S/E/O restent entièrement dégagés, le sol traverse ;
+- fenêtres, tableaux et porte ne sont jamais recouverts (débordement
+  intérieur limité à 6 px sur le bois) ;
+- la nuit est recalculée avec la formule du pipeline et les pixels
+  « fondus » restent noirs dans les deux palettes.
+
+Le script est rejouable à l’identique (RNG semé par salle) et régénère
+composites, Aseprite, cartes Tiled, kit.json et planches.
 
 ## Contenu du kit
 
@@ -106,6 +127,8 @@ du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
 pip install -r source/requirements.txt
 python source/rebuild_landscapes.py
 python source/rebuild_kit.py
+python source/retouche_hall_02.py
+python source/retouche_feuillage.py
 python source/build_preview.py
 python source/verify_pmd.py
 ```

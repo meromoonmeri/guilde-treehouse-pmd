@@ -20,6 +20,7 @@ for r in M['salles']:
    if empty:q['layers'][mode].append(None)
    elif mode=='jour':q['layers'][mode].append(embed(p))
    elif index in [0,8]:q['layers'][mode].append(q['layers']['jour'][index])
+   elif index==11:q['layers'][mode].append(embed(p))
    else:
     original=q['layers']['jour'][index];derived='night_'+original;night_sources[derived]=original;q['layers'][mode].append(derived)
  for mode in M['ambiances']:q['views'][mode]=embed(R/'fenetres_exterieur'/r['id']/(mode+'.png'))
