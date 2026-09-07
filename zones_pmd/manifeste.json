@@ -106,7 +106,7 @@
    "cle": "d02",
    "biome": "foret",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d02p11a",
    "origine_tuiles": [
@@ -119,7 +119,7 @@
    "cle": "d03",
    "biome": "desert",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.363,
    "source": "d03p41a",
    "origine_tuiles": [
@@ -171,7 +171,7 @@
    "cle": "d31",
    "biome": "foret",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d31p41a",
    "origine_tuiles": [
@@ -249,7 +249,7 @@
    "cle": "d14",
    "biome": "desert",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d14p12a",
    "origine_tuiles": [
@@ -262,7 +262,7 @@
    "cle": "d15",
    "biome": "desert",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.367,
    "source": "d15p41a",
    "origine_tuiles": [
@@ -301,7 +301,7 @@
    "cle": "d44",
    "biome": "desert",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d44p31a",
    "origine_tuiles": [
@@ -314,7 +314,7 @@
    "cle": "d51",
    "biome": "pierre",
    "variante": "v1",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d51p41a",
    "origine_tuiles": [
@@ -418,7 +418,7 @@
    "cle": "d54",
    "biome": "foret",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d54p32a",
    "origine_tuiles": [
@@ -444,7 +444,7 @@
    "cle": "d02",
    "biome": "foret",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d02p11a",
    "origine_tuiles": [
@@ -457,7 +457,7 @@
    "cle": "d03",
    "biome": "desert",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.363,
    "source": "d03p11a",
    "origine_tuiles": [
@@ -470,7 +470,7 @@
    "cle": "d04",
    "biome": "desert",
    "variante": "v2",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d04p31a",
    "origine_tuiles": [
@@ -483,7 +483,7 @@
    "cle": "d16",
    "biome": "lave",
    "variante": "v2",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d16p31a",
    "origine_tuiles": [
@@ -509,7 +509,7 @@
    "cle": "d31",
    "biome": "foret",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d31p41a",
    "origine_tuiles": [
@@ -613,7 +613,7 @@
    "cle": "d21",
    "biome": "cristal",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d21p41a",
    "origine_tuiles": [
@@ -639,7 +639,7 @@
    "cle": "d44",
    "biome": "desert",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d44p31a",
    "origine_tuiles": [
@@ -652,7 +652,7 @@
    "cle": "d51",
    "biome": "pierre",
    "variante": "v2",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d51p41a",
    "origine_tuiles": [
@@ -782,7 +782,7 @@
    "cle": "d02",
    "biome": "foret",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.347,
    "source": "d02p11a",
    "origine_tuiles": [
@@ -847,7 +847,7 @@
    "cle": "d31",
    "biome": "foret",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d31p11a",
    "origine_tuiles": [
@@ -925,7 +925,7 @@
    "cle": "d14",
    "biome": "desert",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d14p12a",
    "origine_tuiles": [
@@ -938,7 +938,7 @@
    "cle": "d15",
    "biome": "desert",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d15p41a",
    "origine_tuiles": [
@@ -951,7 +951,7 @@
    "cle": "d21",
    "biome": "cristal",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d21p41a",
    "origine_tuiles": [
@@ -990,7 +990,7 @@
    "cle": "d51",
    "biome": "pierre",
    "variante": "v3",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d51p41a",
    "origine_tuiles": [
@@ -1094,7 +1094,7 @@
    "cle": "d54",
    "biome": "foret",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d54p31a",
    "origine_tuiles": [
@@ -1133,7 +1133,7 @@
    "cle": "d03",
    "biome": "desert",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.353,
    "source": "d03p41a",
    "origine_tuiles": [
@@ -1146,7 +1146,7 @@
    "cle": "d04",
    "biome": "desert",
    "variante": "v4",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d04p31a",
    "origine_tuiles": [
@@ -1185,7 +1185,7 @@
    "cle": "d31",
    "biome": "foret",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d31p11a",
    "origine_tuiles": [
@@ -1263,7 +1263,7 @@
    "cle": "d14",
    "biome": "desert",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d14p12a",
    "origine_tuiles": [
@@ -1289,7 +1289,7 @@
    "cle": "d21",
    "biome": "cristal",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d21p41a",
    "origine_tuiles": [
@@ -1328,7 +1328,7 @@
    "cle": "d51",
    "biome": "pierre",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d51p41a",
    "origine_tuiles": [
@@ -1341,7 +1341,7 @@
    "cle": "d56",
    "biome": "cristal",
    "variante": "v4",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d56p11a",
    "origine_tuiles": [
@@ -1367,7 +1367,7 @@
    "cle": "d28",
    "biome": "foret",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.35,
    "source": "d28p31a",
    "origine_tuiles": [
@@ -1458,7 +1458,7 @@
    "cle": "d02",
    "biome": "foret",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d02p31a",
    "origine_tuiles": [
@@ -1484,7 +1484,7 @@
    "cle": "d04",
    "biome": "desert",
    "variante": "v5",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d04p31a",
    "origine_tuiles": [
@@ -1497,7 +1497,7 @@
    "cle": "d16",
    "biome": "lave",
    "variante": "v5",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d16p31a",
    "origine_tuiles": [
@@ -1588,7 +1588,7 @@
    "cle": "d12",
    "biome": "desert",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d12p41a",
    "origine_tuiles": [
@@ -1601,7 +1601,7 @@
    "cle": "d14",
    "biome": "desert",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d14p12a",
    "origine_tuiles": [
@@ -1614,7 +1614,7 @@
    "cle": "d15",
    "biome": "desert",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.353,
    "source": "d15p41a",
    "origine_tuiles": [
@@ -1627,7 +1627,7 @@
    "cle": "d21",
    "biome": "cristal",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d21p41a",
    "origine_tuiles": [
@@ -1653,7 +1653,7 @@
    "cle": "d44",
    "biome": "desert",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d44p31a",
    "origine_tuiles": [
@@ -1666,7 +1666,7 @@
    "cle": "d51",
    "biome": "pierre",
    "variante": "v5",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.347,
    "source": "d51p41a",
    "origine_tuiles": [
@@ -1770,7 +1770,7 @@
    "cle": "d54",
    "biome": "foret",
    "variante": "v6",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.347,
    "source": "d54p32a",
    "origine_tuiles": [
@@ -1822,7 +1822,7 @@
    "cle": "d04",
    "biome": "desert",
    "variante": "v6",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d04p31a",
    "origine_tuiles": [
@@ -1835,7 +1835,7 @@
    "cle": "d16",
    "biome": "lave",
    "variante": "v6",
-   "liquide": "eau",
+   "liquide": "lave",
    "praticable_pct": 0.343,
    "source": "d16p31a",
    "origine_tuiles": [
@@ -1861,7 +1861,7 @@
    "cle": "d31",
    "biome": "foret",
    "variante": "v6",
-   "liquide": null,
+   "liquide": "eau",
    "praticable_pct": 0.343,
    "source": "d31p11a",
    "origine_tuiles": [
@@ -1952,7 +1952,7 @@
    "cle": "d15",
    "biome": "desert",
    "variante": "v6",
-   "liquide": null,
+   "liquide": "lave",
    "praticable_pct": 0.35,
    "source": "d15p41a",
    "origine_tuiles": [

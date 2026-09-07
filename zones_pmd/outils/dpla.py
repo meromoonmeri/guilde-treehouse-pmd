@@ -125,38 +125,54 @@ class Dpla:
 # Fabrication d'une table à partir d'une rampe de couleurs réelle
 # --------------------------------------------------------------------------
 
-def table_depuis_rampe(rampe, longueurs=(3, 4, 6, 4), duree=6, sens=1):
+def table_depuis_rampe(rampe, longueurs=(3, 4, 6, 4), duree=6, amplitude=1,
+                       ondes=2, depuis=0):
     """
     Construit une table DPLA pour une nappe de liquide.
 
-    `rampe` est la suite des couleurs du liquide, du plus sombre au plus clair,
-    relevée sur les tuiles du jeu.
+    Trois propriétés du format sont reproduites, et ce sont elles qui font le
+    rendu du jeu :
 
-    Deux propriétés du format sont reproduites, et ce sont elles qui font le
-    rendu :
+    1. **la variation est locale.** Chaque emplacement oscille autour de sa
+       propre couleur, de plus ou moins `amplitude` crans dans la rampe. Un
+       premier essai faisait parcourir la rampe entière à chaque emplacement :
+       les pixels sombres devenaient clairs et inversement, et la nappe
+       clignotait au lieu de miroiter.
+    2. **chaque emplacement a son propre nombre d'images** — le champ
+       NbColors, qui est bien par entrée et non global. Les cycles n'ont donc
+       pas la même longueur et se déphasent en permanence.
+    3. les emplacements voisins sont décalés en phase, ce qui fait **voyager**
+       les reflets le long du dégradé au lieu de les faire battre ensemble.
 
-    1. l'emplacement *i* parcourt la rampe **en partant de sa propre
-       position**, si bien que les teintes voyagent le long du dégradé au lieu
-       de clignoter sur place ;
-    2. chaque emplacement reçoit **son propre nombre d'images** — le champ
-       NbColors du format, qui est bien par entrée et non global. Les cycles
-       n'ont donc pas la même longueur et se déphasent continuellement.
+    Les longueurs par défaut (3, 4, 6, 4) ont un PPCM de 12 : la nappe ne se
+    répète qu'au bout de douze pas alors qu'aucun emplacement ne compte plus
+    de six images.
 
-    Les longueurs par défaut (3, 4, 6, 4) ont un PPCM de 12 : le miroitement
-    ne se répète qu'au bout de douze pas, alors qu'aucun emplacement ne compte
-    plus de six images.
+    `amplitude` et `ondes` ont été réglés en mesurant la luminance moyenne de
+    la nappe image par image : à amplitude 1 et deux ondes le long de la rampe,
+    l'écart-type tombe à 9 contre 16 pour une amplitude de 2. Autrement dit la
+    nappe miroite sans battre globalement du clair au sombre.
     """
+    import math
     n = len(rampe)
     if n < 2:
         return Dpla()
     emplacements = []
     for i in range(COULEURS_PAR_PALETTE):
-        if i >= n:
+        # `depuis` laisse fixes les premiers crans de la rampe. C'est ce qui
+        # permet d'animer la seule lueur d'un brasier ou d'un cristal : la
+        # pierre qui le porte appartient à une palette non animée, comme dans
+        # les jeux d'origine.
+        if i >= n or i < depuis:
             emplacements.append({"images": [], "duree": 1})
             continue
         lg = longueurs[i % len(longueurs)]
-        images = [tuple(rampe[(i + sens * round(k * n / lg)) % n])
-                  for k in range(lg)]
+        phase = ondes * i / max(n - 1, 1)
+        images = []
+        for k in range(lg):
+            d = amplitude * math.sin(2 * math.pi * (k / lg + phase))
+            j = min(n - 1, max(0, i + int(round(d))))
+            images.append(tuple(rampe[j]))
         emplacements.append({"images": images, "duree": int(duree)})
     return Dpla(emplacements)
 

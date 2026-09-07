@@ -1,16 +1,22 @@
 {
- "liquide": null,
+ "liquide": {
+  "type": "lave",
+  "methode": "DPLA — substitution de palette, format Chunsoft",
+  "palette_cible": 10,
+  "periode_tics": 72,
+  "table": "dpla.json"
+ },
  "lumiere": {
   "methode": "rotation d'indices, approximation",
   "palette": [
    "#000000",
-   "#22170C",
-   "#342212",
-   "#452E18",
-   "#56391E",
-   "#684524",
-   "#79502A",
-   "#8A5C31"
+   "#130C06",
+   "#25180D",
+   "#372513",
+   "#49311A",
+   "#5C3D20",
+   "#6E4927",
+   "#936233"
   ],
   "plage_cyclee": [
    4,

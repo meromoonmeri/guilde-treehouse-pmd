@@ -32,6 +32,7 @@ sys.path.insert(0, ICI)
 sys.path.insert(0, os.path.join(ICI, "..", "..", "foulards_pmd", "outils"))
 import banque as B
 import dpla as DPLA
+import liquides as LQ
 import aseprite
 
 RACINE = os.path.abspath(os.path.join(ICI, ".."))
@@ -232,6 +233,35 @@ def _teinte_moyenne(t):
     r, g, b = a[..., 0].mean(), a[..., 1].mean(), a[..., 2].mean()
     h, s, v = colorsys.rgb_to_hsv(r, g, b)
     return h, s, v
+
+
+_LIQ_PEINTS = None
+
+
+def liquides_peints():
+    """
+    Tuiles de liquide dessinées puis rendues raccordables, servant de repli
+    quand le donjon d'origine n'en fournit aucune. Beaucoup de donjons n'ont
+    pas d'eau ni de lave dans leur jeu de tuiles : sans ce repli, la plupart
+    des zones resteraient sèches.
+    """
+    global _LIQ_PEINTS
+    if _LIQ_PEINTS is None:
+        src = os.path.join(RACINE, "sources_ia", "tuiles_liquides.png")
+        _LIQ_PEINTS = {"eau": [], "lave": []}
+        if os.path.isfile(src):
+            try:
+                brutes = LQ.decouper(src)
+                moitie = len(brutes) // 2
+                _LIQ_PEINTS["eau"] = [LQ.rendre_raccordable(t)
+                                      for t in brutes[:moitie]]
+                _LIQ_PEINTS["lave"] = [LQ.rendre_raccordable(t)
+                                       for t in brutes[moitie:]]
+            except Exception as e:
+                print("  repli liquide indisponible :", e)
+        print(f"  liquides peints : {len(_LIQ_PEINTS['eau'])} eau, "
+              f"{len(_LIQ_PEINTS['lave'])} lave")
+    return _LIQ_PEINTS
 
 
 def banque_liquide(cartes, max_tuiles=10):
@@ -780,6 +810,10 @@ def main(limite=150, gifs=16):
             biome = biome_du_donjon(noms, table)
             if cle not in cache_liq:
                 lq = banque_liquide(maps[:5])
+                peints = liquides_peints()
+                for k in ("eau", "lave"):
+                    if not lq[k]:
+                        lq[k] = list(peints[k])
                 lq["props"] = B.construire(maps[:5])[0].get("props") or []
                 cache_liq[cle] = lq
             liq = cache_liq[cle]

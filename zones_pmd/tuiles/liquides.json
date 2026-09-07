@@ -1,0 +1,48 @@
+{
+ "eau": {
+  "tuiles": 4,
+  "images": 12,
+  "rampe": [
+   "#001349",
+   "#043066",
+   "#224872",
+   "#1B5891",
+   "#34658A",
+   "#2B73AF",
+   "#538399",
+   "#3A8CC8",
+   "#5191B2",
+   "#6BA1B1",
+   "#79BBCC",
+   "#97D5D8"
+  ],
+  "periode_tics": 72,
+  "planche": "tuiles/eau_anim.png",
+  "tiled": "tiled/eau.tsx",
+  "aseprite": "aseprite/eau.aseprite",
+  "table_dpla": "tuiles/eau_dpla.json"
+ },
+ "lave": {
+  "tuiles": 4,
+  "images": 12,
+  "rampe": [
+   "#280019",
+   "#710C0C",
+   "#4A162E",
+   "#6C333E",
+   "#7F3F10",
+   "#B5390A",
+   "#DA4C07",
+   "#B66A24",
+   "#F16D05",
+   "#D19109",
+   "#FF9304",
+   "#FFBE01"
+  ],
+  "periode_tics": 72,
+  "planche": "tuiles/lave_anim.png",
+  "tiled": "tiled/lave.tsx",
+  "aseprite": "aseprite/lave.aseprite",
+  "table_dpla": "tuiles/lave_dpla.json"
+ }
+}
