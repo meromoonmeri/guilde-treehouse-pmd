@@ -13,6 +13,7 @@ sol, piliers, cercle, effets et sons sont produits par
 |---|---|
 | `decor/` | un PNG par calque, plus `arene.png` composée et `piliers_variantes.png` |
 | `vfx/` | feuilles de sprites : `transformation`, `sphere`, `cercle_foudre`, `colonne_lumiere` |
+| | les blasts célestes et le halo sont intégrés à `transformation` et à la boucle |
 | `aseprite/` | sources éditables, **multi-calques et multi-images** |
 | `sons/` | six effets de synthèse en WAV 16 bits 44,1 kHz stéréo |
 | `apercus/` | GIF de contrôle |
@@ -104,6 +105,21 @@ Aseprite, les deux restent donc cohérents.
 * **Les colonnes de lumière** et **l'anneau de foudre** sont en mélange
   **additif** : la lumière s'accumule au lieu de recouvrir. L'anneau retire une
   graine aléatoire différente à chaque image, d'où le grésillement.
+
+## Direction artistique arc-en-ciel
+
+Trois effets portent l'identité visuelle, et ils sont tous en fusion additive :
+
+* **Les blasts célestes** — des traits d'énergie qui tombent du ciel autour de
+  Terapagos. Chaque trait a sa propre phase : il descend, frappe le sol, y
+  laisse un disque d'impact qui s'élargit et s'efface. Les phases sont
+  décalées, la pluie ne bat donc jamais en cadence.
+* **Le halo** tourne autour de lui, teintes défilantes et épaisseur qui
+  respire. Son arrière est atténué : c'est cette seule atténuation qui donne la
+  profondeur de l'anneau, sans avoir à le découper en deux calques.
+* **La sphère** est facettée en **hexagones projetés**. Les mailles se
+  resserrent vers le bord en suivant le galbe, ce qui la fait lire comme un
+  volume. Une grille carrée, essayée d'abord, donnait un filet à provisions.
 
 ## La transformation
 

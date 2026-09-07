@@ -280,7 +280,25 @@ def pilier(hauteur, largeur, teinte=0.58, eclat=1.0, graine=3):
     return t.img()
 
 
-def placer_piliers():
+def piliers_peints():
+    """
+    Tente d'isoler les piliers de la planche peinte v2, tirée sur fond noir.
+    Renvoie None si la découpe ne donne pas au moins quatre objets nets, on
+    retombe alors sur les piliers procéduraux.
+    """
+    chemin = os.path.join(SOURCES, "piliers_v2.png")
+    if not os.path.isfile(chemin):
+        return None
+    try:
+        objets = PX.decouper_bandes(chemin, 150, 200, n_couleurs=22, seuil=34)
+    except Exception:
+        return None
+    objets = [o for o in objets if o.size[0] > 18 and o.size[1] > 40]
+    print(f"  piliers peints isolés : {len(objets)}")
+    return objets if len(objets) >= 4 else None
+
+
+def placer_piliers(peints=None):
     """Disposition en couronne autour de l'aire de combat."""
     plan = [
         # (x, y au sol, hauteur, largeur, teinte, avant/arrière)
@@ -290,7 +308,13 @@ def placer_piliers():
     ]
     arriere, avant = Toile(), Toile()
     for i, (x, y, hh, lw, te, av) in enumerate(plan):
-        im = pilier(hh, lw, te, 1.0 if av else 0.82, graine=3 + i)
+        if peints:
+            src = peints[i % len(peints)]
+            k = hh / max(src.size[1], 1)
+            im = src.resize((max(4, int(src.size[0] * k)), hh), Image.NEAREST)
+            im = teinter(im, arc_en_ciel(te, 0.45, 1.0), 0.18)
+        else:
+            im = pilier(hh, lw, te, 1.0 if av else 0.82, graine=3 + i)
         cible = avant if av else arriere
         buf = Image.new("RGBA", (LARG, HAUT), (0, 0, 0, 0))
         buf.paste(im, (int(x - im.size[0] // 2), int(y - im.size[1] + 6)), im)
@@ -444,9 +468,108 @@ def cercle_foudre(phase, rayon=118, hauteur=54, brins=9, graine=0, intensite=1.0
     return t.img()
 
 
+def blasts_celestes(phase, w=LARG, h=HAUT, cx=None, cy=None, n=7,
+                    rayon=150, intensite=1.0, graine=0):
+    """
+    Traits d'énergie arc-en-ciel qui tombent du ciel autour de Terapagos.
+
+    Chaque trait a sa propre phase : il descend, frappe le sol, y laisse un
+    disque d'impact qui s'élargit et s'efface. Les impacts sont décalés les
+    uns des autres pour que la pluie ne batte jamais en cadence.
+    """
+    cx = CX if cx is None else cx
+    cy = CY if cy is None else cy
+    t = Toile(w, h)
+    rng = np.random.default_rng(graine * 131 + 7)
+    for i in range(n):
+        a = 2 * math.pi * (i / n) + 0.35
+        px = cx + math.cos(a) * rayon * rng.uniform(0.72, 1.12)
+        py = cy + math.sin(a) * rayon * 0.40 * rng.uniform(0.72, 1.12)
+        ph = (phase * 1.6 + i / n) % 1.0
+        teinte = (i / n + phase * 0.8) % 1.0
+        c = arc_en_ciel(teinte, 0.66, 1.0)
+        cv = arc_en_ciel(teinte, 0.22, 1.0)
+
+        if ph < 0.62:                       # descente
+            k = ph / 0.62
+            tete = py * k
+            longueur = 34 + 90 * (1 - k)
+            for j in range(int(longueur)):
+                y = tete - j
+                if y < 0:
+                    break
+                att = (1 - j / longueur) ** 0.7 * intensite
+                lw = 2.2 * (1 - j / longueur) + 0.6
+                for dx in range(int(-lw) - 1, int(lw) + 2):
+                    d = abs(dx) / max(lw, 1e-6)
+                    if d > 1.25:
+                        continue
+                    coul = cv if d < 0.45 else c
+                    t.ajouter(px + dx, y, coul, (1 - d * 0.8) * 0.62 * att)
+        else:                                # impact au sol
+            k = (ph - 0.62) / 0.38
+            r = 6 + 34 * k
+            fond = (1 - k) ** 1.7 * intensite
+            for ang in range(0, 360, 4):
+                aa = math.radians(ang)
+                t.ajouter(px + math.cos(aa) * r, py + math.sin(aa) * r * 0.42,
+                          c, 0.75 * fond)
+                t.ajouter(px + math.cos(aa) * r * 0.72,
+                          py + math.sin(aa) * r * 0.30, cv, 0.45 * fond)
+            for j in range(int(26 * (1 - k))):
+                t.ajouter(px, py - j, cv, (1 - j / 26.0) * 0.55 * fond)
+    return t.img()
+
+
+def halo_arc_en_ciel(phase, w=LARG, h=HAUT, cx=None, cy=None, rayon=52,
+                     intensite=1.0, epaisseur=7):
+    """
+    Halo arc-en-ciel qui tourne autour de Terapagos : un anneau vu en
+    perspective, dont les teintes défilent et dont l'épaisseur respire.
+    """
+    cx = CX if cx is None else cx
+    cy = (CY - 26) if cy is None else cy
+    t = Toile(w, h)
+    ry = rayon * 0.34
+    respire = 0.85 + 0.15 * math.sin(phase * 2 * math.pi * 2.0)
+    n = int(2 * math.pi * rayon * 2.2)
+    for i in range(n):
+        a = 2 * math.pi * i / n
+        teinte = (a / (2 * math.pi) - phase * 1.2) % 1.0
+        c = arc_en_ciel(teinte, 0.70, 1.0)
+        cv = arc_en_ciel(teinte, 0.18, 1.0)
+        # l'arrière du halo est atténué, ce qui donne la profondeur
+        devant = (math.sin(a) + 1) / 2
+        att = (0.35 + 0.65 * devant) * intensite * respire
+        for e in range(-epaisseur, epaisseur + 1):
+            d = abs(e) / epaisseur
+            x = cx + math.cos(a) * (rayon + e * 0.55)
+            y = cy + math.sin(a) * (ry + e * 0.22) + e * 0.30
+            coul = cv if d < 0.28 else c
+            t.ajouter(x, y, coul, (1 - d) ** 2.0 * 0.42 * att)
+    return t.img()
+
+
 # --------------------------------------------------------------------------
 # Sphère d'enveloppement
 # --------------------------------------------------------------------------
+
+def _hex(x, y, s):
+    """Identifiant de tuile hexagonale, grille pointe en haut."""
+    q = (math.sqrt(3) / 3.0 * x - y / 3.0) / s
+    r = (2.0 / 3.0 * y) / s
+    xc, zc = q, r
+    yc = -xc - zc
+    rx_, ry_, rz_ = round(xc), round(yc), round(zc)
+    dx, dy, dz = abs(rx_ - xc), abs(ry_ - yc), abs(rz_ - zc)
+    if dx > dy and dx > dz:
+        rx_ = -ry_ - rz_
+    elif dy > dz:
+        ry_ = -rx_ - rz_
+    else:
+        rz_ = -rx_ - ry_
+    return (int(rx_), int(rz_))
+
 
 def sphere(rayon, phase, opacite=1.0, fracture=0.0, w=LARG, h=HAUT,
            cx=None, cy=None):
@@ -466,22 +589,25 @@ def sphere(rayon, phase, opacite=1.0, fracture=0.0, w=LARG, h=HAUT,
             d = math.hypot(dx, dy)
             if d > 1.0:
                 continue
-            # facettes hexagonales sur la sphère
-            u = dx * 6.0 + phase * 2.0
-            v = dy * 6.0 * 1.15
-            fx = abs(u - round(u))
-            fy = abs(v - round(v))
-            bord = fx < 0.10 or fy < 0.10
+            # facettes hexagonales, projetées sur la sphère : les mailles
+            # se resserrent vers le bord, ce qui donne le galbe
             z = math.sqrt(max(0.0, 1 - d * d))
+            pas = max(0.06, rayon / 7.0)
+            px_ = (x - cx) / max(0.35 + 0.65 * z, 1e-6)
+            py_ = (y - cy) / max(0.35 + 0.65 * z, 1e-6)
+            h0 = _hex(px_ + phase * pas * 1.2, py_, pas)
+            bord = (_hex(px_ + 1 + phase * pas * 1.2, py_, pas) != h0
+                    or _hex(px_ + phase * pas * 1.2, py_ + 1, pas) != h0)
             ecl = max(0.0, (-dx * 0.45 - dy * 0.55 + z * 0.75))
-            teinte = (phase * 0.7 + d * 0.45) % 1.0
-            c = arc_en_ciel(teinte, 0.42 - 0.25 * ecl, 1.0)
-            a = (0.10 + 0.42 * ecl) * opacite
+            teinte = (phase * 0.9 + d * 0.55 + math.atan2(dy, dx) / 6.283) % 1.0
+            c = arc_en_ciel(teinte, 0.72 - 0.30 * ecl, 1.0)
+            a = (0.12 + 0.40 * ecl) * opacite
             if d > 0.88:                                # lisière vive
-                a = (0.55 + 0.45 * (d - 0.88) / 0.12) * opacite
-                c = arc_en_ciel(teinte, 0.30, 1.0)
+                a = (0.58 + 0.42 * (d - 0.88) / 0.12) * opacite
+                c = arc_en_ciel(teinte, 0.58, 1.0)
             if bord:
-                a *= 1.7
+                a *= 1.85
+                c = arc_en_ciel((teinte + 0.10) % 1.0, 0.85, 1.0)
             if fracture > 0:
                 fis = abs(math.sin(math.atan2(dy, dx) * 5.0 + phase * 3.0))
                 if fis < fracture * 0.42:
@@ -584,6 +710,13 @@ def image_transformation(i, total, terastal, stellaire):
     sp = terastal
     voile = 0.0
 
+    # pluie d'énergie céleste, présente de l'appel à la révélation
+    if not dans("suspens"):
+        pl = 0.45 + 0.85 * ph
+        fond.a = np.maximum(fond.a, np.array(
+            blasts_celestes(ph, VW, VH, VCX, VCY, n=6, rayon=74,
+                            intensite=pl, graine=i), dtype=np.float32))
+
     if dans("appel"):
         k = u("appel")
         for j in range(26):
@@ -594,6 +727,9 @@ def image_transformation(i, total, terastal, stellaire):
     elif dans("montee"):
         k = u("montee")
         corps_y = VCY - int(10 * k)
+        fond.a = np.maximum(fond.a, np.array(
+            halo_arc_en_ciel(ph, VW, VH, VCX, VCY - 30, 40,
+                             intensite=k * 0.9), dtype=np.float32))
         voile = 0.18 * k
         dessus.a = np.maximum(dessus.a, np.array(
             cercle_foudre(k, rayon=74, hauteur=34, brins=7, graine=i,
@@ -658,6 +794,9 @@ def image_transformation(i, total, terastal, stellaire):
         dessus.a = np.maximum(dessus.a, np.array(
             cercle_foudre_local(k, VW, VH, VCX, VCY, 78, 40, 8, i,
                                 0.9 * (1 - k * 0.4)), dtype=np.float32))
+        fond.a = np.maximum(fond.a, np.array(
+            halo_arc_en_ciel(ph, VW, VH, VCX, VCY - 34, 46,
+                             intensite=min(1.0, k * 2.0)), dtype=np.float32))
 
     corps = blanchir(sp, voile)
     lame = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
@@ -811,7 +950,7 @@ def main():
     peint, veines_m, pal_ia = base_peinte()
     print("sol de cristal…")
     sol_proc, cell, arete, lum = sol_cristal()
-    pil_arr, pil_av, plan = placer_piliers()
+    pil_arr, pil_av, plan = placer_piliers(piliers_peints())
     vide = fond_vide()
     ecl = eclairage()
 
@@ -845,13 +984,17 @@ def main():
             "05_boss": boss,
             "06_piliers_avant": pil_av,
             "07_colonnes_lumiere": colonnes_lumiere(plan, ph, 0.85),
-            "08_cercle_foudre": cercle_foudre(ph, graine=i),
+            "08_cercle_foudre": Image.alpha_composite(
+                cercle_foudre(ph, graine=i),
+                halo_arc_en_ciel(ph, intensite=0.85)),
             "09_sphere": Image.new("RGBA", (LARG, HAUT), (0, 0, 0, 0)),
             "10_eclairage": ecl,
         }
         # le halo des piliers rejoint le calque des colonnes
         jeu["07_colonnes_lumiere"] = Image.alpha_composite(
-            jeu["07_colonnes_lumiere"], halo_piliers(plan, ph))
+            Image.alpha_composite(jeu["07_colonnes_lumiere"],
+                                  halo_piliers(plan, ph)),
+            blasts_celestes(ph, n=7, rayon=196, intensite=0.85, graine=i))
         images.append(jeu)
         print(f"  image {i + 1}/{N_BOUCLE}")
 
