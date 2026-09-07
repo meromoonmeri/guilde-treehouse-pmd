@@ -1,0 +1,96 @@
+{
+ "_commentaire": "Calibrage par espèce. Le modèle automatique (marqueurs d'Offsets.png + silhouette) gère le suivi image par image ; ces valeurs corrigent l'anatomie propre à chaque Pokémon. dy = décalage vertical du col en pixels (+ vers le bas), dx = décalage horizontal, largeur = facteur sur la largeur du col, descente = facteur sur le rayon de tête mesuré, echelle = grosseur du trait, vers_corps = correction de profondeur tête -> centre.",
+ "_defaut": {
+  "dx": 0.0,
+  "dy": 0.0,
+  "largeur": 1.0,
+  "descente": 1.0,
+  "echelle": 1.0,
+  "vers_corps": 0.18,
+  "fenetre_cou": 2
+ },
+ "0001": {},
+ "0002": {
+  "dy": 3.8
+ },
+ "0003": {
+  "largeur": 0.92,
+  "dy": -2.0
+ },
+ "0004": {},
+ "0005": {
+  "dy": -0.5
+ },
+ "0006": {
+  "dy": -0.3
+ },
+ "0007": {
+  "dy": 0.5
+ },
+ "0008": {
+  "dy": -1.4
+ },
+ "0009": {
+  "largeur": 0.95,
+  "dy": -1.2
+ },
+ "0152": {
+  "dy": 0.5
+ },
+ "0153": {
+  "dy": 4.1
+ },
+ "0154": {
+  "dy": 4.0
+ },
+ "0155": {
+  "dy": 0.6
+ },
+ "0156": {
+  "dy": -0.6
+ },
+ "0157": {
+  "dy": 0.7
+ },
+ "0158": {
+  "dy": -0.8
+ },
+ "0159": {
+  "dy": -1.0
+ },
+ "0160": {
+  "largeur": 0.92,
+  "dy": -1.9
+ },
+ "0252": {},
+ "0253": {
+  "dy": -2.1
+ },
+ "0254": {
+  "dy": 0.4
+ },
+ "0255": {},
+ "0256": {
+  "dy": 2.7
+ },
+ "0257": {
+  "dy": 1.5
+ },
+ "0258": {},
+ "0259": {
+  "dy": 2.0
+ },
+ "0260": {
+  "largeur": 0.95,
+  "dy": 0.8
+ },
+ "1024": {
+  "dy": 0.2
+ },
+ "1024/0001": {
+  "dy": -2.6
+ },
+ "1024/0002": {
+  "dy": -3.0
+ }
+}
