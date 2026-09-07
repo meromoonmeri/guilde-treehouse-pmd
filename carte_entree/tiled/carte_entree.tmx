@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="96" height="64" tilewidth="8" tileheight="8" infinite="0" nextlayerid="9" nextobjectid="1">
+ <imagelayer id="1" name="00_fond">
+  <image source="../calques/00_fond.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="2" name="01_sol">
+  <image source="../calques/01_sol.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="3" name="02_structure">
+  <image source="../calques/02_structure.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="4" name="03_objets">
+  <image source="../calques/03_objets.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="5" name="04_lueurs">
+  <image source="../calques/04_lueurs.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="6" name="05_lumiere">
+  <image source="../calques/05_lumiere.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="7" name="06_particules">
+  <image source="../calques/06_particules.png" width="768" height="512"/>
+ </imagelayer>
+ <imagelayer id="8" name="07_bordure_avant">
+  <image source="../calques/07_bordure_avant.png" width="768" height="512"/>
+ </imagelayer>
+</map>
