@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>Miltank #0241 — animations de scène</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#1a1a2e;color:#eee}
+header{padding:12px 16px;border-bottom:1px solid #333}
+h1{font-size:18px;margin:0 0 4px} p{margin:2px 0;color:#aab;font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px 16px;padding:10px 16px;align-items:center;font-size:14px}
+canvas{image-rendering:pixelated;background:#241c14;display:block;margin:12px 16px;border:1px solid #333}
+select,input{background:#222;color:#eee;border:1px solid #444;padding:3px}
+</style></head><body>
+<header><h1>Miltank #0241 — animations de scène ajoutées</h1>
+<p>Cases officielles replacées par rapport à l'ancre, squelette de temps du sprite #0155. Aucun pixel repeint.</p></header>
+<div class="bar">
+<label>Animation <select id="anim"></select></label>
+<label>Direction <select id="dir"></select></label>
+<label>Zoom <input id="zoom" type="range" min="1" max="8" value="4"></label>
+<label><input id="play" type="checkbox" checked> lecture</label>
+<span id="info"></span></div>
+<canvas id="c" width="400" height="300"></canvas>
+<script>
+const M = {"EventSleep": {"fw": 32, "fh": 48, "durations": [30, 35], "dirs": 8, "anchors": [[[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]], [[16, 28], [16, 28]]]}, "Wake": {"fw": 32, "fh": 56, "durations": [8, 6, 14, 4, 10], "dirs": 8, "anchors": [[[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32], [16, 32], [16, 32]]]}, "Eat": {"fw": 32, "fh": 48, "durations": [6, 8, 6, 8], "dirs": 1, "anchors": [[[16, 28], [16, 28], [16, 28], [16, 28]]]}, "Tumble": {"fw": 32, "fh": 56, "durations": [3, 3, 3, 3, 3, 3, 3, 3], "dirs": 1, "anchors": [[[16, 32], [16, 31], [16, 31], [16, 32], [16, 33], [16, 33], [16, 34], [16, 33]]]}, "Pose": {"fw": 40, "fh": 56, "durations": [12, 2, 8], "dirs": 8, "anchors": [[[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]], [[20, 32], [20, 34], [20, 34]]]}, "Pull": {"fw": 24, "fh": 48, "durations": [10, 12, 10, 12, 10, 12, 10], "dirs": 1, "anchors": [[[12, 28], [12, 28], [12, 28], [12, 28], [12, 28], [12, 28], [12, 28]]]}, "Pain": {"fw": 48, "fh": 64, "durations": [4, 1, 1, 1, 2, 1, 4, 2, 2, 2, 2, 2], "dirs": 8, "anchors": [[[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [24, 36], [25, 36], [24, 36], [25, 36], [24, 36], [25, 36]]]}, "Float": {"fw": 32, "fh": 64, "durations": [9, 18, 9, 14], "dirs": 8, "anchors": [[[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]], [[16, 36], [16, 35], [16, 36], [16, 37]]]}, "DeepBreath": {"fw": 32, "fh": 48, "durations": [12, 6, 6, 6, 6, 6, 6, 10, 4], "dirs": 1, "anchors": [[[16, 28], [16, 28], [15, 28], [16, 28], [15, 28], [16, 28], [15, 28], [16, 28], [16, 28]]]}, "Nod": {"fw": 32, "fh": 56, "durations": [6, 8, 6], "dirs": 8, "anchors": [[[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]], [[16, 32], [16, 32], [16, 32]]]}, "Sit": {"fw": 32, "fh": 48, "durations": [8, 8, 8], "dirs": 1, "anchors": [[[16, 28], [16, 28], [16, 28]]]}, "LookUp": {"fw": 32, "fh": 56, "durations": [6, 6, 6], "dirs": 1, "anchors": [[[16, 32], [16, 32], [16, 32]]]}, "Sink": {"fw": 32, "fh": 64, "durations": [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dirs": 1, "anchors": [[[16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36], [16, 36]]]}, "Trip": {"fw": 48, "fh": 64, "durations": [4, 6, 4, 4, 4], "dirs": 8, "anchors": [[[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]], [[24, 36], [24, 36], [24, 36], [24, 36], [24, 36]]]}, "Laying": {"fw": 32, "fh": 48, "durations": [12], "dirs": 8, "anchors": [[[16, 28]], [[16, 28]], [[16, 28]], [[16, 28]], [[16, 28]], [[16, 28]], [[16, 28]], [[16, 28]]]}, "LeapForth": {"fw": 32, "fh": 120, "durations": [6, 1, 1, 2, 2, 2], "dirs": 1, "anchors": [[[16, 64], [16, 64], [16, 60], [16, 56], [16, 52], [16, 48]]]}, "Head": {"fw": 40, "fh": 56, "durations": [4], "dirs": 8, "anchors": [[[20, 32]], [[20, 32]], [[20, 32]], [[20, 32]], [[20, 32]], [[20, 32]], [[20, 32]], [[20, 32]]]}, "Cringe": {"fw": 24, "fh": 72, "durations": [2, 8], "dirs": 1, "anchors": [[[12, 38], [12, 37]]]}, "LostBalance": {"fw": 32, "fh": 64, "durations": [8, 8], "dirs": 1, "anchors": [[[16, 36], [16, 36]]]}, "TumbleBack": {"fw": 32, "fh": 56, "durations": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], "dirs": 1, "anchors": [[[16, 34], [16, 35], [16, 36], [16, 34], [16, 32], [16, 31], [16, 30], [16, 31], [16, 32], [16, 33]]]}, "HitGround": {"fw": 24, "fh": 56, "durations": [4, 4, 4, 4, 4, 6, 4, 4], "dirs": 1, "anchors": [[[12, 32], [12, 32], [12, 32], [12, 32], [12, 32], [12, 32], [12, 32], [12, 32]]]}, "Faint": {"fw": 48, "fh": 56, "durations": [8, 12, 4, 10], "dirs": 8, "anchors": [[[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]], [[24, 32], [23, 32], [22, 32], [21, 32]]]}};
+const imgs = {};
+const anim = document.getElementById('anim'), dsel = document.getElementById('dir');
+for (const k of Object.keys(M)) { const o = document.createElement('option'); o.textContent = k; anim.append(o); }
+function loadDirs() {
+  dsel.innerHTML = '';
+  const names = ['Bas','Bas-droite','Droite','Haut-droite','Haut','Haut-gauche','Gauche','Bas-gauche'];
+  for (let i = 0; i < M[anim.value].dirs; i++) { const o = document.createElement('option'); o.value = i; o.textContent = names[i]; dsel.append(o); }
+}
+anim.onchange = loadDirs; loadDirs();
+function img(n) { if (!imgs[n]) { const i = new Image(); i.src = n + '-Anim.png'; imgs[n] = i; } return imgs[n]; }
+const c = document.getElementById('c'), g = c.getContext('2d');
+let t = 0;
+setInterval(() => {
+  const m = M[anim.value], z = +document.getElementById('zoom').value, d = +dsel.value || 0;
+  const total = m.durations.reduce((a, b) => a + b, 0);
+  if (document.getElementById('play').checked) t = (t + 1) % total; 
+  let acc = 0, f = 0;
+  for (let i = 0; i < m.durations.length; i++) { if (acc + m.durations[i] > t) { f = i; break; } acc += m.durations[i]; }
+  c.width = m.fw * z + 40; c.height = m.fh * z + 40;
+  g.imageSmoothingEnabled = false;
+  g.clearRect(0, 0, c.width, c.height);
+  const im = img(anim.value);
+  if (im.complete) g.drawImage(im, f * m.fw, d * m.fh, m.fw, m.fh, 20, 20, m.fw * z, m.fh * z);
+  document.getElementById('info').textContent = anim.value + ' — image ' + (f + 1) + '/' + m.durations.length + ', case ' + m.fw + ' × ' + m.fh;
+}, 1000 / 60);
+</script>
+<p style="padding:0 16px 24px;color:#889;font-size:12px">Animations d'origine conservées telles quelles : Walk, Attack, Stomp, Shoot, Appeal (copie de Twirl), Twirl, Sleep, Hurt, Idle, Swing, Double, Hop, Charge, Rotate.</p>
+</body></html>

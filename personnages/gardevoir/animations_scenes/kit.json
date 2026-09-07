@@ -1,0 +1,535 @@
+{
+ "pokemon": {
+  "numero": "0282",
+  "nom": "Gardevoir",
+  "nom_fr": "Gardevoir",
+  "forme": "0000",
+  "source": "https://sprites.pmdcollab.org/#/0282?form=0"
+ },
+ "methode": "composition : chaque image est une case officielle du même Pokémon, replacée par rapport à son ancre (décalage, direction, troncature) ; durées et déplacements d'ancre relus sur le squelette #0155",
+ "shadow_size": 1,
+ "animations_origine": [
+  "Walk",
+  "Attack",
+  "Strike (copie de Attack)",
+  "Shoot (copie de Charge)",
+  "SpAttack (copie de Appeal)",
+  "Appeal",
+  "Sleep",
+  "Hurt",
+  "Idle",
+  "Swing",
+  "Double",
+  "Hop",
+  "Charge",
+  "Rotate"
+ ],
+ "animations_ajoutees": {
+  "EventSleep": {
+   "index": 13,
+   "case": [
+    24,
+    40
+   ],
+   "images": 2,
+   "directions": 8,
+   "durees": [
+    30,
+    35
+   ],
+   "ticks": 65,
+   "sources": [
+    "Sleep"
+   ]
+  },
+  "Wake": {
+   "index": 14,
+   "case": [
+    32,
+    48
+   ],
+   "images": 5,
+   "directions": 8,
+   "durees": [
+    8,
+    6,
+    14,
+    4,
+    10
+   ],
+   "ticks": 42,
+   "sources": [
+    "Idle",
+    "Sleep"
+   ]
+  },
+  "Eat": {
+   "index": 15,
+   "case": [
+    24,
+    48
+   ],
+   "images": 4,
+   "directions": 1,
+   "durees": [
+    6,
+    8,
+    6,
+    8
+   ],
+   "ticks": 28,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "Tumble": {
+   "index": 16,
+   "case": [
+    32,
+    48
+   ],
+   "images": 8,
+   "directions": 1,
+   "durees": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "ticks": 24,
+   "sources": [
+    "Rotate"
+   ]
+  },
+  "Pose": {
+   "index": 17,
+   "case": [
+    32,
+    48
+   ],
+   "images": 3,
+   "directions": 8,
+   "durees": [
+    12,
+    2,
+    8
+   ],
+   "ticks": 22,
+   "sources": [
+    "Charge",
+    "Idle"
+   ]
+  },
+  "Pull": {
+   "index": 18,
+   "case": [
+    32,
+    40
+   ],
+   "images": 7,
+   "directions": 1,
+   "durees": [
+    10,
+    12,
+    10,
+    12,
+    10,
+    12,
+    10
+   ],
+   "ticks": 76,
+   "sources": [
+    "Charge"
+   ]
+  },
+  "Pain": {
+   "index": 19,
+   "case": [
+    40,
+    56
+   ],
+   "images": 12,
+   "directions": 8,
+   "durees": [
+    4,
+    1,
+    1,
+    1,
+    2,
+    1,
+    4,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 24,
+   "sources": [
+    "Hurt"
+   ]
+  },
+  "Float": {
+   "index": 20,
+   "case": [
+    32,
+    56
+   ],
+   "images": 4,
+   "directions": 8,
+   "durees": [
+    9,
+    18,
+    9,
+    14
+   ],
+   "ticks": 50,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "DeepBreath": {
+   "index": 21,
+   "case": [
+    32,
+    48
+   ],
+   "images": 9,
+   "directions": 1,
+   "durees": [
+    12,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    10,
+    4
+   ],
+   "ticks": 62,
+   "sources": [
+    "Charge",
+    "Idle"
+   ]
+  },
+  "Nod": {
+   "index": 22,
+   "case": [
+    32,
+    48
+   ],
+   "images": 3,
+   "directions": 8,
+   "durees": [
+    6,
+    8,
+    6
+   ],
+   "ticks": 20,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "Sit": {
+   "index": 23,
+   "case": [
+    24,
+    48
+   ],
+   "images": 3,
+   "directions": 1,
+   "durees": [
+    8,
+    8,
+    8
+   ],
+   "ticks": 24,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "LookUp": {
+   "index": 24,
+   "case": [
+    24,
+    48
+   ],
+   "images": 3,
+   "directions": 1,
+   "durees": [
+    6,
+    6,
+    6
+   ],
+   "ticks": 18,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "Sink": {
+   "index": 25,
+   "case": [
+    24,
+    64
+   ],
+   "images": 12,
+   "directions": 1,
+   "durees": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+   ],
+   "ticks": 72,
+   "sources": [
+    "Idle"
+   ]
+  },
+  "Trip": {
+   "index": 26,
+   "case": [
+    40,
+    56
+   ],
+   "images": 5,
+   "directions": 8,
+   "durees": [
+    4,
+    6,
+    4,
+    4,
+    4
+   ],
+   "ticks": 22,
+   "sources": [
+    "Hurt"
+   ]
+  },
+  "Laying": {
+   "index": 27,
+   "case": [
+    24,
+    40
+   ],
+   "images": 1,
+   "directions": 8,
+   "durees": [
+    12
+   ],
+   "ticks": 12,
+   "sources": [
+    "Sleep"
+   ]
+  },
+  "LeapForth": {
+   "index": 28,
+   "case": [
+    32,
+    112
+   ],
+   "images": 6,
+   "directions": 1,
+   "durees": [
+    6,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "ticks": 14,
+   "sources": [
+    "Hop"
+   ]
+  },
+  "Head": {
+   "index": 29,
+   "case": [
+    32,
+    56
+   ],
+   "images": 1,
+   "directions": 8,
+   "durees": [
+    4
+   ],
+   "ticks": 4,
+   "sources": [
+    "Charge"
+   ]
+  },
+  "Cringe": {
+   "index": 30,
+   "case": [
+    24,
+    64
+   ],
+   "images": 2,
+   "directions": 1,
+   "durees": [
+    2,
+    8
+   ],
+   "ticks": 10,
+   "sources": [
+    "Hurt"
+   ]
+  },
+  "LostBalance": {
+   "index": 31,
+   "case": [
+    32,
+    56
+   ],
+   "images": 2,
+   "directions": 1,
+   "durees": [
+    8,
+    8
+   ],
+   "ticks": 16,
+   "sources": [
+    "Hurt"
+   ]
+  },
+  "TumbleBack": {
+   "index": 32,
+   "case": [
+    32,
+    48
+   ],
+   "images": 10,
+   "directions": 1,
+   "durees": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "ticks": 30,
+   "sources": [
+    "Rotate"
+   ]
+  },
+  "HitGround": {
+   "index": 34,
+   "case": [
+    24,
+    56
+   ],
+   "images": 8,
+   "directions": 1,
+   "durees": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    6,
+    4,
+    4
+   ],
+   "ticks": 34,
+   "sources": [
+    "Hurt"
+   ]
+  },
+  "Faint": {
+   "index": 33,
+   "case": [
+    48,
+    56
+   ],
+   "images": 4,
+   "directions": 8,
+   "durees": [
+    8,
+    12,
+    4,
+    10
+   ],
+   "ticks": 34,
+   "sources": [
+    "Hurt"
+   ]
+  }
+ },
+ "aseprite": {
+  "canvas": [
+   48,
+   112
+  ],
+  "images": 114,
+  "calques": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "etiquettes": [
+   "EventSleep",
+   "Wake",
+   "Eat",
+   "Tumble",
+   "Pose",
+   "Pull",
+   "Pain",
+   "Float",
+   "DeepBreath",
+   "Nod",
+   "Sit",
+   "LookUp",
+   "Sink",
+   "Trip",
+   "Laying",
+   "LeapForth",
+   "Head",
+   "Cringe",
+   "LostBalance",
+   "TumbleBack",
+   "HitGround",
+   "Faint"
+  ],
+  "ancre": [
+   24,
+   60
+  ]
+ },
+ "nuit": "nuit/<Anim>-Anim.png : filtre night() de source/rebuild_kit.py ; Offsets et Shadow inchangés",
+ "palette": [
+  "#000000",
+  "#278700",
+  "#5fc737",
+  "#7f8f97",
+  "#8fff67",
+  "#afb7bf",
+  "#d7dfdf",
+  "#e73f67",
+  "#ff8faf",
+  "#ffffff"
+ ],
+ "couleurs": 10
+}

@@ -152,3 +152,59 @@ passes), le reste est mécanique une fois le pipeline Falinks/Zarude en place.
   squelette de Zarude.
 - `source/portraits/` — même démarche pour les portraits (retouche pixel d'une base, vérificateur).
 - `source/rebuild_kit.py` — `night()`, `ase()`, `font()` partagés avec le reste du kit.
+
+## 8. Compléter un sprite officiel : animations de scène (méthode retenue, lot de huit)
+
+Huit Pokémon demandés (#0186, #0241, #0297, #0282, #0443, #0424, #0923, #0674) avaient le set de donjon
+publié sur SpriteCollab mais **aucune** des 22 animations de scène du set complet (Eat, Wake, Sit, Sink,
+Faint…). `build_animations_scenes.py` les ajoute pour les huit d'un coup. Ce qui a marché :
+
+1. **Ne rien dessiner.** Chaque image d'une animation manquante est une **case officielle du même Pokémon**
+   (Idle, Hurt, Hop, Charge, Rotate, Sleep…), replacée par rapport à son ancre : décalage de quelques pixels,
+   changement de ligne, ou troncature par le bas pour l'enfoncement. La palette du résultat est donc
+   forcément incluse dans celle du sprite d'origine — le vérificateur l'exige.
+2. **Un squelette qui possède déjà ces animations.** Bayleef #0155 a le jeu Chunsoft complet : il fournit
+   nombre d'images, durées, déplacements d'ancre, nombre de lignes **et le numéro de créneau `<Index>`**.
+   Attention : `<Index>` n'est **pas** l'index global de `sprite_config.json`, c'est un numéro de créneau
+   propre au fichier (0-12 pour le set de donjon, 13-34 pour les scènes) ; les `CopyOf` partagent le créneau
+   de leur cible. Ne pas contrôler l'un pour l'autre.
+3. **Recopier les animations d'origine octet pour octet** dans le même dossier et les redéclarer dans
+   `AnimData.xml` : le dossier s'importe alors directement dans SkyTemple, sans réassemblage.
+4. **Recettes plutôt que code par Pokémon.** Un dictionnaire `RECIPES` décrit chaque animation par une liste
+   de `Step(src, frame, dx, dy, dir_mode, sink, fade_top)`. Les huit Pokémon partagent ces recettes ; seule
+   la lecture des cases change. Résultat : un seul constructeur, 176 animations produites, aucun cas particulier.
+5. **Ne coller que la boîte du dessin**, jamais la case entière (même piège que Falinks), et recalculer la
+   case par pas de 8 autour de l'étendue réelle.
+
+## 9. Compléter des portraits : `build_portraits_manquants.py`
+
+Généralisation de la méthode Falinks à quatre bases très différentes (#0186, #0297, #0424, #0923). Points
+qui ont demandé plusieurs passes :
+
+- **Détecter le fond sans toucher au personnage.** Propager depuis le bord en n'autorisant que les couleurs
+  qui apparaissent sur le cadre **et jamais dans le carré central 20 × 20** (toujours occupé par le
+  personnage sur ces portraits). Le simple « couleurs du bord » avale la moitié du Pokémon quand il partage
+  une teinte avec le ciel ; le simple « quatre coins » laisse la frange d'anticrénelage. Il faut les deux,
+  plus un rattrapage : une couleur absente du centre dont ≥ 85 % des pixels touchent déjà le fond en fait partie.
+- **Yeux : des opérations, pas des motifs.** Falinks avait des bitmaps ASCII dessinés pour sa seule base.
+  Pour quatre bases, ce sont des opérations paramétrées (`arch`, `line`, `squeeze`, `lid`, `slant`, `wet`,
+  `shrink`, `blank`, `spiral`, `star`) qui n'emploient que le contour, l'iris, la lumière et la peau **relevés
+  dans la boîte de l'œil de cette base**. Seule la boîte est à relever à la main par Pokémon.
+- **Tenir dans 15 couleurs.** Le dégradé de fond à deux tons fait parfois passer à 16. Repli en deux temps :
+  d'abord un aplat (ce que font déjà Dizzy et Surprised chez Chunsoft), puis, si besoin, rabattement des
+  couleurs d'effet sur la plus proche de la base. Les deux sont journalisés dans `kit.json`.
+- **Reprendre à l'identique** les émotions déjà publiées : la planche est complète et cohérente, et le
+  vérificateur compare octet pour octet.
+
+## 10. Un dessin fourni de l'extérieur : `build_zarude_fourni.py`
+
+Quand l'utilisateur fournit une planche (ici 4 orientations × 4 images de 64 × 64, 17 couleurs) :
+
+- **ne pas la repeindre** ; la copier telle quelle dans `source/personnages/reference/` ;
+- calculer l'**ancre au sol** de chaque pose (milieu de la dernière ligne opaque) : les planches externes
+  n'ont pas de `-Shadow.png` ;
+- **réduire la palette** aux 15 couleurs autorisées en rabattant les plus rares, et journaliser chaque report ;
+- prendre un **squelette officiel de même carrure** pour tout le temps, et n'écrire qu'un plan de poses ;
+- **avouer la limite** : sans vue diagonale dessinée, les quatre diagonales reprennent le profil. Le
+  vérificateur contrôle que chaque silhouette produite est, au pixel près, une pose fournie ou son miroir —
+  c'est la garantie que rien n'a été inventé.

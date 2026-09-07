@@ -1,0 +1,506 @@
+{
+ "pokemon": {
+  "nom": "Zarude",
+  "numero": "0893",
+  "forme": "0000",
+  "note": "absent de SpriteCollab ; dessin fourni par l'utilisateur"
+ },
+ "source_dessin": {
+  "fichier": "source/personnages/reference/zarude_fourni.png",
+  "planche": [
+   256,
+   256
+  ],
+  "grille": "4 orientations × 4 images de 64 × 64",
+  "orientations": [
+   "de face",
+   "profil gauche",
+   "profil droit (miroir)",
+   "de dos"
+  ],
+  "palette_rabattue": [
+   {
+    "de": "#4e694a",
+    "vers": "#5e615e",
+    "pixels": 16
+   },
+   {
+    "de": "#ffffff",
+    "vers": "#e8e8f8",
+    "pixels": 32
+   }
+  ]
+ },
+ "squelette": {
+  "sprite": "Rillaboom #0812",
+  "apporte": "durées, déplacements d'ancre, cases, créneaux <Index>, Rush/Hit/Return"
+ },
+ "directions": {
+  "Bas": {
+   "vue": "de face",
+   "miroir": false
+  },
+  "Bas-droite": {
+   "vue": "profil droit",
+   "miroir": false
+  },
+  "Droite": {
+   "vue": "profil droit",
+   "miroir": false
+  },
+  "Haut-droite": {
+   "vue": "profil droit",
+   "miroir": false
+  },
+  "Haut": {
+   "vue": "de dos",
+   "miroir": false
+  },
+  "Haut-gauche": {
+   "vue": "profil gauche",
+   "miroir": false
+  },
+  "Gauche": {
+   "vue": "profil gauche",
+   "miroir": false
+  },
+  "Bas-gauche": {
+   "vue": "profil gauche",
+   "miroir": false
+  }
+ },
+ "limite_connue": "le dessin fourni n'a pas de vue diagonale : les quatre diagonales reprennent le profil du bon côté",
+ "shadow_size": 2,
+ "animations": {
+  "Idle": {
+   "creneau": 7,
+   "case": [
+    72,
+    88
+   ],
+   "images": 1,
+   "directions": 8,
+   "durees": [
+    32
+   ],
+   "ticks": 32,
+   "poses": [
+    0
+   ]
+  },
+  "Walk": {
+   "creneau": 0,
+   "case": [
+    72,
+    88
+   ],
+   "images": 4,
+   "directions": 8,
+   "durees": [
+    8,
+    14,
+    8,
+    14
+   ],
+   "ticks": 44,
+   "poses": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  "Sleep": {
+   "creneau": 5,
+   "case": [
+    72,
+    88
+   ],
+   "images": 2,
+   "directions": 1,
+   "durees": [
+    30,
+    35
+   ],
+   "ticks": 65,
+   "poses": [
+    1,
+    3
+   ]
+  },
+  "Hurt": {
+   "creneau": 6,
+   "case": [
+    72,
+    96
+   ],
+   "images": 2,
+   "directions": 8,
+   "durees": [
+    2,
+    8
+   ],
+   "ticks": 10,
+   "poses": [
+    1,
+    3
+   ]
+  },
+  "Attack": {
+   "creneau": 1,
+   "case": [
+    72,
+    96
+   ],
+   "images": 13,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    4,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 26,
+   "poses": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    0,
+    0
+   ]
+  },
+  "Shoot": {
+   "creneau": 3,
+   "case": [
+    72,
+    96
+   ],
+   "images": 11,
+   "directions": 8,
+   "durees": [
+    2,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 26,
+   "poses": [
+    0,
+    1,
+    2,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    0,
+    0
+   ]
+  },
+  "Sing": {
+   "creneau": 4,
+   "case": [
+    72,
+    88
+   ],
+   "images": 16,
+   "directions": 8,
+   "durees": [
+    4,
+    6,
+    4,
+    4,
+    4,
+    2,
+    2,
+    2,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    6,
+    4
+   ],
+   "ticks": 48,
+   "poses": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    0,
+    0,
+    0
+   ]
+  },
+  "Swing": {
+   "creneau": 8,
+   "case": [
+    88,
+    96
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    2,
+    3,
+    2,
+    2,
+    1,
+    1
+   ],
+   "ticks": 16,
+   "poses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Double": {
+   "creneau": 9,
+   "case": [
+    96,
+    88
+   ],
+   "images": 16,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 36,
+   "poses": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  "Hop": {
+   "creneau": 10,
+   "case": [
+    72,
+    104
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    1,
+    2,
+    3,
+    4,
+    4,
+    3,
+    2,
+    1,
+    2
+   ],
+   "ticks": 24,
+   "poses": [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    0,
+    1,
+    3
+   ]
+  },
+  "Charge": {
+   "creneau": 11,
+   "case": [
+    72,
+    88
+   ],
+   "images": 10,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 20,
+   "poses": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  "Rotate": {
+   "creneau": 12,
+   "case": [
+    72,
+    88
+   ],
+   "images": 9,
+   "directions": 8,
+   "durees": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "ticks": 18,
+   "poses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "copies": {
+  "Strike": "Attack"
+ },
+ "aseprite": {
+  "canvas": [
+   96,
+   104
+  ],
+  "images": 103,
+  "calques": [
+   "Bas",
+   "Bas-droite",
+   "Droite",
+   "Haut-droite",
+   "Haut",
+   "Haut-gauche",
+   "Gauche",
+   "Bas-gauche"
+  ],
+  "etiquettes": [
+   "Idle",
+   "Walk",
+   "Sleep",
+   "Hurt",
+   "Attack",
+   "Shoot",
+   "Sing",
+   "Swing",
+   "Double",
+   "Hop",
+   "Charge",
+   "Rotate"
+  ],
+  "ancre": [
+   48,
+   56
+  ]
+ },
+ "palette": [
+  "#000000",
+  "#2d3d2b",
+  "#303030",
+  "#353535",
+  "#3f413f",
+  "#484848",
+  "#5e615e",
+  "#606060",
+  "#6f975a",
+  "#9090a0",
+  "#94c65a",
+  "#c0c0c0",
+  "#c8c8c8",
+  "#e03838",
+  "#e8e8f8"
+ ],
+ "couleurs": 15
+}

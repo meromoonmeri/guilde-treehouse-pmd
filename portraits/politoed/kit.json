@@ -1,0 +1,798 @@
+{
+ "pokemon": {
+  "numero": "0186",
+  "nom": "Politoed",
+  "nom_fr": "Tarpaud",
+  "forme": "0000",
+  "source": "https://sprites.pmdcollab.org/#/0186?form=0"
+ },
+ "methode": "retouche pixel de la base Normal : fond Chunsoft repeint par propagation depuis le bord, yeux transformés par opérations sur leurs propres couleurs, effets de la palette du kit",
+ "format": {
+  "portrait": [
+   40,
+   40
+  ],
+  "planche": [
+   200,
+   320
+  ],
+  "grille": [
+   5,
+   8
+  ],
+  "ordre": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Angry",
+   "Worried",
+   "Sad",
+   "Crying",
+   "Shouting",
+   "Teary-Eyed",
+   "Determined",
+   "Joyous",
+   "Inspired",
+   "Surprised",
+   "Dizzy",
+   "Special0",
+   "Special1",
+   "Sigh",
+   "Stunned",
+   "Special2",
+   "Special3"
+  ],
+  "moitie_basse": "versions retournées « ^ » : miroir horizontal exact",
+  "cases_vides": [
+   "Special0",
+   "Special1",
+   "Special2",
+   "Special3"
+  ]
+ },
+ "yeux": [
+  {
+   "boite": [
+    11,
+    9,
+    9,
+    11
+   ],
+   "cote": "left"
+  }
+ ],
+ "operations": {
+  "Happy": [
+   "arch",
+   0
+  ],
+  "Joyous": [
+   "arch",
+   1
+  ],
+  "Sigh": [
+   "line",
+   0
+  ],
+  "Crying": [
+   "squeeze",
+   0
+  ],
+  "Pain": [
+   "squeeze",
+   1
+  ],
+  "Sad": [
+   "lid",
+   2
+  ],
+  "Worried": [
+   "lid",
+   1
+  ],
+  "Angry": [
+   "slant",
+   1
+  ],
+  "Determined": [
+   "slant",
+   0
+  ],
+  "Shouting": [
+   "slant",
+   2
+  ],
+  "Teary-Eyed": [
+   "wet",
+   0
+  ],
+  "Surprised": [
+   "shrink",
+   0
+  ],
+  "Stunned": [
+   "blank",
+   0
+  ],
+  "Dizzy": [
+   "spiral",
+   0
+  ],
+  "Inspired": [
+   "star",
+   0
+  ]
+ },
+ "emotions_officielles_reprises": [
+  "Inspired",
+  "Normal",
+  "Shouting",
+  "Surprised"
+ ],
+ "emotions": {
+  "Normal": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#6a9f9f",
+    "#709f3c",
+    "#7ac7d8",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#9bd1c4",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47"
+   ]
+  },
+  "Happy": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      239,
+      119
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "arch",
+     "parametre": 0
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 99,
+   "origine": "retouche de la base Normal",
+   "couleurs": 11,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ffef77",
+    "#ffffbf"
+   ]
+  },
+  "Pain": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      111,
+      135,
+      183
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "squeeze",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "goutte de sueur"
+   ],
+   "pixels_retouches_hors_fond": 121,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#6f87b7",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#a7cfdf",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ffffff"
+   ]
+  },
+  "Angry": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      247,
+      111,
+      143
+     ],
+     [
+      223,
+      127,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "slant",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "marque de colère"
+   ],
+   "pixels_retouches_hors_fond": 37,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#df7faf",
+    "#e4f3b9",
+    "#f5be47",
+    "#f76f8f",
+    "#ffffff"
+   ]
+  },
+  "Worried": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      143,
+      167,
+      207
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "lid",
+     "parametre": 1
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 18,
+   "origine": "retouche de la base Normal",
+   "couleurs": 11,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#8fa7cf",
+    "#98cb61",
+    "#996e35",
+    "#a7cfdf",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47"
+   ]
+  },
+  "Sad": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      135,
+      183
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "lid",
+     "parametre": 2
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 27,
+   "origine": "retouche de la base Normal",
+   "couleurs": 11,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#7787b7",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#a7cfdf",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47"
+   ]
+  },
+  "Crying": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      135,
+      175
+     ],
+     [
+      167,
+      207,
+      223
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "squeeze",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "larmes"
+   ],
+   "pixels_retouches_hors_fond": 104,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#7787af",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#a7cfdf",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ffffff"
+   ]
+  },
+  "Shouting": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 14,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#78aedc",
+    "#85b74d",
+    "#87c7ff",
+    "#8f4323",
+    "#98cb61",
+    "#996e35",
+    "#9fd7e7",
+    "#b275a2",
+    "#bff7bf",
+    "#dea0cf",
+    "#f5be47"
+   ]
+  },
+  "Teary-Eyed": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      247,
+      191,
+      199
+     ],
+     [
+      231,
+      143,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "wet",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "larmes"
+   ],
+   "pixels_retouches_hors_fond": 6,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#e78faf",
+    "#f5be47",
+    "#f7bfc7",
+    "#ffffff"
+   ]
+  },
+  "Determined": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      239,
+      143,
+      191
+     ],
+     [
+      247,
+      111,
+      151
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "slant",
+     "parametre": 0
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 17,
+   "origine": "retouche de la base Normal",
+   "couleurs": 11,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#ef8fbf",
+    "#f5be47",
+    "#f76f97"
+   ]
+  },
+  "Joyous": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      231,
+      127
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "arch",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "croix de joie sur le fond"
+   ],
+   "pixels_retouches_hors_fond": 155,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ff8f87",
+    "#ffe77f",
+    "#ffffbf"
+   ]
+  },
+  "Inspired": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 14,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#8f4323",
+    "#98cb61",
+    "#996e35",
+    "#b275a2",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ffe777",
+    "#ffef97",
+    "#ffffaf"
+   ]
+  },
+  "Surprised": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 15,
+   "palette": [
+    "#41462d",
+    "#637689",
+    "#697a48",
+    "#709f3c",
+    "#7797b7",
+    "#85b74d",
+    "#87afcf",
+    "#8f4323",
+    "#98cb61",
+    "#996e35",
+    "#a6cfdf",
+    "#b275a2",
+    "#dea0cf",
+    "#dfe7ef",
+    "#f5be47"
+   ]
+  },
+  "Dizzy": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      143,
+      207,
+      199
+     ],
+     [
+      143,
+      207,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "spiral",
+     "parametre": 0
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 99,
+   "origine": "retouche de la base Normal",
+   "couleurs": 10,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#8fcfc7",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47"
+   ]
+  },
+  "Sigh": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      253,
+      241,
+      165
+     ],
+     [
+      253,
+      229,
+      120
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "line",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "soupir : goutte"
+   ],
+   "pixels_retouches_hors_fond": 121,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#85b74d",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#fde578",
+    "#fdf1a5",
+    "#ffffff"
+   ]
+  },
+  "Stunned": {
+   "fond": {
+    "type": "degrade",
+    "couleurs": [
+     [
+      119,
+      134,
+      177
+     ],
+     [
+      143,
+      207,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      11,
+      9,
+      9,
+      11
+     ],
+     "cote": "left",
+     "operation": "blank",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "hébétude : goutte"
+   ],
+   "pixels_retouches_hors_fond": 32,
+   "origine": "retouche de la base Normal",
+   "couleurs": 12,
+   "palette": [
+    "#41462d",
+    "#697a48",
+    "#709f3c",
+    "#7786b1",
+    "#85b74d",
+    "#8fcfc7",
+    "#98cb61",
+    "#996e35",
+    "#dea0cf",
+    "#e4f3b9",
+    "#f5be47",
+    "#ffffff"
+   ]
+  }
+ },
+ "note": "portrait cadré serré : un seul œil visible, très grand ; le second est hors champ"
+}

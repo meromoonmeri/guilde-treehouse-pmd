@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>Zarude — sprite fourni au format PMD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#1a1a2e;color:#eee}
+header{padding:12px 16px;border-bottom:1px solid #333} h1{font-size:18px;margin:0 0 4px}
+p{margin:2px 0;color:#aab;font-size:13px}
+.bar{display:flex;gap:16px;padding:10px 16px;align-items:center;font-size:14px;flex-wrap:wrap}
+canvas{image-rendering:pixelated;background:#241c14;display:block;margin:12px 16px;border:1px solid #333}
+select,input{background:#222;color:#eee;border:1px solid #444;padding:3px}
+</style></head><body>
+<header><h1>Zarude — dessin fourni, mis au format SpriteCollab</h1>
+<p>Quatre vues dessinées, squelette d'animation de Rillaboom #0812. Les diagonales reprennent le profil.</p></header>
+<div class="bar">
+<label>Animation <select id="anim"></select></label>
+<label>Direction <select id="dir"></select></label>
+<label>Zoom <input id="zoom" type="range" min="1" max="8" value="4"></label>
+<label><input id="play" type="checkbox" checked> lecture</label><span id="info"></span></div>
+<canvas id="c"></canvas>
+<script>
+const M = {"Idle": {"fw": 72, "fh": 88, "durations": [32], "dirs": 8}, "Walk": {"fw": 72, "fh": 88, "durations": [8, 14, 8, 14], "dirs": 8}, "Sleep": {"fw": 72, "fh": 88, "durations": [30, 35], "dirs": 1}, "Hurt": {"fw": 72, "fh": 96, "durations": [2, 8], "dirs": 8}, "Attack": {"fw": 72, "fh": 96, "durations": [2, 2, 4, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2], "dirs": 8}, "Shoot": {"fw": 72, "fh": 96, "durations": [2, 6, 2, 2, 2, 2, 2, 2, 2, 2, 2], "dirs": 8}, "Sing": {"fw": 72, "fh": 88, "durations": [4, 6, 4, 4, 4, 2, 2, 2, 1, 1, 2, 2, 2, 2, 6, 4], "dirs": 8}, "Swing": {"fw": 88, "fh": 96, "durations": [2, 1, 2, 2, 3, 2, 2, 1, 1], "dirs": 8}, "Double": {"fw": 96, "fh": 88, "durations": [2, 2, 2, 2, 2, 2, 3, 3, 3, 2, 3, 2, 2, 2, 2, 2], "dirs": 8}, "Hop": {"fw": 72, "fh": 104, "durations": [2, 1, 2, 3, 4, 4, 3, 2, 1, 2], "dirs": 8}, "Charge": {"fw": 72, "fh": 88, "durations": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "dirs": 8}, "Rotate": {"fw": 72, "fh": 88, "durations": [2, 2, 2, 2, 2, 2, 2, 2, 2], "dirs": 8}}, imgs = {};
+const anim = document.getElementById('anim'), dsel = document.getElementById('dir');
+for (const k of Object.keys(M)) { const o = document.createElement('option'); o.textContent = k; anim.append(o); }
+const names = ["Bas", "Bas-droite", "Droite", "Haut-droite", "Haut", "Haut-gauche", "Gauche", "Bas-gauche"];
+function loadDirs() { dsel.innerHTML = '';
+  for (let i = 0; i < M[anim.value].dirs; i++) { const o = document.createElement('option'); o.value = i; o.textContent = names[i]; dsel.append(o); } }
+anim.onchange = loadDirs; loadDirs();
+function img(n) { if (!imgs[n]) { const i = new Image(); i.src = n + '-Anim.png'; imgs[n] = i; } return imgs[n]; }
+const c = document.getElementById('c'), g = c.getContext('2d');
+let t = 0;
+setInterval(() => {
+  const m = M[anim.value], z = +document.getElementById('zoom').value, d = +dsel.value || 0;
+  const total = m.durations.reduce((a, b) => a + b, 0);
+  if (document.getElementById('play').checked) t = (t + 1) % total;
+  let acc = 0, f = 0;
+  for (let i = 0; i < m.durations.length; i++) { if (acc + m.durations[i] > t) { f = i; break; } acc += m.durations[i]; }
+  c.width = m.fw * z + 40; c.height = m.fh * z + 40; g.imageSmoothingEnabled = false;
+  g.clearRect(0, 0, c.width, c.height);
+  const im = img(anim.value);
+  if (im.complete) g.drawImage(im, f * m.fw, d * m.fh, m.fw, m.fh, 20, 20, m.fw * z, m.fh * z);
+  document.getElementById('info').textContent = anim.value + ' — image ' + (f + 1) + '/' + m.durations.length;
+}, 1000 / 60);
+</script></body></html>

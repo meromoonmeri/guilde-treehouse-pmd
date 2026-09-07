@@ -1,0 +1,1032 @@
+{
+ "pokemon": {
+  "numero": "0424",
+  "nom": "Ambipom",
+  "nom_fr": "Capidextre",
+  "forme": "0000",
+  "source": "https://sprites.pmdcollab.org/#/0424?form=0"
+ },
+ "methode": "retouche pixel de la base Normal : fond Chunsoft repeint par propagation depuis le bord, yeux transformés par opérations sur leurs propres couleurs, effets de la palette du kit",
+ "format": {
+  "portrait": [
+   40,
+   40
+  ],
+  "planche": [
+   200,
+   320
+  ],
+  "grille": [
+   5,
+   8
+  ],
+  "ordre": [
+   "Normal",
+   "Happy",
+   "Pain",
+   "Angry",
+   "Worried",
+   "Sad",
+   "Crying",
+   "Shouting",
+   "Teary-Eyed",
+   "Determined",
+   "Joyous",
+   "Inspired",
+   "Surprised",
+   "Dizzy",
+   "Special0",
+   "Special1",
+   "Sigh",
+   "Stunned",
+   "Special2",
+   "Special3"
+  ],
+  "moitie_basse": "versions retournées « ^ » : miroir horizontal exact",
+  "cases_vides": [
+   "Special0",
+   "Special1",
+   "Special2",
+   "Special3"
+  ]
+ },
+ "yeux": [
+  {
+   "boite": [
+    13,
+    22,
+    6,
+    7
+   ],
+   "cote": "left"
+  },
+  {
+   "boite": [
+    24,
+    22,
+    6,
+    7
+   ],
+   "cote": "right"
+  }
+ ],
+ "operations": {
+  "Happy": [
+   "arch",
+   0
+  ],
+  "Joyous": [
+   "arch",
+   1
+  ],
+  "Sigh": [
+   "line",
+   0
+  ],
+  "Crying": [
+   "squeeze",
+   0
+  ],
+  "Pain": [
+   "squeeze",
+   1
+  ],
+  "Sad": [
+   "lid",
+   2
+  ],
+  "Worried": [
+   "lid",
+   1
+  ],
+  "Angry": [
+   "slant",
+   1
+  ],
+  "Determined": [
+   "slant",
+   0
+  ],
+  "Shouting": [
+   "slant",
+   2
+  ],
+  "Teary-Eyed": [
+   "wet",
+   0
+  ],
+  "Surprised": [
+   "shrink",
+   0
+  ],
+  "Stunned": [
+   "blank",
+   0
+  ],
+  "Dizzy": [
+   "spiral",
+   0
+  ],
+  "Inspired": [
+   "star",
+   0
+  ]
+ },
+ "emotions_officielles_reprises": [
+  "Happy",
+  "Normal",
+  "Surprised"
+ ],
+ "emotions": {
+  "Normal": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#e7f7b7",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Happy": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 13,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b880b8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffe777",
+    "#ffffaf",
+    "#ffffff"
+   ]
+  },
+  "Pain": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      111,
+      135,
+      183
+     ],
+     [
+      111,
+      135,
+      183
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "squeeze",
+     "parametre": 1
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "squeeze",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "goutte de sueur"
+   ],
+   "pixels_retouches_hors_fond": 106,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#6f87b7",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Angry": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      247,
+      111,
+      143
+     ],
+     [
+      247,
+      111,
+      143
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "slant",
+     "parametre": 1
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "slant",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "marque de colère"
+   ],
+   "pixels_retouches_hors_fond": 44,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f76f8f",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Worried": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      143,
+      167,
+      207
+     ],
+     [
+      143,
+      167,
+      207
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "lid",
+     "parametre": 1
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "lid",
+     "parametre": 1
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 24,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#8fa7cf",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Sad": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      119,
+      135,
+      183
+     ],
+     [
+      119,
+      135,
+      183
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "lid",
+     "parametre": 2
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "lid",
+     "parametre": 2
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 36,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#7787b7",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Crying": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      119,
+      135,
+      175
+     ],
+     [
+      119,
+      135,
+      175
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "squeeze",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "squeeze",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "larmes"
+   ],
+   "pixels_retouches_hors_fond": 94,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#7787af",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Shouting": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      135,
+      199,
+      247
+     ],
+     [
+      135,
+      199,
+      247
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "slant",
+     "parametre": 2
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "slant",
+     "parametre": 2
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 34,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#87c7f7",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Teary-Eyed": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      247,
+      191,
+      199
+     ],
+     [
+      247,
+      191,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "wet",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "wet",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "larmes"
+   ],
+   "pixels_retouches_hors_fond": 7,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f7bfc7",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Determined": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      239,
+      143,
+      191
+     ],
+     [
+      239,
+      143,
+      191
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "slant",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "slant",
+     "parametre": 0
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 22,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#ef8fbf",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Joyous": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      255,
+      191
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "arch",
+     "parametre": 1
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "arch",
+     "parametre": 1
+    }
+   ],
+   "effets": [
+    "croix de joie sur le fond"
+   ],
+   "pixels_retouches_hors_fond": 111,
+   "couleurs_rabattues": [
+    {
+     "de": "#ff8f87",
+     "vers": "#f9857e"
+    }
+   ],
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffbf",
+    "#ffffff"
+   ]
+  },
+  "Inspired": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      255,
+      255,
+      191
+     ],
+     [
+      255,
+      255,
+      191
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "star",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "star",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "étincelles sur le fond"
+   ],
+   "pixels_retouches_hors_fond": 94,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffbf",
+    "#ffffff"
+   ]
+  },
+  "Surprised": {
+   "origine": "portrait officiel PMDCollab, repris tel quel",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#6f8fb7",
+    "#856184",
+    "#87afcf",
+    "#a7cfdf",
+    "#a98c60",
+    "#b55148",
+    "#b880b8",
+    "#d2b0d3",
+    "#ddb993",
+    "#dfe7ef",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Dizzy": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      143,
+      207,
+      199
+     ],
+     [
+      143,
+      207,
+      199
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "spiral",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "spiral",
+     "parametre": 0
+    }
+   ],
+   "effets": [],
+   "pixels_retouches_hors_fond": 84,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#8fcfc7",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Sigh": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      253,
+      241,
+      165
+     ],
+     [
+      253,
+      241,
+      165
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "line",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "line",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "soupir : goutte"
+   ],
+   "pixels_retouches_hors_fond": 106,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#fdf1a5",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  },
+  "Stunned": {
+   "fond": {
+    "type": "uni",
+    "couleurs": [
+     [
+      119,
+      134,
+      177
+     ],
+     [
+      119,
+      134,
+      177
+     ]
+    ]
+   },
+   "yeux": [
+    {
+     "boite": [
+      13,
+      22,
+      6,
+      7
+     ],
+     "cote": "left",
+     "operation": "blank",
+     "parametre": 0
+    },
+    {
+     "boite": [
+      24,
+      22,
+      6,
+      7
+     ],
+     "cote": "right",
+     "operation": "blank",
+     "parametre": 0
+    }
+   ],
+   "effets": [
+    "hébétude : goutte"
+   ],
+   "pixels_retouches_hors_fond": 36,
+   "origine": "retouche de la base Normal",
+   "couleurs": 15,
+   "palette": [
+    "#312b38",
+    "#5a3d5a",
+    "#7786b1",
+    "#77c7d7",
+    "#856184",
+    "#a98c60",
+    "#b55148",
+    "#b7d7b7",
+    "#b880b8",
+    "#bfbfb8",
+    "#d2b0d3",
+    "#ddb993",
+    "#f9857e",
+    "#feeeb1",
+    "#ffffff"
+   ]
+  }
+ },
+ "note": "face franche, deux grands yeux ronds"
+}
