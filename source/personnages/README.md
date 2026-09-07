@@ -17,6 +17,9 @@
 - `reference/zarude_fourni.png` : **planche fournie par l'utilisateur** (`IMG_4840.png`), 4 orientations × 4 images de 64 × 64, **inchangée**.
 - `build_zarude_fourni.py` / `verify_zarude_fourni.py` : mise au format SpriteCollab de cette planche sur le squelette de Rillaboom, et son contrôle (chaque silhouette produite doit être une pose fournie au pixel près). Sortie dans `personnages/zarude_fourni/`.
 
+- `dessine_eat_politoed.py` / `verify_eat_politoed.py` : le `Eat` de Politoed dont la **bouche est dessinée à la main** dans la palette du sprite, à la manière des artistes Chunsoft, et son vérificateur de grammaire graphique (palette fermée, cerne noir, ombrage ordonné, changement local).
+- `generateur_eat_essai.py` + `essais/` : **essai mesuré** de production des images par un générateur d'images. Résultat conservé parce que négatif et chiffré (287 couleurs brutes, 2 règles de grammaire sur 4 après discipline) ; la partie « discipline » reste réutilisable.
+
 - `METHODE_SPRITES_PMD.md` : **guide de méthode pour le prochain sprite** (format, récupération des références, ce qui a marché et échoué pour Falinks, exports attendus, marche à suivre pour un personnage sans base d'après Zarude, **§ 8 compléter un sprite officiel, § 9 compléter des portraits, § 10 intégrer un dessin fourni**).
 
 Sorties dans `personnages/falinks/`, `personnages/zarude/`, `personnages/zarude_fourni/` et les dix `personnages/<nom>/animations_scenes/`. Voir leurs README pour la méthode, les cases et la licence.

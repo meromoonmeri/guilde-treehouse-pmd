@@ -330,3 +330,38 @@ dessiné**, dérivé de `ORIGINE_X/Y` et de la taille de la grille.
 **Conclusion.** Imiter Chunsoft est faisable dès lors qu'on traite leur travail comme une
 spécification mesurable plutôt que comme un style à ressentir. Le coût est qu'il faut le faire
 personnage par personnage : la bouche de Politoed ne se transpose pas sur Hariyama.
+
+## 14. Essai mesuré : faire dessiner les images par un générateur d'images
+
+Proposition de l'utilisateur : employer le générateur d'images en l'« éduquant » à tout conserver
+et à n'ajouter que l'ouverture de la bouche. Testé sérieusement plutôt que refusé d'emblée ;
+`generateur_eat_essai.py` rejoue l'essai et écrit `essais/rapport_generateur.json`.
+
+**Sortie brute** (consigne pourtant très contrainte : « même sprite au pixel près, aucune couleur
+nouvelle, pas d'anticrénelage ») :
+
+| Mesure | Résultat | Limite |
+| --- | --- | --- |
+| couleurs | **287** | 15 |
+| pixels du corps conservés | **18,7 %** | 100 % attendus |
+| pixels modifiés dans les yeux | **45** | 0 demandés |
+
+Le générateur ne conserve pas : il **redessine de mémoire** une image qui ressemble à l'entrée.
+
+**La discipline de post-traitement** est ce qui rend l'idée à moitié défendable, et elle est
+réutilisable telle quelle si un futur modèle fait mieux :
+1. rééchantillonner sur la grille exacte en **moyenne de bloc** (`Image.BOX`), jamais en nearest —
+   le générateur dessine sa propre grille, décalée ; un nearest échantillonne au hasard dans les
+   blocs et détruit tout (première tentative : 18,7 % de conservation, faussement attribuée au
+   modèle alors qu'une partie venait de mon rééchantillonnage) ;
+2. rabattre chaque pixel sur la couleur la plus proche **de la palette d'origine** ;
+3. **masquer par zone** : ne reprendre du générateur que les lignes concernées, et remettre
+   l'original partout ailleurs.
+
+Après discipline : 14 couleurs, 92,1 % conservé — mais **2 règles de grammaire sur 4 seulement** :
+7 pixels de gorge à vif sur la peau (pas de cerne noir), 1 saut de valeur clair→sombre.
+
+**Conclusion.** Utilisable comme *source d'idées de forme*, pas comme producteur d'images
+livrables : la discipline ramène la palette et la zone, mais ne répare pas la grammaire. Il reste
+une reprise manuelle — et à ce stade on a refait le travail de `dessine_eat_politoed.py` en moins
+bien et sans contrôle. Un résultat négatif mesuré vaut mieux qu'un refus de principe.

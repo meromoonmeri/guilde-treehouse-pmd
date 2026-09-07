@@ -1,0 +1,38 @@
+{
+ "question": "peut-on faire produire les images de repas par un générateur d'images ?",
+ "protocole": [
+  "case officielle agrandie ×16 sur fond magenta",
+  "consigne : même sprite au pixel près, seule la bouche s'ouvre",
+  "discipline : grille exacte, palette rabattue, masque limité à la bouche",
+  "mesure contre les quatre règles de grammaire Chunsoft"
+ ],
+ "mesures": {
+  "couleurs_brutes": 287,
+  "couleurs_apres_discipline": 14,
+  "pixels_conserves": 305,
+  "pixels_corps": 331,
+  "taux_conservation": 92.1,
+  "pixels_modifies_par_le_generateur_dans_les_yeux": 45,
+  "pixels_modifies_par_le_generateur_dans_la_bouche": 26
+ },
+ "regles_de_grammaire": {
+  "1_palette_fermee": {
+   "ok": true,
+   "couleurs": 14
+  },
+  "2_gorge_cernee": {
+   "ok": false,
+   "pixels_a_vif_sur_la_peau": 7
+  },
+  "3_ombrage_ordonne": {
+   "ok": false,
+   "sauts_de_valeur": 1
+  },
+  "4_changement_local": {
+   "ok": true,
+   "pixels_retouches": 26
+  }
+ },
+ "regles_respectees": 2,
+ "conclusion": "utilisable comme source d'idées de forme, pas comme producteur d'images livrables : la discipline ramène palette et zone, mais ne répare ni le cerne noir ni l'ombrage — il reste une reprise manuelle, donc autant dessiner directement, ce que fait dessine_eat_politoed.py"
+}
