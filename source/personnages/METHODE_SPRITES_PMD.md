@@ -164,6 +164,36 @@ mieux qu'un dessin d'agent**, demandez-la avant de dessiner.
 Ordre de grandeur : une demi-journée d'agent pour découper et reconstruire Walk exactement, autant pour les
 diagonales et les bras ; le reste est mécanique une fois le pipeline Falinks/Zarude en place.
 
+## 6 bis. Variante d'un sprite existant : ce qui a marché pour les Dynamax
+
+Quand la demande est une **variante** d'un sprite complet (Dynamax, brillant, taille, effet), on ne redessine
+rien : on transforme les feuilles de la source case par case (`build_dynamax_sprites.py`).
+
+1. **Lire la source comme SpriteBot la lit** : `AnimData.xml` (attention, certains alias `CopyOf` de SpriteCollab
+   n'ont pas d'`<Index>` : le garder absent, ne pas en inventer), les trois feuilles, l'ancre = pixel blanc de
+   Shadow, les repères = pixels d'Offsets. Reprendre **toutes** les animations, y compris les spéciales
+   (Stomp, Twirl, RearUp, MultiStrike, QuickStrike, Shock, Punch, Appeal, SpAttack) et les `CopyOf`.
+2. **Transformer sans rééchantillonner** : agrandissement au plus proche voisin (`np.repeat`), effets dessinés
+   en pixels à l'échelle du dessin avant agrandissement (aura par dilatation binaire de la silhouette, nuages en
+   bitmaps ASCII), couleurs ajoutées comptées (≤ 2 pour rester sous 15 quand la source en a 13).
+3. **Recalculer la géométrie** : case = source × échelle puis élargie par pas de 8 pour contenir les effets, ancre
+   au repos en (fw/2, fh/2 + 4), déplacement d'ancre = celui de la source × échelle, repères × échelle (un pixel
+   chacun, pas un bloc), gabarit d'ombre agrandi mais un seul pixel blanc, `ShadowSize` adapté à la taille finale.
+4. **Effets qui bouclent** : tout ce qui tourne ou scintille doit avancer d'un multiple entier de son motif par
+   cycle d'animation (les nuages font un tiers de tour par cycle : trois nuages identiques à 120°, la boucle est
+   invisible) ; décaler la phase par direction et par image pour que les feuilles ne soient pas des copies.
+5. **Effets qui suivent le corps** : ancrer les effets sur la silhouette de *chaque image* (point le plus haut,
+   boîte englobante), pas sur l'ancre au sol, sinon ils restent au sol pendant Hop et flottent dans Sleep.
+6. **Vérifier par différence avec la source** : chaque pixel opaque de la source doit se retrouver, agrandi, à sa
+   place ; les seuls écarts tolérés sont sous un effet de premier plan et doivent être de la couleur de cet effet
+   (`verify_dynamax_sprites.py`). Les sprites officiels **ne sont pas** des miroirs exacts gauche/droite :
+   comparer chaque direction à la sienne, pas au miroir.
+7. **Crédits** : reprendre les lignes de `credits.txt` de la source telles quelles, ajouter la ligne de la
+   transformation avec la licence de la source (une variante dérivée suit la licence de l'original ; « Unspecified »
+   pour les sprites CHUNSOFT = usage de fan non commercial).
+
+Ordre de grandeur : ~30 s de build par Pokémon (dilatation et collage case par case), 5 min pour dix.
+
 ## 7. Fichiers utiles
 
 - `source/personnages/build_falinks_sprite.py` — constructeur par composition d'unités (réutiliser `extract`,
@@ -172,9 +202,13 @@ diagonales et les bras ; le reste est mécanique une fois le pipeline Falinks/Za
   pièces dessinées (réutiliser `piece`, `block`, `hand`, les tables `R(y, x0, x1)`) ; écrit `zarude_pieces.py`.
 - `source/personnages/build_zarude_sprite.py` + `zarude_pieces.py` — constructeur par pièces sur un squelette
   officiel (réutiliser `anchor_displacements`, `Arm`, `assemble`, `draw`, `frame_plan`, `Builder.fit`).
-- `source/personnages/verify_falinks_sprite.py`, `verify_zarude_sprite.py` — vérificateurs (règles SpriteBot +
-  contrôles propres à chaque méthode).
+- `source/personnages/build_dynamax_sprites.py` — variante par transformation de feuilles (réutiliser `load_source`,
+  `compose_frame`, `fit`, `make_cell`, `write_animdata` avec `CopyOf` et index absents, `comparison_sheet`).
+- `source/personnages/verify_falinks_sprite.py`, `verify_zarude_sprite.py`, `verify_dynamax_sprites.py` —
+  vérificateurs (règles SpriteBot + contrôles propres à chaque méthode).
 - `source/personnages/reference/0870/0002`, `0003` — unités Falinks d'origine ; `reference/0812/` — Rillaboom,
-  squelette de Zarude ; `reference/zarude/` — planche de marche fournie par l'utilisateur (source du dessin).
+  squelette de Zarude ; `reference/zarude/` — planche de marche fournie par l'utilisateur (source du dessin) ;
+  `reference/0186, 0241, 0282, 0297, 0424, 0443, 0674, 0923` — sprites complets SpriteCollab (sources Dynamax et
+  des compléments à venir).
 - `source/portraits/` — même démarche pour les portraits (retouche pixel d'une base, vérificateur).
 - `source/rebuild_kit.py` — `night()`, `ase()`, `font()` partagés avec le reste du kit.

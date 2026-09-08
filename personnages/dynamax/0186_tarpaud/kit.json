@@ -1,0 +1,430 @@
+{
+  "pokemon": {
+    "numero": "0186",
+    "nom": "Tarpaud (Politoed)",
+    "forme": "Dynamax (non officielle)",
+    "source": "source/personnages/reference/0186",
+    "licence": "sprite original du jeu (CHUNSOFT), licence non précisée sur SpriteCollab : usage non commercial de fan uniquement"
+  },
+  "format": {
+    "convention": "SpriteCollab / SkyTemple : <Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png + AnimData.xml",
+    "directions": [
+      "Bas",
+      "Bas-droite",
+      "Droite",
+      "Haut-droite",
+      "Haut",
+      "Haut-gauche",
+      "Gauche",
+      "Bas-gauche"
+    ],
+    "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos, déplacée comme dans la source (× échelle)",
+    "shadow_size": 2,
+    "shadow_size_origine": 1,
+    "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu), un pixel chacun replacé à l'échelle"
+  },
+  "dynamax": {
+    "echelle": 2,
+    "aura": {
+      "aura": [
+        232,
+        40,
+        72
+      ],
+      "claire": [
+        255,
+        144,
+        128
+      ],
+      "ombre_des_nuages": [
+        0,
+        0,
+        0
+      ]
+    },
+    "anneau": "1 px plein (aura) + 1 px tramé en damier (aura claire) à l'échelle du dessin, phase changeant à chaque image",
+    "nuages": "trois nuages à 120° sur une ellipse en halo au-dessus du point le plus haut de chaque image (demi-largeur du corps + 3 ; un sixième de sa hauteur), un tiers de tour par cycle, moitié arrière derrière le corps",
+    "orbite": [
+      14,
+      4
+    ],
+    "petits_nuages": true
+  },
+  "animations": {
+    "Walk": {
+      "index": 0,
+      "case": [
+        88,
+        192
+      ],
+      "case_origine": [
+        40,
+        72
+      ],
+      "images": 7,
+      "durees": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        10
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": null,
+      "return": null
+    },
+    "Attack": {
+      "index": 1,
+      "case": [
+        160,
+        264
+      ],
+      "case_origine": [
+        72,
+        104
+      ],
+      "images": 12,
+      "durees": [
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 5,
+      "return": 7
+    },
+    "Strike": {
+      "index": 2,
+      "copie_de": "Attack"
+    },
+    "Shoot": {
+      "index": 3,
+      "case": [
+        104,
+        176
+      ],
+      "case_origine": [
+        40,
+        64
+      ],
+      "images": 14,
+      "durees": [
+        1,
+        1,
+        2,
+        6,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 3,
+      "return": 6
+    },
+    "RearUp": {
+      "index": 4,
+      "case": [
+        80,
+        144
+      ],
+      "case_origine": [
+        32,
+        48
+      ],
+      "images": 6,
+      "durees": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 1,
+      "return": 4
+    },
+    "Sleep": {
+      "index": 5,
+      "case": [
+        72,
+        120
+      ],
+      "case_origine": [
+        24,
+        32
+      ],
+      "images": 2,
+      "durees": [
+        30,
+        35
+      ],
+      "directions": 1,
+      "rush": null,
+      "hit": null,
+      "return": null
+    },
+    "Hurt": {
+      "index": 6,
+      "case": [
+        96,
+        168
+      ],
+      "case_origine": [
+        40,
+        56
+      ],
+      "images": 2,
+      "durees": [
+        2,
+        8
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": null,
+      "return": null
+    },
+    "Idle": {
+      "index": 7,
+      "case": [
+        80,
+        184
+      ],
+      "case_origine": [
+        32,
+        64
+      ],
+      "images": 5,
+      "durees": [
+        40,
+        3,
+        5,
+        3,
+        6
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": null,
+      "return": null
+    },
+    "Swing": {
+      "index": 8,
+      "case": [
+        168,
+        216
+      ],
+      "case_origine": [
+        72,
+        80
+      ],
+      "images": 9,
+      "durees": [
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 5,
+      "return": 5
+    },
+    "Double": {
+      "index": 9,
+      "case": [
+        128,
+        200
+      ],
+      "case_origine": [
+        48,
+        72
+      ],
+      "images": 16,
+      "durees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": null,
+      "return": null
+    },
+    "Hop": {
+      "index": 10,
+      "case": [
+        80,
+        240
+      ],
+      "case_origine": [
+        32,
+        96
+      ],
+      "images": 10,
+      "durees": [
+        2,
+        1,
+        2,
+        3,
+        4,
+        4,
+        3,
+        2,
+        1,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 9,
+      "return": null
+    },
+    "Charge": {
+      "index": 11,
+      "case": [
+        80,
+        152
+      ],
+      "case_origine": [
+        24,
+        48
+      ],
+      "images": 10,
+      "durees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 5,
+      "return": 9
+    },
+    "Rotate": {
+      "index": 12,
+      "case": [
+        80,
+        144
+      ],
+      "case_origine": [
+        32,
+        48
+      ],
+      "images": 9,
+      "durees": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "directions": 8,
+      "rush": null,
+      "hit": 8,
+      "return": null
+    }
+  },
+  "palette": {
+    "couleurs_opaques": 17,
+    "ajoutees": 2,
+    "limite_spritebot": 15,
+    "note": "au-delà de 15 couleurs le sprite n'est pas importable en mode strict SkyTemple (forme non officielle de toute façon)"
+  },
+  "aseprite": {
+    "canvas": [
+      168,
+      264
+    ],
+    "images": 102,
+    "calques": [
+      "Bas",
+      "Bas-droite",
+      "Droite",
+      "Haut-droite",
+      "Haut",
+      "Haut-gauche",
+      "Gauche",
+      "Bas-gauche"
+    ],
+    "etiquettes": [
+      "Walk",
+      "Attack",
+      "Shoot",
+      "RearUp",
+      "Sleep",
+      "Hurt",
+      "Idle",
+      "Swing",
+      "Double",
+      "Hop",
+      "Charge",
+      "Rotate"
+    ],
+    "ancre": [
+      84,
+      136
+    ]
+  },
+  "fichiers": {
+    "feuilles": "<Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png",
+    "nuit": "nuit/<Anim>-Anim.png",
+    "apercus": [
+      "apercu.png",
+      "apercu_directions.png",
+      "apercu_comparaison.png",
+      "apercu_marche_attente.gif",
+      "apercu_attaques.gif",
+      "apercu.html"
+    ]
+  }
+}

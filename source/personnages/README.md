@@ -10,7 +10,9 @@
 - `zarude_pieces.py` : pièces de pixel art de **Zarude** (généré ; 11 couleurs, bitmaps ASCII 1:1).
 - `build_zarude_sprite.py` : assemble les pièces en poses, applique le squelette de Rillaboom image par image, réassemble feuilles, `AnimData.xml`, Aseprite, nuit, aperçus, `kit.json`, `credits.txt`.
 - `verify_zarude_sprite.py` : relecture indépendante (règles SpriteBot + squelette identique à la référence, miroirs exacts, rotation de Swing/Rotate, palette), écrit `controle_qualite.json`.
+- `build_dynamax_sprites.py` : versions **Dynamax** de dix sprites (huit références SpriteCollab + Falinks + Zarude) : toutes les animations de la source, agrandies × 2 pixel par pixel, aura rouge tramée, trois nuages tournants, repères et ancre replacés à l'échelle ; écrit `personnages/dynamax/<numéro>_<slug>/` (feuilles, `AnimData.xml`, nuit, Aseprite, aperçus, `kit.json`, `credits.txt`, README).
+- `verify_dynamax_sprites.py` : relecture (règles SpriteBot + chaque pixel de la source retrouvé à sa place × 2, ancre et repères × 2, durées / index / `CopyOf` identiques, palette = source + aura), écrit `controle_qualite.json`.
 
 - `METHODE_SPRITES_PMD.md` : **guide de méthode pour le prochain sprite** (format, récupération des références, ce qui a marché et échoué pour Falinks, exports attendus, marche à suivre pour un personnage sans base d'après Zarude).
 
-Sorties dans `personnages/falinks/` et `personnages/zarude/`. Voir leurs README pour la méthode, les cases et la licence.
+Sorties dans `personnages/falinks/`, `personnages/zarude/` et `personnages/dynamax/`. Voir leurs README pour la méthode, les cases et la licence.
