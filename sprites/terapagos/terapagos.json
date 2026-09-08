@@ -16,13 +16,13 @@
   },
   "directions": [
     "S",
-    "SE",
-    "E",
-    "NE",
-    "N",
-    "NO",
+    "SO",
     "O",
-    "SO"
+    "NO",
+    "N",
+    "NE",
+    "E",
+    "SE"
   ],
   "palette": {
     "tons_par_matiere": 3,
@@ -38,54 +38,18 @@
       "planche_assetsprite": "assetsprite/terapagos_0000_sprites.png",
       "decoupe": [
         {
-          "animation": "Idle",
-          "x": 0,
-          "y": 0,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
           "animation": "Walk",
           "x": 0,
-          "y": 384,
-          "largeur": 384,
+          "y": 0,
+          "largeur": 192,
           "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
-          "animation": "Run",
-          "x": 0,
-          "y": 768,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
+          "colonnes": 4,
           "lignes": 8
         },
         {
           "animation": "Attack",
           "x": 0,
-          "y": 1152,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Shoot",
-          "x": 0,
-          "y": 1536,
-          "largeur": 240,
-          "hauteur": 384,
-          "colonnes": 5,
-          "lignes": 8
-        },
-        {
-          "animation": "Special",
-          "x": 0,
-          "y": 1920,
+          "y": 384,
           "largeur": 288,
           "hauteur": 384,
           "colonnes": 6,
@@ -94,146 +58,92 @@
         {
           "animation": "Strike",
           "x": 0,
-          "y": 2304,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Charge",
-          "x": 0,
-          "y": 2688,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Withdraw",
-          "x": 0,
-          "y": 3072,
+          "y": 768,
           "largeur": 240,
           "hauteur": 384,
           "colonnes": 5,
           "lignes": 8
         },
         {
-          "animation": "Jump",
+          "animation": "Shoot",
           "x": 0,
-          "y": 3456,
-          "largeur": 288,
+          "y": 1152,
+          "largeur": 240,
           "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Hurt",
-          "x": 0,
-          "y": 3840,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Faint",
-          "x": 0,
-          "y": 4224,
-          "largeur": 144,
-          "hauteur": 384,
-          "colonnes": 3,
+          "colonnes": 5,
           "lignes": 8
         },
         {
           "animation": "Sleep",
           "x": 0,
-          "y": 4608,
+          "y": 1536,
+          "largeur": 96,
+          "hauteur": 48,
+          "colonnes": 2,
+          "lignes": 1
+        },
+        {
+          "animation": "Hurt",
+          "x": 0,
+          "y": 1584,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Idle",
+          "x": 0,
+          "y": 1968,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Swing",
+          "x": 0,
+          "y": 2352,
+          "largeur": 240,
+          "hauteur": 384,
+          "colonnes": 5,
+          "lignes": 8
+        },
+        {
+          "animation": "Double",
+          "x": 0,
+          "y": 2736,
+          "largeur": 336,
+          "hauteur": 384,
+          "colonnes": 7,
+          "lignes": 8
+        },
+        {
+          "animation": "Hop",
+          "x": 0,
+          "y": 3120,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Wake",
+          "animation": "Charge",
           "x": 0,
-          "y": 4656,
+          "y": 3504,
           "largeur": 192,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Dizzy",
+          "animation": "Rotate",
           "x": 0,
-          "y": 4704,
+          "y": 3888,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Fear",
-          "x": 0,
-          "y": 4752,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Rage",
-          "x": 0,
-          "y": 4800,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Joyous",
-          "x": 0,
-          "y": 4848,
-          "largeur": 288,
-          "hauteur": 48,
-          "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Sad",
-          "x": 0,
-          "y": 4896,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Shock",
-          "x": 0,
-          "y": 4944,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Pose",
-          "x": 0,
-          "y": 4992,
-          "largeur": 48,
-          "hauteur": 48,
-          "colonnes": 1,
-          "lignes": 1
-        },
-        {
-          "animation": "Determination",
-          "x": 0,
-          "y": 5040,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         }
       ]
     },
@@ -245,54 +155,18 @@
       "planche_assetsprite": "assetsprite/terapagos_0001_sprites.png",
       "decoupe": [
         {
-          "animation": "Idle",
-          "x": 0,
-          "y": 0,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
           "animation": "Walk",
           "x": 0,
-          "y": 384,
-          "largeur": 384,
+          "y": 0,
+          "largeur": 192,
           "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
-          "animation": "Run",
-          "x": 0,
-          "y": 768,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
+          "colonnes": 4,
           "lignes": 8
         },
         {
           "animation": "Attack",
           "x": 0,
-          "y": 1152,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Shoot",
-          "x": 0,
-          "y": 1536,
-          "largeur": 240,
-          "hauteur": 384,
-          "colonnes": 5,
-          "lignes": 8
-        },
-        {
-          "animation": "Special",
-          "x": 0,
-          "y": 1920,
+          "y": 384,
           "largeur": 288,
           "hauteur": 384,
           "colonnes": 6,
@@ -301,146 +175,92 @@
         {
           "animation": "Strike",
           "x": 0,
-          "y": 2304,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Charge",
-          "x": 0,
-          "y": 2688,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Withdraw",
-          "x": 0,
-          "y": 3072,
+          "y": 768,
           "largeur": 240,
           "hauteur": 384,
           "colonnes": 5,
           "lignes": 8
         },
         {
-          "animation": "Jump",
+          "animation": "Shoot",
           "x": 0,
-          "y": 3456,
-          "largeur": 288,
+          "y": 1152,
+          "largeur": 240,
           "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Hurt",
-          "x": 0,
-          "y": 3840,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Faint",
-          "x": 0,
-          "y": 4224,
-          "largeur": 144,
-          "hauteur": 384,
-          "colonnes": 3,
+          "colonnes": 5,
           "lignes": 8
         },
         {
           "animation": "Sleep",
           "x": 0,
-          "y": 4608,
+          "y": 1536,
+          "largeur": 96,
+          "hauteur": 48,
+          "colonnes": 2,
+          "lignes": 1
+        },
+        {
+          "animation": "Hurt",
+          "x": 0,
+          "y": 1584,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Idle",
+          "x": 0,
+          "y": 1968,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Swing",
+          "x": 0,
+          "y": 2352,
+          "largeur": 240,
+          "hauteur": 384,
+          "colonnes": 5,
+          "lignes": 8
+        },
+        {
+          "animation": "Double",
+          "x": 0,
+          "y": 2736,
+          "largeur": 336,
+          "hauteur": 384,
+          "colonnes": 7,
+          "lignes": 8
+        },
+        {
+          "animation": "Hop",
+          "x": 0,
+          "y": 3120,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Wake",
+          "animation": "Charge",
           "x": 0,
-          "y": 4656,
+          "y": 3504,
           "largeur": 192,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Dizzy",
+          "animation": "Rotate",
           "x": 0,
-          "y": 4704,
+          "y": 3888,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Fear",
-          "x": 0,
-          "y": 4752,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Rage",
-          "x": 0,
-          "y": 4800,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Joyous",
-          "x": 0,
-          "y": 4848,
-          "largeur": 288,
-          "hauteur": 48,
-          "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Sad",
-          "x": 0,
-          "y": 4896,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Shock",
-          "x": 0,
-          "y": 4944,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Pose",
-          "x": 0,
-          "y": 4992,
-          "largeur": 48,
-          "hauteur": 48,
-          "colonnes": 1,
-          "lignes": 1
-        },
-        {
-          "animation": "Determination",
-          "x": 0,
-          "y": 5040,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         }
       ]
     },
@@ -452,54 +272,18 @@
       "planche_assetsprite": "assetsprite/terapagos_0002_sprites.png",
       "decoupe": [
         {
-          "animation": "Idle",
-          "x": 0,
-          "y": 0,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
           "animation": "Walk",
           "x": 0,
-          "y": 384,
-          "largeur": 384,
+          "y": 0,
+          "largeur": 192,
           "hauteur": 384,
-          "colonnes": 8,
-          "lignes": 8
-        },
-        {
-          "animation": "Run",
-          "x": 0,
-          "y": 768,
-          "largeur": 384,
-          "hauteur": 384,
-          "colonnes": 8,
+          "colonnes": 4,
           "lignes": 8
         },
         {
           "animation": "Attack",
           "x": 0,
-          "y": 1152,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Shoot",
-          "x": 0,
-          "y": 1536,
-          "largeur": 240,
-          "hauteur": 384,
-          "colonnes": 5,
-          "lignes": 8
-        },
-        {
-          "animation": "Special",
-          "x": 0,
-          "y": 1920,
+          "y": 384,
           "largeur": 288,
           "hauteur": 384,
           "colonnes": 6,
@@ -508,146 +292,92 @@
         {
           "animation": "Strike",
           "x": 0,
-          "y": 2304,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Charge",
-          "x": 0,
-          "y": 2688,
-          "largeur": 288,
-          "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Withdraw",
-          "x": 0,
-          "y": 3072,
+          "y": 768,
           "largeur": 240,
           "hauteur": 384,
           "colonnes": 5,
           "lignes": 8
         },
         {
-          "animation": "Jump",
+          "animation": "Shoot",
           "x": 0,
-          "y": 3456,
-          "largeur": 288,
+          "y": 1152,
+          "largeur": 240,
           "hauteur": 384,
-          "colonnes": 6,
-          "lignes": 8
-        },
-        {
-          "animation": "Hurt",
-          "x": 0,
-          "y": 3840,
-          "largeur": 192,
-          "hauteur": 384,
-          "colonnes": 4,
-          "lignes": 8
-        },
-        {
-          "animation": "Faint",
-          "x": 0,
-          "y": 4224,
-          "largeur": 144,
-          "hauteur": 384,
-          "colonnes": 3,
+          "colonnes": 5,
           "lignes": 8
         },
         {
           "animation": "Sleep",
           "x": 0,
-          "y": 4608,
+          "y": 1536,
+          "largeur": 96,
+          "hauteur": 48,
+          "colonnes": 2,
+          "lignes": 1
+        },
+        {
+          "animation": "Hurt",
+          "x": 0,
+          "y": 1584,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Idle",
+          "x": 0,
+          "y": 1968,
+          "largeur": 192,
+          "hauteur": 384,
+          "colonnes": 4,
+          "lignes": 8
+        },
+        {
+          "animation": "Swing",
+          "x": 0,
+          "y": 2352,
+          "largeur": 240,
+          "hauteur": 384,
+          "colonnes": 5,
+          "lignes": 8
+        },
+        {
+          "animation": "Double",
+          "x": 0,
+          "y": 2736,
+          "largeur": 336,
+          "hauteur": 384,
+          "colonnes": 7,
+          "lignes": 8
+        },
+        {
+          "animation": "Hop",
+          "x": 0,
+          "y": 3120,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Wake",
+          "animation": "Charge",
           "x": 0,
-          "y": 4656,
+          "y": 3504,
           "largeur": 192,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         },
         {
-          "animation": "Dizzy",
+          "animation": "Rotate",
           "x": 0,
-          "y": 4704,
+          "y": 3888,
           "largeur": 288,
-          "hauteur": 48,
+          "hauteur": 384,
           "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Fear",
-          "x": 0,
-          "y": 4752,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Rage",
-          "x": 0,
-          "y": 4800,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Joyous",
-          "x": 0,
-          "y": 4848,
-          "largeur": 288,
-          "hauteur": 48,
-          "colonnes": 6,
-          "lignes": 1
-        },
-        {
-          "animation": "Sad",
-          "x": 0,
-          "y": 4896,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Shock",
-          "x": 0,
-          "y": 4944,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
-        },
-        {
-          "animation": "Pose",
-          "x": 0,
-          "y": 4992,
-          "largeur": 48,
-          "hauteur": 48,
-          "colonnes": 1,
-          "lignes": 1
-        },
-        {
-          "animation": "Determination",
-          "x": 0,
-          "y": 5040,
-          "largeur": 192,
-          "hauteur": 48,
-          "colonnes": 4,
-          "lignes": 1
+          "lignes": 8
         }
       ]
     }
@@ -679,136 +409,95 @@
   },
   "animations": [
     {
-      "nom": "Idle",
-      "frames": 8,
-      "directions": 8,
-      "description": "Repos, respiration lente + clignement"
-    },
-    {
       "nom": "Walk",
-      "frames": 8,
+      "index": 0,
+      "frames": 4,
       "directions": 8,
-      "description": "Marche, cycle 8 frames"
-    },
-    {
-      "nom": "Run",
-      "frames": 8,
-      "directions": 8,
-      "description": "Course, cycle rapide penché"
+      "copie_de": null
     },
     {
       "nom": "Attack",
+      "index": 1,
       "frames": 6,
       "directions": 8,
-      "description": "Attaque physique, coup de carapace"
-    },
-    {
-      "nom": "Shoot",
-      "frames": 5,
-      "directions": 8,
-      "description": "Attaque à distance"
-    },
-    {
-      "nom": "Special",
-      "frames": 6,
-      "directions": 8,
-      "description": "Attaque spéciale, dôme illuminé"
+      "copie_de": null
     },
     {
       "nom": "Strike",
-      "frames": 4,
-      "directions": 8,
-      "description": "Impact au sol"
-    },
-    {
-      "nom": "Charge",
-      "frames": 6,
-      "directions": 8,
-      "description": "Concentration / charge"
-    },
-    {
-      "nom": "Withdraw",
+      "index": 2,
       "frames": 5,
       "directions": 8,
-      "description": "Rentre dans la carapace"
+      "copie_de": null
     },
     {
-      "nom": "Jump",
-      "frames": 6,
+      "nom": "Shoot",
+      "index": 3,
+      "frames": 5,
       "directions": 8,
-      "description": "Saut"
+      "copie_de": null
     },
     {
-      "nom": "Hurt",
-      "frames": 4,
-      "directions": 8,
-      "description": "Dégâts subis"
-    },
-    {
-      "nom": "Faint",
-      "frames": 3,
-      "directions": 8,
-      "description": "KO"
+      "nom": "Twirl",
+      "index": 4,
+      "frames": null,
+      "directions": 1,
+      "copie_de": "Rotate"
     },
     {
       "nom": "Sleep",
+      "index": 5,
+      "frames": 2,
+      "directions": 1,
+      "copie_de": null
+    },
+    {
+      "nom": "Hurt",
+      "index": 6,
+      "frames": 4,
+      "directions": 8,
+      "copie_de": null
+    },
+    {
+      "nom": "Idle",
+      "index": 7,
+      "frames": 4,
+      "directions": 8,
+      "copie_de": null
+    },
+    {
+      "nom": "Swing",
+      "index": 8,
+      "frames": 5,
+      "directions": 8,
+      "copie_de": null
+    },
+    {
+      "nom": "Double",
+      "index": 9,
+      "frames": 7,
+      "directions": 8,
+      "copie_de": null
+    },
+    {
+      "nom": "Hop",
+      "index": 10,
       "frames": 6,
-      "directions": 1,
-      "description": "Sommeil"
+      "directions": 8,
+      "copie_de": null
     },
     {
-      "nom": "Wake",
+      "nom": "Charge",
+      "index": 11,
       "frames": 4,
-      "directions": 1,
-      "description": "Réveil"
+      "directions": 8,
+      "copie_de": null
     },
     {
-      "nom": "Dizzy",
+      "nom": "Rotate",
+      "index": 12,
       "frames": 6,
-      "directions": 1,
-      "description": "Confusion"
-    },
-    {
-      "nom": "Fear",
-      "frames": 4,
-      "directions": 1,
-      "description": "Peur"
-    },
-    {
-      "nom": "Rage",
-      "frames": 4,
-      "directions": 1,
-      "description": "Colère"
-    },
-    {
-      "nom": "Joyous",
-      "frames": 6,
-      "directions": 1,
-      "description": "Joie"
-    },
-    {
-      "nom": "Sad",
-      "frames": 4,
-      "directions": 1,
-      "description": "Tristesse"
-    },
-    {
-      "nom": "Shock",
-      "frames": 4,
-      "directions": 1,
-      "description": "Surprise"
-    },
-    {
-      "nom": "Pose",
-      "frames": 1,
-      "directions": 1,
-      "description": "Pose neutre de référence"
-    },
-    {
-      "nom": "Determination",
-      "frames": 4,
-      "directions": 1,
-      "description": "Détermination"
+      "directions": 8,
+      "copie_de": null
     }
   ]
 }

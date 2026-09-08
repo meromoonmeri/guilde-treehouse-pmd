@@ -49,13 +49,31 @@ Par animation et par forme :
 - `<Anim>-Shadow.png` — position de l’ombre ;
 - `frames/<Anim>/<Anim>-<DIR>-<NN>.png` — frames individuelles prêtes à l’emploi.
 
-## Portraits (20 émotions + miroirs)
+## Portraits (20 expressions, base verrouillée)
 
-Format canonique **40 × 40**, cadrage PMD : tête bleu nuit au premier plan,
-carapace de vitrail et fourrure débordant en haut du cadre. Émotions SpriteCollab : `Normal, Happy, Pain, Angry, Worried, Sad,
-Crying, Shouting, Teary-Eyed, Determined, Joyous, Inspired, Surprised, Dizzy,
-Special0-3, Sigh, Stunned`, chacune avec sa variante miroir `^`.
-Feuille regroupée : `Portraits.png` (grille 5 × 8).
+Format canonique **40 x 40**, palette indexee de **18 couleurs**, alpha
+strictement binaire, aucun anti-aliasing, aucun pixel semi-transparent.
+
+Methode employee (celle d'un spriter SpriteCollab, pas une illustration
+reduite) :
+
+1. **une** tete canonique est dessinee pixel par pixel dans `outils/portraits.py` ;
+2. cette base est **verrouillee** ;
+3. les 20 expressions ne repeignent que la **fenetre faciale** `(8,17)-(32,34)` —
+   yeux, paupieres, sourcils, bouche, joues ;
+4. tout ce qui sort de cette fenetre est recopie bit a bit depuis la base ;
+5. un **controle final** compare chaque portrait au portrait `Normal` hors
+   fenetre faciale et interrompt la generation si un seul pixel differe.
+
+Resultat verifie : tete identique au pixel pres dans les 20 cases, fond en
+aplat parfaitement uniforme et identique partout, palette stable d'une
+expression a l'autre.
+
+Expressions : Normal, Heureux, Tres heureux, Triste, En colere, Tres en
+colere, Surpris, Choque, Effraye, Inquiet, Confus, Pensif, Determine,
+Combatif, Fatigue, Endormi, Gene, Embarrasse, Douleur, Decu — mappees sur
+les slots officiels SpriteCollab, chacune avec sa variante miroir `^`, plus
+la feuille `Portraits.png`.
 
 ## Fonds
 
