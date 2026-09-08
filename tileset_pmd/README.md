@@ -19,16 +19,15 @@ Ce dossier est la reconstruction de `luminoussspring.png` avec la logique techni
 
 ```text
 planches/
-  base.png                  planche Base
-  river.png                 planche eau et rives
-  cliffs.png                planche pierres, coins et contours
-  fringe.png                planche herbes / franges
-  objects.png               rochers, roseaux et éléments indépendants
-  objects_under.png
-  objects_over.png
-  shadows.png
-  river_animations.png      cellules animées 8 × 8
+  01_bordures.png           planche rives, pierres, coins et contours
+  02_sol.png                planche sol / forêt / chemin
+  03_bassin.png             planche bassin, rives et rochers
+  04_eau.png                planche eau répétable
   05_lumiere_frames.png     8 frames de lumière, en bande horizontale
+  06_arbres.png             planche sprites d'arbres indépendants
+  01_base.png, 02_river.png, 03_cliffs.png, ...
+                            vues de travail séparées par calque PMDO
+  09_river_animations.png  cellules animées 8 × 8
 
 aseprite/05_lumiere_spring.aseprite
   animation 8 frames, 32 × 32 px, 100 ms/frame
