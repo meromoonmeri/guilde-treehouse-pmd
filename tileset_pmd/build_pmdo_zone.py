@@ -37,40 +37,46 @@ PREVIEW = OUT / "preview"
 for d in (PLANCHES, TILE_DIR, GROUND_DIR, TILED_DIR, TILED_TS, SPRITES, ASEPRITE, PREVIEW):
     d.mkdir(parents=True, exist_ok=True)
 
-# Palette chosen from the uploaded luminous spring: deep blue-green forest,
-# cyan water/beam, and restrained blue-green stone. No antialias shades are used.
+# Palette chosen from luminoussspring.png: bright emerald forest, warm ochre
+# clearing, turquoise water, olive stones and cyan-white light. No deep-blue
+# palette is imported from the layout reference and no antialias shades are used.
 PAL = {
     "void": (0, 0, 0, 0),
-    "forest0": (16, 40, 42, 255),
-    "forest1": (20, 57, 54, 255),
-    "forest2": (28, 76, 67, 255),
-    "fern0": (38, 91, 70, 255),
-    "fern1": (61, 119, 81, 255),
-    "grass0": (67, 128, 85, 255),
-    "grass1": (86, 155, 94, 255),
-    "grass2": (117, 178, 102, 255),
-    "moss0": (48, 105, 83, 255),
-    "moss1": (75, 139, 99, 255),
-    "water0": (10, 72, 82, 255),
-    "water1": (11, 104, 111, 255),
-    "water2": (19, 144, 143, 255),
-    "water3": (33, 190, 183, 255),
-    "water4": (104, 228, 216, 255),
-    "stone0": (45, 68, 73, 255),
-    "stone1": (69, 98, 99, 255),
-    "stone2": (107, 139, 130, 255),
-    "stone3": (148, 173, 151, 255),
-    "wood0": (44, 47, 44, 255),
-    "wood1": (77, 64, 49, 255),
-    "wood2": (122, 91, 57, 255),
-    "wood3": (171, 126, 73, 255),
-    "shadow": (9, 32, 34, 210),
-    "shadow2": (12, 44, 45, 180),
-    "beam0": (11, 117, 128, 255),
-    "beam1": (15, 183, 190, 255),
-    "beam2": (39, 231, 239, 255),
-    "beam3": (151, 249, 240, 255),
-    "beam4": (235, 255, 250, 255),
+    # Palette follows luminoussspring.png. The technical reference changes the
+    # layout only; it does not introduce its deep-blue palette here.
+    "forest0": (18, 66, 36, 255),
+    "forest1": (27, 91, 42, 255),
+    "forest2": (40, 116, 51, 255),
+    "fern0": (48, 128, 49, 255),
+    "fern1": (69, 155, 59, 255),
+    "grass0": (55, 139, 64, 255),
+    "grass1": (83, 174, 70, 255),
+    "grass2": (111, 195, 83, 255),
+    "moss0": (45, 110, 58, 255),
+    "moss1": (80, 155, 70, 255),
+    "path0": (164, 103, 41, 255),
+    "path1": (219, 153, 63, 255),
+    "path2": (242, 181, 76, 255),
+    "water0": (24, 104, 116, 255),
+    "water1": (53, 157, 169, 255),
+    "water2": (70, 182, 183, 255),
+    "water3": (117, 203, 193, 255),
+    "water4": (180, 226, 198, 255),
+    "stone0": (58, 74, 53, 255),
+    "stone1": (91, 108, 70, 255),
+    "stone2": (132, 143, 82, 255),
+    "stone3": (174, 175, 106, 255),
+    "wood0": (46, 45, 27, 255),
+    "wood1": (92, 62, 34, 255),
+    "wood2": (130, 84, 42, 255),
+    "wood3": (176, 119, 58, 255),
+    "shadow": (14, 61, 37, 210),
+    "shadow2": (24, 86, 42, 180),
+    "beam0": (16, 128, 126, 255),
+    "beam1": (25, 189, 177, 255),
+    "beam2": (49, 226, 211, 255),
+    "beam3": (164, 245, 218, 255),
+    "beam4": (255, 255, 230, 255),
 }
 
 # PMDO/Halcyon uses 8x8 texture entries on the ground grid.
@@ -135,18 +141,20 @@ def forest(kind: int = 0) -> Image.Image:
 
 
 def path(kind: int = 0) -> Image.Image:
-    im = tile("stone1")
+    # Warm ochre clearing/path from the supplied Luminous Spring, not the
+    # blue-grey ground of the technical reference.
+    im = tile("path1")
     d = ImageDraw.Draw(im)
-    rect(d, (0, 0, 7, 0), "stone0")
+    rect(d, (0, 0, 7, 0), "path0")
     if kind % 3 == 0:
-        rect(d, (2, 3, 5, 3), "stone2")
-        rect(d, (0, 6, 2, 6), "stone0")
+        rect(d, (2, 3, 5, 3), "path2")
+        rect(d, (0, 6, 2, 6), "path0")
     elif kind % 3 == 1:
-        rect(d, (5, 1, 7, 1), "stone2")
-        rect(d, (1, 5, 3, 5), "stone0")
+        rect(d, (5, 1, 7, 1), "path2")
+        rect(d, (1, 5, 3, 5), "path0")
     else:
-        rect(d, (3, 2, 4, 4), "stone2")
-        rect(d, (6, 6, 7, 7), "stone0")
+        rect(d, (3, 2, 4, 4), "path2")
+        rect(d, (6, 6, 7, 7), "path0")
     return im
 
 
@@ -720,7 +728,7 @@ def write_manifest(meta):
         "sheets": meta,
         "animation": {"frames": 8, "canvas_px": [32, 32], "duration_ms": 100, "anchor_px": [16, 31], "aseprite": "aseprite/05_lumiere_spring.aseprite", "sheet": "planches/05_lumiere_frames.png", "frames_are_distinct": True},
         "files": {"tiled": "tiled/luminous_spring_pmdo.tmj", "rsground": "pmd/Data/Ground/luminous_spring_pmdo.rsground", "preview": "preview/luminous_spring_pmdo_animation_board.png"},
-        "generator": {"configuration": "source/generated/generator_config.json", "studies": ["source/generated/zone_pmdo_reconstruction.png", "source/generated/rives_bassin_pmdo.png", "source/generated/sol_vegetation_pmdo.png", "source/generated/lumiere_animation_pmdo.png", "source/generated/lumiere_animation_pmdo_reference.png"], "role": "design studies only; final tiles are manually rebuilt at 8 px with this palette"},
+        "generator": {"configuration": "source/generated/generator_config.json", "studies": ["source/generated/zone_pmdo_bright_palette.png", "source/generated/rives_bassin_bright_palette.png", "source/generated/lumiere_bright_palette.png"], "role": "design studies only; final tiles are manually rebuilt at 8 px with this palette"},
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 

@@ -102,7 +102,7 @@ du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
 
 ## Reconstruction Luminous Spring — grille Halcyon / PMDO
 
-Les trois images déposées à la racine (`luminoussspring.png`, `Luminous_Spring_TDS REFERENCE A IMITER.png` et `LIGHT EFFECT REFERENCE.png`) ont maintenant une reconstruction dédiée dans `tileset_pmd/`. Le rendu reprend la colorimétrie bleu-vert nocturne et la source cyan de la première image, mais la construction suit la grammaire observée dans Halcyon : **cellules de 8 × 8 px**, calques `Base`, `River`, `Cliffs`, `Shadows`, `Objects Under`, `Objects`, `Objects Over`, `Fringe`, puis une couche animée séparée.
+Les trois images déposées à la racine (`luminoussspring.png`, `Luminous_Spring_TDS REFERENCE A IMITER.png` et `LIGHT EFFECT REFERENCE.png`) ont maintenant une reconstruction dédiée dans `tileset_pmd/`. Le rendu reprend la colorimétrie émeraude, jaune-ocre, brune et turquoise de la première image, sans importer le deep blue de la référence ; la construction suit la grammaire observée dans Halcyon : **cellules de 8 × 8 px**, calques `Base`, `River`, `Cliffs`, `Shadows`, `Objects Under`, `Objects`, `Objects Over`, `Fringe`, puis une couche animée séparée.
 
 Le dossier fournit les planches séparées, les `.tile` PMDO, la carte Tiled `tiled/luminous_spring_pmdo.tmj`, le compagnon `pmd/Data/Ground/luminous_spring_pmdo.rsground`, les sprites transparents et `aseprite/05_lumiere_spring.aseprite`. La lumière possède 8 frames distinctes de 32 × 32 px avec ancre fixe ; l'eau possède une séquence PMDO de 4 frames avec `FrameLength = 10`, selon la logique d'`Altere_Pond_River_Animations.tile` de Halcyon.
 

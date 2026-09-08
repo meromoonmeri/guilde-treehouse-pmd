@@ -6,12 +6,13 @@
     "../../../LIGHT EFFECT REFERENCE.png"
   ],
   "prompt_rules": [
-    "Préserver la colorimétrie nocturne de luminoussspring.png : forêt bleu-vert très sombre, eau turquoise, lumière cyan-blanche.",
+    "Préserver la colorimétrie de luminoussspring.png : forêt émeraude lumineuse, clairière jaune-ocre, troncs bruns, eau turquoise et lumière cyan-blanche.",
+    "Ne pas utiliser de deep blue comme palette dominante : la référence technique sert au layout du bassin et à la lisibilité des zones seulement.",
     "Préserver la lecture d'une source lumineuse centrale et d'une clairière jouable.",
     "Utiliser la référence Halcyon uniquement pour la grammaire technique : cellules 8x8, calques Base/River/Cliffs/Shadows/Objects Under/Objects/Objects Over/Fringe et animations de tuiles.",
     "Ne jamais copier les pixels, les tuiles ou les positions de la référence.",
     "Produire des études d'assets séparés, pas une illustration finale à découper.",
-    "Hard pixel edges, palette réduite, clusters propres, nearest neighbour, aucun anti-aliasing, aucun flou, aucun bruit génératif.",
+    "Hard pixel edges, palette réduite et lumineuse, clusters propres, nearest neighbour, aucun anti-aliasing, aucun flou, aucun bruit génératif.",
     "Les modules d'art principaux peuvent être pensés en 16x16, mais chaque tuile exportée et chaque collision PMDO reste sur 8x8 pixels.",
     "Pour l'eau et la lumière, créer des frames réellement différentes avec même canvas, même palette et même point d'ancrage."
   ],

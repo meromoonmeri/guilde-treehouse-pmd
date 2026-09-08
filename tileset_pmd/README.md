@@ -4,7 +4,7 @@ Ce dossier est la reconstruction de `luminoussspring.png` avec la logique techni
 
 ## Ce qui est construit
 
-- même ambiance nocturne bleu-vert et même lumière cyan-blanche que l'image source ;
+- même colorimétrie émeraude, jaune-ocre, brune et turquoise que l'image source, avec une lumière cyan-blanche ;
 - cellules de sol PMDO de **8 × 8 px**, comme les `.tile` de Halcyon ;
 - modules artistiques de 16 px, toujours composés de cellules 8 px ;
 - calques inspirés de la grammaire Halcyon : `Base`, `River`, `Cliffs`, `Shadows`, `Objects Under`, `Objects`, `Objects Over`, `Fringe` ;

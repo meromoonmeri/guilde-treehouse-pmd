@@ -34,183 +34,201 @@
       0
     ],
     "forest0": [
-      16,
-      40,
-      42,
+      18,
+      66,
+      36,
       255
     ],
     "forest1": [
-      20,
-      57,
-      54,
+      27,
+      91,
+      42,
       255
     ],
     "forest2": [
-      28,
-      76,
-      67,
+      40,
+      116,
+      51,
       255
     ],
     "fern0": [
-      38,
-      91,
-      70,
-      255
-    ],
-    "fern1": [
-      61,
-      119,
-      81,
-      255
-    ],
-    "grass0": [
-      67,
-      128,
-      85,
-      255
-    ],
-    "grass1": [
-      86,
-      155,
-      94,
-      255
-    ],
-    "grass2": [
-      117,
-      178,
-      102,
-      255
-    ],
-    "moss0": [
       48,
-      105,
-      83,
-      255
-    ],
-    "moss1": [
-      75,
-      139,
-      99,
-      255
-    ],
-    "water0": [
-      10,
-      72,
-      82,
-      255
-    ],
-    "water1": [
-      11,
-      104,
-      111,
-      255
-    ],
-    "water2": [
-      19,
-      144,
-      143,
-      255
-    ],
-    "water3": [
-      33,
-      190,
-      183,
-      255
-    ],
-    "water4": [
-      104,
-      228,
-      216,
-      255
-    ],
-    "stone0": [
-      45,
-      68,
-      73,
-      255
-    ],
-    "stone1": [
-      69,
-      98,
-      99,
-      255
-    ],
-    "stone2": [
-      107,
-      139,
-      130,
-      255
-    ],
-    "stone3": [
-      148,
-      173,
-      151,
-      255
-    ],
-    "wood0": [
-      44,
-      47,
-      44,
-      255
-    ],
-    "wood1": [
-      77,
-      64,
+      128,
       49,
       255
     ],
-    "wood2": [
-      122,
+    "fern1": [
+      69,
+      155,
+      59,
+      255
+    ],
+    "grass0": [
+      55,
+      139,
+      64,
+      255
+    ],
+    "grass1": [
+      83,
+      174,
+      70,
+      255
+    ],
+    "grass2": [
+      111,
+      195,
+      83,
+      255
+    ],
+    "moss0": [
+      45,
+      110,
+      58,
+      255
+    ],
+    "moss1": [
+      80,
+      155,
+      70,
+      255
+    ],
+    "path0": [
+      164,
+      103,
+      41,
+      255
+    ],
+    "path1": [
+      219,
+      153,
+      63,
+      255
+    ],
+    "path2": [
+      242,
+      181,
+      76,
+      255
+    ],
+    "water0": [
+      24,
+      104,
+      116,
+      255
+    ],
+    "water1": [
+      53,
+      157,
+      169,
+      255
+    ],
+    "water2": [
+      70,
+      182,
+      183,
+      255
+    ],
+    "water3": [
+      117,
+      203,
+      193,
+      255
+    ],
+    "water4": [
+      180,
+      226,
+      198,
+      255
+    ],
+    "stone0": [
+      58,
+      74,
+      53,
+      255
+    ],
+    "stone1": [
       91,
-      57,
+      108,
+      70,
+      255
+    ],
+    "stone2": [
+      132,
+      143,
+      82,
+      255
+    ],
+    "stone3": [
+      174,
+      175,
+      106,
+      255
+    ],
+    "wood0": [
+      46,
+      45,
+      27,
+      255
+    ],
+    "wood1": [
+      92,
+      62,
+      34,
+      255
+    ],
+    "wood2": [
+      130,
+      84,
+      42,
       255
     ],
     "wood3": [
-      171,
-      126,
-      73,
+      176,
+      119,
+      58,
       255
     ],
     "shadow": [
-      9,
-      32,
-      34,
+      14,
+      61,
+      37,
       210
     ],
     "shadow2": [
-      12,
-      44,
-      45,
+      24,
+      86,
+      42,
       180
     ],
     "beam0": [
-      11,
-      117,
+      16,
       128,
+      126,
       255
     ],
     "beam1": [
-      15,
-      183,
-      190,
+      25,
+      189,
+      177,
       255
     ],
     "beam2": [
-      39,
-      231,
-      239,
+      49,
+      226,
+      211,
       255
     ],
     "beam3": [
-      151,
-      249,
-      240,
+      164,
+      245,
+      218,
       255
     ],
     "beam4": [
-      235,
       255,
-      250,
+      255,
+      230,
       255
     ]
   },
@@ -798,11 +816,9 @@
   "generator": {
     "configuration": "source/generated/generator_config.json",
     "studies": [
-      "source/generated/zone_pmdo_reconstruction.png",
-      "source/generated/rives_bassin_pmdo.png",
-      "source/generated/sol_vegetation_pmdo.png",
-      "source/generated/lumiere_animation_pmdo.png",
-      "source/generated/lumiere_animation_pmdo_reference.png"
+      "source/generated/zone_pmdo_bright_palette.png",
+      "source/generated/rives_bassin_bright_palette.png",
+      "source/generated/lumiere_bright_palette.png"
     ],
     "role": "design studies only; final tiles are manually rebuilt at 8 px with this palette"
   }
