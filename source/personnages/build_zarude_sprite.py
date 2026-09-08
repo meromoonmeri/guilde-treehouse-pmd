@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
 """Sprite Zarude (#0893) au format SpriteCollab / SkyTemple, sur le squelette d'animation de Rillaboom.
 
-Zarude n'existe pas sur PMDCollab : le dessin est original (pièces de pixel art 1:1 dans
-`zarude_pieces.py`, 13 couleurs). Pour rester dans la convention des sprites du dépôt, on
-**recopie le squelette** du sprite de Rillaboom #0812 (baronessfaron, CC BY-NC 4.0) :
+Zarude n'existe pas sur PMDCollab. Le dessin vient de la **planche de marche fournie par l'utilisateur**
+(`source/personnages/reference/zarude/`, 4 directions × 4 images, Game Character Hub), découpée en pièces
+pixel-exactes dans `zarude_pieces.py` (tête, poitrail, bras, jambes, queue, dos) et complétée par des pièces
+dessinées dans la même palette (diagonales, bras levés / tendus / au poitrail, sommeil, effets).
+
+Pour rester dans la convention des sprites du dépôt, on **recopie le squelette** du sprite de Rillaboom #0812
+(baronessfaron, CC BY-NC 4.0) :
 
 - mêmes animations (set donjon complet, Sing compris), mêmes cases, mêmes durées,
   mêmes RushFrame / HitFrame / ReturnFrame ;
-- même déplacement du point d'ancrage à chaque image (charge de l'attaque, secousse,
-  cercle de Swing, aller-retour de Double, saut de Hop), lu directement dans les feuilles
-  `*-Shadow.png` de la référence (`source/personnages/reference/0812/`) ;
-- même gabarit d'ombre 24 × 8 (ShadowSize 2), mêmes couleurs de repères ;
-- pour Swing et Rotate, même sens de rotation : l'image i regarde la direction (d − i) mod 8.
+- même déplacement du point d'ancrage à chaque image (charge de l'attaque, secousse, cercle de Swing,
+  aller-retour de Double, saut de Hop), lu directement dans les feuilles `*-Shadow.png` de la référence
+  (`source/personnages/reference/0812/`) ;
+- même gabarit d'ombre, mêmes couleurs de repères ; pour Swing et Rotate, même sens de rotation :
+  l'image i regarde la direction (d − i) mod 8.
 
 Aucun pixel de Rillaboom n'est copié : ses feuilles servent de plan (cases, ancres, timing).
 
-Les cinq orientations Bas, Bas-droite, Droite, Haut-droite, Haut sont dessinées ; Gauche,
-Haut-gauche et Bas-gauche sont des miroirs autour de la colonne de l'ancre (comme les
-sprites officiels). Chaque image est un assemblage de pièces (tête, crinière, torse, bras,
-jambes, queue, lianes) déplacées de quelques pixels : la cohérence entre images est mécanique.
+Les cinq orientations Bas, Bas-droite, Droite, Haut-droite, Haut sont assemblées ; Gauche, Haut-gauche et
+Bas-gauche sont des miroirs autour de la colonne de l'ancre (comme les sprites officiels). Chaque image est
+un assemblage de pièces déplacées de quelques pixels : la cohérence entre images est mécanique.
 
-Sorties : personnages/zarude/ (feuilles, AnimData.xml, Aseprite, variantes nuit, aperçus,
-kit.json, credits.txt).
+Sorties : personnages/zarude/ (feuilles, AnimData.xml, Aseprite, variantes nuit, aperçus, kit.json, credits.txt).
 """
 from __future__ import annotations
 
@@ -44,15 +46,16 @@ from build_falinks_sprite import (  # noqa: E402  (pipeline commun aux sprites d
 import zarude_pieces as P  # noqa: E402
 
 REF = ROOT / "source" / "personnages" / "reference" / "0812"      # Rillaboom : squelette
+PLANCHE = ROOT / "source" / "personnages" / "reference" / "zarude" / "zarude_overworld_1x.png"
 OUT = ROOT / "personnages" / "zarude"
-SHADOW_SIZE = 2
+SHADOW_SIZE = 1                     # Zarude fait 22 px de haut : ombre moyenne (Rillaboom, 35 px : 2)
 ANIM_ORDER = [("Walk", 0), ("Attack", 1), ("Strike", 2), ("Shoot", 3), ("Sing", 4), ("Sleep", 5), ("Hurt", 6),
               ("Idle", 7), ("Swing", 8), ("Double", 9), ("Hop", 10), ("Charge", 11), ("Rotate", 12)]
 SPIN = ("Swing", "Rotate")          # l'image i regarde (d - i) mod 8
 HOP_LIFT = [0, 10, 16, 20, 21, 23, 22, 18, 12, 0]      # hauteur du corps au-dessus du sol, relevée sur Rillaboom
 HOP_POSE = ["crouch", "rest", "rest", "rest", "rest", "crouch", "crouch", "crouch", "crouch", "rest"]
 MIRROR = {5: 3, 6: 2, 7: 1}
-
+WALK_BOB = 1                        # sur les pas, le haut du corps descend d'un pixel (les pieds restent au sol)
 
 # ---------------------------------------------------------------------------
 # Squelette : AnimData et déplacements d'ancre de la référence
@@ -103,7 +106,7 @@ def shadow_template() -> np.ndarray:
 @dataclass(frozen=True)
 class Arm:
     img: np.ndarray
-    fist: tuple[int, int]
+    fist: tuple[int, int]          # coordonnées de la pièce
     shoulder: tuple[int, int]
 
     def flipped(self) -> "Arm":
@@ -114,22 +117,37 @@ class Arm:
         return Arm(P.darker(self.img), self.fist, self.shoulder)
 
     def shortened(self, n: int) -> "Arm":
+        """Retire n lignes du haut du bras, côté épaule (bras à demi levé) ; la main garde sa forme."""
         if n <= 0:
             return self
-        keep = min(self.shoulder[1], self.fist[1]) + 1     # on retire des lignes entre l'épaule et le poing
-        img = P.shorten(self.img, n, keep_top=keep)
         fx, fy = self.fist
         sx, sy = self.shoulder
-        return Arm(img, (fx, fy - n if fy > sy else fy), (sx, sy - n if sy > fy else sy))
+        if sy > fy:                                   # épaule en bas (bras levé) : on coupe juste au-dessus
+            img = P.shorten(self.img, n, keep_top=sy - n)
+            return Arm(img, (fx, fy), (sx, sy - n))
+        img = P.shorten(self.img, n, keep_top=sy + 1)  # épaule en haut : on coupe juste en dessous
+        return Arm(img, (fx, fy - n), (sx, sy))
 
 
-def arm_set(prefix: str) -> dict[str, Arm]:
+def arm(name: str) -> Arm:
     g = vars(P)
-    return {kind: Arm(g[f"{name}_{prefix}"], g[f"{name}_{prefix}_FIST"], g[f"{name}_{prefix}_SHOULDER"])
-            for kind, name in (("rest", "ARM"), ("up", "ARM_UP"), ("out", "ARM_OUT"), ("beat", "ARM_BEAT"), ("push", "ARM_PUSH"))}
+    return Arm(g[name], g[f"{name}_FIST"], g[f"{name}_SHOULDER"])
 
 
-ARMS = {0: arm_set("0"), 2: arm_set("2"), 4: arm_set("4")}
+def mirror_at(at: tuple[int, int], img: np.ndarray) -> tuple[int, int]:
+    """Position d'une pièce retournée : la planche est symétrique autour de x = −0,5 (entre deux colonnes)."""
+    return (-at[0] - img.shape[1], at[1])
+
+
+def flipped_leg(img: np.ndarray, at: tuple[int, int]) -> tuple[np.ndarray, tuple[int, int]]:
+    return P.flip(img), mirror_at(at, img)
+
+
+def flipped_arm(a: Arm, at: tuple[int, int]) -> tuple[Arm, tuple[int, int]]:
+    return a.flipped(), mirror_at(at, a.img)
+
+
+KINDS = {fam: {k: arm(f"ARM_{k.upper()}_{fam}") for k in ("up", "out", "beat", "push")} for fam in (0, 2, 4)}
 
 
 @dataclass
@@ -141,47 +159,84 @@ class Piece:
     z: int
 
 
-# Spécification de la pose de repos pour chaque orientation dessinée.
-#   arms : nom -> (famille de bras, épaule (x, y), z, miroir ?, éloigné ?)
-#   red  : bras portant le repère « main gauche » (rouge) — même convention que la référence :
-#          de face le poing à gauche de l'écran, de dos celui de droite, de profil le poing éloigné.
-#   front : direction écran « devant le personnage » (griffures de l'attaque, ondes du hurlement).
-SPECS = {
-    0: dict(head=(P.HEAD_0, P.HEAD_0_MARK, (-12, -32), 5), mane=(P.MANE_0, (-13, -25), 4),
-            torso=(P.TORSO_0, P.TORSO_0_CENTER, (-6, -20), 3), tail=(P.TAIL_0, (10, -22), 0),
-            legs={"legL": (P.LEG_0, (-7, -9), 1, False, False), "legR": (P.LEG_0, (2, -9), 1, True, False)},
-            arms={"armL": (0, (-5, -18), 6, False, False), "armR": (0, (5, -18), 6, True, False)},
-            red="armL", slash=(0, 6), howl=[((-18, -30), False), ((15, -30), True)], sparks=[(-15, -28), (15, -31)]),
-    1: dict(head=(P.HEAD_1, P.HEAD_1_MARK, (-11, -32), 5), mane=(P.MANE_0, (-13, -25), 4),
-            torso=(P.TORSO_1, P.TORSO_1_CENTER, (-6, -20), 3), tail=(P.TAIL_1, (7, -23), 0),
-            legs={"legL": (P.LEG_0, (-7, -9), 2, False, False), "legR": (P.LEG_0, (2, -10), 1, True, True)},
-            arms={"armL": (0, (-5, -18), 6, False, False), "armR": (0, (5, -20), 1, True, True)},
-            red="armR", slash=(9, 3), howl=[((-18, -30), False), ((15, -30), True)], sparks=[(-15, -28), (15, -31)]),
-    2: dict(head=(P.HEAD_2, P.HEAD_2_MARK, (-2, -32), 5), mane=(P.MANE_2, (-10, -30), 4), vines=(P.VINES_2, (-9, -24), 4),
-            torso=(P.TORSO_2, P.TORSO_2_CENTER, (-9, -21), 3), tail=(P.TAIL_2, (-18, -25), 0),
-            legs={"legL": (P.LEG_2, (-8, -13), 1, False, True), "legR": (P.LEG_2, (-3, -12), 2, False, False)},
-            arms={"armL": (2, (-1, -21), 1, False, True), "armR": (2, (2, -20), 6, False, False)},
-            red="armL", slash=(16, -2), howl=[((17, -27), True)], sparks=[(-6, -30), (18, -29)]),
-    3: dict(head=(P.HEAD_3, P.HEAD_3_MARK, (-12, -32), 5), mane=(P.MANE_0, (-13, -25), 4),
-            vines=(P.VINES_3, (-8, -26), 6),
-            torso=(P.TORSO_4, P.TORSO_4_CENTER, (-6, -20), 3), tail=(P.TAIL_3, (-16, -16), 7),
-            legs={"legL": (P.LEG_4, (-7, -9), 2, False, False), "legR": (P.LEG_4, (2, -10), 1, True, True)},
-            arms={"armL": (4, (-5, -18), 2, False, False), "armR": (4, (5, -20), 1, True, True)},
-            red="armL", slash=(8, -24), howl=[((-18, -30), False), ((15, -30), True)], sparks=[(-15, -28), (15, -31)]),
-    4: dict(head=(P.HEAD_4, P.HEAD_4_MARK, (-12, -32), 5), mane=(P.MANE_0, (-13, -25), 4),
-            vines=(P.VINES_4, (-5, -26), 6),
-            torso=(P.TORSO_4, P.TORSO_4_CENTER, (-6, -20), 3), tail=(P.TAIL_4, (2, -16), 7),
-            legs={"legL": (P.LEG_4, (-7, -9), 1, False, False), "legR": (P.LEG_4, (2, -9), 1, True, False)},
-            arms={"armL": (4, (-5, -18), 2, False, False), "armR": (4, (5, -18), 2, True, False)},
-            red="armR", slash=(0, -26), howl=[((-18, -30), False), ((15, -30), True)], sparks=[(-15, -28), (15, -31)]),
-}
+def _turned(off: dict, dx: int, dy: int = 0, z: int | None = None):
+    """Applique un décalage (et un plan z) à une entrée (pièce, position[, z])."""
+    img, (x, y), *rest = off
+    zz = [z] if z is not None else rest
+    return (img, (x + dx, y + dy), *zz)
 
-# Pas de marche : décalage (dx, dy) des jambes et des bras selon la famille d'orientation.
-#   image 1 : jambe gauche avance, bras droit avance ; image 3 : l'inverse.
-WALK = {
-    "front": {"fwd_leg": (0, 2), "back_leg": (0, -1), "fwd_arm": (-2, 2, 0), "back_arm": (1, 0, 2)},
-    "side": {"fwd_leg": (3, 0), "back_leg": (-2, 0), "fwd_arm": (3, 0, 1), "back_arm": (-3, 0, 1)},
-    "back": {"fwd_leg": (0, -1), "back_leg": (0, 2), "fwd_arm": (-2, 0, 2), "back_arm": (1, 2, 0)},
+
+def _front_spec(head, head_at, torso, torso_at, head_mark=(0, -10), tail=None, red="armL", turn=0):
+    """Face (0) ou trois quarts face (1). Les membres viennent de la planche « bas » ; pour le trois quarts,
+    les deux bras se rapprochent du centre (rotation de 45°) et le bras éloigné (droite-écran) passe derrière."""
+    legL = flipped_leg(P.LEG_0, P.LEG_0_AT)
+    armL = arm("ARM_L_0")
+    armR, armR_at = flipped_arm(armL, P.ARM_L_0_AT)
+    swingR = (arm("ARM_R_0"), P.ARM_R_0_AT)                        # bras droit-écran balancé (pas A)
+    swingL = flipped_arm(*swingR)                                     # bras gauche-écran balancé (pas B)
+    legUpL = (P.LEG_UP_0, P.LEG_UP_0_AT)
+    legUpR = flipped_leg(*legUpL)
+    n, f, fz = (3, -3, 2) if turn else (0, 0, 6)                     # décalage du bras proche / éloigné, plan du bras éloigné
+    ln, lf = (1, -1) if turn else (0, 0)
+    body = [("head", head, head_at, 5), ("torso", torso, torso_at, 3)]
+    if tail is not None:
+        body.append(("tail", *tail, 0))
+    return dict(
+        fam=0, body=body, head_mark=head_mark, center=(0, -4),
+        legs={"legL": _turned((*legL, 1), ln), "legR": _turned((P.LEG_0, P.LEG_0_AT, 1), lf)},
+        arms={"armL": _turned((armL, P.ARM_L_0_AT, 6), n), "armR": _turned((armR, armR_at, 6), f, 0 if not turn else -1, fz)},
+        walk={"walk1": {"legL": _turned(legUpL, ln), "armR": _turned(swingR, f, 0 if not turn else -1)},
+              "walk3": {"legR": _turned(legUpR, lf), "armL": _turned(swingL, n),
+                        "torso": (P.flip(torso), mirror_at(torso_at, torso) if not turn else torso_at)}},
+        red=red, slash=(0, 6), howl=[((-13, -19), False), ((12, -19), True)], sparks=[(-12, -15), (12, -17)],
+    )
+
+
+def _back_spec(head, head_at, back, back_b, back_at, head_mark=(0, -15), red="armR", turn=0):
+    """Dos (4) ou trois quarts dos (3) : pour le trois quarts, le bras éloigné (gauche-écran) passe derrière."""
+    legL = flipped_leg(P.LEG_4, P.LEG_4_AT)
+    armL = arm("ARM_L_4")
+    armR, armR_at = flipped_arm(armL, P.ARM_L_4_AT)
+    swingR = (arm("ARM_R_4"), P.ARM_R_4_AT)
+    swingL = flipped_arm(*swingR)
+    legUpL = (P.LEG_UP_4, P.LEG_UP_4_AT)
+    legUpR = flipped_leg(*legUpL)
+    n, f, fz = (3, -3, 4) if turn else (0, 0, 2)                      # éloigné = gauche-écran (armL, derrière), proche = droite-écran (armR)
+    ln, lf = (1, -1) if turn else (0, 0)
+    return dict(
+        fam=4, body=[("head", head, head_at, 5), ("back", back, back_at, 3)], head_mark=head_mark, center=(0, -6),
+        legs={"legL": _turned((*legL, 1), n and ln), "legR": _turned((P.LEG_4, P.LEG_4_AT, 1), n and lf)},
+        arms={"armL": _turned((armL, P.ARM_L_4_AT, 2), n, 0 if not turn else -1, 2), "armR": _turned((armR, armR_at, 2), f, 0, fz)},
+        walk={"walk1": {"legL": _turned(legUpL, n and ln), "armR": _turned(swingR, f)},
+              "walk3": {"legR": _turned(legUpR, n and lf), "armL": _turned(swingL, n, 0 if not turn else -1),
+                        "back": (back_b, back_at)}},
+        red=red, slash=(0, -22), howl=[((-13, -18), False), ((12, -18), True)], sparks=[(-12, -14), (12, -16)],
+    )
+
+
+def _side_spec():
+    """Profil : le repos est le pas A de la planche (jambe sous le corps, bras proche pendant, main éloignée
+    tendue devant le poitrail) ; les deux images de pas sont le pas B (jambe tendue en arrière, bras balancé)."""
+    near = arm("ARM_2A")
+    far = Arm(P.HAND_F_2, P.HAND_F_2_FIST, P.HAND_F_2_SHOULDER)
+    stride = {"armN": (arm("ARM_2B"), P.ARM_2B_AT), "legN": (P.LEG_2B, P.LEG_2B_AT),
+              "tail": (P.TAIL_2B, P.TAIL_2B_AT), "torso": (P.TORSO_2B, P.TORSO_2B_AT)}
+    return dict(
+        fam=2, body=[("head", P.HEAD_2, P.HEAD_2_AT, 5), ("torso", P.TORSO_2, P.TORSO_2_AT, 3), ("tail", P.TAIL_2A, P.TAIL_2A_AT, 0)],
+        head_mark=(3, -10), center=(-4, -4),
+        legs={"legN": (P.LEG_2A, P.LEG_2A_AT, 1)},
+        arms={"armN": (near, P.ARM_2A_AT, 6), "armF": (far, P.HAND_F_2_AT, 4)},
+        walk={"walk1": stride, "walk3": stride},
+        red="armF", slash=(14, -4), howl=[((14, -18), True)], sparks=[(-8, -18), (13, -14)],
+    )
+
+
+SPECS = {
+    0: _front_spec(P.HEAD_0, P.HEAD_0_AT, P.TORSO_0, P.TORSO_0_AT),
+    1: _front_spec(P.HEAD_1, P.HEAD_1_AT, P.TORSO_1, P.TORSO_1_AT, head_mark=(1, -10), tail=(P.TAIL_1, P.TAIL_1_AT), red="armR", turn=1),
+    2: _side_spec(),
+    3: _back_spec(P.HEAD_3, P.HEAD_3_AT, P.BACK_3, P.BACK_3B, P.BACK_3_AT, head_mark=(0, -15), red="armL", turn=1),
+    4: _back_spec(P.HEAD_4, P.HEAD_4_AT, P.BACK_4, P.BACK_4B, P.BACK_4_AT),
 }
 FAMILY = {0: "front", 1: "front", 2: "side", 3: "back", 4: "back"}
 
@@ -194,105 +249,108 @@ def assemble(facing: int, pose: str = "rest", lift: int = 0, extras: list | None
     """Pièces (coordonnées relatives à l'ancre) et repères d'une pose, pour une orientation dessinée (0-4)."""
     spec = SPECS[facing]
     fam = FAMILY[facing]
-    body = [0, 0]                     # décalage du haut du corps (tête, crinière, torse, queue, épaules)
-    leg_off = {"legL": (0, 0), "legR": (0, 0)}
-    leg_short = {"legL": 0, "legR": 0}
-    arm_kind = {"armL": "rest", "armR": "rest"}
-    arm_off = {"armL": (0, 0), "armR": (0, 0)}
-    arm_short = {"armL": 0, "armR": 0}
-    arm_flip = {"armL": False, "armR": False}      # retournement supplémentaire (bras rejetés en arrière)
+    kinds = KINDS[spec["fam"]]
+    body_dy = 0
     head_off = (0, 0)
+    legs = {k: v for k, v in spec["legs"].items()}          # name -> (img, at, z)
+    arms = {k: v for k, v in spec["arms"].items()}          # name -> (Arm, at, z)
+    body = {name: (img, at, z) for name, img, at, z in spec["body"]}
+    leg_short = {k: 0 for k in legs}
+    arm_kind = {k: "rest" for k in arms}
+    arm_off = {k: (0, 0) for k in arms}
+    arm_short = {k: 0 for k in arms}
+    arm_flip = {k: False for k in arms}
     extras = list(extras or [])
 
     if pose in ("walk1", "walk3"):
-        w = WALK[fam]
-        fwd, back = ("legL", "legR") if pose == "walk1" else ("legR", "legL")
-        leg_off[fwd], leg_off[back] = w["fwd_leg"], w["back_leg"]
-        fa, ba = ("armR", "armL") if pose == "walk1" else ("armL", "armR")
-        arm_off[fa], arm_short[fa] = w["fwd_arm"][:2], w["fwd_arm"][2]
-        arm_off[ba], arm_short[ba] = w["back_arm"][:2], w["back_arm"][2]
-        body[1] += 1
-        leg_short = {k: 1 for k in leg_short}
+        for name, (img, at) in spec["walk"][pose].items():
+            if name in legs:
+                legs[name] = (img, at, legs[name][2])
+            elif name in arms:
+                arms[name] = (img, at, arms[name][2])
+            else:
+                body[name] = (img, at, body[name][2])
+        body_dy = WALK_BOB
     elif pose in ("crouch", "slam", "push", "double"):
-        body[1] += 2
-        leg_short = {k: 2 for k in leg_short}
-        arm_short = {k: 2 for k in arm_short}
+        body_dy = 2
+        leg_short = {k: 2 for k in legs}
+        arm_short = {k: 2 for k in arms}
         if pose == "slam":
-            arm_kind = {k: "rest" for k in arm_kind}
-            for k in arm_off:
-                sx = spec["arms"][k][1][0]
-                arm_off[k] = (-2 if sx < 0 else 2 if sx > 0 else 0, 1) if fam != "side" else (3, 1)
-                arm_short[k] = 3
+            head_off = (0, 1)
+            for k in arms:
+                ax = arms[k][1][0] + arms[k][0].fist[0]
+                arm_off[k] = (2 if ax < 0 else -2, 0) if fam != "side" else (3, 0)
         elif pose == "push":
-            arm_kind = {k: "push" for k in arm_kind}
-            arm_short = {k: 0 for k in arm_short}
-            if fam == "side":                      # bras tendus à hauteur du poitrail, sous le museau
-                arm_off = {"armL": (-1, 2), "armR": (1, 5)}
+            arm_kind = {k: "push" for k in arms}
+            arm_short = {k: 0 for k in arms}
+            arm_off = {k: (0, 2) for k in arms} if fam != "side" else {"armN": (1, 1), "armF": (0, 0)}
     elif pose in ("windup", "raise"):
-        arm_kind = {k: "up" for k in arm_kind}
-        if pose == "raise":                        # bras à demi levés : tient dans les cases 48 × 64 de la référence
-            arm_short = {k: 4 for k in arm_short}
+        arm_kind = {k: "up" for k in arms}
+        if pose == "raise":
+            arm_short = {k: 4 for k in arms}
     elif pose == "howl":
-        arm_kind = {k: "up" for k in arm_kind}
-        arm_short = {k: 4 for k in arm_short}
+        arm_kind = {k: "up" for k in arms}
+        arm_short = {k: 4 for k in arms}
         head_off = (0, -1)
         for (hx, hy), fl in spec["howl"]:
             extras.append((howl_mark(fl), hx, hy, 9))
     elif pose in ("beatL", "beatR"):
-        arm_kind[pose[-1:].join(["arm", ""])] = "beat"
+        names = sorted(arms)
+        arm_kind[names[0] if pose == "beatL" else names[-1]] = "beat"
     elif pose == "hurt":
-        arm_kind = {k: "out" for k in arm_kind}
-        if fam == "side":                          # de profil : bras rejetés en arrière
-            arm_flip = {"armL": True, "armR": True}
-            arm_off = {"armL": (0, -3), "armR": (0, -1)}
+        arm_kind = {k: "out" for k in arms}
         head_off = (0, 1)
+        if fam == "side":                          # de profil : bras rejetés en arrière
+            arm_flip = {k: True for k in arms}
         for sx, sy in spec["sparks"]:
-            extras.append((P.bmp(["W"]), sx, sy, 9))
+            extras.append((P.SPARK, sx, sy, 9))
     elif pose == "rest":
         pass
     else:
         raise ValueError(pose)
 
     pieces: list[Piece] = []
-    bx, by = body
-    img, mark, (x, y), z = spec["head"]
-    pieces.append(Piece("head", img, x + bx + head_off[0], y + by + head_off[1] - lift, z))
-    marks = {"head": (x + bx + head_off[0] + mark[0], y + by + head_off[1] + mark[1] - lift)}
-    img, (x, y), z = spec["mane"]
-    pieces.append(Piece("mane", img, x + bx, y + by - lift, z))
-    if "vines" in spec:
-        img, (x, y), z = spec["vines"]
-        pieces.append(Piece("vines", img, x + bx, y + by - lift, z))
-    img, centre, (x, y), z = spec["torso"]
-    pieces.append(Piece("torso", img, x + bx, y + by - lift, z))
-    marks["center"] = (x + bx + centre[0], y + by + centre[1] - lift)
-    img, (x, y), z = spec["tail"]
-    pieces.append(Piece("tail", img, x + bx, y + by - lift, z))
-    for name, (img, (x, y), z, fl, far) in spec["legs"].items():
-        leg = P.flip(img) if fl else img
-        leg = P.darker(leg) if far else leg
-        leg = P.shorten(leg, leg_short[name], keep_top=1)
-        dx, dy = leg_off[name]
-        dx = -dx if fl else dx
-        pieces.append(Piece(name, leg, x + dx, y + dy + leg_short[name] - lift, z))
+    for name, (img, (x, y), z) in body.items():
+        dy = body_dy + (head_off[1] if name == "head" else 0)
+        dx = head_off[0] if name == "head" else 0
+        pieces.append(Piece(name, img, x + dx, y + dy - lift, z))
+    hx, hy = spec["head_mark"]
+    cx, cy = spec["center"]
+    marks = {"head": (hx + head_off[0], hy + body_dy + head_off[1] - lift), "center": (cx, cy + body_dy - lift)}
+    for name, (img, (x, y), z) in legs.items():
+        n = leg_short[name]
+        pieces.append(Piece(name, P.shorten(img, n, keep_top=1), x, y + n - lift, z))
     fists = {}
-    for name, (family, (sx, sy), z, fl, far) in spec["arms"].items():
-        arm = ARMS[family][arm_kind[name]]
-        if fl != arm_flip[name]:
-            arm = arm.flipped()
-        if far:
-            arm = arm.darker()
-        arm = arm.shortened(arm_short[name])
+    for name, (base, (x, y), z) in arms.items():
+        sx, sy = x + base.shoulder[0], y + base.shoulder[1] + body_dy         # épaule, suit le corps
+        kind = arm_kind[name]
+        if kind == "rest":
+            a = base
+        else:
+            a = kinds[kind]
+            if name == "armR":                        # variantes dessinées pour le bras gauche-écran
+                a = a.flipped()
+            if name == "armF":                        # bras éloigné, de profil : assombri, derrière le corps
+                a = a.darker()
+                z = 2
+                if kind in ("up", "out", "push"):
+                    dx0, dy0 = arm_off[name]
+                    arm_off[name] = (dx0 - 2, dy0) if kind == "up" else (dx0 - 3, dy0 + 2)
+        if arm_flip[name]:
+            a = a.flipped()
+        a = a.shortened(arm_short[name])
         dx, dy = arm_off[name]
-        dx = -dx if fl else dx
-        px, py = sx + bx + dx - arm.shoulder[0], sy + by + dy - arm.shoulder[1] - lift
-        pieces.append(Piece(name, arm.img, px, py, z))
-        fists[name] = (px + arm.fist[0], py + arm.fist[1])
+        if kind == "rest":
+            px, py = x + dx, y + body_dy + dy - lift
+        else:
+            px, py = sx - a.shoulder[0] + dx, sy - a.shoulder[1] + dy - lift
+        pieces.append(Piece(name, a.img, px, py, z))
+        fists[name] = (px + a.fist[0], py + a.fist[1])
     red = spec["red"]
-    blue = "armR" if red == "armL" else "armL"
+    blue = [k for k in arms if k != red][0]
     marks["lhand"], marks["rhand"] = fists[red], fists[blue]
-    for k, (img, cx, cy, z) in enumerate(extras):
-        pieces.append(Piece(f"fx{k}", img, cx - img.shape[1] // 2, cy - img.shape[0] // 2, z))
+    for k, (img, ex, ey, z) in enumerate(extras):
+        pieces.append(Piece(f"fx{k}", img, ex - img.shape[1] // 2, ey - img.shape[0] // 2, z))
     return pieces, marks
 
 
@@ -416,7 +474,7 @@ class Builder:
             plan = [[]]
             for i, img in enumerate((P.SLEEP_A, P.SLEEP_B)):
                 marks = {"head": P.SLEEP_HEAD_MARK, "center": P.SLEEP_CENTER, "lhand": P.SLEEP_FISTS[0], "rhand": P.SLEEP_FISTS[1]}
-                ox, oy = -18, 6 - img.shape[0] + 1            # au sol : dernière ligne à +6 comme la référence
+                ox, oy = P.SLEEP_A_AT
                 plan[0].append(((0, 0), img, (ox, oy), {k: (ox + x, oy + y) for k, (x, y) in marks.items()}))
         else:
             disp = anchor_displacements(name, fw, fh)
@@ -520,7 +578,7 @@ def contact_sheet(comps: dict[str, Composed], path: Path) -> None:
     out = Image.new("RGBA", (W + 16, H), (26, 26, 46, 255))
     d = ImageDraw.Draw(out)
     d.text((12, 10), "ZARUDE #0893 — SPRITE PMD, FORMAT SPRITECOLLAB (× 2)", fill=(240, 240, 240, 255), font=font(18))
-    d.text((12, 36), "Dessin original sur le squelette d'animation de Rillaboom #0812 · Walk, Attack, Sing : ligne 1 = Bas, ligne 2 = Droite",
+    d.text((12, 36), "Planche de marche fournie, complétée · squelette d'animation de Rillaboom #0812 · Walk, Attack, Sing : ligne 1 = Bas, ligne 2 = Droite",
            fill=(170, 170, 200, 255), font=font(12))
     y = 64
     for b in blocks:
@@ -688,12 +746,16 @@ requestAnimationFrame(draw);
 def write_credits(path: Path) -> None:
     lines = [
         "# Zarude #0893 forme 0000 — crédits, format proche de SpriteCollab : date, auteur, statut, licence, animations",
-        "2026-09-06 00:00:00.000000\tGuilde Treehouse (dessin original en pièces, assemblage scripté)\tCUR\tCC_BY-NC_4\tIdle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Sing,Swing,Double,Rotate,Hop",
+        "2026-09-07 00:00:00.000000\tGuilde Treehouse (découpe de la planche fournie + pièces complémentaires, assemblage scripté)\tCUR\tCC_BY-NC_4\tIdle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Sing,Swing,Double,Rotate,Hop",
         "",
-        "Dessin original : aucun pixel n'est repris d'un sprite existant.",
-        "Squelette d'animation (cases, durées, RushFrame/HitFrame/ReturnFrame, déplacements de l'ancre, sens de rotation, gabarit d'ombre)",
+        "Dessin : planche de marche de Zarude fournie par le commanditaire (4 directions × 4 images, fichier « Made with Game Character Hub »,",
+        "source/personnages/reference/zarude/zarude_overworld_2x.png) ; auteur d'origine non renseigné — à compléter si connu.",
+        "Les vues Bas, Droite/Gauche et Haut de Walk reprennent ses pixels tels quels ; les diagonales, les bras des attaques,",
+        "le sommeil et les effets sont dessinés dans sa palette (11 couleurs).",
+        "Squelette d'animation (cases, durées, RushFrame/HitFrame/ReturnFrame, déplacements de l'ancre, sens de rotation)",
         "relevé sur le sprite de Rillaboom #0812 de baronessfaron (<@!544245909639397378>), CC BY-NC 4.0 — https://sprites.pmdcollab.org/#/0812?form=0",
-        "Licence de ce sprite : CC BY-NC 4.0 (usage, copie et modification autorisés avec crédit, hors usage commercial).",
+        "Licence de ce sprite : CC BY-NC 4.0 (usage, copie et modification autorisés avec crédit, hors usage commercial),",
+        "sous réserve des droits de l'auteur de la planche d'origine.",
         "Zarude n'existe pas sur le dépôt SpriteCollab ; ce sprite n'y a été ni soumis ni approuvé.",
     ]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -725,15 +787,16 @@ def main() -> None:
                 a = cell[0]
                 used |= set(map(tuple, a[a[:, :, 3] > 0][:, :3].tolist()))
     kit = {
-        "pokemon": {"numero": "0893", "nom": "Zarude", "forme": "0000", "base_squelette": "0812 Rillaboom forme 0 (baronessfaron, CC BY-NC 4.0)"},
+        "pokemon": {"numero": "0893", "nom": "Zarude", "forme": "0000", "base_dessin": "planche de marche 4 directions fournie par l'utilisateur (Game Character Hub)",
+                    "base_squelette": "0812 Rillaboom forme 0 (baronessfaron, CC BY-NC 4.0)"},
         "format": {"convention": "SpriteCollab / SkyTemple : <Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png + AnimData.xml",
                    "directions": DIRECTIONS, "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos, déplacée comme dans la référence",
                    "shadow_size": SHADOW_SIZE, "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu)",
                    "cases": "celles de la référence"},
         "dessin": {"orientations_dessinees": ["Bas", "Bas-droite", "Droite", "Haut-droite", "Haut"],
                    "miroirs": {"Gauche": "Droite", "Haut-gauche": "Haut-droite", "Bas-gauche": "Bas-droite"},
-                   "pieces": "tête, crinière, torse, queue, deux jambes, deux bras (repos / levé / tendu / poing au poitrail), lianes du dos, griffures, ondes",
-                   "hauteur_repos": 35, "source": "source/personnages/zarude_pieces.py"},
+                   "pieces": "relevées sur la planche fournie (tête, poitrail, bras, jambes, queue, dos ; 4 directions) + dessinées (diagonales, bras levé / tendu / au poitrail / poussée, sommeil, effets)",
+                   "hauteur_repos": 22, "planche": "source/personnages/reference/zarude/zarude_overworld_2x.png", "source": "source/personnages/zarude_pieces.py"},
         "animations": {name: {"index": dict(ANIM_ORDER)[name], "case": [c.fw, c.fh], "images": len(c.durations),
                               "directions": len(c.cells), "durees": c.durations, "ticks": sum(c.durations),
                               "rush": c.rush, "hit": c.hit, "return": c.ret, "composition": c.notes}

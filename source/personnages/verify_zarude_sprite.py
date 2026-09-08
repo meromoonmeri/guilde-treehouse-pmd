@@ -7,7 +7,7 @@ imposés, CopyOf), feuilles Anim / Offsets / Shadow de même taille et divisible
 seul jeu de repères par case, 15 couleurs au plus.
 
 Contrôles propres à ce sprite :
-- squelette = Rillaboom #0812 : mêmes animations, durées, Rush/Hit/Return, ShadowSize, cases
+- squelette = Rillaboom #0812 : mêmes animations, durées, Rush/Hit/Return, cases (ShadowSize 1 : Zarude est plus petit)
   identiques ou agrandies d'un multiple de 8, même déplacement de l'ancre à chaque image ;
 - Gauche / Haut-gauche / Bas-gauche = miroir exact de Droite / Haut-droite / Bas-droite (Anim et
   Offsets) pour les animations sans rotation ; Swing et Rotate tournent d'une direction par image ;
@@ -37,7 +37,7 @@ REQUIRED_INDEX = {"Walk": 0, "Attack": 1, "Strike": 2, "Shoot": 3, "Sing": 4, "S
 COMPLETE_SET = ["Idle", "Walk", "Sleep", "Hurt", "Attack", "Charge", "Shoot", "Strike", "Sing", "Swing", "Double", "Rotate", "Hop"]
 SPIN = ("Swing", "Rotate")
 MIRROR = {5: 3, 6: 2, 7: 1}
-MIN_PIXELS = 350            # une silhouette de Zarude au repos compte ~600 px opaques
+MIN_PIXELS = 250            # une silhouette de Zarude au repos compte ~330 px opaques (22 px de haut)
 
 
 def rgba(path: Path) -> np.ndarray:
@@ -92,7 +92,7 @@ def main() -> None:
     shadow_size, anims, names = parse(OUT / "AnimData.xml")
     ref_shadow_size, ref_anims, _ = parse(REF / "AnimData.xml")
     assert 0 <= shadow_size <= 2, "ShadowSize hors de [0, 2]"
-    assert shadow_size == ref_shadow_size, "ShadowSize ≠ référence"
+    assert shadow_size == 1, "ShadowSize attendu : 1 (Zarude fait 22 px de haut, Rillaboom 35 px → 2)"
     assert len(names) == len(set(names)) <= 44, "noms d'animation en double ou trop nombreux"
     for name, m in anims.items():
         assert REQUIRED_INDEX.get(name, m["index"]) == m["index"], f"{name} : index {m['index']} ≠ {REQUIRED_INDEX.get(name)}"
@@ -257,6 +257,7 @@ def main() -> None:
         assert kit["animations"][name]["durees"] == m["durations"], f"kit.json : durées de {name}"
     credits = (OUT / "credits.txt").read_text()
     assert "544245909639397378" in credits and "0812" in credits and "CC_BY-NC_4" in credits, "credits.txt : référence Rillaboom / licence absentes"
+    assert "Game Character Hub" in credits or "planche" in credits, "credits.txt : origine de la planche de marche absente"
     for f in ("apercu.png", "apercu_directions.png", "apercu_reference.png", "apercu.html", "apercu_marche_attente.gif",
               "apercu_attaque_hurlement.gif", "README.md"):
         assert (OUT / f).is_file(), f"fichier manquant : {f}"

@@ -3,6 +3,7 @@
   "numero": "0893",
   "nom": "Zarude",
   "forme": "0000",
+  "base_dessin": "planche de marche 4 directions fournie par l'utilisateur (Game Character Hub)",
   "base_squelette": "0812 Rillaboom forme 0 (baronessfaron, CC BY-NC 4.0)"
  },
  "format": {
@@ -18,7 +19,7 @@
    "Bas-gauche"
   ],
   "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos, déplacée comme dans la référence",
-  "shadow_size": 2,
+  "shadow_size": 1,
   "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu)",
   "cases": "celles de la référence"
  },
@@ -35,8 +36,9 @@
    "Haut-gauche": "Haut-droite",
    "Bas-gauche": "Bas-droite"
   },
-  "pieces": "tête, crinière, torse, queue, deux jambes, deux bras (repos / levé / tendu / poing au poitrail), lianes du dos, griffures, ondes",
-  "hauteur_repos": 35,
+  "pieces": "relevées sur la planche fournie (tête, poitrail, bras, jambes, queue, dos ; 4 directions) + dessinées (diagonales, bras levé / tendu / au poitrail / poussée, sommeil, effets)",
+  "hauteur_repos": 22,
+  "planche": "source/personnages/reference/zarude/zarude_overworld_2x.png",
   "source": "source/personnages/zarude_pieces.py"
  },
  "animations": {
@@ -169,7 +171,7 @@
   "Hurt": {
    "index": 6,
    "case": [
-    48,
+    56,
     72
    ],
    "images": 2,
@@ -182,7 +184,7 @@
    "rush": null,
    "hit": null,
    "return": null,
-   "composition": "bras écartés (de profil : rejetés en arrière), tête baissée, deux étincelles, recul copié de la référence"
+   "composition": "bras écartés (de profil : rejetés en arrière), tête baissée, deux étincelles, recul copié de la référence ; case agrandie (48 × 72 chez Rillaboom)"
   },
   "Idle": {
    "index": 7,
@@ -205,7 +207,7 @@
    "index": 8,
    "case": [
     88,
-    104
+    96
    ],
    "images": 9,
    "directions": 8,
@@ -377,18 +379,16 @@
  "nuit": "nuit/<Anim>-Anim.png : même filtre que les salles (source/rebuild_kit.py night) ; Offsets et Shadow inchangés",
  "palette": [
   "#000000",
-  "#28262e",
-  "#286438",
-  "#36303c",
-  "#44404a",
-  "#4e984c",
-  "#625e6a",
-  "#84c660",
-  "#8e8e96",
-  "#c6c6ce",
-  "#ce2a2a",
-  "#f08c30",
+  "#2d3d2b",
+  "#303030",
+  "#484848",
+  "#606060",
+  "#6f975a",
+  "#9090a0",
+  "#94c65a",
+  "#c0c0c0",
+  "#e03838",
   "#ffffff"
  ],
- "couleurs": 13
+ "couleurs": 11
 }

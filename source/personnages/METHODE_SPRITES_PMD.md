@@ -98,9 +98,39 @@ Toujours : relancer le constructeur deux fois et vérifier que les PNG sont octe
 
 ## 6. Pour un personnage sans base : ce qui a marché pour Zarude
 
-Zarude n'a pas de sprite sur SpriteCollab et aucune unité à composer. Le lot `personnages/zarude/` a été
-produit ainsi (constructeur `build_zarude_sprite.py`, pièces `zarude_pieces.py`, vérificateur
-`verify_zarude_sprite.py`) ; c'est la marche à suivre pour le prochain personnage inédit :
+Zarude n'a pas de sprite sur SpriteCollab et aucune unité à composer. Une première version dessinée de zéro par
+l'agent (13 couleurs, squelette Rillaboom) a été jugée **trop schématique** ; l'utilisateur a alors déposé sa
+propre planche de marche (`source/personnages/reference/zarude/`, Game Character Hub, 4 directions × 4 images au
+double) avec la consigne « à inclure et améliorer ». Le lot `personnages/zarude/` actuel en découle : c'est la
+marche à suivre pour le prochain personnage inédit, dans cet ordre de préférence — **une planche fournie vaut
+mieux qu'un dessin d'agent**, demandez-la avant de dessiner.
+
+### 6.1 À partir d'une planche fournie (`zarude_pieces_from_sheet.py`)
+
+1. **Mesurer la planche avant tout** : facteur d'échelle (la planche Zarude était au double : blocs 2 × 2
+   uniformes → réduction 1:1 sans perte), taille des cases, ordre des lignes (ici Bas, Gauche, Droite, Haut) et
+   des colonnes (repos / pas A / repos / pas B ; les images 2 et 4 étaient les 1 et 3 descendues d'un pixel),
+   ancre au sol (le pixel médian du bas des pieds), nombre de couleurs. Écrire ces mesures dans le script.
+2. **Réduire la palette sans changer le dessin** : les teintes quasi doublons (écart < 20 sur chaque canal,
+   quelques pixels chacune, typiques d'un export d'éditeur) sont fusionnées à leur voisine → Zarude 17 → 11
+   couleurs. Ne pas requantifier autrement : le SpriteBot accepte 15 couleurs opaques.
+3. **Découper chaque case en pièces pixel-exactes** avec des tables de plages `R(y, x0, x1)` (une pièce = liste
+   de segments horizontaux), et **vérifier la découpe** : la réunion des pièces doit redonner la case exactement,
+   sans pixel oublié ni compté deux fois. Les pièces d'une vue « gauche » sont retournées à la découpe
+   (`flip=True`, x → 15 − x) pour que le constructeur ne travaille qu'en Bas / Droite / Haut, les vues gauches
+   restant des miroirs exacts comme chez les officiels.
+4. **Nommer les points** utiles sur chaque pièce (épaule, poing, centre de la tête) dans le repère de l'ancre :
+   ce sont eux qui donnent les repères Offsets et les articulations des bras dessinés.
+5. **Reconstruire Walk d'abord** et comparer au pixel près avec la planche (`WALK_BOB = 0` pour la comparaison ;
+   une fonction `cmp` qui liste les pixels différents). Tant que Walk n'est pas exact, ne pas passer aux poses.
+6. **Dessiner ce qui manque, dans le trait de la planche** : diagonales (tête et poitrail de trois quarts par
+   décalage d'un pixel des traits et affinement de l'oreille éloignée, membres rapprochés de l'axe de 3 px, bras
+   éloigné derrière le corps), bras des animations (levé, tendu, plié au poitrail, poussée) avec contour noir,
+   cuff et main griffue empruntés à la planche, sommeil, effets. Un bitmap ASCII 1:1 par pièce, deux points
+   nommés par bras. **Ne jamais ré-échantillonner** une pièce (rotation, mise à l'échelle) : le résultat a été
+   rejeté à chaque essai, on redessine.
+
+### 6.2 Squelette, poses, contrôle (commun aux deux cas)
 
 1. **Choisir un squelette officiel de même carrure** et le télécharger en entier dans
    `source/personnages/reference/<numéro>/` (pour Zarude : Rillaboom #0812, demandé par l'utilisateur). Le
@@ -109,46 +139,42 @@ produit ainsi (constructeur `build_zarude_sprite.py`, pièces `zarude_pieces.py`
    l'aller-retour de Double, la parabole de Hop, la secousse de Charge. Le constructeur le relit tel quel
    (`anchor_displacements`), il n'y a rien à inventer côté timing. Pour Swing et Rotate, l'image i regarde la
    direction (d − i) mod 8 : vérifier le sens sur la référence avant d'écrire la règle.
-2. **Fixer la palette d'abord** (≤ 15 couleurs opaques) et l'écrire dans le module de pièces ; le vérificateur
-   refuse toute couleur hors palette.
-3. **Dessiner des pièces, pas des images** : bitmaps ASCII 1:1 (une lettre = une couleur), pour cinq
-   orientations seulement — Bas, Bas-droite, Droite, Haut-droite, Haut ; les trois autres sont des miroirs
-   exacts (les officiels font pareil). Pièces utiles : tête, crinière, torse, queue, deux jambes, et un jeu de
-   bras par pose (repos, levé, tendu, poing au poitrail, poussée) avec deux points nommés chacun (épaule, poing)
-   pour les repères mains. Les membres du côté éloigné sont assombris d'un cran (`darker`), les membres pliés
-   sont raccourcis en retirant des lignes (`shorten`), jamais redessinés.
-4. **Poser le repos sur la grille de la référence** et comparer côte à côte à la même échelle
-   (`apercu_reference.png`) : hauteur du corps, largeur, position des poings. Zarude fait 35 px de haut au repos
-   comme Rillaboom, pour la même case 48 × 64.
-5. **Une pose = un dict de décalages** (`assemble`) : marche = jambes ±2 px et bras opposés, accroupi = corps
-   −2 px et membres raccourcis de 2, etc. Le plan d'animation (`frame_plan`) associe à chaque image de chaque
-   animation une orientation, une pose, une hauteur (Hop) et des effets (griffures, ondes, étincelles).
-6. **Si une pose déborde de la case de la référence**, agrandir la case par pas de 8 en gardant l'ancre en
-   (fw/2, fh/2 + 4) (`Builder.fit`) plutôt que de tasser le dessin ; ne le faire que si nécessaire (Swing pour
-   Zarude : 88 × 104 au lieu de 80 × 96).
-7. **Le générateur d'images n'a servi qu'à des brouillons de pose** (trois vues grand format) pour trancher
-   les questions de design — où va la queue, comment lisent les lianes, quelle taille pour le masque. Tout ce qui
-   sort du générateur est en dehors de la grille et de la palette : il ne faut jamais l'insérer dans une feuille.
-8. **Vérifier contre la référence** : mêmes durées et Rush/Hit/Return, même déplacement d'ancre et même gabarit
+2. **Garder la taille native du dessin** : Zarude (22 px) est plus petit que Rillaboom (35 px) et reste 22 px
+   dans les mêmes cases 48 × 64 ; on n'agrandit pas un sprite pour remplir un gabarit. Adapter `ShadowSize`
+   (0 petit, 1 moyen, 2 grand) à la taille réelle, pas à celle du squelette.
+3. **Une pose = un dict de décalages** (`assemble`) : marche = images de la planche, accroupi = corps −2 px et
+   membres raccourcis côté épaule (`Arm.shortened`), poussée = bras avancés de 2 px, etc. Le plan d'animation
+   (`frame_plan`) associe à chaque image de chaque animation une orientation, une pose, une hauteur (Hop) et des
+   effets (griffures, ondes, étincelles). Les membres du côté éloigné sont assombris d'un cran (`darker`).
+4. **Si une pose déborde de la case de la référence**, agrandir la case par pas de 8 en gardant l'ancre en
+   (fw/2, fh/2 + 4) (`Builder.fit`) plutôt que de tasser le dessin ; ne le faire que si nécessaire (Zarude :
+   Hurt 56 × 72 et Swing 88 × 96).
+5. **Le générateur d'images n'a servi qu'à des brouillons de pose** pour trancher des questions de design. Tout
+   ce qui en sort est hors grille et hors palette : il ne faut jamais l'insérer dans une feuille.
+6. **Vérifier contre la référence** : mêmes durées et Rush/Hit/Return, même déplacement d'ancre et même gabarit
    d'ombre à chaque case, cases identiques ou agrandies d'un multiple de 8, miroirs exacts, Swing/Rotate qui
-   tournent d'une direction par image, Idle/Charge = repos de Walk. Ces règles sont dans `verify_zarude_sprite.py`
-   et s'adaptent en changeant `REF` et la palette importée.
-9. **Crédits** : dessin original mais squelette emprunté → citer l'auteur de la référence et sa licence dans
-   `credits.txt` (CC BY-NC 4.0 pour Rillaboom, donc pour Zarude), et rappeler que le sprite n'est ni soumis ni
-   approuvé sur SpriteCollab.
+   tournent d'une direction par image, Idle/Charge = repos de Walk, palette ⊂ pièces. Ces règles sont dans
+   `verify_zarude_sprite.py` et s'adaptent en changeant `REF`, `SHADOW_SIZE` et la palette importée.
+7. **Relire les aperçus à l'œil**, animation par animation, à ×2 ou ×4 (`apercu.png` découpé en bandes, GIF sur
+   le parquet) : le vérificateur ne voit ni un bras qui traverse le torse ni une main détachée.
+8. **Crédits** : planche fournie + squelette emprunté → citer la planche (auteur si connu, outil), l'auteur de la
+   référence et sa licence dans `credits.txt` (CC BY-NC 4.0 pour Rillaboom, donc pour Zarude), et rappeler que le
+   sprite n'est ni soumis ni approuvé sur SpriteCollab.
 
-Ordre de grandeur : un jour de travail d'agent pour les pièces (la tête et le profil demandent plusieurs
-passes), le reste est mécanique une fois le pipeline Falinks/Zarude en place.
+Ordre de grandeur : une demi-journée d'agent pour découper et reconstruire Walk exactement, autant pour les
+diagonales et les bras ; le reste est mécanique une fois le pipeline Falinks/Zarude en place.
 
 ## 7. Fichiers utiles
 
 - `source/personnages/build_falinks_sprite.py` — constructeur par composition d'unités (réutiliser `extract`,
   `merge_tracks`, `render`, `sheet`, `write_animdata`, `write_aseprite`, `gif`, `player_html`).
-- `source/personnages/build_zarude_sprite.py` + `zarude_pieces.py` — constructeur par pièces dessinées sur un
-  squelette officiel (réutiliser `anchor_displacements`, `Arm`, `assemble`, `draw`, `frame_plan`, `Builder.fit`).
+- `source/personnages/zarude_pieces_from_sheet.py` — découpe d'une planche fournie en pièces pixel-exactes +
+  pièces dessinées (réutiliser `piece`, `block`, `hand`, les tables `R(y, x0, x1)`) ; écrit `zarude_pieces.py`.
+- `source/personnages/build_zarude_sprite.py` + `zarude_pieces.py` — constructeur par pièces sur un squelette
+  officiel (réutiliser `anchor_displacements`, `Arm`, `assemble`, `draw`, `frame_plan`, `Builder.fit`).
 - `source/personnages/verify_falinks_sprite.py`, `verify_zarude_sprite.py` — vérificateurs (règles SpriteBot +
   contrôles propres à chaque méthode).
 - `source/personnages/reference/0870/0002`, `0003` — unités Falinks d'origine ; `reference/0812/` — Rillaboom,
-  squelette de Zarude.
+  squelette de Zarude ; `reference/zarude/` — planche de marche fournie par l'utilisateur (source du dessin).
 - `source/portraits/` — même démarche pour les portraits (retouche pixel d'une base, vérificateur).
 - `source/rebuild_kit.py` — `night()`, `ase()`, `font()` partagés avec le reste du kit.

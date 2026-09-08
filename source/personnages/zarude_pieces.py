@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Zarude #0893 — pièces de pixel art dessinées à l'échelle 1:1 pour le sprite PMD.
+"""Zarude #0893 — pièces de pixel art du sprite PMD, échelle 1:1.
 
-Chaque pièce est un bitmap ASCII (une lettre = une couleur de la palette, « . » = transparent).
-Les cinq orientations dessinées sont Bas (0), Bas-droite (1), Droite (2), Haut-droite (3) et
-Haut (4) ; Gauche, Haut-gauche et Bas-gauche sont obtenues par miroir dans le constructeur
-(`build_zarude_sprite.py`), comme le font les sprites officiels (dir 6 = miroir de dir 2).
+Deux origines, clairement séparées ci-dessous :
 
-Convention : les pièces sont posées par leur coin haut-gauche, en coordonnées relatives à l'ancre
-du sprite (point du sol sous le centre du corps = pixel blanc de la feuille Shadow), x vers la
-droite, y vers le bas. Les pièces de face ont une largeur impaire pour être centrées sur la
-colonne de l'ancre. Les points nommés (`*_FIST`) donnent la position du poing dans la pièce,
-utilisée pour les repères mains de la feuille Offsets.
+1. **Pièces relevées sur la planche fournie par l'utilisateur** (`reference/zarude/zarude_overworld_2x.png`,
+   « Made with Game Character Hub », 4 directions × 4 images, dessinée au double : ramenée à 1:1 dans
+   `zarude_overworld_1x.png`). Chaque pièce est une découpe pixel-exacte d'une case (tête, poitrail, bras,
+   jambes, queue), en coordonnées relatives à l'ancre de la case (colonne 16, rang 27 : sol sous le corps).
+   La vue « gauche » de la planche est retournée pour donner la Droite (2), comme dans les sprites officiels.
+   Six teintes quasi doublons de la planche (53/53/53, 63/65/63, 94/97/94, 78/105/74, 200/200/200,
+   232/232/248) sont ramenées à leur voisine : 11 couleurs.
+2. **Pièces dessinées pour compléter** : les deux diagonales (Bas-droite 1, Haut-droite 3), les variantes
+   de bras des animations (levé, tendu, poing au poitrail, poussée), la pose de sommeil, les effets.
+   Elles reprennent la palette et le trait (contour noir, cuffs de lianes v/V/L, masque G/g) de la planche.
 
-Palette : 13 couleurs opaques, fixées une fois pour toutes (limite SpriteCollab : 15).
+Convention : une lettre = une couleur, « . » = transparent ; `X_AT` = coin haut-gauche de la pièce X
+relatif à l'ancre (x vers la droite, y vers le bas) dans la pose de repos. Les points `_FIST` / `_SHOULDER`
+sont en coordonnées de la pièce.
 """
 from __future__ import annotations
 
@@ -20,20 +24,18 @@ import numpy as np
 
 PALETTE = {
     "#": (0, 0, 0),         # contour
-    "d": (40, 38, 46),      # pelage sombre
-    "b": (68, 64, 74),      # pelage
-    "h": (98, 94, 106),     # pelage éclairé
-    "n": (54, 48, 60),      # crinière
-    "g": (142, 142, 150),   # gris : museau, griffes, plastron ombré
-    "G": (198, 198, 206),   # gris clair : masque, plastron
-    "W": (255, 255, 255),   # crocs, reflets, griffures
-    "R": (206, 42, 42),     # œil
-    "O": (240, 140, 48),    # iris
-    "v": (40, 100, 56),     # liane sombre
-    "V": (78, 152, 76),     # liane
-    "L": (132, 198, 96),    # liane éclairée
+    "d": (48, 48, 48),      # pelage sombre
+    "b": (72, 72, 72),      # pelage
+    "h": (96, 96, 96),      # pelage éclairé
+    "g": (144, 144, 160),   # gris bleuté : ombre du masque, poitrail
+    "G": (192, 192, 192),   # gris clair : masque, poitrail
+    "W": (255, 255, 255),   # crocs, reflet de l'œil, griffures
+    "R": (224, 56, 56),     # œil
+    "v": (45, 61, 43),      # liane sombre (contour des cuffs)
+    "V": (111, 151, 90),    # liane
+    "L": (148, 198, 90),    # liane éclairée
 }
-DARKER = {"h": "b", "b": "d", "L": "V", "V": "v", "G": "g", "g": "h"}   # membres du côté opposé au spectateur
+DARKER = {"h": "b", "b": "d", "L": "V", "V": "v", "G": "g"}   # membres du côté opposé au spectateur
 
 
 def bmp(rows: list[str]) -> np.ndarray:
@@ -64,690 +66,604 @@ def darker(a: np.ndarray) -> np.ndarray:
 
 def shorten(a: np.ndarray, n: int, keep_top: int = 1) -> np.ndarray:
     """Retire n lignes sous les `keep_top` premières : membre plié, le bas (poing, pied) reste en place."""
+    if n <= 0:
+        return a
     rows = [r for r in range(a.shape[0]) if not (keep_top <= r < keep_top + n)]
     return np.ascontiguousarray(a[rows])
 
 
-# =====================================================================================
-# BAS (0) — de face
-# =====================================================================================
-HEAD_0 = bmp([
-    "#.......................#",
-    "##.....................##",
-    "#d#...................#d#",
-    "#dd#.................#dd#",
-    "#ddb#......###......#bdd#",
-    "#ddbb####bbbbbbb####bbdd#",
-    ".#dbbbbbbbbbbbbbbbbbbbd#.",
-    ".#bbGGGGbbbbbbbbbGGGGbb#.",
-    "..#GGRRRGGbbbbbGGRRRGG#..",
-    "..#GGRO#RGbbbbbGR#ORGG#..",
-    "..#bGGGGGGGbbbGGGGGGGb#..",
-    "...#bbGGGGGGGGGGGGGbb#...",
-    "...#bbbbGGggggggGGbbb#...",
-    "....##bbGgW#g#WgGbb##....",
-    "......##ggg#g#ggg##......",
-    "........#ggggggg#........",
-    ".........#######.........",
-])
-HEAD_0_MARK = (12, 11)
-MANE_0 = bmp([
-    "#......#...........#......#",
-    "#n#...#n#.........#n#...#n#",
-    "#nn#.#nn#.........#nn#.#nn#",
-    ".#nn##nnn#.......#nnn##nn#.",
-    "..#Vnnnnnn#######nnnnnnV#..",
-    "...#VnnnnnnnnnnnnnnnnnV#...",
-    "....##nnnnnnnnnnnnnnn##....",
-    "......##nnnnnnnnnnn##......",
-    "........###########........",
-])
-TORSO_0 = bmp([
-    "..#########..",
-    ".#hhbbbbbbb#.",
-    "#hhbGGGGGbbb#",
-    "#hbGGgGgGGbb#",
-    "#hbGGGGGGGbb#",
-    "#bbGgGgGgGbb#",
-    "#bbGGGGGGGbb#",
-    "#bbbGgGgGbbb#",
-    "#bbbbGGGbbbd#",
-    "#dbbbbbbbbdd#",
-    ".#dbbbbbbdd#.",
-    ".#ddbbbbddd#.",
-    "..#dddddd#...",
-])
-TORSO_0_CENTER = (6, 7)
-# bras gauche (côté gauche de l'écran) : épaule en haut à droite, poing au sol en bas à gauche
-ARM_0 = bmp([
-    ".....####.",
-    "....#hbbd#",
-    "....#hbbd#",
-    "...#hhbbd#",
-    "...#hbbd#.",
-    "...#hbbd#.",
-    "..#hhbbd#.",
-    "..#hbbd#..",
-    "..#hbbd#..",
-    ".#hhbbd#..",
-    ".#hbbd#...",
-    ".#LVVv#...",
-    ".#VvVL#...",
-    ".#LVVv#...",
-    ".#vVvV#...",
-    "#hbbbd#...",
-    "#hbbbbd#..",
-    "#bbbbbd#..",
-    ".#g#g#g#..",
-])
-ARM_0_FIST = (3, 16)
-ARM_0_SHOULDER = (7, 0)
-# bras levé au-dessus de la tête (charge de l'attaque, hurlement) : épaule en bas à droite
-ARM_UP_0 = bmp([
-    ".#g#g#g#..",
-    "#bbbbbd#..",
-    "#hbbbbd#..",
-    "#hbbbd#...",
-    ".#vVvV#...",
-    ".#LVVv#...",
-    ".#VvVL#...",
-    ".#LVVv#...",
-    ".#hbbd#...",
-    ".#hhbbd#..",
-    "..#hbbd#..",
-    "..#hbbd#..",
-    "..#hhbbd#.",
-    "...#hbbd#.",
-    "...#hbbd#.",
-    "...#hhbbd#",
-    "....#hbbd#",
-    "....#hbbd#",
-    ".....####.",
-])
-ARM_UP_0_FIST = (3, 2)
-ARM_UP_0_SHOULDER = (7, 18)
-# bras tendu sur le côté (coup reçu) : épaule à droite, poing à gauche
-ARM_OUT_0 = bmp([
-    "..#####......",
-    ".#bbbbd#####.",
-    "#g#bbbLVLbbbd#",
-    "#g#bbbVvVbbbd#",
-    "#g#bbbLVLbbbd#",
-    ".#bbbdvVvbbdd#",
-    "..#####.#####",
-])
-ARM_OUT_0_FIST = (2, 3)
-ARM_OUT_0_SHOULDER = (12, 3)
-# bras plié, poing ramené sur le poitrail (Zarude se frappe la poitrine) : épaule en haut à droite
-ARM_BEAT_0 = bmp([
-    ".....####......",
-    "....#hbbd#.....",
-    "....#hbbd#..##.",
-    "...#hhbbd#.#gg#",
-    "...#hbbd##bbbg#",
-    "...#hbbLVLbbg#.",
-    "..#hhbbVvVbb#..",
-    "..#hbbbLVL##...",
-    "..#bbbbvVv#....",
-    "...#######.....",
-])
-ARM_BEAT_0_FIST = (12, 3)
-ARM_BEAT_0_SHOULDER = (7, 0)
-# bras tendu vers le spectateur (Shoot) : raccourci par la perspective, gros poing griffes en avant
-ARM_PUSH_0 = bmp([
-    ".....####.",
-    "....#hbbd#",
-    "...#hbbbd#",
-    "..#hbbbd#.",
-    ".#LVVVd#..",
-    ".#VvVLd#..",
-    "#hbbbbd#..",
-    "#gGgGgd#..",
-    "#GgGgGd#..",
-    ".#g#g#g#..",
-])
-ARM_PUSH_0_FIST = (3, 8)
-ARM_PUSH_0_SHOULDER = (7, 0)
-LEG_0 = bmp([
-    "#hbbd#",
-    "#hbbd#",
-    "#hbbd#",
-    "#hbd#.",
-    "#hbd#.",
-    "#LVv#.",
-    "#VvV#.",
-    "#hbd#.",
-    "#hbd#.",
-    "#bbbd#",
-    "#GgGd#",
-    ".##.#.",
-])
-TAIL_0 = bmp([
-    "....###.",
-    "...#ddd#",
-    "..#dd#d#",
-    "..#d#.##",
-    ".#dd#...",
-    ".#d#....",
-    "#dd#....",
-    "#d#.....",
-    "##......",
-])
+def shift_rows(rows: list[str], dx: int) -> list[str]:
+    return [("." * dx + r) if dx >= 0 else r[-dx:] for r in rows]
+
 
 # =====================================================================================
-# DROITE (2) — profil, le personnage regarde vers la droite
+# 1. PIÈCES RELEVÉES SUR LA PLANCHE FOURNIE
 # =====================================================================================
-HEAD_2 = bmp([
-    "..#.....#...........",
-    ".#d#...#d#..........",
-    ".#dd#..#dd#.........",
-    ".#ddb#.#ddb#........",
-    "#dddb#.#ddbb#.......",
-    "#ddbbb##bbbbb###....",
-    "#dbbbbbbbbbbbbbb##..",
-    "#bbbbbbbbbbbGGGGGb#.",
-    ".#bbbbbbbbbGGRRRGG#.",
-    ".#bbbbbbbbbGRO#RGGg#",
-    ".#bbbbbbbbbbGGGGGgg#",
-    "..#bbbbbbbbbbGGgggW#",
-    "..#dbbbbbbbbbbGggg#.",
-    "...#dbbbbbbbbbbb##..",
-    "....##ddbbbbbbb#....",
-    "......#########.....",
+
+# ---- Bas (0) : case « bas, pas A » ; le pas B est son miroir exact ----
+HEAD_0 = bmp([  # tête, crinière, masque (rangs −19 à −6)
+    "##................##",
+    "#h##............##h#",
+    ".#hh##.######.##hh#.",
+    "#dbhhh#bbbbbb#hhhbd#",
+    ".#dbhhhddbbddhhhbd#.",
+    "..#hhhhhhddhhhhhh#..",
+    ".#hhbhhhhhhhhhhbhh#.",
+    "..##hGGGhhhhGGGh##..",
+    "..#hhGddGhhGddGhh#..",
+    "...##GRL#GG#LRG##...",
+    "....#hGRVggVRGh#....",
+    "...#hbhgghhgghbh#...",
+    "....#hGdbGGbdGh#....",
+    "....#h##WbbW##h#....",
 ])
-HEAD_2_MARK = (13, 8)
-MANE_2 = bmp([
-    "...#........",
-    "#..##...#...",
-    "##.#n#.#n#..",
-    "#n##nn##nn#.",
-    "#nnnnnnnnnn#",
-    ".#nnnnnnnnnn",
-    "#nnnnnnnnnnn",
-    "##nnnnnnnnnn",
-    ".##nnnnnnnnn",
-    "...#nnnnnnnn",
-    "....##nnnnnn",
-    "......######",
+HEAD_0_AT = (-10, -19)
+TORSO_0 = bmp([  # poitrail
+    ".#dGb##bGd#.",
+    "#dgGGbbGGg#.",
+    "#dbbGddGbbd#",
 ])
-VINES_2 = bmp([
-    "..#VL#",
-    ".#VLV#",
-    ".#vVL#",
-    "#VvVL#",
-    "#vVvV#",
-    "#VvVv#",
-    "#vVvV#",
-    ".#vVv#",
-    ".#VvV#",
-    ".#vVv#",
-    "..#Vv#",
-    "..#v#.",
-    "..#v#.",
+TORSO_0_AT = (-6, -5)
+ARM_L_0 = bmp([  # bras gauche-écran, main au sol
+    "......d..",
+    "....##h..",
+    "....#hdV.",
+    ".....dhdL",
+    ".....#hh.",
+    "....#hh#d",
+    "...vLV#..",
+    "..vVVLLv.",
+    "..vLLVVv.",
+    ".vLVVLLv.",
+    ".#hbbV#..",
+    "#hbhhhb#.",
+    ".#hb##h#.",
+    ".##h#.#..",
+    "...##....",
+])
+ARM_L_0_AT = (-15, -12)
+ARM_R_0 = bmp([  # bras droit-écran, main un pixel plus haut
+    "..d......",
+    "..h##....",
+    ".Vdh#....",
+    "Ldhd.....",
+    ".hh#.....",
+    "d#hh#....",
+    "..#VLv...",
+    ".vVLVVv..",
+    ".vLVLLLv.",
+    "..#Vbbh#.",
+    ".#bhhhbh#",
+    ".#h##hh#.",
+    "..#.#h##.",
+    "....##...",
+])
+ARM_R_0_AT = (6, -12)
+LEG_0 = bmp([  # jambe posée (droite-écran)
+    "#bbbb#",
+    ".dbb#.",
+    ".#bbb#",
+    ".#b#b#",
+    ".d#.#b",
+])
+LEG_0_AT = (0, -2)
+LEG_UP_0 = bmp([  # jambe levée (gauche-écran, pas A)
+    ".#bd##",
+    "#bbb#.",
+    "db#b#.",
+    "d#.#d.",
+])
+LEG_UP_0_AT = (-6, -2)
+HEAD_0_MARK = (10, 9)          # centre du masque (entre les yeux), coordonnées de la pièce
+TORSO_0_CENTER = (6, 1)
+ARM_L_0_SHOULDER = (6, 0)      # articulation des variantes de bras : (-9, -12)
+ARM_L_0_FIST = (3, 12)
+ARM_R_0_SHOULDER = (2, 0)
+ARM_R_0_FIST = (5, 11)
+
+# ---- Droite (2) : case « gauche » de la planche, retournée ; pas A et pas B ----
+HEAD_2 = bmp([  # tête, crinière, lianes de la nuque, haut des épaules (rangs −19 à −7)
+    "......##...........",
+    "......#d###........",
+    "...###.#bbd##......",
+    "...#hh###hhhd#.....",
+    "..vv#hhhdddhhd#....",
+    "..vVV#dhhhhddb#....",
+    ".vvv#hhhhhhhhhb#...",
+    ".vLLvdddhhGGghh#...",
+    ".#vVLdhhhhGddGhg##.",
+    ".dddLVdddhgRL#gdGg#",
+    "#dhhvLdhhhhGRRdGhg#",
+    "#gdbhVLddhbhGghbWd#",
+    "#bhhhhVVhdhhhhhdd#.",
+])
+HEAD_2_AT = (-9, -19)
+TORSO_2 = bmp([  # épaules, poitrail, hanche (rangs −6 à −4)
+    "..#dgdhbdhGg",
+    "#bd....#gGGd",
+    ".#bv........",
+])
+TORSO_2_AT = (-12, -6)
+TORSO_2B = bmp([  # épaules, poitrail, hanche, pas B (le bras avancé recouvre l'épaule)
+    "..#dgdhbdhGg",
+    "#bd....L#GGd",
+    ".#bb........",
+])
+TORSO_2B_AT = (-12, -6)
+HAND_F_2 = bmp([  # main du bras éloigné, tendue devant le poitrail
+    "#h#hdhb#",
+    "###h#h##",
+    "..##.d#.",
+    ".....##.",
+])
+HAND_F_2_AT = (0, -6)
+ARM_2A = bmp([  # bras proche pendant, main au sol (pas A)
+    ".hvLV.",
+    ".vVVLV",
+    "vVLLVL",
+    "vLVVV#",
+    "#Vdhhd",
+    "#dh##h",
+    ".#h#b.",
+    "..###.",
+])
+ARM_2A_AT = (-10, -5)
+ARM_2B = bmp([  # bras proche balancé vers l'avant (pas B)
+    "hGvVL....",
+    ".#VLVV...",
+    "#VLVLLV..",
+    "#VVLVVL#.",
+    ".#VVdhhd#",
+    "...#h#dh#",
+    "....###h#",
+    "...###.#.",
+])
+ARM_2B_AT = (-9, -5)
+LEG_2A = bmp([  # jambe sous le corps (pas A)
+    ".#gd.",
+    ".#h#.",
+    "#hb#.",
+    ".##..",
+    ".#b#.",
+    "#bbd#",
+    ".####",
+])
+LEG_2A_AT = (-5, -4)
+LEG_2B = bmp([  # jambe tendue en arrière (pas B)
+    "Vv....",
+    "#Vd...",
+    ".#bbb.",
+    "..#b#b",
     "...#..",
 ])
-TORSO_2 = bmp([
-    ".....#######...",
-    "...##bbbbbbb#..",
-    "..#bbbbbbbbbG#.",
-    ".#dbbbbbbbbbGg#",
-    ".#dbbbbbbbbbGg#",
-    "#ddbbbbbbbbbGg#",
-    "#ddbbbbbbbbbg#.",
-    "#dddbbbbbbbb#..",
-    "#dddbbbbbbb#...",
-    "#ddddbbbbb#....",
-    ".#dddbbbb#.....",
-    ".#ddddbb#......",
-    "..######.......",
+LEG_2B_AT = (-11, -2)
+TAIL_2A = bmp([  # queue relevée derrière (pas A)
+    "..##..",
+    ".##b##",
+    "#bbbb#",
+    "##bb#.",
+    ".##b#.",
+    "..#b#.",
+    "...#b#",
+    "...#bd",
 ])
-TORSO_2_CENTER = (8, 6)
-# bras proche : épaule en haut à gauche, poing au sol devant
-ARM_2 = bmp([
-    ".#####........",
-    "#hbbbd#.......",
-    "#hbbbd#.......",
-    "#hbbbbd#......",
-    ".#hbbbd#......",
-    ".#hbbbbd#.....",
-    "..#hbbbd#.....",
-    "..#hbbbbd#....",
-    "...#hbbbd#....",
-    "...#hbbbbd#...",
-    "....#hbbbd#...",
-    "....#LVVVv#...",
-    "....#VvVvL#...",
-    ".....#LVVv#...",
-    ".....#vVvV#...",
-    ".....#hbbbd#..",
-    "......#hbbd#..",
-    "......#hbbbd#.",
-    "......#hbbbbd#",
-    ".....#hbbbbbd#",
-    ".....#bbbbbbd#",
-    "......#g#g#g#.",
-    ".......#.#.#..",
+TAIL_2A_AT = (-16, -13)
+TAIL_2B = bmp([  # queue relevée, un pixel plus près du corps (pas B)
+    "..##..",
+    ".##b##",
+    "#bbbb#",
+    "##bb#.",
+    ".##b#.",
+    "..#b#.",
+    "..#b#.",
+    "...#d.",
 ])
-ARM_2_FIST = (9, 20)
-ARM_2_SHOULDER = (3, 0)
-# bras levé devant, au-dessus de la tête : épaule en bas à gauche
-ARM_UP_2 = bmp([
-    "........#g#g#g#",
-    ".......#bbbbbd#",
-    ".......#hbbbbd#",
-    "......#hbbbd#..",
-    "......#vVvV#...",
-    ".....#LVVv#....",
-    ".....#VvVL#....",
-    ".....#LVVv#....",
-    "....#hbbd#.....",
-    "....#hbbd#.....",
-    "...#hbbd#......",
-    "...#hbbd#......",
-    "..#hbbd#.......",
-    "..#hbbd#.......",
-    ".#hbbd#........",
-    ".#hbbd#........",
-    "#hbbbd#........",
-    "#hbbbd#........",
-    ".#####.........",
-])
-ARM_UP_2_FIST = (11, 1)
-ARM_UP_2_SHOULDER = (3, 18)
-# bras tendu devant : épaule à gauche, poing à droite
-ARM_OUT_2 = bmp([
-    ".......#####....",
-    "#####dbbbLVLbbd#",
-    "#hbbbbbbbVvVbbd#g",
-    "#hbbbbbbbLVLbbd#g",
-    ".#####dbbvVvbbd#g",
-    ".......#####.###",
-])
-ARM_OUT_2_FIST = (14, 2)
-ARM_OUT_2_SHOULDER = (2, 2)
-ARM_PUSH_2, ARM_PUSH_2_FIST, ARM_PUSH_2_SHOULDER = ARM_OUT_2, ARM_OUT_2_FIST, ARM_OUT_2_SHOULDER
-# bras plié, poing ramené sur le poitrail
-ARM_BEAT_2 = bmp([
-    ".#####...",
-    "#hbbbd#..",
-    "#hbbbd#..",
-    "#hbbbd##.",
-    ".#hbbbbg#",
-    ".#LVLbbg#",
-    ".#VvVbb#.",
-    ".#LVL##..",
-    "..###....",
-])
-ARM_BEAT_2_FIST = (7, 4)
-ARM_BEAT_2_SHOULDER = (3, 0)
-LEG_2 = bmp([
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbbd#.",
-    "#hbd#..",
-    "#LVv#..",
-    "#VvV#..",
-    "#hbd#..",
-    "#hbbd#.",
-    "#bbbbd#",
-    "#GgGgd#",
-    ".##.##.",
-])
-TAIL_2 = bmp([
-    "....###...",
-    "...#ddd#..",
-    "..#dd#dd#.",
-    "..#d#.#d#.",
-    "..#d#..##.",
-    "..#d#.....",
-    "..#dd#....",
-    "...#dd#...",
-    "....#dd#..",
-    ".....#dd#.",
-    "......#dd#",
-    "......#dd#",
-    ".......#d#",
-    ".......#d#",
-    "........##",
-])
+TAIL_2B_AT = (-15, -13)
+HEAD_2_MARK = (13, 10)
+TORSO_2_CENTER = (8, 1)
+ARM_2A_SHOULDER = (3, -1)      # épaule sous la nuque : (-7, -6)
+ARM_2A_FIST = (2, 6)
+ARM_2B_SHOULDER = (2, -3)
+ARM_2B_FIST = (6, 6)
+HAND_F_2_FIST = (4, 1)
+HAND_F_2_SHOULDER = (-2, -1)   # épaule du bras éloigné, derrière le cou : (-2, -7)
 
-# =====================================================================================
-# HAUT (4) — de dos
-# =====================================================================================
-HEAD_4 = bmp([
-    "#.......................#",
-    "##.....................##",
-    "#d#...................#d#",
-    "#dd#.................#dd#",
-    "#ddb#......###......#bdd#",
-    "#ddbb####bbbbbbb####bbdd#",
-    ".#dbbbbbbbbbbbbbbbbbbbd#.",
-    ".#bbbbbbbbbbbbbbbbbbbbb#.",
-    "..#bbbbbbbbbbbbbbbbbbb#..",
-    "..#bbbbbbbbbbbbbbbbbbb#..",
-    "..#dbbbbbbbbbbbbbbbbbd#..",
-    "...#dbbbbbbbbbbbbbbbd#...",
-    "...#ddbbbbbbbbbbbbbdd#...",
-    "....##dbbbbbbbbbbbd##....",
-    "......##ddddddddd##......",
-    "........#ddddddd#........",
-    ".........#######.........",
+# ---- Haut (4) : case « haut, pas A » ; le dos du pas B (queue balancée de l'autre côté) vient de la case B ----
+HEAD_4 = bmp([  # sommet du crâne et oreilles
+    "##..............##",
+    "#h##..dddddd..##h#",
+    ".#hh##bhhhhb##hh#.",
+    "dhhbbdhhhhhhdbbhhd",
+    ".dbbbhhVLLVhhbbbd.",
 ])
-HEAD_4_MARK = (12, 11)
-VINES_4 = bmp([
-    "..#VLVLV#..",
-    ".#VLVLVLV#.",
-    ".#vVLVLVv#.",
-    "#VvVLVLVvV#",
-    "#vVvVvVvVv#",
-    "#VvVvVvVvV#",
-    ".#vVvVvVv#.",
-    ".#VvVvVvV#.",
-    "..#vVvVv#..",
-    "..#Vv#Vv#..",
-    "...#v#.#v#.",
-    "....#...#..",
+HEAD_4_AT = (-9, -18)
+BACK_4 = bmp([  # nuque et lianes, dos, queue pendante (pas A)
+    ".##bvvVLLLLVvvb##.",
+    "##h#LVVVLLVVVL#h##",
+    "#hhb#vvV##Vvv#bhh#",
+    "#dhhhhb##h#bhhhhd#",
+    ".#bhhh#hhhdhhhhb#.",
+    "#hhdhh##hhhdhhdhh#",
+    "...ghhG##hhdhhg...",
+    "...#GGhhhdh#GG#...",
+    "...#hhGhgdh#hh#...",
+    "....#GhgGdh#g#....",
+    "...#dggGbh#ggd#...",
+    "...#dbbgd#gbbd#...",
+    ".......###........",
 ])
-MANE_4 = MANE_0
-TORSO_4 = bmp([
-    "..#########..",
-    ".#hhbbbbbbb#.",
-    "#hhbbbbbbbbb#",
-    "#hbbbbbbbbbb#",
-    "#hbbbbbbbbbb#",
-    "#bbbbbbbbbbb#",
-    "#bbbbbbbbbbb#",
-    "#bbbbbbbbbbb#",
-    "#bbbbbbbbbbd#",
-    "#dbbbbbbbbdd#",
-    ".#dbbbbbbdd#.",
-    ".#ddbbbbddd#.",
-    "..#dddddd#...",
+BACK_4_AT = (-9, -13)
+BACK_4B = bmp([  # même dos, queue balancée de l'autre côté (pas B)
+    ".##bvvVLLLLVvvb##.",
+    "##h#LVVVLLVVVL#h##",
+    "#hhb#vvVV##vv#bhh#",
+    "#dhhhhbv##h#hhhhd#",
+    ".#bhhhh#hhhdhhhb#.",
+    "#hhdhhh##hhhdhdhh#",
+    "...ghhGh##dhdhg...",
+    "...#GGhhhhdh#G#...",
+    "...#hhGhgGd#hh#...",
+    "....#GhgGdh#g#....",
+    "...#dggGbh#ggd#...",
+    "...#dbbgd#gbbd#...",
+    "........###.......",
 ])
-TORSO_4_CENTER = (6, 7)
-ARM_4 = bmp([
-    ".....####.",
-    "....#hbbd#",
-    "....#hbbd#",
-    "...#hhbbd#",
-    "...#hbbd#.",
-    "...#hbbd#.",
-    "..#hhbbd#.",
-    "..#hbbd#..",
-    "..#hbbd#..",
-    ".#hhbbd#..",
-    ".#hbbd#...",
-    ".#LVVv#...",
-    ".#VvVL#...",
-    ".#LVVv#...",
-    ".#vVvV#...",
-    "#hbbbd#...",
-    "#hbbbbd#..",
-    "#bbbbbd#..",
-    ".#dddd#...",
-    "..####....",
+BACK_4B_AT = (-9, -13)
+ARM_L_4 = bmp([  # bras gauche-écran pendant
+    "..#hh#",
+    ".vLh#.",
+    ".vVLLv",
+    "vLLVVv",
+    "vVLLLV",
+    "#bVVVb",
+    "#db##d",
+    "##b#..",
+    "..##..",
 ])
-ARM_4_FIST = (3, 17)
-ARM_4_SHOULDER = (7, 0)
-ARM_UP_4 = bmp([
-    "..####....",
-    ".#dddd#...",
-    "#bbbbbd#..",
-    "#hbbbbd#..",
-    "#hbbbd#...",
-    ".#vVvV#...",
-    ".#LVVv#...",
-    ".#VvVL#...",
-    ".#LVVv#...",
-    ".#hbbd#...",
-    ".#hhbbd#..",
-    "..#hbbd#..",
-    "..#hbbd#..",
-    "..#hhbbd#.",
-    "...#hbbd#.",
-    "...#hbbd#.",
-    "...#hhbbd#",
-    "....#hbbd#",
-    "....#hbbd#",
-    ".....####.",
+ARM_L_4_AT = (-12, -7)
+ARM_R_4 = bmp([  # bras droit-écran, un peu avancé
+    "...v..",
+    "#hLLv.",
+    "VLVVLv",
+    "vVLLVv",
+    "#dVVb#",
+    "b##bd#",
+    "#.#b##",
+    "..##..",
 ])
-ARM_UP_4_FIST = (3, 3)
-ARM_UP_4_SHOULDER = (7, 19)
-ARM_OUT_4 = bmp([
-    "..#####......",
-    ".#bbbbd#####.",
-    "#dbbbbbLVLbbd#",
-    "#dbbbbbVvVbbd#",
-    "#dbbbbbLVLbbd#",
-    ".#bbbbdvVvbdd#",
-    "..#####.#####",
+ARM_R_4_AT = (6, -8)
+LEG_4 = bmp([  # jambe posée (droite-écran)
+    "ddV#.",
+    "#dVb#",
+    "#dbb#",
+    ".###d",
 ])
-ARM_OUT_4_FIST = (2, 3)
-ARM_OUT_4_SHOULDER = (12, 3)
-# de dos, le bras plié disparaît devant le corps : on ne voit que le haut du bras rentrer derrière le torse
-ARM_BEAT_4 = bmp([
-    ".....####.",
-    "....#hbbd#",
-    "....#hbbd#",
-    "...#hhbbd#",
-    "...#hbbd#.",
-    "..#hhbbd#.",
-    "..#hbbdd#.",
-    "..#bbbdd#.",
-    "...#####..",
-])
-ARM_BEAT_4_FIST = (6, 7)
-ARM_BEAT_4_SHOULDER = (7, 0)
-# bras tendu loin du spectateur (Shoot de dos) : on voit le haut du bras partir en avant, le poing disparaît
-ARM_PUSH_4 = bmp([
-    "..#####.",
-    ".#hbbbd#",
-    "#hbbbbd#",
-    "#LVVVd#.",
-    "#VvVLd#.",
-    "#hbbbd#.",
-    ".#ddd#..",
-    "..###...",
-])
-ARM_PUSH_4_FIST = (2, 6)
-ARM_PUSH_4_SHOULDER = (6, 0)
-LEG_4 = bmp([
-    "#hbbd#",
-    "#hbbd#",
-    "#hbbd#",
-    "#hbd#.",
-    "#hbd#.",
-    "#LVv#.",
-    "#VvV#.",
-    "#hbd#.",
-    "#hbd#.",
-    "#bbbd#",
-    "#dddd#",
+LEG_4_AT = (1, -1)
+LEG_UP_4 = bmp([  # jambe levée (gauche-écran, pas A)
+    "..#Vd.",
+    "##ddd#",
     ".####.",
 ])
-TAIL_4 = bmp([
-    "..#dd#..",
-    "..#dd#..",
-    "..#dd#..",
-    "...#dd#.",
-    "...#dd#.",
-    "....#dd#",
-    "....#dd#",
-    "...#ddd#",
-    "..#dd##.",
-    ".#dd#...",
-    ".#d#....",
-    ".##.....",
-])
+LEG_UP_4_AT = (-7, -1)
+HEAD_4_MARK = (9, 2)
+BACK_4_CENTER = (9, 6)
+ARM_L_4_SHOULDER = (4, -3)     # épaule cachée par le dos : (-8, -10)
+ARM_L_4_FIST = (2, 7)
+ARM_R_4_SHOULDER = (2, -4)
+ARM_R_4_FIST = (3, 6)
+
 
 # =====================================================================================
-# BAS-DROITE (1) — trois quarts face (le côté droit de l'écran est le plus proche)
+# 2. PIÈCES DESSINÉES POUR COMPLÉTER
 # =====================================================================================
-HEAD_1 = bmp([
-    "#....................#..",
-    "##..................##..",
-    "#d#................#d#..",
-    "#dd#..............#dd#..",
-    "#ddb#....####....#bdd#..",
-    "#ddbb####bbbb####bbdd#..",
-    ".#dbbbbbbbbbbbbbbbbbd##.",
-    ".#bbbGGGGbbbbbbGGGGbbb#.",
-    "..#bbGRRRGbbbbGGRRRGGb#.",
-    "..#bbGRO#RGbbbGRO#RGGg#.",
-    "..#bbGGGGGGbbbGGGGGGgg#.",
-    "...#bbbGGGGGGGGGGGGggg#.",
-    "....#bbbbbGGgggggggggW#.",
-    ".....##bbbbGggW#gggg##..",
-    ".......##bbbGgggggg#....",
-    ".........###bbbb###.....",
-    "............####........",
-])
-HEAD_1_MARK = (13, 11)
-MANE_1 = MANE_0
-TORSO_1 = bmp([
-    "..#########..",
-    ".#hhbbbbbbb#.",
-    "#hhbbGGGGGbb#",
-    "#hbbGGgGgGGb#",
-    "#hbbGGGGGGGb#",
-    "#bbbGgGgGgGb#",
-    "#bbbGGGGGGGb#",
-    "#bbbbGgGgGbb#",
-    "#bbbbbGGGbbd#",
-    "#dbbbbbbbbdd#",
-    ".#dbbbbbbdd#.",
-    ".#ddbbbbddd#.",
-    "..#dddddd#...",
-])
-TORSO_1_CENTER = (7, 7)
-TAIL_1 = bmp([
-    "...###..",
-    "..#ddd#.",
-    ".#dd#dd#",
-    ".#d#.#d#",
-    ".#d#.##.",
-    ".#dd#...",
-    "..#dd#..",
-    "...#dd#.",
-    "....#dd#",
-    ".....#d#",
-    "......##",
-])
 
-# =====================================================================================
-# HAUT-DROITE (3) — trois quarts dos (le côté gauche de l'écran est le plus proche)
-# =====================================================================================
-HEAD_3 = bmp([
-    "..#....................#",
-    "..##..................##",
-    "..#d#................#d#",
-    "..#dd#..............#dd#",
-    "..#ddb#....####....#bdd#",
-    "..#ddbb####bbbb####bbdd#",
-    ".##dbbbbbbbbbbbbbbbbbbd#",
-    ".#bbbbbbbbbbbbbbbbbbbbb#",
-    ".#bbbbbbbbbbbbbbbbbbbGG#",
-    ".#bbbbbbbbbbbbbbbbbbbGG#",
-    ".#dbbbbbbbbbbbbbbbbbbbG#",
-    "..#dbbbbbbbbbbbbbbbbbbg#",
-    "..#ddbbbbbbbbbbbbbbbgg#.",
-    "...##dbbbbbbbbbbbbbgg#..",
-    ".....##dddddddddddg##...",
-    ".......#dddddddddd#.....",
-    "........##########......",
+# ---- Bas-droite (1) : vue de trois quarts construite sur la vue de face (côté proche = gauche-écran) ----
+HEAD_1 = bmp([  # tête de trois quarts : oreille éloignée plus fine, traits du masque décalés d'un pixel vers la droite
+    "##..............##",
+    "#h##..........##h#",
+    ".#hh##.######.#hh#",
+    "#dbhhh#bbbbbb#hbd#",
+    ".#dbhhhddbbddhbd#.",
+    "..#hhhhhhddhhhh#..",
+    ".#hhbhhhhhhhhbhh#.",
+    "..##hhGGGhhhGGh#..",
+    "..#hhhGddGhGdGh#..",
+    "...##hGRL#G#LRG#..",
+    "....#hhGRVgVRGh#..",
+    "...#hbhhgghgghbh#.",
+    "....#hhGdbGbdGh#..",
+    "....#hh##WbW##h#..",
 ])
-HEAD_3_MARK = (11, 11)
-MANE_3 = MANE_0
-VINES_3 = bmp([
-    "..#VLVLV#..",
-    ".#VLVLVLV#.",
-    ".#vVLVLVv#.",
-    "#VvVLVLVvV#",
-    "#vVvVvVvVv#",
-    "#VvVvVvVvV#",
-    ".#vVvVvVv#.",
-    ".#VvVvVvV#.",
-    "..#vVvVv#..",
-    "..#Vv#Vv#..",
-    "...#v#.#v#.",
-    "....#...#..",
+HEAD_1_AT = (-9, -19)
+HEAD_1_MARK = (10, 9)
+TORSO_1 = bmp([  # poitrail de trois quarts
+    ".#ddGb#bGd#.",
+    "#ddgGGbGGg#.",
+    "#ddbbGdGbd#.",
 ])
-TORSO_3 = TORSO_4
-TORSO_3_CENTER = (6, 7)
-TAIL_3 = bmp([
-    ".......#dd#",
-    "......#dd#.",
-    ".....#dd#..",
-    "....#dd#...",
-    "...#dd#....",
-    "..#dd#.....",
-    ".#dd#......",
-    "#dd#.......",
+TORSO_1_AT = (-6, -5)
+TORSO_1_CENTER = (6, 1)
+TAIL_1 = bmp([  # bout de queue qui dépasse derrière l'épaule proche
+    "..##.",
+    ".#bb#",
+    "#bb#.",
+    "#b#..",
+    "#b#..",
+    ".#...",
+])
+TAIL_1_AT = (-14, -15)
+
+# ---- Haut-droite (3) : vue de trois quarts dos construite sur la vue de dos (côté proche = droite-écran) ----
+HEAD_3 = bmp([  # arrière du crâne de trois quarts (oreille éloignée = gauche-écran, plus fine)
+    "##............##",
+    "#h#.dddddd..##h#",
+    "#h##bhhhhb##hh#.",
+    "hbbdhhhhhhdbbhhd",
+    "dbbhVLLVhhhbbbd.",
+])
+HEAD_3_AT = (-8, -18)
+HEAD_3_MARK = (9, 2)
+BACK_3 = bmp([  # dos de trois quarts : lianes et queue décalées d'un pixel vers la gauche, sliver du masque à droite
+    ".##vvVLLLLVvvbb##.",
+    "##hLVVVLLVVVL#bh##",
+    "#hb#vvV##Vvv#bhhG#",
+    "#dhhhb##h#bhhhhGG#",
+    ".#bhh#hhhdhhhhbG#.",
+    "#hdhh##hhhdhhdhhh#",
+    "..ghhG##hhdhhg....",
+    "..#GGhhhdh#GG#....",
+    "..#hhGhgdh#hh#....",
+    "...#GhgGdh#g#.....",
+    "..#dggGbh#ggd#....",
+    "..#dbbgd#gbbd#....",
+    "......###.........",
+])
+BACK_3_AT = (-9, -13)
+BACK_3B = bmp([  # dos de trois quarts, queue balancée (pas B)
+    ".##vvVLLLLVvvbb##.",
+    "##hLVVVLLVVVL#bh##",
+    "#hb#vvVV##vv#bhhG#",
+    "#dhhhbv##h#hhhhGG#",
+    ".#bhhh#hhhdhhhbG#.",
+    "#hdhhh##hhhdhdhhh#",
+    "..ghhGh##dhdhg....",
+    "..#GGhhhhdh#G#....",
+    "..#hhGhgGd#hh#....",
+    "...#GhgGdh#g#.....",
+    "..#dggGbh#ggd#....",
+    "..#dbbgd#gbbd#....",
+    ".......###........",
+])
+BACK_3B_AT = (-9, -13)
+BACK_3_CENTER = (9, 6)
+
+# ---- Variantes de bras, famille 0 (face) : dessinées pour le bras gauche-écran, retournées pour l'autre ----
+ARM_UP_0 = bmp([  # bras levé au-dessus de la tête : main ouverte en haut (celle de la planche, retournée), cuff, avant-bras vers l'épaule
+    "...##...",
+    ".##h#.#.",
+    ".#hb##h#",
+    "#hbhhhb#",
+    ".#hbbV#.",
+    ".vLVVLv.",
+    "vLVVLLv.",
+    "vLLVVLv.",
+    ".vvVLv..",
+    "..#hh#..",
+    "..#hh#..",
+    "..#hb#..",
+    "..#hb#..",
+    "...#hb#.",
+    "...#hb#.",
+    "....#h#.",
+    "....##..",
+])
+ARM_UP_0_AT = (-14, -28)
+ARM_UP_0_FIST = (4, 2)
+ARM_UP_0_SHOULDER = (5, 16)
+ARM_OUT_0 = bmp([  # bras tendu sur le côté : main à gauche, cuff, épaule à droite
+    "...##..vvv.....",
+    ".##h#.vLVLv#...",
+    "#hbh#vVLVLV#h#.",
+    "#hbhhLVLVLVhhh#",
+    "#hbh#vVLVLV#hb#",
+    ".##h#.vLVLv.##.",
+    "...##..vvv.....",
+])
+ARM_OUT_0_AT = (-22, -15)
+ARM_OUT_0_FIST = (2, 3)
+ARM_OUT_0_SHOULDER = (13, 3)
+ARM_BEAT_0 = bmp([  # bras plié : haut du bras vertical le long du corps, avant-bras vers le centre, cuff et poing sur le poitrail
+    ".#d#...........",
+    "#hbd#..........",
+    "#hbd#..........",
+    "#hbd#..........",
+    "#hbd#..........",
+    "#hbd#..........",
+    "#hbd#..........",
+    ".#hbd#...vvv...",
+    "..#hbd#.vLVLv#.",
+    "...#hbdvVLVLhh#",
+    "....#hbLVLVLhb#",
+    ".....#vVLVLVbh#",
+    "......vvLVLv##.",
+    ".......vvv.....",
+])
+ARM_BEAT_0_AT = (-11, -12)
+ARM_BEAT_0_FIST = (12, 10)
+ARM_BEAT_0_SHOULDER = (2, 0)
+ARM_PUSH_0 = bmp([  # bras poussé vers l'avant : bras oblique vers le centre, cuff vu de face, paume ouverte griffes vers le bas
+    "#d#......",
+    "#hd#.....",
+    "#hbd#....",
+    ".#hbd#...",
+    ".#hbd#...",
+    "..#hbd#..",
+    "..vvLVv..",
+    ".vLVLVLv.",
+    ".vVLVLVv.",
+    ".#vvVvv#.",
+    "#hbhhhbh#",
+    ".#h#h#h#.",
+    "..#.#.#..",
+])
+ARM_PUSH_0_AT = (-11, -12)
+ARM_PUSH_0_FIST = (4, 10)
+ARM_PUSH_0_SHOULDER = (1, 0)
+
+# ---- Variantes de bras, famille 2 (profil regardant à droite), bras proche ----
+ARM_UP_2 = bmp([  # bras levé, vu de profil (doigts repliés)
+    "..##..",
+    ".#h##.",
+    "#hbh#.",
+    "#hbbh#",
+    ".#bV#.",
+    ".vLVLv",
+    "vLVVLv",
+    "vVLLVv",
+    ".vvVv.",
+    ".#hh#.",
+    ".#hh#.",
+    ".#hb#.",
+    ".#hb#.",
+    ".#hb#.",
+    ".#hb#.",
+    ".#hb#.",
+    ".#bd#.",
+    "..##..",
+])
+ARM_UP_2_AT = (-9, -25)
+ARM_UP_2_FIST = (2, 2)
+ARM_UP_2_SHOULDER = (2, 17)
+ARM_OUT_2 = bmp([  # bras tendu vers l'avant à hauteur d'épaule : épaule à gauche, cuff, main à droite
+    "......vvv....##.",
+    ".####vLVLv.##h#.",
+    "#hhhhLVLVL#hbh#.",
+    "#bhhhVLVLVhhbhh#",
+    ".####vLVLv#hbh#.",
+    "......vvv.##h#..",
+    "...........##...",
+])
+ARM_OUT_2_AT = (-8, -11)
+ARM_OUT_2_FIST = (13, 3)
+ARM_OUT_2_SHOULDER = (1, 2)
+ARM_BEAT_2 = bmp([  # bras plié, poing sur le poitrail (vers l'avant)
     "#d#........",
-    "##.........",
+    "#hd#.......",
+    "#hd#.vvv...",
+    "#hb#vLVLv#.",
+    ".#hbLVLVhh#",
+    ".#hbvLVLhb#",
+    "..##.vvv##.",
 ])
+ARM_BEAT_2_AT = (-8, -8)
+ARM_BEAT_2_FIST = (9, 4)
+ARM_BEAT_2_SHOULDER = (1, 0)
+ARM_PUSH_2 = ARM_OUT_2
+ARM_PUSH_2_FIST = ARM_OUT_2_FIST
+ARM_PUSH_2_SHOULDER = ARM_OUT_2_SHOULDER
+ARM_PUSH_2_AT = ARM_OUT_2_AT
 
-# =====================================================================================
-# SOMMEIL (une seule direction) — couché sur le flanc, tête à gauche, queue enroulée
-# =====================================================================================
-SLEEP_A = bmp([
-    "...#..#.............................",
-    "..##.##.......###...................",
-    "..#d#d#.....##nnn##.................",
-    ".#ddbdd#..##nnnnnnn##...............",
-    "#dbbbbbb###nnnnnnnnnnn##............",
-    "#bbbbbbbbbbnnnnnnnnbbbbb##..........",
-    "#bGGGbbbbbbbbnnnbbbbbbbbbb##........",
-    "#GG##Gbbbbbbbbbbbbbbbbbbbbbb#.......",
-    "#GGGGGbbbbbbbbbbbbbbbbbbbbbbb#......",
-    "#bGgggGbbbbbbbbbbbbbbbbbbbbbbd#.....",
-    ".#ggg#gbbbbbbbbbbbbbbbbbbbbbbdd#....",
-    ".##ggg#bbbbbbbbbbbbbbbbbbbbbbddd#...",
-    "..####hbbbbbbbbbbbbbbbbbbbbbbbddd#..",
-    "....#hbbbbbbbbbbbbbbbbbbbbbbbdddd#..",
-    "...#hbbbbLVLbbbbbbbbbLVLbbbbbdddd#..",
-    "...#hbbbbVvVbbbbbbbbbVvVbbbbdddd#...",
-    "...#bbbbbLVLbbbbbbbbbLVLbbbbddd##...",
-    "...#g#g#g#bbbbbbbb#g#g#g#bbdd#dd#...",
-    "....###########################dd#..",
-    "..............................####..",
+# ---- Variantes de bras, famille 4 (dos) : mêmes silhouettes que de face, dos de la main (pas de paume) ----
+ARM_UP_4 = bmp([  # bras levé vu de dos
+    "...##...",
+    ".##b#.#.",
+    ".#bd##b#",
+    "#bdbbbd#",
+    ".#bddV#.",
+    ".vLVVLv.",
+    "vLVVLLv.",
+    "vLLVVLv.",
+    ".vvVLv..",
+    "..#hh#..",
+    "..#hh#..",
+    "..#hb#..",
+    "..#hb#..",
+    "...#hb#.",
+    "...#hb#.",
+    "....#h#.",
+    "....##..",
 ])
-SLEEP_B = bmp([              # respiration : le dos redescend d'une ligne
-    "...#..#.............................",
-    "..##.##.............................",
-    "..#d#d#.......###...................",
-    ".#ddbdd#....##nnn##.................",
-    "#dbbbbbb###nnnnnnnn##...............",
-    "#bbbbbbbbbbnnnnnnnnnnn###...........",
-    "#bGGGbbbbbbbbnnnnnbbbbbbb##.........",
-    "#GG##Gbbbbbbbbbbbbbbbbbbbbbb#.......",
-    "#GGGGGbbbbbbbbbbbbbbbbbbbbbbb#......",
-    "#bGgggGbbbbbbbbbbbbbbbbbbbbbbd#.....",
-    ".#ggg#gbbbbbbbbbbbbbbbbbbbbbbdd#....",
-    ".##ggg#bbbbbbbbbbbbbbbbbbbbbbddd#...",
-    "..####hbbbbbbbbbbbbbbbbbbbbbbbddd#..",
-    "....#hbbbbbbbbbbbbbbbbbbbbbbbdddd#..",
-    "...#hbbbbLVLbbbbbbbbbLVLbbbbbdddd#..",
-    "...#hbbbbVvVbbbbbbbbbVvVbbbbdddd#...",
-    "...#bbbbbLVLbbbbbbbbbLVLbbbbddd##...",
-    "...#g#g#g#bbbbbbbb#g#g#g#bbdd#dd#...",
-    "....###########################dd#..",
-    "..............................####..",
+ARM_UP_4_AT = (-14, -28)
+ARM_UP_4_FIST = (4, 2)
+ARM_UP_4_SHOULDER = (5, 16)
+ARM_OUT_4 = bmp([  # bras tendu sur le côté, vu de dos
+    "...##..vvv.....",
+    ".##b#.vLVLv#...",
+    "#bdb#vVLVLV#h#.",
+    "#bdbbLVLVLVhhh#",
+    "#bdb#vVLVLV#hb#",
+    ".##b#.vLVLv.##.",
+    "...##..vvv.....",
 ])
-SLEEP_HEAD_MARK = (3, 8)
-SLEEP_CENTER = (16, 11)
-SLEEP_FISTS = ((6, 17), (21, 17))
+ARM_OUT_4_AT = (-22, -15)
+ARM_OUT_4_FIST = (2, 3)
+ARM_OUT_4_SHOULDER = (13, 3)
+ARM_BEAT_4 = bmp([  # bras plié vu de dos : coude sorti, avant-bras et poing cachés par le corps
+    "..#d#.",
+    ".#hbd#",
+    ".#hbd#",
+    "#hbd#.",
+    "#hbd#.",
+    "#hb#vv",
+    "#bb#LV",
+    ".#d#vv",
+    "..##..",
+])
+ARM_BEAT_4_AT = (-11, -12)
+ARM_BEAT_4_FIST = (5, 6)
+ARM_BEAT_4_SHOULDER = (3, 0)
+ARM_PUSH_4 = bmp([  # bras poussé vers l'avant vu de dos : seul le haut du bras dépasse
+    ".#d#.",
+    "#hbd#",
+    "#hbd#",
+    ".#bd#",
+    ".#bd#",
+    "..##.",
+])
+ARM_PUSH_4_AT = (-11, -12)
+ARM_PUSH_4_FIST = (3, 5)
+ARM_PUSH_4_SHOULDER = (2, 0)
 
+# ---- Sommeil (une seule ligne, deux images) : couché sur le flanc, tête à gauche ----
+SLEEP_A = bmp([  # sommeil, image 1
+    "..##.........###..........",
+    ".#hh#......##bbb##........",
+    "#hbb##....#bbbbbbb##......",
+    "#bhhhh#..#bbbbbbbbbb#.....",
+    ".#hhGGh##bbbbbbbbbbbb#....",
+    ".#hGGgGhbbbbbbbbbbbbbb#...",
+    "#hGGgGGhbbbbbbbbbbbbbbb#..",
+    "#GGGgGGhbbbbbbbbbbbbbbbb#.",
+    "#gGGgGhbbbbbbbbbbbbbbbbbd#",
+    "#hgGGhbbbbvLVvbbbbbvLVvbd#",
+    "#hhhhbbbbvLVLVvbbbvLVLVvd#",
+    ".#hhbbbbbvVLVVvbbbvVLVVvd#",
+    "..#hh#bbb#hbbh#bbb#hbbh#d#",
+    "...##..###.##.#####.##.###",
+])
+SLEEP_A_AT = (-14, -12)
+SLEEP_HEAD_MARK = (4, 7)
+SLEEP_CENTER = (14, 8)
+SLEEP_FISTS = ((11, 12), (20, 12))
+SLEEP_B = bmp([  # sommeil, image 2 : le dos redescend d'un rang (respiration)
+    "..##......................",
+    ".#hh#........###..........",
+    "#hbb##.....##bbb##........",
+    "#bhhhh#...#bbbbbbb##......",
+    ".#hhGGh##.#bbbbbbbbb#.....",
+    ".#hGGgGhbbbbbbbbbbbbb#....",
+    "#hGGgGGhbbbbbbbbbbbbbb#...",
+    "#GGGgGGhbbbbbbbbbbbbbbb#..",
+    "#gGGgGhbbbbbbbbbbbbbbbbd#.",
+    "#hgGGhbbbbvLVvbbbbbvLVvbd#",
+    "#hhhhbbbbvLVLVvbbbvLVLVvd#",
+    ".#hhbbbbbvVLVVvbbbvVLVVvd#",
+    "..#hh#bbb#hbbh#bbb#hbbh#d#",
+    "...##..###.##.#####.##.###",
+])
+SLEEP_B_AT = (-14, -12)
 
-# =====================================================================================
-# Effets
-# =====================================================================================
-# Griffures : trois traits parallèles à la direction de frappe, dessinés à la main pour les trois
-# familles d'axes (vertical, horizontal, diagonale) ; les autres directions sont des miroirs/transposées.
+# ---- Effets ----
 _SLASH_V = bmp([
     "..G...G...G..",
     "..W...W...W..",
@@ -759,7 +675,7 @@ _SLASH_V = bmp([
     "..W...W...W..",
     "..G...G...G..",
 ])
-_SLASH_D = bmp([          # frappe vers le bas-droite : trois traits « \ » décalés en travers
+_SLASH_D = bmp([          # frappe vers le bas-droite : trois traits « \\ » décalés en travers
     "......G......",
     "......GW.....",
     ".......GW....",
@@ -781,10 +697,10 @@ def slash(direction: int) -> np.ndarray:
         return _SLASH_V
     if direction in (2, 6):
         return np.ascontiguousarray(_SLASH_V.transpose(1, 0, 2))
-    a = _SLASH_D                       # 1 : bas-droite (axe « \ »)
+    a = _SLASH_D                       # 1 : bas-droite (axe « \\ »)
     if direction == 3:                 # haut-droite : axe « / »
         a = a[::-1]
-    elif direction == 5:               # haut-gauche : axe « \ », rotation de 180°
+    elif direction == 5:               # haut-gauche : axe « \\ », rotation de 180°
         a = a[::-1, ::-1]
     elif direction == 7:               # bas-gauche : axe « / »
         a = a[:, ::-1]
@@ -798,3 +714,5 @@ HOWL = bmp([
     "W.W.",
     ".W..",
 ])
+SPARK = bmp(["W"])
+

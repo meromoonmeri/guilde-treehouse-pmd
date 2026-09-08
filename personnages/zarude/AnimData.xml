@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <AnimData>
-	<ShadowSize>2</ShadowSize>
+	<ShadowSize>1</ShadowSize>
 	<Anims>
 		<Anim>
 			<Name>Walk</Name>
@@ -103,7 +103,7 @@
 		<Anim>
 			<Name>Hurt</Name>
 			<Index>6</Index>
-			<FrameWidth>48</FrameWidth>
+			<FrameWidth>56</FrameWidth>
 			<FrameHeight>72</FrameHeight>
 			<Durations>
 				<Duration>2</Duration>
@@ -123,7 +123,7 @@
 			<Name>Swing</Name>
 			<Index>8</Index>
 			<FrameWidth>88</FrameWidth>
-			<FrameHeight>104</FrameHeight>
+			<FrameHeight>96</FrameHeight>
 			<HitFrame>5</HitFrame>
 			<ReturnFrame>5</ReturnFrame>
 			<Durations>
