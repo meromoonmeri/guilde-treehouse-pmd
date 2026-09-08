@@ -37,6 +37,7 @@ def main():
     size, magic, frames, w, h, depth, flags, speed = struct.unpack_from("<IHHHHHIH", ase, 0)
     assert size == len(ase) and magic == 0xA5E0 and (frames, w, h, depth) == (1, 528, 384, 32)
     assert (OUT / "source/generation/zone_corrigee.png").exists()
+    assert len(list((OUT / "source/layers_generated").glob("*_magenta_generated.png"))) == 4
     assert m["entity_removed"] is True and m["seamless_ground"] is True
     print("PASS")
     print("  final 528x384; grid 8 px;", counts)

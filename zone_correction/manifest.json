@@ -16,6 +16,29 @@
     "planches/03_rochers.png",
     "planches/04_bordures_fleurs.png"
   ],
+  "layers": {
+    "transparent": [
+      "layers/transparent/01_sol.png",
+      "layers/transparent/02_cliff_entree.png",
+      "layers/transparent/03_rochers.png",
+      "layers/transparent/04_bordures_fleurs.png"
+    ],
+    "magenta": [
+      "layers/magenta/01_sol_magenta.png",
+      "layers/magenta/02_cliff_entree_magenta.png",
+      "layers/magenta/03_rochers_magenta.png",
+      "layers/magenta/04_bordures_fleurs_magenta.png"
+    ],
+    "generator_studies_layers": [
+      "source/layers_generated/01_sol_magenta_generated.png",
+      "source/layers_generated/02_cliff_entree_magenta_generated.png",
+      "source/layers_generated/03_rochers_magenta_generated.png",
+      "source/layers_generated/04_bordures_fleurs_magenta_generated.png"
+    ],
+    "composite_magenta": "layers/zone_corrigee_magenta.png",
+    "recomposed": "layers/zone_corrigee_recomposee.png",
+    "pixel_perfect": true
+  },
   "tiled": "tiled/zone_corrigee.tmj",
   "aseprite": "aseprite/zone_corrigee.aseprite",
   "generator_studies": [
@@ -23,7 +46,11 @@
     "source/generation/cliff_entree.png",
     "source/generation/sol.png",
     "source/generation/rochers.png",
-    "source/generation/bordures.png"
+    "source/generation/bordures.png",
+    "source/layers_generated/01_sol_magenta_generated.png",
+    "source/layers_generated/02_cliff_entree_magenta_generated.png",
+    "source/layers_generated/03_rochers_magenta_generated.png",
+    "source/layers_generated/04_bordures_fleurs_magenta_generated.png"
   ],
   "rule": "image.png controls colorimetry, texture, silhouettes and DA; IMG_4854.png controls layout grammar only"
 }

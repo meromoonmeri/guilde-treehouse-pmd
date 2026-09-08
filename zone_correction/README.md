@@ -25,6 +25,11 @@ planches/01_cliff_entree.png             entrée et bordures de falaise
 planches/02_sol.png                      sol contrôlé + transitions
 planches/03_rochers.png                  sprites indépendants de rochers
 planches/04_bordures_fleurs.png          fleurs et végétation indépendantes
+layers/transparent/*.png                 calques RGBA indépendants
+layers/magenta/*_magenta.png             mêmes calques sur #FF00FF opaque
+layers/zone_corrigee_magenta.png         contrôle de composition
+layers/zone_corrigee_recomposee.png      recomposition pixel-perfect
+source/layers_generated/                études générées par calque sur fond magenta
 sprites/                                 rochers et fleurs séparés
 pmd/Content/Tile/*.tile                  feuilles PMDO de 8 × 8 px
 tiled/zone_corrigee.tmj                  carte Tiled 66 × 48, cellules 8 × 8
@@ -39,3 +44,12 @@ aseprite/zone_corrigee.aseprite          composition inspectable dans Aseprite
 ```
 
 La reconstruction finale reste volontairement proche de l'image fournie : il s'agit d'une correction de structure et de modularité, pas d'une nouvelle direction artistique.
+
+## Calques magenta
+
+Le générateur a reçu `final/zone_corrigee.png` comme référence pour produire les quatre études de calques dans `source/layers_generated/`. Ces études servent de contrôle visuel. Les exports intégrables sont les PNG 528 × 384 de `layers/magenta/`, eux-mêmes dérivés de la recomposition finale et calés sur la grille 8 px. Chaque calque garde exactement la même résolution, et l'union des quatre PNG transparents est vérifiée octet par octet avec `zone_corrigee.png`.
+
+```bash
+.venv/bin/python zone_correction/build_layers.py
+.venv/bin/python zone_correction/verify.py
+```
