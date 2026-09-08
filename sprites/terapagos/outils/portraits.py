@@ -20,6 +20,9 @@ import os
 import sys
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fonds as F
+
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 T = 40
 
@@ -49,7 +52,7 @@ P = {
 
 # ------------------------------------------------------- fenêtre faciale ---
 # SEULE zone que les expressions ont le droit de modifier.
-FX0, FY0, FX1, FY1 = 8, 17, 32, 34
+FX0, FY0, FX1, FY1 = 10, 19, 30, 35
 
 
 class Toile:
@@ -80,12 +83,16 @@ class Toile:
             for x in range(int(x0), int(x1) + 1):
                 self.s(x, y, c)
 
-    def image(self):
-        im = Image.new("RGBA", (T, T))
+    def image(self, transparent=False):
+        """transparent=True : le fond devient alpha 0 (tête détourée)."""
+        im = Image.new("RGBA", (T, T), (0, 0, 0, 0))
         d = im.load()
         for y in range(T):
             for x in range(T):
-                d[x, y] = P[self.p[y][x]] + (255,)
+                c = self.p[y][x]
+                if transparent and c == "fond":
+                    continue
+                d[x, y] = P[c] + (255,)
         return im
 
     def copie(self):
@@ -103,13 +110,13 @@ def base_verrouillee():
     # calotte basse et large, coupée par le haut du cadre (cadrage PMD)
     # Les cellules sont obtenues par germes (Voronoi discret) : contours
     # polygonaux irréguliers, comme le vitrail de l'artwork.
-    germes = [(8, 2, "vit_vio"), (20, 0, "vit_omb"), (32, 2, "vit_ros"),
-              (4, 9, "vit_cya"), (14, 8, "vit_omb"), (26, 8, "vit_vio"),
-              (36, 9, "vit_cya")]
-    for y in range(0, 20):
+    germes = [(10, 1, "vit_vio"), (20, 0, "vit_omb"), (30, 1, "vit_ros"),
+              (7, 8, "vit_cya"), (16, 7, "vit_omb"), (25, 7, "vit_vio"),
+              (33, 8, "vit_cya")]
+    for y in range(0, 18):
         for x in range(T):
-            u = (x - 20) / 20.0
-            v = (y - 4) / 15.0
+            u = (x - 20) / 16.0
+            v = (y - 3) / 13.0
             if u * u + v * v > 1.0:
                 continue
             best, bd = None, 1e9
@@ -120,7 +127,7 @@ def base_verrouillee():
             t.s(x, y, best)
 
     # nervures menthe entre cellules
-    for y in range(0, 20):
+    for y in range(0, 18):
         for x in range(T):
             c = t.g(x, y)
             if c is None or not c.startswith("vit"):
@@ -130,7 +137,7 @@ def base_verrouillee():
                 if n is not None and n.startswith("vit") and n != c:
                     t.s(x, y, "nerv")
     # cerclage menthe du bord de carapace
-    for y in range(0, 20):
+    for y in range(0, 18):
         for x in range(T):
             c = t.g(x, y)
             if c is None or not c.startswith(("vit", "nerv")):
@@ -147,8 +154,8 @@ def base_verrouillee():
         t.s(17 + dx, 1 + dy, "or")
 
     # --- fourrure : mèches pointues encadrant la tête ----------------------
-    for (mx, my, ml, sens) in ((6, 19, 4, -1), (4, 26, 4, -1), (7, 33, 3, -1),
-                               (33, 19, 4, 1), (35, 26, 4, 1), (32, 33, 3, 1)):
+    for (mx, my, ml, sens) in ((9, 20, 3, -1), (7, 27, 3, -1), (10, 33, 2, -1),
+                               (30, 20, 3, 1), (32, 27, 3, 1), (29, 33, 2, 1)):
         for k in range(ml):
             larg = max(0, 2 - k // 2)
             for dy in range(-larg, larg + 1):
@@ -157,13 +164,13 @@ def base_verrouillee():
                 t.s(mx + sens * k, my + dy, c)
 
     # collerette pleine autour de la tête
-    t.ell(20, 27, 16, 13, "four_mid")
+    t.ell(20, 27, 13, 11, "four_mid")
     for y in range(15, T):
         for x in range(T):
             if t.g(x, y) != "four_mid":
                 continue
-            u = (x - 20) / 16.0
-            v = (y - 27) / 13.0
+            u = (x - 20) / 13.0
+            v = (y - 27) / 11.0
             lum = -0.6 * u - 0.8 * v
             if lum > 0.45:
                 t.s(x, y, "four_hau")
@@ -171,13 +178,13 @@ def base_verrouillee():
                 t.s(x, y, "four_omb")
 
     # --- tête bleu nuit, au premier plan -----------------------------------
-    t.ell(20, 27, 12, 11, "tet_mid")
+    t.ell(20, 27, 10, 9, "tet_mid")
     for y in range(14, T):
         for x in range(T):
             if t.g(x, y) != "tet_mid":
                 continue
-            u = (x - 20) / 12.0
-            v = (y - 27) / 11.0
+            u = (x - 20) / 10.0
+            v = (y - 27) / 9.0
             lum = -0.55 * u - 0.8 * v
             if lum > 0.5:
                 t.s(x, y, "tet_hau")
@@ -185,7 +192,7 @@ def base_verrouillee():
                 t.s(x, y, "tet_omb")
     # reflet fixe sur le crâne (structure d'ombre, jamais modifié ensuite)
     for dx, dy in ((0, 0), (1, 0), (0, 1), (1, 1), (2, 1), (1, 2)):
-        t.s(13 + dx, 20 + dy, "tet_hau")
+        t.s(15 + dx, 22 + dy, "tet_hau")
 
     # --- contour dur --------------------------------------------------------
     contourner(t)
@@ -209,8 +216,8 @@ def contourner(t):
 
 # ========================================================= EXPRESSIONS ====
 # Chaque fonction ne peint QUE dans la fenêtre faciale.
-OG, OD = 15, 25      # centre des deux yeux
-OY = 25              # ligne des yeux
+OG, OD = 16, 24      # centre des deux yeux
+OY = 26              # ligne des yeux
 BX, BY = 20, 32      # centre de la bouche
 
 
@@ -470,7 +477,8 @@ def generer(dst, variante=None):
     feuille = Image.new("RGBA", (T * 5, T * 8), (0, 0, 0, 0))
     for i, nom in enumerate(ORDRE):
         _lib, t = portraits[nom]
-        im = t.image()
+        im = F.fond(nom)              # fond canonique PMD
+        im.alpha_composite(t.image(transparent=True))  # tête par-dessus
         im.save(os.path.join(dst, "%s.png" % nom))
         feuille.paste(im, ((i % 5) * T, (i // 5) * T))
         mi = im.transpose(Image.FLIP_LEFT_RIGHT)
