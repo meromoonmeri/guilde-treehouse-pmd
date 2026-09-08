@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Luminous Spring PMDO — aperçu</title>
+<style>
+:root{color-scheme:dark;--bg:#0b2025;--panel:#12343a;--line:#2c6665;--ink:#eafff3;--muted:#9ec5bc;--cyan:#27e7ef}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px}h1{margin:0 0 6px;font-size:26px}p{color:var(--muted);margin:6px 0 18px}.grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}.map{width:100%;image-rendering:pixelated;image-rendering:crisp-edges;background:#102c31}.anim{display:block;width:256px;height:256px;image-rendering:pixelated;image-rendering:crisp-edges;background:#06171c;margin:12px auto}.frames{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}.frames canvas{width:100%;image-rendering:pixelated;background:#06171c;border:1px solid var(--line)}.tag{color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.08em}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.links a{color:var(--cyan);border:1px solid var(--line);padding:8px 10px;border-radius:6px;text-decoration:none}code{color:#b7f9e5}
+</style>
+<main>
+  <div class="tag">PMDO / HALCYON GRAMMAR / 8 PX</div>
+  <h1>Luminous Spring — zone reconstruite</h1>
+  <p>Colorimétrie de <code>luminoussspring.png</code>, modules et couches séparés. La grille de collision et les animations suivent la logique observée dans Halcyon.</p>
+  <section class="grid">
+    <div class="card"><img class="map" src="luminous_spring_pmdo.png" alt="Aperçu de la zone Luminous Spring"></div>
+    <div class="card">
+      <strong>Lumière du bassin · 8 frames</strong>
+      <canvas id="anim" class="anim" width="32" height="32"></canvas>
+      <div class="frames" id="frames"></div>
+      <p>100 ms/frame · ancre fixe <code>16,31</code> · pas de frame dupliquée.</p>
+      <div class="links"><a href="../README.md">README</a><a href="../manifest.json">manifest</a><a href="../tiled/luminous_spring_pmdo.tmj">Tiled</a></div>
+    </div>
+  </section>
+</main>
+<script>
+const strip=new Image();strip.src='../planches/05_lumiere_frames.png';
+const canvas=document.querySelector('#anim'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;let frame=0;
+strip.onload=()=>{for(let i=0;i<8;i++){const c=document.createElement('canvas');c.width=c.height=32;c.className='frame';const x=c.getContext('2d');x.imageSmoothingEnabled=false;x.drawImage(strip,i*32,0,32,32,0,0,32,32);document.querySelector('#frames').append(c)};setInterval(()=>{ctx.clearRect(0,0,32,32);ctx.drawImage(strip,frame*32,0,32,32,0,0,32,32);frame=(frame+1)%8},100)};
+</script>

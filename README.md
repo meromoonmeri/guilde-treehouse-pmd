@@ -100,6 +100,21 @@ Banc de props ramené aux tailles PMD : `sprites_reduits/`. Proposition de mise 
 du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
 `analyse_echelle/placements/`.
 
+## Reconstruction Luminous Spring — grille Halcyon / PMDO
+
+Les deux images déposées à la racine (`luminoussspring.png` et `Luminous_Spring_TDS REFERENCE A IMITER.png`) ont maintenant une reconstruction dédiée dans `tileset_pmd/`. Le rendu reprend la colorimétrie bleu-vert nocturne et la source cyan de la première image, mais la construction suit la grammaire observée dans Halcyon : **cellules de 8 × 8 px**, calques `Base`, `River`, `Cliffs`, `Shadows`, `Objects Under`, `Objects`, `Objects Over`, `Fringe`, puis une couche animée séparée.
+
+Le dossier fournit les planches séparées, les `.tile` PMDO, la carte Tiled `tiled/luminous_spring_pmdo.tmj`, le compagnon `pmd/Data/Ground/luminous_spring_pmdo.rsground`, les sprites transparents et `aseprite/05_lumiere_spring.aseprite`. La lumière possède 8 frames distinctes de 32 × 32 px avec ancre fixe ; l'eau possède une séquence PMDO de 4 frames avec `FrameLength = 10`, selon la logique d'`Altere_Pond_River_Animations.tile` de Halcyon.
+
+Pour regénérer et contrôler :
+
+```bash
+.venv/bin/python tileset_pmd/build_pmdo_zone.py
+.venv/bin/python tileset_pmd/verify_pmdo_zone.py
+```
+
+Aperçu : `tileset_pmd/preview/luminous_spring_pmdo_animation_board.png` ou `tileset_pmd/preview/index.html`. Les études générées par le modèle sont conservées dans `tileset_pmd/source/generated/` comme direction artistique ; les tuiles finales sont reconstruites au niveau 8 px, sans interpolation ni découpage des images sources.
+
 ## Reproduction et contrôles
 
 ```bash

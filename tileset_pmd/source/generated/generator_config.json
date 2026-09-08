@@ -1,0 +1,24 @@
+{
+  "purpose": "Créer des études visuelles de zones PMDO à partir de la Luminous Spring fournie, puis reconstruire les éléments au pixel près.",
+  "references": [
+    "../../../luminoussspring.png",
+    "../../../Luminous_Spring_TDS REFERENCE A IMITER.png"
+  ],
+  "prompt_rules": [
+    "Préserver la colorimétrie nocturne de luminoussspring.png : forêt bleu-vert très sombre, eau turquoise, lumière cyan-blanche.",
+    "Préserver la lecture d'une source lumineuse centrale et d'une clairière jouable.",
+    "Utiliser la référence Halcyon uniquement pour la grammaire technique : cellules 8x8, calques Base/River/Cliffs/Shadows/Objects Under/Objects/Objects Over/Fringe et animations de tuiles.",
+    "Ne jamais copier les pixels, les tuiles ou les positions de la référence.",
+    "Produire des études d'assets séparés, pas une illustration finale à découper.",
+    "Hard pixel edges, palette réduite, clusters propres, nearest neighbour, aucun anti-aliasing, aucun flou, aucun bruit génératif.",
+    "Les modules d'art principaux peuvent être pensés en 16x16, mais chaque tuile exportée et chaque collision PMDO reste sur 8x8 pixels.",
+    "Pour l'eau et la lumière, créer des frames réellement différentes avec même canvas, même palette et même point d'ancrage."
+  ],
+  "final_reconstruction": {
+    "method": "Les études générées ne sont pas utilisées comme texture finale. Les PNG finaux sont redessinés au niveau 8x8 dans build_pmdo_zone.py.",
+    "palette_locked": true,
+    "tile_px": 8,
+    "animation": {"river_frames": 4, "river_frame_length": 10, "light_frames": 8, "light_frame_length_ms": 100},
+    "software_workflow": ["image generator for design studies", "Aseprite for light animation and inspection", "Tiled for 8 px map/layer assembly", "PMDO .tile + .rsground export"]
+  }
+}
