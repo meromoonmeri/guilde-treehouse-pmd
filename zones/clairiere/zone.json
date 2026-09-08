@@ -1,0 +1,124 @@
+{
+ "zone": "clairiere",
+ "source": "meromoonmeri/zone-pmd@0f9805e (layers/src/clairiere_pmdo + render_layers)",
+ "master_px": [
+  1120,
+  960
+ ],
+ "facteur": "1/2",
+ "taille_px": [
+  560,
+  480
+ ],
+ "cellules_8px": [
+  70,
+  60
+ ],
+ "cases_24px": [
+  23.33,
+  20.0
+ ],
+ "ecrans_320x240": 3.5,
+ "palette_base": 256,
+ "collision": {
+  "libres": 1058,
+  "murs": 3142,
+  "fichier": "obstacles.txt",
+  "masque": "collision.png"
+ },
+ "entree_sud": {
+  "x0": 24,
+  "x1": 46
+ },
+ "calques": [
+  {
+   "nom": "Base",
+   "tile": "Clairiere_Base.tile",
+   "draw_layer": "Bottom",
+   "frames": 1
+  },
+  {
+   "nom": "Eau",
+   "tile": "Clairiere_Eau.tile",
+   "draw_layer": "Bottom",
+   "etats": 4,
+   "sequence": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "frame_length_ticks": 8
+  },
+  {
+   "nom": "Lumiere Rayon",
+   "tile": "Clairiere_Lumiere_Rayon.tile",
+   "draw_layer": "Top",
+   "visible": false,
+   "etats": 3,
+   "sequence": [
+    0,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "nom": "Lumiere Etincelles",
+   "tile": "Clairiere_Lumiere_Etincelles.tile",
+   "draw_layer": "Top",
+   "visible": false,
+   "etats": 5,
+   "sequence": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    3,
+    2,
+    1
+   ]
+  }
+ ],
+ "tile_stats": {
+  "Base": {
+   "entrees": 4200,
+   "uniques": 4200,
+   "reemploi": 1.0,
+   "octets": 945161
+  },
+  "Eau": {
+   "entrees": 308,
+   "uniques": 221,
+   "reemploi": 1.39,
+   "octets": 25465
+  },
+  "Lumiere_Rayon": {
+   "entrees": 2472,
+   "uniques": 1710,
+   "reemploi": 1.45,
+   "octets": 355839
+  },
+  "Lumiere_Etincelles": {
+   "entrees": 3675,
+   "uniques": 3234,
+   "reemploi": 1.14,
+   "octets": 522439
+  }
+ },
+ "tiled": {
+  "tuiles": 4441,
+  "tuiles_base": 4200,
+  "animations_eau": 77,
+  "cases": 4200
+ }
+}

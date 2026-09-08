@@ -100,6 +100,24 @@ Banc de props ramené aux tailles PMD : `sprites_reduits/`. Proposition de mise 
 du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
 `analyse_echelle/placements/`.
 
+## Zone extérieure : la clairière de l'arbre ancien
+
+`zones/clairiere/` reprend la clairière de `meromoonmeri/zone-pmd@0f9805e`
+(masters 1120 × 960), réduite ÷2 exact en **560 × 480 = 70 × 60 cellules de 8 px**
+avec une palette de 256 couleurs, et exportée dans les formats **natifs PMDO** :
+banques `.tile` + `clairiere.rsground` (eau animée sur 4 états, deux calques de
+lumière désactivés par défaut), grille d'obstacles 8 px avec entrée sud, carte
+Tiled 8 px à tileset dédoublonné et tuiles animées. Détails, échelle et mode
+d'emploi dans [`zones/clairiere/README.md`](zones/clairiere/README.md).
+
+```bash
+python3 source/build_clairiere.py     # regénère la zone depuis source/clairiere_master/
+python3 source/verify_clairiere.py    # relit .tile / .rsground / .tmx et recompose l'image
+```
+
+`source/pmdo_format.py` : lecteurs/écrivains `.tile` et `.rsground` relevés dans
+le code de RogueEssence (TEX_SIZE 8, Tags d'obstacles, DrawLayer).
+
 ## Reproduction et contrôles
 
 ```bash
