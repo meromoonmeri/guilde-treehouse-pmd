@@ -1,0 +1,29 @@
+{
+  "source": "../image.png",
+  "layout_reference": "../IMG_4854.png",
+  "final": "final/zone_corrigee.png",
+  "generator_render": "final/zone_corrigee_generateur.png",
+  "grid_px": 8,
+  "dimensions_px": [
+    528,
+    384
+  ],
+  "entity_removed": true,
+  "seamless_ground": true,
+  "sheets": [
+    "planches/01_cliff_entree.png",
+    "planches/02_sol.png",
+    "planches/03_rochers.png",
+    "planches/04_bordures_fleurs.png"
+  ],
+  "tiled": "tiled/zone_corrigee.tmj",
+  "aseprite": "aseprite/zone_corrigee.aseprite",
+  "generator_studies": [
+    "source/generation/zone_corrigee.png",
+    "source/generation/cliff_entree.png",
+    "source/generation/sol.png",
+    "source/generation/rochers.png",
+    "source/generation/bordures.png"
+  ],
+  "rule": "image.png controls colorimetry, texture, silhouettes and DA; IMG_4854.png controls layout grammar only"
+}
