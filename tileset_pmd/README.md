@@ -1,6 +1,6 @@
 # Luminous Spring PMDO — reconstruction Halcyon
 
-Ce dossier est la reconstruction de `luminoussspring.png` avec la logique technique de **Luminous Spring / Halcyon de Palikadude**. La seconde image fournie sert de référence de construction et de lisibilité, pas de texture à copier.
+Ce dossier est la reconstruction de `luminoussspring.png` avec la logique technique de **Luminous Spring / Halcyon de Palikadude**. `Luminous_Spring_TDS REFERENCE A IMITER.png` sert de référence de construction et de lisibilité, et `LIGHT EFFECT REFERENCE.png` sert à régler le faisceau animé. Aucune de ces images n'est utilisée comme texture à copier.
 
 ## Ce qui est construit
 

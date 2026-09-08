@@ -418,24 +418,25 @@ def build_layers():
     # Eight true frames at 32x32 for the independent spring glow. The anchor is
     # the same bottom-center pixel in every frame, while the silhouette changes.
     light_frames = []
-    widths = [4, 5, 6, 5, 4, 6, 5, 4]
+    widths = [8, 10, 12, 10, 8, 12, 10, 8]
     offsets = [0, 0, 1, 1, 0, -1, -1, 0]
     for f in range(8):
         im = Image.new("RGBA", (32, 32), rgba("void"))
         d = ImageDraw.Draw(im)
         cx = 16 + offsets[f]
         bw = widths[f]
-        # stepped beam, always terminates at the same anchor y=31
+        # Broad, stepped beam like the supplied light reference. It always
+        # terminates at the same anchor y=31; only the silhouette above moves.
         rect(d, (cx - bw // 2, 0, cx + bw // 2, 20 + (f % 2)), "beam0")
-        rect(d, (cx - max(1, bw // 2 - 1), 0, cx + max(1, bw // 2 - 1), 19 + ((f + 1) % 2)), "beam1")
-        rect(d, (cx - 1, 0, cx + 1, 18 + (f % 3)), "beam2")
+        rect(d, (cx - max(2, bw // 2 - 2), 0, cx + max(2, bw // 2 - 2), 19 + ((f + 1) % 2)), "beam1")
+        rect(d, (cx - max(1, bw // 2 - 4), 0, cx + max(1, bw // 2 - 4), 18 + (f % 3)), "beam2")
         # stepped expanding halo, not a blur
-        r = 5 + (f % 3)
-        rect(d, (cx - r, 22, cx + r, 27), "beam0")
-        rect(d, (cx - r + 2, 21, cx + r - 2, 28), "beam1")
-        rect(d, (cx - 3, 22, cx + 3, 28), "beam2")
-        rect(d, (cx - 2, 23, cx + 2, 27), "beam3")
-        rect(d, (cx - 1, 24, cx + 1, 26), "beam4")
+        r = 6 + (f % 3)
+        rect(d, (cx - r, 21, cx + r, 27), "beam0")
+        rect(d, (cx - r + 2, 20, cx + r - 2, 28), "beam1")
+        rect(d, (cx - 5, 21, cx + 5, 28), "beam2")
+        rect(d, (cx - 3, 22, cx + 3, 28), "beam3")
+        rect(d, (cx - 2, 23 + (f % 2), cx + 2, 26 + (f % 2)), "beam4")
         # two controlled sparkles migrate around the fixed core
         sx = 8 + ((f * 3) % 15); sy = 17 + ((f * 2) % 7)
         rect(d, (sx, sy, sx + 1, sy + 1), "beam3")
@@ -684,9 +685,9 @@ def build_preview(groups, light_frames):
     # independent animated Aseprite sprite below.
     beam_layer = Image.new("RGBA", im.size, rgba("void"))
     bd = ImageDraw.Draw(beam_layer)
-    rect(bd, (30 * TILE, 0, 33 * TILE - 1, 12 * TILE), "beam0")
-    rect(bd, (31 * TILE, 0, 32 * TILE - 1, 12 * TILE), "beam1")
-    rect(bd, (31 * TILE + 2, 0, 31 * TILE + 5, 12 * TILE), "beam2")
+    rect(bd, (29 * TILE, 0, 34 * TILE - 1, 12 * TILE), "beam0")
+    rect(bd, (30 * TILE, 0, 33 * TILE - 1, 12 * TILE), "beam1")
+    rect(bd, (31 * TILE, 0, 32 * TILE - 1, 12 * TILE), "beam2")
     im.alpha_composite(beam_layer)
     # beam in the first preview frame, then trees and rocks as independent art
     beam = light_frames[0]
@@ -711,6 +712,7 @@ def write_manifest(meta):
         "nom": "Luminous Spring PMDO — reconstruction Halcyon",
         "source_design": "luminoussspring.png",
         "technical_reference": "Luminous_Spring_TDS REFERENCE A IMITER.png",
+        "light_reference": "LIGHT EFFECT REFERENCE.png",
         "reference_project": "Palikadude/Halcyon",
         "reference_observed": {"ground_tile_px": 8, "layer_order": ["Base", "River", "Cliffs", "Shadows", "Objects Under", "Objects", "Objects Over", "Fringe"], "river_animation_frames": 4, "river_animation_frame_length": 10},
         "grid": {"pmd_ground_tile_px": 8, "art_module_px": 16, "collision_subgrid_px": 8, "interpolation": "none", "antialiasing": False},
@@ -718,7 +720,7 @@ def write_manifest(meta):
         "sheets": meta,
         "animation": {"frames": 8, "canvas_px": [32, 32], "duration_ms": 100, "anchor_px": [16, 31], "aseprite": "aseprite/05_lumiere_spring.aseprite", "sheet": "planches/05_lumiere_frames.png", "frames_are_distinct": True},
         "files": {"tiled": "tiled/luminous_spring_pmdo.tmj", "rsground": "pmd/Data/Ground/luminous_spring_pmdo.rsground", "preview": "preview/luminous_spring_pmdo_animation_board.png"},
-        "generator": {"configuration": "source/generated/generator_config.json", "studies": ["source/generated/zone_pmdo_reconstruction.png", "source/generated/rives_bassin_pmdo.png", "source/generated/sol_vegetation_pmdo.png", "source/generated/lumiere_animation_pmdo.png"], "role": "design studies only; final tiles are manually rebuilt at 8 px with this palette"},
+        "generator": {"configuration": "source/generated/generator_config.json", "studies": ["source/generated/zone_pmdo_reconstruction.png", "source/generated/rives_bassin_pmdo.png", "source/generated/sol_vegetation_pmdo.png", "source/generated/lumiere_animation_pmdo.png", "source/generated/lumiere_animation_pmdo_reference.png"], "role": "design studies only; final tiles are manually rebuilt at 8 px with this palette"},
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
