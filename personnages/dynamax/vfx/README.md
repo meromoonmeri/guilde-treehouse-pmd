@@ -1,28 +1,30 @@
-# VFX Dynamax — effets seuls, à superposer sur n'importe quel sprite
+# VFX Dynamax — effets seuls, sans personnage ni fond
 
-![Aperçu](apercu.png)
+![Toutes les images, fond transparent](apercu.png)
 
-Effets visuels de la Dynamax **sans personnage ni fond**, dessinés en pixel art à l'échelle 1 et agrandis × 3
-comme les sprites Dynamax du dépôt. Deux tailles : **M** (corps ≤ 24 px de large à l'échelle 1 : —)
-et **L** (au-delà : Hariyama, Pâtachiot (Pawmi)). L'entrée `dynamax.vfx` du `kit.json` de chaque pack Dynamax donne la taille et le
-décalage à appliquer ; pour un autre sprite, mesurer la largeur du corps au repos.
+Effets visuels de la Dynamax **tels qu'ils se jouent en jeu par-dessus n'importe quel sprite** : ce dossier ne
+contient **aucun personnage et aucun fond** — uniquement les effets, sur transparence, dans les feuilles comme
+dans les aperçus (`apercu.png`, `apercu.gif`). Pixel art dessiné à l'échelle 1 et agrandi × 3 comme les
+sprites Dynamax du dépôt. Deux gabarits : **M** (corps ≤ 24 px de large à l'échelle 1 : Tarpaud (Politoed), Écrémeuh (Miltank), Gardevoir, Griknot (Gible), Pandespiègle (Pancham), Falinks (escouade)) et **L**
+(au-delà : Hariyama, Capidextre (Ambipom), Zarude, Pâtachiot (Pawmi)). L'entrée `dynamax.vfx` du `kit.json` de chaque pack Dynamax donne le gabarit et le décalage
+à appliquer ; pour un autre sprite, mesurer la largeur du corps au repos.
 
 | Effet | Case | Images | Durée | Ancre | Boucle |
 | --- | --- | --- | --- | --- | --- |
-| Transformation-M | 192 × 368 | 15 | 62 ticks | sol | non |
-| NuagesApparition-M | 136 × 56 | 5 | 24 ticks | centre de l’anneau | non |
-| Nuages-M | 136 × 56 | 12 | 48 ticks | centre de l’anneau | oui |
-| Aura-M | 88 × 104 | 4 | 16 ticks | centre du corps | oui |
-| Transformation-L | 224 × 440 | 15 | 62 ticks | sol | non |
-| NuagesApparition-L | 208 × 80 | 5 | 24 ticks | centre de l’anneau | non |
-| Nuages-L | 208 × 80 | 12 | 48 ticks | centre de l’anneau | oui |
-| Aura-L | 120 × 136 | 4 | 16 ticks | centre du corps | oui |
+| `Transformation-M` | 192 × 368 | 15 | 62 ticks | sol | non |
+| `NuagesApparition-M` | 136 × 56 | 5 | 24 ticks | centre de l’anneau | non |
+| `Nuages-M` | 136 × 56 | 12 | 48 ticks | centre de l’anneau | oui |
+| `Aura-M` | 88 × 104 | 4 | 16 ticks | centre du corps | oui |
+| `Transformation-L` | 224 × 440 | 15 | 62 ticks | sol | non |
+| `NuagesApparition-L` | 208 × 80 | 5 | 24 ticks | centre de l’anneau | non |
+| `Nuages-L` | 208 × 80 | 12 | 48 ticks | centre de l’anneau | oui |
+| `Aura-L` | 120 × 136 | 4 | 16 ticks | centre du corps | oui |
 
 ## Séquence en jeu
 
 1. Le Pokémon (sprite normal) est à l'arrêt. Lancer **Transformation** avec l'ancre sur son sol (pixel blanc de
    sa feuille Shadow), dessinée par-dessus le sprite. Images 1–4 : un rayon fin descend du ciel et frappe le sommet
-   du Pokémon (hauteur calibrée pour un corps de taille M ou L). Images 5–10 : la **colonne d'énergie opaque**
+   du Pokémon (hauteur calibrée pour un corps de gabarit M ou L). Images 5–10 : la **colonne d'énergie opaque**
    s'abat (bord clair, bandes rouges où coulent des étincelles, cœur cramoisi), enroulée d'**éclairs épais et
    opaques** cramoisi bordé de rose qui tournent en descendant ; **masquer le sprite normal à l'image 5**.
 2. Image 11 (`HitFrame` = 10) : **flash** — la colonne devient blanche, grand éclat en étoile : **afficher le sprite
@@ -36,14 +38,19 @@ décalage à appliquer ; pour un autre sprite, mesurer la largeur du corps au re
 4. **Aura** : les sprites Dynamax du dépôt ont déjà l'aura animée dans leurs feuilles. Cet effet générique (ellipse
    d'énergie, 4 images) sert à donner l'aura à un sprite qui ne l'a pas (ancre au centre du corps).
 
+Un exemple d'intégration de cette séquence sur un sprite (Hariyama, sur le parquet) est conservé **hors de ce
+dossier**, à titre de document : `source/personnages/reference/dynamax/exemple_sequence_hariyama.gif`.
+
+## Format
+
 Palette des effets : 5 couleurs — sombre (20, 8, 16), cramoisi (138, 12, 48), rouge (232, 40, 72), claire
-(255, 144, 128), blanc (255, 236, 232) ; tout est opaque (aucune transparence partielle). Feuilles à une ligne (un
-VFX n'a pas d'orientation), `AnimData.xml` façon SpriteCollab (index 13+),
-`*-Offsets.png` (centre vert = ancre) et `*-Shadow.png` (pixel blanc = ancre) pour les lecteurs du dépôt,
-`dynamax_vfx.aseprite` (une étiquette par effet), `apercu.png`, `apercu_effets.gif` (effets seuls sur damier),
-`apercu_demonstration.gif` (Hariyama : petit sprite, transformation, sprite Dynamax, apparition puis boucle des nuages).
+(255, 144, 128), blanc (255, 236, 232) ; tout est opaque (aucune transparence partielle) sur fond transparent
+(alpha 0). Feuilles à une ligne (un VFX n'a pas d'orientation), `AnimData.xml` façon SpriteCollab (index 13+),
+`*-Offsets.png` (centre vert = ancre) et `*-Shadow.png` (pixel blanc = ancre) pour les lecteurs du dépôt et
+SkyTemple, `dynamax_vfx.aseprite` (un calque, une étiquette par effet), `apercu.png` (toutes les images, fond
+transparent), `apercu.gif` (lecture des huit effets, fond transparent), `kit.json`, `controle_qualite.json`.
 
 Design : brouillons du générateur d'images `source/personnages/reference/dynamax/concept_*.png` (volutes à cœur
 clair, colonne à cœur sombre enroulée d'éclairs, flash en étoile, formation des nuages) ; tout est redessiné à la
 main sur la grille dans `source/personnages/dynamax_fx.py` et `build_dynamax_vfx.py`. Reconstruire :
-`python3 source/personnages/build_dynamax_vfx.py`.
+`python3 source/personnages/build_dynamax_vfx.py` ; vérifier : `python3 source/personnages/verify_dynamax_sprites.py --vfx`.

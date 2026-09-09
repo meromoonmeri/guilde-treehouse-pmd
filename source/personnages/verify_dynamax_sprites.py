@@ -16,8 +16,10 @@ README et aperçus présents ; l'entrée `dynamax.vfx` du kit.json désigne une 
 (Les sprites officiels ne sont pas des miroirs exacts gauche/droite : chaque direction est comparée à la sienne.)
 
 Le dossier `personnages/dynamax/vfx/` est vérifié à part (`--vfx` ou sans argument) : feuilles à une ligne, cases
-multiples de 8, colonnes = Durations, alpha 0/255, ancre unique, palette ≤ 5 couleurs, Hit / Return dans les images,
-AnimData index ≥ 13, GIF et Aseprite présents.
+multiples de 8, colonnes = Durations, alpha 0/255, ancre unique, palette = les 5 couleurs des effets et rien
+d'autre (donc **aucun personnage ni fond** : pas une couleur de sprite, pas un pixel de parquet), aperçus `apercu.png`
+et `apercu.gif` à fond transparent, Hit / Return dans les images, AnimData index ≥ 13, Aseprite présent, aucun
+fichier étranger (démonstration avec personnage, damier) dans le dossier.
 
 Usage : python3 source/personnages/verify_dynamax_sprites.py [slug ...] [--vfx] → controle_qualite.json.
 """
@@ -34,10 +36,12 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "source" / "personnages"))
 from build_dynamax_sprites import AURA, AURA_LIGHT, OUT_ROOT, POKEMON, darkest_colour, load_source, white_pixel  # noqa: E402
+import dynamax_fx as FX  # noqa: E402
 
 MAX_COLOURS = 15
 VFX_DIR = OUT_ROOT / "vfx"
-VFX_COLOURS = 5
+VFX_PALETTE = {FX.FX_DARK, FX.FX_CRIMSON, FX.FX_RED, FX.FX_LIGHT, FX.FX_WHITE}
+VFX_FILES = {"AnimData.xml", "kit.json", "README.md", "apercu.png", "apercu.gif", "dynamax_vfx.aseprite", "controle_qualite.json"}
 
 
 def check_vfx() -> tuple[list[str], dict]:
@@ -114,11 +118,32 @@ def check_vfx() -> tuple[list[str], dict]:
                 ys = np.nonzero(m.any(axis=1))[0]
                 if ys.max() > ay + 4 * scale:                       # le disque au pied de la colonne déborde de 3 px × échelle
                     E(f"{n} i{i} : dessin trop bas sous le sol (ancre)")
-    if len(colours) > VFX_COLOURS:
-        E(f"{len(colours)} couleurs opaques (> {VFX_COLOURS})")
-    for f in ("kit.json", "README.md", "apercu.png", "apercu_effets.gif", "apercu_demonstration.gif", "dynamax_vfx.aseprite"):
+    if not colours <= VFX_PALETTE:
+        E(f"couleurs hors palette des effets (personnage ou fond ?) : {sorted(colours - VFX_PALETTE)[:5]}")
+    # rien d'autre que les effets : aperçus sur transparence, aucun fichier étranger
+    for f in sorted(VFX_FILES - {"controle_qualite.json"}):
         if not (VFX_DIR / f).is_file():
             E(f"{f} absent")
+    allowed = VFX_FILES | {f"{n}-{k}.png" for n in names for k in ("Anim", "Offsets", "Shadow")}
+    for f in sorted(VFX_DIR.iterdir()):
+        if f.name not in allowed:
+            E(f"fichier étranger dans vfx/ : {f.name} (le dossier ne doit contenir que les effets)")
+    if (VFX_DIR / "apercu.png").is_file():
+        a = np.array(Image.open(VFX_DIR / "apercu.png").convert("RGBA"))
+        if a[0, 0, 3] != 0 or (a[:, :, 3] > 0).mean() > 0.5:
+            E("apercu.png : fond non transparent")
+        extra = set(map(tuple, a[a[:, :, 3] > 0][:, :3].tolist())) - VFX_PALETTE
+        if extra:
+            E(f"apercu.png : couleurs hors palette des effets {sorted(extra)[:3]}")
+    if (VFX_DIR / "apercu.gif").is_file():
+        g = Image.open(VFX_DIR / "apercu.gif")
+        if g.info.get("transparency") is None:
+            E("apercu.gif : pas de couleur transparente")
+        else:
+            g.seek(0)
+            first = np.array(g.convert("RGBA"))
+            if first[0, 0, 3] != 0:
+                E("apercu.gif : fond non transparent")
     ase = VFX_DIR / "dynamax_vfx.aseprite"
     if ase.is_file():
         head = ase.read_bytes()[:128]

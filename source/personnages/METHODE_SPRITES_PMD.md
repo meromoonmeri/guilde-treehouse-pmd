@@ -203,8 +203,13 @@ rien : on transforme les feuilles de la source case par case (`build_dynamax_spr
    échange le sprite normal contre le sprite Dynamax, `ReturnFrame` = moment où lancer l'effet suivant. Chaque pack
    n'emporte que ce qui lui est propre (l'aura, qui colle à la silhouette) et un `kit.json["dynamax"]["vfx"]`
    (taille + décalage de l'anneau). Le seul lien entre un pack et le VFX est donc géométrique (`vfx_info`), et le
-   vérificateur le contrôle. Un GIF de démonstration (`apercu_demonstration.gif`) rejoue la séquence complète sur
-   un sprite pour que le lecteur voie le résultat sans moteur de jeu.
+   vérificateur le contrôle. **Le dossier du VFX ne contient que l'effet** : feuilles, `apercu.png`, `apercu.gif`
+   et Aseprite sur fond transparent, palette = les couleurs de l'effet et rien d'autre (le vérificateur refuse
+   toute autre couleur et tout fichier étranger). Deuxième retour utilisateur sur ce point : même un GIF de
+   démonstration avec le Pokémon et le parquet, ou un aperçu sur damier, n'a rien à faire dans le livrable d'un
+   VFX ; si l'on veut montrer l'intégration, on l'écrit **à côté**, dans `reference/dynamax/` (ici
+   `exemple_sequence_hariyama.gif`, produit par `example_gif`), et on le présente comme un document, pas comme
+   l'effet.
 9. **Dessiner un VFX en pixel art** (`dynamax_fx.py`) : palette de 4–5 couleurs opaques (sombre, cramoisi, rouge,
    clair, blanc), **aucune transparence partielle** ; les concepts du générateur d'images
    (`reference/dynamax/concept_*.png`) servent de guide de forme et de rythme (volutes à cœur clair, colonne à

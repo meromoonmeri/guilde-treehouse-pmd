@@ -18,8 +18,10 @@ l'échelle 1 puis agrandis × 3 comme les sprites Dynamax (`dynamax_fx.py` pour 
 
 Format : feuilles `<Effet>-<Taille>.png` (une ligne, une colonne par image), `AnimData.xml` façon SpriteCollab
 (index libres ≥ 13 ; une seule direction : un VFX n'a pas d'orientation), `*-Offsets.png` (centre vert = ancre)
-et `*-Shadow.png` (pixel blanc = ancre) pour que les lecteurs du dépôt et SkyTemple les affichent ; Aseprite,
-GIF sur fond damier et sur le parquet, `kit.json`, `README.md`.
+et `*-Shadow.png` (pixel blanc = ancre) pour que les lecteurs du dépôt et SkyTemple les affichent ; Aseprite (un
+calque), `apercu.png` et `apercu.gif` à fond transparent, `kit.json`, `README.md`. **Rien d'autre** : ni personnage,
+ni fond, ni damier dans ce dossier (retour utilisateur). L'exemple d'intégration sur un sprite (Hariyama) est écrit
+hors livrable, dans `source/personnages/reference/dynamax/exemple_sequence_hariyama.gif`.
 
 Usage : python3 source/personnages/build_dynamax_vfx.py [--echelle N]
 """
@@ -328,55 +330,72 @@ def write_animdata(comps: dict[str, Composed], path: Path) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def checker(size: tuple[int, int], zoom: int) -> Image.Image:
-    a = np.zeros((size[1], size[0], 4), np.uint8)
-    yy, xx = np.indices((size[1], size[0]))
-    dark = ((xx // (8 * zoom) + yy // (8 * zoom)) % 2) == 0
-    a[dark] = (58, 58, 82, 255)
-    a[~dark] = (70, 70, 96, 255)
-    return Image.fromarray(a, "RGBA")
+GIF_PALETTE = [(0, 0, 0), FX.FX_DARK, FX.FX_CRIMSON, FX.FX_RED, FX.FX_LIGHT, FX.FX_WHITE]   # index 0 = transparent
+
+
+def gif_frame(arr: np.ndarray) -> Image.Image:
+    """Image P pour un GIF à fond transparent : index 0 = transparent, puis la palette des effets."""
+    idx = np.zeros(arr.shape[:2], np.uint8)
+    opaque = arr[:, :, 3] > 0
+    for k, col in enumerate(GIF_PALETTE[1:], start=1):
+        idx[opaque & np.all(arr[:, :, :3] == col, axis=2)] = k
+    stray = opaque & (idx == 0)
+    if stray.any():                                            # couleur hors palette (ne doit pas arriver) : rouge
+        idx[stray] = 3
+    im = Image.fromarray(idx, "P")
+    im.putpalette([v for c in GIF_PALETTE for v in c])
+    return im
+
+
+def save_gif(frames: list[np.ndarray], durations_ticks: list[int], path: Path) -> None:
+    """GIF transparent (disposal 2 : chaque image repart d'un fond vide)."""
+    ims = [gif_frame(f) for f in frames]
+    ims[0].save(path, save_all=True, append_images=ims[1:], duration=[int(round(d * 1000 / 60)) for d in durations_ticks],
+                loop=0, transparency=0, disposal=2, optimize=False)
+
+
+def label(text: str) -> np.ndarray:
+    """Étiquette en pixels nets (rendu 1 bit, pas d'anticrénelage) : texte sombre bordé de blanc, dans la palette."""
+    f = font(12)
+    probe = ImageDraw.Draw(Image.new("1", (1, 1)))
+    x0, y0, x1, y1 = probe.textbbox((3, 1), text, font=f)
+    w = x1 + 6
+    mask = Image.new("1", (w, max(18, y1 + 3)), 0)
+    ImageDraw.Draw(mask).text((3, 1), text, font=f, fill=1)
+    m = np.array(mask, bool)
+    out = np.zeros((mask.height, w, 4), np.uint8)
+    out[dilate(m)] = (*FX.FX_WHITE, 255)
+    out[m] = (*FX.FX_DARK, 255)
+    return out
 
 
 def contact_sheet(comps: dict[str, Composed], path: Path) -> None:
-    zoom = 1
+    """Toutes les images de tous les effets, fond transparent, une bande par effet, une étiquette au-dessus."""
     blocks = []
     for name, c in comps.items():
         n = len(c.durations)
-        img = Image.new("RGBA", (n * (c.fw * zoom + 2) + 8, c.fh * zoom + 2 + 26), (26, 26, 46, 255))
-        d = ImageDraw.Draw(img)
-        extra = "".join(f" · {k} {v}" for k, v in (("Hit", c.hit), ("Return", c.ret)) if v is not None)
-        d.text((4, 4), f"{name} — case {c.fw} × {c.fh}, {n} images, durées {c.durations}{extra}", fill=(230, 230, 230, 255), font=font(12))
+        extra = "".join(f" · {k} {v}" for k, v in (("HitFrame", c.hit), ("ReturnFrame", c.ret)) if v is not None)
+        lab = label(f"{name} — case {c.fw} × {c.fh}, {n} images, durées {c.durations}{extra}")
+        strip = np.zeros((c.fh, n * (c.fw + 2), 4), np.uint8)
         for i in range(n):
-            cell = Image.fromarray(c.cells[0][i][0], "RGBA")
-            bg = checker((c.fw * zoom, c.fh * zoom), zoom)
-            bg.alpha_composite(cell.resize((c.fw * zoom, c.fh * zoom), Image.NEAREST))
-            # ancre
-            ax, ay = c.anchors[0][i]
-            dd = ImageDraw.Draw(bg)
-            dd.line([(ax * zoom - 3, ay * zoom), (ax * zoom + 3, ay * zoom)], fill=(0, 255, 0, 255))
-            dd.line([(ax * zoom, ay * zoom - 3), (ax * zoom, ay * zoom + 3)], fill=(0, 255, 0, 255))
-            img.alpha_composite(bg, (4 + i * (c.fw * zoom + 2), 26))
-        blocks.append(img)
-    W = max(b.width for b in blocks)
-    H = sum(b.height + 6 for b in blocks) + 64
-    out = Image.new("RGBA", (W + 16, H), (26, 26, 46, 255))
-    d = ImageDraw.Draw(out)
-    d.text((12, 10), "VFX DYNAMAX — EFFETS SEULS, SANS PERSONNAGE (× 3)", fill=(240, 240, 240, 255), font=font(18))
-    d.text((12, 36), "Transformation (ancre = sol), Nuages (ancre = centre de l'anneau), Aura (ancre = centre du corps) · tailles M et L · croix verte = ancre",
-           fill=(170, 170, 200, 255), font=font(12))
-    y = 64
-    for b in blocks:
-        out.alpha_composite(b, (8, y))
-        y += b.height + 6
-    out.save(path, optimize=True)
+            strip[:, i * (c.fw + 2):i * (c.fw + 2) + c.fw] = c.cells[0][i][0]
+        blocks.append((lab, strip))
+    W = max(max(l.shape[1], st.shape[1]) for l, st in blocks) + 8
+    H = sum(l.shape[0] + st.shape[0] + 10 for l, st in blocks) + 8
+    out = np.zeros((H, W, 4), np.uint8)
+    y = 4
+    for lab, strip in blocks:
+        paste(out, lab, 4, y)
+        y += lab.shape[0]
+        paste(out, strip, 4, y)
+        y += strip.shape[0] + 10
+    save_png(Image.fromarray(out, "RGBA"), path)
 
 
-def gif(comps: dict[str, Composed], names: list[str], path: Path, zoom: int = 1, span: int | None = None,
-        background: str = "damier", sprite: tuple[np.ndarray, tuple[int, int], int] | None = None) -> None:
-    """Lecture des effets côte à côte. `sprite` = (image RGBA, ancre, image à partir de laquelle l'afficher) pour la
-    démonstration sur le parquet ; sinon fond damier, effets seuls."""
-    cw = max(comps[n].fw for n in names) * zoom + 8
-    ch = max(comps[n].fh for n in names) * zoom + 8
+def gif(comps: dict[str, Composed], names: list[str], path: Path, span: int | None = None) -> None:
+    """Lecture des effets côte à côte, fond transparent, rien d'autre."""
+    cw = max(comps[n].fw for n in names) + 8
+    ch = max(comps[n].fh for n in names) + 8
     span = span or max(sum(comps[n].durations) for n in names)
     tick_frames = {}
     for n in names:
@@ -388,34 +407,25 @@ def gif(comps: dict[str, Composed], names: list[str], path: Path, zoom: int = 1,
                 t += d
         tick_frames[n] = seq
     events = sorted({t for seq in tick_frames.values() for t, _ in seq if t < span} | {0})
-    if background == "parquet":
-        bg = parquet_background((len(names) * cw, ch), zoom)
-    else:
-        bg = checker((len(names) * cw, ch), zoom)
-    frames_out, durations_out = [], []
+    frames, durs = [], []
     for k, t in enumerate(events):
         nxt = events[k + 1] if k + 1 < len(events) else span
-        img = bg.copy()
+        img = np.zeros((ch, len(names) * cw, 4), np.uint8)
         for col, n in enumerate(names):
             c = comps[n]
             i = max(i for tt, i in tick_frames[n] if tt <= t)
             ax, ay = c.anchors[0][i]
             cx = col * cw + cw // 2
             cy = ch - 12 if n.startswith("Transformation") else ch // 2
-            if sprite is not None and n.startswith("Transformation") and i >= sprite[2]:
-                simg, (sax, say), _ = sprite
-                img.alpha_composite(Image.fromarray(simg, "RGBA").resize((simg.shape[1] * zoom, simg.shape[0] * zoom), Image.NEAREST),
-                                    (cx - sax * zoom, cy - say * zoom))
-            cell = Image.fromarray(c.cells[0][i][0], "RGBA").resize((c.fw * zoom, c.fh * zoom), Image.NEAREST)
-            img.alpha_composite(cell, (cx - ax * zoom, cy - ay * zoom))
-        frames_out.append(img.convert("RGB").quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
-        durations_out.append(int(round((nxt - t) * 1000 / 60)))
-    frames_out[0].save(path, save_all=True, append_images=frames_out[1:], duration=durations_out, loop=0, optimize=True)
+            paste(img, c.cells[0][i][0], cx - ax, cy - ay)
+        frames.append(img)
+        durs.append(nxt - t)
+    save_gif(frames, durs, path)
 
 
-def demo_gif(comps: dict[str, Composed], path: Path, zoom: int = 1) -> None:
-    """Démonstration : petit Hariyama, transformation L, apparition des nuages, puis Hariyama Dynamax (aura intégrée)
-    sous la boucle des nuages — exactement la séquence à jouer en jeu."""
+def example_gif(comps: dict[str, Composed], path: Path) -> None:
+    """Exemple d'intégration, HORS livrable (dossier reference/) : petit Hariyama, transformation, sprite Dynamax,
+    apparition puis boucle des nuages sur le parquet — la séquence à jouer en jeu, pour les lecteurs humains."""
     src = ROOT / "source" / "personnages" / "reference" / "0297"
     big = ROOT / "personnages" / "dynamax" / "0297_hariyama"
     if not (src / "Idle-Anim.png").is_file() or not (big / "kit.json").is_file():
@@ -450,19 +460,15 @@ def demo_gif(comps: dict[str, Composed], path: Path, zoom: int = 1) -> None:
     t_loop = intro_seq[-1][0] + intro.durations[-1]
     t_end = tr_seq[-1][0] + tr.durations[-1]
     total = t_loop + 2 * sum(loop.durations)
-    W, H = max(tr.fw, fw + 40) * zoom + 16, (tr.fh // 2 + 40) * zoom + 16
-    bg = parquet_background((W, H), zoom)
-    cx, cy = W // 2, H - 14 * zoom
+    W, H = max(tr.fw, fw + 40) + 16, (tr.fh // 2 + 40) + 16
+    bg = parquet_background((W, H), 1)
+    cx, cy = W // 2, H - 14
     events = sorted({t for t, _ in tr_seq} | {t for t, _ in intro_seq} | set(range(t_loop, total, CLOUD_TICKS)) | {20, 40})
     frames, durs = [], []
 
     def blit(img, arr, ax, ay, dx=0, dy=0):
-        im = Image.fromarray(arr, "RGBA")
-        if zoom != 1:
-            im = im.resize((arr.shape[1] * zoom, arr.shape[0] * zoom), Image.NEAREST)
-        img.alpha_composite(im, (cx - ax * zoom + dx * zoom, cy - ay * zoom + dy * zoom))
+        img.alpha_composite(Image.fromarray(arr, "RGBA"), (cx - ax + dx, cy - ay + dy))
 
-    gt = 0
     for k, e in enumerate(events):
         nxt = events[k + 1] if k + 1 < len(events) else total
         img = bg.copy()
@@ -470,8 +476,7 @@ def demo_gif(comps: dict[str, Composed], path: Path, zoom: int = 1) -> None:
         if i is not None and i < 4:
             blit(img, small, *small_anchor)
         if i is None or i >= tr.hit:
-            gi = 0
-            acc = 0
+            acc, gi = 0, 0
             for gi, d in enumerate(gdurs):
                 acc += d
                 if (e - t_ret) % sum(gdurs) < acc:
@@ -487,6 +492,7 @@ def demo_gif(comps: dict[str, Composed], path: Path, zoom: int = 1) -> None:
             blit(img, loop.cells[0][j][0], *loop.anchors[0][j], 0, cloud_dy)
         frames.append(img.convert("RGB").quantize(colors=128, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
         durs.append(int(round((nxt - e) * 1000 / 60)))
+    path.parent.mkdir(parents=True, exist_ok=True)
     frames[0].save(path, save_all=True, append_images=frames[1:], duration=durs, loop=0, optimize=True)
 
 
@@ -502,20 +508,22 @@ def pack_sizes() -> dict[str, list[str]]:
 
 
 def write_readme(comps: dict[str, Composed], colours: int, path: Path, scale: int) -> None:
-    rows = "\n".join(f"| {n} | {c.fw} × {c.fh} | {len(c.durations)} | {sum(c.durations)} ticks | "
+    rows = "\n".join(f"| `{n}` | {c.fw} × {c.fh} | {len(c.durations)} | {sum(c.durations)} ticks | "
                      f"{'sol' if n.startswith('Transformation') else 'centre de l’anneau' if n.startswith('Nuages') else 'centre du corps'} |"
                      f" {'oui' if n.startswith('Nuages-') or n.startswith('Aura') else 'non'} |"
                      for n, c in comps.items())
     sizes = pack_sizes()
     who = {k: (", ".join(v) if v else "—") for k, v in sizes.items()}
-    text = f"""# VFX Dynamax — effets seuls, à superposer sur n'importe quel sprite
+    text = f"""# VFX Dynamax — effets seuls, sans personnage ni fond
 
-![Aperçu](apercu.png)
+![Toutes les images, fond transparent](apercu.png)
 
-Effets visuels de la Dynamax **sans personnage ni fond**, dessinés en pixel art à l'échelle 1 et agrandis × {scale}
-comme les sprites Dynamax du dépôt. Deux tailles : **M** (corps ≤ 24 px de large à l'échelle 1 : {who['M']})
-et **L** (au-delà : {who['L']}). L'entrée `dynamax.vfx` du `kit.json` de chaque pack Dynamax donne la taille et le
-décalage à appliquer ; pour un autre sprite, mesurer la largeur du corps au repos.
+Effets visuels de la Dynamax **tels qu'ils se jouent en jeu par-dessus n'importe quel sprite** : ce dossier ne
+contient **aucun personnage et aucun fond** — uniquement les effets, sur transparence, dans les feuilles comme
+dans les aperçus (`apercu.png`, `apercu.gif`). Pixel art dessiné à l'échelle 1 et agrandi × {scale} comme les
+sprites Dynamax du dépôt. Deux gabarits : **M** (corps ≤ 24 px de large à l'échelle 1 : {who['M']}) et **L**
+(au-delà : {who['L']}). L'entrée `dynamax.vfx` du `kit.json` de chaque pack Dynamax donne le gabarit et le décalage
+à appliquer ; pour un autre sprite, mesurer la largeur du corps au repos.
 
 | Effet | Case | Images | Durée | Ancre | Boucle |
 | --- | --- | --- | --- | --- | --- |
@@ -525,7 +533,7 @@ décalage à appliquer ; pour un autre sprite, mesurer la largeur du corps au re
 
 1. Le Pokémon (sprite normal) est à l'arrêt. Lancer **Transformation** avec l'ancre sur son sol (pixel blanc de
    sa feuille Shadow), dessinée par-dessus le sprite. Images 1–4 : un rayon fin descend du ciel et frappe le sommet
-   du Pokémon (hauteur calibrée pour un corps de taille M ou L). Images 5–10 : la **colonne d'énergie opaque**
+   du Pokémon (hauteur calibrée pour un corps de gabarit M ou L). Images 5–10 : la **colonne d'énergie opaque**
    s'abat (bord clair, bandes rouges où coulent des étincelles, cœur cramoisi), enroulée d'**éclairs épais et
    opaques** cramoisi bordé de rose qui tournent en descendant ; **masquer le sprite normal à l'image 5**.
 2. Image 11 (`HitFrame` = 10) : **flash** — la colonne devient blanche, grand éclat en étoile : **afficher le sprite
@@ -539,17 +547,22 @@ décalage à appliquer ; pour un autre sprite, mesurer la largeur du corps au re
 4. **Aura** : les sprites Dynamax du dépôt ont déjà l'aura animée dans leurs feuilles. Cet effet générique (ellipse
    d'énergie, 4 images) sert à donner l'aura à un sprite qui ne l'a pas (ancre au centre du corps).
 
+Un exemple d'intégration de cette séquence sur un sprite (Hariyama, sur le parquet) est conservé **hors de ce
+dossier**, à titre de document : `source/personnages/reference/dynamax/exemple_sequence_hariyama.gif`.
+
+## Format
+
 Palette des effets : {colours} couleurs — sombre (20, 8, 16), cramoisi (138, 12, 48), rouge (232, 40, 72), claire
-(255, 144, 128), blanc (255, 236, 232) ; tout est opaque (aucune transparence partielle). Feuilles à une ligne (un
-VFX n'a pas d'orientation), `AnimData.xml` façon SpriteCollab (index 13+),
-`*-Offsets.png` (centre vert = ancre) et `*-Shadow.png` (pixel blanc = ancre) pour les lecteurs du dépôt,
-`dynamax_vfx.aseprite` (une étiquette par effet), `apercu.png`, `apercu_effets.gif` (effets seuls sur damier),
-`apercu_demonstration.gif` (Hariyama : petit sprite, transformation, sprite Dynamax, apparition puis boucle des nuages).
+(255, 144, 128), blanc (255, 236, 232) ; tout est opaque (aucune transparence partielle) sur fond transparent
+(alpha 0). Feuilles à une ligne (un VFX n'a pas d'orientation), `AnimData.xml` façon SpriteCollab (index 13+),
+`*-Offsets.png` (centre vert = ancre) et `*-Shadow.png` (pixel blanc = ancre) pour les lecteurs du dépôt et
+SkyTemple, `dynamax_vfx.aseprite` (un calque, une étiquette par effet), `apercu.png` (toutes les images, fond
+transparent), `apercu.gif` (lecture des huit effets, fond transparent), `kit.json`, `controle_qualite.json`.
 
 Design : brouillons du générateur d'images `source/personnages/reference/dynamax/concept_*.png` (volutes à cœur
 clair, colonne à cœur sombre enroulée d'éclairs, flash en étoile, formation des nuages) ; tout est redessiné à la
 main sur la grille dans `source/personnages/dynamax_fx.py` et `build_dynamax_vfx.py`. Reconstruire :
-`python3 source/personnages/build_dynamax_vfx.py`.
+`python3 source/personnages/build_dynamax_vfx.py` ; vérifier : `python3 source/personnages/verify_dynamax_sprites.py --vfx`.
 """
     path.write_text(text, encoding="utf-8")
 
@@ -561,18 +574,18 @@ def main(argv: list[str]) -> None:
         if arg == "--echelle":
             scale = int(next(it))
     OUT.mkdir(parents=True, exist_ok=True)
-    for old in OUT.glob("*.png"):
+    for old in list(OUT.glob("*.png")) + list(OUT.glob("*.gif")):
         old.unlink()
     comps = build_all(scale)
     for name, c in comps.items():
         for which, kind in enumerate(["Anim", "Offsets", "Shadow"]):
             save_png(sheet(c, which), OUT / f"{name}-{kind}.png")
     write_animdata(comps, OUT / "AnimData.xml")
-    ase = write_aseprite(comps, OUT / "dynamax_vfx.aseprite", list(comps))
+    ase = write_aseprite(comps, OUT / "dynamax_vfx.aseprite", list(comps), layers=["Effet"])
     contact_sheet(comps, OUT / "apercu.png")
     gif(comps, ["Transformation-M", "Transformation-L", "NuagesApparition-M", "Nuages-M", "NuagesApparition-L", "Nuages-L", "Aura-M", "Aura-L"],
-        OUT / "apercu_effets.gif")
-    demo_gif(comps, OUT / "apercu_demonstration.gif")
+        OUT / "apercu.gif")
+    example_gif(comps, ROOT / "source" / "personnages" / "reference" / "dynamax" / "exemple_sequence_hariyama.gif")
     used = set()
     for c in comps.values():
         for cell in c.cells[0]:
@@ -583,6 +596,7 @@ def main(argv: list[str]) -> None:
                        "ancre": "sol" if n.startswith("Transformation") else "centre de l'anneau" if n.startswith("Nuages") else "centre du corps",
                        "taille": n.split("-")[1]} for n, c in comps.items()},
            "echelle": scale, "palette": sorted(used), "tailles": SIZES,
+           "contenu": "effets seuls : aucun personnage, aucun fond (feuilles et aperçus sur transparence)",
            "sequence": ["Transformation à l'ancre du sprite (masquer le sprite normal à l'image 5, afficher le sprite Dynamax à HitFrame)",
                         "NuagesApparition à ReturnFrame, ancre = ancre du sprite + ancre_nuages_decalage (kit.json de chaque pack)",
                         "Nuages en boucle au même endroit",

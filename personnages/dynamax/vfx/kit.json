@@ -229,6 +229,7 @@
       "petits_nuages": false
     }
   },
+  "contenu": "effets seuls : aucun personnage, aucun fond (feuilles et aperçus sur transparence)",
   "sequence": [
     "Transformation à l'ancre du sprite (masquer le sprite normal à l'image 5, afficher le sprite Dynamax à HitFrame)",
     "NuagesApparition à ReturnFrame, ancre = ancre du sprite + ancre_nuages_decalage (kit.json de chaque pack)",
@@ -242,14 +243,7 @@
     ],
     "images": 72,
     "calques": [
-      "Bas",
-      "Bas-droite",
-      "Droite",
-      "Haut-droite",
-      "Haut",
-      "Haut-gauche",
-      "Gauche",
-      "Bas-gauche"
+      "Effet"
     ],
     "etiquettes": [
       "Transformation-M",

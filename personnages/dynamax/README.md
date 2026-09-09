@@ -7,7 +7,11 @@ rouge animée**. Aucun pixel du Pokémon n'est redessiné. Les **nuages tournant
 transformation** ne sont pas dans les sprites : ce sont des **VFX génériques, sans personnage ni fond**, dans
 [`vfx/`](vfx/README.md), à superposer en jeu sur n'importe quel sprite (deux tailles, M et L).
 
-![Démonstration : Hariyama, transformation, sprite Dynamax et nuages](vfx/apercu_demonstration.gif)
+![VFX Dynamax : les huit effets, seuls, sur transparence](vfx/apercu.gif)
+
+Le dossier `vfx/` ne contient **que les effets** (feuilles, aperçus et Aseprite sur fond transparent, palette de
+5 couleurs) : aucun personnage, aucun fond. Un exemple d'intégration de la séquence sur Hariyama est conservé à
+part, comme document : `source/personnages/reference/dynamax/exemple_sequence_hariyama.gif`.
 
 | Dossier | Pokémon | Source | Animations (index) | Couleurs | VFX | Licence |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -85,7 +89,8 @@ Le vérificateur rejoue les contrôles du SpriteBot (index, `CopyOf`, tailles de
 de l'origine se retrouve agrandi à sa place sans recoloration, que l'ancre et les repères sont ceux de l'origine
 × 3, que les durées, index et `CopyOf` sont identiques, que la palette = palette d'origine + aura, et que l'entrée
 `dynamax.vfx` désigne des VFX existants avec le bon décalage. Pour `vfx/` : feuilles à une ligne, cases multiples
-de 8, ancre unique, alpha binaire, 5 couleurs au plus, `HitFrame` < `ReturnFrame`.
+de 8, ancre unique, alpha binaire, palette = les 5 couleurs des effets et rien d'autre (donc ni personnage ni
+fond), aperçus transparents, aucun fichier étranger, `HitFrame` < `ReturnFrame`.
 
 ## Licences
 

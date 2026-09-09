@@ -564,19 +564,22 @@ def _chunk(kind: int, data: bytes) -> bytes:
     return struct.pack("<IH", len(data) + 6, kind) + data
 
 
-def write_aseprite(comps: dict[str, Composed], path: Path, order: list[str] | None = None) -> dict:
+def write_aseprite(comps: dict[str, Composed], path: Path, order: list[str] | None = None,
+                   layers: list[str] | None = None) -> dict:
     """Aseprite RGBA : un calque par direction, une image par case, une étiquette par animation.
-    `order` : noms d'animations à écrire (par défaut ANIM_ORDER sans Strike) ; réutilisé par les autres sprites."""
+    `order` : noms d'animations à écrire (par défaut ANIM_ORDER sans Strike) ; réutilisé par les autres sprites.
+    `layers` : noms des calques (par défaut les huit directions ; un VFX à une ligne n'en a qu'un)."""
     W = max(c.fw for c in comps.values())
     H = max(c.fh for c in comps.values())
     order = order or [n for n, _ in ANIM_ORDER if n != "Strike"]
+    layers = layers or DIRECTIONS
     frames, tags, cursor = [], [], 0
     for name in order:
         c = comps[name]
         n = len(c.durations)
         for i in range(n):
             cels = []
-            for d in range(8):
+            for d in range(len(layers)):
                 if d < len(c.cells):
                     cels.append(Image.fromarray(c.cells[d][i][0], "RGBA"))
                 else:
@@ -586,7 +589,7 @@ def write_aseprite(comps: dict[str, Composed], path: Path, order: list[str] | No
         cursor += n
 
     layer_chunks = b"".join(_chunk(0x2004, struct.pack("<HHHHHHB", 3, 0, 0, 0, 0, 0, 255) + b"\0" * 3 + _astr(label))
-                            for label in DIRECTIONS)
+                            for label in layers)
     tag_data = struct.pack("<H", len(tags)) + b"\0" * 8
     for start, end, label in tags:
         tag_data += struct.pack("<HHBH", start, end, 0, 0) + b"\0" * 6 + bytes((230, 180, 60)) + b"\0" + _astr(label)
@@ -609,14 +612,14 @@ def write_aseprite(comps: dict[str, Composed], path: Path, order: list[str] | No
             data = struct.pack("<HhhBHh", layer, x, y, 255, 2, 0) + b"\0" * 5
             data += struct.pack("<HH", q.width, q.height) + zlib.compress(q.tobytes(), 9)
             chunks.append(_chunk(0x2005, data))
-        n_chunks = len(chunks) - 1 + len(DIRECTIONS) if k == 0 else len(chunks)   # layer_chunks contient 8 chunks
+        n_chunks = len(chunks) - 1 + len(layers) if k == 0 else len(chunks)   # layer_chunks contient len(layers) chunks
         data = b"".join(chunks)
         body += struct.pack("<IHHH2sI", len(data) + 16, 0xF1FA, min(n_chunks, 0xFFFF), duration, b"\0\0", n_chunks) + data
     header = bytearray(128)
     struct.pack_into("<IHHHHHIH", header, 0, len(body) + 128, 0xA5E0, len(frames), W, H, 32, 1, 100)
     struct.pack_into("<HBBhhHH", header, 32, 0, 1, 1, 0, 0, 8, 8)
     path.write_bytes(header + body)
-    return {"canvas": [W, H], "images": len(frames), "calques": DIRECTIONS, "etiquettes": [t[2] for t in tags],
+    return {"canvas": [W, H], "images": len(frames), "calques": layers, "etiquettes": [t[2] for t in tags],
             "ancre": [W // 2, H // 2 + 4]}
 
 
