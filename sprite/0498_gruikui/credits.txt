@@ -1,0 +1,18 @@
+# Gruikui (Tepig) #0498 — version Dynamax (agrandissement × 3, aura et nuages Dynamax), format SpriteCollab : date, auteur, statut, licence, animations
+2026-09-09 00:00:00.000000	Dynamax scripté (source/sprite/build_dynamax.py)	CUR	PMDCollab_1+PMDCollab_2	Walk,Attack,Strike,Shoot,Sleep,Hurt,Idle,Swing,Double,Hop,Charge,Rotate,EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,Faint,HitGround
+
+Sprite d'origine : https://github.com/PMDCollab/SpriteCollab/tree/db1928346e45/sprite/0498 (https://sprites.pmdcollab.org/#/0498), crédits repris tels quels :
+  2022-02-18 08:50:55.881762	<@!319945906600411179>	CUR	PMDCollab_1	Attack,Idle,Walk
+  2022-02-22 04:29:43.784034	<@!237286997645983744>	CUR	PMDCollab_1	Attack,Charge,Double,Hop,Hurt,Idle,Rotate,Shoot,Sleep,Swing,Walk
+  2022-06-29 13:26:20.537869	<@!237286997645983744>	CUR	PMDCollab_1	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Swing,Double,Rotate,Hop
+  2022-06-30 04:41:29.958524	<@!704349360929898516>	CUR	PMDCollab_1	Idle,Walk,Attack,Charge,Shoot,Swing,Double,Rotate,Hop
+  2023-06-19 03:30:30.635190	<@!169247379453640706>	CUR	PMDCollab_2	EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,HitGround,Faint
+  2023-06-19 06:50:46.607316	<@!169247379453640706>	CUR	PMDCollab_2	Wake,HitGround,Faint
+  2023-10-13 20:25:43.048850	<@!169247379453640706>	CUR	PMDCollab_2	LeapForth
+
+Transformation : chaque pixel du sprite d'origine est agrandi × 3 (aucun pixel du Pokémon redessiné) ; aura rouge animée ajoutée
+autour de la silhouette (deux couleurs : (232, 40, 72) et (255, 144, 128)) ; trois nuages rouges tournent au-dessus de la tête.
+Toutes les animations d'origine sont reprises avec leurs index, durées, RushFrame / HitFrame / ReturnFrame et déplacements d'ancre (× échelle).
+Licence : PMDCollab_1+PMDCollab_2 — cette version dérivée suit la ou les licences du sprite d'origine (Unspecified = sprite du jeu, usage de fan non commercial ;
+PMDCollab_1 / PMDCollab_2 / CC_BY-NC_4 = usage non commercial avec crédit des auteurs ci-dessus).
+Forme non officielle : ce sprite n'a été ni soumis ni approuvé sur SpriteCollab.

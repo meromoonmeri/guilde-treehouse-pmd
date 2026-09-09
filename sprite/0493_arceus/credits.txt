@@ -1,0 +1,17 @@
+# Arceus #0493 — version Dynamax (agrandissement × 3, aura et nuages Dynamax), format SpriteCollab : date, auteur, statut, licence, animations
+2026-09-09 00:00:00.000000	Dynamax scripté (source/sprite/build_dynamax.py)	CUR	PMDCollab_1+PMDCollab_2	Walk,Attack,SpAttack,Shoot,Sleep,Hurt,Idle,Swing,Double,Hop,Charge,Rotate,EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,Faint,HitGround
+
+Sprite d'origine : https://github.com/PMDCollab/SpriteCollab/tree/db1928346e45/sprite/0493 (https://sprites.pmdcollab.org/#/0493), crédits repris tels quels :
+  2021-04-06 09:55:32.627394	<@!702275233125630042>	CUR	PMDCollab_1	Attack,Bite,Charge,Double,Hop,Hurt,Idle,Rotate,Sleep,Stomp,Swing,Walk
+  2021-07-16 03:57:13.083922	<@!702275233125630042>	CUR	PMDCollab_1	Attack,Bite,Charge,Double,Hop,Hurt,Idle,Rotate,Stomp,Swing,Walk
+  2021-11-01 04:23:55.604488	<@!544245909639397378>	CUR	PMDCollab_1	Attack,Bite,Charge,Double,Hop,Hurt,Idle,Rotate,Sleep,Stomp,Swing,Walk
+  2022-02-14 23:07:25.517625	<@!237286997645983744>	OLD	PMDCollab_1	Attack,Bite,Charge,Cringe,DeepBreath,Double,Eat,EventSleep,Faint,Float,Head,HitGround,Hop,Hurt,Idle,Laying,LeapForth,LookUp,LostBalance,Nod,Pain,Pose,Pull,Rotate,Sink,Sit,Sleep,Stomp,Swing,Trip,Tumble,TumbleBack,Wake,Walk
+  2022-08-24 08:48:31.418644	<@!237286997645983744>	OLD	PMDCollab_1	EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,HitGround,Faint
+  2024-02-05 16:21:42.530821	<@!544245909639397378>	CUR	PMDCollab_2	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Bite,Stomp,SpAttack,Swing,Double,Rotate,Hop,EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,HitGround,Faint
+
+Transformation : chaque pixel du sprite d'origine est agrandi × 3 (aucun pixel du Pokémon redessiné) ; aura rouge animée ajoutée
+autour de la silhouette (deux couleurs : (232, 40, 72) et (255, 144, 128)) ; trois nuages rouges tournent au-dessus de la tête.
+Toutes les animations d'origine sont reprises avec leurs index, durées, RushFrame / HitFrame / ReturnFrame et déplacements d'ancre (× échelle).
+Licence : PMDCollab_1+PMDCollab_2 — cette version dérivée suit la ou les licences du sprite d'origine (Unspecified = sprite du jeu, usage de fan non commercial ;
+PMDCollab_1 / PMDCollab_2 / CC_BY-NC_4 = usage non commercial avec crédit des auteurs ci-dessus).
+Forme non officielle : ce sprite n'a été ni soumis ni approuvé sur SpriteCollab.
