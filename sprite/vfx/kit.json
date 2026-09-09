@@ -1,0 +1,150 @@
+{
+  "contenu": "effet seul : aucun personnage, aucun fond",
+  "echelle": 3,
+  "palette": [
+    [
+      20,
+      8,
+      16
+    ],
+    [
+      138,
+      12,
+      48
+    ],
+    [
+      232,
+      40,
+      72
+    ],
+    [
+      255,
+      144,
+      128
+    ],
+    [
+      255,
+      236,
+      232
+    ]
+  ],
+  "images": [
+    {
+      "n": 1,
+      "nom": "rayon",
+      "ticks": 5
+    },
+    {
+      "n": 2,
+      "nom": "impact",
+      "ticks": 4
+    },
+    {
+      "n": 3,
+      "nom": "colonne_etroite",
+      "ticks": 4
+    },
+    {
+      "n": 4,
+      "nom": "colonne",
+      "ticks": 5
+    },
+    {
+      "n": 5,
+      "nom": "rotation_1",
+      "ticks": 5
+    },
+    {
+      "n": 6,
+      "nom": "rotation_2",
+      "ticks": 5
+    },
+    {
+      "n": 7,
+      "nom": "colonne_pleine",
+      "ticks": 5
+    },
+    {
+      "n": 8,
+      "nom": "colonne_large",
+      "ticks": 4
+    },
+    {
+      "n": 9,
+      "nom": "flash",
+      "ticks": 4
+    },
+    {
+      "n": 10,
+      "nom": "lames",
+      "ticks": 5
+    },
+    {
+      "n": 11,
+      "nom": "onde",
+      "ticks": 6
+    },
+    {
+      "n": 12,
+      "nom": "brumes",
+      "ticks": 8
+    }
+  ],
+  "hit": 8,
+  "return": 11,
+  "ancre": "sol du sprite (pixel blanc de Shadow)",
+  "effets": {
+    "Transformation-M": {
+      "case": [
+        200,
+        408
+      ],
+      "images": 12,
+      "durees": [
+        5,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gabarit": "M",
+      "pour": "corps ≤ 24 px de large à l'échelle 1 (index.json : petits_nuages = true)"
+    },
+    "Transformation-L": {
+      "case": [
+        240,
+        512
+      ],
+      "images": 12,
+      "durees": [
+        5,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        5,
+        6,
+        8
+      ],
+      "gabarit": "L",
+      "pour": "corps > 24 px"
+    }
+  },
+  "sequence": [
+    "Transformation-<gabarit> à l'ancre du sprite normal",
+    "image 3 : masquer le sprite normal",
+    "image 9 (HitFrame) : afficher le sprite Dynamax de sprite/<dex>_<slug>/ (aura + nuages intégrés)",
+    "image 12 (ReturnFrame) : fin du VFX"
+  ]
+}
