@@ -10,7 +10,8 @@ ReturnFrame, déplacements d'ancre) et transformées :
    + langues extérieures) — deux couleurs ajoutées : (232, 40, 72) et (255, 144, 128) ;
 3. trois nuages-cyclones rouges qui tournent au-dessus de la tête (un tiers de tour par cycle d'animation, boucle
    continue ; volute à trois phases ; la moitié arrière de l'anneau passe derrière le corps) — contour = couleur
-   la plus sombre du sprite, pas de couleur ajoutée ; petits nuages si le corps fait moins de 24 px de large ;
+   la plus sombre du sprite, pas de couleur ajoutée ; petits nuages si le corps fait moins de 24 px de large
+   ou moins de 20 px de haut ;
 4. repères d'Offsets et ancre de Shadow replacés à l'échelle, gabarit d'ombre agrandi, ShadowSize 2 ;
 5. cases élargies par pas de 8, ancre au repos en (largeur / 2, hauteur / 2 + 4).
 
@@ -80,7 +81,7 @@ def ensure_source(source: Path) -> str:
 
 
 def list_species(source: Path) -> list[str]:
-    found = {d.name for d in (source / "sprite").iterdir() if (d / "AnimData.xml").is_file()}
+    found = {d.name for d in (source / "sprite").iterdir() if (d / "AnimData.xml").is_file() and d.name != "0000"}  # 0000 = gabarit Missingno
     found |= {d for d, f in LOCAL_SOURCES.items() if (f / "AnimData.xml").is_file()}
     return sorted(found)
 
@@ -343,7 +344,8 @@ class Composed:
 def build_pack(anims: list[SrcAnim], scale: int, with_clouds: bool) -> dict[str, Composed]:
     width, height = body_size(anims)
     orbit = (width // 2 + 3, max(3, int(round(height / 6))))
-    clouds = FX.clouds(small=width < NARROW, dark=darkest_colour(anims))
+    small = width < NARROW or height < 20                    # corps étroit ou bas (Fantyrm, Racaillou) : petits nuages
+    clouds = FX.clouds(small=small, dark=darkest_colour(anims))
     comps: dict[str, Composed] = {}
     for a in anims:
         if a.copy_of:
@@ -502,7 +504,7 @@ def build_species(args: tuple) -> dict:
         walk = comps.get("Walk") or next(iter(comps.values()))
         return {"dex": dex, "nom": name_of(dex), "slug": slug_of(dex), "dossier": out.name, "animations": len(anims),
                 "cases": cells, "couleurs": len(used), "corps": [width, height], "case_walk": [walk.fw, walk.fh],
-                "petits_nuages": width < NARROW, "licence": lic, "octets": size, "shadow_size_origine": src_shadow,
+                "petits_nuages": width < NARROW or height < 20, "licence": lic, "octets": size, "shadow_size_origine": src_shadow,
                 "origine": str(folder.relative_to(ROOT)) if dex in LOCAL_SOURCES else f"SpriteCollab sprite/{dex}"}
     except Exception as exc:  # noqa: BLE001 — une espèce cassée ne doit pas arrêter le lot
         return {"dex": dex, "erreur": f"{type(exc).__name__}: {exc}"}

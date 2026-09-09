@@ -4,7 +4,7 @@
 
 Effet de transformation joué **par-dessus** n'importe quel sprite quand la Dynamax s'active : **aucun personnage,
 aucun fond** — 12 images dessinées une à une à l'échelle 1 et agrandies × 3 comme les sprites de
-`sprite/`. Deux gabarits : `Transformation-M` (corps ≤ 24 px de large à l'échelle 1) et `Transformation-L`
+`sprite/`. Deux gabarits : `Transformation-M` (corps < 24 px de large ou < 20 px de haut à l'échelle 1) et `Transformation-L`
 (au-delà) ; `sprite/index.json` donne `petits_nuages` (= gabarit M) pour chaque espèce. Cases : Transformation-M : 200 × 408 px · Transformation-L : 240 × 512 px.
 Durée totale 60 ticks (1/60 s) ≈ 1.0 s.
 

@@ -115,7 +115,7 @@
         8
       ],
       "gabarit": "M",
-      "pour": "corps ≤ 24 px de large à l'échelle 1 (index.json : petits_nuages = true)"
+      "pour": "corps < 24 px de large ou < 20 px de haut à l'échelle 1 (index.json : petits_nuages = true)"
     },
     "Transformation-L": {
       "case": [
@@ -138,7 +138,7 @@
         8
       ],
       "gabarit": "L",
-      "pour": "corps > 24 px"
+      "pour": "corps plus grand (petits_nuages = false)"
     }
   },
   "sequence": [

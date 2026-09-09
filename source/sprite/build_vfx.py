@@ -2,7 +2,7 @@
 """VFX de transformation Dynamax, image par image → sprite/vfx/ (effet seul : aucun personnage, aucun fond).
 
 Douze images dessinées une à une à l'échelle 1 (`frame_01` … `frame_12`, décrites dans FRAMES) puis agrandies × 3
-comme les sprites de `sprite/`. Deux gabarits : **M** (corps ≤ 24 px de large à l'échelle 1) et **L** (au-delà).
+comme les sprites de `sprite/`. Deux gabarits : **M** (corps < 24 px de large ou < 20 px de haut à l'échelle 1) et **L** (au-delà).
 
   1  rayon fin qui descend du ciel (traînée haute)                 7  colonne pleine, second éclair, étincelles au sol
   2  le rayon touche le sol : impact, premières étincelles         8  la colonne s'élargit, éclairs au plus épais
@@ -303,7 +303,7 @@ def write_readme(comps: dict[str, dict], colours: int, path: Path, scale: int) -
 
 Effet de transformation joué **par-dessus** n'importe quel sprite quand la Dynamax s'active : **aucun personnage,
 aucun fond** — {len(FRAMES)} images dessinées une à une à l'échelle 1 et agrandies × {scale} comme les sprites de
-`sprite/`. Deux gabarits : `Transformation-M` (corps ≤ 24 px de large à l'échelle 1) et `Transformation-L`
+`sprite/`. Deux gabarits : `Transformation-M` (corps < 24 px de large ou < 20 px de haut à l'échelle 1) et `Transformation-L`
 (au-delà) ; `sprite/index.json` donne `petits_nuages` (= gabarit M) pour chaque espèce. Cases : {cases}.
 Durée totale {sum(d for _, d in FRAMES)} ticks (1/60 s) ≈ {sum(d for _, d in FRAMES) / 60:.1f} s.
 
@@ -356,7 +356,7 @@ def main(argv: list[str]) -> None:
            "echelle": scale, "palette": sorted(used), "images": [{"n": i + 1, "nom": n, "ticks": d} for i, (n, d) in enumerate(FRAMES)],
            "hit": HIT, "return": RET, "ancre": "sol du sprite (pixel blanc de Shadow)",
            "effets": {n: {"case": [c["fw"], c["fh"]], "images": len(FRAMES), "durees": [d for _, d in FRAMES], "gabarit": n.split("-")[1],
-                          "pour": "corps ≤ 24 px de large à l'échelle 1 (index.json : petits_nuages = true)" if n.endswith("M") else "corps > 24 px"}
+                          "pour": "corps < 24 px de large ou < 20 px de haut à l'échelle 1 (index.json : petits_nuages = true)" if n.endswith("M") else "corps plus grand (petits_nuages = false)"}
                       for n, c in comps.items()},
            "sequence": ["Transformation-<gabarit> à l'ancre du sprite normal", "image 3 : masquer le sprite normal",
                         "image 9 (HitFrame) : afficher le sprite Dynamax de sprite/<dex>_<slug>/ (aura + nuages intégrés)",

@@ -8,7 +8,10 @@ alpha 0 ou 255, un seul pixel blanc par case de Shadow, un pixel de chaque repè
 Règles de la transformation Dynamax : mêmes animations, index, durées, Rush / Hit / Return et CopyOf que la source
 SpriteCollab ; cases multiples de 8 ; ancre = source × échelle autour de (fw/2, fh/2 + 4) ; chaque pixel opaque de
 la source se retrouve agrandi à sa place (les seuls pixels différents sont sous un nuage de premier plan : couleurs
-des nuages uniquement, au plus 12 % du corps) ; palette = source + aura (2 couleurs) ; marge d'un pixel ;
+des nuages uniquement ; au plus 8 % du corps sur l'ensemble de l'espèce et 35 % sur une image — les nuages tournent
+autour de la tête, la moitié avant de l'anneau passe donc devant le haut du corps ; au-delà de 20 % sur une image,
+ou de 35 % quand le corps s'est réduit à moins de la moitié de sa taille de marche — Spiritomb rentré dans sa
+clé de voûte —, simple avertissement : ailes déployées, sommeil à plat) ; palette = source + aura ;
 credits.txt cite SpriteCollab.
 
 VFX : feuilles à une ligne, palette = les 5 couleurs des effets et rien d'autre (aucun personnage, aucun fond),
@@ -71,6 +74,7 @@ def parse(path: Path) -> tuple[int, list[dict]]:
 def check_species(dex: str, source: Path, scale: int) -> tuple[list[str], dict]:
     out = OUT_ROOT / f"{dex}_{slug_of(dex)}"
     errors: list[str] = []
+    warnings: list[str] = []
     E = errors.append
     if not (out / "AnimData.xml").is_file():
         return [f"{out.name} : AnimData.xml absent"], {"dex": dex}
@@ -78,6 +82,8 @@ def check_species(dex: str, source: Path, scale: int) -> tuple[list[str], dict]:
     _, src = load_source(source_folder(dex, source))
     src_by = {a.name: a for a in src}
     cloud_colours = {AURA, AURA_LIGHT, darkest_colour(src)}
+    walk = next((a for a in src if a.name == "Walk" and a.anim is not None), None) or next(a for a in src if a.anim is not None)
+    ref_body = int((walk.cell(walk.anim, 0, 0)[:, :, 3] > 0).sum())            # taille du corps au repos, pour relativiser
     if shadow_size != 2:
         E(f"ShadowSize {shadow_size} ≠ 2")
     if [a["name"] for a in anims] != [a.name for a in src]:
@@ -171,8 +177,12 @@ def check_species(dex: str, source: Path, scale: int) -> tuple[list[str], dict]:
                 bad = [tuple(int(v) for v in g) for g, ok in zip(got, same) if not ok and tuple(int(v) for v in g) not in cloud_colours]
                 if bad:
                     E(f"{n} d{d} i{i} : {len(bad)} pixel(s) du Pokémon recolorés hors nuage, ex. {bad[0]}")
-                if lost > len(same) // 8:
-                    E(f"{n} d{d} i{i} : {lost} pixels du Pokémon sous les nuages (sur {len(same)}, > 12 %)")
+                if lost > len(same) * 0.35 and len(same) >= ref_body // 2:
+                    E(f"{n} d{d} i{i} : {lost} pixels du Pokémon sous les nuages (sur {len(same)}, > 35 %)")
+                elif lost > len(same) // 5:
+                    warnings.append(f"{n} d{d} i{i} : {lost} pixels du Pokémon sous les nuages (sur {len(same)}, > 20 %)")
+    if compared_total and lost_total > compared_total * 0.08:
+        E(f"{lost_total} pixels du Pokémon sous les nuages sur {compared_total} (> 8 % de l'espèce)")
     extra = colours - src_colours
     if not extra <= {AURA, AURA_LIGHT}:
         E(f"couleurs hors palette source + aura : {sorted(extra - {AURA, AURA_LIGHT})[:5]}")
@@ -180,7 +190,8 @@ def check_species(dex: str, source: Path, scale: int) -> tuple[list[str], dict]:
     if dex not in credits or "SpriteCollab" not in credits:
         E("credits.txt : source SpriteCollab non citée")
     report = {"dex": dex, "animations": len(anims), "cases": cells, "couleurs": len(colours), "couleurs_source": len(src_colours),
-              "pixels_compares": compared_total, "pixels_sous_nuages": lost_total, "erreurs": errors[:20]}
+              "pixels_compares": compared_total, "pixels_sous_nuages": lost_total, "erreurs": errors[:20],
+              "avertissements": len(warnings), "exemples_avertissements": warnings[:5]}
     return errors, report
 
 
@@ -299,7 +310,7 @@ def main(argv: list[str]) -> None:
     if all_species:
         dexes = [d for d, r in sorted(index["especes"].items()) if "erreur" not in r][::step]
     failed = False
-    summary = {"vfx": None, "especes": {}, "ok": 0, "erreurs": 0}
+    summary = {"vfx": None, "especes": {}, "ok": 0, "erreurs": 0, "avertissements": 0}
     if want_vfx or all_species:
         errors, r = check_vfx()
         summary["vfx"] = {"resultat": "OK" if not errors else "ERREURS", **r}
@@ -313,6 +324,7 @@ def main(argv: list[str]) -> None:
     for k, (dex, errors, r) in enumerate(results, 1):
         r["resultat"] = "OK" if not errors else "ERREURS"
         summary["especes"][dex] = r
+        summary["avertissements"] += r.get("avertissements", 0)
         if errors:
             failed = True
             summary["erreurs"] += 1
@@ -327,7 +339,8 @@ def main(argv: list[str]) -> None:
     if pool:
         pool.close()
     if dexes:
-        print(f"{summary['ok']} espèces OK, {summary['erreurs']} en erreur" + (f" (échantillon : une sur {step})" if step > 1 else ""))
+        print(f"{summary['ok']} espèces OK, {summary['erreurs']} en erreur, {summary['avertissements']} image(s) avec plus de 20 % du corps sous un nuage"
+              + (f" (échantillon : une sur {step})" if step > 1 else ""))
     (OUT_ROOT / "controle_qualite.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")
     sys.exit(1 if failed else 0)
 
