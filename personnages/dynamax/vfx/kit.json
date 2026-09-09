@@ -1,0 +1,269 @@
+{
+  "vfx": {
+    "Transformation-M": {
+      "case": [
+        192,
+        368
+      ],
+      "images": 15,
+      "durees": [
+        4,
+        4,
+        4,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "hit": 10,
+      "return": 13,
+      "ancre": "sol",
+      "taille": "M"
+    },
+    "NuagesApparition-M": {
+      "case": [
+        136,
+        56
+      ],
+      "images": 5,
+      "durees": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre de l'anneau",
+      "taille": "M"
+    },
+    "Nuages-M": {
+      "case": [
+        136,
+        56
+      ],
+      "images": 12,
+      "durees": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre de l'anneau",
+      "taille": "M"
+    },
+    "Aura-M": {
+      "case": [
+        88,
+        104
+      ],
+      "images": 4,
+      "durees": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre du corps",
+      "taille": "M"
+    },
+    "Transformation-L": {
+      "case": [
+        224,
+        440
+      ],
+      "images": 15,
+      "durees": [
+        4,
+        4,
+        4,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "hit": 10,
+      "return": 13,
+      "ancre": "sol",
+      "taille": "L"
+    },
+    "NuagesApparition-L": {
+      "case": [
+        208,
+        80
+      ],
+      "images": 5,
+      "durees": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre de l'anneau",
+      "taille": "L"
+    },
+    "Nuages-L": {
+      "case": [
+        208,
+        80
+      ],
+      "images": 12,
+      "durees": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre de l'anneau",
+      "taille": "L"
+    },
+    "Aura-L": {
+      "case": [
+        120,
+        136
+      ],
+      "images": 4,
+      "durees": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "hit": null,
+      "return": null,
+      "ancre": "centre du corps",
+      "taille": "L"
+    }
+  },
+  "echelle": 3,
+  "palette": [
+    [
+      20,
+      8,
+      16
+    ],
+    [
+      138,
+      12,
+      48
+    ],
+    [
+      232,
+      40,
+      72
+    ],
+    [
+      255,
+      144,
+      128
+    ],
+    [
+      255,
+      236,
+      232
+    ]
+  ],
+  "tailles": {
+    "M": {
+      "corps": 20,
+      "geant": 24,
+      "orbite": [
+        13,
+        4
+      ],
+      "colonne": 22,
+      "hauteur": 60,
+      "petits_nuages": true
+    },
+    "L": {
+      "corps": 32,
+      "geant": 28,
+      "orbite": [
+        19,
+        5
+      ],
+      "colonne": 34,
+      "hauteur": 72,
+      "petits_nuages": false
+    }
+  },
+  "sequence": [
+    "Transformation à l'ancre du sprite (masquer le sprite normal à l'image 5, afficher le sprite Dynamax à HitFrame)",
+    "NuagesApparition à ReturnFrame, ancre = ancre du sprite + ancre_nuages_decalage (kit.json de chaque pack)",
+    "Nuages en boucle au même endroit",
+    "Aura : seulement pour un sprite sans aura intégrée"
+  ],
+  "aseprite": {
+    "canvas": [
+      224,
+      440
+    ],
+    "images": 72,
+    "calques": [
+      "Bas",
+      "Bas-droite",
+      "Droite",
+      "Haut-droite",
+      "Haut",
+      "Haut-gauche",
+      "Gauche",
+      "Bas-gauche"
+    ],
+    "etiquettes": [
+      "Transformation-M",
+      "NuagesApparition-M",
+      "Nuages-M",
+      "Aura-M",
+      "Transformation-L",
+      "NuagesApparition-L",
+      "Nuages-L",
+      "Aura-L"
+    ],
+    "ancre": [
+      112,
+      224
+    ]
+  }
+}

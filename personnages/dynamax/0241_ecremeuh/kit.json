@@ -24,9 +24,14 @@
     "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu), un pixel chacun replacé à l'échelle"
   },
   "dynamax": {
-    "echelle": 2,
-    "aura": {
-      "aura": [
+    "echelle": 3,
+    "couleurs_effets": {
+      "sombre": [
+        20,
+        8,
+        16
+      ],
+      "rouge": [
         232,
         40,
         72
@@ -36,26 +41,36 @@
         144,
         128
       ],
-      "ombre_des_nuages": [
+      "blanc": [
+        255,
+        236,
+        232
+      ],
+      "contour_nuages": [
         0,
         0,
         0
       ]
     },
-    "anneau": "1 px plein (aura) + 1 px tramé en damier (aura claire) à l'échelle du dessin, phase changeant à chaque image",
-    "nuages": "trois nuages à 120° sur une ellipse en halo au-dessus du point le plus haut de chaque image (demi-largeur du corps + 3 ; un sixième de sa hauteur), un tiers de tour par cycle, moitié arrière derrière le corps",
-    "orbite": [
-      14,
-      4
-    ],
-    "petits_nuages": true
+    "aura": "anneau plein rouge + anneau tramé clair dont le motif remonte d'un pixel par phase (4 phases par cycle d'animation) + langues extérieures",
+    "nuages_integres": false,
+    "vfx": {
+      "taille": "M",
+      "dossier": "personnages/dynamax/vfx/",
+      "ancre_transformation": "ancre du sprite (pixel blanc de Shadow), au sol",
+      "ancre_nuages_decalage": [
+        0,
+        -75
+      ],
+      "sequence": "Transformation-<taille> à l'ancre du sprite (masquer le sprite d'origine dès l'image 5, afficher ce sprite à HitFrame) ; à ReturnFrame, NuagesApparition-<taille> puis boucle Nuages-<taille> à l'ancre + ancre_nuages_decalage"
+    }
   },
   "animations": {
     "Walk": {
       "index": 0,
       "case": [
-        80,
-        136
+        112,
+        160
       ],
       "case_origine": [
         32,
@@ -76,8 +91,8 @@
     "Attack": {
       "index": 1,
       "case": [
-        160,
-        208
+        208,
+        264
       ],
       "case_origine": [
         64,
@@ -109,8 +124,8 @@
     "Stomp": {
       "index": 2,
       "case": [
-        152,
-        176
+        224,
+        224
       ],
       "case_origine": [
         72,
@@ -143,8 +158,8 @@
     "Shoot": {
       "index": 3,
       "case": [
-        80,
-        168
+        128,
+        200
       ],
       "case_origine": [
         40,
@@ -175,8 +190,8 @@
     "Twirl": {
       "index": 4,
       "case": [
-        80,
-        136
+        128,
+        160
       ],
       "case_origine": [
         40,
@@ -212,8 +227,8 @@
     "Sleep": {
       "index": 5,
       "case": [
-        72,
-        128
+        104,
+        144
       ],
       "case_origine": [
         32,
@@ -232,8 +247,8 @@
     "Hurt": {
       "index": 6,
       "case": [
-        104,
-        168
+        160,
+        208
       ],
       "case_origine": [
         48,
@@ -252,8 +267,8 @@
     "Idle": {
       "index": 7,
       "case": [
-        80,
-        152
+        120,
+        176
       ],
       "case_origine": [
         32,
@@ -276,8 +291,8 @@
     "Swing": {
       "index": 8,
       "case": [
-        168,
-        216
+        248,
+        280
       ],
       "case_origine": [
         80,
@@ -303,8 +318,8 @@
     "Double": {
       "index": 9,
       "case": [
-        128,
-        184
+        176,
+        232
       ],
       "case_origine": [
         56,
@@ -337,8 +352,8 @@
     "Hop": {
       "index": 10,
       "case": [
-        80,
-        224
+        112,
+        296
       ],
       "case_origine": [
         32,
@@ -365,8 +380,8 @@
     "Charge": {
       "index": 11,
       "case": [
-        80,
-        144
+        120,
+        168
       ],
       "case_origine": [
         32,
@@ -393,8 +408,8 @@
     "Rotate": {
       "index": 12,
       "case": [
-        80,
-        136
+        112,
+        160
       ],
       "case_origine": [
         32,
@@ -426,8 +441,8 @@
   },
   "aseprite": {
     "canvas": [
-      168,
-      224
+      248,
+      296
     ],
     "images": 128,
     "calques": [
@@ -456,8 +471,8 @@
       "Rotate"
     ],
     "ancre": [
-      84,
-      116
+      124,
+      152
     ]
   },
   "fichiers": {

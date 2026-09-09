@@ -3,9 +3,11 @@
 ![Comparaison](apercu_comparaison.png)
 
 Version **Dynamax** du sprite SpriteCollab de Gardevoir : toutes les animations du sprite d'origine
-(`source/personnages/reference/0282`) sont reprises, agrandies × 2 au plus proche voisin, entourées d'une aura rouge
-tramée et de trois nuages rouges qui tournent autour du corps. Aucun pixel du Pokémon n'est redessiné ; trois
-couleurs sont ajoutées (12 couleurs au total). `ShadowSize` passe à 2 (grande ombre).
+(`source/personnages/reference/0282`) sont reprises, agrandies × 3 au plus proche voisin et entourées d'une aura rouge
+animée (anneau plein + trame qui remonte le long du corps). Aucun pixel du Pokémon n'est redessiné ; deux couleurs
+sont ajoutées (12 couleurs au total). `ShadowSize` passe à 2 (grande ombre). **Les nuages tournants et la
+transformation sont des VFX séparés**, sans personnage, à superposer en jeu : voir
+[`personnages/dynamax/vfx/`](../vfx/README.md) et l'entrée `dynamax.vfx` de `kit.json` (taille et décalage).
 
 Construit par `source/personnages/build_dynamax_sprites.py` (méthode et réglages dans
 [`personnages/dynamax/README.md`](../README.md)), vérifié par `verify_dynamax_sprites.py`
@@ -22,22 +24,22 @@ les images), `apercu_directions.png`, `apercu_comparaison.png`, `apercu_marche_a
 
 | Animation | Index | Case | Images | Durée | Repères |
 | --- | --- | --- | --- | --- | --- |
-| Walk | 0 | 72 × 128 (origine 32 × 40) | 4 | 40 ticks | — |
-| Attack | 1 | 152 × 200 (origine 72 × 72) | 10 | 19 ticks | Rush 1, Hit 3, Return 6 |
+| Walk | 0 | 112 × 144 (origine 32 × 40) | 4 | 40 ticks | — |
+| Attack | 1 | 232 × 248 (origine 72 × 72) | 10 | 19 ticks | Rush 1, Hit 3, Return 6 |
 | Strike | 2 | — | — | — | copie de Attack |
 | Shoot | 3 | — | — | — | copie de Charge |
 | SpAttack | — | — | — | — | copie de Appeal |
-| Appeal | 4 | 72 × 136 (origine 32 × 40) | 8 | 30 ticks | Hit 4 |
-| Sleep | 5 | 56 × 120 (origine 24 × 32) | 2 | 65 ticks | — |
-| Hurt | 6 | 96 × 160 (origine 40 × 56) | 2 | 10 ticks | — |
-| Idle | 7 | 64 × 128 (origine 32 × 40) | 4 | 36 ticks | — |
-| Swing | 8 | 152 × 200 (origine 72 × 72) | 9 | 16 ticks | Hit 5, Return 5 |
-| Double | 9 | 120 × 192 (origine 56 × 72) | 16 | 36 ticks | — |
-| Hop | 10 | 72 × 224 (origine 32 × 88) | 10 | 24 ticks | Hit 9 |
-| Charge | 11 | 72 × 136 (origine 32 × 40) | 10 | 20 ticks | Hit 5, Return 9 |
-| Rotate | 12 | 64 × 128 (origine 32 × 40) | 9 | 18 ticks | Hit 8 |
+| Appeal | 4 | 112 × 160 (origine 32 × 40) | 8 | 30 ticks | Hit 4 |
+| Sleep | 5 | 88 × 128 (origine 24 × 32) | 2 | 65 ticks | — |
+| Hurt | 6 | 144 × 192 (origine 40 × 56) | 2 | 10 ticks | — |
+| Idle | 7 | 104 × 144 (origine 32 × 40) | 4 | 36 ticks | — |
+| Swing | 8 | 232 × 256 (origine 72 × 72) | 9 | 16 ticks | Hit 5, Return 5 |
+| Double | 9 | 176 × 240 (origine 56 × 72) | 16 | 36 ticks | — |
+| Hop | 10 | 112 × 288 (origine 32 × 88) | 10 | 24 ticks | Hit 9 |
+| Charge | 11 | 104 × 152 (origine 32 × 40) | 10 | 20 ticks | Hit 5, Return 9 |
+| Rotate | 12 | 104 × 144 (origine 32 × 40) | 9 | 18 ticks | Hit 8 |
 
-Les durées, index et repères d'images sont ceux du sprite d'origine ; les cases sont agrandies × 2 puis élargies
+Les durées, index et repères d'images sont ceux du sprite d'origine ; les cases sont agrandies × 3 puis élargies
 par pas de 8 pour contenir l'aura et les nuages, l'ancre au repos restant en (largeur / 2, hauteur / 2 + 4).
 
 ## Licence

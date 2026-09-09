@@ -6,12 +6,11 @@ durées, RushFrame / HitFrame / ReturnFrame, CopyOf, mêmes déplacements d'ancr
 
 1. le dessin est agrandi × SCALE au plus proche voisin (aucun rééchantillonnage : chaque pixel devient un bloc),
    comme un Pokémon dynamaxé qui garde sa forme mais change d'échelle ;
-2. une **aura rouge** entoure la silhouette : anneau plein d'un pixel (à l'échelle du dessin) puis anneau tramé
-   en damier qui change de phase à chaque image (le halo scintille pendant les animations) ;
-3. **trois nuages rouges** tournent en halo juste au-dessus de la silhouette (ils suivent les sauts et les bras
-   levés) ; leur avance est proportionnelle au temps écoulé dans l'animation et vaut un tiers de tour par cycle, de
-   sorte que la boucle est continue (chaque nuage prend la place du suivant) ; la moitié arrière de l'anneau passe
-   derrière le corps, la moitié avant devant ;
+2. une **aura rouge animée** entoure la silhouette : anneau plein d'un pixel (à l'échelle du dessin), anneau tramé
+   dont le motif remonte d'un pixel par phase (quatre phases par cycle d'animation) et langues extérieures ;
+3. les **nuages tournants** et la **transformation** ne sont pas dans le sprite : ce sont des VFX génériques sans
+   personnage (`build_dynamax_vfx.py` → `personnages/dynamax/vfx/`), superposés en jeu ; `kit.json` donne la
+   taille (M/L) et le décalage à appliquer (`--nuages-integres` dessine quand même l'anneau dans le sprite) ;
 4. les repères (Offsets) et l'ancre (pixel blanc de Shadow) sont replacés à l'échelle, un seul pixel chacun ;
    le gabarit d'ombre de la référence est agrandi ; `ShadowSize` passe à 2 (grande ombre) ;
 5. les cases sont agrandies par pas de 8 pour contenir aura et nuages, l'ancre au repos restant en
@@ -47,17 +46,18 @@ from rebuild_kit import night  # noqa: E402
 from build_falinks_sprite import (  # noqa: E402  (pipeline commun aux sprites du kit)
     DIRECTIONS, Composed, font, parquet_background, sheet, write_aseprite,
 )
+import dynamax_fx as FX  # noqa: E402
 
 REFS = ROOT / "source" / "personnages" / "reference"
 OUT_ROOT = ROOT / "personnages" / "dynamax"
-SCALE = 2                                   # facteur d'agrandissement (--echelle N)
+SCALE = 3                                   # facteur d'agrandissement (--echelle N) : un Dynamax fait trois fois sa taille
 SHADOW_SIZE = 2                             # un Pokémon dynamaxé projette la grande ombre
 PAD = 48                                    # marge de travail autour de la case d'origine (à l'échelle 1)
 
-# Aura et nuages : deux couleurs ajoutées à la palette d'origine ; l'ombre des nuages reprend la couleur la plus
-# sombre du sprite (son contour), pour rester sous les 15 couleurs du SpriteBot quand le sprite en compte 13.
-AURA = (232, 40, 72)
-AURA_LIGHT = (255, 144, 128)
+# Couleurs des effets : dynamax_fx (sombre, rouge, claire, blanc) ; le contour des nuages reprend la couleur la
+# plus sombre du sprite.
+AURA = FX.FX_RED
+AURA_LIGHT = FX.FX_LIGHT
 
 # numéro, slug, nom affiché, dossier source (format SpriteCollab), licence d'origine
 POKEMON = [
@@ -137,6 +137,28 @@ def load_source(folder: Path) -> tuple[int, list[SrcAnim]]:
     return shadow_size, anims
 
 
+def save_png(img: Image.Image, path: Path) -> None:
+    """PNG indexé (palette + tRNS) quand l'image compte ≤ 256 couleurs RGBA : mêmes pixels exactement, fichier deux
+    fois plus petit que le RGBA ; sinon RGBA. Les lecteurs (Pillow, navigateurs, SkyTemple) relisent les deux."""
+    a = np.array(img.convert("RGBA"))
+    flat = a.reshape(-1, 4).astype(np.uint32)
+    keys = (flat[:, 0] << 24) | (flat[:, 1] << 16) | (flat[:, 2] << 8) | flat[:, 3]
+    uniq, inv = np.unique(keys, return_inverse=True)
+    if len(uniq) > 256:
+        img.save(path, optimize=True)
+        return
+    # la couleur transparente en premier, alpha 0 ⇒ tRNS court
+    order = np.argsort((uniq & 255), kind="stable")
+    rank = np.empty(len(uniq), np.int64)
+    rank[order] = np.arange(len(uniq))
+    idx = rank[inv].reshape(a.shape[:2]).astype(np.uint8)
+    uniq = uniq[order]
+    pal = Image.fromarray(idx, "P")
+    pal.putpalette([int(v) for k in uniq for v in ((k >> 24) & 255, (k >> 16) & 255, (k >> 8) & 255)])
+    alphas = bytes(int(k & 255) for k in uniq)
+    pal.save(path, optimize=True, transparency=alphas)
+
+
 def white_pixel(shad_cell: np.ndarray) -> tuple[int, int]:
     w = np.argwhere((shad_cell[:, :, 3] > 0) & np.all(shad_cell[:, :, :3] == 255, axis=2))
     assert len(w) == 1, "pixel blanc absent ou multiple"
@@ -144,68 +166,15 @@ def white_pixel(shad_cell: np.ndarray) -> tuple[int, int]:
 
 
 # ---------------------------------------------------------------------------
-# Aura et nuages (dessinés à l'échelle 1, agrandis avec le reste)
+# Effets (dessinés à l'échelle 1, agrandis avec le reste) : voir dynamax_fx.py
 # ---------------------------------------------------------------------------
-CLOUD_KEY = {"d": (0, 0, 0), "r": AURA, "l": AURA_LIGHT}      # « d » est remplacé par la couleur sombre du sprite
-CLOUD_ART = [                     # grands nuages (corps de 24 px de large ou plus)
-    ["....lll.....",
-     "..llrrrl....",
-     ".lrrrrrrl...",
-     "lrrrrrrrrrl.",
-     "rrrrrrrrrrrd",
-     ".dddrrrddd.."],
-    ["...ll....",
-     ".lrrrrl..",
-     "lrrrrrrl.",
-     "rrrrrrrrd",
-     ".ddrrdd.."],
-    [".....ll....",
-     "..llrrrrl..",
-     ".lrrrrrrrl.",
-     "lrrrrrrrrrl",
-     "drrrrrrrrrd",
-     ".dddddddd.."],
-]
-CLOUD_ART_SMALL = [               # petits nuages (corps plus étroit : Gardevoir, Griknot, Pandespiègle…)
-    ["..ll....",
-     ".lrrrl..",
-     "lrrrrrrd",
-     ".drrddd."],
-    [".ll...",
-     "lrrrl.",
-     "rrrrrd",
-     ".dddd."],
-    ["...ll..",
-     ".lrrrl.",
-     "lrrrrrd",
-     ".ddddd."],
-]
-
-
-def bmp(rows: list[str]) -> np.ndarray:
-    h, w = len(rows), max(len(r) for r in rows)
-    out = np.zeros((h, w, 4), np.uint8)
-    for y, row in enumerate(rows):
-        for x, ch in enumerate(row):
-            if ch in CLOUD_KEY:
-                out[y, x] = (*CLOUD_KEY[ch], 255)
-    return out
-
-
-CLOUDS = [bmp(rows) for rows in CLOUD_ART]
-CLOUDS_SMALL = [bmp(rows) for rows in CLOUD_ART_SMALL]
-NARROW = 24                       # largeur du corps au repos (px) en dessous de laquelle on prend les petits nuages
+NARROW = 24                       # largeur du corps au repos (px) : au-delà, VFX de taille L (et grands nuages si intégrés)
+BAKE_CLOUDS = False               # True (--nuages-integres) : dessiner l'anneau de nuages dans le sprite au lieu du VFX séparé
 STRUCT = np.ones((3, 3), bool)
 
 
-def recolour_clouds(dark: tuple[int, int, int], small: bool) -> list[np.ndarray]:
-    out = []
-    for c in (CLOUDS_SMALL if small else CLOUDS):
-        c = c.copy()
-        m = (c[:, :, 3] > 0) & np.all(c[:, :, :3] == 0, axis=2)
-        c[m, :3] = dark
-        out.append(c)
-    return out
+def dilate(mask: np.ndarray) -> np.ndarray:
+    return binary_dilation(mask, STRUCT)
 
 
 def darkest_colour(anims: list["SrcAnim"]) -> tuple[int, int, int]:
@@ -227,27 +196,6 @@ def paste(canvas: np.ndarray, img: np.ndarray, x: int, y: int) -> None:
     canvas[y0:y1, x0:x1][m] = src[m]
 
 
-def aura(mask: np.ndarray, seed: int) -> np.ndarray:
-    """Anneau plein d'un pixel + anneau extérieur tramé (damier dont la phase dépend de `seed`)."""
-    d1 = binary_dilation(mask, STRUCT)
-    d2 = binary_dilation(d1, STRUCT)
-    ring1 = d1 & ~mask
-    ring2 = d2 & ~d1
-    yy, xx = np.indices(mask.shape)
-    ring2 &= ((xx + yy + seed) % 2) == 0
-    out = np.zeros((*mask.shape, 4), np.uint8)
-    out[ring1] = (*AURA, 255)
-    out[ring2] = (*AURA_LIGHT, 255)
-    return out
-
-
-def cloud_angles(t: int, total: int, direction: int) -> list[float]:
-    """Trois nuages à 120° ; avance d'un tiers de tour par cycle (boucle continue), décalage par direction
-    pour que les huit lignes ne soient pas des copies."""
-    base = -math.pi / 2 + direction * math.pi / 12 + (2 * math.pi / 3) * (t / total if total else 0)
-    return [base + k * 2 * math.pi / 3 for k in range(3)]
-
-
 @dataclass
 class Frame1x:
     """Une case composée à l'échelle 1, dans un canevas élargi de PAD ; ancre en (PAD + ax, PAD + ay)."""
@@ -258,39 +206,64 @@ class Frame1x:
     template: list[tuple[int, int, tuple[int, int, int]]]  # gabarit d'ombre relatif à l'ancre (sans le blanc)
 
 
-def compose_frame(a: SrcAnim, d: int, i: int, orbit: tuple[int, int], clouds: list[np.ndarray], t: int, total: int) -> Frame1x:
-    body = a.cell(a.anim, d, i)
+def source_marks(a: SrcAnim, d: int, i: int, ax: int, ay: int):
     offs = a.cell(a.offs, d, i)
     shad = a.cell(a.shad, d, i)
-    ax, ay = white_pixel(shad)
+    marks = [(int(x) - ax, int(y) - ay, tuple(int(v) for v in offs[y, x, :3])) for y, x in np.argwhere(offs[:, :, 3] > 0)]
+    template = [(int(x) - ax, int(y) - ay, tuple(int(v) for v in shad[y, x, :3]))
+                for y, x in np.argwhere(shad[:, :, 3] > 0) if (int(x), int(y)) != (ax, ay)]
+    return marks, template
+
+
+def draw_clouds(canvas: np.ndarray, mask: np.ndarray, cx: int, orbit: tuple[int, int], clouds: list[np.ndarray],
+                t: int, total: int, d: int, body_paste) -> None:
+    """Anneau de nuages-cyclones au-dessus de la silhouette : moitié arrière derrière le corps, moitié avant devant,
+    volute qui tourne (trois phases), traînée dans le sens du mouvement."""
+    ys = np.nonzero(mask.any(axis=1))[0]
+    top = int(ys.min()) if len(ys) else PAD
+    rx, ry = orbit
+    oy = top - ry - 1                                       # bas de l'ellipse juste au-dessus de la tête
+    placements = []
+    for ang, phase in FX.cloud_ring(t, total, d):
+        c = clouds[phase]
+        px = int(round(cx + rx * math.cos(ang))) - c.shape[1] // 2
+        py = int(round(oy + ry * math.sin(ang))) - c.shape[0] // 2
+        # traînée : derrière le nuage par rapport au sens de rotation (sens horaire vu de dessus)
+        trail = FX.TRAIL_SMALL if c.shape[1] < 14 else FX.TRAIL
+        tx = px - trail.shape[1] if math.sin(ang) > 0 else px + c.shape[1]
+        ty = py + c.shape[0] // 2
+        placements.append((math.sin(ang) > 0, c, px, py, trail, tx, ty))
+    for front, c, px, py, trail, tx, ty in placements:
+        if not front:
+            paste(canvas, trail, tx, ty)
+            paste(canvas, c, px, py)
+    body_paste()
+    for front, c, px, py, trail, tx, ty in placements:
+        if front:
+            paste(canvas, trail, tx, ty)
+            paste(canvas, c, px, py)
+
+
+def compose_frame(a: SrcAnim, d: int, i: int, orbit: tuple[int, int], clouds: list[np.ndarray], t: int, total: int) -> Frame1x:
+    """Case Dynamax ordinaire : corps agrandi (plus tard), aura ondulante, anneau de nuages."""
+    body = a.cell(a.anim, d, i)
+    ax, ay = white_pixel(a.cell(a.shad, d, i))
     disp = (ax - a.fw // 2, ay - (a.fh // 2 + 4))
     canvas = np.zeros((a.fh + 2 * PAD, a.fw + 2 * PAD, 4), np.uint8)
     mask = np.zeros(canvas.shape[:2], bool)
     mask[PAD:PAD + a.fh, PAD:PAD + a.fw] = body[:, :, 3] > 0
     cx, cy = PAD + ax, PAD + ay
-    # anneau de nuages : halo juste au-dessus du point le plus haut de la silhouette de l'image (il suit les sauts,
-    # les bras levés et le sommeil), centré sur l'ancre
-    ys = np.nonzero(mask.any(axis=1))[0]
-    top = int(ys.min()) if len(ys) else cy - 16
-    rx, ry = orbit
-    oy = top - ry - 1                     # bas de l'ellipse juste au-dessus de la tête
-    placements = []
-    for k, ang in enumerate(cloud_angles(t, total, d)):
-        c = clouds[k]
-        px = int(round(cx + rx * math.cos(ang))) - c.shape[1] // 2
-        py = int(round(oy + ry * math.sin(ang))) - c.shape[0] // 2
-        placements.append((math.sin(ang) > 0, c, px, py))
-    for front, c, px, py in placements:
-        if not front:
-            paste(canvas, c, px, py)
-    paste(canvas, aura(mask, seed=i + 3 * d), 0, 0)
-    paste(canvas, body, PAD, PAD)
-    for front, c, px, py in placements:
-        if front:
-            paste(canvas, c, px, py)
-    marks = [(int(x) - ax, int(y) - ay, tuple(int(v) for v in offs[y, x, :3])) for y, x in np.argwhere(offs[:, :, 3] > 0)]
-    template = [(int(x) - ax, int(y) - ay, tuple(int(v) for v in shad[y, x, :3]))
-                for y, x in np.argwhere(shad[:, :, 3] > 0) if (int(x), int(y)) != (ax, ay)]
+    phase = int(4 * t / total) % 4 if total else 0          # l'aura fait un cycle de flux par animation
+
+    def body_paste():
+        paste(canvas, FX.aura(mask, phase, dilate), 0, 0)
+        paste(canvas, body, PAD, PAD)
+
+    if BAKE_CLOUDS:
+        draw_clouds(canvas, mask, cx, orbit, clouds, t, total, d, body_paste)
+    else:
+        body_paste()
+    marks, template = source_marks(a, d, i, ax, ay)
     return Frame1x(canvas, (cx, cy), disp, marks, template)
 
 
@@ -335,6 +308,26 @@ def make_cell(f: Frame1x, fw: int, fh: int, scale: int) -> tuple[tuple[np.ndarra
     return (anim, offs, shad), (ax, ay)
 
 
+def make_cell_scaled(img: np.ndarray, anchor: tuple[int, int], fw: int, fh: int, marks, template, scale: int):
+    """Comme make_cell, pour une image déjà à l'échelle (transformation) ; ancre au repos, sans déplacement."""
+    ax, ay = fw // 2, fh // 2 + 4
+    anim = np.zeros((fh, fw, 4), np.uint8)
+    offs = np.zeros((fh, fw, 4), np.uint8)
+    shad = np.zeros((fh, fw, 4), np.uint8)
+    ox, oy = ax - anchor[0], ay - anchor[1]
+    ys, xs = np.nonzero(img[:, :, 3])
+    assert xs.min() + ox >= 1 and ys.min() + oy >= 1 and xs.max() + ox <= fw - 2 and ys.max() + oy <= fh - 2, "transformation hors de la case"
+    paste(anim, img, ox, oy)
+    for mx, my, rgb in marks:
+        offs[ay + my * scale, ax + mx * scale] = (*rgb, 255)
+    for tx, ty, rgb in template:
+        y0, x0 = ay + ty * scale, ax + tx * scale
+        shad[y0:y0 + scale, x0:x0 + scale] = (*rgb, 255)
+    shad[ay:ay + scale, ax:ax + scale] = (0, 255, 0, 255)
+    shad[ay, ax] = (255, 255, 255, 255)
+    return (anim, offs, shad), (ax, ay)
+
+
 def body_size(anims: list[SrcAnim]) -> tuple[int, int]:
     walk = next(a for a in anims if a.name == "Walk")
     body = walk.cell(walk.anim, 0, 0)
@@ -353,7 +346,8 @@ def orbit_for(anims: list[SrcAnim]) -> tuple[int, int]:
 
 def build_pack(anims: list[SrcAnim], scale: int) -> dict[str, Composed]:
     orbit = orbit_for(anims)
-    clouds = recolour_clouds(darkest_colour(anims), small=body_size(anims)[0] < NARROW)
+    dark = darkest_colour(anims)
+    clouds = FX.clouds(small=body_size(anims)[0] < NARROW, dark=dark)
     comps: dict[str, Composed] = {}
     for a in anims:
         if a.copy_of:
@@ -380,6 +374,23 @@ def build_pack(anims: list[SrcAnim], scale: int) -> dict[str, Composed]:
         comp.notes = f"case d'origine {a.fw} × {a.fh}"
         comps[a.name] = comp
     return comps
+
+
+def vfx_info(anims: list[SrcAnim], scale: int) -> dict:
+    """Comment poser les VFX génériques (personnages/dynamax/vfx/) sur ce sprite : taille (M si le corps fait
+    ≤ 24 px de large à l'échelle 1, sinon L) et décalage vertical de l'anneau de nuages par rapport à l'ancre
+    (2 px au-dessus du sommet du sprite au repos, à l'échelle)."""
+    width, _ = body_size(anims)
+    walk = next(a for a in anims if a.name == "Walk")
+    body = walk.cell(walk.anim, 0, 0)
+    ax, ay = white_pixel(walk.cell(walk.shad, 0, 0))
+    top = int(np.nonzero(body[:, :, 3].any(axis=1))[0].min())
+    return {"taille": "M" if width <= NARROW else "L",
+            "dossier": "personnages/dynamax/vfx/",
+            "ancre_transformation": "ancre du sprite (pixel blanc de Shadow), au sol",
+            "ancre_nuages_decalage": [0, (top - ay) * scale - 2 * scale],
+            "sequence": "Transformation-<taille> à l'ancre du sprite (masquer le sprite d'origine dès l'image 5, afficher ce sprite à HitFrame) ; "
+                        "à ReturnFrame, NuagesApparition-<taille> puis boucle Nuages-<taille> à l'ancre + ancre_nuages_decalage"}
 
 
 # ---------------------------------------------------------------------------
@@ -654,7 +665,7 @@ def write_credits(number: str, name: str, folder: Path, anims: list[SrcAnim], pa
     lines += [
         "",
         f"Transformation : chaque pixel du sprite d'origine est agrandi × {scale} (aucun pixel du Pokémon redessiné) ; l'aura rouge, son anneau",
-        "tramé et les trois nuages tournants sont ajoutés autour (deux couleurs ajoutées : aura, aura claire). Toutes les animations",
+        "tramé animé est ajouté autour (deux couleurs ajoutées : aura, aura claire) ; nuages et transformation sont des VFX séparés. Toutes les animations",
         "du sprite d'origine sont reprises avec leurs index, durées, RushFrame / HitFrame / ReturnFrame et déplacements d'ancre (× échelle).",
         f"Licence : {LICENCES[lic]} ; cette version dérivée suit la licence du sprite d'origine.",
         "Forme non officielle : ce sprite n'a été ni soumis ni approuvé sur SpriteCollab.",
@@ -678,9 +689,11 @@ def write_readme(number: str, slug: str, name: str, folder: Path, anims: list[Sr
 ![Comparaison](apercu_comparaison.png)
 
 Version **Dynamax** du sprite SpriteCollab de {name} : toutes les animations du sprite d'origine
-(`{folder.relative_to(ROOT)}`) sont reprises, agrandies × {scale} au plus proche voisin, entourées d'une aura rouge
-tramée et de trois nuages rouges qui tournent autour du corps. Aucun pixel du Pokémon n'est redessiné ; trois
-couleurs sont ajoutées ({colours} couleurs au total). `ShadowSize` passe à 2 (grande ombre).
+(`{folder.relative_to(ROOT)}`) sont reprises, agrandies × {scale} au plus proche voisin et entourées d'une aura rouge
+animée (anneau plein + trame qui remonte le long du corps). Aucun pixel du Pokémon n'est redessiné ; deux couleurs
+sont ajoutées ({colours} couleurs au total). `ShadowSize` passe à 2 (grande ombre). **Les nuages tournants et la
+transformation sont des VFX séparés**, sans personnage, à superposer en jeu : voir
+[`personnages/dynamax/vfx/`](../vfx/README.md) et l'entrée `dynamax.vfx` de `kit.json` (taille et décalage).
 
 Construit par `source/personnages/build_dynamax_sprites.py` (méthode et réglages dans
 [`personnages/dynamax/README.md`](../README.md)), vérifié par `verify_dynamax_sprites.py`
@@ -720,13 +733,13 @@ def build_one(number: str, slug: str, name: str, folder: Path, scale: int) -> di
     comps = build_pack(anims, scale)
     for name_, c in comps.items():
         for which, kind in enumerate(["Anim", "Offsets", "Shadow"]):
-            sheet(c, which).save(out / f"{name_}-{kind}.png", optimize=True)
-        night(sheet(c, 0)).save(out / "nuit" / f"{name_}-Anim.png", optimize=True)
+            save_png(sheet(c, which), out / f"{name_}-{kind}.png")
+        save_png(night(sheet(c, 0)), out / "nuit" / f"{name_}-Anim.png")
     write_animdata(anims, comps, out / "AnimData.xml")
     order = [a.name for a in anims if not a.copy_of]
     ase_info = write_aseprite(comps, out / f"{slug}.aseprite", order)
     title = f"{name.upper()} #{number} — SPRITE DYNAMAX, FORMAT SPRITECOLLAB (× {scale})"
-    contact_sheet(title, "Toutes les animations du sprite SpriteCollab d'origine, agrandies, avec aura et nuages · Walk, Attack : ligne 1 = Bas, ligne 2 = Droite",
+    contact_sheet(title, "Toutes les animations du sprite SpriteCollab d'origine, agrandies, avec l'aura animée · nuages et transformation : VFX séparés · Walk, Attack : ligne 1 = Bas, ligne 2 = Droite",
                   anims, comps, out / "apercu.png", scale)
     directions_sheet(comps, out / "apercu_directions.png", scale)
     comparison_sheet(name, anims, comps, out / "apercu_comparaison.png", scale)
@@ -751,15 +764,15 @@ def build_one(number: str, slug: str, name: str, folder: Path, scale: int) -> di
                    "directions": DIRECTIONS, "ancre": "pixel blanc de Shadow, en (largeur/2, hauteur/2 + 4) au repos, déplacée comme dans la source (× échelle)",
                    "shadow_size": SHADOW_SIZE, "shadow_size_origine": src_shadow,
                    "reperes": "tête (noir), centre (vert), main gauche (rouge), main droite (bleu), un pixel chacun replacé à l'échelle"},
-        "dynamax": {"echelle": scale, "aura": {"aura": AURA, "claire": AURA_LIGHT, "ombre_des_nuages": darkest_colour(anims)},
-                    "anneau": "1 px plein (aura) + 1 px tramé en damier (aura claire) à l'échelle du dessin, phase changeant à chaque image",
-                    "nuages": "trois nuages à 120° sur une ellipse en halo au-dessus du point le plus haut de chaque image (demi-largeur du corps + 3 ; un sixième de sa hauteur), un tiers de tour par cycle, moitié arrière derrière le corps",
-                    "orbite": list(orbit_for(anims)), "petits_nuages": body_size(anims)[0] < NARROW},
+        "dynamax": {"echelle": scale, "couleurs_effets": {"sombre": FX.FX_DARK, "rouge": FX.FX_RED, "claire": FX.FX_LIGHT, "blanc": FX.FX_WHITE, "contour_nuages": darkest_colour(anims)},
+                    "aura": "anneau plein rouge + anneau tramé clair dont le motif remonte d'un pixel par phase (4 phases par cycle d'animation) + langues extérieures",
+                    "nuages_integres": BAKE_CLOUDS,
+                    "vfx": vfx_info(anims, scale)},
         "animations": {a.name: ({"index": a.index, "copie_de": a.copy_of} if a.copy_of else
                                 {"index": a.index, "case": [comps[a.name].fw, comps[a.name].fh], "case_origine": [a.fw, a.fh],
                                  "images": len(a.durations), "durees": a.durations, "directions": comps[a.name].cells.__len__(),
                                  "rush": a.rush, "hit": a.hit, "return": a.ret}) for a in anims},
-        "palette": {"couleurs_opaques": len(used), "ajoutees": 2, "limite_spritebot": 15,
+        "palette": {"couleurs_opaques": len(used), "ajoutees": 2 if not BAKE_CLOUDS else 3, "limite_spritebot": 15,
                     "note": "au-delà de 15 couleurs le sprite n'est pas importable en mode strict SkyTemple (forme non officielle de toute façon)"},
         "aseprite": ase_info,
         "fichiers": {"feuilles": "<Anim>-Anim.png, <Anim>-Offsets.png, <Anim>-Shadow.png", "nuit": "nuit/<Anim>-Anim.png",
@@ -775,9 +788,12 @@ def main(argv: list[str]) -> None:
     scale = SCALE
     slugs = []
     it = iter(argv)
+    global BAKE_CLOUDS
     for arg in it:
         if arg == "--echelle":
             scale = int(next(it))
+        elif arg == "--nuages-integres":
+            BAKE_CLOUDS = True
         else:
             slugs.append(arg)
     for number, slug, name, folder in POKEMON:

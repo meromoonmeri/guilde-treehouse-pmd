@@ -173,9 +173,10 @@ rien : on transforme les feuilles de la source case par case (`build_dynamax_spr
    n'ont pas d'`<Index>` : le garder absent, ne pas en inventer), les trois feuilles, l'ancre = pixel blanc de
    Shadow, les repères = pixels d'Offsets. Reprendre **toutes** les animations, y compris les spéciales
    (Stomp, Twirl, RearUp, MultiStrike, QuickStrike, Shock, Punch, Appeal, SpAttack) et les `CopyOf`.
-2. **Transformer sans rééchantillonner** : agrandissement au plus proche voisin (`np.repeat`), effets dessinés
-   en pixels à l'échelle du dessin avant agrandissement (aura par dilatation binaire de la silhouette, nuages en
-   bitmaps ASCII), couleurs ajoutées comptées (≤ 2 pour rester sous 15 quand la source en a 13).
+2. **Transformer sans rééchantillonner** : agrandissement au plus proche voisin (`np.repeat`, × 3 pour les Dynamax :
+   « plus grands » qu'un × 2 jugé insuffisant), effets dessinés en pixels à l'échelle du dessin avant
+   agrandissement (aura par dilatation binaire de la silhouette, nuages en bitmaps ASCII), couleurs ajoutées
+   comptées (≤ 2 pour rester sous 15 quand la source en a 13).
 3. **Recalculer la géométrie** : case = source × échelle puis élargie par pas de 8 pour contenir les effets, ancre
    au repos en (fw/2, fh/2 + 4), déplacement d'ancre = celui de la source × échelle, repères × échelle (un pixel
    chacun, pas un bloc), gabarit d'ombre agrandi mais un seul pixel blanc, `ShadowSize` adapté à la taille finale.
@@ -184,6 +185,7 @@ rien : on transforme les feuilles de la source case par case (`build_dynamax_spr
    invisible) ; décaler la phase par direction et par image pour que les feuilles ne soient pas des copies.
 5. **Effets qui suivent le corps** : ancrer les effets sur la silhouette de *chaque image* (point le plus haut,
    boîte englobante), pas sur l'ancre au sol, sinon ils restent au sol pendant Hop et flottent dans Sleep.
+   Cela ne vaut que pour un effet **cuit dans le sprite** (l'aura) ; voir le point 8 pour les effets séparés.
 6. **Vérifier par différence avec la source** : chaque pixel opaque de la source doit se retrouver, agrandi, à sa
    place ; les seuls écarts tolérés sont sous un effet de premier plan et doivent être de la couleur de cet effet
    (`verify_dynamax_sprites.py`). Les sprites officiels **ne sont pas** des miroirs exacts gauche/droite :
@@ -191,8 +193,33 @@ rien : on transforme les feuilles de la source case par case (`build_dynamax_spr
 7. **Crédits** : reprendre les lignes de `credits.txt` de la source telles quelles, ajouter la ligne de la
    transformation avec la licence de la source (une variante dérivée suit la licence de l'original ; « Unspecified »
    pour les sprites CHUNSOFT = usage de fan non commercial).
+8. **Un effet de jeu est un VFX séparé, pas une partie du sprite** (retour utilisateur : « c'est un VFX quand tu
+   actives la Dynamax in-game, donc pas de perso, pas de fond, c'est pour chaque sprite »). Les nuages tournants et
+   l'animation de transformation ont d'abord été cuits dans les feuilles de chaque Pokémon (avec le Pokémon
+   dedans) : rejeté. La bonne forme est `build_dynamax_vfx.py` → `personnages/dynamax/vfx/` : des feuilles
+   **sans personnage ni fond**, génériques, en deux tailles (M : corps ≤ 24 px de large à l'échelle 1, L au-delà),
+   avec une ancre (sol pour la transformation, centre de l'anneau pour les nuages, centre du corps pour l'aura),
+   `AnimData.xml` aux index libres (13+, une ligne : un VFX n'a pas d'orientation), `HitFrame` = moment où le jeu
+   échange le sprite normal contre le sprite Dynamax, `ReturnFrame` = moment où lancer l'effet suivant. Chaque pack
+   n'emporte que ce qui lui est propre (l'aura, qui colle à la silhouette) et un `kit.json["dynamax"]["vfx"]`
+   (taille + décalage de l'anneau). Le seul lien entre un pack et le VFX est donc géométrique (`vfx_info`), et le
+   vérificateur le contrôle. Un GIF de démonstration (`apercu_demonstration.gif`) rejoue la séquence complète sur
+   un sprite pour que le lecteur voie le résultat sans moteur de jeu.
+9. **Dessiner un VFX en pixel art** (`dynamax_fx.py`) : palette de 4–5 couleurs opaques (sombre, cramoisi, rouge,
+   clair, blanc), **aucune transparence partielle** ; les concepts du générateur d'images
+   (`reference/dynamax/concept_*.png`) servent de guide de forme et de rythme (volutes à cœur clair, colonne à
+   cœur sombre, éclairs qui s'enroulent, flash en étoile), puis tout est retracé en pixels : nuages en bitmaps ASCII
+   à trois phases (un tracé paramétrique de spirale est illisible à cette taille), colonne = bandes verticales
+   (bord clair | rouge avec étincelles qui coulent | cœur cramoisi), éclairs = polyligne **zigzag** épaisse
+   (corps 2–3 px + bord clair de 1 px) posée sur une hélice, la moitié arrière dessinée avant la colonne et la
+   moitié avant après (`spiral_bolt` renvoie ce drapeau). Un éclair en hélice régulière fait un ruban lisse : il
+   faut ± 5–6 px de jitter latéral pour lire « éclair ». Un flash en rayons de 1 px disparaît à × 3 : masse pleine
+   (ellipse blanche) + rayons de 3 px + colonne surexposée en blanc. Les boucles (nuages) avancent d'un multiple
+   entier du motif par boucle et l'apparition se termine sur l'image qui précède l'image 0 de la boucle.
 
-Ordre de grandeur : ~30 s de build par Pokémon (dilatation et collage case par case), 5 min pour dix.
+Ordre de grandeur : ~30 s de build par Pokémon (dilatation et collage case par case), 5 min pour dix ; quelques
+secondes pour les VFX. PNG indexés (`save_png`) : mêmes pixels, fichiers deux fois plus petits qu'en RGBA (les dix
+packs × 3 pèsent 24 Mo, comme la v1 × 2 en RGBA).
 
 ## 7. Fichiers utiles
 
@@ -203,7 +230,12 @@ Ordre de grandeur : ~30 s de build par Pokémon (dilatation et collage case par 
 - `source/personnages/build_zarude_sprite.py` + `zarude_pieces.py` — constructeur par pièces sur un squelette
   officiel (réutiliser `anchor_displacements`, `Arm`, `assemble`, `draw`, `frame_plan`, `Builder.fit`).
 - `source/personnages/build_dynamax_sprites.py` — variante par transformation de feuilles (réutiliser `load_source`,
-  `compose_frame`, `fit`, `make_cell`, `write_animdata` avec `CopyOf` et index absents, `comparison_sheet`).
+  `compose_frame`, `fit`, `make_cell`, `write_animdata` avec `CopyOf` et index absents, `comparison_sheet`,
+  `save_png`, `vfx_info`).
+- `source/personnages/dynamax_fx.py` + `build_dynamax_vfx.py` — VFX séparés sans personnage (réutiliser `bmp`,
+  `clouds`, `aura`, `column`, `bolt`, `spiral_bolt`, `flash_burst`, `to_composed` pour tout effet à une ligne avec
+  ancre, `gif` / `demo_gif` pour montrer un effet superposé à un sprite) ; `reference/dynamax/concept_*.png` =
+  guides du générateur d'images.
 - `source/personnages/verify_falinks_sprite.py`, `verify_zarude_sprite.py`, `verify_dynamax_sprites.py` —
   vérificateurs (règles SpriteBot + contrôles propres à chaque méthode).
 - `source/personnages/reference/0870/0002`, `0003` — unités Falinks d'origine ; `reference/0812/` — Rillaboom,

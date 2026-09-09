@@ -3,9 +3,11 @@
 ![Comparaison](apercu_comparaison.png)
 
 Version **Dynamax** du sprite SpriteCollab de Pâtachiot (Pawmi) : toutes les animations du sprite d'origine
-(`source/personnages/reference/0923`) sont reprises, agrandies × 2 au plus proche voisin, entourées d'une aura rouge
-tramée et de trois nuages rouges qui tournent autour du corps. Aucun pixel du Pokémon n'est redessiné ; trois
-couleurs sont ajoutées (14 couleurs au total). `ShadowSize` passe à 2 (grande ombre).
+(`source/personnages/reference/0923`) sont reprises, agrandies × 3 au plus proche voisin et entourées d'une aura rouge
+animée (anneau plein + trame qui remonte le long du corps). Aucun pixel du Pokémon n'est redessiné ; deux couleurs
+sont ajoutées (14 couleurs au total). `ShadowSize` passe à 2 (grande ombre). **Les nuages tournants et la
+transformation sont des VFX séparés**, sans personnage, à superposer en jeu : voir
+[`personnages/dynamax/vfx/`](../vfx/README.md) et l'entrée `dynamax.vfx` de `kit.json` (taille et décalage).
 
 Construit par `source/personnages/build_dynamax_sprites.py` (méthode et réglages dans
 [`personnages/dynamax/README.md`](../README.md)), vérifié par `verify_dynamax_sprites.py`
@@ -22,21 +24,21 @@ les images), `apercu_directions.png`, `apercu_comparaison.png`, `apercu_marche_a
 
 | Animation | Index | Case | Images | Durée | Repères |
 | --- | --- | --- | --- | --- | --- |
-| Walk | 0 | 88 × 152 (origine 32 × 48) | 4 | 36 ticks | — |
-| Attack | 1 | 176 × 224 (origine 72 × 88) | 10 | 19 ticks | Rush 1, Hit 3, Return 6 |
-| QuickStrike | 2 | 280 × 336 (origine 128 × 144) | 10 | 19 ticks | Hit 3, Return 6 |
-| Shoot | 3 | 104 × 176 (origine 40 × 56) | 11 | 25 ticks | Hit 2, Return 4 |
-| Shock | 4 | 112 × 184 (origine 48 × 64) | 13 | 20 ticks | Hit 6, Return 10 |
-| Sleep | 5 | 80 × 136 (origine 24 × 40) | 2 | 65 ticks | — |
-| Hurt | 6 | 104 × 176 (origine 48 × 64) | 2 | 10 ticks | — |
-| Idle | 7 | 88 × 168 (origine 32 × 56) | 6 | 56 ticks | — |
-| Swing | 8 | 168 × 224 (origine 80 × 80) | 9 | 16 ticks | Hit 5, Return 5 |
-| Double | 9 | 136 × 200 (origine 56 × 72) | 16 | 36 ticks | — |
-| Hop | 10 | 88 × 240 (origine 32 × 96) | 10 | 24 ticks | Hit 9 |
-| Charge | 11 | 96 × 152 (origine 32 × 48) | 10 | 20 ticks | Hit 5, Return 9 |
-| Rotate | 12 | 88 × 152 (origine 32 × 48) | 9 | 18 ticks | Hit 8 |
+| Walk | 0 | 120 × 176 (origine 32 × 48) | 4 | 36 ticks | — |
+| Attack | 1 | 240 × 288 (origine 72 × 88) | 10 | 19 ticks | Rush 1, Hit 3, Return 6 |
+| QuickStrike | 2 | 392 × 456 (origine 128 × 144) | 10 | 19 ticks | Hit 3, Return 6 |
+| Shoot | 3 | 144 × 208 (origine 40 × 56) | 11 | 25 ticks | Hit 2, Return 4 |
+| Shock | 4 | 168 × 224 (origine 48 × 64) | 13 | 20 ticks | Hit 6, Return 10 |
+| Sleep | 5 | 96 × 152 (origine 24 × 40) | 2 | 65 ticks | — |
+| Hurt | 6 | 152 × 216 (origine 48 × 64) | 2 | 10 ticks | — |
+| Idle | 7 | 120 × 200 (origine 32 × 56) | 6 | 56 ticks | — |
+| Swing | 8 | 248 × 280 (origine 80 × 80) | 9 | 16 ticks | Hit 5, Return 5 |
+| Double | 9 | 176 × 240 (origine 56 × 72) | 16 | 36 ticks | — |
+| Hop | 10 | 120 × 312 (origine 32 × 96) | 10 | 24 ticks | Hit 9 |
+| Charge | 11 | 120 × 176 (origine 32 × 48) | 10 | 20 ticks | Hit 5, Return 9 |
+| Rotate | 12 | 120 × 176 (origine 32 × 48) | 9 | 18 ticks | Hit 8 |
 
-Les durées, index et repères d'images sont ceux du sprite d'origine ; les cases sont agrandies × 2 puis élargies
+Les durées, index et repères d'images sont ceux du sprite d'origine ; les cases sont agrandies × 3 puis élargies
 par pas de 8 pour contenir l'aura et les nuages, l'ancre au repos restant en (largeur / 2, hauteur / 2 + 4).
 
 ## Licence
