@@ -1,0 +1,22 @@
+# Zarude #0893 — version Dynamax (agrandissement × 3, aura et nuages Dynamax), format SpriteCollab : date, auteur, statut, licence, animations
+2026-09-09 00:00:00.000000	Dynamax scripté (source/sprite/build_dynamax.py)	CUR	CC_BY-NC_4	Walk,Attack,Strike,Shoot,Sing,Sleep,Hurt,Idle,Swing,Double,Hop,Charge,Rotate
+
+Sprite d'origine : personnages/zarude (sprite du projet, absent de SpriteCollab), crédits repris tels quels :
+  # Zarude #0893 forme 0000 — crédits, format proche de SpriteCollab : date, auteur, statut, licence, animations
+  2026-09-07 00:00:00.000000	Guilde Treehouse (découpe de la planche fournie + pièces complémentaires, assemblage scripté)	CUR	CC_BY-NC_4	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Sing,Swing,Double,Rotate,Hop
+  Dessin : planche de marche de Zarude fournie par le commanditaire (4 directions × 4 images, fichier « Made with Game Character Hub »,
+  source/personnages/reference/zarude/zarude_overworld_2x.png) ; auteur d'origine non renseigné — à compléter si connu.
+  Les vues Bas, Droite/Gauche et Haut de Walk reprennent ses pixels tels quels ; les diagonales, les bras des attaques,
+  le sommeil et les effets sont dessinés dans sa palette (11 couleurs).
+  Squelette d'animation (cases, durées, RushFrame/HitFrame/ReturnFrame, déplacements de l'ancre, sens de rotation)
+  relevé sur le sprite de Rillaboom #0812 de baronessfaron (<@!544245909639397378>), CC BY-NC 4.0 — https://sprites.pmdcollab.org/#/0812?form=0
+  Licence de ce sprite : CC BY-NC 4.0 (usage, copie et modification autorisés avec crédit, hors usage commercial),
+  sous réserve des droits de l'auteur de la planche d'origine.
+  Zarude n'existe pas sur le dépôt SpriteCollab ; ce sprite n'y a été ni soumis ni approuvé.
+
+Transformation : chaque pixel du sprite d'origine est agrandi × 3 (aucun pixel du Pokémon redessiné) ; aura rouge animée ajoutée
+autour de la silhouette (deux couleurs : (232, 40, 72) et (255, 144, 128)) ; trois nuages rouges tournent au-dessus de la tête.
+Toutes les animations d'origine sont reprises avec leurs index, durées, RushFrame / HitFrame / ReturnFrame et déplacements d'ancre (× échelle).
+Licence : CC_BY-NC_4 — cette version dérivée suit la ou les licences du sprite d'origine (Unspecified = sprite du jeu, usage de fan non commercial ;
+PMDCollab_1 / PMDCollab_2 / CC_BY-NC_4 = usage non commercial avec crédit des auteurs ci-dessus).
+Forme non officielle : ce sprite n'a été ni soumis ni approuvé sur SpriteCollab.

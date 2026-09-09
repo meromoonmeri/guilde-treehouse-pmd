@@ -1,0 +1,16 @@
+# Larméléon (Sobble) #0816 — version Dynamax (agrandissement × 3, aura et nuages Dynamax), format SpriteCollab : date, auteur, statut, licence, animations
+2026-09-09 00:00:00.000000	Dynamax scripté (source/sprite/build_dynamax.py)	CUR	PMDCollab_1+PMDCollab_2+CC_BY-NC_4	Walk,Attack,Strike,Shoot,SpAttack,Appeal,Sleep,Hurt,Idle,Swing,Double,Hop,Charge,Rotate,EventSleep,Wake,Eat,Tumble,Pose,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,Faint,HitGround
+
+Sprite d'origine : https://github.com/PMDCollab/SpriteCollab/tree/db1928346e45/sprite/0816 (https://sprites.pmdcollab.org/#/0816), crédits repris tels quels :
+  2023-04-29 22:15:09.786700	<@!702275233125630042>	CUR	PMDCollab_1	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Appeal,SpAttack,Swing,Double,Rotate,Hop
+  2023-05-05 19:39:44.210811	<@!350050109741858829>	CUR	PMDCollab_1	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Swing,Double,Rotate,Hop
+  2023-11-16 02:53:54.263960	<@!544245909639397378>	CUR	PMDCollab_2	Idle,Walk,Sleep,Hurt,Attack,Charge,Shoot,Strike,Swing,Double,Rotate,Hop,Pose,Faint
+  2024-10-27 07:12:11.153143	<@!544245909639397378>	CUR	CC_BY-NC_4	EventSleep,Wake,Eat,Tumble,Pull,Pain,Float,DeepBreath,Nod,Sit,LookUp,Sink,Trip,Laying,LeapForth,Head,Cringe,LostBalance,TumbleBack,HitGround,Faint
+  2024-11-16 04:51:33.662021	<@!544245909639397378>	CUR	CC_BY-NC_4	DeepBreath,LookUp,Trip,HitGround
+
+Transformation : chaque pixel du sprite d'origine est agrandi × 3 (aucun pixel du Pokémon redessiné) ; aura rouge animée ajoutée
+autour de la silhouette (deux couleurs : (232, 40, 72) et (255, 144, 128)) ; trois nuages rouges tournent au-dessus de la tête.
+Toutes les animations d'origine sont reprises avec leurs index, durées, RushFrame / HitFrame / ReturnFrame et déplacements d'ancre (× échelle).
+Licence : PMDCollab_1+PMDCollab_2+CC_BY-NC_4 — cette version dérivée suit la ou les licences du sprite d'origine (Unspecified = sprite du jeu, usage de fan non commercial ;
+PMDCollab_1 / PMDCollab_2 / CC_BY-NC_4 = usage non commercial avec crédit des auteurs ci-dessus).
+Forme non officielle : ce sprite n'a été ni soumis ni approuvé sur SpriteCollab.
