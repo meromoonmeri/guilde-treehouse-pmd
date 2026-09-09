@@ -612,6 +612,12 @@ def build_tiled(groups, meta):
 def build_ground_rsground(meta):
     # PMDO's .rsground keeps layers as arrays of 8 px cells. This compact map is
     # intentionally the same layer vocabulary as Halcyon/Altere_Pond.
+    #
+    # NOTE: this function only lays out *which* cell goes where. The RogueEssence
+    # serialization envelope (SerializationContainer, GroundMap $type, LocalText
+    # name, GroundWall obstacles, ReRandom, MapBG, AnimLayer/EntityLayer, ...) is
+    # applied afterwards by fix_rsground.convert(), which is called from main().
+    # Do not hand-edit the schema here; keep the single source of truth there.
     def cell(sheet: str, x: int, y: int, frames=None, length=10):
         fs = frames or [{"Sheet": sheet, "TexLoc": {"X": x, "Y": y}}]
         out = {"Frames": fs}
@@ -737,8 +743,19 @@ def main():
     groups, meta, light_frames, trees = build_layers()
     build_tiled(groups, meta)
     build_ground_rsground(meta)
+
+    # Convert the layout draft into a real RogueEssence file and (re)build the
+    # two index files the engine needs, then assert the result is loadable.
+    import fix_rsground
+    import verify_rsground
+
+    fix_rsground.main()
+
     build_preview(groups, light_frames)
     write_manifest(meta)
+
+    if verify_rsground.main() != 0:
+        raise SystemExit("Le .rsground produit n'est pas conforme au format PMDO.")
     print("Built PMDO/Halcyon-style Luminous Spring: 8 px cells, 9 tile sheets, 8 light frames, Tiled + rsground.")
 
 
