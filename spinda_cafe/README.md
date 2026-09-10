@@ -54,16 +54,38 @@ rouge/orange saturées, même liseré doré net, aplats au lieu de dégradés. L
 silhouette, la tête de Spinda, le comptoir, les fioles, le panier, les mâts et
 le tapis gardent leurs positions.
 
-### Détourage du fond
+### Affinage du lineart
 
-Le générateur renvoie un PNG agrandi **sans canal alpha**. Sur fond de damier,
-celui-ci est peint en dur et reste indétourable proprement, puisque le sujet
-contient lui aussi des gris.
+Le kiosque était cerné de gros traits noirs épais — chaque planche du comptoir
+et chaque tuile étaient soulignées — alors que l'aile droite sépare ses formes
+par contraste de couleur, avec des traits fins voire absents. Mesuré : 25,8 %
+de pixels sombres à gauche contre 20,8 % à droite, et surtout 1 429 segments de
+trait à gauche contre 253 à droite.
 
-La parade : demander la génération sur un **fond magenta uni (#FF00FF)**, couleur
-absente de la palette du café. `../tileset_pmd/detourer_magenta.py` isole ce fond,
-dilate le masque de 1 px pour absorber le liseré de compression, puis reprojette
-le sujet dans la bbox exacte de la source.
+Le kiosque a été redessiné avec des traits d'1 px dans une teinte plus foncée
+de la couleur de l'objet (brun sombre pour le bois, rouge sombre pour le toit)
+au lieu du noir.
+
+### Détourage du fond, en qualité pixel-art
+
+Le générateur rend en ~1327×784 pour une cible de 425×251. Réduire en LANCZOS
+**moyenne** les pixels : les bords deviennent flous et les couleurs se délavent
+(les fioles viraient au sépia). Comparaison avec la référence Halcyon :
+
+| | bords semi-transparents | gradient interne moyen |
+|---|---|---|
+| Référence Halcyon | **0** | 15,3 |
+| Réduction LANCZOS | 2 467 (4,3 %) | 10,2 |
+| **Rendu final** | **0** | **12,6** |
+
+La génération est dessinée sur une grille régulière d'environ 3,1 px.
+`../tileset_pmd/detourer_magenta.py` rééchantillonne donc par **couleur
+majoritaire** de chaque bloc : chaque pixel de sortie reprend une teinte
+réellement présente dans la source, jamais une moyenne. Les aplats restent
+purs, les bords tranchés, et l'alpha est binaire comme sur un vrai sprite.
+
+Réduire la palette (quantification à 48 couleurs) a été essayé et **écarté** :
+cela tuait les couleurs des fioles et faisait virer l'ensemble au sépia.
 
 ## Fichiers produits
 
