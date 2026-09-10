@@ -31,6 +31,25 @@ salle dans le cadre 456 × 320.
 python3 ../tileset_pmd/mettre_interieur_echelle_pmdo.py interieur_*.png
 ```
 
+### Version calée sur la grille 8 px
+
+Dans le cadre 456 × 320, la salle tombe à l'offset x=20 pour une largeur de
+415 px : ni l'un ni l'autre n'est un multiple de 8, donc ses bords tomberaient
+au milieu des tuiles et le découpage en `.tile` serait décalé.
+
+`../tileset_pmd/caler_grille8_interieur.py` la recadre sur des frontières de
+cellules : **52 × 40 cellules** pleines (416 × 320 px), à l'offset (16, 0).
+
+| Fichier | Contenu |
+|---|---|
+| `interieur_sans_deco_jour_grille8.png` | jour, calé grille, prêt à découper |
+| `interieur_sans_deco_nuit_grille8.png` | nuit, calé grille |
+| `*_grille8_apercu.png` | la grille en surimpression, pour vérifier le calage |
+
+```bash
+python3 ../tileset_pmd/caler_grille8_interieur.py interieur_sans_deco_*.png
+```
+
 ## Parti pris
 
 Le vrai café Spinda d'*Explorers of Sky* est une **salle souterraine** : anneau
