@@ -1,0 +1,112 @@
+{
+  "zone": "Cafe_Basement",
+  "tile_px": 8,
+  "moments": {
+    "jour": {
+      "Floor": {
+        "fichier": "Cafe_Basement_Floor_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 2148,
+        "couleurs": 116,
+        "moy_par_tuile": 5.8,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 55.94
+      },
+      "Walls": {
+        "fichier": "Cafe_Basement_Walls_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 378,
+        "couleurs": 76,
+        "moy_par_tuile": 6.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 8.32
+      },
+      "Shadows": {
+        "fichier": "Cafe_Basement_Shadows_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 1372,
+        "couleurs": 278,
+        "moy_par_tuile": 5.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 21.66
+      },
+      "Objects_Over": {
+        "fichier": "Cafe_Basement_Objects_Over_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 422,
+        "couleurs": 168,
+        "moy_par_tuile": 3.7,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 4.55
+      },
+      "Objects": {
+        "fichier": "Cafe_Basement_Objects_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 436,
+        "couleurs": 185,
+        "moy_par_tuile": 4.4,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 4.68
+      },
+      "_recomposition_ecart_pct": 0.0
+    },
+    "nuit": {
+      "Floor": {
+        "fichier": "Cafe_Basement_Floor_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 1634,
+        "couleurs": 40,
+        "moy_par_tuile": 3.1,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 40.54
+      },
+      "Walls": {
+        "fichier": "Cafe_Basement_Walls_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 984,
+        "couleurs": 41,
+        "moy_par_tuile": 2.8,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 23.68
+      },
+      "Shadows": {
+        "fichier": "Cafe_Basement_Shadows_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 1216,
+        "couleurs": 133,
+        "moy_par_tuile": 3.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 14.02
+      },
+      "Objects_Over": {
+        "fichier": "Cafe_Basement_Objects_Over_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 529,
+        "couleurs": 200,
+        "moy_par_tuile": 4.9,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 7.49
+      },
+      "Objects": {
+        "fichier": "Cafe_Basement_Objects_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 672,
+        "couleurs": 237,
+        "moy_par_tuile": 5.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 9.35
+      },
+      "_recomposition_ecart_pct": 0.0
+    }
+  }
+}

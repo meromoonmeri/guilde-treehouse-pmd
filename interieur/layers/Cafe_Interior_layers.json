@@ -1,0 +1,112 @@
+{
+  "zone": "Cafe_Interior",
+  "tile_px": 8,
+  "moments": {
+    "jour": {
+      "Floor": {
+        "fichier": "Cafe_Interior_Floor_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 2209,
+        "couleurs": 95,
+        "moy_par_tuile": 5.2,
+        "pct_tuiles_conformes": 99.3,
+        "semi_transparents": 0,
+        "occupation_pct": 57.77
+      },
+      "Walls": {
+        "fichier": "Cafe_Interior_Walls_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 354,
+        "couleurs": 59,
+        "moy_par_tuile": 7.1,
+        "pct_tuiles_conformes": 99.4,
+        "semi_transparents": 0,
+        "occupation_pct": 7.57
+      },
+      "Shadows": {
+        "fichier": "Cafe_Interior_Shadows_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 712,
+        "couleurs": 145,
+        "moy_par_tuile": 4.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 7.11
+      },
+      "Objects_Over": {
+        "fichier": "Cafe_Interior_Objects_Over_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 314,
+        "couleurs": 58,
+        "moy_par_tuile": 4.6,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 3.7
+      },
+      "Objects": {
+        "fichier": "Cafe_Interior_Objects_jour.png",
+        "Layer": 0,
+        "cellules_occupees": 401,
+        "couleurs": 104,
+        "moy_par_tuile": 3.5,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 4.05
+      },
+      "_recomposition_ecart_pct": 0.0
+    },
+    "nuit": {
+      "Floor": {
+        "fichier": "Cafe_Interior_Floor_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 2115,
+        "couleurs": 95,
+        "moy_par_tuile": 6.0,
+        "pct_tuiles_conformes": 99.5,
+        "semi_transparents": 0,
+        "occupation_pct": 55.33
+      },
+      "Walls": {
+        "fichier": "Cafe_Interior_Walls_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 475,
+        "couleurs": 50,
+        "moy_par_tuile": 5.4,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 10.09
+      },
+      "Shadows": {
+        "fichier": "Cafe_Interior_Shadows_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 339,
+        "couleurs": 88,
+        "moy_par_tuile": 2.5,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 1.64
+      },
+      "Objects_Over": {
+        "fichier": "Cafe_Interior_Objects_Over_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 334,
+        "couleurs": 67,
+        "moy_par_tuile": 6.1,
+        "pct_tuiles_conformes": 99.4,
+        "semi_transparents": 0,
+        "occupation_pct": 5.51
+      },
+      "Objects": {
+        "fichier": "Cafe_Interior_Objects_nuit.png",
+        "Layer": 0,
+        "cellules_occupees": 500,
+        "couleurs": 125,
+        "moy_par_tuile": 5.3,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 7.71
+      },
+      "_recomposition_ecart_pct": 0.0
+    }
+  }
+}
