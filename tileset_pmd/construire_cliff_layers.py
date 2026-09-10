@@ -93,12 +93,40 @@ CIEL_JOUR = [
     (0.71, (151, 215, 255)), (0.77, (151, 223, 255)), (0.82, (159, 231, 255)),
     (0.90, (167, 231, 255)), (0.96, (223, 247, 255)),
 ]
-CIEL_NUIT = [
-    (0.00, (11, 19, 71)), (0.36, (15, 27, 87)), (0.46, (19, 35, 103)),
-    (0.51, (23, 43, 115)), (0.56, (27, 51, 127)), (0.61, (31, 59, 139)),
-    (0.71, (39, 71, 151)), (0.77, (47, 83, 159)), (0.82, (55, 95, 167)),
-    (0.90, (67, 111, 175)), (0.96, (87, 135, 183)),
+# Crepuscule et nuit sont RELEVES sur les references fournies
+# (`IMG_4888.jpeg`, `IMG_4889.png`) : mediane de chaque ligne de ciel sur la
+# moitie droite du cadre, la ou aucune falaise ne masque le fond, puis
+# quantification en 11 aplats francs comme le fait PMD.
+CIEL_CREPUSCULE = [
+    (0.00, (169, 149, 238)), (0.09, (171, 149, 229)), (0.18, (178, 145, 209)),
+    (0.27, (192, 139, 184)), (0.36, (208, 137, 159)), (0.45, (218, 132, 135)),
+    (0.54, (230, 125, 104)), (0.63, (238, 122, 83)), (0.72, (240, 128, 88)),
+    (0.81, (243, 140, 96)), (0.90, (247, 158, 108)),
 ]
+CIEL_NUIT = [
+    (0.00, (0, 26, 96)), (0.20, (0, 31, 108)), (0.34, (0, 35, 118)),
+    (0.46, (0, 39, 127)), (0.56, (0, 42, 134)), (0.64, (0, 46, 142)),
+    (0.72, (0, 51, 150)), (0.79, (0, 55, 158)), (0.86, (8, 62, 165)),
+    (0.92, (18, 72, 172)), (0.97, (34, 88, 180)),
+]
+
+# Un moment = une rampe de ciel, une planche de mer, un habillage.
+MOMENTS = {
+    # "nuit" = teinte appliquee a la falaise, "nuages" = teinte appliquee a la
+    # bande de nuages. Sans cette derniere, les cumulus restaient blancs de
+    # midi au-dessus d'un ciel orange, ce qui cassait toute l'ambiance.
+    "jour":       {"ciel": "CIEL_JOUR",       "mer": None,
+                   "nuit": None,             "nuages": None,
+                   "astre": "soleil"},
+    "crepuscule": {"ciel": "CIEL_CREPUSCULE", "mer": "mer_crepuscule.png",
+                   "nuit": (0.46, (188, 104, 84)),
+                   "nuages": (0.52, (240, 138, 96)),
+                   "astre": "soleil"},
+    "nuit":       {"ciel": "CIEL_NUIT",       "mer": "mer_nuit.png",
+                   "nuit": (0.66, (34, 54, 132)),
+                   "nuages": (0.58, (96, 108, 172)),
+                   "astre": "lune"},
+}
 
 # L'herbe de Treasure Town n'est pas verte : elle est olive.
 HERBE_METANO = np.array([
@@ -353,11 +381,36 @@ def bande_nuages(pieces: list[np.ndarray]) -> np.ndarray:
 # ocean
 # --------------------------------------------------------------------------
 
-def construire_ocean(pal: np.ndarray) -> np.ndarray:
-    """Pave l'ocean genere, en respectant la degression de la reference."""
+def construire_ocean(pal: np.ndarray, planche: str | None = None) -> np.ndarray:
+    """Pave l'ocean, en respectant la degression de la reference.
+
+    `planche` pointe une mer RELEVEE sur les references de crepuscule / nuit
+    (`cliff/ref2/mer_*.png`) : chaque ligne y porte la couleur mediane de la
+    ligne correspondante dans l'image d'origine. On garde alors la STRUCTURE
+    de vagues de la mer de jour et on ne remplace que sa gamme, ligne a ligne.
+    """
     hauteur = CADRE_H - HORIZON
     src = nettoyer_orphelins(projeter_palette(
         cadrage_entier(Image.open(GEN_SEA).convert("RGBA"), CADRE_W), pal))
+    if planche and (REF / planche).exists():
+        rampe = np.array(Image.open(REF / planche).convert("RGB")).astype(int)
+        base = src[:min(src.shape[0], hauteur)].astype(int)
+        h = base.shape[0]
+        lum = base[..., :3].sum(2) / 765.0
+        lo, hi = lum.min(), max(lum.max(), lum.min() + 1e-6)
+        t = (lum - lo) / (hi - lo)
+        out = src.copy()
+        # On quantifie le facteur de relief AVANT de l'appliquer : moduler en
+        # continu creait une couleur par pixel et faisait exploser le compte
+        # par tuile (597 couleurs, 95 % de conformite). Avec 5 crans, chaque
+        # ligne ne porte plus que 5 teintes et la mer reste conforme.
+        crans = 5
+        q = np.round(t * (crans - 1)) / (crans - 1)
+        for y in range(h):
+            cible = rampe[min(y, rampe.shape[0] - 1), 0].astype(float)
+            f = (0.74 + 0.52 * q[y])[:, None]
+            out[y, :, :3] = np.clip(cible[None, :] * f, 0, 255).astype(np.uint8)
+        src = nettoyer_orphelins(out)
     out = np.zeros((hauteur, CADRE_W, 4), np.uint8)
     y = 0
     while y < hauteur:
@@ -396,7 +449,7 @@ def construire() -> None:
     SORTIE.mkdir(parents=True, exist_ok=True)
     pal = palette_metano()
 
-    ocean = construire_ocean(pal)
+    oceans = {m: construire_ocean(pal, r["mer"]) for m, r in MOMENTS.items()}
 
     # --- la falaise : collee au bord GAUCHE et au bord BAS ----------------
     # Elle mord ces deux bords, donc aucun liseré de ciel ne peut apparaitre
@@ -442,13 +495,14 @@ def construire() -> None:
                  },
                  "moments": {}}
 
-    for moment in ("jour", "nuit"):
+    for moment, reglage in MOMENTS.items():
         nuit = moment == "nuit"
+        sombre = reglage["nuit"]          # (force, teinte) ou None
         couches: dict[str, np.ndarray] = {}
         vide = lambda: np.zeros((CADRE_H, CADRE_W, 4), np.uint8)  # noqa: E731
 
         # --- Sky ----------------------------------------------------------
-        couches["Sky"] = construire_ciel(CIEL_NUIT if nuit else CIEL_JOUR)
+        couches["Sky"] = construire_ciel(globals()[reglage["ciel"]])
 
         # --- Stars ---------------------------------------------------------
         if nuit:
@@ -468,10 +522,16 @@ def construire() -> None:
 
         # --- Moon -----------------------------------------------------------
         c = vide()
-        rayon = 22 if nuit else 18
-        cy, cx = 46, 96
-        ton = (247, 247, 215) if nuit else (255, 231, 111)
-        halo = (215, 223, 175) if nuit else (255, 207, 71)
+        if reglage["astre"] == "lune":
+            rayon, cy, cx = 22, 46, 96
+            ton, halo = (247, 247, 215), (215, 223, 175)
+        elif moment == "crepuscule":
+            # au crepuscule le soleil est bas sur l'horizon et vire au rouge
+            rayon, cy, cx = 24, HORIZON - 26, 108
+            ton, halo = (255, 179, 71), (247, 122, 63)
+        else:
+            rayon, cy, cx = 18, 46, 96
+            ton, halo = (255, 231, 111), (255, 207, 71)
         yy, xx = np.ogrid[:CADRE_H, :CADRE_W]
         d2 = (yy - cy) ** 2 + (xx - cx) ** 2
         c[d2 <= rayon ** 2, :3] = ton
@@ -481,12 +541,11 @@ def construire() -> None:
 
         # --- Base : l'ocean ---------------------------------------------------
         c = vide()
-        poser(c, teinte_nuit(ocean, 0.66, (34, 54, 132)) if nuit else ocean,
-              0, HORIZON)
+        poser(c, oceans[moment], 0, HORIZON)
         couches["Base"] = c
 
         # --- la falaise, decomposee comme chez Metano ------------------------
-        terre = teinte_nuit(cliff_px, 0.5) if nuit else cliff_px
+        terre = teinte_nuit(cliff_px, *sombre) if sombre else cliff_px
         plein = vide()
         poser(plein, terre, 0, CADRE_H - terre.shape[0])
         masque = plein[..., 3] > 0
@@ -554,8 +613,8 @@ def construire() -> None:
 
         # --- Clouds : N frames, defilement en boucle parfaite -------------------
         base = bande_nuages(pieces)
-        if nuit:
-            base = teinte_nuit(base, 0.58, (96, 108, 172))
+        if reglage["nuages"]:
+            base = nettoyer_orphelins(teinte_nuit(base, *reglage["nuages"]))
         pas = CADRE_W // N_FRAMES_NUAGES
         frames = []
         for i in range(N_FRAMES_NUAGES):
@@ -619,6 +678,32 @@ def construire() -> None:
             if nom in couches:
                 comp.alpha_composite(Image.fromarray(couches[nom], "RGBA"))
         comp.save(RACINE / "cliff" / f"cliff_{moment}.png")
+
+        # --- le rendu final anime, en GIF -------------------------------------
+        # On rejoue le meme empilement N fois : a la frame i, chaque layer
+        # anime prend SA variante i — cycling de palette pour l'eau et le
+        # ciel, defilement pour les nuages. Les layers fixes sont reutilises
+        # tels quels. Le GIF boucle donc exactement comme en jeu.
+        n_gif = max(N_FRAMES_EAU, N_FRAMES_NUAGES, N_FRAMES_CIEL)
+        images = []
+        for i in range(n_gif):
+            f = Image.new("RGBA", (CADRE_W, CADRE_H), (0, 0, 0, 0))
+            for nom in ORDRE:
+                if nom not in couches:
+                    continue
+                if nom == "Clouds":
+                    src = frames[i % N_FRAMES_NUAGES]
+                elif nom in anim:
+                    lst = anim[nom]
+                    src = np.array(Image.open(SORTIE / lst[i % len(lst)]))
+                else:
+                    src = couches[nom]
+                f.alpha_composite(Image.fromarray(src, "RGBA"))
+            images.append(f.convert("P", palette=Image.ADAPTIVE, colors=256))
+        images[0].save(RACINE / "cliff" / f"cliff_{moment}.gif",
+                       save_all=True, append_images=images[1:],
+                       duration=int(1000 * PERIODE_EAU_FRAMES / 60),
+                       loop=0, disposal=2, optimize=False)
 
     (SORTIE / "Cliff_layers.json").write_text(json.dumps(manifeste, indent=2))
 

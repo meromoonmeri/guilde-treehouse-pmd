@@ -146,6 +146,122 @@
         "occupation_pct": 0.07
       }
     },
+    "crepuscule": {
+      "Sky": {
+        "fichier": "Cliff_Sky_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 5400,
+        "couleurs": 11,
+        "moy_par_tuile": 1.1,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 100.0,
+        "frames": [
+          "Cliff_Sky_crepuscule_c0.png",
+          "Cliff_Sky_crepuscule_c1.png",
+          "Cliff_Sky_crepuscule_c2.png",
+          "Cliff_Sky_crepuscule_c3.png",
+          "Cliff_Sky_crepuscule_c4.png",
+          "Cliff_Sky_crepuscule_c5.png",
+          "Cliff_Sky_crepuscule_c6.png",
+          "Cliff_Sky_crepuscule_c7.png"
+        ],
+        "animation": "palette_cycling"
+      },
+      "Moon": {
+        "fichier": "Cliff_Moon_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 41,
+        "couleurs": 2,
+        "moy_par_tuile": 1.4,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 0.52
+      },
+      "Clouds": {
+        "fichier": "Cliff_Clouds_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 897,
+        "couleurs": 365,
+        "moy_par_tuile": 6.3,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 14.68,
+        "frames": [
+          "Cliff_Clouds_crepuscule_f0.png",
+          "Cliff_Clouds_crepuscule_f1.png",
+          "Cliff_Clouds_crepuscule_f2.png",
+          "Cliff_Clouds_crepuscule_f3.png",
+          "Cliff_Clouds_crepuscule_f4.png",
+          "Cliff_Clouds_crepuscule_f5.png",
+          "Cliff_Clouds_crepuscule_f6.png",
+          "Cliff_Clouds_crepuscule_f7.png"
+        ],
+        "animation": "defilement"
+      },
+      "Base": {
+        "fichier": "Cliff_Base_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 3780,
+        "couleurs": 238,
+        "moy_par_tuile": 5.5,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 70.0,
+        "frames": [
+          "Cliff_Base_crepuscule_c0.png",
+          "Cliff_Base_crepuscule_c1.png",
+          "Cliff_Base_crepuscule_c2.png",
+          "Cliff_Base_crepuscule_c3.png",
+          "Cliff_Base_crepuscule_c4.png",
+          "Cliff_Base_crepuscule_c5.png",
+          "Cliff_Base_crepuscule_c6.png",
+          "Cliff_Base_crepuscule_c7.png"
+        ],
+        "animation": "palette_cycling"
+      },
+      "Cliffs": {
+        "fichier": "Cliff_Cliffs_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 1452,
+        "couleurs": 46,
+        "moy_par_tuile": 5.2,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 26.27
+      },
+      "River": {
+        "fichier": "Cliff_River_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 64,
+        "couleurs": 132,
+        "moy_par_tuile": 3.6,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 0.47,
+        "frames": [
+          "Cliff_River_crepuscule_c0.png",
+          "Cliff_River_crepuscule_c1.png",
+          "Cliff_River_crepuscule_c2.png",
+          "Cliff_River_crepuscule_c3.png",
+          "Cliff_River_crepuscule_c4.png",
+          "Cliff_River_crepuscule_c5.png",
+          "Cliff_River_crepuscule_c6.png",
+          "Cliff_River_crepuscule_c7.png"
+        ],
+        "animation": "palette_cycling"
+      },
+      "River_Sparkles": {
+        "fichier": "Cliff_River_Sparkles_crepuscule.png",
+        "Layer": 0,
+        "cellules_occupees": 134,
+        "couleurs": 1,
+        "moy_par_tuile": 1.0,
+        "pct_tuiles_conformes": 100.0,
+        "semi_transparents": 0,
+        "occupation_pct": 0.07
+      }
+    },
     "nuit": {
       "Sky": {
         "fichier": "Cliff_Sky_nuit.png",
@@ -213,8 +329,8 @@
         "fichier": "Cliff_Base_nuit.png",
         "Layer": 0,
         "cellules_occupees": 3780,
-        "couleurs": 37,
-        "moy_par_tuile": 2.4,
+        "couleurs": 69,
+        "moy_par_tuile": 2.2,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
         "occupation_pct": 70.0,
@@ -244,7 +360,7 @@
         "fichier": "Cliff_River_nuit.png",
         "Layer": 0,
         "cellules_occupees": 64,
-        "couleurs": 14,
+        "couleurs": 37,
         "moy_par_tuile": 1.6,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,

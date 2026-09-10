@@ -115,16 +115,66 @@ gamme est remplacée.
 Cadre **720 × 480**, horizon **y = 144**. **100 % des tuiles ≤ 16 couleurs,
 0 pixel semi-transparent.**
 
-| Layer | jour (cellules / couleurs) | nuit |
-|---|---|---|
-| Sky | 5400 / 11 | 5400 / 11 |
-| Stars | — | 155 / 2 |
-| Moon | 26 / 2 | 33 / 2 |
-| Clouds | 897 / 475 | 897 / 270 |
-| Base | 3780 / 37 | 3780 / 37 |
-| Cliffs | 1452 / 46 | 1452 / 46 |
-| River | 64 / 14 | 64 / 14 |
-| River_Sparkles | 134 / 1 | 134 / 1 |
+| Layer | jour (cell. / coul.) | crépuscule | nuit |
+|---|---|---|---|
+| Sky | 5400 / 11 | 5400 / 11 | 5400 / 11 |
+| Stars | — | — | 155 / 2 |
+| Moon | 26 / 2 | 41 / 2 | 33 / 2 |
+| Clouds | 897 / 475 | 897 / 365 | 897 / 270 |
+| Base | 3780 / 37 | 3780 / 238 | 3780 / 69 |
+| Cliffs | 1452 / 46 | 1452 / 46 | 1452 / 46 |
+| River | 64 / 14 | 64 / 132 | 64 / 37 |
+| River_Sparkles | 134 / 1 | 134 / 1 | 134 / 1 |
+
+## Crépuscule et nuit : gammes relevées, pas inventées
+
+Les deux ambiances sont **échantillonnées sur les photos de référence**
+`IMG_4888.jpeg` (crépuscule) et `IMG_4889.png` (nuit), placées à la racine du
+dépôt. Ces images sont en 3840 × 2400 et **ne sont pas des agrandissements
+entiers** — un test à tous les pas de 2 à 6 laisse une différence résiduelle,
+donc pas de re-décimation `[::k, ::k]` : elles sont ramenées en 720 × 480 par
+un `resize` LANCZOS.
+
+Relevé, pour chaque image :
+
+1. **Horizon** détecté par la plus forte rupture verticale sur une colonne
+   libre de tout relief : **y = 221** au crépuscule, **y = 223** de nuit.
+2. **Médiane par ligne** sur la moitié droite du cadre (sans falaise), ce qui
+   élimine les nuages et l'écume et ne garde que la gamme de fond.
+3. Ré-échantillonnage sur le cadre du jeu (`HORIZON = 144`, mer sur 336 px)
+   puis quantification en **11 aplats de ciel** et **12 de mer**.
+
+Les gammes de mer sont stockées comme planches d'une colonne de couleur par
+ligne dans `ref2/mer_crepuscule.png` et `ref2/mer_nuit.png`.
+
+⚠️ La médiane du ciel de nuit est un **aplat** `(0, 39, 127)` sur presque toute
+la hauteur : quantifier tel quel aurait supprimé tout dégradé. La rampe est
+ré-étalée autour de cette valeur mesurée, de `(0, 26, 96)` à `(34, 88, 180)`.
+
+La mer ne se contente pas de recevoir la nouvelle gamme : `construire_ocean()`
+**conserve la structure de vagues du jour** et ne remplace que les couleurs,
+ligne à ligne, en modulant chaque pixel par son relief local. Ce facteur est
+**quantifié sur 5 crans** avant application — en continu, il créait une couleur
+par pixel et faisait tomber la conformité de la mer à 95 %.
+
+Les nuages sont teintés par moment (`"nuages"` dans `MOMENTS`) : sans cela, des
+cumulus de plein midi flottaient au-dessus d'un ciel orange.
+
+## Les GIF de rendu final
+
+Un GIF par moment, à la racine de `cliff/` :
+
+| Fichier | Contenu |
+|---|---|
+| `cliff_jour.gif` | 8 frames, 720 × 480, 330 ms |
+| `cliff_crepuscule.gif` | idem |
+| `cliff_nuit.gif` | idem |
+
+Chaque frame rejoue **le même empilement de layers** : les layers fixes sont
+réutilisés tels quels, `Clouds` prend sa variante de défilement `_f<i>`, les
+layers à cycling prennent leur variante `_c<i>`. Le GIF boucle donc exactement
+comme le ferait le moteur — il illustre le rendu, il ne le remplace pas : la
+livraison reste les layers séparés.
 
 ## Reproduire
 
