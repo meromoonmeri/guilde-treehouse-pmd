@@ -1,43 +1,38 @@
 # Cliff — layout de la référence, tileset de Metano Town
 
-Zone `Cliff` construite en **12 layers modulaires**, selon la méthode Halcyon
-auditée dans `tileset_pmd/AUDIT_METHODE_LAYERS_HALCYON.md`.
+Zone `Cliff` en **12 layers modulaires**, méthode Halcyon
+(`tileset_pmd/AUDIT_METHODE_LAYERS_HALCYON.md`).
 
-Deux règles fixent le résultat :
+Quatre règles fixent le résultat :
 
-1. **Le layout est celui de la référence.** `IMG_4889.png` / `IMG_4890.png`
-   sont la planche ripée du *Pelipper Post Office* : plateau herbeux à gauche,
-   paroi qui tombe à pic, océan à droite, horizon haut. Composition reprise
-   telle quelle.
-2. **Le ciel et l'océan ne sont pas générés.** Ils sont découpés directement
-   dans la planche officielle, en **pixels natifs 1×**, sans passer par le
-   pipeline de réduction. Seule la falaise est une génération, restylée sur le
-   tileset de Metano Town (= Treasure Town).
+1. **Layout de la référence** — plateau herbeux à gauche, paroi à pic, océan à
+   droite, horizon haut.
+2. **La falaise touche les bords** — elle mord le bord gauche et court sur tout
+   le bord bas ; aucun liseré de ciel ne peut apparaître derrière elle. Elle ne
+   couvre pas toute la largeur : la mer reste visible à droite.
+3. **Texture et couleurs de `IMG_4892.png`** — roche en grès finement moucheté
+   par strates horizontales avec veines mauves, herbe olive clair mouchetée de
+   touffes.
+4. **Le ciel est un overlay, les nuages défilent en wrap loop parfaite.**
 
-## Sources
+## La référence `IMG_4892.png`
 
-| Fichier | Origine | Taille |
-|---|---|---|
-| `ref/ref_sky.png` | découpe officielle | 720 × 208 |
-| `ref/ref_ocean_deep_1..5.png` | découpe officielle | 48 × 128 |
-| `ref/ref_ocean_shallow_1..9.png` | découpe officielle | 48 × 168 |
-| `ref/ref_scene_land.png` | découpe officielle, référence de layout | 540 × 470 |
-| `ref/gen_cliff_metano.png` | génération restylée Metano | falaise nue |
-| `ref/gen_sky_objects.png` | génération | soleil, lune |
-| `reference_metano_*.png` | tilesets extraits de `Palikadude/Halcyon` | palette |
+La capture est un **upscale ×3 exact** — vérifié en re-décimant l'image, la
+reconstruction est identique au pixel près. On en récupère donc les **pixels
+natifs 504 × 384** (`ref2/ref_metano_scene.png`), ce qui donne la palette
+authentique sans aucune approximation. Trois patches en sont découpés et
+servent de référence directe au générateur d'image :
 
-Le ciel officiel est séparé en deux par `separer_ciel()` : le dégradé pur va
-dans `Sky`, les nuages dans `Clouds`. La version de nuit rejoue **la structure
-exacte** du dégradé ripé (mêmes bandes, mêmes hauteurs de transition) en
-gamme nocturne.
+| Fichier | Contenu |
+|---|---|
+| `ref2/ref_rock_texture.png` | grès moucheté, strates, veines mauves |
+| `ref2/ref_grass_texture.png` | turf olive moucheté de touffes |
+| `ref2/ref_cliff_edge.png` | bord herbe/roche, liseré de sable, ressac |
 
-L'océan est pavé par `construire_ocean()` avec les tuiles officielles : la
-bande `deep` (14 couleurs) à l'horizon, puis le `shallow` (4 couleurs) pour le
-large — c'est la dégression de la référence.
+Palettes mesurées : ciel **4 couleurs**, mer **19**, roche **55**, herbe **48**.
+Horizon natif à `y = 117`, soit `y = 144` dans notre cadre.
 
 ## Structure des layers
-
-Relevée sur `metano_town.rsground` puis reprise :
 
 ```
 Metano Town  : Base(0) > Cliffs(0) > River(0) > Objects Under(0) >
@@ -50,65 +45,85 @@ Cliff (nous) : Sky(0) > Stars(0) > Moon(0) > Clouds(0) >
 
 | Layer | `Layer` | Rôle | Équivalent Metano |
 |---|---|---|---|
-| `Sky` | 0 | dégradé officiel, seul calque plein cadre | `Background` |
+| `Sky` | 0 | dégradé en bandes franches, plein cadre | `Background` |
 | `Stars` | 0 | étoiles, **nuit seulement** | — |
 | `Moon` | 0 | soleil le jour, lune la nuit | — |
-| `Clouds` | 0 | nuages du ciel officiel | — |
-| `Base` | 0 | l'océan, tuiles officielles | `Metano_Town_Base` |
+| `Clouds` | 0 | **8 frames en boucle** | — |
+| `Base` | 0 | l'océan | `Metano_Town_Base` |
 | `Cliffs` | 0 | la paroi rocheuse | `Metano_Town_Cliffs` |
-| `River` | 0 | ressac au pied et au flanc de la roche | `..._River_Animation_*` |
-| `River_Sparkles` | 0 | scintillements sur l'eau | `..._River_Sparkles` |
-| `Objects_Under` | 0 | liseré sombre sous l'herbe | `Objects Under` |
+| `River` | 0 | ressac au pied et au flanc | `..._River_Animation_*` |
+| `River_Sparkles` | 0 | scintillements | `..._River_Sparkles` |
+| `Objects_Under` | 0 | liseré de sable sous l'herbe | `Objects Under` |
 | `Objects` | 0 | le plateau herbeux | `Objects` |
-| `Objects_Over` | 0 | affleurements de roche sur l'herbe | `Objects Over` |
-| **`Fringe`** | **4** | **crête du plateau, DEVANT le joueur** | `Metano_Town_Fringe` |
+| `Objects_Over` | 0 | affleurements de roche | `Objects Over` |
+| **`Fringe`** | **4** | **crête, DEVANT le joueur** | `Metano_Town_Fringe` |
 
-`River` est séparé de `Base` pour la raison même qui pousse Metano à le faire :
-on pourra l'animer en 4 frames sans toucher ni à la mer ni à la falaise.
+## Nuages : wrap loop parfaite
+
+`bande_nuages()` compose une bande de **largeur exactement `CADRE_W`**. Tout
+nuage qui déborde du bord droit est **redessiné à `x - CADRE_W`** : la bande se
+raccorde donc à elle-même par construction, et un simple `np.roll` horizontal
+produit un défilement infini sans couture.
+
+8 frames, pas de **90 px** (`720 / 8`). Vérifié :
+
+```
+f0→f1 … f7→f0 : diff = 0 pixel   ⇒ WRAP LOOP PARFAITE
+```
+
+Fichiers `layers/Cliff_Clouds_<moment>_f0..f7.png`, à jouer en boucle sur leur
+propre layer, par-dessus `Sky` et sous `Base`.
 
 ## Colorimétrie
 
 | Élément | Couleur | Source |
 |---|---|---|
-| Herbe | `(200, 216, 80)` jaune-olive | `Metano_Town_Cliffs.tile` |
-| Roche | `(191, 131, 111)` ocre-sable | `Metano_Town_Cliffs.tile` |
-| Ciel zénith (jour) | `(16, 128, 248)` | planche officielle |
-| Océan large | 4 couleurs | `ref_ocean_shallow_*` |
-| Océan horizon | 14 couleurs | `ref_ocean_deep_*` |
+| Herbe | `(215,223,87)`, `(231,239,103)` olive clair | `IMG_4892` |
+| Herbe, ombre | `(167,191,47)`, `(55,103,31)` | `IMG_4892` |
+| Roche | `(207,151,95)`, `(167,119,71)`, `(151,95,55)` | `IMG_4892` |
+| Veines de roche | `(159,95,79)`, `(175,103,95)` mauve | `IMG_4892` |
+| Ciel zénith | `(111,167,255)` | `IMG_4892` |
+| Écume | `(199,239,247)`, `(223,247,255)` | `IMG_4892` |
 
-L'herbe de Treasure Town **n'est pas verte, elle est olive**. Projeter sur la
-palette complète ne suffit pas — elle contient aussi les verts sombres du
-feuillage. `virer_herbe_metano()` force donc tout pixel à dominante verte vers
-l'un des quatre tons d'herbe réellement mesurés dans le tileset.
+Deux pièges traités explicitement dans le code :
+
+* **l'herbe de Treasure Town est olive, pas verte** — `virer_herbe_metano()`
+  force tout pixel à dominante verte vers l'un des cinq tons mesurés ;
+* **séparer herbe et roche par « vert > bleu » ne marche pas** — la roche ocre
+  `(167,119,71)` a elle aussi G nettement au-dessus de B. Ce qui les distingue,
+  c'est que la roche est *chaude* : son rouge domine largement son vert, alors
+  que l'herbe olive a R et G proches. D'où le test
+  `G >= R - 20 and G > B + 40`.
 
 ## Conformité PMDO
 
-Cadre **720 × 480**, horizon à **y = 208**. **100 % des tuiles à ≤ 16 couleurs
-sur les 12 layers, 0 pixel semi-transparent.**
+Cadre **720 × 480**, horizon **y = 144**. **100 % des tuiles ≤ 16 couleurs sur
+tous les layers, 0 pixel semi-transparent.**
 
 | Layer | jour (cellules / couleurs) | nuit |
 |---|---|---|
-| Sky | 5400 / 5 | 5400 / 5 |
-| Stars | — | 161 / 2 |
-| Moon | 127 / 6 | 175 / 6 |
-| Clouds | 898 / 4 | 898 / 4 |
-| Base | 3060 / 22 | 3060 / 22 |
-| Cliffs | 818 / 55 | 999 / 70 |
-| River | 108 / 14 | 108 / 15 |
-| River_Sparkles | 119 / 1 | 119 / 1 |
-| Objects_Under | 207 / 46 | 122 / 53 |
-| Objects | 2317 / 19 | 1961 / 4 |
-| Objects_Over | 31 / 7 | 34 / 9 |
-| Fringe | 221 / 12 | 151 / 4 |
+| Sky | 5400 / 11 | 5400 / 11 |
+| Stars | — | 155 / 2 |
+| Moon | 26 / 2 | 33 / 2 |
+| Clouds | 897 / 475 | 897 / 270 |
+| Base | 3780 / 37 | 3780 / 37 |
+| Cliffs | 556 / 54 | 556 / 52 |
+| River | 84 / 19 | 84 / 19 |
+| River_Sparkles | 124 / 1 | 124 / 1 |
+| Objects_Under | 165 / 32 | 172 / 34 |
+| Objects | 1603 / 5 | 1629 / 7 |
+| Objects_Over | 15 / 3 | 15 / 3 |
+| Fringe | 160 / 4 | 165 / 5 |
 
 ## Fichiers
 
 * `layers/Cliff_<Layer>_<jour|nuit>.png` — les calques, cadre 720 × 480,
-  même offset, superposables au pixel près ;
-* `layers/Cliff_layers.json` — manifeste : ordre, champ `Layer`, métriques,
-  liste des sources officielles utilisées ;
+  superposables au pixel près ;
+* `layers/Cliff_Clouds_<moment>_f0..f7.png` — la boucle de nuages ;
+* `layers/Cliff_layers.json` — manifeste : ordre, `Layer`, métriques, et le
+  bloc `nuages` (frames, sens du wrap, pas en px) ;
 * `cliff_<jour|nuit>.png` — aperçu composé ;
-* `ref/` — les découpes officielles et les générations restylées.
+* `ref2/` — la référence en pixels natifs et les patches de texture.
 
 ## Reproduire
 
