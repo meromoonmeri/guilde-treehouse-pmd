@@ -2,10 +2,15 @@ from __future__ import annotations
 
 """Amenage le sous-sol du cafe en salle de concert privee.
 
-La coque de la salle n'est PAS generee : c'est le calque souterrain d'origine
-(`interieur/variante_caverne/`), celui a paroi rocheuse, simplement passe au
-format PMDO par `pipeline_sprite_pmdo.py`. Seuls les elements de scene sont
-generes, sur une planche d'objets detaches, comme le prescrit
+Rien de la variante caverne n'est regenere. La coque de la salle ET son
+mobilier de cafe (comptoirs a auvent raye, guirlande de fanions, tables-souches,
+panneau, caisses, plantes) viennent du calque d'origine
+`interieur/variante_caverne/`, simplement passes au format PMDO par
+`pipeline_sprite_pmdo.py`. Le sous-sol reprend donc litteralement la variante
+caverne du cafe, a laquelle on ajoute la scene.
+
+Seuls les elements specifiques au spectacle (estrade, rideaux, bancs, fauteuil,
+lampadaires) sont generes, sur une planche d'objets detaches, comme le prescrit
 `AUDIT_PIPELINE_SPRITE.md`.
 
 Layout, calque sur celui de la salle du haut : la scene occupe le fond de la
@@ -30,6 +35,22 @@ from PIL import Image, ImageOps
 RACINE = Path(__file__).resolve().parent.parent
 SALLE = RACINE / "sous_sol"
 PLANCHE = SALLE / "scene_objets_pmdo.png"
+# Le mobilier de cafe repris tel quel a la variante caverne d'origine.
+PLANCHE_CAFE = SALLE / "cafe_caverne_deco_pmdo.png"
+
+# Elements decoupes de la deco de `interieur/variante_caverne/`, par taille
+# decroissante. Ce sont les pixels d'origine, pas une regeneration.
+NOMS_CAFE = [
+    "stand_gauche",        # comptoir a auvent raye rouge
+    "stand_droit",         # comptoir a auvent raye bleu
+    "coin_plantes_droit",
+    "tables_gauche",       # tables-souches et tabourets
+    "tables_droite",
+    "panneau_caisses",     # panneau d'affichage et caisses
+    "table_centre",
+    "guirlande",           # guirlande de fanions rouges
+    "buissons_bas",
+]
 
 CADRE_W, CADRE_H = 576, 400
 
@@ -54,55 +75,63 @@ NOMS = [
 # (objet, x du centre, y du BAS) dans le cadre 576 x 400.
 # Le sol utile va de y=28 (fond) a y=320, large de ~445 px entre x=66 et x=510.
 PLAN = [
+    # --- la guirlande de fanions du cafe, en haut du mur du fond ---
+    ("guirlande", 288, 88),
     # --- le fond de scene : trois pans de rideau formant un mur de velours ---
-    ("rideau", 216, 128),
-    ("rideau", 288, 128),
-    ("rideau", 360, 128),
-    # --- la frise suspendue, par-dessus toute la largeur de la scene ---
-    ("bandeau", 232, 74),
-    ("bandeau", 344, 74),
+    ("rideau", 216, 132),
+    ("rideau", 288, 132),
+    ("rideau", 360, 132),
+    ("bandeau", 232, 78),
+    ("bandeau", 344, 78),
     # --- la scene ---
-    ("estrade", 288, 158),       # l'estrade elle-meme
-    ("pupitre", 196, 168),       # pupitre, au pied de la scene
-    ("tambour", 372, 170),       # tambour, au pied de la scene
-    # --- eclairage de scene, de part et d'autre ---
-    ("lampadaire", 150, 158),
-    ("lampadaire", 426, 158),
-    ("torche", 96, 132),
-    ("torche", 480, 132),
+    ("estrade", 288, 162),
+    ("pupitre", 214, 172),
+    ("tambour", 366, 174),
+    # --- le bar du cafe : les deux comptoirs a auvent, de part et d'autre ---
+    ("stand_gauche", 118, 200),
+    ("stand_droit", 458, 200),
+    # --- eclairage de scene ---
+    ("lampadaire", 206, 152),
+    ("lampadaire", 370, 152),
+    ("torche", 92, 122),
+    ("torche", 484, 122),
     # --- le public : deux rangees de bancs face a la scene ---
-    ("banc", 190, 222),
-    ("banc", 386, 222),
-    ("banc", 178, 272),
-    ("banc", 398, 272),
+    ("banc", 190, 244),
+    ("banc", 386, 244),
+    ("banc", 178, 292),
+    ("banc", 398, 292),
     # --- places d'honneur au centre, devant la scene ---
-    ("fauteuil", 288, 226),
-    ("tabouret", 244, 262),
-    ("tabouret", 332, 262),
-    # --- allee centrale et bords ---
-    ("tapis", 288, 322),         # tapis rouge menant a l'escalier
-    ("cordon", 214, 300),
-    ("cordon", 362, 300),
-    ("tonneau", 108, 258),
-    ("plante", 468, 262),
+    ("fauteuil", 288, 248),
+    ("tabouret", 244, 284),
+    ("tabouret", 332, 284),
+    # --- coin cafe : tables-souches et plantes de la variante caverne ---
+    ("table_centre", 150, 300),
+    ("coin_plantes_droit", 452, 304),
+    # --- allee centrale ---
+    ("tapis", 288, 330),
+    ("cordon", 214, 316),
+    ("cordon", 362, 316),
 ]
 
 # Elements adosses au mur ou suspendus : pas d'ombre portee au sol, sinon on
 # obtient une flaque sombre en plein milieu de la piece.
-SANS_OMBRE = {"bandeau", "rideau", "torche", "tapis"}
+SANS_OMBRE = {"bandeau", "rideau", "torche", "tapis", "guirlande"}
 
 OMBRE_FACTEUR = 0.72
 OMBRE_LARGEUR = 0.34
 OMBRE_HAUTEUR = 0.26
 
 
-def decouper(chemin: Path) -> dict[str, Image.Image]:
+def decouper(chemin: Path, noms: list[str] | None = None,
+             seuil: int = 120, par_taille: bool = False) -> dict[str, Image.Image]:
     """Isole chaque objet de la planche par composante connexe."""
+    noms = noms if noms is not None else NOMS
     a = np.array(Image.open(chemin).convert("RGBA"))
     m = a[..., 3] > 0
     H, W = m.shape
     seen = np.zeros_like(m)
     boites = []
+    aires: dict[tuple[int, int], int] = {}
     for y in range(H):
         for x in range(W):
             if m[y, x] and not seen[y, x]:
@@ -118,13 +147,19 @@ def decouper(chemin: Path) -> dict[str, Image.Image]:
                             if 0 <= ny < H and 0 <= nx < W and m[ny, nx] and not seen[ny, nx]:
                                 seen[ny, nx] = 1
                                 q.append((ny, nx))
-                if len(pts) > 120:
+                if len(pts) > seuil:
                     ys = [p[0] for p in pts]
                     xs = [p[1] for p in pts]
                     boites.append((min(xs), min(ys), max(xs), max(ys)))
-    boites.sort(key=lambda b: (b[1] // 40, b[0]))
+                    aires[(min(xs), min(ys))] = len(pts)
+    if par_taille:
+        # tri par nombre de pixels reels, pas par aire de boite englobante :
+        # une guirlande large et plate a une grande boite mais peu de matiere.
+        boites.sort(key=lambda b: -aires[(b[0], b[1])])
+    else:
+        boites.sort(key=lambda b: (b[1] // 40, b[0]))
     objets = {}
-    for nom, (x0, y0, x1, y1) in zip(NOMS, boites):
+    for nom, (x0, y0, x1, y1) in zip(noms, boites):
         objets[nom] = Image.fromarray(a[y0:y1 + 1, x0:x1 + 1], "RGBA")
     # Le banc est genere dossier vers le fond : le public tournerait le dos a
     # la scene. On le retourne pour qu'il regarde l'estrade.
@@ -192,7 +227,9 @@ def composer(moment: str, objets: dict[str, Image.Image]) -> None:
 
 def main() -> None:
     objets = decouper(PLANCHE)
-    print(f"{len(objets)} elements de scene decoupes\n")
+    objets.update(decouper(PLANCHE_CAFE, NOMS_CAFE, seuil=200, par_taille=True))
+    print(f"{len(objets)} elements decoupes "
+          f"({len(NOMS)} de scene + {len(NOMS_CAFE)} du cafe caverne)\n")
     manquants = {n for n, _, _ in PLAN} - set(objets)
     if manquants:
         print(f"  ATTENTION, absents de la planche : {sorted(manquants)}")

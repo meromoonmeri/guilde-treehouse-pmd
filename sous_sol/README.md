@@ -6,14 +6,25 @@ tournés vers la scène.
 
 ## Provenance des pixels
 
-**La coque de la salle n'est pas une génération neuve.** C'est le calque
-souterrain d'origine, celui à paroi rocheuse fourni au début du projet
-(`interieur/variante_caverne/`), simplement remis au format PMDO. Sa géométrie,
-son sol à spirales et sa paroi de roche sont donc conservés tels quels.
+**Le sous-sol reprend littéralement la variante caverne du café.** Rien de cette
+variante n'est regénéré :
 
-Seuls les **éléments de scène** sont générés, et uniquement en planche d'objets
-détachés sur fond magenta — jamais en scène complète — conformément à la règle
-établie dans `tileset_pmd/AUDIT_PIPELINE_SPRITE.md`.
+* **la coque** — géométrie, sol à spirales, paroi de roche — vient du calque
+  `interieur/variante_caverne/interieur_sans_deco_*.png` ;
+* **le mobilier de café** — les deux comptoirs à auvent rayé rouge et bleu, la
+  guirlande de fanions, les tables-souches et leurs tabourets, les plantes en
+  pot — est extrait par différence entre les calques `avec_deco` et `sans_deco`
+  de cette même variante, puis découpé en objets réutilisables
+  (`cafe_caverne_deco_pmdo.png`).
+
+Les deux sont simplement passés au format PMDO par `pipeline_sprite_pmdo.py`.
+Ce sont donc les pixels d'origine, replacés — la cave est bien le même café,
+au sous-sol.
+
+Seuls les **éléments propres au spectacle** (estrade, rideaux de velours,
+bancs, fauteuil, lampadaires, torches, cordons) sont générés, et uniquement en
+planche d'objets détachés sur fond magenta — jamais en scène complète —
+conformément à `tileset_pmd/AUDIT_PIPELINE_SPRITE.md`.
 
 ## Fichiers
 
@@ -23,13 +34,17 @@ détachés sur fond magenta — jamais en scène complète — conformément à 
 | `sous_sol_deco_seule_{jour,nuit}.png` | les aménagements seuls, fond transparent |
 | `sous_sol_avec_deco_{jour,nuit}.png` | la composition |
 | `sous_sol_*_grille8.png` | variantes calées sur la grille 8 px |
-| `scene_objets_pmdo.png` | la planche des 14 éléments de scène |
+| `scene_objets_pmdo.png` | la planche des 14 éléments de scène générés |
+| `cafe_caverne_deco_pmdo.png` | les 9 éléments de café repris à la variante caverne |
 
 Tous partagent le **même cadre 576 × 400** (72 × 50 cellules de 8 px) et le même
 offset que la salle du haut : les calques se superposent au pixel près.
 
 ## Aménagement
 
+* **le café** — les deux comptoirs à auvent rayé de la variante caverne, placés
+  de part et d'autre de la salle, la guirlande de fanions sur le mur du fond, et
+  des tables-souches avec leurs tabourets dans les coins ;
 * **fond de scène** — trois pans de rideau de velours rouge formant un mur
   continu, surmontés d'une double frise suspendue ;
 * **la scène** — estrade de bois au centre du fond, pupitre à partition et
@@ -48,13 +63,16 @@ offset que la salle du haut : les calques se superposent au pixel près.
 |---|---|---|---|---|---|
 | salle vide (jour) | 117 | 5,9 | 100 % | 0 | 0,0 % |
 | salle vide (nuit) | 45 | 3,1 | 100 % | 0 | 0,0 % |
-| aménagée (jour) | 231 | 6,9 | 99,8 % | 0 | 0,8 % |
-| aménagée (nuit) | 188 | 4,4 | 100 % | 0 | 0,4 % |
-| planche d'éléments | 151 | 4,3 | 100 % | 0 | 0,4 % |
+| aménagée (jour) | 372 | 7,8 | 99,1 % | 0 | 1,1 % |
+| aménagée (nuit) | 333 | 5,7 | 99,8 % | 0 | 0,8 % |
+| déco café caverne | 252 | 5,8 | 99,8 % | 0 | 1,2 % |
+| planche de scène | 151 | 4,3 | 100 % | 0 | 0,4 % |
 | *étalon officiel EOS* | *147* | *4,8* | *99,0 %* | *0* | *8,3 %* |
 
 La mise au format a fait passer la coque d'origine de **80 862 à 117 couleurs**
-et de 2,7 % à 100 % de tuiles conformes, sans altérer son dessin.
+et de 2,7 % à 100 % de tuiles conformes, et le mobilier de café de **137 738 à
+252 couleurs** (41,7 % → 99,8 % de tuiles conformes), sans altérer leur dessin :
+la teinte moyenne du mur reste à 168/118/42 contre 169/118/42 à l'origine.
 
 ## Reproduire
 
