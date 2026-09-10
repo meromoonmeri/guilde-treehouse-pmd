@@ -52,24 +52,71 @@ cellules : **52 × 40 cellules** pleines (416 × 320 px), à l'offset (16, 0).
 python3 ../tileset_pmd/caler_grille8_interieur.py interieur_*.png
 ```
 
+## Calques séparés
+
+Comme le café de Metano dans Halcyon, qui est découpé en `_Base`, `_Objects`,
+`_Objects_Fringe`, `_Objects_Over` et `_Objects_Under`, le décor est livré en
+calques indépendants. Tous partagent le **même cadre 456 × 320 et le même
+offset** : ils se superposent au pixel près, sans le moindre recalage.
+
+| Fichier | Contenu |
+|---|---|
+| `interieur_deco_seule_jour.png` | les meubles seuls **et leurs ombres portées**, le reste transparent |
+| `interieur_deco_seule_nuit.png` | idem, en éclairage nocturne |
+| `interieur_fenetres_jour.png` | le vitrage seul des quatre fenêtres, ciel de jour |
+| `interieur_fenetres_nuit.png` | le vitrage seul, ciel nocturne étoilé |
+
+Le calque de décoration se pose sur la salle vide pour retrouver la salle
+décorée :
+
+```python
+fond = Image.open("interieur_sans_deco_jour_grille8.png").convert("RGBA")
+fond.alpha_composite(Image.open("interieur_deco_seule_jour.png").convert("RGBA"))
+```
+
+Le **calque de fenêtres** sert d'éclairage : on le pose sur la salle pour
+changer l'heure sans retoucher le reste, ou on le remplace pour changer le ciel.
+
+Ces calques ne sont pas extraits par différence entre deux images : deux
+générations successives reteintent légèrement tout le bois, et la soustraction
+trouait les meubles (97 % de la salle marquée comme « modifiée »). Le calque de
+déco est donc généré directement sur fond magenta, puis remis dans le cadre par
+`../tileset_pmd/caler_calque_deco.py`, qui lui applique le décalage exact subi
+par la salle — décalage mesuré sur les fichiers, jamais supposé.
+
 ## Contrôle qualité
 
-Vérifié sur les huit fichiers, pour qu'il n'y ait aucune perte au format PMDO :
+Étalon : l'intérieur du café de Metano dans `Palikadude/Halcyon`, dont les
+**920 tuiles de 8 × 8** ont été extraites et mesurées (0 pixel semi-transparent).
 
 | Mesure | Résultat |
 |---|---|
-| Pixels semi-transparents | **0** sur les huit |
+| Pixels semi-transparents | **0** sur les douze fichiers |
 | Alpha strictement 0 ou 255 | **100 %** — masque binaire, comme un vrai sprite |
-| Gradient interne moyen | 5,9 à 11,6 contre **5,0** pour la référence officielle |
+| Liseré orange/cuivré sur le contour | **0 %** (86 % avant correction) |
+| Fenêtres : pixels blancs | quelques dizaines de reflets, plus d'aplat blanc |
+| Salle | **52 × 40 cellules** pleines, offset (16, 0) |
 
 L'alpha binaire est le point clé : aucun pixel fantôme sur les bords, donc le
-moteur ne recompose rien au rendu. Le gradient supérieur à celui de la référence
-confirme que les transitions restent franches après réduction — le
-rééchantillonnage par couleur dominante n'introduit aucun mélange.
+moteur ne recompose rien au rendu.
+
+### Le liseré cuivré
+
+Le contour extérieur de la bordure était bordé d'un halo orange-cuivré sur
+**86 % de son périmètre** en version jour, comme un rétroéclairage. Il a été
+supprimé à la régénération : le bord extérieur est maintenant un trait brun
+foncé net, mesuré à **0 %** de pixels cuivrés.
+
+### Les fenêtres
+
+Les quatre fenêtres étaient des **disques blancs** — refusés. Le vitrage est
+désormais un **bleu ciel** franc de jour et un **bleu nuit étoilé** de nuit,
+avec croisillon simple en bois et cadre rond cerné d'un trait sombre.
 
 Le passage à la grille 8 px ne touche pas un pixel de l'image : mesures
-identiques avant et après (mêmes couleurs, même gradient), seul le cadrage
-change.
+identiques avant et après, seul le cadrage change. La salle de jour, large de
+415 px, a été portée à 416 en dupliquant sa dernière colonne de pixels — aucun
+pixel existant n'est modifié.
 
 ## Parti pris
 
@@ -107,6 +154,12 @@ dans la référence, ce qui l'ancre au sol.
 Les fenêtres rondes ont un **croisillon simple** : une barre verticale et une
 barre horizontale, quatre carreaux. Les diagonales en X du premier jet ont été
 retirées, trop chargées à cette échelle.
+
+La salle a été **élargie** : la bordure de rondins a été affinée pour dégager le
+plancher, qui occupe désormais bien plus de surface et laisse de larges
+circulations entre les meubles. Le plancher lui-même a été redessiné en planches
+franches — lattes séparées par un trait sombre d'1 px, joints visibles — après
+qu'un premier rendu l'eut laissé flou et constellé de halos lumineux diffus.
 
 De nuit, la palette bascule vers un bleu-violet froid, les fenêtres montrent un
 ciel nocturne et quelques flaques de lumière chaude subsistent au sol.
