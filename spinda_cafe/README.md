@@ -41,18 +41,29 @@ répand devant la porte. C'est le même traitement que la porte du café de Halc
 Cette version a été produite par le générateur d'image à partir de
 `spindacafevFINAL.png`, puis remise au format exact de la source.
 
+## Unification du style
+
+Le kiosque de gauche était dessiné dans un style plus doux que l'aile droite :
+dégradés marqués, bois flou, tons beiges éteints, alors que l'aile droite a des
+aplats francs, des tuiles nettes et des contours appuyés. **Ce décalage était
+déjà présent dans le fichier d'origine**, il ne venait pas de la retouche de la
+porte.
+
+Le kiosque a donc été redessiné dans le style de l'aile droite : mêmes tuiles
+rouge/orange saturées, même liseré doré net, aplats au lieu de dégradés. La
+silhouette, la tête de Spinda, le comptoir, les fioles, le panier, les mâts et
+le tapis gardent leurs positions.
+
 ### Détourage du fond
 
-Le générateur renvoie un PNG agrandi **sans canal alpha** : le damier de
-transparence de l'aperçu est peint en dur, avec du bruit de compression. Le
-détourer par la couleur laissait toujours un quadrillage résiduel visible.
+Le générateur renvoie un PNG agrandi **sans canal alpha**. Sur fond de damier,
+celui-ci est peint en dur et reste indétourable proprement, puisque le sujet
+contient lui aussi des gris.
 
-`../tileset_pmd/nettoyer_sortie_generee.py` procède autrement : l'image source a
-déjà un alpha parfait et la génération est cadrée de la même façon (écart moyen
-mesuré : 20/255 sur la zone opaque contre 220/255 sur le fond). Le script
-**réutilise donc l'alpha de la source**, en y ajoutant la matière franchement
-colorée apparue hors du sujet d'origine — ce qui laisse passer les 875 px de
-festons qui débordent sous le seuil.
+La parade : demander la génération sur un **fond magenta uni (#FF00FF)**, couleur
+absente de la palette du café. `../tileset_pmd/detourer_magenta.py` isole ce fond,
+dilate le masque de 1 px pour absorber le liseré de compression, puis reprojette
+le sujet dans la bbox exacte de la source.
 
 ## Fichiers produits
 
@@ -81,8 +92,8 @@ pixel-art (palette réduite, alpha binaire), c'est `NEAREST` qu'il faudrait util
 ## Régénérer
 
 ```bash
-# 1. détourer la sortie du générateur et la remettre au format source
-python3 ../tileset_pmd/nettoyer_sortie_generee.py \
+# 1. détourer le fond magenta et remettre au format source
+python3 ../tileset_pmd/detourer_magenta.py \
     spindacafevFINAL.png _generation_brute.png spindacafevFINAL_porte.png
 
 # 2. remettre à l'échelle du café de Halcyon
