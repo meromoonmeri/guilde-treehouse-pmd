@@ -2,18 +2,35 @@
   "zone": "Cliff",
   "tile_px": 8,
   "cadre": [
-    648,
-    432
+    720,
+    480
   ],
-  "horizon_y": 176,
+  "horizon_y": 208,
+  "sources_officielles": [
+    "ref_sky.png",
+    "ref_ocean_deep_1.png",
+    "ref_ocean_deep_2.png",
+    "ref_ocean_deep_3.png",
+    "ref_ocean_deep_4.png",
+    "ref_ocean_deep_5.png",
+    "ref_ocean_shallow_1.png",
+    "ref_ocean_shallow_2.png",
+    "ref_ocean_shallow_3.png",
+    "ref_ocean_shallow_4.png",
+    "ref_ocean_shallow_5.png",
+    "ref_ocean_shallow_6.png",
+    "ref_ocean_shallow_7.png",
+    "ref_ocean_shallow_8.png",
+    "ref_ocean_shallow_9.png"
+  ],
   "moments": {
     "jour": {
       "Sky": {
         "fichier": "Cliff_Sky_jour.png",
         "Layer": 0,
-        "cellules_occupees": 4374,
-        "couleurs": 9,
-        "moy_par_tuile": 1.3,
+        "cellules_occupees": 5400,
+        "couleurs": 5,
+        "moy_par_tuile": 1.0,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
         "occupation_pct": 100.0
@@ -21,57 +38,57 @@
       "Moon": {
         "fichier": "Cliff_Moon_jour.png",
         "Layer": 0,
-        "cellules_occupees": 92,
-        "couleurs": 26,
-        "moy_par_tuile": 5.3,
+        "cellules_occupees": 127,
+        "couleurs": 6,
+        "moy_par_tuile": 2.5,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 1.67
+        "occupation_pct": 1.96
       },
       "Clouds": {
         "fichier": "Cliff_Clouds_jour.png",
         "Layer": 0,
-        "cellules_occupees": 389,
-        "couleurs": 24,
-        "moy_par_tuile": 2.9,
+        "cellules_occupees": 898,
+        "couleurs": 4,
+        "moy_par_tuile": 2.2,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 6.87
+        "occupation_pct": 14.93
       },
       "Base": {
         "fichier": "Cliff_Base_jour.png",
         "Layer": 0,
-        "cellules_occupees": 2592,
-        "couleurs": 15,
-        "moy_par_tuile": 3.1,
+        "cellules_occupees": 3060,
+        "couleurs": 22,
+        "moy_par_tuile": 2.1,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 59.26
+        "occupation_pct": 56.67
       },
       "Cliffs": {
         "fichier": "Cliff_Cliffs_jour.png",
         "Layer": 0,
-        "cellules_occupees": 2020,
-        "couleurs": 28,
-        "moy_par_tuile": 3.7,
+        "cellules_occupees": 818,
+        "couleurs": 55,
+        "moy_par_tuile": 3.5,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 44.4
+        "occupation_pct": 9.62
       },
       "River": {
         "fichier": "Cliff_River_jour.png",
         "Layer": 0,
-        "cellules_occupees": 47,
-        "couleurs": 7,
-        "moy_par_tuile": 1.7,
+        "cellules_occupees": 108,
+        "couleurs": 14,
+        "moy_par_tuile": 1.5,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.35
+        "occupation_pct": 1.18
       },
       "River_Sparkles": {
         "fichier": "Cliff_River_Sparkles_jour.png",
         "Layer": 0,
-        "cellules_occupees": 92,
+        "cellules_occupees": 119,
         "couleurs": 1,
         "moy_par_tuile": 1.0,
         "pct_tuiles_conformes": 100.0,
@@ -81,51 +98,51 @@
       "Objects_Under": {
         "fichier": "Cliff_Objects_Under_jour.png",
         "Layer": 0,
-        "cellules_occupees": 128,
-        "couleurs": 19,
-        "moy_par_tuile": 3.2,
+        "cellules_occupees": 207,
+        "couleurs": 46,
+        "moy_par_tuile": 2.9,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.77
+        "occupation_pct": 0.56
       },
       "Objects": {
         "fichier": "Cliff_Objects_jour.png",
         "Layer": 0,
-        "cellules_occupees": 321,
-        "couleurs": 3,
-        "moy_par_tuile": 1.6,
+        "cellules_occupees": 2317,
+        "couleurs": 19,
+        "moy_par_tuile": 1.3,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 5.3
+        "occupation_pct": 39.31
       },
       "Objects_Over": {
         "fichier": "Cliff_Objects_Over_jour.png",
         "Layer": 0,
-        "cellules_occupees": 96,
-        "couleurs": 17,
-        "moy_par_tuile": 2.1,
+        "cellules_occupees": 31,
+        "couleurs": 7,
+        "moy_par_tuile": 1.2,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.52
+        "occupation_pct": 0.04
       },
       "Fringe": {
         "fichier": "Cliff_Fringe_jour.png",
         "Layer": 4,
-        "cellules_occupees": 139,
-        "couleurs": 3,
-        "moy_par_tuile": 1.5,
+        "cellules_occupees": 221,
+        "couleurs": 12,
+        "moy_par_tuile": 1.4,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 1.12
+        "occupation_pct": 0.9
       }
     },
     "nuit": {
       "Sky": {
         "fichier": "Cliff_Sky_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 4374,
-        "couleurs": 32,
-        "moy_par_tuile": 4.1,
+        "cellules_occupees": 5400,
+        "couleurs": 5,
+        "moy_par_tuile": 1.0,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
         "occupation_pct": 100.0
@@ -133,67 +150,67 @@
       "Stars": {
         "fichier": "Cliff_Stars_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 352,
-        "couleurs": 14,
-        "moy_par_tuile": 2.8,
+        "cellules_occupees": 161,
+        "couleurs": 2,
+        "moy_par_tuile": 1.0,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 2.64
+        "occupation_pct": 0.09
       },
       "Moon": {
         "fichier": "Cliff_Moon_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 53,
-        "couleurs": 12,
-        "moy_par_tuile": 3.5,
+        "cellules_occupees": 175,
+        "couleurs": 6,
+        "moy_par_tuile": 2.4,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.72
+        "occupation_pct": 2.78
       },
       "Clouds": {
         "fichier": "Cliff_Clouds_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 389,
-        "couleurs": 24,
-        "moy_par_tuile": 2.9,
+        "cellules_occupees": 898,
+        "couleurs": 4,
+        "moy_par_tuile": 2.2,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 6.87
+        "occupation_pct": 14.93
       },
       "Base": {
         "fichier": "Cliff_Base_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 2592,
-        "couleurs": 15,
-        "moy_par_tuile": 3.1,
+        "cellules_occupees": 3060,
+        "couleurs": 22,
+        "moy_par_tuile": 2.1,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 59.26
+        "occupation_pct": 56.67
       },
       "Cliffs": {
         "fichier": "Cliff_Cliffs_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 2020,
-        "couleurs": 28,
+        "cellules_occupees": 999,
+        "couleurs": 70,
         "moy_par_tuile": 3.7,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 44.4
+        "occupation_pct": 14.7
       },
       "River": {
         "fichier": "Cliff_River_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 47,
-        "couleurs": 5,
-        "moy_par_tuile": 1.4,
+        "cellules_occupees": 108,
+        "couleurs": 15,
+        "moy_par_tuile": 1.5,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.35
+        "occupation_pct": 1.18
       },
       "River_Sparkles": {
         "fichier": "Cliff_River_Sparkles_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 92,
+        "cellules_occupees": 119,
         "couleurs": 1,
         "moy_par_tuile": 1.0,
         "pct_tuiles_conformes": 100.0,
@@ -203,42 +220,42 @@
       "Objects_Under": {
         "fichier": "Cliff_Objects_Under_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 128,
-        "couleurs": 19,
-        "moy_par_tuile": 3.2,
+        "cellules_occupees": 122,
+        "couleurs": 53,
+        "moy_par_tuile": 4.7,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.77
+        "occupation_pct": 0.62
       },
       "Objects": {
         "fichier": "Cliff_Objects_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 321,
-        "couleurs": 2,
-        "moy_par_tuile": 1.6,
+        "cellules_occupees": 1961,
+        "couleurs": 4,
+        "moy_par_tuile": 1.1,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 5.3
+        "occupation_pct": 34.23
       },
       "Objects_Over": {
         "fichier": "Cliff_Objects_Over_nuit.png",
         "Layer": 0,
-        "cellules_occupees": 97,
-        "couleurs": 18,
-        "moy_par_tuile": 2.1,
+        "cellules_occupees": 34,
+        "couleurs": 9,
+        "moy_par_tuile": 1.3,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 0.53
+        "occupation_pct": 0.05
       },
       "Fringe": {
         "fichier": "Cliff_Fringe_nuit.png",
         "Layer": 4,
-        "cellules_occupees": 138,
-        "couleurs": 2,
-        "moy_par_tuile": 1.5,
+        "cellules_occupees": 151,
+        "couleurs": 4,
+        "moy_par_tuile": 1.4,
         "pct_tuiles_conformes": 100.0,
         "semi_transparents": 0,
-        "occupation_pct": 1.12
+        "occupation_pct": 0.93
       }
     }
   }

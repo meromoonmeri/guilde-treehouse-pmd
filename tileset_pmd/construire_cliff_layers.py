@@ -2,43 +2,45 @@ from __future__ import annotations
 
 """Construit la zone `Cliff` en layers modulaires, methode Halcyon.
 
-La methode auditee dans `AUDIT_METHODE_LAYERS_HALCYON.md` est appliquee ici de
-bout en bout :
+Deux principes, qui viennent des deux corrections successives du brief :
 
-  * **un layer = une fonction visuelle**, pas un objet : tout le ciel dans un
-    calque, toutes les etoiles dans un autre, etc. ;
-  * **un layer = un fichier qui porte son nom**, `Cliff_<Layer>_<moment>.png`,
-    exactement comme `Guild_Dining_Room_Floor.tile` ;
-  * **le champ `Layer` vaut 0 ou 4** : 0 pour ce qui est rendu sous le joueur,
-    4 pour ce qui passe devant lui ;
-  * **vocabulaire d'exterieur** (`Base`, `Objects`, `Fringe`), jamais
-    `Floor`/`Walls` qui sont reserves aux interieurs.
+1. **Le layout est celui de la reference.** `IMG_4889.png` / `IMG_4890.png`
+   sont la planche ripee du *Pelipper Post Office* : un plateau herbeux a
+   gauche, une falaise qui tombe a pic, l'ocean a droite, l'horizon haut. On
+   reprend cette composition telle quelle.
 
-Empilement retenu, du fond vers l'avant :
+2. **Le ciel et l'ocean ne sont PAS generes.** Ils sont decoupes directement
+   dans la planche officielle (`cliff/ref/ref_sky.png`,
+   `cliff/ref/ref_ocean_*.png`), en pixels natifs 1x, sans passer par le
+   pipeline de reduction. Seule la falaise est une generation, restylee sur
+   le tileset de Metano Town (= Treasure Town).
 
-    Sky            0   le degrade de ciel, seul calque opaque plein cadre
-    Stars          0   etoiles et scintillements      (nuit seulement)
-    Moon           0   lune ou soleil selon le moment
-    Clouds         0   nuages
-    Sea            0   la mer, jusqu'a la ligne d'horizon
-    Base           0   la falaise et son plateau herbeux
-    Objects        0   rochers et buissons poses sur le plateau
-    Fringe         4   herbes hautes de premier plan, DEVANT le joueur
+Empilement, calque sur la structure relevee dans `metano_town.rsground` :
 
-Chaque calque est produit en jour et en nuit, au meme cadre et au meme offset,
-donc superposable au pixel pres.
+    Sky              0   degrade de ciel, decoupe dans la planche officielle
+    Stars            0   etoiles                                (nuit)
+    Moon             0   lune / soleil
+    Clouds           0   nuages, extraits du ciel officiel
+    Base             0   l'ocean, tuiles officielles             (Metano_Town_Base)
+    Cliffs           0   la paroi rocheuse                       (Metano_Town_Cliffs)
+    River            0   ressac au pied de la roche              (River_Animation)
+    River_Sparkles   0   scintillements                          (River_Sparkles)
+    Objects_Under    0   liseré sombre sous l'herbe              (Objects Under)
+    Objects          0   le plateau herbeux                      (Objects)
+    Objects_Over     0   affleurements de roche sur l'herbe      (Objects Over)
+    Fringe           4   crete du plateau, DEVANT le joueur      (Metano_Town_Fringe)
 
 Usage :
     python3 construire_cliff_layers.py
 """
 
-from collections import Counter, deque
+from collections import Counter
 from pathlib import Path
 import json
 import sys
 
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pipeline_sprite_pmdo import (  # noqa: E402
@@ -49,27 +51,24 @@ from pipeline_sprite_pmdo import (  # noqa: E402
 )
 
 RACINE = Path(__file__).resolve().parent.parent
+REF = RACINE / "cliff" / "ref"
 SORTIE = RACINE / "cliff" / "layers"
-SOURCES = Path("/tmp")
 
 TILE = 8
-CADRE_W, CADRE_H = 648, 432          # meme cadre que `exterieur/`
-HORIZON = 176                        # ligne de mer, multiple de 8
+# Le cadre est cale sur la planche officielle : son ciel fait exactement
+# 720 x 208 px, donc on le pose au pixel pres sans jamais le redimensionner.
+CADRE_W, CADRE_H = 720, 480
+HORIZON = 208
 
-# Structure relevee sur `metano_town.rsground` (Halcyon) :
-#   Base(0) > Cliffs(0) > River(0) > Objects Under(0) > Objects(0) >
-#   Objects Over(0) > Fringe(4)
-# On la reprend telle quelle, en prefixant les calques de ciel qui, chez eux,
-# vivent dans `Background` et non dans `Layers`.
 PROFONDEUR = {
     "Sky": 0,
     "Stars": 0,
     "Moon": 0,
     "Clouds": 0,
-    "Base": 0,           # la mer : le terrain de fond de la zone
-    "Cliffs": 0,         # la falaise, layer dedie comme chez Metano
-    "River": 0,          # ressac et ecume au pied de la falaise
-    "River_Sparkles": 0, # scintillements, comme Metano_Town_River_Sparkles
+    "Base": 0,
+    "Cliffs": 0,
+    "River": 0,
+    "River_Sparkles": 0,
     "Objects_Under": 0,
     "Objects": 0,
     "Objects_Over": 0,
@@ -79,57 +78,23 @@ PROFONDEUR = {
 ORDRE = ["Sky", "Stars", "Moon", "Clouds", "Base", "Cliffs", "River",
          "River_Sparkles", "Objects_Under", "Objects", "Objects_Over", "Fringe"]
 
+# --- sources officielles, en pixels natifs -------------------------------
+REF_SKY = REF / "ref_sky.png"
+REF_OCEAN_DEEP = sorted(REF.glob("ref_ocean_deep_*.png"))
+REF_OCEAN_SHALLOW = sorted(REF.glob("ref_ocean_shallow_*.png"))
+REF_SCENE = REF / "ref_scene_land.png"
 
-# --------------------------------------------------------------------------
+# --- generations restylees ------------------------------------------------
+GEN_CLIFF = REF / "gen_cliff_metano.png"
+GEN_SKYOBJ = REF / "gen_sky_objects.png"
 
-def detourer_magenta(chemin: Path) -> Image.Image:
-    """Retire le fond magenta d'une generation, contour franc."""
-    a = np.array(Image.open(chemin).convert("RGB")).astype(int)
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    mag = (r > 110) & (b > 110) & (g < 120) & ((r - g) > 45) & ((b - g) > 45)
-    m = Image.fromarray(((~mag) * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(3))
-    return Image.fromarray(np.dstack([a.astype(np.uint8), np.array(m)]), "RGBA")
-
-
-# Palette de reference : les tilesets de falaise REELS de Metano Town, extraits
-# de `Palikadude/Halcyon` (`Metano_Town_Cliffs.tile`, `Metano_Town_Fringe.tile`).
-# Metano partage ses tilesets avec Treasure Town : c'est donc la colorimetrie
-# authentique du jeu — herbe jaune-olive (200,216,80), roche ocre-sable
-# (191,131,111), eau cyan (80,128,184) — et non les verts froids de notre
-# paysage de vallee.
+# Tilesets Metano extraits de `Palikadude/Halcyon`, palette de reference.
 REFS_METANO = [
     RACINE / "cliff" / "reference_metano_cliffs.png",
     RACINE / "cliff" / "reference_metano_fringe.png",
-    RACINE / "cliff" / "reference_metano_river.png",
-    RACINE / "cliff" / "reference_metano_sparkles.png",
 ]
 
-# L'eau de Metano ne fait que 19 couleurs, cyan clair a liseré bleu. On la
-# reserve au calque d'eau pour que la mer ne derive pas vers le vert.
-REFS_EAU = [
-    RACINE / "cliff" / "reference_metano_river.png",
-    RACINE / "cliff" / "reference_metano_sparkles.png",
-]
-
-
-def palette_projet(extra: list[Path] | None = None, n_extra: int = 40) -> np.ndarray:
-    """Palette des tilesets de falaise de Metano Town, elargie si besoin."""
-    pal = palette_depuis(REFS_METANO)
-    if extra:
-        for c in extra:
-            a = np.array(Image.open(c).convert("RGBA"))
-            px = a[a[..., 3] > 127][:, :3]
-            if len(px) == 0:
-                continue
-            q = Image.fromarray(px.reshape(-1, 1, 3)).quantize(
-                colors=n_extra, method=Image.MEDIANCUT)
-            sup = np.array(q.getpalette()[:n_extra * 3]).reshape(-1, 3)
-            pal = np.vstack([pal, sup])
-    return pal
-
-
-# L'herbe de Metano Town n'est pas verte : elle est jaune-olive. Ces quatre
-# tons sont ceux effectivement mesures dans `Metano_Town_Cliffs.tile`.
+# L'herbe de Treasure Town n'est pas verte : elle est jaune-olive.
 HERBE_METANO = np.array([
     (184, 208, 64),
     (200, 216, 80),
@@ -138,19 +103,35 @@ HERBE_METANO = np.array([
 ], dtype=int)
 
 
-def virer_herbe_metano(a: np.ndarray) -> np.ndarray:
-    """Bascule les verts de la generation vers l'olive de Treasure Town.
+# --------------------------------------------------------------------------
+# outils
+# --------------------------------------------------------------------------
 
-    Projeter sur la palette complete ne suffit pas : elle contient aussi les
-    verts sombres du feuillage, et chaque vert froid trouvait un vert froid
-    proche. On force donc explicitement tout pixel a dominante verte vers le
-    ton d'herbe Metano de luminosite equivalente.
-    """
+def charger(chemin: Path) -> np.ndarray:
+    """Charge une source officielle SANS y toucher : pixels natifs."""
+    return np.array(Image.open(chemin).convert("RGBA"))
+
+
+def detourer_magenta(chemin: Path) -> Image.Image:
+    """Retire le fond magenta d'une generation, contour franc."""
+    a = np.array(Image.open(chemin).convert("RGB")).astype(int)
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    mag = (r > 110) & (b > 110) & (g < 120) & ((r - g) > 45) & ((b - g) > 45)
+    al = ((~mag) * 255).astype(np.uint8)
+    return Image.fromarray(np.dstack([a.astype(np.uint8), al]), "RGBA")
+
+
+def palette_metano() -> np.ndarray:
+    return palette_depuis(REFS_METANO)
+
+
+def virer_herbe_metano(a: np.ndarray) -> np.ndarray:
+    """Bascule les verts de la generation vers l'olive de Treasure Town."""
     out = a.copy()
     m = out[..., 3] > 0
     rgb = out[..., :3].astype(int)
     r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
-    vert = m & (g > r + 6) & (g > b + 24)
+    vert = m & (g > r - 30) & (g > b + 24)
     if not vert.any():
         return out
     lum = rgb[vert].sum(1)
@@ -160,16 +141,7 @@ def virer_herbe_metano(a: np.ndarray) -> np.ndarray:
     return out
 
 
-def au_format(img: Image.Image, largeur: int, palette: np.ndarray,
-              herbe: bool = False) -> np.ndarray:
-    a = cadrage_entier(img, largeur)
-    if herbe:
-        a = virer_herbe_metano(a)
-    return nettoyer_orphelins(projeter_palette(a, palette))
-
-
 def poser(cadre: np.ndarray, obj: np.ndarray, x: int, y: int) -> None:
-    """Colle obj dans cadre a (x, y), en respectant l'alpha binaire."""
     h, w = obj.shape[:2]
     H, W = cadre.shape[:2]
     x0, y0 = max(0, x), max(0, y)
@@ -178,42 +150,41 @@ def poser(cadre: np.ndarray, obj: np.ndarray, x: int, y: int) -> None:
         return
     sous = obj[y0 - y:y1 - y, x0 - x:x1 - x]
     m = sous[..., 3] > 0
-    zone = cadre[y0:y1, x0:x1]
-    zone[m] = sous[m]
+    cadre[y0:y1, x0:x1][m] = sous[m]
 
 
-def decouper_objets(a: np.ndarray, seuil: int = 60) -> list[np.ndarray]:
-    """Isole chaque element d'une planche par composante connexe."""
+def composantes(a: np.ndarray, seuil: int = 60) -> list[np.ndarray]:
+    """Isole chaque element d'une planche par composante connexe (BFS pile)."""
     m = a[..., 3] > 0
     H, W = m.shape
     seen = np.zeros_like(m)
     out = []
     for y in range(H):
         for x in range(W):
-            if m[y, x] and not seen[y, x]:
-                q = deque([(y, x)])
-                seen[y, x] = 1
-                pts = []
-                while q:
-                    cy, cx = q.popleft()
-                    pts.append((cy, cx))
-                    for dy in range(-2, 3):
-                        for dx in range(-2, 3):
-                            ny, nx = cy + dy, cx + dx
-                            if 0 <= ny < H and 0 <= nx < W and m[ny, nx] and not seen[ny, nx]:
-                                seen[ny, nx] = 1
-                                q.append((ny, nx))
-                if len(pts) > seuil:
-                    ys = [p[0] for p in pts]
-                    xs = [p[1] for p in pts]
-                    out.append(a[min(ys):max(ys) + 1, min(xs):max(xs) + 1].copy())
+            if not m[y, x] or seen[y, x]:
+                continue
+            pile = [(y, x)]
+            seen[y, x] = True
+            pts = []
+            while pile:
+                cy, cx = pile.pop()
+                pts.append((cy, cx))
+                for dy in (-2, -1, 0, 1, 2):
+                    for dx in (-2, -1, 0, 1, 2):
+                        ny, nx = cy + dy, cx + dx
+                        if 0 <= ny < H and 0 <= nx < W and m[ny, nx] and not seen[ny, nx]:
+                            seen[ny, nx] = True
+                            pile.append((ny, nx))
+            if len(pts) > seuil:
+                ys = [p[0] for p in pts]
+                xs = [p[1] for p in pts]
+                out.append(a[min(ys):max(ys) + 1, min(xs):max(xs) + 1].copy())
     out.sort(key=lambda o: -(o[..., 3] > 0).sum())
     return out
 
 
 def teinte_nuit(a: np.ndarray, force: float = 0.55,
                 cible=(70, 88, 150)) -> np.ndarray:
-    """Bascule un calque de jour vers une ambiance nocturne froide."""
     out = a.copy()
     m = out[..., 3] > 0
     rgb = out[m][:, :3].astype(float)
@@ -223,6 +194,91 @@ def teinte_nuit(a: np.ndarray, force: float = 0.55,
     return out
 
 
+# --------------------------------------------------------------------------
+# ciel officiel : on le separe en degrade + nuages
+# --------------------------------------------------------------------------
+
+def separer_ciel() -> tuple[np.ndarray, np.ndarray]:
+    """Decoupe `ref_sky.png` en (degrade sans nuages, nuages seuls).
+
+    Les nuages sont les pixels desatures et clairs ; le ciel est franchement
+    bleu. Une fois les nuages retires, chaque ligne du degrade est remplie par
+    sa couleur dominante : on obtient un ciel propre, reutilisable de nuit.
+    """
+    src = charger(REF_SKY)
+    rgb = src[..., :3].astype(int)
+    r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+    nuage = (b - r) < 90                       # le ciel a un bleu tres dominant
+
+    degrade = np.zeros_like(src)
+    for y in range(src.shape[0]):
+        ligne = rgb[y][~nuage[y]]
+        if len(ligne) == 0:
+            ligne = rgb[y]
+        couleurs, comptes = np.unique(ligne, axis=0, return_counts=True)
+        degrade[y, :, :3] = couleurs[comptes.argmax()]
+    degrade[..., 3] = 255
+
+    nuages = np.zeros_like(src)
+    nuages[nuage] = src[nuage]
+    nuages[..., 3] = np.where(nuage, 255, 0)
+    return degrade, nuages
+
+
+def ciel_nuit(degrade_jour: np.ndarray) -> np.ndarray:
+    """Rejoue le degrade officiel en gamme nocturne.
+
+    On garde la STRUCTURE du ciel ripe — meme nombre de bandes, memes hauteurs
+    de transition — et on ne remappe que la teinte, vers le bleu nuit de la
+    reference `IMG_4889.png`.
+    """
+    out = degrade_jour.copy()
+    rgb = out[..., :3].astype(float)
+    lum = rgb.sum(2) / 765.0                        # 0 = sombre, 1 = clair
+    haut = np.array([14, 22, 92], float)            # zenith
+    bas = np.array([40, 78, 168], float)            # juste au-dessus de la mer
+    t = (lum - lum.min()) / max(float(lum.max() - lum.min()), 1e-6)
+    for i in range(3):
+        out[..., i] = np.clip(haut[i] + (bas[i] - haut[i]) * t, 0, 255)
+    out[..., 3] = 255
+    return out
+
+
+# --------------------------------------------------------------------------
+# ocean officiel
+# --------------------------------------------------------------------------
+
+def construire_ocean() -> np.ndarray:
+    """Pave l'ocean avec les tuiles officielles, sans redimensionnement.
+
+    La planche fournit deux jeux : `deep` (14 couleurs, sombre en haut et clair
+    en bas, c'est la bande d'horizon) et `shallow` (4 couleurs, le large calme
+    du premier plan). On les empile dans cet ordre, ce qui reproduit exactement
+    la degression de la reference.
+    """
+    hauteur = CADRE_H - HORIZON
+    out = np.zeros((hauteur, CADRE_W, 4), np.uint8)
+
+    deep = [charger(p) for p in REF_OCEAN_DEEP]
+    shallow = [charger(p) for p in REF_OCEAN_SHALLOW]
+    if not deep or not shallow:
+        raise SystemExit("tuiles d'ocean officielles absentes de cliff/ref/")
+
+    hd = deep[0].shape[0]
+    for i, x in enumerate(range(0, CADRE_W, deep[0].shape[1])):
+        poser(out, deep[i % len(deep)], x, 0)
+    y = hd
+    k = 0
+    while y < hauteur:
+        for i, x in enumerate(range(0, CADRE_W, shallow[0].shape[1])):
+            poser(out, shallow[(i + k) % len(shallow)], x, y)
+        y += shallow[0].shape[0]
+        k += 1
+    return out
+
+
+# --------------------------------------------------------------------------
+# controle
 # --------------------------------------------------------------------------
 
 def controler(a: np.ndarray) -> dict:
@@ -247,34 +303,26 @@ def controler(a: np.ndarray) -> dict:
     }
 
 
+# --------------------------------------------------------------------------
+
 def construire() -> None:
     SORTIE.mkdir(parents=True, exist_ok=True)
-    pal_base = palette_projet()
+    pal = palette_metano()
 
-    # --- sources, une seule fois ---
-    cliff = detourer_magenta(SOURCES / "cl_cliff.png")
-    objets_ciel = detourer_magenta(SOURCES / "cl_ciel_obj.png")
-    mer = Image.open(SOURCES / "cl_mer.png").convert("RGBA")
-    ciel_j = Image.open(SOURCES / "cl_ciel_jour.png").convert("RGBA")
-    ciel_n = Image.open(SOURCES / "cl_ciel_nuit.png").convert("RGBA")
+    # --- le ciel et la mer : sources officielles, pixels natifs -----------
+    degrade_j, nuages_src = separer_ciel()
+    degrade_n = ciel_nuit(degrade_j)
+    ocean = construire_ocean()
 
-    pal_ciel = palette_projet([SOURCES / "cl_ciel_nuit.png"], 32)
-    pal_obj = palette_projet([SOURCES / "cl_ciel_obj.png"], 48)
-    pal_eau = palette_depuis(REFS_EAU)
+    # --- la falaise : seule piece generee, restylee Metano -----------------
+    cliff_img = detourer_magenta(GEN_CLIFF)
+    cliff_px = nettoyer_orphelins(
+        projeter_palette(virer_herbe_metano(cadrage_entier(cliff_img, 560)), pal))
 
-    cliff_px = au_format(cliff, 560, palette_projet(), herbe=True)
-    objets_px = au_format(objets_ciel, 520, pal_obj)
-    mer_px = au_format(mer, CADRE_W, palette_depuis(REFS_EAU))
-    ciel = {
-        "jour": au_format(ciel_j, CADRE_W, pal_ciel),
-        "nuit": au_format(ciel_n, CADRE_W, pal_ciel),
-    }
+    # --- astres, extraits de la planche de generation ---------------------
+    objets = nettoyer_orphelins(cadrage_entier(detourer_magenta(GEN_SKYOBJ), 440))
+    pieces = composantes(objets)
 
-    pieces = decouper_objets(objets_px)
-
-    # On classe par la TEINTE, pas par la taille : le soleil est dore, les
-    # lunes sont grises et rondes, les nuages sont blancs et larges, les
-    # etoiles sont minuscules. Trier par taille melangeait lune et nuage.
     def teinte(p):
         m = p[..., 3] > 0
         return p[m][:, :3].astype(int).mean(0)
@@ -283,186 +331,184 @@ def construire() -> None:
         h, w = p.shape[:2]
         return 0.7 < w / max(h, 1) < 1.45
 
-    soleil, lunes, nuages, etoiles = None, [], [], []
+    soleil, lunes, etoiles = None, [], []
     for p in pieces:
         r, g, b = teinte(p)
         n = int((p[..., 3] > 0).sum())
-        if n < 320:
+        if n < 240:
             etoiles.append(p)
-        elif r - b > 55 and rond(p):
-            soleil = p if soleil is None else soleil
-        elif rond(p) and abs(r - b) < 40:
+        elif rond(p) and r - b > 55:
+            soleil = soleil or p
+        elif rond(p) and r > 180 and g > 180:
             lunes.append(p)
-        else:
-            nuages.append(p)
-    # la plus petite lune fait une jolie pleine lune ; sinon on prend ce qu'on a
-    lunes.sort(key=lambda p: (p[..., 3] > 0).sum())
+    lunes.sort(key=lambda p: -(p[..., 3] > 0).sum())
 
-    manifeste = {"zone": "Cliff", "tile_px": TILE,
-                 "cadre": [CADRE_W, CADRE_H], "horizon_y": HORIZON,
+    # --- placement de la falaise ------------------------------------------
+    # Comme dans la reference : le plateau occupe la gauche, la paroi tombe a
+    # pic et la mer occupe la droite du cadre.
+    CX, CY = -8, CADRE_H - cliff_px.shape[0] + 8
+
+    manifeste = {"zone": "Cliff", "tile_px": TILE, "cadre": [CADRE_W, CADRE_H],
+                 "horizon_y": HORIZON,
+                 "sources_officielles": [p.name for p in
+                                         [REF_SKY, *REF_OCEAN_DEEP, *REF_OCEAN_SHALLOW]],
                  "moments": {}}
 
     for moment in ("jour", "nuit"):
+        nuit = moment == "nuit"
         couches: dict[str, np.ndarray] = {}
         vide = lambda: np.zeros((CADRE_H, CADRE_W, 4), np.uint8)  # noqa: E731
 
-        # --- Sky : plein cadre, opaque ---
+        # --- Sky --------------------------------------------------------
         c = vide()
-        s = ciel[moment]
-        poser(c, s[:CADRE_H, :CADRE_W], 0, 0)
-        if (c[..., 3] == 0).any():        # complete si la source est plus courte
-            manque = c[..., 3] == 0
-            c[manque] = c[c[..., 3] > 0][0]
+        deg = degrade_n if nuit else degrade_j
+        poser(c, deg, 0, 0)
+        c[HORIZON:] = c[HORIZON - 1]           # prolonge la derniere bande
+        c[..., 3] = 255
         couches["Sky"] = c
 
-        # --- Stars : nuit seulement ---
-        if moment == "nuit" and etoiles:
+        # --- Stars ------------------------------------------------------
+        # Dessinees a la main plutot qu'extraites : reduire une etoile ripee
+        # donne un paté de 3 x 3, alors qu'une etoile PMD est un point ou une
+        # croix de 3 px. On les pose donc directement en pixels.
+        if nuit:
             c = vide()
             rng = np.random.default_rng(7)
-            for i in range(46):
-                e = etoiles[i % len(etoiles)]
-                x = int(rng.integers(4, CADRE_W - e.shape[1] - 4))
-                y = int(rng.integers(4, HORIZON - 44))
-                poser(c, e, x, y)
+            for _ in range(150):
+                x = int(rng.integers(3, CADRE_W - 3))
+                y = int(rng.integers(3, HORIZON - 24))
+                ton = (255, 255, 255) if rng.random() < 0.6 else (200, 216, 248)
+                c[y, x, :3] = ton
+                c[y, x, 3] = 255
+                if rng.random() < 0.3:                  # les plus brillantes
+                    for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                        c[y + dy, x + dx, :3] = ton
+                        c[y + dy, x + dx, 3] = 255
             couches["Stars"] = c
 
-        # --- Moon : la lune la nuit, le soleil le jour ---
-        astre = soleil if moment == "jour" else (lunes[0] if lunes else None)
+        # --- Moon -------------------------------------------------------
+        astre = (lunes[0] if lunes else None) if nuit else soleil
         if astre is not None:
+            # L'astre sort d'une generation : on le ramene a une poignee de
+            # tons, sinon il pese a lui seul plus de couleurs que toute la
+            # falaise. Et on le pose a GAUCHE, dans la portion de ciel que les
+            # nuages officiels laissent degagee.
+            a = astre.copy()
+            m = a[..., 3] > 0
+            q = Image.fromarray(a[..., :3]).quantize(colors=6, method=Image.MEDIANCUT)
+            a[..., :3] = np.array(q.convert("RGB"))
+            a[..., 3] = np.where(m, 255, 0)
             c = vide()
-            poser(c, astre, CADRE_W - astre.shape[1] - 72, 28)
+            poser(c, a, 56, 20)
             couches["Moon"] = c
 
-        # --- Clouds ---
-        if nuages:
-            c = vide()
-            placements = [(40, 30), (250, 16), (430, 44), (150, 78), (520, 92)]
-            for (x, y), n in zip(placements, nuages):
-                nn = n if moment == "jour" else teinte_nuit(n, 0.6)
-                poser(c, nn, x, y)
-            couches["Clouds"] = c
-
-        # --- Base : la mer, terrain de fond de la zone ---
-        # Chez Metano, `Base` est le sol de la carte et `Cliffs` un layer a
-        # part. Ici le sol de la zone, c'est l'ocean.
+        # --- Clouds : les nuages du ciel officiel, en calque separe ------
         c = vide()
-        m2 = mer_px if moment == "jour" else teinte_nuit(mer_px, 0.62, (40, 60, 130))
-        hauteur = CADRE_H - HORIZON
-        tuile = m2[:hauteur] if m2.shape[0] >= hauteur else np.resize(m2, (hauteur, CADRE_W, 4))
-        poser(c, tuile[:, :CADRE_W], 0, HORIZON)
+        n = teinte_nuit(nuages_src, 0.62, (86, 96, 168)) if nuit else nuages_src
+        poser(c, n, 0, 0)
+        couches["Clouds"] = c
+
+        # --- Base : l'ocean officiel ------------------------------------
+        c = vide()
+        o = teinte_nuit(ocean, 0.66, (34, 54, 132)) if nuit else ocean
+        poser(c, o, 0, HORIZON)
         couches["Base"] = c
 
-        # --- Cliffs : la falaise, layer dedie comme Metano_Town_Cliffs ---
-        c = vide()
-        cl = cliff_px if moment == "jour" else teinte_nuit(cliff_px, 0.5)
-        poser(c, cl, (CADRE_W - cl.shape[1]) // 2, CADRE_H - cl.shape[0] + 16)
-        couches["Cliffs"] = c
+        # --- la falaise, decomposee comme chez Metano --------------------
+        terre = cliff_px if not nuit else teinte_nuit(cliff_px, 0.5)
+        plein = vide()
+        poser(plein, terre, CX, CY)
+        masque = plein[..., 3] > 0
+        br = plein[..., :3].astype(int)
+        herbe = masque & (br[..., 1] > br[..., 2] + 55) & (br[..., 1] > 110)
+        roche = masque & ~herbe
 
-        cliff_m = couches["Cliffs"][..., 3] > 0
-        ys, xs = np.nonzero(cliff_m)
-        haut = ys.min()
+        def extraire(sel):
+            c = vide()
+            c[sel] = plein[sel]
+            c[..., 3] = np.where(sel, 255, 0)
+            return c
 
-        # --- River : le ressac au pied de la falaise ---
-        # Metano garde son eau dans un layer separe de la Base. On fait pareil :
-        # la frange d'ecume qui borde la roche vit dans `River`, donc on peut
-        # l'animer plus tard sans toucher a la mer ni a la falaise.
+        couches["Cliffs"] = extraire(roche)
+
+        # --- River : le ressac au pied de la paroi ------------------------
         c = vide()
-        eau_m = np.zeros((CADRE_H, CADRE_W), bool)
+        eau = np.zeros((CADRE_H, CADRE_W), bool)
         for x in range(CADRE_W):
-            col = np.nonzero(cliff_m[:, x])[0]
-            if len(col) == 0:
+            col = np.nonzero(masque[:, x])[0]
+            if len(col) == 0 or col.max() >= CADRE_H - 2:
                 continue
             bas = col.max()
-            if bas >= CADRE_H - 2:
-                continue
-            eau_m[bas + 1:min(CADRE_H, bas + 9), x] = True
-        eau_m &= couches["Base"][..., 3] > 0
-        src = couches["Base"]
-        c[eau_m] = src[eau_m]
-        c[..., 3] = np.where(eau_m, 255, 0)
-        # on eclaircit le ressac vers le cyan clair de Metano
-        if eau_m.any():
-            c[eau_m, :3] = np.clip(c[eau_m, :3].astype(int) + 46, 0, 255).astype(np.uint8)
-            couches["River"] = nettoyer_orphelins(projeter_palette(c, pal_eau))
+            eau[bas + 1:min(CADRE_H, bas + 7), x] = True
+        # le ressac longe aussi le flanc droit de la falaise
+        for y in range(HORIZON, CADRE_H):
+            ligne = np.nonzero(masque[y])[0]
+            if len(ligne):
+                d = ligne.max()
+                eau[y, d + 1:min(CADRE_W, d + 6)] = True
+        eau &= couches["Base"][..., 3] > 0
+        if eau.sum() > 40:
+            c[eau] = couches["Base"][eau]
+            c[eau, :3] = np.clip(c[eau, :3].astype(int) + 52, 0, 255).astype(np.uint8)
+            c[..., 3] = np.where(eau, 255, 0)
+            couches["River"] = nettoyer_orphelins(c)
 
-        # --- River_Sparkles : quelques scintillements sur l'eau ---
+        # --- River_Sparkles ----------------------------------------------
         c = vide()
         rng = np.random.default_rng(11)
-        eau_libre = (couches["Base"][..., 3] > 0) & ~cliff_m
-        pts = np.argwhere(eau_libre)
+        libre = (couches["Base"][..., 3] > 0) & ~masque
+        pts = np.argwhere(libre)
         if len(pts):
-            blanc = (246, 250, 255) if moment == "jour" else (156, 234, 246)
-            for k in rng.choice(len(pts), size=min(90, len(pts)), replace=False):
+            blanc = (156, 234, 246) if nuit else (246, 250, 255)
+            for k in rng.choice(len(pts), size=min(110, len(pts)), replace=False):
                 y, x = pts[k]
                 if x + 2 < CADRE_W:
                     c[y, x:x + 2, :3] = blanc
                     c[y, x:x + 2, 3] = 255
             couches["River_Sparkles"] = c
 
-        # --- l'herbe du plateau ---
-        # L'herbe de Metano est olive : G domine B franchement, mais R reste
-        # eleve. Tester "vert > rouge" ne marche donc plus une fois la
-        # colorimetrie appliquee — on teste G contre B.
-        br = couches["Cliffs"][..., :3].astype(int)
-        vert = (br[..., 1] > br[..., 2] + 55) & (br[..., 1] > 140)
-        herbe = cliff_m & vert
-
-        # --- Objects_Under : la lisiere d'herbe qui mord sur la roche ---
-        c = vide()
+        # --- Objects_Under : le liseré sombre sous l'herbe ----------------
         sous = np.zeros((CADRE_H, CADRE_W), bool)
         for x in range(CADRE_W):
             col = np.nonzero(herbe[:, x])[0]
             if len(col) == 0:
                 continue
             bas = col.max()
-            sous[bas:min(CADRE_H, bas + 4), x] = cliff_m[bas:min(CADRE_H, bas + 4), x]
-        c[sous] = couches["Cliffs"][sous]
-        c[..., 3] = np.where(sous, 255, 0)
+            sous[bas:min(CADRE_H, bas + 4), x] = masque[bas:min(CADRE_H, bas + 4), x]
         if sous.sum() > 40:
-            couches["Objects_Under"] = c
+            couches["Objects_Under"] = extraire(sous)
 
-        # --- Objects : rochers et buissons du plateau ---
-        c = vide()
-        zone_obj = herbe & (np.arange(CADRE_H)[:, None] < haut + 60)
-        c[zone_obj] = couches["Cliffs"][zone_obj]
-        c[..., 3] = np.where(zone_obj, 255, 0)
-        couches["Objects"] = c
+        # --- Objects : le plateau herbeux ---------------------------------
+        couches["Objects"] = extraire(herbe & ~sous)
 
-        # --- Objects_Over : les rochers sombres poses sur l'herbe ---
-        c = vide()
-        roche = cliff_m & (np.arange(CADRE_H)[:, None] < haut + 40) & ~vert
-        c[roche] = couches["Cliffs"][roche]
-        c[..., 3] = np.where(roche, 255, 0)
-        if roche.sum() > 40:
-            couches["Objects_Over"] = c
+        # --- Objects_Over : les affleurements de roche sur le plateau -----
+        haut = np.nonzero(masque.any(1))[0].min()
+        aff = roche & (np.arange(CADRE_H)[:, None] < haut + 40)
+        if aff.sum() > 40:
+            couches["Objects_Over"] = extraire(aff)
 
-        # --- Fringe : la crete, DEVANT le joueur (Layer = 4) ---
-        c = vide()
-        zone_fr = np.zeros((CADRE_H, CADRE_W), bool)
+        # --- Fringe : la crete, DEVANT le joueur --------------------------
+        crete = np.zeros((CADRE_H, CADRE_W), bool)
         for x in range(CADRE_W):
             col = np.nonzero(herbe[:, x])[0]
             if len(col) == 0:
                 continue
             bas = col.max()
-            zone_fr[max(0, bas - 5):bas + 1, x] = herbe[max(0, bas - 5):bas + 1, x]
-        c[zone_fr] = couches["Cliffs"][zone_fr]
-        c[..., 3] = np.where(zone_fr, 255, 0)
-        if zone_fr.sum() > 40:
-            couches["Fringe"] = c
+            crete[max(0, bas - 5):bas + 1, x] = herbe[max(0, bas - 5):bas + 1, x]
+        if crete.sum() > 40:
+            couches["Fringe"] = extraire(crete)
 
+        # --- sortie -------------------------------------------------------
         infos = {}
         for nom in ORDRE:
-            if nom not in couches:
-                continue
-            img = couches[nom]
-            if (img[..., 3] > 0).sum() == 0:
+            img = couches.get(nom)
+            if img is None or (img[..., 3] > 0).sum() == 0:
                 continue
             fichier = f"Cliff_{nom}_{moment}.png"
             Image.fromarray(img, "RGBA").save(SORTIE / fichier)
             infos[nom] = {"fichier": fichier, "Layer": PROFONDEUR[nom], **controler(img)}
         manifeste["moments"][moment] = infos
 
-        # apercu compose
         comp = Image.new("RGBA", (CADRE_W, CADRE_H), (0, 0, 0, 0))
         for nom in ORDRE:
             if nom in couches:
@@ -474,10 +520,10 @@ def construire() -> None:
     print("=== Cliff ===")
     for moment, infos in manifeste["moments"].items():
         print(f"\n  [{moment}]")
-        print(f"    {'layer':<10}{'Layer':>6}{'cellules':>10}{'coul':>7}"
+        print(f"    {'layer':<16}{'Layer':>6}{'cellules':>10}{'coul':>7}"
               f"{'moy/tui':>9}{'<=16':>8}{'semi':>6}{'occup':>9}")
         for nom, d in infos.items():
-            print(f"    {nom:<10}{d['Layer']:>6}{d['cellules_occupees']:>10}"
+            print(f"    {nom:<16}{d['Layer']:>6}{d['cellules_occupees']:>10}"
                   f"{d['couleurs']:>7}{d['moy_par_tuile']:>9}"
                   f"{d['pct_tuiles_conformes']:>7}%{d['semi_transparents']:>6}"
                   f"{d['occupation_pct']:>8}%")
