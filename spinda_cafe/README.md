@@ -30,15 +30,42 @@ soit 8 px de moins que les 101 px de la référence — c'est normal, ton bâtim
 un peu moins haut *proportionnellement*. Le forcer à 101 px l'aurait étiré
 verticalement et déformé.
 
+## Jeu d'ombre et de lumière sur la porte
+
+L'entrée principale est désormais **fermée visuellement** : on ne voit plus le mur
+du fond ni le tapis spiralé à travers l'embrasure. L'ouverture est remplie d'une
+ombre noire qui se réchauffe légèrement vers le sol, et une rangée de **petits
+demi-cercles dorés** déborde sur le seuil, comme la lumière de l'intérieur qui se
+répand devant la porte. C'est le même traitement que la porte du café de Halcyon.
+
+Cette version a été produite par le générateur d'image à partir de
+`spindacafevFINAL.png`, puis remise au format exact de la source.
+
+### Détourage du fond
+
+Le générateur renvoie un PNG agrandi **sans canal alpha** : le damier de
+transparence de l'aperçu est peint en dur, avec du bruit de compression. Le
+détourer par la couleur laissait toujours un quadrillage résiduel visible.
+
+`../tileset_pmd/nettoyer_sortie_generee.py` procède autrement : l'image source a
+déjà un alpha parfait et la génération est cadrée de la même façon (écart moyen
+mesuré : 20/255 sur la zone opaque contre 220/255 sur le fond). Le script
+**réutilise donc l'alpha de la source**, en y ajoutant la matière franchement
+colorée apparue hors du sujet d'origine — ce qui laisse passer les 875 px de
+festons qui débordent sous le seuil.
+
 ## Fichiers produits
 
 | Fichier | Taille | Usage |
 |---|---|---|
+| `spindacafevFINAL_porte.png` | 425 × 251 | **source retravaillée** : porte assombrie + festons |
 | `spinda_cafe_taille_halcyon.png` | 221 × 131 | image complète (tapis compris) à la bonne échelle |
 | `spinda_cafe_batiment.png` | **208 × 93** | bâtiment seul, recadré — la façade à la taille de Halcyon |
 | `spinda_cafe_pmdo_grille8.png` | 208 × 96 | calé sur la grille 8 px → **26 × 12 cellules**, prêt à découper en `.tile` |
 | `spinda_cafe_comparaison.png` | — | côte à côte avec la référence |
 | `cafe_halcyon_reference.png` | 208 × 101 | la façade Halcyon extraite, pour contrôle |
+| `spindacafevFINAL.png` | 425 × 251 | l'original intact, conservé |
+| `_generation_brute.png` | 1327 × 784 | sortie brute du générateur, avant détourage |
 
 ## Pourquoi LANCZOS et pas NEAREST
 
@@ -54,5 +81,10 @@ pixel-art (palette réduite, alpha binaire), c'est `NEAREST` qu'il faudrait util
 ## Régénérer
 
 ```bash
-python3 ../tileset_pmd/redim_spinda_cafe.py spindacafevFINAL.png
+# 1. détourer la sortie du générateur et la remettre au format source
+python3 ../tileset_pmd/nettoyer_sortie_generee.py \
+    spindacafevFINAL.png _generation_brute.png spindacafevFINAL_porte.png
+
+# 2. remettre à l'échelle du café de Halcyon
+python3 ../tileset_pmd/redim_spinda_cafe.py spindacafevFINAL_porte.png
 ```
