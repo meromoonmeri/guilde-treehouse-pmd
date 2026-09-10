@@ -118,6 +118,69 @@ identiques avant et après, seul le cadrage change. La salle de jour, large de
 415 px, a été portée à 416 en dupliquant sa dernière colonne de pixels — aucun
 pixel existant n'est modifié.
 
+## Import dans l'éditeur PMDO
+
+### Pourquoi « Load PNG to Tileset » écrasait la netteté
+
+L'éditeur découpe le PNG en tuiles de 8 × 8, puis **déduplique** : deux tuiles
+identiques ne sont stockées qu'une fois. Deux défauts faisaient s'effondrer ce
+mécanisme. Mesures faites contre l'intérieur du café de Metano, reconstitué
+tuile par tuile depuis `Palikadude/Halcyon`.
+
+| | notre café (avant) | Metano (Halcyon) |
+|---|---|---|
+| Couleurs | **60 299** | **396** |
+| Couleurs présentes sur 1 seul pixel | 46 123 — **76 %** de la palette | 153 |
+| Pixels altérés si l'éditeur indexe en 256 couleurs | **65,5 %** | 0,2 % |
+| Offset horizontal | x=20 → **4 px hors grille** | x=0 |
+| Largeur | 415 px → **7 px hors grille** | 456 px = 57 cellules |
+| Tuiles uniques générées | **1 602** | 1 118 |
+
+**Le dégradé.** Le générateur d'image produit des dégradés lisses : 76 % de la
+palette n'apparaît qu'une seule fois, du bruit invisible à l'œil. Quand
+l'éditeur indexe la palette, deux tiers des pixels sont modifiés — c'est la
+bouillie constatée à l'import. Un tileset ripé du jeu tient en 396 couleurs.
+
+**La grille.** La salle commençait à x=20 pour 415 px de large : ni l'un ni
+l'autre multiple de 8. Chaque tuile découpée tombait **à cheval** sur deux
+motifs, donc aucune ne se répétait et le tileset explosait.
+
+### La correction
+
+`../tileset_pmd/assainir_pour_pmdo.py` fait les deux :
+
+1. **Calage sur la grille** — offset et largeur ramenés à des multiples de 8.
+   La largeur est complétée en dupliquant la dernière colonne : aucun pixel
+   existant n'est modifié.
+2. **Regroupement de palette** — chaque teinte rare est remplacée par la teinte
+   fréquente la plus proche, dans la limite d'un écart de 16/255, imperceptible.
+   Aucun pixel n'est moyenné, aucune couleur n'est inventée : on supprime des
+   doublons quasi identiques, ce qu'est déjà un tileset du jeu.
+
+| Fichier | Couleurs | Grille |
+|---|---|---|
+| `interieur_sans_deco_jour.png` | 60 299 → **3 162** | x=16, 416 px = 52 cellules |
+| `interieur_sans_deco_nuit.png` | → **6 610** | idem |
+| `interieur_avec_deco_jour.png` | → **20 038** | idem |
+| `interieur_avec_deco_nuit.png` | → **15 558** | idem |
+
+Dégât mesuré sur le dessin : écart **max 16/255**, moyen 2,70, et **0 %** de
+pixels au-delà de 16. Le layout est strictement inchangé.
+
+```bash
+python3 ../tileset_pmd/assainir_pour_pmdo.py interieur_*.png
+```
+
+## La lumière de sortie
+
+Comme dans Metano, la lumière du jour entre par l'escalier et s'ouvre en
+éventail sur le plancher. Halcyon ne l'apporte pas en dégradé mais en **aplats
+francs de la palette** — vérifié en relevant les pixels de l'asset original.
+
+Elle est donc appliquée en **trois paliers nets**, uniquement sur les pixels du
+sol, sans toucher aux meubles ni aux murs : doré chaud de jour, bleu lunaire de
+nuit. Aucun pixel semi-transparent, aucun flou.
+
 ## Parti pris
 
 Le vrai café Spinda d'*Explorers of Sky* est une **salle souterraine** : anneau
