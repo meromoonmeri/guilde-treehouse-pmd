@@ -15,7 +15,7 @@ l'éclairage se superposent sans décalage.
 
 ## Échelle PMDO
 
-Les quatre calques font **456 × 320 px**, soit **57 × 40 cellules** de 8 px.
+Les calques font **576 × 400 px**, soit **72 × 50 cellules** de 8 px.
 
 Cette taille n'est pas arbitraire : c'est celle de l'intérieur du café de
 Metano Town dans `Palikadude/Halcyon` (`Data/Ground/metano_cafe.rsground`),
@@ -25,7 +25,7 @@ d'une salle intérieure PMDO.
 Le générateur rend en ~1180 × 910 : `../tileset_pmd/mettre_interieur_echelle_pmdo.py`
 détoure le magenta, réduit par **couleur dominante** de chaque bloc — un filtre
 classique moyennerait les pixels et rendrait les bords flous — puis centre la
-salle dans le cadre 456 × 320.
+salle dans le cadre 576 × 400.
 
 ```bash
 python3 ../tileset_pmd/mettre_interieur_echelle_pmdo.py interieur_*.png
@@ -33,12 +33,12 @@ python3 ../tileset_pmd/mettre_interieur_echelle_pmdo.py interieur_*.png
 
 ### Version calée sur la grille 8 px
 
-Dans le cadre 456 × 320, la salle tombe à l'offset x=20 pour une largeur de
+Dans le cadre 576 × 400, la salle tombe à l'offset x=32 pour une largeur de
 415 px : ni l'un ni l'autre n'est un multiple de 8, donc ses bords tomberaient
 au milieu des tuiles et le découpage en `.tile` serait décalé.
 
 `../tileset_pmd/caler_grille8_interieur.py` la recadre sur des frontières de
-cellules : **52 × 40 cellules** pleines (416 × 320 px), à l'offset (16, 0).
+cellules : **65 × 50 cellules** pleines (520 × 400 px), à l'offset (32, 0).
 
 | Fichier | Contenu |
 |---|---|
@@ -56,7 +56,7 @@ python3 ../tileset_pmd/caler_grille8_interieur.py interieur_*.png
 
 Comme le café de Metano dans Halcyon, qui est découpé en `_Base`, `_Objects`,
 `_Objects_Fringe`, `_Objects_Over` et `_Objects_Under`, le décor est livré en
-calques indépendants. Tous partagent le **même cadre 456 × 320 et le même
+calques indépendants. Tous partagent le **même cadre 576 × 400 et le même
 offset** : ils se superposent au pixel près, sans le moindre recalage.
 
 | Fichier | Contenu |
@@ -282,3 +282,28 @@ ciel nocturne et quelques flaques de lumière chaude subsistent au sol.
 
 `variante_caverne/` contient les quatre mêmes calques en version **grotte**,
 fidèles au jeu d'origine, si tu préfères ce parti pris.
+
+
+## Échelle de la salle — audit contre l'asset officiel
+
+Le mobilier vient des vrais tilesets du jeu : sa taille est donc juste par
+définition, et ne doit pas être touchée. Ce qui pouvait être faux, c'est la
+taille de la **pièce** autour de lui. Mesures faites sur
+`reference/spinda_cafe_officiel_pmd_sky.png` (rip officiel d'Explorers of Sky) :
+
+| Grandeur | Spinda Cafe officiel | Notre salle avant | Notre salle après |
+|---|---|---|---|
+| Largeur du sol | 426 px | 405 px | **506 px** |
+| Table ronde (43–53 px) en % du sol | 10,1 % | 11,7 % | **9,9 %** |
+| Comptoir (120/150 px) en % du sol | 28,2 % | 37,0 % | **29,6 %** |
+
+Les meubles occupaient donc 1,16× (tables) à 1,32× (comptoirs) trop de place :
+la pièce était trop petite d'un facteur moyen **1,235**. Corrigé par
+`tileset_pmd/agrandir_salle.py` avec un facteur exact **5/4 = 1,25** —
+agrandissement entier ×5 au plus proche voisin puis réduction ×4 par couleur
+dominante de bloc, donc **aucune interpolation**, aucune perte de netteté,
+aucune couleur inventée. Le cadre passe de 456 × 320 à **576 × 400**
+(72 × 50 cellules).
+
+Conformité après correction : **0 pixel semi-transparent** sur tous les calques,
+5,3 couleurs par tuile de 8 px en moyenne, **97,9 % des tuiles à ≤ 16 couleurs**.

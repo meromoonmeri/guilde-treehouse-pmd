@@ -2,7 +2,7 @@ from __future__ import annotations
 
 """Cale un calque d'interieur sur la grille 8 px de PMDO.
 
-Le cadre fait deja 456 x 320 px = 57 x 40 cellules (viewport de l'interieur du
+Le cadre fait deja 576 x 400 px = 72 x 50 cellules (viewport de l'interieur du
 cafe de Metano Town). Mais la salle elle-meme y est posee a l'offset x=20 pour
 une largeur de 415 px : ni l'un ni l'autre n'est un multiple de 8, donc les
 bords de la salle tombent au milieu des tuiles et le decoupage en `.tile` serait
@@ -25,7 +25,7 @@ from PIL import Image, ImageDraw
 import numpy as np
 
 TILE = 8
-CADRE_W, CADRE_H = 456, 320
+CADRE_W, CADRE_H = 576, 400
 
 
 def snap(valeur: int, pas: int = TILE) -> int:
