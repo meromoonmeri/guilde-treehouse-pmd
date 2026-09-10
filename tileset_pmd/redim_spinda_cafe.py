@@ -18,10 +18,12 @@ Sorties :
   spinda_cafe_comparaison.png      cote a cote avec la reference Halcyon
 """
 
+from collections import Counter
 from pathlib import Path
 import sys
 
 from PIL import Image
+import numpy as np
 
 # Taille mesuree de la facade du cafe de Halcyon.
 REF_W, REF_H = 208, 101
@@ -32,6 +34,30 @@ SRC_BUILDING_W = 400
 SRC_BUILDING_BOTTOM = 190
 
 TILE = 8  # GraphicsManager.TEX_SIZE
+
+
+def resample_mode(im: Image.Image, tw: int, th: int) -> Image.Image:
+    """Reduit en gardant, pour chaque bloc, sa couleur dominante.
+
+    Preserve les aplats et garde l'alpha binaire, contrairement a un filtre
+    de reechantillonnage classique qui moyenne les pixels voisins.
+    """
+    src = np.array(im.convert("RGBA")).astype(int)
+    h, w, _ = src.shape
+    out = np.zeros((th, tw, 4), dtype=np.uint8)
+    for y in range(th):
+        y0 = int(y * h / th)
+        y1 = max(y0 + 1, int((y + 1) * h / th))
+        for x in range(tw):
+            x0 = int(x * w / tw)
+            x1 = max(x0 + 1, int((x + 1) * w / tw))
+            blk = src[y0:y1, x0:x1].reshape(-1, 4)
+            vis = blk[blk[:, 3] > 128]
+            if len(vis) * 2 < len(blk):
+                continue
+            col = Counter(map(tuple, vis[:, :3])).most_common(1)[0][0]
+            out[y, x] = (col[0], col[1], col[2], 255)
+    return Image.fromarray(out, "RGBA")
 
 
 def building_box(im: Image.Image, bottom: int) -> tuple[int, int, int, int]:
@@ -60,11 +86,12 @@ def main() -> int:
     factor = REF_W / bw
     print(f"Facteur           : {REF_W}/{bw} = {factor:.4f}")
 
-    # L'image source est deja lissee (44 971 couleurs, alpha sur 256 niveaux) :
-    # ce n'est pas du pixel-art 1:1. LANCZOS conserve donc mieux le dessin que
-    # NEAREST, qui produirait des escaliers sans rien gagner en nettete.
+    # La source est du pixel-art a alpha binaire : LANCZOS moyennerait les
+    # pixels et redonnerait des bords flous (mesure : 760 pixels a demi
+    # transparents sur le batiment, contre 0 pour la reference Halcyon).
+    # On reduit donc par couleur dominante, comme au detourage.
     new_size = (round(im.width * factor), round(im.height * factor))
-    full = im.resize(new_size, Image.LANCZOS)
+    full = resample_mode(im, *new_size)
     full.save(out_dir / "spinda_cafe_taille_halcyon.png")
     print(f"\nImage complete    : {full.width} x {full.height}"
           f"  -> spinda_cafe_taille_halcyon.png")

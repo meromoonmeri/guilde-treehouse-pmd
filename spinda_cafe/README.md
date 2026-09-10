@@ -84,8 +84,24 @@ majoritaire** de chaque bloc : chaque pixel de sortie reprend une teinte
 réellement présente dans la source, jamais une moyenne. Les aplats restent
 purs, les bords tranchés, et l'alpha est binaire comme sur un vrai sprite.
 
-Réduire la palette (quantification à 48 couleurs) a été essayé et **écarté** :
-cela tuait les couleurs des fioles et faisait virer l'ensemble au sépia.
+Réduire la palette a été essayé à 48, 64, 96, 128 et 192 couleurs, puis
+**écarté à chaque fois** : le médian-cut privilégie les grands aplats bruns du
+bâtiment et sacrifie les petits détails colorés. Les fioles du comptoir
+perdaient leur cyan, leur bleu et leur vert, l'ensemble virant au kaki. La
+référence Halcyon n'a que 92 couleurs parce qu'elle a été *dessinée* ainsi, pas
+quantifiée après coup.
+
+### Les dérivés aussi
+
+`redim_spinda_cafe.py` réduisait encore en LANCZOS, ce qui redonnait des bords
+flous aux quatre dérivés (760 pixels semi-transparents sur le bâtiment). Il
+utilise désormais le même rééchantillonnage par couleur dominante :
+
+| | bords semi-transparents |
+|---|---|
+| Référence Halcyon | 0 |
+| Dérivés, avant | 760 à 1 100 |
+| **Dérivés, après** | **0** |
 
 ## Fichiers produits
 
