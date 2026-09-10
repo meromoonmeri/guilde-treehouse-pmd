@@ -13,6 +13,24 @@ Chaque calque est un PNG à fond transparent, bords nets (0 pixel
 semi-transparent), généré en cascade à partir du précédent pour que le décor et
 l'éclairage se superposent sans décalage.
 
+## Échelle PMDO
+
+Les quatre calques font **456 × 320 px**, soit **57 × 40 cellules** de 8 px.
+
+Cette taille n'est pas arbitraire : c'est celle de l'intérieur du café de
+Metano Town dans `Palikadude/Halcyon` (`Data/Ground/metano_cafe.rsground`),
+relevée sur les assets réels. Le viewport correspond donc exactement à celui
+d'une salle intérieure PMDO.
+
+Le générateur rend en ~1180 × 910 : `../tileset_pmd/mettre_interieur_echelle_pmdo.py`
+détoure le magenta, réduit par **couleur dominante** de chaque bloc — un filtre
+classique moyennerait les pixels et rendrait les bords flous — puis centre la
+salle dans le cadre 456 × 320.
+
+```bash
+python3 ../tileset_pmd/mettre_interieur_echelle_pmdo.py interieur_*.png
+```
+
 ## Parti pris
 
 Le vrai café Spinda d'*Explorers of Sky* est une **salle souterraine** : anneau
@@ -30,6 +48,10 @@ artistique du jeu.
 La déco reprend celle du café officiel : deux comptoirs en rondins sous auvents
 rayés rouge et bleu, boissons colorées, tables et tabourets en rondins, plantes
 en pot, caisses, tableau d'affichage et guirlandes de rubans rouges.
+
+Les fenêtres rondes ont un **croisillon simple** : une barre verticale et une
+barre horizontale, quatre carreaux. Les diagonales en X du premier jet ont été
+retirées, trop chargées à cette échelle.
 
 De nuit, la palette bascule vers un bleu-violet froid, les fenêtres montrent un
 ciel nocturne et quelques flaques de lumière chaude subsistent au sol.
