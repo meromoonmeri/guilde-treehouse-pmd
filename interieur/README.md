@@ -171,15 +171,66 @@ pixels au-delà de 16. Le layout est strictement inchangé.
 python3 ../tileset_pmd/assainir_pour_pmdo.py interieur_*.png
 ```
 
-## La lumière de sortie
 
-Comme dans Metano, la lumière du jour entre par l'escalier et s'ouvre en
-éventail sur le plancher. Halcyon ne l'apporte pas en dégradé mais en **aplats
-francs de la palette** — vérifié en relevant les pixels de l'asset original.
+## Import dans l'éditeur PMDO
 
-Elle est donc appliquée en **trois paliers nets**, uniquement sur les pixels du
-sol, sans toucher aux meubles ni aux murs : doré chaud de jour, bleu lunaire de
-nuit. Aucun pixel semi-transparent, aucun flou.
+### Pourquoi l'intérieur était moche en jeu
+
+L'intérieur du café de Metano a été décodé tuile par tuile depuis les `.tile`
+de `Palikadude/Halcyon` pour servir d'étalon chiffré
+(`reference/metano_cafe_interieur_halcyon.png`). La comparaison désigne le
+coupable sans ambiguïté :
+
+| | Palika | nous (avant) |
+|---|---|---|
+| Couleurs de l'image | 396 | **60 299** |
+| Couleurs dans une tuile 8 × 8 | 5,3 | **59,2** |
+| Tuiles tenant en 16 couleurs | 99,4 % | **0 %** |
+| Pixels voisins strictement identiques | 76,2 % | **1,6 %** |
+| Longueur moyenne d'une plage unie | 4,18 px | **1,02 px** |
+
+**Le problème n'était pas le nombre de couleurs, mais le grain.** Chez Palika,
+un aplat est un vrai aplat : de longues plages de pixels rigoureusement
+identiques. Chez nous, **98,5 % des plages ne faisaient qu'un seul pixel** — le
+générateur d'image dépose un bruit de ±1 à ±12 niveaux sur chaque pixel.
+Invisible à l'écran, fatal à l'import :
+
+- l'éditeur découpe en tuiles 8 × 8 et **déduplique** ; à 59 couleurs par tuile,
+  aucune tuile ne se répète jamais ;
+- une tuile DS tient sur 16 couleurs, et l'éditeur réindexe la palette :
+  **99,3 % de nos pixels étaient déplacés** vers une teinte voisine. D'où la
+  bouillie en jeu.
+
+### La correction
+
+`../tileset_pmd/aplatir_comme_palika.py` reconstruit de vrais aplats :
+
+1. **Postérisation par regroupement** — les teintes séparées par moins de 14
+   niveaux fusionnent vers la plus fréquente. Les aplats redeviennent plats,
+   les bords et les détails gardent leurs teintes propres.
+2. **16 couleurs par tuile** — dans chaque tuile 8 × 8, les teintes au-delà des
+   16 dominantes sont ramenées à la plus proche. C'est la contrainte exacte
+   d'un tileset DS.
+
+Aucun pixel n'est moyenné, aucune couleur inventée : chaque pixel reçoit une
+teinte déjà présente à côté de lui.
+
+| Fichier | Couleurs | Par tuile | Voisins identiques |
+|---|---|---|---|
+| `interieur_sans_deco_jour.png` | 34 690 → **98** | 55,8 → 6,6 | 3,0 % → **64,3 %** |
+| `interieur_sans_deco_nuit.png` | 46 292 → **97** | 57,9 → 7,2 | 2,2 % → **60,2 %** |
+| `interieur_avec_deco_jour.png` | 60 299 → **531** | 59,2 → 11,5 | 1,6 % → **48,0 %** |
+| `interieur_avec_deco_nuit.png` | 55 341 → **340** | 58,5 → 9,2 | 1,8 % → **52,6 %** |
+
+**Résultat à l'import** : pixels altérés **99,3 % → 5,5 %** sur le calque
+décoré, et **0 %** sur la salle vide (Palika : 0,2 %).
+
+La salle est calée sur la grille : offset x=16, largeur 416 px = **52 × 40
+cellules** pleines.
+
+```bash
+python3 ../tileset_pmd/aplatir_comme_palika.py interieur_*.png
+```
 
 ## Parti pris
 
