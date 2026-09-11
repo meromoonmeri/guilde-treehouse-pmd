@@ -1,32 +1,35 @@
 {
+  "version": 1,
   "id": "falaise_originale",
+  "titre": "Falaise océanique originale — layers générés",
   "dimensions": [
     688,
     384
   ],
   "grille_px": 8,
   "fond_chroma_key": "#FF00FF",
-  "creation": "Cinq layers IA séparés; falaise et mer générées avec le placement/trait PMD demandé.",
   "animation": {
     "frames": 1032,
     "duree_image_ms": 250,
-    "nuages_wrap_px": 344,
-    "mer_palette_frames": 24
+    "duree_boucle_ms": 258000,
+    "nuages": "wrap horizontal parfaitement périodique sur 344 px",
+    "mer": "cycle de palette 24 phases sans déplacement"
   },
+  "creation": "Cinq layers générés séparément de zéro ; aucune référence externe n'est un layout, template ou pixel source.",
   "calques": [
     {
       "id": "00_ciel",
-      "nom": "Ciel ouvert sans nuage",
+      "nom": "Ciel ouvert — sans nuage",
       "anime": false
     },
     {
       "id": "01_nuages_wrap",
-      "nom": "Nuages — wrap horizontal parfait",
+      "nom": "Nuages — overlay horizontal, wrap parfait",
       "anime": true
     },
     {
       "id": "02_mer_palette",
-      "nom": "Mer — cycle de palette",
+      "nom": "Mer — cycle de palette sans déplacement",
       "anime": true
     },
     {
@@ -36,18 +39,18 @@
     },
     {
       "id": "04_falaise",
-      "nom": "Falaise côtière naturelle",
+      "nom": "Falaise naturelle de premier plan",
       "anime": false
     }
   ],
   "fichiers": {
     "original": {
-      "calques": {
-        "00_ciel": "calques/original/00_ciel.png",
-        "01_nuages_wrap": "calques/original/01_nuages_wrap.png",
-        "02_mer_palette": "calques/original/02_mer_palette.png",
-        "03_plateaux_reliefs": "calques/original/03_plateaux_reliefs.png",
-        "04_falaise": "calques/original/04_falaise.png"
+      "calques_rgba": {
+        "00_ciel": "calques_rgba/original/00_ciel.png",
+        "01_nuages_wrap": "calques_rgba/original/01_nuages_wrap.png",
+        "02_mer_palette": "calques_rgba/original/02_mer_palette.png",
+        "03_plateaux_reliefs": "calques_rgba/original/03_plateaux_reliefs.png",
+        "04_falaise": "calques_rgba/original/04_falaise.png"
       },
       "composition": "compositions/original.png",
       "base": "bases/original_transparente.png",
@@ -60,7 +63,8 @@
           "period": 344,
           "prefix": "nuages_wrap",
           "vitesse_px_par_image": -1,
-          "wrap_horizontal_parfait": true
+          "wrap_horizontal_parfait": true,
+          "couture_bords_px": 12
         },
         "02_mer_palette": {
           "kind": "frames",
@@ -72,7 +76,203 @@
             384
           ],
           "source_columns": 6,
-          "palette_only": true
+          "palette_only": true,
+          "palette_phases": [
+            {
+              "phase": 0,
+              "force": 0.0,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 1,
+              "force": 0.13052619,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 2,
+              "force": 0.25881905,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 3,
+              "force": 0.38268343,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 4,
+              "force": 0.5,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 5,
+              "force": 0.60876143,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 6,
+              "force": 0.70710678,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 7,
+              "force": 0.79335334,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 8,
+              "force": 0.8660254,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 9,
+              "force": 0.92387953,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 10,
+              "force": 0.96592583,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 11,
+              "force": 0.99144486,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 12,
+              "force": 1.0,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 13,
+              "force": 0.99144486,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 14,
+              "force": 0.96592583,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 15,
+              "force": 0.92387953,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 16,
+              "force": 0.8660254,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 17,
+              "force": 0.79335334,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 18,
+              "force": 0.70710678,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 19,
+              "force": 0.60876143,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 20,
+              "force": 0.5,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 21,
+              "force": 0.38268343,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 22,
+              "force": 0.25881905,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            },
+            {
+              "phase": 23,
+              "force": 0.13052619,
+              "deplacement_px": [
+                0,
+                0
+              ]
+            }
+          ],
+          "geometrie_inchangee": true,
+          "raccord_frame_24_vers_0": true
         }
       },
       "animations": {
@@ -82,11 +282,11 @@
           "columns": 8,
           "frame_size": [
             688,
-            128
+            240
           ],
           "offset": [
             0,
-            69
+            70
           ]
         },
         "02_mer_palette": {
@@ -95,11 +295,11 @@
           "columns": 8,
           "frame_size": [
             688,
-            247
+            206
           ],
           "offset": [
             0,
-            137
+            178
           ]
         }
       },
@@ -138,11 +338,41 @@
       ]
     }
   },
-  "sources": {
-    "00_ciel_genere.png": "92c034ec9c80d684367f48605b73de17d49ce1ce2f13d7d87c2ab9d560960eef",
-    "02_nuages_genere.png": "b526fdf43095a0afb9bb5b355f846fa2f9e7d66cc7488cf63c54ebafb717fb07",
-    "01_mer_generee.png": "5631e22472aa82375a8e1d0eac08f4c8ba285eb26fdede4a41e687f0bbbfe1de",
-    "03_plateaux_reliefs_generes.png": "d550d88ee990398bdc7e28f0b7c1317caa6d9cfb7351a3d511a10b8143ef87b5",
-    "04_falaise_generee.png": "7d55fe90857c619718f2bf8e7a97f519ec473158450884dfa39977943513e363"
+  "sources_generation": {
+    "00_ciel_genere.png": {
+      "sha256": "e0bf1e8c6a4e5f904f19b0926b3a02ef62d37b4a463429d7b4956369d260e6be",
+      "dimensions": [
+        1376,
+        768
+      ]
+    },
+    "02_nuages_genere.png": {
+      "sha256": "13a614f257c9881aeda07f20b359c4edae2731fb9bb6477e210873633884f810",
+      "dimensions": [
+        1376,
+        768
+      ]
+    },
+    "01_mer_generee.png": {
+      "sha256": "9da9d672269900ad6a23d02937e04041c9c4e77d080684bfdd7f2d073e4ad97e",
+      "dimensions": [
+        1376,
+        768
+      ]
+    },
+    "03_plateaux_reliefs_generes.png": {
+      "sha256": "e329265240d199bf207bc52cfff7650e2498ac25f6bfd6851c797b42d28e404f",
+      "dimensions": [
+        1376,
+        768
+      ]
+    },
+    "04_falaise_generee.png": {
+      "sha256": "ebd53ce8b40f90c7d78e3962020c681680fcc9563ca99d5cb4631216b875bb18",
+      "dimensions": [
+        1376,
+        768
+      ]
+    }
   }
 }

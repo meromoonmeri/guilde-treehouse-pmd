@@ -3,7 +3,13 @@
   "layers": 5,
   "fond": "#FF00FF",
   "grille_px": 8,
-  "nuages_wrap_px": 344,
-  "mer_palette_frames": 24,
+  "nuages": {
+    "period_px": 344,
+    "wrap": "bit_identique"
+  },
+  "mer": {
+    "frames_palette": 24,
+    "geometrie": "inchangee"
+  },
   "aseprite_frames": 1032
 }

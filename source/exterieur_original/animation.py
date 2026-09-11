@@ -1,4 +1,4 @@
-"""Animations et exports communs aux deux extérieurs, sans toucher au kit intérieur.
+"""Exports animés du paysage original généré, à plans indépendants et fond magenta.
 
 Les mêmes phases sont exportées en Aseprite, Tiled et dans l'aperçu autonome.
 Les étoiles ont une période de 24 images ; la lune ne change jamais d'opacité.
@@ -184,7 +184,7 @@ def write_tiled(path, root, mode, operators, definitions, size, markers):
             gid += op.period
             object_id += 1
         else:
-            layer.update(type='imagelayer', image=f'../calques/{mode}/{key}.png')
+            layer.update(type='imagelayer', image=f'../calques_rgba/{mode}/{key}.png')
         layers.append(layer)
     objects = []
     for marker in markers:
@@ -203,15 +203,15 @@ def write_tiled(path, root, mode, operators, definitions, size, markers):
 
 
 def export_variant(root, mode, definitions, images, specs, size, frames, base_start, markers, stem):
-    files = {'calques': {}, 'composition': f'compositions/{mode}.png', 'base': f'bases/{mode}_transparente.png',
+    files = {'calques_rgba': {}, 'composition': f'compositions/{mode}.png', 'base': f'bases/{mode}_transparente.png',
              'magenta': f'bases/{mode}_magenta.png', 'aseprite': f'aseprite/{stem}_{mode}.aseprite',
              'tiled': f'tiled/{stem}_{mode}.tmj', 'operations': specs}
     operators = []
     for definition, image in zip(definitions, images):
         key = definition['id']
-        rel = f'calques/{mode}/{key}.png'
+        rel = f'calques_rgba/{mode}/{key}.png'
         save_png(image, root / rel)
-        files['calques'][key] = rel
+        files['calques_rgba'][key] = rel
         op = AnimatedLayer(image, specs.get(key), root)
         assert frames % op.period == 0
         assert np.array_equal(np.array(op.at(0)), np.array(image)), 'Les PNG doivent rester l’image 0'

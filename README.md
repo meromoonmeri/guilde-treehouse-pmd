@@ -2,11 +2,11 @@
 
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
-## Nouveaux layouts extérieurs de référence
+## Paysage extérieur original — layers générés
 
-Trois layouts **générés à partir des compositions** des références ajoutées le 11 septembre 2026 sont disponibles dans [`references_exterieures/`](references_exterieures/README.md) : **Sanctuaire des cascades**, **Prairie maritime** et **Cap côtier**, chacun en **jour et nuit**. Suivant la méthode de `sharpedo`, leurs plans PNG sources sont préparés avant l’export, puis le reconstructeur les charge nommément — ciel, astres, nuages, eau/reliefs et décor — sans redécouper la composition finale. La boucle compte 24 images : nuages défilants, étoiles nocturnes scintillantes et crêtes d’eau/cascades animées. Les PNG de l’image 0, compositions, bases transparente/magenta, Aseprite animés et cartes Tiled à atlas sont fournis. L’aperçu autonome [`apercu_references_exterieures.html`](apercu_references_exterieures.html) affiche aussi une grille de 8 px.
+[`exterieur_original/`](exterieur_original/README.md) remplace la livraison extérieure précédente par une seule composition totalement nouvelle : une falaise océanique créée de zéro avec **cinq layers générés indépendamment**. Les sorties ont été régénérées avec une contrainte explicite de **pixel art PMD natif strict** : palette limitée, clusters de pixels durs, contours crénelés et tramage contrôlé — jamais une illustration lissée ou peinte. Les références antérieures ne sont ni templates ni pixels source.
 
-L’analyse de la branche de référence et le protocole suivi sont documentés dans [`AUDIT_BRANCHE_01A082DB.md`](AUDIT_BRANCHE_01A082DB.md). Les douze salles et les panoramas originels restent inchangés.
+Les layers finals sont livrés sur fond chroma-key **#FF00FF** : ciel ouvert sans nuage, nuages en overlay à wrap horizontal parfait, mer avec cycle de palette sans déplacement géométrique, plateaux naturels et falaise naturelle sans aucune construction. Les PNG magenta, les exports RGBA/Aseprite/Tiled et un aperçu avec grille **8 × 8 px** sont fournis. Ouvrir [`apercu_exterieur_original.html`](apercu_exterieur_original.html).
 
 ## Règles effectivement appliquées
 

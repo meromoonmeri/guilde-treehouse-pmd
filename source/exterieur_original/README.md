@@ -1,34 +1,70 @@
-# Falaise côtière PMD — kit original
+# Falaise océanique originale — layers générés
 
-Kit de décor Pokémon Mystery Dungeon à cinq calques éditables, construit depuis les sources visuelles IA de `source/exterieur_original/generation/`. La falaise et la mer suivent la logique de placement demandée (promontoire végétalisé au premier plan, récifs rocheux et mer ouverte), sans reprendre de pixels de l'image de guidage et sans élément artificiel.
+Cette livraison repart de zéro. Les cinq images de `source/exterieur_original/generation/`
+ont été générées séparément, avec une consigne explicite de **pixel art PMD natif
+strict** : palette indexée limitée, contours sombres durs, clusters carrés,
+diagonales crénelées et tramage contrôlé. Elles ne doivent jamais être lues comme
+des illustrations lissées, vectorielles ou peintes. Aucune image de référence,
+aucun template ni aucun pixel extérieur n'est présent dans les fichiers finals.
 
-## Contenu éditable
+## Composition inventée
 
-| Ordre | Calque | PNG chroma-key | Animation |
-|---:|---|---|---|
-| 0 | Ciel ouvert sans nuage | `calques_magentas/original/00_ciel.png` | fixe |
-| 1 | Nuages | `calques_magentas/original/01_nuages_wrap.png` | défile d'1 px/image, période 344 px |
-| 2 | Mer | `calques_magentas/original/02_mer_palette.png` | 24 palettes, aucune translation de pixel |
-| 3 | Plateaux et reliefs | `calques_magentas/original/03_plateaux_reliefs.png` | fixe |
-| 4 | Falaise naturelle | `calques_magentas/original/04_falaise.png` | fixe |
+La scène de 688 × 384 px présente un horizon marin, une ligne de reliefs naturels,
+une falaise rocheuse de premier plan et une mer ouverte. Il n'y a aucune maison,
+route, pont, escalier, plateforme construite, bâtiment, objet de gameplay ou
+personnage.
 
-- **Canvas :** 688 × 384 px. La grille de travail/aperçu est de **8 px**.
-- Les PNG de calques avec zones vides utilisent exclusivement le fond de clé `#FF00FF` (RGB 255, 0, 255). Les versions transparentes correspondantes sont dans `calques/original/`.
-- Les 24 PNG de mer chroma-key sont dans `cycles_magentas/mer_palette/`. Leur atlas est `animations/source_mer_palette.png`.
-- `animations/nuages_wrap_original.png` et `animations/mer_palette_original.png` sont les exports animés. Le cycle combiné fait 1 032 images (PPCM de 344 et 24), à 250 ms/image.
-- `aseprite/falaise_originale_original.aseprite` et `tiled/falaise_originale_original.tmj` sont les exports d'édition Aseprite et Tiled.
+L'ordre de parallax est :
 
-## Aperçu
+1. `00_ciel` — dégradé atmosphérique ouvert, **sans nuage** ;
+2. `01_nuages_wrap` — groupes de nuages indépendants ;
+3. `02_mer_palette` — surface marine sans objet ;
+4. `03_plateaux_reliefs` — masses géographiques naturelles lointaines ;
+5. `04_falaise` — roche naturelle de premier plan.
 
-Ouvrir `../apercu_exterieur_original.html` dans un navigateur (ou via un petit serveur HTTP). Il permet de masquer chaque calque, mettre en pause l'animation et activer/désactiver la grille 8 px. Il est autonome : les images sont embarquées et aucun appel réseau n'est effectué.
+## Fond magenta explicite
+
+Les fichiers finals inspectables sont dans :
+
+```text
+calques_magentas/original/
+```
+
+Ils sont tous des PNG **RGB** avec le chroma-key strict `#FF00FF` dans les zones
+vides. Le ciel couvre naturellement tout le cadre ; les quatre autres layers ont
+un fond magenta. `calques_rgba/original/` est l'équivalent alpha dérivé de façon
+déterministe du chroma-key, exclusivement pour Aseprite, Tiled et la composition.
+
+## Animations conçues pour boucler
+
+- **Nuages** : le layer généré est transformé en ruban périodique de 344 px,
+  répété exactement deux fois sur 688 px. Ses bords de tuile sont magenta pur,
+  donc le `offset` horizontal de 1 px par image ne crée aucune cassure à gauche
+  ou à droite. Après 344 phases, la matrice est identique à la phase 0.
+- **Mer** : 24 états changent uniquement les valeurs de palette de l'eau.
+  L'alpha et les coordonnées des pixels restent identiques : aucune vague ne se
+  déplace géométriquement. La force chromatique évolue doucement de 0 à son
+  maximum et revient à 0, ce qui raccorde la phase 24 à la phase 0 sans coupure.
+- La timeline commune fait 1 032 images de 250 ms afin que 344 et 24 soient
+  synchronisés. Les cels Aseprite réelles sont écrites sur chaque période puis
+  liées pour les répétitions. Tiled possède un atlas par layer animé.
+
+## Aperçu sur grille
+
+Ouvrir [`../apercu_exterieur_original.html`](../apercu_exterieur_original.html).
+L'aperçu applique le chroma-key magenta au rendu, affiche une **grille 8 × 8 px**
+par défaut, permet de masquer chaque layer et de mettre la boucle en pause. Il est
+autonome : les images sont encodées en WebP data URI et aucune requête réseau
+n'est nécessaire.
 
 ## Reconstruction et contrôle
 
-Depuis la racine du dépôt :
-
 ```bash
-.cache/audit-venv/bin/python source/exterieur_original/build.py
-.cache/audit-venv/bin/python source/exterieur_original/verify.py
+pip install -r source/requirements.txt
+python source/exterieur_original/build.py
+python source/exterieur_original/verify.py
 ```
 
-Le constructeur normalise les canvases retournés par le générateur en pixels entiers, réalise uniquement une clé de transparence fuchsia connectée au bord, puis exporte les fichiers. `verify.py` vérifie les dimensions, le chroma-key, l'identité du wrap à 344 px, l'absence de déplacement de la géométrie marine, la composition, l'entête Aseprite, le fichier Tiled et la présence de la grille dans l'aperçu. Le résultat du dernier contrôle est consigné dans `controle_qualite.json`.
+Le vérificateur contrôle le fond magenta, la conversion chroma-key/RGBA, la
+composition initiale, le wrap bit-identique des nuages, la mer sans déplacement
+de géométrie, les cycles Tiled, les cels Aseprite et les repères de la grille HTML.
