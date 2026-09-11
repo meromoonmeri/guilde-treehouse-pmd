@@ -1,0 +1,364 @@
+{
+  "note": "Questions du test de personnalite. Les poids sont INTERNES : ils ne doivent jamais etre montres au joueur, ni sous forme de points, ni de barre, ni de pourcentage. Comme dans PMD, on tire un sous-ensemble de questions a chaque partie.",
+  "tirage": 8,
+  "questions": [
+    {
+      "id": "q01",
+      "texte": "Un ami est bloque au fond d'un donjon. Tu y vas seul, sans attendre les renforts ?",
+      "reponses": [
+        {
+          "label": "J'y vais tout de suite",
+          "poids": {
+            "brave": 3,
+            "hardy": 2
+          }
+        },
+        {
+          "label": "J'attends de l'aide",
+          "poids": {
+            "timid": 3,
+            "calm": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "texte": "Tu trouves une baie rare sur le chemin. Tu la gardes pour toi ?",
+      "reponses": [
+        {
+          "label": "Je la garde",
+          "poids": {
+            "sassy": 3,
+            "lonely": 2
+          }
+        },
+        {
+          "label": "Je la partage",
+          "poids": {
+            "docile": 3,
+            "jolly": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "texte": "On te confie une corvee sans interet, mais quelqu'un doit la faire.",
+      "reponses": [
+        {
+          "label": "Je m'y mets sans rien dire",
+          "poids": {
+            "docile": 3,
+            "relaxed": 1
+          }
+        },
+        {
+          "label": "Je rale, puis je bacle",
+          "poids": {
+            "impish": 4,
+            "hasty": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "texte": "Le ciel gronde au loin et la nuit tombe. Tu presses le pas ?",
+      "reponses": [
+        {
+          "label": "Je me depeche",
+          "poids": {
+            "hasty": 3,
+            "timid": 1
+          }
+        },
+        {
+          "label": "Je continue tranquillement",
+          "poids": {
+            "relaxed": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "texte": "Un inconnu te propose un raccourci par une grotte que personne ne connait.",
+      "reponses": [
+        {
+          "label": "Je le suis",
+          "poids": {
+            "naive": 4,
+            "brave": 1
+          }
+        },
+        {
+          "label": "Je passe mon chemin",
+          "poids": {
+            "sassy": 3,
+            "calm": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "texte": "Pour explorer, tu preferes partir seul plutot qu'en equipe ?",
+      "reponses": [
+        {
+          "label": "Seul, c'est mieux",
+          "poids": {
+            "lonely": 4,
+            "quirky": 2
+          }
+        },
+        {
+          "label": "A plusieurs, toujours",
+          "poids": {
+            "jolly": 3,
+            "docile": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "texte": "Quelqu'un se moque de toi devant tout le monde.",
+      "reponses": [
+        {
+          "label": "Je reponds du tac au tac",
+          "poids": {
+            "sassy": 2,
+            "impish": 4
+          }
+        },
+        {
+          "label": "Je laisse couler",
+          "poids": {
+            "timid": 3,
+            "docile": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "texte": "Tu aimes faire rire ceux qui t'entourent ?",
+      "reponses": [
+        {
+          "label": "C'est tout moi",
+          "poids": {
+            "jolly": 4,
+            "impish": 2
+          }
+        },
+        {
+          "label": "Pas vraiment",
+          "poids": {
+            "lonely": 3,
+            "calm": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "texte": "Devant un choix difficile, tu tranches vite ?",
+      "reponses": [
+        {
+          "label": "Je decide sur-le-champ",
+          "poids": {
+            "hasty": 4,
+            "brave": 1
+          }
+        },
+        {
+          "label": "Je prends mon temps",
+          "poids": {
+            "relaxed": 3,
+            "timid": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "texte": "On te raconte une histoire extraordinaire. Tu y crois ?",
+      "reponses": [
+        {
+          "label": "Pourquoi mentirait-on ?",
+          "poids": {
+            "naive": 4,
+            "docile": 1
+          }
+        },
+        {
+          "label": "J'ai des doutes",
+          "poids": {
+            "sassy": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "texte": "La veille d'un grand depart, ton sac est deja pret ?",
+      "reponses": [
+        {
+          "label": "Tout est range",
+          "poids": {
+            "calm": 4,
+            "hardy": 2
+          }
+        },
+        {
+          "label": "Je verrai demain",
+          "poids": {
+            "quirky": 3,
+            "hasty": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "texte": "Une fete bruyante bat son plein au village.",
+      "reponses": [
+        {
+          "label": "J'y cours",
+          "poids": {
+            "jolly": 3,
+            "naive": 2
+          }
+        },
+        {
+          "label": "Je rentre chez moi",
+          "poids": {
+            "lonely": 3,
+            "relaxed": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "texte": "Il faut parler devant toute la guilde. Tu te lances ?",
+      "reponses": [
+        {
+          "label": "Je prends la parole",
+          "poids": {
+            "hardy": 4,
+            "brave": 2
+          }
+        },
+        {
+          "label": "Je laisse ma place",
+          "poids": {
+            "timid": 4,
+            "lonely": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "texte": "Tu changes souvent d'avis en cours de route ?",
+      "reponses": [
+        {
+          "label": "Tout le temps",
+          "poids": {
+            "quirky": 4,
+            "naive": 2
+          }
+        },
+        {
+          "label": "Je m'y tiens",
+          "poids": {
+            "hardy": 3,
+            "docile": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "texte": "Un adversaire bien plus fort te barre la route.",
+      "reponses": [
+        {
+          "label": "Je l'affronte",
+          "poids": {
+            "brave": 4,
+            "hardy": 1
+          }
+        },
+        {
+          "label": "Je cherche un detour",
+          "poids": {
+            "calm": 3,
+            "timid": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "texte": "Tu fais les choses a ta facon, meme quand elle etonne les autres ?",
+      "reponses": [
+        {
+          "label": "Toujours",
+          "poids": {
+            "quirky": 4,
+            "impish": 3
+          }
+        },
+        {
+          "label": "Je fais comme tout le monde",
+          "poids": {
+            "docile": 3,
+            "hardy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "texte": "Le silence d'une clairiere au petit matin, ca te plait ?",
+      "reponses": [
+        {
+          "label": "Rien de meilleur",
+          "poids": {
+            "relaxed": 4,
+            "calm": 2
+          }
+        },
+        {
+          "label": "Je m'ennuie vite",
+          "poids": {
+            "hasty": 3,
+            "jolly": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "texte": "Tu vois un objet briller au fond d'un ravin glissant.",
+      "reponses": [
+        {
+          "label": "Je descends le chercher",
+          "poids": {
+            "naive": 3,
+            "brave": 2
+          }
+        },
+        {
+          "label": "Je le laisse ou il est",
+          "poids": {
+            "calm": 2,
+            "relaxed": 2
+          }
+        }
+      ]
+    }
+  ]
+}

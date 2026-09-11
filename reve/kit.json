@@ -1,0 +1,39 @@
+{
+  "dimensions_reference_quiz": [
+    320,
+    240
+  ],
+  "sortie_reference_quiz": [
+    960,
+    720
+  ],
+  "halo_reference": [
+    1280,
+    720
+  ],
+  "rendu": "plein viewport adaptatif, caméra perspective 3D",
+  "atlas": {
+    "file": "assets/anneaux_36_phases.png",
+    "frames": 36,
+    "columns": 6,
+    "frame_size": [
+      256,
+      256
+    ],
+    "gutter": 2,
+    "cycle_seconds": 6
+  },
+  "couches": [
+    "nébuleuse multicolore à trois vitesses de parallaxe",
+    "anneaux circulaires multiframes en profondeur",
+    "étoiles et poussières 3D",
+    "sphère lumineuse 3D",
+    "interface du test"
+  ],
+  "mouvement": "avance dans le tunnel et orbite gauche/droite à chaque validation ; pas de progression automatique",
+  "references": {
+    "depot": "meromoonmeri/mypmdproject",
+    "code_commit": "e3fa166525d08202503200c77482a2c1cc9cabad",
+    "art_commit": "319d10f69605331a07c817227c85ec8d0aba3dab"
+  }
+}

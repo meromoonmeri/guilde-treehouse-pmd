@@ -1,0 +1,438 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "tiledversion": "1.11.0",
+  "name": "Bordures PMD Sky — redessin nuit",
+  "tilewidth": 24,
+  "tileheight": 24,
+  "tilecount": 20,
+  "columns": 5,
+  "margin": 0,
+  "spacing": 0,
+  "image": "../tilesets/bordures_pmd_nuit.png",
+  "imagewidth": 120,
+  "imageheight": 96,
+  "objectalignment": "bottomleft",
+  "tiles": [
+    {
+      "id": 0,
+      "class": "rive",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Rive N"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "rive_N"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "N"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "class": "rive",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Rive E"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "rive_E"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "E"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "class": "rive",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Rive S"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "rive_S"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "class": "rive",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Rive W"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "rive_W"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "W"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "class": "angle_sortant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle sortant NE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_sortant_NE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NE"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "class": "angle_sortant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle sortant SE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_sortant_SE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SE"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "class": "angle_sortant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle sortant SW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_sortant_SW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SW"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "class": "angle_sortant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle sortant NW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_sortant_NW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NW"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "class": "angle_rentrant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle rentrant NE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_rentrant_NE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NE"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "class": "angle_rentrant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle rentrant SE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_rentrant_SE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SE"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "class": "angle_rentrant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle rentrant SW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_rentrant_SW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SW"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "class": "angle_rentrant",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Angle rentrant NW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "angle_rentrant_NW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NW"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "class": "diagonale",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Diagonale NE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "diagonale_NE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NE"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "class": "diagonale",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Diagonale SE"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "diagonale_SE"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SE"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "class": "diagonale",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Diagonale SW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "diagonale_SW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "SW"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "class": "diagonale",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Diagonale NW"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "diagonale_NW"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "NW"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "class": "paroi",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Paroi centre"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "paroi_centre"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "centre"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "class": "paroi",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Paroi base"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "paroi_base"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "base"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "class": "paroi",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Paroi gauche"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "paroi_gauche"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "W"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "class": "paroi",
+      "properties": [
+        {
+          "name": "nom",
+          "type": "string",
+          "value": "Paroi droite"
+        },
+        {
+          "name": "motif",
+          "type": "string",
+          "value": "paroi_droite"
+        },
+        {
+          "name": "orientation",
+          "type": "string",
+          "value": "E"
+        }
+      ]
+    }
+  ]
+}

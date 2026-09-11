@@ -1,0 +1,50 @@
+{
+  "reference": {
+    "depot": "Minemaker0430/ExplorersOfSkyOrigins",
+    "commit": "b8c0de576606c5a24802158462d5d1d7e561f72d",
+    "carte": "Data/Ground/habitat_sharpedo_bluff_day.rsground",
+    "url": "https://github.com/Minemaker0430/ExplorersOfSkyOrigins/tree/b8c0de576606c5a24802158462d5d1d7e561f72d",
+    "usage": "Cadrage et cycle de mer uniquement. La paroi est une falaise naturelle générée, sans visage ni profil de créature."
+  },
+  "dimensions": [
+    504,
+    384
+  ],
+  "grille_px": 8,
+  "sommet": "prairie et un chemin arrivant depuis la droite",
+  "batiment": false,
+  "arbres": false,
+  "mobilier": false,
+  "mer": "en contrebas, horizon à y=120 ; couleur/profondeur fixes et vagues/reflets sur un overlay animé",
+  "animation": "Nuages en boucle et étoiles scintillantes conservés ; mer en dix phases successives de la référence, adaptées à la palette et à la largeur de la scène. Aucun va-et-vient sinusoïdal des vagues.",
+  "collisions": "Repères uniquement ; pas de transitions ni collisions PMDO intégrées.",
+  "scene_independante": true,
+  "paroi": "Paroi côtière naturelle continue, stratifiée, sans yeux, bouche, mâchoire, dents ni forme de Sharpedo.",
+  "forme_creature": false,
+  "cycle_mer": {
+    "source": "animation_mer_reference.json",
+    "images": 10,
+    "duree_image_ms": 250,
+    "duree_ms": 2500,
+    "palette_adaptee": true,
+    "overlay_independant": true
+  },
+  "protection_prairie": "Chemin et intérieur de prairie conservés ; seules les rives, angles et bordures de paroi sont retouchés.",
+  "bordures_pmd": {
+    "reference": "Motifs de bordures PMD Explorateurs du Ciel, redessinés puis adaptés au cap.",
+    "atlas": "../bordures_pmd/bordures_redessinees.png",
+    "taille_motif_px": 24,
+    "nombre_motifs": 20,
+    "familles": [
+      "rives N/E/S/W",
+      "angles sortants",
+      "angles rentrants",
+      "diagonales",
+      "parois"
+    ],
+    "adaptation": "Retouche locale dans le masque ; motif N posé directement sur la rive arrière ; pas de bordure fermant les sorties droite/basse.",
+    "chemin_protege": true,
+    "alpha_conserve": true,
+    "autotiling_automatique": false
+  }
+}

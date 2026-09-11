@@ -1,0 +1,89 @@
+{
+  "demande_validee": {
+    "plateau": "Falaise seule, plateau libre",
+    "paysage": "Nouveaux reliefs rocheux, pas la vallée de la terrasse",
+    "correction": "Sommet entièrement repeint au générateur : prairie, un chemin de terre et bordures raccordées à la paroi ; escalier de référence conservé."
+  },
+  "reference": {
+    "depot": "Minemaker0430/ExplorersOfSkyOrigins",
+    "commit": "b8c0de576606c5a24802158462d5d1d7e561f72d",
+    "carte": "Data/Ground/guild_outside.rsground",
+    "texture": "Content/Tile/GuildOutside.tile",
+    "url": "https://github.com/Minemaker0430/ExplorersOfSkyOrigins/tree/b8c0de576606c5a24802158462d5d1d7e561f72d",
+    "usage": "Escalier et paroi hors zone de raccord conservés ; sommet et bordure harmonisés au générateur selon la dernière direction prairie + chemin.",
+    "escalier_rectangle_px": [
+      196,
+      328,
+      88,
+      80
+    ],
+    "escalier_source": "reference_escalier.png",
+    "regions_protegees": "reference_terrain.png",
+    "exclusion_masque": "masque_harmonisation_sol.png"
+  },
+  "dimensions": [
+    480,
+    408
+  ],
+  "grille_px": 8,
+  "acces_sud": {
+    "rectangle_px": [
+      208,
+      380,
+      64,
+      28
+    ],
+    "destination": null
+  },
+  "plateau_libre": {
+    "rectangle_px": [
+      154,
+      144,
+      172,
+      176
+    ]
+  },
+  "batiment": false,
+  "mobilier": false,
+  "personnages": false,
+  "vegetation": "Prairie intégrée au sol, sans arbre ni arbuste ajouté. Calque de décor 05 vide.",
+  "animation": "Six familles de nuages en défilement ; étoiles scintillantes la nuit sur un cycle de 6 secondes ; lune, terrain et escalier fixes.",
+  "collisions": "Non intégrées ; les rectangles sont des repères visuels, pas un maillage de navigation.",
+  "independant_des_salles": true,
+  "arbres_sur_plateau": false,
+  "ciels": {
+    "jour": "Ciel bleu lumineux à bandes et tramage fin, quatre groupes de nuages indépendants.",
+    "nuit": "Ciel indigo dédié ; lune fixe, étoiles scintillantes indépendamment par groupes.",
+    "astres_transparents": true
+  },
+  "harmonisation": {
+    "methode": "generation_image",
+    "surface": "prairie avec un chemin de terre",
+    "natif": "sommet_genere.png",
+    "masque": "masque_harmonisation_sol.png",
+    "contour_alpha_conserve": true,
+    "escalier_conserve": true,
+    "texture": "continue, sans assemblage de fragments de terrain"
+  },
+  "nuages_formes": [
+    "cumulus vertical",
+    "nuage effilé",
+    "banc horizontal",
+    "cirrus",
+    "fragments séparés",
+    "nuage déchiqueté"
+  ],
+  "passe_eos_entiere": {
+    "source": "falaise_eos_generee.png",
+    "cadre": [
+      64,
+      114,
+      352,
+      294
+    ],
+    "entierement_repasse_au_generateur": true,
+    "escalier_reference_retabli": true,
+    "emprise_reference_conservee": true,
+    "fidelite": "Direction artistique EoS contrôlée visuellement ; aucune garantie de copie pixel pour pixel du jeu hors escalier."
+  }
+}

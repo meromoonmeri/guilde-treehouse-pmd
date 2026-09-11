@@ -1,0 +1,46 @@
+{
+  "scene": "sharpedo",
+  "dimensions": [
+    504,
+    384
+  ],
+  "calques": 7,
+  "frames_par_ambiance": 2520,
+  "sommet_entierement_genere": true,
+  "pixels_sommet": 40793,
+  "ambiances": [
+    {
+      "id": "jour",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 2520,
+      "animations": [
+        "scroll",
+        "frames"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "nuit",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 2520,
+      "animations": [
+        "scroll",
+        "frames",
+        "stars"
+      ],
+      "terrain_fixe": true
+    }
+  ],
+  "inspection_artistique_automatisee": false,
+  "prairie_interieure_chemin_conserves": true,
+  "bordures_pmd_redessinees": true,
+  "motifs_bordures": 20,
+  "sorties_droite_basse_ouvertes": true,
+  "paroi_naturelle_remplacee": true,
+  "silhouette_inferieure_actualisee": true,
+  "frames_verifiees_par_format": 5040,
+  "etoiles_scintillantes_lune_fixe": true,
+  "escalier_reference_identique_jour": false,
+  "mer_overlay_anime": true,
+  "cycle_mer_reference_10_phases": true
+}

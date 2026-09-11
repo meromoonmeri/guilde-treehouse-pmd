@@ -1,0 +1,19 @@
+{
+  "note": "13 natures du quiz PMD. La COULEUR pilote le ruban, les VFX et le fond.",
+  "natures": [
+    {"id": "hardy",   "fr": "Hardi",     "hue": 8,   "rgb": [0.86, 0.22, 0.16], "accent": [1.0, 0.78, 0.35]},
+    {"id": "brave",   "fr": "Brave",     "hue": 22,  "rgb": [0.94, 0.42, 0.13], "accent": [1.0, 0.84, 0.40]},
+    {"id": "hasty",   "fr": "Pressé",    "hue": 32,  "rgb": [0.98, 0.55, 0.12], "accent": [1.0, 0.88, 0.52]},
+    {"id": "jolly",   "fr": "Jovial",    "hue": 48,  "rgb": [1.00, 0.78, 0.16], "accent": [1.0, 0.95, 0.62]},
+    {"id": "docile",  "fr": "Docile",    "hue": 96,  "rgb": [0.52, 0.82, 0.42], "accent": [0.82, 0.98, 0.70]},
+    {"id": "relaxed", "fr": "Relax",     "hue": 168, "rgb": [0.24, 0.82, 0.74], "accent": [0.62, 1.0, 0.94]},
+    {"id": "calm",    "fr": "Calme",     "hue": 196, "rgb": [0.34, 0.76, 0.94], "accent": [0.70, 0.94, 1.0]},
+    {"id": "timid",   "fr": "Timide",    "hue": 208, "rgb": [0.58, 0.80, 0.96], "accent": [0.84, 0.95, 1.0]},
+    {"id": "lonely",  "fr": "Solitaire", "hue": 226, "rgb": [0.24, 0.38, 0.74], "accent": [0.55, 0.68, 0.96]},
+    {"id": "sassy",   "fr": "Malin",     "hue": 276, "rgb": [0.42, 0.24, 0.62], "accent": [0.72, 0.56, 0.92]},
+    {"id": "impish",  "fr": "Malicieux", "hue": 290, "rgb": [0.66, 0.32, 0.86], "accent": [0.88, 0.66, 1.0]},
+    {"id": "naive",   "fr": "Naïf",      "hue": 322, "rgb": [0.98, 0.52, 0.80], "accent": [0.72, 0.96, 1.0]},
+    {"id": "quirky",  "fr": "Bizarre",   "hue": -1,  "rgb": [0.80, 0.60, 0.90], "accent": [1.0, 0.90, 0.70],
+     "multicolore": true, "note": "teinte instable : le ruban parcourt tout le spectre"}
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "scene": "falaise",
+  "dimensions": [
+    480,
+    408
+  ],
+  "calques": 6,
+  "frames_par_ambiance": 480,
+  "sommet_entierement_genere": true,
+  "pixels_sommet": 55321,
+  "ambiances": [
+    {
+      "id": "jour",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "nuit",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll",
+        "stars"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "crepuscule",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "aube",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "soir",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll"
+      ],
+      "terrain_fixe": true
+    },
+    {
+      "id": "orageux",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 480,
+      "animations": [
+        "scroll"
+      ],
+      "terrain_fixe": true
+    }
+  ],
+  "inspection_artistique_automatisee": false,
+  "passe_complete_eos": true,
+  "emprise_reference_conservee": true,
+  "frames_verifiees_par_format": 2880,
+  "etoiles_scintillantes_lune_fixe": true,
+  "escalier_reference_identique_jour": true,
+  "mer_overlay_anime": false
+}

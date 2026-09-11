@@ -1,0 +1,153 @@
+{
+  "tile_size": 24,
+  "columns": 5,
+  "rows": 4,
+  "source_cell_size": 48,
+  "source_spacing": 12,
+  "source_canvas": [
+    312,
+    252
+  ],
+  "motifs": [
+    {
+      "id": 0,
+      "id_motif": "rive_N",
+      "nom": "Rive N",
+      "famille": "rive",
+      "orientation": "N"
+    },
+    {
+      "id": 1,
+      "id_motif": "rive_E",
+      "nom": "Rive E",
+      "famille": "rive",
+      "orientation": "E"
+    },
+    {
+      "id": 2,
+      "id_motif": "rive_S",
+      "nom": "Rive S",
+      "famille": "rive",
+      "orientation": "S"
+    },
+    {
+      "id": 3,
+      "id_motif": "rive_W",
+      "nom": "Rive W",
+      "famille": "rive",
+      "orientation": "W"
+    },
+    {
+      "id": 4,
+      "id_motif": "angle_sortant_NE",
+      "nom": "Angle sortant NE",
+      "famille": "angle_sortant",
+      "orientation": "NE"
+    },
+    {
+      "id": 5,
+      "id_motif": "angle_sortant_SE",
+      "nom": "Angle sortant SE",
+      "famille": "angle_sortant",
+      "orientation": "SE"
+    },
+    {
+      "id": 6,
+      "id_motif": "angle_sortant_SW",
+      "nom": "Angle sortant SW",
+      "famille": "angle_sortant",
+      "orientation": "SW"
+    },
+    {
+      "id": 7,
+      "id_motif": "angle_sortant_NW",
+      "nom": "Angle sortant NW",
+      "famille": "angle_sortant",
+      "orientation": "NW"
+    },
+    {
+      "id": 8,
+      "id_motif": "angle_rentrant_NE",
+      "nom": "Angle rentrant NE",
+      "famille": "angle_rentrant",
+      "orientation": "NE"
+    },
+    {
+      "id": 9,
+      "id_motif": "angle_rentrant_SE",
+      "nom": "Angle rentrant SE",
+      "famille": "angle_rentrant",
+      "orientation": "SE"
+    },
+    {
+      "id": 10,
+      "id_motif": "angle_rentrant_SW",
+      "nom": "Angle rentrant SW",
+      "famille": "angle_rentrant",
+      "orientation": "SW"
+    },
+    {
+      "id": 11,
+      "id_motif": "angle_rentrant_NW",
+      "nom": "Angle rentrant NW",
+      "famille": "angle_rentrant",
+      "orientation": "NW"
+    },
+    {
+      "id": 12,
+      "id_motif": "diagonale_NE",
+      "nom": "Diagonale NE",
+      "famille": "diagonale",
+      "orientation": "NE"
+    },
+    {
+      "id": 13,
+      "id_motif": "diagonale_SE",
+      "nom": "Diagonale SE",
+      "famille": "diagonale",
+      "orientation": "SE"
+    },
+    {
+      "id": 14,
+      "id_motif": "diagonale_SW",
+      "nom": "Diagonale SW",
+      "famille": "diagonale",
+      "orientation": "SW"
+    },
+    {
+      "id": 15,
+      "id_motif": "diagonale_NW",
+      "nom": "Diagonale NW",
+      "famille": "diagonale",
+      "orientation": "NW"
+    },
+    {
+      "id": 16,
+      "id_motif": "paroi_centre",
+      "nom": "Paroi centre",
+      "famille": "paroi",
+      "orientation": "centre"
+    },
+    {
+      "id": 17,
+      "id_motif": "paroi_base",
+      "nom": "Paroi base",
+      "famille": "paroi",
+      "orientation": "base"
+    },
+    {
+      "id": 18,
+      "id_motif": "paroi_gauche",
+      "nom": "Paroi gauche",
+      "famille": "paroi",
+      "orientation": "W"
+    },
+    {
+      "id": 19,
+      "id_motif": "paroi_droite",
+      "nom": "Paroi droite",
+      "famille": "paroi",
+      "orientation": "E"
+    }
+  ]
+}

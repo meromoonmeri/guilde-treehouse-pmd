@@ -1,5 +1,23 @@
 # Guilde Treehouse — passages ouverts PMD
 
+> **Deux extérieurs indépendants : [Prairie de la guilde](falaise/README.md) et [Falaise côtière](sharpedo/README.md).**
+> Sommets repeints au générateur, prairies avec chemins et bordures raccordées aux falaises.
+> Nuages variés, étoiles scintillantes la nuit et mer animée en overlay pour la falaise côtière.
+> [Ouvrir l’aperçu des deux scènes](apercu_falaise.html). Les douze salles et la terrasse restent inchangées.
+
+## Nouveau : rêve et test de personnalité plein écran
+
+[Ouvrir le rêve interactif](apercu_reve.html) · [Documentation et audit de la référence](reve/README.md)
+
+Sphère 3D en voyage, changement de point de vue gauche/droite à chaque question, anneaux circulaires à 36 phases et nébuleuse arc-en-ciel en parallaxe. Huit questions, réponses uniquement sur validation, aucune note affichée.
+
+![Preview du rêve et des changements de caméra](previews/reve_personnalite.gif)
+
+La falaise de la guilde a aussi reçu une **reprise complète au générateur avec les références EoS**, sommet et paroi ensemble ; l’emprise et les marches de référence restent contrôlées.
+
+![Preview de la falaise de la guilde, jour et nuit](previews/falaise_guilde_eos.gif)
+
+
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
 ## Règles effectivement appliquées

@@ -1,0 +1,44 @@
+{
+  "reference": {
+    "url": "https://github.com/Minemaker0430/ExplorersOfSkyOrigins/tree/b8c0de576606c5a24802158462d5d1d7e561f72d",
+    "carte": "Data/Ground/habitat_sharpedo_bluff_day.rsground",
+    "calque": "Background",
+    "feuille": "Habitat_SharpedoBluff_Day_Layer1",
+    "rectangle_px": [
+      0,
+      120,
+      144,
+      264
+    ],
+    "frames": 10,
+    "FrameLength_ticks": 10
+  },
+  "atlas_reference": {
+    "file": "mer_reference_cycle.png",
+    "columns": 5,
+    "frame_size": [
+      144,
+      264
+    ]
+  },
+  "adaptation": {
+    "dimensions": [
+      504,
+      384
+    ],
+    "horizon_y": 120,
+    "extension_x": "miroir continu, sans coupure de couleur aux raccords",
+    "palette": "profil de profondeur de notre mer générée",
+    "amplitude_couleurs": 0.85,
+    "duree_export_image_ms": 250
+  },
+  "atlas_sortie": {
+    "file": "vagues_cycle.png",
+    "columns": 5,
+    "frame_size": [
+      504,
+      384
+    ],
+    "frames": 10
+  }
+}
