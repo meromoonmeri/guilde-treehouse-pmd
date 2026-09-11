@@ -19,6 +19,13 @@ ROOT = Path(__file__).resolve().parents[1]
 ENTREES = ROOT / "source" / "references_exterieures" / "entrees"
 GENERATED = ROOT / "source" / "references_exterieures" / "generation"
 NATIVES = ROOT / "source" / "references_exterieures" / "natives"
+# Comme source/sharpedo de la branche auditée, le reconstructeur final ne
+# découpe pas une composition : il consomme ce pack de plans natives préparés.
+PLANES = ROOT / "source" / "references_exterieures" / "plans"
+# Ces six backplates ont été demandés séparément au générateur, un par scène
+# et ambiance. Ils constituent les vrais 00_ciel du pack de calques.
+GENERATOR_PLANES = ROOT / "source" / "references_exterieures" / "generator_planes"
+GENERATOR_SKY_SIZES = {"cascades": (816, 1300), "prairie_maritime": (1376, 768), "cap_cotier": (1376, 768)}
 
 # Les deux rendus paysage sortent en 1376×768 et sont divisés par deux. Le
 # sanctuaire de cascades est volontairement un layout vertical, 816×1300 / 2.
@@ -62,6 +69,65 @@ def prepare_guides() -> None:
     save(board, ENTREES / "animation_reference_planche.png")
 
 
+def generated_sky(scene_id: str, mode: str, size: tuple[int, int]) -> Image.Image:
+    """Normalise un backplate produit directement par le générateur d'images."""
+    path = GENERATOR_PLANES / f"{scene_id}_{mode}_00_ciel.png"
+    assert path.is_file(), f"Backplate généré absent : {path}"
+    with Image.open(path) as opened:
+        sky = opened.convert("RGBA")
+    # Les sorties image du générateur gardent le ratio demandé (x2) ; la
+    # normalisation est entière, comme les rendus de composition complets.
+    assert sky.size == GENERATOR_SKY_SIZES[scene_id], f"Taille de backplate inattendue : {path} = {sky.size}"
+    return sky.resize(size, Image.Resampling.NEAREST)
+
+
+def compose_initial(layers: list[Image.Image], size: tuple[int, int]) -> Image.Image:
+    image = Image.new("RGBA", size)
+    for layer in layers:
+        image.alpha_composite(layer)
+    return image
+
+
+def prepare_semantic_planes() -> dict:
+    """Écrit les sources de calques, avant tout export de livraison.
+
+    C'est l'équivalent du pack ``source/sharpedo/*_native.png`` de la branche
+    auditée : le constructeur ne connaîtra ensuite plus les heuristiques de
+    préparation et lira seulement ces PNG nommés, un par plan sémantique.
+    """
+    # Import local tardif : ce module définit les règles de préparation, sans
+    # déclencher sa fonction build grâce à son garde __main__.
+    from rebuild_references_exterieures import SCENES, load as load_native, make_layers
+
+    result = {}
+    if PLANES.exists():
+        import shutil
+        shutil.rmtree(PLANES)
+    for scene in SCENES:
+        definitions = scene["layers"]
+        scene_result = {}
+        for mode, filename in scene["natives"].items():
+            # La native normalisée de génération sert à placer les plans de
+            # terrain. 00_ciel, lui, vient d'un appel générateur autonome :
+            # c'est l'actif de fond éditable, non un inpainting de secours.
+            layout_native = load_native(NATIVES / filename, scene["dimensions"])
+            layers = make_layers(scene["id"], layout_native, mode)
+            layers[0] = generated_sky(scene["id"], mode, scene["dimensions"])
+            target = PLANES / scene["id"] / mode
+            for definition, layer in zip(definitions, layers):
+                save(layer, target / f"{definition[0]}.png")
+            # La native de livraison est la recomposition des sources générées
+            # et préparées. Elle devient le contrat d'image 0 de l'export.
+            save(compose_initial(layers, scene["dimensions"]), NATIVES / filename)
+            scene_result[mode] = [definition[0] for definition in definitions]
+        result[scene["id"]] = scene_result
+    (PLANES / "kit.json").write_text(json.dumps({
+        "methode": "plans_natives_prepares_avant_export_comme_sharpedo",
+        "scenes": result,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
 def prepare() -> dict:
     NATIVES.mkdir(parents=True, exist_ok=True)
     prepare_guides()
@@ -79,8 +145,14 @@ def prepare() -> dict:
             "native": destination, "dimensions_native": list(native_size), "reduction": "plus_proche_voisin",
         }
 
+    semantic_planes = prepare_semantic_planes()
+    generator_planes_report = {
+        path.name: {"sha256": digest(path), "dimensions": list(Image.open(path).size), "role": "00_ciel"}
+        for path in sorted(GENERATOR_PLANES.glob("*_00_ciel.png"))
+    }
+    assert len(generator_planes_report) == 6, "Six backplates générés sont requis"
     report = {
-        "methode": "generation_image_referencee_puis_normalisation_entierement_reproductible",
+        "methode": "generation_image_referencee_puis_normalisation_et_preparation_de_plans_natives",
         "branche_references": "arena/01a082db-guilde-treehouse-pmd",
         "commits_entrees": {
             "cascade_et_gif": "6cf427cdcc59874411172e57f53fb47011de7941",
@@ -91,6 +163,8 @@ def prepare() -> dict:
             for path in sorted(ENTREES.glob("*")) if path.is_file()
         },
         "generation": generated_report,
+        "generation_des_calques": generator_planes_report,
+        "plans_natives": semantic_planes,
         "natives": {
             path.name: {"sha256": digest(path), "dimensions": list(Image.open(path).size)}
             for path in sorted(NATIVES.glob("*.png"))

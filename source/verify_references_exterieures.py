@@ -19,6 +19,7 @@ from exterior_reference_animation import AnimatedLayer, compose
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "references_exterieures"
+PLANES = ROOT / "source" / "references_exterieures" / "plans"
 PREVIEW = ROOT / "apercu_references_exterieures.html"
 FRAMES, DURATION = 24, 250
 
@@ -147,8 +148,9 @@ def verify() -> dict:
         root, size = OUT / scene["id"], tuple(scene["dimensions"])
         assert all(value % 8 == 0 for value in size)
         definitions = scene["calques"]
-        assert len(definitions) >= 6 and len({layer["id"] for layer in definitions}) == len(definitions)
+        assert len(definitions) >= 7 and len({layer["id"] for layer in definitions}) == len(definitions)
         assert [layer["id"] for layer in definitions[:3]] == ["00_ciel", "01_astres", "02_nuages"]
+        assert definitions[3]["id"].startswith("03_") and definitions[4]["id"].startswith("04_")
         scene_report = {"id": scene["id"], "dimensions": list(size), "calques": len(definitions), "ambiances": []}
         day = None
         for mode in ("jour", "nuit"):
@@ -157,7 +159,15 @@ def verify() -> dict:
             assert native.size == size and native.getchannel("A").getextrema() == (255, 255)
             layers = [image(root / files["calques"][definition["id"]]) for definition in definitions]
             assert all(layer.size == size for layer in layers)
+            # Le constructeur charge les sources de plans natives déjà
+            # préparées, comme rebuild_sharpedo.py : aucun repartitionnement
+            # caché ne doit intervenir au moment de l'export.
+            prepared = [image(PLANES / scene["id"] / mode / f"{definition['id']}.png") for definition in definitions]
+            for definition, actual_layer, source_layer in zip(definitions, layers, prepared):
+                equal(actual_layer, source_layer, f"Plan exporté différent de sa source préparée : {scene['id']}/{mode}/{definition['id']}")
+            assert layers[0].getchannel("A").getextrema() == (255, 255), "00_ciel doit être un backplate opaque"
             specs = files["operations"]
+            assert specs[definitions[4]["id"]]["kind"] == "waves" and specs[definitions[4]["id"]]["period"] == FRAMES
             if layers[2].getbbox():
                 assert specs["02_nuages"]["kind"] == "scroll" and specs["02_nuages"]["period"] == FRAMES
             else:
@@ -191,7 +201,11 @@ def verify() -> dict:
     assert "data:image/webp;base64," in preview and "24 phases de 250 ms" in preview
     # L'aperçu applique la même LUT de groupes que les cels, avec la valeur 255
     # du groupe 0 qui maintient la lune immobile ; pas un fondu global.
-    assert "starGroups" in preview and "levels[groups[g]]" in preview and "globalAlpha" not in preview
+    # Les étoiles consultent leur LUT de groupes ; l'opacité globale restante
+    # concerne exclusivement le cycle des vagues, comme dans waves_spec().
+    assert "starGroups" in preview and "levels[groups[g]]" in preview
+    assert "wavePhases" in preview and "op==='waves'" in preview and "phase[2]/255" in preview
+    assert "Grille 8 px : visible" in preview and "x+=8" in preview and "y+=8" in preview
     assert "http://" not in preview and "https://" not in preview
     report["apercu_autonome"] = True
     (OUT / "controle_qualite.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -12,16 +12,17 @@ import io
 import json
 import shutil
 from pathlib import Path
-from typing import Callable
-
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 
-from exterior_reference_animation import AnimatedLayer, compose, export_variant, stars_spec
+from exterior_reference_animation import AnimatedLayer, compose, export_variant, stars_spec, waves_spec
 
 ROOT = Path(__file__).resolve().parents[1]
 NATIVES = ROOT / "source" / "references_exterieures" / "natives"
+# Pack préparé une fois, analogue aux *_native.png de source/sharpedo : le
+# build ne redécoupe pas la composition et ne connaît que des calques sources.
+PLANES = ROOT / "source" / "references_exterieures" / "plans"
 OUT = ROOT / "references_exterieures"
 PREVIEW = ROOT / "apercu_references_exterieures.html"
 FRAMES, DURATION = 24, 250
@@ -35,9 +36,10 @@ SCENES = (
             ("00_ciel", "Ciel et montagnes lointaines", False),
             ("01_astres", "Lune fixe et étoiles scintillantes", True),
             ("02_nuages", "Nuages — défilement horizontal", True),
-            ("03_eau_cascades", "Eau, cascades et écume", False),
-            ("04_ilot_rocheux", "Îlot rocheux suspendu", False),
-            ("05_vegetation", "Roseaux, buissons et premier plan", False),
+            ("03_eau_cascades", "Eau et profondeur des cascades", False),
+            ("04_cascades_ecume", "Cascades et écume — cycle léger", True),
+            ("05_ilot_rocheux", "Îlot rocheux suspendu", False),
+            ("06_vegetation", "Roseaux, buissons et premier plan", False),
         ),
     },
     {
@@ -48,10 +50,11 @@ SCENES = (
             ("00_ciel", "Ciel et montagnes lointaines", False),
             ("01_astres", "Lune fixe et étoiles scintillantes", True),
             ("02_nuages", "Nuages — défilement horizontal", True),
-            ("03_mer_reflets", "Mer et reflets", False),
-            ("04_falaises", "Parois rocheuses et rebords", False),
-            ("05_prairie_chemin", "Prairie centrale et chemin", False),
-            ("06_fleurs_vegetation", "Fleurs, herbes et buissons", False),
+            ("03_mer_reflets", "Mer et profondeur", False),
+            ("04_vagues_reflets", "Vagues et reflets — cycle léger", True),
+            ("05_falaises", "Parois rocheuses et rebords", False),
+            ("06_prairie_chemin", "Prairie centrale et chemin", False),
+            ("07_fleurs_vegetation", "Fleurs, herbes et buissons", False),
         ),
     },
     {
@@ -62,10 +65,11 @@ SCENES = (
             ("00_ciel", "Ciel et horizon marin", False),
             ("01_astres", "Lune fixe et étoiles scintillantes", True),
             ("02_nuages", "Nuages — défilement horizontal", True),
-            ("03_mer_reflets", "Mer et reflet lunaire", False),
-            ("04_falaise_terrain", "Falaise, chemin et sol", False),
-            ("05_maison", "Maison-courrier et abords", False),
-            ("06_vegetation", "Arbres, fleurs et liserés d'herbe", False),
+            ("03_mer_reflets", "Mer et profondeur", False),
+            ("04_vagues_reflets", "Vagues et reflet lunaire — cycle léger", True),
+            ("05_falaise_terrain", "Falaise, chemin et sol", False),
+            ("06_maison", "Maison-courrier et abords", False),
+            ("07_vegetation", "Arbres, fleurs et liserés d'herbe", False),
         ),
     },
 )
@@ -77,6 +81,26 @@ def load(path: Path, size: tuple[int, int]) -> Image.Image:
     assert image.size == size, f"Dimensions inattendues pour {path}: {image.size}, attendu {size}"
     assert image.getchannel("A").getextrema() == (255, 255), f"Native non opaque : {path}"
     return image
+
+
+def load_prepared_planes(scene: dict, mode: str, definitions: list[dict]) -> list[Image.Image]:
+    """Charge exclusivement le pack de sources semantiques préparées.
+
+    À l'image de ``rebuild_sharpedo.py``, l'exporteur n'applique pas de
+    segmentation sur une composition complète : les sources par plan sont
+    déjà fixes dans ``source/references_exterieures/plans``.
+    """
+    root = PLANES / scene["id"] / mode
+    expected = [root / f"{definition['id']}.png" for definition in definitions]
+    absent = [str(path.relative_to(ROOT)) for path in expected if not path.is_file()]
+    assert not absent, "Plans sources absents : exécuter prepare_references_exterieures.py — " + ", ".join(absent)
+    layers = []
+    for path in expected:
+        with Image.open(path) as opened:
+            layer = opened.convert("RGBA")
+        assert layer.size == scene["dimensions"], f"Dimensions de plan inattendues : {path}"
+        layers.append(layer)
+    return layers
 
 
 def mask_polygon(points: list[tuple[int, int]], size: tuple[int, int]) -> np.ndarray:
@@ -186,6 +210,10 @@ def terrain_masks(scene: str, image: Image.Image) -> list[np.ndarray]:
         ], (w, h))
         island = island_zone & ~water
         vegetation = greens & ((yy > h*.53) | (xx < w*.20) | (xx > w*.80)) & ~water
+        # Tout le premier plan restant appartient au décor végétal/sol : ce
+        # plan couvre les pierres et chemins qui ne sont pas strictement verts
+        # et maintient le backplate ciel hors de la zone de jeu.
+        vegetation |= (yy > h*.46) & ~water & ~island
         return exclusive(water, island, vegetation)
     if scene == "prairie_maritime":
         # La mer occupe une bande étroite sous les montagnes ; le ciel bleu
@@ -200,7 +228,7 @@ def terrain_masks(scene: str, image: Image.Image) -> list[np.ndarray]:
     if scene == "cap_cotier":
         # L'océan débute sous la ligne d'horizon ; ne pas voler la lune et les
         # nuages situés à droite dans le plan marin.
-        water = blue_water & (yy >= h*.26) & (xx > w*.55)
+        water = (yy >= h*.26) & (xx > w*.55)
         house = mask_polygon([
             (round(w*.34), round(h*.23)), (round(w*.57), round(h*.23)), (round(w*.62), round(h*.36)),
             (round(w*.61), round(h*.65)), (round(w*.51), round(h*.70)), (round(w*.34), round(h*.66)),
@@ -218,6 +246,20 @@ def cut(source: np.ndarray, mask: np.ndarray) -> Image.Image:
     pixels = np.zeros_like(source)
     pixels[mask] = source[mask]
     return Image.fromarray(pixels, "RGBA")
+
+
+def wave_overlay(source: np.ndarray, water: np.ndarray) -> np.ndarray:
+    """Isole les crêtes locales du plan d'eau pour un overlay animé.
+
+    La mer de fond reste dans son propre PNG, comme ``mer_native.png`` de
+    Sharpedo ; seules les crêtes très contrastées forment l'équivalent local
+    de ``vagues_native.png``. La source artistique demeure le rendu généré.
+    """
+    rgb = source[:, :, :3]
+    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    smooth = cv2.GaussianBlur(gray, (0, 0), 3)
+    highlights = water & (gray.astype(np.int16) > smooth.astype(np.int16) + 18) & (gray > 72)
+    return components(highlights, 1)
 
 
 def make_layers(scene: str, image: Image.Image, mode: str) -> list[Image.Image]:
@@ -245,11 +287,19 @@ def make_layers(scene: str, image: Image.Image, mode: str) -> list[Image.Image]:
     # originaux se superposent exactement sur ce fond ; après déplacement les
     # nuages découvrent un ciel continu, au lieu d'un trou transparent.
     background = source.copy()
-    fill = cv2.inpaint(source[:, :, :3], (animated.astype("uint8") * 255), 3, cv2.INPAINT_TELEA)
-    background[animated, :3] = fill[animated]
-    background[occupied & ~animated] = 0
+    # 00_ciel est un véritable backplate opaque, comme le 00_ciel de
+    # sharpedo. Les zones eau/relief/terrain sont reconstituées ici puis
+    # recouvertes par leurs PNG sémantiques : aucun trou alpha n'est révélé si
+    # un overlay mobile quitte sa position initiale.
+    reveal = animated | occupied
+    fill = cv2.inpaint(source[:, :, :3], (reveal.astype("uint8") * 255), 3, cv2.INPAINT_TELEA)
+    background[reveal, :3] = fill[reveal]
+    background[:, :, 3] = 255
     background = Image.fromarray(background, "RGBA")
-    layers = [background, cut(source, stars), cut(source, clouds)] + [cut(source, mask) for mask in static]
+    # Même découpage que sharpedo : mer/eau de fond puis un overlay de crêtes
+    # indépendant, qui peut être animé sans déplacer la falaise ou le sol.
+    waves = wave_overlay(source, static[0])
+    layers = [background, cut(source, stars), cut(source, clouds), cut(source, static[0]), cut(source, waves)] + [cut(source, mask) for mask in static[1:]]
     initial = Image.new("RGBA", image.size)
     for layer in layers:
         initial.alpha_composite(layer)
@@ -271,13 +321,12 @@ def data_uri_path(path: Path) -> str:
 def preview_html(scenes: list[dict]) -> str:
     payload = json.dumps(scenes, ensure_ascii=False, separators=(",", ":"))
     return f"""<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Extérieurs PMD — layouts animés</title><style>
-:root{{color-scheme:dark;font-family:system-ui,sans-serif;background:#101522;color:#f7efd7}}*{{box-sizing:border-box}}body{{margin:0;min-width:300px}}main{{max-width:1180px;margin:auto;padding:22px 16px 34px}}h1{{margin:0;font-size:clamp(1.35rem,4vw,2rem)}}p,small{{line-height:1.5;color:#c9d3cf}}.controls,#layers{{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}}button,label{{border:1px solid #60718a;border-radius:8px;padding:8px 10px;background:#232d41;color:inherit;font:inherit}}button{{cursor:pointer}}button[aria-pressed=true]{{background:#dbc779;color:#172034;font-weight:700}}label{{display:flex;gap:7px;align-items:center;font-size:.92rem}}#stage{{background:#080c15;border:1px solid #485670;border-radius:12px;padding:14px;overflow:auto}}canvas{{display:block;margin:auto;image-rendering:pixelated;image-rendering:crisp-edges;max-width:none}}</style></head><body><main><h1>Layouts extérieurs PMD — calques animés</h1><p>Les nuages défilent ; les étoiles scintillent la nuit. Masquez un plan pour vérifier son indépendance.</p><div class="controls" id="scenes"></div><div class="controls" id="modes"></div><div class="controls"><button id="motion" type="button"></button><span id="time"></span></div><section id="stage"><canvas id="map"></canvas></section><div id="layers"></div><small id="note"></small></main><script>
-'use strict';const DATA={payload},C=document.querySelector('#map'),X=C.getContext('2d'),I={{}},A=document.createElement('canvas'),AX=A.getContext('2d'),G=document.createElement('canvas'),GX=G.getContext('2d');let si=0,mode='jour',frame=0,play=!matchMedia('(prefers-reduced-motion:reduce)').matches,last=performance.now(),visible=[];function load(u){{if(I[u])return Promise.resolve(I[u]);return new Promise((ok,no)=>{{let q=new Image;q.onload=()=>{{I[u]=q;ok(q)}};q.onerror=no;q.src=u}})}}async function paint(){{let s=DATA[si],v=s.variants[mode],sources=v.layers.concat(v.starGroups?[v.starGroups]:[]);await Promise.all(sources.map(load));X.clearRect(0,0,C.width,C.height);for(let n=0;n<v.layers.length;n++){{if(!visible[n])continue;let op=v.operations[n],q=I[v.layers[n]];if(op==='cloud'){{let dx=-(frame%24);X.drawImage(q,dx,0);X.drawImage(q,dx+C.width,0)}}else if(op==='stars'){{A.width=G.width=C.width;A.height=G.height=C.height;AX.clearRect(0,0,C.width,C.height);GX.clearRect(0,0,C.width,C.height);AX.drawImage(q,0,0);GX.drawImage(I[v.starGroups],0,0);let px=AX.getImageData(0,0,C.width,C.height),groups=GX.getImageData(0,0,C.width,C.height).data,levels=v.starLevels[frame%24];for(let a=3,g=0;a<px.data.length;a+=4,g+=4)px.data[a]=Math.floor((px.data[a]*levels[groups[g]]+127)/255);AX.putImageData(px,0,0);X.drawImage(A,0,0)}}else X.drawImage(q,0,0)}}document.querySelector('#time').textContent='Image '+(frame+1)+' / 24';}}function controls(){{let s=DATA[si],a=document.querySelector('#scenes'),b=document.querySelector('#modes'),l=document.querySelector('#layers');a.replaceChildren();b.replaceChildren();l.replaceChildren();DATA.forEach((q,i)=>{{let z=document.createElement('button');z.textContent=q.nom;z.setAttribute('aria-pressed',String(i===si));z.onclick=()=>{{si=i;frame=0;visible=DATA[si].layers.map(()=>true);draw()}};a.append(z)}});for(let k of ['jour','nuit']){{let z=document.createElement('button');z.textContent=k==='jour'?'☀ Jour':'☾ Nuit';z.setAttribute('aria-pressed',String(k===mode));z.onclick=()=>{{mode=k;frame=0;draw()}};b.append(z)}}s.layers.forEach((q,i)=>{{let z=document.createElement('label'),c=document.createElement('input');c.type='checkbox';c.checked=visible[i];c.onchange=()=>{{visible[i]=c.checked;paint()}};z.append(c,document.createTextNode(q));l.append(z)}});let m=document.querySelector('#motion');m.textContent=play?'❚❚ Pause':'▶ Animer';m.setAttribute('aria-pressed',String(play));m.onclick=()=>{{play=!play;last=performance.now();controls();paint()}};document.querySelector('#note').textContent=s.description+' · '+s.size.join(' × ')+' px · 24 phases de 250 ms';}}function draw(){{let s=DATA[si];C.width=s.size[0];C.height=s.size[1];let max=document.querySelector('#stage').clientWidth-28,scale=Math.min(1,max/C.width);C.style.width=Math.floor(C.width*scale)+'px';C.style.height=Math.floor(C.height*scale)+'px';controls();paint()}}function tick(now){{if(play&&now-last>250){{frame=(frame+Math.floor((now-last)/250))%24;last=now;paint()}}requestAnimationFrame(tick)}}visible=DATA[0].layers.map(()=>true);draw();requestAnimationFrame(tick);</script></body></html>"""
+:root{{color-scheme:dark;font-family:system-ui,sans-serif;background:#101522;color:#f7efd7}}*{{box-sizing:border-box}}body{{margin:0;min-width:300px}}main{{max-width:1180px;margin:auto;padding:22px 16px 34px}}h1{{margin:0;font-size:clamp(1.35rem,4vw,2rem)}}p,small{{line-height:1.5;color:#c9d3cf}}.controls,#layers{{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}}button,label{{border:1px solid #60718a;border-radius:8px;padding:8px 10px;background:#232d41;color:inherit;font:inherit}}button{{cursor:pointer}}button[aria-pressed=true]{{background:#dbc779;color:#172034;font-weight:700}}label{{display:flex;gap:7px;align-items:center;font-size:.92rem}}#stage{{background:#080c15;border:1px solid #485670;border-radius:12px;padding:14px;overflow:auto}}canvas{{display:block;margin:auto;image-rendering:pixelated;image-rendering:crisp-edges;max-width:none}}</style></head><body><main><h1>Layouts extérieurs PMD — calques animés</h1><p>Les nuages défilent, les étoiles scintillent et les crêtes d’eau bouclent. Masquez un plan pour vérifier son indépendance.</p><div class="controls" id="scenes"></div><div class="controls" id="modes"></div><div class="controls"><button id="motion" type="button"></button><button id="grid" type="button"></button><span id="time"></span></div><section id="stage"><canvas id="map"></canvas></section><div id="layers"></div><small id="note"></small></main><script>
+'use strict';const DATA={payload},C=document.querySelector('#map'),X=C.getContext('2d'),I={{}},A=document.createElement('canvas'),AX=A.getContext('2d'),G=document.createElement('canvas'),GX=G.getContext('2d');let si=0,mode='jour',frame=0,play=!matchMedia('(prefers-reduced-motion:reduce)').matches,last=performance.now(),visible=[],grid=true;function load(u){{if(I[u])return Promise.resolve(I[u]);return new Promise((ok,no)=>{{let q=new Image;q.onload=()=>{{I[u]=q;ok(q)}};q.onerror=no;q.src=u}})}}async function paint(){{let s=DATA[si],v=s.variants[mode],sources=v.layers.concat(v.starGroups?[v.starGroups]:[]);await Promise.all(sources.map(load));X.clearRect(0,0,C.width,C.height);for(let n=0;n<v.layers.length;n++){{if(!visible[n])continue;let op=v.operations[n],q=I[v.layers[n]];if(op==='cloud'){{let dx=-(frame%24);X.drawImage(q,dx,0);X.drawImage(q,dx+C.width,0)}}else if(op==='waves'){{let phase=v.wavePhases[frame%24],dx=phase[0],dy=phase[1];X.save();X.globalAlpha=phase[2]/255;for(let ox of [dx-C.width,dx,dx+C.width])for(let oy of [dy-C.height,dy,dy+C.height])X.drawImage(q,ox,oy);X.restore()}}else if(op==='stars'){{A.width=G.width=C.width;A.height=G.height=C.height;AX.clearRect(0,0,C.width,C.height);GX.clearRect(0,0,C.width,C.height);AX.drawImage(q,0,0);GX.drawImage(I[v.starGroups],0,0);let px=AX.getImageData(0,0,C.width,C.height),groups=GX.getImageData(0,0,C.width,C.height).data,levels=v.starLevels[frame%24];for(let a=3,g=0;a<px.data.length;a+=4,g+=4)px.data[a]=Math.floor((px.data[a]*levels[groups[g]]+127)/255);AX.putImageData(px,0,0);X.drawImage(A,0,0)}}else X.drawImage(q,0,0)}}if(grid){{X.save();X.strokeStyle='rgba(255,238,157,.32)';X.lineWidth=1;X.beginPath();for(let x=0;x<=C.width;x+=8){{X.moveTo(x+.5,0);X.lineTo(x+.5,C.height)}}for(let y=0;y<=C.height;y+=8){{X.moveTo(0,y+.5);X.lineTo(C.width,y+.5)}}X.stroke();X.restore()}}document.querySelector('#time').textContent='Image '+(frame+1)+' / 24';}}function controls(){{let s=DATA[si],a=document.querySelector('#scenes'),b=document.querySelector('#modes'),l=document.querySelector('#layers');a.replaceChildren();b.replaceChildren();l.replaceChildren();DATA.forEach((q,i)=>{{let z=document.createElement('button');z.textContent=q.nom;z.setAttribute('aria-pressed',String(i===si));z.onclick=()=>{{si=i;frame=0;visible=DATA[si].layers.map(()=>true);draw()}};a.append(z)}});for(let k of ['jour','nuit']){{let z=document.createElement('button');z.textContent=k==='jour'?'☀ Jour':'☾ Nuit';z.setAttribute('aria-pressed',String(k===mode));z.onclick=()=>{{mode=k;frame=0;draw()}};b.append(z)}}s.layers.forEach((q,i)=>{{let z=document.createElement('label'),c=document.createElement('input');c.type='checkbox';c.checked=visible[i];c.onchange=()=>{{visible[i]=c.checked;paint()}};z.append(c,document.createTextNode(q));l.append(z)}});let g=document.querySelector('#grid');g.textContent=grid?'Grille 8 px : visible':'Grille 8 px : masquée';g.setAttribute('aria-pressed',String(grid));g.onclick=()=>{{grid=!grid;controls();paint()}};let m=document.querySelector('#motion');m.textContent=play?'❚❚ Pause':'▶ Animer';m.setAttribute('aria-pressed',String(play));m.onclick=()=>{{play=!play;last=performance.now();controls();paint()}};document.querySelector('#note').textContent=s.description+' · '+s.size.join(' × ')+' px · 24 phases de 250 ms';}}function draw(){{let s=DATA[si];C.width=s.size[0];C.height=s.size[1];let max=document.querySelector('#stage').clientWidth-28,scale=Math.min(1,max/C.width);C.style.width=Math.floor(C.width*scale)+'px';C.style.height=Math.floor(C.height*scale)+'px';controls();paint()}}function tick(now){{if(play&&now-last>250){{frame=(frame+Math.floor((now-last)/250))%24;last=now;paint()}}requestAnimationFrame(tick)}}visible=DATA[0].layers.map(()=>true);draw();requestAnimationFrame(tick);</script></body></html>"""
 
 
 def build() -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
-    selectors: dict[str, Callable[[str, Image.Image, str], list[Image.Image]]] = {scene["id"]: make_layers for scene in SCENES}
     manifest_scenes, preview_scenes = [], []
     for scene in SCENES:
         root = OUT / scene["id"]
@@ -286,25 +335,28 @@ def build() -> dict:
         definitions = [{"id": layer_id, "nom": label, "anime": animated} for layer_id, label, animated in scene["layers"]]
         manifest = {"id": scene["id"], "nom": scene["nom"], "dimensions": list(scene["dimensions"]), "grille_px": 8,
                     "animation": {"frames": FRAMES, "duree_image_ms": DURATION, "duree_boucle_ms": FRAMES * DURATION},
-                    "base_start": 3, "calques": definitions, "fichiers": {}}
+                    "base_start": 5, "calques": definitions, "fichiers": {}}
         variants = {}
         for mode, native_name in scene["natives"].items():
             native = load(NATIVES / native_name, scene["dimensions"])
-            layers = selectors[scene["id"]](scene["id"], native, mode)
+            layers = load_prepared_planes(scene, mode, definitions)
             assert len(layers) == len(definitions)
             specs = {}
             if layers[2].getbbox():
                 specs["02_nuages"] = {"kind": "scroll", "period": FRAMES, "prefix": "nuages"}
+            if layers[4].getbbox():
+                specs[definitions[4]["id"]] = waves_spec()
             if mode == "nuit":
                 specs["01_astres"] = stars_spec(layers[1], root)
-            files = export_variant(root, mode, definitions, layers, specs, scene["dimensions"], FRAMES, 3, [], scene["id"])
+            files = export_variant(root, mode, definitions, layers, specs, scene["dimensions"], FRAMES, 5, [], scene["id"])
             actual = compose([AnimatedLayer(layer, specs.get(defn["id"]), root) for defn, layer in zip(definitions, layers)], scene["dimensions"], 0)
             assert np.array_equal(np.asarray(actual), np.asarray(native)), f"PNG initial différent : {scene['id']}/{mode}"
             manifest["fichiers"][mode] = {"native": f"../../source/references_exterieures/natives/{native_name}", **files}
             variants[mode] = {"layers": [data_uri(layer) for layer in layers],
-                              "operations": ["stars" if definitions[index]["id"] in specs and specs[definitions[index]["id"]]["kind"] == "stars" else "cloud" if definitions[index]["id"] in specs and specs[definitions[index]["id"]]["kind"] == "scroll" else "fixed" for index in range(len(layers))],
+                              "operations": ["stars" if definitions[index]["id"] in specs and specs[definitions[index]["id"]]["kind"] == "stars" else "cloud" if definitions[index]["id"] in specs and specs[definitions[index]["id"]]["kind"] == "scroll" else "waves" if definitions[index]["id"] in specs and specs[definitions[index]["id"]]["kind"] == "waves" else "fixed" for index in range(len(layers))],
                               "starGroups": data_uri_path(root / specs["01_astres"]["groups"]) if "01_astres" in specs else None,
-                              "starLevels": specs["01_astres"]["levels"] if "01_astres" in specs else None}
+                              "starLevels": specs["01_astres"]["levels"] if "01_astres" in specs else None,
+                              "wavePhases": specs[definitions[4]["id"]]["phases"] if definitions[4]["id"] in specs else None}
             moving = "nuages animés" if "02_nuages" in specs else "ciel dégagé (plan nuages transparent)"
             print(f"{scene['id']} {mode} : {len(layers)} plans, {moving}" + (", étoiles scintillantes" if mode == "nuit" else ""))
         (root / "kit.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

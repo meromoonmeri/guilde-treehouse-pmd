@@ -180,7 +180,7 @@ La correction de consigne demande désormais les **layouts des nouvelles référ
 ### A. Origine, génération et natives
 
 - Les cinq entrées des commits récents sont conservées dans `source/references_exterieures/entrees/`. Elles sont des guides de composition, de lisibilité et de palette ; leurs SHA-256 restent consignés dans `provenance.json`.
-- Six rendus complets ont été créés avec le générateur d’images de cette livraison : `cascades`, `prairie_maritime` et `cap_cotier`, chacun en jour/nuit. Ils sont les sources artistiques canoniques dans `source/references_exterieures/generation/`. Aucun crop, collage ni filtre de l’image de référence n’est la native finale.
+- Six rendus complets ont été créés avec le générateur d’images de cette livraison : `cascades`, `prairie_maritime` et `cap_cotier`, chacun en jour/nuit. Ils sont les layouts initiaux dans `source/references_exterieures/generation/`. Six autres appels au générateur produisent explicitement les backplates `00_ciel`, un par scène/ambiance, dans `source/references_exterieures/generator_planes/`. Aucun crop, collage ni filtre de l’image de référence n’est la native finale.
 - `cascades` est une composition verticale volontaire : les rendus de génération font 816 × 1 300 px et sont normalisés au plus proche voisin vers **408 × 648 px**. Les deux scènes panoramiques font 1 376 × 768 px et sont normalisées vers **688 × 384 px**.
 - Chaque nuit a été créée en prenant le rendu jour correspondant comme contrainte de géométrie ; elle n’est pas une simple teinte appliquée après coup. La préparation qui est versionnée ne recontacte aucun générateur : elle valide les six sources présentes, les redimensionne et écrit la provenance reproductible de cette normalisation.
 
@@ -188,7 +188,7 @@ Cela garde une frontière honnête : l’export est rejouable depuis les six ras
 
 ### B. Architecture animée reprise et adaptée
 
-`source/exterior_reference_animation.py` est la mécanique relue dans `source/exterior_animation.py` de la branche auditée, adaptée seulement pour accepter le nom d’asset de chaque scène. Elle apporte :
+`source/exterior_reference_animation.py` est la mécanique relue dans `source/exterior_animation.py` de la branche auditée, adaptée seulement pour accepter le nom d’asset de chaque scène. Comme `rebuild_sharpedo.py`, le reconstructeur lit un pack de PNG sources préalablement préparé, `source/references_exterieures/plans/`, et ne repartitionne pas une composition à l’export. Elle apporte :
 
 - `AnimatedLayer`, qui rend une phase de plan fixe, défilant ou scintillant ;
 - la carte de groupes et la LUT de 24 phases pour les étoiles ; le plus grand groupe, la lune, est forcé à l’opacité 100 % ;
@@ -205,17 +205,17 @@ Les plans, dans l’ordre de composition, sont :
 
 | Scène | Plans |
 | --- | --- |
-| `cascades` | `00_ciel`, `01_astres`, `02_nuages`, `03_eau_cascades`, `04_ilot_rocheux`, `05_vegetation` |
-| `prairie_maritime` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_falaises`, `05_prairie_chemin`, `06_fleurs_vegetation` |
-| `cap_cotier` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_falaise_terrain`, `05_maison`, `06_vegetation` |
+| `cascades` | `00_ciel`, `01_astres`, `02_nuages`, `03_eau_cascades`, `04_cascades_ecume`, `05_ilot_rocheux`, `06_vegetation` |
+| `prairie_maritime` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_vagues_reflets`, `05_falaises`, `06_prairie_chemin`, `07_fleurs_vegetation` |
+| `cap_cotier` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_vagues_reflets`, `05_falaise_terrain`, `06_maison`, `07_vegetation` |
 
-L’eau, le relief, le terrain/la maison et la végétation sont des plans séparés et éditables. `02_nuages` défile là où le layout contient des nuages ; la prairie a un ciel délibérément dégagé et garde un PNG nuages transparent au lieu d’inventer une masse nuageuse. `01_astres` est transparent le jour et animé la nuit.
+L’eau, le relief, le terrain/la maison et la végétation sont des plans séparés et éditables. Dès `prepare_references_exterieures.py`, chacun est écrit dans `source/references_exterieures/plans/<scene>/<ambiance>/` : c’est le pack de « natives de calques » analogue à `source/sharpedo/mer_native.png`, `vagues_native.png` et `falaise_native.png`. `rebuild_references_exterieures.py` les charge ensuite nommément, comme `rebuild_sharpedo.py`, sans appliquer de nouvelle heuristique de segmentation. `02_nuages` défile là où le layout contient des nuages ; la prairie a un ciel délibérément dégagé et garde un PNG nuages transparent au lieu d’inventer une masse nuageuse. `01_astres` est transparent le jour et animé la nuit.
 
 Afin qu’un nuage en déplacement ne découvre pas une découpe vide, `00_ciel` reçoit une reconstitution inpaintée derrière les pixels mobiles. À la phase 0, les pixels originaux des nuages/astres sont composités au-dessus : **la composition est donc identique, pixel par pixel, à la native générée**. Cette méthode implique que le ciel et les plans atmosphériques peuvent se chevaucher précisément à l’image 0. Les plans de décor terrestre restent séparés ; le contrôle ne prétend plus faussement que chaque pixel de tous les plans est exclusivement attribué une seule fois.
 
 ### D. Exports et contrôle exécuté
 
-Chaque scène/ambiance de `references_exterieures/` contient les PNG RGBA, la composition, les bases transparente/magenta, un `.aseprite` de 24 images et une carte `.tmj`. Les nuages et étoiles animés ont aussi un atlas dans `animations/`; les groupes des étoiles sont conservés dans `etoiles_groupes.png`. `apercu_references_exterieures.html` encode ses PNG en WebP data URI, permet de changer scène/ambiance, pause/reprise et visibilité de chaque plan sans appel réseau.
+Chaque scène/ambiance de `references_exterieures/` contient les PNG RGBA, la composition, les bases transparente/magenta, un `.aseprite` de 24 images et une carte `.tmj`. Nuages, étoiles et crêtes d’eau/cascades animés ont leur atlas dans `animations/`; les groupes des étoiles sont conservés dans `etoiles_groupes.png`. `apercu_references_exterieures.html` encode ses PNG en WebP data URI, permet de changer scène/ambiance, pause/reprise, visibilité de chaque plan et grille de 8 px sans appel réseau.
 
 Les commandes suivantes ont été exécutées après le changement vers l’architecture animée :
 
@@ -225,7 +225,7 @@ python source/rebuild_references_exterieures.py
 python source/verify_references_exterieures.py
 ```
 
-Le vérificateur de cette livraison contrôle les dimensions/alpha des natives, l’identité native = composition à la phase 0, les bases, les deux ambiances, la périodicité et le mouvement des plans non vides, tous les pixels de toutes les cels Aseprite, les cels liées des plans fixes, les atlas et séquences de 24 tuiles Tiled, ainsi que l’absence d’URL réseau dans l’aperçu. Il ne rend pas de jugement esthétique ni de licence : une revue humaine reste nécessaire.
+Le vérificateur de cette livraison contrôle les dimensions/alpha des natives, l’identité de chaque PNG livré avec sa source dans le pack de plans, l’identité native = composition à la phase 0, les bases, les deux ambiances, la périodicité et le mouvement des plans non vides, tous les pixels de toutes les cels Aseprite, les cels liées des plans fixes, les atlas et séquences de 24 tuiles Tiled, la grille 8 px de l’aperçu et l’absence d’URL réseau. Il ne rend pas de jugement esthétique ni de licence : une revue humaine reste nécessaire.
 
 ---
 
@@ -244,9 +244,9 @@ Le vérificateur de cette livraison contrôle les dimensions/alpha des natives, 
 
 ## 9. État de cette livraison
 
-- Les trois layouts sont produits dans `references_exterieures/` en **jour et nuit**, avec six ou sept plans sémantiques par ambiance.
+- Les trois layouts sont produits dans `references_exterieures/` en **jour et nuit**, avec sept ou huit plans sémantiques par ambiance.
 - Les six natives finales viennent des rendus générés de cette livraison ; les références récentes restent des guides tracés, non des pixels livrés.
-- Les nuages non vides défilent, les étoiles nocturnes scintillent et les lunes restent fixes dans Aseprite, Tiled et l’aperçu.
+- Les nuages non vides défilent, les étoiles nocturnes scintillent, les lunes restent fixes et les crêtes d’eau/cascades bouclent dans Aseprite, Tiled et l’aperçu.
 - La chaîne préparation → export → vérification a été exécutée avec succès sur cette architecture animée.
 - L’aperçu `apercu_references_exterieures.html` est autonome et permet de masquer chaque plan, changer d’ambiance et mettre la boucle en pause.
 

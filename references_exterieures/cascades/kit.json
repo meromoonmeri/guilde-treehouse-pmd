@@ -11,7 +11,7 @@
     "duree_image_ms": 250,
     "duree_boucle_ms": 6000
   },
-  "base_start": 3,
+  "base_start": 5,
   "calques": [
     {
       "id": "00_ciel",
@@ -30,16 +30,21 @@
     },
     {
       "id": "03_eau_cascades",
-      "nom": "Eau, cascades et écume",
+      "nom": "Eau et profondeur des cascades",
       "anime": false
     },
     {
-      "id": "04_ilot_rocheux",
+      "id": "04_cascades_ecume",
+      "nom": "Cascades et écume — cycle léger",
+      "anime": true
+    },
+    {
+      "id": "05_ilot_rocheux",
       "nom": "Îlot rocheux suspendu",
       "anime": false
     },
     {
-      "id": "05_vegetation",
+      "id": "06_vegetation",
       "nom": "Roseaux, buissons et premier plan",
       "anime": false
     }
@@ -52,8 +57,9 @@
         "01_astres": "calques/jour/01_astres.png",
         "02_nuages": "calques/jour/02_nuages.png",
         "03_eau_cascades": "calques/jour/03_eau_cascades.png",
-        "04_ilot_rocheux": "calques/jour/04_ilot_rocheux.png",
-        "05_vegetation": "calques/jour/05_vegetation.png"
+        "04_cascades_ecume": "calques/jour/04_cascades_ecume.png",
+        "05_ilot_rocheux": "calques/jour/05_ilot_rocheux.png",
+        "06_vegetation": "calques/jour/06_vegetation.png"
       },
       "composition": "compositions/jour.png",
       "base": "bases/jour_transparente.png",
@@ -65,6 +71,133 @@
           "kind": "scroll",
           "period": 24,
           "prefix": "nuages"
+        },
+        "04_cascades_ecume": {
+          "kind": "waves",
+          "period": 24,
+          "prefix": "vagues",
+          "phases": [
+            [
+              0,
+              0,
+              255
+            ],
+            [
+              1,
+              0,
+              254
+            ],
+            [
+              1,
+              0,
+              253
+            ],
+            [
+              2,
+              1,
+              250
+            ],
+            [
+              3,
+              1,
+              247
+            ],
+            [
+              3,
+              1,
+              243
+            ],
+            [
+              3,
+              1,
+              239
+            ],
+            [
+              3,
+              1,
+              235
+            ],
+            [
+              3,
+              1,
+              231
+            ],
+            [
+              2,
+              1,
+              228
+            ],
+            [
+              1,
+              0,
+              225
+            ],
+            [
+              1,
+              0,
+              224
+            ],
+            [
+              0,
+              0,
+              223
+            ],
+            [
+              -1,
+              0,
+              224
+            ],
+            [
+              -1,
+              0,
+              225
+            ],
+            [
+              -2,
+              -1,
+              228
+            ],
+            [
+              -3,
+              -1,
+              231
+            ],
+            [
+              -3,
+              -1,
+              235
+            ],
+            [
+              -3,
+              -1,
+              239
+            ],
+            [
+              -3,
+              -1,
+              243
+            ],
+            [
+              -3,
+              -1,
+              247
+            ],
+            [
+              -2,
+              -1,
+              250
+            ],
+            [
+              -2,
+              -1,
+              253
+            ],
+            [
+              -1,
+              0,
+              254
+            ]
+          ]
         }
       },
       "animations": {
@@ -74,7 +207,20 @@
           "columns": 8,
           "frame_size": [
             408,
-            304
+            298
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "04_cascades_ecume": {
+          "atlas": "animations/vagues_jour.png",
+          "period": 24,
+          "columns": 8,
+          "frame_size": [
+            408,
+            648
           ],
           "offset": [
             0,
@@ -90,8 +236,9 @@
         "01_astres": "calques/nuit/01_astres.png",
         "02_nuages": "calques/nuit/02_nuages.png",
         "03_eau_cascades": "calques/nuit/03_eau_cascades.png",
-        "04_ilot_rocheux": "calques/nuit/04_ilot_rocheux.png",
-        "05_vegetation": "calques/nuit/05_vegetation.png"
+        "04_cascades_ecume": "calques/nuit/04_cascades_ecume.png",
+        "05_ilot_rocheux": "calques/nuit/05_ilot_rocheux.png",
+        "06_vegetation": "calques/nuit/06_vegetation.png"
       },
       "composition": "compositions/nuit.png",
       "base": "bases/nuit_transparente.png",
@@ -103,6 +250,133 @@
           "kind": "scroll",
           "period": 24,
           "prefix": "nuages"
+        },
+        "04_cascades_ecume": {
+          "kind": "waves",
+          "period": 24,
+          "prefix": "vagues",
+          "phases": [
+            [
+              0,
+              0,
+              255
+            ],
+            [
+              1,
+              0,
+              254
+            ],
+            [
+              1,
+              0,
+              253
+            ],
+            [
+              2,
+              1,
+              250
+            ],
+            [
+              3,
+              1,
+              247
+            ],
+            [
+              3,
+              1,
+              243
+            ],
+            [
+              3,
+              1,
+              239
+            ],
+            [
+              3,
+              1,
+              235
+            ],
+            [
+              3,
+              1,
+              231
+            ],
+            [
+              2,
+              1,
+              228
+            ],
+            [
+              1,
+              0,
+              225
+            ],
+            [
+              1,
+              0,
+              224
+            ],
+            [
+              0,
+              0,
+              223
+            ],
+            [
+              -1,
+              0,
+              224
+            ],
+            [
+              -1,
+              0,
+              225
+            ],
+            [
+              -2,
+              -1,
+              228
+            ],
+            [
+              -3,
+              -1,
+              231
+            ],
+            [
+              -3,
+              -1,
+              235
+            ],
+            [
+              -3,
+              -1,
+              239
+            ],
+            [
+              -3,
+              -1,
+              243
+            ],
+            [
+              -3,
+              -1,
+              247
+            ],
+            [
+              -2,
+              -1,
+              250
+            ],
+            [
+              -2,
+              -1,
+              253
+            ],
+            [
+              -1,
+              0,
+              254
+            ]
+          ]
         },
         "01_astres": {
           "kind": "stars",
@@ -1173,6 +1447,19 @@
           "frame_size": [
             408,
             248
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "04_cascades_ecume": {
+          "atlas": "animations/vagues_nuit.png",
+          "period": 24,
+          "columns": 8,
+          "frame_size": [
+            408,
+            648
           ],
           "offset": [
             0,

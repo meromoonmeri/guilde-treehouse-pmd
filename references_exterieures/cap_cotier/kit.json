@@ -11,7 +11,7 @@
     "duree_image_ms": 250,
     "duree_boucle_ms": 6000
   },
-  "base_start": 3,
+  "base_start": 5,
   "calques": [
     {
       "id": "00_ciel",
@@ -30,21 +30,26 @@
     },
     {
       "id": "03_mer_reflets",
-      "nom": "Mer et reflet lunaire",
+      "nom": "Mer et profondeur",
       "anime": false
     },
     {
-      "id": "04_falaise_terrain",
+      "id": "04_vagues_reflets",
+      "nom": "Vagues et reflet lunaire — cycle léger",
+      "anime": true
+    },
+    {
+      "id": "05_falaise_terrain",
       "nom": "Falaise, chemin et sol",
       "anime": false
     },
     {
-      "id": "05_maison",
+      "id": "06_maison",
       "nom": "Maison-courrier et abords",
       "anime": false
     },
     {
-      "id": "06_vegetation",
+      "id": "07_vegetation",
       "nom": "Arbres, fleurs et liserés d'herbe",
       "anime": false
     }
@@ -57,9 +62,10 @@
         "01_astres": "calques/jour/01_astres.png",
         "02_nuages": "calques/jour/02_nuages.png",
         "03_mer_reflets": "calques/jour/03_mer_reflets.png",
-        "04_falaise_terrain": "calques/jour/04_falaise_terrain.png",
-        "05_maison": "calques/jour/05_maison.png",
-        "06_vegetation": "calques/jour/06_vegetation.png"
+        "04_vagues_reflets": "calques/jour/04_vagues_reflets.png",
+        "05_falaise_terrain": "calques/jour/05_falaise_terrain.png",
+        "06_maison": "calques/jour/06_maison.png",
+        "07_vegetation": "calques/jour/07_vegetation.png"
       },
       "composition": "compositions/jour.png",
       "base": "bases/jour_transparente.png",
@@ -71,6 +77,133 @@
           "kind": "scroll",
           "period": 24,
           "prefix": "nuages"
+        },
+        "04_vagues_reflets": {
+          "kind": "waves",
+          "period": 24,
+          "prefix": "vagues",
+          "phases": [
+            [
+              0,
+              0,
+              255
+            ],
+            [
+              1,
+              0,
+              254
+            ],
+            [
+              1,
+              0,
+              253
+            ],
+            [
+              2,
+              1,
+              250
+            ],
+            [
+              3,
+              1,
+              247
+            ],
+            [
+              3,
+              1,
+              243
+            ],
+            [
+              3,
+              1,
+              239
+            ],
+            [
+              3,
+              1,
+              235
+            ],
+            [
+              3,
+              1,
+              231
+            ],
+            [
+              2,
+              1,
+              228
+            ],
+            [
+              1,
+              0,
+              225
+            ],
+            [
+              1,
+              0,
+              224
+            ],
+            [
+              0,
+              0,
+              223
+            ],
+            [
+              -1,
+              0,
+              224
+            ],
+            [
+              -1,
+              0,
+              225
+            ],
+            [
+              -2,
+              -1,
+              228
+            ],
+            [
+              -3,
+              -1,
+              231
+            ],
+            [
+              -3,
+              -1,
+              235
+            ],
+            [
+              -3,
+              -1,
+              239
+            ],
+            [
+              -3,
+              -1,
+              243
+            ],
+            [
+              -3,
+              -1,
+              247
+            ],
+            [
+              -2,
+              -1,
+              250
+            ],
+            [
+              -2,
+              -1,
+              253
+            ],
+            [
+              -1,
+              0,
+              254
+            ]
+          ]
         }
       },
       "animations": {
@@ -80,7 +213,20 @@
           "columns": 8,
           "frame_size": [
             688,
-            175
+            100
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "04_vagues_reflets": {
+          "atlas": "animations/vagues_jour.png",
+          "period": 24,
+          "columns": 8,
+          "frame_size": [
+            688,
+            384
           ],
           "offset": [
             0,
@@ -96,9 +242,10 @@
         "01_astres": "calques/nuit/01_astres.png",
         "02_nuages": "calques/nuit/02_nuages.png",
         "03_mer_reflets": "calques/nuit/03_mer_reflets.png",
-        "04_falaise_terrain": "calques/nuit/04_falaise_terrain.png",
-        "05_maison": "calques/nuit/05_maison.png",
-        "06_vegetation": "calques/nuit/06_vegetation.png"
+        "04_vagues_reflets": "calques/nuit/04_vagues_reflets.png",
+        "05_falaise_terrain": "calques/nuit/05_falaise_terrain.png",
+        "06_maison": "calques/nuit/06_maison.png",
+        "07_vegetation": "calques/nuit/07_vegetation.png"
       },
       "composition": "compositions/nuit.png",
       "base": "bases/nuit_transparente.png",
@@ -110,6 +257,133 @@
           "kind": "scroll",
           "period": 24,
           "prefix": "nuages"
+        },
+        "04_vagues_reflets": {
+          "kind": "waves",
+          "period": 24,
+          "prefix": "vagues",
+          "phases": [
+            [
+              0,
+              0,
+              255
+            ],
+            [
+              1,
+              0,
+              254
+            ],
+            [
+              1,
+              0,
+              253
+            ],
+            [
+              2,
+              1,
+              250
+            ],
+            [
+              3,
+              1,
+              247
+            ],
+            [
+              3,
+              1,
+              243
+            ],
+            [
+              3,
+              1,
+              239
+            ],
+            [
+              3,
+              1,
+              235
+            ],
+            [
+              3,
+              1,
+              231
+            ],
+            [
+              2,
+              1,
+              228
+            ],
+            [
+              1,
+              0,
+              225
+            ],
+            [
+              1,
+              0,
+              224
+            ],
+            [
+              0,
+              0,
+              223
+            ],
+            [
+              -1,
+              0,
+              224
+            ],
+            [
+              -1,
+              0,
+              225
+            ],
+            [
+              -2,
+              -1,
+              228
+            ],
+            [
+              -3,
+              -1,
+              231
+            ],
+            [
+              -3,
+              -1,
+              235
+            ],
+            [
+              -3,
+              -1,
+              239
+            ],
+            [
+              -3,
+              -1,
+              243
+            ],
+            [
+              -3,
+              -1,
+              247
+            ],
+            [
+              -2,
+              -1,
+              250
+            ],
+            [
+              -2,
+              -1,
+              253
+            ],
+            [
+              -1,
+              0,
+              254
+            ]
+          ]
         },
         "01_astres": {
           "kind": "stars",
@@ -560,6 +834,19 @@
           "offset": [
             0,
             0
+          ]
+        },
+        "04_vagues_reflets": {
+          "atlas": "animations/vagues_nuit.png",
+          "period": 24,
+          "columns": 8,
+          "frame_size": [
+            688,
+            285
+          ],
+          "offset": [
+            0,
+            99
           ]
         }
       }

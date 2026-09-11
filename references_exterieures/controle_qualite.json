@@ -6,13 +6,13 @@
         408,
         648
       ],
-      "calques": 6,
+      "calques": 7,
       "ambiances": [
         {
           "id": "jour",
           "image_0": "identique_a_la_native",
           "aseprite": "24_images_et_cels_animees",
-          "tiled": "1_atlas_animes",
+          "tiled": "2_atlas_animes",
           "base_magenta": "identique",
           "animation": "nuages"
         },
@@ -20,7 +20,7 @@
           "id": "nuit",
           "image_0": "identique_a_la_native",
           "aseprite": "24_images_et_cels_animees",
-          "tiled": "2_atlas_animes",
+          "tiled": "3_atlas_animes",
           "base_magenta": "identique",
           "animation": "nuages_et_etoiles"
         }
@@ -32,33 +32,7 @@
         688,
         384
       ],
-      "calques": 7,
-      "ambiances": [
-        {
-          "id": "jour",
-          "image_0": "identique_a_la_native",
-          "aseprite": "24_images_et_cels_animees",
-          "tiled": "0_atlas_animes",
-          "base_magenta": "identique",
-          "animation": "nuages"
-        },
-        {
-          "id": "nuit",
-          "image_0": "identique_a_la_native",
-          "aseprite": "24_images_et_cels_animees",
-          "tiled": "1_atlas_animes",
-          "base_magenta": "identique",
-          "animation": "nuages_et_etoiles"
-        }
-      ]
-    },
-    {
-      "id": "cap_cotier",
-      "dimensions": [
-        688,
-        384
-      ],
-      "calques": 7,
+      "calques": 8,
       "ambiances": [
         {
           "id": "jour",
@@ -73,6 +47,32 @@
           "image_0": "identique_a_la_native",
           "aseprite": "24_images_et_cels_animees",
           "tiled": "2_atlas_animes",
+          "base_magenta": "identique",
+          "animation": "nuages_et_etoiles"
+        }
+      ]
+    },
+    {
+      "id": "cap_cotier",
+      "dimensions": [
+        688,
+        384
+      ],
+      "calques": 8,
+      "ambiances": [
+        {
+          "id": "jour",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "2_atlas_animes",
+          "base_magenta": "identique",
+          "animation": "nuages"
+        },
+        {
+          "id": "nuit",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "3_atlas_animes",
           "base_magenta": "identique",
           "animation": "nuages_et_etoiles"
         }
