@@ -4,19 +4,21 @@
     504,
     384
   ],
-  "calques": 10,
+  "calques": 11,
   "texture_treasure_town_controle_visuel": true,
   "plans_generes_separement": true,
   "indices_fixes": true,
   "palettes_animees": true,
   "cascades_et_ecume_separees": true,
+  "chaque_cascade_independante": true,
+  "nuages_deux_plans_wrap": true,
   "ambiances": [
     {
       "id": "jour",
       "PNG_Aseprite_Tiled": "identiques",
       "frames_verifiees": 504,
       "calques_cycling": [
-        "04_eau_cycle"
+        "05_eau_cycle"
       ]
     },
     {
@@ -24,12 +26,12 @@
       "PNG_Aseprite_Tiled": "identiques",
       "frames_verifiees": 504,
       "calques_cycling": [
-        "04_eau_cycle"
+        "05_eau_cycle"
       ]
     }
   ],
   "comparaisons_navigateur": 12,
-  "erreur_max_premultiplie": 1.2863,
+  "erreur_max_premultiplie": 1.1686,
   "terrain_fixe": true,
   "hors_ligne": true,
   "mobile": true,

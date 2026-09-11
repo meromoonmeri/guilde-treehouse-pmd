@@ -49,16 +49,40 @@ def prepare():
     for name,c in cfg.items():
         d=S/name;size=tuple(c['size']);w,h=size
         for mode in ['jour','nuit']:save(sky(mode,size,max(90,c['sky']+10)),d/f'ciel_{mode}.png')
-        save(stars(size,c['sky']),d/'astres_nuit.png')
-        cl=Image.open(F/'nuages_native.png').convert('RGBA').crop((0,0,480,128));scale=min(w/480,c['sky']/115)
+        if name=='littoral':
+            q=Image.open(S/'ambiances/ciel_pleine_lune.png').convert('RGBA').crop((0,0,512,148)).resize((w,c['sky']),Image.Resampling.NEAREST)
+            back=Image.new('RGBA',size);back.paste(q,(0,0));last=q.crop((0,c['sky']-1,w,c['sky'])).resize((w,h-c['sky']),Image.Resampling.NEAREST)
+            back.paste(last,(0,c['sky']));save(back,d/'ciel_nuit.png')
+        astral=stars(size,c['sky'])
+        reflection=Image.new('RGBA',size)
+        if name=='littoral':
+            source=np.array(Image.open(S/'ambiances/astres_pleine_lune.png').convert('RGBA'))
+            n,lab,stat,cent=cv2.connectedComponentsWithStats((source[:,:,3]>0).astype('uint8'),8)
+            astral=Image.new('RGBA',size);k=min(w/512,c['sky']/148)
+            for j in range(1,n):
+                x0,y0,ww,hh,_=stat[j];a0=source[y0:y0+hh,x0:x0+ww].copy();a0[lab[y0:y0+hh,x0:x0+ww]!=j]=0
+                q=Image.fromarray(a0).resize((max(1,round(ww*k)),max(1,round(hh*k))),Image.Resampling.NEAREST)
+                if not q.getbbox():continue
+                px=round(cent[j,0]/512*w-q.width/2);py=round(cent[j,1]/148*c['sky']-q.height/2)
+                astral.alpha_composite(q,(max(0,min(w-q.width,px)),max(0,min(c['sky']-q.height,py))))
+            q=Image.open(S/'ambiances/reflet_lunaire_source.png').convert('RGBA').crop((0,148,512,320))
+            q=q.resize((w,round(q.height*w/512)),Image.Resampling.NEAREST);reflection.alpha_composite(q,(0,c['water_y']))
+        save(astral,d/'astres_nuit.png');save(reflection,d/'reflet_lunaire.png')
+        cloud_source=Image.open(F/'nuages_native.png').convert('RGBA').crop((0,0,480,128))
+        far_mask=np.zeros((128,480),np.uint8)
+        for x,y,bw,bh in [(29,39,121,20),(271,27,83,22),(81,91,73,23)]:far_mask[y:y+bh,x:x+bw]=255
+        ca=np.array(cloud_source);far=ca.copy();near=ca.copy();far[far_mask==0]=0;near[far_mask>0]=0
+        scale=min(w/480,c['sky']/115)
+        for role,arr in [('lointains',far),('proches',near)]:
+            q=Image.fromarray(arr).resize((round(480*scale),round(128*scale)),Image.Resampling.NEAREST)
+            plane=Image.new('RGBA',size);plane.alpha_composite(q,((w-q.width)//2,0));save(plane,d/f'nuages_{role}.png')
+        cl=cloud_source
         cl=cl.resize((round(480*scale),round(128*scale)),Image.Resampling.NEAREST);plane=Image.new('RGBA',size);plane.alpha_composite(cl,((w-cl.width)//2,0));save(plane,d/'nuages.png')
         if (d/'reliefs_genere.png').exists():
             q=Image.open(d/'reliefs_genere.png').convert('RGBA')
             if name=='plateaux':
-                a=np.array(q);color=np.median(a[236:248,:,:3],axis=(0,1)).astype('uint8')
-                for yy in range(248,h):
-                    t=min(1,(yy-248)/12);a[yy,:,:3]=np.rint(a[247,:,:3]*(1-t)+color*t).astype('uint8');a[yy,:,3]=255
-                q=Image.fromarray(a)
+                q=Image.open(d/'montagnes_fond_genere.png').convert('RGBA')
+                save(Image.open(d/'brume_wrap_generee.png'),d/'brume_wrap.png')
             save(q,d/'reliefs.png')
         else:save(Image.new('RGBA',size),d/'reliefs.png')
         terrain=np.array(Image.open(d/'terrain_genere.png').convert('RGBA'));rr,gg,bb=[terrain[:,:,i].astype(int) for i in range(3)]
@@ -86,10 +110,17 @@ def prepare():
         else:
             save(water,d/'eau_native.png');save(water,d/'eau_fond.png')
         effects=Image.new('RGBA',size);foam=Image.new('RGBA',size)
-        for sid,x,y,bw,bh in FLOW.get(name,[]):
+        for number,(sid,x,y,bw,bh) in enumerate(FLOW.get(name,[]),1):
             sprite=water_parts[sid];aa=np.array(sprite);cut=int(sprite.height*.72);active=aa[:cut,:,3]>0;xx=np.where(active.any(0))[0]
             body=sprite.crop((int(xx.min()),0,int(xx.max()+1),cut)).resize((bw,bh),Image.Resampling.NEAREST)
             effects.alpha_composite(body,(x,y))
+            single=Image.new('RGBA',size);single.alpha_composite(body,(x,y));prefix=f'cascade_{number:02d}'
+            spec=create(single,'cascade',d,prefix)
+            offset=((number-1)*2)%spec['period'];spec['phase_offset']=offset
+            spec['palettes']=spec['palettes'][offset:]+spec['palettes'][:offset]
+            (d/(prefix+'_cycle.json')).write_text(json.dumps(spec,ensure_ascii=False,indent=2)+'\n')
+            indices=np.array(Image.open(d/spec['indices'])).astype(int)
+            save(Image.fromarray(np.array(spec['palettes'][0],np.uint8)[indices]),d/(prefix+'_native.png'))
             foot=sprite.crop((0,cut,sprite.width,sprite.height));foot=foot.crop(foot.getbbox()).resize((bw*3,max(12,bw)),Image.Resampling.NEAREST)
             foam.alpha_composite(foot,(x-bw,y+bh-5))
         for sid,x,y,bw,bh in RIPPLES.get(name,[]):foam.alpha_composite(water_parts[sid].resize((bw,bh),Image.Resampling.NEAREST),(x,y))

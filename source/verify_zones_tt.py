@@ -9,6 +9,7 @@ import struct
 import zlib
 from verify_falaise import references, expected, verify_ase, verify_tiled, image
 from verify_falaise_browser import actual, visual_delta
+from prepare_zones_tt import FLOW
 
 R=Path(__file__).resolve().parents[1]
 S=R/'source/zones_treasure_town'
@@ -46,17 +47,19 @@ def verify():
     for name,cfg in configs.items():
         root=R/'paysages'/name;m=json.loads((root/'kit.json').read_text());size=tuple(m['dimensions']);frames=m['animation']['frames']
         assert size==tuple(cfg['size']) and m['regles']['structures'] is False
-        assert len(m['calques'])==10 and m['base_start']==8 and m['regles']['plans_generes_separement']
-        report={'id':name,'dimensions':list(size),'calques':10,'texture_treasure_town_controle_visuel':True,
+        ids={d['id']:i for i,d in enumerate(m['calques'])}
+        assert m['base_start']==ids['terrain'] and m['regles']['plans_generes_separement']
+        assert all(f'cascade_{n:02d}' in ids for n in range(1,len(FLOW.get(name,[]))+1))
+        report={'id':name,'dimensions':list(size),'calques':len(m['calques']),'texture_treasure_town_controle_visuel':True,
                 'plans_generes_separement':True,'indices_fixes':True,'palettes_animees':True,
-                'cascades_et_ecume_separees':True,'ambiances':[]}
+                'cascades_et_ecume_separees':True,'chaque_cascade_independante':True,'nuages_deux_plans_wrap':True,'ambiances':[]}
         for mode in ['jour','nuit']:
             refs=references(root,m,mode);f=m['fichiers'][mode]
             assert np.array_equal(np.array(expected(refs,0,size)),np.array(image(root/f['composition'])))
-            assert np.array_equal(np.array(expected(refs,0,size,base_start=8)),np.array(image(root/f['base'])))
+            assert np.array_equal(np.array(expected(refs,0,size,base_start=m['base_start'])),np.array(image(root/f['base'])))
             if mode=='jour':
-                assert np.array_equal(refs[8].array,np.array(image(S/name/'terrain_genere.png')))
-                assert np.array_equal(refs[5].array,np.array(image(S/name/'reliefs.png')))
+                assert np.array_equal(refs[ids['terrain']].array,np.array(image(S/name/'terrain_genere.png')))
+                assert np.array_equal(refs[ids['06_reliefs']].array,np.array(image(S/name/'reliefs.png')))
             for i,ref in enumerate(refs):
                 assert np.array_equal(np.array(ref.at(0)),np.array(ref.at(frames)))
                 if ref.spec and ref.spec['kind']=='stars':
@@ -77,9 +80,26 @@ def verify():
                     assert not np.array_equal(np.array(ref.at(0)),np.array(ref.at(ref.period//2)))
                     key=m['calques'][i]['id'];asset=f['palette_assets'][key]
                     verify_indexed(root/asset['aseprite_indexe'],indices.astype(np.uint8),spec['palettes'])
+            far=refs[ids['02_nuages_lointains']];near=refs[ids['03_nuages_proches']]
+            assert far.spec['step']==1 and near.spec['step']==2
+            for cloud in [far,near]:
+                assert cloud.spec['kind']=='scroll' and cloud.array[:,:,3].any()
+                assert np.array_equal(np.array(cloud.at(1)),np.roll(cloud.array,-cloud.spec['step'],axis=1))
+                assert not np.array_equal(np.array(cloud.at(0)),np.array(cloud.at(12)))
+                assert np.array_equal(np.roll(np.array(cloud.at(cloud.period-1)),-cloud.spec['step'],axis=1),np.array(cloud.at(0))), 'Raccord wrap incorrect'
+            if mode=='jour':
+                cloud_sum=Image.new('RGBA',size);cloud_sum.alpha_composite(far.at(0));cloud_sum.alpha_composite(near.at(0))
+                assert np.array_equal(np.array(cloud_sum),np.array(image(S/name/'nuages.png'))), 'Nuages perdus dans la séparation'
+            if name=='plateaux':
+                assert refs[ids['brume_wrap']].spec['kind']=='scroll'
+                brume=refs[ids['brume_wrap']].array
+                assert np.array_equal(brume[:,0],brume[:,-1]), 'Couture dans la mer de nuages'
             if name in ['etang','cascades']:
-                assert refs[4].spec['kind']==refs[6].spec['kind']==refs[7].spec['kind']=='palette_cycle'
-                assert refs[6].array[:,:,3].any() and refs[7].array[:,:,3].any()
+                assert refs[ids['05_eau_cycle']].spec['kind']==refs[ids['ecume']].spec['kind']=='palette_cycle'
+                for n in range(1,len(FLOW[name])+1):
+                    ref=refs[ids[f'cascade_{n:02d}']]
+                    assert ref.spec['kind']=='palette_cycle' and ref.array[:,:,3].any()
+                    assert ref.spec['phase_offset']==((n-1)*2)%8
             verify_ase(root/f['aseprite'],refs,size,frames,250)
             verify_tiled(root/f['tiled'],refs,size,frames,250)
             report['ambiances'].append({'id':mode,'PNG_Aseprite_Tiled':'identiques','frames_verifiees':frames,

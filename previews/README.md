@@ -18,3 +18,5 @@ Ces aperçus remplacent les anciennes captures nettoyées. Chaque GIF montre six
 - [Démonstration du palette cycling](palette_cycling_tt.gif) — indices immobiles à gauche, palette animée à droite.
 
 Les cartes d’indices et palettes sont livrées avec les PNG, les Aseprite indexés et les compositions Aseprite/Tiled. Génération des GIFs : `python source/export_nouveaux_gifs.py` puis `python source/export_palette_demo.py`.
+
+Les GIFs des quatre zones incluent désormais les deux vitesses de wrap des nuages et les cycles indépendants des chutes. Les prairies ont aussi leur nappe de nuages mobile.

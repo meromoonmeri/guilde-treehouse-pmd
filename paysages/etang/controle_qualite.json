@@ -4,21 +4,24 @@
     480,
     432
   ],
-  "calques": 10,
+  "calques": 12,
   "texture_treasure_town_controle_visuel": true,
   "plans_generes_separement": true,
   "indices_fixes": true,
   "palettes_animees": true,
   "cascades_et_ecume_separees": true,
+  "chaque_cascade_independante": true,
+  "nuages_deux_plans_wrap": true,
   "ambiances": [
     {
       "id": "jour",
       "PNG_Aseprite_Tiled": "identiques",
       "frames_verifiees": 480,
       "calques_cycling": [
-        "04_eau_cycle",
-        "06_cascades",
-        "07_ecume"
+        "05_eau_cycle",
+        "ecume",
+        "cascade_01",
+        "cascade_02"
       ]
     },
     {
@@ -26,9 +29,10 @@
       "PNG_Aseprite_Tiled": "identiques",
       "frames_verifiees": 480,
       "calques_cycling": [
-        "04_eau_cycle",
-        "06_cascades",
-        "07_ecume"
+        "05_eau_cycle",
+        "ecume",
+        "cascade_01",
+        "cascade_02"
       ]
     }
   ],

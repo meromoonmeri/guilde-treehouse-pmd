@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "id": "plateaux",
   "titre": "Prairies suspendues",
   "dimensions": [
@@ -11,11 +11,11 @@
     63,
     51
   ],
-  "base_start": 8,
+  "base_start": 9,
   "calques": [
     {
       "id": "00_ciel",
-      "nom": "Ciel — fond indépendant",
+      "nom": "Ciel — fond fixe",
       "anime": false
     },
     {
@@ -24,43 +24,48 @@
       "anime": true
     },
     {
-      "id": "02_nuages",
-      "nom": "Nuages — défilement",
+      "id": "02_nuages_lointains",
+      "nom": "Nuages lointains — wrap 4 px/s",
       "anime": true
     },
     {
-      "id": "03_fond_eau",
-      "nom": "Bassin / mer — fond fixe",
+      "id": "03_nuages_proches",
+      "nom": "Nuages proches — wrap 8 px/s",
+      "anime": true
+    },
+    {
+      "id": "04_fond_eau",
+      "nom": "Fond du bassin / de la mer",
       "anime": false
     },
     {
-      "id": "04_eau_cycle",
+      "id": "05_eau_cycle",
       "nom": "Eau — palette cycling",
       "anime": true
     },
     {
-      "id": "05_reliefs",
-      "nom": "Falaises et forêt du fond — texture TT",
+      "id": "06_reliefs",
+      "nom": "Reliefs et forêt du fond",
       "anime": false
     },
     {
-      "id": "06_cascades",
-      "nom": "Cascades — palette cycling",
+      "id": "brume_wrap",
+      "nom": "Mer de nuages — wrap overlay",
       "anime": true
     },
     {
-      "id": "07_ecume",
-      "nom": "Écume et rides — palette cycling",
+      "id": "ecume",
+      "nom": "Écume et rides — overlay cyclique",
       "anime": true
     },
     {
-      "id": "08_terrain",
-      "nom": "Terrain du premier plan — texture TT",
+      "id": "terrain",
+      "nom": "Terrain, prairie et chemin",
       "anime": false
     },
     {
-      "id": "09_vegetation",
-      "nom": "Végétation — overlay indépendant",
+      "id": "vegetation",
+      "nom": "Végétation — overlay fixe",
       "anime": false
     }
   ],
@@ -78,14 +83,15 @@
       "calques": {
         "00_ciel": "calques/jour/00_ciel.png",
         "01_astres": "calques/jour/01_astres.png",
-        "02_nuages": "calques/jour/02_nuages.png",
-        "03_fond_eau": "calques/jour/03_fond_eau.png",
-        "04_eau_cycle": "calques/jour/04_eau_cycle.png",
-        "05_reliefs": "calques/jour/05_reliefs.png",
-        "06_cascades": "calques/jour/06_cascades.png",
-        "07_ecume": "calques/jour/07_ecume.png",
-        "08_terrain": "calques/jour/08_terrain.png",
-        "09_vegetation": "calques/jour/09_vegetation.png"
+        "02_nuages_lointains": "calques/jour/02_nuages_lointains.png",
+        "03_nuages_proches": "calques/jour/03_nuages_proches.png",
+        "04_fond_eau": "calques/jour/04_fond_eau.png",
+        "05_eau_cycle": "calques/jour/05_eau_cycle.png",
+        "06_reliefs": "calques/jour/06_reliefs.png",
+        "brume_wrap": "calques/jour/brume_wrap.png",
+        "ecume": "calques/jour/ecume.png",
+        "terrain": "calques/jour/terrain.png",
+        "vegetation": "calques/jour/vegetation.png"
       },
       "composition": "compositions/jour.png",
       "base": "bases/jour_transparente.png",
@@ -93,25 +99,66 @@
       "aseprite": "aseprite/falaise_jour.aseprite",
       "tiled": "tiled/falaise_jour.tmj",
       "operations": {
-        "02_nuages": {
+        "02_nuages_lointains": {
           "kind": "scroll",
           "period": 504,
-          "prefix": "nuages",
+          "step": 1,
+          "prefix": "nuages_lointains",
+          "ase_linked_motion": true
+        },
+        "03_nuages_proches": {
+          "kind": "scroll",
+          "period": 252,
+          "step": 2,
+          "prefix": "nuages_proches",
+          "ase_linked_motion": true
+        },
+        "brume_wrap": {
+          "kind": "scroll",
+          "period": 504,
+          "step": 1,
+          "prefix": "brume",
           "ase_linked_motion": true
         }
       },
       "animations": {
-        "02_nuages": {
-          "atlas": "animations/nuages_jour.png",
+        "02_nuages_lointains": {
+          "atlas": "animations/nuages_lointains_jour.png",
           "period": 504,
           "columns": 8,
           "frame_size": [
             504,
-            92
+            82
+          ],
+          "offset": [
+            0,
+            27
+          ]
+        },
+        "03_nuages_proches": {
+          "atlas": "animations/nuages_proches_jour.png",
+          "period": 252,
+          "columns": 8,
+          "frame_size": [
+            504,
+            90
           ],
           "offset": [
             0,
             17
+          ]
+        },
+        "brume_wrap": {
+          "atlas": "animations/brume_jour.png",
+          "period": 504,
+          "columns": 8,
+          "frame_size": [
+            504,
+            124
+          ],
+          "offset": [
+            0,
+            123
           ]
         }
       },
@@ -121,14 +168,15 @@
       "calques": {
         "00_ciel": "calques/nuit/00_ciel.png",
         "01_astres": "calques/nuit/01_astres.png",
-        "02_nuages": "calques/nuit/02_nuages.png",
-        "03_fond_eau": "calques/nuit/03_fond_eau.png",
-        "04_eau_cycle": "calques/nuit/04_eau_cycle.png",
-        "05_reliefs": "calques/nuit/05_reliefs.png",
-        "06_cascades": "calques/nuit/06_cascades.png",
-        "07_ecume": "calques/nuit/07_ecume.png",
-        "08_terrain": "calques/nuit/08_terrain.png",
-        "09_vegetation": "calques/nuit/09_vegetation.png"
+        "02_nuages_lointains": "calques/nuit/02_nuages_lointains.png",
+        "03_nuages_proches": "calques/nuit/03_nuages_proches.png",
+        "04_fond_eau": "calques/nuit/04_fond_eau.png",
+        "05_eau_cycle": "calques/nuit/05_eau_cycle.png",
+        "06_reliefs": "calques/nuit/06_reliefs.png",
+        "brume_wrap": "calques/nuit/brume_wrap.png",
+        "ecume": "calques/nuit/ecume.png",
+        "terrain": "calques/nuit/terrain.png",
+        "vegetation": "calques/nuit/vegetation.png"
       },
       "composition": "compositions/nuit.png",
       "base": "bases/nuit_transparente.png",
@@ -136,10 +184,18 @@
       "aseprite": "aseprite/falaise_nuit.aseprite",
       "tiled": "tiled/falaise_nuit.tmj",
       "operations": {
-        "02_nuages": {
+        "02_nuages_lointains": {
           "kind": "scroll",
           "period": 504,
-          "prefix": "nuages",
+          "step": 1,
+          "prefix": "nuages_lointains",
+          "ase_linked_motion": true
+        },
+        "03_nuages_proches": {
+          "kind": "scroll",
+          "period": 252,
+          "step": 2,
+          "prefix": "nuages_proches",
           "ase_linked_motion": true
         },
         "01_astres": {
@@ -5340,6 +5396,13 @@
             36
           ],
           "moon_steady": true
+        },
+        "brume_wrap": {
+          "kind": "scroll",
+          "period": 504,
+          "step": 1,
+          "prefix": "brume",
+          "ase_linked_motion": true
         }
       },
       "animations": {
@@ -5356,34 +5419,61 @@
             1
           ]
         },
-        "02_nuages": {
-          "atlas": "animations/nuages_nuit.png",
+        "02_nuages_lointains": {
+          "atlas": "animations/nuages_lointains_nuit.png",
           "period": 504,
           "columns": 8,
           "frame_size": [
             504,
-            92
+            82
+          ],
+          "offset": [
+            0,
+            27
+          ]
+        },
+        "03_nuages_proches": {
+          "atlas": "animations/nuages_proches_nuit.png",
+          "period": 252,
+          "columns": 8,
+          "frame_size": [
+            504,
+            90
           ],
           "offset": [
             0,
             17
+          ]
+        },
+        "brume_wrap": {
+          "atlas": "animations/brume_nuit.png",
+          "period": 504,
+          "columns": 8,
+          "frame_size": [
+            504,
+            124
+          ],
+          "offset": [
+            0,
+            123
           ]
         }
       },
       "palette_assets": {}
     }
   },
-  "note": "Prairies suspendues — Terrasse haute à gauche, clairière basse et rampe naturelle vers la terrasse droite. Roches dans la texture de Treasure Town. Les plans ont leurs dessins propres ; eau, cascades et écume sont animées séparément par palettes.",
-  "badge": "Texture Treasure Town · plans séparés",
-  "animation_note": "Les pixels des plans d’eau restent en place : les entrées de palette cyclent. Nuages et étoiles ont leur animation propre. Les calques de terrain et de végétation restent fixes.",
+  "note": "Prairies suspendues — Terrasse haute à gauche, clairière basse et rampe naturelle vers la terrasse droite. Sommet et roche harmonisés avec la guilde et le cap. Chaque mouvement est séparé du décor fixe.",
+  "badge": "DA guilde / cap · overlays indépendants",
+  "animation_note": "Deux plans de nuages traversent le ciel en wrap continu à des vitesses différentes. Eau, chaque cascade et écume ont leur cycle propre ; le terrain reste fixe.",
   "regles": {
     "reference": "2cwdrrs469f61.gif",
     "structures": false,
     "layout_original": true,
     "intention": "Terrasse haute à gauche, clairière basse et rampe naturelle vers la terrasse droite.",
-    "texture": "Treasure Town — roche ocre stratifiée et pixel fin",
+    "texture": "DA des falaises de guilde et du cap approuvées",
     "plans_generes_separement": true,
-    "eau": "palette cycling sur cartes d’indices fixes",
+    "nuages": "deux overlays au-dessus du ciel, boucle horizontale sans couture",
+    "cascades": "un calque par chute, phases indépendantes",
     "collisions": "non intégrées"
   }
 }

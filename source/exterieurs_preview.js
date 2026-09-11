@@ -47,8 +47,8 @@ function draw(){
     if(op&&op.kind==='palette_cycle'){
       ctx.drawImage(paletteImage(id,op,variant),0,0);
     }else if(op&&op.kind==='scroll'){
-      const x=-(frame%op.period);ctx.drawImage(images[key],x,0);ctx.drawImage(images[key],x+width,0);
-    }else if(op&&op.kind==='waves'){
+      const x=-(frame%op.period)*(op.step||1);ctx.drawImage(images[key],x,0);ctx.drawImage(images[key],x+width,0);
+    }else if(op&&op.kind==='waves'&&!op.preview_exact){
       const [dx,dy,opacity]=op.phases[frame%op.period];ctx.save();ctx.globalAlpha=opacity/255;
       for(const xx of [-width,0,width])for(const yy of [-height,0,height])ctx.drawImage(images[key],dx+xx,dy+yy);
       ctx.restore();

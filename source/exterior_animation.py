@@ -72,7 +72,7 @@ class AnimatedLayer:
             return self.cache[phase]
         kind = self.spec['kind']
         if kind == 'scroll':
-            q = ImageChops.offset(self.image, -phase, 0)
+            q = ImageChops.offset(self.image, -phase*self.spec.get('step',1), 0)
         elif kind == 'stars':
             a = self.array.copy()
             levels = np.asarray(self.spec['levels'][phase], dtype=np.uint32)[self.groups]
@@ -144,7 +144,7 @@ def write_ase(path, operators, definitions, size, frames):
                     head=struct.pack('<HhhBHh',i,0,top,255,2,0)+b'\0'*5
                     chunks.append(_chunk(0x2005,head+struct.pack('<HH',wide.width,wide.height)+zlib.compress(wide.tobytes(),9)))
                 else:
-                    head=struct.pack('<HhhBHh',i,-phase,top,255,1,0)+b'\0'*5+struct.pack('<H',0)
+                    head=struct.pack('<HhhBHh',i,-phase*op.spec.get('step',1),top,255,1,0)+b'\0'*5+struct.pack('<H',0)
                     chunks.append(_chunk(0x2005,head))
                 continue
             if frame >= op.period:

@@ -42,7 +42,7 @@ class ReferenceLayer:
         if self.spec:
             kind = self.spec['kind']
             if kind == 'scroll':
-                a = np.roll(a, -phase, axis=1)
+                a = np.roll(a, -phase*self.spec.get('step',1), axis=1)
             elif kind == 'stars':
                 factors = np.array(self.spec['levels'][phase], dtype=np.uint32)[self.groups]
                 a[:, :, 3] = ((a[:, :, 3].astype(np.uint32)*factors+127)//255).astype('uint8')
@@ -121,7 +121,7 @@ def verify_ase(path, refs, size, count, duration):
                     assert linked < frame
                     sx, sy, q = history[linked, i]
                     if refs[i].spec and refs[i].spec.get('ase_linked_motion'):
-                        assert linked==0 and (x,y)==(-(frame%refs[i].period),sy)
+                        assert linked==0 and (x,y)==(-(frame%refs[i].period)*refs[i].spec.get('step',1),sy)
                     else:
                         assert linked==frame%refs[i].period
                         assert (x, y) == (sx, sy), (path, frame, i, 'Cel lié déplacé')

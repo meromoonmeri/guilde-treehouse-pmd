@@ -1,3 +1,7 @@
+# Version courante
+
+Voir **DA_GUILDE_CAP.md** : harmonisation au générateur, deux plans de nuages en wrap, mer de nuages séparée et un calque par cascade. Les notes ci-dessous décrivent la base de texture et le moteur de palettes, toujours utilisés.
+
 # Plans de zones et texture Treasure Town
 
 ## Sources graphiques retenues

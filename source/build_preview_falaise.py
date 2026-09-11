@@ -40,7 +40,7 @@ def build():
                 if spec['kind'] == 'palette_cycle':
                     palette_maps[key] = embed(Image.open(root / spec['indices']))
                     continue
-                if spec['kind'] in ['scroll', 'waves']:
+                if spec['kind']=='scroll' or (spec['kind']=='waves' and not spec.get('preview_exact')):
                     continue
                 info = f['animations'][key]
                 atlas = Image.open(root / info['atlas']).convert('RGBA')

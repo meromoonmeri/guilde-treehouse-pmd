@@ -9,7 +9,7 @@ R=Path(__file__).resolve().parents[1]
 
 def export():
     root=R/'paysages/cascades'
-    m=json.loads((root/'kit.json').read_text());spec=m['fichiers']['jour']['operations']['06_cascades']
+    m=json.loads((root/'kit.json').read_text());spec=m['fichiers']['jour']['operations']['cascade_01']
     ids=np.array(Image.open(root/spec['indices'])).astype(int)
     gray=np.rint(ids/max(1,ids.max())*255).astype('uint8')
     guide=Image.fromarray(gray).convert('RGB').resize((280,210),Image.Resampling.NEAREST)
