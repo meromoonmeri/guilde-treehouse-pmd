@@ -1,0 +1,28 @@
+{
+  "id": "littoral",
+  "dimensions": [
+    512,
+    320
+  ],
+  "calques": 6,
+  "structures_retirees_controle_visuel": true,
+  "recomposition_exacte": true,
+  "ambiances": [
+    {
+      "id": "jour",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 24
+    },
+    {
+      "id": "nuit",
+      "PNG_Aseprite_Tiled": "identiques",
+      "frames_verifiees": 24
+    }
+  ],
+  "comparaisons_navigateur": 12,
+  "erreur_max_premultiplie": 2.0,
+  "mobile_sans_debordement": true,
+  "hors_ligne": true,
+  "erreurs_js": [],
+  "requêtes_réseau": []
+}

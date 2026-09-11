@@ -36,3 +36,7 @@ Le quiz source tire huit questions dans une banque de dix-huit, possède treize 
 - API plein écran avec gestion du refus en iframe, et préférence de mouvement réduit.
 
 Les contrôles du nouveau module ont été exécutés sur des viewports 320 × 568, 390 × 844, 768 × 1024, 1280 × 720, 1920 × 1080 et 844 × 390. Le rapport machine indique les résultats du navigateur. La lecture du projet source ne vaut pas une validation de son exécution dans PMDO : aucun changement ni test moteur n’a été fait dans l’autre dépôt.
+
+## Recontrôle du 11 septembre 2026
+
+La branche distante fournie pointe toujours sur `e3fa166525d08202503200c77482a2c1cc9cabad`. Les fichiers `dxui.py`, `quizscreen.py`, `portalcam.py` et `build_halo_loop.py` ont été relus directement via GitHub : les dimensions ci-dessus sont confirmées. Le module web présent dans ce dépôt a été retesté : plein viewport, 36 phases, vraie sphère 3D, voyage/alternance de caméra à chaque question, fond multicolore, retour arrière, poids non affichés, iframe et mode de mouvement réduit passent. Aucun changement n’a été poussé dans l’autre dépôt.

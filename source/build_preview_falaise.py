@@ -27,7 +27,7 @@ def build():
         return hashes[digest]
 
     scenes = []
-    for directory, label in [('falaise', 'Prairie de la guilde'), ('sharpedo', 'Falaise côtière')]:
+    for directory, label in [('falaise', 'Prairie de la guilde'), ('sharpedo', 'Falaise côtière'), ('paysages/littoral', 'Cap du large'), ('paysages/plateaux', 'Plateaux fleuris'), ('paysages/etang', 'Étang de la forêt'), ('paysages/cascades', 'Cascades célestes')]:
         root = R / directory
         manifest = json.loads((root / 'kit.json').read_text(encoding='utf-8'))
         variants = {}
@@ -48,7 +48,7 @@ def build():
                 motion[key] = {'frames': frames, 'offset': info['offset']}
             variants[mode] = {'layers': [embed(q) for q in layers], 'empty': [q.getbbox() is None for q in layers],
                               'thumb': embed(Image.open(root / f['composition']), thumb=True), 'files': f, 'motion': motion}
-        scenes.append({'id': directory, 'directory': directory, 'label': label, 'manifest': manifest, 'variants': variants})
+        scenes.append({'id': manifest.get('id',directory), 'directory': directory, 'label': label, 'manifest': manifest, 'variants': variants})
     data = json.dumps({'scenes': scenes, 'assets': assets}, ensure_ascii=False, separators=(',', ':'))
     html = (R / 'source/exterieurs_preview.html').read_text(encoding='utf-8')
     html = html.replace('__STYLE__', (R / 'source/exterieurs_preview.css').read_text(encoding='utf-8'))

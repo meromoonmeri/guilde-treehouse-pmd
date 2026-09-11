@@ -6,7 +6,7 @@ import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 ENTRY = 'apercu_falaise.html'
-ALLOWED = {'apercu_falaise.html', 'apercu_reve.html', 'apercu_pmd.html', 'falaise', 'sharpedo', 'reve', 'previews'}
+ALLOWED = {'apercu_falaise.html', 'apercu_reve.html', 'apercu_pmd.html', 'falaise', 'sharpedo', 'reve', 'previews', 'paysages'}
 
 
 class Preview(SimpleHTTPRequestHandler):

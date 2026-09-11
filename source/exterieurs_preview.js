@@ -1,7 +1,7 @@
 'use strict';
 const $=s=>document.querySelector(s), canvas=$('#map'), ctx=canvas.getContext('2d');
 const names={jour:'Jour',nuit:'Nuit',crepuscule:'Crépuscule',aube:'Aube',soir:'Soir',orageux:'Orageux'}, images={};
-let scene=DATA.scenes.find(s=>s.id==='sharpedo')||DATA.scenes[0], M=scene.manifest, A=M.animation, mode='jour';
+let scene=DATA.scenes.find(s=>s.id==='littoral')||DATA.scenes[0], M=scene.manifest, A=M.animation, mode='jour';
 let width=M.dimensions[0],height=M.dimensions[1],vis=M.calques.map(()=>true);
 canvas.width=width;canvas.height=height;
 let frame=0,elapsed=0,speed=1,baseOnly=false,ready=false;
@@ -48,7 +48,7 @@ function update(){
   $('#title').textContent=scene.label+' · '+names[mode];$('#ambiance').value=mode;
   $('#stage').classList.toggle('magenta',baseOnly);$('#composite').classList.toggle('on',!baseOnly);$('#base').classList.toggle('on',baseOnly);
   $('#animation').textContent=running?'❚❚ Pause':'▶ Animer';$('#animation').setAttribute('aria-pressed',String(running));
-  const active=scene.id==='sharpedo'?'Nuages et vagues animés':'Nuages en mouvement';
+  const active=M.note?'Calques animés':(scene.id==='sharpedo'?'Nuages et vagues animés':'Nuages en mouvement');
   $('#status').textContent=running?active+(mode==='nuit'?' · étoiles scintillantes':''):'Animation en pause';
   $('#layers').replaceChildren();
   M.calques.forEach((layer,i)=>{
@@ -80,13 +80,13 @@ function menus(){
   $('#frame').max=String(A.frames-1);$('#end-time').textContent=(A.duree_boucle_ms/1000)+' s';
   $('#layer-title').textContent=M.calques.length+' calques indépendants';
   $('#documentation').href=scene.directory+'/README.md';$('#manifest').href=scene.directory+'/kit.json';
-  $('#badge').textContent=scene.id==='sharpedo'?'Prairie · mer en contrebas':'Prairie · escalier sud';
-  $('#scene-note').textContent=scene.id==='sharpedo'
+  $('#badge').textContent=M.badge||(scene.id==='sharpedo'?'Prairie · mer en contrebas':'Prairie · escalier sud');
+  $('#scene-note').textContent=M.note||(scene.id==='sharpedo'
     ?'Falaise côtière : rives et angles redessinés d’après les bordures de PMD Sky, adaptés au contour du cap. Le chemin reste ouvert à droite, sans bordure artificielle. Le tileset de 20 motifs est fourni ; la mer animée et la prairie intérieure restent inchangées.'
-    :'Falaise entière repassée au générateur avec la référence EoS : prairie, chemin, bordures et paroi harmonisés. L’escalier de référence reste inchangé. Aucun arbre, rocher ou mobilier ajouté sur le plateau.';
-  $('#animation-note').textContent=scene.id==='sharpedo'
+    :'Falaise entière repassée au générateur avec la référence EoS : prairie, chemin, bordures et paroi harmonisés. L’escalier de référence reste inchangé. Aucun arbre, rocher ou mobilier ajouté sur le plateau.');
+  $('#animation-note').textContent=M.animation_note||(scene.id==='sharpedo'
     ?'Les vagues avancent en 10 phases sur leur propre overlay : cycle de 2,5 secondes. Les nuages défilent et les étoiles scintillent la nuit. La lune, la prairie et la paroi restent fixes.'
-    :'Six familles de nuages : cumulus, bancs étirés, cirrus et fragments. Les étoiles scintillent par groupes la nuit, sur un cycle doux de 6 secondes. La lune et le terrain restent fixes.';
+    :'Six familles de nuages : cumulus, bancs étirés, cirrus et fragments. Les étoiles scintillent par groupes la nuit, sur un cycle doux de 6 secondes. La lune et le terrain restent fixes.');
 }
 function setScene(id){
   const selected=DATA.scenes.find(s=>s.id===id);if(!selected)throw new Error('Scène inconnue');

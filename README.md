@@ -1,9 +1,8 @@
 # Guilde Treehouse — passages ouverts PMD
 
-> **Deux extérieurs indépendants : [Prairie de la guilde](falaise/README.md) et [Falaise côtière](sharpedo/README.md).**
-> Sommets repeints au générateur, prairies avec chemins et bordures raccordées aux falaises.
-> Nuages variés, étoiles scintillantes la nuit et mer animée en overlay pour la falaise côtière.
-> [Ouvrir l’aperçu des deux scènes](apercu_falaise.html). Les douze salles et la terrasse restent inchangées.
+> **Six décors extérieurs en jour/nuit** : les deux falaises et [quatre nouvelles références sans structures](paysages/README.md).
+> [Ouvrir l’atelier des paysages](apercu_falaise.html) · [Rêve du test de personnalité en 3D](apercu_reve.html) · [Previews GIF](previews/README.md).
+> Les anciens intérieurs restent inchangés.
 
 ## Nouveau : rêve et test de personnalité plein écran
 

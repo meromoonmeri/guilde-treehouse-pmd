@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "id": "etang",
+  "titre": "Étang de la forêt",
+  "dimensions": [
+    456,
+    624
+  ],
+  "grille_px": 8,
+  "cellules": [
+    57,
+    78
+  ],
+  "base_start": 4,
+  "calques": [
+    {
+      "id": "00_fond",
+      "nom": "Ciel et arrière-plan",
+      "anime": false
+    },
+    {
+      "id": "01_astres",
+      "nom": "Lune fixe et étoiles nocturnes",
+      "anime": true
+    },
+    {
+      "id": "02_eau",
+      "nom": "Eau — fond",
+      "anime": false
+    },
+    {
+      "id": "03_effets",
+      "nom": "Reflets et cascades — overlay",
+      "anime": true
+    },
+    {
+      "id": "04_terrain",
+      "nom": "Terrain et végétation naturels",
+      "anime": false
+    },
+    {
+      "id": "05_decor",
+      "nom": "Structures — calque vide",
+      "anime": false
+    }
+  ],
+  "ambiances": [
+    "jour",
+    "nuit"
+  ],
+  "animation": {
+    "frames": 24,
+    "duree_image_ms": 250,
+    "duree_boucle_ms": 6000
+  },
+  "fichiers": {
+    "jour": {
+      "calques": {
+        "00_fond": "calques/jour/00_fond.png",
+        "01_astres": "calques/jour/01_astres.png",
+        "02_eau": "calques/jour/02_eau.png",
+        "03_effets": "calques/jour/03_effets.png",
+        "04_terrain": "calques/jour/04_terrain.png",
+        "05_decor": "calques/jour/05_decor.png"
+      },
+      "composition": "compositions/jour.png",
+      "base": "bases/jour_transparente.png",
+      "magenta": "bases/jour_magenta.png",
+      "aseprite": "aseprite/falaise_jour.aseprite",
+      "tiled": "tiled/falaise_jour.tmj",
+      "operations": {
+        "03_effets": {
+          "kind": "frames",
+          "period": 3,
+          "prefix": "cascades",
+          "source_frame_size": [
+            456,
+            624
+          ],
+          "source_columns": 3,
+          "source_atlas": "animations/source_effets_jour.png"
+        }
+      },
+      "animations": {
+        "03_effets": {
+          "atlas": "animations/cascades_jour.png",
+          "period": 3,
+          "columns": 3,
+          "frame_size": [
+            456,
+            310
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "nuit": {
+      "calques": {
+        "00_fond": "calques/nuit/00_fond.png",
+        "01_astres": "calques/nuit/01_astres.png",
+        "02_eau": "calques/nuit/02_eau.png",
+        "03_effets": "calques/nuit/03_effets.png",
+        "04_terrain": "calques/nuit/04_terrain.png",
+        "05_decor": "calques/nuit/05_decor.png"
+      },
+      "composition": "compositions/nuit.png",
+      "base": "bases/nuit_transparente.png",
+      "magenta": "bases/nuit_magenta.png",
+      "aseprite": "aseprite/falaise_nuit.aseprite",
+      "tiled": "tiled/falaise_nuit.tmj",
+      "operations": {
+        "03_effets": {
+          "kind": "frames",
+          "period": 3,
+          "prefix": "cascades",
+          "source_frame_size": [
+            456,
+            624
+          ],
+          "source_columns": 3,
+          "source_atlas": "animations/source_effets_nuit.png"
+        }
+      },
+      "animations": {
+        "03_effets": {
+          "atlas": "animations/cascades_nuit.png",
+          "period": 3,
+          "columns": 3,
+          "frame_size": [
+            456,
+            310
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "note": "Étang de la forêt — référence redessinée au générateur, sans bâtiment, panneau, clôture ni installation. Arrière-plan, eau, effets et terrain sont séparés.",
+  "badge": "Jour / nuit · sans structures",
+  "animation_note": "Le terrain reste fixe. Les reflets ou cascades utilisent leur overlay ; les étoiles scintillent là où le ciel est visible.",
+  "regles": {
+    "reference": "pondourpmdàrefaire.png",
+    "structures": false,
+    "methode": "génération puis découpe et palettes",
+    "collisions": "non intégrées"
+  }
+}
