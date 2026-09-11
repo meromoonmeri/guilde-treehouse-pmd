@@ -1,0 +1,148 @@
+{
+  "id": "falaise_originale",
+  "dimensions": [
+    688,
+    384
+  ],
+  "grille_px": 8,
+  "fond_chroma_key": "#FF00FF",
+  "creation": "Cinq layers IA séparés; falaise et mer générées avec le placement/trait PMD demandé.",
+  "animation": {
+    "frames": 1032,
+    "duree_image_ms": 250,
+    "nuages_wrap_px": 344,
+    "mer_palette_frames": 24
+  },
+  "calques": [
+    {
+      "id": "00_ciel",
+      "nom": "Ciel ouvert sans nuage",
+      "anime": false
+    },
+    {
+      "id": "01_nuages_wrap",
+      "nom": "Nuages — wrap horizontal parfait",
+      "anime": true
+    },
+    {
+      "id": "02_mer_palette",
+      "nom": "Mer — cycle de palette",
+      "anime": true
+    },
+    {
+      "id": "03_plateaux_reliefs",
+      "nom": "Plateaux et reliefs naturels",
+      "anime": false
+    },
+    {
+      "id": "04_falaise",
+      "nom": "Falaise côtière naturelle",
+      "anime": false
+    }
+  ],
+  "fichiers": {
+    "original": {
+      "calques": {
+        "00_ciel": "calques/original/00_ciel.png",
+        "01_nuages_wrap": "calques/original/01_nuages_wrap.png",
+        "02_mer_palette": "calques/original/02_mer_palette.png",
+        "03_plateaux_reliefs": "calques/original/03_plateaux_reliefs.png",
+        "04_falaise": "calques/original/04_falaise.png"
+      },
+      "composition": "compositions/original.png",
+      "base": "bases/original_transparente.png",
+      "magenta": "bases/original_magenta.png",
+      "aseprite": "aseprite/falaise_originale_original.aseprite",
+      "tiled": "tiled/falaise_originale_original.tmj",
+      "operations": {
+        "01_nuages_wrap": {
+          "kind": "scroll",
+          "period": 344,
+          "prefix": "nuages_wrap",
+          "vitesse_px_par_image": -1,
+          "wrap_horizontal_parfait": true
+        },
+        "02_mer_palette": {
+          "kind": "frames",
+          "period": 24,
+          "prefix": "mer_palette",
+          "source_atlas": "animations/source_mer_palette.png",
+          "source_frame_size": [
+            688,
+            384
+          ],
+          "source_columns": 6,
+          "palette_only": true
+        }
+      },
+      "animations": {
+        "01_nuages_wrap": {
+          "atlas": "animations/nuages_wrap_original.png",
+          "period": 344,
+          "columns": 8,
+          "frame_size": [
+            688,
+            128
+          ],
+          "offset": [
+            0,
+            69
+          ]
+        },
+        "02_mer_palette": {
+          "atlas": "animations/mer_palette_original.png",
+          "period": 24,
+          "columns": 8,
+          "frame_size": [
+            688,
+            247
+          ],
+          "offset": [
+            0,
+            137
+          ]
+        }
+      },
+      "calques_magentas": {
+        "00_ciel": "calques_magentas/original/00_ciel.png",
+        "01_nuages_wrap": "calques_magentas/original/01_nuages_wrap.png",
+        "02_mer_palette": "calques_magentas/original/02_mer_palette.png",
+        "03_plateaux_reliefs": "calques_magentas/original/03_plateaux_reliefs.png",
+        "04_falaise": "calques_magentas/original/04_falaise.png"
+      },
+      "cycle_mer_magentas": [
+        "cycles_magentas/mer_palette/mer_palette_00.png",
+        "cycles_magentas/mer_palette/mer_palette_01.png",
+        "cycles_magentas/mer_palette/mer_palette_02.png",
+        "cycles_magentas/mer_palette/mer_palette_03.png",
+        "cycles_magentas/mer_palette/mer_palette_04.png",
+        "cycles_magentas/mer_palette/mer_palette_05.png",
+        "cycles_magentas/mer_palette/mer_palette_06.png",
+        "cycles_magentas/mer_palette/mer_palette_07.png",
+        "cycles_magentas/mer_palette/mer_palette_08.png",
+        "cycles_magentas/mer_palette/mer_palette_09.png",
+        "cycles_magentas/mer_palette/mer_palette_10.png",
+        "cycles_magentas/mer_palette/mer_palette_11.png",
+        "cycles_magentas/mer_palette/mer_palette_12.png",
+        "cycles_magentas/mer_palette/mer_palette_13.png",
+        "cycles_magentas/mer_palette/mer_palette_14.png",
+        "cycles_magentas/mer_palette/mer_palette_15.png",
+        "cycles_magentas/mer_palette/mer_palette_16.png",
+        "cycles_magentas/mer_palette/mer_palette_17.png",
+        "cycles_magentas/mer_palette/mer_palette_18.png",
+        "cycles_magentas/mer_palette/mer_palette_19.png",
+        "cycles_magentas/mer_palette/mer_palette_20.png",
+        "cycles_magentas/mer_palette/mer_palette_21.png",
+        "cycles_magentas/mer_palette/mer_palette_22.png",
+        "cycles_magentas/mer_palette/mer_palette_23.png"
+      ]
+    }
+  },
+  "sources": {
+    "00_ciel_genere.png": "92c034ec9c80d684367f48605b73de17d49ce1ce2f13d7d87c2ab9d560960eef",
+    "02_nuages_genere.png": "b526fdf43095a0afb9bb5b355f846fa2f9e7d66cc7488cf63c54ebafb717fb07",
+    "01_mer_generee.png": "5631e22472aa82375a8e1d0eac08f4c8ba285eb26fdede4a41e687f0bbbfe1de",
+    "03_plateaux_reliefs_generes.png": "d550d88ee990398bdc7e28f0b7c1317caa6d9cfb7351a3d511a10b8143ef87b5",
+    "04_falaise_generee.png": "7d55fe90857c619718f2bf8e7a97f519ec473158450884dfa39977943513e363"
+  }
+}
