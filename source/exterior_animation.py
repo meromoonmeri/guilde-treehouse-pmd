@@ -62,6 +62,7 @@ class AnimatedLayer:
         self.cache = {}
         self.groups = np.array(Image.open(root / spec['groups'])).astype(int) if spec and spec['kind'] == 'stars' else None
         self.source_atlas = Image.open(root / spec['source_atlas']).convert('RGBA') if spec and spec['kind'] == 'frames' else None
+        self.indices = np.array(Image.open(root / spec['indices'])).astype(int) if spec and spec['kind'] == 'palette_cycle' else None
 
     def at(self, frame):
         if not self.spec:
@@ -78,6 +79,8 @@ class AnimatedLayer:
             a[:, :, 3] = ((a[:, :, 3].astype(np.uint32)*levels+127)//255).astype('uint8')
             a[a[:, :, 3] == 0] = 0
             q = Image.fromarray(a)
+        elif kind == 'palette_cycle':
+            q = Image.fromarray(np.asarray(self.spec['palettes'][phase], dtype=np.uint8)[self.indices])
         elif kind == 'frames':
             width, height = self.spec['source_frame_size']
             x = (phase % self.spec['source_columns'])*width
@@ -132,6 +135,18 @@ def write_ase(path, operators, definitions, size, frames):
             chunks.append(_chunk(0x2018, struct.pack('<H', 1)+b'\0'*8+tag))
         for i, op in enumerate(operators):
             phase = frame % op.period
+            if op.spec and op.spec.get('ase_linked_motion'):
+                assert op.spec['kind'] == 'scroll'
+                box=op.image.getbbox();top,bottom=box[1],box[3]
+                if frame==0:
+                    width=size[0];strip=op.image.crop((0,top,width,bottom))
+                    wide=Image.new('RGBA',(width*2,bottom-top));wide.paste(strip,(0,0));wide.paste(strip,(width,0))
+                    head=struct.pack('<HhhBHh',i,0,top,255,2,0)+b'\0'*5
+                    chunks.append(_chunk(0x2005,head+struct.pack('<HH',wide.width,wide.height)+zlib.compress(wide.tobytes(),9)))
+                else:
+                    head=struct.pack('<HhhBHh',i,-phase,top,255,1,0)+b'\0'*5+struct.pack('<H',0)
+                    chunks.append(_chunk(0x2005,head))
+                continue
             if frame >= op.period:
                 x, y = positions[i, phase]
                 data = struct.pack('<HhhBHh', i, x, y, 255, 1, 0)+b'\0'*5+struct.pack('<H', phase)

@@ -1,6 +1,6 @@
 # Guilde Treehouse — passages ouverts PMD
 
-> **Six décors extérieurs en jour/nuit** : les deux falaises et [quatre nouvelles références sans structures](paysages/README.md).
+> **Six décors extérieurs en jour/nuit, dont quatre zones à palette cycling** : les deux falaises et [quatre zones à plans séparés — texture Treasure Town](paysages/README.md).
 > [Ouvrir l’atelier des paysages](apercu_falaise.html) · [Rêve du test de personnalité en 3D](apercu_reve.html) · [Previews GIF](previews/README.md).
 > Les anciens intérieurs restent inchangés.
 

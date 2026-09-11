@@ -11,7 +11,7 @@ S=R/'source/zones_treasure_town'
 F=R/'source/falaise'
 FLOW={'etang':[(0,135,70,14,145),(0,252,89,15,144)],
       'cascades':[(0,178,118,17,230),(0,272,205,16,144),(1,394,161,30,190)]}
-RIPPLES={'etang':[(4,171,258,70,18),(3,255,274,55,17)],'cascades':[(4,224,374,129,20),(3,389,365,80,20)]}
+RIPPLES={'etang':[(4,171,258,70,18),(4,255,274,55,17)],'cascades':[(4,224,374,129,20),(4,389,365,80,20)]}
 PLANTS={
  'littoral':[(0,35,211,18,17),(1,53,310,19,18),(2,215,177,18,16)],
  'plateaux':[(i%4,x,y,19,18) for i,(x,y) in enumerate([(25,170),(65,167),(110,184),(40,217),(91,239),(26,283),(58,315),(24,365),(144,295),(173,365),(288,333),(327,381),(401,206),(449,232),(389,288),(462,333),(445,371)])],
@@ -83,17 +83,20 @@ def prepare():
                 a=np.array(texture);v=a[:,:,:3].astype(float);row=np.median(v,axis=1)[:,None,:]
                 a[:,:,:3]=np.rint(ref+(v-row)*.55).clip(0,255).astype('uint8');texture=Image.fromarray(a)
             water.alpha_composite(texture,(0,y));create(water,'surface',d,'eau')
-        else:save(water,d/'eau_native.png')
-        effects=Image.new('RGBA',size)
+        else:
+            save(water,d/'eau_native.png');save(water,d/'eau_fond.png')
+        effects=Image.new('RGBA',size);foam=Image.new('RGBA',size)
         for sid,x,y,bw,bh in FLOW.get(name,[]):
             sprite=water_parts[sid];aa=np.array(sprite);cut=int(sprite.height*.72);active=aa[:cut,:,3]>0;xx=np.where(active.any(0))[0]
             body=sprite.crop((int(xx.min()),0,int(xx.max()+1),cut)).resize((bw,bh),Image.Resampling.NEAREST)
             effects.alpha_composite(body,(x,y))
             foot=sprite.crop((0,cut,sprite.width,sprite.height));foot=foot.crop(foot.getbbox()).resize((bw*3,max(12,bw)),Image.Resampling.NEAREST)
-            effects.alpha_composite(foot,(x-bw,y+bh-5))
-        for sid,x,y,bw,bh in RIPPLES.get(name,[]):effects.alpha_composite(water_parts[sid].resize((bw,bh),Image.Resampling.NEAREST),(x,y))
+            foam.alpha_composite(foot,(x-bw,y+bh-5))
+        for sid,x,y,bw,bh in RIPPLES.get(name,[]):foam.alpha_composite(water_parts[sid].resize((bw,bh),Image.Resampling.NEAREST),(x,y))
         if effects.getbbox():create(effects,'cascade',d,'cascades')
         else:save(effects,d/'cascades_native.png')
+        if foam.getbbox():create(foam,'foam',d,'ecume')
+        else:save(foam,d/'ecume_native.png')
         (d/'placements.json').write_text(json.dumps({'vegetation':placed,'cascades':FLOW.get(name,[]),'reflets':RIPPLES.get(name,[])},ensure_ascii=False,indent=2)+'\n')
         print(name,'— texture TT, plans indépendants, cartes d’indices de cycling',flush=True)
 

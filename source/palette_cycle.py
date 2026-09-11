@@ -19,6 +19,7 @@ def create(image, role, directory, prefix):
     q=Image.fromarray(a[:,:,:3]).quantize(colors=32,dither=Image.Dither.NONE)
     ids=np.array(q).astype('uint8')+1;ids[~opaque]=0
     fixed=np.array(q.getpalette()[:96],np.uint8).reshape(32,3)
+    original_ids=ids.copy()
     yy,xx=np.indices((h,w))
     if role=='surface':
         median=cv2.medianBlur(a[:,:,:3],5)
@@ -31,6 +32,17 @@ def create(image, role, directory, prefix):
         base=np.median(a[opaque,:3],axis=0)
         ramp=np.rint(WATER_RAMP*.45+base*.55).clip(0,255).astype('uint8')
         period=24;hold=3
+    elif role=='foam':
+        # Suivre les couleurs du sprite plutôt qu'imposer des rayures diagonales
+        # qui transformeraient un petit anneau de rides en disque lumineux.
+        lum=a[:,:,:3].astype(float)@np.array([.2126,.7152,.0722])
+        threshold=float(np.percentile(lum[opaque],55))
+        cycle=opaque&(lum>=threshold)
+        level=np.rint((lum[cycle]-threshold)/max(1,255-threshold)*7).clip(0,7).astype('uint8')
+        ids[cycle]=33+level
+        ramp=np.array([(120,223,242),(154,236,250),(190,246,254),(244,255,255),
+                       (217,252,255),(177,241,252),(139,230,246),(104,214,235)],np.uint8)
+        period=8;hold=1
     else:
         light=np.rint(a[:,:,:3].mean(2)/48).astype(int)
         # Bandes fixes le long des rubans. La palette les fait avancer vers le bas.
@@ -42,6 +54,11 @@ def create(image, role, directory, prefix):
         shift=f//hold
         table.extend([list(map(int,ramp[(i-shift)%8]))+[255] for i in range(8)])
         palettes.append(table)
+    if role=='surface':
+        table=np.concatenate([np.zeros((1,4),np.uint8),np.column_stack([fixed,np.full(32,255,np.uint8)])])
+        Image.fromarray(table[original_ids]).save(directory/(prefix+'_fond.png'),optimize=True)
+        # La surface cyclique ne duplique pas le fond : indice 0 en dehors des reflets.
+        ids[~cycle]=0
     Image.fromarray(ids).save(directory/(prefix+'_indices.png'),optimize=True)
     data={'kind':'palette_cycle','period':period,'prefix':prefix,'indices':prefix+'_indices.png',
           'palettes':palettes,'cycled_indices':list(range(33,41)),

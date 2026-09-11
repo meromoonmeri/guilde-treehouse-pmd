@@ -1,53 +1,70 @@
-# Nouvelles références — jour/nuit sans structures
+# Zones originales — texture Treasure Town et palette cycling
 
-Les images ajoutées dans les commits `6cf427c` et `bc3afc6` ont été traitées par la méthode du projet : **dessin au générateur**, normalisation au plus proche voisin, séparation en calques RGBA, variantes d’ambiance et exports éditables.
+Cette version remplace la première tentative trop proche des captures nettoyées. Les références servent de **direction artistique** ; les quatre zones ont de nouveaux layouts et des **plans dessinés séparément**, comme la guilde et la falaise côtière.
 
-[Ouvrir l’aperçu des six décors](../apercu_falaise.html) · [Ouvrir le rêve du test de personnalité](../apercu_reve.html)
+[Ouvrir les zones](../apercu_falaise.html) · [Démonstration du vrai cycling](../previews/palette_cycling_tt.gif)
 
-| Décor | Format natif | Référence fournie | GIF |
-|---|---|---|---|
-| [Cap du large](littoral/README.md) | 512 × 320 | `anothercliff reference to made.jpg` + référence de nuit du poste Bekipan | [Jour/nuit](../previews/littoral_jour_nuit.gif) |
-| [Plateaux fleuris](plateaux/README.md) | 504 × 504 | `2cwdrrs469f61.gif` | [Jour/nuit](../previews/plateaux_jour_nuit.gif) |
-| [Étang de la forêt](etang/README.md) | 456 × 624 | `pondourpmdàrefaire.png` | [Jour/nuit](../previews/etang_jour_nuit.gif) |
-| [Cascades célestes](cascades/README.md) | 592 × 448 | `232024.png` | [Jour/nuit](../previews/cascades_jour_nuit.gif) |
+| Zone | Dimensions | Layout |
+|---|---|---|
+| [Cap des Alizés](littoral/README.md) | 504 × 384 | Cap en arc, arrivée sud-ouest, belvédère à l’est |
+| [Prairies suspendues](plateaux/README.md) | 504 × 408 | Terrasses asymétriques, clairière et rampe naturelle |
+| [Clairière des sources](etang/README.md) | 480 × 432 | Étang décalé, rive est, deux chutes dans une paroi boisée |
+| [Ressauts célestes](cascades/README.md) | 576 × 432 | Deux hauteurs rocheuses, bassin central et berges au premier plan |
 
-## Contenu
+La roche suit la texture de **Treasure Town** : strates ocres, petits éclats et ombres rose-brun en pixel fin. Les grands blocs gris facettés de l’essai précédent ne sont plus utilisés. Les bâtiments, panneaux, clôtures et installations ne sont pas réintroduits.
 
-Chaque décor existe en **jour et nuit**, avec six emplacements de calques :
+## Dix plans
 
-1. Arrière-plan / ciel et lointains.
-2. Astres nocturnes, quand le ciel est visible.
-3. Eau.
-4. Reflets et cascades en overlay animé.
-5. Terrain, roches et végétation naturels.
-6. Emplacement de structures, **vide**.
+1. Ciel indépendant.
+2. Lune fixe et étoiles scintillantes.
+3. Nuages en défilement continu.
+4. Fond du bassin ou de la mer, fixe.
+5. **Surface de l’eau : palette cycling.**
+6. Reliefs/forêt du fond.
+7. **Cascades : palette cycling distinct.**
+8. **Écume et rides : palette cycling distinct.**
+9. Terrain/chemins du premier plan.
+10. Végétation en overlay masquable.
 
-La maison-poste, son visage/toit, les panneaux, clôtures, poteaux, souches décoratives, plateforme artificielle et chaîne de pas de l’étang ont été retirés. Les fleurs, arbres, roseaux et formations rocheuses naturelles restent là où ils constituent le paysage. Le massif des cascades est une formation naturelle, pas un bâtiment ajouté.
+Les plans inutiles à une zone restent vides. Ce ne sont pas neuf/dix découpes d’une seule capture : terrains, arrière-plans rocheux et banques de végétation/eau ont leurs propres dessins. Les ciels et nuages partagent les éléments déjà retenus dans le projet.
 
-Le cap du large possède un **nouveau fond de nuit généré**, pleine lune et reflet marin compris. Les trois autres nuits sont des palettes appliquées aux mêmes géométries ; les astres sont ajoutés séparément lorsque le cadrage montre du ciel. Les glyphes de lune ne sont pas étirés pour remplir le cadre.
+## Ce que signifie ici « palette cycling »
 
-Les arrière-plans peints peuvent contenir leurs nuages : ils ne sont pas tous découpés nuage par nuage. Les cartes sont des compositions graphiques fixes avec effets, pas des terrains procéduraux ou des cartes de navigation PMDO.
+Une image d’**indices fixes** est associée à une table de couleurs. Les entrées réservées changent selon les frames, mais les pixels de la carte et sa silhouette ne se déplacent pas. Le fond de l’eau reste visible sous ce plan. Les cascades et l’écume ont leurs propres cartes et palettes.
 
-## Fichiers et animation
+- Surface : 24 images à 250 ms, soit 6 s ; huit états de palette tenus trois images.
+- Cascades et écume : huit états à 250 ms, soit 2 s.
+- Nuages : un pixel par image, boucle sur la largeur de la zone.
+- Étoiles : cycle de 6 s, lune exclue du scintillement.
+- Boucles globales : 126 s pour le cap et les prairies, 120 s pour l’étang, 144 s pour les ressauts.
 
-Dans chaque sous-dossier : `calques/`, `compositions/`, `bases/`, `animations/`, `aseprite/`, `tiled/`, `kit.json` et `controle_qualite.json`.
+Les surfaces terrestres et les éléments de végétation restent fixes. Le mode de mouvement réduit démarre l’aperçu en pause.
 
-- PNG RGBA natifs, sans légende.
-- Deux Aseprite et deux cartes Tiled avec les mêmes compositions.
-- Boucle de **24 images à 250 ms**, soit 6 s. Les petits cycles de cascades ont trois phases, répétées dans cette boucle ; les reflets marins ont 24 phases. Les étoiles scintillent, avec lune fixe.
-- Le jour des plateaux fleuris est volontairement fixe ; les astres animent sa nuit.
-- Les GIF montrent six secondes de jour puis six secondes de nuit. Leur légende est extérieure au dessin de jeu, et ils sont réduits pour GitHub.
+## Fichiers
 
-Conserver les atlas avec les cartes Tiled. Les compositions sont validées par lecture et recomposition, pas par une ouverture dans les interfaces des éditeurs. Aucune collision, transition ou intégration `.rsground` native n’est annoncée.
+- `calques/` : PNG RGBA des plans, dans les deux ambiances.
+- `compositions/`, `bases/` : rendus et premier plan transparent/magenta.
+- `animations/*_indices.png` : cartes d’indices, pas des images à afficher telles quelles.
+- `animations/*_palettes_*.json` : palettes et entrées réservées au cycling.
+- **`aseprite_indexe/`** : vrais Aseprite 8 bits ; carte fixe, cels liés, chunks de palette différents par frame.
+- `aseprite/` : scènes complètes RGBA, avec les mêmes phases rendues. Le défilement des nuages utilise des cels liés déplacés plutôt que des centaines de duplications.
+- `tiled/` : image layers et animations de tuiles correspondant aux mêmes phases.
 
-## Reconstruire
+L’aperçu reconstruit le cycling directement depuis les indices et les palettes ; il ne simule pas ce mouvement par un simple déplacement d’image. Le bouton **Cycling indexé Aseprite** télécharge l’animation indexée de l’eau ; les cascades et l’écume sont disponibles dans le même dossier.
+
+Les bases isolent le premier plan. Conserver les atlas et les données d’animation avec les cartes. Ce sont des ressources graphiques éditables, pas des collisions ou des transitions PMDO intégrées.
+
+## Reconstruction et contrôle
 
 ```bash
-python source/prepare_paysages_nouveaux.py
-python source/rebuild_paysages_nouveaux.py
+python source/prepare_zones_tt.py
+python source/rebuild_zones_tt.py
 python source/build_preview_falaise.py
-python source/verify_paysages_nouveaux.py
+python source/verify_zones_tt.py
 python source/export_nouveaux_gifs.py
+python source/export_palette_demo.py
 ```
 
-Les natives retenues et les masques sont dans `source/paysages_nouveaux/`. La préparation ne rappelle pas le générateur. Voir la provenance pour les recadrages et limites des calques.
+Les anciennes commandes `prepare_paysages_nouveaux.py`, `rebuild_paysages_nouveaux.py` et `verify_paysages_nouveaux.py` redirigent désormais vers cette méthode. L’ancien détourage d’une composition complète est conservé seulement dans l’historique Git.
+
+Les tests relisent les Aseprite indexés et RGBA, leurs palettes, les atlas Tiled, les compositions et les calques du navigateur. Ils vérifient que les indices, l’alpha et les entrées de palette fixes ne changent pas. Les dessins et la texture font aussi l’objet d’un contrôle visuel ; il n’y a pas de promesse d’identité pixel pour pixel avec le jeu original.

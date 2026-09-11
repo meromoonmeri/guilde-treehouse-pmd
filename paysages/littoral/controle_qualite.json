@@ -1,28 +1,38 @@
 {
   "id": "littoral",
   "dimensions": [
-    512,
-    320
+    504,
+    384
   ],
-  "calques": 6,
-  "structures_retirees_controle_visuel": true,
-  "recomposition_exacte": true,
+  "calques": 10,
+  "texture_treasure_town_controle_visuel": true,
+  "plans_generes_separement": true,
+  "indices_fixes": true,
+  "palettes_animees": true,
+  "cascades_et_ecume_separees": true,
   "ambiances": [
     {
       "id": "jour",
       "PNG_Aseprite_Tiled": "identiques",
-      "frames_verifiees": 24
+      "frames_verifiees": 504,
+      "calques_cycling": [
+        "04_eau_cycle"
+      ]
     },
     {
       "id": "nuit",
       "PNG_Aseprite_Tiled": "identiques",
-      "frames_verifiees": 24
+      "frames_verifiees": 504,
+      "calques_cycling": [
+        "04_eau_cycle"
+      ]
     }
   ],
   "comparaisons_navigateur": 12,
-  "erreur_max_premultiplie": 2.0,
-  "mobile_sans_debordement": true,
+  "erreur_max_premultiplie": 1.2863,
+  "terrain_fixe": true,
   "hors_ligne": true,
+  "mobile": true,
   "erreurs_js": [],
-  "requêtes_réseau": []
+  "requetes_reseau": []
 }

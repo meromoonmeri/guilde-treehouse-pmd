@@ -1,5 +1,6 @@
 'use strict';
 const $=s=>document.querySelector(s), canvas=$('#map'), ctx=canvas.getContext('2d');
+const cycleCache=new Map();
 const names={jour:'Jour',nuit:'Nuit',crepuscule:'Crépuscule',aube:'Aube',soir:'Soir',orageux:'Orageux'}, images={};
 let scene=DATA.scenes.find(s=>s.id==='littoral')||DATA.scenes[0], M=scene.manifest, A=M.animation, mode='jour';
 let width=M.dimensions[0],height=M.dimensions[1],vis=M.calques.map(()=>true);
@@ -17,6 +18,25 @@ function clock(){
   $('#time').textContent=`Image ${frame+1} / ${A.frames} · ${seconds} s`;
   $('#frame').value=String(frame);
 }
+function paletteImage(id,op,variant){
+  const key=scene.id+'/'+mode+'/'+id;
+  let item=cycleCache.get(key);
+  if(!item){
+    const input=document.createElement('canvas');input.width=width;input.height=height;
+    const c=input.getContext('2d',{willReadFrequently:true});c.drawImage(images[variant.palette_maps[id]],0,0);
+    const source=c.getImageData(0,0,width,height).data,indices=new Uint8Array(width*height);
+    for(let i=0;i<indices.length;i++)indices[i]=source[i*4];
+    const output=document.createElement('canvas');output.width=width;output.height=height;
+    const context=output.getContext('2d');item={indices,output,context,data:context.createImageData(width,height),phase:-1};cycleCache.set(key,item);
+  }
+  const phase=frame%op.period;
+  if(item.phase!==phase){
+    const palette=op.palettes[phase],data=item.data.data;
+    for(let i=0;i<item.indices.length;i++){const p=palette[item.indices[i]],n=i*4;data[n]=p[0];data[n+1]=p[1];data[n+2]=p[2];data[n+3]=p[3]}
+    item.context.putImageData(item.data,0,0);item.phase=phase;
+  }
+  return item.output;
+}
 function draw(){
   if(!ready)return;
   ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,width,height);
@@ -24,7 +44,9 @@ function draw(){
   variant.layers.forEach((key,i)=>{
     if(!vis[i]||(baseOnly&&i<M.base_start))return;
     const id=M.calques[i].id,op=variant.files.operations[id];
-    if(op&&op.kind==='scroll'){
+    if(op&&op.kind==='palette_cycle'){
+      ctx.drawImage(paletteImage(id,op,variant),0,0);
+    }else if(op&&op.kind==='scroll'){
       const x=-(frame%op.period);ctx.drawImage(images[key],x,0);ctx.drawImage(images[key],x+width,0);
     }else if(op&&op.kind==='waves'){
       const [dx,dy,opacity]=op.phases[frame%op.period];ctx.save();ctx.globalAlpha=opacity/255;
@@ -56,7 +78,7 @@ function update(){
     label.className='layer'+(empty?' empty':'');check.type='checkbox';check.dataset.layer=i;
     check.disabled=empty;check.checked=!empty&&vis[i]&&!(baseOnly&&i<M.base_start);check.setAttribute('aria-label',layer.nom);
     check.onchange=()=>{vis[i]=check.checked;if(i<M.base_start&&check.checked)baseOnly=false;update()};text.textContent=layer.nom;label.append(check,text);
-    if(empty||scene.variants[mode].files.operations[layer.id]){const tag=document.createElement('small');tag.textContent=empty?'vide':'animé';label.append(tag)}
+    if(empty||scene.variants[mode].files.operations[layer.id]){const tag=document.createElement('small');tag.textContent=empty?'vide':(scene.variants[mode].files.operations[layer.id]?.kind==='palette_cycle'?'cycling':'animé');label.append(tag)}
     $('#layers').append(label);
   });
   document.querySelectorAll('.variant').forEach(b=>b.classList.toggle('on',b.dataset.mode===mode));
@@ -65,6 +87,7 @@ function update(){
   const f=scene.variants[mode].files;
   $('#png').href=scene.directory+'/'+f.composition;$('#ase').href=scene.directory+'/'+f.aseprite;$('#tiled').href=scene.directory+'/'+f.tiled;
   $('#tileset').hidden=!f.tileset_bordures;if(f.tileset_bordures)$('#tileset').href=scene.directory+'/'+f.tileset_bordures.png;
+  const firstCycle=Object.values(f.palette_assets||{})[0];$('#cycling').hidden=!firstCycle;if(firstCycle)$('#cycling').href=scene.directory+'/'+firstCycle.aseprite_indexe;
   fit();draw();
 }
 function menus(){

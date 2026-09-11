@@ -7,13 +7,14 @@ Les GIF sont des aperçus compressés ; les fichiers HTML autonomes et les PNG/A
 
 Reconstruction : `python source/export_previews_gif.py`, avec Playwright/Chromium et imageio-ffmpeg installés.
 
-## Nouvelles références de paysages
+## Zones Treasure Town — layouts et calques créés séparément
 
-Chaque GIF présente six secondes de jour puis six secondes de nuit. Les images identiques peuvent être regroupées par l’encodeur sans modifier la durée totale de 12 s.
+Ces aperçus remplacent les anciennes captures nettoyées. Chaque GIF montre six secondes de jour puis six secondes de nuit.
 
-- [Cap du large](littoral_jour_nuit.gif) — 384 × 264, pleine lune et reflets nocturnes.
-- [Plateaux fleuris](plateaux_jour_nuit.gif) — 384 × 408, terrain fixe et étoiles nocturnes.
-- [Étang de la forêt](etang_jour_nuit.gif) — 320 × 462, cascades et reflets.
-- [Cascades célestes](cascades_jour_nuit.gif) — 384 × 315, flux séparés du terrain.
+- [Cap des Alizés](littoral_jour_nuit.gif) — 384 × 317.
+- [Prairies suspendues](plateaux_jour_nuit.gif) — 384 × 335.
+- [Clairière des sources](etang_jour_nuit.gif) — 320 × 312.
+- [Ressauts célestes](cascades_jour_nuit.gif) — 384 × 312.
+- [Démonstration du palette cycling](palette_cycling_tt.gif) — indices immobiles à gauche, palette animée à droite.
 
-Les légendes et marges de GIF ne font pas partie des PNG de jeu. Reconstruction : `python source/export_nouveaux_gifs.py`.
+Les cartes d’indices et palettes sont livrées avec les PNG, les Aseprite indexés et les compositions Aseprite/Tiled. Génération des GIFs : `python source/export_nouveaux_gifs.py` puis `python source/export_palette_demo.py`.

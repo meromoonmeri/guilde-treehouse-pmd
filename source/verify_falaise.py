@@ -32,6 +32,7 @@ class ReferenceLayer:
         self.cache = {}
         self.groups = np.array(Image.open(root / spec['groups'])).astype(int) if spec and spec['kind'] == 'stars' else None
         self.source_atlas = image(root / spec['source_atlas']) if spec and spec['kind'] == 'frames' else None
+        self.indices = np.array(Image.open(root / spec['indices'])).astype(int) if spec and spec['kind'] == 'palette_cycle' else None
 
     def at(self, frame):
         phase = frame % self.period
@@ -45,6 +46,8 @@ class ReferenceLayer:
             elif kind == 'stars':
                 factors = np.array(self.spec['levels'][phase], dtype=np.uint32)[self.groups]
                 a[:, :, 3] = ((a[:, :, 3].astype(np.uint32)*factors+127)//255).astype('uint8')
+            elif kind == 'palette_cycle':
+                a = np.asarray(self.spec['palettes'][phase], dtype=np.uint8)[self.indices]
             elif kind == 'frames':
                 w, h = self.spec['source_frame_size']
                 col, row = phase % self.spec['source_columns'], phase//self.spec['source_columns']
@@ -103,16 +106,25 @@ def verify_ase(path, refs, size, count, duration):
                     q = Image.frombytes('RGBA', (w, h), zlib.decompress(d[20:]))
                     target = refs[i].at(frame)
                     box = target.getbbox()
-                    xy = box[:2] if box else (0, 0)
-                    cropped = target.crop(box) if box else Image.new('RGBA', (1, 1))
+                    if refs[i].spec and refs[i].spec.get('ase_linked_motion'):
+                        assert frame==0 and refs[i].spec['kind']=='scroll'
+                        band=target.crop((0,box[1],size[0],box[3]));cropped=Image.new('RGBA',(size[0]*2,band.height))
+                        cropped.paste(band,(0,0));cropped.paste(band,(size[0],0));xy=(0,box[1])
+                    else:
+                        xy = box[:2] if box else (0, 0)
+                        cropped = target.crop(box) if box else Image.new('RGBA', (1, 1))
                     assert (x, y) == xy, (path, frame, i, 'Position du cel')
                     equal(q, cropped, (path, frame, i, 'Pixels du cel'))
                 else:
                     assert typ == 1
                     linked = struct.unpack_from('<H', d, 16)[0]
-                    assert linked < frame and linked == frame % refs[i].period
+                    assert linked < frame
                     sx, sy, q = history[linked, i]
-                    assert (x, y) == (sx, sy), (path, frame, i, 'Cel lié déplacé')
+                    if refs[i].spec and refs[i].spec.get('ase_linked_motion'):
+                        assert linked==0 and (x,y)==(-(frame%refs[i].period),sy)
+                    else:
+                        assert linked==frame%refs[i].period
+                        assert (x, y) == (sx, sy), (path, frame, i, 'Cel lié déplacé')
                 cels[i] = (x, y, q)
                 history[frame, i] = cels[i]
             p += length
