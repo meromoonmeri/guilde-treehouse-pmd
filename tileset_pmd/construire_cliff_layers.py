@@ -198,43 +198,170 @@ def virer_pixels_mer(a: np.ndarray) -> np.ndarray:
     return out
 
 
-def habiller_terrain(a: np.ndarray) -> np.ndarray:
-    """Repeint le terrain avec les vrais materiaux de Metano Town.
+# Rampe de roche, relevee au compte-gouttes sur `ref_cliff_edge.png`. La
+# reference n'empile PAS des strates : elle pose des AMAS arrondis dans une
+# gamme ocre serree, traverses de veines mauves, le tout cercle d'un contour
+# brun fonce. Ces neuf tons sont les dominantes mesurees, du plus sombre au
+# plus clair.
+ROCHE_METANO = np.array([
+    (119, 79, 39), (151, 103, 55), (167, 111, 55), (183, 127, 79),
+    (199, 135, 71), (215, 167, 95), (231, 167, 103), (247, 207, 135),
+    (255, 191, 119),
+], dtype=np.uint8)
 
-    * le plateau est PAVE avec `tile_grass8.png`, une cellule 8x8 prelevee
-      telle quelle dans l'herbe de la reference — le motif se raccorde donc
-      exactement comme en jeu, sans bande ni couture ;
-    * la paroi est reprojetee sur `pal_paroi`, la palette mesuree sur la
-      falaise de la reference, pour retrouver son ocre exact.
+# Les veines d'erosion de la reference ne sont pas brunes mais MAUVES.
+VEINE_METANO = np.array([(183, 103, 135), (199, 111, 151)], dtype=np.uint8)
+
+# Contour : la falaise est cernee d'un trait brun fonce d'un pixel.
+CONTOUR_METANO = np.array((119, 79, 39), dtype=np.uint8)
+
+
+def _bruit(forme, freq, graine):
+    """Bruit de valeur lisse — grille basse frequence interpolee.
+
+    Le mouchetis pixel par pixel est exactement ce qu'il faut EVITER : la
+    reference dessine des amas lisibles. On tire donc une grille grossiere
+    puis on l'agrandit en bilineaire, ce qui donne des taches larges.
+    """
+    h, w = forme
+    rng = np.random.default_rng(graine)
+    gh, gw = max(2, h // freq + 2), max(2, w // freq + 2)
+    g = rng.random((gh, gw))
+    im = Image.fromarray((g * 255).astype(np.uint8)).resize((w, h), Image.BILINEAR)
+    return np.array(im).astype(float) / 255.0
+
+
+def peindre_roche(masque: np.ndarray) -> np.ndarray:
+    """Dessine la paroi en amas, facon Metano, dans la silhouette donnee.
+
+    Deux essais ont ete jetes avant celui-ci : un mouchetis pixel par pixel
+    (aucune structure lisible) puis des strates horizontales (velours cotele,
+    puis veines de bois des qu'on les rendait irregulieres). En regardant la
+    reference agrandie, la roche est faite de PLAQUES arrondies de taille
+    moyenne, eclairees en haut a gauche, avec des saignees mauves obliques.
+    """
+    H, W = masque.shape
+    yy, xx = np.mgrid[0:H, 0:W].astype(float)
+
+    # 1. Les plaques : deux echelles de bruit, quantifiees en paliers pour
+    #    obtenir des aplats a bord net et non un degrade continu.
+    gros = _bruit((H, W), 17, 11)
+    moyen = _bruit((H, W), 8, 12)
+    fin = _bruit((H, W), 4, 13)
+    # Le bruit fin est volontairement peu pondere : au-dela, il reintroduit
+    # le grain pixel par pixel qu'on cherche justement a supprimer.
+    champ = 0.58 * gros + 0.33 * moyen + 0.09 * fin
+
+    # 2. Eclairage : la lumiere vient du haut a gauche. On decale le champ
+    #    d'un pixel et on compare — la ou la plaque monte, elle prend la
+    #    lumiere ; la ou elle descend, elle passe dans l'ombre. C'est ce qui
+    #    donne le galbe des amas.
+    dy = np.roll(champ, 1, 0) - champ
+    dx = np.roll(champ, 1, 1) - champ
+    relief = np.clip((dy + dx) * 9.0, -1.6, 1.6)
+
+    niveau = 3.0 + 6.0 * champ + 1.7 * relief
+
+    # 3. Assombrissement en profondeur et sur le flanc droit, comme sur la
+    #    falaise de la reference qui s'enfonce vers la mer.
+    haut = np.full(W, H, dtype=int)
+    for x in range(W):
+        col = np.nonzero(masque[:, x])[0]
+        if len(col):
+            haut[x] = col.min()
+    prof = yy - haut[None, :]
+    niveau -= 2.6 * (prof < 3)                 # occlusion sous la levre
+    niveau -= 1.2 * ((prof >= 3) & (prof < 7))
+    niveau -= 1.3 * np.clip(prof / max(1, H - 1), 0, 1)
+
+    idx = np.clip(np.round(niveau), 0, len(ROCHE_METANO) - 1).astype(int)
+    out = np.zeros((H, W, 4), np.uint8)
+    out[masque, :3] = ROCHE_METANO[idx[masque]]
+    out[masque, 3] = 255
+
+    # 4. Veines mauves. Premier essai jete : un bruit isotrope seuille donnait
+    #    des confettis mauves eparpilles. Il faut des saignees ETIREES — on
+    #    tire donc le bruit dans une grille tres aplatie puis on l'etire, ce
+    #    qui allonge les taches, et on les cisaille en diagonale.
+    rng = np.random.default_rng(31)
+    gh, gw = max(2, H // 30 + 2), max(2, W // 11 + 2)
+    vg = np.array(Image.fromarray((rng.random((gh, gw)) * 255).astype(np.uint8))
+                  .resize((W, H), Image.BILINEAR)).astype(float) / 255.0
+    # Cisaillement franc : a 0.6 les veines tombaient a la verticale comme des
+    # coulures. A 1.6 elles filent en oblique, comme sur la reference.
+    dec = (xx * 1.6).astype(int) % max(1, H)
+    vg = vg[(np.arange(H)[:, None] - dec) % H, xx.astype(int)]
+    # Les veines restent minces et cantonnees loin du bord superieur, comme
+    # sur la reference ou la levre du plateau est franchement ocre.
+    veine = masque & (vg < 0.20) & (prof > 8)
+    # Les veines sont FONDUES a moitie dans la roche : posees en aplat pur,
+    # elles ressortaient comme des confettis violets sur l'ocre.
+    melange = (out[..., :3].astype(int) + VEINE_METANO[0].astype(int)) // 2
+    out[veine, :3] = melange[veine]
+    coeur = masque & (vg < 0.09) & (prof > 8)
+    out[coeur, :3] = VEINE_METANO[0]
+
+    # 5. Contour brun d'un pixel sur tout le pourtour visible.
+    bord = np.zeros((H, W), bool)
+    for ddy, ddx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        bord |= ~np.roll(masque, (ddy, ddx), (0, 1))
+    out[masque & bord, :3] = CONTOUR_METANO
+    return out
+
+
+def peindre_herbe(masque: np.ndarray, roche: np.ndarray) -> np.ndarray:
+    """Pave le plateau, puis l'ourle d'ombre le long du bord de falaise."""
+    H, W = masque.shape
+    out = np.zeros((H, W, 4), np.uint8)
+    if TUILE_HERBE.exists():
+        t = np.array(Image.open(TUILE_HERBE).convert("RGB"))
+        th, tw = t.shape[:2]
+        motif = np.tile(t, (H // th + 1, W // tw + 1, 1))[:H, :W]
+        out[masque, :3] = motif[masque]
+    else:
+        out[masque, :3] = HERBE_METANO[-1]
+    out[masque, 3] = 255
+
+    # Touffes : des amas plus sombres, pas un grain uniforme.
+    # Touffes discretes : deux tons voisins seulement. Avec des tons eloignes,
+    # le plateau prenait un aspect de camouflage militaire.
+    touffe = _bruit((H, W), 13, 51)
+    out[masque & (touffe < 0.24), :3] = HERBE_METANO[3]
+    out[masque & (touffe > 0.84), :3] = HERBE_METANO[-1]
+
+    # Ourlet : l'herbe s'assombrit sur les trois derniers pixels avant le
+    # vide et avant la roche — sans lui, le plateau flotte au-dessus du bord.
+    voisin = np.zeros((H, W), bool)
+    for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        d = np.roll(masque, (dy, dx), (0, 1))
+        voisin |= ~d
+    bord = masque & (voisin | np.roll(roche, -1, 0) | np.roll(roche, -2, 0)
+                     | np.roll(roche, -3, 0))
+    out[bord, :3] = HERBE_METANO[0]
+    return out
+
+
+def habiller_terrain(a: np.ndarray) -> np.ndarray:
+    """Redessine entierement le terrain aux materiaux de Metano Town.
+
+    Ancienne approche, abandonnee : remapper la generation par luminosite sur
+    une rampe ocre. Elle rendait la bonne GAMME mais gardait le mouchetis
+    aleatoire de la generation, sans strate ni ombre — rien a voir avec le
+    pixel art de la reference. On garde donc uniquement la SILHOUETTE et on
+    repeint par-dessus.
     """
     out = virer_pixels_mer(a)
     herbe, roche = separer_terrain(out)
 
-    if TUILE_HERBE.exists():
-        t = np.array(Image.open(TUILE_HERBE).convert("RGB"))
-        th, tw = t.shape[:2]
-        H, W = out.shape[:2]
-        motif = np.tile(t, (H // th + 1, W // tw + 1, 1))[:H, :W]
-        out[herbe, :3] = motif[herbe]
-
+    res = np.zeros_like(out)
     if roche.any():
-        # Projeter « au plus proche » gardait le brun-rouge de la generation :
-        # la palette contient des bruns, chaque brun trouvait un brun. On
-        # remappe donc par LUMINOSITE sur la rampe ocre mesuree sur la paroi
-        # de la reference — le modele de la falaise est conserve, sa gamme est
-        # remplacee.
-        rampe = palette_depuis([REF_PAROI, REF_ROCHE], maxi=64)
-        # `ref_paroi.png` est un rectangle decoupe dans la scene : il contient
-        # aussi du ciel et de la mer. Garder ces bleus dans la rampe injectait
-        # un mouchetis bleu dans la falaise. On ne garde que les tons CHAUDS.
-        chaud = (rampe[:, 0] > rampe[:, 2] + 25) & (rampe[:, 0] > 70)
-        rampe = rampe[chaud]
-        rampe = rampe[np.argsort(rampe.sum(1))]
-        lum = out[roche, :3].astype(int).sum(1)
-        lo, hi = lum.min(), max(int(lum.max()), int(lum.min()) + 1)
-        idx = ((lum - lo) / (hi - lo) * (len(rampe) - 1)).round().astype(int)
-        out[roche, :3] = rampe[idx]
-    return out
+        res = peindre_roche(roche)
+    if herbe.any():
+        g = peindre_herbe(herbe, roche)
+        sel = g[..., 3] > 0
+        res[sel] = g[sel]
+    res[out[..., 3] == 0] = 0
+    return res
 
 
 def cycler_palette(a: np.ndarray, rampe: np.ndarray, pas: int) -> np.ndarray:
@@ -352,6 +479,27 @@ def construire_ciel(bandes) -> np.ndarray:
 # nuages : bande de largeur exacte, defilement en boucle parfaite
 # --------------------------------------------------------------------------
 
+def laver_nuage(pc: np.ndarray) -> np.ndarray:
+    """Efface les pixels mauves parasites des cumulus decoupes.
+
+    Les nuages sont preleves dans la scene source, ou ils cotoient une
+    banniere : quelques pixels lilas sont partis avec eux et formaient une
+    tache violette en plein ciel. Le seuil est volontairement BAS — les
+    fautifs vont du lilas franc au blanc a peine rose (255, 237, 255), qu'un
+    seuil large laissait passer.
+    """
+    m = pc[..., 3] > 0
+    r, g, b = (pc[..., k].astype(int) for k in range(3))
+    sale = m & (b > g + 6) & (r > g)
+    if not sale.any():
+        return pc
+    pc = pc.copy()
+    gris = np.minimum(pc[..., 1], np.minimum(pc[..., 0], pc[..., 2]))
+    for k in range(3):
+        pc[..., k] = np.where(sale, np.maximum(gris, 200), pc[..., k])
+    return pc
+
+
 def bande_nuages(pieces: list[np.ndarray]) -> np.ndarray:
     """Compose une bande de nuages de LARGEUR EXACTEMENT `CADRE_W`.
 
@@ -363,6 +511,10 @@ def bande_nuages(pieces: list[np.ndarray]) -> np.ndarray:
     bande = np.zeros((HORIZON, CADRE_W, 4), np.uint8)
     if not pieces:
         return bande
+    # Les cumulus decoupes dans la scene source trainent quelques pixels
+    # mauves parasites (bord d'une banniere voisine). Ils ressortaient comme
+    # une tache violette en plein ciel : on les repousse vers le blanc.
+    pieces = [laver_nuage(pc) for pc in pieces]
     # Peu de nuages, bien espaces : la reference laisse le ciel largement
     # degage. En entasser davantage forme un banc continu qui masque
     # l'horizon.
@@ -612,7 +764,7 @@ def construire() -> None:
             couches["River_Sparkles"] = c
 
         # --- Clouds : N frames, defilement en boucle parfaite -------------------
-        base = bande_nuages(pieces)
+        base = laver_nuage(bande_nuages(pieces))
         if reglage["nuages"]:
             base = nettoyer_orphelins(teinte_nuit(base, *reglage["nuages"]))
         pas = CADRE_W // N_FRAMES_NUAGES

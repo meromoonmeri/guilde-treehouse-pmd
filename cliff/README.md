@@ -105,6 +105,41 @@ re-décimant l'image. On travaille donc sur ses **pixels natifs 504 × 384**
   mouchetis bleu dans la falaise. La rampe est filtrée sur les tons chauds
   (`R > B + 25`).
 
+## La texture de la roche est DESSINÉE, pas remappée
+
+Remapper le bruit de la génération sur une rampe ocre donnait la bonne *gamme*
+mais gardait un mouchetis aléatoire pixel par pixel — rien à voir avec le pixel
+art de la référence. La paroi et l'herbe sont donc **entièrement redessinées** :
+on ne conserve que la **silhouette** du layer `Cliffs`, et on repeint dedans.
+
+En agrandissant `ref_cliff_edge.png`, la roche de Metano est faite de :
+
+* des **amas arrondis** de taille moyenne dans une gamme ocre serrée
+  (`ROCHE_METANO`, 9 tons relevés au compte-gouttes) ;
+* des **veines mauves obliques** (`183,103,135`), à moitié fondues dans la
+  roche ;
+* un **contour brun foncé** d'un pixel sur tout le pourtour ;
+* une **occlusion franche** sous la lèvre herbeuse.
+
+Les amas viennent d'un bruit à trois échelles quantifié en paliers, éclairé en
+comparant le champ à lui-même décalé d'un pixel — là où la plaque monte elle
+prend la lumière, là où elle descend elle passe dans l'ombre. C'est ce gradient
+qui donne le galbe.
+
+Deux approches ont été essayées puis **jetées**, ne pas y revenir :
+
+1. **Mouchetis pixel par pixel** — aucune structure lisible.
+2. **Strates horizontales** — effet velours côtelé ; en rendant les lits
+   irréguliers pour casser la période, la paroi virait aux veines de bois.
+
+De même, les veines mauves tirées d'un bruit isotrope seuillé donnaient des
+**confettis** ; il faut un bruit tiré dans une grille aplatie puis étirée, et
+cisaillé en diagonale (facteur 1.6 — à 0.6 elles tombaient en coulures
+verticales). Posées en aplat pur elles ressortaient trop : elles sont fondues
+à 50 % dans la roche, seul leur cœur est en teinte pure.
+
+Le résultat descend `Cliffs` de **46 à 20 couleurs** — de vrais aplats.
+
 Projeter « au plus proche » ne recolore pas non plus : la palette contient des
 bruns, chaque brun de la génération trouvait un brun. La paroi est donc
 remappée **par luminosité** sur la rampe ocre — le modelé est conservé, la
@@ -122,7 +157,7 @@ Cadre **720 × 480**, horizon **y = 144**. **100 % des tuiles ≤ 16 couleurs,
 | Moon | 26 / 2 | 41 / 2 | 33 / 2 |
 | Clouds | 897 / 475 | 897 / 365 | 897 / 270 |
 | Base | 3780 / 37 | 3780 / 238 | 3780 / 69 |
-| Cliffs | 1452 / 46 | 1452 / 46 | 1452 / 46 |
+| Cliffs | 1452 / 20 | 1452 / 20 | 1452 / 20 |
 | River | 64 / 14 | 64 / 132 | 64 / 37 |
 | River_Sparkles | 134 / 1 | 134 / 1 | 134 / 1 |
 
