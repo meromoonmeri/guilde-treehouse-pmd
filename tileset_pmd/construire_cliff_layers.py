@@ -75,6 +75,7 @@ REF_BORD = REF / "ref_cliff_edge.png"
 GEN_CLIFF = REF / "gen_cliff.png"
 TUILE_HERBE = REF / "tile_grass8.png"      # cellule 8x8 prelevee dans Metano
 REF_PAROI = REF / "ref_paroi.png"          # la paroi rocheuse de la reference
+TEX_PAROI = REF / "tex_paroi.png"          # colonnes rocheuses a facettes
 GEN_SEA = REF / "gen_sea.png"
 GEN_CLOUDS = REF / "gen_clouds.png"
 
@@ -232,76 +233,85 @@ def _bruit(forme, freq, graine):
 
 
 def peindre_roche(masque: np.ndarray) -> np.ndarray:
-    """Dessine la paroi en amas, facon Metano, dans la silhouette donnee.
+    """Pave la paroi avec la VRAIE texture rocheuse, dans la silhouette donnee.
 
-    Deux essais ont ete jetes avant celui-ci : un mouchetis pixel par pixel
-    (aucune structure lisible) puis des strates horizontales (velours cotele,
-    puis veines de bois des qu'on les rendait irregulieres). En regardant la
-    reference agrandie, la roche est faite de PLAQUES arrondies de taille
-    moyenne, eclairees en haut a gauche, avec des saignees mauves obliques.
+    C'est la methode du premier jet, retrouvee dans l'historique (commit
+    b632cee) : la falaise d'origine venait de `gen_cliff_metano.png`, une
+    illustration 1103x960 NETTE, ou la roche est dessinee en colonnes
+    verticales a facettes. La source utilisee ensuite, `gen_cliff.png`
+    (350x280), est floue — d'ou les tentatives de RECONSTRUIRE la texture au
+    bruit, qui n'ont jamais rendu le pixel art de Metano.
+
+    On prend donc un pave propre de cette illustration, remis a l'echelle du
+    jeu (facteur 496/1103, celui du cadrage d'origine), et on le repete dans
+    la silhouette. Les colonnes de la reference sont verticales : le pavage se
+    fait donc en x seulement, et on decale chaque bande d'un cran vertical
+    variable pour ne pas voir la repetition.
     """
     H, W = masque.shape
-    yy, xx = np.mgrid[0:H, 0:W].astype(float)
+    src = Image.open(TEX_PAROI).convert("RGB")
+    # La texture est etiree pour couvrir TOUTE la hauteur de la paroi d'un
+    # seul tenant. Empiler plusieurs rangees laissait des coutures
+    # horizontales franches en travers de la falaise, et la roche de la
+    # reference est faite de colonnes verticales : l'etirer dans leur sens ne
+    # la deforme pas, il allonge simplement les facettes.
+    if H > src.height:
+        src = src.resize((src.width, H), Image.LANCZOS)
+    t = np.array(src)
+    th, tw = t.shape[:2]
 
-    # 1. Les plaques : deux echelles de bruit, quantifiees en paliers pour
-    #    obtenir des aplats a bord net et non un degrade continu.
-    gros = _bruit((H, W), 17, 11)
-    moyen = _bruit((H, W), 8, 12)
-    fin = _bruit((H, W), 4, 13)
-    # Le bruit fin est volontairement peu pondere : au-dela, il reintroduit
-    # le grain pixel par pixel qu'on cherche justement a supprimer.
-    champ = 0.58 * gros + 0.33 * moyen + 0.09 * fin
+    # Pavage en miroir alterne. Decaler chaque bande verticalement (premier
+    # essai) faisait apparaitre de longues DIAGONALES parasites : les facettes
+    # de deux bandes voisines s'alignaient de biais. Le miroir, lui, raccorde
+    # bord a bord sans creer de direction privilegiee.
+    # Pavage en miroir alterne, DECALE en x a chaque rangee. Deux essais
+    # avant celui-ci : un decalage vertical par bande creait de longues
+    # diagonales (les facettes voisines s'alignaient de biais), et le miroir
+    # seul laissait lire des symetries en papillon. Le decalage horizontal
+    # aleatoire de chaque rangee casse ces axes.
+    # Une seule rangee, mais des colonnes de LARGEUR VARIABLE, miroitees au
+    # hasard et decalees verticalement. Le miroir systematique une colonne sur
+    # deux donnait des paires en papillon tres lisibles ; le tirage aleatoire
+    # de la largeur et du decalage les supprime tout en gardant le raccord.
+    rng = np.random.default_rng(5)
+    motif = np.zeros((H, W, 3), np.uint8)
+    x = 0
+    while x < W:
+        larg = int(rng.integers(max(8, tw // 3), tw))
+        x1 = int(rng.integers(0, max(1, tw - larg + 1)))
+        bloc = t[:, x1:x1 + larg]
+        if rng.random() < 0.5:
+            bloc = bloc[:, ::-1]
+        bloc = np.roll(bloc, int(rng.integers(0, th)), axis=0)
+        pris = min(larg, W - x)
+        motif[:, x:x + pris] = bloc[:H, :pris]
+        x += pris
 
-    # 2. Eclairage : la lumiere vient du haut a gauche. On decale le champ
-    #    d'un pixel et on compare — la ou la plaque monte, elle prend la
-    #    lumiere ; la ou elle descend, elle passe dans l'ombre. C'est ce qui
-    #    donne le galbe des amas.
-    dy = np.roll(champ, 1, 0) - champ
-    dx = np.roll(champ, 1, 1) - champ
-    relief = np.clip((dy + dx) * 9.0, -1.6, 1.6)
+    # Projection sur la palette Metano : l'illustration source est en
+    # milliers de teintes, PMDO en demande 16 par tuile.
+    pal = palette_depuis([REF_PAROI, REF_ROCHE], maxi=48)
+    chaud = (pal[:, 0] > pal[:, 2] + 25) & (pal[:, 0] > 70)
+    pal = pal[chaud]
+    d = (motif.reshape(-1, 1, 3).astype(int) - pal[None, :, :].astype(int))
+    motif = pal[(d ** 2).sum(2).argmin(1)].reshape(H, W, 3).astype(np.uint8)
 
-    niveau = 3.0 + 6.0 * champ + 1.7 * relief
+    out = np.zeros((H, W, 4), np.uint8)
+    out[masque, :3] = motif[masque]
+    out[masque, 3] = 255
 
-    # 3. Assombrissement en profondeur et sur le flanc droit, comme sur la
-    #    falaise de la reference qui s'enfonce vers la mer.
+    # Occlusion sous la levre herbeuse : la reference pose une ombre franche
+    # juste sous le plateau, c'est elle qui detache la falaise du gazon.
     haut = np.full(W, H, dtype=int)
     for x in range(W):
         col = np.nonzero(masque[:, x])[0]
         if len(col):
             haut[x] = col.min()
+    yy = np.mgrid[0:H, 0:W][0]
     prof = yy - haut[None, :]
-    niveau -= 2.6 * (prof < 3)                 # occlusion sous la levre
-    niveau -= 1.2 * ((prof >= 3) & (prof < 7))
-    niveau -= 1.3 * np.clip(prof / max(1, H - 1), 0, 1)
+    ombre = masque & (prof < 4)
+    out[ombre, :3] = (out[ombre, :3].astype(int) * 0.62).astype(np.uint8)
 
-    idx = np.clip(np.round(niveau), 0, len(ROCHE_METANO) - 1).astype(int)
-    out = np.zeros((H, W, 4), np.uint8)
-    out[masque, :3] = ROCHE_METANO[idx[masque]]
-    out[masque, 3] = 255
-
-    # 4. Veines mauves. Premier essai jete : un bruit isotrope seuille donnait
-    #    des confettis mauves eparpilles. Il faut des saignees ETIREES — on
-    #    tire donc le bruit dans une grille tres aplatie puis on l'etire, ce
-    #    qui allonge les taches, et on les cisaille en diagonale.
-    rng = np.random.default_rng(31)
-    gh, gw = max(2, H // 30 + 2), max(2, W // 11 + 2)
-    vg = np.array(Image.fromarray((rng.random((gh, gw)) * 255).astype(np.uint8))
-                  .resize((W, H), Image.BILINEAR)).astype(float) / 255.0
-    # Cisaillement franc : a 0.6 les veines tombaient a la verticale comme des
-    # coulures. A 1.6 elles filent en oblique, comme sur la reference.
-    dec = (xx * 1.6).astype(int) % max(1, H)
-    vg = vg[(np.arange(H)[:, None] - dec) % H, xx.astype(int)]
-    # Les veines restent minces et cantonnees loin du bord superieur, comme
-    # sur la reference ou la levre du plateau est franchement ocre.
-    veine = masque & (vg < 0.20) & (prof > 8)
-    # Les veines sont FONDUES a moitie dans la roche : posees en aplat pur,
-    # elles ressortaient comme des confettis violets sur l'ocre.
-    melange = (out[..., :3].astype(int) + VEINE_METANO[0].astype(int)) // 2
-    out[veine, :3] = melange[veine]
-    coeur = masque & (vg < 0.09) & (prof > 8)
-    out[coeur, :3] = VEINE_METANO[0]
-
-    # 5. Contour brun d'un pixel sur tout le pourtour visible.
+    # Contour brun d'un pixel sur tout le pourtour visible.
     bord = np.zeros((H, W), bool)
     for ddy, ddx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
         bord |= ~np.roll(masque, (ddy, ddx), (0, 1))
