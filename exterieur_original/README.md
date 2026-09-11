@@ -1,11 +1,14 @@
 # Falaise océanique originale — layers générés
 
 Cette livraison repart de zéro. Les cinq images de `source/exterieur_original/generation/`
-ont été générées séparément, avec une consigne explicite de **pixel art PMD natif
-strict** : palette indexée limitée, contours sombres durs, clusters carrés,
-diagonales crénelées et tramage contrôlé. Elles ne doivent jamais être lues comme
-des illustrations lissées, vectorielles ou peintes. Aucune image de référence,
-aucun template ni aucun pixel extérieur n'est présent dans les fichiers finals.
+ont été générées séparément en **pixel art PMD natif strict** : palette limitée,
+clusters carrés, contours nets, diagonales crénelées et tramage contrôlé, sans
+lissage ni rendu peint. Pour la falaise et les plateaux, le générateur emploie la
+référence Metano Town comme guide de langage rocheux et de placement : plateau
+gazonneux clair, falaises hautes à grandes facettes crème/sauge et petits buissons
+suspendus. Aucun pixel de cette référence n'est copié, découpé, recoloré ou
+composé dans les fichiers finals ; toutes les zones artificielles sont remplacées
+par des éléments naturels.
 
 ## Composition inventée
 

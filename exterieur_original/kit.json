@@ -15,7 +15,7 @@
     "nuages": "wrap horizontal parfaitement périodique sur 344 px",
     "mer": "cycle de palette 24 phases sans déplacement"
   },
-  "creation": "Cinq layers générés séparément de zéro ; aucune référence externe n'est un layout, template ou pixel source.",
+  "creation": "Cinq layers IA séparés : falaise et plateaux générés dans le langage rocheux et la logique de placement Metano Town, sans aucun pixel, découpage ni composite de la référence.",
   "calques": [
     {
       "id": "00_ciel",
@@ -282,11 +282,11 @@
           "columns": 8,
           "frame_size": [
             688,
-            240
+            206
           ],
           "offset": [
             0,
-            70
+            20
           ]
         },
         "02_mer_palette": {
@@ -295,11 +295,11 @@
           "columns": 8,
           "frame_size": [
             688,
-            206
+            234
           ],
           "offset": [
             0,
-            178
+            150
           ]
         }
       },
@@ -340,35 +340,35 @@
   },
   "sources_generation": {
     "00_ciel_genere.png": {
-      "sha256": "e0bf1e8c6a4e5f904f19b0926b3a02ef62d37b4a463429d7b4956369d260e6be",
+      "sha256": "764acb4dd76a519cd5659c2eb3334b8bdaf2fd6e68ee0f02bb241929e2131a17",
       "dimensions": [
         1376,
         768
       ]
     },
     "02_nuages_genere.png": {
-      "sha256": "13a614f257c9881aeda07f20b359c4edae2731fb9bb6477e210873633884f810",
+      "sha256": "1b27ccd5ae3e318cc75a65462085e0d346cfd144849ca3243aef77deffb246ba",
       "dimensions": [
         1376,
         768
       ]
     },
     "01_mer_generee.png": {
-      "sha256": "9da9d672269900ad6a23d02937e04041c9c4e77d080684bfdd7f2d073e4ad97e",
+      "sha256": "9b1526b0871f35beea00f5b821dbdb49382e7e079db01ef3edeb9dcf0b39da70",
       "dimensions": [
         1376,
         768
       ]
     },
     "03_plateaux_reliefs_generes.png": {
-      "sha256": "e329265240d199bf207bc52cfff7650e2498ac25f6bfd6851c797b42d28e404f",
+      "sha256": "e973455af4aa0483bc0632dd15fd4a61ea3d93b8f9a42793ef8b2abe91c7811f",
       "dimensions": [
         1376,
         768
       ]
     },
     "04_falaise_generee.png": {
-      "sha256": "ebd53ce8b40f90c7d78e3962020c681680fcc9563ca99d5cb4631216b875bb18",
+      "sha256": "ff2b38c91670764fb53598719dda4a22f68d0e263f07d888f0c1edc26abebdab",
       "dimensions": [
         1376,
         768

@@ -2,9 +2,10 @@
 """Construit un paysage original à cinq layers générés indépendamment.
 
 Les rasters de generation/ sont uniquement des sorties du générateur d'images,
-régénérées sous contrainte stricte de pixel art PMD natif (palette limitée,
-clusters nets, contours crénelés, aucun lissage). Le fond magenta #FF00FF est le
-chroma-key explicite de tous les overlays.
+réalisées dans un pixel art PMD natif strict. La falaise et les plateaux ont été
+générés en s'inspirant du langage rocheux et de la logique de placement de la
+référence Metano Town, sans copie, découpe ou composition de ses pixels.
+Le fond magenta #FF00FF est le chroma-key explicite de tous les overlays.
 """
 from __future__ import annotations
 
@@ -51,7 +52,7 @@ def sha256(path: Path) -> str:
 
 
 def generated(path: Path) -> Image.Image:
-    """Normalise un raster créé par le générateur, jamais une référence externe."""
+    """Normalise un raster créé par le générateur, jamais un raster de référence."""
     assert path.is_file(), f"Layer généré manquant : {path}"
     with Image.open(path) as opened:
         image = opened.convert("RGB")
@@ -62,10 +63,8 @@ def generated(path: Path) -> Image.Image:
 def normalise_magenta(image: Image.Image) -> Image.Image:
     """Uniformise le chroma-key externe et sa frange fuchsia de générateur.
 
-    Seules les teintes rose/violet connectées au bord du canvas sont une zone
-    vide : les violets des ombres, fleurs ou rochers enfermés dans le sujet ne
-    sont jamais touchés. Le résultat ne dessine rien, il rend uniquement le
-    fond de clé strictement #FF00FF, sans halo fuchsia dans la composition.
+    Seules les teintes rose/violet connectées au bord du canvas sont du vide.
+    Les ombres et détails violets enfermés dans un sujet restent intacts.
     """
     array = np.asarray(image.convert("RGB")).copy()
     red, green, blue = (array[:, :, index] for index in range(3))
@@ -73,7 +72,10 @@ def normalise_magenta(image: Image.Image) -> Image.Image:
     _count, labels = cv2.connectedComponents(candidate, connectivity=4)
     border = np.concatenate((labels[0], labels[-1], labels[:, 0], labels[:, -1]))
     exterior = np.isin(labels, np.unique(border[border > 0]))
-    array[exterior] = MAGENTA
+    # Les rares îlots rose vif enfermés dans un nuage sont aussi des trous de
+    # chroma-key produits par le modèle, jamais une couleur utile du décor.
+    strict_key = (red > 220) & (blue > 220) & (green < 100)
+    array[exterior | strict_key] = MAGENTA
     return Image.fromarray(array, "RGB")
 
 
@@ -212,7 +214,7 @@ def build() -> dict:
         "dimensions": list(SIZE), "grille_px": 8, "fond_chroma_key": "#FF00FF",
         "animation": {"frames": FRAMES, "duree_image_ms": DURATION, "duree_boucle_ms": FRAMES * DURATION,
                        "nuages": f"wrap horizontal parfaitement périodique sur {CLOUD_PERIOD} px", "mer": "cycle de palette 24 phases sans déplacement"},
-        "creation": "Cinq layers générés séparément de zéro ; aucune référence externe n'est un layout, template ou pixel source.",
+        "creation": "Cinq layers IA séparés : falaise et plateaux générés dans le langage rocheux et la logique de placement Metano Town, sans aucun pixel, découpage ni composite de la référence.",
         "calques": definitions, "fichiers": {MODE: {**files,
             "calques_magentas": {definition["id"]: f"calques_magentas/{MODE}/{definition['id']}.png" for definition in definitions},
             "cycle_mer_magentas": [f"cycles_magentas/mer_palette/mer_palette_{frame:02d}.png" for frame in range(SEA_PERIOD)]}},

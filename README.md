@@ -4,7 +4,7 @@ Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont
 
 ## Paysage extérieur original — layers générés
 
-[`exterieur_original/`](exterieur_original/README.md) remplace la livraison extérieure précédente par une seule composition totalement nouvelle : une falaise océanique créée de zéro avec **cinq layers générés indépendamment**. Les sorties ont été régénérées avec une contrainte explicite de **pixel art PMD natif strict** : palette limitée, clusters de pixels durs, contours crénelés et tramage contrôlé — jamais une illustration lissée ou peinte. Les références antérieures ne sont ni templates ni pixels source.
+[`exterieur_original/`](exterieur_original/README.md) remplace la livraison extérieure précédente par une seule composition totalement nouvelle : une falaise océanique créée de zéro avec **cinq layers générés indépendamment**. La falaise et les plateaux reprennent, via le générateur, la logique de placement et le langage rocheux de Metano Town (grandes facettes crème/sauge, plateau gazonné) ; aucun pixel de référence n'est un template ou une source finale.
 
 Les layers finals sont livrés sur fond chroma-key **#FF00FF** : ciel ouvert sans nuage, nuages en overlay à wrap horizontal parfait, mer avec cycle de palette sans déplacement géométrique, plateaux naturels et falaise naturelle sans aucune construction. Les PNG magenta, les exports RGBA/Aseprite/Tiled et un aperçu avec grille **8 × 8 px** sont fournis. Ouvrir [`apercu_exterieur_original.html`](apercu_exterieur_original.html).
 
