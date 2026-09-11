@@ -1,0 +1,105 @@
+{
+  "entrees": {
+    "232024.png": {
+      "sha256": "2155d578ba6f03a7083bc287884a031a0b9015f654b354a59cc4922a0c1da5f0",
+      "octets": 97239
+    },
+    "2cwdrrs469f61.gif": {
+      "sha256": "5daefc3facdc90c5d33425db0c149854cc64555856d571473f47d311b63e3d47",
+      "octets": 631490
+    },
+    "animation_reference_planche.png": {
+      "sha256": "8ce9a4694cf904126aedb1ee0f9835de8838fc65c5cd0581c6c22f4fe2db9e54",
+      "octets": 106962
+    },
+    "cascade_reference_recadree.png": {
+      "sha256": "b717a89fc5fd2ba643c6f76e509bb0ec524ae641cec797a60e22c482e485774a",
+      "octets": 51815
+    },
+    "etang_reference.png": {
+      "sha256": "d6172930149c87bffd0b1fe8c11c06395d733a5c7cc715e17a49a5bad02844fa",
+      "octets": 38793
+    },
+    "falaise_cotiere_jour_reference.jpg": {
+      "sha256": "2345c0be40929818d1ea05a3ac8490e532169a49b236b697d37b03fdba114477",
+      "octets": 353021
+    },
+    "falaise_cotiere_nuit_reference.png": {
+      "sha256": "4dc288cb0253123bd28e4ecbd5982f7e0cbc3dadc24ae8b9cd7f2c690b9b76be",
+      "octets": 1798556
+    }
+  },
+  "natives": {
+    "cap_cotier_jour.png": {
+      "sha256": "8f447b0ffb3376ec55c7ba1f374a98bbeddfd96dae5112264c477cdc2f0bf871",
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    "cap_cotier_nuit.png": {
+      "sha256": "28cef546ef8b054eef77197ced8a5dd7db36899bc4fba678004db7a47fffbcf6",
+      "dimensions": [
+        960,
+        600
+      ]
+    },
+    "cascades_jour.png": {
+      "sha256": "2f7d6a4437ad2e30659f13e0ebfe1a2a5e11a6e3460f165da094b153d47d737a",
+      "dimensions": [
+        592,
+        448
+      ]
+    },
+    "cascades_nuit.png": {
+      "sha256": "97f9109b50c699446d19512d0e3d8ce3a833530c8b3f8eba9d3d7e821d0c4b69",
+      "dimensions": [
+        592,
+        448
+      ]
+    },
+    "prairie_maritime_jour.png": {
+      "sha256": "9a0235cf778adf2e4ee3bfbc73e4b1d69f13322fe198e6014c60f0a614cfe5b9",
+      "dimensions": [
+        504,
+        504
+      ]
+    },
+    "prairie_maritime_nuit.png": {
+      "sha256": "abb2f6d9abd35f6c6594bb858334b34c307e641b62541ac156488d6cc06cea48",
+      "dimensions": [
+        504,
+        504
+      ]
+    }
+  },
+  "cascade": {
+    "recadrage_source_px": [
+      1,
+      0,
+      297,
+      224
+    ],
+    "dimensions": [
+      592,
+      448
+    ]
+  },
+  "prairie_maritime": {
+    "image_source": 0,
+    "dimensions": [
+      504,
+      504
+    ],
+    "animation_source": 4
+  },
+  "cap_cotier": {
+    "reduction": "3840×2400 / 4 au plus proche voisin",
+    "dimensions": [
+      960,
+      600
+    ]
+  },
+  "nuit_cascades": "palette fixe et astres locaux, géométrie de jour inchangée",
+  "nuit_prairie_maritime": "palette fixe et étoiles locales, géométrie de jour inchangée"
+}

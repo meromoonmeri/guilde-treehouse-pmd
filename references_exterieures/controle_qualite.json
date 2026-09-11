@@ -1,0 +1,85 @@
+{
+  "scenes": [
+    {
+      "id": "cascades",
+      "dimensions": [
+        592,
+        448
+      ],
+      "calques": 5,
+      "ambiances": [
+        {
+          "id": "jour",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        },
+        {
+          "id": "nuit",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        }
+      ]
+    },
+    {
+      "id": "prairie_maritime",
+      "dimensions": [
+        504,
+        504
+      ],
+      "calques": 5,
+      "ambiances": [
+        {
+          "id": "jour",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        },
+        {
+          "id": "nuit",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        }
+      ]
+    },
+    {
+      "id": "cap_cotier",
+      "dimensions": [
+        960,
+        600
+      ],
+      "calques": 5,
+      "ambiances": [
+        {
+          "id": "jour",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        },
+        {
+          "id": "nuit",
+          "recomposition_png": "identique_a_la_native",
+          "aseprite": "1_image_5_calques",
+          "tiled": "5_image_layers",
+          "base_magenta": "identique",
+          "plans_disjoints": true
+        }
+      ]
+    }
+  ],
+  "animation": false,
+  "inspection_artistique_automatisee": false,
+  "apercu_autonome": true
+}

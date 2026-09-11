@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "titre": "Layouts extérieurs PMD — références jour/nuit",
+  "grille_px": 8,
+  "animation": false,
+  "methode": "Composition PNG par calques disjoints, sans interpolation ni animation.",
+  "provenance": "source/references_exterieures/provenance.json",
+  "scenes": [
+    {
+      "id": "cascades",
+      "nom": "Sanctuaire des cascades",
+      "dimensions": [
+        592,
+        448
+      ],
+      "grille_px": 8,
+      "animation": false,
+      "calques": [
+        {
+          "id": "00_ciel_eau",
+          "nom": "Ciel, horizon et nappe d'eau"
+        },
+        {
+          "id": "01_nuages_astres",
+          "nom": "Nuages de jour / étoiles de nuit"
+        },
+        {
+          "id": "02_ilot_rocheux",
+          "nom": "Îlot rocheux et relief central"
+        },
+        {
+          "id": "03_cascades",
+          "nom": "Chutes et écume"
+        },
+        {
+          "id": "04_vegetation",
+          "nom": "Roseaux, buissons et premier plan"
+        }
+      ],
+      "fichiers": {
+        "jour": {
+          "native": "../../source/references_exterieures/natives/cascades_jour.png",
+          "calques": {
+            "00_ciel_eau": "calques/jour/00_ciel_eau.png",
+            "01_nuages_astres": "calques/jour/01_nuages_astres.png",
+            "02_ilot_rocheux": "calques/jour/02_ilot_rocheux.png",
+            "03_cascades": "calques/jour/03_cascades.png",
+            "04_vegetation": "calques/jour/04_vegetation.png"
+          },
+          "composition": "compositions/jour.png",
+          "base": "bases/jour_transparente.png",
+          "magenta": "bases/jour_magenta.png",
+          "aseprite": "aseprite/cascades_jour.aseprite",
+          "tiled": "tiled/cascades_jour.tmj"
+        },
+        "nuit": {
+          "native": "../../source/references_exterieures/natives/cascades_nuit.png",
+          "calques": {
+            "00_ciel_eau": "calques/nuit/00_ciel_eau.png",
+            "01_nuages_astres": "calques/nuit/01_nuages_astres.png",
+            "02_ilot_rocheux": "calques/nuit/02_ilot_rocheux.png",
+            "03_cascades": "calques/nuit/03_cascades.png",
+            "04_vegetation": "calques/nuit/04_vegetation.png"
+          },
+          "composition": "compositions/nuit.png",
+          "base": "bases/nuit_transparente.png",
+          "magenta": "bases/nuit_magenta.png",
+          "aseprite": "aseprite/cascades_nuit.aseprite",
+          "tiled": "tiled/cascades_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "prairie_maritime",
+      "nom": "Prairie maritime",
+      "dimensions": [
+        504,
+        504
+      ],
+      "grille_px": 8,
+      "animation": false,
+      "calques": [
+        {
+          "id": "00_ciel_mer",
+          "nom": "Ciel, horizon et mer"
+        },
+        {
+          "id": "01_nuages_astres",
+          "nom": "Atmosphère et étoiles nocturnes"
+        },
+        {
+          "id": "02_prairie_chemin",
+          "nom": "Prairie centrale et chemin"
+        },
+        {
+          "id": "03_reliefs",
+          "nom": "Falaises, rochers et rebords"
+        },
+        {
+          "id": "04_vegetation_fleurs",
+          "nom": "Fleurs, buissons et arbres"
+        }
+      ],
+      "fichiers": {
+        "jour": {
+          "native": "../../source/references_exterieures/natives/prairie_maritime_jour.png",
+          "calques": {
+            "00_ciel_mer": "calques/jour/00_ciel_mer.png",
+            "01_nuages_astres": "calques/jour/01_nuages_astres.png",
+            "02_prairie_chemin": "calques/jour/02_prairie_chemin.png",
+            "03_reliefs": "calques/jour/03_reliefs.png",
+            "04_vegetation_fleurs": "calques/jour/04_vegetation_fleurs.png"
+          },
+          "composition": "compositions/jour.png",
+          "base": "bases/jour_transparente.png",
+          "magenta": "bases/jour_magenta.png",
+          "aseprite": "aseprite/prairie_maritime_jour.aseprite",
+          "tiled": "tiled/prairie_maritime_jour.tmj"
+        },
+        "nuit": {
+          "native": "../../source/references_exterieures/natives/prairie_maritime_nuit.png",
+          "calques": {
+            "00_ciel_mer": "calques/nuit/00_ciel_mer.png",
+            "01_nuages_astres": "calques/nuit/01_nuages_astres.png",
+            "02_prairie_chemin": "calques/nuit/02_prairie_chemin.png",
+            "03_reliefs": "calques/nuit/03_reliefs.png",
+            "04_vegetation_fleurs": "calques/nuit/04_vegetation_fleurs.png"
+          },
+          "composition": "compositions/nuit.png",
+          "base": "bases/nuit_transparente.png",
+          "magenta": "bases/nuit_magenta.png",
+          "aseprite": "aseprite/prairie_maritime_nuit.aseprite",
+          "tiled": "tiled/prairie_maritime_nuit.tmj"
+        }
+      }
+    },
+    {
+      "id": "cap_cotier",
+      "nom": "Cap côtier",
+      "dimensions": [
+        960,
+        600
+      ],
+      "grille_px": 8,
+      "animation": false,
+      "calques": [
+        {
+          "id": "00_ciel_mer",
+          "nom": "Ciel, horizon et mer"
+        },
+        {
+          "id": "01_nuages_astres",
+          "nom": "Nuages de jour / lune et étoiles de nuit"
+        },
+        {
+          "id": "02_terrain_falaise",
+          "nom": "Chemin, sol et paroi rocheuse"
+        },
+        {
+          "id": "03_maison",
+          "nom": "Maison-courrier et abords immédiats"
+        },
+        {
+          "id": "04_vegetation",
+          "nom": "Arbres, herbes, fleurs et liserés de prairie"
+        }
+      ],
+      "fichiers": {
+        "jour": {
+          "native": "../../source/references_exterieures/natives/cap_cotier_jour.png",
+          "calques": {
+            "00_ciel_mer": "calques/jour/00_ciel_mer.png",
+            "01_nuages_astres": "calques/jour/01_nuages_astres.png",
+            "02_terrain_falaise": "calques/jour/02_terrain_falaise.png",
+            "03_maison": "calques/jour/03_maison.png",
+            "04_vegetation": "calques/jour/04_vegetation.png"
+          },
+          "composition": "compositions/jour.png",
+          "base": "bases/jour_transparente.png",
+          "magenta": "bases/jour_magenta.png",
+          "aseprite": "aseprite/cap_cotier_jour.aseprite",
+          "tiled": "tiled/cap_cotier_jour.tmj"
+        },
+        "nuit": {
+          "native": "../../source/references_exterieures/natives/cap_cotier_nuit.png",
+          "calques": {
+            "00_ciel_mer": "calques/nuit/00_ciel_mer.png",
+            "01_nuages_astres": "calques/nuit/01_nuages_astres.png",
+            "02_terrain_falaise": "calques/nuit/02_terrain_falaise.png",
+            "03_maison": "calques/nuit/03_maison.png",
+            "04_vegetation": "calques/nuit/04_vegetation.png"
+          },
+          "composition": "compositions/nuit.png",
+          "base": "bases/nuit_transparente.png",
+          "magenta": "bases/nuit_magenta.png",
+          "aseprite": "aseprite/cap_cotier_nuit.aseprite",
+          "tiled": "tiled/cap_cotier_nuit.tmj"
+        }
+      }
+    }
+  ]
+}

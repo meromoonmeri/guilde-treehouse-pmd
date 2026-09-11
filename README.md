@@ -2,6 +2,12 @@
 
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
+## Nouveaux layouts extérieurs de référence
+
+Trois layouts reprenant les références ajoutées le 11 septembre 2026 sont disponibles dans [`references_exterieures/`](references_exterieures/README.md) : **Sanctuaire des cascades**, **Prairie maritime** et **Cap côtier**, chacun en **jour et nuit**. Ils sont structurés en cinq calques PNG, avec leurs compositions, bases transparente/magenta, Aseprite statiques et cartes Tiled. L’aperçu multicouche autonome est [`apercu_references_exterieures.html`](apercu_references_exterieures.html).
+
+L’analyse de la branche de référence et le protocole suivi sont documentés dans [`AUDIT_BRANCHE_01A082DB.md`](AUDIT_BRANCHE_01A082DB.md). Les douze salles et les panoramas originels restent inchangés.
+
 ## Règles effectivement appliquées
 
 - **Est / Ouest :** le plancher traverse une interruption de la bordure latérale. Pas de battant, de portique ni d’arche ajoutée sur ces accès.
