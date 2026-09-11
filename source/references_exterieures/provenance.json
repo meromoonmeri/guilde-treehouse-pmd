@@ -1,4 +1,10 @@
 {
+  "methode": "generation_image_referencee_puis_normalisation_entierement_reproductible",
+  "branche_references": "arena/01a082db-guilde-treehouse-pmd",
+  "commits_entrees": {
+    "cascade_et_gif": "6cf427cdcc59874411172e57f53fb47011de7941",
+    "etang_et_cap": "bc3afc6676d62e1a5d811e129070ed3443162946"
+  },
   "entrees": {
     "232024.png": {
       "sha256": "2155d578ba6f03a7083bc287884a031a0b9015f654b354a59cc4922a0c1da5f0",
@@ -29,77 +35,144 @@
       "octets": 1798556
     }
   },
+  "generation": {
+    "cascades_jour_generee.png": {
+      "sha256": "3408a27ca835c25562b32442f85e5c338c8336a648bf1954837c46caacc6ddac",
+      "dimensions_source": [
+        816,
+        1300
+      ],
+      "native": "cascades_jour.png",
+      "dimensions_native": [
+        408,
+        648
+      ],
+      "reduction": "plus_proche_voisin"
+    },
+    "cascades_nuit_generee.png": {
+      "sha256": "4c20a36d76bb513ab4646a5299d77811bbf744d9a4e4cd172c2ddbe7c51ef9a6",
+      "dimensions_source": [
+        816,
+        1300
+      ],
+      "native": "cascades_nuit.png",
+      "dimensions_native": [
+        408,
+        648
+      ],
+      "reduction": "plus_proche_voisin"
+    },
+    "prairie_maritime_jour_generee.png": {
+      "sha256": "0546229ac36856e2a165a13f6451c2af159769a5cc628134c932adc89010a8bf",
+      "dimensions_source": [
+        1376,
+        768
+      ],
+      "native": "prairie_maritime_jour.png",
+      "dimensions_native": [
+        688,
+        384
+      ],
+      "reduction": "plus_proche_voisin"
+    },
+    "prairie_maritime_nuit_generee.png": {
+      "sha256": "12b4c61628505256aa38f1649a9de68dca84ec7f5d3371f4a2a6a05425d7f80d",
+      "dimensions_source": [
+        1376,
+        768
+      ],
+      "native": "prairie_maritime_nuit.png",
+      "dimensions_native": [
+        688,
+        384
+      ],
+      "reduction": "plus_proche_voisin"
+    },
+    "cap_cotier_jour_generee.png": {
+      "sha256": "79fa94f4a5f693396907c118f83de6757198d649b243f20e42736b5a7af6acfe",
+      "dimensions_source": [
+        1376,
+        768
+      ],
+      "native": "cap_cotier_jour.png",
+      "dimensions_native": [
+        688,
+        384
+      ],
+      "reduction": "plus_proche_voisin"
+    },
+    "cap_cotier_nuit_generee.png": {
+      "sha256": "c91138124f6f8f832b271200dc4d4e24476b5ba202e350936fedb882e2c7a043",
+      "dimensions_source": [
+        1376,
+        768
+      ],
+      "native": "cap_cotier_nuit.png",
+      "dimensions_native": [
+        688,
+        384
+      ],
+      "reduction": "plus_proche_voisin"
+    }
+  },
   "natives": {
     "cap_cotier_jour.png": {
-      "sha256": "8f447b0ffb3376ec55c7ba1f374a98bbeddfd96dae5112264c477cdc2f0bf871",
+      "sha256": "f43c29d714c76c4bd20ba0a4c113a731cc9acf6e576929e9973a23938017ea8c",
       "dimensions": [
-        960,
-        600
+        688,
+        384
       ]
     },
     "cap_cotier_nuit.png": {
-      "sha256": "28cef546ef8b054eef77197ced8a5dd7db36899bc4fba678004db7a47fffbcf6",
+      "sha256": "ae0dd5093b60ccda45379c5e6575fb22bca54885d24ee10cd45a1e529d0378f1",
       "dimensions": [
-        960,
-        600
+        688,
+        384
       ]
     },
     "cascades_jour.png": {
-      "sha256": "2f7d6a4437ad2e30659f13e0ebfe1a2a5e11a6e3460f165da094b153d47d737a",
+      "sha256": "e047a8d17cfd88582fcf0d3b6505458aa37c8184a45ad967264c7cf949fd0e82",
       "dimensions": [
-        592,
-        448
+        408,
+        648
       ]
     },
     "cascades_nuit.png": {
-      "sha256": "97f9109b50c699446d19512d0e3d8ce3a833530c8b3f8eba9d3d7e821d0c4b69",
+      "sha256": "3bcd24c8955c7aa89d3d6b2091af840fa13065d25c4664fefca67372ae7a30e2",
       "dimensions": [
-        592,
-        448
+        408,
+        648
       ]
     },
     "prairie_maritime_jour.png": {
-      "sha256": "9a0235cf778adf2e4ee3bfbc73e4b1d69f13322fe198e6014c60f0a614cfe5b9",
+      "sha256": "6083f8e796b34e481e06fd5edabcb106960d299fa1377c51e0b1bdce19c3e82f",
       "dimensions": [
-        504,
-        504
+        688,
+        384
       ]
     },
     "prairie_maritime_nuit.png": {
-      "sha256": "abb2f6d9abd35f6c6594bb858334b34c307e641b62541ac156488d6cc06cea48",
+      "sha256": "26c81a2c2e511234aeb0e43f0c9bb8a687bc8ae32bb15af8c0adc81a68e84031",
       "dimensions": [
-        504,
-        504
+        688,
+        384
       ]
     }
   },
-  "cascade": {
+  "regle_jour_nuit": "Chaque nuit est générée à partir de son rendu jour afin de conserver le même layout ; aucune nuit n'est un filtre runtime.",
+  "guide_cascade": {
     "recadrage_source_px": [
       1,
       0,
       297,
       224
-    ],
-    "dimensions": [
-      592,
-      448
     ]
   },
-  "prairie_maritime": {
-    "image_source": 0,
+  "guide_gif": {
+    "frames": 4,
     "dimensions": [
       504,
       504
-    ],
-    "animation_source": 4
-  },
-  "cap_cotier": {
-    "reduction": "3840×2400 / 4 au plus proche voisin",
-    "dimensions": [
-      960,
-      600
     ]
-  },
-  "nuit_cascades": "palette fixe et astres locaux, géométrie de jour inchangée",
-  "nuit_prairie_maritime": "palette fixe et étoiles locales, géométrie de jour inchangée"
+  }
 }

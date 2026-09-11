@@ -3,83 +3,84 @@
     {
       "id": "cascades",
       "dimensions": [
-        592,
-        448
+        408,
+        648
       ],
-      "calques": 5,
+      "calques": 6,
       "ambiances": [
         {
           "id": "jour",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "1_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages"
         },
         {
           "id": "nuit",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "2_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages_et_etoiles"
         }
       ]
     },
     {
       "id": "prairie_maritime",
       "dimensions": [
-        504,
-        504
+        688,
+        384
       ],
-      "calques": 5,
+      "calques": 7,
       "ambiances": [
         {
           "id": "jour",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "0_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages"
         },
         {
           "id": "nuit",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "1_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages_et_etoiles"
         }
       ]
     },
     {
       "id": "cap_cotier",
       "dimensions": [
-        960,
-        600
+        688,
+        384
       ],
-      "calques": 5,
+      "calques": 7,
       "ambiances": [
         {
           "id": "jour",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "1_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages"
         },
         {
           "id": "nuit",
-          "recomposition_png": "identique_a_la_native",
-          "aseprite": "1_image_5_calques",
-          "tiled": "5_image_layers",
+          "image_0": "identique_a_la_native",
+          "aseprite": "24_images_et_cels_animees",
+          "tiled": "2_atlas_animes",
           "base_magenta": "identique",
-          "plans_disjoints": true
+          "animation": "nuages_et_etoiles"
         }
       ]
     }
   ],
-  "animation": false,
+  "animation": true,
   "inspection_artistique_automatisee": false,
+  "contrat": "image_0=native ; nuages et étoiles périodiques ; Aseprite et Tiled animés",
   "apercu_autonome": true
 }

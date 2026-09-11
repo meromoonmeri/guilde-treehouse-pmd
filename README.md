@@ -4,7 +4,7 @@ Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont
 
 ## Nouveaux layouts extérieurs de référence
 
-Trois layouts reprenant les références ajoutées le 11 septembre 2026 sont disponibles dans [`references_exterieures/`](references_exterieures/README.md) : **Sanctuaire des cascades**, **Prairie maritime** et **Cap côtier**, chacun en **jour et nuit**. Ils sont structurés en cinq calques PNG, avec leurs compositions, bases transparente/magenta, Aseprite statiques et cartes Tiled. L’aperçu multicouche autonome est [`apercu_references_exterieures.html`](apercu_references_exterieures.html).
+Trois layouts **générés à partir des compositions** des références ajoutées le 11 septembre 2026 sont disponibles dans [`references_exterieures/`](references_exterieures/README.md) : **Sanctuaire des cascades**, **Prairie maritime** et **Cap côtier**, chacun en **jour et nuit**. Ils comportent six ou sept plans RGBA sémantiques — ciel, astres, nuages, eau/reliefs et décor — avec une boucle de 24 images : nuages défilants et étoiles nocturnes scintillantes. Les PNG de l’image 0, compositions, bases transparente/magenta, Aseprite animés et cartes Tiled à atlas sont fournis. L’aperçu autonome est [`apercu_references_exterieures.html`](apercu_references_exterieures.html).
 
 L’analyse de la branche de référence et le protocole suivi sont documentés dans [`AUDIT_BRANCHE_01A082DB.md`](AUDIT_BRANCHE_01A082DB.md). Les douze salles et les panoramas originels restent inchangés.
 

@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Prépare les natives complètes à partir des références ajoutées le 11-09-2026.
+"""Prépare les natives générées depuis les références ajoutées le 11-09-2026.
 
-Le but de cette étape est de conserver les layouts de référence avant leur
-séparation technique. Elle ne dessine pas une nouvelle carte :
-- la planche 232024 est recadrée sur un seul panneau de cascades ;
-- les deux images côtières sont réduites par un facteur entier ;
-- seule la nuit de la planche de cascades est une palette dédiée appliquée à
-  la même géométrie, avec un petit ciel étoilé local.
+Les entrées de ``entrees/`` servent uniquement de guides de layout, de palette
+et de lecture PMD. Les six images de ``generation/`` sont les rendus créés par
+le générateur d'images pour cette livraison. Cette étape ne recontacte aucun
+service : elle fixe leurs dimensions de production par un redimensionnement
+entier au plus proche voisin, sans masque ni collage de fragments.
 """
 from __future__ import annotations
 
@@ -14,16 +13,24 @@ import hashlib
 import json
 from pathlib import Path
 
-import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
 ENTREES = ROOT / "source" / "references_exterieures" / "entrees"
+GENERATED = ROOT / "source" / "references_exterieures" / "generation"
 NATIVES = ROOT / "source" / "references_exterieures" / "natives"
 
-CASCADE_CROP = (1, 0, 297, 224)  # un panneau, sans séparateur noir ni plan magenta
-CASCADE_SIZE = (592, 448)       # x2, grille 8 px
-CAP_SIZE = (960, 600)           # 3840×2400 ÷ 4, grille 8 px
+# Les deux rendus paysage sortent en 1376×768 et sont divisés par deux. Le
+# sanctuaire de cascades est volontairement un layout vertical, 816×1300 / 2.
+GENERATED_OUTPUTS = (
+    ("cascades_jour.png", "cascades_jour_generee.png", (816, 1300), (408, 648)),
+    ("cascades_nuit.png", "cascades_nuit_generee.png", (816, 1300), (408, 648)),
+    ("prairie_maritime_jour.png", "prairie_maritime_jour_generee.png", (1376, 768), (688, 384)),
+    ("prairie_maritime_nuit.png", "prairie_maritime_nuit_generee.png", (1376, 768), (688, 384)),
+    ("cap_cotier_jour.png", "cap_cotier_jour_generee.png", (1376, 768), (688, 384)),
+    ("cap_cotier_nuit.png", "cap_cotier_nuit_generee.png", (1376, 768), (688, 384)),
+)
+CASCADE_CROP = (1, 0, 297, 224)  # panneau de référence, sans séparateur ni plan magenta
 
 
 def save(image: Image.Image, path: Path) -> None:
@@ -31,59 +38,18 @@ def save(image: Image.Image, path: Path) -> None:
     image.convert("RGBA").save(path, optimize=True)
 
 
-def night_cascade(day: Image.Image) -> Image.Image:
-    """Décline le panneau de jour sans déplacer aucun élément du layout."""
-    pixels = np.asarray(day.convert("RGBA")).copy()
-    rgb = pixels[:, :, :3].astype(np.float32)
-    # Transformation chromatique fixe, plus froide mais laissant l'eau lisible.
-    rgb = rgb * np.array([0.34, 0.41, 0.66], dtype=np.float32) + np.array([3, 6, 16], dtype=np.float32)
-    water = (pixels[:, :, 2] > pixels[:, :, 0] * 1.15) & (pixels[:, :, 1] > pixels[:, :, 0] * 1.06)
-    rgb[water] = np.minimum(255, rgb[water] + np.array([0, 10, 18], dtype=np.float32))
-    pixels[:, :, :3] = np.rint(rgb).clip(0, 255).astype(np.uint8)
-    image = Image.fromarray(pixels, "RGBA")
-    draw = ImageDraw.Draw(image)
-    # Astres ajoutés au fond, sans toucher aux éléments de terrain du layout.
-    for x, y, r in [(round(image.width*f), y, r) for f, y, r in
-                    [(.10, 50, 2), (.16, 89, 1), (.22, 31, 1), (.39, 50, 2),
-                     (.73, 42, 1), (.85, 83, 1), (.92, 39, 2)]]:
-        draw.rectangle((x-r, y-r, x+r, y+r), fill=(218, 235, 255, 255))
-    return image
-
-
-def night_prairie(day: Image.Image) -> Image.Image:
-    """Variante nocturne du même layout de prairie maritime, sans déplacement."""
-    pixels = np.asarray(day.convert("RGBA")).copy()
-    rgb = pixels[:, :, :3].astype(np.float32)
-    rgb = rgb * np.array([0.31, 0.39, 0.61], dtype=np.float32) + np.array([2, 6, 16], dtype=np.float32)
-    pixels[:, :, :3] = np.rint(rgb).clip(0, 255).astype(np.uint8)
-    image = Image.fromarray(pixels, "RGBA")
-    draw = ImageDraw.Draw(image)
-    for x, y in [(38, 28), (86, 63), (154, 39), (218, 74), (298, 32), (372, 58), (453, 24)]:
-        draw.rectangle((x, y, x + 2, y + 2), fill=(218, 235, 255, 255))
-    return image
-
-
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def prepare() -> dict:
-    NATIVES.mkdir(parents=True, exist_ok=True)
-
+def prepare_guides() -> None:
+    """Conserve les deux aides de lecture fabriquées depuis les entrées brutes."""
     with Image.open(ENTREES / "232024.png") as original:
         panel = original.convert("RGBA").crop(CASCADE_CROP)
-    assert panel.getchannel("A").getextrema() == (255, 255)
     save(panel, ENTREES / "cascade_reference_recadree.png")
-    cascade = panel.resize(CASCADE_SIZE, Image.Resampling.NEAREST)
-    save(cascade, NATIVES / "cascades_jour.png")
-    save(night_cascade(cascade), NATIVES / "cascades_nuit.png")
 
-    # Le GIF est une référence de layout/mouvement ; la planche rend ses quatre
-    # phases consultables sans traiter le GIF comme un calque de production.
     with Image.open(ENTREES / "2cwdrrs469f61.gif") as animated:
         assert animated.n_frames == 4 and animated.size == (504, 504)
-        animated.seek(0)
-        prairie = animated.convert("RGBA").copy()
         board = Image.new("RGBA", (480, 420), (19, 23, 42, 255))
         draw = ImageDraw.Draw(board)
         for index in range(animated.n_frames):
@@ -94,36 +60,49 @@ def prepare() -> dict:
             board.alpha_composite(frame, (x + (240 - frame.width) // 2, y + 24))
             draw.text((x + 8, y + 6), f"Image {index}", fill=(246, 239, 216, 255))
     save(board, ENTREES / "animation_reference_planche.png")
-    save(prairie, NATIVES / "prairie_maritime_jour.png")
-    save(night_prairie(prairie), NATIVES / "prairie_maritime_nuit.png")
 
-    for mode, filename in (("jour", "falaise_cotiere_jour_reference.jpg"), ("nuit", "falaise_cotiere_nuit_reference.png")):
-        with Image.open(ENTREES / filename) as original:
-            image = original.convert("RGBA")
-        assert image.size == (3840, 2400), f"Référence côtière inattendue: {image.size}"
-        native = image.resize(CAP_SIZE, Image.Resampling.NEAREST)
-        assert native.getchannel("A").getextrema() == (255, 255)
-        save(native, NATIVES / f"cap_cotier_{mode}.png")
+
+def prepare() -> dict:
+    NATIVES.mkdir(parents=True, exist_ok=True)
+    prepare_guides()
+    generated_report = {}
+    for destination, source, source_size, native_size in GENERATED_OUTPUTS:
+        path = GENERATED / source
+        with Image.open(path) as opened:
+            rendered = opened.convert("RGBA")
+        assert rendered.size == source_size, f"Taille inattendue : {source} = {rendered.size}, attendu {source_size}"
+        assert rendered.getchannel("A").getextrema() == (255, 255), f"Rendu non opaque : {source}"
+        native = rendered.resize(native_size, Image.Resampling.NEAREST)
+        save(native, NATIVES / destination)
+        generated_report[source] = {
+            "sha256": digest(path), "dimensions_source": list(source_size),
+            "native": destination, "dimensions_native": list(native_size), "reduction": "plus_proche_voisin",
+        }
 
     report = {
+        "methode": "generation_image_referencee_puis_normalisation_entierement_reproductible",
+        "branche_references": "arena/01a082db-guilde-treehouse-pmd",
+        "commits_entrees": {
+            "cascade_et_gif": "6cf427cdcc59874411172e57f53fb47011de7941",
+            "etang_et_cap": "bc3afc6676d62e1a5d811e129070ed3443162946",
+        },
         "entrees": {
             path.name: {"sha256": digest(path), "octets": path.stat().st_size}
             for path in sorted(ENTREES.glob("*")) if path.is_file()
         },
+        "generation": generated_report,
         "natives": {
             path.name: {"sha256": digest(path), "dimensions": list(Image.open(path).size)}
             for path in sorted(NATIVES.glob("*.png"))
         },
-        "cascade": {"recadrage_source_px": list(CASCADE_CROP), "dimensions": list(CASCADE_SIZE)},
-        "prairie_maritime": {"image_source": 0, "dimensions": [504, 504], "animation_source": 4},
-        "cap_cotier": {"reduction": "3840×2400 / 4 au plus proche voisin", "dimensions": list(CAP_SIZE)},
-        "nuit_cascades": "palette fixe et astres locaux, géométrie de jour inchangée",
-        "nuit_prairie_maritime": "palette fixe et étoiles locales, géométrie de jour inchangée",
+        "regle_jour_nuit": "Chaque nuit est générée à partir de son rendu jour afin de conserver le même layout ; aucune nuit n'est un filtre runtime.",
+        "guide_cascade": {"recadrage_source_px": list(CASCADE_CROP)},
+        "guide_gif": {"frames": 4, "dimensions": [504, 504]},
     }
     (ROOT / "source" / "references_exterieures" / "provenance.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print("Natives prêtes : cascade, prairie maritime et cap côtier, tous en jour/nuit.")
+    print("Natives générées prêtes : cascades, prairie maritime et cap côtier, en jour/nuit.")
     return report
 
 

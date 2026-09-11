@@ -5,7 +5,7 @@
 - **Branche auditée :** `arena/01a082db-guilde-treehouse-pmd`
 - **Révision auditée :** `bc3afc6676d62e1a5d811e129070ed3443162946`
 - **Base commune :** `6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78` (`main`, tag `pmd-passages-ouverts-v1`)
-- **Méthode d'audit :** récupération Git de la branche distante, inspection des commits, manifestes, scripts, tailles de blobs, PNG de compositions et rapports ; extraction dans un répertoire isolé ; installation isolée des dépendances Python ; exécution du vérificateur statique de la branche auditée. Aucun fichier de la branche auditée n'a été modifié.
+- **Méthode d'audit :** récupération Git de la branche distante, inspection des commits, manifestes, scripts, tailles de blobs, PNG de compositions et rapports ; extraction dans un répertoire isolé ; installation isolée des dépendances Python ; exécution du vérificateur de formats de la branche auditée. Aucun fichier de la branche auditée n'a été modifié.
 
 Ce document sépare les **faits vérifiés** des déclarations présentes dans la branche. Il explique la chaîne qui avait été livrée, ses limites et le protocole de reprise appliqué ici.
 
@@ -173,33 +173,51 @@ Les quatre compositions jour/nuit de l'ancienne branche ont été inspectées vi
 
 ---
 
-## 7. Protocole de reprise adopté sur cette branche
+## 7. Protocole de reprise effectivement adopté sur cette branche
 
-La correction de consigne demande maintenant de conserver **les layouts des nouvelles références et une structure à plusieurs calques**, à la manière du précédent agent. La livraison ajoutée ici suit donc le protocole ci-dessous.
+La correction de consigne demande désormais les **layouts des nouvelles références**, une image créée par générateur puis les **plans animés** de l’implémentation extérieure auditée. Il ne s’agit donc ni de livrer une découpe directe des fichiers fournis, ni de se limiter au format Aseprite fixe du kit de salles de `main`.
 
-### A. Références et natives
+### A. Origine, génération et natives
 
-- Les cinq nouvelles entrées ont été placées sous `source/references_exterieures/entrees/` ; leurs empreintes SHA-256 sont régénérées dans `source/references_exterieures/provenance.json`.
-- Un panneau propre de `232024.png` est sélectionné, sans séparateur noir ni bande magenta technique. Il est redimensionné au plus proche voisin vers **592 × 448 px**.
-- L'image 0 du GIF de prairie maritime est conservée au format source **504 × 504 px** ; ce layout devient la troisième scène. Les quatre phases restent en planche de référence afin de tracer le mouvement observé, sans l'inventer ni l'appliquer à une scène non demandée.
-- Les deux grandes références côtières jour/nuit sont réduites par le facteur entier quatre vers **960 × 600 px**, sans recadrage ni interpolation. Elles gardent donc le layout fourni : prairie, maison-courrier, falaise et mer.
-- Les variantes nocturnes de cascades et de prairie maritime gardent strictement leurs géométries de jour. Une transformation chromatique fixe et de petites étoiles limitées à l'atmosphère constituent ces variantes ; aucun terrain n'est déplacé.
+- Les cinq entrées des commits récents sont conservées dans `source/references_exterieures/entrees/`. Elles sont des guides de composition, de lisibilité et de palette ; leurs SHA-256 restent consignés dans `provenance.json`.
+- Six rendus complets ont été créés avec le générateur d’images de cette livraison : `cascades`, `prairie_maritime` et `cap_cotier`, chacun en jour/nuit. Ils sont les sources artistiques canoniques dans `source/references_exterieures/generation/`. Aucun crop, collage ni filtre de l’image de référence n’est la native finale.
+- `cascades` est une composition verticale volontaire : les rendus de génération font 816 × 1 300 px et sont normalisés au plus proche voisin vers **408 × 648 px**. Les deux scènes panoramiques font 1 376 × 768 px et sont normalisées vers **688 × 384 px**.
+- Chaque nuit a été créée en prenant le rendu jour correspondant comme contrainte de géométrie ; elle n’est pas une simple teinte appliquée après coup. La préparation qui est versionnée ne recontacte aucun générateur : elle valide les six sources présentes, les redimensionne et écrit la provenance reproductible de cette normalisation.
 
-### B. Calques produits
+Cela garde une frontière honnête : l’export est rejouable depuis les six rasters versionnés, mais la génération artistique elle-même dépend de l’outil et de la séance de génération, comme c’était le cas des assets déjà commis de la branche auditée.
 
-`references_exterieures/cascades/`, `references_exterieures/prairie_maritime/` et `references_exterieures/cap_cotier/` contiennent chacun, pour jour et nuit :
+### B. Architecture animée reprise et adaptée
 
-- cinq PNG RGBA dans `calques/<ambiance>/` ;
-- une composition complète dans `compositions/` ;
-- une base transparente et une base magenta dans `bases/` ;
-- un Aseprite statique à une image et cinq vrais calques ;
-- une carte Tiled à cinq `image layers` sur une grille de 8 px.
+`source/exterior_reference_animation.py` est la mécanique relue dans `source/exterior_animation.py` de la branche auditée, adaptée seulement pour accepter le nom d’asset de chaque scène. Elle apporte :
 
-Le séparateur attribue chaque pixel opaque d'une native à **un seul plan**. Il n'y a ni trou ni recouvrement. Le fond reçoit les pixels non spécialisés ; l'atmosphère, le relief, l'eau/cascade, la maison et la végétation reçoivent ensuite leurs zones sémantiques. Cette propriété est plus importante qu'une simple liste de PNG : elle garantit que masquer un calque dans l'aperçu est significatif et que la recomposition ne modifie pas l'image de référence.
+- `AnimatedLayer`, qui rend une phase de plan fixe, défilant ou scintillant ;
+- la carte de groupes et la LUT de 24 phases pour les étoiles ; le plus grand groupe, la lune, est forcé à l’opacité 100 % ;
+- un compositeur unique utilisé à la fois pour l’image 0, les cels Aseprite et les atlas Tiled ;
+- `write_ase()`, qui déclare les calques une seule fois, crée le tag de boucle, écrit les cels réelles sur une période et des cels liées pour les répétitions ;
+- `write_tiled()`, qui exporte les plans fixes en `imagelayer` et les opérations animées sous forme d’objet-tile pointant vers un atlas ;
+- `export_variant()`, qui écrit les PNG image 0, compositions, bases, magenta, Aseprite, Tiled et métadonnées d’opérations.
 
-### C. Contrat et contrôle
+Le précédent `falaise` emploie 480 phases afin de parcourir ses 480 px de nuages. Pour les nouveaux layouts, la boucle commune est volontairement plus courte : **24 phases × 250 ms = 6 000 ms**, avec un décalage horizontal de 1 px par phase. C’est un choix documenté, contrôlé et compatible avec la période de scintillement déjà employée ; ce n’est pas une revendication que la nouvelle composition aurait une boucle de 480 px.
 
-Les scripts de cette branche sont :
+### C. Plans produits et conservation de l’image 0
+
+Les plans, dans l’ordre de composition, sont :
+
+| Scène | Plans |
+| --- | --- |
+| `cascades` | `00_ciel`, `01_astres`, `02_nuages`, `03_eau_cascades`, `04_ilot_rocheux`, `05_vegetation` |
+| `prairie_maritime` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_falaises`, `05_prairie_chemin`, `06_fleurs_vegetation` |
+| `cap_cotier` | `00_ciel`, `01_astres`, `02_nuages`, `03_mer_reflets`, `04_falaise_terrain`, `05_maison`, `06_vegetation` |
+
+L’eau, le relief, le terrain/la maison et la végétation sont des plans séparés et éditables. `02_nuages` défile là où le layout contient des nuages ; la prairie a un ciel délibérément dégagé et garde un PNG nuages transparent au lieu d’inventer une masse nuageuse. `01_astres` est transparent le jour et animé la nuit.
+
+Afin qu’un nuage en déplacement ne découvre pas une découpe vide, `00_ciel` reçoit une reconstitution inpaintée derrière les pixels mobiles. À la phase 0, les pixels originaux des nuages/astres sont composités au-dessus : **la composition est donc identique, pixel par pixel, à la native générée**. Cette méthode implique que le ciel et les plans atmosphériques peuvent se chevaucher précisément à l’image 0. Les plans de décor terrestre restent séparés ; le contrôle ne prétend plus faussement que chaque pixel de tous les plans est exclusivement attribué une seule fois.
+
+### D. Exports et contrôle exécuté
+
+Chaque scène/ambiance de `references_exterieures/` contient les PNG RGBA, la composition, les bases transparente/magenta, un `.aseprite` de 24 images et une carte `.tmj`. Les nuages et étoiles animés ont aussi un atlas dans `animations/`; les groupes des étoiles sont conservés dans `etoiles_groupes.png`. `apercu_references_exterieures.html` encode ses PNG en WebP data URI, permet de changer scène/ambiance, pause/reprise et visibilité de chaque plan sans appel réseau.
+
+Les commandes suivantes ont été exécutées après le changement vers l’architecture animée :
 
 ```bash
 python source/prepare_references_exterieures.py
@@ -207,9 +225,7 @@ python source/rebuild_references_exterieures.py
 python source/verify_references_exterieures.py
 ```
 
-Le premier prépare les natives et enregistre les entrées. Le second répartitionne les pixels, produit tous les exports et construit `apercu_references_exterieures.html` avec les plans encodés localement. Le dernier relit les PNG, vérifie la partition, recompose les images, relit chaque cel Aseprite, valide les liens Tiled, les bases transparente/magenta, les différences jour/nuit et l'absence de requête réseau dans l'aperçu.
-
-Aucun appel à un service réseau, aucun générateur en ligne et aucune animation ne sont nécessaires pour rejouer l'export des fichiers versionnés. Comme pour le kit historique, une inspection artistique humaine reste complémentaire.
+Le vérificateur de cette livraison contrôle les dimensions/alpha des natives, l’identité native = composition à la phase 0, les bases, les deux ambiances, la périodicité et le mouvement des plans non vides, tous les pixels de toutes les cels Aseprite, les cels liées des plans fixes, les atlas et séquences de 24 tuiles Tiled, ainsi que l’absence d’URL réseau dans l’aperçu. Il ne rend pas de jugement esthétique ni de licence : une revue humaine reste nécessaire.
 
 ---
 
@@ -217,9 +233,9 @@ Aucun appel à un service réseau, aucun générateur en ligne et aucune animati
 
 1. Toujours lire les commits dans l'ordre temporel avant d'associer une sortie à une référence.
 2. Conserver l'image complète native en source, puis produire les plans et tous les formats depuis elle. Ne jamais ne modifier qu'une composition livrée.
-3. Pour une ambiance nuit, conserver la géométrie de la variante jour, sauf demande explicite de layout différent ; isoler astres/nuages du terrain dans un plan dédié.
+3. Pour une ambiance nuit, conserver la géométrie du layout jour lorsque cela est demandé ; isoler astres et nuages dans des plans dédiés et garder la lune fixe.
 4. Employer une grille 8 px lorsque les cartes Aseprite/Tiled sont demandées, sans transformer le rendu en gros carrés de 8 px.
-5. Vérifier les plans par une partition/une recomposition pixel à pixel avant de déclarer qu'ils sont indépendants.
+5. Vérifier la recomposition pixel à pixel à la phase 0. Lorsqu’un plan se déplace, reconstituer derrière lui un fond cohérent ; ne pas prétendre que ce fond et l’atmosphère sont disjoints.
 6. Distinguer clairement références de travail, sources externes, natives préparées et exports de jeu ; garder les informations de provenance avec les assets.
 7. Ne pas prétendre qu'un test de format valide une décision artistique ou une licence.
 8. Limiter les gros binaires aux formats explicitement demandés. Pour une simple référence, les PNG peuvent suffire ; pour une intégration modulaire, garder en plus Aseprite/Tiled et les scripts de contrôle.
@@ -228,9 +244,10 @@ Aucun appel à un service réseau, aucun générateur en ligne et aucune animati
 
 ## 9. État de cette livraison
 
-- Les trois layouts nouvellement ajoutés sont produits dans `references_exterieures/` en **jour et nuit, cinq plans par ambiance**.
-- Les références récentes sont réellement utilisées dans la préparation ; elles ne sont pas confondues avec le rendu antérieur à leurs commits.
-- La chaîne préparateur → export → vérificateur a été exécutée avec succès après la modification de consigne vers une livraison multicouche.
-- L'aperçu `apercu_references_exterieures.html` est autonome et permet de masquer chaque plan.
+- Les trois layouts sont produits dans `references_exterieures/` en **jour et nuit**, avec six ou sept plans sémantiques par ambiance.
+- Les six natives finales viennent des rendus générés de cette livraison ; les références récentes restent des guides tracés, non des pixels livrés.
+- Les nuages non vides défilent, les étoiles nocturnes scintillent et les lunes restent fixes dans Aseprite, Tiled et l’aperçu.
+- La chaîne préparation → export → vérification a été exécutée avec succès sur cette architecture animée.
+- L’aperçu `apercu_references_exterieures.html` est autonome et permet de masquer chaque plan, changer d’ambiance et mettre la boucle en pause.
 
 Ce manuel doit être lu avec `references_exterieures/README.md`, qui décrit le contrat de fichiers de la nouvelle livraison.

@@ -1,69 +1,91 @@
-# Layouts extérieurs PMD — références jour / nuit
+# Layouts extérieurs PMD — générés, multicouches et animés
 
-Les nouveaux layouts de référence sont livrés en **plusieurs calques fixes**, selon la méthode du kit précédent : conserver le cadrage de la référence, préparer une native complète, séparer des plans disjoints, reconstituer l'image, puis exporter les mêmes données en PNG, Aseprite et Tiled.
+Cette livraison applique le workflow extérieur audité, et non le workflow fixe
+plus limité des salles de `main` : **native complète → plans RGBA sémantiques →
+composition contrôlée → timeline Aseprite, atlas Tiled et aperçu animé**.
 
-## Scènes
+Les cinq images ajoutées le 11 septembre 2026 sont des **guides de layout**.
+Les six natives finales sont des rendus produits par le générateur d’images de
+cette livraison, conservés dans `source/references_exterieures/generation/`.
+Aucun pixel des références externes n'est collé dans les natives ou les plans.
+Le script de préparation réduit ces rendus entiers au plus proche voisin et en
+consigne les empreintes SHA-256 dans `source/references_exterieures/provenance.json`.
 
-| Identifiant | Layout repris | Dimensions | Ambiances |
-| --- | --- | --- | --- |
-| `cascades` | îlot suspendu, chutes d'eau, eau et végétation de rive | 592 × 448 px | Jour, nuit |
-| `prairie_maritime` | prairie fleurie, chemin, reliefs latéraux et mer au nord | 504 × 504 px | Jour, nuit |
-| `cap_cotier` | prairie maritime, chemin, maison-courrier, falaise et océan | 960 × 600 px | Jour, nuit |
+## Scènes et tailles de production
 
-Les trois scènes reprennent les **layouts** des références ajoutées le 11 septembre 2026. Les positions structurantes sont conservées entre les deux ambiances : l'îlot, les chutes, le bassin et les rives pour `cascades` ; le sentier, les parterres et les retours rocheux pour `prairie_maritime` ; le chemin, la maison-courrier, le plateau, la falaise et la mer pour `cap_cotier`.
+| Identifiant | Intention du layout | Native | Ambiances |
+| --- | --- | ---: | --- |
+| `cascades` | îlot suspendu, cascades, bassin et rive | 408 × 648 px | Jour, nuit |
+| `prairie_maritime` | prairie fleurie, retours rocheux et mer | 688 × 384 px | Jour, nuit |
+| `cap_cotier` | prairie, maison-courrier, falaise et océan | 688 × 384 px | Jour, nuit |
 
-## Cinq calques par scène et par ambiance
+La nuit est un rendu généré séparément à partir de son équivalent de jour afin
+de préserver le même cadrage ; ce n'est pas un filtre appliqué au runtime.
 
-### Sanctuaire des cascades
+## Plans éditables, du fond vers l'avant
 
-1. `00_ciel_eau` — ciel, horizon et nappe d'eau ;
-2. `01_nuages_astres` — nuages de jour ou étoiles de nuit ;
-3. `02_ilot_rocheux` — îlot rocheux et relief central ;
-4. `03_cascades` — chutes et écume ;
-5. `04_vegetation` — roseaux, buissons et premier plan.
+### `cascades` — 6 PNG par ambiance
 
-### Prairie maritime
+1. `00_ciel` : ciel reconstitué sous les éléments atmosphériques et montagnes lointaines ;
+2. `01_astres` : lune immobile et étoiles nocturnes scintillantes (transparent le jour) ;
+3. `02_nuages` : bancs de nuages défilants ;
+4. `03_eau_cascades` : eau, chutes et écume ;
+5. `04_ilot_rocheux` : îlot suspendu ;
+6. `05_vegetation` : roseaux, buissons et avant-plan.
 
-1. `00_ciel_mer` — ciel, horizon et mer ;
-2. `01_nuages_astres` — atmosphère et étoiles nocturnes ;
-3. `02_prairie_chemin` — prairie centrale et chemin ;
-4. `03_reliefs` — falaises, rochers et rebords ;
-5. `04_vegetation_fleurs` — fleurs, buissons et arbres.
+### `prairie_maritime` — 7 PNG par ambiance
 
-### Cap côtier
+1. `00_ciel` ; 2. `01_astres` ; 3. `02_nuages` ; 4. `03_mer_reflets` ;
+5. `04_falaises` ; 6. `05_prairie_chemin` ; 7. `06_fleurs_vegetation`.
 
-1. `00_ciel_mer` — ciel, horizon et mer ;
-2. `01_nuages_astres` — nuages de jour ou lune/étoiles de nuit ;
-3. `02_terrain_falaise` — chemin, sol et paroi rocheuse ;
-4. `03_maison` — maison-courrier et ses abords immédiats ;
-5. `04_vegetation` — arbres, herbes, fleurs et liserés de prairie.
+Le ciel de cette composition est dégagé : `02_nuages` est volontairement un
+plan transparent, sans faux nuage ni atlas vide. La lune et les étoiles de nuit
+restent un vrai plan animé.
 
-Les calques sont des PNG RGBA pleine taille et **disjoints** : chaque pixel opaque de la native appartient à un seul calque. Leur composition, dans l'ordre ci-dessus, redonne la native puis `compositions/jour.png` ou `compositions/nuit.png` exactement, pixel pour pixel. Il n'y a aucune animation dans cette livraison.
+### `cap_cotier` — 7 PNG par ambiance
 
-## Arborescence d'une scène
+1. `00_ciel` ; 2. `01_astres` ; 3. `02_nuages` ; 4. `03_mer_reflets` ;
+5. `04_falaise_terrain` ; 6. `05_maison` ; 7. `06_vegetation`.
+
+## Contrat de l’animation
+
+Toutes les variantes utilisent une boucle de **24 images de 250 ms**, soit
+**6 000 ms**. Les PNG dans `calques/` sont exactement l’**image 0** de chaque
+plan ; `compositions/<ambiance>.png` est exactement la native préparée.
+
+- Les `02_nuages` non vides sont décalés horizontalement d’un pixel à chaque
+  phase et bouclent après 24 px.
+- Pour chaque nuit, `01_astres` comporte des groupes de composantes. Les étoiles
+  changent d'opacité selon une LUT de 24 phases ; le plus grand groupe (la lune)
+  reste à 100 %, donc ne scintille pas.
+- Un ciel sous-jacent est inpainté sous les éléments mobiles. Il n'apparaît pas
+  dans le rendu initial, car les pixels atmosphériques originaux le recouvrent,
+  mais évite de révéler un trou transparent lorsque les nuages se déplacent.
+- Les plans de terrain restent des PNG indépendants. Ils sont séparés par rôle,
+  pas artificiellement transformés en une animation sans contenu.
+
+Cette nécessité d'un fond révélé signifie que les plans atmosphériques peuvent
+se superposer au ciel à l'image 0. Le contrat contrôlé est l'identité stricte de
+la recomposition avec la native, et non une fausse promesse de plans totalement
+disjoints à chaque pixel.
+
+## Arborescence d’une scène
 
 ```text
 references_exterieures/<scene>/
-├── calques/{jour,nuit}/     # 5 PNG RGBA par ambiance
-├── compositions/            # rendu reconstitué, PNG complet
-├── bases/                   # base sans ciel/mer ni astres, transparente et magenta
-├── aseprite/                # 1 image, 5 calques réels, sans timeline animée
-└── tiled/                   # 5 image layers, grille 8 px
+├── calques/{jour,nuit}/     # PNG RGBA pleine taille, image 0
+├── animations/              # groupes d'étoiles + atlas Tiled des plans mobiles
+├── compositions/            # image 0 recomposée, strictement identique à la native
+├── bases/                   # plans terrain seulement, transparente et magenta
+├── aseprite/                # 24 images, calques réels, tag de boucle et cels liées
+└── tiled/                   # image layers fixes + objets tuiles animés, grille 8 px
 ```
 
-`bases/*_transparente.png` permet de vérifier que le fond a bien été séparé. `bases/*_magenta.png` est le témoin de contrôle sur `#FF00FF`. Les cartes Tiled portent des **image layers** liés aux PNG ; elles ne fournissent ni collisions, ni transitions ni autotiling.
-
-## Méthode appliquée
-
-1. Audit des ajouts `6cf427c` et `bc3afc6` : planche de cascades, GIF de prairie maritime, spritesheet d'étang et paire de références côtières jour/nuit.
-2. Préparation des natives : un panneau propre est extrait de la planche de cascades ; l'image 0 du GIF donne le layout de `prairie_maritime` ; les vues côtières sont réduites au facteur entier 4. Les nuits des cascades et de la prairie maritime reprennent strictement leurs géométries de jour, avec une palette nocturne et des astres limités au ciel.
-3. Attribution exclusive de chaque pixel à un plan sémantique. Cette partition est contrôlée avant l'export : pas de trou, pas de recouvrement, pas de pixel mélangé.
-4. Reconstruction des compositions, des bases transparente/magenta, d'un Aseprite à une image et d'une carte Tiled à cinq image layers.
-5. Vérification indépendante des pixels des PNG, cels Aseprite, liens Tiled, bases et aperçu autonome.
-
-Les références d'entrée, le panneau de travail et une planche des quatre phases du GIF sont conservés dans `source/references_exterieures/entrees/`. Les natives préparées sont dans `source/references_exterieures/natives/`; leur provenance et leurs empreintes sont inscrites dans `source/references_exterieures/provenance.json`.
-
-L'audit complet de la branche indiquée, notamment le fait que son rendu précédent est antérieur aux commits apportant ces références, se trouve dans [`../AUDIT_BRANCHE_01A082DB.md`](../AUDIT_BRANCHE_01A082DB.md).
+Dans Tiled, les plans fixes sont des `imagelayer`. Les plans animés sont des
+`objectgroup` pointant vers un atlas PNG : la tuile 0 contient une séquence de
+24 entrées de 250 ms. Les cartes sont des aides de montage ; elles ne fournissent
+ni collisions, ni transitions, ni autotiling. `bases/*_transparente.png` et
+`bases/*_magenta.png` servent à contrôler l'extraction des plans de terrain.
 
 ## Reconstruction et contrôle
 
@@ -72,6 +94,22 @@ pip install -r source/requirements.txt
 python source/prepare_references_exterieures.py
 python source/rebuild_references_exterieures.py
 python source/verify_references_exterieures.py
+python source/verify_pmd.py
 ```
 
-Ouvrir [`../apercu_references_exterieures.html`](../apercu_references_exterieures.html) pour afficher les trois scènes en jour/nuit et masquer chaque plan. Cet aperçu est autonome : les PNG sont intégrés en WebP sans requête réseau.
+1. `prepare_references_exterieures.py` valide les dimensions/alpha des six
+   rendus générés, prépare les natives et met à jour leur provenance.
+2. `rebuild_references_exterieures.py` sépare les plans, crée le ciel révélé,
+   exporte PNG/Aseprite/Tiled et génère l'aperçu hors ligne.
+3. `verify_references_exterieures.py` relit les PNG, valide l'identité image
+   0/native, les périodes, les pixels des cels Aseprite, les cels liées, les
+   atlas et séquences Tiled, les bases, les deux ambiances et l'autonomie HTML.
+4. `verify_pmd.py` reste le contrôle indépendant du kit historique de `main`.
+
+Ouvrir [`../apercu_references_exterieures.html`](../apercu_references_exterieures.html)
+pour changer de scène/ambiance, mettre en pause et masquer un plan. Les images
+y sont encodées en WebP data URI : aucune requête réseau n'est requise.
+
+L’analyse détaillée de la branche précédente — notamment sa chronologie et sa
+mécanique `exterior_animation.py` — est dans
+[`../AUDIT_BRANCHE_01A082DB.md`](../AUDIT_BRANCHE_01A082DB.md).
