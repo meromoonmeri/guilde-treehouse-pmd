@@ -1,0 +1,96 @@
+{
+  "littoral": {
+    "size": [
+      504,
+      384
+    ],
+    "label": "Cap des Alizés",
+    "sky": 120,
+    "water_y": 120,
+    "reference": "anothercliff reference to made.jpg",
+    "intent": "Cap en arc depuis le sud-ouest, chemin vers un belvédère à l’est.",
+    "crops": {
+      "terrain": [
+        0,
+        144,
+        384,
+        384
+      ]
+    }
+  },
+  "plateaux": {
+    "size": [
+      504,
+      408
+    ],
+    "label": "Prairies suspendues",
+    "sky": 110,
+    "water_y": 0,
+    "reference": "2cwdrrs469f61.gif",
+    "intent": "Terrasse haute à gauche, clairière basse et rampe naturelle vers la terrasse droite.",
+    "crops": {
+      "terrain": [
+        0,
+        128,
+        504,
+        408
+      ],
+      "reliefs": [
+        0,
+        64,
+        504,
+        248
+      ]
+    }
+  },
+  "etang": {
+    "size": [
+      480,
+      432
+    ],
+    "label": "Clairière des sources",
+    "sky": 85,
+    "water_y": 145,
+    "reference": "pondourpmdàrefaire.png",
+    "intent": "Bassin décalé au nord-ouest, rive est et arrivée depuis le sud, cascades dans la paroi boisée.",
+    "crops": {
+      "terrain": [
+        0,
+        112,
+        480,
+        432
+      ],
+      "reliefs": [
+        0,
+        16,
+        376,
+        224
+      ]
+    }
+  },
+  "cascades": {
+    "size": [
+      576,
+      432
+    ],
+    "label": "Ressauts célestes",
+    "sky": 100,
+    "water_y": 288,
+    "reference": "232024.png",
+    "intent": "Deux ressauts naturels asymétriques, bassin ouvert au centre et berges au premier plan.",
+    "crops": {
+      "reliefs": [
+        104,
+        32,
+        472,
+        320
+      ],
+      "terrain": [
+        0,
+        280,
+        576,
+        432
+      ]
+    }
+  }
+}
