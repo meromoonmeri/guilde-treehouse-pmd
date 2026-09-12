@@ -1,0 +1,123 @@
+{
+  "id": "01_paroi",
+  "name": "La grande paroi",
+  "description": "Plateau ouvert au nord, longue face rocheuse et trois grandes chutes.",
+  "size_px": [
+    2048,
+    1536
+  ],
+  "grid_px": 8,
+  "grid_cells": [
+    256,
+    192
+  ],
+  "plateaus": [
+    {
+      "top_polygon_px": [
+        [
+          0,
+          0
+        ],
+        [
+          2048,
+          0
+        ],
+        [
+          2048,
+          520
+        ],
+        [
+          1856,
+          520
+        ],
+        [
+          1856,
+          584
+        ],
+        [
+          1632,
+          584
+        ],
+        [
+          1632,
+          640
+        ],
+        [
+          1344,
+          640
+        ],
+        [
+          1344,
+          616
+        ],
+        [
+          1152,
+          616
+        ],
+        [
+          1152,
+          704
+        ],
+        [
+          864,
+          704
+        ],
+        [
+          864,
+          656
+        ],
+        [
+          608,
+          656
+        ],
+        [
+          608,
+          592
+        ],
+        [
+          352,
+          592
+        ],
+        [
+          352,
+          544
+        ],
+        [
+          0,
+          544
+        ]
+      ],
+      "face_height_px": 320
+    }
+  ],
+  "cascades": [
+    {
+      "x": 480,
+      "y": 592,
+      "height": 320
+    },
+    {
+      "x": 1248,
+      "y": 616,
+      "height": 320
+    },
+    {
+      "x": 1760,
+      "y": 584,
+      "height": 320
+    }
+  ],
+  "stairs": [
+    {
+      "x": 784,
+      "y": 656,
+      "height": 320
+    },
+    {
+      "x": 1456,
+      "y": 640,
+      "height": 320
+    }
+  ],
+  "suggested_edges": "Ouvertures visuelles seulement ; raccord à une carte existante à placer manuellement."
+}

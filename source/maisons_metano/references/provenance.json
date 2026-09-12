@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/Palikadude/Halcyon",
+  "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "extraction_source": "town02/dev/docs/metano_origins_structure_library; opaque pixels checked against Palika native .tile resources",
+  "comparisons": [
+    {
+      "name": "normal",
+      "size": [
+        80,
+        111
+      ],
+      "opaque_pixel_mismatch_vs_palika": 0
+    },
+    {
+      "name": "rock",
+      "size": [
+        96,
+        96
+      ],
+      "opaque_pixel_mismatch_vs_palika": 0
+    },
+    {
+      "name": "fire",
+      "size": [
+        110,
+        99
+      ],
+      "opaque_pixel_mismatch_vs_palika": 0
+    }
+  ]
+}

@@ -1,0 +1,6643 @@
+{
+  "size_px": [
+    2048,
+    1536
+  ],
+  "grid_px": 8,
+  "maps": [
+    {
+      "id": "01_paroi",
+      "name": "La grande paroi",
+      "description": "Plateau ouvert au nord, longue face rocheuse et trois grandes chutes.",
+      "size_px": [
+        2048,
+        1536
+      ],
+      "grid_px": 8,
+      "grid_cells": [
+        256,
+        192
+      ],
+      "plateaus": [
+        {
+          "top_polygon_px": [
+            [
+              0,
+              0
+            ],
+            [
+              2048,
+              0
+            ],
+            [
+              2048,
+              520
+            ],
+            [
+              1856,
+              520
+            ],
+            [
+              1856,
+              584
+            ],
+            [
+              1632,
+              584
+            ],
+            [
+              1632,
+              640
+            ],
+            [
+              1344,
+              640
+            ],
+            [
+              1344,
+              616
+            ],
+            [
+              1152,
+              616
+            ],
+            [
+              1152,
+              704
+            ],
+            [
+              864,
+              704
+            ],
+            [
+              864,
+              656
+            ],
+            [
+              608,
+              656
+            ],
+            [
+              608,
+              592
+            ],
+            [
+              352,
+              592
+            ],
+            [
+              352,
+              544
+            ],
+            [
+              0,
+              544
+            ]
+          ],
+          "face_height_px": 320
+        }
+      ],
+      "cascades": [
+        {
+          "x": 480,
+          "y": 592,
+          "height": 320
+        },
+        {
+          "x": 1248,
+          "y": 616,
+          "height": 320
+        },
+        {
+          "x": 1760,
+          "y": 584,
+          "height": 320
+        }
+      ],
+      "stairs": [
+        {
+          "x": 784,
+          "y": 656,
+          "height": 320
+        },
+        {
+          "x": 1456,
+          "y": 640,
+          "height": 320
+        }
+      ],
+      "suggested_edges": "Ouvertures visuelles seulement ; raccord à une carte existante à placer manuellement."
+    },
+    {
+      "id": "02_plateau",
+      "name": "Le plateau des trois sources",
+      "description": "Grand plateau isolé, contour rocheux et espace central libre.",
+      "size_px": [
+        2048,
+        1536
+      ],
+      "grid_px": 8,
+      "grid_cells": [
+        256,
+        192
+      ],
+      "plateaus": [
+        {
+          "top_polygon_px": [
+            [
+              640,
+              160
+            ],
+            [
+              1344,
+              160
+            ],
+            [
+              1536,
+              240
+            ],
+            [
+              1728,
+              368
+            ],
+            [
+              1808,
+              544
+            ],
+            [
+              1808,
+              704
+            ],
+            [
+              1712,
+              704
+            ],
+            [
+              1712,
+              816
+            ],
+            [
+              1504,
+              816
+            ],
+            [
+              1504,
+              912
+            ],
+            [
+              1280,
+              912
+            ],
+            [
+              1280,
+              976
+            ],
+            [
+              768,
+              976
+            ],
+            [
+              768,
+              912
+            ],
+            [
+              544,
+              912
+            ],
+            [
+              544,
+              816
+            ],
+            [
+              336,
+              816
+            ],
+            [
+              336,
+              704
+            ],
+            [
+              240,
+              704
+            ],
+            [
+              240,
+              512
+            ],
+            [
+              336,
+              336
+            ],
+            [
+              464,
+              240
+            ]
+          ],
+          "face_height_px": 256
+        }
+      ],
+      "cascades": [
+        {
+          "x": 432,
+          "y": 816,
+          "height": 256
+        },
+        {
+          "x": 1152,
+          "y": 976,
+          "height": 256
+        },
+        {
+          "x": 1648,
+          "y": 816,
+          "height": 256
+        }
+      ],
+      "stairs": [
+        {
+          "x": 816,
+          "y": 976,
+          "height": 256
+        },
+        {
+          "x": 1456,
+          "y": 912,
+          "height": 256
+        }
+      ],
+      "suggested_edges": "Ouvertures visuelles seulement ; raccord à une carte existante à placer manuellement."
+    },
+    {
+      "id": "03_terrasses",
+      "name": "Les terrasses de Métano",
+      "description": "Trois niveaux superposés, chutes en chaîne et escaliers latéraux.",
+      "size_px": [
+        2048,
+        1536
+      ],
+      "grid_px": 8,
+      "grid_cells": [
+        256,
+        192
+      ],
+      "plateaus": [
+        {
+          "top_polygon_px": [
+            [
+              128,
+              480
+            ],
+            [
+              320,
+              320
+            ],
+            [
+              1728,
+              320
+            ],
+            [
+              1920,
+              480
+            ],
+            [
+              1920,
+              960
+            ],
+            [
+              1728,
+              960
+            ],
+            [
+              1728,
+              1104
+            ],
+            [
+              1408,
+              1104
+            ],
+            [
+              1408,
+              1168
+            ],
+            [
+              640,
+              1168
+            ],
+            [
+              640,
+              1104
+            ],
+            [
+              320,
+              1104
+            ],
+            [
+              320,
+              960
+            ],
+            [
+              128,
+              960
+            ]
+          ],
+          "face_height_px": 160
+        },
+        {
+          "top_polygon_px": [
+            [
+              352,
+              256
+            ],
+            [
+              512,
+              160
+            ],
+            [
+              1568,
+              160
+            ],
+            [
+              1696,
+              256
+            ],
+            [
+              1696,
+              656
+            ],
+            [
+              1568,
+              656
+            ],
+            [
+              1568,
+              768
+            ],
+            [
+              512,
+              768
+            ],
+            [
+              512,
+              656
+            ],
+            [
+              352,
+              656
+            ]
+          ],
+          "face_height_px": 160
+        },
+        {
+          "top_polygon_px": [
+            [
+              640,
+              64
+            ],
+            [
+              1408,
+              64
+            ],
+            [
+              1472,
+              160
+            ],
+            [
+              1472,
+              400
+            ],
+            [
+              1312,
+              400
+            ],
+            [
+              1312,
+              448
+            ],
+            [
+              736,
+              448
+            ],
+            [
+              736,
+              400
+            ],
+            [
+              576,
+              400
+            ],
+            [
+              576,
+              160
+            ]
+          ],
+          "face_height_px": 160
+        }
+      ],
+      "cascades": [
+        {
+          "x": 1024,
+          "y": 448,
+          "height": 160
+        },
+        {
+          "x": 1024,
+          "y": 768,
+          "height": 160
+        },
+        {
+          "x": 1024,
+          "y": 1168,
+          "height": 160
+        },
+        {
+          "x": 1600,
+          "y": 1104,
+          "height": 160
+        }
+      ],
+      "stairs": [
+        {
+          "x": 656,
+          "y": 400,
+          "height": 160
+        },
+        {
+          "x": 1456,
+          "y": 768,
+          "height": 160
+        },
+        {
+          "x": 592,
+          "y": 1104,
+          "height": 160
+        }
+      ],
+      "suggested_edges": "Ouvertures visuelles seulement ; raccord à une carte existante à placer manuellement."
+    }
+  ],
+  "atlas_tiles": 4864,
+  "native_sheet": "Extension_Metano",
+  "native_animations": [
+    {
+      "tileid": 23,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 26,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 29,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 44,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 47,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 152,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 155,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 172,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 174,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 176,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 178,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 180,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 183,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 185,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 193,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 196,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 3
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 262,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 263,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 305,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 363,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 481,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 7
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 491,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 7
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 608,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 9
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 618,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 9
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 625,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 9
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 9
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 745,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 11
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 751,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 11
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 846,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 852,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 13
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 862,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 13
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 956,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 14
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 14
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 14
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 14
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 973,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 999,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1004,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1010,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1013,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1023,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 61,
+            "Y": 15
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 15
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1028,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1031,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1034,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1039,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 14,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1043,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 17,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1054,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1059,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1064,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1069,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1074,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1079,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1084,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 16
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 16
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1095,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1100,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 10,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1105,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 14,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1110,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1115,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1120,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1128,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1133,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1138,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1143,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1148,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 17
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1153,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 61,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 17
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1172,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 17,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1177,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1182,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1187,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1192,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1197,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1213,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 18
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1218,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 18
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1223,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1228,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 10,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1233,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 14,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1238,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1253,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 35,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1258,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1263,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1268,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1273,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1278,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 19
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 61,
+            "Y": 19
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1285,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1290,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1295,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 14,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1300,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 17,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1305,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1310,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1315,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1320,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1325,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1330,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1335,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1340,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 58,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 20
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1349,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1354,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1358,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1362,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 17,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1366,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1369,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1374,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1379,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1383,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1386,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1390,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 43,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1394,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 21
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 20
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 21
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1427,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 5
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 5
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 5
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 22
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1511,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 23
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1583,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 24
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 24
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 24
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 24
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1601,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 24
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 25
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 25
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 25
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1695,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 26
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1717,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 26
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1725,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 26
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 26
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 26
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 26
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1850,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 28
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1860,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1879,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 29
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 1882,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 29
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 29
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2001,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 16,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 4
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2004,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 31
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2007,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 31
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2060,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 10,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 32
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2113,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 33
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 63,
+            "Y": 32
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2140,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 33
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 33
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 33
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 33
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2142,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 29,
+            "Y": 33
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 7
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 7
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2185,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 34
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2188,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 10,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 11,
+            "Y": 34
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2192,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 22
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 22
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 22
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2233,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 34
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2238,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 61,
+            "Y": 34
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2360,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 36
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 36
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 36
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 36
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2435,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 38
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2438,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 38
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 38
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2637,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 12,
+            "Y": 41
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2650,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 41
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2808,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 43
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 43
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 43
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 43
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2813,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 43
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 8
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 8
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 2,
+            "Y": 8
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2890,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 8,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 9,
+            "Y": 45
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2895,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 13
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 14,
+            "Y": 45
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2899,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2907,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 25,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 45
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 45
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2973,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 8
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 8
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 8
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2976,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 31,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 46
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2980,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 33,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 35,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 46
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 2983,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 37,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 46
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 46
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3064,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 47
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 47
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 47
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 54,
+            "Y": 47
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3105,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 32
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 48
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3295,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 51
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 6
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 6
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 6
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3299,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 51
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3348,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 52
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 52
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 19,
+            "Y": 52
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 52
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3400,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 53
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3414,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 53
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 53
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3519,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 54
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3541,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 55
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3627,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 42,
+            "Y": 56
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3630,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 45,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 44,
+            "Y": 56
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3633,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 48,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 47,
+            "Y": 56
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3635,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 18,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 56
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3638,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 52,
+            "Y": 56
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 53,
+            "Y": 56
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3719,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3726,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 13,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 2
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3728,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3730,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 17,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3734,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3736,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 23,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3741,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 28,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 0
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3743,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 30,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 49,
+            "Y": 3
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3752,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 39
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 39
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 51,
+            "Y": 39
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 39,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3754,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 5,
+            "Y": 58
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 58
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3781,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 3,
+            "Y": 59
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 22
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 4,
+            "Y": 59
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 59,
+            "Y": 22
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3784,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 6,
+            "Y": 59
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 59
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 59
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 7,
+            "Y": 59
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3927,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 21,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 22,
+            "Y": 61
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3929,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 31
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 24,
+            "Y": 61
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 3932,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 26,
+            "Y": 61
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 27,
+            "Y": 61
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4034,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 63
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4090,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 56,
+            "Y": 63
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 63
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4327,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 37
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 37
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 34,
+            "Y": 37
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 38,
+            "Y": 67
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4330,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 40,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 41,
+            "Y": 67
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4351,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 61,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 67
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 62,
+            "Y": 67
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4354,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 0,
+            "Y": 68
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 11
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 1,
+            "Y": 68
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4437,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 60,
+            "Y": 1
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 20,
+            "Y": 69
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4581,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 71
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 15,
+            "Y": 4
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4602,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 6
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 6
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 57,
+            "Y": 71
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 55,
+            "Y": 6
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4645,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 36,
+            "Y": 72
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 55
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 55
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 46,
+            "Y": 55
+          }
+        }
+      ],
+      "FrameLength": 10
+    },
+    {
+      "tileid": 4659,
+      "Frames": [
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 50,
+            "Y": 72
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        },
+        {
+          "Sheet": "Extension_Metano",
+          "TexLoc": {
+            "X": 32,
+            "Y": 28
+          }
+        }
+      ],
+      "FrameLength": 10
+    }
+  ],
+  "limitations": [
+    "Layouts originaux, pas des zones officielles de Métano",
+    "Textures roche/herbe/escaliers natives répétées sans agrandissement",
+    "Contours de rivière et vaguelettes dessinés pour les nouveaux layouts",
+    "Grandes chutes allongées par répétition du milieu des frames originales",
+    "Pas de collisions ni de transitions configurées ; intégration moteur non testée"
+  ]
+}

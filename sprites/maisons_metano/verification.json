@@ -1,0 +1,20 @@
+{
+  "status": "OK",
+  "houses": 10,
+  "individual_png": 20,
+  "native_tile_files": 2,
+  "checks": [
+    "Dimensions, alignement grille 8 px et ligne de base",
+    "10 images distinctes",
+    "Transparence binaire et absence de magenta vif",
+    "Palette limitée par maison",
+    "Recomposition exacte des atlas depuis les PNG",
+    "Décodage indépendant des .tile égal aux atlas PNG",
+    "Dimensions et références des TSJ"
+  ],
+  "not_checked": [
+    "Ouverture et placement dans PMDO",
+    "Collisions, zones d’entrée et occlusion",
+    "Fidélité artistique subjective au style Métano"
+  ]
+}
