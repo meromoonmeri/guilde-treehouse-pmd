@@ -1,6 +1,6 @@
 # Manuel de production — falaises Métano et entrées de donjon PMDO
 
-**Version du document : 12 septembre 2026 · cible moteur : PMDO 0.8.12.**
+**Version du document : 13 septembre 2026 · cible moteur : PMDO 0.8.12.**
 
 Ce manuel décrit les méthodes effectivement employées, leurs limites et le protocole nécessaire pour passer des contrôles de fichiers à une validation dans le moteur. Il ne certifie pas une installation ou une ouverture de carte qui n’a pas eu lieu.
 
@@ -10,10 +10,10 @@ Ce manuel décrit les méthodes effectivement employées, leurs limites et le pr
 |---|---|
 | Pack `cotes_metano_abyss_0812_pmdo.zip` | Livré : dix terrains, vingt variantes jour/nuit |
 | Filtre nocturne Abyss | Implémenté et comparé aux sources |
-| Demande supplémentaire : sept falaises + trois entrées | En préparation ; aucun nouveau pack de dix cartes livré à ce stade |
+| Sept falaises + trois entrées | Livrées dans `mod_metano_expeditions_pmdo_0812.zip` : 20 nouveaux Ground + 20 précédents |
 | Références Crooked Cavern / Brine Cave / Drenched Bluff | Tilesets téléchargés, décodés et références des cartes contrôlées |
 | Installation PMDO ici | **Moteur installé depuis RUNTIMEPMDO, ressources de base récupérées** |
-| Désérialisation par le vrai chargeur | **20 Ground du pack livré : PASS, sans affichage** |
+| Désérialisation par le vrai chargeur | **40 Ground du mod Expéditions : PASS, sans affichage** |
 | Éditeur graphique / rendu / test de jeu | **Lancement en échec (code 139), non validés** |
 
 Le détail des tentatives est dans [installation_pmdo.json](source/cote_v5_expeditions/installation_pmdo.json). Un programme Python qui vérifie du JSON ou reconstruit une image n’est pas le moteur PMDO. Depuis cette première étude, le [test natif documenté](source/pmdo_runtime/README.md) appelle le vrai chargeur PMDO et valide vingt désérialisations, sans GPU.
@@ -98,7 +98,7 @@ Avant de produire les ressources, écrire pour chaque carte :
 - les zones réservées aux futures structures ;
 - le rôle des fonds et la présence de mer.
 
-Les dix fonctions proposées pour ce lot sont : crête sinueuse, caps reliés, éventail de terrasses, lagune latérale, côte découpée, sommet à balcon, cap à chenal ; puis vestibule de grotte, corniche d’accès maritime et passage entre deux épaules. **Ce sont des intentions de composition, pas des cartes déjà réalisées.**
+Les dix fonctions proposées pour ce lot sont : crête sinueuse, caps reliés, éventail de terrasses, lagune latérale, côte découpée, sommet à balcon, cap à chenal ; puis vestibule de grotte, corniche d’accès maritime et passage entre deux épaules. Ces intentions sont maintenant réalisées dans le lot Expéditions. Voir sa [notice et ses limites](source/cote_v5_expeditions/README.md).
 
 Une silhouette supplémentaire doit être réellement nouvelle : retourner, étirer ou recolorer une ancienne carte ne suffit pas.
 
@@ -168,7 +168,7 @@ Un remplissage natif peut rester trop répétitif ou trop plat. « Zéro différ
 
 ## 10. Construire les entrées sans copier leurs textures
 
-La future construction doit dissocier :
+La construction des entrées dissocie :
 
 1. relief de la falaise Métano ;
 2. cadre et rebord de l’ouverture ;
@@ -329,7 +329,7 @@ L’aperçu HTML utilise des images WebP sans perte embarquées, contrôlées co
 
 Les tests Node actuels simulent le DOM et contrôlent les interactions ; ils ne sont ni un vrai navigateur ni un test du moteur. Les planches réduites sont des documents de lecture, jamais des assets à importer.
 
-## 22. Reproduction du dernier pack livré
+## 22. Reproduction du pack Métano/Abyss antérieur
 
 Dépendances de la chaîne images : Python, Pillow, NumPy. Outils auxiliaires : Git, GitHub CLI, Node pour les tests d’interaction. Ces outils ne remplacent pas PMDO.
 
@@ -343,7 +343,7 @@ node source/cote_dix_zones/test_viewer.cjs apercu_cotes_metano_abyss.html
 
 Le package exécute son vérificateur avant archivage. Les sorties natives non compressées sont dans `~/.cache/cote_v4_abyss_pack/`. Les copies PNG régénérables sont ignorées par Git ; le ZIP et l’aperçu conservent les pixels finaux.
 
-Ces commandes reproduisent **le pack livré**, pas les sept falaises et trois entrées encore en préparation.
+Ces commandes reproduisent **le pack Métano/Abyss antérieur**. Pour le mod Expéditions de 40 Ground, suivre les commandes de `source/cote_v5_expeditions/README.md`.
 
 ## 23. Erreurs connues et réponses correctes
 
@@ -367,3 +367,18 @@ Conserver les crédits Métano / Palika / Halcyon, ceux des références EoSO, c
 Les textures des trois entrées de référence sont archivées pour analyse, pas choisies comme matière des nouvelles cartes. Les téléchargements de moteur, bibliothèques et fichiers temporaires doivent rester hors du contenu versionné du projet.
 
 Ne jamais effacer un ancien pack pour faire place à une correction. Marquer la livraison courante, conserver les rapports et décrire ce qui change réellement.
+
+
+## 25. Livraison Métano Expéditions : sept falaises et trois entrées
+
+Le fichier courant est **`mod_metano_expeditions_pmdo_0812.zip`**, projet `metano_expeditions`. Il réunit 20 nouveaux Ground `v50812_*` et les 20 Ground `v40812_*` du pack précédent, laissés identiques. Les archives modulaires plus anciennes ne sont pas incluses.
+
+Les nouvelles silhouettes sont définies par `layouts.py` : contours Catmull-Rom rasterisés à la résolution native, plateaux superposés et découpes explicites des deux baies. Il s’agit d’une interprétation du guide, pas de l’extraction de ses panneaux mal numérotés. Le guide ne fournit aucun RGB final.
+
+Les deux grottes utilisent un même encadrement Métano natif dans deux layouts différents ; le troisième accès est un corridor ouvert. Les palettes Crooked Cavern, Brine Cave et Drenched Bluff ne sont pas utilisées. Leurs ressources restent uniquement dans le dossier d’étude. Les accès sont sur un sixième calque de terrain indépendant.
+
+Les nouvelles collisions bloquent les cellules partiellement hors herbe et les éléments d’accès. Une recherche de chemin vérifie un dégagement 16×16 depuis chaque arrivée jusqu’au seuil. Les accès entre terrasses secondaires et le comportement réel des collisions restent à contrôler dans le jeu.
+
+**Les destinations des trois donjons restent non configurées.** Le mod fournit les marqueurs `donjon_seuil` et une fiche de raccordement, pas une téléportation vers un donjon inventé. Le projet est prêt à ouvrir pour éditer, pas présenté comme une aventure complète.
+
+`runtime_test.py` a chargé les **40 Ground avec le vrai PMDO 0.8.12**, et vérifié dimensions, grille, nombre de calques et nombre de marqueurs. Le test est sans affichage, avec la constante de grille graphique initialisée explicitement. Aucun nouveau succès de rendu GPU ou de gameplay n’est revendiqué. Les lanceurs Windows/Linux servent à ouvrir le projet dans l’installation du joueur ; ils ne changent pas cette limite de validation.

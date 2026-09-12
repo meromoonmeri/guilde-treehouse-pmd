@@ -1,0 +1,57 @@
+{
+  "entrances": [
+    {
+      "id": "08_antre_crochu",
+      "arrival": [
+        576,
+        704
+      ],
+      "threshold": [
+        576,
+        496
+      ],
+      "clearance_px": [
+        16,
+        16
+      ],
+      "reachable": true,
+      "dungeon_destination": null
+    },
+    {
+      "id": "09_grotte_marees",
+      "arrival": [
+        576,
+        720
+      ],
+      "threshold": [
+        816,
+        568
+      ],
+      "clearance_px": [
+        16,
+        16
+      ],
+      "reachable": true,
+      "dungeon_destination": null
+    },
+    {
+      "id": "10_defile_brume",
+      "arrival": [
+        576,
+        752
+      ],
+      "threshold": [
+        576,
+        208
+      ],
+      "clearance_px": [
+        16,
+        16
+      ],
+      "reachable": true,
+      "dungeon_destination": null
+    }
+  ],
+  "previous_files_byte_identical": 30,
+  "graphical_runtime_tested": false
+}

@@ -1,0 +1,120 @@
+{
+  "materials": {
+    "source_files_hash_checked": 7,
+    "native_module_placements_rebuilt": 3205,
+    "generated_terrain_rgb_pixels": 0,
+    "filter_reference_colors_checked": 1421,
+    "entire_base_cliffs_fringe_night_sheets_equal": true,
+    "land_alpha_differences": 0
+  },
+  "status": "PASS",
+  "target": "0.8.12",
+  "native_runtime_tested": false,
+  "maps": 40,
+  "new_maps": 20,
+  "new_native_premultiplied_layers_checked": 120,
+  "sea_frames_checked": 16,
+  "native_backgrounds": 6,
+  "standalone_index_complete": true,
+  "installer_merge_and_conflict_tests": true,
+  "zones": [
+    {
+      "id": "01_crete_sillage",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 539172,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "02_caps_relies",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 413008,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "03_eventail_strates",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 379531,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "04_lagune_occident",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 268861,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "05_cote_quatre_pointes",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 479820,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "06_sommet_balcon",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 451573,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "07_cap_chenal",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 341629,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "08_antre_crochu",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 312508,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "09_grotte_marees",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 345824,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "10_defile_brume",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 294727,
+      "W_E_S_contacts": true
+    }
+  ],
+  "limits": [
+    "No PMDO editor/runtime opening test",
+    "GPU alpha rounding not tested",
+    "Native modules repeated to extend very tall faces; joins need in-engine review",
+    "Night uses the exact Abyss color filter; sky and stars retain existing night artwork",
+    "New obstacle grid blocks non-grass; review terrace connections in game; old maps preserve their original free collisions",
+    "Dungeon threshold markers supplied, no dungeon destination bound"
+  ]
+}

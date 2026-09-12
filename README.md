@@ -1,11 +1,20 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Livraison courante — Métano Expéditions, mod de 40 Ground
+
+- **[Voir nos nouvelles entrées et les falaises](apercu_metano_expeditions.html)** — l’aperçu démarre sur l’Antre Crochu ; 20 lieux en jour/nuit, calques et exports.
+- **[Télécharger le mod PMDO 0.8.12](mod_metano_expeditions_pmdo_0812.zip)** — **7 nouvelles falaises + 3 entrées**, leurs 20 variantes et les 20 Ground Métano/Abyss précédents.
+- **[Installation et catalogue](source/cote_v5_expeditions/README.md)** · [manuel détaillé](MANUEL_METHODE_PMDO.md) · [40 chargements dans le vrai moteur](source/cote_v5_expeditions/runtime_verification.json).
+
+Copier le dossier `metano_expeditions` dans `MODS`, puis lancer `OUVRIR_EDITEUR.bat` (Windows) ou `bash OUVRIR_EDITEUR.sh` (Linux). Ressources, index complet, scripts et manuel inclus ; aucun import PNG. **Projet prêt à éditer, pas une aventure complète.** Les trois seuils sont repérés et accessibles sur la grille ; leurs destinations de donjon restent à raccorder. Les 40 Ground passent le chargeur natif sans affichage ; rendu GPU et gameplay non validés ici.
+
+
 ## Manuel et préparation des prochaines entrées
 
 **Nouveau : [PMDO installé depuis RUNTIMEPMDO et 20 Ground désérialisés par le vrai moteur](source/pmdo_runtime/README.md)**. Test sans affichage réussi ; rendu dans l’éditeur non validé. Les mentions antérieures « non testé moteur » décrivent les contrôles à la date de construction des packs.
 
 - **[Manuel détaillé des méthodes PMDO](MANUEL_METHODE_PMDO.md)** — ressources natives, layouts, échelle, calques, filtre Abyss, animations, formats, installation, tests et limites.
-- [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le prochain lot de sept falaises et trois entrées. **Lot encore en préparation ; moteur installé, éditeur graphique encore en échec ; pas de nouveau pack annoncé.**
+- [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le lot de sept falaises et trois entrées désormais livré ci-dessus. Moteur installé ; éditeur graphique encore en échec dans cet environnement.
 
 
 ## Dernière correction — Métano natif et filtre nuit Abyss

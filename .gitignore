@@ -16,3 +16,10 @@ __pycache__/
 # Native Abyss correction: PNG copies regenerate from pinned native sheets and
 # approved masks; final pixels are embedded losslessly in the viewer/native ZIP.
 /sprites/cote_v4_abyss/*/*.png
+
+# New expedition PNGs are reproducible; final pixels are in the lossless viewer
+# and native mod ZIP. Keep native masks and placement metadata in Git.
+/sprites/cote_v5_expeditions/*/0[0-5]_*.png
+/sprites/cote_v5_expeditions/*/TERRAIN.png
+/sprites/cote_v5_expeditions/*/jour_*.png
+/sprites/cote_v5_expeditions/*/nuit_*.png

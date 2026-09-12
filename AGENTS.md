@@ -60,3 +60,24 @@ couronnes et pieds viennent de modules natifs. Aucun ancien RGB généré ni
 ombre générée. Panneaux 64x48 prolongés pour les grandes hauteurs, retours aux
 bords. Tests de provenance, alpha, filtre, binaires et installateur PASS ;
 ceci ne signifie ni raccords artistiques parfaits ni ouverture moteur testée.
+
+## Métano Expéditions — sept falaises et trois entrées livrées
+
+Livraison courante : `mod_metano_expeditions_pmdo_0812.zip`, projet
+`metano_expeditions`. 20 nouveaux Ground `v50812_*` et 20 précédents `v40812_*`,
+soit 40 Ground / 20 lieux en jour-nuit. Aperçu `apercu_metano_expeditions.html`.
+Les références Crooked Cavern / Brine Cave / Drenched Bluff sont utilisées
+uniquement pour la composition et la construction : aucune de leurs textures
+n’est peinte dans nos nouvelles cartes. Deux grottes partagent un encadrement
+Métano natif, le troisième accès est un défilé ouvert. Ne pas affirmer trois
+sprites de porte différents. Les nouveaux contours sont définis dans layouts.py,
+pas copiés pixel à pixel depuis le guide généré non conforme.
+Les nouvelles collisions bloquent hors-herbe et les éléments d’accès. Trois
+chemins avec dégagement 16x16 de l’arrivée au seuil sont contrôlés. Les vingt
+anciennes cartes restent byte-à-byte identiques, collisions libres incluses.
+Marqueurs `donjon_seuil` fournis mais aucune destination de donjon liée :
+`RACCORDEMENT_DONJONS.json` est une fiche non exécutée, pas un téléporteur.
+40 chargements par le vrai PMDO 0.8.12 PASS (dimensions, grille, calques,
+marqueurs), sans GPU. L’éditeur graphique reste en échec ; ne pas confondre
+ce résultat avec un test de rendu, de collisions en mouvement ou de gameplay.
+Le manuel exhaustif est `MANUEL_METHODE_PMDO.md`, complété par la notice du lot.

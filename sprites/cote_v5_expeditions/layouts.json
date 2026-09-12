@@ -1,0 +1,350 @@
+{
+  "method": "explicit organic native-resolution contours; layouts inspired by reference studies; not pixel-identical generated proposals",
+  "zones": [
+    {
+      "id": "01_crete_sillage",
+      "title": "La crête du Sillage",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 780,
+        "E": 746,
+        "S": 983
+      },
+      "door": null
+    },
+    {
+      "id": "02_caps_relies",
+      "title": "Les caps reliés",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 742,
+        "E": 750,
+        "S": 961
+      },
+      "door": null
+    },
+    {
+      "id": "03_eventail_strates",
+      "title": "L’éventail des strates",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 766,
+        "E": 779,
+        "S": 1168
+      },
+      "door": null
+    },
+    {
+      "id": "04_lagune_occident",
+      "title": "La lagune d’Occident",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 605,
+        "E": 786,
+        "S": 1168
+      },
+      "door": null
+    },
+    {
+      "id": "05_cote_quatre_pointes",
+      "title": "La côte aux quatre pointes",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 805,
+        "E": 694,
+        "S": 750
+      },
+      "door": null
+    },
+    {
+      "id": "06_sommet_balcon",
+      "title": "Le sommet au balcon",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 755,
+        "E": 754,
+        "S": 1168
+      },
+      "door": null
+    },
+    {
+      "id": "07_cap_chenal",
+      "title": "Le cap du Chenal",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 765,
+        "E": 754,
+        "S": 1052
+      },
+      "door": null
+    },
+    {
+      "id": "08_antre_crochu",
+      "title": "L’antre Crochu",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 755,
+        "E": 755,
+        "S": 1168
+      },
+      "door": {
+        "module": "portail",
+        "position": [
+          544,
+          360
+        ],
+        "threshold": [
+          576,
+          496
+        ],
+        "spawn": [
+          576,
+          704
+        ],
+        "layout_reference": "Crooked Cavern: vestibule central et epaules enveloppantes"
+      }
+    },
+    {
+      "id": "09_grotte_marees",
+      "title": "La grotte des Marées",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 758,
+        "E": 764,
+        "S": 1168
+      },
+      "door": {
+        "module": "portail",
+        "position": [
+          784,
+          432
+        ],
+        "threshold": [
+          816,
+          568
+        ],
+        "spawn": [
+          576,
+          720
+        ],
+        "layout_reference": "Brine Cave: corniche asymetrique et acces recule"
+      }
+    },
+    {
+      "id": "10_defile_brume",
+      "title": "Le défilé de Brume",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 765,
+        "E": 823,
+        "S": 1168
+      },
+      "door": {
+        "module": "passage",
+        "position": [
+          456,
+          336
+        ],
+        "threshold": [
+          576,
+          208
+        ],
+        "spawn": [
+          576,
+          752
+        ],
+        "layout_reference": "Drenched Bluff: corridor ouvert entre deux epaules"
+      }
+    }
+  ]
+}
