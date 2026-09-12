@@ -9,7 +9,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from build import CLOUD_PERIOD, FRAMES, LAYERS, MAGENTA, MODE, OUT, SEA_PERIOD, SIZE, rgba_from_magenta
+from build import (CELL_PX, CLOUD_PERIOD, FRAMES, LAYERS, MAGENTA, MODE, OUT,
+                   PMDO_TILE_PX, SEA_PERIOD, SIZE, VIEWPORT_ORIGIN, VIEWPORT_SIZE,
+                   rgba_from_magenta)
 
 ROOT = Path(__file__).resolve().parents[2]
 PREVIEW = ROOT / "apercu_exterieur_original.html"
@@ -97,23 +99,34 @@ def verify() -> None:
     assert not np.array_equal(np.asarray(sea.at(0)), np.asarray(sea.at(12))), "Palette de mer immobile"
 
     tiled = json.loads((OUT / files["tiled"]).read_text(encoding="utf-8"))
-    assert (tiled["width"] * 8, tiled["height"] * 8) == SIZE
+    assert (tiled["width"] * CELL_PX, tiled["height"] * CELL_PX) == SIZE
     assert len(tiled["layers"]) == 6 and len(tiled["tilesets"]) == 2
+    properties = {item["name"]: item["value"] for item in tiled["properties"]}
+    assert properties == {"cellule_edition_px": CELL_PX, "tuile_pmdo_px": PMDO_TILE_PX,
+                          "viewport_waterfallvillagecapital_px": "320x240",
+                          "viewport_origine_px": f"{VIEWPORT_ORIGIN[0]},{VIEWPORT_ORIGIN[1]}"}
     periods = sorted(tileset["tilecount"] for tileset in tiled["tilesets"])
     assert periods == [SEA_PERIOD, CLOUD_PERIOD]
     for tileset in tiled["tilesets"]:
         sequence = tileset["tiles"][0]["animation"]
         assert len(sequence) == tileset["tilecount"] and all(entry["duration"] == 250 for entry in sequence)
+    view = json.loads((OUT / files["contrat_map_viewport"]).read_text(encoding="utf-8"))
+    assert view["map_px"] == list(SIZE) and view["cellule_px"] == CELL_PX
+    assert view["viewport_px"] == list(VIEWPORT_SIZE) and view["origine_px"] == list(VIEWPORT_ORIGIN)
+    assert all(value % CELL_PX == 0 for value in (*SIZE, *VIEWPORT_SIZE, *VIEWPORT_ORIGIN))
+    assert read(OUT / files["viewport"]).size == VIEWPORT_SIZE
     verify_aseprite(OUT / files["aseprite"])
 
     html = PREVIEW.read_text(encoding="utf-8")
-    for token in ("#FF00FF", "Grille 8 px : visible", "x+=8", "y+=8", "frame%344", "frame%24"):
+    for token in ("#FF00FF", "Grille 8 px : visible", "x+=8", "y+=8", f"frame%{CLOUD_PERIOD}", "frame%24", "Viewport WaterfallVillageCapital"):
         assert token in html, f"Contrat aperçu absent : {token}"
     assert "http://" not in html and "https://" not in html
     (OUT / "controle_qualite.json").write_text(json.dumps({
         "resultat": "PASS", "layers": 5, "fond": "#FF00FF", "grille_px": 8,
         "nuages": {"period_px": CLOUD_PERIOD, "wrap": "bit_identique"},
         "mer": {"frames_palette": SEA_PERIOD, "geometrie": "inchangee"},
+        "map_waterfallvillagecapital": {"cellule_px": CELL_PX, "tuile_pmdo_px": PMDO_TILE_PX,
+                                         "viewport_px": list(VIEWPORT_SIZE), "origine_px": list(VIEWPORT_ORIGIN)},
         "aseprite_frames": FRAMES,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"PASS paysage original — 5 layers IA, fond magenta, mer {SEA_PERIOD} palettes, nuages wrap {CLOUD_PERIOD} px.")

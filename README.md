@@ -1,10 +1,27 @@
 # Guilde Treehouse — passages ouverts PMD
 
+> **Six décors extérieurs en jour/nuit, dont quatre zones à palette cycling** : les deux falaises et [quatre zones à plans séparés — texture Treasure Town](paysages/README.md).
+> [Ouvrir l’atelier des paysages](apercu_falaise.html) · [Rêve du test de personnalité en 3D](apercu_reve.html) · [Previews GIF](previews/README.md).
+> Les anciens intérieurs restent inchangés.
+
+## Nouveau : rêve et test de personnalité plein écran
+
+[Ouvrir le rêve interactif](apercu_reve.html) · [Documentation et audit de la référence](reve/README.md)
+
+Sphère 3D en voyage, changement de point de vue gauche/droite à chaque question, anneaux circulaires à 36 phases et nébuleuse arc-en-ciel en parallaxe. Huit questions, réponses uniquement sur validation, aucune note affichée.
+
+![Preview du rêve et des changements de caméra](previews/reve_personnalite.gif)
+
+La falaise de la guilde a aussi reçu une **reprise complète au générateur avec les références EoS**, sommet et paroi ensemble ; l’emprise et les marches de référence restent contrôlées.
+
+![Preview de la falaise de la guilde, jour et nuit](previews/falaise_guilde_eos.gif)
+
+
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
 ## Paysage extérieur original — layers générés
 
-[`exterieur_original/`](exterieur_original/README.md) remplace la livraison extérieure précédente par une seule composition totalement nouvelle : une falaise océanique créée de zéro avec **cinq layers générés indépendamment**. La falaise et les plateaux reprennent, via le générateur, la logique de placement et le langage rocheux de Metano Town (grandes facettes crème/sauge, plateau gazonné) ; aucun pixel de référence n'est un template ou une source finale.
+[`exterieur_original/`](exterieur_original/README.md) remplace la livraison extérieure précédente par une carte océanique totalement nouvelle avec **cinq layers générés indépendamment**. La falaise, l'herbe et les plateaux suivent la DA des tuiles Metano Town / WaterfallVillageCapital ; le ciel reprend la DA du ciel Sharpedo. Ces guides ne fournissent aucun pixel final. La carte fait 672 × 384 px, sur cellules de 8 px, avec une viewport WaterfallVillageCapital de 320 × 240 px explicitement visible et alignée.
 
 Les layers finals sont livrés sur fond chroma-key **#FF00FF** : ciel ouvert sans nuage, nuages en overlay à wrap horizontal parfait, mer avec cycle de palette sans déplacement géométrique, plateaux naturels et falaise naturelle sans aucune construction. Les PNG magenta, les exports RGBA/Aseprite/Tiled et un aperçu avec grille **8 × 8 px** sont fournis. Ouvrir [`apercu_exterieur_original.html`](apercu_exterieur_original.html).
 

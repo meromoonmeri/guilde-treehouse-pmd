@@ -3,19 +3,53 @@
   "id": "falaise_originale",
   "titre": "Falaise océanique originale — layers générés",
   "dimensions": [
-    688,
+    672,
     384
   ],
   "grille_px": 8,
   "fond_chroma_key": "#FF00FF",
   "animation": {
-    "frames": 1032,
+    "frames": 336,
     "duree_image_ms": 250,
-    "duree_boucle_ms": 258000,
-    "nuages": "wrap horizontal parfaitement périodique sur 344 px",
+    "duree_boucle_ms": 84000,
+    "nuages": "wrap horizontal parfaitement périodique sur 336 px",
     "mer": "cycle de palette 24 phases sans déplacement"
   },
-  "creation": "Cinq layers IA séparés : falaise et plateaux générés dans le langage rocheux et la logique de placement Metano Town, sans aucun pixel, découpage ni composite de la référence.",
+  "creation": "Cinq layers générés séparément. Les falaises/plateaux suivent la DA des tuiles Metano Town et le ciel la DA Sharpedo ; aucun pixel de référence n'est copié, découpé, recoloré ou composé.",
+  "map_viewport": {
+    "reference": "WaterfallVillageCapital / Metano Town — guide de grille, de viewport et de texture; aucun pixel source livré",
+    "map_px": [
+      672,
+      384
+    ],
+    "cellule_px": 8,
+    "cellules": [
+      84,
+      48
+    ],
+    "tuile_pmdo_px": 24,
+    "tuiles_pmdo": [
+      28,
+      16
+    ],
+    "viewport_px": [
+      320,
+      240
+    ],
+    "viewport_cellules": [
+      40,
+      30
+    ],
+    "origine_px": [
+      176,
+      72
+    ],
+    "origine_cellules": [
+      22,
+      9
+    ],
+    "composition_vue": "compositions/viewport_waterfallvillagecapital.png"
+  },
   "calques": [
     {
       "id": "00_ciel",
@@ -60,7 +94,7 @@
       "operations": {
         "01_nuages_wrap": {
           "kind": "scroll",
-          "period": 344,
+          "period": 336,
           "prefix": "nuages_wrap",
           "vitesse_px_par_image": -1,
           "wrap_horizontal_parfait": true,
@@ -72,7 +106,7 @@
           "prefix": "mer_palette",
           "source_atlas": "animations/source_mer_palette.png",
           "source_frame_size": [
-            688,
+            672,
             384
           ],
           "source_columns": 6,
@@ -278,10 +312,10 @@
       "animations": {
         "01_nuages_wrap": {
           "atlas": "animations/nuages_wrap_original.png",
-          "period": 344,
+          "period": 336,
           "columns": 8,
           "frame_size": [
-            688,
+            672,
             206
           ],
           "offset": [
@@ -294,7 +328,7 @@
           "period": 24,
           "columns": 8,
           "frame_size": [
-            688,
+            672,
             234
           ],
           "offset": [
@@ -303,6 +337,8 @@
           ]
         }
       },
+      "viewport": "compositions/viewport_waterfallvillagecapital.png",
+      "contrat_map_viewport": "map_waterfallvillagecapital.json",
       "calques_magentas": {
         "00_ciel": "calques_magentas/original/00_ciel.png",
         "01_nuages_wrap": "calques_magentas/original/01_nuages_wrap.png",
@@ -340,7 +376,7 @@
   },
   "sources_generation": {
     "00_ciel_genere.png": {
-      "sha256": "764acb4dd76a519cd5659c2eb3334b8bdaf2fd6e68ee0f02bb241929e2131a17",
+      "sha256": "02c5b62de399f92c40755688af16fbb4063d60774b9c04435dc6f3508e619b9f",
       "dimensions": [
         1376,
         768
@@ -361,14 +397,14 @@
       ]
     },
     "03_plateaux_reliefs_generes.png": {
-      "sha256": "e973455af4aa0483bc0632dd15fd4a61ea3d93b8f9a42793ef8b2abe91c7811f",
+      "sha256": "63a7bf030da8f9f7a7c2f81cf2fcfb2a9567b101a9620962267c9c9afa62d8e0",
       "dimensions": [
         1376,
         768
       ]
     },
     "04_falaise_generee.png": {
-      "sha256": "ff2b38c91670764fb53598719dda4a22f68d0e263f07d888f0c1edc26abebdab",
+      "sha256": "89b591d0dc9a26a92307986d1dd769969f4e25bf23c798d49ee07bd256bdec28",
       "dimensions": [
         1376,
         768

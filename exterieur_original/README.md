@@ -1,21 +1,34 @@
 # Falaise océanique originale — layers générés
 
 Cette livraison repart de zéro. Les cinq images de `source/exterieur_original/generation/`
-ont été générées séparément en **pixel art PMD natif strict** : palette limitée,
+ont été générées séparément dans un pixel art PMD natif strict : palette limitée,
 clusters carrés, contours nets, diagonales crénelées et tramage contrôlé, sans
-lissage ni rendu peint. Pour la falaise et les plateaux, le générateur emploie la
-référence Metano Town comme guide de langage rocheux et de placement : plateau
-gazonneux clair, falaises hautes à grandes facettes crème/sauge et petits buissons
-suspendus. Aucun pixel de cette référence n'est copié, découpé, recoloré ou
-composé dans les fichiers finals ; toutes les zones artificielles sont remplacées
-par des éléments naturels.
+lissage ni rendu peint.
+
+La falaise, l'herbe et les plateaux emploient le langage visuel des tuiles
+**Metano Town / WaterfallVillageCapital** : pelouse jaune-vert texturée, bordure
+d'herbe irrégulière, roche ocre stratifiée, creux brun-violet et petits buissons.
+Le ciel reprend les bandes bleu royal / azur / cyan de `sharpedo/.../00_ciel.png`.
+Ces images n'ont servi qu'au générateur comme guides visuels : aucun pixel n'est
+copié, recadré, recoloré ou composé dans les livrables.
+
+## Carte et viewport WaterfallVillageCapital
+
+La carte fait **672 × 384 px** : 84 × 48 cellules de 8 px, soit exactement 28 ×
+16 tuiles PMDO de 24 px. Elle est donc entièrement alignée sur le pas de 8 px
+observé dans les tuiles Metano. La viewport logique est celle du moteur PMDO et
+de WaterfallVillageCapital : **320 × 240 px** (40 × 30 cellules), à l'origine
+**176, 72 px** (22, 9 cellules). Tous ces nombres sont des multiples de 8.
+
+`map_waterfallvillagecapital.json` consigne ce contrat, et
+`compositions/viewport_waterfallvillagecapital.png` en est l'export de vue. Tiled
+reçoit aussi ces propriétés. L'aperçu affiche ce cadre caméra jaune par défaut.
 
 ## Composition inventée
 
-La scène de 688 × 384 px présente un horizon marin, une ligne de reliefs naturels,
-une falaise rocheuse de premier plan et une mer ouverte. Il n'y a aucune maison,
-route, pont, escalier, plateforme construite, bâtiment, objet de gameplay ou
-personnage.
+La carte présente un horizon marin, une ligne de reliefs naturels, une falaise
+rocheuse de premier plan et une mer ouverte. Il n'y a aucune maison, route, pont,
+escalier, plateforme construite, bâtiment, objet de gameplay ou personnage.
 
 L'ordre de parallax est :
 
@@ -40,15 +53,16 @@ déterministe du chroma-key, exclusivement pour Aseprite, Tiled et la compositio
 
 ## Animations conçues pour boucler
 
-- **Nuages** : le layer généré est transformé en ruban périodique de 344 px,
-  répété exactement deux fois sur 688 px. Ses bords de tuile sont magenta pur,
-  donc le `offset` horizontal de 1 px par image ne crée aucune cassure à gauche
-  ou à droite. Après 344 phases, la matrice est identique à la phase 0.
+- **Nuages** : le layer généré est transformé en ruban périodique de 336 px,
+  répété exactement deux fois sur 672 px. Ces valeurs sont multiples de 8. Ses
+  bords de tuile sont magenta pur, donc le `offset` horizontal de 1 px par image
+  ne crée aucune cassure à gauche ou à droite. Après 336 phases, la matrice est
+  identique à la phase 0.
 - **Mer** : 24 états changent uniquement les valeurs de palette de l'eau.
   L'alpha et les coordonnées des pixels restent identiques : aucune vague ne se
   déplace géométriquement. La force chromatique évolue doucement de 0 à son
   maximum et revient à 0, ce qui raccorde la phase 24 à la phase 0 sans coupure.
-- La timeline commune fait 1 032 images de 250 ms afin que 344 et 24 soient
+- La timeline commune fait 336 images de 250 ms afin que 336 et 24 soient
   synchronisés. Les cels Aseprite réelles sont écrites sur chaque période puis
   liées pour les répétitions. Tiled possède un atlas par layer animé.
 
@@ -56,9 +70,9 @@ déterministe du chroma-key, exclusivement pour Aseprite, Tiled et la compositio
 
 Ouvrir [`../apercu_exterieur_original.html`](../apercu_exterieur_original.html).
 L'aperçu applique le chroma-key magenta au rendu, affiche une **grille 8 × 8 px**
-par défaut, permet de masquer chaque layer et de mettre la boucle en pause. Il est
-autonome : les images sont encodées en WebP data URI et aucune requête réseau
-n'est nécessaire.
+et le cadre caméra WaterfallVillageCapital **320 × 240 px** par défaut, permet de
+masquer chaque layer et de mettre la boucle en pause. Il est autonome : les images
+sont encodées en WebP data URI et aucune requête réseau n'est nécessaire.
 
 ## Reconstruction et contrôle
 

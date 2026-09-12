@@ -4,12 +4,24 @@
   "fond": "#FF00FF",
   "grille_px": 8,
   "nuages": {
-    "period_px": 344,
+    "period_px": 336,
     "wrap": "bit_identique"
   },
   "mer": {
     "frames_palette": 24,
     "geometrie": "inchangee"
   },
-  "aseprite_frames": 1032
+  "map_waterfallvillagecapital": {
+    "cellule_px": 8,
+    "tuile_pmdo_px": 24,
+    "viewport_px": [
+      320,
+      240
+    ],
+    "origine_px": [
+      176,
+      72
+    ]
+  },
+  "aseprite_frames": 336
 }
