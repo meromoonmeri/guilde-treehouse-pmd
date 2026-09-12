@@ -1,0 +1,108 @@
+{
+ "pokemon": {
+  "nom": "Terapagos Terastal",
+  "numero": "1024",
+  "forme": "0001"
+ },
+ "demarche": "base verrouillée : seule la boîte de l'œil est redessinée",
+ "boite_oeil": {
+  "x": 12,
+  "y": 23,
+  "w": 6,
+  "h": 8
+ },
+ "roles_de_couleur": {
+  "a": "#303f4d",
+  "b": "#31a5ce",
+  "c": "#457ebb",
+  "d": "#5051a0",
+  "e": "#6addbf",
+  "g": "#77c7d7",
+  "j": "#dd4e97",
+  "k": "#ee919c",
+  "m": "#ffffff"
+ },
+ "palette_officielle": 13,
+ "expressions": {
+  "Normal": {
+   "couleurs": 13,
+   "pixels_modifies": 0
+  },
+  "Heureux": {
+   "couleurs": 13,
+   "pixels_modifies": 9
+  },
+  "Tres_heureux": {
+   "couleurs": 13,
+   "pixels_modifies": 15
+  },
+  "Triste": {
+   "couleurs": 13,
+   "pixels_modifies": 19
+  },
+  "En_colere": {
+   "couleurs": 13,
+   "pixels_modifies": 11
+  },
+  "Tres_en_colere": {
+   "couleurs": 13,
+   "pixels_modifies": 13
+  },
+  "Surpris": {
+   "couleurs": 13,
+   "pixels_modifies": 19
+  },
+  "Choque": {
+   "couleurs": 13,
+   "pixels_modifies": 23
+  },
+  "Effraye": {
+   "couleurs": 13,
+   "pixels_modifies": 20
+  },
+  "Inquiet": {
+   "couleurs": 13,
+   "pixels_modifies": 14
+  },
+  "Confus": {
+   "couleurs": 13,
+   "pixels_modifies": 16
+  },
+  "Pensif": {
+   "couleurs": 13,
+   "pixels_modifies": 8
+  },
+  "Determine": {
+   "couleurs": 13,
+   "pixels_modifies": 14
+  },
+  "Combatif": {
+   "couleurs": 13,
+   "pixels_modifies": 14
+  },
+  "Fatigue": {
+   "couleurs": 13,
+   "pixels_modifies": 15
+  },
+  "Endormi": {
+   "couleurs": 13,
+   "pixels_modifies": 7
+  },
+  "Gene": {
+   "couleurs": 13,
+   "pixels_modifies": 10
+  },
+  "Embarrasse": {
+   "couleurs": 13,
+   "pixels_modifies": 14
+  },
+  "Douleur": {
+   "couleurs": 13,
+   "pixels_modifies": 12
+  },
+  "Decu": {
+   "couleurs": 13,
+   "pixels_modifies": 13
+  }
+ }
+}

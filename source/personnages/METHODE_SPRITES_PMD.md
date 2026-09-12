@@ -587,3 +587,36 @@ sa déformation à charnière. Aucun autre Pokémon du lot n'est affecté, leurs
 émotions ; `Shouting`, `Sigh` et `Stunned` ont été rejetées au contrôle visuel — il y perd la
 structure de la tête (facettes en bouillie, œil remplacé par un disque blanc). Le taux de
 conservation ne l'avait pas signalé : il faut regarder.
+
+## 22. « Fidélité 100/100 » : une base verrouillée se garantit par construction
+
+Cahier des charges très strict de l'utilisateur pour Terapagos Terastal : une seule tête de base,
+qui ne bouge pas d'un pixel entre deux cases ; fond strictement identique ; palette figée ; vrai
+pixel art ; 20 expressions.
+
+**Le générateur d'images ne peut pas tenir cette exigence, et c'est mesurable.** Sur mes propres
+sorties pour ce même Pokémon : la silhouette se déplaçait sur 2 émotions sur 7 (jusqu'à 71 pixels
+d'écart) et 12 à 34 % de l'image changeait à chaque fois. Un générateur *redessine* — il ne
+retouche pas.
+
+**La garantie doit être structurelle, pas vérifiée après coup.** `planche_terapagos_terastal.py`
+part du tableau d'octets de la case officielle, le copie, et ne réécrit **que** les pixels d'une
+boîte de 6 × 8 autour de l'œil. Les 1552 autres pixels sont, littéralement, les mêmes octets. Il
+n'y a rien à espérer : la tête *ne peut pas* différer.
+
+Résultat : 13 pixels modifiés en moyenne par expression, sur 1600.
+
+**Trouver la bonne boîte demande de dumper la case.** Premier essai avec une boîte à
+`(12, 21, 9×10)` : les dessins écrasaient l'œil au lieu de le remplacer, parce que je l'avais
+situé à vue. En dumpant la zone en lettres de palette, l'œil est un ovale précis — blanc `m` +
+iris cyan `b` en `x 12..16, y 24..29`, bordé du liseré rose `j` en `x 11`. Boîte corrigée à
+`(12, 23, 6×8)`.
+
+**Contrôle non déclaratif.** 390 contrôles : hors boîte, comparaison octet pour octet avec
+`Normal` ; silhouette identique ; bords du cadre identiques ; palette incluse dans l'officielle ;
+aucun pixel semi-transparent ; et toutes les paires d'expressions deux à deux distinctes.
+
+**Sur les 20 expressions du brief**, 16 ont un équivalent dans la nomenclature SpriteCollab et
+partent dans une planche 200 × 320 déposable ; les 4 autres (Très en colère, Choqué, Effrayé,
+Pensif…) restent dans la planche de travail. Le dépôt officiel n'a que 16 créneaux d'émotion plus
+les `Special`.
