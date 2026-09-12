@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveau — 10 côtes Métano, nuages et nuit Guilde / Sharpedo
+
+- **Voir : [aperçu interactif jour/nuit](apercu_dix_zones_metano.html)** — 10 nouveaux lieux et les deux côtes V2 adaptées, calques, zoom natif, animation et exports PNG.
+- **[Pack PMDO natif](cote_metano_dix_zones_pmdo.zip)** : 20 Ground pour les nouveaux lieux (jour/nuit), plus 4 variantes des anciennes côtes ; ressources `.tile` / `.dir` et installateur préservant les cartes modifiées.
+- **[Installation, provenance et limites](source/cote_dix_zones/README.md)** ; [planche réduite](sprites/cote_dix_zones/PLANCHE_JOUR_NUIT_NE_PAS_IMPORTER.png).
+
+Les six nuages et la recette de nuit sont repris directement du travail de l'autre agent (`c16efe12`), pas redessinés. Les dix terrains utilisent des modules Métano natifs ; les rives ont une découpe alpha et les faces sont prolongées par répétition de rangées. **Collisions à dessiner, raccords à contrôler et ouverture PMDO non testée.** Les variantes V2 ne remplacent pas les anciennes cartes.
+
+Le premier pack de deux cartes est aussi versionné : [cote_metano_v2_pmdo.zip](cote_metano_v2_pmdo.zip).
+
+
 Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont été corrigés suivant la dernière consigne : **des ruptures du contour avec un sol continu, pas une porte à chaque sortie**.
 
 ## Règles effectivement appliquées
@@ -126,7 +137,7 @@ Des calques vides permettent d'ajouter sols, structures, avant-plans et objets.
 
 - [Installation, calques, limites et formats vérifiés](source/pmdo_cote/README.md)
 - Reproduire le pack : `.venv/bin/python source/pmdo_cote/package.py`
-- Sortie par défaut : `~/cote_metano_v2_pmdo.zip` (livrée séparément, hors Git).
+- Sortie par défaut du générateur : `~/cote_metano_v2_pmdo.zip` ; une copie livrée est versionnée à la racine.
 - Validation indépendante des ressources et des pixels ; **pas de test dans PMDO**.
 - Collisions libres à dessiner avant utilisation comme niveau jouable.
 

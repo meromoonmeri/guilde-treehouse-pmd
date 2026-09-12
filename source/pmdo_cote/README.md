@@ -87,4 +87,4 @@ Depuis la racine, avec Pillow et numpy (ici `.venv/bin/python`) :
 
 Ce script reconstruit les binaires, exécute les validations, puis produit `~/cote_metano_v2_pmdo.zip`. Les fichiers intermédiaires sont placés dans `~/.cache/cote_pmdo_pack/`. Pour choisir l'emplacement final : `--output /chemin/pack.zip`.
 
-Les sources et tests restent dans Git ; le ZIP natif est livré séparément pour ne pas ajouter aux nombreux gros packs graphiques déjà présents. **Ne pas copier les sources de fabrication dans les dossiers Data/Content du mod.**
+Les sources et tests restent dans Git. À la demande de push, une copie de `cote_metano_v2_pmdo.zip` est maintenant également versionnée à la racine du dépôt ; le générateur garde sa sortie par défaut dans le dossier utilisateur. **Ne pas copier les sources de fabrication dans les dossiers Data/Content du mod.**
