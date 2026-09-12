@@ -59,6 +59,61 @@ Le hall mesure **1280 × 544 px** ; les autres pièces **648 × 432 px**. Les gr
 
 Les cartes ne sont pas un jeu intégré : collisions, transitions et déclencheurs de porte doivent être configurés dans le moteur. Les accès sont décrits dans `kit.json` et `source/regles_acces.json`.
 
+## Retouches du hall des missions (salle 02)
+
+`python3 source/retouche_hall_02.py` applique trois corrections et regénère les
+composites, l'Aseprite et les cartes Tiled de la salle :
+
+- **Passage ouest** ramené au gabarit commun : ouverture de **67 px** comme les
+  chambres, contour de pièce restitué de part et d'autre. Le rebord garde son
+  **épaisseur de mur** : 11 px de linteau au nord, en ombre dégradée avec les
+  bouts de planches, 9 px de seuil au sud dont l'arête accroche la lumière.
+  L'ombre portée du linteau retombe sur le passage.
+- **Cadre feuillu de la sortie ouest** : une branche suit le contour extérieur
+  du rebord, deux massifs de feuillage (banc de props, teintés dans l'ombre du
+  bois) l'enrobent au nord et au sud, avec un liséré brun qui reprend exactement
+  le trait de l'extrémité de la pièce. Le feuillage déborde d'une trentaine de
+  pixels au bord du bois et retombe sur l'angle gauche, sans jamais empiéter sur
+  le sol marchable du passage.
+- **Trou sous le tronc, dans le diamètre du tronc** : le tronc est la seule
+  matière dessinée au-dessus du toit, ses bords s'y lisent — **99 px**, centrés
+  en x = 642. L'ouverture du plancher reprend exactement cette largeur et
+  démarre **sous la silhouette du tronc** (y = 218) : elle en est la continuation
+  vers le bas, jamais un ovale posé devant. Profondeur 52 px ; la lèvre est en
+  écorce côté tronc et en chant de planche côté salle, avec deux collets
+  d'écorce qui enracinent le pied. **L'échelle y descend**, montants aux
+  x 623 et 656, barreaux resserrés par la fuite, le tout s'éteignant dans le
+  noir — principe du deuxième étage de Halcyon.
+- **Arche de guilde au nord** à la place de l'ancienne porte à cadre rose :
+  encadrement de bois cintré, ouverture sombre, emblème feuille sur la clef.
+  La variante à battants sculptés est écrite à côté, en
+  `calques/02_hall_missions/<palette>/05_porte_maitre_battants.png`.
+
+Les calques d'avant retouche sont conservés dans `source/hall_02_avant_retouche/` :
+le script repart toujours d'eux, il est donc rejouable à l'identique, y compris
+après un `rebuild_kit.py`.
+
+## Échelle des salles — analyse comparative
+
+Une analyse chiffrée du rapport **sprite ↔ salle**, avec les guildes de
+*PMD: Halcyon* (Palikadude) comme référence, est disponible dans
+[`ANALYSE_ECHELLE.md`](ANALYSE_ECHELLE.md).
+
+Résumé : nos chambres font **×3 la surface de sol** d'une chambre de Halcyon
+(×1,73 en linéaire), le hall **×2,3** la plus grande salle du jeu de référence, et nos
+calques de décor sont vides là où Halcyon couvre 24 à 59 % du sol. Un facteur global de
+**×0,65** sur le kit remet chaque salle dans les fourchettes de référence
+(chambres ≈ 408 × 264 px, salles ≈ 432 – 480 × 288 – 312 px, hall ≈ 840 × 360 px).
+
+Scripts de mesure et planches de comparaison : `analyse_echelle/`.
+Gabarits de retravail salle par salle (grille 24 px, bande mobilier, passages,
+sprites posés à 1:1) : `analyse_echelle/guides/`.
+Base de dessin déjà mise à l'échelle cible : `calques_reduits/` et `salles_reduites/`
+(brouillon à reprendre à la main, le rééchantillonnage adoucit le pixel art).
+Banc de props ramené aux tailles PMD : `sprites_reduits/`. Proposition de mise en place
+du mobilier (10 à 32 props par salle, calques `06`/`07` remplis) :
+`analyse_echelle/placements/`.
+
 ## Reproduction et contrôles
 
 ```bash

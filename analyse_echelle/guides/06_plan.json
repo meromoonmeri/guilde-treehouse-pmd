@@ -1,0 +1,38 @@
+{
+  "id": "06",
+  "nom": "Chambre du veilleur",
+  "type": "chambre",
+  "toile_px": [
+    432,
+    288
+  ],
+  "toile_cases": [
+    18.0,
+    12.0
+  ],
+  "facteur": [
+    0.667,
+    0.667
+  ],
+  "sol_cases2": 65.4,
+  "sol_reference_halcyon_cases2": [
+    50,
+    60
+  ],
+  "vide_max_cases": 4.1,
+  "vide_max_tolere": 6,
+  "bande_mobilier_cases": 1.5,
+  "props_a_poser": 11,
+  "ilot_central_px": null,
+  "passages": [
+    {
+      "cote": "S",
+      "debut_px": 171,
+      "largeur_px": 90,
+      "largeur_cases": 3.8,
+      "cible_px": 48
+    }
+  ],
+  "hauteur_mur_visee_px": 96,
+  "ligne_haute_du_sol_px": 119
+}

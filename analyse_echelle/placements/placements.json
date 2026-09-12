@@ -1,0 +1,2960 @@
+[
+  {
+    "id": "01",
+    "nom": "Accueil de la guilde",
+    "toile_px": [
+      432,
+      288
+    ],
+    "props_demandes": 13,
+    "props_poses": 12,
+    "couverture_du_sol_pct": 14.6,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "panneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 255,
+        "y": 169,
+        "w": 42,
+        "h": 63,
+        "pieds": [
+          276,
+          232
+        ],
+        "case": [
+          10.62,
+          7.04
+        ]
+      },
+      {
+        "sprite": "plante_tonneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 57,
+        "y": 101,
+        "w": 35,
+        "h": 51,
+        "pieds": [
+          74,
+          152
+        ],
+        "case": [
+          2.38,
+          4.21
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 213,
+        "y": -3,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          227,
+          53
+        ],
+        "case": [
+          8.88,
+          -0.12
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 344,
+        "y": 128,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          364,
+          157
+        ],
+        "case": [
+          14.33,
+          5.33
+        ]
+      },
+      {
+        "sprite": "vegetation_03_17",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 154,
+        "y": 222,
+        "w": 20,
+        "h": 16,
+        "pieds": [
+          164,
+          238
+        ],
+        "case": [
+          6.42,
+          9.25
+        ]
+      },
+      {
+        "sprite": "vegetation_04_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 152,
+        "y": 117,
+        "w": 18,
+        "h": 8,
+        "pieds": [
+          161,
+          125
+        ],
+        "case": [
+          6.33,
+          4.88
+        ]
+      },
+      {
+        "sprite": "vegetation_03_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 269,
+        "y": 112,
+        "w": 10,
+        "h": 12,
+        "pieds": [
+          274,
+          124
+        ],
+        "case": [
+          11.21,
+          4.67
+        ]
+      },
+      {
+        "sprite": "vegetation_03_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 218,
+        "y": 263,
+        "w": 8,
+        "h": 12,
+        "pieds": [
+          222,
+          275
+        ],
+        "case": [
+          9.08,
+          10.96
+        ]
+      },
+      {
+        "sprite": "vegetation_04_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 93,
+        "y": 203,
+        "w": 8,
+        "h": 12,
+        "pieds": [
+          97,
+          215
+        ],
+        "case": [
+          3.88,
+          8.46
+        ]
+      },
+      {
+        "sprite": "vegetation_03_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 334,
+        "y": 204,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          338,
+          212
+        ],
+        "case": [
+          13.92,
+          8.5
+        ]
+      },
+      {
+        "sprite": "vegetation_03_14",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 111,
+        "y": 117,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          115,
+          125
+        ],
+        "case": [
+          4.62,
+          4.88
+        ]
+      },
+      {
+        "sprite": "banniere_accueil_droite",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 184,
+        "y": 0,
+        "w": 23,
+        "h": 48,
+        "pieds": [
+          195,
+          48
+        ],
+        "case": [
+          7.67,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "nom": "Hall des missions",
+    "toile_px": [
+      840,
+      360
+    ],
+    "props_demandes": 32,
+    "props_poses": 32,
+    "couverture_du_sol_pct": 23.6,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "table_etude",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 134,
+        "y": 181,
+        "w": 65,
+        "h": 55,
+        "pieds": [
+          166,
+          236
+        ],
+        "case": [
+          5.58,
+          7.54
+        ]
+      },
+      {
+        "sprite": "provisions",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 449,
+        "y": 185,
+        "w": 55,
+        "h": 51,
+        "pieds": [
+          476,
+          236
+        ],
+        "case": [
+          18.71,
+          7.71
+        ]
+      },
+      {
+        "sprite": "panneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 741,
+        "y": 173,
+        "w": 42,
+        "h": 63,
+        "pieds": [
+          762,
+          236
+        ],
+        "case": [
+          30.88,
+          7.21
+        ]
+      },
+      {
+        "sprite": "fontaine_bois",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 299,
+        "y": 101,
+        "w": 38,
+        "h": 55,
+        "pieds": [
+          318,
+          156
+        ],
+        "case": [
+          12.46,
+          4.21
+        ]
+      },
+      {
+        "sprite": "vegetation_03_18",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 596,
+        "y": 117,
+        "w": 56,
+        "h": 37,
+        "pieds": [
+          624,
+          154
+        ],
+        "case": [
+          24.83,
+          4.88
+        ]
+      },
+      {
+        "sprite": "vegetation_12_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 317,
+        "y": 261,
+        "w": 53,
+        "h": 34,
+        "pieds": [
+          343,
+          295
+        ],
+        "case": [
+          13.21,
+          10.88
+        ]
+      },
+      {
+        "sprite": "plante_tonneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 622,
+        "y": 238,
+        "w": 35,
+        "h": 51,
+        "pieds": [
+          639,
+          289
+        ],
+        "case": [
+          25.92,
+          9.92
+        ]
+      },
+      {
+        "sprite": "fanion",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 421,
+        "y": 294,
+        "w": 32,
+        "h": 54,
+        "pieds": [
+          437,
+          348
+        ],
+        "case": [
+          17.54,
+          12.25
+        ]
+      },
+      {
+        "sprite": "vegetation_08_10",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 34,
+        "y": 152,
+        "w": 43,
+        "h": 39,
+        "pieds": [
+          55,
+          191
+        ],
+        "case": [
+          1.42,
+          6.33
+        ]
+      },
+      {
+        "sprite": "vegetation_06_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 183,
+        "y": 123,
+        "w": 56,
+        "h": 29,
+        "pieds": [
+          211,
+          152
+        ],
+        "case": [
+          7.62,
+          5.12
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 492,
+        "y": 94,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          506,
+          150
+        ],
+        "case": [
+          20.5,
+          3.92
+        ]
+      },
+      {
+        "sprite": "vegetation_03_12",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 246,
+        "y": 212,
+        "w": 38,
+        "h": 36,
+        "pieds": [
+          265,
+          248
+        ],
+        "case": [
+          10.25,
+          8.83
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 530,
+        "y": 259,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          550,
+          288
+        ],
+        "case": [
+          22.08,
+          10.79
+        ]
+      },
+      {
+        "sprite": "vegetation_05_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 375,
+        "y": 163,
+        "w": 43,
+        "h": 26,
+        "pieds": [
+          396,
+          189
+        ],
+        "case": [
+          15.62,
+          6.79
+        ]
+      },
+      {
+        "sprite": "vegetation_04_14",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 670,
+        "y": 169,
+        "w": 29,
+        "h": 37,
+        "pieds": [
+          684,
+          206
+        ],
+        "case": [
+          27.92,
+          7.04
+        ]
+      },
+      {
+        "sprite": "vegetation_08_13",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 74,
+        "y": 231,
+        "w": 38,
+        "h": 28,
+        "pieds": [
+          93,
+          259
+        ],
+        "case": [
+          3.08,
+          9.62
+        ]
+      },
+      {
+        "sprite": "vegetation_08_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 114,
+        "y": 123,
+        "w": 27,
+        "h": 33,
+        "pieds": [
+          127,
+          156
+        ],
+        "case": [
+          4.75,
+          5.12
+        ]
+      },
+      {
+        "sprite": "vegetation_04_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 198,
+        "y": 269,
+        "w": 38,
+        "h": 22,
+        "pieds": [
+          217,
+          291
+        ],
+        "case": [
+          8.25,
+          11.21
+        ]
+      },
+      {
+        "sprite": "vegetation_05_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 344,
+        "y": 204,
+        "w": 26,
+        "h": 32,
+        "pieds": [
+          357,
+          236
+        ],
+        "case": [
+          14.33,
+          8.5
+        ]
+      },
+      {
+        "sprite": "vegetation_08_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 563,
+        "y": 203,
+        "w": 46,
+        "h": 13,
+        "pieds": [
+          586,
+          216
+        ],
+        "case": [
+          23.46,
+          8.46
+        ]
+      },
+      {
+        "sprite": "vegetation_09_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 682,
+        "y": 266,
+        "w": 32,
+        "h": 14,
+        "pieds": [
+          698,
+          280
+        ],
+        "case": [
+          28.42,
+          11.08
+        ]
+      },
+      {
+        "sprite": "vegetation_04_08",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 735,
+        "y": 136,
+        "w": 10,
+        "h": 30,
+        "pieds": [
+          740,
+          166
+        ],
+        "case": [
+          30.62,
+          5.67
+        ]
+      },
+      {
+        "sprite": "vegetation_04_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 461,
+        "y": 277,
+        "w": 13,
+        "h": 21,
+        "pieds": [
+          467,
+          298
+        ],
+        "case": [
+          19.21,
+          11.54
+        ]
+      },
+      {
+        "sprite": "vegetation_09_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 283,
+        "y": 279,
+        "w": 16,
+        "h": 14,
+        "pieds": [
+          291,
+          293
+        ],
+        "case": [
+          11.79,
+          11.62
+        ]
+      },
+      {
+        "sprite": "vegetation_04_05",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 241,
+        "y": 172,
+        "w": 13,
+        "h": 14,
+        "pieds": [
+          247,
+          186
+        ],
+        "case": [
+          10.04,
+          7.17
+        ]
+      },
+      {
+        "sprite": "vegetation_03_15",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 452,
+        "y": 159,
+        "w": 8,
+        "h": 18,
+        "pieds": [
+          456,
+          177
+        ],
+        "case": [
+          18.83,
+          6.62
+        ]
+      },
+      {
+        "sprite": "vegetation_06_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 386,
+        "y": 314,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          390,
+          322
+        ],
+        "case": [
+          16.08,
+          13.08
+        ]
+      },
+      {
+        "sprite": "vegetation_12_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 526,
+        "y": 214,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          530,
+          222
+        ],
+        "case": [
+          21.92,
+          8.92
+        ]
+      },
+      {
+        "sprite": "embleme_feuille_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 384,
+        "y": 89,
+        "w": 64,
+        "h": 47,
+        "pieds": [
+          416,
+          136
+        ],
+        "case": [
+          16.0,
+          3.71
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 664,
+        "y": 105,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          675,
+          136
+        ],
+        "case": [
+          27.67,
+          4.38
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 152,
+        "y": 105,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          163,
+          136
+        ],
+        "case": [
+          6.33,
+          4.38
+        ]
+      },
+      {
+        "sprite": "lampe_suspendue",
+        "pose": "suspendu",
+        "calque": "06_decorations",
+        "x": 414,
+        "y": 39,
+        "w": 12,
+        "h": 31,
+        "pieds": [
+          420,
+          70
+        ],
+        "case": [
+          17.25,
+          1.62
+        ]
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "nom": "Grande salle commune",
+    "toile_px": [
+      456,
+      312
+    ],
+    "props_demandes": 14,
+    "props_poses": 14,
+    "couverture_du_sol_pct": 20.6,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "table_etude",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 133,
+        "y": 96,
+        "w": 65,
+        "h": 55,
+        "pieds": [
+          165,
+          151
+        ],
+        "case": [
+          5.54,
+          4.0
+        ]
+      },
+      {
+        "sprite": "vegetation_03_19",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 378,
+        "y": 159,
+        "w": 56,
+        "h": 38,
+        "pieds": [
+          406,
+          197
+        ],
+        "case": [
+          15.75,
+          6.62
+        ]
+      },
+      {
+        "sprite": "fontaine_bois",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 228,
+        "y": 246,
+        "w": 38,
+        "h": 55,
+        "pieds": [
+          247,
+          301
+        ],
+        "case": [
+          9.5,
+          10.25
+        ]
+      },
+      {
+        "sprite": "plante_tonneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 1,
+        "y": 132,
+        "w": 35,
+        "h": 51,
+        "pieds": [
+          18,
+          183
+        ],
+        "case": [
+          0.04,
+          5.5
+        ]
+      },
+      {
+        "sprite": "fanion",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 282,
+        "y": 81,
+        "w": 32,
+        "h": 54,
+        "pieds": [
+          298,
+          135
+        ],
+        "case": [
+          11.75,
+          3.38
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 93,
+        "y": 183,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          107,
+          239
+        ],
+        "case": [
+          3.88,
+          7.62
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 296,
+        "y": 208,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          316,
+          237
+        ],
+        "case": [
+          12.33,
+          8.67
+        ]
+      },
+      {
+        "sprite": "vegetation_04_15",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 161,
+        "y": 232,
+        "w": 42,
+        "h": 25,
+        "pieds": [
+          182,
+          257
+        ],
+        "case": [
+          6.71,
+          9.67
+        ]
+      },
+      {
+        "sprite": "vegetation_04_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 78,
+        "y": 121,
+        "w": 16,
+        "h": 29,
+        "pieds": [
+          86,
+          150
+        ],
+        "case": [
+          3.25,
+          5.04
+        ]
+      },
+      {
+        "sprite": "vegetation_04_09",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 226,
+        "y": 149,
+        "w": 17,
+        "h": 20,
+        "pieds": [
+          234,
+          169
+        ],
+        "case": [
+          9.42,
+          6.21
+        ]
+      },
+      {
+        "sprite": "vegetation_04_12",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 357,
+        "y": 126,
+        "w": 8,
+        "h": 18,
+        "pieds": [
+          361,
+          144
+        ],
+        "case": [
+          14.88,
+          5.25
+        ]
+      },
+      {
+        "sprite": "vegetation_04_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 49,
+        "y": 210,
+        "w": 10,
+        "h": 10,
+        "pieds": [
+          54,
+          220
+        ],
+        "case": [
+          2.04,
+          8.75
+        ]
+      },
+      {
+        "sprite": "vegetation_05_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 364,
+        "y": 225,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          368,
+          233
+        ],
+        "case": [
+          15.17,
+          9.38
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 208,
+        "y": 40,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          219,
+          71
+        ],
+        "case": [
+          8.67,
+          1.67
+        ]
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "nom": "Cantine",
+    "toile_px": [
+      504,
+      336
+    ],
+    "props_demandes": 14,
+    "props_poses": 13,
+    "couverture_du_sol_pct": 30.5,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "table_banquet",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 134,
+        "y": 97,
+        "w": 150,
+        "h": 65,
+        "pieds": [
+          209,
+          162
+        ],
+        "case": [
+          5.58,
+          4.04
+        ]
+      },
+      {
+        "sprite": "etagere_boissons",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 422,
+        "y": 153,
+        "w": 54,
+        "h": 63,
+        "pieds": [
+          449,
+          216
+        ],
+        "case": [
+          17.58,
+          6.38
+        ]
+      },
+      {
+        "sprite": "provisions",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 285,
+        "y": 216,
+        "w": 55,
+        "h": 51,
+        "pieds": [
+          312,
+          267
+        ],
+        "case": [
+          11.88,
+          9.0
+        ]
+      },
+      {
+        "sprite": "vegetation_06_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 74,
+        "y": 211,
+        "w": 56,
+        "h": 32,
+        "pieds": [
+          102,
+          243
+        ],
+        "case": [
+          3.08,
+          8.79
+        ]
+      },
+      {
+        "sprite": "vegetation_06_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 319,
+        "y": 114,
+        "w": 49,
+        "h": 32,
+        "pieds": [
+          343,
+          146
+        ],
+        "case": [
+          13.29,
+          4.75
+        ]
+      },
+      {
+        "sprite": "seau_cantine",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 182,
+        "y": 222,
+        "w": 33,
+        "h": 42,
+        "pieds": [
+          198,
+          264
+        ],
+        "case": [
+          7.58,
+          9.25
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 88,
+        "y": 131,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          108,
+          160
+        ],
+        "case": [
+          3.67,
+          5.46
+        ]
+      },
+      {
+        "sprite": "vegetation_08_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 359,
+        "y": 231,
+        "w": 45,
+        "h": 25,
+        "pieds": [
+          381,
+          256
+        ],
+        "case": [
+          14.96,
+          9.62
+        ]
+      },
+      {
+        "sprite": "vegetation_05_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 256,
+        "y": 166,
+        "w": 45,
+        "h": 20,
+        "pieds": [
+          278,
+          186
+        ],
+        "case": [
+          10.67,
+          6.92
+        ]
+      },
+      {
+        "sprite": "vegetation_04_13",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 392,
+        "y": 123,
+        "w": 23,
+        "h": 37,
+        "pieds": [
+          403,
+          160
+        ],
+        "case": [
+          16.33,
+          5.12
+        ]
+      },
+      {
+        "sprite": "vegetation_04_10",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 247,
+        "y": 217,
+        "w": 25,
+        "h": 33,
+        "pieds": [
+          259,
+          250
+        ],
+        "case": [
+          10.29,
+          9.04
+        ]
+      },
+      {
+        "sprite": "vegetation_05_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 44,
+        "y": 194,
+        "w": 20,
+        "h": 14,
+        "pieds": [
+          54,
+          208
+        ],
+        "case": [
+          1.83,
+          8.08
+        ]
+      },
+      {
+        "sprite": "vegetation_04_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 149,
+        "y": 166,
+        "w": 18,
+        "h": 8,
+        "pieds": [
+          158,
+          174
+        ],
+        "case": [
+          6.21,
+          6.92
+        ]
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "nom": "Chambre de l’équipe",
+    "toile_px": [
+      408,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 10,
+    "couverture_du_sol_pct": 30.2,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "table_etude",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 190,
+        "y": 87,
+        "w": 65,
+        "h": 55,
+        "pieds": [
+          222,
+          142
+        ],
+        "case": [
+          7.92,
+          3.62
+        ]
+      },
+      {
+        "sprite": "nid_mousse",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 39,
+        "y": 152,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          64,
+          188
+        ],
+        "case": [
+          1.62,
+          6.33
+        ]
+      },
+      {
+        "sprite": "nid_ambre",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 331,
+        "y": 156,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          356,
+          192
+        ],
+        "case": [
+          13.79,
+          6.5
+        ]
+      },
+      {
+        "sprite": "vegetation_06_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 141,
+        "y": 206,
+        "w": 56,
+        "h": 29,
+        "pieds": [
+          169,
+          235
+        ],
+        "case": [
+          5.88,
+          8.58
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 257,
+        "y": 172,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          271,
+          228
+        ],
+        "case": [
+          10.71,
+          7.17
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 117,
+        "y": 106,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          137,
+          135
+        ],
+        "case": [
+          4.88,
+          4.42
+        ]
+      },
+      {
+        "sprite": "vegetation_05_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 287,
+        "y": 107,
+        "w": 43,
+        "h": 26,
+        "pieds": [
+          308,
+          133
+        ],
+        "case": [
+          11.96,
+          4.46
+        ]
+      },
+      {
+        "sprite": "vegetation_04_14",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 99,
+        "y": 176,
+        "w": 29,
+        "h": 37,
+        "pieds": [
+          113,
+          213
+        ],
+        "case": [
+          4.12,
+          7.33
+        ]
+      },
+      {
+        "sprite": "vegetation_05_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 209,
+        "y": 206,
+        "w": 26,
+        "h": 32,
+        "pieds": [
+          222,
+          238
+        ],
+        "case": [
+          8.71,
+          8.58
+        ]
+      },
+      {
+        "sprite": "vegetation_06_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 66,
+        "y": 134,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          70,
+          142
+        ],
+        "case": [
+          2.75,
+          5.58
+        ]
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "nom": "Chambre du veilleur",
+    "toile_px": [
+      432,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 11,
+    "couverture_du_sol_pct": 21.4,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "armoire_veilleur",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 238,
+        "y": 65,
+        "w": 36,
+        "h": 73,
+        "pieds": [
+          256,
+          138
+        ],
+        "case": [
+          9.92,
+          2.71
+        ]
+      },
+      {
+        "sprite": "vegetation_08_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 66,
+        "y": 172,
+        "w": 56,
+        "h": 36,
+        "pieds": [
+          94,
+          208
+        ],
+        "case": [
+          2.75,
+          7.17
+        ]
+      },
+      {
+        "sprite": "nid_sauge",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 340,
+        "y": 145,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          365,
+          181
+        ],
+        "case": [
+          14.17,
+          6.04
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 183,
+        "y": 175,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          197,
+          231
+        ],
+        "case": [
+          7.62,
+          7.29
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 138,
+        "y": 106,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          158,
+          135
+        ],
+        "case": [
+          5.75,
+          4.42
+        ]
+      },
+      {
+        "sprite": "vegetation_05_09",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 266,
+        "y": 182,
+        "w": 29,
+        "h": 39,
+        "pieds": [
+          280,
+          221
+        ],
+        "case": [
+          11.08,
+          7.58
+        ]
+      },
+      {
+        "sprite": "vegetation_08_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 80,
+        "y": 118,
+        "w": 29,
+        "h": 23,
+        "pieds": [
+          94,
+          141
+        ],
+        "case": [
+          3.33,
+          4.92
+        ]
+      },
+      {
+        "sprite": "vegetation_06_05",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 309,
+        "y": 124,
+        "w": 33,
+        "h": 8,
+        "pieds": [
+          325,
+          132
+        ],
+        "case": [
+          12.88,
+          5.17
+        ]
+      },
+      {
+        "sprite": "vegetation_06_08",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 138,
+        "y": 209,
+        "w": 10,
+        "h": 13,
+        "pieds": [
+          143,
+          222
+        ],
+        "case": [
+          5.75,
+          8.71
+        ]
+      },
+      {
+        "sprite": "vegetation_08_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 51,
+        "y": 161,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          55,
+          169
+        ],
+        "case": [
+          2.12,
+          6.71
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 280,
+        "y": 76,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          291,
+          107
+        ],
+        "case": [
+          11.67,
+          3.17
+        ]
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "nom": "Chambre des résidents",
+    "toile_px": [
+      408,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 11,
+    "couverture_du_sol_pct": 22.9,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "nid_menthe",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 157,
+        "y": 104,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          182,
+          140
+        ],
+        "case": [
+          6.54,
+          4.33
+        ]
+      },
+      {
+        "sprite": "nid_ambre",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 305,
+        "y": 166,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          330,
+          202
+        ],
+        "case": [
+          12.71,
+          6.92
+        ]
+      },
+      {
+        "sprite": "plante_tonneau",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 30,
+        "y": 132,
+        "w": 35,
+        "h": 51,
+        "pieds": [
+          47,
+          183
+        ],
+        "case": [
+          1.25,
+          5.5
+        ]
+      },
+      {
+        "sprite": "vegetation_08_12",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 210,
+        "y": 199,
+        "w": 40,
+        "h": 32,
+        "pieds": [
+          230,
+          231
+        ],
+        "case": [
+          8.75,
+          8.29
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 114,
+        "y": 199,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          134,
+          228
+        ],
+        "case": [
+          4.75,
+          8.29
+        ]
+      },
+      {
+        "sprite": "vegetation_08_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 246,
+        "y": 109,
+        "w": 45,
+        "h": 25,
+        "pieds": [
+          268,
+          134
+        ],
+        "case": [
+          10.25,
+          4.54
+        ]
+      },
+      {
+        "sprite": "vegetation_09_10",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 90,
+        "y": 120,
+        "w": 34,
+        "h": 14,
+        "pieds": [
+          107,
+          134
+        ],
+        "case": [
+          3.75,
+          5.0
+        ]
+      },
+      {
+        "sprite": "vegetation_08_09",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 275,
+        "y": 199,
+        "w": 18,
+        "h": 25,
+        "pieds": [
+          284,
+          224
+        ],
+        "case": [
+          11.46,
+          8.29
+        ]
+      },
+      {
+        "sprite": "vegetation_09_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 76,
+        "y": 201,
+        "w": 17,
+        "h": 15,
+        "pieds": [
+          84,
+          216
+        ],
+        "case": [
+          3.17,
+          8.38
+        ]
+      },
+      {
+        "sprite": "vegetation_08_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 328,
+        "y": 141,
+        "w": 20,
+        "h": 9,
+        "pieds": [
+          338,
+          150
+        ],
+        "case": [
+          13.67,
+          5.88
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 216,
+        "y": 25,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          227,
+          56
+        ],
+        "case": [
+          9.0,
+          1.04
+        ]
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "nom": "Dortoir des apprentis",
+    "toile_px": [
+      408,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 11,
+    "couverture_du_sol_pct": 24.3,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "nid_mousse",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 108,
+        "y": 192,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          133,
+          228
+        ],
+        "case": [
+          4.5,
+          8.0
+        ]
+      },
+      {
+        "sprite": "nid_menthe",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 331,
+        "y": 152,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          356,
+          188
+        ],
+        "case": [
+          13.79,
+          6.33
+        ]
+      },
+      {
+        "sprite": "nid_sauge",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 195,
+        "y": 82,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          220,
+          118
+        ],
+        "case": [
+          8.12,
+          3.42
+        ]
+      },
+      {
+        "sprite": "vegetation_12_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 222,
+        "y": 195,
+        "w": 53,
+        "h": 34,
+        "pieds": [
+          248,
+          229
+        ],
+        "case": [
+          9.25,
+          8.12
+        ]
+      },
+      {
+        "sprite": "vegetation_08_10",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 82,
+        "y": 96,
+        "w": 43,
+        "h": 39,
+        "pieds": [
+          103,
+          135
+        ],
+        "case": [
+          3.42,
+          4.0
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 286,
+        "y": 75,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          300,
+          131
+        ],
+        "case": [
+          11.92,
+          3.12
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 44,
+        "y": 165,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          64,
+          194
+        ],
+        "case": [
+          1.83,
+          6.88
+        ]
+      },
+      {
+        "sprite": "vegetation_08_13",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 175,
+        "y": 210,
+        "w": 38,
+        "h": 28,
+        "pieds": [
+          194,
+          238
+        ],
+        "case": [
+          7.29,
+          8.75
+        ]
+      },
+      {
+        "sprite": "vegetation_09_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 297,
+        "y": 206,
+        "w": 32,
+        "h": 14,
+        "pieds": [
+          313,
+          220
+        ],
+        "case": [
+          12.38,
+          8.58
+        ]
+      },
+      {
+        "sprite": "vegetation_09_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 146,
+        "y": 106,
+        "w": 16,
+        "h": 14,
+        "pieds": [
+          154,
+          120
+        ],
+        "case": [
+          6.08,
+          4.42
+        ]
+      },
+      {
+        "sprite": "vegetation_12_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 91,
+        "y": 211,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          95,
+          219
+        ],
+        "case": [
+          3.79,
+          8.79
+        ]
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "nom": "Grand dortoir",
+    "toile_px": [
+      456,
+      312
+    ],
+    "props_demandes": 14,
+    "props_poses": 14,
+    "couverture_du_sol_pct": 25.4,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "nid_ambre",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 100,
+        "y": 198,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          125,
+          234
+        ],
+        "case": [
+          4.17,
+          8.25
+        ]
+      },
+      {
+        "sprite": "nid_menthe",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 364,
+        "y": 163,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          389,
+          199
+        ],
+        "case": [
+          15.17,
+          6.79
+        ]
+      },
+      {
+        "sprite": "nid_mousse",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 202,
+        "y": 23,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          227,
+          59
+        ],
+        "case": [
+          8.42,
+          0.96
+        ]
+      },
+      {
+        "sprite": "nid_sauge",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 241,
+        "y": 222,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          266,
+          258
+        ],
+        "case": [
+          10.04,
+          9.25
+        ]
+      },
+      {
+        "sprite": "vegetation_12_05",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 280,
+        "y": 100,
+        "w": 49,
+        "h": 34,
+        "pieds": [
+          304,
+          134
+        ],
+        "case": [
+          11.67,
+          4.17
+        ]
+      },
+      {
+        "sprite": "vegetation_12_08",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 135,
+        "y": 100,
+        "w": 38,
+        "h": 35,
+        "pieds": [
+          154,
+          135
+        ],
+        "case": [
+          5.62,
+          4.17
+        ]
+      },
+      {
+        "sprite": "vegetation_09_09",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 163,
+        "y": 238,
+        "w": 56,
+        "h": 21,
+        "pieds": [
+          191,
+          259
+        ],
+        "case": [
+          6.79,
+          9.92
+        ]
+      },
+      {
+        "sprite": "vegetation_09_12",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 301,
+        "y": 214,
+        "w": 56,
+        "h": 21,
+        "pieds": [
+          329,
+          235
+        ],
+        "case": [
+          12.54,
+          8.92
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 55,
+        "y": 138,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          75,
+          167
+        ],
+        "case": [
+          2.29,
+          5.75
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 222,
+        "y": 96,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          242,
+          125
+        ],
+        "case": [
+          9.25,
+          4.0
+        ]
+      },
+      {
+        "sprite": "vegetation_02_05",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 349,
+        "y": 125,
+        "w": 21,
+        "h": 26,
+        "pieds": [
+          359,
+          151
+        ],
+        "case": [
+          14.54,
+          5.21
+        ]
+      },
+      {
+        "sprite": "vegetation_03_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 178,
+        "y": 127,
+        "w": 36,
+        "h": 11,
+        "pieds": [
+          196,
+          138
+        ],
+        "case": [
+          7.42,
+          5.29
+        ]
+      },
+      {
+        "sprite": "vegetation_03_04",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 61,
+        "y": 202,
+        "w": 20,
+        "h": 13,
+        "pieds": [
+          71,
+          215
+        ],
+        "case": [
+          2.54,
+          8.42
+        ]
+      },
+      {
+        "sprite": "lampe_suspendue",
+        "pose": "suspendu",
+        "calque": "06_decorations",
+        "x": 174,
+        "y": 0,
+        "w": 12,
+        "h": 31,
+        "pieds": [
+          180,
+          31
+        ],
+        "case": [
+          7.25,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "nom": "Dortoir des explorateurs",
+    "toile_px": [
+      408,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 11,
+    "couverture_du_sol_pct": 25.1,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "nid_sauge",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 137,
+        "y": 202,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          162,
+          238
+        ],
+        "case": [
+          5.71,
+          8.42
+        ]
+      },
+      {
+        "sprite": "nid_ambre",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 322,
+        "y": 142,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          347,
+          178
+        ],
+        "case": [
+          13.42,
+          5.92
+        ]
+      },
+      {
+        "sprite": "nid_mousse",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 187,
+        "y": 81,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          212,
+          117
+        ],
+        "case": [
+          7.79,
+          3.38
+        ]
+      },
+      {
+        "sprite": "vegetation_03_05",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 24,
+        "y": 155,
+        "w": 53,
+        "h": 32,
+        "pieds": [
+          50,
+          187
+        ],
+        "case": [
+          1.0,
+          6.46
+        ]
+      },
+      {
+        "sprite": "vegetation_02_01",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 237,
+        "y": 194,
+        "w": 46,
+        "h": 36,
+        "pieds": [
+          260,
+          230
+        ],
+        "case": [
+          9.88,
+          8.08
+        ]
+      },
+      {
+        "sprite": "lanterne",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 104,
+        "y": 70,
+        "w": 28,
+        "h": 56,
+        "pieds": [
+          118,
+          126
+        ],
+        "case": [
+          4.33,
+          2.92
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 260,
+        "y": 95,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          280,
+          124
+        ],
+        "case": [
+          10.83,
+          3.96
+        ]
+      },
+      {
+        "sprite": "vegetation_03_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 84,
+        "y": 189,
+        "w": 30,
+        "h": 32,
+        "pieds": [
+          99,
+          221
+        ],
+        "case": [
+          3.5,
+          7.88
+        ]
+      },
+      {
+        "sprite": "vegetation_02_07",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 303,
+        "y": 191,
+        "w": 29,
+        "h": 26,
+        "pieds": [
+          317,
+          217
+        ],
+        "case": [
+          12.62,
+          7.96
+        ]
+      },
+      {
+        "sprite": "vegetation_12_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 198,
+        "y": 213,
+        "w": 17,
+        "h": 25,
+        "pieds": [
+          206,
+          238
+        ],
+        "case": [
+          8.25,
+          8.88
+        ]
+      },
+      {
+        "sprite": "vegetation_03_10",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 66,
+        "y": 132,
+        "w": 9,
+        "h": 8,
+        "pieds": [
+          70,
+          140
+        ],
+        "case": [
+          2.75,
+          5.5
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "nom": "Chambre des éclaireurs",
+    "toile_px": [
+      408,
+      288
+    ],
+    "props_demandes": 11,
+    "props_poses": 11,
+    "couverture_du_sol_pct": 20.9,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "table_etude",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 150,
+        "y": 85,
+        "w": 65,
+        "h": 55,
+        "pieds": [
+          182,
+          140
+        ],
+        "case": [
+          6.25,
+          3.54
+        ]
+      },
+      {
+        "sprite": "nid_menthe",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 318,
+        "y": 151,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          343,
+          187
+        ],
+        "case": [
+          13.25,
+          6.29
+        ]
+      },
+      {
+        "sprite": "nid_mousse",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 22,
+        "y": 147,
+        "w": 51,
+        "h": 36,
+        "pieds": [
+          47,
+          183
+        ],
+        "case": [
+          0.92,
+          6.12
+        ]
+      },
+      {
+        "sprite": "vegetation_02_08",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 224,
+        "y": 200,
+        "w": 38,
+        "h": 36,
+        "pieds": [
+          243,
+          236
+        ],
+        "case": [
+          9.33,
+          8.33
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 120,
+        "y": 199,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          140,
+          228
+        ],
+        "case": [
+          5.0,
+          8.29
+        ]
+      },
+      {
+        "sprite": "vegetation_03_17",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 259,
+        "y": 118,
+        "w": 20,
+        "h": 16,
+        "pieds": [
+          269,
+          134
+        ],
+        "case": [
+          10.79,
+          4.92
+        ]
+      },
+      {
+        "sprite": "vegetation_03_03",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 103,
+        "y": 113,
+        "w": 10,
+        "h": 12,
+        "pieds": [
+          108,
+          125
+        ],
+        "case": [
+          4.29,
+          4.71
+        ]
+      },
+      {
+        "sprite": "vegetation_03_06",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 319,
+        "y": 122,
+        "w": 8,
+        "h": 12,
+        "pieds": [
+          323,
+          134
+        ],
+        "case": [
+          13.29,
+          5.08
+        ]
+      },
+      {
+        "sprite": "vegetation_03_11",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 293,
+        "y": 223,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          297,
+          231
+        ],
+        "case": [
+          12.21,
+          9.29
+        ]
+      },
+      {
+        "sprite": "vegetation_03_14",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 83,
+        "y": 208,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          87,
+          216
+        ],
+        "case": [
+          3.46,
+          8.67
+        ]
+      },
+      {
+        "sprite": "applique_bois",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 216,
+        "y": 25,
+        "w": 22,
+        "h": 31,
+        "pieds": [
+          227,
+          56
+        ],
+        "case": [
+          9.0,
+          1.04
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "nom": "Salle du chef",
+    "toile_px": [
+      480,
+      312
+    ],
+    "props_demandes": 13,
+    "props_poses": 12,
+    "couverture_du_sol_pct": 32.3,
+    "cible_couverture_pct": [
+      30,
+      45
+    ],
+    "placements": [
+      {
+        "sprite": "tapis_maitre",
+        "pose": "tapis",
+        "calque": "07_objets",
+        "x": 168,
+        "y": 168,
+        "w": 143,
+        "h": 62,
+        "pieds": [
+          239,
+          230
+        ],
+        "case": [
+          7.0,
+          7.0
+        ]
+      },
+      {
+        "sprite": "table_etude",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 330,
+        "y": 92,
+        "w": 65,
+        "h": 55,
+        "pieds": [
+          362,
+          147
+        ],
+        "case": [
+          13.75,
+          3.83
+        ]
+      },
+      {
+        "sprite": "vegetation_03_18",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 43,
+        "y": 162,
+        "w": 56,
+        "h": 37,
+        "pieds": [
+          71,
+          199
+        ],
+        "case": [
+          1.79,
+          6.75
+        ]
+      },
+      {
+        "sprite": "fanion",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 149,
+        "y": 80,
+        "w": 32,
+        "h": 54,
+        "pieds": [
+          165,
+          134
+        ],
+        "case": [
+          6.21,
+          3.33
+        ]
+      },
+      {
+        "sprite": "vegetation_03_12",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 316,
+        "y": 209,
+        "w": 38,
+        "h": 36,
+        "pieds": [
+          335,
+          245
+        ],
+        "case": [
+          13.17,
+          8.71
+        ]
+      },
+      {
+        "sprite": "coffre_feuille",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 115,
+        "y": 214,
+        "w": 40,
+        "h": 29,
+        "pieds": [
+          135,
+          243
+        ],
+        "case": [
+          4.79,
+          8.92
+        ]
+      },
+      {
+        "sprite": "vegetation_04_02",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 263,
+        "y": 120,
+        "w": 13,
+        "h": 21,
+        "pieds": [
+          269,
+          141
+        ],
+        "case": [
+          10.96,
+          5.0
+        ]
+      },
+      {
+        "sprite": "vegetation_03_15",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 412,
+        "y": 194,
+        "w": 8,
+        "h": 18,
+        "pieds": [
+          416,
+          212
+        ],
+        "case": [
+          17.17,
+          8.08
+        ]
+      },
+      {
+        "sprite": "vegetation_03_09",
+        "pose": "sol",
+        "calque": "07_objets",
+        "x": 276,
+        "y": 294,
+        "w": 8,
+        "h": 8,
+        "pieds": [
+          280,
+          302
+        ],
+        "case": [
+          11.5,
+          12.25
+        ]
+      },
+      {
+        "sprite": "banniere_maitre_centrale",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 208,
+        "y": 58,
+        "w": 41,
+        "h": 64,
+        "pieds": [
+          228,
+          122
+        ],
+        "case": [
+          8.67,
+          2.42
+        ]
+      },
+      {
+        "sprite": "banniere_maitre_rouge",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 96,
+        "y": 58,
+        "w": 39,
+        "h": 64,
+        "pieds": [
+          115,
+          122
+        ],
+        "case": [
+          4.0,
+          2.42
+        ]
+      },
+      {
+        "sprite": "banniere_maitre_verte",
+        "pose": "mural",
+        "calque": "06_decorations",
+        "x": 288,
+        "y": 58,
+        "w": 36,
+        "h": 64,
+        "pieds": [
+          306,
+          122
+        ],
+        "case": [
+          12.0,
+          2.42
+        ]
+      }
+    ]
+  }
+]

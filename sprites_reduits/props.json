@@ -1,0 +1,3024 @@
+{
+  "facteur_base": 0.65,
+  "case_px": 24,
+  "plafonds": {
+    "vegetation": [
+      56,
+      48
+    ],
+    "couchages": [
+      64,
+      44
+    ],
+    "mobilier": [
+      120,
+      80
+    ],
+    "textiles": [
+      72,
+      64
+    ],
+    "lampes": [
+      40,
+      56
+    ],
+    "ornements": [
+      72,
+      56
+    ],
+    "portes": [
+      56,
+      56
+    ]
+  },
+  "plafonds_id": {
+    "table_banquet": [
+      150,
+      72
+    ],
+    "tapis_maitre": [
+      150,
+      72
+    ],
+    "table_etude": [
+      72,
+      64
+    ],
+    "panneau": [
+      48,
+      72
+    ]
+  },
+  "props": [
+    {
+      "id": "coffre_feuille",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        61,
+        44
+      ],
+      "taille": [
+        40,
+        29
+      ],
+      "taille_cases": [
+        1.67,
+        1.21
+      ],
+      "facteur": 0.656,
+      "pivot": [
+        20.0,
+        29
+      ]
+    },
+    {
+      "id": "fanion",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        50,
+        83
+      ],
+      "taille": [
+        32,
+        54
+      ],
+      "taille_cases": [
+        1.33,
+        2.25
+      ],
+      "facteur": 0.64,
+      "pivot": [
+        16.0,
+        54
+      ]
+    },
+    {
+      "id": "fontaine_bois",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        59,
+        84
+      ],
+      "taille": [
+        38,
+        55
+      ],
+      "taille_cases": [
+        1.58,
+        2.29
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        19.0,
+        55
+      ]
+    },
+    {
+      "id": "lanterne",
+      "groupe": "lampes",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        87
+      ],
+      "taille": [
+        28,
+        56
+      ],
+      "taille_cases": [
+        1.17,
+        2.33
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        14.0,
+        56
+      ]
+    },
+    {
+      "id": "nid_ambre",
+      "groupe": "couchages",
+      "pose": "sol",
+      "taille_avant": [
+        78,
+        56
+      ],
+      "taille": [
+        51,
+        36
+      ],
+      "taille_cases": [
+        2.12,
+        1.5
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        25.5,
+        36
+      ]
+    },
+    {
+      "id": "nid_menthe",
+      "groupe": "couchages",
+      "pose": "sol",
+      "taille_avant": [
+        78,
+        56
+      ],
+      "taille": [
+        51,
+        36
+      ],
+      "taille_cases": [
+        2.12,
+        1.5
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        25.5,
+        36
+      ]
+    },
+    {
+      "id": "nid_mousse",
+      "groupe": "couchages",
+      "pose": "sol",
+      "taille_avant": [
+        78,
+        56
+      ],
+      "taille": [
+        51,
+        36
+      ],
+      "taille_cases": [
+        2.12,
+        1.5
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        25.5,
+        36
+      ]
+    },
+    {
+      "id": "nid_sauge",
+      "groupe": "couchages",
+      "pose": "sol",
+      "taille_avant": [
+        78,
+        56
+      ],
+      "taille": [
+        51,
+        36
+      ],
+      "taille_cases": [
+        2.12,
+        1.5
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        25.5,
+        36
+      ]
+    },
+    {
+      "id": "panneau",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        65,
+        97
+      ],
+      "taille": [
+        42,
+        63
+      ],
+      "taille_cases": [
+        1.75,
+        2.62
+      ],
+      "facteur": 0.646,
+      "pivot": [
+        21.0,
+        63
+      ]
+    },
+    {
+      "id": "plante_tonneau",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        54,
+        79
+      ],
+      "taille": [
+        35,
+        51
+      ],
+      "taille_cases": [
+        1.46,
+        2.12
+      ],
+      "facteur": 0.648,
+      "pivot": [
+        17.5,
+        51
+      ]
+    },
+    {
+      "id": "provisions",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        84,
+        78
+      ],
+      "taille": [
+        55,
+        51
+      ],
+      "taille_cases": [
+        2.29,
+        2.12
+      ],
+      "facteur": 0.655,
+      "pivot": [
+        27.5,
+        51
+      ]
+    },
+    {
+      "id": "table_banquet",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        260,
+        113
+      ],
+      "taille": [
+        150,
+        65
+      ],
+      "taille_cases": [
+        6.25,
+        2.71
+      ],
+      "facteur": 0.577,
+      "pivot": [
+        75.0,
+        65
+      ]
+    },
+    {
+      "id": "table_etude",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        100,
+        85
+      ],
+      "taille": [
+        65,
+        55
+      ],
+      "taille_cases": [
+        2.71,
+        2.29
+      ],
+      "facteur": 0.65,
+      "pivot": [
+        32.5,
+        55
+      ]
+    },
+    {
+      "id": "banniere_maitre_rouge",
+      "groupe": "textiles",
+      "pose": "mural",
+      "taille_avant": [
+        70,
+        114
+      ],
+      "taille": [
+        39,
+        64
+      ],
+      "taille_cases": [
+        1.62,
+        2.67
+      ],
+      "facteur": 0.557,
+      "pivot": [
+        19.5,
+        64
+      ]
+    },
+    {
+      "id": "banniere_maitre_centrale",
+      "groupe": "textiles",
+      "pose": "mural",
+      "taille_avant": [
+        81,
+        125
+      ],
+      "taille": [
+        41,
+        64
+      ],
+      "taille_cases": [
+        1.71,
+        2.67
+      ],
+      "facteur": 0.506,
+      "pivot": [
+        20.5,
+        64
+      ]
+    },
+    {
+      "id": "banniere_maitre_verte",
+      "groupe": "textiles",
+      "pose": "mural",
+      "taille_avant": [
+        65,
+        115
+      ],
+      "taille": [
+        36,
+        64
+      ],
+      "taille_cases": [
+        1.5,
+        2.67
+      ],
+      "facteur": 0.554,
+      "pivot": [
+        18.0,
+        64
+      ]
+    },
+    {
+      "id": "tapis_maitre",
+      "groupe": "textiles",
+      "pose": "tapis",
+      "taille_avant": [
+        220,
+        95
+      ],
+      "taille": [
+        143,
+        62
+      ],
+      "taille_cases": [
+        5.96,
+        2.58
+      ],
+      "facteur": 0.65,
+      "pivot": [
+        71.5,
+        62
+      ]
+    },
+    {
+      "id": "embleme_feuille_bois",
+      "groupe": "ornements",
+      "pose": "mural",
+      "taille_avant": [
+        99,
+        73
+      ],
+      "taille": [
+        64,
+        47
+      ],
+      "taille_cases": [
+        2.67,
+        1.96
+      ],
+      "facteur": 0.646,
+      "pivot": [
+        32.0,
+        47
+      ]
+    },
+    {
+      "id": "banniere_accueil_gauche",
+      "groupe": "textiles",
+      "pose": "mural",
+      "taille_avant": [
+        33,
+        73
+      ],
+      "taille": [
+        21,
+        47
+      ],
+      "taille_cases": [
+        0.88,
+        1.96
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        10.5,
+        47
+      ]
+    },
+    {
+      "id": "banniere_accueil_droite",
+      "groupe": "textiles",
+      "pose": "mural",
+      "taille_avant": [
+        35,
+        74
+      ],
+      "taille": [
+        23,
+        48
+      ],
+      "taille_cases": [
+        0.96,
+        2.0
+      ],
+      "facteur": 0.657,
+      "pivot": [
+        11.5,
+        48
+      ]
+    },
+    {
+      "id": "etagere_boissons",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        83,
+        97
+      ],
+      "taille": [
+        54,
+        63
+      ],
+      "taille_cases": [
+        2.25,
+        2.62
+      ],
+      "facteur": 0.651,
+      "pivot": [
+        27.0,
+        63
+      ]
+    },
+    {
+      "id": "armoire_veilleur",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        56,
+        112
+      ],
+      "taille": [
+        36,
+        73
+      ],
+      "taille_cases": [
+        1.5,
+        3.04
+      ],
+      "facteur": 0.643,
+      "pivot": [
+        18.0,
+        73
+      ]
+    },
+    {
+      "id": "seau_cantine",
+      "groupe": "mobilier",
+      "pose": "sol",
+      "taille_avant": [
+        51,
+        65
+      ],
+      "taille": [
+        33,
+        42
+      ],
+      "taille_cases": [
+        1.38,
+        1.75
+      ],
+      "facteur": 0.647,
+      "pivot": [
+        16.5,
+        42
+      ]
+    },
+    {
+      "id": "porte_double_feuille",
+      "groupe": "portes",
+      "pose": "mural",
+      "taille_avant": [
+        76,
+        72
+      ],
+      "taille": [
+        49,
+        47
+      ],
+      "taille_cases": [
+        2.04,
+        1.96
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        24.5,
+        47
+      ]
+    },
+    {
+      "id": "porte_double_arrondie",
+      "groupe": "portes",
+      "pose": "mural",
+      "taille_avant": [
+        70,
+        86
+      ],
+      "taille": [
+        46,
+        56
+      ],
+      "taille_cases": [
+        1.92,
+        2.33
+      ],
+      "facteur": 0.657,
+      "pivot": [
+        23.0,
+        56
+      ]
+    },
+    {
+      "id": "lampe_suspendue",
+      "groupe": "lampes",
+      "pose": "suspendu",
+      "taille_avant": [
+        18,
+        47
+      ],
+      "taille": [
+        12,
+        31
+      ],
+      "taille_cases": [
+        0.5,
+        1.29
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        6.0,
+        31
+      ]
+    },
+    {
+      "id": "applique_bois",
+      "groupe": "lampes",
+      "pose": "mural",
+      "taille_avant": [
+        34,
+        47
+      ],
+      "taille": [
+        22,
+        31
+      ],
+      "taille_cases": [
+        0.92,
+        1.29
+      ],
+      "facteur": 0.647,
+      "pivot": [
+        11.0,
+        31
+      ]
+    },
+    {
+      "id": "vegetation_01_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        71,
+        86
+      ],
+      "taille": [
+        40,
+        48
+      ],
+      "taille_cases": [
+        1.67,
+        2.0
+      ],
+      "facteur": 0.563,
+      "pivot": [
+        20.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_01_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        82,
+        107
+      ],
+      "taille": [
+        37,
+        48
+      ],
+      "taille_cases": [
+        1.54,
+        2.0
+      ],
+      "facteur": 0.451,
+      "pivot": [
+        18.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_01_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        81,
+        109
+      ],
+      "taille": [
+        36,
+        48
+      ],
+      "taille_cases": [
+        1.5,
+        2.0
+      ],
+      "facteur": 0.444,
+      "pivot": [
+        18.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_01_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        33,
+        69
+      ],
+      "taille": [
+        21,
+        45
+      ],
+      "taille_cases": [
+        0.88,
+        1.88
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        10.5,
+        45
+      ]
+    },
+    {
+      "id": "vegetation_01_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        110
+      ],
+      "taille": [
+        33,
+        48
+      ],
+      "taille_cases": [
+        1.38,
+        2.0
+      ],
+      "facteur": 0.434,
+      "pivot": [
+        16.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_01_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        70
+      ],
+      "taille": [
+        29,
+        46
+      ],
+      "taille_cases": [
+        1.21,
+        1.92
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        46
+      ]
+    },
+    {
+      "id": "vegetation_01_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        60,
+        85
+      ],
+      "taille": [
+        34,
+        48
+      ],
+      "taille_cases": [
+        1.42,
+        2.0
+      ],
+      "facteur": 0.567,
+      "pivot": [
+        17.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_01_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        102
+      ],
+      "taille": [
+        36,
+        48
+      ],
+      "taille_cases": [
+        1.5,
+        2.0
+      ],
+      "facteur": 0.474,
+      "pivot": [
+        18.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_02_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        70,
+        56
+      ],
+      "taille": [
+        46,
+        36
+      ],
+      "taille_cases": [
+        1.92,
+        1.5
+      ],
+      "facteur": 0.657,
+      "pivot": [
+        23.0,
+        36
+      ]
+    },
+    {
+      "id": "vegetation_02_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        99
+      ],
+      "taille": [
+        32,
+        48
+      ],
+      "taille_cases": [
+        1.33,
+        2.0
+      ],
+      "facteur": 0.478,
+      "pivot": [
+        16.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_02_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        10,
+        12
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.8,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_02_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        58,
+        71
+      ],
+      "taille": [
+        38,
+        46
+      ],
+      "taille_cases": [
+        1.58,
+        1.92
+      ],
+      "facteur": 0.655,
+      "pivot": [
+        19.0,
+        46
+      ]
+    },
+    {
+      "id": "vegetation_02_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        33,
+        40
+      ],
+      "taille": [
+        21,
+        26
+      ],
+      "taille_cases": [
+        0.88,
+        1.08
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        10.5,
+        26
+      ]
+    },
+    {
+      "id": "vegetation_02_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        69
+      ],
+      "taille": [
+        49,
+        45
+      ],
+      "taille_cases": [
+        2.04,
+        1.88
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        24.5,
+        45
+      ]
+    },
+    {
+      "id": "vegetation_02_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        40
+      ],
+      "taille": [
+        29,
+        26
+      ],
+      "taille_cases": [
+        1.21,
+        1.08
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        26
+      ]
+    },
+    {
+      "id": "vegetation_02_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        59,
+        55
+      ],
+      "taille": [
+        38,
+        36
+      ],
+      "taille_cases": [
+        1.58,
+        1.5
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        19.0,
+        36
+      ]
+    },
+    {
+      "id": "vegetation_02_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        99
+      ],
+      "taille": [
+        32,
+        48
+      ],
+      "taille_cases": [
+        1.33,
+        2.0
+      ],
+      "facteur": 0.478,
+      "pivot": [
+        16.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_03_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        55,
+        17
+      ],
+      "taille": [
+        36,
+        11
+      ],
+      "taille_cases": [
+        1.5,
+        0.46
+      ],
+      "facteur": 0.655,
+      "pivot": [
+        18.0,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_03_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        46,
+        50
+      ],
+      "taille": [
+        30,
+        32
+      ],
+      "taille_cases": [
+        1.25,
+        1.33
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        15.0,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_03_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        16,
+        18
+      ],
+      "taille": [
+        10,
+        12
+      ],
+      "taille_cases": [
+        0.42,
+        0.5
+      ],
+      "facteur": 0.625,
+      "pivot": [
+        5.0,
+        12
+      ]
+    },
+    {
+      "id": "vegetation_03_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        31,
+        20
+      ],
+      "taille": [
+        20,
+        13
+      ],
+      "taille_cases": [
+        0.83,
+        0.54
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        10.0,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_03_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        81,
+        49
+      ],
+      "taille": [
+        53,
+        32
+      ],
+      "taille_cases": [
+        2.21,
+        1.33
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        26.5,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_03_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        9,
+        18
+      ],
+      "taille": [
+        8,
+        12
+      ],
+      "taille_cases": [
+        0.33,
+        0.5
+      ],
+      "facteur": 0.889,
+      "pivot": [
+        4.0,
+        12
+      ]
+    },
+    {
+      "id": "vegetation_03_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        76
+      ],
+      "taille": [
+        48,
+        48
+      ],
+      "taille_cases": [
+        2.0,
+        2.0
+      ],
+      "facteur": 0.632,
+      "pivot": [
+        24.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_03_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        68
+      ],
+      "taille": [
+        29,
+        44
+      ],
+      "taille_cases": [
+        1.21,
+        1.83
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        44
+      ]
+    },
+    {
+      "id": "vegetation_03_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        13,
+        13
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.615,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_03_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        14,
+        13
+      ],
+      "taille": [
+        9,
+        8
+      ],
+      "taille_cases": [
+        0.38,
+        0.33
+      ],
+      "facteur": 0.643,
+      "pivot": [
+        4.5,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_03_11",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        12,
+        9
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_03_12",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        59,
+        55
+      ],
+      "taille": [
+        38,
+        36
+      ],
+      "taille_cases": [
+        1.58,
+        1.5
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        19.0,
+        36
+      ]
+    },
+    {
+      "id": "vegetation_03_13",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        51
+      ],
+      "taille": [
+        29,
+        33
+      ],
+      "taille_cases": [
+        1.21,
+        1.38
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        33
+      ]
+    },
+    {
+      "id": "vegetation_03_14",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        11,
+        12
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.727,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_03_15",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        11,
+        27
+      ],
+      "taille": [
+        8,
+        18
+      ],
+      "taille_cases": [
+        0.33,
+        0.75
+      ],
+      "facteur": 0.727,
+      "pivot": [
+        4.0,
+        18
+      ]
+    },
+    {
+      "id": "vegetation_03_16",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        15,
+        17
+      ],
+      "taille": [
+        10,
+        11
+      ],
+      "taille_cases": [
+        0.42,
+        0.46
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        5.0,
+        11
+      ]
+    },
+    {
+      "id": "vegetation_03_17",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        30,
+        25
+      ],
+      "taille": [
+        20,
+        16
+      ],
+      "taille_cases": [
+        0.83,
+        0.67
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        10.0,
+        16
+      ]
+    },
+    {
+      "id": "vegetation_03_18",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        90,
+        60
+      ],
+      "taille": [
+        56,
+        37
+      ],
+      "taille_cases": [
+        2.33,
+        1.54
+      ],
+      "facteur": 0.622,
+      "pivot": [
+        28.0,
+        37
+      ]
+    },
+    {
+      "id": "vegetation_03_19",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        91,
+        61
+      ],
+      "taille": [
+        56,
+        38
+      ],
+      "taille_cases": [
+        2.33,
+        1.58
+      ],
+      "facteur": 0.615,
+      "pivot": [
+        28.0,
+        38
+      ]
+    },
+    {
+      "id": "vegetation_04_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        27,
+        8
+      ],
+      "taille": [
+        18,
+        8
+      ],
+      "taille_cases": [
+        0.75,
+        0.33
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        9.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_04_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        20,
+        32
+      ],
+      "taille": [
+        13,
+        21
+      ],
+      "taille_cases": [
+        0.54,
+        0.88
+      ],
+      "facteur": 0.65,
+      "pivot": [
+        6.5,
+        21
+      ]
+    },
+    {
+      "id": "vegetation_04_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        25,
+        44
+      ],
+      "taille": [
+        16,
+        29
+      ],
+      "taille_cases": [
+        0.67,
+        1.21
+      ],
+      "facteur": 0.64,
+      "pivot": [
+        8.0,
+        29
+      ]
+    },
+    {
+      "id": "vegetation_04_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        7,
+        18
+      ],
+      "taille": [
+        8,
+        12
+      ],
+      "taille_cases": [
+        0.33,
+        0.5
+      ],
+      "facteur": 1.143,
+      "pivot": [
+        4.0,
+        12
+      ]
+    },
+    {
+      "id": "vegetation_04_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        20,
+        21
+      ],
+      "taille": [
+        13,
+        14
+      ],
+      "taille_cases": [
+        0.54,
+        0.58
+      ],
+      "facteur": 0.65,
+      "pivot": [
+        6.5,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_04_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        16,
+        16
+      ],
+      "taille": [
+        10,
+        10
+      ],
+      "taille_cases": [
+        0.42,
+        0.42
+      ],
+      "facteur": 0.625,
+      "pivot": [
+        5.0,
+        10
+      ]
+    },
+    {
+      "id": "vegetation_04_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        27,
+        8
+      ],
+      "taille": [
+        18,
+        8
+      ],
+      "taille_cases": [
+        0.75,
+        0.33
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        9.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_04_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        15,
+        46
+      ],
+      "taille": [
+        10,
+        30
+      ],
+      "taille_cases": [
+        0.42,
+        1.25
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        5.0,
+        30
+      ]
+    },
+    {
+      "id": "vegetation_04_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        26,
+        31
+      ],
+      "taille": [
+        17,
+        20
+      ],
+      "taille_cases": [
+        0.71,
+        0.83
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        8.5,
+        20
+      ]
+    },
+    {
+      "id": "vegetation_04_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        38,
+        51
+      ],
+      "taille": [
+        25,
+        33
+      ],
+      "taille_cases": [
+        1.04,
+        1.38
+      ],
+      "facteur": 0.658,
+      "pivot": [
+        12.5,
+        33
+      ]
+    },
+    {
+      "id": "vegetation_04_11",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        59,
+        34
+      ],
+      "taille": [
+        38,
+        22
+      ],
+      "taille_cases": [
+        1.58,
+        0.92
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        19.0,
+        22
+      ]
+    },
+    {
+      "id": "vegetation_04_12",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        8,
+        27
+      ],
+      "taille": [
+        8,
+        18
+      ],
+      "taille_cases": [
+        0.33,
+        0.75
+      ],
+      "facteur": 1.0,
+      "pivot": [
+        4.0,
+        18
+      ]
+    },
+    {
+      "id": "vegetation_04_13",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        36,
+        57
+      ],
+      "taille": [
+        23,
+        37
+      ],
+      "taille_cases": [
+        0.96,
+        1.54
+      ],
+      "facteur": 0.639,
+      "pivot": [
+        11.5,
+        37
+      ]
+    },
+    {
+      "id": "vegetation_04_14",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        57
+      ],
+      "taille": [
+        29,
+        37
+      ],
+      "taille_cases": [
+        1.21,
+        1.54
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        37
+      ]
+    },
+    {
+      "id": "vegetation_04_15",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        65,
+        39
+      ],
+      "taille": [
+        42,
+        25
+      ],
+      "taille_cases": [
+        1.75,
+        1.04
+      ],
+      "facteur": 0.646,
+      "pivot": [
+        21.0,
+        25
+      ]
+    },
+    {
+      "id": "vegetation_05_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        69,
+        31
+      ],
+      "taille": [
+        45,
+        20
+      ],
+      "taille_cases": [
+        1.88,
+        0.83
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        22.5,
+        20
+      ]
+    },
+    {
+      "id": "vegetation_05_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        40,
+        49
+      ],
+      "taille": [
+        26,
+        32
+      ],
+      "taille_cases": [
+        1.08,
+        1.33
+      ],
+      "facteur": 0.65,
+      "pivot": [
+        13.0,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_05_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        11,
+        11
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.727,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_05_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        31,
+        21
+      ],
+      "taille": [
+        20,
+        14
+      ],
+      "taille_cases": [
+        0.83,
+        0.58
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        10.0,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_05_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        81,
+        80
+      ],
+      "taille": [
+        49,
+        48
+      ],
+      "taille_cases": [
+        2.04,
+        2.0
+      ],
+      "facteur": 0.605,
+      "pivot": [
+        24.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_05_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        33,
+        69
+      ],
+      "taille": [
+        21,
+        45
+      ],
+      "taille_cases": [
+        0.88,
+        1.88
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        10.5,
+        45
+      ]
+    },
+    {
+      "id": "vegetation_05_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        66,
+        40
+      ],
+      "taille": [
+        43,
+        26
+      ],
+      "taille_cases": [
+        1.79,
+        1.08
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        21.5,
+        26
+      ]
+    },
+    {
+      "id": "vegetation_05_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        76
+      ],
+      "taille": [
+        48,
+        48
+      ],
+      "taille_cases": [
+        2.0,
+        2.0
+      ],
+      "facteur": 0.632,
+      "pivot": [
+        24.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_05_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        60
+      ],
+      "taille": [
+        29,
+        39
+      ],
+      "taille_cases": [
+        1.21,
+        1.62
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        39
+      ]
+    },
+    {
+      "id": "vegetation_05_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        61,
+        85
+      ],
+      "taille": [
+        34,
+        48
+      ],
+      "taille_cases": [
+        1.42,
+        2.0
+      ],
+      "facteur": 0.557,
+      "pivot": [
+        17.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_05_11",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        103
+      ],
+      "taille": [
+        35,
+        48
+      ],
+      "taille_cases": [
+        1.46,
+        2.0
+      ],
+      "facteur": 0.461,
+      "pivot": [
+        17.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_06_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        71,
+        86
+      ],
+      "taille": [
+        40,
+        48
+      ],
+      "taille_cases": [
+        1.67,
+        2.0
+      ],
+      "facteur": 0.563,
+      "pivot": [
+        20.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_06_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        65,
+        102
+      ],
+      "taille": [
+        31,
+        48
+      ],
+      "taille_cases": [
+        1.29,
+        2.0
+      ],
+      "facteur": 0.477,
+      "pivot": [
+        15.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_06_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        101,
+        57
+      ],
+      "taille": [
+        56,
+        32
+      ],
+      "taille_cases": [
+        2.33,
+        1.33
+      ],
+      "facteur": 0.554,
+      "pivot": [
+        28.0,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_06_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        105,
+        54
+      ],
+      "taille": [
+        56,
+        29
+      ],
+      "taille_cases": [
+        2.33,
+        1.21
+      ],
+      "facteur": 0.533,
+      "pivot": [
+        28.0,
+        29
+      ]
+    },
+    {
+      "id": "vegetation_06_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        51,
+        10
+      ],
+      "taille": [
+        33,
+        8
+      ],
+      "taille_cases": [
+        1.38,
+        0.33
+      ],
+      "facteur": 0.647,
+      "pivot": [
+        16.5,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_06_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        50
+      ],
+      "taille": [
+        49,
+        32
+      ],
+      "taille_cases": [
+        2.04,
+        1.33
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        24.5,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_06_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        10,
+        12
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.8,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_06_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        16,
+        20
+      ],
+      "taille": [
+        10,
+        13
+      ],
+      "taille_cases": [
+        0.42,
+        0.54
+      ],
+      "facteur": 0.625,
+      "pivot": [
+        5.0,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_06_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        61,
+        85
+      ],
+      "taille": [
+        34,
+        48
+      ],
+      "taille_cases": [
+        1.42,
+        2.0
+      ],
+      "facteur": 0.557,
+      "pivot": [
+        17.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_06_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        102
+      ],
+      "taille": [
+        36,
+        48
+      ],
+      "taille_cases": [
+        1.5,
+        2.0
+      ],
+      "facteur": 0.474,
+      "pivot": [
+        18.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_08_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        69,
+        39
+      ],
+      "taille": [
+        45,
+        25
+      ],
+      "taille_cases": [
+        1.88,
+        1.04
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        22.5,
+        25
+      ]
+    },
+    {
+      "id": "vegetation_08_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        41,
+        51
+      ],
+      "taille": [
+        27,
+        33
+      ],
+      "taille_cases": [
+        1.12,
+        1.38
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        13.5,
+        33
+      ]
+    },
+    {
+      "id": "vegetation_08_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        12,
+        11
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_08_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        31,
+        14
+      ],
+      "taille": [
+        20,
+        9
+      ],
+      "taille_cases": [
+        0.83,
+        0.38
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        10.0,
+        9
+      ]
+    },
+    {
+      "id": "vegetation_08_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        96,
+        109
+      ],
+      "taille": [
+        42,
+        48
+      ],
+      "taille_cases": [
+        1.75,
+        2.0
+      ],
+      "facteur": 0.438,
+      "pivot": [
+        21.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_08_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        71,
+        20
+      ],
+      "taille": [
+        46,
+        13
+      ],
+      "taille_cases": [
+        1.92,
+        0.54
+      ],
+      "facteur": 0.648,
+      "pivot": [
+        23.0,
+        13
+      ]
+    },
+    {
+      "id": "vegetation_08_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        88,
+        57
+      ],
+      "taille": [
+        56,
+        36
+      ],
+      "taille_cases": [
+        2.33,
+        1.5
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        28.0,
+        36
+      ]
+    },
+    {
+      "id": "vegetation_08_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        72
+      ],
+      "taille": [
+        49,
+        47
+      ],
+      "taille_cases": [
+        2.04,
+        1.96
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        24.5,
+        47
+      ]
+    },
+    {
+      "id": "vegetation_08_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        28,
+        38
+      ],
+      "taille": [
+        18,
+        25
+      ],
+      "taille_cases": [
+        0.75,
+        1.04
+      ],
+      "facteur": 0.643,
+      "pivot": [
+        9.0,
+        25
+      ]
+    },
+    {
+      "id": "vegetation_08_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        66,
+        60
+      ],
+      "taille": [
+        43,
+        39
+      ],
+      "taille_cases": [
+        1.79,
+        1.62
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        21.5,
+        39
+      ]
+    },
+    {
+      "id": "vegetation_08_11",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        44,
+        36
+      ],
+      "taille": [
+        29,
+        23
+      ],
+      "taille_cases": [
+        1.21,
+        0.96
+      ],
+      "facteur": 0.659,
+      "pivot": [
+        14.5,
+        23
+      ]
+    },
+    {
+      "id": "vegetation_08_12",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        61,
+        49
+      ],
+      "taille": [
+        40,
+        32
+      ],
+      "taille_cases": [
+        1.67,
+        1.33
+      ],
+      "facteur": 0.656,
+      "pivot": [
+        20.0,
+        32
+      ]
+    },
+    {
+      "id": "vegetation_08_13",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        58,
+        43
+      ],
+      "taille": [
+        38,
+        28
+      ],
+      "taille_cases": [
+        1.58,
+        1.17
+      ],
+      "facteur": 0.655,
+      "pivot": [
+        19.0,
+        28
+      ]
+    },
+    {
+      "id": "vegetation_08_14",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        45,
+        36
+      ],
+      "taille": [
+        29,
+        23
+      ],
+      "taille_cases": [
+        1.21,
+        0.96
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        14.5,
+        23
+      ]
+    },
+    {
+      "id": "vegetation_09_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        26,
+        23
+      ],
+      "taille": [
+        17,
+        15
+      ],
+      "taille_cases": [
+        0.71,
+        0.62
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        8.5,
+        15
+      ]
+    },
+    {
+      "id": "vegetation_09_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        99
+      ],
+      "taille": [
+        32,
+        48
+      ],
+      "taille_cases": [
+        1.33,
+        2.0
+      ],
+      "facteur": 0.478,
+      "pivot": [
+        16.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_09_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        81,
+        109
+      ],
+      "taille": [
+        36,
+        48
+      ],
+      "taille_cases": [
+        1.5,
+        2.0
+      ],
+      "facteur": 0.444,
+      "pivot": [
+        18.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_09_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        33,
+        70
+      ],
+      "taille": [
+        21,
+        46
+      ],
+      "taille_cases": [
+        0.88,
+        1.92
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        10.5,
+        46
+      ]
+    },
+    {
+      "id": "vegetation_09_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        110
+      ],
+      "taille": [
+        33,
+        48
+      ],
+      "taille_cases": [
+        1.38,
+        2.0
+      ],
+      "facteur": 0.434,
+      "pivot": [
+        16.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_09_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        37,
+        69
+      ],
+      "taille": [
+        24,
+        45
+      ],
+      "taille_cases": [
+        1.0,
+        1.88
+      ],
+      "facteur": 0.649,
+      "pivot": [
+        12.0,
+        45
+      ]
+    },
+    {
+      "id": "vegetation_09_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        24,
+        22
+      ],
+      "taille": [
+        16,
+        14
+      ],
+      "taille_cases": [
+        0.67,
+        0.58
+      ],
+      "facteur": 0.667,
+      "pivot": [
+        8.0,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_09_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        100
+      ],
+      "taille": [
+        32,
+        48
+      ],
+      "taille_cases": [
+        1.33,
+        2.0
+      ],
+      "facteur": 0.478,
+      "pivot": [
+        16.0,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_09_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        115,
+        44
+      ],
+      "taille": [
+        56,
+        21
+      ],
+      "taille_cases": [
+        2.33,
+        0.88
+      ],
+      "facteur": 0.487,
+      "pivot": [
+        28.0,
+        21
+      ]
+    },
+    {
+      "id": "vegetation_09_10",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        52,
+        22
+      ],
+      "taille": [
+        34,
+        14
+      ],
+      "taille_cases": [
+        1.42,
+        0.58
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        17.0,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_09_11",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        50,
+        21
+      ],
+      "taille": [
+        32,
+        14
+      ],
+      "taille_cases": [
+        1.33,
+        0.58
+      ],
+      "facteur": 0.64,
+      "pivot": [
+        16.0,
+        14
+      ]
+    },
+    {
+      "id": "vegetation_09_12",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        116,
+        44
+      ],
+      "taille": [
+        56,
+        21
+      ],
+      "taille_cases": [
+        2.33,
+        0.88
+      ],
+      "facteur": 0.483,
+      "pivot": [
+        28.0,
+        21
+      ]
+    },
+    {
+      "id": "vegetation_12_01",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        69,
+        55
+      ],
+      "taille": [
+        45,
+        36
+      ],
+      "taille_cases": [
+        1.88,
+        1.5
+      ],
+      "facteur": 0.652,
+      "pivot": [
+        22.5,
+        36
+      ]
+    },
+    {
+      "id": "vegetation_12_02",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        97
+      ],
+      "taille": [
+        33,
+        48
+      ],
+      "taille_cases": [
+        1.38,
+        2.0
+      ],
+      "facteur": 0.493,
+      "pivot": [
+        16.5,
+        48
+      ]
+    },
+    {
+      "id": "vegetation_12_03",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        81,
+        52
+      ],
+      "taille": [
+        53,
+        34
+      ],
+      "taille_cases": [
+        2.21,
+        1.42
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        26.5,
+        34
+      ]
+    },
+    {
+      "id": "vegetation_12_04",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        22,
+        69
+      ],
+      "taille": [
+        14,
+        45
+      ],
+      "taille_cases": [
+        0.58,
+        1.88
+      ],
+      "facteur": 0.636,
+      "pivot": [
+        7.0,
+        45
+      ]
+    },
+    {
+      "id": "vegetation_12_05",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        76,
+        52
+      ],
+      "taille": [
+        49,
+        34
+      ],
+      "taille_cases": [
+        2.04,
+        1.42
+      ],
+      "facteur": 0.645,
+      "pivot": [
+        24.5,
+        34
+      ]
+    },
+    {
+      "id": "vegetation_12_06",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        26,
+        38
+      ],
+      "taille": [
+        17,
+        25
+      ],
+      "taille_cases": [
+        0.71,
+        1.04
+      ],
+      "facteur": 0.654,
+      "pivot": [
+        8.5,
+        25
+      ]
+    },
+    {
+      "id": "vegetation_12_07",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        13,
+        11
+      ],
+      "taille": [
+        8,
+        8
+      ],
+      "taille_cases": [
+        0.33,
+        0.33
+      ],
+      "facteur": 0.615,
+      "pivot": [
+        4.0,
+        8
+      ]
+    },
+    {
+      "id": "vegetation_12_08",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        59,
+        54
+      ],
+      "taille": [
+        38,
+        35
+      ],
+      "taille_cases": [
+        1.58,
+        1.46
+      ],
+      "facteur": 0.644,
+      "pivot": [
+        19.0,
+        35
+      ]
+    },
+    {
+      "id": "vegetation_12_09",
+      "groupe": "vegetation",
+      "pose": "sol",
+      "taille_avant": [
+        67,
+        98
+      ],
+      "taille": [
+        33,
+        48
+      ],
+      "taille_cases": [
+        1.38,
+        2.0
+      ],
+      "facteur": 0.493,
+      "pivot": [
+        16.5,
+        48
+      ]
+    },
+    {
+      "id": "embleme_oeuf_quatre_ailes",
+      "groupe": "ornements",
+      "pose": "mural",
+      "taille_avant": [
+        64,
+        56
+      ],
+      "taille": [
+        42,
+        36
+      ],
+      "taille_cases": [
+        1.75,
+        1.5
+      ],
+      "facteur": 0.656,
+      "pivot": [
+        21.0,
+        36
+      ]
+    }
+  ]
+}
