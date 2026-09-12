@@ -1,0 +1,209 @@
+{
+  "ambiances": {
+    "jour": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.79,
+        "couture_y": 5.79,
+        "interne_x": 5.9,
+        "interne_y": 6.63
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    },
+    "nuit": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.31,
+        "couture_y": 2.22,
+        "interne_x": 2.24,
+        "interne_y": 2.53
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    },
+    "crepuscule": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.42,
+        "couture_y": 2.95,
+        "interne_x": 3.03,
+        "interne_y": 3.41
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    },
+    "aube": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.69,
+        "couture_y": 5.03,
+        "interne_x": 5.11,
+        "interne_y": 5.74
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    },
+    "soir": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.67,
+        "couture_y": 4.89,
+        "interne_x": 4.91,
+        "interne_y": 5.53
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    },
+    "orageux": {
+      "aseprite": {
+        "frames": 4,
+        "dimensions": [
+          192,
+          72
+        ],
+        "grille": 24,
+        "duree_ms": 150,
+        "cels_identiques_aux_png": true
+      },
+      "tuiles_animees": 13,
+      "tuiles_statiques": 11,
+      "raccord_sans_couture": {
+        "couture_x": 0.51,
+        "couture_y": 3.73,
+        "interne_x": 3.8,
+        "interne_y": 4.27
+      },
+      "apng_frames": 4,
+      "exemple": {
+        "dimensions": [
+          480,
+          240
+        ],
+        "rempli": 0.589
+      }
+    }
+  },
+  "tuiles": 24,
+  "frames": 4,
+  "duree_ms": 150,
+  "grille_tuile": 24,
+  "moyennes_rgb": {
+    "jour": [
+      183.0,
+      149.4,
+      96.4
+    ],
+    "nuit": [
+      74.3,
+      60.5,
+      60.1
+    ],
+    "crepuscule": [
+      95.5,
+      67.4,
+      97.1
+    ],
+    "aube": [
+      183.6,
+      121.1,
+      100.6
+    ],
+    "soir": [
+      185.0,
+      125.0,
+      77.1
+    ],
+    "orageux": [
+      118.7,
+      91.2,
+      82.0
+    ]
+  },
+  "apercu_hors_ligne": true
+}

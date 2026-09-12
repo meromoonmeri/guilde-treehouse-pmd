@@ -1,0 +1,281 @@
+{
+  "titre": "Falaises de Métano / Treasure Town — tileset animé",
+  "grille_tuile": 24,
+  "grille_kit": 8,
+  "frames": 4,
+  "duree_ms": 150,
+  "ambiances": [
+    "jour",
+    "nuit",
+    "crepuscule",
+    "aube",
+    "soir",
+    "orageux"
+  ],
+  "planche": [
+    8,
+    3
+  ],
+  "tuiles": [
+    {
+      "id": 0,
+      "nom": "face_roche",
+      "usage": "Paroi de falaise, raccords 4 côtés",
+      "anime": false,
+      "colonne": 0,
+      "ligne": 0
+    },
+    {
+      "id": 1,
+      "nom": "face_roche_fissure",
+      "usage": "Paroi fissurée (variant)",
+      "anime": false,
+      "colonne": 1,
+      "ligne": 0
+    },
+    {
+      "id": 2,
+      "nom": "face_roche_mousse",
+      "usage": "Paroi moussue (variant)",
+      "anime": false,
+      "colonne": 2,
+      "ligne": 0
+    },
+    {
+      "id": 3,
+      "nom": "sommet_herbe",
+      "usage": "Sommet marchable, frange herbeuse",
+      "anime": true,
+      "colonne": 3,
+      "ligne": 0
+    },
+    {
+      "id": 4,
+      "nom": "plateau_herbe",
+      "usage": "Plateau herbeux (remplissage)",
+      "anime": true,
+      "colonne": 4,
+      "ligne": 0
+    },
+    {
+      "id": 5,
+      "nom": "sommet_roche_nu",
+      "usage": "Sommet rocheux nu",
+      "anime": false,
+      "colonne": 5,
+      "ligne": 0
+    },
+    {
+      "id": 6,
+      "nom": "coin_haut_gauche",
+      "usage": "Coin haut gauche",
+      "anime": true,
+      "colonne": 6,
+      "ligne": 0
+    },
+    {
+      "id": 7,
+      "nom": "coin_haut_droit",
+      "usage": "Coin haut droit",
+      "anime": true,
+      "colonne": 7,
+      "ligne": 0
+    },
+    {
+      "id": 8,
+      "nom": "bord_gauche",
+      "usage": "Flanc gauche de falaise",
+      "anime": false,
+      "colonne": 0,
+      "ligne": 1
+    },
+    {
+      "id": 9,
+      "nom": "bord_droit",
+      "usage": "Flanc droit de falaise",
+      "anime": false,
+      "colonne": 1,
+      "ligne": 1
+    },
+    {
+      "id": 10,
+      "nom": "pente_droite",
+      "usage": "Pente herbeuse montante à droite",
+      "anime": true,
+      "colonne": 2,
+      "ligne": 1
+    },
+    {
+      "id": 11,
+      "nom": "pente_gauche",
+      "usage": "Pente herbeuse montante à gauche",
+      "anime": true,
+      "colonne": 3,
+      "ligne": 1
+    },
+    {
+      "id": 12,
+      "nom": "escalier_droit",
+      "usage": "Escalier taillé, montant à droite",
+      "anime": true,
+      "colonne": 4,
+      "ligne": 1
+    },
+    {
+      "id": 13,
+      "nom": "escalier_gauche",
+      "usage": "Escalier taillé, montant à gauche",
+      "anime": true,
+      "colonne": 5,
+      "ligne": 1
+    },
+    {
+      "id": 14,
+      "nom": "pont_corde",
+      "usage": "Tablier de pont de corde",
+      "anime": true,
+      "colonne": 6,
+      "ligne": 1
+    },
+    {
+      "id": 15,
+      "nom": "pilier_corde",
+      "usage": "Pilier de pont de corde",
+      "anime": true,
+      "colonne": 7,
+      "ligne": 1
+    },
+    {
+      "id": 16,
+      "nom": "pont_bois",
+      "usage": "Passerelle de bois",
+      "anime": false,
+      "colonne": 0,
+      "ligne": 2
+    },
+    {
+      "id": 17,
+      "nom": "pilier_bois",
+      "usage": "Pilier de passerelle",
+      "anime": false,
+      "colonne": 1,
+      "ligne": 2
+    },
+    {
+      "id": 18,
+      "nom": "echelle",
+      "usage": "Échelle de paroi",
+      "anime": false,
+      "colonne": 2,
+      "ligne": 2
+    },
+    {
+      "id": 19,
+      "nom": "touffe_herbe",
+      "usage": "Touffe d’herbe (décor animé)",
+      "anime": true,
+      "colonne": 3,
+      "ligne": 2
+    },
+    {
+      "id": 20,
+      "nom": "lierre",
+      "usage": "Lierre suspendu (décor animé)",
+      "anime": true,
+      "colonne": 4,
+      "ligne": 2
+    },
+    {
+      "id": 21,
+      "nom": "brume",
+      "usage": "Nappe de brume (décor animé)",
+      "anime": true,
+      "colonne": 5,
+      "ligne": 2
+    },
+    {
+      "id": 22,
+      "nom": "fleurs",
+      "usage": "Fleurs des sommets (décor)",
+      "anime": false,
+      "colonne": 6,
+      "ligne": 2
+    },
+    {
+      "id": 23,
+      "nom": "eboulis",
+      "usage": "Éboulis au pied de falaise",
+      "anime": false,
+      "colonne": 7,
+      "ligne": 2
+    }
+  ],
+  "fichiers": {
+    "jour": {
+      "aseprite": "falaises/jour/tileset_falaises_jour.aseprite",
+      "planches": [
+        "falaises/jour/planche_f1.png",
+        "falaises/jour/planche_f2.png",
+        "falaises/jour/planche_f3.png",
+        "falaises/jour/planche_f4.png"
+      ],
+      "apng": "falaises/jour/animation.png",
+      "exemple": "falaises/exemple_jour.png"
+    },
+    "nuit": {
+      "aseprite": "falaises/nuit/tileset_falaises_nuit.aseprite",
+      "planches": [
+        "falaises/nuit/planche_f1.png",
+        "falaises/nuit/planche_f2.png",
+        "falaises/nuit/planche_f3.png",
+        "falaises/nuit/planche_f4.png"
+      ],
+      "apng": "falaises/nuit/animation.png",
+      "exemple": "falaises/exemple_nuit.png"
+    },
+    "crepuscule": {
+      "aseprite": "falaises/crepuscule/tileset_falaises_crepuscule.aseprite",
+      "planches": [
+        "falaises/crepuscule/planche_f1.png",
+        "falaises/crepuscule/planche_f2.png",
+        "falaises/crepuscule/planche_f3.png",
+        "falaises/crepuscule/planche_f4.png"
+      ],
+      "apng": "falaises/crepuscule/animation.png",
+      "exemple": "falaises/exemple_crepuscule.png"
+    },
+    "aube": {
+      "aseprite": "falaises/aube/tileset_falaises_aube.aseprite",
+      "planches": [
+        "falaises/aube/planche_f1.png",
+        "falaises/aube/planche_f2.png",
+        "falaises/aube/planche_f3.png",
+        "falaises/aube/planche_f4.png"
+      ],
+      "apng": "falaises/aube/animation.png",
+      "exemple": "falaises/exemple_aube.png"
+    },
+    "soir": {
+      "aseprite": "falaises/soir/tileset_falaises_soir.aseprite",
+      "planches": [
+        "falaises/soir/planche_f1.png",
+        "falaises/soir/planche_f2.png",
+        "falaises/soir/planche_f3.png",
+        "falaises/soir/planche_f4.png"
+      ],
+      "apng": "falaises/soir/animation.png",
+      "exemple": "falaises/exemple_soir.png"
+    },
+    "orageux": {
+      "aseprite": "falaises/orageux/tileset_falaises_orageux.aseprite",
+      "planches": [
+        "falaises/orageux/planche_f1.png",
+        "falaises/orageux/planche_f2.png",
+        "falaises/orageux/planche_f3.png",
+        "falaises/orageux/planche_f4.png"
+      ],
+      "apng": "falaises/orageux/animation.png",
+      "exemple": "falaises/exemple_orageux.png"
+    }
+  }
+}

@@ -43,6 +43,21 @@ La salle 01 n’a pas de fenêtre vitrée : son accès nord est désormais une c
 
 Chaque salle est disponible en **jour et nuit**, avec une seule image par fichier Aseprite. Il n’y a aucune animation dans cette version.
 
+## Falaises — tileset animé « Métano / Treasure Town »
+
+24 tuiles de **24 × 24 px** (multiple de la grille 8 px du kit), **4 frames de 150 ms**, déclinées dans les **6 ambiances**. Roche ocre façon Trésor-Ville (lobes arrondis, coutures sombres, lèvre éclairée) harmonisée avec la palette teal/verte du panorama extérieur : les falaises se raccordent visuellement au village et aux salles.
+
+- `falaises/<ambiance>/tileset_falaises_<ambiance>.aseprite` : feuille Aseprite multi-frames — chaque frame est la planche complète (8 × 3 tuiles), grille du document réglée sur 24 px. C'est le fichier à ouvrir dans l'éditeur.
+- `falaises/<ambiance>/planche_f1..f4.png` : les mêmes frames en tilesheet PNG, pour un moteur quelconque.
+- `falaises/<ambiance>/animation.png` : APNG de prévisualisation (4 frames, 150 ms).
+- `falaises/exemple_<ambiance>.png` : assemblage de démonstration — trois falaises reliées par un pont de corde, un escalier taillé (descente d'un rang) et une passerelle de bois sur gouffre ; échelle de paroi, talus en pente, éboulis, lierre et brume.
+- `falaises/falaises.json` : manifeste (nom, usage, animation, position sur la planche de chaque tuile).
+- `apercu_falaises.html` : aperçu autonome hors ligne, animé : sélecteur d'ambiance, lecture frame par frame, grille des 24 tuiles et scène d'assemblage.
+
+Raccords : `face_roche*` se juxtapose sans couture sur les 4 côtés ; `sommet_herbe`, `sommet_roche_nu` et `coin_haut_*` coiffent les parois ; `bord_gauche/droit` dessinent les flancs à bossages ; `pente_*` et `escalier_*` changent de niveau ; `pont_corde`/`pilier_corde` et `pont_bois`/`pilier_bois` enjambent les vides à même hauteur ; `echelle` monte le long d'une paroi.
+
+Animations (13 tuiles animées, 11 fixes) : frange herbeuse des sommets, plateau, pentes, escaliers, tablier et cordes des ponts (balancement), touffes d'herbe, lierre, brume — 4 frames à 150 ms, le tempo des animations PMD. Les tuiles fixes sont garanties identiques sur les 4 frames par `verify_falaises.py`.
+
 ## Contenu du kit
 
 - `apercu_pmd.html` : aperçu autonome, hors ligne. Le bouton **« Base seule — magenta »** retire le paysage pour vérifier les ouvertures. Les cases permettent de masquer chaque calque.
@@ -52,6 +67,8 @@ Chaque salle est disponible en **jour et nuit**, avec une seule image par fichie
 - `fenetres_exterieur/` : masques et 72 couches de paysage positionnées.
 - `exterieur/` : 6 ambiances complètes.
 - `sprites/` : banque indépendante du premier kit modulaire ; ces éléments ne sont pas posés dans les salles.
+- `falaises/` : tileset animé de falaises (24 tuiles, 4 frames, 6 ambiances) en feuilles Aseprite, tilesheets PNG, APNG et exemples d'assemblage.
+- `apercu_falaises.html` : aperçu autonome animé du tileset de falaises.
 - `kit.json` : dimensions, accès, calques et chemins.
 - `source/` : retouches natives retenues, sources du panorama, règles et scripts de reconstruction.
 
@@ -67,7 +84,11 @@ python source/rebuild_landscapes.py
 python source/rebuild_kit.py
 python source/build_preview.py
 python source/verify_pmd.py
+python source/build_falaises.py
+python source/verify_falaises.py
 ```
+
+`build_falaises.py` régénère le tileset de falaises (planches, feuilles Aseprite, APNG, exemples, manifeste, aperçu) ; `verify_falaises.py` relit les feuilles Aseprite, compare les cels aux PNG, contrôle les tuiles animées/figées, les raccords sans couture, les 6 ambiances et l'aperçu hors ligne, puis écrit `controle_falaises.json`.
 
 Le contrôle relit et recompose les PNG, Aseprite et cartes Tiled ; vérifie les bases transparentes/magenta, les 6 vues alignées, les calques vides et l’unique porte nord. Validation par code, pas par ouverture dans l’interface d’Aseprite.
 

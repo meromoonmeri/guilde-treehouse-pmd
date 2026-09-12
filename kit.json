@@ -679,5 +679,20 @@
         }
       }
     }
-  ]
+  ],
+  "falaises": {
+    "manifeste": "falaises/falaises.json",
+    "apercu": "apercu_falaises.html",
+    "tuiles": 24,
+    "frames": 4,
+    "duree_ms": 150,
+    "ambiances": [
+      "jour",
+      "nuit",
+      "crepuscule",
+      "aube",
+      "soir",
+      "orageux"
+    ]
+  }
 }
