@@ -1,0 +1,59 @@
+{
+  "id": "02_paliers",
+  "name": "Les deux paliers",
+  "description": "Deux niveaux rocheux et une rivière centrale continue.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 544,
+      "extra": 128,
+      "flats": 24
+    },
+    {
+      "x": -128,
+      "offset": 80,
+      "extra": 128,
+      "flats": 26
+    }
+  ],
+  "streams": [
+    {
+      "x": 1024,
+      "walls": [
+        1,
+        0
+      ]
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 1024,
+      "top_px": 536,
+      "bottom_px": 752
+    },
+    {
+      "center_x_px": 1024,
+      "top_px": 1000,
+      "bottom_px": 1216
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

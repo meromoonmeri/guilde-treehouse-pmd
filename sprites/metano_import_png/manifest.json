@@ -1,0 +1,437 @@
+{
+  "purpose": "PNG to Tileset in PMDO Dev; native-scale dry calibration scenes, not full replacements of the approved 2048x1536 guides",
+  "tile_size_for_import": 8,
+  "ground_texsize_reference": 1,
+  "asset_scale": 1,
+  "sources": {
+    "Metano_Town_Base": {
+      "path": "source/falaises_metano/natifs/Metano_Town_Base.tile",
+      "sha256": "ee17ebd268f05bd71e337e1ac5773426d8038b9df169c4cb4344fe656a9a6409",
+      "git_blob_sha1": "19b295495e49819b356c02d13a574616dd67d36c"
+    },
+    "Metano_Town_Cliffs": {
+      "path": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+      "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+      "git_blob_sha1": "6d342b97ebfcad3e9aa6022b49e0f3b5b9d75640"
+    },
+    "Metano_Town_Animation_Tileset": {
+      "path": "source/eau_metano/natifs/Metano_Town_Animation_Tileset.tile",
+      "sha256": "51ee6afbd9da3747e060bf9c1f3dd3d9305853fbcb7cbf582b51b6fbea81e8d0",
+      "git_blob_sha1": "8b01d1730ef537ecc5578101fc8c1ea9630a3569"
+    },
+    "Metano_Town_River_Animation_1": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_1.tile",
+      "sha256": "e1c284b767a2f1195dc291756f44994fe904ad315c92e6d40cefc3a7ab8f9d81",
+      "git_blob_sha1": "97d615195ef9488de15d28060a77e88b03c989a1"
+    },
+    "Metano_Town_River_Animation_2": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_2.tile",
+      "sha256": "4ebf844d4e3ed7b21ff57dd8b29f715b9494090f5417e763a754981add10a230",
+      "git_blob_sha1": "6956ccd5d7053faaa217edb7382939155f282f6c"
+    },
+    "Metano_Town_River_Animation_3": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_3.tile",
+      "sha256": "f712122bcc59e589150b4f3fb8bf689ac595ea96464f54e455f45967d9500e22",
+      "git_blob_sha1": "21243860eef0e229957478d86f5a155b631aacbb"
+    },
+    "Metano_Town_River_Animation_4": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_4.tile",
+      "sha256": "e6d8ff874ea3d687fb2039927700547703e19821881491b52ca43918dbf3704d",
+      "git_blob_sha1": "5e5528a0d2a5a8ca380db320186c4868ba1277f3"
+    }
+  },
+  "modules": {
+    "descente_ouest": {
+      "sheet": "Metano_Town_Cliffs",
+      "source_rect_px": [
+        456,
+        208,
+        680,
+        544
+      ],
+      "size_px": [
+        224,
+        336
+      ],
+      "file": "METANO_V3_MODULE_DESCENTE_OUEST.png"
+    },
+    "face_complete": {
+      "sheet": "Metano_Town_Cliffs",
+      "source_rect_px": [
+        912,
+        448,
+        976,
+        544
+      ],
+      "size_px": [
+        64,
+        96
+      ],
+      "file": "METANO_V3_MODULE_FACE_COMPLETE.png"
+    },
+    "retour_arrondi": {
+      "sheet": "Metano_Town_Cliffs",
+      "source_rect_px": [
+        680,
+        448,
+        744,
+        544
+      ],
+      "size_px": [
+        64,
+        96
+      ],
+      "file": "METANO_V3_MODULE_RETOUR_ARRONDI.png"
+    },
+    "remontee_est": {
+      "sheet": "Metano_Town_Cliffs",
+      "source_rect_px": [
+        1296,
+        304,
+        1512,
+        544
+      ],
+      "size_px": [
+        216,
+        240
+      ],
+      "file": "METANO_V3_MODULE_REMONTEE_EST.png"
+    }
+  },
+  "zones": [
+    {
+      "id": "01_cirque",
+      "size": [
+        1016,
+        512
+      ],
+      "walls": [
+        {
+          "offset_y": -208,
+          "rounded": [
+            2,
+            5
+          ]
+        }
+      ],
+      "placements": [
+        {
+          "module": "descente_ouest",
+          "dest_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            224,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            288,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            352,
+            240
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            416,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            480,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            544,
+            240
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            608,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            672,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            736,
+            240
+          ]
+        },
+        {
+          "module": "remontee_est",
+          "dest_px": [
+            800,
+            96
+          ]
+        }
+      ],
+      "files": {
+        "METANO_V3_CIRQUE_SOL.png": {
+          "size_px": [
+            1016,
+            512
+          ],
+          "sha256": "c2f07883aaf37af9eb11292d2d74db2255cf54d639a10380780222bf55b8059f"
+        },
+        "METANO_V3_CIRQUE_FALAISES.png": {
+          "size_px": [
+            1016,
+            512
+          ],
+          "sha256": "6095fd8591588835b332826c5b668e015d38358240724528c4d19ea38da62ea5"
+        },
+        "METANO_V3_CIRQUE_SCENE.png": {
+          "size_px": [
+            1016,
+            512
+          ],
+          "sha256": "4c26e64362f61e9958b0eb2741ca90621d35da584c87ff9179a5d7b92b7a54e0"
+        }
+      },
+      "grid": [
+        127,
+        64
+      ]
+    },
+    {
+      "id": "02_terrasses",
+      "size": [
+        1016,
+        768
+      ],
+      "walls": [
+        {
+          "offset_y": -208,
+          "rounded": [
+            1,
+            6
+          ]
+        },
+        {
+          "offset_y": 176,
+          "rounded": [
+            3,
+            5
+          ]
+        }
+      ],
+      "placements": [
+        {
+          "module": "descente_ouest",
+          "dest_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            224,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            288,
+            240
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            352,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            416,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            480,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            544,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            608,
+            240
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            672,
+            240
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            736,
+            240
+          ]
+        },
+        {
+          "module": "remontee_est",
+          "dest_px": [
+            800,
+            96
+          ]
+        },
+        {
+          "module": "descente_ouest",
+          "dest_px": [
+            0,
+            384
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            224,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            288,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            352,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            416,
+            624
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            480,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            544,
+            624
+          ]
+        },
+        {
+          "module": "retour_arrondi",
+          "dest_px": [
+            608,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            672,
+            624
+          ]
+        },
+        {
+          "module": "face_complete",
+          "dest_px": [
+            736,
+            624
+          ]
+        },
+        {
+          "module": "remontee_est",
+          "dest_px": [
+            800,
+            480
+          ]
+        }
+      ],
+      "files": {
+        "METANO_V3_TERRASSES_SOL.png": {
+          "size_px": [
+            1016,
+            768
+          ],
+          "sha256": "8767997b67e71f3654db350bddadc434af6881f4d3e666dd75b18e91434ea56c"
+        },
+        "METANO_V3_TERRASSES_FALAISES.png": {
+          "size_px": [
+            1016,
+            768
+          ],
+          "sha256": "ef784348d9590be39b4a5018a279f5c451a2fe3a6c50bcef7084dc2b9f920e40"
+        },
+        "METANO_V3_TERRASSES_SCENE.png": {
+          "size_px": [
+            1016,
+            768
+          ],
+          "sha256": "2364eee34861f321b5ebb4f23acb696ec3802a4d3f12ccab3ce69df6eb5d3efd"
+        }
+      },
+      "grid": [
+        127,
+        96
+      ]
+    }
+  ],
+  "limits": [
+    "New dry calibration layouts, not identical silhouettes to the generated proposals",
+    "No water animation or new nighttime palette in this calibration set",
+    "Whole modules retain their source pixels; joins between modules still require visual/game validation",
+    "Not executed inside the user PMDO installation"
+  ]
+}

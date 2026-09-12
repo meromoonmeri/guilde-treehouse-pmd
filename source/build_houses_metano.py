@@ -3,16 +3,26 @@ python source/build_houses_metano.py — dépendance Pillow uniquement.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
-import json, io, struct, base64, hashlib
+import json, io, struct, base64, hashlib, argparse
+parser=argparse.ArgumentParser();parser.add_argument("--organic-v2",action="store_true");args=parser.parse_args()
 R=Path(__file__).resolve().parents[1]; S=R/'source/maisons_metano'; O=R/'sprites/maisons_metano'; O.mkdir(exist_ok=True)
 NAMES=['Feuillue','Vannerie','Galets','Nénuphar','Gland','Argile','Pivoine','Mousse','Ginkgo','Coquille']
 SLUGS=['feuillue','vannerie','galets','nenuphar','gland','argile','pivoine','mousse','ginkgo','coquille']
+REF=R/'source/maisons_metano'
+PREFIX='Maisons_Metano'
+PREVIEW='apercu_maisons_metano.html'
+if args.organic_v2:
+    S=R/'source/maisons_organiques_v2';O=R/'sprites/maisons_organiques_v2';O.mkdir(exist_ok=True)
+    NAMES=['Souche','Champignon','Calebasse','Fougère','Bambou','Cactus','Coco','Racines','Artichaut','Ruche']
+    SLUGS=['souche','champignon','calebasse','fougere','bambou','cactus','coco','racines','artichaut','ruche']
+    PREFIX='Maisons_Organiques_V2';PREVIEW='apercu_maisons_organiques_v2.html'
 WIDTHS=[96,96,96,104,96,96,104,96,104,104]
 W,H=112,128
 
 def sprite(i):
     source=Image.open(S/f'paire_{i//2+1:02}.png').convert('RGBA')
-    mid=source.width//2;source=source.crop((0 if i%2==0 else mid,0,mid if i%2==0 else source.width,source.height))
+    mid=source.width//2;gutter=16 if args.organic_v2 else 0
+    source=source.crop((gutter if i%2==0 else mid+gutter,0,mid-gutter if i%2==0 else source.width-gutter,source.height))
     source.putdata([(0,0,0,0) if r>140 and b>100 and g<r*.45 and b>r*.80 else (r,g,b,255) for r,g,b,a in source.getdata()])
     bounds=source.getbbox(); assert bounds
     source=source.crop(bounds)
@@ -59,14 +69,14 @@ for i in range(10):
         atlases[m].paste(im,((i%5)*W,(i//5)*H))
     houses.append({'id':i+1,'name':NAMES[i],'files':paths,'canvas_px':[W,H],'canvas_cells':[14,16], 'baseline_px':120,'placement_anchor_px':[56,120], 'atlas_rect_px':[(i%5)*W,(i//5)*H,W,H], 'atlas_rect_cells':[(i%5)*14,(i//5)*16,14,16],**meta})
 for mode,atlas in atlases.items():
-    atlas.save(O/f'Maisons_Metano_{mode}.png');write_tile(atlas,O/f'Maisons_Metano_{mode}.tile')
-    (O/f'Maisons_Metano_{mode}.tsj').write_text(json.dumps({'type':'tileset','version':'1.10','name':f'Maisons_Metano_{mode}','tilewidth':8,'tileheight':8,'columns':70,'tilecount':2240,'margin':0,'spacing':0,'image':f'Maisons_Metano_{mode}.png','imagewidth':560,'imageheight':256},indent=2))
+    atlas.save(O/f'{PREFIX}_{mode}.png');write_tile(atlas,O/f'{PREFIX}_{mode}.tile')
+    (O/f'{PREFIX}_{mode}.tsj').write_text(json.dumps({'type':'tileset','version':'1.10','name':f'{PREFIX}_{mode}','tilewidth':8,'tileheight':8,'columns':70,'tilecount':2240,'margin':0,'spacing':0,'image':f'{PREFIX}_{mode}.png','imagewidth':560,'imageheight':256},indent=2))
 manifest={'schema':1,'grid_px':8,'target':'PMDO Ground, TexSize=1','native_reference_sizes_px':[[80,111],[96,96],[110,99]],'reference':'Palikadude/Halcyon','source_commit':'da6c2130d641507447e6386a5e47a296e8cb4c71','origin':'10 nouvelles créations via générateur, pas des extractions du jeu','animation':'aucune, structures fixes','houses':houses}
 (O/'maisons.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
 # Contact sheet with labels; never used as an import texture.
 fontpath='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf';font=ImageFont.truetype(fontpath,22);small=ImageFont.truetype(fontpath,15)
 board=Image.new('RGB',(1240,800),'#1d2b27');d=ImageDraw.Draw(board)
-d.text((30,20),'MÉTANO / 10 HUTTES ORGANIQUES',font=font,fill='#ecdaa0')
+d.text((30,20),('MÉTANO / 10 NOUVELLES HUTTES — LOT 02' if args.organic_v2 else 'MÉTANO / 10 HUTTES ORGANIQUES'),font=font,fill='#ecdaa0')
 d.text((30,57),'Échelle native PMDO • Grille 8 px • Dômes arrondis • PNG transparents',font=small,fill='#afc0a8')
 for i,house in enumerate(houses):
     x=20+(i%5)*244;y=100+(i//5)*325
@@ -78,6 +88,9 @@ d.text((30,770),'Créations générées d’après Métano Town — référence 
 board.save(O/'planche.png')
 # Embedded assets make the viewer genuinely usable offline.
 def uri(p):return 'data:image/png;base64,'+base64.b64encode(p.read_bytes()).decode()
-data={'houses':[{**h,'images':{m:uri(O/p) for m,p in h['files'].items()}} for h in houses], 'references':[{ 'name':n,'image':uri(S/'references'/f'metano_{n}.png')} for n in ['normal','rock','fire']]}
-html=(S/'viewer.html').read_text();(R/'apercu_maisons_metano.html').write_text(html.replace('__DATA__',json.dumps(data,ensure_ascii=False)))
+data={'houses':[{**h,'images':{m:uri(O/p) for m,p in h['files'].items()}} for h in houses], 'references':[{ 'name':n,'image':uri(REF/'references'/f'metano_{n}.png')} for n in ['normal','rock','fire']]}
+html=(REF/'viewer.html').read_text()
+if args.organic_v2:
+    html=html.replace('Dix huttes pour Métano','Dix nouvelles huttes — lot 02').replace('feuillage, vannerie, galets, nénuphar, gland, argile, pivoine, mousse, ginkgo et coquille','souche, champignon, calebasse, fougère, bambou, cactus, coco, racines, artichaut et ruche').replace('sprites/maisons_metano/','sprites/maisons_organiques_v2/')
+(R/PREVIEW).write_text(html.replace('__DATA__',json.dumps(data,ensure_ascii=False)))
 print('10 maisons, 20 PNG individuels, 2 atlas, 2 .tile, 2 TSJ, manifeste, planche, aperçu.')

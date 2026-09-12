@@ -92,3 +92,46 @@ Voir **`apercu_ponts.html`** et **`sprites/ponts/README.md`** : ponts originaux 
 ## Trois grands layouts de falaises — extensions visuelles de Métano
 
 **`apercu_falaises_metano.html`** : trois cartes de **2048 × 1536 px**, chacune en **256 × 192 cases de 8 px** : grande paroi, plateau isolé et trois terrasses. Textures natives répétées sans agrandissement, escaliers et grandes cascades à quatre phases. **`sprites/falaises_metano/`** contient les calques PNG, les compositions, trois cartes Tiled, l'atlas commun `.tile` PMDO et les métadonnées. Les formes du terrain et des rivières sont nouvelles ; ce ne sont pas des zones officielles ou des raccords déjà intégrés à Métano. Collisions et transitions à configurer. Contrôles : recomposition exacte des cartes sur les quatre phases et relecture de l'atlas natif. Voir le README du pack pour l'import et l'attribution. Reconstruction : `python source/build_cliff_layouts.py`; validation : `python source/verify_cliff_layouts.py`.
+
+## Lot 02 — dix nouvelles maisons, falaises modulaires et rendu PNG
+
+**`sprites/falaises_modulaires_v2/rendu_collection.png`** présente le nouveau décor, les dix nouvelles maisons et les morceaux de falaises. Rendus natifs **2048 × 1536 px** : `rendu_falaise.png` (sans maisons), `rendu_village.png` (avec maisons). **`sprites/maisons_organiques_v2/planche.png`** montre le nouveau lot ; **`sprites/falaises_modulaires_v2/planche_modules.png`** montre 11 fragments natifs et les 4 phases de cascade. La planche importable, les PNG individuels, les `.tile`/TSJ et les cartes Tiled sont fournis séparément, tous sur grille de 8 px. Les anciens lots restent inchangés. Voir les README de ces dossiers pour les commandes de reconstruction et les limites : géométrie nouvelle, morceaux sources inchangés, intégration PMDO et collisions à faire. Les vérificateurs comparent les fragments à leurs sources et recomposent le décor/village aux quatre phases.
+
+## Layouts canoniques pixel-perfect — versions sèches et animées
+
+**`apercu_metano_pixel_perfect.html`** : trois layouts **2048 × 1536 px**, grille **8 px**, avec bascule **sans eau / eau animée**. Dans **`sprites/metano_pixel_perfect/`**, chaque carte possède un PNG sec ne contenant que l'herbe, les falaises et leurs bordures, quatre rendus humides, les calques séparés et deux cartes Tiled. Aucun chemin, escalier ou bâtiment n'est ajouté. Contrairement aux prototypes précédents, chaque tuile utilisée est une copie vérifiée d'une tuile canonique de Métano : aucun dessin généré, aucune berge tracée, aucun agrandissement de texture. La géométrie est nouvelle ; les longues faces et chutes répètent des rangées natives. L'atlas `.tile` PMDO et les références source/Frames sont fournis. Voir `verification.json` et le README du dossier pour la portée exacte du contrôle et les limites d'intégration moteur. Reconstruction : `python source/build_metano_pixel_perfect.py`; tests : `python source/verify_metano_pixel_perfect.py`.
+
+## Zones guidées par le générateur → tuiles canoniques
+
+Deux nouvelles compositions (cirque et terrasses), illustrées par le générateur puis reconstruites avec de vraies tuiles Métano de 8 px : **2048 × 1536 px**, versions sèches sans chemin et quatre phases d’eau natives.
+
+- **Voir avant/après :** `sprites/zones_guidees/comparaison_generateur_canonique.png`.
+- **Explorer / animer :** `apercu_zones_guidees.html` (autonome, grille et zoom natif).
+- **Pack :** `zones_guidees_metano_pack.zip` ; PNG, atlas natif, maps Tiled et provenance dans `sprites/zones_guidees/`.
+- **Méthode et limites :** [README des zones guidées](sprites/zones_guidees/README.md). Le générateur fournit le guide, jamais les pixels canoniques. Les raccords sont encore approximatifs par endroits ; gameplay et import PMDO non validés.
+- **Contrôle indépendant :** `.venv/bin/python source/verify_zones_guidees.py`.
+
+### Zones approuvées — édition multicalques comme la guilde
+
+**`apercu_zones_multicalques.html`** permet maintenant d’afficher, masquer ou isoler les six calques des deux zones approuvées : sol, parois, bordures, berges, rivière et cascades. Les compositions et pixels Métano restent **inchangés**.
+
+Dans `sprites/zones_guidees/{01_cirque,02_terrasses}/multicalques/` : PNG transparents alignés, Aseprite sec (3 calques / 1 frame) et animé (6 calques / 4 frames), cartes Tiled réutilisant l’atlas canonique. Le découpage et les fichiers éditables ont été vérifiés par relecture : **0 différence de pixel**. Les archives antérieures ne sont pas modifiées. Voir [les instructions multicalques](sprites/zones_guidees/README_multicalques.md) et `sprites/zones_guidees/planche_multicalques.png`.
+
+La méthode approuvée est conservée dans `AGENTS.md` pour les prochaines zones. Reconstruction : `source/build_zones_multicalques.py`, contrôle : `source/verify_zones_multicalques.py`, aperçu : `source/package_zones_multicalques.py`.
+
+### Audit du rendu en jeu et de l’échelle des falaises
+
+Après le retour utilisateur sur la qualité à l’import, [l’audit](audits/metano_import/RAPPORT.md) distingue un **défaut confirmé d’assemblage des fragments natifs** d’un éventuel problème d’échelle/filtrage côté import, encore à vérifier. Le contrôle des pixels ne validait pas les volumes des falaises. Comparatif à zoom entier : `audits/metano_import/comparaison_echelle.png` ; mesures : `audits/metano_import/mesures.json`. Les zones approuvées ne sont pas modifiées par cet audit.
+
+### Métano V3 — PNG pour l’importeur PMDO Dev
+
+Le [lot PNG natif](sprites/metano_import_png/README.md) fournit deux premières scènes sèches de calibration **1016 × 512** et **1016 × 768**, avec des blocs de falaises complets et leurs calques sol/falaises. Aucun pixel natif redimensionné. Les noms `METANO_V3_*` sont uniques pour éviter les écrasements lors de « PNG to Tileset ». Importer en **8 px**, puis comparer le témoin natif **64 × 96** en jeu. Les grandes zones précédentes restent intactes ; ce lot n’en est pas encore le remplacement complet. Construction : `source/build_metano_import_png.py` ; contrôle : `source/verify_metano_import_png.py`. Archive : `metano_png_import_v3.zip`.
+
+### Layouts côtiers du commit utilisateur — génération sur les vraies références
+
+Le commit **`3bc185b`**, ajouté sur la branche de cette session et non sur `main`, contient les références du **promontoire de Bekipan** et de la **terrasse côtière avec campement/grotte**. Elles ont été intégrées sans modification. Deux nouvelles reproductions diurnes ont été réalisées avec le générateur à partir de ces layouts et de la référence Métano :
+
+- `source/layouts_commit_3bc185b/01_promontoire_bekipan.png`
+- `source/layouts_commit_3bc185b/02_terrasse_campement.png`
+
+Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **Ces images sont des propositions générées, pas des textures canoniques certifiées pour PMDO.** Les originales, dont la vue nocturne, restent à la racine ; le lot natif d’import et les anciens travaux sont conservés séparément.

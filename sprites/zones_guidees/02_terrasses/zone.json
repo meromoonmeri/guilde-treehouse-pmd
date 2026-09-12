@@ -1,0 +1,35 @@
+{
+  "id": "02_terrasses",
+  "name": "Les trois gradins",
+  "guide": "source/zones_guidees/generateur_02.png",
+  "guide_sha256": "08e10075e51a04f0a0d61b64fed63a47189b31467884132142a7907b599797b9",
+  "guide_px": [
+    1200,
+    896
+  ],
+  "final_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "river_center_px": 1024,
+  "cliff_bands_px": [
+    [
+      256,
+      408
+    ],
+    [
+      616,
+      768
+    ],
+    [
+      1072,
+      1232
+    ]
+  ],
+  "method": "Generator proposal -> coherent native interior pattern + nearest canonical boundary tiles with seam reranking. Only the guide is resampled; no guide pixels enter final assets.",
+  "active_cliff_cells": 13804
+}

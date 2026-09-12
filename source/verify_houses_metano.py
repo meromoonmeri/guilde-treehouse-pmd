@@ -1,12 +1,14 @@
 """Validation hors moteur des 10 huttes et du format PMDO natif."""
 from pathlib import Path
 from PIL import Image
-import json,struct,io,hashlib
-P=Path(__file__).resolve().parents[1]/'sprites/maisons_metano'
+import json,struct,io,hashlib,argparse
+parser=argparse.ArgumentParser();parser.add_argument("--organic-v2",action="store_true");args=parser.parse_args()
+PREFIX="Maisons_Organiques_V2" if args.organic_v2 else "Maisons_Metano"
+P=Path(__file__).resolve().parents[1]/('sprites/maisons_organiques_v2' if args.organic_v2 else 'sprites/maisons_metano')
 m=json.loads((P/'maisons.json').read_text());assert len(m['houses'])==10
 hashes=set()
 for mode in ['jour','nuit']:
-    atlas=Image.open(P/f'Maisons_Metano_{mode}.png').convert('RGBA');assert atlas.size==(560,256)
+    atlas=Image.open(P/f'{PREFIX}_{mode}.png').convert('RGBA');assert atlas.size==(560,256)
     rebuilt=Image.new('RGBA',atlas.size)
     for h in m['houses']:
         im=Image.open(P/h['files'][mode]).convert('RGBA');assert im.size==(112,128)
@@ -19,7 +21,7 @@ for mode in ['jour','nuit']:
         x,y,w,hh=h['atlas_rect_px'];assert all(v%8==0 for v in [x,y,w,hh])
         rebuilt.paste(im,(x,y))
     assert rebuilt.tobytes()==atlas.tobytes()
-    data=(P/f'Maisons_Metano_{mode}.tile').read_bytes();size,n=struct.unpack_from('<II',data);assert (size,n)==(8,2240)
+    data=(P/f'{PREFIX}_{mode}.tile').read_bytes();size,n=struct.unpack_from('<II',data);assert (size,n)==(8,2240)
     decoded=Image.new('RGBA',atlas.size)
     for i in range(n):
         x,y,off=struct.unpack_from('<IIQ',data,8+16*i);assert x<70 and y<32 and off>=8+n*16
@@ -27,7 +29,7 @@ for mode in ['jour','nuit']:
         tile=Image.open(io.BytesIO(data[off+8:off+8+length])).convert('RGBA');assert tile.size==(8,8)
         decoded.paste(tile,(x*8,y*8))
     assert decoded.tobytes()==atlas.tobytes()
-    ts=json.loads((P/f'Maisons_Metano_{mode}.tsj').read_text());assert ts['tilewidth']==ts['tileheight']==8 and ts['tilecount']==2240
+    ts=json.loads((P/f'{PREFIX}_{mode}.tsj').read_text());assert ts['tilewidth']==ts['tileheight']==8 and ts['tilecount']==2240
 assert len(hashes)==10
 report={'status':'OK','houses':10,'individual_png':20,'native_tile_files':2,'checks':['Dimensions, alignement grille 8 px et ligne de base','10 images distinctes','Transparence binaire et absence de magenta vif','Palette limitée par maison','Recomposition exacte des atlas depuis les PNG','Décodage indépendant des .tile égal aux atlas PNG','Dimensions et références des TSJ'],'not_checked':['Ouverture et placement dans PMDO','Collisions, zones d’entrée et occlusion','Fidélité artistique subjective au style Métano']}
 (P/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2))

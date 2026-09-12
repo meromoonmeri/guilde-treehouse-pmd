@@ -1,0 +1,174 @@
+{
+  "scope": "Asset/code audit, not an observation of the user game runtime",
+  "source_tile_px": 8,
+  "native_cliff_cells": 2169,
+  "native_cliff_unique_rgba_tiles": 381,
+  "zones": [
+    {
+      "id": "01_cirque",
+      "sizes": {
+        "guide": [
+          1200,
+          896
+        ],
+        "canonical_dry": [
+          2048,
+          1536
+        ],
+        "layer": [
+          2048,
+          1536
+        ],
+        "layer_png_mode": "RGBA",
+        "layer_dpi_metadata": null
+      },
+      "guide_to_map_scale": [
+        1.7066666666666668,
+        1.7142857142857142
+      ],
+      "tiled_grid": [
+        256,
+        192
+      ],
+      "tiled_tile_px": [
+        8,
+        8
+      ],
+      "aseprite_header_magic_frames_width_height_depth": [
+        42464,
+        4,
+        2048,
+        1536,
+        32
+      ],
+      "placed_cliff_cells": 17549,
+      "unique_cliff_tile_images_used": 117,
+      "adjacency_pairs": [
+        16927,
+        16801
+      ],
+      "pairs_absent_from_native_cliff_adjacencies": [
+        9251,
+        7253
+      ],
+      "absent_percent": [
+        54.65,
+        43.17
+      ],
+      "adjacency_caveat": "Diagnostic of assembly change, NOT a proof that every absent pair is visually invalid. Repetition and new legal layouts can also create absent pairs.",
+      "water_crossing_cliff_heights_px": [
+        216,
+        128,
+        160
+      ],
+      "visible_reference_hashes_unchanged": true
+    },
+    {
+      "id": "02_terrasses",
+      "sizes": {
+        "guide": [
+          1200,
+          896
+        ],
+        "canonical_dry": [
+          2048,
+          1536
+        ],
+        "layer": [
+          2048,
+          1536
+        ],
+        "layer_png_mode": "RGBA",
+        "layer_dpi_metadata": null
+      },
+      "guide_to_map_scale": [
+        1.7066666666666668,
+        1.7142857142857142
+      ],
+      "tiled_grid": [
+        256,
+        192
+      ],
+      "tiled_tile_px": [
+        8,
+        8
+      ],
+      "aseprite_header_magic_frames_width_height_depth": [
+        42464,
+        4,
+        2048,
+        1536,
+        32
+      ],
+      "placed_cliff_cells": 13804,
+      "unique_cliff_tile_images_used": 103,
+      "adjacency_pairs": [
+        13423,
+        13106
+      ],
+      "pairs_absent_from_native_cliff_adjacencies": [
+        5769,
+        4194
+      ],
+      "absent_percent": [
+        42.98,
+        32.0
+      ],
+      "adjacency_caveat": "Diagnostic of assembly change, NOT a proof that every absent pair is visually invalid. Repetition and new legal layouts can also create absent pairs.",
+      "water_crossing_cliff_heights_px": [
+        152,
+        152,
+        160
+      ],
+      "visible_reference_hashes_unchanged": true
+    }
+  ],
+  "original_ground": {
+    "blob": "38d178520e95d2b1f17d57c12682579d9e37bbae",
+    "TexSize": 1,
+    "layers": [
+      {
+        "name": "Base",
+        "grid": [
+          189,
+          189
+        ],
+        "placed_cells": 35646,
+        "source_to_ground_coordinates_identical": 35646
+      },
+      {
+        "name": "Cliffs",
+        "grid": [
+          189,
+          189
+        ],
+        "placed_cells": 2169,
+        "source_to_ground_coordinates_identical": 2169
+      }
+    ],
+    "interpretation": "Native 8px cells and direct source-to-map coordinates; no source-cell magnification present in these original terrain layers."
+  },
+  "code_findings": {
+    "native_grid_is_not_a_complete_cliff_module": true,
+    "body_repeat_px": [
+      64,
+      48
+    ],
+    "shadow_repeat_column_px": 8,
+    "shadow_source_columns": [
+      85,
+      86,
+      92
+    ],
+    "body_source_rows": [
+      59,
+      64
+    ],
+    "boundary_reconstruction": "Nearest candidate per 8px cell; local color/rock-mask score, not a semantic cliff-edge module system",
+    "layer_border": "One-cell peripheral band of selected cliff cells; not a reconstruction of native complete rims",
+    "fit_preview_scale": "Noninteger fit-to-width; nearest sampling can hide or exaggerate detail. Native 100% must be used for review.",
+    "import_settings_known": false,
+    "no_proven_export_downscale": true,
+    "approved_geometry_preserved": true
+  }
+}

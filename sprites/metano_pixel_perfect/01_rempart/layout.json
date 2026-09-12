@@ -1,0 +1,69 @@
+{
+  "id": "01_rempart",
+  "name": "Le grand rempart",
+  "description": "Une grande paroi et trois chutes alimentées depuis le nord.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 224,
+      "extra": 192,
+      "flats": 24
+    }
+  ],
+  "streams": [
+    {
+      "x": 512,
+      "walls": [
+        0
+      ]
+    },
+    {
+      "x": 1024,
+      "walls": [
+        0
+      ]
+    },
+    {
+      "x": 1536,
+      "walls": [
+        0
+      ]
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 512,
+      "top_px": 680,
+      "bottom_px": 960
+    },
+    {
+      "center_x_px": 1024,
+      "top_px": 680,
+      "bottom_px": 960
+    },
+    {
+      "center_x_px": 1536,
+      "top_px": 680,
+      "bottom_px": 960
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}
