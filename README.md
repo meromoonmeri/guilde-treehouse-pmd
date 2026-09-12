@@ -1,6 +1,15 @@
 # Guilde Treehouse — passages ouverts PMD
 
-## Nouveau — formes V2, pack ciblé PMDO 0.8.12
+## Dernière correction — Métano natif et filtre nuit Abyss
+
+- **[Ouvrir l’aperçu des dix côtes](apercu_cotes_metano_abyss.html)** — jour/nuit, cinq calques de terrain, grille 8 px, exports PNG.
+- **[Télécharger les 20 Ground PMDO 0.8.12](cotes_metano_abyss_0812_pmdo.zip)** — projet séparé `cotes_metano_abyss_0812`, toutes les ressources et l’index inclus.
+- **[Installation et méthode](source/cote_v4_abyss/README.md)** · [résultats des contrôles](source/cote_v4_abyss/verification.json).
+
+Herbe et roche entièrement reconstruites depuis les pixels Métano : plus de lisières ni d’ombres générées. Faces, retours, couronnes et pieds séparés ; silhouettes et contacts W/E/S conservés. **Filtre exact d’Abyss V4**, vérifié contre ses trois feuilles nocturnes complètes. Le remplissage des grandes hauteurs répète des modules natifs ; les raccords restent à apprécier en jeu. **Fichiers vérifiés par code, ouverture réelle dans PMDO non testée. Collisions à dessiner.** Les anciens packs ci-dessous sont conservés.
+
+
+## Archive V3 — formes V2, pack ciblé PMDO 0.8.12
 
 - **[Voir les dix côtes jour/nuit](apercu_cotes_v2_0812.html)** — silhouettes organiques, calques activables, grille 8 px et exports natifs.
 - **[Télécharger les 20 Ground et leur projet séparé](cotes_v2_0812_pmdo.zip)** — dossier `cotes_v2_0812` à placer dans `PMDO/MODS/`, index complet et ressources incluses.

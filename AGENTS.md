@@ -43,3 +43,20 @@ style Métano, sans fragments réinterprétés par le générateur. Le pack V3
 conservait encore lisière et ombres générées : ne pas le considérer corrigé.
 Le nouvel échantillon natif est une calibration de matière, pas une validation
 des retours, des raccords ni des volumes, et pas un remplacement des 20 Ground.
+
+## Filtre Abyss demandé explicitement — correction complète livrée
+
+La dernière consigne autorise et demande le filtre nocturne exact d’Abyss.
+`source/cote_v4_abyss/night.py` reprend `tools/tile_night.py` (blob
+`438383f479e2d80a6a0b3be4cced4087470d9835`), vérifié contre le script original
+sur 1421 couleurs et contre les trois feuilles nocturnes complètes. Cette
+transformation de nuit est explicitement voulue ; les pixels de JOUR restent
+natifs sans recoloration. Ne pas ajouter le filtre Guilde/Sharpedo par-dessus.
+La correction complète est maintenant `cotes_metano_abyss_0812_pmdo.zip`,
+20 Ground `v40812_*`, aperçu `apercu_cotes_metano_abyss.html`. Elle remplace
+l’échantillon comme livraison courante, mais tous les anciens lots sont conservés.
+Les masques V3 guident la géométrie, pas les couleurs. Herbe, faces, retours,
+couronnes et pieds viennent de modules natifs. Aucun ancien RGB généré ni
+ombre générée. Panneaux 64x48 prolongés pour les grandes hauteurs, retours aux
+bords. Tests de provenance, alpha, filtre, binaires et installateur PASS ;
+ceci ne signifie ni raccords artistiques parfaits ni ouverture moteur testée.

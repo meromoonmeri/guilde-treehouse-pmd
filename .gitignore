@@ -12,3 +12,7 @@ __pycache__/
 /sprites/cote_v3_0812/*/AVANT_ROCHE.png
 /sprites/cote_v3_0812/*/jour_*.png
 /sprites/cote_v3_0812/*/nuit_*.png
+
+# Native Abyss correction: PNG copies regenerate from pinned native sheets and
+# approved masks; final pixels are embedded losslessly in the viewer/native ZIP.
+/sprites/cote_v4_abyss/*/*.png

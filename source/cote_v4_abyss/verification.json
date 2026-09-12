@@ -1,0 +1,119 @@
+{
+  "materials": {
+    "source_files_hash_checked": 7,
+    "native_module_placements_rebuilt": 3389,
+    "generated_terrain_rgb_pixels": 0,
+    "filter_reference_colors_checked": 1421,
+    "entire_base_cliffs_fringe_night_sheets_equal": true,
+    "land_alpha_differences": 0
+  },
+  "status": "PASS",
+  "target": "0.8.12",
+  "native_runtime_tested": false,
+  "maps": 20,
+  "native_premultiplied_layers_checked": 100,
+  "sea_frames_checked": 16,
+  "native_backgrounds": 6,
+  "standalone_index_complete": true,
+  "installer_merge_and_conflict_tests": true,
+  "zones": [
+    {
+      "id": "03_double_belvedere",
+      "size": [
+        1168,
+        912
+      ],
+      "rock_pixels_exact": 330298,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "08_terrasses_decalees",
+      "size": [
+        1152,
+        912
+      ],
+      "rock_pixels_exact": 433086,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "02_terrasse_croissant",
+      "size": [
+        1160,
+        904
+      ],
+      "rock_pixels_exact": 334135,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "10_esplanade_arrondie",
+      "size": [
+        1136,
+        912
+      ],
+      "rock_pixels_exact": 362794,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "05_grande_mesa",
+      "size": [
+        1144,
+        904
+      ],
+      "rock_pixels_exact": 421355,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "04_pointe_sinueuse",
+      "size": [
+        1128,
+        912
+      ],
+      "rock_pixels_exact": 380113,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "06_crique_profonde",
+      "size": [
+        1128,
+        912
+      ],
+      "rock_pixels_exact": 309502,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "01_cap_large",
+      "size": [
+        1120,
+        912
+      ],
+      "rock_pixels_exact": 494141,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "09_cap_eventail",
+      "size": [
+        1112,
+        912
+      ],
+      "rock_pixels_exact": 257885,
+      "W_E_S_contacts": true
+    },
+    {
+      "id": "07_balcon_haut",
+      "size": [
+        1096,
+        912
+      ],
+      "rock_pixels_exact": 513956,
+      "W_E_S_contacts": true
+    }
+  ],
+  "limits": [
+    "No PMDO editor/runtime opening test",
+    "GPU alpha rounding not tested",
+    "Native modules repeated to extend very tall faces; joins need in-engine review",
+    "Night uses the exact Abyss color filter; sky and stars retain existing night artwork",
+    "Obstacle grid is deliberately free: draw collisions before gameplay"
+  ],
+  "lossless_viewer_images": 122
+}
