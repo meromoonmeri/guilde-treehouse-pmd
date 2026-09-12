@@ -113,3 +113,12 @@ python source/verify_pmd.py
 Le contrôle relit et recompose les PNG, Aseprite et cartes Tiled ; vérifie les bases transparentes/magenta, les 6 vues alignées, les calques vides et l’unique porte nord. Validation par code, pas par ouverture dans l’interface d’Aseprite.
 
 Les retouches ont été faites avec le générateur à partir des images du kit. Les images du jeu fournies par l’utilisateur ont servi à comprendre le principe des passages, pas à être collées dans les décors. **Le tout premier ZIP de la guilde et les archives de la terrasse approuvée restent inchangés.**
+
+## Clairière extérieure
+
+Le dossier `clairiere/` ajoute la **zone extérieure** : la clairière de la
+guilde vue de dessus (1024 × 768, grille 8 px), avec sa jungle immersive en
+cadre, son grand arbre, ses chemins de sable et son **bassin animé au nord**
+(12 images, vraie animation Tiled via `bassin_eau.tsx`) et ses plateformes
+de pierre. Onze calques en jour et nuit, export Tiled `.tmj` + Aseprite,
+visionneuse `clairiere/apercu_clairiere.html`.
