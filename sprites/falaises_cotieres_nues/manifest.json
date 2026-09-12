@@ -1,0 +1,157 @@
+{
+  "status": "generated_terrain_with_reference_backdrops",
+  "terrain_is_canonical_metano": false,
+  "terrain_resized": false,
+  "source_sea_sky": "User upload IMG_4890.png, commit 3bc185b; Pelipper Post Office sheet, ripped by Jaxster; original game art Nintendo/Game Freak/Chunsoft",
+  "reference_sha256": "f0f59c7986b48b744e2e072506ef0b45f772810f600caae83b3c75e834688d5c",
+  "sky_rect": [
+    544,
+    8,
+    1264,
+    216
+  ],
+  "sea_rects": [
+    [
+      544,
+      224,
+      592,
+      352
+    ],
+    [
+      600,
+      224,
+      648,
+      352
+    ],
+    [
+      656,
+      224,
+      704,
+      352
+    ],
+    [
+      712,
+      224,
+      760,
+      352
+    ],
+    [
+      768,
+      224,
+      816,
+      352
+    ]
+  ],
+  "near_sea_rects": [
+    [
+      824,
+      224,
+      872,
+      392
+    ],
+    [
+      880,
+      224,
+      928,
+      392
+    ],
+    [
+      936,
+      224,
+      984,
+      392
+    ],
+    [
+      992,
+      224,
+      1040,
+      392
+    ],
+    [
+      1048,
+      224,
+      1096,
+      392
+    ]
+  ],
+  "sky_motion": "8-phase slow horizontal oscillation of the source strip, 600 ms per phase",
+  "water_motion": "5 source strips in left-to-right order, 150 ms per phase; timing/order proposed",
+  "zones": [
+    {
+      "id": "01_promontoire",
+      "size_px": [
+        1312,
+        816
+      ],
+      "origin_px": [
+        0,
+        0
+      ],
+      "generated_terrain_translation_y": 256,
+      "import_cell_px": 8,
+      "horizon_px": 208,
+      "terrain": "COTE01_02_TERRAIN_GENERE.png",
+      "sky": [
+        "COTE01_00_CIEL_01.png",
+        "COTE01_00_CIEL_02.png",
+        "COTE01_00_CIEL_03.png",
+        "COTE01_00_CIEL_04.png",
+        "COTE01_00_CIEL_05.png",
+        "COTE01_00_CIEL_06.png",
+        "COTE01_00_CIEL_07.png",
+        "COTE01_00_CIEL_08.png"
+      ],
+      "sea": [
+        "COTE01_01_MER_01.png",
+        "COTE01_01_MER_02.png",
+        "COTE01_01_MER_03.png",
+        "COTE01_01_MER_04.png",
+        "COTE01_01_MER_05.png"
+      ],
+      "source_generated_sha256": "a5c15d879fa705d64da681211a848f1ad711e8d43cee5c303d0f6a6ca2f7d4de",
+      "keyed_pixels": 479969,
+      "nonkey_generated_pixels_modified": 0
+    },
+    {
+      "id": "02_terrasse",
+      "size_px": [
+        1200,
+        896
+      ],
+      "origin_px": [
+        0,
+        0
+      ],
+      "generated_terrain_translation_y": 0,
+      "import_cell_px": 8,
+      "horizon_px": 208,
+      "terrain": "COTE02_02_TERRAIN_GENERE.png",
+      "sky": [
+        "COTE02_00_CIEL_01.png",
+        "COTE02_00_CIEL_02.png",
+        "COTE02_00_CIEL_03.png",
+        "COTE02_00_CIEL_04.png",
+        "COTE02_00_CIEL_05.png",
+        "COTE02_00_CIEL_06.png",
+        "COTE02_00_CIEL_07.png",
+        "COTE02_00_CIEL_08.png"
+      ],
+      "sea": [
+        "COTE02_01_MER_01.png",
+        "COTE02_01_MER_02.png",
+        "COTE02_01_MER_03.png",
+        "COTE02_01_MER_04.png",
+        "COTE02_01_MER_05.png"
+      ],
+      "source_generated_sha256": "5debe317717a25e876117674eb5f0e88baba4708945479d267619924e9cf186e",
+      "keyed_pixels": 404989,
+      "nonkey_generated_pixels_modified": 0
+    }
+  ],
+  "limits": [
+    "Generated rock and grass, not an exact assembly of Metano native tiles",
+    "No PMDO runtime import test",
+    "Only terrain is generated; sky and sea are extracted/repeated from the user reference, not Metano river assets",
+    "Source strips repeat in the background; new layouts and timing are not official game assets"
+  ]
+}

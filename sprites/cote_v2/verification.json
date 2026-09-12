@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "canonical_metano_terrain": false,
+  "pmdo_runtime_tested": false,
+  "clouds": {
+    "source_sprites_preserved": 4,
+    "resizes": 0,
+    "period_px": 2200,
+    "transparent_left_right_margin_at_least": 32,
+    "wrap_tests": "0=P, 1=P+1, -1=P-1, plus translation continuity at seam"
+  },
+  "zones": [
+    {
+      "id": "01_promontoire",
+      "dimensions": [
+        1312,
+        816
+      ],
+      "cloud_wrap_pixel_differences": 0,
+      "terrain_resizes": 0,
+      "sea_quantization_pixel_differences": 0,
+      "sea_same_index_data_and_IDAT_for_8_phases": true,
+      "only_palette_entries_changed": true,
+      "alpha_and_dominant_background_unchanged": true,
+      "phase_8_equals_phase_0": true,
+      "distinct_sea_phases": 8,
+      "composition_pixel_differences": 0
+    },
+    {
+      "id": "02_terrasse",
+      "dimensions": [
+        1200,
+        896
+      ],
+      "cloud_wrap_pixel_differences": 0,
+      "terrain_resizes": 0,
+      "sea_quantization_pixel_differences": 0,
+      "sea_same_index_data_and_IDAT_for_8_phases": true,
+      "only_palette_entries_changed": true,
+      "alpha_and_dominant_background_unchanged": true,
+      "phase_8_equals_phase_0": true,
+      "distinct_sea_phases": 8,
+      "composition_pixel_differences": 0
+    }
+  ]
+}

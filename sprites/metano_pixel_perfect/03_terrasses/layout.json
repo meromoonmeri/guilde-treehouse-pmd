@@ -1,0 +1,71 @@
+{
+  "id": "03_terrasses",
+  "name": "Les terrasses canoniques",
+  "description": "Trois niveaux reliés par les mêmes frames natives de cascade.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 800,
+      "extra": 128,
+      "flats": 24
+    },
+    {
+      "x": -64,
+      "offset": 352,
+      "extra": 128,
+      "flats": 25
+    },
+    {
+      "x": -192,
+      "offset": 0,
+      "extra": 64,
+      "flats": 27
+    }
+  ],
+  "streams": [
+    {
+      "x": 1024,
+      "walls": [
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 1024,
+      "top_px": 456,
+      "bottom_px": 608
+    },
+    {
+      "center_x_px": 1024,
+      "top_px": 808,
+      "bottom_px": 1024
+    },
+    {
+      "center_x_px": 1024,
+      "top_px": 1256,
+      "bottom_px": 1472
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

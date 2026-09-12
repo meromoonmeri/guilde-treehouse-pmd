@@ -1,0 +1,139 @@
+{
+  "id": "02_plateau",
+  "name": "Le plateau des trois sources",
+  "description": "Grand plateau isolé, contour rocheux et espace central libre.",
+  "size_px": [
+    2048,
+    1536
+  ],
+  "grid_px": 8,
+  "grid_cells": [
+    256,
+    192
+  ],
+  "plateaus": [
+    {
+      "top_polygon_px": [
+        [
+          640,
+          160
+        ],
+        [
+          1344,
+          160
+        ],
+        [
+          1536,
+          240
+        ],
+        [
+          1728,
+          368
+        ],
+        [
+          1808,
+          544
+        ],
+        [
+          1808,
+          704
+        ],
+        [
+          1712,
+          704
+        ],
+        [
+          1712,
+          816
+        ],
+        [
+          1504,
+          816
+        ],
+        [
+          1504,
+          912
+        ],
+        [
+          1280,
+          912
+        ],
+        [
+          1280,
+          976
+        ],
+        [
+          768,
+          976
+        ],
+        [
+          768,
+          912
+        ],
+        [
+          544,
+          912
+        ],
+        [
+          544,
+          816
+        ],
+        [
+          336,
+          816
+        ],
+        [
+          336,
+          704
+        ],
+        [
+          240,
+          704
+        ],
+        [
+          240,
+          512
+        ],
+        [
+          336,
+          336
+        ],
+        [
+          464,
+          240
+        ]
+      ],
+      "face_height_px": 256
+    }
+  ],
+  "cascades": [
+    {
+      "x": 432,
+      "y": 816,
+      "height": 256
+    },
+    {
+      "x": 1152,
+      "y": 976,
+      "height": 256
+    },
+    {
+      "x": 1648,
+      "y": 816,
+      "height": 256
+    }
+  ],
+  "stairs": [
+    {
+      "x": 816,
+      "y": 976,
+      "height": 256
+    },
+    {
+      "x": 1456,
+      "y": 912,
+      "height": 256
+    }
+  ],
+  "suggested_edges": "Ouvertures visuelles seulement ; raccord à une carte existante à placer manuellement."
+}

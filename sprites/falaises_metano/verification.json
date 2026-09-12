@@ -1,0 +1,34 @@
+{
+  "status": "OK",
+  "maps": [
+    {
+      "layout": "01_paroi",
+      "cells": 49152,
+      "phases": 4,
+      "pixel_differences": 0,
+      "water_layer_separate": true
+    },
+    {
+      "layout": "02_plateau",
+      "cells": 49152,
+      "phases": 4,
+      "pixel_differences": 0,
+      "water_layer_separate": true
+    },
+    {
+      "layout": "03_terrasses",
+      "cells": 49152,
+      "phases": 4,
+      "pixel_differences": 0,
+      "water_layer_separate": true
+    }
+  ],
+  "native_atlas_roundtrip": "pixel exact",
+  "animations": 181,
+  "not_checked": [
+    "Lancement dans PMDO ou interface Tiled",
+    "Collisions et chemins praticables",
+    "Raccord à une Ground existante",
+    "Validation artistique des layouts"
+  ]
+}

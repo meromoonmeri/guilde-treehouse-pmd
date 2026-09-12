@@ -1,0 +1,191 @@
+{
+  "type": "tileset",
+  "version": "1.10",
+  "tiledversion": "1.10.2",
+  "name": "ponts_nuit",
+  "tilewidth": 64,
+  "tileheight": 64,
+  "tilecount": 24,
+  "columns": 6,
+  "spacing": 0,
+  "margin": 0,
+  "image": "ponts_nuit.png",
+  "imagewidth": 384,
+  "imageheight": 256,
+  "tiles": [
+    {
+      "id": 0,
+      "type": "horizontal_ouest",
+      "animation": [
+        {
+          "tileid": 0,
+          "duration": 180
+        },
+        {
+          "tileid": 6,
+          "duration": 180
+        },
+        {
+          "tileid": 12,
+          "duration": 180
+        },
+        {
+          "tileid": 18,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "horizontal_centre",
+      "animation": [
+        {
+          "tileid": 1,
+          "duration": 180
+        },
+        {
+          "tileid": 7,
+          "duration": 180
+        },
+        {
+          "tileid": 13,
+          "duration": 180
+        },
+        {
+          "tileid": 19,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "horizontal_est",
+      "animation": [
+        {
+          "tileid": 2,
+          "duration": 180
+        },
+        {
+          "tileid": 8,
+          "duration": 180
+        },
+        {
+          "tileid": 14,
+          "duration": 180
+        },
+        {
+          "tileid": 20,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "vertical_nord",
+      "animation": [
+        {
+          "tileid": 3,
+          "duration": 180
+        },
+        {
+          "tileid": 9,
+          "duration": 180
+        },
+        {
+          "tileid": 15,
+          "duration": 180
+        },
+        {
+          "tileid": 21,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "vertical_centre",
+      "animation": [
+        {
+          "tileid": 4,
+          "duration": 180
+        },
+        {
+          "tileid": 10,
+          "duration": 180
+        },
+        {
+          "tileid": 16,
+          "duration": 180
+        },
+        {
+          "tileid": 22,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "vertical_sud",
+      "animation": [
+        {
+          "tileid": 5,
+          "duration": 180
+        },
+        {
+          "tileid": 11,
+          "duration": 180
+        },
+        {
+          "tileid": 17,
+          "duration": 180
+        },
+        {
+          "tileid": 23,
+          "duration": 180
+        }
+      ],
+      "properties": [
+        {
+          "name": "usage",
+          "type": "string",
+          "value": "Répéter le centre entre les deux ancrages ; synchroniser les phases."
+        }
+      ]
+    }
+  ]
+}

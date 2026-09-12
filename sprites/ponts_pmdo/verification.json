@@ -1,0 +1,14 @@
+{
+  "status": "OK",
+  "checks": [
+    "PNG RGBA, dimensions et palette 48 couleurs",
+    "Alpha binaire et RGB transparent nul",
+    "8 fichiers .tile relus, reconstitution exacte des PNG",
+    "Raccords horizontaux et verticaux exacts aux quatre phases",
+    "Références et coordonnées des animations Tiled et PMDO"
+  ],
+  "not_checked": [
+    "Ouverture dans le moteur PMDO",
+    "TexSize et placement dans WaterfallVillageCapital.rsground (téléchargement LFS inaccessible)"
+  ]
+}
