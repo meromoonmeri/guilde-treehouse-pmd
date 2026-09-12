@@ -1,6 +1,6 @@
 # Nouveau lot — sept falaises et trois entrées (en préparation)
 
-**Aucun nouveau pack de dix cartes n’est encore livré.** L’étude des ressources est faite ; l’installation réelle de PMDO reste bloquée par les téléchargements.
+**Aucun nouveau pack de dix cartes n’est encore livré.** L’étude des ressources est faite ; le moteur est maintenant installé depuis RUNTIMEPMDO, mais l’éditeur graphique plante encore. Vingt anciennes cartes ont passé la désérialisation native sans affichage.
 
 - [Manuel des méthodes et limites](../../MANUEL_METHODE_PMDO.md)
 - [Audit des trois références](audit/references.json)
@@ -29,6 +29,6 @@ Le lecteur supporte les cellules 8 et 24 px, compare les hashes, valide chaque r
 
 ## Installation moteur
 
-Le ZIP officiel Linux x64 0.8.12 n’a pas pu être téléchargé : connexion à l’hôte des releases interrompue. Les dépôts Debian échouent en HTTP et HTTPS. Aucun exécutable/éditeur lancé, aucune carte ouverte dans PMDO. Une archive Linux officielle ou une installation Linux complète fournie permettra de reprendre l’inspection des dépendances ; ce n’est pas une garantie de démarrage tant que les bibliothèques graphiques et les ressources n’ont pas été vérifiées.
+Le dépôt utilisateur `meromoonmeri/RUNTIMEPMDO` a permis de récupérer le binaire ; les ressources de base ont aussi été installées. Le moteur confirme la version 0.8.12.0. Le chargeur réel a désérialisé les vingt Ground du pack Métano/Abyss, sans GPU. Le lancement graphique reste en échec (code 139), donc ni rendu ni gameplay ne sont encore validés. Voir [le rapport runtime](../pmdo_runtime/README.md). Aucun nouvel envoi de ZIP n’est requis.
 
 Les anciens packs sont conservés sans modification.

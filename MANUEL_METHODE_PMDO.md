@@ -12,10 +12,11 @@ Ce manuel décrit les méthodes effectivement employées, leurs limites et le pr
 | Filtre nocturne Abyss | Implémenté et comparé aux sources |
 | Demande supplémentaire : sept falaises + trois entrées | En préparation ; aucun nouveau pack de dix cartes livré à ce stade |
 | Références Crooked Cavern / Brine Cave / Drenched Bluff | Tilesets téléchargés, décodés et références des cartes contrôlées |
-| Installation PMDO ici | **Bloquée : téléchargements du binaire et des dépendances en échec** |
-| Démarrage éditeur / ouverture réelle / test de jeu | **Non effectués** |
+| Installation PMDO ici | **Moteur installé depuis RUNTIMEPMDO, ressources de base récupérées** |
+| Désérialisation par le vrai chargeur | **20 Ground du pack livré : PASS, sans affichage** |
+| Éditeur graphique / rendu / test de jeu | **Lancement en échec (code 139), non validés** |
 
-Le détail des tentatives est dans [installation_pmdo.json](source/cote_v5_expeditions/installation_pmdo.json). Un programme qui vérifie du JSON ou reconstruit une image n’est pas le moteur PMDO.
+Le détail des tentatives est dans [installation_pmdo.json](source/cote_v5_expeditions/installation_pmdo.json). Un programme Python qui vérifie du JSON ou reconstruit une image n’est pas le moteur PMDO. Depuis cette première étude, le [test natif documenté](source/pmdo_runtime/README.md) appelle le vrai chargeur PMDO et valide vingt désérialisations, sans GPU.
 
 ## 2. Contrat artistique et technique
 
@@ -282,17 +283,13 @@ Ne pas importer un PNG de composition contenant ciel, nuages et mer comme tilese
 
 Cible : Linux x64, version 0.8.12. L’asset officiel du moteur est `pmdc-linux-x64.zip`, 77 503 089 octets, release PMDC v0.8.12. Un moteur seul peut nécessiter les ressources du jeu et des bibliothèques graphiques ; vérifier le contenu avant de conclure que l’installation est complète.
 
-Tentatives effectuées : téléchargement HTTPS direct, téléchargement par l’API GitHub, accès aux dépôts Debian en HTTP puis HTTPS. Le téléchargement du binaire échoue à la connexion avec l’hôte des assets ; les dépôts système échouent également. `dotnet` et `Xvfb` ne sont pas disponibles. Aucune installation réussie à annoncer.
+Les tentatives initiales via l’hôte des releases et les dépôts Debian ont échoué. **Ce blocage a ensuite été contourné grâce au dépôt `meromoonmeri/RUNTIMEPMDO` fourni par l’utilisateur** : téléchargement du ZIP comme blob Git, CRC valide et SHA-256 identique au digest de la release officielle. Le binaire démarre, répond à `-help` et annonce 0.8.12.0 / .NET 8.0.26.
 
-Prochaine étape : fournir l’archive Linux officielle ou une installation Linux complète avec ses ressources. Ensuite :
+Les ressources de base ont été récupérées depuis `audinowho/DumpAsset` au commit épinglé dans le rapport. Le manque initial de `Base/PathParams.xml` est résolu. Il n’est plus nécessaire de demander une archive Linux à l’utilisateur.
 
-1. vérifier taille, intégrité et provenance de l’archive ;
-2. extraire dans un espace de travail ignoré par Git ;
-3. inspecter l’exécutable, les bibliothèques et les dossiers de ressources ;
-4. vérifier les dépendances dynamiques et l’affichage disponible ;
-5. démarrer le moteur en capturant ses logs ;
-6. démarrer l’éditeur ;
-7. seulement alors charger une carte et conserver la preuve du résultat.
+L’éditeur plante encore au démarrage avec le code 139, y compris après un essai avec les bibliothèques embarquées et SDL offscreen. La cause exacte reste à diagnostiquer ; aucun rendu GPU n’est validé. En revanche, un hook Lua temporaire dans la copie de cache a permis d’appeler **le véritable `DataManager.GetGround`** sur les vingt cartes livrées : PASS pour les dimensions, la grille et les calques. La constante de grille graphique est initialisée explicitement pour ce test sans affichage, puis le script original est restauré.
+
+Voir [installation, provenance, résultats et reproduction](source/pmdo_runtime/README.md). Les étapes restantes sont le diagnostic du crash graphique, une session éditeur fonctionnelle, puis les tests visuels, animations et collisions. Le test sans affichage ne les remplace pas.
 
 Le code `PMDC/Program.cs` de v0.8.12 confirme les options `-dev`, `-quest [folder]`, `-asset [path]`, `-appdata [path]`. Exemple de principe **non exécuté** :
 
@@ -324,7 +321,7 @@ Projet temporaire avec une banque étrangère, simulation sans écriture, fusion
 
 Ouverture dans PMDO 0.8.12, tous les calques visibles, comparaison 1×, animation pendant plusieurs boucles, marche et collisions, déclenchement/retour de donjon, sauvegarde et réouverture. Capturer les erreurs et ne pas les remplacer par une affirmation de compatibilité.
 
-Un rapport doit indiquer quels niveaux ont été effectués. Aujourd’hui les packs précédents ont des contrôles A–D, **pas de validation E ici**.
+Un rapport doit indiquer quels niveaux ont été effectués. Les packs ont des contrôles A–D. Le dernier pack Métano/Abyss possède désormais un test de désérialisation par le moteur réel ; **la partie graphique et interactive du niveau E reste non validée**.
 
 ## 21. Aperçu et exports
 

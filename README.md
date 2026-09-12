@@ -2,8 +2,10 @@
 
 ## Manuel et préparation des prochaines entrées
 
+**Nouveau : [PMDO installé depuis RUNTIMEPMDO et 20 Ground désérialisés par le vrai moteur](source/pmdo_runtime/README.md)**. Test sans affichage réussi ; rendu dans l’éditeur non validé. Les mentions antérieures « non testé moteur » décrivent les contrôles à la date de construction des packs.
+
 - **[Manuel détaillé des méthodes PMDO](MANUEL_METHODE_PMDO.md)** — ressources natives, layouts, échelle, calques, filtre Abyss, animations, formats, installation, tests et limites.
-- [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le prochain lot de sept falaises et trois entrées. **Lot encore en préparation ; installation moteur bloquée, pas de nouveau pack annoncé.**
+- [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le prochain lot de sept falaises et trois entrées. **Lot encore en préparation ; moteur installé, éditeur graphique encore en échec ; pas de nouveau pack annoncé.**
 
 
 ## Dernière correction — Métano natif et filtre nuit Abyss
