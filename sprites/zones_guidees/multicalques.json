@@ -1,0 +1,148 @@
+{
+  "method": "Keep the approved guide -> canonical tile method; split existing tile cells into disjoint layers, without regenerating or repainting.",
+  "guild_reference_commit": "6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78",
+  "branch_reference_commit": "7f1e82b",
+  "dimensions": [
+    2048,
+    1536
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "01_sol",
+      "name": "Sol — herbe Métano",
+      "animated": false,
+      "wet_only": false
+    },
+    {
+      "id": "02_parois",
+      "name": "Parois rocheuses",
+      "animated": false,
+      "wet_only": false
+    },
+    {
+      "id": "03_bordures",
+      "name": "Bordures et retours de falaises",
+      "animated": false,
+      "wet_only": false
+    },
+    {
+      "id": "04_berges",
+      "name": "Berges et fond de rivière",
+      "animated": false,
+      "wet_only": true
+    },
+    {
+      "id": "05_riviere",
+      "name": "Surface de rivière animée",
+      "animated": true,
+      "wet_only": true
+    },
+    {
+      "id": "06_cascades",
+      "name": "Cascades animées",
+      "animated": true,
+      "wet_only": true
+    }
+  ],
+  "zones": [
+    {
+      "id": "01_cirque",
+      "name": "Le cirque des sources",
+      "directory": "sprites/zones_guidees/01_cirque/multicalques",
+      "files": {
+        "01_sol": [
+          "01_sol.png"
+        ],
+        "02_parois": [
+          "02_parois.png"
+        ],
+        "03_bordures": [
+          "03_bordures.png"
+        ],
+        "04_berges": [
+          "04_berges.png"
+        ],
+        "05_riviere": [
+          "05_riviere_phase_1.png",
+          "05_riviere_phase_2.png",
+          "05_riviere_phase_3.png",
+          "05_riviere_phase_4.png"
+        ],
+        "06_cascades": [
+          "06_cascades_phase_1.png",
+          "06_cascades_phase_2.png",
+          "06_cascades_phase_3.png",
+          "06_cascades_phase_4.png"
+        ]
+      },
+      "reference_sha256": {
+        "canonique_sec.png": "c448397a92eb04d159ac9d55758d8954f5f56cf464cbe618e74aa089f83db0fc",
+        "canonique_eau_1.png": "83a3bc97493b9628e7d3f0f7f7a26b1e0754028b19ce1f3aabf922cb49d5ab63",
+        "canonique_eau_2.png": "37cf74731f3b226e7a7d77c9ad7eb6c3ff76b8e637d7c34f5eba4297ca503dc8",
+        "canonique_eau_3.png": "62043715271ee6f7c68c643af5198f60c238012631205326f3e7c64bb00fbf27",
+        "canonique_eau_4.png": "8d09dda873ffac532b9869194fbde5bd3a4f2553a101f5d7bb80e7b033d667bf"
+      },
+      "aseprite": [
+        "zone_seche.aseprite",
+        "zone_eau_animee.aseprite"
+      ],
+      "tiled": [
+        "zone_seche.tmj",
+        "zone_eau.tmj"
+      ]
+    },
+    {
+      "id": "02_terrasses",
+      "name": "Les trois gradins",
+      "directory": "sprites/zones_guidees/02_terrasses/multicalques",
+      "files": {
+        "01_sol": [
+          "01_sol.png"
+        ],
+        "02_parois": [
+          "02_parois.png"
+        ],
+        "03_bordures": [
+          "03_bordures.png"
+        ],
+        "04_berges": [
+          "04_berges.png"
+        ],
+        "05_riviere": [
+          "05_riviere_phase_1.png",
+          "05_riviere_phase_2.png",
+          "05_riviere_phase_3.png",
+          "05_riviere_phase_4.png"
+        ],
+        "06_cascades": [
+          "06_cascades_phase_1.png",
+          "06_cascades_phase_2.png",
+          "06_cascades_phase_3.png",
+          "06_cascades_phase_4.png"
+        ]
+      },
+      "reference_sha256": {
+        "canonique_sec.png": "149ac09b68057b199e3c0fce72eaa9851d7e9ad49b813ec26b533cc9cf91721c",
+        "canonique_eau_1.png": "c979dcbc63cd385276baa37a453c00f493d301c08e75fdcc7f200a89048ea839",
+        "canonique_eau_2.png": "a7d16be219fde3e8f21d367a2cb69267712e47273cce07486765150b36ab1b59",
+        "canonique_eau_3.png": "30f89a2863097ce54c6b90bf6e557e4b1f1116f6997d4fe1b642b62754abcc3e",
+        "canonique_eau_4.png": "f2ee9861367aa29857e4d857ca13bbbaeeb6690c104ddc43b014e5ef99297c09"
+      },
+      "aseprite": [
+        "zone_seche.aseprite",
+        "zone_eau_animee.aseprite"
+      ],
+      "tiled": [
+        "zone_seche.tmj",
+        "zone_eau.tmj"
+      ]
+    }
+  ],
+  "limits": [
+    "Border layer is the one-cell peripheral band of the rock mask, including top, feet and side returns; not an autotile classification",
+    "River banks include native static water pixels; hide all three wet layers for a dry scene",
+    "No added palette for night: source textures remain unchanged",
+    "No collisions, transitions, or runtime PMDO validation"
+  ]
+}

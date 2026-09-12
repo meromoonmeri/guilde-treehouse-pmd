@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "pinned_sources": {
+    "Metano_Town_Base": "19b295495e49819b356c02d13a574616dd67d36c",
+    "Metano_Town_Cliffs": "6d342b97ebfcad3e9aa6022b49e0f3b5b9d75640"
+  },
+  "modules_source_identical": 4,
+  "unique_pmdo_sheet_names": true,
+  "zones": [
+    {
+      "zone": "01_cirque",
+      "native_module_placements": 11,
+      "source_module_resizes": 0,
+      "overlapping_module_rectangles": 0,
+      "layer_composition_different_pixels": 0
+    },
+    {
+      "zone": "02_terrasses",
+      "native_module_placements": 22,
+      "source_module_resizes": 0,
+      "overlapping_module_rectangles": 0,
+      "layer_composition_different_pixels": 0
+    }
+  ],
+  "png_import_partition_tests": [
+    {
+      "png": "01_cirque/METANO_V3_CIRQUE_FALAISES.png",
+      "size_px": [
+        1016,
+        512
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 1750,
+      "different_pixels": 0
+    },
+    {
+      "png": "01_cirque/METANO_V3_CIRQUE_SCENE.png",
+      "size_px": [
+        1016,
+        512
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 8128,
+      "different_pixels": 0
+    },
+    {
+      "png": "01_cirque/METANO_V3_CIRQUE_SOL.png",
+      "size_px": [
+        1016,
+        512
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 8128,
+      "different_pixels": 0
+    },
+    {
+      "png": "02_terrasses/METANO_V3_TERRASSES_FALAISES.png",
+      "size_px": [
+        1016,
+        768
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 3500,
+      "different_pixels": 0
+    },
+    {
+      "png": "02_terrasses/METANO_V3_TERRASSES_SCENE.png",
+      "size_px": [
+        1016,
+        768
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 12192,
+      "different_pixels": 0
+    },
+    {
+      "png": "02_terrasses/METANO_V3_TERRASSES_SOL.png",
+      "size_px": [
+        1016,
+        768
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 12192,
+      "different_pixels": 0
+    },
+    {
+      "png": "METANO_V3_MODULE_DESCENTE_OUEST.png",
+      "size_px": [
+        224,
+        336
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 472,
+      "different_pixels": 0
+    },
+    {
+      "png": "METANO_V3_MODULE_FACE_COMPLETE.png",
+      "size_px": [
+        64,
+        96
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 96,
+      "different_pixels": 0
+    },
+    {
+      "png": "METANO_V3_MODULE_REMONTEE_EST.png",
+      "size_px": [
+        216,
+        240
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 414,
+      "different_pixels": 0
+    },
+    {
+      "png": "METANO_V3_MODULE_RETOUR_ARRONDI.png",
+      "size_px": [
+        64,
+        96
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 96,
+      "different_pixels": 0
+    },
+    {
+      "png": "METANO_V3_TEMOIN_64x96.png",
+      "size_px": [
+        64,
+        96
+      ],
+      "tile_size": 8,
+      "nonempty_cells": 96,
+      "different_pixels": 0
+    }
+  ],
+  "runtime_pmdo_tested": false,
+  "artistic_quality_scope": "Whole original modules preserved; visual inspection performed separately. Not an automatic certification of every new join."
+}

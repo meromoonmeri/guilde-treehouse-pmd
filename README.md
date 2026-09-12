@@ -129,3 +129,38 @@ Des calques vides permettent d'ajouter sols, structures, avant-plans et objets.
 - Sortie par défaut : `~/cote_metano_v2_pmdo.zip` (livrée séparément, hors Git).
 - Validation indépendante des ressources et des pixels ; **pas de test dans PMDO**.
 - Collisions libres à dessiner avant utilisation comme niveau jouable.
+
+## Zones guidées par le générateur → tuiles canoniques
+
+Deux nouvelles compositions (cirque et terrasses), illustrées par le générateur puis reconstruites avec de vraies tuiles Métano de 8 px : **2048 × 1536 px**, versions sèches sans chemin et quatre phases d’eau natives.
+
+- **Voir avant/après :** `sprites/zones_guidees/comparaison_generateur_canonique.png`.
+- **Explorer / animer :** `apercu_zones_guidees.html` (autonome, grille et zoom natif).
+- **Pack :** `zones_guidees_metano_pack.zip` ; PNG, atlas natif, maps Tiled et provenance dans `sprites/zones_guidees/`.
+- **Méthode et limites :** [README des zones guidées](sprites/zones_guidees/README.md). Le générateur fournit le guide, jamais les pixels canoniques. Les raccords sont encore approximatifs par endroits ; gameplay et import PMDO non validés.
+- **Contrôle indépendant :** `.venv/bin/python source/verify_zones_guidees.py`.
+
+### Zones approuvées — édition multicalques comme la guilde
+
+**`apercu_zones_multicalques.html`** permet maintenant d’afficher, masquer ou isoler les six calques des deux zones approuvées : sol, parois, bordures, berges, rivière et cascades. Les compositions et pixels Métano restent **inchangés**.
+
+Dans `sprites/zones_guidees/{01_cirque,02_terrasses}/multicalques/` : PNG transparents alignés, Aseprite sec (3 calques / 1 frame) et animé (6 calques / 4 frames), cartes Tiled réutilisant l’atlas canonique. Le découpage et les fichiers éditables ont été vérifiés par relecture : **0 différence de pixel**. Les archives antérieures ne sont pas modifiées. Voir [les instructions multicalques](sprites/zones_guidees/README_multicalques.md) et `sprites/zones_guidees/planche_multicalques.png`.
+
+La méthode approuvée est conservée dans `AGENTS.md` pour les prochaines zones. Reconstruction : `source/build_zones_multicalques.py`, contrôle : `source/verify_zones_multicalques.py`, aperçu : `source/package_zones_multicalques.py`.
+
+### Audit du rendu en jeu et de l’échelle des falaises
+
+Après le retour utilisateur sur la qualité à l’import, [l’audit](audits/metano_import/RAPPORT.md) distingue un **défaut confirmé d’assemblage des fragments natifs** d’un éventuel problème d’échelle/filtrage côté import, encore à vérifier. Le contrôle des pixels ne validait pas les volumes des falaises. Comparatif à zoom entier : `audits/metano_import/comparaison_echelle.png` ; mesures : `audits/metano_import/mesures.json`. Les zones approuvées ne sont pas modifiées par cet audit.
+
+### Métano V3 — PNG pour l’importeur PMDO Dev
+
+Le [lot PNG natif](sprites/metano_import_png/README.md) fournit deux premières scènes sèches de calibration **1016 × 512** et **1016 × 768**, avec des blocs de falaises complets et leurs calques sol/falaises. Aucun pixel natif redimensionné. Les noms `METANO_V3_*` sont uniques pour éviter les écrasements lors de « PNG to Tileset ». Importer en **8 px**, puis comparer le témoin natif **64 × 96** en jeu. Les grandes zones précédentes restent intactes ; ce lot n’en est pas encore le remplacement complet. Construction : `source/build_metano_import_png.py` ; contrôle : `source/verify_metano_import_png.py`. Archive : `metano_png_import_v3.zip`.
+
+### Layouts côtiers du commit utilisateur — génération sur les vraies références
+
+Le commit **`3bc185b`**, ajouté sur la branche de cette session et non sur `main`, contient les références du **promontoire de Bekipan** et de la **terrasse côtière avec campement/grotte**. Elles ont été intégrées sans modification. Deux nouvelles reproductions diurnes ont été réalisées avec le générateur à partir de ces layouts et de la référence Métano :
+
+- `source/layouts_commit_3bc185b/01_promontoire_bekipan.png`
+- `source/layouts_commit_3bc185b/02_terrasse_campement.png`
+
+Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **Ces images sont des propositions générées, pas des textures canoniques certifiées pour PMDO.** Les originales, dont la vue nocturne, restent à la racine ; le lot natif d’import et les anciens travaux sont conservés séparément.
