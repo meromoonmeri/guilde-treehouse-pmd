@@ -41,7 +41,7 @@ for amb in AMB:
     fa = d / f'tileset_falaises_{amb}.aseprite'
     planches = [np.array(Image.open(d / f'planche_f{i + 1}.png').convert('RGBA')) for i in range(FR)]
     assert all(p.shape == (ROWS * T, COLS * T, 4) for p in planches), 'Taille de planche'
-    assert (d / 'animation.png').exists() and (R / M['fichiers'][amb]['exemple']).exists()
+    assert (d / 'animation.png').exists()
     # --- Aseprite
     data = fa.read_bytes()
     size, magic, n, w, h, depth, flags, speed = struct.unpack_from('<IHHHHHIH', data)
@@ -108,10 +108,10 @@ for amb in AMB:
     # --- APNG et exemple
     ap = Image.open(d / 'animation.png')
     assert getattr(ap, 'n_frames', 1) == FR, 'APNG 4 frames'
-    ex = np.array(Image.open(R / M['fichiers'][amb]['exemple']).convert('RGBA'))
-    assert ex.shape == (240, 480, 4) and (ex[:, :, 3] > 0).mean() > 0.2, 'Exemple trop vide'
+    ex = np.array(Image.open(R / 'falaises' / 'zones' / 'plateaux_ponts' / f'zone_{amb}.png').convert('RGBA'))
+    assert ex.shape == (240, 480, 4) and (ex[:, :, 3] > 0).mean() > 0.2, 'Zone exemple trop vide'
     rec['apng_frames'] = ap.n_frames
-    rec['exemple'] = {'dimensions': [480, 240], 'rempli': round(float((ex[:, :, 3] > 0).mean()), 3)}
+    rec['zone_exemple'] = {'dimensions': [480, 240], 'rempli': round(float((ex[:, :, 3] > 0).mean()), 3)}
     moyennes[amb] = tuple(round(float(v), 1) for v in ex[ex[:, :, 3] > 0][:, :3].mean(0))
     report['ambiances'][amb] = rec
 
@@ -121,6 +121,58 @@ assert len(set(moyennes[a] for a in AMB)) == len(AMB), 'Ambiances identiques'
 assert min(vals, key=vals.get) == 'nuit', 'La nuit doit être l’ambiance la plus sombre'
 assert max(vals, key=vals.get) == 'jour', 'Le jour doit être l’ambiance la plus claire'
 report['moyennes_rgb'] = {a: list(v) for a, v in moyennes.items()}
+
+# --- zones map : rendu pixel perfect depuis les tuiles canoniques
+from PIL import Image as _I
+planche_jour = np.array(_I.open(R / 'falaises' / 'jour' / 'planche_f1.png').convert('RGBA'))
+cano = {}
+for t in M['tuiles']:
+    ox, oy = t['colonne'] * T, t['ligne'] * T
+    cano[t['nom']] = planche_jour[oy:oy + T, ox:ox + T]
+VIDE = np.zeros((T, T, 4), np.uint8)
+CLASSE = {t['nom']: t['classe'] for t in M['tuiles']}
+report['zones'] = {}
+union = set()
+for z in M['zones']:
+    zd = R / 'falaises' / 'zones' / z['nom']
+    couches = {}
+    for c in ('ground', 'falaise', 'decor'):
+        arr = np.array(_I.open(zd / f'{c}_jour.png').convert('RGBA'))
+        assert arr.shape == (z['dimensions_px'][1], z['dimensions_px'][0], 4), 'Taille de calque'
+        for r in range(arr.shape[0] // T):
+            for cx in range(arr.shape[1] // T):
+                blk = arr[r * T:(r + 1) * T, cx * T:(cx + 1) * T]
+                if not blk[:, :, 3].any():
+                    assert np.array_equal(blk, VIDE), 'Cellule vide non transparente'
+                    continue
+                ok = any(np.array_equal(blk, cano[n]) for n in cano if CLASSE[n] == c)
+                assert ok, f'Cellule non canonique dans {z["nom"]}/{c} en ({cx},{r})'
+        couches[c] = arr
+    comp = np.array(_I.open(zd / 'zone_jour.png').convert('RGBA'))
+    rebuilt = np.zeros_like(comp)
+    from PIL import Image as _Im
+    base = _Im.fromarray(rebuilt)
+    for c in ('ground', 'falaise', 'decor'):
+        base.alpha_composite(_Im.fromarray(couches[c]))
+    assert np.array_equal(np.array(base), comp), 'Composite != ground+falaise+décor'
+    nuit = np.array(_I.open(zd / 'zone_nuit.png').convert('RGBA'))
+    j = _Im.fromarray(comp).copy(); px = j.load()
+    for y in range(j.height):
+        for x in range(j.width):
+            rr, gg, bb, al = px[x, y]
+            if al:
+                px[x, y] = (min(255, int(rr * .36 + 9)), min(255, int(gg * .34 + 10)),
+                            min(255, int(bb * .43 + 19)), al)
+    assert np.array_equal(np.array(j), nuit), 'Zone nuit != teinte nuit du kit'
+    ap = _I.open(zd / 'zone_jour_anim.png')
+    assert getattr(ap, 'n_frames', 1) == M['frames'], 'APNG de zone 4 frames'
+    union.update(z['tuiles_utilisees'])
+    report['zones'][z['nom']] = {'cellules': z['cellules'], 'poses': z['poses'],
+                                 'calques': ['ground', 'falaise', 'decor'],
+                                 'composite_identique_aux_calques': True,
+                                 'cellules_canoniques': True, 'apng_frames': ap.n_frames}
+assert union == {t['nom'] for t in M['tuiles']}, 'Toutes les tuiles doivent servir dans les zones'
+report['tuiles_couvertes_par_zones'] = sorted(union)
 
 # --- aperçu hors ligne
 html = (R / 'apercu_falaises.html').read_text()

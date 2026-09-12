@@ -50,13 +50,21 @@ Chaque salle est disponible en **jour et nuit**, avec une seule image par fichie
 - `falaises/<ambiance>/tileset_falaises_<ambiance>.aseprite` : feuille Aseprite multi-frames — chaque frame est la planche complète (8 × 3 tuiles), grille du document réglée sur 24 px. C'est le fichier à ouvrir dans l'éditeur.
 - `falaises/<ambiance>/planche_f1..f4.png` : les mêmes frames en tilesheet PNG, pour un moteur quelconque.
 - `falaises/<ambiance>/animation.png` : APNG de prévisualisation (4 frames, 150 ms).
-- `falaises/exemple_<ambiance>.png` : assemblage de démonstration — trois falaises reliées par un pont de corde, un escalier taillé (descente d'un rang) et une passerelle de bois sur gouffre ; échelle de paroi, talus en pente, éboulis, lierre et brume.
+- `falaises/zones/<zone>/…` : cinq zones map falaise rendues **pixel perfect** depuis les tuiles canoniques, en calques séparés `ground` (terrain praticable), `falaise` (roche structurelle) et `decor` (superpositions), plus le composite animé :
+  - `ground_jour.png` / `ground_nuit.png`, `falaise_jour.png` / `falaise_nuit.png`, `decor_jour.png` / `decor_nuit.png` : les calques isolés ;
+  - `zone_<ambiance>.png` : composite des trois calques, dans les 6 ambiances ;
+  - `zone_jour_anim.png` : APNG 4 frames du composite.
+  Zones fournies : `col_montagne`, `plateaux_ponts`, `gouffre_passerelle`, `corniche_escalier` et `worldmap` (32 × 18 tuiles, toutes les tuiles du tileset y servent).
 - `falaises/falaises.json` : manifeste (nom, usage, animation, position sur la planche de chaque tuile).
 - `apercu_falaises.html` : aperçu autonome hors ligne, animé : sélecteur d'ambiance, lecture frame par frame, grille des 24 tuiles et scène d'assemblage.
 
 Raccords : `face_roche*` se juxtapose sans couture sur les 4 côtés ; `sommet_herbe`, `sommet_roche_nu` et `coin_haut_*` coiffent les parois ; `bord_gauche/droit` dessinent les flancs à bossages ; `pente_*` et `escalier_*` changent de niveau ; `pont_corde`/`pilier_corde` et `pont_bois`/`pilier_bois` enjambent les vides à même hauteur ; `echelle` monte le long d'une paroi.
 
 Animations (13 tuiles animées, 11 fixes) : frange herbeuse des sommets, plateau, pentes, escaliers, tablier et cordes des ponts (balancement), touffes d'herbe, lierre, brume — 4 frames à 150 ms, le tempo des animations PMD. Les tuiles fixes sont garanties identiques sur les 4 frames par `verify_falaises.py`.
+
+### Zones map : rendu pixel perfect
+
+Chaque zone est un plan de tuiles **canoniques** : le rendu copie exactement les cellules de la planche (aucune transformation, aucun filtrage), alignées sur la grille de 24 px. `verify_falaises.py` le prouve cellule par cellule : chaque cellule d'un calque est soit vide, soit égale au pixel près à la tuile canonique de sa classe, et le composite est exactement `ground + falaise + decor`. Les jonctions suivent trois règles : surface pleine (`sommet_herbe`) contre un escalier, piliers de pont posés sur les bordures, flancs fondus en paroi quand deux massifs se touchent.
 
 ## Contenu du kit
 

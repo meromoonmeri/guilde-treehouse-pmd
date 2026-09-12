@@ -22,6 +22,7 @@
       "nom": "face_roche",
       "usage": "Paroi de falaise, raccords 4 côtés",
       "anime": false,
+      "classe": "falaise",
       "colonne": 0,
       "ligne": 0
     },
@@ -30,6 +31,7 @@
       "nom": "face_roche_fissure",
       "usage": "Paroi fissurée (variant)",
       "anime": false,
+      "classe": "falaise",
       "colonne": 1,
       "ligne": 0
     },
@@ -38,6 +40,7 @@
       "nom": "face_roche_mousse",
       "usage": "Paroi moussue (variant)",
       "anime": false,
+      "classe": "falaise",
       "colonne": 2,
       "ligne": 0
     },
@@ -46,6 +49,7 @@
       "nom": "sommet_herbe",
       "usage": "Sommet marchable, frange herbeuse",
       "anime": true,
+      "classe": "ground",
       "colonne": 3,
       "ligne": 0
     },
@@ -54,6 +58,7 @@
       "nom": "plateau_herbe",
       "usage": "Plateau herbeux (remplissage)",
       "anime": true,
+      "classe": "ground",
       "colonne": 4,
       "ligne": 0
     },
@@ -62,6 +67,7 @@
       "nom": "sommet_roche_nu",
       "usage": "Sommet rocheux nu",
       "anime": false,
+      "classe": "ground",
       "colonne": 5,
       "ligne": 0
     },
@@ -70,6 +76,7 @@
       "nom": "coin_haut_gauche",
       "usage": "Coin haut gauche",
       "anime": true,
+      "classe": "falaise",
       "colonne": 6,
       "ligne": 0
     },
@@ -78,6 +85,7 @@
       "nom": "coin_haut_droit",
       "usage": "Coin haut droit",
       "anime": true,
+      "classe": "falaise",
       "colonne": 7,
       "ligne": 0
     },
@@ -86,6 +94,7 @@
       "nom": "bord_gauche",
       "usage": "Flanc gauche de falaise",
       "anime": false,
+      "classe": "falaise",
       "colonne": 0,
       "ligne": 1
     },
@@ -94,6 +103,7 @@
       "nom": "bord_droit",
       "usage": "Flanc droit de falaise",
       "anime": false,
+      "classe": "falaise",
       "colonne": 1,
       "ligne": 1
     },
@@ -102,6 +112,7 @@
       "nom": "pente_droite",
       "usage": "Pente herbeuse montante à droite",
       "anime": true,
+      "classe": "ground",
       "colonne": 2,
       "ligne": 1
     },
@@ -110,6 +121,7 @@
       "nom": "pente_gauche",
       "usage": "Pente herbeuse montante à gauche",
       "anime": true,
+      "classe": "ground",
       "colonne": 3,
       "ligne": 1
     },
@@ -118,6 +130,7 @@
       "nom": "escalier_droit",
       "usage": "Escalier taillé, montant à droite",
       "anime": true,
+      "classe": "ground",
       "colonne": 4,
       "ligne": 1
     },
@@ -126,6 +139,7 @@
       "nom": "escalier_gauche",
       "usage": "Escalier taillé, montant à gauche",
       "anime": true,
+      "classe": "ground",
       "colonne": 5,
       "ligne": 1
     },
@@ -134,6 +148,7 @@
       "nom": "pont_corde",
       "usage": "Tablier de pont de corde",
       "anime": true,
+      "classe": "ground",
       "colonne": 6,
       "ligne": 1
     },
@@ -142,6 +157,7 @@
       "nom": "pilier_corde",
       "usage": "Pilier de pont de corde",
       "anime": true,
+      "classe": "ground",
       "colonne": 7,
       "ligne": 1
     },
@@ -150,6 +166,7 @@
       "nom": "pont_bois",
       "usage": "Passerelle de bois",
       "anime": false,
+      "classe": "ground",
       "colonne": 0,
       "ligne": 2
     },
@@ -158,6 +175,7 @@
       "nom": "pilier_bois",
       "usage": "Pilier de passerelle",
       "anime": false,
+      "classe": "ground",
       "colonne": 1,
       "ligne": 2
     },
@@ -166,6 +184,7 @@
       "nom": "echelle",
       "usage": "Échelle de paroi",
       "anime": false,
+      "classe": "decor",
       "colonne": 2,
       "ligne": 2
     },
@@ -174,6 +193,7 @@
       "nom": "touffe_herbe",
       "usage": "Touffe d’herbe (décor animé)",
       "anime": true,
+      "classe": "decor",
       "colonne": 3,
       "ligne": 2
     },
@@ -182,6 +202,7 @@
       "nom": "lierre",
       "usage": "Lierre suspendu (décor animé)",
       "anime": true,
+      "classe": "decor",
       "colonne": 4,
       "ligne": 2
     },
@@ -190,6 +211,7 @@
       "nom": "brume",
       "usage": "Nappe de brume (décor animé)",
       "anime": true,
+      "classe": "decor",
       "colonne": 5,
       "ligne": 2
     },
@@ -198,6 +220,7 @@
       "nom": "fleurs",
       "usage": "Fleurs des sommets (décor)",
       "anime": false,
+      "classe": "decor",
       "colonne": 6,
       "ligne": 2
     },
@@ -206,8 +229,295 @@
       "nom": "eboulis",
       "usage": "Éboulis au pied de falaise",
       "anime": false,
+      "classe": "decor",
       "colonne": 7,
       "ligne": 2
+    }
+  ],
+  "zones": [
+    {
+      "nom": "col_montagne",
+      "desc": "Col : deux pics reliés par une selle, escaliers taillés dans la roche.",
+      "cellules": [
+        16,
+        10
+      ],
+      "dimensions_px": [
+        384,
+        240
+      ],
+      "poses": 155,
+      "fichiers": {
+        "calques": {
+          "ground": {
+            "jour": "falaises/zones/col_montagne/ground_jour.png",
+            "nuit": "falaises/zones/col_montagne/ground_nuit.png"
+          },
+          "falaise": {
+            "jour": "falaises/zones/col_montagne/falaise_jour.png",
+            "nuit": "falaises/zones/col_montagne/falaise_nuit.png"
+          },
+          "decor": {
+            "jour": "falaises/zones/col_montagne/decor_jour.png",
+            "nuit": "falaises/zones/col_montagne/decor_nuit.png"
+          }
+        },
+        "composites": {
+          "jour": "falaises/zones/col_montagne/zone_jour.png",
+          "nuit": "falaises/zones/col_montagne/zone_nuit.png",
+          "crepuscule": "falaises/zones/col_montagne/zone_crepuscule.png",
+          "aube": "falaises/zones/col_montagne/zone_aube.png",
+          "soir": "falaises/zones/col_montagne/zone_soir.png",
+          "orageux": "falaises/zones/col_montagne/zone_orageux.png"
+        },
+        "apng": "falaises/zones/col_montagne/zone_jour_anim.png"
+      },
+      "tuiles_utilisees": [
+        "bord_droit",
+        "bord_gauche",
+        "brume",
+        "coin_haut_droit",
+        "eboulis",
+        "echelle",
+        "escalier_droit",
+        "escalier_gauche",
+        "face_roche",
+        "face_roche_fissure",
+        "fleurs",
+        "lierre",
+        "sommet_herbe",
+        "touffe_herbe"
+      ]
+    },
+    {
+      "nom": "plateaux_ponts",
+      "desc": "Plateaux reliés : pont de corde, escalier d’un rang, passerelle de bois.",
+      "cellules": [
+        20,
+        10
+      ],
+      "dimensions_px": [
+        480,
+        240
+      ],
+      "poses": 146,
+      "fichiers": {
+        "calques": {
+          "ground": {
+            "jour": "falaises/zones/plateaux_ponts/ground_jour.png",
+            "nuit": "falaises/zones/plateaux_ponts/ground_nuit.png"
+          },
+          "falaise": {
+            "jour": "falaises/zones/plateaux_ponts/falaise_jour.png",
+            "nuit": "falaises/zones/plateaux_ponts/falaise_nuit.png"
+          },
+          "decor": {
+            "jour": "falaises/zones/plateaux_ponts/decor_jour.png",
+            "nuit": "falaises/zones/plateaux_ponts/decor_nuit.png"
+          }
+        },
+        "composites": {
+          "jour": "falaises/zones/plateaux_ponts/zone_jour.png",
+          "nuit": "falaises/zones/plateaux_ponts/zone_nuit.png",
+          "crepuscule": "falaises/zones/plateaux_ponts/zone_crepuscule.png",
+          "aube": "falaises/zones/plateaux_ponts/zone_aube.png",
+          "soir": "falaises/zones/plateaux_ponts/zone_soir.png",
+          "orageux": "falaises/zones/plateaux_ponts/zone_orageux.png"
+        },
+        "apng": "falaises/zones/plateaux_ponts/zone_jour_anim.png"
+      },
+      "tuiles_utilisees": [
+        "bord_droit",
+        "bord_gauche",
+        "brume",
+        "coin_haut_droit",
+        "coin_haut_gauche",
+        "eboulis",
+        "echelle",
+        "escalier_droit",
+        "face_roche",
+        "face_roche_fissure",
+        "face_roche_mousse",
+        "fleurs",
+        "lierre",
+        "pente_droite",
+        "pilier_bois",
+        "pilier_corde",
+        "plateau_herbe",
+        "pont_bois",
+        "pont_corde",
+        "sommet_herbe",
+        "touffe_herbe"
+      ]
+    },
+    {
+      "nom": "gouffre_passerelle",
+      "desc": "Gouffre franchi par une passerelle de bois, échelle et brume au fond.",
+      "cellules": [
+        16,
+        10
+      ],
+      "dimensions_px": [
+        384,
+        240
+      ],
+      "poses": 102,
+      "fichiers": {
+        "calques": {
+          "ground": {
+            "jour": "falaises/zones/gouffre_passerelle/ground_jour.png",
+            "nuit": "falaises/zones/gouffre_passerelle/ground_nuit.png"
+          },
+          "falaise": {
+            "jour": "falaises/zones/gouffre_passerelle/falaise_jour.png",
+            "nuit": "falaises/zones/gouffre_passerelle/falaise_nuit.png"
+          },
+          "decor": {
+            "jour": "falaises/zones/gouffre_passerelle/decor_jour.png",
+            "nuit": "falaises/zones/gouffre_passerelle/decor_nuit.png"
+          }
+        },
+        "composites": {
+          "jour": "falaises/zones/gouffre_passerelle/zone_jour.png",
+          "nuit": "falaises/zones/gouffre_passerelle/zone_nuit.png",
+          "crepuscule": "falaises/zones/gouffre_passerelle/zone_crepuscule.png",
+          "aube": "falaises/zones/gouffre_passerelle/zone_aube.png",
+          "soir": "falaises/zones/gouffre_passerelle/zone_soir.png",
+          "orageux": "falaises/zones/gouffre_passerelle/zone_orageux.png"
+        },
+        "apng": "falaises/zones/gouffre_passerelle/zone_jour_anim.png"
+      },
+      "tuiles_utilisees": [
+        "bord_droit",
+        "bord_gauche",
+        "brume",
+        "coin_haut_droit",
+        "eboulis",
+        "echelle",
+        "face_roche",
+        "face_roche_fissure",
+        "fleurs",
+        "lierre",
+        "pilier_bois",
+        "pont_bois",
+        "sommet_herbe",
+        "touffe_herbe"
+      ]
+    },
+    {
+      "nom": "corniche_escalier",
+      "desc": "Corniche en zigzag : trois vires reliées par escaliers taillés.",
+      "cellules": [
+        16,
+        10
+      ],
+      "dimensions_px": [
+        384,
+        240
+      ],
+      "poses": 131,
+      "fichiers": {
+        "calques": {
+          "ground": {
+            "jour": "falaises/zones/corniche_escalier/ground_jour.png",
+            "nuit": "falaises/zones/corniche_escalier/ground_nuit.png"
+          },
+          "falaise": {
+            "jour": "falaises/zones/corniche_escalier/falaise_jour.png",
+            "nuit": "falaises/zones/corniche_escalier/falaise_nuit.png"
+          },
+          "decor": {
+            "jour": "falaises/zones/corniche_escalier/decor_jour.png",
+            "nuit": "falaises/zones/corniche_escalier/decor_nuit.png"
+          }
+        },
+        "composites": {
+          "jour": "falaises/zones/corniche_escalier/zone_jour.png",
+          "nuit": "falaises/zones/corniche_escalier/zone_nuit.png",
+          "crepuscule": "falaises/zones/corniche_escalier/zone_crepuscule.png",
+          "aube": "falaises/zones/corniche_escalier/zone_aube.png",
+          "soir": "falaises/zones/corniche_escalier/zone_soir.png",
+          "orageux": "falaises/zones/corniche_escalier/zone_orageux.png"
+        },
+        "apng": "falaises/zones/corniche_escalier/zone_jour_anim.png"
+      },
+      "tuiles_utilisees": [
+        "bord_droit",
+        "bord_gauche",
+        "brume",
+        "coin_haut_droit",
+        "eboulis",
+        "echelle",
+        "escalier_gauche",
+        "face_roche",
+        "face_roche_fissure",
+        "fleurs",
+        "lierre",
+        "sommet_herbe",
+        "touffe_herbe"
+      ]
+    },
+    {
+      "nom": "worldmap",
+      "desc": "Grande zone démonstrative : toutes les tuiles du tileset, cinq niveaux.",
+      "cellules": [
+        32,
+        18
+      ],
+      "dimensions_px": [
+        768,
+        432
+      ],
+      "poses": 482,
+      "fichiers": {
+        "calques": {
+          "ground": {
+            "jour": "falaises/zones/worldmap/ground_jour.png",
+            "nuit": "falaises/zones/worldmap/ground_nuit.png"
+          },
+          "falaise": {
+            "jour": "falaises/zones/worldmap/falaise_jour.png",
+            "nuit": "falaises/zones/worldmap/falaise_nuit.png"
+          },
+          "decor": {
+            "jour": "falaises/zones/worldmap/decor_jour.png",
+            "nuit": "falaises/zones/worldmap/decor_nuit.png"
+          }
+        },
+        "composites": {
+          "jour": "falaises/zones/worldmap/zone_jour.png",
+          "nuit": "falaises/zones/worldmap/zone_nuit.png",
+          "crepuscule": "falaises/zones/worldmap/zone_crepuscule.png",
+          "aube": "falaises/zones/worldmap/zone_aube.png",
+          "soir": "falaises/zones/worldmap/zone_soir.png",
+          "orageux": "falaises/zones/worldmap/zone_orageux.png"
+        },
+        "apng": "falaises/zones/worldmap/zone_jour_anim.png"
+      },
+      "tuiles_utilisees": [
+        "bord_droit",
+        "bord_gauche",
+        "brume",
+        "coin_haut_gauche",
+        "eboulis",
+        "echelle",
+        "escalier_gauche",
+        "face_roche",
+        "face_roche_fissure",
+        "face_roche_mousse",
+        "fleurs",
+        "lierre",
+        "pente_droite",
+        "pente_gauche",
+        "pilier_bois",
+        "pilier_corde",
+        "plateau_herbe",
+        "pont_bois",
+        "pont_corde",
+        "sommet_herbe",
+        "sommet_roche_nu",
+        "touffe_herbe"
+      ]
     }
   ],
   "fichiers": {
@@ -219,8 +529,7 @@
         "falaises/jour/planche_f3.png",
         "falaises/jour/planche_f4.png"
       ],
-      "apng": "falaises/jour/animation.png",
-      "exemple": "falaises/exemple_jour.png"
+      "apng": "falaises/jour/animation.png"
     },
     "nuit": {
       "aseprite": "falaises/nuit/tileset_falaises_nuit.aseprite",
@@ -230,8 +539,7 @@
         "falaises/nuit/planche_f3.png",
         "falaises/nuit/planche_f4.png"
       ],
-      "apng": "falaises/nuit/animation.png",
-      "exemple": "falaises/exemple_nuit.png"
+      "apng": "falaises/nuit/animation.png"
     },
     "crepuscule": {
       "aseprite": "falaises/crepuscule/tileset_falaises_crepuscule.aseprite",
@@ -241,8 +549,7 @@
         "falaises/crepuscule/planche_f3.png",
         "falaises/crepuscule/planche_f4.png"
       ],
-      "apng": "falaises/crepuscule/animation.png",
-      "exemple": "falaises/exemple_crepuscule.png"
+      "apng": "falaises/crepuscule/animation.png"
     },
     "aube": {
       "aseprite": "falaises/aube/tileset_falaises_aube.aseprite",
@@ -252,8 +559,7 @@
         "falaises/aube/planche_f3.png",
         "falaises/aube/planche_f4.png"
       ],
-      "apng": "falaises/aube/animation.png",
-      "exemple": "falaises/exemple_aube.png"
+      "apng": "falaises/aube/animation.png"
     },
     "soir": {
       "aseprite": "falaises/soir/tileset_falaises_soir.aseprite",
@@ -263,8 +569,7 @@
         "falaises/soir/planche_f3.png",
         "falaises/soir/planche_f4.png"
       ],
-      "apng": "falaises/soir/animation.png",
-      "exemple": "falaises/exemple_soir.png"
+      "apng": "falaises/soir/animation.png"
     },
     "orageux": {
       "aseprite": "falaises/orageux/tileset_falaises_orageux.aseprite",
@@ -274,8 +579,7 @@
         "falaises/orageux/planche_f3.png",
         "falaises/orageux/planche_f4.png"
       ],
-      "apng": "falaises/orageux/animation.png",
-      "exemple": "falaises/exemple_orageux.png"
+      "apng": "falaises/orageux/animation.png"
     }
   }
 }

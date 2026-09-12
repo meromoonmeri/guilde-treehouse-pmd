@@ -393,7 +393,7 @@ def t_pont_corde(f):
 
 def t_pilier_corde(f):
     g = t_pont_corde(f)
-    for y in range(2, 18):
+    for y in range(2, 24):
         for x in range(10, 14):
             g[y][x] = (BOIS_HI if x == 10 else BOIS_DRK if x == 13 else BOIS_MID) + (255,)
     for x in range(9, 15):
@@ -424,7 +424,7 @@ def t_pont_bois(f):
 
 def t_pilier_bois(f):
     g = t_pont_bois(f)
-    for y in range(1, 20):
+    for y in range(1, 24):
         for x in range(9, 15):
             g[y][x] = (BOIS_HI if x == 9 else BOIS_DRK if x == 14 else BOIS_MID) + (255,)
     for x in range(8, 16):
@@ -587,44 +587,33 @@ SCENE = [
     # falaise gauche (sommet rang 2)
     (0, 2, 'sommet_herbe'), (1, 2, 'sommet_herbe'), (2, 2, 'sommet_herbe'),
     (3, 2, 'sommet_herbe'), (4, 2, 'coin_haut_droit'),
-    # pont de corde vers la falaise centrale
+    # pont de corde ancré aux bordures
     (5, 2, 'pilier_corde'), (6, 2, 'pont_corde'), (7, 2, 'pont_corde'), (8, 2, 'pilier_corde'),
-    # falaise centrale (sommet rang 2)
+    # falaise centrale : jonction d'escalier en pleine surface
     (9, 2, 'coin_haut_gauche'), (10, 2, 'sommet_herbe'), (11, 2, 'sommet_herbe'),
-    (12, 2, 'coin_haut_droit'),
-    # escalier taillé : descente d'un rang vers la falaise droite
-    (13, 2, 'escalier_droit'),
-    # falaise droite (sommet rang 3) coupée par une passerelle de bois
-    (13, 3, 'coin_haut_gauche'), (14, 3, 'sommet_herbe'), (15, 3, 'sommet_herbe'),
-    (16, 3, 'pilier_bois'), (17, 3, 'pont_bois'), (18, 3, 'pilier_bois'),
-    (19, 3, 'sommet_herbe'),
+    (12, 2, 'sommet_herbe'), (13, 2, 'escalier_droit'),
+    # falaise droite d'un rang plus bas, coupée par la passerelle de bois
+    (14, 3, 'sommet_herbe'), (15, 3, 'sommet_herbe'), (16, 3, 'pilier_bois'),
+    (17, 3, 'pont_bois'), (18, 3, 'pilier_bois'), (19, 3, 'coin_haut_droit'),
     # décors de sommet
-    (1, 1, 'touffe_herbe'), (10, 1, 'touffe_herbe'), (14, 2, 'touffe_herbe'),
+    (1, 1, 'touffe_herbe'), (10, 1, 'touffe_herbe'), (15, 2, 'touffe_herbe'),
     (11, 1, 'fleurs'), (19, 2, 'fleurs'),
+    # décors de paroi et de fond
+    (12, 4, 'lierre'), (12, 5, 'lierre'), (4, 5, 'lierre'), (4, 6, 'lierre'),
+    (15, 5, 'echelle'), (15, 6, 'echelle'), (15, 7, 'echelle'),
+    (5, 6, 'brume'), (6, 6, 'brume'), (7, 6, 'brume'), (8, 6, 'brume'),
+    (16, 7, 'brume'), (17, 7, 'brume'),
+    (1, 9, 'eboulis'), (10, 9, 'eboulis'), (18, 9, 'eboulis'),
+    (5, 9, 'plateau_herbe'), (6, 9, 'plateau_herbe'), (7, 9, 'plateau_herbe'),
+    (6, 8, 'eboulis'), (8, 8, 'pente_droite'),
 ]
 for r in range(3, SC[1]):
-    for c in range(0, 4):
-        SCENE.append((c, r, 'face_roche' if (c + r) % 5 else 'face_roche_fissure'))
-    SCENE.append((4, r, 'bord_droit'))
-    for c in range(10, 12):
-        SCENE.append((c, r, 'face_roche' if (c + r) % 7 else 'face_roche_mousse'))
-    SCENE.append((9, r, 'bord_gauche'))
-    SCENE.append((12, r, 'bord_droit'))
+    SCENE += [(0, r, 'bord_gauche')] + [(c, r, 'face_roche' if (c + r) % 5 else 'face_roche_fissure') for c in (1, 2, 3)] + [(4, r, 'bord_droit')]
+    SCENE += [(9, r, 'bord_gauche')] + [(c, r, 'face_roche' if (c + r) % 7 else 'face_roche_mousse') for c in (10, 11)] + [(12, r, 'bord_droit')]
+    SCENE += [(13, r, 'bord_gauche')]
 for r in range(4, SC[1]):
-    SCENE.append((13, r, 'face_roche' if r % 3 else 'face_roche_mousse'))
-    for c in range(14, 16):
-        SCENE.append((c, r, 'face_roche' if (c + r) % 6 else 'face_roche_fissure'))
-    SCENE.append((16, r, 'bord_droit'))
-    SCENE.append((18, r, 'bord_gauche'))
-    SCENE.append((19, r, 'face_roche'))
-SCENE += [(12, 4, 'lierre'), (12, 5, 'lierre'), (4, 5, 'lierre'), (4, 6, 'lierre'),
-          (15, 5, 'echelle'), (15, 6, 'echelle'), (15, 7, 'echelle'),
-          (5, 6, 'brume'), (6, 6, 'brume'), (7, 6, 'brume'), (8, 6, 'brume'),
-          (16, 7, 'brume'), (17, 7, 'brume'),
-          (1, 9, 'eboulis'), (10, 9, 'eboulis'), (18, 9, 'eboulis'),
-          # talus au pied : sol de vallée puis pente remontant vers la paroi
-          (5, 9, 'plateau_herbe'), (6, 9, 'plateau_herbe'), (7, 9, 'plateau_herbe'),
-          (6, 8, 'eboulis'), (8, 8, 'pente_droite')]
+    SCENE += [(c, r, 'face_roche' if (c + r) % 6 else 'face_roche_fissure') for c in (14, 15)]
+    SCENE += [(16, r, 'bord_droit'), (18, r, 'bord_gauche'), (19, r, 'bord_droit')]
 
 
 def scene(f):
@@ -636,6 +625,186 @@ def scene(f):
         im.alpha_composite(sh.crop(((i % COLS) * T, (i // COLS) * T,
                                     (i % COLS) * T + T, (i // COLS) * T + T)), (c * T, r * T))
     return im
+
+
+# ---------------------------------------------------------------- zones map
+# Classes de calques : ground (terrain praticable), falaise (roche structurelle),
+# décor (animation/ornement). Chaque zone est un plan de tuiles canoniques :
+# rendu pixel perfect par copie exacte des cellules de la planche.
+CLASSES = {}
+for _n, _d, _a, _f in TUILES:
+    CLASSES[_n] = ('ground' if _n in ('sommet_herbe', 'plateau_herbe', 'sommet_roche_nu',
+                                      'pente_droite', 'pente_gauche', 'escalier_droit',
+                                      'escalier_gauche', 'pont_corde', 'pilier_corde',
+                                      'pont_bois', 'pilier_bois')
+                   else 'falaise' if _n in ('face_roche', 'face_roche_fissure',
+                                            'face_roche_mousse', 'coin_haut_gauche',
+                                            'coin_haut_droit', 'bord_gauche', 'bord_droit')
+                   else 'decor')
+COUCHES = ['ground', 'falaise', 'decor']
+ROCSOLIDE = {'face_roche', 'face_roche_fissure', 'face_roche_mousse', 'bord_gauche',
+             'bord_droit', 'sommet_herbe', 'plateau_herbe', 'sommet_roche_nu',
+             'coin_haut_gauche', 'coin_haut_droit', 'pente_droite', 'pente_gauche',
+             'escalier_droit', 'escalier_gauche'}
+
+
+def compact(poses):
+    """Un flanc voisin d'une roche devient paroi : les massifs accolés se
+    fondent sans fente blanche ; les silhouettes ne restent qu'au contact
+    de l'air. La déduplication se fait par calque : un décor se superpose
+    à la roche de sa cellule au lieu de la remplacer."""
+    d = {}
+    for (c, r, n) in poses:
+        d[(c, r, CLASSES[n])] = n
+    roche = {(c, r): n for (c, r, cl), n in d.items() if cl in ('ground', 'falaise')}
+    out = []
+    for (c, r, cl), n in d.items():
+        if cl == 'falaise':
+            if n == 'bord_gauche' and roche.get((c - 1, r)) in ROCSOLIDE:
+                n = 'face_roche'
+            elif n == 'bord_droit' and roche.get((c + 1, r)) in ROCSOLIDE:
+                n = 'face_roche'
+        out.append((c, r, n))
+    return out
+
+
+def _massif(pos, c0, c1, r0, r1, var=6):
+    """Corps de falaise : flancs + parois, avec variants rares."""
+    out = []
+    for r in range(r0, r1 + 1):
+        for c in range(c0, c1 + 1):
+            if c == c0:
+                out.append((c, r, 'bord_gauche'))
+            elif c == c1:
+                out.append((c, r, 'bord_droit'))
+            else:
+                out.append((c, r, 'face_roche' if (c + r) % var else 'face_roche_fissure'))
+    return out
+
+
+ZONE_A = [  # col de montagne : deux pics, selle centrale, escaliers taillés
+    (0, 1, 'sommet_herbe'), (1, 1, 'sommet_herbe'), (2, 1, 'sommet_herbe'), (3, 1, 'sommet_herbe'),
+    (4, 1, 'escalier_gauche'),
+    (5, 2, 'sommet_herbe'), (6, 2, 'sommet_herbe'), (7, 2, 'sommet_herbe'),
+    (8, 2, 'sommet_herbe'), (9, 2, 'sommet_herbe'), (10, 2, 'sommet_herbe'),
+    (11, 1, 'escalier_droit'),
+    (12, 1, 'sommet_herbe'), (13, 1, 'sommet_herbe'), (14, 1, 'sommet_herbe'), (15, 1, 'coin_haut_droit'),
+    (1, 0, 'touffe_herbe'), (7, 1, 'touffe_herbe'), (13, 0, 'fleurs'),
+    (3, 4, 'lierre'), (3, 5, 'lierre'), (13, 4, 'echelle'), (13, 5, 'echelle'), (13, 6, 'echelle'),
+    (5, 6, 'brume'), (6, 6, 'brume'), (7, 6, 'brume'), (8, 6, 'brume'), (9, 6, 'brume'), (10, 6, 'brume'),
+    (2, 9, 'eboulis'), (8, 9, 'eboulis'), (14, 9, 'eboulis'),
+]
+ZONE_A = compact(ZONE_A + (_massif(None, 0, 4, 2, 9, 5) + _massif(None, 5, 10, 3, 9, 7) + _massif(None, 11, 15, 2, 9, 6)))
+
+ZONE_B = compact(SCENE)          # plateaux reliés : pont de corde, escalier, passerelle
+
+ZONE_C = [  # gouffre : passerelle de bois ancrée aux bordures, échelle, brume
+    (0, 3, 'sommet_herbe'), (1, 3, 'sommet_herbe'), (2, 3, 'sommet_herbe'), (3, 3, 'sommet_herbe'),
+    (4, 3, 'pilier_bois'), (5, 3, 'pont_bois'), (6, 3, 'pont_bois'), (7, 3, 'pont_bois'),
+    (8, 3, 'pont_bois'), (9, 3, 'pont_bois'), (10, 3, 'pilier_bois'),
+    (11, 3, 'sommet_herbe'), (12, 3, 'sommet_herbe'), (13, 3, 'sommet_herbe'),
+    (14, 3, 'sommet_herbe'), (15, 3, 'coin_haut_droit'),
+    (1, 2, 'touffe_herbe'), (12, 2, 'touffe_herbe'), (14, 2, 'fleurs'),
+    (2, 5, 'echelle'), (2, 6, 'echelle'), (2, 7, 'echelle'),
+    (10, 4, 'lierre'), (10, 5, 'lierre'),
+    (5, 7, 'brume'), (6, 7, 'brume'), (7, 7, 'brume'), (8, 7, 'brume'), (9, 7, 'brume'),
+    (5, 8, 'brume'), (6, 8, 'brume'), (7, 8, 'brume'), (8, 8, 'brume'), (9, 8, 'brume'),
+    (6, 9, 'eboulis'), (8, 9, 'eboulis'),
+]
+ZONE_C = compact(ZONE_C + _massif(None, 0, 4, 4, 9, 6) + _massif(None, 10, 15, 4, 9, 7))
+
+ZONE_D = [  # corniche en zigzag : trois vires reliées par escaliers taillés
+    (0, 2, 'sommet_herbe'), (1, 2, 'sommet_herbe'), (2, 2, 'sommet_herbe'), (3, 2, 'sommet_herbe'),
+    (4, 2, 'sommet_herbe'), (5, 2, 'escalier_gauche'),
+    (6, 3, 'sommet_herbe'), (7, 3, 'sommet_herbe'), (8, 3, 'sommet_herbe'), (9, 3, 'sommet_herbe'),
+    (10, 3, 'escalier_gauche'),
+    (11, 4, 'sommet_herbe'), (12, 4, 'sommet_herbe'), (13, 4, 'sommet_herbe'),
+    (14, 4, 'sommet_herbe'), (15, 4, 'coin_haut_droit'), (10, 4, 'face_roche'),
+    (2, 1, 'touffe_herbe'), (7, 2, 'touffe_herbe'), (13, 3, 'touffe_herbe'), (12, 3, 'fleurs'),
+    (9, 5, 'lierre'), (9, 6, 'lierre'),
+    (2, 5, 'echelle'), (2, 6, 'echelle'), (2, 7, 'echelle'),
+    (6, 7, 'brume'), (7, 7, 'brume'), (8, 7, 'brume'), (9, 7, 'brume'), (10, 7, 'brume'),
+    (11, 7, 'brume'), (12, 7, 'brume'),
+    (5, 9, 'eboulis'), (13, 9, 'eboulis'),
+]
+ZONE_D = compact(ZONE_D + (_massif(None, 0, 5, 3, 9, 5) + _massif(None, 6, 9, 4, 9, 7) + _massif(None, 10, 15, 5, 9, 6)))
+
+ZONE_E = [  # worldmap : tous les types de tuiles, cinq niveaux
+    (0, 1, 'sommet_roche_nu'), (1, 1, 'sommet_roche_nu'), (2, 1, 'sommet_roche_nu'),
+    (3, 1, 'sommet_roche_nu'), (4, 1, 'escalier_gauche'),
+    (5, 2, 'sommet_herbe'), (6, 2, 'sommet_herbe'), (7, 2, 'sommet_herbe'), (8, 2, 'sommet_herbe'),
+    (9, 2, 'sommet_herbe'), (10, 2, 'pilier_corde'), (11, 2, 'pont_corde'), (12, 2, 'pont_corde'),
+    (13, 2, 'pont_corde'), (14, 2, 'pont_corde'), (15, 2, 'pilier_corde'),
+    (16, 2, 'sommet_herbe'), (17, 2, 'sommet_herbe'), (18, 2, 'sommet_herbe'), (19, 2, 'sommet_herbe'),
+    (20, 2, 'sommet_herbe'), (21, 2, 'escalier_gauche'), (21, 3, 'face_roche'),
+    (22, 3, 'sommet_herbe'), (23, 3, 'sommet_herbe'), (24, 3, 'sommet_herbe'), (25, 3, 'pilier_bois'),
+    (26, 3, 'pont_bois'), (27, 3, 'pont_bois'), (28, 3, 'pont_bois'), (29, 3, 'pilier_bois'),
+    (30, 3, 'coin_haut_gauche'), (31, 3, 'sommet_herbe'),
+    (0, 7, 'sommet_herbe'), (1, 7, 'sommet_herbe'), (2, 7, 'sommet_herbe'), (3, 7, 'sommet_herbe'),
+    (4, 7, 'sommet_herbe'), (5, 7, 'sommet_herbe'), (6, 7, 'sommet_herbe'), (7, 7, 'sommet_herbe'),
+    (8, 7, 'sommet_herbe'), (9, 7, 'pente_gauche'),
+    (10, 8, 'plateau_herbe'), (11, 8, 'plateau_herbe'), (12, 8, 'plateau_herbe'), (13, 8, 'plateau_herbe'),
+    (14, 7, 'pente_droite'),
+    (1, 0, 'touffe_herbe'), (6, 1, 'touffe_herbe'), (17, 1, 'touffe_herbe'), (23, 2, 'touffe_herbe'),
+    (31, 2, 'touffe_herbe'), (5, 6, 'touffe_herbe'),
+    (8, 1, 'fleurs'), (19, 1, 'fleurs'), (24, 2, 'fleurs'), (2, 6, 'fleurs'),
+    (8, 9, 'lierre'), (8, 10, 'lierre'), (20, 6, 'lierre'), (20, 7, 'lierre'),
+    (17, 10, 'echelle'), (17, 11, 'echelle'), (17, 12, 'echelle'), (17, 13, 'echelle'),
+    (5, 12, 'brume'), (6, 12, 'brume'), (7, 12, 'brume'),
+    (26, 9, 'brume'), (27, 9, 'brume'), (28, 9, 'brume'),
+    (27, 12, 'brume'), (28, 12, 'brume'),
+    (3, 17, 'eboulis'), (11, 17, 'eboulis'), (18, 17, 'eboulis'), (30, 17, 'eboulis'),
+    (27, 17, 'eboulis'), (28, 17, 'eboulis'),
+    (6, 11, 'face_roche_mousse'), (18, 6, 'face_roche_mousse'),
+]
+ZONE_E = compact(ZONE_E + (_massif(None, 0, 4, 2, 4, 5) + _massif(None, 5, 10, 3, 6, 7) +
+           _massif(None, 15, 20, 3, 17, 6) + _massif(None, 21, 25, 4, 17, 7) +
+           _massif(None, 29, 31, 4, 17, 5) +
+           [(0, r, 'bord_gauche') for r in range(5, 18)] +
+           [(c, r, 'face_roche' if (c + r) % 6 else 'face_roche_fissure') for r in range(5, 18) for c in (1, 2, 3)] +
+           [(4, r, 'bord_droit') for r in range(5, 18)] +
+           [(c, r, 'face_roche' if (c + r) % 7 else 'face_roche_mousse') for r in range(8, 18) for c in (5, 6, 7)] +
+           [(8, r, 'bord_droit') for r in range(8, 18)] +
+           [(9, r, 'bord_gauche') for r in range(8, 18)] +
+           [(c, r, 'face_roche' if (c + r) % 5 else 'face_roche_fissure') for r in range(9, 18) for c in (10, 11, 12)] +
+           [(13, r, 'bord_droit') for r in range(9, 18)] +
+           [(14, r, 'face_roche') for r in range(8, 18)]))
+
+
+ZONES = [
+    {'nom': 'col_montagne', 'w': 16, 'h': 10, 'poses': ZONE_A,
+     'desc': 'Col : deux pics reliés par une selle, escaliers taillés dans la roche.'},
+    {'nom': 'plateaux_ponts', 'w': 20, 'h': 10, 'poses': ZONE_B,
+     'desc': 'Plateaux reliés : pont de corde, escalier d’un rang, passerelle de bois.'},
+    {'nom': 'gouffre_passerelle', 'w': 16, 'h': 10, 'poses': ZONE_C,
+     'desc': 'Gouffre franchi par une passerelle de bois, échelle et brume au fond.'},
+    {'nom': 'corniche_escalier', 'w': 16, 'h': 10, 'poses': ZONE_D,
+     'desc': 'Corniche en zigzag : trois vires reliées par escaliers taillés.'},
+    {'nom': 'worldmap', 'w': 32, 'h': 18, 'poses': ZONE_E,
+     'desc': 'Grande zone démonstrative : toutes les tuiles du tileset, cinq niveaux.'},
+]
+
+
+def rend_zone(zone, planches):
+    """Rendu pixel perfect : chaque cellule est une copie exacte de la tuile
+    canonique de la planche. Retourne {couche: [frames]} + composite [frames]."""
+    idx = {n: i for i, (n, _d, _a, _fn) in enumerate(TUILES)}
+    w, h = zone['w'] * T, zone['h'] * T
+    couches = {c: [Image.new('RGBA', (w, h), (0, 0, 0, 0)) for _ in range(FRAMES)] for c in COUCHES}
+    for (c, r, nom) in sorted(zone['poses'], key=lambda q: COUCHES.index(CLASSES[q[2]])):
+        i = idx[nom]
+        cl = CLASSES[nom]
+        for f in range(FRAMES):
+            tile = planches[f].crop(((i % COLS) * T, (i // COLS) * T,
+                                     (i % COLS) * T + T, (i // COLS) * T + T))
+            couches[cl][f].alpha_composite(tile, (c * T, r * T))
+    comp = []
+    for f in range(FRAMES):
+        im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+        for c in COUCHES:
+            im.alpha_composite(couches[c][f])
+        comp.append(im)
+    return couches, comp
 
 
 # ---------------------------------------------------------------- Aseprite
@@ -670,21 +839,19 @@ def apng(path, frames_im, duree):
 
 
 # ---------------------------------------------------------------- aperçu HTML
-def apercu(html_path, par_amb):
+def apercu(html_path, par_amb, zones_data):
     assets = {}
     for amb, d in par_amb.items():
         assets[amb] = ['data:image/png;base64,' + base64.b64encode(b).decode()
                        for b in d['frames_png']]
-        assets[amb + '_scene'] = ['data:image/png;base64,' + base64.b64encode(b).decode()
-                                  for b in d['scene_png']]
-    data = json.dumps({'ambiances': AMBIANCES, 'assets': assets,
-                       'tiles': [{'id': i, 'nom': n, 'desc': d, 'anime': a}
+    data = json.dumps({'ambiances': AMBIANCES, 'assets': assets, 'zones': zones_data,
+                       'tiles': [{'id': i, 'nom': n, 'desc': d, 'anime': a, 'classe': CLASSES[n]}
                                  for i, (n, d, a, _f) in enumerate(TUILES)],
                        'frames': FRAMES, 'duree': DUREE, 'taille': T,
                        'cols': COLS, 'rows': ROWS}, ensure_ascii=False)
     html = '''<!doctype html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Falaises Métano / Treasure Town — tileset animé PMD</title>
+<title>Falaises Métano / Treasure Town — tileset animé & zones map</title>
 <style>
 :root{--bg:#1d2a26;--pan:#24352f;--tx:#e8f2e4;--ac:#8fd6a8;--mu:#9db4a6}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,sans-serif}
@@ -703,9 +870,10 @@ canvas{image-rendering:pixelated;background:
 .tu canvas{background:repeating-conic-gradient(#2b3b34 0% 25%,#22312b 0% 50%) 0 0/12px 12px}
 .tu b{display:block;font-size:11px;margin-top:4px}.tu span{display:block;color:var(--mu);font-size:10px}
 .anim{color:var(--ac);font-size:10px;font-style:normal}
+.cl{color:#e8d29a;font-size:10px}
 </style></head><body>
-<header><h1>Falaises de Métano / Treasure Town — tileset animé</h1>
-<p class="s">24 tuiles de 24 × 24 px · 4 frames de 150 ms · feuille Aseprite multi-frames · 6 ambiances · roche ocre harmonisée au panorama du kit</p></header>
+<header><h1>Falaises de Métano / Treasure Town — tileset animé &amp; zones map</h1>
+<p class="s">24 tuiles de 24 × 24 px · 4 frames de 150 ms · feuille Aseprite multi-frames · 6 ambiances · 5 zones map rendues pixel perfect en calques ground / falaise / décor</p></header>
 <main>
 <div class="bar" id="amb"></div>
 <div class="bar"><button id="play" aria-pressed="true">⏸ Pause</button>
@@ -713,27 +881,46 @@ canvas{image-rendering:pixelated;background:
 <span class="lab" id="etat"></span></div>
 <div class="box"><canvas id="sheet" width="192" height="72" style="width:768px;height:288px"></canvas>
 <p class="lab">Planche tilesheet (8 × 3 tuiles) — chaque frame est une planche complète, comme dans la feuille Aseprite.</p></div>
-<div class="box"><canvas id="sc" width="480" height="240" style="width:960px;height:480px;max-width:100%"></canvas>
-<p class="lab">Exemple d’assemblage : falaises reliées par pont de corde, escalier taillé et passerelle de bois ; échelle de paroi, talus, brume et éboulis.</p></div>
+<div class="box"><h2 style="margin:0 0 8px;font-size:14px">Zones map falaise (rendu pixel perfect, tuiles canoniques)</h2>
+<div class="bar" id="zon"></div>
+<div class="bar" id="cou"></div>
+<canvas id="zc" width="480" height="240" style="width:960px;max-width:100%"></canvas>
+<p class="lab" id="zdesc"></p></div>
 <div class="box"><h2 style="margin:0 0 4px;font-size:14px">Tuiles</h2><div class="grille" id="gr"></div></div>
 </main><script>
 const D=__DATA__;
-let amb=D.ambiances[0], f=0, joue=true;
+let amb=D.ambiances[0], f=0, joue=true, zone=D.zones[0].nom, cou='composite';
 const imgs={};
 function get(a,i){const k=a+'#'+i;if(!imgs[k]){imgs[k]=new Image();imgs[k].src=D.assets[a][i];}return imgs[k]}
-function getSc(a,i){const k=a+'sc'+i;if(!imgs[k]){imgs[k]=new Image();imgs[k].src=D.assets[a+'_scene'][i];}return imgs[k]}
+function zget(z,a,i){const k=z+a+i;if(!imgs[k]){imgs[k]=new Image();imgs[k].src=D.zones.find(q=>q.nom===z).frames[a][i];}return imgs[k]}
+function lget(z,c){const k=z+'L'+c;if(!imgs[k]){imgs[k]=new Image();imgs[k].src=D.zones.find(q=>q.nom===z).layers[c];}return imgs[k]}
 const bar=document.getElementById('amb');
 D.ambiances.forEach(a=>{const b=document.createElement('button');b.textContent=a;b.dataset.a=a;
  b.onclick=()=>{amb=a;maj();};bar.appendChild(b);});
+const zb=document.getElementById('zon');
+D.zones.forEach(z=>{const b=document.createElement('button');b.textContent=z.nom;b.dataset.z=z.nom;
+ b.onclick=()=>{zone=z.nom;maj();};zb.appendChild(b);});
+const cb=document.getElementById('cou');
+['composite','ground','falaise','decor'].forEach(c=>{const b=document.createElement('button');
+ b.textContent=c;b.dataset.c=c;b.onclick=()=>{cou=c;maj();};cb.appendChild(b);});
 const gr=document.getElementById('gr');
 D.tiles.forEach((tl,i)=>{const d=document.createElement('div');d.className='tu';
  const c=document.createElement('canvas');c.width=24;c.height=24;c.style.width='72px';c.style.height='72px';
- d.appendChild(c);d.innerHTML+='<b>'+tl.nom+'</b><span>'+(tl.anime?'<em class="anim">animé · </em>':'')+tl.desc+'</span>';
+ d.appendChild(c);d.innerHTML+='<b>'+tl.nom+'</b><span class="cl">'+tl.classe+'</span><span>'+(tl.anime?'<em class="anim">animé · </em>':'')+tl.desc+'</span>';
  gr.appendChild(d);tl._c=c;});
 function maj(){[...bar.children].forEach(b=>b.setAttribute('aria-pressed',b.dataset.a===amb));
+ [...zb.children].forEach(b=>b.setAttribute('aria-pressed',b.dataset.z===zone));
+ [...cb.children].forEach(b=>b.setAttribute('aria-pressed',b.dataset.c===cou));
+ const z=D.zones.find(q=>q.nom===zone);
  document.getElementById('etat').textContent='ambiance '+amb+' — frame '+(f+1)+'/'+D.frames+' ('+D.duree+' ms)';
  const cs=document.getElementById('sheet').getContext('2d');cs.clearRect(0,0,192,72);cs.drawImage(get(amb,f),0,0);
- const cc=document.getElementById('sc').getContext('2d');cc.clearRect(0,0,480,240);cc.drawImage(getSc(amb,f),0,0);
+ const cv=document.getElementById('zc');cv.width=z.w*24;cv.height=z.h*24;
+ cv.style.width=(z.w*24*2)+'px';cv.style.height=(z.h*24*2)+'px';
+ const cx=cv.getContext('2d');cx.clearRect(0,0,cv.width,cv.height);
+ if(cou==='composite')cx.drawImage(zget(zone,amb,f),0,0);
+ else cx.drawImage(lget(zone,cou),0,0);
+ document.getElementById('zdesc').textContent=z.desc+' — calque affiché : '+cou+
+  (cou==='composite'?' (ground + falaise + décor, animé)':' (statique, isolé)');
  D.tiles.forEach((tl,i)=>{const ctx=tl._c.getContext('2d');ctx.clearRect(0,0,24,24);
   ctx.drawImage(get(amb,f),(i%8)*24,Math.floor(i/8)*24,24,24,0,0,24,24);});}
 setInterval(()=>{if(joue){f=(f+1)%D.frames;maj();}},D.duree);
@@ -741,9 +928,11 @@ document.getElementById('play').onclick=e=>{joue=!joue;e.currentTarget.setAttrib
  e.currentTarget.textContent=joue?'⏸ Pause':'▶ Lecture';};
 document.getElementById('prec').onclick=()=>{f=(f+D.frames-1)%D.frames;maj();};
 document.getElementById('suiv').onclick=()=>{f=(f+1)%D.frames;maj();};
-let prets=0;const tot=D.ambiances.length*(D.frames*2);
+let prets=0;const tot=D.ambiances.length*D.frames+D.zones.length*(D.ambiances.length*D.frames+3);
 function ok(){prets++;if(prets>=tot)maj();}
-D.ambiances.forEach(a=>{for(let i=0;i<D.frames;i++){get(a,i).onload=ok;getSc(a,i).onload=ok;}});
+D.ambiances.forEach(a=>{for(let i=0;i<D.frames;i++)get(a,i).onload=ok;});
+D.zones.forEach(z=>{D.ambiances.forEach(a=>{for(let i=0;i<D.frames;i++)zget(z.nom,a,i).onload=ok;});
+ ['ground','falaise','decor'].forEach(c=>lget(z.nom,c).onload=ok);});
 maj();
 </script></body></html>'''
     html_path.write_text(html.replace('__DATA__', data), encoding='utf-8')
@@ -752,48 +941,78 @@ maj();
 # ---------------------------------------------------------------- génération
 def main():
     par_amb = {}
+    zones_data = []
     manifeste = {'titre': 'Falaises de Métano / Treasure Town — tileset animé',
                  'grille_tuile': T, 'grille_kit': 8, 'frames': FRAMES, 'duree_ms': DUREE,
                  'ambiances': AMBIANCES, 'planche': [COLS, ROWS],
-                 'tuiles': [{'id': i, 'nom': n, 'usage': d, 'anime': a,
+                 'tuiles': [{'id': i, 'nom': n, 'usage': d, 'anime': a, 'classe': CLASSES[n],
                              'colonne': i % COLS, 'ligne': i // COLS}
                             for i, (n, d, a, _f) in enumerate(TUILES)],
-                 'fichiers': {}}
+                 'zones': [], 'fichiers': {}}
+    brutes = [planche(f) for f in range(FRAMES)]
     for amb in AMBIANCES:
         d = OUT / amb
         d.mkdir(exist_ok=True)
-        frames = [teinte(planche(f), amb) for f in range(FRAMES)]
-        scs = [teinte(scene(f), amb) for f in range(FRAMES)]
-        sc = scs[0]
+        frames = [teinte(im.copy(), amb) for im in brutes] if amb != 'jour' else [im.copy() for im in brutes]
         for i, im in enumerate(frames):
             im.save(d / f'planche_f{i + 1}.png', optimize=True)
         aseprite(d / f'tileset_falaises_{amb}.aseprite', frames, DUREE, T)
         apng(d / 'animation.png', frames, DUREE)
-        scene_png = []
-        for q in scs:
-            buf = io.BytesIO()
-            q.save(buf, format='PNG', optimize=True)
-            scene_png.append(buf.getvalue())
-        sc.save(OUT / f'exemple_{amb}.png', optimize=True)
         fps = []
         for im in frames:
             b = io.BytesIO()
             im.save(b, format='PNG', optimize=True)
             fps.append(b.getvalue())
-        par_amb[amb] = {'frames_png': fps, 'scene_png': scene_png}
+        par_amb[amb] = {'frames_png': fps}
         manifeste['fichiers'][amb] = {
             'aseprite': f'falaises/{amb}/tileset_falaises_{amb}.aseprite',
             'planches': [f'falaises/{amb}/planche_f{i + 1}.png' for i in range(FRAMES)],
-            'apng': f'falaises/{amb}/animation.png',
-            'exemple': f'falaises/exemple_{amb}.png'}
+            'apng': f'falaises/{amb}/animation.png'}
+    # ---- zones map : rendu pixel perfect depuis les tuiles canoniques
+    zdir = OUT / 'zones'
+    zdir.mkdir(exist_ok=True)
+    for zone in ZONES:
+        couches, comp = rend_zone(zone, brutes)
+        zd = zdir / zone['nom']
+        zd.mkdir(exist_ok=True)
+        zrec = {'nom': zone['nom'], 'desc': zone['desc'], 'cellules': [zone['w'], zone['h']],
+                'dimensions_px': [zone['w'] * T, zone['h'] * T], 'poses': len(zone['poses']),
+                'fichiers': {'calques': {}, 'composites': {}}}
+        zdata = {'nom': zone['nom'], 'w': zone['w'], 'h': zone['h'], 'desc': zone['desc'],
+                 'frames': {}, 'layers': {}}
+        for c in COUCHES:
+            b = io.BytesIO()
+            couches[c][0].save(b, format='PNG', optimize=True)
+            zdata['layers'][c] = 'data:image/png;base64,' + base64.b64encode(b.getvalue()).decode()
+            couches[c][0].save(zd / f'{c}_jour.png', optimize=True)
+            n = teinte(couches[c][0].copy(), 'nuit')
+            n.save(zd / f'{c}_nuit.png', optimize=True)
+            zrec['fichiers']['calques'][c] = {'jour': f'falaises/zones/{zone["nom"]}/{c}_jour.png',
+                                              'nuit': f'falaises/zones/{zone["nom"]}/{c}_nuit.png'}
+        for amb in AMBIANCES:
+            fr = comp if amb == 'jour' else [teinte(im.copy(), amb) for im in comp]
+            bufs = []
+            for im in fr:
+                b = io.BytesIO()
+                im.save(b, format='PNG', optimize=True)
+                bufs.append(b.getvalue())
+            fr[0].save(zd / f'zone_{amb}.png', optimize=True)
+            zrec['fichiers']['composites'][amb] = f'falaises/zones/{zone["nom"]}/zone_{amb}.png'
+            zdata['frames'][amb] = ['data:image/png;base64,' + base64.b64encode(b).decode() for b in bufs]
+        apng(zd / 'zone_jour_anim.png', comp, DUREE)
+        zrec['fichiers']['apng'] = f'falaises/zones/{zone["nom"]}/zone_jour_anim.png'
+        zrec['tuiles_utilisees'] = sorted({n for (_c, _r, n) in zone['poses']})
+        manifeste['zones'].append(zrec)
+        zones_data.append(zdata)
     (OUT / 'falaises.json').write_text(json.dumps(manifeste, ensure_ascii=False, indent=2), encoding='utf-8')
-    apercu(R / 'apercu_falaises.html', par_amb)
+    apercu(R / 'apercu_falaises.html', par_amb, zones_data)
     kit = json.loads((R / 'kit.json').read_text())
     kit['falaises'] = {'manifeste': 'falaises/falaises.json', 'apercu': 'apercu_falaises.html',
                        'tuiles': len(TUILES), 'frames': FRAMES, 'duree_ms': DUREE,
-                       'ambiances': AMBIANCES}
+                       'ambiances': AMBIANCES, 'zones': [z['nom'] for z in ZONES]}
     (R / 'kit.json').write_text(json.dumps(kit, ensure_ascii=False, indent=2), encoding='utf-8')
-    print('OK falaises :', len(TUILES), 'tuiles ×', FRAMES, 'frames ×', len(AMBIANCES), 'ambiances')
+    print('OK falaises :', len(TUILES), 'tuiles ×', FRAMES, 'frames ×', len(AMBIANCES),
+          'ambiances +', len(ZONES), 'zones map pixel perfect')
 
 
 if __name__ == '__main__':

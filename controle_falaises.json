@@ -20,12 +20,12 @@
         "interne_y": 6.63
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     },
     "nuit": {
@@ -48,12 +48,12 @@
         "interne_y": 2.53
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     },
     "crepuscule": {
@@ -76,12 +76,12 @@
         "interne_y": 3.41
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     },
     "aube": {
@@ -104,12 +104,12 @@
         "interne_y": 5.74
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     },
     "soir": {
@@ -132,12 +132,12 @@
         "interne_y": 5.53
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     },
     "orageux": {
@@ -160,12 +160,12 @@
         "interne_y": 4.27
       },
       "apng_frames": 4,
-      "exemple": {
+      "zone_exemple": {
         "dimensions": [
           480,
           240
         ],
-        "rempli": 0.589
+        "rempli": 0.588
       }
     }
   },
@@ -175,35 +175,138 @@
   "grille_tuile": 24,
   "moyennes_rgb": {
     "jour": [
-      183.0,
+      183.5,
       149.4,
-      96.4
+      96.3
     ],
     "nuit": [
-      74.3,
+      74.5,
       60.5,
       60.1
     ],
     "crepuscule": [
-      95.5,
+      95.7,
       67.4,
       97.1
     ],
     "aube": [
-      183.6,
+      184.0,
       121.1,
-      100.6
+      100.5
     ],
     "soir": [
-      185.0,
-      125.0,
+      185.5,
+      124.9,
       77.1
     ],
     "orageux": [
-      118.7,
+      119.0,
       91.2,
       82.0
     ]
   },
+  "zones": {
+    "col_montagne": {
+      "cellules": [
+        16,
+        10
+      ],
+      "poses": 155,
+      "calques": [
+        "ground",
+        "falaise",
+        "decor"
+      ],
+      "composite_identique_aux_calques": true,
+      "cellules_canoniques": true,
+      "apng_frames": 4
+    },
+    "plateaux_ponts": {
+      "cellules": [
+        20,
+        10
+      ],
+      "poses": 146,
+      "calques": [
+        "ground",
+        "falaise",
+        "decor"
+      ],
+      "composite_identique_aux_calques": true,
+      "cellules_canoniques": true,
+      "apng_frames": 4
+    },
+    "gouffre_passerelle": {
+      "cellules": [
+        16,
+        10
+      ],
+      "poses": 102,
+      "calques": [
+        "ground",
+        "falaise",
+        "decor"
+      ],
+      "composite_identique_aux_calques": true,
+      "cellules_canoniques": true,
+      "apng_frames": 4
+    },
+    "corniche_escalier": {
+      "cellules": [
+        16,
+        10
+      ],
+      "poses": 131,
+      "calques": [
+        "ground",
+        "falaise",
+        "decor"
+      ],
+      "composite_identique_aux_calques": true,
+      "cellules_canoniques": true,
+      "apng_frames": 4
+    },
+    "worldmap": {
+      "cellules": [
+        32,
+        18
+      ],
+      "poses": 482,
+      "calques": [
+        "ground",
+        "falaise",
+        "decor"
+      ],
+      "composite_identique_aux_calques": true,
+      "cellules_canoniques": true,
+      "apng_frames": 4
+    }
+  },
+  "tuiles_couvertes_par_zones": [
+    "bord_droit",
+    "bord_gauche",
+    "brume",
+    "coin_haut_droit",
+    "coin_haut_gauche",
+    "eboulis",
+    "echelle",
+    "escalier_droit",
+    "escalier_gauche",
+    "face_roche",
+    "face_roche_fissure",
+    "face_roche_mousse",
+    "fleurs",
+    "lierre",
+    "pente_droite",
+    "pente_gauche",
+    "pilier_bois",
+    "pilier_corde",
+    "plateau_herbe",
+    "pont_bois",
+    "pont_corde",
+    "sommet_herbe",
+    "sommet_roche_nu",
+    "touffe_herbe"
+  ],
   "apercu_hors_ligne": true
 }
