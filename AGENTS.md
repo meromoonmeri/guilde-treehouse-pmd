@@ -30,3 +30,16 @@ Le lot `sprites/metano_import_png/` inaugure les blocs natifs complets et les no
 
 Le commit utilisateur `3bc185bec2d5aa295f32825927db9d25bb936f75` était sur `arena/01a095e8-guilde-treehouse-pmd`, PAS sur main. Toujours vérifier la branche distante de la session, pas seulement origin/main, pour les nouveaux uploads utilisateur.
 Les fichiers `IMG_4888.jpeg`, `IMG_4889.png`, `IMG_4890.png`, `IMG_4892.png` représentent deux lieux côtiers (bureau de Bekipan ; terrasse de campement avec grotte), avec plusieurs ambiances/références du premier. Pour « les layouts que j’ai commit », utiliser ces fichiers, pas les anciens cirques de calibration. Les deux générations diurnes sont dans `source/layouts_commit_3bc185b/`, explicitement non certifiées comme tuiles canoniques.
+
+## Correction demandée : vraie variante Métano nuit d’Abyss to Ascension
+
+La référence existe dans `meromoonmeri/new-era-abyss-to-ascension-V4`, commit
+`55860b9a5eb48697a3cea3a8bdfce5f0529d6141` : `Metano_Town_Base_Night.tile`,
+`Metano_Town_Cliffs_Night.tile`, `Metano_Town_Fringe_Night.tile`.
+Copies et preuves : `source/cote_v4_abyss/`. Utiliser leurs pixels nocturnes
+existants, pas la formule Guilde/Sharpedo pour le terrain. Cette dernière
+reste la référence des fonds. L’utilisateur demande toute la roche dans le
+style Métano, sans fragments réinterprétés par le générateur. Le pack V3
+conservait encore lisière et ombres générées : ne pas le considérer corrigé.
+Le nouvel échantillon natif est une calibration de matière, pas une validation
+des retours, des raccords ni des volumes, et pas un remplacement des 20 Ground.
