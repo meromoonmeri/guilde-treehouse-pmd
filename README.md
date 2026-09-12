@@ -25,6 +25,10 @@ Cette reprise conserve l’univers graphique du **premier pack**. Les accès ont
 
 Les layers finals sont livrés sur fond chroma-key **#FF00FF** : ciel ouvert sans nuage, nuages en overlay à wrap horizontal parfait, mer avec cycle de palette sans déplacement géométrique, plateaux naturels et falaise naturelle sans aucune construction. Les PNG magenta, les exports RGBA/Aseprite/Tiled et un aperçu avec grille **8 × 8 px** sont fournis. Ouvrir [`apercu_exterieur_original.html`](apercu_exterieur_original.html).
 
+## Audit PMUniverse — sources graphiques externes
+
+L’audit exhaustif des six dépôts publics de [`PMUniverse`](https://github.com/PMUniverse) est documenté dans [`AUDIT_PMUNIVERSE_ASSETS.md`](AUDIT_PMUNIVERSE_ASSETS.md). Il fournit le catalogue complet et vérifiable des tilesets, conteneurs de sprites/portraits, PNG, sources Paint.NET, fontes, données de cartes et archives, avec commits figés, licences déclarées, provenance, tailles et hachages. Les assets tiers ne sont volontairement **pas** ajoutés au kit : voir [`audit_pmuniverse_assets/`](audit_pmuniverse_assets/README.md) pour les manifestes et la procédure de reproduction.
+
 ## Règles effectivement appliquées
 
 - **Est / Ouest :** le plancher traverse une interruption de la bordure latérale. Pas de battant, de portique ni d’arche ajoutée sur ces accès.

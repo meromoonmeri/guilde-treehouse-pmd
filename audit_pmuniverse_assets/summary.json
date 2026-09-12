@@ -1,0 +1,199 @@
+{
+  "organization": "PMUniverse",
+  "audit_date": "2026-09-13",
+  "repository_count": 6,
+  "asset_file_count": 2241,
+  "asset_byte_count": 134714831,
+  "summary_by_category": [
+    {
+      "repository": "PMUniverse/Installer",
+      "scope": "direct_visual",
+      "format": "icon",
+      "file_count": 1,
+      "size_bytes": 98854
+    },
+    {
+      "repository": "PMUniverse/Installer",
+      "scope": "direct_visual",
+      "format": "raster_png",
+      "file_count": 2,
+      "size_bytes": 77528
+    },
+    {
+      "repository": "PMUniverse/Installer",
+      "scope": "resource_descriptor",
+      "format": "dotnet_resx",
+      "file_count": 15,
+      "size_bytes": 88931
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "direct_visual",
+      "format": "icon",
+      "file_count": 2,
+      "size_bytes": 19324
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "direct_visual",
+      "format": "paintdotnet_source",
+      "file_count": 4,
+      "size_bytes": 19884
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "direct_visual",
+      "format": "raster_png",
+      "file_count": 550,
+      "size_bytes": 5615838
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "map_data",
+      "format": "pmu_map_data",
+      "file_count": 140,
+      "size_bytes": 42084480
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "resource_descriptor",
+      "format": "dotnet_resx",
+      "file_count": 3,
+      "size_bytes": 17864
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "typography",
+      "format": "font_truetype",
+      "file_count": 5,
+      "size_bytes": 1995000
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "visual_container",
+      "format": "pmu_portrait_container",
+      "file_count": 751,
+      "size_bytes": 1413412
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "visual_container",
+      "format": "pmu_sprite_container",
+      "file_count": 751,
+      "size_bytes": 11952321
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "scope": "visual_container",
+      "format": "pmu_tileset_container",
+      "file_count": 11,
+      "size_bytes": 19790810
+    },
+    {
+      "repository": "PMUniverse/PMU-Server",
+      "scope": "archive_review",
+      "format": "zip_archive",
+      "file_count": 1,
+      "size_bytes": 51512308
+    },
+    {
+      "repository": "PMUniverse/PMU-Server",
+      "scope": "resource_descriptor",
+      "format": "dotnet_resx",
+      "file_count": 5,
+      "size_bytes": 28277
+    }
+  ],
+  "release_assets": [
+    {
+      "repository": "PMUniverse/framework",
+      "release_count": 0,
+      "assets": []
+    },
+    {
+      "repository": "PMUniverse/Installer",
+      "release_count": 0,
+      "assets": []
+    },
+    {
+      "repository": "PMUniverse/PMU-Client",
+      "release_count": 0,
+      "assets": []
+    },
+    {
+      "repository": "PMUniverse/PMU-Server",
+      "release_count": 0,
+      "assets": []
+    },
+    {
+      "repository": "PMUniverse/Scripts",
+      "release_count": 0,
+      "assets": []
+    },
+    {
+      "repository": "PMUniverse/Updater",
+      "release_count": 0,
+      "assets": []
+    }
+  ],
+  "inspected_archives": [
+    {
+      "repository": "PMUniverse/PMU-Server",
+      "snapshot_commit": "8fb424a520e559e94cff4973def8172cf29d90a2",
+      "path": "Content_Data.zip",
+      "scope": "archive_review",
+      "format": "zip_archive",
+      "size_bytes": 51512308,
+      "git_blob_sha1": "76a34aff1fcbe96d00b4ad1dc361cb013d6508ed",
+      "sha256": "e26e411e364fb992042fd1d85df01c40b1458c363b9623d8864df35d3d3914a5",
+      "github_url": "https://github.com/PMUniverse/PMU-Server/blob/8fb424a520e559e94cff4973def8172cf29d90a2/Content_Data.zip",
+      "raw_url": "https://raw.githubusercontent.com/PMUniverse/PMU-Server/8fb424a520e559e94cff4973def8172cf29d90a2/Content_Data.zip",
+      "provenance_and_license_note": "PMU repository file; inspect before redistributing.",
+      "inspection": {
+        "inspected": true,
+        "sha256": "e26e411e364fb992042fd1d85df01c40b1458c363b9623d8864df35d3d3914a5",
+        "file_count": 4,
+        "uncompressed_bytes": 1155686469,
+        "compressed_bytes": 51511716,
+        "extension_counts": {
+          ".bat": 1,
+          ".sql": 3
+        },
+        "entries": [
+          {
+            "path": "LoadTableBackup.bat",
+            "uncompressed_size": 510,
+            "compressed_size": 181,
+            "crc32": "a98036ce"
+          },
+          {
+            "path": "pmu_data.sql",
+            "uncompressed_size": 1155666067,
+            "compressed_size": 51509156,
+            "crc32": "c1ce55f1"
+          },
+          {
+            "path": "pmu_players.sql",
+            "uncompressed_size": 19835,
+            "compressed_size": 2324,
+            "crc32": "3aabbaf0"
+          },
+          {
+            "path": "pmu_schemas.sql",
+            "uncompressed_size": 57,
+            "compressed_size": 55,
+            "crc32": "2819aa4f"
+          }
+        ]
+      }
+    }
+  ],
+  "pmuniverse_client_container_analysis": {
+    "inspected": true,
+    "embedded_pngs": {
+      "tile": 52486,
+      "sprite": 12676,
+      "portrait": 749
+    }
+  }
+}
