@@ -1,0 +1,576 @@
+{
+  "reference_agent_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+  "clouds": {
+    "source_size": [
+      480,
+      408
+    ],
+    "crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "strip_size": [
+      1440,
+      208
+    ],
+    "speed_px_s": -4
+  },
+  "night": {
+    "multiply": [
+      0.4,
+      0.42,
+      0.58
+    ],
+    "add": [
+      4,
+      8,
+      15
+    ],
+    "saturation": 0.8
+  },
+  "sources": {
+    "Metano_Town_Base": {
+      "path": "source/falaises_metano/natifs/Metano_Town_Base.tile",
+      "sha256": "ee17ebd268f05bd71e337e1ac5773426d8038b9df169c4cb4344fe656a9a6409",
+      "git_blob_sha1": "19b295495e49819b356c02d13a574616dd67d36c"
+    },
+    "Metano_Town_Cliffs": {
+      "path": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+      "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+      "git_blob_sha1": "6d342b97ebfcad3e9aa6022b49e0f3b5b9d75640"
+    },
+    "Metano_Town_Animation_Tileset": {
+      "path": "source/eau_metano/natifs/Metano_Town_Animation_Tileset.tile",
+      "sha256": "51ee6afbd9da3747e060bf9c1f3dd3d9305853fbcb7cbf582b51b6fbea81e8d0",
+      "git_blob_sha1": "8b01d1730ef537ecc5578101fc8c1ea9630a3569"
+    },
+    "Metano_Town_River_Animation_1": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_1.tile",
+      "sha256": "e1c284b767a2f1195dc291756f44994fe904ad315c92e6d40cefc3a7ab8f9d81",
+      "git_blob_sha1": "97d615195ef9488de15d28060a77e88b03c989a1"
+    },
+    "Metano_Town_River_Animation_2": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_2.tile",
+      "sha256": "4ebf844d4e3ed7b21ff57dd8b29f715b9494090f5417e763a754981add10a230",
+      "git_blob_sha1": "6956ccd5d7053faaa217edb7382939155f282f6c"
+    },
+    "Metano_Town_River_Animation_3": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_3.tile",
+      "sha256": "f712122bcc59e589150b4f3fb8bf689ac595ea96464f54e455f45967d9500e22",
+      "git_blob_sha1": "21243860eef0e229957478d86f5a155b631aacbb"
+    },
+    "Metano_Town_River_Animation_4": {
+      "path": "source/eau_metano/natifs/Metano_Town_River_Animation_4.tile",
+      "sha256": "e6d8ff874ea3d687fb2039927700547703e19821881491b52ca43918dbf3704d",
+      "git_blob_sha1": "5e5528a0d2a5a8ca380db320186c4868ba1277f3"
+    }
+  },
+  "sea_frame_length": 10,
+  "zones": [
+    {
+      "id": "11_anses_jumelles",
+      "title": "Les anses jumelles",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        512
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2",
+        "Prairie 3",
+        "Falaise 3"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_11_anses_jumelles_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_11_anses_jumelles_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "12_balcon_asymetrique",
+      "title": "Le balcon asymétrique",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_12_balcon_asymetrique_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_12_balcon_asymetrique_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "13_chapelet",
+      "title": "Le chapelet marin",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2",
+        "Prairie 3",
+        "Falaise 3"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_13_chapelet_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_13_chapelet_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "14_corniches_paralleles",
+      "title": "Les corniches parallèles",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_14_corniches_paralleles_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_14_corniches_paralleles_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "15_mesas_decalees",
+      "title": "Les mesas décalées",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        608,
+        320
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_15_mesas_decalees_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_15_mesas_decalees_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "16_couronne",
+      "title": "La couronne des embruns",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2",
+        "Prairie 3",
+        "Falaise 3"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_16_couronne_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_16_couronne_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "17_chenal",
+      "title": "Le chenal profond",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_17_chenal_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_17_chenal_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "18_esplanade",
+      "title": "La grande esplanade",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        832,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_18_esplanade_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_18_esplanade_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "19_eperon",
+      "title": "L’éperon occidental",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        624,
+        240
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_19_eperon_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_19_eperon_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    },
+    {
+      "id": "20_marches_levant",
+      "title": "Les marches du levant",
+      "size": [
+        1312,
+        1024
+      ],
+      "new": true,
+      "entry": [
+        656,
+        336
+      ],
+      "terrain_provenance": "native modules + alpha-separated north shore",
+      "planes": [
+        "Prairie 1",
+        "Falaise 1",
+        "Prairie 2",
+        "Falaise 2",
+        "Prairie 3",
+        "Falaise 3"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "cote20_20_marches_levant_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "cote20_20_marches_levant_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      }
+    }
+  ],
+  "native_runtime_tested": false
+}

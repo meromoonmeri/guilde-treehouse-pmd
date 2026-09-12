@@ -6,3 +6,9 @@ __pycache__/
 .env.*
 
 .venv/
+
+# V3: reproducible intermediate/composite copies; native exports remain in the
+# standalone lossless viewer and PMDO ZIP. Keep approved sources and core layers.
+/sprites/cote_v3_0812/*/AVANT_ROCHE.png
+/sprites/cote_v3_0812/*/jour_*.png
+/sprites/cote_v3_0812/*/nuit_*.png

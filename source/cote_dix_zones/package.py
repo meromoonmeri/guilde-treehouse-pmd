@@ -13,6 +13,9 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 WEB=ROOT/'sprites/cote_dix_zones'
 PACK=Path.home()/'.cache/cote_dix_pack'
+VIEWER_NAME='apercu_dix_zones_metano.html'
+ZIP_NAME='cote_metano_dix_zones_pmdo.zip'
+EXPECTED_TOTAL=24
 
 
 def main():
@@ -35,10 +38,10 @@ def main():
         images[name]='data:image/webp;base64,'+base64.b64encode(encoded).decode()
     data={'manifest':manifest,'images':images}
     html=(HERE/'viewer.html').read_text().replace('__DATA__',json.dumps(data,ensure_ascii=False,separators=(',',':')))
-    (ROOT/'apercu_dix_zones_metano.html').write_text(html)
-    archive_html=html.replace('<a href="cote_metano_dix_zones_pmdo.zip" download>Pack PMDO ↓</a>',
+    (ROOT/VIEWER_NAME).write_text(html)
+    archive_html=html.replace(f'<a href="{ZIP_NAME}" download>Pack PMDO ↓</a>',
                               '<span class="small">Pack natif déjà extrait · voir README.md</span>')
-    (PACK/'apercu_dix_zones_metano.html').write_text(archive_html)
+    (PACK/VIEWER_NAME).write_text(archive_html)
     # Presentation only, reduced by an integer factor; all real assets stay native.
     board=Image.new('RGB',(1312,5*288),'#101d2b');draw=ImageDraw.Draw(board)
     for i,z in enumerate(manifest['zones'][:10]):
@@ -55,7 +58,7 @@ def main():
     report['standalone_viewer_lossless_images']=len(images)
     for p in [PACK/'verification.json',WEB/'verification.json',HERE/'verification.json']:
         p.write_text(json.dumps(report,ensure_ascii=False,indent=2))
-    output=ROOT/'cote_metano_dix_zones_pmdo.zip'
+    output=ROOT/ZIP_NAME
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
         for path in sorted(PACK.rglob('*')):
             if path.is_file():
@@ -64,7 +67,7 @@ def main():
                 archive.writestr(info,path.read_bytes(),compresslevel=9)
     with zipfile.ZipFile(output) as archive:
         assert archive.testzip() is None
-        assert len([n for n in archive.namelist() if n.endswith('.rsground')])==24
+        assert len([n for n in archive.namelist() if n.endswith('.rsground')])==EXPECTED_TOTAL
         assert not any(n.endswith('index.idx') for n in archive.namelist())
     print(f'{len(images)} images WebP sans perte; viewer {len(html.encode())/2**20:.2f} MiB')
     print(f'Pack natif verifie : {output} ({output.stat().st_size/2**20:.2f} MiB)')

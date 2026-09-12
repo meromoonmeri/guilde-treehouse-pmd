@@ -24,6 +24,9 @@ REF = HERE / 'reference_autre_agent'
 OUT = Path.home() / '.cache/cote_dix_pack'
 WEB = ROOT / 'sprites/cote_dix_zones'
 SIZE = (1312, 1024)
+SHEET_PREFIX = "C10_"
+MAP_PREFIX = "cote10_"
+INCLUDE_V2 = True
 # x, native-sheet Y offset, number of 64px middle modules, wall extension, rear Y.
 # Topology follows the ten panels of the generated composition guide, not its pixels.
 CONFIG = [
@@ -97,7 +100,7 @@ def backgrounds():
         clouds = grade(strip, mode)
         out[mode] = (sky, astres, clouds)
         for kind, im in [('CIEL',sky),('ASTRES',astres),('NUAGES',clouds)]:
-            name = 'C10_'+mode.upper()+'_'+kind
+            name = SHEET_PREFIX+mode.upper()+'_'+kind
             N.write_dir(OUT / f'Content/BG/{name}.dir', im)
             png(im, WEB / 'fonds' / f'{mode}_{kind.lower()}.png')
     return out, {'source_size': source.size, 'crops': crops, 'destinations': dests,
@@ -192,7 +195,7 @@ def make_map(asset, title, mode, planes, sea, banks, template):
     obj['AssetName'] = asset
     obj['Comment'] = 'Base editable. Collisions libres. Nuages et nuit Guild/Sharpedo. Voir README du pack.'
     obj['obstacles'] = [[{'Bounds':{'X':x*8,'Y':y*8,'Width':8,'Height':8},'Tags':0} for y in range(h)] for x in range(w)]
-    sky_name = 'C10_'+mode.upper()
+    sky_name = SHEET_PREFIX+mode.upper()
     obj['Background'] = {'$type':'RogueEssence.Dungeon.LayeredBG, RogueEssence', 'Layers':[
         {'BG':N.background(sky_name+'_CIEL')}, {'BG':N.background(sky_name+'_ASTRES')},
         {'BG':N.background(sky_name+'_NUAGES',0,-4,True)}]}
@@ -228,8 +231,8 @@ def main():
     template.pop('Layers');template.pop('obstacles')
     bg, cloud_info = backgrounds()
     source_bank = Bank()
-    banks = {mode:{'sea':N.TileBank('C10_'+mode.upper()+'_MER'),
-                   'terrain':N.TileBank('C10_'+mode.upper()+'_TERRAIN')} for mode in ['jour','nuit']}
+    banks = {mode:{'sea':N.TileBank(SHEET_PREFIX+mode.upper()+'_MER'),
+                   'terrain':N.TileBank(SHEET_PREFIX+mode.upper()+'_TERRAIN')} for mode in ['jour','nuit']}
     original_sea = [Image.open(ROOT/f'sprites/cote_v2/01_promontoire/COTEV2_01_02_MER_PALETTE_{i:02d}.png').convert('RGBA') for i in range(8)]
     extended = []
     for im in original_sea:
@@ -248,7 +251,7 @@ def main():
                 'sources':source_bank.source_info,'sea_frame_length':10,'zones':[],
                 'native_runtime_tested':False}
     configs = [(slug,title,walls,None) for slug,title,walls in CONFIG]
-    for i,slug in enumerate(['promontoire','terrasse'],1):
+    for i,slug in enumerate(['promontoire','terrasse'] if INCLUDE_V2 else [],1):
         path = ROOT/f'sprites/cote_v2/{i:02d}_{slug}/COTEV2_{i:02d}_03_TERRAIN.png'
         configs.append(('v2_'+slug,'V2 '+slug,None,path))
     for slug,title,walls,existing in configs:
@@ -278,7 +281,7 @@ def main():
         for mode in ['jour','nuit']:
             variants=[(name,grade(im,mode)) for name,im in planes]
             sea=[im.crop((0,0,*size)) for im in seas[mode]]
-            asset='cote10_'+slug+'_'+mode
+            asset=MAP_PREFIX+slug+'_'+mode
             doc=make_map(asset,title,mode,variants,sea,banks[mode],template)
             doc['Object']['Entities'][0]['Markers'][0]['Collider'].update(X=cx-8,Y=cy-8)
             N.save(OUT/f'Data/Ground/{asset}.rsground',json.dumps(doc,separators=(',',':')).encode())
@@ -301,7 +304,7 @@ def main():
             bank.write(OUT/f'Content/Tile/{bank.name}.tile')
     for path in [WEB/'manifest.json',OUT/'manifest.json']:
         N.save(path,json.dumps(manifest,ensure_ascii=False,indent=2).encode())
-    print('24 native Ground maps generated; validation still required.')
+    print(f'{len(configs)*2} native Ground maps generated; validation still required.')
 
 
 if __name__=='__main__':

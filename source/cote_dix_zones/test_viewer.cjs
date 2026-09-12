@@ -1,6 +1,6 @@
 // DOM-mocked interaction smoke test, NOT a real browser/rendering test.
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
-const html=fs.readFileSync('apercu_dix_zones_metano.html','utf8');
+const html=fs.readFileSync(process.argv[2]||'apercu_dix_zones_metano.html','utf8');
 const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
 const all=[],nodes={},downloads=[];
 class Element {
@@ -21,7 +21,8 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
 (async()=>{
  await settle();
  assert(vm.runInContext('ready',sandbox));
- for(let i=0;i<12;i++){
+ const count=vm.runInContext('zones.length',sandbox);
+ for(let i=0;i<count;i++){
   nodes.zone.value=String(i);nodes.zone.onchange();await settle();
   for(const mode of ['day','night']){
    nodes[mode].onclick();await settle();
@@ -35,7 +36,7 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
  }
  await nodes.board.onclick();
  assert(vm.runInContext('Object.keys(images).length<=17',sandbox));
- assert.equal(downloads.length,73);
+ assert.equal(downloads.length,count*6+1);
  assert.deepEqual(downloads.at(-1),[1312,2720]);
- console.log('PASS: 24 selections, layer/scene/dry exports, board, lazy image eviction (DOM mocks only).');
+ console.log(`PASS: ${count*2} selections, layer/scene/dry exports, board, lazy image eviction (DOM mocks only).`);
 })().catch(error=>{console.error(error);process.exitCode=1});

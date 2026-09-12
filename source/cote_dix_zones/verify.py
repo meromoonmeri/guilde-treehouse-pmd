@@ -18,6 +18,10 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 PACK=Path.home()/'.cache/cote_dix_pack'
 WEB=ROOT/'sprites/cote_dix_zones'
+REPORT_DIR=HERE
+EXPECTED_TOTAL=24
+PREFIX='C10_'
+COMPARE_PREVIOUS=None
 sys.path.insert(0,str(ROOT/'source/pmdo_cote'))
 spec=importlib.util.spec_from_file_location('native_checks',ROOT/'source/pmdo_cote/verify.py')
 V=importlib.util.module_from_spec(spec);spec.loader.exec_module(V)
@@ -49,8 +53,8 @@ def main():
     for f in refs['files']:
         raw=(HERE/'reference_autre_agent'/f['local']).read_bytes()
         assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==f['blob']
-    assert len(m['zones'])==12 and sum(z['new'] for z in m['zones'])==10
-    assert len(list((PACK/'Data/Ground').glob('*.rsground')))==24
+    assert len(m['zones'])==EXPECTED_TOTAL//2 and sum(z['new'] for z in m['zones'])==10
+    assert len(list((PACK/'Data/Ground').glob('*.rsground')))==EXPECTED_TOTAL
     for src in m['sources'].values():
         assert hashlib.sha256((ROOT/src['path']).read_bytes()).hexdigest()==src['sha256']
     sources={name:V.read_tile(ROOT/m['sources'][name]['path']) for name in ['Metano_Town_Base','Metano_Town_Cliffs']}
@@ -58,7 +62,7 @@ def main():
     background={p.stem:V.read_dir(p) for p in (PACK/'Content/BG').glob('*.dir')}
     for mode in ['jour','nuit']:
         for kind in ['ciel','astres','nuages']:
-            assert np.array_equal(np.array(background[f'C10_{mode.upper()}_{kind.upper()}']),V.expected(WEB/'fonds'/f'{mode}_{kind}.png'))
+            assert np.array_equal(np.array(background[f'{PREFIX}{mode.upper()}_{kind.upper()}']),V.expected(WEB/'fonds'/f'{mode}_{kind}.png'))
     original=Image.open(HERE/'reference_autre_agent/source__falaise__nuages_native.png').convert('RGBA')
     reconstructed=Image.new('RGBA',original.size)
     strip=Image.new('RGBA',tuple(m['clouds']['strip_size']))
@@ -71,7 +75,7 @@ def main():
     a=cloud_image(strip,(1312,1024),0)
     equal(a,cloud_image(strip,a.size,1440))
     equal(cloud_image(strip,a.size,1439).crop((1,0,1312,1024)),a.crop((0,0,1311,1024)))
-    report={'status':'PASS','maps':24,'new_layouts':10,'day_night_variants':20,'styled_previous_variants':4,
+    report={'status':'PASS','maps':EXPECTED_TOTAL,'new_layouts':10,'day_night_variants':20,'styled_previous_variants':EXPECTED_TOTAL-20,
             'pmdo_runtime_tested':False,'source_agent_blobs_exact':True,
             'cloud_pixels_preserved':True,'night_formula_exact':True,
             'sea_native_frame_length':10,'cloud_speed_px_s':-4,'zones':[],
@@ -80,6 +84,9 @@ def main():
                       'north/side shoreline tiles have river-blue pixels removed through alpha',
                       'new module junctions, collision and gameplay need in-engine review']}
     unique=set();sea_templates={}
+    if COMPARE_PREVIOUS:
+        for path in Path(COMPARE_PREVIOUS).glob('*/jour_composition.png'):
+            unique.add(hashlib.sha256(Image.open(path).convert('RGBA').tobytes()).hexdigest())
     for zone in m['zones']:
         size=tuple(zone['size']);w,h=size[0]//8,size[1]//8
         base=WEB/zone['id']
@@ -128,7 +135,7 @@ def main():
             assert marker['EntName']=='entrance' and [marker['Collider']['X'],marker['Collider']['Y']]==zone['entry']
             bgs=o['Background']['Layers']
             assert o['Background']['$type']=='RogueEssence.Dungeon.LayeredBG, RogueEssence'
-            assert [b['BG']['BGAnim']['AnimIndex'] for b in bgs]==[f'C10_{mode.upper()}_{k}' for k in ['CIEL','ASTRES','NUAGES']]
+            assert [b['BG']['BGAnim']['AnimIndex'] for b in bgs]==[f'{PREFIX}{mode.upper()}_{k}' for k in ['CIEL','ASTRES','NUAGES']]
             assert all(b['BG']['Parallax']=='1, 1' for b in bgs)
             cloud=bgs[-1]['BG'];assert cloud['BGMovement']=={'X':-4,'Y':0} and cloud['RepeatX'] and not cloud['RepeatY']
             if mode not in sea_templates:
@@ -165,17 +172,17 @@ def main():
         install(PACK,mod)
         nodes=read_index(td/'index.idx');assert len(nodes)==5 and nodes['AlreadyThere']==raw[:8+count*16]
         assert next(td.glob('*.bak')).read_bytes()==old
-        assert len(list((mod/'Data/Ground').glob('*.rsground')))==24
-        assert len(list((mod/'Data/Script/test_mod/ground').glob('*/init.lua')))==24
+        assert len(list((mod/'Data/Ground').glob('*.rsground')))==EXPECTED_TOTAL
+        assert len(list((mod/'Data/Script/test_mod/ground').glob('*/init.lua')))==EXPECTED_TOTAL
         edited=next((mod/'Data/Ground').glob('*.rsground'));edited.write_text('user edited structures')
         try:
             install(PACK,mod);raise AssertionError('An edited map was overwritten')
         except ValueError as exc:assert 'Conflits' in str(exc)
         assert edited.read_text()=='user edited structures'
     report['installer_index_merge_and_protection']='PASS'
-    for path in [HERE/'verification.json',PACK/'verification.json',WEB/'verification.json']:
+    for path in [REPORT_DIR/'verification.json',PACK/'verification.json',WEB/'verification.json']:
         path.write_text(json.dumps(report,ensure_ascii=False,indent=2))
-    print('PASS: 24 maps; 10 unique new layouts; no PMDO runtime test.')
+    print(f'PASS: {EXPECTED_TOTAL} maps; 10 unique new layouts; no PMDO runtime test.')
 
 
 if __name__=='__main__':main()

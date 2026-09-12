@@ -1,5 +1,23 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveau — formes V2, pack ciblé PMDO 0.8.12
+
+- **[Voir les dix côtes jour/nuit](apercu_cotes_v2_0812.html)** — silhouettes organiques, calques activables, grille 8 px et exports natifs.
+- **[Télécharger les 20 Ground et leur projet séparé](cotes_v2_0812_pmdo.zip)** — dossier `cotes_v2_0812` à placer dans `PMDO/MODS/`, index complet et ressources incluses.
+- **[Installation dans un projet séparé ou existant](source/cote_v3_0812/README.md)** · [contrôles](source/cote_v3_0812/verification.json).
+
+Bords ouest/est/sud joints par recadrage, sans étirement. Roche brute Métano à 1×, ombres séparées ; herbe et lisières générées. Nuages et nuit Guilde / Sharpedo. **Format et fichiers vérifiés par code, ouverture réelle dans PMDO non testée.** Collisions à dessiner. Les anciens lots restent disponibles ci-dessous.
+
+
+## Lot 2 — 10 côtes supplémentaires dans la même DA
+
+- **[Voir les zones 11 à 20 en jour/nuit](apercu_dix_zones_metano_lot2.html)** : mêmes nuages et palette nocturne, dix agencements supplémentaires, calques et exports PNG natifs.
+- **[Pack de 20 Ground PMDO](cote_metano_dix_zones_lot2_pmdo.zip)** — ressources et installateur inclus ; préfixes `cote20_` / `C20_`, sans remplacement des anciennes cartes.
+- **[Installation et provenance](source/cote_dix_zones_lot2/README.md)** · [planche jour/nuit](sprites/cote_dix_zones_lot2/PLANCHE_JOUR_NUIT_NE_PAS_IMPORTER.png).
+
+Bases sans bâtiments ni arbres, collisions libres à dessiner. Pixels et formats contrôlés ; **ouverture dans PMDO non testée**.
+
+
 ## Nouveau — 10 côtes Métano, nuages et nuit Guilde / Sharpedo
 
 - **Voir : [aperçu interactif jour/nuit](apercu_dix_zones_metano.html)** — 10 nouveaux lieux et les deux côtes V2 adaptées, calques, zoom natif, animation et exports PNG.
