@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveaux PNG — 12 entrées générées dans la DA PMD
+
+- **[Planche des 12 entrées](renders/entrees_pmd_collection/PLANCHE_12_ENTREES.png)** — forêt, cristaux, volcan, glace, ruines, cascade, marais, gouffre et autres compositions.
+- **[Catalogue des PNG individuels et variantes Abyss](renders/entrees_pmd_collection/README.md)** · [galerie HTML locale](renders/entrees_pmd_collection/index.html).
+- **[40 rendus PNG du mod actuel et calques des trois entrées natives](renders/metano_expeditions_actuel/README.md)**.
+
+Les nouvelles entrées utilisent des matières librement inventées dans la DA PMD ; la fidélité stricte à Métano reste réservée à ses extensions. **Les 12 créations sont des images générées aplaties, pas encore des cartes natives intégrées au mod ci-dessous.**
+
 ## Livraison courante — Métano Expéditions, mod de 40 Ground
 
 - **[Voir nos nouvelles entrées et les falaises](apercu_metano_expeditions.html)** — l’aperçu démarre sur l’Antre Crochu ; 20 lieux en jour/nuit, calques et exports.
