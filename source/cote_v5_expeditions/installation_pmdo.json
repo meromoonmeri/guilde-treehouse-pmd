@@ -1,0 +1,22 @@
+{
+  "target": "PMDO 0.8.12 Linux x64",
+  "platform": "Linux x86_64",
+  "installed": false,
+  "executable_started": false,
+  "editor_started": false,
+  "map_opened_in_engine": false,
+  "official_release": "https://github.com/PMDCollab/PMDC/releases/tag/v0.8.12",
+  "official_asset": "https://github.com/PMDCollab/PMDC/releases/download/v0.8.12/pmdc-linux-x64.zip",
+  "asset_id": 406230348,
+  "expected_size_bytes": 77503089,
+  "attempts": [
+    {"method": "curl HTTPS official release", "result": "SSL_ERROR_SYSCALL on release-assets.githubusercontent.com; no archive downloaded"},
+    {"method": "GitHub API asset with Accept application/octet-stream", "result": "Redirect to official release asset fails with EOF; zero-byte response"},
+    {"method": "apt-get update Debian HTTP", "result": "Repository connection failures; dependency installation unavailable"},
+    {"method": "apt-get update Debian HTTPS using separate source file", "result": "TLS handshake terminated; dependency installation unavailable"}
+  ],
+  "available": ["GitHub metadata and source blobs", "Python/Pillow/NumPy source-file audits"],
+  "missing": ["downloaded PMDC executable", "dotnet SDK/runtime command", "Xvfb command", "verified graphical dependencies"],
+  "next_step": "Supply the official Linux archive or a complete Linux PMDO 0.8.12 installation. Then inspect included libraries and game assets before attempting launch. Upload alone does not guarantee the editor will start.",
+  "cli_source_checked": "PMDC/Program.cs at v0.8.12: -dev, -quest [folder], -asset [path], -appdata [path]"
+}

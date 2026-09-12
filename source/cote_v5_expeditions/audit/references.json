@@ -1,0 +1,288 @@
+{
+  "scope": "source reference study, not engine validation or final textures",
+  "runtime_tested": false,
+  "maps": [
+    {
+      "name": "Halcyon__crooked_cavern_entrance",
+      "repo": "Palikadude/Halcyon",
+      "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+      "serialization_version": "0.7.4.0",
+      "size_px": [
+        320,
+        240
+      ],
+      "grid": [
+        40,
+        30
+      ],
+      "TexSize": 1,
+      "tile_size": 8,
+      "sheets": [
+        {
+          "name": "Crooked_Cavern_Base",
+          "tile_size": 8,
+          "index_entries": 1200,
+          "unique_png_payloads": 852,
+          "alpha_values": [
+            255
+          ],
+          "blob": "e4f83942ff04073ed3b9885366a15579311ba830"
+        },
+        {
+          "name": "Crooked_Cavern_Objects",
+          "tile_size": 8,
+          "index_entries": 116,
+          "unique_png_payloads": 106,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "blob": "cee4da8fbf4095cbcd7015a4e45480817d22265f"
+        },
+        {
+          "name": "Crooked_Cavern_Shadows",
+          "tile_size": 8,
+          "index_entries": 83,
+          "unique_png_payloads": 73,
+          "alpha_values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            48,
+            50
+          ],
+          "blob": "c7735e0232d8a05e94909c4e05c5b7aa5c9801dc"
+        }
+      ],
+      "layers": [
+        {
+          "name": "Base",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 1200,
+          "animated_cells": 0,
+          "frame_lengths": [
+            60
+          ],
+          "frame_references_by_sheet": {
+            "Crooked_Cavern_Base": 1200
+          }
+        },
+        {
+          "name": "Objects",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 116,
+          "animated_cells": 0,
+          "frame_lengths": [
+            60
+          ],
+          "frame_references_by_sheet": {
+            "Crooked_Cavern_Objects": 116
+          }
+        },
+        {
+          "name": "Shadows",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 83,
+          "animated_cells": 0,
+          "frame_lengths": [
+            60
+          ],
+          "frame_references_by_sheet": {
+            "Crooked_Cavern_Shadows": 83
+          }
+        }
+      ],
+      "obstacle_tag_counts": {
+        "0": 751,
+        "1": 449
+      },
+      "entity_counts": {
+        "MapChars": 0,
+        "GroundObjects": 0,
+        "Spawners": 1,
+        "Markers": 1
+      },
+      "composition": "Halcyon__crooked_cavern_entrance_composition.png"
+    },
+    {
+      "name": "ExplorersOfSkyOrigins__Brine_Cave_Entrance",
+      "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+      "commit": "26e298db66335ccccb13f32959704357f3210a04",
+      "serialization_version": "0.8.11.0",
+      "size_px": [
+        648,
+        504
+      ],
+      "grid": [
+        27,
+        21
+      ],
+      "TexSize": 3,
+      "tile_size": 24,
+      "sheets": [
+        {
+          "name": "Brine Cave Entrance",
+          "tile_size": 24,
+          "index_entries": 8505,
+          "unique_png_payloads": 914,
+          "alpha_values": [
+            255
+          ],
+          "blob": "9dfe2aed871a7a5569a4ab7b0d81138717b7b1e2"
+        }
+      ],
+      "layers": [
+        {
+          "name": "New Layer",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 567,
+          "animated_cells": 567,
+          "frame_lengths": [
+            8
+          ],
+          "frame_references_by_sheet": {
+            "Brine Cave Entrance": 8505
+          }
+        }
+      ],
+      "obstacle_tag_counts": {
+        "1": 4155,
+        "0": 948
+      },
+      "entity_counts": {
+        "MapChars": 0,
+        "GroundObjects": 0,
+        "Spawners": 0,
+        "Markers": 0
+      },
+      "composition": "ExplorersOfSkyOrigins__Brine_Cave_Entrance_composition.png"
+    },
+    {
+      "name": "ExplorersOfSkyOrigins__drenched_bluff_entrance",
+      "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+      "commit": "26e298db66335ccccb13f32959704357f3210a04",
+      "serialization_version": "0.8.12.0",
+      "size_px": [
+        528,
+        408
+      ],
+      "grid": [
+        66,
+        51
+      ],
+      "TexSize": 1,
+      "tile_size": 8,
+      "sheets": [
+        {
+          "name": "DrenchedBluffEntranceBackground",
+          "tile_size": 8,
+          "index_entries": 3366,
+          "unique_png_payloads": 376,
+          "alpha_values": [
+            255
+          ],
+          "blob": "808ac3bdba03a31506ae2d91ad2aa1166106b091"
+        },
+        {
+          "name": "DrenchedBluffEntranceDetails",
+          "tile_size": 8,
+          "index_entries": 1674,
+          "unique_png_payloads": 897,
+          "alpha_values": [
+            0,
+            1,
+            2,
+            255
+          ],
+          "blob": "610d140c0175cfba57e0fbba9482a69599ce288d"
+        }
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 3366,
+          "animated_cells": 0,
+          "frame_lengths": [
+            60
+          ],
+          "frame_references_by_sheet": {
+            "DrenchedBluffEntranceBackground": 3366
+          }
+        },
+        {
+          "name": "Details",
+          "visible": true,
+          "draw_layer": 0,
+          "occupied_cells": 1674,
+          "animated_cells": 0,
+          "frame_lengths": [
+            60
+          ],
+          "frame_references_by_sheet": {
+            "DrenchedBluffEntranceDetails": 1674
+          }
+        }
+      ],
+      "obstacle_tag_counts": {
+        "1": 1660,
+        "0": 1706
+      },
+      "entity_counts": {
+        "MapChars": 1,
+        "GroundObjects": 0,
+        "Spawners": 1,
+        "Markers": 1
+      },
+      "composition": "ExplorersOfSkyOrigins__drenched_bluff_entrance_composition.png"
+    }
+  ]
+}

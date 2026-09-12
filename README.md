@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Manuel et préparation des prochaines entrées
+
+- **[Manuel détaillé des méthodes PMDO](MANUEL_METHODE_PMDO.md)** — ressources natives, layouts, échelle, calques, filtre Abyss, animations, formats, installation, tests et limites.
+- [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le prochain lot de sept falaises et trois entrées. **Lot encore en préparation ; installation moteur bloquée, pas de nouveau pack annoncé.**
+
+
 ## Dernière correction — Métano natif et filtre nuit Abyss
 
 - **[Ouvrir l’aperçu des dix côtes](apercu_cotes_metano_abyss.html)** — jour/nuit, cinq calques de terrain, grille 8 px, exports PNG.
