@@ -29,6 +29,8 @@ Les layers finals sont livrés sur fond chroma-key **#FF00FF** : ciel ouvert san
 
 L’audit exhaustif des six dépôts publics de [`PMUniverse`](https://github.com/PMUniverse) est documenté dans [`AUDIT_PMUNIVERSE_ASSETS.md`](AUDIT_PMUNIVERSE_ASSETS.md). Il fournit le catalogue complet et vérifiable des tilesets, conteneurs de sprites/portraits, PNG, sources Paint.NET, fontes, données de cartes et archives, avec commits figés, licences déclarées, provenance, tailles et hachages. Les assets tiers ne sont volontairement **pas** ajoutés au kit : voir [`audit_pmuniverse_assets/`](audit_pmuniverse_assets/README.md) pour les manifestes et la procédure de reproduction.
 
+L’inventaire complémentaire et reproductible de la **composition réelle des cartes** est dans [`audit_pmuniverse_maps/`](audit_pmuniverse_maps/README.md): dix slots visuels par cellule, cinq paires statique/animation à 250 ms, références coordonnées de 52 cartes eau/cascade/pont, transparence alpha des 52 486 PNG de tiles et séparation vérifiée entre stockage client (`.tile` / `.dat`) et serveur (`map_tiles`). Il ne redistribue aucun pixel PMUniverse.
+
 ## Règles effectivement appliquées
 
 - **Est / Ouest :** le plancher traverse une interruption de la bordure latérale. Pas de battant, de portique ni d’arche ajoutée sur ces accès.

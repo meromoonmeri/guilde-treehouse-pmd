@@ -15,7 +15,7 @@
 - Le seul véritable corpus d’images de jeu est dans **PMU-Client** : 11 conteneurs de tiles, 751 conteneurs de sprites, 751 portraits, 550 PNG directs, 4 sources Paint.NET, 2 ICO et 5 fontes. `Installer` ne contient que trois visuels d’interface. Les trois autres dépôts de code n’ont aucun asset graphique.
 - Les fichiers PMUniverse examinés ont été récupérés dans un cache ignoré uniquement afin d’en vérifier les octets et les formats. **Aucun pixel PMUniverse, tileset, sprite ou portrait n’a été copié dans le kit livré ni versionné dans ce dépôt.**
 
-Les données détaillées, exploitables sans interprétation manuelle, sont dans [`audit_pmuniverse_assets/`](audit_pmuniverse_assets/README.md).
+Les données détaillées, exploitables sans interprétation manuelle, sont dans [`audit_pmuniverse_assets/`](audit_pmuniverse_assets/README.md). Le complément consacré à la **composition par layer des cartes réelles** (slots statiques/animés, coordonnées eau/cascade/pont, alpha et stockage client/serveur) est dans [`audit_pmuniverse_maps/`](audit_pmuniverse_maps/README.md); lui aussi ne versionne aucun pixel PMUniverse.
 
 ## Couverture par dépôt
 
