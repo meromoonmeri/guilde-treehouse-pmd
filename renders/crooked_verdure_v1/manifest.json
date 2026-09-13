@@ -1,0 +1,28 @@
+{
+  "canvas": [
+    320,
+    240
+  ],
+  "layout": "Entrée déplacée de +8px, blocs latéraux repositionnés, approche herbeuse et chemin central",
+  "rock": "Dessin canonique conservé à échelle1 ; RGB remappés en gris légèrement froid selon luminance. Pas texture rocheuse générée.",
+  "grass": "Patch natif LuminousSpring 250,390,314,454, répété au sol",
+  "vegetation": "Six petites touffes générées, distinctes des matériaux natifs",
+  "animation": {
+    "type": "Particules ambiantes ajoutées ; source Crooked Cavern statique",
+    "frames": 48,
+    "frame_ms": 80,
+    "period_ms": 3840
+  },
+  "spring_gif": {
+    "frames": 78,
+    "period_ms": 6500,
+    "note": "Copie GIF 256 couleurs de l’animation WebP publiée, couleur légèrement quantifiée"
+  },
+  "layers": [
+    "01_sol_herbe_chemin.png",
+    "02_paroi_grise.png",
+    "03_rochers_gris.png",
+    "04_vegetation.png"
+  ],
+  "runtime_validated": false
+}
