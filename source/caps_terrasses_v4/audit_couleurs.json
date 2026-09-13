@@ -1,0 +1,328 @@
+{
+  "status": "PASS_COULEURS_ALPHA",
+  "canonical_patch_equality": [
+    {
+      "role": "herbe",
+      "source_rect": [
+        0,
+        640,
+        128,
+        768
+      ],
+      "rgba_equal_to_native_banks": true,
+      "palette_colors": 7
+    },
+    {
+      "role": "roche",
+      "source_rect": [
+        912,
+        472,
+        976,
+        520
+      ],
+      "rgba_equal_to_native_banks": true,
+      "palette_colors": 11
+    },
+    {
+      "role": "rebord",
+      "source_rect": [
+        912,
+        448,
+        976,
+        472
+      ],
+      "rgba_equal_to_native_banks": true,
+      "palette_colors": 322
+    },
+    {
+      "role": "pied",
+      "source_rect": [
+        912,
+        528,
+        976,
+        544
+      ],
+      "rgba_equal_to_native_banks": true,
+      "palette_colors": 12
+    },
+    {
+      "role": "ombre_falaise",
+      "source_bank": "Metano_Town_Cliffs.tile",
+      "source_pixel_xy": [
+        874,
+        455
+      ],
+      "native_rgba": [
+        96,
+        56,
+        88,
+        255
+      ],
+      "rgb_found_in_native_cliffs": true,
+      "palette_colors": 1
+    }
+  ],
+  "not_proved": "canonical tile pattern identity, automatic crown matching, seamless cross-map joins or engine validity",
+  "zones": [
+    {
+      "id": "07_anse_gauche",
+      "opaque_pixels": 737017,
+      "raw_unique_opaque_rgb": 140802,
+      "corrected_unique_opaque_rgb": 225,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 736829,
+      "deltaE76_before_after_median": 11.34,
+      "deltaE76_before_after_p95": 16.437,
+      "deltaE76_before_after_max": 68.194,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        107,
+        312,
+        667,
+        472
+      ],
+      "edge_contact_pixels": {
+        "left": 492,
+        "right": 0,
+        "bottom": 366
+      }
+    },
+    {
+      "id": "08_crochet_droit",
+      "opaque_pixels": 548296,
+      "raw_unique_opaque_rgb": 91499,
+      "corrected_unique_opaque_rgb": 318,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 547825,
+      "deltaE76_before_after_median": 2.69,
+      "deltaE76_before_after_p95": 15.046,
+      "deltaE76_before_after_max": 58.61,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        625,
+        178,
+        1185,
+        338
+      ],
+      "edge_contact_pixels": {
+        "left": 0,
+        "right": 458,
+        "bottom": 355
+      }
+    },
+    {
+      "id": "09_paliers_decales_droits",
+      "opaque_pixels": 742808,
+      "raw_unique_opaque_rgb": 106364,
+      "corrected_unique_opaque_rgb": 317,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 740442,
+      "deltaE76_before_after_median": 2.391,
+      "deltaE76_before_after_p95": 7.265,
+      "deltaE76_before_after_max": 53.609,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        853,
+        152,
+        1413,
+        312
+      ],
+      "edge_contact_pixels": {
+        "left": 0,
+        "right": 656,
+        "bottom": 1252
+      }
+    },
+    {
+      "id": "10_double_balcon_gauche",
+      "opaque_pixels": 909278,
+      "raw_unique_opaque_rgb": 111975,
+      "corrected_unique_opaque_rgb": 266,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 931620,
+      "deltaE76_before_after_median": 2.898,
+      "deltaE76_before_after_p95": 11.382,
+      "deltaE76_before_after_max": 57.81,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        964,
+        301,
+        1524,
+        461
+      ],
+      "edge_contact_pixels": {
+        "left": 580,
+        "right": 0,
+        "bottom": 1215
+      }
+    },
+    {
+      "id": "11_corniche_oblique_gauche",
+      "opaque_pixels": 504574,
+      "raw_unique_opaque_rgb": 113258,
+      "corrected_unique_opaque_rgb": 232,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 504370,
+      "deltaE76_before_after_median": 5.208,
+      "deltaE76_before_after_p95": 17.07,
+      "deltaE76_before_after_max": 55.941,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        260,
+        260,
+        820,
+        420
+      ],
+      "edge_contact_pixels": {
+        "left": 425,
+        "right": 0,
+        "bottom": 901
+      }
+    },
+    {
+      "id": "12_paroi_haute_droite",
+      "opaque_pixels": 677781,
+      "raw_unique_opaque_rgb": 95863,
+      "corrected_unique_opaque_rgb": 318,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 673895,
+      "deltaE76_before_after_median": 2.605,
+      "deltaE76_before_after_p95": 7.741,
+      "deltaE76_before_after_max": 57.341,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        383,
+        170,
+        943,
+        330
+      ],
+      "edge_contact_pixels": {
+        "left": 0,
+        "right": 768,
+        "bottom": 872
+      }
+    },
+    {
+      "id": "13_avancee_basse_gauche",
+      "opaque_pixels": 468247,
+      "raw_unique_opaque_rgb": 79564,
+      "corrected_unique_opaque_rgb": 322,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 467143,
+      "deltaE76_before_after_median": 2.116,
+      "deltaE76_before_after_p95": 6.159,
+      "deltaE76_before_after_max": 54.114,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        580,
+        300,
+        1140,
+        460
+      ],
+      "edge_contact_pixels": {
+        "left": 150,
+        "right": 0,
+        "bottom": 1212
+      }
+    },
+    {
+      "id": "14_echancrure_droite",
+      "opaque_pixels": 628320,
+      "raw_unique_opaque_rgb": 111666,
+      "corrected_unique_opaque_rgb": 325,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 624088,
+      "deltaE76_before_after_median": 2.105,
+      "deltaE76_before_after_p95": 13.926,
+      "deltaE76_before_after_max": 55.559,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        602,
+        286,
+        1162,
+        446
+      ],
+      "edge_contact_pixels": {
+        "left": 0,
+        "right": 656,
+        "bottom": 1024
+      }
+    },
+    {
+      "id": "15_trois_gradins_gauches",
+      "opaque_pixels": 814741,
+      "raw_unique_opaque_rgb": 122055,
+      "corrected_unique_opaque_rgb": 325,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 813242,
+      "deltaE76_before_after_median": 3.477,
+      "deltaE76_before_after_p95": 6.971,
+      "deltaE76_before_after_max": 57.127,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        241,
+        274,
+        801,
+        434
+      ],
+      "edge_contact_pixels": {
+        "left": 656,
+        "right": 0,
+        "bottom": 1330
+      }
+    },
+    {
+      "id": "16_balcon_renfonce_droit",
+      "opaque_pixels": 651907,
+      "raw_unique_opaque_rgb": 107561,
+      "corrected_unique_opaque_rgb": 267,
+      "allowed_canonical_palette_size": 328,
+      "out_of_palette_after": 0,
+      "changed_opaque_rgb_before_crop": 651687,
+      "deltaE76_before_after_median": 4.612,
+      "deltaE76_before_after_p95": 10.104,
+      "deltaE76_before_after_max": 55.318,
+      "alpha_binary": true,
+      "transparent_rgb_zero": true,
+      "source_texture_tiles_reconstructed": false,
+      "crown_crop_xyxy": [
+        542,
+        274,
+        1102,
+        434
+      ],
+      "edge_contact_pixels": {
+        "left": 0,
+        "right": 768,
+        "bottom": 858
+      }
+    }
+  ]
+}

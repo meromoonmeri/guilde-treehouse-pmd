@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Dix créations supplémentaires — contrôle Métano renforcé
+
+- **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
+- [PNG et bilan : huit retenues, deux à reprendre](renders/caps_terrasses_v4/README.md) · [comparatif des bordures](renders/caps_terrasses_v4/AUDIT_BORDURES_AVANT_APRES.png).
+- [Audit détaillé](source/caps_terrasses_v4/AUDIT.md) : palette de 328 couleurs natives vérifiées, zéro pixel opaque hors palette sur les exports jour.
+
+**07 et 11 ne passent pas l’audit du dessin et restent à régénérer.** Les autres sont retenues visuellement, sans prétendre que les motifs générés sont des tuiles natives identiques.
+
 ## Nouveaux calques — six caps et terrasses face à la mer
 
 - **[Aperçu animé avec calques activables](apercu_caps_terrasses_v3.html)** : falaise proche de la caméra, ciel/océan séparés, jour/nuit.

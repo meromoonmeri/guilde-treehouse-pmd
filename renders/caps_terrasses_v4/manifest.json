@@ -1,0 +1,286 @@
+{
+  "method": "reference-driven generator then nearest canonical RGB color chosen in CIELAB; no geometry redraw",
+  "palette_file": "../../source/caps_terrasses_v4/palette_canonique.json",
+  "zones": [
+    {
+      "id": "07_anse_gauche",
+      "title": "Anse gauche",
+      "size": [
+        1408,
+        768
+      ],
+      "raw": "bruts/07_anse_gauche.png",
+      "raw_sha256": "56e3afc4bd572f2c63bc216ec61ae6bd85b0f701e168187a6fc6a41ab92e9928",
+      "terrain": "07_anse_gauche_terrain.png",
+      "night": "07_anse_gauche_terrain_nuit.png",
+      "scene": "07_anse_gauche_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "A_REGENERER",
+      "crown_crop": [
+        107,
+        312,
+        667,
+        472
+      ],
+      "visual_note": "Roche en petits galets verticaux et couronne en chapelet : le motif ne reprend pas la référence Métano. La palette verrouillée ne corrige pas cette erreur de dessin."
+    },
+    {
+      "id": "08_crochet_droit",
+      "title": "Crochet droit",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/08_crochet_droit.png",
+      "raw_sha256": "5ca34d701200f1886e9cffb1ea1adbb9b106f862baaee7a2926e4f3e476db925",
+      "terrain": "08_crochet_droit_terrain.png",
+      "night": "08_crochet_droit_terrain_nuit.png",
+      "scene": "08_crochet_droit_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        625,
+        178,
+        1185,
+        338
+      ],
+      "visual_note": "Couronne continue au retour concave ; herbe et paroi se rejoignent sans bande détachée visible. Grain plus dense sur le flanc droit ; pas de certification des tuiles pixel à pixel."
+    },
+    {
+      "id": "09_paliers_decales_droits",
+      "title": "Paliers décalés droits",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/09_paliers_decales_droits.png",
+      "raw_sha256": "6b49a9f9dde241a1155de18a41bb43ba781762f8de45612264d14c97e02603a1",
+      "terrain": "09_paliers_decales_droits_terrain.png",
+      "night": "09_paliers_decales_droits_terrain_nuit.png",
+      "scene": "09_paliers_decales_droits_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        853,
+        152,
+        1413,
+        312
+      ],
+      "visual_note": "Deux paliers distincts ; les couronnes suivent les arrondis et rejoignent les faces. Matériau et teintes proches de la référence après correction."
+    },
+    {
+      "id": "10_double_balcon_gauche",
+      "title": "Double balcon gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/10_double_balcon_gauche.png",
+      "raw_sha256": "7a60c24322a9684b165722d422b2b38844832af08fe89c283540f0a46a073803",
+      "terrain": "10_double_balcon_gauche_terrain.png",
+      "night": "10_double_balcon_gauche_terrain_nuit.png",
+      "scene": "10_double_balcon_gauche_scene.png",
+      "offset_px": [
+        0,
+        26
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        964,
+        301,
+        1524,
+        461
+      ],
+      "visual_note": "Deux balcons lisibles, couronne et roche cohérentes dans les coupes inspectées. Extrémités de couronne un peu relevées : détail à surveiller lors du placement. Recalage vertical documenté."
+    },
+    {
+      "id": "11_corniche_oblique_gauche",
+      "title": "Corniche oblique gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/11_corniche_oblique_gauche.png",
+      "raw_sha256": "8a2c2f618c1224f6115fb509b1200af51d03ba08c7b572badae88cab1335cae2",
+      "terrain": "11_corniche_oblique_gauche_terrain.png",
+      "night": "11_corniche_oblique_gauche_terrain_nuit.png",
+      "scene": "11_corniche_oblique_gauche_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "A_REGENERER",
+      "crown_crop": [
+        260,
+        260,
+        820,
+        420
+      ],
+      "visual_note": "Rebord lisse en double bande et gros blocs trop simplifiés, différents de la couronne et du grain Métano demandés. Ne pas présenter comme une falaise conforme au contrôle de dessin."
+    },
+    {
+      "id": "12_paroi_haute_droite",
+      "title": "Paroi haute droite",
+      "size": [
+        1376,
+        768
+      ],
+      "raw": "bruts/12_paroi_haute_droite.png",
+      "raw_sha256": "b2b6750473c3381faf0a0d31d65c3a2563397f0c91f4b23a015c137fe682448e",
+      "terrain": "12_paroi_haute_droite_terrain.png",
+      "night": "12_paroi_haute_droite_terrain_nuit.png",
+      "scene": "12_paroi_haute_droite_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        383,
+        170,
+        943,
+        330
+      ],
+      "visual_note": "Couronne irrégulière continue autour du renfoncement ; retour rocheux ombré cohérent, herbe jointe au rebord dans le gros plan."
+    },
+    {
+      "id": "13_avancee_basse_gauche",
+      "title": "Avancée basse gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/13_avancee_basse_gauche.png",
+      "raw_sha256": "0c7fdfd8ff1f17276c73e1dc34b885c95f2b4e8c1380b08295d5162fc7721405",
+      "terrain": "13_avancee_basse_gauche_terrain.png",
+      "night": "13_avancee_basse_gauche_terrain_nuit.png",
+      "scene": "13_avancee_basse_gauche_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        580,
+        300,
+        1140,
+        460
+      ],
+      "visual_note": "Couronne découpée et retour arrondi cohérents avec la présentation Métano. Coupe choisie manuellement sur le vrai bord avant, pas sur le bord arrière du plateau."
+    },
+    {
+      "id": "14_echancrure_droite",
+      "title": "Échancrure droite",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/14_echancrure_droite.png",
+      "raw_sha256": "3adc042a55599a93912f3a64ef5da080f806ec437e7721fe09edc416f1e60779",
+      "terrain": "14_echancrure_droite_terrain.png",
+      "night": "14_echancrure_droite_terrain_nuit.png",
+      "scene": "14_echancrure_droite_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        602,
+        286,
+        1162,
+        446
+      ],
+      "visual_note": "Retour concave lisible et rebord continu. Ajout à la palette de l’ombre mauve native 96,56,88, vérifiée dans Cliffs, pour éviter d’éclaircir artificiellement le creux. La profondeur reste une interprétation générée."
+    },
+    {
+      "id": "15_trois_gradins_gauches",
+      "title": "Trois gradins gauches",
+      "size": [
+        1640,
+        656
+      ],
+      "raw": "bruts/15_trois_gradins_gauches.png",
+      "raw_sha256": "e7245c446db057aea534e9dfb7c2b1675c432d4d102812b013b685dc34d1f154",
+      "terrain": "15_trois_gradins_gauches_terrain.png",
+      "night": "15_trois_gradins_gauches_terrain_nuit.png",
+      "scene": "15_trois_gradins_gauches_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        241,
+        274,
+        801,
+        434
+      ],
+      "visual_note": "Trois niveaux distincts et raccords herbe/roche lisibles ; couronnes locales cohérentes. Les extrémités ne sont pas des autotiles certifiés."
+    },
+    {
+      "id": "16_balcon_renfonce_droit",
+      "title": "Balcon renfoncé droit",
+      "size": [
+        1376,
+        768
+      ],
+      "raw": "bruts/16_balcon_renfonce_droit.png",
+      "raw_sha256": "0f4a4cd528d3e863c742511095558a03151d30489bc79045ec1271e3a06e00d9",
+      "terrain": "16_balcon_renfonce_droit_terrain.png",
+      "night": "16_balcon_renfonce_droit_terrain_nuit.png",
+      "scene": "16_balcon_renfonce_droit_scene.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "resampled": false,
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "visual_status": "RETENU_VISUELLEMENT",
+      "crown_crop": [
+        542,
+        274,
+        1102,
+        434
+      ],
+      "visual_note": "Couronne fine suivant le balcon ; même famille de roche et d’herbe. Texture répétitive sur la grande face : observation conservée, pas une preuve de seamlessness entre cartes."
+    }
+  ]
+}
