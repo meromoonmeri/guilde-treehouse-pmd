@@ -256,3 +256,7 @@ Le commit **`3bc185b`**, ajouté sur la branche de cette session et non sur `mai
 - `source/layouts_commit_3bc185b/02_terrasse_campement.png`
 
 Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **Ces images sont des propositions générées, pas des textures canoniques certifiées pour PMDO.** Les originales, dont la vue nocturne, restent à la racine ; le lot natif d’import et les anciens travaux sont conservés séparément.
+
+## Nouveaux calques côtiers V2
+
+[10 promontoires et animations séparées](renders/references_calques_v2/README.md) — [galerie autonome](apercu_references_calques_v2.html). Étoiles, lune/halo, reflets et nuages wrap ; réserves artistiques documentées, sans modification du mod natif.

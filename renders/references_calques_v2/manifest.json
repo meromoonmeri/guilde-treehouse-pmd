@@ -1,0 +1,213 @@
+{
+  "canvas": [
+    960,
+    600
+  ],
+  "phases": 64,
+  "frame_ms": 80,
+  "cycle_ms": 5120,
+  "clouds": {
+    "wrap_x": true,
+    "speed_px_s": -4,
+    "period_s": 240,
+    "layer": "overlay transparent, placement avant astres selon ordre manifeste"
+  },
+  "terrains": [
+    {
+      "id": "01",
+      "side": "gauche",
+      "native_size": [
+        1063,
+        398
+      ],
+      "position": [
+        0,
+        215
+      ],
+      "display_size": [
+        820,
+        307
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    },
+    {
+      "id": "02",
+      "side": "droite",
+      "native_size": [
+        1115,
+        398
+      ],
+      "position": [
+        140,
+        215
+      ],
+      "display_size": [
+        820,
+        293
+      ],
+      "audit": "Réserve : silhouette générée plus isolée/rectiligne; montage recadré au premier plan."
+    },
+    {
+      "id": "03",
+      "side": "gauche",
+      "native_size": [
+        1106,
+        384
+      ],
+      "position": [
+        0,
+        215
+      ],
+      "display_size": [
+        820,
+        285
+      ],
+      "audit": "Réserve : silhouette générée plus isolée/rectiligne; montage recadré au premier plan."
+    },
+    {
+      "id": "04",
+      "side": "droite",
+      "native_size": [
+        1032,
+        384
+      ],
+      "position": [
+        140,
+        215
+      ],
+      "display_size": [
+        820,
+        305
+      ],
+      "audit": "Réserve : silhouette générée plus isolée/rectiligne; montage recadré au premier plan."
+    },
+    {
+      "id": "05",
+      "side": "gauche",
+      "native_size": [
+        1312,
+        816
+      ],
+      "position": [
+        0,
+        215
+      ],
+      "display_size": [
+        820,
+        510
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    },
+    {
+      "id": "06",
+      "side": "droite",
+      "native_size": [
+        1312,
+        816
+      ],
+      "position": [
+        140,
+        215
+      ],
+      "display_size": [
+        820,
+        510
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    },
+    {
+      "id": "07",
+      "side": "gauche",
+      "native_size": [
+        1312,
+        816
+      ],
+      "position": [
+        0,
+        215
+      ],
+      "display_size": [
+        820,
+        510
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    },
+    {
+      "id": "08",
+      "side": "droite",
+      "native_size": [
+        1312,
+        816
+      ],
+      "position": [
+        140,
+        215
+      ],
+      "display_size": [
+        820,
+        510
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    },
+    {
+      "id": "09",
+      "side": "gauche",
+      "native_size": [
+        1312,
+        816
+      ],
+      "position": [
+        0,
+        215
+      ],
+      "display_size": [
+        820,
+        510
+      ],
+      "audit": "Réserve : blocs et contour plus gros que le promontoire approuvé."
+    },
+    {
+      "id": "10",
+      "side": "droite",
+      "native_size": [
+        1376,
+        768
+      ],
+      "position": [
+        140,
+        215
+      ],
+      "display_size": [
+        820,
+        458
+      ],
+      "audit": "Texture guidée par le promontoire; validation utilisateur requise."
+    }
+  ],
+  "backgrounds": {
+    "jour": {
+      "sky": "fonds/jour/01_ciel.png",
+      "sea": "fonds/jour/05_mer.png",
+      "clouds": "fonds/jour/03_nuages_wrap.png"
+    },
+    "coucher": {
+      "sky": "fonds/coucher/01_ciel.png",
+      "sea": "fonds/coucher/05_mer.png",
+      "clouds": "fonds/coucher/03_nuages_wrap.png"
+    },
+    "nuit": {
+      "sky": "fonds/nuit/01_ciel.png",
+      "sea": "fonds/nuit/05_mer.png",
+      "clouds": "fonds/nuit/03_nuages_wrap.png"
+    }
+  },
+  "sky_source": {
+    "zip": "cote_metano_v2_wrap_palette.zip",
+    "member": "sprites/cote_v2/01_promontoire/COTEV2_01_00_CIEL_SANS_NUAGES.png",
+    "sha256": "8a7612a4ab5917fa0d7eea41caaaa78aad601d70e3cbe1bbf2c72abbb51d5040",
+    "day": "RGB source conservé, ajustement nearest au ciel 960×280",
+    "sunset": "mêmes paliers, teintes coucher dérivées",
+    "night": "filtre Abyss exact appliqué au ciel source"
+  },
+  "animation_method": "8 phases générées par reflet, recalées puis interpolation alpha prémultipliée vers 64 phases. Étoiles/halo paramétriques indépendants; wrap nuages indépendant de la boucle 5,12s."
+}
