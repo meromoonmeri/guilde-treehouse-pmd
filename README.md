@@ -260,3 +260,7 @@ Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **C
 ## Nouveaux calques côtiers V2
 
 [10 promontoires et animations séparées](renders/references_calques_v2/README.md) — [galerie autonome](apercu_references_calques_v2.html). Étoiles, lune/halo, reflets et nuages wrap ; réserves artistiques documentées, sans modification du mod natif.
+
+## Soleil animé et Luminous Spring
+
+[Nouveau pack PNG multicouche](renders/soleil_spring_v1/README.md) — [aperçu autonome](apercu_soleil_spring_v1.html). Soleil subtil 64 phases, grands nuages traversants, variante du Spring Halcyon avec cycles natifs 3/13 phases préservés.
