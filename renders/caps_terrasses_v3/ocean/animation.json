@@ -1,0 +1,31 @@
+{
+  "source": "sprites/cote_v2/01_promontoire",
+  "original_frame_count": 8,
+  "original_png_preview_frame_ms": 160,
+  "original_png_preview_loop_ms": 1280,
+  "original_native_frame_ticks": 10,
+  "original_native_loop_ms": 1333.3333333333333,
+  "frame_count": 64,
+  "frame_ms": 50,
+  "suggested_pmdo_frame_ticks": 3,
+  "loop_ms": 3200,
+  "method": "linear interpolation of the eight original palette rotations, 8 subphases per original transition",
+  "geometry_moves": false,
+  "only_cycle_entries_change_during_day_animation": true,
+  "cycle_indices": [
+    7,
+    8,
+    10,
+    14,
+    15,
+    12,
+    9,
+    11
+  ],
+  "alpha_unchanged": true,
+  "phase_64_equals_phase_0": true,
+  "unique_day_palettes": 64,
+  "max_rgb_channel_jump_old": 56.0,
+  "max_rgb_channel_jump_new": 7.0,
+  "native_mod_updated": false
+}

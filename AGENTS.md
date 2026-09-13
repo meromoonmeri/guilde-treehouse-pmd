@@ -97,3 +97,8 @@ L’utilisateur demande de repasser les zones assemblées manuellement dans le g
 ## Dernière correction — conserver la méthode Métano texturée sur magenta
 
 L’utilisateur rejette le changement de matériau et rejette les layouts plats comme livrable. **Le générateur reprend la roche ET l’herbe Métano avec les références existantes, conserve le layout et génère la falaise texturée sur fond magenta.** Ne pas revenir aux essais V7/V8. Témoin : `renders/falaise_metano_temoin/`. Référence utilisée : `source/falaises_generees/reference_canonique.png`. Vérifier ce témoin avant une génération en série. Ne pas prétendre que les pixels générés sont canoniques ; ne pas remplacer les cartes natives. L’amélioration demandée du cycle océan est encore en attente.
+
+
+## Caps / Terrasses V3 — dernières variantes face à la mer
+
+L’utilisateur demande des calques comme Terrasse V2 et Cap V2 : falaise latérale, très proche caméra, face à la mer. Six variantes texturées via générateur sur magenta dans `renders/caps_terrasses_v3/`, avec références V2 et Métano, PNG terrain et nuit à 1640×656 sans resampling. La 04 est décalée de 256 px à gauche pour cadrage. Terrain complet séparé de ciel/nuages/océan, pas roche et herbe séparées. `apercu_caps_terrasses_v3.html` montre les calques. La demande antérieure d’océan plus fluide est maintenant réalisée **dans ces exports PNG et cet aperçu** : 64 phases à 50 ms, boucle 3,2 s, interpolation de palette à indices/alpha fixes. Elle n’est PAS intégrée au mod natif existant. Voir `source/caps_terrasses_v3/README.md` et les tests ; ne pas annoncer un nouveau test moteur.

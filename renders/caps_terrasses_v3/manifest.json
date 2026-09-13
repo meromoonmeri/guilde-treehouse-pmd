@@ -1,0 +1,185 @@
+{
+  "method": "Cap V2 / Terrasse V2 framing + Metano rock and grass references, generator on magenta, chroma extraction",
+  "reference_layouts": [
+    "sprites/cote_v2/01_promontoire/COTEV2_01_03_TERRAIN.png",
+    "sprites/cote_v2/02_terrasse/COTEV2_02_03_TERRAIN.png"
+  ],
+  "reference_texture": "source/falaises_generees/reference_canonique.png",
+  "ocean": {
+    "source": "sprites/cote_v2/01_promontoire",
+    "original_frame_count": 8,
+    "original_png_preview_frame_ms": 160,
+    "original_png_preview_loop_ms": 1280,
+    "original_native_frame_ticks": 10,
+    "original_native_loop_ms": 1333.3333333333333,
+    "frame_count": 64,
+    "frame_ms": 50,
+    "suggested_pmdo_frame_ticks": 3,
+    "loop_ms": 3200,
+    "method": "linear interpolation of the eight original palette rotations, 8 subphases per original transition",
+    "geometry_moves": false,
+    "only_cycle_entries_change_during_day_animation": true,
+    "cycle_indices": [
+      7,
+      8,
+      10,
+      14,
+      15,
+      12,
+      9,
+      11
+    ],
+    "alpha_unchanged": true,
+    "phase_64_equals_phase_0": true,
+    "unique_day_palettes": 64,
+    "max_rgb_channel_jump_old": 56.0,
+    "max_rgb_channel_jump_new": 7.0,
+    "native_mod_updated": false
+  },
+  "zones": [
+    {
+      "id": "01_cap_gauche",
+      "title": "Cap gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "01_cap_gauche_magenta.png",
+      "source_sha256": "533a02e3178308da93755882ae85dda934fc02167f0624265a52709c43abc1b7",
+      "terrain": "01_cap_gauche_terrain.png",
+      "night": "01_cap_gauche_terrain_nuit.png",
+      "scene": "01_cap_gauche_scene.png",
+      "scene_night": "01_cap_gauche_scene_nuit.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.4844
+    },
+    {
+      "id": "02_cap_droit",
+      "title": "Cap droit",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "02_cap_droit_magenta.png",
+      "source_sha256": "c1d347acc86c1a1421419a78ab1dd2ae2273112fd036de53069ac09d2a42e1c8",
+      "terrain": "02_cap_droit_terrain.png",
+      "night": "02_cap_droit_terrain_nuit.png",
+      "scene": "02_cap_droit_scene.png",
+      "scene_night": "02_cap_droit_scene_nuit.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.4793
+    },
+    {
+      "id": "03_terrasse_droite",
+      "title": "Terrasse droite",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "03_terrasse_droite_magenta.png",
+      "source_sha256": "f6bff0d7d60f17c3e025f2085265d32934094a1b828992a0929ef39832242f3a",
+      "terrain": "03_terrasse_droite_terrain.png",
+      "night": "03_terrasse_droite_terrain_nuit.png",
+      "scene": "03_terrasse_droite_scene.png",
+      "scene_night": "03_terrasse_droite_scene_nuit.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.3161
+    },
+    {
+      "id": "04_terrasse_gauche",
+      "title": "Terrasse gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "04_terrasse_gauche_magenta.png",
+      "source_sha256": "ed0cbe7cc7911657fc6a1dd0ca25ae76f6d38a5bf8dab6be91250d691bca01c1",
+      "terrain": "04_terrasse_gauche_terrain.png",
+      "night": "04_terrasse_gauche_terrain_nuit.png",
+      "scene": "04_terrasse_gauche_scene.png",
+      "scene_night": "04_terrasse_gauche_scene_nuit.png",
+      "offset_px": [
+        -256,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.4671
+    },
+    {
+      "id": "05_corniche_gauche",
+      "title": "Corniche gauche",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "05_corniche_gauche_magenta.png",
+      "source_sha256": "0fc6b75d2fcc96175724a34167358d2121df8aeca294cb36d88c28f89bc580fd",
+      "terrain": "05_corniche_gauche_terrain.png",
+      "night": "05_corniche_gauche_terrain_nuit.png",
+      "scene": "05_corniche_gauche_scene.png",
+      "scene_night": "05_corniche_gauche_scene_nuit.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.5124
+    },
+    {
+      "id": "06_balcon_droit",
+      "title": "Balcon droit",
+      "size": [
+        1640,
+        656
+      ],
+      "source": "06_balcon_droit_magenta.png",
+      "source_sha256": "c817a0bb034a57356bca4a4d48fd93fa93b09ffd2bbcf66376cb99f3de1bd629",
+      "terrain": "06_balcon_droit_terrain.png",
+      "night": "06_balcon_droit_terrain_nuit.png",
+      "scene": "06_balcon_droit_scene.png",
+      "scene_night": "06_balcon_droit_scene_nuit.png",
+      "offset_px": [
+        0,
+        0
+      ],
+      "terrain_resampled": false,
+      "day_retained_rgb_changed": false,
+      "terrain_plane": "combined grass, rock, crowns; separate from ocean/sky/clouds",
+      "terrain_generated_not_canonical": true,
+      "native_pmdo_integrated": false,
+      "transparent_fraction": 0.3991
+    }
+  ]
+}

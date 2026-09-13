@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveaux calques — six caps et terrasses face à la mer
+
+- **[Aperçu animé avec calques activables](apercu_caps_terrasses_v3.html)** : falaise proche de la caméra, ciel/océan séparés, jour/nuit.
+- **[Planche PNG des six variantes](renders/caps_terrasses_v3/PLANCHE_FACE_MER.png)** · [PNG transparents, magenta et compositions](renders/caps_terrasses_v3/README.md).
+- [Océan : 64 phases, boucle plus lente de 3,2 s](renders/caps_terrasses_v3/ocean/README.md).
+
+Présentation Cap V2 / Terrasse V2 et références roche/herbe Métano. Les nouveaux calques et le cycle sont livrés séparément ; le mod natif reste inchangé.
+
 ## Témoin courant — méthode Métano sur fond magenta
 
 **[Voir la falaise texturée sur magenta et son PNG transparent](renders/falaise_metano_temoin/README.md)**. Retour aux références de roche et d’herbe Métano, sans nouvelle matière ni layouts plats comme résultat final. Un témoin à valider avant de reprendre la série ; cartes natives préservées.
