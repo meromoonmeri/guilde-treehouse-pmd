@@ -1,5 +1,9 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Témoin courant — méthode Métano sur fond magenta
+
+**[Voir la falaise texturée sur magenta et son PNG transparent](renders/falaise_metano_temoin/README.md)**. Retour aux références de roche et d’herbe Métano, sans nouvelle matière ni layouts plats comme résultat final. Un témoin à valider avant de reprendre la série ; cartes natives préservées.
+
 ## V6 — retouches des zones et prototypes de calques
 
 - **[Atelier visuel : avant/après et calques activables](apercu_retouches_et_calques_v6.html)**.
