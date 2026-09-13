@@ -1,0 +1,58 @@
+[
+  {
+    "id": "foret_racines",
+    "source": "renders/entrees_pmd_collection/04_foret_racines.png",
+    "source_sha256": "aa9fad7db4aa00495b449e65ef6b00503f0a75ae756d7145f671ca451a4194de",
+    "original_size": [
+      1376,
+      768
+    ],
+    "canvas": [
+      1376,
+      768
+    ],
+    "padding_right_bottom": [
+      0,
+      0
+    ],
+    "resampled": false,
+    "layers": [
+      "00_sol",
+      "01_chemin",
+      "02_entree_arriere",
+      "03_premier_plan"
+    ],
+    "rgba_recomposition_exact": true,
+    "hidden_ground": "repeated source texture patch, not generative inpainting",
+    "mask_method": "explicit hand-defined scene polygons; cave grass color classification",
+    "native_pmdo": false
+  },
+  {
+    "id": "grotte_encaissee",
+    "source": "renders/entrees_pmd_collection/01_antre_encaisse.png",
+    "source_sha256": "8f5ccb9f04575e00f7cf61211ba742cfd30523554e53582125fb1a9afc25166c",
+    "original_size": [
+      1134,
+      944
+    ],
+    "canvas": [
+      1136,
+      944
+    ],
+    "padding_right_bottom": [
+      2,
+      0
+    ],
+    "resampled": false,
+    "layers": [
+      "00_sol",
+      "01_chemin",
+      "02_entree_arriere",
+      "03_premier_plan"
+    ],
+    "rgba_recomposition_exact": true,
+    "hidden_ground": "repeated source texture patch, not generative inpainting",
+    "mask_method": "explicit hand-defined scene polygons; cave grass color classification",
+    "native_pmdo": false
+  }
+]

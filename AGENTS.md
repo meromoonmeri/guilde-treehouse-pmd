@@ -87,3 +87,8 @@ Marqueurs `donjon_seuil` fournis mais aucune destination de donjon liée :
 marqueurs), sans GPU. L’éditeur graphique reste en échec ; ne pas confondre
 ce résultat avec un test de rendu, de collisions en mouvement ou de gameplay.
 Le manuel exhaustif est `MANUEL_METHODE_PMDO.md`, complété par la notice du lot.
+
+
+## V6 — demande de repassage des zones et calques forêt/grotte
+
+L’utilisateur demande de repasser les zones assemblées manuellement dans le générateur pour en corriger les défauts sans perdre les compositions. Ne pas écraser les natifs. Dix propositions produites dans `renders/retouches_zones_v6/` ; 01/04/10 à reprendre. Deux kits provisoires dans `renders/entrees_calques_v6/` sont découpés depuis des images antérieures : ne pas les présenter comme les nouveaux atlas générés. La limite réelle de dix générations a empêché ces atlas et les trois reprises. Voir la liste priorisée dans `source/retouches_v6/README.md`. Références TSR Murky Forest/Armaldo et Halcyon Apricorn Grove réellement inspectées. Les nouvelles entrées restent libres en textures PMD ; les retouches Métano gardent ses références de matière.

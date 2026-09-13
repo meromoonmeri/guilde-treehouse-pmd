@@ -1,5 +1,14 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## V6 — retouches des zones et prototypes de calques
+
+- **[Atelier visuel : avant/après et calques activables](apercu_retouches_et_calques_v6.html)**.
+- [Dix retouches, PNG originaux et nuits](renders/retouches_zones_v6/README.md) — les sorties 01, 04 et 10 restent à reprendre.
+- [Forêt et grotte : PNG séparés et projets OpenRaster](renders/entrees_calques_v6/README.md).
+- [Références Spriters Resource/Halcyon, méthode et suite à faire](source/retouches_v6/README.md).
+
+Les originaux et le mod sont conservés. La limite de dix générations a empêché les trois reprises et les deux nouveaux atlas : les calques livrés ici sont des découpages provisoires des propositions existantes, avec un sol caché complété par échantillonnage.
+
 ## Nouveaux PNG — 12 entrées générées dans la DA PMD
 
 - **[Planche des 12 entrées](renders/entrees_pmd_collection/PLANCHE_12_ENTREES.png)** — forêt, cristaux, volcan, glace, ruines, cascade, marais, gouffre et autres compositions.
