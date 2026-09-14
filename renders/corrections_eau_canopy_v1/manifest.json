@@ -1,0 +1,158 @@
+{
+  "scenes": [
+    {
+      "id": "eau_integrale_rochers_gris",
+      "title": "Eau intégrale · rochers gris bleutés",
+      "size": [
+        456,
+        384
+      ],
+      "layers": [
+        {
+          "name": "03_ombres_rochers_sur_eau",
+          "file": "eau_integrale_rochers_gris_03_ombres_rochers_sur_eau.png"
+        },
+        {
+          "name": "04_rochers_arriere",
+          "file": "eau_integrale_rochers_gris_04_rochers_arriere.png"
+        },
+        {
+          "name": "05_rochers_avant",
+          "file": "eau_integrale_rochers_gris_05_rochers_avant.png"
+        },
+        {
+          "name": "06_galet_decale",
+          "file": "eau_integrale_rochers_gris_06_galet_decale.png"
+        }
+      ],
+      "animation_groups": [
+        {
+          "name": "01_surface_eau",
+          "files": [
+            "eau_integrale_rochers_gris_01_surface_eau_000.png",
+            "eau_integrale_rochers_gris_01_surface_eau_001.png",
+            "eau_integrale_rochers_gris_01_surface_eau_002.png",
+            "eau_integrale_rochers_gris_01_surface_eau_003.png",
+            "eau_integrale_rochers_gris_01_surface_eau_004.png",
+            "eau_integrale_rochers_gris_01_surface_eau_005.png",
+            "eau_integrale_rochers_gris_01_surface_eau_006.png",
+            "eau_integrale_rochers_gris_01_surface_eau_007.png",
+            "eau_integrale_rochers_gris_01_surface_eau_008.png",
+            "eau_integrale_rochers_gris_01_surface_eau_009.png",
+            "eau_integrale_rochers_gris_01_surface_eau_010.png",
+            "eau_integrale_rochers_gris_01_surface_eau_011.png"
+          ],
+          "duration_ms": 120
+        },
+        {
+          "name": "02_siphons",
+          "files": [
+            "eau_integrale_rochers_gris_02_siphons_000.png",
+            "eau_integrale_rochers_gris_02_siphons_001.png",
+            "eau_integrale_rochers_gris_02_siphons_002.png",
+            "eau_integrale_rochers_gris_02_siphons_003.png",
+            "eau_integrale_rochers_gris_02_siphons_004.png",
+            "eau_integrale_rochers_gris_02_siphons_005.png"
+          ],
+          "duration_ms": 60
+        }
+      ],
+      "notes": "Tout le sol est une nouvelle plaque d’eau générée et animée en 12 phases. Aucun ancien sol, sable ou raccord jaune conservé. Siphons : adaptation des 6 phases de sable, pas une animation d’eau native. Rochers et ombres séparés.",
+      "complete_frames": 24,
+      "cycle_ms": 1440
+    },
+    {
+      "id": "foret_mousse_canopy",
+      "title": "Forêt mousse · cadre de canopée",
+      "size": [
+        504,
+        480
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_mousse_canopy_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_mousse_canopy_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_mousse_canopy_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_mousse_canopy_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_mousse_canopy_06_petits_decors.png"
+        },
+        {
+          "name": "08_canopy_gauche",
+          "file": "foret_mousse_canopy_08_canopy_gauche.png"
+        },
+        {
+          "name": "09_canopy_droite",
+          "file": "foret_mousse_canopy_09_canopy_droite.png"
+        }
+      ],
+      "animation_groups": [],
+      "notes": "Masses de feuillage sombre au premier plan extraites de Southern_Jungle_entrance_S.png (commit 46e93da), puis mises à hauteur 480 en nearest-neighbor et accordées à la palette. Pas une nouvelle génération de rameaux. Gauche/droite séparées ; passage central libre. Layout de base généré sur magenta conservé.",
+      "complete_frames": 0,
+      "cycle_ms": 0
+    },
+    {
+      "id": "foret_emeraude_canopy",
+      "title": "Forêt emeraude · cadre de canopée",
+      "size": [
+        504,
+        480
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_emeraude_canopy_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_emeraude_canopy_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_emeraude_canopy_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_emeraude_canopy_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_emeraude_canopy_06_petits_decors.png"
+        },
+        {
+          "name": "08_canopy_gauche",
+          "file": "foret_emeraude_canopy_08_canopy_gauche.png"
+        },
+        {
+          "name": "09_canopy_droite",
+          "file": "foret_emeraude_canopy_09_canopy_droite.png"
+        }
+      ],
+      "animation_groups": [],
+      "notes": "Masses de feuillage sombre au premier plan extraites de Southern_Jungle_entrance_S.png (commit 46e93da), puis mises à hauteur 480 en nearest-neighbor et accordées à la palette. Pas une nouvelle génération de rameaux. Gauche/droite séparées ; passage central libre. Layout de base généré sur magenta conservé.",
+      "complete_frames": 0,
+      "cycle_ms": 0
+    }
+  ],
+  "runtime_pmdo_validated": false,
+  "gpu_validated": false,
+  "tests": {
+    "opaque_compositions": true,
+    "ora_exact_recomposition": true,
+    "water_complete_frames_unique": 24,
+    "canopy_central_100px_clear": true,
+    "old_sand_layers_used": false
+  }
+}
