@@ -1,0 +1,105 @@
+{
+  "size": [
+    456,
+    384
+  ],
+  "frames": 128,
+  "frame_ms": 50,
+  "cycle_ms": 6400,
+  "static_layers": [
+    "03_ombres_contact",
+    "04_rochers_arriere",
+    "05_rochers_avant",
+    "06_galet_decale",
+    "07_chaussee_surface",
+    "08_chaussee_rebords"
+  ],
+  "animation_groups": [
+    "01_eau_advectee",
+    "02_filets_courant",
+    "09_reflets_rives"
+  ],
+  "render_order": [
+    "01_eau_advectee",
+    "02_filets_courant",
+    "03_ombres_contact",
+    "04_rochers_arriere",
+    "05_rochers_avant",
+    "06_galet_decale",
+    "07_chaussee_surface",
+    "08_chaussee_rebords",
+    "09_reflets_rives"
+  ],
+  "sink_centers": [
+    [
+      272,
+      20,
+      46
+    ],
+    [
+      128,
+      68,
+      46
+    ],
+    [
+      231,
+      144,
+      77
+    ],
+    [
+      292,
+      177,
+      19
+    ],
+    [
+      332,
+      163,
+      19
+    ],
+    [
+      80,
+      197,
+      46
+    ],
+    [
+      400,
+      197,
+      30
+    ],
+    [
+      156,
+      184,
+      11
+    ],
+    [
+      292,
+      224,
+      11
+    ]
+  ],
+  "flow": {
+    "model": "steady 2D finite-volume pressure projection with swirl, sink removal and open external boundaries",
+    "cell_px": 2,
+    "solid_normal_face_flux": 0,
+    "relative_mass_residual": 3.5347036232853797e-14,
+    "total_sink_flux": 9286.89391713762,
+    "net_boundary_inflow": 9286.893917136891,
+    "retained_sink_reaching_tracks": 635,
+    "velocity_95th_percentile_px_s": 140
+  },
+  "rendering": "new generated material, dual-phase backward advection looping; regenerated funnel shading, no old six sand poses or old blue rings; bounded numerical tracer stepping",
+  "tests": {
+    "opaque_compositions": true,
+    "ora_exact": true,
+    "finite_volume_balance": true,
+    "zero_flow_through_solid_faces": true,
+    "all_128_saved_frames_recompose": true,
+    "128_unique_full_frames": true,
+    "independent_mass_balance_and_zero_solid_flux_checks": true,
+    "all_visible_tracer_endpoints_in_fluid": true,
+    "rock_and_causeway_alpha_unchanged": true,
+    "dry_interiors_unchanged_all_frames": true,
+    "shore_reflection_alpha_at_most_28": true
+  },
+  "runtime_pmdo_validated": false
+}
