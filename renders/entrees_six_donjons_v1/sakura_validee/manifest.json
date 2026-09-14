@@ -1,0 +1,78 @@
+{
+  "size": [
+    1200,
+    896
+  ],
+  "source_sha256": "3461c96e06999cc72a4a88f1d94437b582d05f78617174d439bfc096e4ced03f",
+  "layers": [
+    "01_sol_chemin_reconstitue",
+    "02_ombres_portees",
+    "03_vegetation_basse_petales",
+    "04_profondeur_entree",
+    "05_arbres_lisiere",
+    "06_arbre_centre",
+    "07_arbre_avant_gauche"
+  ],
+  "composition_pixel_identical": true,
+  "trees_tilesheet": {
+    "file": "SAKURA_ARBRES_tilesheet_8px.png",
+    "size": [
+      416,
+      216
+    ],
+    "grid": 8,
+    "sprites": [
+      {
+        "name": "arbre_centre",
+        "source_box": [
+          347,
+          397,
+          531,
+          591
+        ],
+        "atlas_box": [
+          8,
+          8,
+          192,
+          208
+        ],
+        "origin_scene": [
+          347,
+          397
+        ],
+        "anchor": [
+          92,
+          185
+        ],
+        "complete_visible_sprite": true
+      },
+      {
+        "name": "arbre_avant_gauche",
+        "source_box": [
+          137,
+          563,
+          329,
+          756
+        ],
+        "atlas_box": [
+          216,
+          8,
+          408,
+          208
+        ],
+        "origin_scene": [
+          137,
+          563
+        ],
+        "anchor": [
+          95,
+          187
+        ],
+        "complete_visible_sprite": true
+      }
+    ]
+  },
+  "ground_hidden_areas": "reconstructed by generator; visible uncovered source pixels unchanged",
+  "shadow_method": "Original painted shadow pixels on transparent canvas; position-bound, not a universal black multiply mask",
+  "runtime_validated": false
+}
