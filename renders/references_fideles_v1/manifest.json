@@ -1,0 +1,620 @@
+{
+  "reference_commit": "8eb46bc",
+  "approach": "Reference pixels preserved; disjoint visible-surface layers, not reconstructed hidden scenery",
+  "scenes": [
+    {
+      "id": "ref_00",
+      "title": "Fond nocturne fourni",
+      "source": "backgroundnight a animé.png",
+      "source_sha256": "cd9de99f441cd08ae3c52a46e3dbe410828fcc6ceecf12a001cb47a2ad427bad",
+      "size": [
+        312,
+        240
+      ],
+      "layers": [
+        {
+          "name": "01_ciel_fond_visible",
+          "file": "ref_00_01_ciel_fond_visible.png"
+        },
+        {
+          "name": "01b_etoiles",
+          "file": "ref_00_01b_etoiles.png"
+        },
+        {
+          "name": "01c_nuages",
+          "file": "ref_00_01c_nuages.png"
+        },
+        {
+          "name": "02_eau_visible",
+          "file": "ref_00_02_eau_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_01",
+      "title": "Entrée cascade",
+      "source": "entrancecascade.png",
+      "source_sha256": "712471d25dfb4d309ef068b0478bd7f47d968429e79c62b13eb299a801c5dbd4",
+      "size": [
+        504,
+        456
+      ],
+      "layers": [
+        {
+          "name": "02_eau_visible",
+          "file": "ref_01_02_eau_visible.png"
+        },
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_01_03_vegetation_visible.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_01_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_01_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_01_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_02",
+      "title": "D05P11A · chemin fruitier",
+      "source": "large.D05P11A.gif.8381c07f1ec2991d730c99ad50de4cd7.gif",
+      "source_sha256": "52686f48f8aa21ef6c7fccab80eeae2007245aa481ffd0005c5d29e308e44f66",
+      "size": [
+        552,
+        408
+      ],
+      "layers": [
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_02_03_vegetation_visible.png"
+        },
+        {
+          "name": "05_details_sombres",
+          "file": "ref_02_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_02_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_02_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_02_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_03",
+      "title": "D05P31A · clairière fruitière",
+      "source": "large.D05P31A.gif.f2eec5558afda778b7580a60547df5cc.gif",
+      "source_sha256": "186b065722678a44a4a1f68871c89a88b7a269fa3fb28238b5ec070ed00bdb3a",
+      "size": [
+        552,
+        552
+      ],
+      "layers": [
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_03_03_vegetation_visible.png"
+        },
+        {
+          "name": "05_details_sombres",
+          "file": "ref_03_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_03_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_03_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_03_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_04",
+      "title": "D07P11A · corniche rocheuse",
+      "source": "large.D07P11A.gif.aab27786dc70587deec76028a16260e6.gif",
+      "source_sha256": "71ed8208af97f902b1ff150cd3169b51e18ee2df0a407455132a60e7b8940c53",
+      "size": [
+        552,
+        360
+      ],
+      "layers": [
+        {
+          "name": "01_ciel_fond_visible",
+          "file": "ref_04_01_ciel_fond_visible.png"
+        },
+        {
+          "name": "04_ouverture_profondeur",
+          "file": "ref_04_04_ouverture_profondeur.png"
+        },
+        {
+          "name": "05_details_sombres",
+          "file": "ref_04_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_04_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_04_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_04_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_05",
+      "title": "D11P11A · passage gris",
+      "source": "large.D11P11A.gif.b6aecde0a02623538b245a41c192d06e.gif",
+      "source_sha256": "edcc314014004c3ca0a672a5bcbe928393014339bea3239890f9ad0e1129ad67",
+      "size": [
+        456,
+        408
+      ],
+      "layers": [
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_05_03_vegetation_visible.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_05_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_05_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_05_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_06",
+      "title": "D12P41A · cirque gris",
+      "source": "large.D12P41A.gif.09a7a74ea736e19f6f3de41118dee563.gif",
+      "source_sha256": "80b2ed6635c90791b52825a7663fdf3f1162a32ad7ac1381cc75a96b87cd2de9",
+      "size": [
+        552,
+        504
+      ],
+      "layers": [
+        {
+          "name": "05_details_sombres",
+          "file": "ref_06_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_06_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_06_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_06_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_07",
+      "title": "D13P11A · défilé désertique",
+      "source": "large.D13P11A.gif.ba973a19d3e55a5246785df4287834aa (1).gif",
+      "source_sha256": "14d55672fa139dbfdca9af1206983221a783d7919dc5d0900b6709cc01cb1a38",
+      "size": [
+        456,
+        456
+      ],
+      "layers": [
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_07_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_07_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_07_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_09",
+      "title": "D14P11A · bassins de sable",
+      "source": "large.D14P11A.gif.de6fb5fd180b164fe8a67715f1d7ee5c.gif",
+      "source_sha256": "af89e0b55222b83ea39669b4da60a4fd3de2ae3f8dc9367f052bc50ef7fa44ef",
+      "size": [
+        456,
+        384
+      ],
+      "layers": [
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_09_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_09_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_09_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "animation_native/ref_09_phase_000.png",
+          "animation_native/ref_09_phase_001.png",
+          "animation_native/ref_09_phase_002.png",
+          "animation_native/ref_09_phase_003.png",
+          "animation_native/ref_09_phase_004.png",
+          "animation_native/ref_09_phase_005.png"
+        ],
+        "durations_ms": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "native_from_supplied_gif": true
+      },
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_10",
+      "title": "D17P33A · passage cristallin",
+      "source": "large.D17P33A.gif.188f8399cf4c18292d9ecdd2454bcd10.gif",
+      "source_sha256": "87bca5bada455cb9099db4202c30ad2b863243504bef0aa5761834cf269e0bd6",
+      "size": [
+        456,
+        504
+      ],
+      "layers": [
+        {
+          "name": "02_eau_visible",
+          "file": "ref_10_02_eau_visible.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_10_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "animation_native/ref_10_phase_000.png",
+          "animation_native/ref_10_phase_001.png",
+          "animation_native/ref_10_phase_002.png",
+          "animation_native/ref_10_phase_003.png",
+          "animation_native/ref_10_phase_004.png",
+          "animation_native/ref_10_phase_005.png",
+          "animation_native/ref_10_phase_006.png",
+          "animation_native/ref_10_phase_007.png",
+          "animation_native/ref_10_phase_008.png",
+          "animation_native/ref_10_phase_009.png",
+          "animation_native/ref_10_phase_010.png",
+          "animation_native/ref_10_phase_011.png"
+        ],
+        "durations_ms": [
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160
+        ],
+        "native_from_supplied_gif": true
+      },
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_11",
+      "title": "D24P11A · forêt à racines",
+      "source": "large.D24P11A.gif.c7519ceacdae16ff85bc579306dca404.gif",
+      "source_sha256": "5cbfa1e4b4380b81499cc2c9e01359d61fd16a2540d5a515138c9abb68c83ac6",
+      "size": [
+        504,
+        432
+      ],
+      "layers": [
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_11_03_vegetation_visible.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_11_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_11_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_11_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_12",
+      "title": "D24P31A · clairière à racines",
+      "source": "large.D24P31A.gif.b7e3b3cf5ed2c5764be99be522e52427.gif",
+      "source_sha256": "fbfe6df9227c3908aa3a40d7a5db94d4215cb393eee840675a3f0f96606c90d7",
+      "size": [
+        504,
+        480
+      ],
+      "layers": [
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_12_03_vegetation_visible.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_12_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_12_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_12_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_13",
+      "title": "D25P11A · côte et grotte",
+      "source": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+      "source_sha256": "7175b0db1e730451ecb02f45a797d7dff610125a52557cc65294ead60737bbf5",
+      "size": [
+        648,
+        504
+      ],
+      "layers": [
+        {
+          "name": "04_ouverture_profondeur",
+          "file": "ref_13_04_ouverture_profondeur.png"
+        },
+        {
+          "name": "05_details_sombres",
+          "file": "ref_13_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_13_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_13_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_13_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "animation_native/ref_13_phase_000.png",
+          "animation_native/ref_13_phase_001.png",
+          "animation_native/ref_13_phase_002.png",
+          "animation_native/ref_13_phase_003.png",
+          "animation_native/ref_13_phase_004.png",
+          "animation_native/ref_13_phase_005.png",
+          "animation_native/ref_13_phase_006.png",
+          "animation_native/ref_13_phase_007.png",
+          "animation_native/ref_13_phase_008.png",
+          "animation_native/ref_13_phase_009.png",
+          "animation_native/ref_13_phase_010.png",
+          "animation_native/ref_13_phase_011.png",
+          "animation_native/ref_13_phase_012.png",
+          "animation_native/ref_13_phase_013.png",
+          "animation_native/ref_13_phase_014.png",
+          "animation_native/ref_13_phase_015.png",
+          "animation_native/ref_13_phase_016.png",
+          "animation_native/ref_13_phase_017.png",
+          "animation_native/ref_13_phase_018.png",
+          "animation_native/ref_13_phase_019.png",
+          "animation_native/ref_13_phase_020.png",
+          "animation_native/ref_13_phase_021.png",
+          "animation_native/ref_13_phase_022.png",
+          "animation_native/ref_13_phase_023.png",
+          "animation_native/ref_13_phase_024.png",
+          "animation_native/ref_13_phase_025.png",
+          "animation_native/ref_13_phase_026.png",
+          "animation_native/ref_13_phase_027.png",
+          "animation_native/ref_13_phase_028.png",
+          "animation_native/ref_13_phase_029.png"
+        ],
+        "durations_ms": [
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130
+        ],
+        "native_from_supplied_gif": true
+      },
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_14",
+      "title": "D28P31A · salle à fresques",
+      "source": "large.D28P31A.gif.bb9c3a52d0aef3ad3ec64842fa566598.gif",
+      "source_sha256": "1b6b2a4af1a95591aba2980a1a4c1a753e279d326e38efd16a9e831405420637",
+      "size": [
+        816,
+        360
+      ],
+      "layers": [
+        {
+          "name": "05_details_sombres",
+          "file": "ref_14_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_14_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_14_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_14_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": true,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    },
+    {
+      "id": "ref_15",
+      "title": "P04P01C · promontoire nocturne",
+      "source": "large.P04P01C.png.7e3cb52aa7a7a5527f11548e3519116d.png",
+      "source_sha256": "5fc8c729db9a7339ea7315b273f553fb93552fec52439fbf1ef7c6c25a65539f",
+      "size": [
+        312,
+        912
+      ],
+      "layers": [
+        {
+          "name": "01_ciel_fond_visible",
+          "file": "ref_15_01_ciel_fond_visible.png"
+        },
+        {
+          "name": "01b_etoiles",
+          "file": "ref_15_01b_etoiles.png"
+        },
+        {
+          "name": "03_vegetation_visible",
+          "file": "ref_15_03_vegetation_visible.png"
+        },
+        {
+          "name": "05_details_sombres",
+          "file": "ref_15_05_details_sombres.png"
+        },
+        {
+          "name": "06_massif_arriere",
+          "file": "ref_15_06_massif_arriere.png"
+        },
+        {
+          "name": "07_premier_plan",
+          "file": "ref_15_07_premier_plan.png"
+        },
+        {
+          "name": "08_sol_chemin_visible",
+          "file": "ref_15_08_sol_chemin_visible.png"
+        }
+      ],
+      "animation": null,
+      "optional_subtle_variant": false,
+      "source_pixels_unchanged": true,
+      "hidden_surfaces_reconstructed": false
+    }
+  ]
+}
