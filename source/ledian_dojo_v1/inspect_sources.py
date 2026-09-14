@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,sys,subprocess,hashlib
+from PIL import Image
+R=Path(__file__).resolve().parents[2];P=Path(__file__).resolve().parent/'references';sys.path.insert(0,str(R/'source/cote_v5_expeditions'));from audit_references import tiles,straight
+o=json.loads((P/'ledian_dojo.rsground').read_text(encoding='utf-8-sig'))['Object'];banks={};pin=(P/'halcyon_commit.txt').read_text().strip()
+for l in o['Layers']:
+ for col in l['Tiles']:
+  for t in col:
+   for a in t['Layers']:
+    name=a['Frames'][0]['Sheet']
+    if not name or name in banks:continue
+    p=P/(name+'.tile')
+    if not p.exists():p.write_bytes(subprocess.check_output(['gh','api',f'repos/Palikadude/Halcyon/contents/Content/Tile/{name}.tile?ref={pin}','-H','Accept: application/vnd.github.raw+json']))
+    ts,bank,_=tiles(p);banks[name]={xy:straight(im) for xy,im in bank.items()}
+    sheet=Image.new('RGBA',((max(x for x,y in bank)+1)*ts,(max(y for x,y in bank)+1)*ts))
+    for (x,y),im in banks[name].items():sheet.alpha_composite(im,(x*ts,y*ts))
+    sheet.save(P/(name+'.png'))
+cell=o['TexSize']*8;size=(len(o['Layers'][0]['Tiles'])*cell,len(o['Layers'][0]['Tiles'][0])*cell);scene=Image.new('RGBA',size)
+for l in o['Layers']:
+ if not l['Visible']:continue
+ layer=Image.new('RGBA',size)
+ for x,col in enumerate(l['Tiles']):
+  for y,t in enumerate(col):
+   for a in t['Layers']:
+    f=a['Frames'][0];v=f['TexLoc'];
+    if not f['Sheet']:continue
+    layer.alpha_composite(banks[f['Sheet']][v['X'],v['Y']],(x*cell,y*cell))
+ layer.save(P/('layer_'+str(o['Layers'].index(l))+'.png'));scene.alpha_composite(layer)
+scene.save(P/'ledian_dojo_reference.png')
+(P/'hashes.json').write_text(json.dumps({p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in P.iterdir() if p.suffix in ['.tile','.rsground']},indent=2))
+print(size)

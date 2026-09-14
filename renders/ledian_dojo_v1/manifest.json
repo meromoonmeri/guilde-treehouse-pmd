@@ -1,0 +1,279 @@
+{
+  "reference": "Palikadude/Halcyon ledian_dojo.rsground",
+  "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "size": [
+    512,
+    512
+  ],
+  "port_width": 64,
+  "runtime_validated": false,
+  "rooms": [
+    {
+      "id": "couloir_ns",
+      "title": "Couloir nord–sud élargi",
+      "raw": "couloir_ns_corrige.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_N",
+        "06_acces_S"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    },
+    {
+      "id": "couloir_ew",
+      "title": "Couloir est–ouest",
+      "raw": "couloir_ew.png",
+      "ports": [
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    },
+    {
+      "id": "couloir_t",
+      "title": "Jonction en T",
+      "raw": "couloir_t.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_N",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    },
+    {
+      "id": "salle_traversee",
+      "title": "Salle traversante",
+      "raw": "salle_traversee.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_N",
+        "06_acces_S"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    },
+    {
+      "id": "salle_laterale",
+      "title": "Salle latérale",
+      "raw": "salle_laterale.png",
+      "ports": [
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_W",
+        "06_acces_S",
+        "07_echelle_native"
+      ],
+      "optional": [
+        "07_echelle_native"
+      ],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    },
+    {
+      "id": "salle_carrefour",
+      "title": "Salle carrefour",
+      "raw": "salle_carrefour_corrige.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "05_roche_premier_plan",
+        "06_acces_N",
+        "06_acces_S",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_and_identical": true
+      }
+    }
+  ]
+}

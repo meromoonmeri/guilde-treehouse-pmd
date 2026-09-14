@@ -1,0 +1,13 @@
+{
+  "scenes": 6,
+  "aligned_layers": 46,
+  "ports": 15,
+  "checks": [
+    "Sources SHA256 identiques",
+    "6 compositions identiques a la recomposition des calques actifs",
+    "Tous calques512x512",
+    "Echelle et patch de sol strictement egaux aux extraits natifs",
+    "Build:15 bandes de jonction64px opaques et identiques, partitions exactes"
+  ],
+  "runtime_validated": false
+}
