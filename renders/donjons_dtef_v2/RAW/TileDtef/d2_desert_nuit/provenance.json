@@ -1,0 +1,137 @@
+{
+  "source": "quicksand_cave",
+  "mode": "nuit",
+  "adaptation": "native originals; localized native-patch texture bombing on full floor variants1/2 only",
+  "bomb_stamps": [
+    {
+      "variant": 1,
+      "donor_variant": 1,
+      "donor_xy": [
+        10,
+        7
+      ],
+      "target_xy": [
+        9,
+        8
+      ],
+      "size": 5
+    },
+    {
+      "variant": 1,
+      "donor_variant": 1,
+      "donor_xy": [
+        9,
+        6
+      ],
+      "target_xy": [
+        14,
+        14
+      ],
+      "size": 5
+    },
+    {
+      "variant": 1,
+      "donor_variant": 1,
+      "donor_xy": [
+        9,
+        14
+      ],
+      "target_xy": [
+        14,
+        10
+      ],
+      "size": 5
+    },
+    {
+      "variant": 1,
+      "donor_variant": 0,
+      "donor_xy": [
+        7,
+        9
+      ],
+      "target_xy": [
+        5,
+        5
+      ],
+      "size": 5
+    },
+    {
+      "variant": 1,
+      "donor_variant": 1,
+      "donor_xy": [
+        9,
+        6
+      ],
+      "target_xy": [
+        11,
+        14
+      ],
+      "size": 5
+    },
+    {
+      "variant": 2,
+      "donor_variant": 1,
+      "donor_xy": [
+        5,
+        12
+      ],
+      "target_xy": [
+        11,
+        9
+      ],
+      "size": 5
+    },
+    {
+      "variant": 2,
+      "donor_variant": 0,
+      "donor_xy": [
+        12,
+        13
+      ],
+      "target_xy": [
+        5,
+        7
+      ],
+      "size": 5
+    },
+    {
+      "variant": 2,
+      "donor_variant": 0,
+      "donor_xy": [
+        7,
+        7
+      ],
+      "target_xy": [
+        13,
+        6
+      ],
+      "size": 5
+    },
+    {
+      "variant": 2,
+      "donor_variant": 2,
+      "donor_xy": [
+        8,
+        11
+      ],
+      "target_xy": [
+        7,
+        14
+      ],
+      "size": 5
+    },
+    {
+      "variant": 2,
+      "donor_variant": 2,
+      "donor_xy": [
+        7,
+        13
+      ],
+      "target_xy": [
+        11,
+        8
+      ],
+      "size": 5
+    }
+  ]
+}
