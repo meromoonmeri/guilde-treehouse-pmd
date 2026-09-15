@@ -1,0 +1,771 @@
+[
+  {
+    "id": "spring",
+    "size": [
+      600,
+      600
+    ],
+    "frames": 78,
+    "durations_ms": [
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84,
+      83,
+      83,
+      84
+    ],
+    "still_phase": 39,
+    "layers": [
+      "01_decor_escalier",
+      "02_eau_native",
+      "03_lumiere_bassin_native",
+      "04_decor_derriere_spectre",
+      "05_spectre_translucide"
+    ],
+    "animated": [
+      "02_eau_native",
+      "03_lumiere_bassin_native",
+      "05_spectre_translucide"
+    ],
+    "alpha_max": 89,
+    "alpha_max_fraction": 0.34901960784313724,
+    "rgb_unchanged": true,
+    "reconstructed_background": true
+  },
+  {
+    "id": "carillon_applewoods",
+    "prefix": "cs2_carillon",
+    "size": [
+      640,
+      480
+    ],
+    "frames": 1,
+    "layers": [
+      "01_herbe_applewoods",
+      "02_chemin_applewoods",
+      "09_feuilles_tombees",
+      "10_pommier_00",
+      "10_pommier_01",
+      "10_pommier_02",
+      "10_pommier_03",
+      "10_pommier_04",
+      "10_pommier_05",
+      "10_pommier_06",
+      "10_pommier_07",
+      "10_pommier_08",
+      "10_pommier_09",
+      "10_pommier_10",
+      "10_pommier_11",
+      "03_facade",
+      "04_porte_escalier",
+      "05_poutres_rouge_fonce",
+      "06_tuiles_toitures",
+      "06b_socle_complement",
+      "10_pommier_12",
+      "10_pommier_13",
+      "10_pommier_14",
+      "10_pommier_15",
+      "10_pommier_16",
+      "10_pommier_17",
+      "10_pommier_18",
+      "10_pommier_19",
+      "10_pommier_20",
+      "10_pommier_21",
+      "10_pommier_22",
+      "10_pommier_23"
+    ],
+    "animated": [],
+    "architecture_pixels_identical": true,
+    "trees": [
+      {
+        "name": "10_pommier_00",
+        "variant": 0,
+        "xy": [
+          -44,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_01",
+        "variant": 1,
+        "xy": [
+          54,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_02",
+        "variant": 0,
+        "xy": [
+          482,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_03",
+        "variant": 1,
+        "xy": [
+          580,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_04",
+        "variant": 1,
+        "xy": [
+          -43,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_05",
+        "variant": 0,
+        "xy": [
+          53,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_06",
+        "variant": 1,
+        "xy": [
+          483,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_07",
+        "variant": 0,
+        "xy": [
+          579,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_08",
+        "variant": 0,
+        "xy": [
+          -44,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_09",
+        "variant": 1,
+        "xy": [
+          54,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_10",
+        "variant": 0,
+        "xy": [
+          482,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_11",
+        "variant": 1,
+        "xy": [
+          580,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_12",
+        "variant": 1,
+        "xy": [
+          -43,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_13",
+        "variant": 0,
+        "xy": [
+          53,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_14",
+        "variant": 1,
+        "xy": [
+          483,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_15",
+        "variant": 0,
+        "xy": [
+          579,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_16",
+        "variant": 0,
+        "xy": [
+          -44,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_17",
+        "variant": 1,
+        "xy": [
+          54,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_18",
+        "variant": 0,
+        "xy": [
+          482,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_19",
+        "variant": 1,
+        "xy": [
+          580,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_20",
+        "variant": 1,
+        "xy": [
+          -43,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_21",
+        "variant": 0,
+        "xy": [
+          53,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_22",
+        "variant": 1,
+        "xy": [
+          483,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_23",
+        "variant": 0,
+        "xy": [
+          579,
+          443
+        ]
+      }
+    ],
+    "native_source": "Apple_Woods_entrance_TDS.png",
+    "grass_samples": [
+      [
+        336,
+        296
+      ],
+      [
+        496,
+        256
+      ],
+      [
+        176,
+        352
+      ],
+      [
+        200,
+        40
+      ],
+      [
+        352,
+        352
+      ],
+      [
+        80,
+        256
+      ],
+      [
+        448,
+        256
+      ],
+      [
+        96,
+        304
+      ]
+    ],
+    "path_samples": [
+      [
+        256,
+        0
+      ],
+      [
+        248,
+        64
+      ],
+      [
+        256,
+        40
+      ],
+      [
+        256,
+        48
+      ],
+      [
+        256,
+        56
+      ],
+      [
+        272,
+        232
+      ],
+      [
+        256,
+        8
+      ],
+      [
+        320,
+        184
+      ]
+    ],
+    "tree_provenance": [
+      {
+        "source_box": [
+          74,
+          211,
+          180,
+          316
+        ],
+        "shape": "native-pixel foliage/trunk mask",
+        "no_resize": true,
+        "only_foliage_rgb_changed": true
+      },
+      {
+        "source_box": [
+          362,
+          199,
+          467,
+          304
+        ],
+        "shape": "native-pixel foliage/trunk mask",
+        "no_resize": true,
+        "only_foliage_rgb_changed": true
+      }
+    ]
+  },
+  {
+    "id": "cendree_applewoods",
+    "prefix": "cs2_cendree",
+    "size": [
+      640,
+      480
+    ],
+    "frames": 1,
+    "layers": [
+      "01_herbe_applewoods",
+      "02_chemin_applewoods",
+      "09_feuilles_tombees",
+      "10_pommier_00",
+      "10_pommier_01",
+      "10_pommier_02",
+      "10_pommier_03",
+      "10_pommier_04",
+      "10_pommier_05",
+      "10_pommier_06",
+      "10_pommier_07",
+      "10_pommier_08",
+      "10_pommier_09",
+      "10_pommier_10",
+      "10_pommier_11",
+      "03_facade",
+      "04_porte_escalier",
+      "05_poutres_rouge_fonce",
+      "06_tuiles_toitures",
+      "06b_socle_complement",
+      "10_pommier_12",
+      "10_pommier_13",
+      "10_pommier_14",
+      "10_pommier_15",
+      "10_pommier_16",
+      "10_pommier_17",
+      "10_pommier_18",
+      "10_pommier_19",
+      "10_pommier_20",
+      "10_pommier_21",
+      "10_pommier_22",
+      "10_pommier_23"
+    ],
+    "animated": [],
+    "architecture_pixels_identical": true,
+    "trees": [
+      {
+        "name": "10_pommier_00",
+        "variant": 0,
+        "xy": [
+          -44,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_01",
+        "variant": 1,
+        "xy": [
+          54,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_02",
+        "variant": 0,
+        "xy": [
+          482,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_03",
+        "variant": 1,
+        "xy": [
+          580,
+          -22
+        ]
+      },
+      {
+        "name": "10_pommier_04",
+        "variant": 1,
+        "xy": [
+          -43,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_05",
+        "variant": 0,
+        "xy": [
+          53,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_06",
+        "variant": 1,
+        "xy": [
+          483,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_07",
+        "variant": 0,
+        "xy": [
+          579,
+          70
+        ]
+      },
+      {
+        "name": "10_pommier_08",
+        "variant": 0,
+        "xy": [
+          -44,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_09",
+        "variant": 1,
+        "xy": [
+          54,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_10",
+        "variant": 0,
+        "xy": [
+          482,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_11",
+        "variant": 1,
+        "xy": [
+          580,
+          162
+        ]
+      },
+      {
+        "name": "10_pommier_12",
+        "variant": 1,
+        "xy": [
+          -43,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_13",
+        "variant": 0,
+        "xy": [
+          53,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_14",
+        "variant": 1,
+        "xy": [
+          483,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_15",
+        "variant": 0,
+        "xy": [
+          579,
+          260
+        ]
+      },
+      {
+        "name": "10_pommier_16",
+        "variant": 0,
+        "xy": [
+          -44,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_17",
+        "variant": 1,
+        "xy": [
+          54,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_18",
+        "variant": 0,
+        "xy": [
+          482,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_19",
+        "variant": 1,
+        "xy": [
+          580,
+          358
+        ]
+      },
+      {
+        "name": "10_pommier_20",
+        "variant": 1,
+        "xy": [
+          -43,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_21",
+        "variant": 0,
+        "xy": [
+          53,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_22",
+        "variant": 1,
+        "xy": [
+          483,
+          443
+        ]
+      },
+      {
+        "name": "10_pommier_23",
+        "variant": 0,
+        "xy": [
+          579,
+          443
+        ]
+      }
+    ],
+    "native_source": "Apple_Woods_entrance_TDS.png",
+    "grass_samples": [
+      [
+        336,
+        296
+      ],
+      [
+        496,
+        256
+      ],
+      [
+        176,
+        352
+      ],
+      [
+        200,
+        40
+      ],
+      [
+        352,
+        352
+      ],
+      [
+        80,
+        256
+      ],
+      [
+        448,
+        256
+      ],
+      [
+        96,
+        304
+      ]
+    ],
+    "path_samples": [
+      [
+        256,
+        0
+      ],
+      [
+        248,
+        64
+      ],
+      [
+        256,
+        40
+      ],
+      [
+        256,
+        48
+      ],
+      [
+        256,
+        56
+      ],
+      [
+        272,
+        232
+      ],
+      [
+        256,
+        8
+      ],
+      [
+        320,
+        184
+      ]
+    ],
+    "tree_provenance": [
+      {
+        "source_box": [
+          74,
+          211,
+          180,
+          316
+        ],
+        "shape": "native-pixel foliage/trunk mask",
+        "no_resize": true,
+        "only_foliage_rgb_changed": true
+      },
+      {
+        "source_box": [
+          362,
+          199,
+          467,
+          304
+        ],
+        "shape": "native-pixel foliage/trunk mask",
+        "no_resize": true,
+        "only_foliage_rgb_changed": true
+      }
+    ]
+  }
+]
