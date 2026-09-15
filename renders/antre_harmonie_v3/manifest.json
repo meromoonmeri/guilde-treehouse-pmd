@@ -1,0 +1,129 @@
+{
+  "size": [
+    480,
+    312
+  ],
+  "static": [
+    "01b_ombre_pierre",
+    "02_paroi_fond",
+    "03_bordure_gauche",
+    "04_bordure_droite",
+    "05_rebord_bas",
+    "07_surface_pierre_claire",
+    "06_tranche_plateforme",
+    "08_pas_japonais_1",
+    "08_pas_japonais_2",
+    "08_pas_japonais_3"
+  ],
+  "animated": [
+    "00_eau_altere",
+    "10_cascade_1",
+    "20_ecume_1",
+    "10_cascade_2",
+    "20_ecume_2",
+    "10_cascade_3",
+    "20_ecume_3",
+    "10_cascade_4",
+    "20_ecume_4",
+    "10_cascade_5",
+    "20_ecume_5",
+    "10_cascade_6",
+    "20_ecume_6"
+  ],
+  "order": [
+    "00_eau_altere",
+    "01b_ombre_pierre",
+    "02_paroi_fond",
+    "03_bordure_gauche",
+    "04_bordure_droite",
+    "05_rebord_bas",
+    "07_surface_pierre_claire",
+    "06_tranche_plateforme",
+    "08_pas_japonais_1",
+    "08_pas_japonais_2",
+    "08_pas_japonais_3",
+    "10_cascade_1",
+    "20_ecume_1",
+    "10_cascade_2",
+    "20_ecume_2",
+    "10_cascade_3",
+    "20_ecume_3",
+    "10_cascade_4",
+    "20_ecume_4",
+    "10_cascade_5",
+    "20_ecume_5",
+    "10_cascade_6",
+    "20_ecume_6"
+  ],
+  "frames": 12,
+  "durations_ms": [
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167
+  ],
+  "loop_ms": 2000,
+  "game_frames_per_pose": 10,
+  "native_cycles": {
+    "waterfall": 4,
+    "foam": 3
+  },
+  "falls": [
+    {
+      "x": 64,
+      "top_x": 58,
+      "top_y": 92,
+      "width": 25,
+      "foot_y": 156
+    },
+    {
+      "x": 152,
+      "top_x": 140,
+      "top_y": 75,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 216,
+      "top_x": 216,
+      "top_y": 57,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 264,
+      "top_x": 264,
+      "top_y": 57,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 327,
+      "top_x": 339,
+      "top_y": 75,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 417,
+      "top_x": 424,
+      "top_y": 92,
+      "width": 25,
+      "foot_y": 156
+    }
+  ],
+  "native_reference": "Halcyon Altere Pond, commit1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+  "cave": "generated Crooked-guided form, palette mapped to existing native Crooked rock colors",
+  "platform": "generated wider Altere disc, mapped to native disc colors;3native stepping stones unchanged",
+  "cascade_adaptation": "native central24px strip follows new fitted masks; no resized/scrolled texture",
+  "foam_adaptation": "native3poses fitted at50percent nearest-neighbor; no procedural foam",
+  "runtime_pmdo_validated": false
+}
