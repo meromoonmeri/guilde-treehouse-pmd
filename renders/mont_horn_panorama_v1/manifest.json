@@ -1,0 +1,84 @@
+{
+  "size": [
+    648,
+    504
+  ],
+  "reference": "Mt_Horn_entrance_Sky.png",
+  "source_size": [
+    552,
+    360
+  ],
+  "art_origin": "AI-generated reference-guided redesign, not native sprite recovery",
+  "foreground_resize": [
+    432,
+    504
+  ],
+  "foreground_origin": [
+    108,
+    0
+  ],
+  "static_layers": [
+    "01_panorama_montagnes",
+    "03_falaises_gauches",
+    "04_falaises_droites",
+    "05_chemin_pierre_grise",
+    "06_entree_nord_et_marches"
+  ],
+  "animated_groups": [
+    "02_nuages_lointains",
+    "07_nuages_overlay"
+  ],
+  "frames": 324,
+  "frame_ms": 320,
+  "loop_ms": 103680,
+  "wrap_width": 648,
+  "shift_pixels_per_frame": [
+    2,
+    4
+  ],
+  "velocities_px_second": [
+    6.25,
+    12.5
+  ],
+  "overlay_blend": "normal source-over, alpha <=69, spatial fade to zero over path/cave",
+  "route_guide": [
+    [
+      324,
+      503
+    ],
+    [
+      323,
+      438
+    ],
+    [
+      310,
+      388
+    ],
+    [
+      323,
+      340
+    ],
+    [
+      338,
+      294
+    ],
+    [
+      323,
+      263
+    ],
+    [
+      324,
+      228
+    ],
+    [
+      324,
+      195
+    ],
+    [
+      324,
+      164
+    ]
+  ],
+  "segmentation": "disjoint masks partition generated foreground; independent aligned scene layers, not invented hidden surfaces",
+  "runtime_validated": false
+}
