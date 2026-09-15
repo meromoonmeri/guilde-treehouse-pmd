@@ -1,0 +1,43 @@
+{
+  "pokemon": "Falinks",
+  "dex": 870,
+  "form": "0000 (whole formation)",
+  "format": "SpriteCollab multi-sheet",
+  "output_folder": "sprite/0870",
+  "output_archive": "sprite-0870.zip",
+  "gif_previews": {
+    "folder": "gifs/0870",
+    "archive": "gifs-0870.zip",
+    "script": "source/sprites_falinks/make_gifs.py",
+    "direction": "down/front (PMD direction 0)",
+    "timing": "AnimData.xml at 60 game ticks per second"
+  },
+  "canonical_source": {
+    "repository": "PMDCollab/SpriteCollab",
+    "note": "Falinks form 0 had NO sprite upstream. The two halves existed and are the only art source.",
+    "brass": "sprite/0870/0002",
+    "trooper": "sprite/0870/0003",
+    "local_copy": "source/sprites_falinks/canonical"
+  },
+  "composition": {
+    "method": "Form 0 is the whole formation: canonical Brass at the head of the column, canonical Troopers behind him along the facing axis.",
+    "trooper_count": 3,
+    "spacing_px": 7,
+    "no_recolour": true,
+    "no_resampling": true,
+    "no_rotation": true,
+    "shared_palette_colors": 13
+  },
+  "animation_indices": {
+    "0": "Walk", "1": "Attack", "2": "Strike (CopyOf Attack)", "3": "Shoot",
+    "5": "Sleep", "6": "Hurt", "7": "Idle", "8": "Swing", "9": "Double",
+    "10": "Hop", "11": "Charge", "12": "Rotate"
+  },
+  "constraints": {
+    "sprite_palette_colors": 15,
+    "transparent_alpha_only": true,
+    "frame_dimensions_even": true,
+    "direction_order": ["down", "down-right", "right", "up-right", "up", "up-left", "left", "down-left"]
+  },
+  "verification": "python source/sprites_falinks/verify_sprites.py"
+}
