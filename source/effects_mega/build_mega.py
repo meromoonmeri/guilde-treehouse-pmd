@@ -55,6 +55,9 @@ WHITE = (255, 255, 255)
 ROSE = (221, 78, 151)
 LILAC = (154, 86, 213)
 
+# The base effect palette comes from the subject sprite. The emblem adds the
+# canonical Mega rainbow on top: those hues are deliberately NOT snapped away,
+# because the emblem's colours are the one thing that must stay canonical.
 PALETTE = [DEEP, DUSK, BLUE, STEEL, SKY, AQUA, MINT, ICE, FROST, WHITE,
            ROSE, LILAC]
 
@@ -64,13 +67,100 @@ PALETTE = [DEEP, DUSK, BLUE, STEEL, SKY, AQUA, MINT, ICE, FROST, WHITE,
 DEPTH_RAMP = [STEEL, BLUE, AQUA, SKY, ICE, FROST, WHITE]
 
 # Two counter-rotating rings, each with its own tilt, radius and mote count.
+# ---------------------------------------------------------------- emblem
+# The Mega Evolution emblem, as a 17x26 SILHOUETTE.
+#
+# It was generated (see gen/emblem_fade.png), then reduced once, and the
+# resulting shape was FROZEN here as data. From now on it is drawn pixel by
+# pixel at native size: colouring happens in code, never by resampling, so the
+# emblem keeps hard edges and an exact colour count at every fade stage.
+EMBLEM = [
+    ".......###.......",
+    ".....#####.......",
+    "....######.......",
+    "..########.......",
+    ".#########.......",
+    ".#####.####......",
+    "#####..#####.....",
+    "#############....",
+    "##############...",
+    "####..#########..",
+    "######....#####..",
+    ".########..#####.",
+    ".###############.",
+    "..###############",
+    "...####...#######",
+    "....#####...#####",
+    ".....############",
+    ".....###########.",
+    "......##########.",
+    "......####.####..",
+    "......#########..",
+    "......########...",
+    "......#######....",
+    "......#####......",
+    "......####.......",
+    ".....###.........",
+]
+EMBLEM_W = len(EMBLEM[0])
+EMBLEM_H = len(EMBLEM)
+
+# Canonical Mega Evolution rainbow, top to bottom around the helix.
+# Six bands, not eight: at 26px tall each band is only a few rows, and more
+# bands only inflated the colour count without being visible.
+EMBLEM_BANDS = [
+    (255, 150, 190),   # rose
+    (255, 225, 150),   # gold
+    (190, 240, 160),   # lime
+    (130, 220, 235),   # aqua
+    (140, 185, 240),   # sky
+    (175, 150, 235),   # lilac
+]
+# Fade stages: how the emblem dims in and out. Each entry is a blend weight
+# toward the dark violet, so the appearance is gradual and subtle.
+EMBLEM_DARK = (60, 40, 110)
+
+# Explicit highlight tint per band. Deriving these with a blend at draw time
+# spawned ~20 stray in-between colours; naming them keeps the sheet tight.
+EMBLEM_LIGHT = [
+    (255, 215, 230),   # rose
+    (255, 245, 210),   # gold
+    (230, 250, 215),   # lime
+    (205, 243, 248),   # aqua
+    (210, 228, 250),   # sky
+    (225, 210, 248),   # lilac
+]
+
+
 RINGS = [
     {"count": 7, "tilt": 0.46, "spin": +1.0, "phase": 0.0, "rx": 31},
     {"count": 5, "tilt": 0.78, "spin": -1.4, "phase": 1.7, "rx": 24},
 ]
 
 
+def _emblem_colours():
+    """Every colour draw_emblem can emit, so the snap never crushes the
+    canonical rainbow into the sprite's cool palette."""
+    out = set()
+    for step in range(0, FADE_STEPS + 1):
+        strength = step / FADE_STEPS
+        for band in EMBLEM_BANDS:
+            out.add(blend(EMBLEM_DARK, band, strength))
+        for tint in EMBLEM_LIGHT:
+            out.add(blend(EMBLEM_DARK, tint, strength))
+        out.add(blend(DEEP, EMBLEM_DARK, strength))
+    return out
+
+
+_ALLOWED = None
+
+
 def snap(colour):
+    global _ALLOWED
+    if _ALLOWED is None:
+        _ALLOWED = set(PALETTE) | _emblem_colours()
+    if colour in _ALLOWED:
+        return colour
     return min(PALETTE, key=lambda c: sum((a - b) ** 2 for a, b in zip(colour, c)))
 
 
@@ -184,6 +274,83 @@ def draw_mote(canvas, x, y, size, colour, vx=0.0):
             canvas.set(x + dx, y + dy, WHITE)
 
 
+# Fades are quantised to a few discrete steps. A continuous blend produced 46
+# distinct colours, which is not pixel-art discipline; stepping the fade keeps
+# the count low while still reading as a smooth appearance.
+FADE_STEPS = 3
+
+
+def quantise(w):
+    return round(max(0.0, min(1.0, w)) * FADE_STEPS) / FADE_STEPS
+
+
+def blend(a, b, w):
+    """Linear blend on a quantised weight, w=0 gives a, w=1 gives b."""
+    w = quantise(w)
+    return tuple(round(x + (y - x) * w) for x, y in zip(a, b))
+
+
+def draw_emblem(canvas, cx, cy, strength, ghost=False):
+    """Draw the emblem at native size, faded by strength in [0,1].
+
+    strength scales how far each band is pulled toward the dark violet, so the
+    sigil bleeds in and out smoothly without ever being resized.
+    """
+    if strength <= 0.02:
+        return
+    ox = cx - EMBLEM_W // 2
+    oy = cy - EMBLEM_H // 2
+    for row, line in enumerate(EMBLEM):
+        band = EMBLEM_BANDS[min(len(EMBLEM_BANDS) - 1,
+                                row * len(EMBLEM_BANDS) // EMBLEM_H)]
+        colour = blend(EMBLEM_DARK, band, strength)
+        for col, char in enumerate(line):
+            if char != "#":
+                continue
+            # While the Pokemon is still visible the sigil is drawn as a
+            # dither, so it hangs in the air instead of blanking the sprite.
+            if ghost and (col + row) % 2:
+                continue
+            x, y = ox + col, oy + row
+            # Inner highlight on the left edge of each strand catches light.
+            left_edge = col == 0 or line[col - 1] != "#"
+            if left_edge and strength > 0.55:
+                tint = EMBLEM_LIGHT[min(len(EMBLEM_LIGHT) - 1,
+                                        row * len(EMBLEM_LIGHT) // EMBLEM_H)]
+                canvas.set(x, y, blend(EMBLEM_DARK, tint, strength))
+            else:
+                canvas.set(x, y, colour)
+    # Thin dark contour so the sigil stays legible over the bright flash.
+    for row, line in enumerate(EMBLEM):
+        for col, char in enumerate(line):
+            if char != "#":
+                continue
+            if ghost:
+                continue
+            for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+                nc, nr = col + dx, row + dy
+                inside = (0 <= nr < EMBLEM_H and 0 <= nc < EMBLEM_W
+                          and EMBLEM[nr][nc] == "#")
+                if not inside:
+                    canvas.set(ox + nc, oy + nr,
+                               blend(DEEP, EMBLEM_DARK, strength))
+
+
+def emblem_strength(t):
+    """Subtle appear/disappear curve, peaking with the flash.
+
+    It rises before the whiteout, holds through it, and is gone by the time the
+    release wave expands, so it reads as a sigil surfacing rather than a stamp.
+    """
+    if t < 0.50:
+        return 0.0
+    if t < 0.70:
+        return ease_in_out((t - 0.50) / 0.20) * 0.80
+    if t < 0.90:
+        return 0.80 + 0.20 * ease_in_out((t - 0.70) / 0.20)
+    return max(0.0, 1.0 - ease_in_out((t - 0.90) / 0.10))
+
+
 def build_frame(index, subject):
     t = index / FRAMES
     canvas = Canvas()
@@ -219,6 +386,9 @@ def build_frame(index, subject):
     for z, x, y, size, colour, vx in sorted(motes, key=lambda m: m[0]):
         if z >= 0:
             draw_mote(canvas, x, y, size, colour, vx)
+
+    # --- the emblem, surfacing over the flash
+    draw_emblem(canvas, CX, CY, emblem_strength(t), ghost=not flash)
 
     # --- release wave, only after the flash, capped inside the frame
     if t >= 0.90:
