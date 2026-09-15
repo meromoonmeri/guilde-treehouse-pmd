@@ -1,48 +1,60 @@
-# Animation d'effet — Méga-Évolution
+# Animation d'effet — Méga-Évolution, multidirectionnelle
 
 Livrable : [`effects/mega_evolution/`](../../effects/mega_evolution/)
 
-- `MegaEvolution-Anim.png` : planche horizontale de **16 frames de 80 × 96 px** ;
-- `frame_00.png` … `frame_15.png` : frames individuelles ;
-- `MegaEvolution.gif` : aperçu animé en boucle.
+- `MegaEvolution-Anim.png` : planche **1280 × 768**, soit
+  **16 frames × 8 directions** de 80 × 96 px ;
+  une **ligne par direction**, une **colonne par frame** ;
+- `MegaEvolution-<direction>.gif` : un aperçu animé pour chacune des
+  8 directions.
 
-## Déroulé de l'animation
+Ordre des lignes, conforme au format PMD :
+`down, down-right, right, up-right, up, up-left, left, down-left`.
 
-1. **frames 0–2** : de grosses colonnes de foudre s'abattent autour du Pokémon,
-   qui est encore visible ;
-2. **frames 2–6** : la **sphère d'énergie arc-en-ciel opaque** grandit et
-   engloutit complètement le sprite ;
-3. **frames 6–13** : le **symbole de la Méga-Évolution** — la double hélice
-   d'ADN — brûle devant la sphère, en pleine taille ;
-4. **frames 13–15** : la sphère s'effondre, le symbole s'efface, le Pokémon
-   réapparaît.
+## Art généré, puis transformé en sprite
 
-## Choix techniques
+Les trois éléments de l'effet sont **produits par le générateur d'image**, sur
+clé magenta pure, en vrai pixel art. Ils sont archivés dans `gen/` :
 
-- **Sphère opaque**, comme demandé : bandes concentriques arc-en-ciel avec un
-  cœur blanc et un liseré clair. Aucune transparence dans le disque, le sprite
-  est réellement caché.
-- **Colonnes de foudre épaisses** : chaque colonne est faite de 3 ou 4 longs
-  segments droits, tracés en barres larges avec cœur blanc, manteau pâle et
-  liseré cyan/violet. Une première version avec une gigue pixel par pixel a été
-  **testée puis rejetée** : elle produisait un grésillement fin au lieu de
-  vraies colonnes. Les colonnes sont réparties dans des couloirs qui encadrent
-  le sujet sans lui passer au travers.
-- **Symbole** : la double hélice d'ADN de la Méga-Évolution, dessinée en art
-  ASCII puis agrandie par **facteur entier** (pas de rééchantillonnage), avec
-  un contour sombre pour rester lisible sur la sphère.
-- **Discipline pixel art** : palette d'effet écrite à la main, chaque pixel
-  est ramené dessus. Transparence binaire. **13 couleurs** utilisées.
-- Tout est procédural et déterministe (aléatoire à graine fixe) : le rendu est
-  reproductible à l'identique.
+| Fichier | Contenu |
+| --- | --- |
+| `gen/sphere_stages.png` | 6 stades de croissance de la sphère arc-en-ciel opaque |
+| `gen/mega_emblem.png` | le symbole Méga-Évolution, double hélice d'ADN |
+| `gen/lightning_columns.png` | 4 variantes de grosses colonnes de foudre |
 
-Aucun pixel généré par IA.
+Chaîne appliquée ensuite par `build_mega_animation.py` :
+
+1. **détourage exact** de la clé magenta, alpha binaire ;
+2. **recadrage** sur le contenu utile ;
+3. **mise à l'échelle en NEAREST** uniquement, pour garder les arêtes dures ;
+4. **composition** par-dessus le sprite du sujet, pour les 8 directions ;
+5. **verrouillage de palette** : chaque pixel est ramené sur une palette
+   d'effet écrite à la main. **12 couleurs** utilisées, transparence binaire.
+
+Le symbole a été vérifié avant génération : c'est bien la **double hélice
+d'ADN** du logo Méga-Évolution, pas une forme inventée.
+
+## Déroulé
+
+1. **frames 0–2** : les colonnes de foudre s'abattent, le Pokémon est visible ;
+2. **frames 2–7** : la sphère arc-en-ciel **opaque** grandit et l'engloutit ;
+3. **frames 6–13** : le symbole brûle devant la sphère ;
+4. **frames 13–15** : la sphère s'effondre, le Pokémon réapparaît.
+
+## Multidirectionnel
+
+Chaque ligne utilise **l'artwork propre du sujet pour cette direction**, pris
+dans sa feuille `Idle`. Le Pokémon regarde donc dans le bon sens dans les huit
+lignes, pendant que l'effet l'engloutit.
+
+Correction appliquée après contrôle visuel : les colonnes étaient d'abord trop
+larges et masquaient le sujet. Elles sont désormais **étroites et placées dans
+des couloirs qui longent les bords**, le centre reste dégagé.
 
 ## Sujet
 
-Par défaut, le sprite englouti est le `Idle` de Terapagos forme Stellaire
-(`sprite/1024/Idle-Anim.png`, direction 0). Pour l'appliquer à un autre
-Pokémon, changer `SPRITE_SHEET` et `SPRITE_FRAME` en tête du script.
+Par défaut Terapagos forme Stellaire. Pour un autre Pokémon, changer
+`SPRITE_SHEET`, `SUBJECT_W` et `SUBJECT_H` en tête du script.
 
 ## Reproduction
 
@@ -53,9 +65,9 @@ python source/effects_mega_evolution/build_mega_animation.py
 ## Réserves honnêtes
 
 - C'est une **animation d'effet VFX**, pas une animation de personnage
-  SpriteCollab : elle n'entre pas dans `AnimData.xml` et n'a ni feuille
-  `-Offsets` ni feuille `-Shadow`. SpriteCollab n'a pas de slot pour ce type
-  d'effet ; c'est un asset pour ton propre jeu.
-- La cadence du GIF (90 ms) est un choix de lisibilité, à réaccorder selon le
-  moteur.
+  SpriteCollab : pas d'entrée `AnimData.xml`, pas de `-Offsets` ni `-Shadow`.
+  SpriteCollab n'a pas de slot pour ce type d'effet.
+- Les pixels de l'effet viennent du générateur d'image, contrairement aux lots
+  sprite/portrait livrés précédemment. C'est ce qui a été demandé ici, mais
+  cela signifie qu'ils ne sont **pas issus d'une source canonique**.
 - Aucun test moteur n'a été effectué.
