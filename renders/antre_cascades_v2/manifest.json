@@ -1,0 +1,124 @@
+{
+  "size": [
+    480,
+    312
+  ],
+  "source": "images.png",
+  "reference_commit": "3b96b74399b53f4b772139df9e977e30e5b72e66",
+  "frames": 40,
+  "frame_ms": 80,
+  "loop_ms": 3200,
+  "falls": [
+    {
+      "x": 64,
+      "top_x": 58,
+      "top_y": 86,
+      "width": 25,
+      "foot_y": 196
+    },
+    {
+      "x": 152,
+      "top_x": 140,
+      "top_y": 68,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 216,
+      "top_x": 216,
+      "top_y": 53,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 264,
+      "top_x": 264,
+      "top_y": 53,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 327,
+      "top_x": 339,
+      "top_y": 68,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 417,
+      "top_x": 424,
+      "top_y": 86,
+      "width": 25,
+      "foot_y": 196
+    }
+  ],
+  "static": [
+    "02_ombre_arene",
+    "03a_paroi_fond",
+    "03b_bordure_gauche",
+    "03c_bordure_droite",
+    "03d_roches_avant_bas",
+    "04_couronne_pierre_humide",
+    "05_plancher_arene_bois",
+    "06_passerelle_sud"
+  ],
+  "animated": [
+    "01_eau_bassin",
+    "07_liseres_eau_pierre",
+    "10_cascade_01",
+    "10_cascade_02",
+    "10_cascade_03",
+    "10_cascade_04",
+    "10_cascade_05",
+    "10_cascade_06",
+    "20_ecume_impact_01",
+    "20_ecume_impact_02",
+    "20_ecume_impact_03",
+    "20_ecume_impact_04",
+    "20_ecume_impact_05",
+    "20_ecume_impact_06",
+    "30_remous_01",
+    "30_remous_02",
+    "30_remous_03",
+    "30_remous_04",
+    "30_remous_05",
+    "30_remous_06"
+  ],
+  "order": [
+    "01_eau_bassin",
+    "02_ombre_arene",
+    "03a_paroi_fond",
+    "03b_bordure_gauche",
+    "03c_bordure_droite",
+    "03d_roches_avant_bas",
+    "04_couronne_pierre_humide",
+    "05_plancher_arene_bois",
+    "06_passerelle_sud",
+    "07_liseres_eau_pierre",
+    "10_cascade_01",
+    "10_cascade_02",
+    "10_cascade_03",
+    "10_cascade_04",
+    "10_cascade_05",
+    "10_cascade_06",
+    "20_ecume_impact_01",
+    "20_ecume_impact_02",
+    "20_ecume_impact_03",
+    "20_ecume_impact_04",
+    "20_ecume_impact_05",
+    "20_ecume_impact_06",
+    "30_remous_01",
+    "30_remous_02",
+    "30_remous_03",
+    "30_remous_04",
+    "30_remous_05",
+    "30_remous_06"
+  ],
+  "provenance": {
+    "platform": "previous generated stone/timber sprite fitted170x180 at155,132 to new cavern layout",
+    "rocks": "new generated cavern and foreground borders, keyed magenta,4 independent rock regions",
+    "water": "new generated20color full-canvas water background, periodic bounded2px warp",
+    "falls_foam_ripples": "generated waterfall and foam sprites; falling texture translated2px/frame in fitted outlet masks,4 foam poses, procedural expanding ripples; artistic animation not native nor fluid simulation"
+  },
+  "runtime_pmdo_validated": false
+}
