@@ -1,0 +1,286 @@
+[
+  {
+    "id": "clairiere",
+    "size": [
+      648,
+      504
+    ],
+    "frames": 12,
+    "durations_ms": [
+      333,
+      334,
+      333,
+      333,
+      334,
+      333,
+      333,
+      334,
+      333,
+      333,
+      334,
+      333
+    ],
+    "layer_order": [
+      "01_sol_reconstitue",
+      "02_chemins_assortis",
+      "03_roche_grotte",
+      "04_vegetation_fond",
+      "05_vegetation_gauche",
+      "06_vegetation_droite",
+      "07_cadre_pmd_natif_gauche",
+      "08_cadre_pmd_natif_droit",
+      "08b_orifices_emission",
+      "09_bouche_geyser_0",
+      "09_bouche_geyser_1",
+      "09_bouche_geyser_2",
+      "09_bouche_geyser_3",
+      "09_bouche_geyser_4",
+      "10_jet_0",
+      "11_vapeur_0",
+      "10_jet_1",
+      "11_vapeur_1",
+      "10_jet_2",
+      "11_vapeur_2",
+      "10_jet_3",
+      "11_vapeur_3",
+      "10_jet_4",
+      "11_vapeur_4",
+      "12_rebord_avant_0",
+      "12_rebord_avant_1",
+      "12_rebord_avant_2",
+      "12_rebord_avant_3",
+      "12_rebord_avant_4"
+    ],
+    "animated": [
+      "10_jet_0",
+      "11_vapeur_0",
+      "10_jet_1",
+      "11_vapeur_1",
+      "10_jet_2",
+      "11_vapeur_2",
+      "10_jet_3",
+      "11_vapeur_3",
+      "10_jet_4",
+      "11_vapeur_4"
+    ],
+    "points": [
+      [
+        324,
+        255,
+        [
+          271,
+          215,
+          377,
+          296
+        ]
+      ],
+      [
+        170,
+        171,
+        [
+          135,
+          149,
+          204,
+          200
+        ]
+      ],
+      [
+        486,
+        171,
+        [
+          452,
+          149,
+          522,
+          200
+        ]
+      ],
+      [
+        171,
+        350,
+        [
+          140,
+          329,
+          206,
+          379
+        ]
+      ],
+      [
+        483,
+        350,
+        [
+          451,
+          326,
+          518,
+          380
+        ]
+      ]
+    ],
+    "pose_sequence": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      1,
+      0
+    ],
+    "phase_offsets": [
+      0,
+      2,
+      7,
+      4,
+      9
+    ],
+    "original_partition_exact": true,
+    "native_frames": "Southern_Jungle_entrance_S.png; native RGB at1:1, ground key/clearance clipping and32px top alpha transition",
+    "generated": "background/layout, vent geometry and four jet/vapor poses",
+    "runtime_validated": false
+  },
+  {
+    "id": "clairiere_grotte",
+    "size": [
+      648,
+      504
+    ],
+    "frames": 12,
+    "durations_ms": [
+      333,
+      334,
+      333,
+      333,
+      334,
+      333,
+      333,
+      334,
+      333,
+      333,
+      334,
+      333
+    ],
+    "layer_order": [
+      "01_sol_reconstitue",
+      "02_chemins_assortis",
+      "03_roche_grotte",
+      "04_vegetation_fond",
+      "05_vegetation_gauche",
+      "06_vegetation_droite",
+      "07_cadre_pmd_natif_gauche",
+      "08_cadre_pmd_natif_droit",
+      "08b_orifices_emission",
+      "09_bouche_geyser_0",
+      "09_bouche_geyser_1",
+      "09_bouche_geyser_2",
+      "09_bouche_geyser_3",
+      "09_bouche_geyser_4",
+      "10_jet_0",
+      "11_vapeur_0",
+      "10_jet_1",
+      "11_vapeur_1",
+      "10_jet_2",
+      "11_vapeur_2",
+      "10_jet_3",
+      "11_vapeur_3",
+      "10_jet_4",
+      "11_vapeur_4",
+      "12_rebord_avant_0",
+      "12_rebord_avant_1",
+      "12_rebord_avant_2",
+      "12_rebord_avant_3",
+      "12_rebord_avant_4"
+    ],
+    "animated": [
+      "10_jet_0",
+      "11_vapeur_0",
+      "10_jet_1",
+      "11_vapeur_1",
+      "10_jet_2",
+      "11_vapeur_2",
+      "10_jet_3",
+      "11_vapeur_3",
+      "10_jet_4",
+      "11_vapeur_4"
+    ],
+    "points": [
+      [
+        324,
+        254,
+        [
+          284,
+          224,
+          367,
+          291
+        ]
+      ],
+      [
+        201,
+        195,
+        [
+          183,
+          181,
+          218,
+          212
+        ]
+      ],
+      [
+        449,
+        195,
+        [
+          432,
+          181,
+          467,
+          212
+        ]
+      ],
+      [
+        201,
+        333,
+        [
+          183,
+          318,
+          219,
+          351
+        ]
+      ],
+      [
+        449,
+        333,
+        [
+          431,
+          318,
+          468,
+          351
+        ]
+      ]
+    ],
+    "pose_sequence": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      1,
+      0
+    ],
+    "phase_offsets": [
+      0,
+      2,
+      7,
+      4,
+      9
+    ],
+    "original_partition_exact": true,
+    "native_frames": "Southern_Jungle_entrance_S.png; native RGB at1:1, ground key/clearance clipping and32px top alpha transition",
+    "generated": "background/layout, vent geometry and four jet/vapor poses",
+    "runtime_validated": false
+  }
+]
