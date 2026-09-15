@@ -1,0 +1,112 @@
+{
+  "source": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Friend Areas - Waterfall Lake.png",
+  "source_size": [
+    456,
+    312
+  ],
+  "size": [
+    504,
+    360
+  ],
+  "source_origin": [
+    24,
+    16
+  ],
+  "padding": [
+    24,
+    16,
+    24,
+    32
+  ],
+  "extension_method": "native edge pixels reflected only outside original rectangle; no central regeneration",
+  "frames": 24,
+  "durations_ms": [
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167
+  ],
+  "loop_ms": 4000,
+  "layer_order": [
+    "01_eau_profondeurs_originales",
+    "02_roche_cascade",
+    "03_herbe_berges",
+    "04_vegetation_arriere",
+    "05_canopy_avant_gauche",
+    "06_canopy_avant_droite",
+    "07_cascade_descendante",
+    "08_ecume_impact",
+    "12_reflets_altere_1",
+    "12_reflets_altere_2",
+    "12_reflets_altere_3",
+    "12_reflets_altere_4",
+    "12_reflets_altere_5",
+    "12_reflets_altere_6",
+    "12_reflets_altere_7",
+    "10_disque_altere",
+    "11_pas_japonais_1",
+    "11_pas_japonais_2",
+    "11_pas_japonais_3",
+    "11_pas_japonais_4",
+    "11_pas_japonais_5",
+    "11_pas_japonais_6"
+  ],
+  "static": [
+    "01_eau_profondeurs_originales",
+    "02_roche_cascade",
+    "03_herbe_berges",
+    "04_vegetation_arriere",
+    "05_canopy_avant_gauche",
+    "06_canopy_avant_droite",
+    "10_disque_altere",
+    "11_pas_japonais_1",
+    "11_pas_japonais_2",
+    "11_pas_japonais_3",
+    "11_pas_japonais_4",
+    "11_pas_japonais_5",
+    "11_pas_japonais_6"
+  ],
+  "animated": [
+    "07_cascade_descendante",
+    "08_ecume_impact",
+    "12_reflets_altere_1",
+    "12_reflets_altere_2",
+    "12_reflets_altere_3",
+    "12_reflets_altere_4",
+    "12_reflets_altere_5",
+    "12_reflets_altere_6",
+    "12_reflets_altere_7"
+  ],
+  "platform_origin": [
+    196,
+    168
+  ],
+  "steps": 6,
+  "source_unchanged_pixels_each_frame": 129065,
+  "source_total_pixels": 142272,
+  "night": "existing Abyss filter used for Northern; applied consistently per layer, not a native GBA night asset",
+  "waterfall": "reconstructed downward motion from original static GBA material;2px per pose;48px period",
+  "foam": "local1px swelling from original GBA foam,3poses;not recovered native temporal data",
+  "native_platform_cycle": 8,
+  "runtime_validated": false
+}
