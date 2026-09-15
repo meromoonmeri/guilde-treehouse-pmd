@@ -1,0 +1,97 @@
+{
+  "size": [
+    648,
+    624
+  ],
+  "source": "Steam_Cave_Peak_TDS.png",
+  "background_exact": true,
+  "geysers": [
+    {
+      "x": 324,
+      "y": 352,
+      "scale": 1,
+      "phase_offset": 0
+    },
+    {
+      "x": 242,
+      "y": 228,
+      "scale": 0.43,
+      "phase_offset": 2
+    },
+    {
+      "x": 411,
+      "y": 253,
+      "scale": 0.46,
+      "phase_offset": 7
+    },
+    {
+      "x": 236,
+      "y": 389,
+      "scale": 0.4,
+      "phase_offset": 4
+    },
+    {
+      "x": 419,
+      "y": 410,
+      "scale": 0.42,
+      "phase_offset": 9
+    }
+  ],
+  "frames": 12,
+  "durations_ms": [
+    333,
+    334,
+    333,
+    333,
+    334,
+    333,
+    333,
+    334,
+    333,
+    333,
+    334,
+    333
+  ],
+  "layer_order": [
+    "01_sol_original",
+    "02_parois_originales",
+    "03_bouche_geyser_0",
+    "03_bouche_geyser_1",
+    "03_bouche_geyser_2",
+    "03_bouche_geyser_3",
+    "03_bouche_geyser_4",
+    "04_jet_0",
+    "05_vapeur_0",
+    "04_jet_1",
+    "05_vapeur_1",
+    "04_jet_2",
+    "05_vapeur_2",
+    "04_jet_3",
+    "05_vapeur_3",
+    "04_jet_4",
+    "05_vapeur_4"
+  ],
+  "static": [
+    "01_sol_original",
+    "02_parois_originales",
+    "03_bouche_geyser_0",
+    "03_bouche_geyser_1",
+    "03_bouche_geyser_2",
+    "03_bouche_geyser_3",
+    "03_bouche_geyser_4"
+  ],
+  "animated": [
+    "04_jet_0",
+    "05_vapeur_0",
+    "04_jet_1",
+    "05_vapeur_1",
+    "04_jet_2",
+    "05_vapeur_2",
+    "04_jet_3",
+    "05_vapeur_3",
+    "04_jet_4",
+    "05_vapeur_4"
+  ],
+  "provenance": "Original Steam Cave Peak backdrop, losslessly partitioned; vent/jet/vapor authored procedurally in pixel art, not native geyser sprites.",
+  "runtime_validated": false
+}
