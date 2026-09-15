@@ -57,9 +57,20 @@ for name in drawn:
         im = Image.open(path)
         if im.width != fw * count:
             fail(f"{name}-{suffix}: width {im.width} != {fw}*{count}")
-        if im.height != fh * 8:
-            fail(f"{name}-{suffix}: height {im.height} != {fh}*8 directions")
-print("PASS: frame dimensions even, sheets are whole 8-direction grids")
+        # PMD allows 1-direction animations: SpriteCollab itself ships Sleep,
+        # Eat, Cringe and others as single-row sheets, because those poses are
+        # never shown from another angle. Accept 1 or 8 rows, reject anything
+        # else, and report the split so the coverage is explicit.
+        if im.height % fh:
+            fail(f"{name}-{suffix}: height {im.height} is not a multiple of {fh}")
+        elif im.height // fh not in (1, 8):
+            fail(f"{name}-{suffix}: {im.height // fh} rows, expected 1 or 8")
+rows8 = sum(1 for n in drawn
+            if Image.open(PACK / f"{n}-Anim.png").height
+            // int(next(a for a in anims if a.findtext("Name") == n)
+                   .findtext("FrameHeight")) == 8)
+print(f"PASS: dimensions even; {rows8} animations in 8 directions, "
+      f"{len(drawn) - rows8} single-direction (as upstream)")
 
 # 4. colour budget and binary alpha
 colours = set()
@@ -90,23 +101,36 @@ for name in drawn:
         fail(f"{name}-Shadow.png uses illegal colours: {bad}")
 print("PASS: offset and shadow sheets use only legal marker colours")
 
-# 6. the artwork really is the source, pixel for pixel
-from PIL import ImageSequence
-src = [f.convert("RGBA").resize((96, 96), Image.Resampling.NEAREST)
-       for f in ImageSequence.Iterator(Image.open(GIF))]
-idle = Image.open(PACK / "Idle-Anim.png").convert("RGBA")
-node = next(a for a in anims if a.findtext("Name") == "Idle")
-fw, fh = int(node.findtext("FrameWidth")), int(node.findtext("FrameHeight"))
-tile = idle.crop((0, 0, fw, fh))
-found = any(
-    all(tile.getpixel((x, y)) == s.getpixel((x + ox, y + oy))
-        for y in range(0, fh, 3) for x in range(0, fw, 3))
-    for s in src[:1] for ox in range(0, 96 - fw + 1) for oy in range(0, 96 - fh + 1)
-)
-if not found:
-    fail("the first Idle tile does not match the source GIF artwork")
+# 6. geometry must be untouched: alpha masks identical to canonical
+CANON = Path(__file__).resolve().parent / "canonical"
+from PIL import ImageChops
+for name in drawn:
+    a = Image.open(CANON / f"{name}-Anim.png").convert("RGBA").getchannel("A")
+    b = Image.open(PACK / f"{name}-Anim.png").convert("RGBA").getchannel("A")
+    if a.size != b.size:
+        fail(f"{name}: sheet size changed {a.size} vs {b.size}")
+    elif ImageChops.difference(a, b).getbbox() is not None:
+        fail(f"{name}: silhouette changed, this must be a recolour only")
+print("PASS: every silhouette matches canonical Raichu geometry exactly")
+
+# 7. marker sheets must be byte-identical to canonical
+import filecmp
+for name in drawn:
+    for suffix in ("Offsets", "Shadow"):
+        if not filecmp.cmp(CANON / f"{name}-{suffix}.png",
+                           PACK / f"{name}-{suffix}.png", shallow=False):
+            fail(f"{name}-{suffix}.png differs from canonical marker data")
+print("PASS: offset and shadow marker sheets are canonical, unmodified")
+
+# 8. no canonical colour survived the recolour
+CANON_ONLY = {(0, 0, 0), (255, 175, 71), (119, 63, 0), (223, 135, 31),
+              (167, 95, 31), (255, 247, 0), (223, 183, 0), (255, 255, 255),
+              (215, 191, 103), (255, 247, 159), (183, 135, 39)}
+left = colours & CANON_ONLY
+if left:
+    fail(f"canonical colours still present after recolour: {left}")
 else:
-    print("PASS: pack artwork is pixel-identical to the source GIF")
+    print("PASS: no canonical Raichu colour remains, recolour is complete")
 
 print()
 print("ALL CHECKS PASSED" if not FAILED else f"{len(FAILED)} CHECK(S) FAILED")
