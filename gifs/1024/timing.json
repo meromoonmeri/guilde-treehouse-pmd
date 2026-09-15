@@ -1,0 +1,681 @@
+{
+  "pokemon": "Terapagos Stellar",
+  "dex": 186,
+  "direction": 0,
+  "direction_name": "down/front",
+  "timing_source": "sprite/0186/AnimData.xml",
+  "game_ticks_per_second": 60,
+  "gif_min_delay_ms": 20,
+  "animations": [
+    {
+      "name": "Walk",
+      "source_sheet": "Walk-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "source_frames": 6,
+      "frames": 6,
+      "duration_game_ticks": [
+        8,
+        6,
+        6,
+        8,
+        6,
+        6
+      ],
+      "source_duration_gif_ms": [
+        130,
+        100,
+        100,
+        130,
+        100,
+        100
+      ],
+      "duration_gif_ms": [
+        130,
+        100,
+        100,
+        130,
+        100,
+        100
+      ],
+      "loop_game_ticks": 40,
+      "loop_gif_ms": 660,
+      "file": "Walk.gif"
+    },
+    {
+      "name": "Attack",
+      "source_sheet": "Attack-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        72,
+        56
+      ],
+      "source_frames": 17,
+      "frames": 17,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        30
+      ],
+      "loop_game_ticks": 30,
+      "loop_gif_ms": 470,
+      "file": "Attack.gif"
+    },
+    {
+      "name": "Strike",
+      "source_sheet": "Attack-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        72,
+        56
+      ],
+      "source_frames": 17,
+      "frames": 17,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        30
+      ],
+      "loop_game_ticks": 30,
+      "loop_gif_ms": 470,
+      "file": "Strike.gif"
+    },
+    {
+      "name": "Shoot",
+      "source_sheet": "Shoot-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        40
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_game_ticks": 20,
+      "loop_gif_ms": 300,
+      "file": "Shoot.gif"
+    },
+    {
+      "name": "SpAttack",
+      "source_sheet": "Shoot-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        40
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_game_ticks": 20,
+      "loop_gif_ms": 300,
+      "file": "SpAttack.gif"
+    },
+    {
+      "name": "Sleep",
+      "source_sheet": "Sleep-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        32
+      ],
+      "source_frames": 8,
+      "frames": 8,
+      "duration_game_ticks": [
+        12,
+        12,
+        16,
+        16,
+        12,
+        12,
+        16,
+        16
+      ],
+      "source_duration_gif_ms": [
+        200,
+        200,
+        270,
+        270,
+        200,
+        200,
+        270,
+        270
+      ],
+      "duration_gif_ms": [
+        200,
+        200,
+        270,
+        270,
+        200,
+        200,
+        270,
+        270
+      ],
+      "loop_game_ticks": 112,
+      "loop_gif_ms": 1880,
+      "file": "Sleep.gif"
+    },
+    {
+      "name": "Hurt",
+      "source_sheet": "Hurt-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        48,
+        48
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        2,
+        8
+      ],
+      "source_duration_gif_ms": [
+        30,
+        130
+      ],
+      "duration_gif_ms": [
+        30,
+        130
+      ],
+      "loop_game_ticks": 10,
+      "loop_gif_ms": 160,
+      "file": "Hurt.gif"
+    },
+    {
+      "name": "Idle",
+      "source_sheet": "Idle-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "source_frames": 13,
+      "frames": 12,
+      "duration_game_ticks": [
+        12,
+        12,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        12,
+        12,
+        12
+      ],
+      "source_duration_gif_ms": [
+        200,
+        200,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        200,
+        200,
+        200
+      ],
+      "duration_gif_ms": [
+        200,
+        200,
+        100,
+        100,
+        200,
+        100,
+        100,
+        100,
+        100,
+        200,
+        200,
+        200
+      ],
+      "loop_game_ticks": 108,
+      "loop_gif_ms": 1800,
+      "file": "Idle.gif"
+    },
+    {
+      "name": "Swing",
+      "source_sheet": "Swing-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        88,
+        72
+      ],
+      "source_frames": 9,
+      "frames": 9,
+      "duration_game_ticks": [
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "source_duration_gif_ms": [
+        30,
+        20,
+        30,
+        30,
+        50,
+        30,
+        30,
+        20,
+        20
+      ],
+      "duration_gif_ms": [
+        30,
+        20,
+        30,
+        30,
+        50,
+        30,
+        30,
+        20,
+        20
+      ],
+      "loop_game_ticks": 16,
+      "loop_gif_ms": 260,
+      "file": "Swing.gif"
+    },
+    {
+      "name": "Double",
+      "source_sheet": "Double-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        64,
+        56
+      ],
+      "source_frames": 16,
+      "frames": 16,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        50,
+        50,
+        50,
+        30,
+        50,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        50,
+        50,
+        50,
+        30,
+        50,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_game_ticks": 36,
+      "loop_gif_ms": 560,
+      "file": "Double.gif"
+    },
+    {
+      "name": "Hop",
+      "source_sheet": "Hop-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        88
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        1,
+        2,
+        3,
+        4,
+        4,
+        3,
+        2,
+        1,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        20,
+        30,
+        50,
+        70,
+        70,
+        50,
+        30,
+        20,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        20,
+        30,
+        50,
+        70,
+        70,
+        50,
+        30,
+        20,
+        30
+      ],
+      "loop_game_ticks": 24,
+      "loop_gif_ms": 400,
+      "file": "Hop.gif"
+    },
+    {
+      "name": "Charge",
+      "source_sheet": "Charge-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        40
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_game_ticks": 20,
+      "loop_gif_ms": 300,
+      "file": "Charge.gif"
+    },
+    {
+      "name": "Rotate",
+      "source_sheet": "Rotate-Anim.png",
+      "direction": 0,
+      "frame_size": [
+        40,
+        40
+      ],
+      "source_frames": 9,
+      "frames": 9,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "source_duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_game_ticks": 18,
+      "loop_gif_ms": 270,
+      "file": "Rotate.gif"
+    }
+  ]
+}
