@@ -6,6 +6,13 @@
   "wan_export": "Use PMDO after importing the multi-sheet folder; no proprietary WAN binary is committed",
   "output_folder": "sprite/0186",
   "output_archive": "sprite-0186.zip",
+  "gif_previews": {
+    "folder": "gifs/0186",
+    "archive": "gifs-0186.zip",
+    "script": "source/sprites_politoed/make_gifs.py",
+    "direction": "down/front (PMD direction 0)",
+    "timing": "AnimData.xml at 60 game ticks per second"
+  },
   "guide": {
     "title": "How to Make PMD Sprites for SkyTemple",
     "url": "https://docs.google.com/presentation/d/1SH2onT2yttVuznohr4yi3Uh07y4lNLcLlHGT_YWNGmo/edit?usp=drivesdk",

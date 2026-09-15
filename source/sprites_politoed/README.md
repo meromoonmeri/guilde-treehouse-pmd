@@ -88,3 +88,22 @@ python source/sprites_politoed/verify_sprites.py
 La génération recopie la base canonique, ajoute les animations 13–34, écrit
 les trois feuilles de chaque animation, produit `AnimData.xml`, recalcule
 `credits.txt` et reconstruit `sprite-0186.zip`.
+
+## Aperçus GIF
+
+`gifs/0186/` contient un GIF en boucle pour chacun des 35 indices de
+`AnimData.xml`, y compris `Strike` (copie de `Attack`). Les aperçus montrent la
+direction PMD 0 (bas / face caméra) à la taille native, avec les durées du jeu
+converties depuis une cadence de 60 ticks par seconde. Les délais GIF sont
+arrondis à 10 ms et limités à 20 ms pour éviter que les navigateurs ne sautent
+les frames trop courtes. Les poses identiques consécutives sont fusionnées en
+additionnant leurs durées, sans accélérer l'animation.
+
+Pour les reconstruire :
+
+```bash
+python source/sprites_politoed/make_gifs.py
+```
+
+Le paquet de prévisualisation est `gifs-0186.zip`. Ces GIFs servent au contrôle
+visuel ; les feuilles PNG de `sprite/0186/` restent le livrable SpriteCollab.
