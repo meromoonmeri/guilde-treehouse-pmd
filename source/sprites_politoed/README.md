@@ -48,8 +48,8 @@ a été suivie pour la couverture et la construction :
    `Sleep`) comme bases cohérentes ;
 3. construire chaque mouvement par transformations entières nearest-neighbor,
    déplacements pixel par pixel et séquences lisibles : ouverture de la
-   bouche et gestes main-bouche pour `Eat`, respiration, saut, chute, roulade,
-   sommeil et réveil ;
+   bouche et gestes main-bouche pour `Eat`, bâillement pour `DeepBreath`,
+   respiration, saut, chute, roulade, sommeil et réveil ;
 4. aligner chaque pose sur la même base d'ombre, puis calculer les offsets
    séparément ;
 5. vérifier à la taille native, sur les quatre angles principaux et dans

@@ -190,6 +190,24 @@ def _paint(frame: Image.Image, points: list[tuple[int, int]], color: tuple[int, 
             frame.putpixel((x, y), color)
 
 
+def _draw_open_mouth(frame: Image.Image, *, y_bias: int = 0) -> Image.Image:
+    """Add a small PMD-style open mouth to the current front pose."""
+    frame = frame.copy()
+    box = _largest_component_bbox(frame) or _bbox(frame)
+    if box is None:
+        return frame
+    left, top, right, bottom = box
+    center = round((left + right - 1) / 2)
+    y = top + round((bottom - top) * 0.60) + y_bias
+    _paint(frame, [(center - 3, y), (center - 2, y), (center - 1, y), (center, y),
+                   (center + 1, y), (center + 2, y), (center + 3, y),
+                   (center - 3, y + 1), (center + 3, y + 1)], BLACK)
+    _paint(frame, [(center - 2, y + 1), (center - 1, y + 1), (center, y + 1),
+                   (center + 1, y + 1), (center + 2, y + 1)], RED)
+    _paint(frame, [(center - 1, y + 2), (center, y + 2), (center + 1, y + 2)], YELLOW)
+    return frame
+
+
 def _eat_details(frame: Image.Image, index: int) -> Image.Image:
     """Make the four Eat frames read as feed, open, chew, and reset."""
     frame = frame.copy()
@@ -217,6 +235,23 @@ def _eat_details(frame: Image.Image, index: int) -> Image.Image:
     return frame
 
 
+def _pose_details(frame: Image.Image, index: int) -> Image.Image:
+    """Raise Politoed's hands for the morning-cheer Pose animation."""
+    if index == 0:
+        return frame
+    frame = frame.copy()
+    box = _largest_component_bbox(frame) or _bbox(frame)
+    if box is None:
+        return frame
+    left, top, right, _bottom = box
+    width = right - left
+    y = top + round(width * 0.45)
+    _paint(frame, [(left + 2, y), (left + 1, y - 1), (left + 2, y - 2),
+                   (left + 3, y - 3), (right - 3, y), (right - 2, y - 1),
+                   (right - 3, y - 2), (right - 4, y - 3)], YELLOW)
+    return frame
+
+
 def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) -> Image.Image:
     """Author one frame of one starter animation from canonical Politoed art."""
     # The four side/diagonal rows retain Politoed's curled asymmetry by using
@@ -225,7 +260,9 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return render(_sleep_frame(index, direction in (2, 3)), fw, fh)
 
     if name == "Wake":
-        source = _sleep_frame(index, direction in (2, 3)) if index < 2 else _dir_image("Idle", direction, min(index - 2, 4))
+        # Wake ends in a front/side idle pose, never in Idle's rear-facing
+        # transition frame.
+        source = _sleep_frame(index, direction in (2, 3)) if index < 2 else _dir_image("Idle", direction, min(index - 2, 3))
         return render(source, fw, fh, dy=(-2 if index == 1 else 0))
 
     if name == "Eat":
@@ -241,8 +278,8 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         if index == 0:
             return _frame("Idle", direction, 0, fw, fh)
         if index == 1:
-            return _frame("Attack", direction, 2, fw, fh, dy=-1)
-        return _frame("Attack", direction, 5, fw, fh)
+            return _pose_details(_frame("Attack", direction, 2, fw, fh, dy=-1), index)
+        return _pose_details(_frame("Attack", direction, 5, fw, fh), index)
 
     if name == "Pull":
         attack_frames = (0, 1, 2, 3, 4, 5, 6)
@@ -259,9 +296,12 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _frame("Idle", direction, (0, 1, 2, 1)[index], fw, fh, dy=offsets[index])
 
     if name == "DeepBreath":
-        idle_frames = (0, 1, 2, 3, 4, 3, 2, 1, 0)
+        # Idle frame 4 is a rear-facing transition, so it must not appear in
+        # a yawn/breath cycle. Keep the face toward the camera throughout.
+        idle_frames = (0, 1, 2, 3, 2, 3, 2, 1, 0)
         scales = (100, 101, 103, 105, 103, 101, 100, 100, 100)
-        return _frame("Idle", 0, idle_frames[index], fw, fh, scale_x=scales[index], scale_y=scales[index])
+        frame = _frame("Idle", 0, idle_frames[index], fw, fh, scale_x=scales[index], scale_y=scales[index])
+        return _draw_open_mouth(frame, y_bias=(1 if index in (2, 3, 4, 5) else 0)) if index in (2, 3, 4, 5) else frame
 
     if name == "Nod":
         return _frame("Idle", direction, (0, 1, 0)[index], fw, fh, dy=(0, 2, 0)[index])
