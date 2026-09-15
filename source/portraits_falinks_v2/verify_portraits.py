@@ -12,13 +12,14 @@ ROOT = Path(__file__).resolve().parents[2]
 PACK = ROOT / "portrait" / "0870_v2_generateur"
 REF = ROOT / "source" / "portraits_falinks" / "reference"
 TEMPLATE = ROOT / "portrait" / "0186" / "template.png"
-EMOTIONS = [
+SLOTS = [
     "Normal", "Happy", "Pain", "Angry", "Worried",
     "Sad", "Crying", "Shouting", "Teary-Eyed", "Determined",
-    "Joyous", "Inspired", "Surprised", "Dizzy", "Special0",
-    "Special1", "Sigh", "Stunned", "Special2", "Special3",
+    "Joyous", "Inspired", "Surprised", "Dizzy", None,
+    None, "Sigh", "Stunned", None, None,
 ]
-REQUIRED_16 = EMOTIONS[:14] + ["Sigh", "Stunned"]
+EMOTIONS = [slot for slot in SLOTS if slot]
+REQUIRED_16 = EMOTIONS
 UPSTREAM = ["Normal"]
 
 
@@ -65,7 +66,9 @@ for emotion in REQUIRED_16:
 template = Image.open(TEMPLATE).convert("RGB")
 source = Image.open(REF / "Normal.png").convert("RGB")
 falinks_palette = {colour for _, colour in source.getcolors(10000)}
-for index, emotion in enumerate(EMOTIONS):
+for index, emotion in enumerate(SLOTS):
+    if emotion is None:
+        continue
     tile = template.crop(((index % 5) * 40, (index // 5) * 40,
                           (index % 5 + 1) * 40, (index // 5 + 1) * 40))
     portrait = normal[emotion]
@@ -75,7 +78,7 @@ for index, emotion in enumerate(EMOTIONS):
         fail(f"{emotion}: canonical background from template cell {index} not preserved")
 
 for emotion in EMOTIONS:
-    index = EMOTIONS.index(emotion)
+    index = SLOTS.index(emotion)
     tile = template.crop(((index % 5) * 40, (index // 5) * 40,
                           (index % 5 + 1) * 40, (index // 5 + 1) * 40))
     tile_colors = {colour for _, colour in tile.getcolors(10000)}
@@ -89,7 +92,9 @@ sheet_path = PACK / "Sheet.png"
 sheet = Image.open(sheet_path).convert("RGB") if sheet_path.is_file() else fail("missing Sheet.png")
 if sheet.size != (200, 320):
     fail(f"Sheet.png: expected 200x320, got {sheet.size}")
-for index, emotion in enumerate(EMOTIONS):
+for index, emotion in enumerate(SLOTS):
+    if emotion is None:
+        continue
     x, y = (index % 5) * 40, (index // 5) * 40
     if ImageChops.difference(sheet.crop((x, y, x + 40, y + 40)), normal[emotion]).getbbox():
         fail(f"Sheet.png: normal tile {emotion} is out of order or differs")
@@ -98,7 +103,7 @@ for index, emotion in enumerate(EMOTIONS):
         fail(f"Sheet.png: mirrored tile {emotion} is out of order or differs")
 
 print(f"PASS: {len(EMOTIONS)} normal + {len(EMOTIONS)} mirrored Falinks portraits")
-print("PASS: the 16 required emotions and the 4 Special slots are present")
+print("PASS: the 16 required emotions are present; Special slots left empty")
 print("PASS: all portraits are 40x40, opaque and <=15 colors")
 print("PASS: every portrait uses only canonical Falinks colours")
 print("PASS: canonical template backgrounds preserved, palette limited to Falinks art")

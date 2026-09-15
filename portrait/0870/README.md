@@ -1,28 +1,28 @@
 # Falinks #0870 — PMD portraits
 
-Lot complet au format SpriteCollab/SpriteBot : 20 émotions canoniques et leurs
-20 variantes miroir.
+Lot au format SpriteCollab/SpriteBot : **16 émotions** et leurs 16 miroirs.
 
 - portraits individuels : `Emotion.png` et `Emotion^.png` ;
-- planche importable : [`Sheet.png`](Sheet.png), 200 × 320 px ;
-- fond canonique utilisé : [`template.png`](template.png), copie de
-  [`portrait/0186/template.png`](../0186/template.png) ;
-- ordre de la planche :
-  `Normal, Happy, Pain, Angry, Worried / Sad, Crying, Shouting,
-  Teary-Eyed, Determined / Joyous, Inspired, Surprised, Dizzy, Special0 /
-  Special1, Sigh, Stunned, Special2, Special3`, puis le même ordre retourné ;
-- chaque case mesure 40 × 40 px, est opaque et reste à 15 couleurs ou moins.
+- planche importable : `Sheet.png`, 200 × 320 px ;
+- fond canonique : `template.png` ;
+- chaque case est 40 × 40 px, opaque, 15 couleurs maximum.
 
-`Normal.png` conserve au pixel près le portrait Falinks publié sur
-SpriteCollab. **Toutes les autres expressions sont dérivées de ce portrait
-existant** : le personnage est extrait tel quel, seuls les yeux sont effacés
-puis redessinés, avec de petits effets (larmes, gouttes, étincelles, veines de
-colère) pris exclusivement dans les 12 couleurs du portrait d'origine. Aucune
-image générée n'entre dans le lot.
+## Règles propres au personnage
 
-Les quatre slots `Special` suivent la logique du personnage, un Pokémon de
-formation militaire : `Special0` salut discipliné, `Special1` clin d'œil
-assuré, `Special2` repos yeux fermés, `Special3` cri de guerre.
+- **Falinks n'a pas de bouche.** La plaque faciale est lisse : toute l'émotion
+  passe par les yeux et les sourcils. Un nettoyage automatique efface toute
+  bouche que le générateur aurait dessinée sur la plaque.
+- Expressions **sobres et disciplinées**, dans le registre des portraits PMD
+  officiels. Pas de grimaces grotesques ni de déformation comique.
+- Les personnage est détouré sur clé magenta pure, donc **aucun fond généré ne
+  peut baver** sur le fond canonique du template.
 
-Voir [`source/portraits_falinks/README.md`](../../source/portraits_falinks/README.md)
-pour la méthode, la provenance et les crédits.
+## Slots Special laissés vides
+
+Le FAQ SpriteCollab exige qu'un Special soit réellement unique et refuse tout
+ce qui se décrit comme « une autre émotion sur un autre fond ». Mes essais
+précédents ne faisaient que recycler Determined, Happy, Sigh et Shouting : ils
+sont retirés plutôt que soumis en l'état.
+
+Versions précédentes conservées : `portrait/0870_v1_derive/` (dérivée du
+portrait publié) et `portrait/0870_v2_generateur/`.
