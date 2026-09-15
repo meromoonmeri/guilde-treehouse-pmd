@@ -47,8 +47,9 @@ a été suivie pour la couverture et la construction :
 2. réutiliser les poses canonique Politoed (`Walk`, `Idle`, `Attack`, `Hurt`,
    `Sleep`) comme bases cohérentes ;
 3. construire chaque mouvement par transformations entières nearest-neighbor,
-   déplacements pixel par pixel et séquences lisibles : respiration, saut,
-   chute, roulade, sommeil et réveil ;
+   déplacements pixel par pixel et séquences lisibles : ouverture de la
+   bouche et gestes main-bouche pour `Eat`, respiration, saut, chute, roulade,
+   sommeil et réveil ;
 4. aligner chaque pose sur la même base d'ombre, puis calculer les offsets
    séparément ;
 5. vérifier à la taille native, sur les quatre angles principaux et dans

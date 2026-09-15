@@ -174,6 +174,49 @@ def _sleep_frame(index: int, flip: bool = False) -> Image.Image:
     return image.transpose(Image.Transpose.FLIP_LEFT_RIGHT) if flip else image
 
 
+# Exact colours already present in the canonical Politoed sprite.  These are
+# used for the few semantic details that cannot be obtained by reusing a
+# dungeon frame (notably the hand-to-mouth motion in Eat).
+BLACK = (0, 0, 0, 255)
+DARK_GREEN = (39, 135, 0, 255)
+ORANGE = (223, 183, 0, 255)
+YELLOW = (255, 247, 0, 255)
+RED = (159, 0, 0, 255)
+
+
+def _paint(frame: Image.Image, points: list[tuple[int, int]], color: tuple[int, int, int, int]) -> None:
+    for x, y in points:
+        if 0 <= x < frame.width and 0 <= y < frame.height:
+            frame.putpixel((x, y), color)
+
+
+def _eat_details(frame: Image.Image, index: int) -> Image.Image:
+    """Make the four Eat frames read as feed, open, chew, and reset."""
+    frame = frame.copy()
+    # Frame 1: both hands are raised toward the mouth while it opens.
+    # Frame 2: hands stay near the cheeks and the mouth closes to chew.
+    # Frame 3: the mouth opens once more, then the loop returns to frame 0.
+    if index in (1, 3):
+        _paint(frame, [(17, 23), (18, 23), (19, 23), (20, 23), (21, 23), (22, 23),
+                       (16, 24), (23, 24), (16, 25), (23, 25),
+                       (17, 26), (18, 26), (19, 26), (20, 26), (21, 26), (22, 26)], BLACK)
+        _paint(frame, [(18, 24), (19, 24), (20, 24), (21, 24),
+                       (18, 25), (19, 25), (20, 25), (21, 25)], RED)
+        _paint(frame, [(19, 26), (20, 26)], YELLOW)
+        if index == 1:
+            left = [(11, 23), (12, 22), (13, 21), (14, 21), (14, 22)]
+            right = [(28, 23), (27, 22), (26, 21), (25, 21), (25, 22)]
+        else:
+            left = [(10, 25), (11, 24), (12, 23), (13, 23)]
+            right = [(29, 25), (28, 24), (27, 23), (26, 23)]
+        _paint(frame, left + right, YELLOW)
+    elif index == 2:
+        _paint(frame, [(17, 24), (18, 24), (19, 24), (20, 24), (21, 24), (22, 24)], DARK_GREEN)
+        _paint(frame, [(19, 25), (20, 25)], ORANGE)
+        _paint(frame, [(12, 22), (13, 22), (14, 23), (25, 23), (26, 22), (27, 22)], YELLOW)
+    return frame
+
+
 def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) -> Image.Image:
     """Author one frame of one starter animation from canonical Politoed art."""
     # The four side/diagonal rows retain Politoed's curled asymmetry by using
@@ -187,7 +230,8 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
 
     if name == "Eat":
         attack_frames = (0, 2, 5, 11)
-        return _frame("Attack", 0, attack_frames[index], fw, fh, dx=(-1, -2, -1, 0)[index])
+        base = _frame("Attack", 0, attack_frames[index], fw, fh)
+        return _eat_details(base, index)
 
     if name == "Tumble":
         angles = (0, 45, 90, 135, 180, 225, 270, 315)
