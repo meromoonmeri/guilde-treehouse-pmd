@@ -1,0 +1,29 @@
+{
+  "pokedex": 186,
+  "name": "Politoed",
+  "format": "SpriteCollab portrait sheet",
+  "tile_size": [40, 40],
+  "sheet_size": [200, 320],
+  "max_colors_per_tile": 15,
+  "opaque": true,
+  "asymmetric_mirrors": true,
+  "order": [
+    "Normal", "Happy", "Pain", "Angry", "Worried",
+    "Sad", "Crying", "Shouting", "Teary-Eyed", "Determined",
+    "Joyous", "Inspired", "Surprised", "Dizzy", "Special0",
+    "Special1", "Sigh", "Stunned", "Special2", "Special3"
+  ],
+  "upstream_unchanged": ["Normal", "Inspired", "Shouting", "Surprised"],
+  "generated_here": [
+    "Angry", "Crying", "Determined", "Dizzy", "Happy", "Joyous",
+    "Pain", "Sad", "Sigh", "Special0", "Special1", "Special2",
+    "Special3", "Stunned", "Teary-Eyed", "Worried"
+  ],
+  "background_provenance": {
+    "template": "reference/portrait-XXXX.png",
+    "repository": "PMDCollab/SpriteCollab",
+    "repository_commit": "39246063655c8b3de3ff104e323b1d5c081c39f0",
+    "politoed_reference": "reference/Normal.png, reference/Inspired.png, reference/Shouting.png, reference/Surprised.png"
+  },
+  "validation": "python source/portraits_politoed/verify_portraits.py"
+}
