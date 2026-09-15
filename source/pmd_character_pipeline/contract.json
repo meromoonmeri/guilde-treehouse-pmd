@@ -66,7 +66,13 @@
     ],
     "reference_resize_for_cleanup": "bilinear may be used as guide, never final automatic acceptance",
     "preview_resize": "nearest",
-    "asymmetry_requires_manual_reverse_view": true
+    "asymmetry_requires_manual_reverse_view": true,
+    "user_backgrounds": {
+      "commit": "bee49f0",
+      "primary_template": "template.png",
+      "extras_atlas": "Extra_Backgrounds.png",
+      "policy": "user-provided canonical background references; preserve originals; crop selected cell, then count subject+background colors together; optional extras require explicit emotion mapping"
+    }
   },
   "sprite": {
     "visible_colors_all_animations_max": 15,

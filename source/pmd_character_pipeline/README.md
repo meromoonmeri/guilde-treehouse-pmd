@@ -31,6 +31,16 @@ Une planche standard complète fait **200 × 160** ; les vues inversées occupen
 
 Pour une anatomie asymétrique, chaque émotion présente a sa vue inverse corrigée : **un miroir automatique ne suffit pas** pour un accessoire porté d’un seul côté. Le dépôt stocke les fichiers par nom (`Normal.png`, `Happy.png`, `Normal^.png`, etc.) ; la planche de soumission est un autre format de présentation de ces mêmes cellules.
 
+### Fonds canoniques ajoutés par l’utilisateur
+
+Le commit utilisateur `bee49f0` (« Portrait fond canonique »), arrivé pendant cette préparation, a été fusionné sans écraser les fichiers :
+
+- `template.png` : **200 × 320**, grille 5 × 8 de cellules 40 × 40 ; référence prioritaire pour les fonds d’émotion.
+- `Extra_Backgrounds.png` : **280 × 240**, atlas 7 × 6 de fonds supplémentaires ; sélectionner une cellule explicitement plutôt que supposer un ordre d’émotions identique au template.
+- Empreintes, palettes et alphas par cellule : `references/user_backgrounds.json`.
+
+Ces fichiers sont des **sources de fond, pas des portraits finaux à soumettre**. Le contrôle a relevé quatre cellules `Special` partiellement transparentes dans le template ; la cellule du slot `Special2` comporte 17 couleurs visibles avant même d’ajouter un personnage. Il faut composer ces motifs sur un fond opaque et choisir/optimiser la palette finale sujet + fond dans la limite de 15, sans altérer les originaux. Ne pas annoncer le template brut comme une planche conforme de portraits finis. Les fonds supplémentaires utilisent jusqu’à six couleurs par cellule : les prévoir dans le budget de palette.
+
 ### Méthode artistique retenue
 
 1. Références canoniques + exemples Chunsoft pertinents ; noter proportions, anatomie, palette, fonds d’émotion et asymétries. Les modèles 3D servent à comprendre les volumes, pas à imposer un rendu 3D.
