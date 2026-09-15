@@ -27,14 +27,14 @@ SPECS = [
     ("Wake", 14, 40, 64, (8, 6, 14, 4, 10), 8),
     ("Eat", 15, 40, 56, (6, 8, 6, 8), 1),
     ("Tumble", 16, 48, 48, (3, 3, 3, 3, 3, 3, 3, 3), 1),
-    ("Pose", 17, 40, 64, (12, 2, 8), 8),
+    ("Pose", 17, 40, 64, (8, 6, 6, 6, 8), 8),
     ("Pull", 18, 48, 64, (10, 12, 10, 12, 10, 12, 10), 1),
     ("Pain", 19, 48, 64, (4, 1, 1, 1, 2, 1, 4, 2, 2, 2, 2, 2), 8),
     ("Float", 20, 40, 64, (9, 18, 9, 14), 8),
     ("DeepBreath", 21, 40, 64, (12, 6, 6, 6, 6, 6, 6, 10, 4), 1),
     ("Nod", 22, 40, 64, (6, 8, 6), 8),
     ("Sit", 23, 40, 48, (8, 8, 8), 1),
-    ("LookUp", 24, 40, 64, (6, 6), 1),
+    ("LookUp", 24, 40, 64, (6, 8, 6), 1),
     ("Sink", 25, 40, 64, (6,) * 12, 1),
     ("Trip", 26, 48, 64, (4, 6, 4, 4, 4), 8),
     ("Laying", 27, 48, 40, (12,), 8),
@@ -182,6 +182,8 @@ DARK_GREEN = (39, 135, 0, 255)
 ORANGE = (223, 183, 0, 255)
 YELLOW = (255, 247, 0, 255)
 RED = (159, 0, 0, 255)
+WHITE = (255, 255, 255, 255)
+BLUE = (135, 159, 255, 255)
 
 
 def _paint(frame: Image.Image, points: list[tuple[int, int]], color: tuple[int, int, int, int]) -> None:
@@ -206,6 +208,59 @@ def _draw_open_mouth(frame: Image.Image, *, y_bias: int = 0) -> Image.Image:
                    (center + 1, y + 1), (center + 2, y + 1)], RED)
     _paint(frame, [(center - 1, y + 2), (center, y + 2), (center + 1, y + 2)], YELLOW)
     return frame
+
+
+def _effort_marks(frame: Image.Image, index: int) -> Image.Image:
+    """Add the small canonical white exertion marks used by PMD Pull."""
+    if index not in (1, 3, 5):
+        return frame
+    frame = frame.copy()
+    box = _largest_component_bbox(frame) or _bbox(frame)
+    if box is None:
+        return frame
+    left, top, right, bottom = box
+    y = top + round((bottom - top) * 0.42)
+    marks = [
+        (left - 4, y), (left - 3, y - 2), (left - 2, y - 3),
+        (right + 3, y), (right + 2, y - 2), (right + 1, y - 3),
+    ]
+    _paint(frame, marks, WHITE)
+    return frame
+
+
+def _ground_impact(frame: Image.Image, index: int) -> Image.Image:
+    """Draw restrained PMD impact pixels when the body meets the floor."""
+    if index not in (3, 4, 5):
+        return frame
+    frame = frame.copy()
+    box = _largest_component_bbox(frame) or _bbox(frame)
+    if box is None:
+        return frame
+    left, _top, right, bottom = box
+    center = round((left + right - 1) / 2)
+    marks = [
+        (left - 3, bottom), (left - 2, bottom + 1),
+        (right + 2, bottom), (right + 1, bottom + 1),
+        (center - 5, bottom + 2), (center + 5, bottom + 2),
+    ]
+    _paint(frame, marks[:4], WHITE)
+    _paint(frame, marks[4:], BLUE)
+    return frame
+
+
+def _head_only(direction: int, fw: int, fh: int) -> Image.Image:
+    """Use only Politoed's head for the official PMD Head expression."""
+    source = _dir_image("Idle", direction, 0)
+    box = _largest_component_bbox(source) or _bbox(source)
+    if box is None:
+        return Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+    _left, top, _right, bottom = box
+    # The canonical Politoed pose is 24 pixels tall.  The upper fifteen
+    # pixels contain crest, eyes and mouth; the lower pixels are the body and
+    # feet that must not appear in Head.
+    head_bottom = min(bottom, top + 15)
+    head = source.crop((0, top, source.width, head_bottom))
+    return render(head, fw, fh, dy=-10)
 
 
 def _eat_details(frame: Image.Image, index: int) -> Image.Image:
@@ -239,23 +294,6 @@ def _eat_details(frame: Image.Image, index: int) -> Image.Image:
     return frame
 
 
-def _pose_details(frame: Image.Image, index: int) -> Image.Image:
-    """Raise Politoed's hands for the morning-cheer Pose animation."""
-    if index == 0:
-        return frame
-    frame = frame.copy()
-    box = _largest_component_bbox(frame) or _bbox(frame)
-    if box is None:
-        return frame
-    left, top, right, _bottom = box
-    width = right - left
-    y = top + round(width * 0.45)
-    _paint(frame, [(left + 2, y), (left + 1, y - 1), (left + 2, y - 2),
-                   (left + 3, y - 3), (right - 3, y), (right - 2, y - 1),
-                   (right - 3, y - 2), (right - 4, y - 3)], YELLOW)
-    return frame
-
-
 def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) -> Image.Image:
     """Author one frame of one starter animation from canonical Politoed art."""
     # The four side/diagonal rows retain Politoed's curled asymmetry by using
@@ -282,16 +320,20 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _frame("Walk", 0, 0, fw, fh, angle=angles[index])
 
     if name == "Pose":
+        # Use the existing Politoed RearUp hand-wave as the actual drawing
+        # reference.  This gives Pose raised, readable arms instead of an
+        # Attack frame with a few detached yellow pixels.
         if index == 0:
             return _frame("Idle", direction, 0, fw, fh)
-        if index == 1:
-            return _pose_details(_frame("Attack", direction, 2, fw, fh, dy=-1), index)
-        return _pose_details(_frame("Attack", direction, 5, fw, fh), index)
+        return _frame("RearUp", direction, index - 1, fw, fh, dy=-1 if index >= 2 else 0)
 
     if name == "Pull":
-        attack_frames = (0, 1, 2, 3, 4, 5, 6)
-        shifts = (-2, -1, 0, 1, 2, 1, 0)
-        return _frame("Attack", 0, attack_frames[index], fw, fh, dx=shifts[index])
+        # Official PMD Pull poses show the character from behind while it
+        # leans against a heavy object.  Alternate canonical rear Walk poses
+        # and add the same small white effort marks used by SpriteCollab.
+        walk_frames = (1, 0, 1, 0, 1, 0, 0)
+        frame = _frame("Walk", 4, walk_frames[index], fw, fh, dy=(0, 1, 0, 1, 0, 1, 0)[index])
+        return _effort_marks(frame, index)
 
     if name == "Pain":
         hurt_frame = (0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1)[index]
@@ -311,13 +353,25 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _draw_open_mouth(frame, y_bias=(1 if index in (2, 3, 4, 5) else 0)) if index in (2, 3, 4, 5) else frame
 
     if name == "Nod":
-        return _frame("Idle", direction, (0, 1, 0)[index], fw, fh, dy=(0, 2, 0)[index])
+        # A nod is a front pose, a lowered/hidden head, then the same front
+        # pose again.  Turning the middle frame away mirrors the official PMD
+        # starter timing without inventing a new silhouette.
+        if index == 1:
+            return _frame("Idle", (direction + 4) % 8, 0, fw, fh, dy=1)
+        return _frame("Idle", direction, 0, fw, fh)
 
     if name == "Sit":
-        return _frame("Walk", 0, (0, 6, 6)[index], fw, fh, scale_y=(100, 92, 88)[index])
+        # Stand, lower the body, then settle into Politoed's compact crouch.
+        sources = (1, 2, 5)
+        scales = (100, 96, 88)
+        return _frame("Walk", 0, sources[index], fw, fh, scale_y=scales[index], dy=(0, 1, 0)[index])
 
     if name == "LookUp":
-        return _frame("Walk", 4, index, fw, fh)
+        # Rise through the existing front Walk poses instead of showing an
+        # unrelated rear-facing direction.  The increasing vertical lift
+        # makes the head look upward while preserving Politoed's anatomy.
+        sources = (0, 1, 2)
+        return _frame("Walk", 0, sources[index], fw, fh, dy=(0, -1, -2)[index])
 
     if name == "Sink":
         scales = (100, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16)
@@ -336,7 +390,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return render(sources[index], fw, fh, dy=jumps[index])
 
     if name == "Head":
-        return _frame("Idle", direction, 0, fw, fh)
+        return _head_only(direction, fw, fh)
 
     if name == "Cringe":
         return _frame("Hurt", 0, index, fw, fh, dy=(0, 3)[index], scale_y=(100, 90)[index])
@@ -349,15 +403,28 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _frame("Walk", 0, 0, fw, fh, angle=angles[index])
 
     if name == "Faint":
-        angles = (0, 12, 38, 72)
-        scales = (100, 98, 94, 88)
-        return _frame("Walk", direction, 0, fw, fh, angle=angles[index], scale_y=scales[index])
+        # Faint ends in the canonical curled Sleep pose, as in the official
+        # starter animations, rather than stopping half-way through a spin.
+        if index < 2:
+            return _frame("Walk", direction, (1, 5)[index], fw, fh,
+                          angle=(0, -18)[index], scale_y=(100, 96)[index])
+        sleeping = _sleep_frame(index - 2, direction in (2, 3))
+        return render(sleeping, fw, fh, dy=1 if index == 2 else 0)
 
     if name == "HitGround":
-        sources = (source_frame("Walk", 0, 0), source_frame("Walk", 0, 6), source_frame("Walk", 0, 6), source_frame("Sleep", 0, 0), source_frame("Sleep", 0, 1), source_frame("Sleep", 0, 0), source_frame("Walk", 0, 6), source_frame("Walk", 0, 0))
-        angles = (0, -12, -28, -55, -70, -70, -25, 0)
+        # Forward fall: upright, pitch forward, make contact, lie still, then
+        # begin the recovery.  The impact marks are deliberately detached
+        # from the body so PMD offsets continue to describe the sprite itself.
+        sources = (
+            source_frame("Walk", 0, 1), source_frame("Walk", 0, 2),
+            source_frame("Walk", 0, 5), source_frame("Sleep", 0, 0),
+            source_frame("Sleep", 0, 1), source_frame("Sleep", 0, 0),
+            source_frame("Walk", 0, 5), source_frame("Walk", 0, 0),
+        )
+        angles = (0, -12, -30, -58, -72, -72, -28, 0)
         scales = (100, 98, 94, 90, 88, 88, 94, 100)
-        return render(sources[index], fw, fh, angle=angles[index], scale_y=scales[index])
+        frame = render(sources[index], fw, fh, angle=angles[index], scale_y=scales[index])
+        return _ground_impact(frame, index)
 
     raise ValueError(f"unhandled starter animation {name}")
 

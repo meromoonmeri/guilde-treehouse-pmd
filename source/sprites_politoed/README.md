@@ -49,6 +49,9 @@ a été suivie pour la couverture et la construction :
 3. construire chaque mouvement par transformations entières nearest-neighbor,
    déplacements pixel par pixel et séquences lisibles : ouverture de la
    bouche et gestes main-bouche pour `Eat`, bâillement pour `DeepBreath`,
+   bras levés issus de `RearUp` pour `Pose`, traction vue de dos avec marques
+   d'effort pour `Pull`, tête seule pour `Head`, position relevée pour
+   `LookUp`, chute puis pose allongée pour `Faint` et `HitGround`, ainsi que
    respiration, saut, chute, roulade, sommeil et réveil ;
 4. aligner chaque pose sur la même base d'ombre, puis calculer les offsets
    séparément ;

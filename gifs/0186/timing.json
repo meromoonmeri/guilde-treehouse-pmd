@@ -752,25 +752,31 @@
         40,
         64
       ],
-      "source_frames": 3,
-      "frames": 3,
+      "source_frames": 5,
+      "frames": 5,
       "duration_game_ticks": [
-        12,
-        2,
+        8,
+        6,
+        6,
+        6,
         8
       ],
       "source_duration_gif_ms": [
-        200,
-        30,
+        130,
+        100,
+        100,
+        100,
         130
       ],
       "duration_gif_ms": [
-        200,
-        30,
+        130,
+        100,
+        100,
+        100,
         130
       ],
-      "loop_game_ticks": 22,
-      "loop_gif_ms": 360,
+      "loop_game_ticks": 34,
+      "loop_gif_ms": 560,
       "file": "Pose.gif"
     },
     {
@@ -782,7 +788,7 @@
         64
       ],
       "source_frames": 7,
-      "frames": 6,
+      "frames": 7,
       "duration_game_ticks": [
         10,
         12,
@@ -804,7 +810,8 @@
       "duration_gif_ms": [
         170,
         200,
-        370,
+        170,
+        200,
         170,
         200,
         170
@@ -1010,22 +1017,25 @@
         40,
         64
       ],
-      "source_frames": 2,
-      "frames": 2,
+      "source_frames": 3,
+      "frames": 3,
       "duration_game_ticks": [
         6,
+        8,
         6
       ],
       "source_duration_gif_ms": [
         100,
+        130,
         100
       ],
       "duration_gif_ms": [
         100,
+        130,
         100
       ],
-      "loop_game_ticks": 12,
-      "loop_gif_ms": 200,
+      "loop_game_ticks": 20,
+      "loop_gif_ms": 330,
       "file": "LookUp.gif"
     },
     {
