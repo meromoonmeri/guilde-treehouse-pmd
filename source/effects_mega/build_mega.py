@@ -1,25 +1,24 @@
-"""Mega Evolution effect animation for a PMD sprite, drawn from scratch.
+"""Mega Evolution effect: 10 frames, continuous motion, 2D/3D orbiting energy.
 
-WHY THIS IS A REWRITE
----------------------
-The previous attempt generated large images and downscaled them to ~60px.
-Downscaled pixel art is not pixel art: it turns to mush, the edges go soft and
-the colour count explodes. It also stacked five loud elements at once and used
-a saturated rainbow that belongs to no PMD palette, so the effect fought the
-Pokemon instead of serving it.
+DESIGN
+------
+Ten frames is short, so nothing may be wasted and nothing may jump. Two rules
+drive this build:
 
-This version fixes that at the root:
+  FLUID  — every element is a CONTINUOUS function of a normalised time t in
+           [0,1). No hand-tuned per-frame tables, no popping. Angles advance by
+           a constant step, radii follow smooth eased curves, so the motion
+           reads the same at any playback speed and the loop is seamless.
 
-  * every pixel is placed by hand at NATIVE resolution, 80x96. Nothing is ever
-    resized, so edges stay hard by construction;
-  * the palette is TAKEN FROM THE SUBJECT SPRITE ITSELF, so the effect looks
-    like it belongs to this Pokemon rather than sitting on top of it;
-  * the staging is restrained: at most two ideas on screen at a time, and the
-    Pokemon stays readable except during the single deliberate whiteout;
-  * the energy reads as RINGS and MOTES converging, which is the classic PMD
-    power-up vocabulary, instead of vertical bars that curtained the frame.
+  3D     — the energy orbits on TILTED RINGS rendered in perspective. Each
+           orbiting mote carries a depth value z = sin(angle). Motes with z < 0
+           are drawn BEHIND the sprite, motes with z > 0 are drawn IN FRONT,
+           and their size and brightness track depth. That single trick is what
+           sells volume on a flat sprite: the ring visibly wraps around the
+           Pokemon instead of sitting on top of it.
 
-Output is a PMD-style sheet: one row per direction, one column per frame.
+Everything is placed pixel by pixel at native 80x96. No image is ever resized,
+so edges stay hard. The palette is taken from the subject sprite itself.
 """
 from pathlib import Path
 import math
@@ -38,13 +37,11 @@ DIRECTIONS = ["down", "down-right", "right", "up-right",
 WIDTH, HEIGHT = 80, 96
 CX, CY = WIDTH // 2, HEIGHT // 2 - 2
 FEET_Y = CY + 20
-FRAMES = 24
+FRAMES = 10
 
 CLEAR = (0, 0, 0, 0)
 
-# Palette lifted from the Terapagos Stellar sprite, plus one warm accent for
-# the flash. Keeping the effect inside the subject's own colours is what makes
-# it read as PMD rather than as a sticker.
+# Palette lifted from the Terapagos Stellar sprite.
 DEEP = (47, 0, 127)
 DUSK = (68, 76, 157)
 BLUE = (86, 106, 192)
@@ -52,52 +49,53 @@ STEEL = (119, 167, 223)
 SKY = (100, 199, 238)
 AQUA = (49, 165, 206)
 MINT = (143, 215, 151)
-LEAF = (191, 231, 159)
 ICE = (207, 223, 255)
 FROST = (223, 247, 255)
 WHITE = (255, 255, 255)
 ROSE = (221, 78, 151)
 LILAC = (154, 86, 213)
-GOLD = (255, 231, 175)
 
-PALETTE = [DEEP, DUSK, BLUE, STEEL, SKY, AQUA, MINT, LEAF, ICE, FROST,
-           WHITE, ROSE, LILAC, GOLD]
+PALETTE = [DEEP, DUSK, BLUE, STEEL, SKY, AQUA, MINT, ICE, FROST, WHITE,
+           ROSE, LILAC]
+
+# Depth ramps: far motes are dim and small, near motes bright and fat.
+# Far motes still have to be VISIBLE against a dark dungeon floor, so the ramp
+# starts at STEEL rather than at the near-black DUSK, which vanished entirely.
+DEPTH_RAMP = [STEEL, BLUE, AQUA, SKY, ICE, FROST, WHITE]
+
+# Two counter-rotating rings, each with its own tilt, radius and mote count.
+RINGS = [
+    {"count": 7, "tilt": 0.46, "spin": +1.0, "phase": 0.0, "rx": 31},
+    {"count": 5, "tilt": 0.78, "spin": -1.4, "phase": 1.7, "rx": 24},
+]
 
 
 def snap(colour):
     return min(PALETTE, key=lambda c: sum((a - b) ** 2 for a, b in zip(colour, c)))
 
 
-class Canvas:
-    """A tiny native-resolution pixel canvas. No scaling, ever."""
+def ease_in_out(t):
+    """Smooth acceleration and deceleration, so nothing starts or stops hard."""
+    return t * t * (3.0 - 2.0 * t)
 
+
+class Canvas:
     def __init__(self):
         self.image = Image.new("RGBA", (WIDTH, HEIGHT), CLEAR)
         self.px = self.image.load()
 
     def set(self, x, y, colour):
-        if 0 <= x < WIDTH and 0 <= y < HEIGHT and colour is not None:
-            self.px[int(x), int(y)] = (*colour, 255)
+        if colour is None:
+            return
+        x, y = int(x), int(y)
+        if 0 <= x < WIDTH and 0 <= y < HEIGHT:
+            self.px[x, y] = (*colour, 255)
 
     def blit(self, art, ox, oy):
         layer = Image.new("RGBA", (WIDTH, HEIGHT), CLEAR)
         layer.paste(art, (int(ox), int(oy)))
         self.image = Image.alpha_composite(self.image, layer)
         self.px = self.image.load()
-
-
-def ring(canvas, cx, cy, radius, colour, squash=1.0, gaps=0):
-    """A 1px ring drawn with midpoint stepping, optionally dashed."""
-    if radius < 1:
-        return
-    steps = max(8, int(radius * 8))
-    for step in range(steps):
-        if gaps and (step * gaps // steps) % 2:
-            continue
-        angle = 2 * math.pi * step / steps
-        x = round(cx + math.cos(angle) * radius)
-        y = round(cy + math.sin(angle) * radius * squash)
-        canvas.set(x, y, colour)
 
 
 def disc(canvas, cx, cy, radius, colour, squash=1.0):
@@ -109,135 +107,125 @@ def disc(canvas, cx, cy, radius, colour, squash=1.0):
                 canvas.set(x, y, colour)
 
 
-def mote(canvas, x, y, colour, big=False):
-    """A converging energy mote: a plus sign, with a core when big."""
-    canvas.set(x, y, WHITE if big else colour)
-    for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-        canvas.set(x + dx, y + dy, colour)
-    if big:
-        for dx, dy in ((-1, -1), (1, -1), (-1, 1), (1, 1)):
+def ring_outline(canvas, cx, cy, radius, colour, squash=1.0):
+    steps = max(10, int(radius * 9))
+    for step in range(steps):
+        angle = 2 * math.pi * step / steps
+        canvas.set(round(cx + math.cos(angle) * radius),
+                   round(cy + math.sin(angle) * radius * squash), colour)
+
+
+def orbit_motes(t):
+    """Every orbiting mote for time t, as (z, x, y, radius, colour).
+
+    z is the depth: negative is behind the subject, positive is in front.
+    The orbit radius contracts with an eased curve, so the energy visibly
+    spirals in rather than sliding at constant distance.
+    """
+    pull = ease_in_out(min(1.0, t / 0.75))
+    motes = []
+    for ring in RINGS:
+        rx = ring["rx"] * (1.0 - 0.34 * pull)
+        for k in range(ring["count"]):
+            angle = (2 * math.pi * k / ring["count"]
+                     + ring["phase"]
+                     + 2 * math.pi * ring["spin"] * t)
+            # Perspective projection of a tilted circular orbit.
+            z = math.sin(angle)
+            x = CX + math.cos(angle) * rx
+            y = CY + z * rx * ring["tilt"]
+            # Near motes render bigger and brighter.
+            depth = (z + 1.0) * 0.5
+            shade = DEPTH_RAMP[min(len(DEPTH_RAMP) - 1,
+                                   int(depth * len(DEPTH_RAMP)))]
+            vx = -math.sin(angle) * ring["spin"]
+            motes.append((z, x, y, 1 + (depth > 0.55) + (depth > 0.85),
+                          shade, vx))
+    return motes
+
+
+def orbit_path(canvas, t, front):
+    """Faint dashed ellipse tracing each orbit, split into far/near halves.
+
+    Without the path the motes read as loose sparkles. With it, the eye sees a
+    ring in perspective wrapping the sprite, which is what creates the volume.
+    """
+    pull = ease_in_out(min(1.0, t / 0.75))
+    for ring in RINGS:
+        rx = ring["rx"] * (1.0 - 0.34 * pull)
+        steps = max(24, int(rx * 7))
+        for step in range(steps):
+            angle = 2 * math.pi * step / steps
+            z = math.sin(angle)
+            if (z >= 0) != front:
+                continue
+            # A CONTINUOUS path. Dashes were tried and rejected: at this
+            # scale they broke the ellipse into disconnected arcs that looked
+            # like rendering errors. Depth is conveyed by colour instead: the
+            # far half is dim, the near half bright.
+            canvas.set(round(CX + math.cos(angle) * rx),
+                       round(CY + z * rx * ring["tilt"]),
+                       STEEL if front else DUSK)
+
+
+def draw_mote(canvas, x, y, size, colour, vx=0.0):
+    """A mote plus a short trail opposite its travel, which sells speed."""
+    if abs(vx) > 0.15:
+        step = -1 if vx > 0 else 1
+        canvas.set(x + step, y, colour)
+        if size >= 3:
+            canvas.set(x + 2 * step, y, DUSK if colour is WHITE else colour)
+    canvas.set(x, y, WHITE if size >= 3 else colour)
+    if size >= 2:
+        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
             canvas.set(x + dx, y + dy, colour)
-
-
-def spark(canvas, cx, cy, angle, inner, outer, colour, tip=WHITE):
-    """A radial energy spike, drawn as a line of pixels."""
-    length = outer - inner
-    if length <= 0:
-        return
-    for step in range(length + 1):
-        t = inner + step
-        x = round(cx + math.cos(angle) * t)
-        y = round(cy + math.sin(angle) * t)
-        canvas.set(x, y, tip if step >= length - 1 else colour)
-
-
-def ground_pool(canvas, radius, bright):
-    """Flat light pooling on the floor, anchored at the feet."""
-    if radius < 2:
-        return
-    disc(canvas, CX, FEET_Y, radius, DUSK, squash=0.34)
-    disc(canvas, CX, FEET_Y, radius * 0.72, BLUE if not bright else STEEL,
-         squash=0.34)
-    disc(canvas, CX, FEET_Y, radius * 0.40, STEEL if not bright else FROST,
-         squash=0.34)
-    ring(canvas, CX, FEET_Y, radius, LILAC, squash=0.34)
-
-
-def halo(canvas, radius, colour, squash=1.0, gaps=0):
-    ring(canvas, CX, CY, radius, colour, squash=squash, gaps=gaps)
-
-
-# ------------------------------------------------------------------ timeline
-# Restraint is the point: each phase owns the frame, they overlap only briefly.
-#   0-5   gather : motes spiral inward, pool opens
-#   6-10  bind   : rings tighten around the Pokemon
-#   11-13 flash  : single clean whiteout, the only moment the sprite is hidden
-#   14-18 emerge : shockwave rings expand, sparks radiate
-#   19-23 settle : pool dims, last motes drift off
-
-
-def draw_motes(canvas, index):
-    """Motes spiralling inward during the gather, outward on release."""
-    if index <= 10:
-        t = index / 10.0
-        distance = 40 - 28 * t
-        count = 8
-        spin = index * 0.38
-        colours = [SKY, MINT, ROSE, ICE]
-        for k in range(count):
-            angle = 2 * math.pi * k / count + spin
-            x = round(CX + math.cos(angle) * distance)
-            y = round(CY + math.sin(angle) * distance * 0.8)
-            mote(canvas, x, y, colours[k % len(colours)], big=index > 6)
-    elif index >= 19:
-        t = (index - 19) / 4.0
-        distance = 14 + 26 * t
-        for k in range(6):
-            angle = 2 * math.pi * k / 6 + index * 0.2
-            x = round(CX + math.cos(angle) * distance)
-            y = round(CY + math.sin(angle) * distance * 0.8)
-            mote(canvas, x, y, ICE)
+    if size >= 3:
+        for dx, dy in ((0, -1), (0, 1)):
+            canvas.set(x + dx, y + dy, WHITE)
 
 
 def build_frame(index, subject):
+    t = index / FRAMES
     canvas = Canvas()
 
-    # --- floor light, present through most of the sequence
-    pool = 0
-    if index < 6:
-        pool = 6 + index * 3
-    elif index < 14:
-        pool = 24 + (index - 6)
-    elif index < 19:
-        pool = 34 - (index - 14) * 2
-    else:
-        pool = max(0, 24 - (index - 19) * 6)
-    ground_pool(canvas, pool, bright=11 <= index <= 14)
+    # --- ground light, breathing with the same eased curve as the orbit
+    pull = ease_in_out(min(1.0, t / 0.75))
+    pool = 10 + 20 * pull
+    flash = 0.70 <= t < 0.90
+    disc(canvas, CX, FEET_Y, pool, DUSK, squash=0.34)
+    disc(canvas, CX, FEET_Y, pool * 0.70, STEEL if flash else BLUE, squash=0.34)
+    disc(canvas, CX, FEET_Y, pool * 0.38, FROST if flash else STEEL, squash=0.34)
 
-    # --- the Pokemon, in its own direction artwork
-    if not (11 <= index <= 13):
+    motes = orbit_motes(t)
+
+    # --- BEHIND the subject: the far half of every orbit
+    orbit_path(canvas, t, front=False)
+    for z, x, y, size, colour, vx in sorted(motes, key=lambda m: m[0]):
+        if z < 0:
+            draw_mote(canvas, x, y, size, colour, vx)
+
+    # --- the subject, hidden only at the peak of the flash
+    if not flash:
         canvas.blit(subject, CX - SUBJECT_W // 2, CY - SUBJECT_H // 2)
+    else:
+        burst = 14 + 10 * ease_in_out((t - 0.70) / 0.20)
+        disc(canvas, CX, CY, burst, WHITE)
+        ring_outline(canvas, CX, CY, burst + 1, FROST)
+        ring_outline(canvas, CX, CY, burst + 2, LILAC)
 
-    # --- gather: motes converge
-    draw_motes(canvas, index)
+    # --- IN FRONT of the subject: the near half, painter's order
+    if not flash:
+        orbit_path(canvas, t, front=True)
+    for z, x, y, size, colour, vx in sorted(motes, key=lambda m: m[0]):
+        if z >= 0:
+            draw_mote(canvas, x, y, size, colour, vx)
 
-    # --- bind: rings tighten
-    if 6 <= index <= 12:
-        t = (index - 6) / 6.0
-        radius = 30 - 20 * t
-        halo(canvas, radius, FROST, squash=0.85)
-        halo(canvas, radius - 3, SKY, squash=0.85, gaps=6)
+    # --- release wave, only after the flash, capped inside the frame
+    if t >= 0.90:
+        wave = 20 + 14 * ease_in_out((t - 0.90) / 0.10)
+        ring_outline(canvas, CX, CY, wave, ICE, squash=0.8)
+        ring_outline(canvas, CX, CY, wave - 2, LILAC, squash=0.8)
 
-    # --- flash: one clean whiteout, no clutter competing with it
-    if 11 <= index <= 13:
-        stage = index - 11
-        radius = (16, 26, 20)[stage]
-        disc(canvas, CX, CY, radius, WHITE)
-        ring(canvas, CX, CY, radius + 1, FROST)
-        ring(canvas, CX, CY, radius + 2, LILAC)
-        if stage == 1:
-            for k in range(12):
-                spark(canvas, CX, CY, 2 * math.pi * k / 12, radius + 2,
-                      radius + 9, FROST, tip=WHITE)
-
-    # --- emerge: shockwave rings and sparks.
-    # The ring must DIE before it reaches the frame edge. An expanding circle
-    # that runs off the canvas gets sliced into broken arcs, which reads as a
-    # bug rather than as energy, so the wave is capped and thins out instead.
-    if 14 <= index <= 18:
-        t = index - 14
-        outer = 16 + t * 5          # peaks at 36, inside the 40px half-width
-        colour = (FROST, FROST, ICE, STEEL, DUSK)[t]
-        halo(canvas, outer, colour, squash=0.8)
-        if t <= 2:
-            halo(canvas, outer - 2, LILAC, squash=0.8, gaps=8)
-        if t <= 2:
-            for k in range(8):
-                angle = 2 * math.pi * k / 8 + 0.2 * t
-                spark(canvas, CX, CY, angle, outer - 6, outer + 1, SKY,
-                      tip=WHITE)
-
-    # --- palette lock
     px = canvas.image.load()
     for y in range(HEIGHT):
         for x in range(WIDTH):
@@ -248,8 +236,11 @@ def build_frame(index, subject):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    sheet_src = Image.open(SPRITE_SHEET).convert("RGBA")
-    subjects = [sheet_src.crop((0, r * SUBJECT_H, SUBJECT_W, (r + 1) * SUBJECT_H))
+    for stale in OUT.glob("*"):
+        stale.unlink()
+
+    src = Image.open(SPRITE_SHEET).convert("RGBA")
+    subjects = [src.crop((0, r * SUBJECT_H, SUBJECT_W, (r + 1) * SUBJECT_H))
                 for r in range(len(DIRECTIONS))]
 
     sheet = Image.new("RGBA", (WIDTH * FRAMES, HEIGHT * len(DIRECTIONS)), CLEAR)
@@ -268,7 +259,7 @@ def main():
             frames.append(Image.alpha_composite(backdrop, tile)
                           .convert("P", palette=Image.ADAPTIVE))
         frames[0].save(OUT / f"Mega-{name}.gif", save_all=True,
-                       append_images=frames[1:], duration=80, loop=0,
+                       append_images=frames[1:], duration=90, loop=0,
                        disposal=2)
 
     colours = {p[:3] for p in sheet.get_flattened_data() if p[3]}
