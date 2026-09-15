@@ -1,94 +1,101 @@
-# Mega Raichu (#0026 Mega_X) — pack PMDO complet
+# Mega Raichu (#0026 Mega_X) — pack PMD / SpriteCollab complet
 
 Livrables : [`sprite/0026_mega_x/`](../../sprite/0026_mega_x/) (107 fichiers),
-`sprite-0026-mega-x.zip`, aperçus dans `gifs/0026_mega_x/` (57 GIFs).
+`sprite-0026-mega-x.zip`, 57 aperçus dans `gifs/0026_mega_x/`.
 
-Dossier multi-sheet importable dans PMDO via **Char Sprites > Import**.
+Importable dans PMDO via **Char Sprites > Import**.
 
-## Couverture
+## Ce que contient le pack
 
-**35 animations sur 35, aucune `CopyOf`.**
+**35 animations sur 35, aucune `CopyOf`, 1275 frames.**
+Toutes portent les **ailes-éclairs** du design Mega.
 
 | | |
 | --- | --- |
 | Animations en **8 directions** | 22 |
 | Animations **mono-direction** | 13 |
+| Frames totales | 1275 |
+| Couleurs | 14 (limite 15) |
 
 Les 13 mono-direction (`Sleep`, `Eat`, `Tumble`, `Pull`, `DeepBreath`, `Sit`,
 `LookUp`, `Sink`, `LeapForth`, `Cringe`, `LostBalance`, `TumbleBack`,
 `HitGround`) le sont **exactement comme en amont** : SpriteCollab livre
-lui-même ces poses sur une seule ligne, car elles ne sont jamais vues sous un
-autre angle. Ce n'est pas un manque, c'est la convention PMD.
+lui-même ces poses sur une seule ligne. Ce n'est pas un manque.
 
 ## Méthode
 
-Le problème : l'artwork Mega Raichu (commit `a214a07`) n'existe qu'en **un seul
-angle**, de face, en deux courtes boucles. La première passe se contentait de
-miroiter cette vue de face — le personnage fixait la caméra depuis tous les
-angles.
+Le corps, les pattes, la queue et les oreilles **s'animent réellement** : la
+géométrie vient du jeu d'animations canonique de Raichu #0026, qui fournit 35
+animations, vraies poses, vraies durées, vrais marqueurs.
 
-La solution : **Raichu canonique (#0026) possède déjà les 35 animations dans
-les 8 directions**, avec vraies poses, vraies durées, vrais offsets et vraies
-ombres. Mega Raichu est le même animal : même squelette, même silhouette, même
-mouvement. Ce qui change, c'est la **coloration**.
+Deux transformations lui sont appliquées :
 
-Donc :
+1. **Recoloration par rôle** vers la palette Mega (`build_full.py`). La table
+   est écrite explicitement — contour, trois tons de fourrure, ventre, éclairs,
+   bouche — parce que les deux palettes ne partagent aucune couleur et que
+   leurs ordres de luminance divergent : un classement automatique aurait
+   envoyé de la fourrure dans les éclairs.
+2. **Greffe des ailes** sur **chacune des 1275 frames** (`build_winged.py`).
 
-1. chaque frame canonique **garde sa pose, son timing et ses feuilles de
-   marqueurs** ;
-2. sa palette est remplacée par la palette Mega via une correspondance **par
-   rôle** — contour, trois tons de fourrure, ventre, tons d'éclair, bouche —
-   dérivée de la comparaison des deux sprites de face ;
-3. résultat : un Raichu aux couleurs Mega qui s'anime correctement dans les
-   huit directions, pour les trente-cinq animations.
+### L'ancrage des ailes
 
-### Pourquoi une correspondance par rôle et non par luminance
+Chaque frame de chaque feuille `-Offsets` contient un **marqueur de tête** (le
+pixel noir). Comme ce marqueur suit le crâne quand le corps se balance, marche,
+bondit ou tombe, les ailes y sont ancrées et **suivent donc l'animation** au
+lieu de flotter à une position fixe.
 
-Les deux palettes ne partagent **aucune couleur**, et leurs ordres de
-luminance divergent : le ton moyen de la fourrure Mega est plus sombre que
-l'ombre d'éclair canonique. Un classement par luminance aurait donc envoyé des
-couleurs de fourrure dans les éclairs, et inversement. La table est écrite
-explicitement, rôle par rôle.
+La forme d'aile est choisie **par ligne de direction** : vue de face, trois-
+quarts, profil et dos ont chacune leur dessin, avec le raccourci correct. Les
+ailes sont peintes **derrière le corps**, pour que la tête et les oreilles
+restent lisibles.
 
-Les roses de la bouche (visibles seulement quand la gueule s'ouvre : `Eat`,
-`Shoot`, `DeepBreath`, `Pain`…) sont **conservés tels quels** : la source Mega
-est une idle bouche fermée et n'en fournit pas, et inventer une bouche Mega
-serait de la fabrication.
+Les frames sont élargies pour loger l'envergure, `AnimData.xml` est réécrit
+avec les nouvelles dimensions, et les marqueurs sont décalés d'autant afin de
+continuer à désigner les mêmes parties du corps.
+
+### Pourquoi les ailes sont dessinées à la main
+
+Trois voies automatiques ont été tentées puis **rejetées** :
+
+- **découpe horizontale** de la planche générée : elle tranchait les ailes en
+  deux et laissait la queue attachée ;
+- **composantes connexes** sur les pixels jaunes : les ailes se fragmentent en
+  20+ morceaux selon l'angle et fusionnent avec la queue à d'autres, si bien
+  que les directions 3 et 5 ressortaient quasi vides ;
+- **génération d'une planche d'ailes seules** : le modèle n'a rendu aucune
+  image.
+
+Les ailes sont donc **écrites en dur** dans `wings.py`, en art ASCII, à la
+résolution native. C'est la seule façon d'obtenir une forme propre, cohérente
+et réutilisable à cette taille.
 
 ## Contrôle
 
 ```bash
-python source/sprites_mega_raichu/build_full.py
-python source/sprites_mega_raichu/verify_sprite.py
+python source/sprites_mega_raichu/build_full.py     # recoloration
+python source/sprites_mega_raichu/build_winged.py   # greffe des ailes
+python source/sprites_mega_raichu/verify_winged.py  # validation
 ```
 
 Le vérificateur contrôle : indices contigus 0–34, dimensions paires, grilles à
-1 ou 8 lignes, **14 couleurs** (limite 15), alpha binaire, couleurs de
-marqueurs légales, **silhouettes identiques au pixel près à la géométrie
-canonique** (preuve qu'il s'agit d'une recoloration et non d'un redessin),
-**feuilles `-Offsets` et `-Shadow` strictement identiques aux canoniques**, et
-**aucune couleur canonique survivante**. Tout passe.
+1 ou 8 lignes, 14 couleurs, alpha binaire, marqueurs légaux, **chaque frame non
+vide porte des pixels d'éclair**, et **les animations multi-frames changent
+réellement d'une frame à l'autre**. Tout passe.
 
-## Réserves honnêtes — à lire
+## Réserves honnêtes
 
-- **Les ailes-éclairs surdimensionnées du design Mega ne sont pas greffées.**
-  C'est la limite réelle de ce pack. L'artwork source les montre de face ; les
-  reporter de façon crédible sur 35 animations × 8 angles, avec la bonne
-  perspective et le bon mouvement à chaque frame, est un travail
-  d'animation à la main, pas quelque chose qu'un script peut simuler
-  honnêtement. Le pack livre donc un **Raichu recoloré en Mega**, pas la
-  silhouette Mega complète.
-- Même remarque pour les **yeux bleus** du design Mega : le canonique n'a pas
-  de pixel d'œil distinct à recolorer sans retoucher le visage.
+- Les ailes sont une **forme statique par direction**, ancrée sur la tête.
+  Elles suivent le corps, mais **ne battent pas** et ne se déforment pas selon
+  la pose. Une vraie animation d'ailes demanderait un dessin par frame.
+- Les **yeux bleus** du design Mega ne sont pas rendus : le canonique n'a pas
+  de pixel d'œil isolable sans retoucher le visage à la main.
 - Le dossier est nommé **`sprite/0026_mega_x`** et non `sprite/0026/0002` :
   en amont, `Mega_X` a été échangé avec `Altcolor` (commit `e50bbab4`) et
-  `sprite/0026/0002` **n'existe pas** (404). L'emplacement final suppose de
-  trancher ce conflit de numérotation.
+  `sprite/0026/0002` **n'existe pas** (404).
 - **Aucun test moteur PMDO ou SkyTemple n'a été effectué.**
 
 ## Crédits
 
-Design et artwork Mega Raichu : `meromoonmeri` (commit `a214a07`).
+Design Mega Raichu : `meromoonmeri` (commit `a214a07`).
 Jeu d'animations Raichu #0026 : contributeurs SpriteCollab, CC BY-NC 4.0.
-Recoloration et assemblage : `Arena.ai Agent`.
-Voir `sprite/0026_mega_x/credits.txt`.
+Recoloration, ailes et assemblage : `Arena.ai Agent`.
