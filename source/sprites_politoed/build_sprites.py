@@ -222,11 +222,15 @@ def _eat_details(frame: Image.Image, index: int) -> Image.Image:
                        (18, 25), (19, 25), (20, 25), (21, 25)], RED)
         _paint(frame, [(19, 26), (20, 26)], YELLOW)
         if index == 1:
-            left = [(11, 23), (12, 22), (13, 21), (14, 21), (14, 22)]
-            right = [(28, 23), (27, 22), (26, 21), (25, 21), (25, 22)]
+            # The hands visibly travel inward instead of staying in the attack
+            # pose: the yellow tips nearly touch the mouth at x=16 and x=23.
+            left = [(11, 24), (12, 23), (13, 22), (14, 22), (15, 22), (16, 23)]
+            right = [(28, 24), (27, 23), (26, 22), (25, 22), (24, 22), (23, 23)]
         else:
-            left = [(10, 25), (11, 24), (12, 23), (13, 23)]
-            right = [(29, 25), (28, 24), (27, 23), (26, 23)]
+            # Release the hands after the chew while keeping the mouth open for
+            # the last beat of the loop.
+            left = [(10, 25), (11, 24), (12, 23), (13, 23), (14, 24)]
+            right = [(29, 25), (28, 24), (27, 23), (26, 23), (25, 24)]
         _paint(frame, left + right, YELLOW)
     elif index == 2:
         _paint(frame, [(17, 24), (18, 24), (19, 24), (20, 24), (21, 24), (22, 24)], DARK_GREEN)
@@ -266,8 +270,11 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return render(source, fw, fh, dy=(-2 if index == 1 else 0))
 
     if name == "Eat":
+        # Match the proven PMD starter choreography: neutral, reach to mouth,
+        # chew, release. Eat is a grounded action; it must not become a hop.
         attack_frames = (0, 2, 5, 11)
-        base = _frame("Attack", 0, attack_frames[index], fw, fh)
+        dips = (0, 1, 1, 0)
+        base = _frame("Attack", 0, attack_frames[index], fw, fh, dy=dips[index])
         return _eat_details(base, index)
 
     if name == "Tumble":
