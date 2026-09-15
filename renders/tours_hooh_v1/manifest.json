@@ -1,0 +1,135 @@
+[
+  {
+    "id": "carillon_entree",
+    "layers": [
+      "01_sol",
+      "02_parvis_chemin",
+      "03_facade",
+      "04_porte_escalier",
+      "05_poutres_rouge_fonce",
+      "06_tuiles_toitures",
+      "07_vegetation_fond",
+      "08_vegetation_avant_gauche",
+      "09_vegetation_avant_droite"
+    ],
+    "animated": [],
+    "size": [
+      640,
+      480
+    ],
+    "generated": true
+  },
+  {
+    "id": "carillon_boss",
+    "size": [
+      640,
+      480
+    ],
+    "layers": [
+      "01_ciel_crepusculaire",
+      "02_nuages_lavande",
+      "03_montagnes_0",
+      "04_nuages_rose",
+      "05_montagnes_1",
+      "06_nuages_ambre",
+      "07_montagnes_2",
+      "10_plancher_abime",
+      "11_murs_droite",
+      "11_murs_gauche",
+      "11_traverse_fond",
+      "12_vitraux_droite",
+      "12_vitraux_gauche",
+      "13_toiture_brisee",
+      "14_poutre_1",
+      "14_poutre_2",
+      "14_poutre_3",
+      "14_poutre_4",
+      "15_acces_sud"
+    ],
+    "animated": [
+      "02_nuages_lavande",
+      "04_nuages_rose",
+      "06_nuages_ambre"
+    ],
+    "loop_ms": 64000,
+    "frames": 256,
+    "frame_ms": 250,
+    "period_px": 640,
+    "multipliers": [
+      1,
+      -1,
+      2
+    ],
+    "posts": 4,
+    "generated_foreground": true,
+    "background": "authored stepped sky and separate mountain silhouettes; generated detached cloud sprites",
+    "day_ambience": "crepuscule",
+    "runtime_validated": false
+  },
+  {
+    "id": "cendree_entree",
+    "layers": [
+      "01_sol",
+      "02_parvis_chemin",
+      "03_facade",
+      "04_porte_escalier",
+      "05_poutres_rouge_fonce",
+      "06_tuiles_toitures",
+      "07_vegetation_fond",
+      "08_vegetation_avant_gauche",
+      "09_vegetation_avant_droite"
+    ],
+    "animated": [],
+    "size": [
+      640,
+      480
+    ],
+    "generated": true
+  },
+  {
+    "id": "cendree_boss",
+    "size": [
+      640,
+      480
+    ],
+    "layers": [
+      "01_ciel_crepusculaire",
+      "02_nuages_lavande",
+      "03_montagnes_0",
+      "04_nuages_rose",
+      "05_montagnes_1",
+      "06_nuages_ambre",
+      "07_montagnes_2",
+      "10_plancher_abime",
+      "11_murs_droite",
+      "11_murs_gauche",
+      "11_traverse_fond",
+      "12_vitraux_droite",
+      "12_vitraux_gauche",
+      "13_toiture_brisee",
+      "14_poutre_1",
+      "14_poutre_2",
+      "14_poutre_3",
+      "14_poutre_4"
+    ],
+    "animated": [
+      "02_nuages_lavande",
+      "04_nuages_rose",
+      "06_nuages_ambre"
+    ],
+    "loop_ms": 64000,
+    "frames": 256,
+    "frame_ms": 250,
+    "period_px": 640,
+    "multipliers": [
+      1,
+      -1,
+      2
+    ],
+    "posts": 4,
+    "generated_foreground": true,
+    "background": "authored stepped sky and separate mountain silhouettes; generated detached cloud sprites",
+    "day_ambience": "crepuscule",
+    "runtime_validated": false
+  }
+]
