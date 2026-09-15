@@ -1,0 +1,367 @@
+[
+  {
+    "id": "carillon",
+    "size": [
+      640,
+      480
+    ],
+    "layers": [
+      "01_ciel",
+      "02_lueur_astre_ciel",
+      "03_astre",
+      "04_etoiles",
+      "10_montagnes_horizon",
+      "10_montagnes_horizon_lumiere",
+      "11_montagnes_intermediaires",
+      "11_montagnes_intermediaires_lumiere",
+      "12_reliefs_proches",
+      "12_reliefs_proches_lumiere",
+      "13_foret_lointaine",
+      "13_foret_lointaine_lumiere",
+      "14_foret_vallee",
+      "14_foret_vallee_lumiere",
+      "15_foret_contrebas",
+      "15_foret_contrebas_lumiere",
+      "20_nuages_0",
+      "20_nuages_0_lumiere",
+      "20_nuages_1",
+      "20_nuages_1_lumiere",
+      "20_nuages_2",
+      "20_nuages_2_lumiere",
+      "30_10_plancher_abime",
+      "30_10_plancher_abime_lumiere",
+      "30_11_murs_droite",
+      "30_11_murs_droite_lumiere",
+      "30_11_murs_gauche",
+      "30_11_murs_gauche_lumiere",
+      "30_11_traverse_fond",
+      "30_11_traverse_fond_lumiere",
+      "30_12_vitraux_droite",
+      "30_12_vitraux_droite_lumiere",
+      "30_12_vitraux_gauche",
+      "30_12_vitraux_gauche_lumiere",
+      "30_13_toiture_brisee",
+      "30_13_toiture_brisee_lumiere",
+      "30_14_poutre_1",
+      "30_14_poutre_1_lumiere",
+      "30_14_poutre_2",
+      "30_14_poutre_2_lumiere",
+      "30_14_poutre_3",
+      "30_14_poutre_3_lumiere",
+      "30_14_poutre_4",
+      "30_14_poutre_4_lumiere",
+      "30_15_acces_sud",
+      "30_15_acces_sud_lumiere"
+    ],
+    "environment_count": 22,
+    "lights": [
+      "02_lueur_astre_ciel",
+      "10_montagnes_horizon_lumiere",
+      "11_montagnes_intermediaires_lumiere",
+      "12_reliefs_proches_lumiere",
+      "13_foret_lointaine_lumiere",
+      "14_foret_vallee_lumiere",
+      "15_foret_contrebas_lumiere",
+      "20_nuages_0_lumiere",
+      "20_nuages_1_lumiere",
+      "20_nuages_2_lumiere",
+      "30_10_plancher_abime_lumiere",
+      "30_11_murs_droite_lumiere",
+      "30_11_murs_gauche_lumiere",
+      "30_11_traverse_fond_lumiere",
+      "30_12_vitraux_droite_lumiere",
+      "30_12_vitraux_gauche_lumiere",
+      "30_13_toiture_brisee_lumiere",
+      "30_14_poutre_1_lumiere",
+      "30_14_poutre_2_lumiere",
+      "30_14_poutre_3_lumiere",
+      "30_14_poutre_4_lumiere",
+      "30_15_acces_sud_lumiere"
+    ],
+    "architecture": [
+      {
+        "name": "30_10_plancher_abime",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_10_plancher_abime.png"
+      },
+      {
+        "name": "30_11_murs_droite",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_11_murs_droite.png"
+      },
+      {
+        "name": "30_11_murs_gauche",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_11_murs_gauche.png"
+      },
+      {
+        "name": "30_11_traverse_fond",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_11_traverse_fond.png"
+      },
+      {
+        "name": "30_12_vitraux_droite",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_12_vitraux_droite.png"
+      },
+      {
+        "name": "30_12_vitraux_gauche",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_12_vitraux_gauche.png"
+      },
+      {
+        "name": "30_13_toiture_brisee",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_13_toiture_brisee.png"
+      },
+      {
+        "name": "30_14_poutre_1",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_14_poutre_1.png"
+      },
+      {
+        "name": "30_14_poutre_2",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_14_poutre_2.png"
+      },
+      {
+        "name": "30_14_poutre_3",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_14_poutre_3.png"
+      },
+      {
+        "name": "30_14_poutre_4",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_14_poutre_4.png"
+      },
+      {
+        "name": "30_15_acces_sud",
+        "source": "renders/tours_hooh_v1/carillon_boss/jour/th1_carillon_boss_jour_15_acces_sud.png"
+      }
+    ],
+    "clouds": [
+      {
+        "name": "20_nuages_0",
+        "multiplier": 1
+      },
+      {
+        "name": "20_nuages_0_lumiere",
+        "multiplier": 1
+      },
+      {
+        "name": "20_nuages_1",
+        "multiplier": -1
+      },
+      {
+        "name": "20_nuages_1_lumiere",
+        "multiplier": -1
+      },
+      {
+        "name": "20_nuages_2",
+        "multiplier": 2
+      },
+      {
+        "name": "20_nuages_2_lumiere",
+        "multiplier": 2
+      }
+    ],
+    "loop_ms": 64000,
+    "cloud_period_px": 640,
+    "source_generated": "source/panoramas_tours_v2/references/carillon_guide.png",
+    "sun": {
+      "center": [
+        320,
+        112
+      ],
+      "radius": 60
+    },
+    "night": "moon and neutral light alternatives, then exact Abyss per layer",
+    "hidden_extensions": "reconstructed beneath the next foreground plane",
+    "reference_vertical_adaptation": {
+      "source_y": [
+        0,
+        70,
+        145,
+        245,
+        365,
+        479
+      ],
+      "target_y": [
+        0,
+        85,
+        149,
+        201,
+        310,
+        479
+      ]
+    }
+  },
+  {
+    "id": "cendree",
+    "size": [
+      640,
+      480
+    ],
+    "layers": [
+      "01_ciel",
+      "02_lueur_astre_ciel",
+      "03_astre",
+      "04_etoiles",
+      "10_montagnes_horizon",
+      "10_montagnes_horizon_lumiere",
+      "11_montagnes_intermediaires",
+      "11_montagnes_intermediaires_lumiere",
+      "12_reliefs_proches",
+      "12_reliefs_proches_lumiere",
+      "13_foret_lointaine",
+      "13_foret_lointaine_lumiere",
+      "14_foret_vallee",
+      "14_foret_vallee_lumiere",
+      "15_foret_contrebas",
+      "15_foret_contrebas_lumiere",
+      "20_nuages_0",
+      "20_nuages_0_lumiere",
+      "20_nuages_1",
+      "20_nuages_1_lumiere",
+      "20_nuages_2",
+      "20_nuages_2_lumiere",
+      "30_10_plancher_abime",
+      "30_10_plancher_abime_lumiere",
+      "30_11_murs_droite",
+      "30_11_murs_droite_lumiere",
+      "30_11_murs_gauche",
+      "30_11_murs_gauche_lumiere",
+      "30_11_traverse_fond",
+      "30_11_traverse_fond_lumiere",
+      "30_12_vitraux_droite",
+      "30_12_vitraux_droite_lumiere",
+      "30_12_vitraux_gauche",
+      "30_12_vitraux_gauche_lumiere",
+      "30_13_toiture_brisee",
+      "30_13_toiture_brisee_lumiere",
+      "30_14_poutre_1",
+      "30_14_poutre_1_lumiere",
+      "30_14_poutre_2",
+      "30_14_poutre_2_lumiere",
+      "30_14_poutre_3",
+      "30_14_poutre_3_lumiere",
+      "30_14_poutre_4",
+      "30_14_poutre_4_lumiere"
+    ],
+    "environment_count": 22,
+    "lights": [
+      "02_lueur_astre_ciel",
+      "10_montagnes_horizon_lumiere",
+      "11_montagnes_intermediaires_lumiere",
+      "12_reliefs_proches_lumiere",
+      "13_foret_lointaine_lumiere",
+      "14_foret_vallee_lumiere",
+      "15_foret_contrebas_lumiere",
+      "20_nuages_0_lumiere",
+      "20_nuages_1_lumiere",
+      "20_nuages_2_lumiere",
+      "30_10_plancher_abime_lumiere",
+      "30_11_murs_droite_lumiere",
+      "30_11_murs_gauche_lumiere",
+      "30_11_traverse_fond_lumiere",
+      "30_12_vitraux_droite_lumiere",
+      "30_12_vitraux_gauche_lumiere",
+      "30_13_toiture_brisee_lumiere",
+      "30_14_poutre_1_lumiere",
+      "30_14_poutre_2_lumiere",
+      "30_14_poutre_3_lumiere",
+      "30_14_poutre_4_lumiere"
+    ],
+    "architecture": [
+      {
+        "name": "30_10_plancher_abime",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_10_plancher_abime.png"
+      },
+      {
+        "name": "30_11_murs_droite",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_11_murs_droite.png"
+      },
+      {
+        "name": "30_11_murs_gauche",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_11_murs_gauche.png"
+      },
+      {
+        "name": "30_11_traverse_fond",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_11_traverse_fond.png"
+      },
+      {
+        "name": "30_12_vitraux_droite",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_12_vitraux_droite.png"
+      },
+      {
+        "name": "30_12_vitraux_gauche",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_12_vitraux_gauche.png"
+      },
+      {
+        "name": "30_13_toiture_brisee",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_13_toiture_brisee.png"
+      },
+      {
+        "name": "30_14_poutre_1",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_14_poutre_1.png"
+      },
+      {
+        "name": "30_14_poutre_2",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_14_poutre_2.png"
+      },
+      {
+        "name": "30_14_poutre_3",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_14_poutre_3.png"
+      },
+      {
+        "name": "30_14_poutre_4",
+        "source": "renders/tours_hooh_v1/cendree_boss/jour/th1_cendree_boss_jour_14_poutre_4.png"
+      }
+    ],
+    "clouds": [
+      {
+        "name": "20_nuages_0",
+        "multiplier": 1
+      },
+      {
+        "name": "20_nuages_0_lumiere",
+        "multiplier": 1
+      },
+      {
+        "name": "20_nuages_1",
+        "multiplier": -1
+      },
+      {
+        "name": "20_nuages_1_lumiere",
+        "multiplier": -1
+      },
+      {
+        "name": "20_nuages_2",
+        "multiplier": 2
+      },
+      {
+        "name": "20_nuages_2_lumiere",
+        "multiplier": 2
+      }
+    ],
+    "loop_ms": 64000,
+    "cloud_period_px": 640,
+    "source_generated": "source/panoramas_tours_v2/references/cendree_guide.png",
+    "sun": {
+      "center": [
+        322,
+        105
+      ],
+      "radius": 65
+    },
+    "night": "moon and neutral light alternatives, then exact Abyss per layer",
+    "hidden_extensions": "reconstructed beneath the next foreground plane",
+    "reference_vertical_adaptation": {
+      "source_y": [
+        0,
+        90,
+        200,
+        290,
+        400,
+        479
+      ],
+      "target_y": [
+        0,
+        60,
+        142,
+        215,
+        355,
+        479
+      ]
+    }
+  }
+]
