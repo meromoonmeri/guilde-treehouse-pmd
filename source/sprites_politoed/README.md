@@ -61,8 +61,11 @@ a été suivie pour la couverture et la construction :
 Les nouveaux pixels ne sont pas une génération IA brute : le générateur
 `build_sprites.py` ne redessine pas le Pokémon avec une autre espèce et ne
 resample aucune image. Il part des pixels Politoed canoniques et conserve leur
-palette. Les études d'animation ont donc la cohérence de volume, de boucle de
-tête et de couleurs du sprite existant.
+palette. Les corrections manuelles sont limitées aux détails nécessaires à la
+lecture PMD (`_eat_details`, marques d'effort, impact au sol, découpe de
+`Head`, masque de `Sink`) et sont dessinées pixel par pixel avec les couleurs
+canoniques. Les études d'animation ont donc la cohérence de volume, de boucle
+de tête et de couleurs du sprite existant.
 
 ## Provenance et crédits
 

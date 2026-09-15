@@ -263,6 +263,16 @@ def _head_only(direction: int, fw: int, fh: int) -> Image.Image:
     return render(head, fw, fh, dy=-10)
 
 
+def _clip_below(frame: Image.Image, y_limit: int) -> Image.Image:
+    """Hide pixels below a PMD ground line without scaling the sprite."""
+    frame = frame.copy()
+    for y in range(max(0, y_limit), frame.height):
+        for x in range(frame.width):
+            if frame.getpixel((x, y))[3]:
+                frame.putpixel((x, y), (0, 0, 0, 0))
+    return frame
+
+
 def _eat_details(frame: Image.Image, index: int) -> Image.Image:
     """Make the four Eat frames read as feed, open, chew, and reset."""
     frame = frame.copy()
@@ -348,8 +358,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         # Idle frame 4 is a rear-facing transition, so it must not appear in
         # a yawn/breath cycle. Keep the face toward the camera throughout.
         idle_frames = (0, 1, 2, 3, 2, 3, 2, 1, 0)
-        scales = (100, 101, 103, 105, 103, 101, 100, 100, 100)
-        frame = _frame("Idle", 0, idle_frames[index], fw, fh, scale_x=scales[index], scale_y=scales[index])
+        frame = _frame("Idle", 0, idle_frames[index], fw, fh)
         return _draw_open_mouth(frame, y_bias=(1 if index in (2, 3, 4, 5) else 0)) if index in (2, 3, 4, 5) else frame
 
     if name == "Nod":
@@ -363,8 +372,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
     if name == "Sit":
         # Stand, lower the body, then settle into Politoed's compact crouch.
         sources = (1, 2, 5)
-        scales = (100, 96, 88)
-        return _frame("Walk", 0, sources[index], fw, fh, scale_y=scales[index], dy=(0, 1, 0)[index])
+        return _frame("Walk", 0, sources[index], fw, fh, dy=(0, 1, 0)[index])
 
     if name == "LookUp":
         # Rise through the existing front Walk poses instead of showing an
@@ -374,8 +382,11 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _frame("Walk", 0, sources[index], fw, fh, dy=(0, -1, -2)[index])
 
     if name == "Sink":
-        scales = (100, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16)
-        return _frame("Walk", 0, 0, fw, fh, scale_y=scales[index])
+        # Move the canonical pose downward and clip it at the floor.  This is
+        # a true pixel mask, not a squeezed/deformed sprite.
+        sink_offsets = (0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
+        frame = _frame("Walk", 0, 0, fw, fh, dy=sink_offsets[index])
+        return _clip_below(frame, fh // 2 + 4)
 
     if name == "Trip":
         angles = (0, -8, -25, -50, -75)
@@ -393,7 +404,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         return _head_only(direction, fw, fh)
 
     if name == "Cringe":
-        return _frame("Hurt", 0, index, fw, fh, dy=(0, 3)[index], scale_y=(100, 90)[index])
+        return _frame("Hurt", 0, index, fw, fh, dy=(0, 3)[index])
 
     if name == "LostBalance":
         return _frame("Walk", 0, 0, fw, fh, angle=(-18, 18)[index])
@@ -407,7 +418,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
         # starter animations, rather than stopping half-way through a spin.
         if index < 2:
             return _frame("Walk", direction, (1, 5)[index], fw, fh,
-                          angle=(0, -18)[index], scale_y=(100, 96)[index])
+                          angle=(0, -18)[index])
         sleeping = _sleep_frame(index - 2, direction in (2, 3))
         return render(sleeping, fw, fh, dy=1 if index == 2 else 0)
 
@@ -422,8 +433,7 @@ def make_starter_frame(name: str, direction: int, index: int, fw: int, fh: int) 
             source_frame("Walk", 0, 5), source_frame("Walk", 0, 0),
         )
         angles = (0, -12, -30, -58, -72, -72, -28, 0)
-        scales = (100, 98, 94, 90, 88, 88, 94, 100)
-        frame = render(sources[index], fw, fh, angle=angles[index], scale_y=scales[index])
+        frame = render(sources[index], fw, fh, angle=angles[index])
         return _ground_impact(frame, index)
 
     raise ValueError(f"unhandled starter animation {name}")
