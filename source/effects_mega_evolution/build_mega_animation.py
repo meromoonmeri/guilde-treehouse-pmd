@@ -1,22 +1,24 @@
 """Build a MULTIDIRECTIONAL Mega Evolution effect animation for a PMD sprite.
 
-Pipeline, following the PMD sprite guide:
+Reference studied: the Deeshura/Mega_Stones PMDO mod preview GIF. Its beat is
+sound but minimal: a plain white orb swells, pops into a red/white starburst,
+then a few yellow columns fall. No emblem, no colour identity, one direction.
 
-  1. draw BIG with the image generator: three magenta-keyed pixel-art plates
-     live in gen/ (rainbow sphere growth stages, Mega DNA emblem, thick
-     lightning columns). They are the only art source for the effect;
-  2. turn each plate into a sprite: magenta key removed exactly, snapped back
-     to its own pixel grid, then scaled by integer-friendly steps to the sizes
-     the animation needs;
-  3. composite over the subject sprite for ALL 8 PMD DIRECTIONS, row by row,
-     so the sheet covers every angle like a real PMD animation;
-  4. snap every pixel to one authored effect palette.
+This build keeps the beat and goes far past it, in six staged acts over 24
+frames, rendered for ALL 8 PMD DIRECTIONS:
 
-The subject keeps its own per-direction artwork, so the Pokemon faces the right
-way in every row while the effect engulfs it.
+  act 1  charge    a light pool opens under the Pokemon, shards fly inward
+  act 2  implosion the shards slam home, the pool flares
+  act 3  engulf    an OPAQUE rainbow sphere swells and swallows the sprite
+  act 4  sigil     the Mega Evolution DNA emblem burns in front, pulsing
+  act 5  burst     a starburst shockwave detonates, lightning columns strike
+  act 6  settle    everything recedes, the Pokemon returns lit by the pool
+
+Art pipeline: every element is drawn BIG by the image generator onto a magenta
+key (plates archived in gen/), then de-keyed, trimmed, scaled NEAREST only, and
+snapped to one authored effect palette. Hard pixels throughout.
 """
 from pathlib import Path
-import math
 import random
 
 from PIL import Image
@@ -26,17 +28,17 @@ HERE = Path(__file__).resolve().parent
 GEN = HERE / "gen"
 OUT = ROOT / "effects" / "mega_evolution"
 
-# Subject: Terapagos Stellar. Its Idle sheet is 13 columns x 8 direction rows.
 SPRITE_SHEET = ROOT / "sprite" / "1024" / "Idle-Anim.png"
 SUBJECT_W, SUBJECT_H = 40, 48
 
-# PMD direction order, one sheet row each.
 DIRECTIONS = ["down", "down-right", "right", "up-right",
               "up", "up-left", "left", "down-left"]
 
 WIDTH, HEIGHT = 80, 96
 CX, CY = WIDTH // 2, HEIGHT // 2
-FRAMES = 16
+# Feet line: the ground pool sits here, not on the sprite's centre.
+FEET_Y = CY + SUBJECT_H // 2 - 6
+FRAMES = 24
 
 CLEAR = (0, 0, 0, 0)
 OUTLINE = (47, 0, 127)
@@ -54,13 +56,43 @@ MAGENTA = (235, 80, 180)
 PALETTE = [OUTLINE, WHITE, PALE, RED, ORANGE, YELLOW, GREEN, TEAL, CYAN,
            BLUE, VIOLET, MAGENTA]
 
-# Per frame: which generated sphere stage, its diameter, emblem size, bolts.
-# Stage -1 means no sphere. The sphere must fully hide the 40x48 subject at
-# its peak, so the peak diameter is comfortably larger than the subject.
-SPHERE_STAGE = [-1, -1, 0, 1, 2, 3, 4, 5, 5, 5, 5, 4, 3, 2, 1, 0]
-SPHERE_SIZE = [0, 0, 10, 22, 38, 54, 64, 68, 68, 68, 68, 66, 58, 44, 26, 12]
-EMBLEM_SIZE = [0, 0, 0, 0, 0, 0, 20, 34, 40, 40, 40, 38, 32, 18, 0, 0]
-BOLT_COUNT = [2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 2, 2]
+# ---------------------------------------------------------------- timelines
+# One entry per frame. 0 or -1 means "absent this frame".
+
+# Ground pool: opens early, flares at the implosion, lingers to the end.
+POOL_STAGE = [0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2,
+              2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0]
+POOL_WIDTH = [16, 24, 34, 44, 52, 58, 62, 62, 62, 62, 62, 62,
+              62, 62, 62, 66, 72, 68, 62, 54, 44, 34, 24, 14]
+
+# Converging shards: fly inward, then gone once the sphere takes over.
+SHARD_STAGE = [0, 0, 1, 1, 2, 3, 3, -1, -1, -1, -1, -1,
+               -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+SHARD_SIZE = [74, 68, 60, 52, 44, 34, 24, 0, 0, 0, 0, 0,
+              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+# Opaque rainbow sphere: swells, holds through the sigil, collapses at burst.
+SPHERE_STAGE = [-1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 5,
+                5, 5, 5, 5, 4, -1, -1, -1, -1, -1, -1, -1]
+SPHERE_SIZE = [0, 0, 0, 0, 0, 12, 26, 42, 56, 66, 70, 70,
+               70, 70, 70, 68, 58, 0, 0, 0, 0, 0, 0, 0]
+
+# The emblem: fades in over the sphere, pulses, flashes out with the burst.
+EMBLEM_SIZE = [0, 0, 0, 0, 0, 0, 0, 0, 16, 28, 38, 42,
+               40, 44, 42, 46, 52, 64, 72, 0, 0, 0, 0, 0]
+
+# Starburst shockwave: detonates as the sphere breaks.
+BURST_STAGE = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+               -1, -1, -1, -1, 0, 1, 2, 2, 3, 3, -1, -1]
+BURST_SIZE = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+              0, 0, 0, 0, 40, 62, 84, 96, 108, 120, 0, 0]
+
+# Lightning columns: a first warning strike, then the real barrage at the pop.
+BOLT_COUNT = [0, 1, 2, 2, 3, 3, 2, 2, 2, 2, 3, 3,
+              3, 4, 4, 5, 6, 6, 5, 4, 3, 2, 1, 0]
+
+# Subject visibility: hidden only while the opaque sphere covers it.
+SUBJECT_HIDDEN = {10, 11, 12, 13, 14, 15}
 
 
 def snap(colour):
@@ -84,87 +116,102 @@ def trim(image):
     return image.crop(box) if box else image
 
 
-def fit(image, size):
-    """Scale a de-keyed plate to a target box, keeping hard pixel edges."""
-    if size <= 0:
+def slice_plate(path, count):
+    plate = dekey(Image.open(path))
+    step = plate.width // count
+    return [trim(plate.crop((i * step, 0, (i + 1) * step, plate.height)))
+            for i in range(count)]
+
+
+def harden(image):
+    alpha = image.getchannel("A").point(lambda v: 255 if v > 127 else 0)
+    image.putalpha(alpha)
+    return image
+
+
+def fit(source, size, ratio=None):
+    """Scale a plate to a target box, keeping hard pixel edges."""
+    if source is None or size <= 0:
         return None
-    source = trim(image)
-    scale = min(size / source.width, size / source.height)
-    width = max(1, round(source.width * scale))
-    height = max(1, round(source.height * scale))
-    art = source.resize((width, height), Image.Resampling.NEAREST)
-    # Re-harden the alpha: NEAREST keeps it binary, this is a safety net.
-    alpha = art.getchannel("A").point(lambda v: 255 if v > 127 else 0)
-    art.putalpha(alpha)
-    return art
+    if ratio is None:
+        scale = min(size / source.width, size / source.height)
+        width = max(1, round(source.width * scale))
+        height = max(1, round(source.height * scale))
+    else:
+        width = max(1, size)
+        height = max(1, round(size * ratio))
+    return harden(source.resize((width, height), Image.Resampling.NEAREST))
 
 
 def load_plates():
-    sphere = dekey(Image.open(GEN / "sphere_stages.png"))
-    stages = []
-    step = sphere.width // 6
-    for index in range(6):
-        stages.append(trim(sphere.crop((index * step, 0,
-                                        (index + 1) * step, sphere.height))))
-
-    bolts_plate = dekey(Image.open(GEN / "lightning_columns.png"))
-    bolts = []
-    step = bolts_plate.width // 4
-    for index in range(4):
-        bolts.append(trim(bolts_plate.crop((index * step, 0,
-                                            (index + 1) * step,
-                                            bolts_plate.height))))
-
-    emblem = trim(dekey(Image.open(GEN / "mega_emblem.png")))
-    return stages, bolts, emblem
+    return {
+        "sphere": slice_plate(GEN / "sphere_stages.png", 6),
+        "bolts": slice_plate(GEN / "lightning_columns.png", 4),
+        "emblem": trim(dekey(Image.open(GEN / "mega_emblem.png"))),
+        "burst": slice_plate(GEN / "starburst.png", 4),
+        "shards": slice_plate(GEN / "shards.png", 4),
+        "pool": slice_plate(GEN / "ground_pool.png", 3),
+    }
 
 
-def subject_frame(direction_row):
-    """The subject's own artwork for this direction."""
+def load_subject_rows():
     sheet = Image.open(SPRITE_SHEET).convert("RGBA")
-    y = direction_row * SUBJECT_H
-    return sheet.crop((0, y, SUBJECT_W, y + SUBJECT_H))
+    return [sheet.crop((0, row * SUBJECT_H, SUBJECT_W, (row + 1) * SUBJECT_H))
+            for row in range(len(DIRECTIONS))]
 
 
-def paste_centre(canvas, art, offset=(0, 0)):
+def paste_at(canvas, art, cx, cy):
     if art is None:
         return canvas
     layer = Image.new("RGBA", (WIDTH, HEIGHT), CLEAR)
-    layer.paste(art, (CX - art.width // 2 + offset[0],
-                      CY - art.height // 2 + offset[1]))
+    layer.paste(art, (cx - art.width // 2, cy - art.height // 2))
     return Image.alpha_composite(canvas, layer)
 
 
-def build_frame(index, direction_row, plates):
-    stages, bolts, emblem = plates
+def build_frame(index, row, plates, subject):
     frame = Image.new("RGBA", (WIDTH, HEIGHT), CLEAR)
+    rng = random.Random(index * 31 + row * 7)
 
-    # 1. lightning columns behind, in lanes that frame the subject.
-    rng = random.Random(index * 31 + direction_row * 7)
-    # Lanes hug the left and right edges: the centre stays clear so the
-    # subject and the sphere are never hidden by the columns.
+    # --- ground pool, flat on the floor, drawn first so it reads as ground
+    if POOL_STAGE[index] >= 0 and POOL_WIDTH[index] > 0:
+        pool = plates["pool"][POOL_STAGE[index]]
+        frame = paste_at(frame, fit(pool, POOL_WIDTH[index], ratio=0.42),
+                         CX, FEET_Y)
+
+    # --- lightning columns, in lanes that keep the centre clear
     lanes = [5, 15, 65, 75, 25, 55]
     for bolt in range(BOLT_COUNT[index]):
-        plate = bolts[rng.randrange(len(bolts))]
-        # Keep each column narrow enough to read as a pillar, not a curtain.
-        column = plate.resize((10 if bolt % 2 == 0 else 8, HEIGHT),
-                              Image.Resampling.NEAREST)
-        alpha = column.getchannel("A").point(lambda v: 255 if v > 127 else 0)
-        column.putalpha(alpha)
+        plate = plates["bolts"][rng.randrange(4)]
+        column = harden(plate.resize((10 if bolt % 2 == 0 else 8, HEIGHT),
+                                     Image.Resampling.NEAREST))
         layer = Image.new("RGBA", (WIDTH, HEIGHT), CLEAR)
         layer.paste(column, (lanes[bolt % len(lanes)] - column.width // 2, 0))
-        frame = Image.alpha_composite(frame, layer)
+        frame = Image.alpha_composite(layer, frame) if False else \
+            Image.alpha_composite(frame, layer)
 
-    # 2. the subject, in ITS OWN direction artwork.
-    frame = paste_centre(frame, subject_frame(direction_row))
+    # --- the subject, in ITS OWN direction artwork
+    if index not in SUBJECT_HIDDEN:
+        frame = paste_at(frame, subject, CX, CY)
 
-    # 3. the opaque rainbow sphere swallows it.
-    stage = SPHERE_STAGE[index]
-    if stage >= 0:
-        frame = paste_centre(frame, fit(stages[stage], SPHERE_SIZE[index]))
+    # --- shards converging inward
+    if SHARD_STAGE[index] >= 0 and SHARD_SIZE[index] > 0:
+        frame = paste_at(frame, fit(plates["shards"][SHARD_STAGE[index]],
+                                    SHARD_SIZE[index]), CX, CY)
 
-    # 4. the Mega emblem burns in front.
-    frame = paste_centre(frame, fit(emblem, EMBLEM_SIZE[index]))
+    # --- opaque rainbow sphere
+    if SPHERE_STAGE[index] >= 0 and SPHERE_SIZE[index] > 0:
+        frame = paste_at(frame, fit(plates["sphere"][SPHERE_STAGE[index]],
+                                    SPHERE_SIZE[index]), CX, CY)
+
+    # --- starburst shockwave
+    if BURST_STAGE[index] >= 0 and BURST_SIZE[index] > 0:
+        frame = paste_at(frame, fit(plates["burst"][BURST_STAGE[index]],
+                                    BURST_SIZE[index]), CX, CY)
+
+    # --- the Mega emblem, in front of everything
+    if EMBLEM_SIZE[index] > 0:
+        frame = paste_at(frame, fit(plates["emblem"], EMBLEM_SIZE[index]),
+                         CX, CY)
 
     pixels = frame.load()
     for y in range(HEIGHT):
@@ -176,17 +223,19 @@ def build_frame(index, direction_row, plates):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    plates = load_plates()
+    for stale in OUT.glob("MegaEvolution-*.gif"):
+        stale.unlink()
 
-    # One row per direction, one column per frame: a real PMD-style sheet.
+    plates = load_plates()
+    subjects = load_subject_rows()
+
     sheet = Image.new("RGBA", (WIDTH * FRAMES, HEIGHT * len(DIRECTIONS)), CLEAR)
     for row in range(len(DIRECTIONS)):
         for index in range(FRAMES):
-            frame = build_frame(index, row, plates)
-            sheet.paste(frame, (index * WIDTH, row * HEIGHT))
+            sheet.paste(build_frame(index, row, plates, subjects[row]),
+                        (index * WIDTH, row * HEIGHT))
     sheet.save(OUT / "MegaEvolution-Anim.png")
 
-    # A GIF per direction, for review.
     backdrop = Image.new("RGBA", (WIDTH, HEIGHT), (24, 24, 32, 255))
     for row, name in enumerate(DIRECTIONS):
         frames = []
@@ -196,7 +245,8 @@ def main():
             frames.append(Image.alpha_composite(backdrop, tile)
                           .convert("P", palette=Image.ADAPTIVE))
         frames[0].save(OUT / f"MegaEvolution-{name}.gif", save_all=True,
-                       append_images=frames[1:], duration=90, loop=0, disposal=2)
+                       append_images=frames[1:], duration=80, loop=0,
+                       disposal=2)
 
     colours = {p[:3] for p in sheet.get_flattened_data() if p[3]}
     print(f"sheet {sheet.size}: {FRAMES} frames x {len(DIRECTIONS)} directions")
