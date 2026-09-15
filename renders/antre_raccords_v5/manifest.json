@@ -1,0 +1,287 @@
+{
+  "size": [
+    480,
+    312
+  ],
+  "frames": 24,
+  "durations_ms": [
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167
+  ],
+  "loop_ms": 4000,
+  "game_frames_per_pose": 10,
+  "cycles": {
+    "basin_generated": 4,
+    "cascades_regenerated": 4,
+    "foam_native_adapted": 3,
+    "platform_water_native": 8
+  },
+  "static": [
+    "02_paroi_fond",
+    "03_bordure_gauche",
+    "04_bordure_droite",
+    "05_rebord_bas",
+    "06_disque_natif",
+    "07_pas_japonais_1",
+    "07_pas_japonais_2",
+    "07_pas_japonais_3"
+  ],
+  "animated": [
+    "00_bassin_regenere",
+    "09_rives_roche_eau",
+    "08_reflets_natifs_disque",
+    "08_reflets_natifs_pas_1",
+    "08_reflets_natifs_pas_2",
+    "08_reflets_natifs_pas_3",
+    "10_cascade_1",
+    "10_cascade_2",
+    "10_cascade_3",
+    "10_cascade_4",
+    "10_cascade_5",
+    "10_cascade_6",
+    "20_ecume_1",
+    "20_ecume_2",
+    "20_ecume_3",
+    "20_ecume_4",
+    "20_ecume_5",
+    "20_ecume_6"
+  ],
+  "order": [
+    "00_bassin_regenere",
+    "02_paroi_fond",
+    "03_bordure_gauche",
+    "04_bordure_droite",
+    "05_rebord_bas",
+    "09_rives_roche_eau",
+    "08_reflets_natifs_disque",
+    "08_reflets_natifs_pas_1",
+    "08_reflets_natifs_pas_2",
+    "08_reflets_natifs_pas_3",
+    "06_disque_natif",
+    "07_pas_japonais_1",
+    "07_pas_japonais_2",
+    "07_pas_japonais_3",
+    "10_cascade_1",
+    "10_cascade_2",
+    "10_cascade_3",
+    "10_cascade_4",
+    "10_cascade_5",
+    "10_cascade_6",
+    "20_ecume_1",
+    "20_ecume_2",
+    "20_ecume_3",
+    "20_ecume_4",
+    "20_ecume_5",
+    "20_ecume_6"
+  ],
+  "falls": [
+    {
+      "x": 64,
+      "top_x": 58,
+      "top_y": 92,
+      "width": 25,
+      "foot_y": 156
+    },
+    {
+      "x": 152,
+      "top_x": 140,
+      "top_y": 75,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 216,
+      "top_x": 216,
+      "top_y": 57,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 264,
+      "top_x": 264,
+      "top_y": 57,
+      "width": 20,
+      "foot_y": 119
+    },
+    {
+      "x": 327,
+      "top_x": 339,
+      "top_y": 75,
+      "width": 25,
+      "foot_y": 164
+    },
+    {
+      "x": 417,
+      "top_x": 424,
+      "top_y": 92,
+      "width": 25,
+      "foot_y": 156
+    }
+  ],
+  "platform": {
+    "origin": [
+      184,
+      178
+    ],
+    "source_rects": [
+      [
+        0,
+        984,
+        112,
+        1128
+      ],
+      [
+        112,
+        984,
+        224,
+        1128
+      ],
+      [
+        224,
+        984,
+        336,
+        1128
+      ],
+      [
+        336,
+        984,
+        448,
+        1128
+      ],
+      [
+        0,
+        1128,
+        112,
+        1272
+      ],
+      [
+        112,
+        1128,
+        224,
+        1272
+      ],
+      [
+        224,
+        1128,
+        336,
+        1272
+      ],
+      [
+        336,
+        1128,
+        448,
+        1272
+      ]
+    ],
+    "disc_native_bbox": [
+      20,
+      9,
+      92,
+      62
+    ],
+    "disc_size": [
+      72,
+      53
+    ],
+    "previous_disc_size": [
+      160,
+      106
+    ],
+    "stone_pixels_unchanged": true,
+    "scale": 1
+  },
+  "native_platform_proof": {
+    "Frames": [
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 6,
+          "Y": 126
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 20,
+          "Y": 126
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 34,
+          "Y": 126
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 48,
+          "Y": 126
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 6,
+          "Y": 144
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 20,
+          "Y": 144
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 34,
+          "Y": 144
+        }
+      },
+      {
+        "Sheet": "Metano_Town_Animation_Tileset",
+        "TexLoc": {
+          "X": 48,
+          "Y": 144
+        }
+      }
+    ],
+    "FrameLength": 10
+  },
+  "native_atlas_sha256": "51ee6afbd9da3747e060bf9c1f3dd3d9305853fbcb7cbf582b51b6fbea81e8d0",
+  "material": "V4basin poses attenuated to12percent contrast on nativeAltere water base; rock-side wet bank3px; V4falls preserved; native3key foam layout-warped with persistent contact core;8key platform water unchanged",
+  "bank_width_px": 3,
+  "bank_max_alpha": 32,
+  "basin_delta_limit_rgb": [
+    -12,
+    10
+  ],
+  "foam_layout_warp": true,
+  "foam_contact_core": true,
+  "runtime_pmdo_validated": false
+}
