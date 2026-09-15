@@ -1,0 +1,25 @@
+{
+  "species": "<espèce à préciser>",
+  "species_key_pmdo": null,
+  "dex_index_pmdo": null,
+  "form_index_pmdo": null,
+  "skin": "normal",
+  "gender": null,
+  "form_description": "<forme canonique ou variante personnelle>",
+  "custom_traits": "<accessoires, signes distinctifs, personnalité>",
+  "asymmetry": "<marquages/accessoires à vérifier dans les deux sens>",
+  "destination": "pmdo_custom_private",
+  "scope": "<portraits, sprites, ou les deux>",
+  "sprite_completion_level": "<minimum, dungeon ou full>",
+  "references": [],
+  "emotion_notes": {},
+  "approval_gates": {
+    "reference_design": false,
+    "native_size_Normal_Happy_Angry_Sad": false,
+    "native_size_Idle_directions": false,
+    "manual_art_review": false,
+    "local_preflight": false,
+    "pmdo_import_and_animation_test": false,
+    "public_ai_assisted_submission_permission": false
+  }
+}

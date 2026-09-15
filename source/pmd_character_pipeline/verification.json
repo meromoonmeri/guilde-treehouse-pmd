@@ -1,0 +1,73 @@
+{
+  "unit_tests_passed": 19,
+  "native_probes": {
+    "native_idle_minimum": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+      ],
+      "measurements": {
+        "actions": {
+          "Idle": {
+            "frame": [
+              32,
+              40
+            ],
+            "columns": 3,
+            "directions": 8,
+            "ticks": 52,
+            "colors": 8
+          }
+        },
+        "global_visible_colors": 8
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    },
+    "native_Normal": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Expression, composition, background and asymmetrical anatomy require visual review."
+      ],
+      "measurements": {
+        "size": [
+          40,
+          40
+        ],
+        "emotions": {
+          "Normal": 15
+        }
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    },
+    "native_three_emotions": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Expression, composition, background and asymmetrical anatomy require visual review."
+      ],
+      "measurements": {
+        "size": [
+          160,
+          40
+        ],
+        "emotions": {
+          "Normal": 15,
+          "Happy": 15,
+          "Angry": 15
+        }
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    }
+  },
+  "source_commit": "69a8eabf11e03e737bc64007fd5fc3da18fd9058",
+  "note": "Idle-only probe intentionally excludes other actions; NOT a full sprite pack, NOT PMDO runtime or SpriteBot acceptance",
+  "prompt_guard_tests_passed": 4
+}

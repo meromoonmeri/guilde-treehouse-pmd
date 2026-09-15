@@ -1,0 +1,18 @@
+"""Prepare a per-request image-generation prompt. Does NOT call or retrain a model."""
+import argparse,json
+from pathlib import Path
+C=json.loads(Path(__file__).with_name('contract.json').read_text())
+def make(brief,kind,emotion='Normal',direction='Down'):
+ species=brief.get('species','')
+ if not species or species.startswith('<'):raise ValueError('Specify the Pokemon species first')
+ refs=brief.get('references',[])
+ if not refs:raise ValueError('Add verified canonical/native references before generation')
+ identity=f"Pokemon: {species}. Form/design: {brief.get('form_description','canonical form')}. Individual traits/accessories: {brief.get('custom_traits','none')}. Asymmetry that must remain consistent: {brief.get('asymmetry','must be checked against references')}."
+ common=identity+' Use the supplied canonical design and Chunsoft PMD reference images as the anatomical and style guide. This output is a drawing/reference draft for deliberate pixel cleanup, not an engine-ready asset. No text, labels, watermark, interface or decorative frame. Do not invent features or change body proportions between views. '
+ if kind=='portrait':
+  if emotion not in C['portrait']['emotions']:raise ValueError('Use a configured emotion slot; describe custom nuance in the brief')
+  return common+f"Create ONE emotion portrait, {emotion}, not a contact sheet. Tight expressive head composition intended for a 40 by 40 pixel PMD Explorers portrait. Make the large drawing roughly 400 by 400 compositionally; final 40 by 40 raster and palette will be constructed and checked separately. Neutral views face forward at a readable three-quarter angle; adapt head tilt, eyelids, brows and mouth genuinely for this emotion. Keep important ears, muzzle and species identifiers legible at native scale. Emulate the softly clustered, illustrated Chunsoft portrait look: colored dark outlines, controlled cel shading, a few opaque hand-placed blend colors, no uniform heavy pure-black outline, no smooth 3D rendering, photorealism, bloom or noisy dithering. Use the emotion-appropriate PMD background from references, reserving about three background colors plus a blend color in a total intended fifteen-color palette. Filled final portraits must be entirely opaque including their background; no magenta or transparent holes. "+brief.get('emotion_notes',{}).get(emotion,'')
+ if direction not in C['sprite']['directions']:raise ValueError('Unknown PMD direction')
+ return common+f"Create ONE full-body Idle key-pose guide facing {direction}. Match the exact oblique PMD dungeon camera, native reference body scale and grounded center. Keep every limb, marking and attachment anatomically consistent. Crisp small pixel clusters, readable silhouette, restrained shading and a planned fifteen-visible-color palette shared with ALL future animations. Use flat solid magenta only as a removable intermediate matte if transparency is unavailable, with no magenta on the character. No ground, scene, painted shadow, blur, bloom, alpha gradients or illustration background. Do NOT draw technical offset markers: they will be authored as separate PNG sheets, as will the engine shadow. Do not produce the final 8-direction animation grid in this drawing; approved native-size poses will be registered, retouched and animated separately. "
+if __name__=='__main__':
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('brief',type=Path);p.add_argument('kind',choices=['portrait','sprite']);p.add_argument('--emotion',default='Normal');p.add_argument('--direction',default='Down');a=p.parse_args();print(make(json.loads(a.brief.read_text()),a.kind,a.emotion,a.direction))
