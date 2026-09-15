@@ -1,0 +1,132 @@
+{
+  "size": [
+    504,
+    360
+  ],
+  "frames": 24,
+  "durations_ms": [
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167,
+    167,
+    166,
+    167
+  ],
+  "loop_ms": 4000,
+  "layer_order": [
+    "01_eau_anneaux",
+    "03_herbe_berges",
+    "04_vegetation_arriere",
+    "05_canopy_avant_gauche",
+    "06_canopy_avant_droite",
+    "06_falaise_fond",
+    "06_falaise_gauche",
+    "06_falaise_centre",
+    "06_falaise_droite",
+    "07_cascade_1",
+    "07_cascade_2",
+    "07_cascade_3",
+    "08_ecume_metano_1",
+    "08_ecume_metano_2",
+    "08_ecume_metano_3",
+    "12_reflets_altere_1",
+    "12_reflets_altere_2",
+    "12_reflets_altere_3",
+    "12_reflets_altere_4",
+    "12_reflets_altere_5",
+    "12_reflets_altere_6",
+    "12_reflets_altere_7",
+    "10_disque_altere",
+    "11_pas_japonais_1",
+    "11_pas_japonais_2",
+    "11_pas_japonais_3",
+    "11_pas_japonais_4",
+    "11_pas_japonais_5",
+    "11_pas_japonais_6"
+  ],
+  "static": [
+    "03_herbe_berges",
+    "04_vegetation_arriere",
+    "05_canopy_avant_gauche",
+    "06_canopy_avant_droite",
+    "06_falaise_fond",
+    "06_falaise_gauche",
+    "06_falaise_centre",
+    "06_falaise_droite",
+    "10_disque_altere",
+    "11_pas_japonais_1",
+    "11_pas_japonais_2",
+    "11_pas_japonais_3",
+    "11_pas_japonais_4",
+    "11_pas_japonais_5",
+    "11_pas_japonais_6"
+  ],
+  "animated": [
+    "01_eau_anneaux",
+    "07_cascade_1",
+    "07_cascade_2",
+    "07_cascade_3",
+    "08_ecume_metano_1",
+    "08_ecume_metano_2",
+    "08_ecume_metano_3",
+    "12_reflets_altere_1",
+    "12_reflets_altere_2",
+    "12_reflets_altere_3",
+    "12_reflets_altere_4",
+    "12_reflets_altere_5",
+    "12_reflets_altere_6",
+    "12_reflets_altere_7"
+  ],
+  "source": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Friend Areas - Waterfall Lake.png",
+  "parent": "waterfall_lake_trois_v2",
+  "cascade_count": 3,
+  "channels": [
+    {
+      "foot": [
+        128,
+        137
+      ],
+      "top": 28,
+      "width": 48
+    },
+    {
+      "foot": [
+        252,
+        109
+      ],
+      "top": 0,
+      "width": 64
+    },
+    {
+      "foot": [
+        376,
+        137
+      ],
+      "top": 28,
+      "width": 48
+    }
+  ],
+  "rock": "Generated dry semicircular layout and texture inspired by original; nearest original rock colors. Not native tiles.",
+  "water": "Separate generated guide registered to outlets; original GBA 76x48 material advected down 2px per pose; reconstructed animation.",
+  "foam": "Exact native96x56 Metano foam from Altere Objects Over,3poses/10ticks, translated only; no recoloring or resampling in day.",
+  "native_reference_commit": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+  "runtime_validated": false
+}
