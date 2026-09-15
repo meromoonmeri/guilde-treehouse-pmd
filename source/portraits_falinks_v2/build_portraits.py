@@ -20,7 +20,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 REF = ROOT / "source" / "portraits_falinks" / "reference" / "Normal.png"
-GUIDE = HERE / "reference" / "big_expressions_v4.png"
+GUIDE = HERE / "reference" / "big_expressions_v5.png"
 # The v2 sheet is kept: the user validated four of its portraits.
 GUIDE_V2 = HERE / "reference" / "big_expressions.png"
 CANONICAL = ROOT / "portrait" / "0186" / "template.png"
