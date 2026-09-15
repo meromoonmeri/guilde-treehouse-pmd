@@ -1,0 +1,36 @@
+{
+  "pokedex": 870,
+  "name": "Falinks",
+  "format": "SpriteCollab portrait sheet",
+  "tile_size": [40, 40],
+  "sheet_size": [200, 320],
+  "max_colors_per_tile": 15,
+  "opaque": true,
+  "asymmetric_mirrors": true,
+  "order": [
+    "Normal", "Happy", "Pain", "Angry", "Worried",
+    "Sad", "Crying", "Shouting", "Teary-Eyed", "Determined",
+    "Joyous", "Inspired", "Surprised", "Dizzy", "Special0",
+    "Special1", "Sigh", "Stunned", "Special2", "Special3"
+  ],
+  "art_source": {
+    "method": "existing portrait only; no generated image is used in the pack",
+    "base": "source/portraits_falinks/reference/Normal.png",
+    "repository": "PMDCollab/SpriteCollab",
+    "repository_commit": "13237e6357e2dd1c6b88649db9dbc4957a5934ad",
+    "extraction": "background of the published portrait is byte-identical to cell 0 of portrait/0186/template.png, so the character layer is isolated exactly",
+    "edits": "eye artwork cleared and repainted per emotion, plus small effects, strictly within the 12 colours of the published portrait"
+  },
+  "upstream_unchanged": ["Normal"],
+  "generated_here": [
+    "Angry", "Crying", "Determined", "Dizzy", "Happy", "Inspired", "Joyous",
+    "Pain", "Sad", "Shouting", "Sigh", "Special0", "Special1", "Special2",
+    "Special3", "Stunned", "Surprised", "Teary-Eyed", "Worried"
+  ],
+  "background_provenance": {
+    "authoritative_template": "portrait/0186/template.png",
+    "template_grid": "5 columns x 8 rows, 40px cells; top 5x4 normal source, exact-flip mirror output",
+    "requantised_cells": "only template cells whose colour count exceeds 15, deterministic and dither-free"
+  },
+  "validation": "python source/portraits_falinks/verify_portraits.py"
+}
