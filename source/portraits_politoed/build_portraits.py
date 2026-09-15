@@ -1,10 +1,12 @@
 from PIL import Image, ImageDraw
 from pathlib import Path
+from collections import deque
 import shutil
 
 ROOT=Path(__file__).resolve().parents[2]
 REF=ROOT/'source/portraits_politoed/reference'
-BGDIR=ROOT/'source/portraits_politoed/backgrounds'
+CANONICAL=ROOT/'portrait/0186/template.png'
+AI_GUIDE=REF/'ai_expression_guide.png'
 OUT=ROOT/'portrait/0186';OUT.mkdir(parents=True, exist_ok=True)
 
 # The palette comes from the four existing Politoed SpriteCollab portraits.
@@ -24,6 +26,12 @@ BODY={O,G,DG,MG,S,L,Y,B,MD,P,PD}
 EMOTIONS=['Normal','Happy','Pain','Angry','Worried','Sad','Crying','Shouting','Teary-Eyed','Determined','Joyous','Inspired','Surprised','Dizzy','Special0','Special1','Sigh','Stunned','Special2','Special3']
 # Existing upstream art is retained pixel-for-pixel for these four emotions.
 UPSTREAM={'Normal','Inspired','Shouting','Surprised'}
+# The 1024x1024 guide is deliberately only a BIG sketch. It follows the
+# Google Slides method: one 256x256 head study per cell, then bilinear
+# downscale and manual palette cleanup below.
+AI_ORDER=['Normal','Happy','Pain','Angry','Worried','Sad','Crying','Shouting',
+          'Teary-Eyed','Determined','Joyous','Inspired','Surprised','Dizzy',
+          'Sigh','Stunned']
 
 def art_from(path):
     src=Image.open(path).convert('RGB')
@@ -33,6 +41,96 @@ def art_from(path):
             c=src.getpixel((x,y))
             if c in BODY:p[x,y]=(*c,255)
     return out
+
+def _distance(a, b):
+    return sum((x-y)*(x-y) for x,y in zip(a,b))
+
+
+def _largest_component(mask):
+    # Keep the connected Politoed head from the BIG guide and discard the
+    # decorative stars/question marks the image generator may place nearby.
+    height=len(mask); width=len(mask[0]); seen=set(); best=[]
+    for y in range(height):
+        for x in range(width):
+            if not mask[y][x] or (x,y) in seen:
+                continue
+            queue=[(x,y)]; seen.add((x,y)); component=[]
+            while queue:
+                xx,yy=queue.pop(); component.append((xx,yy))
+                for nx,ny in ((xx-1,yy),(xx+1,yy),(xx,yy-1),(xx,yy+1)):
+                    if 0 <= nx < width and 0 <= ny < height and mask[ny][nx] and (nx,ny) not in seen:
+                        seen.add((nx,ny)); queue.append((nx,ny))
+            if len(component) > len(best):
+                best=component
+    return best
+
+
+def ai_art(emotion):
+    # Turn one BIG expression study into a clean 40px transparent art layer.
+    index=AI_ORDER.index(emotion)
+    source=Image.open(AI_GUIDE).convert('RGB')
+    cell=source.crop(((index % 4)*256, (index // 4)*256,
+                      (index % 4 + 1)*256, (index // 4 + 1)*256))
+    background=cell.getpixel((255,255))
+    pixels=cell.load(); mask=[]
+    for y in range(256):
+        mask.append([_distance(pixels[x,y],background) > 30*30 for x in range(256)])
+    component=_largest_component(mask)
+    alpha=Image.new('L',(256,256),0); ap=alpha.load()
+    for x,y in component:
+        ap[x,y]=255
+    rgba=cell.convert('RGBA'); rgba.putalpha(alpha)
+    # Exact guide workflow: draw large, then bilinear downscale.
+    study=rgba.resize((40,40),Image.Resampling.BILINEAR)
+    out=study.load(); alpha=study.getchannel('A').load()
+    for y in range(40):
+        for x in range(40):
+            if alpha[x,y]:
+                c=out[x,y][:3]
+                q=min(BODY,key=lambda color:_distance(c,color))
+                out[x,y]=(*q,alpha[x,y])
+    # The BIG study's blue tear highlights are intentionally redrawn with the
+    # Politoed light swatch so Crying remains legible after palette indexing.
+    if emotion == 'Crying':
+        for x,y in [(17,19),(18,19),(18,20),(18,21),(19,22),(19,23)]:
+            out[x,y]=(*L,255)
+        for x,y in [(16,19),(17,20),(17,21)]:
+            out[x,y]=(*S,255)
+    return study
+
+
+def _template_tile(emotion):
+    index=EMOTIONS.index(emotion)
+    template=Image.open(CANONICAL).convert('RGB')
+    return template.crop(((index % 5)*40, (index // 5)*40,
+                          (index % 5 + 1)*40, (index // 5 + 1)*40))
+
+
+def _reduced_body(max_colors):
+    # Preserve line, main green, depth, light face, yellow and mouth/tongue
+    # before merging less important AA shades for the Special backgrounds.
+    palettes={
+        11:[O,G,DG,MG,S,L,Y,B,MD,P,PD],
+        10:[O,G,DG,MG,S,L,Y,MD,P,PD],
+        9:[O,G,DG,MG,L,Y,MD,P],
+        8:[O,G,DG,L,Y,MD,P,PD],
+        7:[O,G,DG,L,Y,MD,P],
+        6:[O,G,DG,L,Y,P],
+    }
+    return palettes.get(max_colors, palettes[6] if max_colors < 6 else palettes[11])
+
+
+def _reduce_background(tile, max_colors):
+    colors=tile.getcolors(10000)
+    if len(colors) <= max_colors:
+        return tile, [color for _,color in colors]
+    # Only supplemental Special samples need reduction; the standard 16
+    # backgrounds are <=4 colours and remain byte-exact.
+    reduced=tile.quantize(colors=max_colors, method=Image.Quantize.MEDIANCUT,
+                          dither=Image.Dither.NONE).convert('RGB')
+    palette=[color for _,color in reduced.getcolors(10000)]
+    return reduced, palette
+
 
 def patch(img, x0,y0,x1,y1, color=G):
     d=ImageDraw.Draw(img)
@@ -130,7 +228,12 @@ def sweat(img):
     px(img,[(28,10),(28,11)],(159,215,231))
 
 def create(emotion):
-    # Pick one of the existing 2D head bases, then redraw only the face.
+    # The BIG guide provides anatomy and facial pose for missing required
+    # emotions; four already-published portraits stay untouched.
+    if emotion in AI_ORDER and emotion not in UPSTREAM:
+        return ai_art(emotion)
+    # Special slots have no BIG study: reuse the cleaned head base and draw a
+    # small, deliberate variation rather than letting the generator invent one.
     if emotion in UPSTREAM:
         return art_from(REF/(emotion+'.png'))
     if emotion in {'Angry','Joyous','Happy'}:
@@ -159,11 +262,27 @@ def create(emotion):
     return art
 
 def compose(emotion, art):
-    bg=Image.open(BGDIR/(emotion+'.png')).convert('RGB')
-    out=bg.convert('RGBA')
-    out.alpha_composite(art)
-    # Explicit palette restriction is a final guard against ImageDraw internals.
-    return out.convert('RGB')
+    # The user-provided latest canonical template is authoritative. Crop its
+    # 5x4 SpriteBot grid; never resize or guess the background geometry.
+    canonical=_template_tile(emotion)
+    colors=len(canonical.getcolors(10000))
+    max_bg=8 if colors > 9 else colors
+    bg,bg_palette=_reduce_background(canonical,max_bg)
+    body_palette=_reduced_body(min(11,15-len(bg_palette)))
+    allowed=bg_palette+body_palette
+    result=Image.new('RGB',(40,40)); rp=result.load(); bp=bg.load()
+    ap=art.getchannel('A').load(); rgb=art.convert('RGB').load()
+    for y in range(40):
+        for x in range(40):
+            if ap[x,y] == 0:
+                rp[x,y]=bp[x,y]
+                continue
+            # Blend the downscaled edge, then snap to the union of canonical
+            # background colours and the reduced Politoed palette.
+            a=ap[x,y]/255.0; source=rgb[x,y]; base=bp[x,y]
+            mixed=tuple(round(source[i]*a+base[i]*(1-a)) for i in range(3))
+            rp[x,y]=min(allowed,key=lambda color:_distance(mixed,color))
+    return result
 
 # Build the 20 canonical slots and their mirrored half.  The four existing
 # SpriteCollab portraits are copied byte-for-byte; only missing expressions are

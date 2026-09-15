@@ -6,7 +6,7 @@ Ce dossier contient la source reproductible du lot `#0186 Politoed` livré dans
 ## Règles appliquées
 
 - une émotion = une image opaque de **40 × 40 px** ;
-- **15 couleurs maximum par portrait** (la transparence n'est pas utilisée) ;
+- **15 couleurs maximum par portrait** ;
 - ordre SpriteBot/SpriteViewer :
   `Normal, Happy, Pain, Angry, Worried, Sad, Crying, Shouting,
   Teary-Eyed, Determined, Joyous, Inspired, Surprised, Dizzy, Special0,
@@ -15,14 +15,38 @@ Ce dossier contient la source reproductible du lot `#0186 Politoed` livré dans
 - Politoed étant asymétrique (boucle de tête, profil et joue), les 20 portraits
   retournés sont livrés dans la seconde moitié de `Sheet.png` et sous les noms
   `Emotion^.png` ;
-- les fonds suivent les motifs canoniques de la planche SpriteViewer et les
-  quatre portraits Politoed déjà publiés, sans fond uni inventé ;
-- les portraits officiels ou déjà publiés n'ont pas été repeints.
+- les fonds ne sont plus reconstruits par approximation : le fichier fourni
+  par l'utilisateur `portrait/0186/template.png` est la planche canonique
+  200×320 : ses 20 cases supérieures (grille 5×4) sont lues case par case,
+  sans redimensionnement ni interpolation ; la moitié miroir est produite par
+  retournement exact, comme l'exige le format SpriteBot ;
+- `portrait/0186/Extra_Backgrounds.png` est conservé comme planche canonique
+  complémentaire pour les variantes et l'audit visuel ;
+- les portraits officiels ou déjà publiés ne sont pas repeints.
 
-La méthode du guide fourni a été suivie : recherche et références 2D, tête de
-base réutilisable, expressions redessinées en pixels, contrôle à la taille
-native, puis contrôle de palette. Les détails sont lisibles à 1× ; le contact
-sheet agrandi n'est pas un asset de jeu.
+## Méthode optimisée
+
+La chaîne suit la méthode du guide PMD Portraits for SkyTemple, avec un
+contrôle supplémentaire contre les glitches. La configuration du générateur
+est figée dans `ai_generation_config.json` :
+
+1. `reference/ai_expression_guide.png` est une planche **BIG 1024×1024** de
+   recherches d'expressions, 16 cases de 256×256 ; elle sert uniquement de
+   croquis de pose et d'anatomie, pas de sprite final ;
+2. chaque case est isolée par composant connecté afin d'écarter les étoiles,
+   points ou symboles parasites éventuellement générés autour de la tête ;
+3. la tête est réduite de 256×256 à 40×40 par bilinéaire, comme dans le guide,
+   puis chaque pixel visible est ramené à la palette Politoed approuvée ;
+4. le fond canonique est posé après la réduction, ce qui empêche les artefacts
+   du générateur de contaminer les motifs de fond ;
+5. les cases standard conservent exactement les couleurs du template. Les
+   cases `Special` à fond très riche passent par une réduction déterministe
+   sans tramage, uniquement pour respecter la limite de 15 couleurs ;
+6. le rendu est contrôlé à 1×, puis exporté en portraits individuels et en
+   planche SpriteBot.
+
+Les détails doivent rester lisibles à 1× ; un contact sheet agrandi n'est pas
+un asset de jeu.
 
 ## Provenance et crédits
 
@@ -35,9 +59,9 @@ Références consultées le 15 septembre 2026 :
 `reference/Normal.png` est le portrait CHUNSOFT existant. `Inspired.png`,
 `Shouting.png` et `Surprised.png` sont conservés depuis l'entrée Politoed
 existante de SpriteCollab (crédit PMDCollab_2 / Caitemis dans la fiche du
-site). Les 16 slots manquants et les variantes miroir sont les nouveaux
-pixels de ce lot, produits pour ce dépôt par Arena.ai Agent à la demande de
-`meromoonmeri`.
+site). Les nouveaux slots sont produits pour ce dépôt par Arena.ai Agent à la
+demande de `meromoonmeri` ; la planche BIG est archivée comme référence de
+travail et non comme asset SpriteCollab approuvé.
 
 La licence et les conditions d'utilisation des références restent celles de
 SpriteCollab : usage non commercial, crédit obligatoire, [CC BY-NC
@@ -54,8 +78,8 @@ python source/portraits_politoed/build_portraits.py
 python source/portraits_politoed/verify_portraits.py
 ```
 
-Le générateur recopie les quatre PNG de référence sans les réencoder, compose
-les autres portraits à partir de la tête de base et des fonds archivés, crée
-les miroirs, puis écrit la planche 200 × 320. Le vérificateur contrôle les
-40 portraits, les dimensions, l'opacité, la palette, les miroirs et chaque
-case de la planche.
+Le générateur recopie les quatre PNG de référence sans les réencoder, utilise
+le template canonique fourni, extrait et nettoie la planche BIG, crée les
+miroirs, puis écrit la planche 200 × 320. Le vérificateur contrôle les 40
+portraits, les dimensions, l'opacité, la palette, les miroirs, les sources
+canoniques et chaque case de la planche.

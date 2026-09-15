@@ -20,10 +20,18 @@
     "Special3", "Stunned", "Teary-Eyed", "Worried"
   ],
   "background_provenance": {
-    "template": "reference/portrait-XXXX.png",
+    "authoritative_template": "portrait/0186/template.png",
+    "supplemental_canonical_sheet": "portrait/0186/Extra_Backgrounds.png",
+    "template_grid": "5 columns x 8 rows, 40px cells; top 5x4 normal source, exact-flip mirror output",
     "repository": "PMDCollab/SpriteCollab",
     "repository_commit": "39246063655c8b3de3ff104e323b1d5c081c39f0",
     "politoed_reference": "reference/Normal.png, reference/Inspired.png, reference/Shouting.png, reference/Surprised.png"
+  },
+  "big_expression_guide": {
+    "file": "reference/ai_expression_guide.png",
+    "size": [1024, 1024],
+    "cell_size": [256, 256],
+    "role": "large sketch only; cleaned and downscaled by build_portraits.py"
   },
   "validation": "python source/portraits_politoed/verify_portraits.py"
 }

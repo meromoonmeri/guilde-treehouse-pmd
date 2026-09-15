@@ -1,0 +1,33 @@
+{
+  "purpose": "BIG reference only; never imported directly as a final portrait",
+  "file": "reference/ai_expression_guide.png",
+  "size": [1024, 1024],
+  "grid": [4, 4],
+  "cell_size": [256, 256],
+  "expressions": [
+    "Normal", "Happy", "Pain", "Angry", "Worried", "Sad", "Crying", "Shouting",
+    "Teary-Eyed", "Determined", "Joyous", "Inspired", "Surprised", "Dizzy", "Sigh", "Stunned"
+  ],
+  "reference_images": [
+    "portrait/0186/Normal.png",
+    "portrait/0186/Inspired.png",
+    "portrait/0186/Shouting.png",
+    "portrait/0186/Surprised.png",
+    "portrait/0186/template.png"
+  ],
+  "constraints": [
+    "2D PMD SpriteCollab-inspired pixel-art planning reference",
+    "consistent Politoed 3/4 anatomy and curled head swirl",
+    "no labels, no text, no extra Pokemon, no accessories",
+    "distinct readable expressions at 40x40 after reduction",
+    "no gradients, photorealism, malformed faces or decorative artifacts"
+  ],
+  "cleanup": [
+    "extract the largest connected character component per cell",
+    "discard disconnected stars and symbols",
+    "bilinear downscale from 256 to 40",
+    "snap art to the authored Politoed palette",
+    "composite only after applying the user-provided canonical template background",
+    "enforce 15 colors maximum and validate every mirror"
+  ]
+}
