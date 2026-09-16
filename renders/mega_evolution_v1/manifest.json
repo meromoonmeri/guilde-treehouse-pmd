@@ -1,0 +1,56 @@
+{
+  "status": "visual_prototype_not_PMDO_runtime_validated",
+  "frames": 144,
+  "ticks_per_frame": 2,
+  "fps": 30,
+  "cell": [
+    256,
+    256
+  ],
+  "atlas_grid": [
+    12,
+    12
+  ],
+  "ground_anchor": [
+    128,
+    194
+  ],
+  "sphere_center": [
+    128,
+    182
+  ],
+  "sphere_radius": 33,
+  "measured_bounds": [
+    107,
+    165,
+    150,
+    199
+  ],
+  "form_switch_frame": 66,
+  "fully_opaque_frames": [
+    48,
+    90
+  ],
+  "layers": [
+    "ground",
+    "rear_lightning",
+    "shell",
+    "front_lightning",
+    "fragments",
+    "emblem"
+  ],
+  "directions": [
+    "D",
+    "DR",
+    "R",
+    "UR",
+    "U",
+    "UL",
+    "L",
+    "DL"
+  ],
+  "coverage_test": "PASS: both forms, eight directions, all four Idle frames covered at frames 60\u201370",
+  "emblem": "original stylized double helix, official silhouette still needs correction",
+  "runtime_test": "NOT RUN",
+  "universal_fit": "Envelope algorithm demonstrated on Charizard/X only; no all-species roster validation"
+}
