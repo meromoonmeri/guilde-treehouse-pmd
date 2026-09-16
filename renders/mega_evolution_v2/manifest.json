@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "source": "image-generator keyframes, RGBA cleanup, registration, bidirectional optical-flow interpolation; NOT native PMDO VFX",
+  "frames": 192,
+  "ticks_per_frame": 2,
+  "duration_ms": 6400,
+  "cell": [
+    240,
+    256
+  ],
+  "atlas_grid": [
+    12,
+    16
+  ],
+  "ground_anchor": [
+    120,
+    198
+  ],
+  "sphere_center": [
+    120,
+    186
+  ],
+  "directions": [
+    "D",
+    "DR",
+    "R",
+    "UR",
+    "U",
+    "UL",
+    "L",
+    "DL"
+  ],
+  "generated_keys": {
+    "energy": 8,
+    "sphere": 8,
+    "break": 8,
+    "emblem": 8
+  },
+  "cycle_frames": {
+    "energy": 48,
+    "sphere": 48,
+    "break": 43,
+    "emblem": 48
+  },
+  "layers": [
+    "ground",
+    "rear_energy",
+    "sphere",
+    "front_energy",
+    "fracture",
+    "emblem"
+  ],
+  "form_switch_frame": 78,
+  "full_coverage_checks": {
+    "phases": 25,
+    "forms": 2,
+    "directions": 8,
+    "native_idle_frames": 4,
+    "result": "PASS"
+  },
+  "loop_diagnostics": {
+    "energy": {
+      "wrap_mean_rgba_difference": 8.626689453125,
+      "max_internal_difference": 9.751767578125,
+      "mean_internal_difference": 3.294233086768617
+    },
+    "sphere": {
+      "wrap_mean_rgba_difference": 1.538486328125,
+      "max_internal_difference": 1.982119140625,
+      "mean_internal_difference": 1.5418465342420211
+    },
+    "emblem": {
+      "wrap_mean_rgba_difference": 0.084736328125,
+      "max_internal_difference": 0.142958984375,
+      "mean_internal_difference": 0.07661049700797871
+    }
+  },
+  "multi_direction_note": "same radial VFX camera; 8 native character directions, not 8 independently generated 3D camera angles",
+  "limitations": [
+    "artistic review still required",
+    "optical flow synthesizes inbetweens, not hand-drawn frames",
+    "front/rear masks approximate semantic partition of one generated image, not fully separately painted column objects",
+    "Ground/Dungeon PMDO playback NOT TESTED",
+    "only Charizard/X envelope measured; not universal species-size certification"
+  ]
+}
