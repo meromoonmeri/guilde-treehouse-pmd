@@ -1,0 +1,38 @@
+{
+  "normal_pixels_preserved": true,
+  "Idle": {
+    "unique_frames_per_direction": [
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "markers_inside_sprites": true,
+    "fixed_shadow_anchor": [
+      24,
+      28
+    ]
+  },
+  "Walk": {
+    "unique_frames_per_direction": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "markers_inside_sprites": true,
+    "fixed_shadow_anchor": [
+      24,
+      28
+    ]
+  },
+  "limitations": "Image checks only. Anatomy, quality, official validator and PMDO runtime not certified."
+}

@@ -14,4 +14,10 @@ Exports : `renders/mega_evolution_v1/`, 6 atlas RGBA 3072×3072, cellules 256×2
 
 Ordre : sol → éclairs arrière → personnage → sphère → éclairs avant → fragments → emblème. Le switch de forme est un événement de la timeline à la phase 66, pas inclus dans les atlas. La démo compose les véritables Idle natifs sans les recolorer. Calcul d'enveloppe depuis les marqueurs blancs de chaque frame ; couverture opaque testée pour les deux formes, les huit directions et les quatre poses Idle.
 
-Points non terminés : emblème double hélice stylisé (pas encore silhouette officielle), variations de fragments à améliorer, aucun test Ground/Dungeon, ni liste entière X/Y/Z-A mesurée. Les références Onde Boréale sont conservées mais les éclairs sont un dessin original, pas l'animation native réexportée. Ne pas annoncer ce prototype comme finition de l'ensemble du mandat.
+Points non terminés : emblème flamme/S redessiné (référence visuelle du motif dans un logo fan consulté, pas extraction officielle), raccord des fissures aux cellules de fracture à affiner, aucun test Ground/Dungeon, ni liste entière X/Y/Z-A mesurée. Les références Onde Boréale sont conservées mais les éclairs sont un dessin original, pas l'animation native réexportée. Ne pas annoncer ce prototype comme finition de l'ensemble du mandat.
+
+## Correction après inspection
+
+La sphère utilise maintenant des bandes arc-en-ciel avec ombrage de volume au lieu des secteurs angulaires. Les 20 fragments proviennent réellement des pixels de la coque opaque (partition de Voronoï), se séparent puis rétrécissent et perdent leur opacité. Des particules prennent le relais. L’emblème en simple double hélice du premier checkpoint a été remplacé par le motif flamme/S avec point inférieur, redessiné en pixels après inspection du symbole présent dans le logo fan `image-search/mega-evolution-icon-1.png`. Cette référence secondaire ne prouve pas une reproduction pixel-exacte de l’icône officielle.
+
+`verify.py` contrôle les dimensions des six atlas, les débuts/fins transparents et les 144 phases des huit aperçus. Les assertions de couverture opaque sont exécutées dans `build.py`.

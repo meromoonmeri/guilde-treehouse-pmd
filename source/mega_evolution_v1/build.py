@@ -29,6 +29,7 @@ cx=ground[0];cy=round((y0+y1)/2);radius=math.ceil(max(math.hypot(x-cx,y-cy) for 
 particles=[(rng.random()*math.tau,rng.uniform(.5,1),rng.randint(0,11)) for _ in range(80)]
 layernames=['ground','rear_lightning','shell','front_lightning','fragments','emblem']; atlases={n:Image.new('RGBA',(W*12,H*12)) for n in layernames}
 previews=[[] for _ in range(8)]; checks=[]
+shards=[]
 for f in range(N):
  layers={n:blank() for n in layernames}; d={n:ImageDraw.Draw(im) for n,im in layers.items()}
  strength=min(1,f/24)*max(0,min(1,(116-f)/24))
@@ -54,7 +55,7 @@ for f in range(N):
   z=np.sqrt(np.maximum(0,1-nx*nx-ny*ny)); shade=np.clip(np.floor((.42+.50*z-.15*nx-.1*ny)*5)/5,.2,1)
   arr=np.zeros((H,W,4),dtype=np.uint8)
   for band in range(12):
-   m=mask & ((np.floor((np.arctan2(ny,nx)/math.tau+1+f*.002)*12).astype(int)%12)==band)
+   m=mask & ((np.floor((nx*.24+ny*.20+1+f*.003)*12).astype(int)%12)==band)
    rgb=np.array(rainbow(band/12)[:3]);arr[m,:3]=(shade[m,None]*rgb).astype(np.uint8)
   arr[mask,3]=alpha; layers['shell']=Image.fromarray(arr); ds=ImageDraw.Draw(layers['shell'])
   if r>4: ds.arc((cx-r+4,cy-r+4,cx+r-4,cy+r-4),195,275,fill=(245,255,255,alpha),width=3)
@@ -64,25 +65,46 @@ for f in range(N):
     for j in range(1,min(6,(f-74)//2)):
      a=angle+.13*math.sin(j*7+k);pts.append((cx+math.cos(a)*radius*j/5,cy+math.sin(a)*radius*j/5))
     if len(pts)>1:ds.line(pts,fill=(255,255,255,255),width=2)
- # Shell shards separate then shrink/fade into sparkles.
+ # Partition the actual opaque shell into coherent pieces (not unrelated triangles).
+ if f==90:
+  source=np.array(layers['shell']); sy,sx=np.mgrid[:H,:W]
+  seeds=[(cx+math.cos(k*math.tau/13)*radius*.76,cy+math.sin(k*math.tau/13)*radius*.76) for k in range(13)]
+  seeds += [(cx+math.cos(k*math.tau/7+.3)*radius*.30,cy+math.sin(k*math.tau/7+.3)*radius*.30) for k in range(7)]
+  nearest=np.argmin(np.stack([(sx-x)**2+(sy-y)**2 for x,y in seeds]),axis=0)
+  for k,(x,y) in enumerate(seeds):
+   part=source.copy();part[nearest!=k]=0;im=Image.fromarray(part);box=im.getbbox()
+   shards.append((im.crop(box),box,math.atan2(y-cy,x-cx),k))
  if 91<=f<134:
-  t=(f-91)/43
+  t=(f-90)/44
+  for im,box,angle,k in shards:
+   travel=t*(38+(k%5)*5); shrink=max(.08,1-max(0,t-.3)/.7)
+   piece=im.resize((max(1,round(im.width*shrink)),max(1,round(im.height*shrink))),Image.Resampling.NEAREST)
+   piece.putalpha(piece.getchannel('A').point(lambda a:round(a*(1-t)**1.3)))
+   px=round(box[0]+im.width/2-piece.width/2+math.cos(angle)*travel);py=round(box[1]+im.height/2-piece.height/2+math.sin(angle)*travel+t*t*12)
+   layers['fragments'].alpha_composite(piece,(px,py))
   for i,(angle,speed,delay) in enumerate(particles):
-   travel=t*(32+speed*30); x=cx+math.cos(angle)*(radius+travel);y=cy+math.sin(angle)*(radius+travel*.7)+t*t*14
-   size=max(1,round((6 if i<24 else 2)*(1-t)));color=rainbow(i/20,round(255*(1-t)**1.5))
-   if i<24:d['fragments'].polygon([(x-size,y-size),(x+size,y),(x,y+size*2)],fill=color)
-   else:d['fragments'].line((x-size,y,x+size,y),fill=color,width=1)
- # Original stylized double-helix flame sigil. NOT claimed to be exact official emblem.
+   age=max(0,(f-94-delay)/36)
+   if age<=0 or age>=1:continue
+   travel=age*(32+speed*42);x=cx+math.cos(angle)*(radius+travel);y=cy+math.sin(angle)*(radius+travel*.7)+age*age*14
+   size=max(1,round(3*(1-age)));color=rainbow(i/20,round(230*(1-age)**1.5))
+   ImageDraw.Draw(layers['fragments']).line((x-size,y,x+size,y),fill=color,width=1)
+ # Flame/S emblem reconstructed by pixel drawing from visible Mega motif.
+ # The official 24x42 asset could not be fetched; this is not a native extraction.
  if 43<=f<140:
-  opacity=min(1,(f-43)/15)*min(1,(140-f)/22); ey=cy-radius-25
-  for strand in range(2):
-   pts=[]
-   for j in range(31):
-    x=cx+math.sin(j/30*math.tau+strand*math.pi)*8;y=ey-15+j
-    pts.append((x,y))
-   for j in range(30):d['emblem'].line((*pts[j],*pts[j+1]),fill=rainbow(j/35+strand*.3,255*opacity),width=4)
-  for j in range(5):
-   x=cx-12+j*6; y=ey+9-int(5*math.sin(f*.25+j));d['emblem'].line((x,ey+15,x,y),fill=rainbow(j/5,180*opacity),width=2)
+  opacity=min(1,(f-43)/15)*min(1,(140-f)/22); ey=cy-radius-49
+  symbol=Image.new('RGBA',(24,42));sm=Image.new('L',(24,42));md=ImageDraw.Draw(sm)
+  md.polygon([(14,0),(12,5),(14,10),(20,16),(21,20),(19,25),(15,29),(11,31),(11,26),(8,22),(4,18),(2,14),(3,9),(7,5)],fill=255)
+  md.ellipse((7,34,15,42),fill=255)
+  ar=np.zeros((42,24,4),dtype=np.uint8);mask=np.array(sm)>0
+  for y in range(42):ar[y,:,:]=rainbow(.78+y/48,255*opacity)
+  ar[~mask]=0;symbol=Image.fromarray(ar);sd=ImageDraw.Draw(symbol)
+  sd.line([(4,12),(15,14)],fill=(42,29,69,int(255*opacity)),width=2)
+  sd.line([(7,19),(19,21)],fill=(42,29,69,int(255*opacity)),width=2)
+  layers['emblem'].alpha_composite(symbol,(cx-12,ey))
+  for j in range(8):
+   x=cx-14+j*4;y=ey+38-int((f*.9+j*4)%33)
+   size=1 if f>64 else 2
+   d['emblem'].rectangle((x,y,x+size,y+size),fill=rainbow(j/8,160*opacity))
  for name in layernames: atlases[name].paste(layers[name],((f%12)*W,(f//12)*H))
  if 60<=f<=70:
   mask=np.array(layers['shell'])[:,:,3]
@@ -99,10 +121,10 @@ for f in range(N):
   previews[direction].append(scene.convert('RGB'))
 for n,a in atlases.items(): a.save(OUT/f'MEGA_V1_{n}.png')
 for direction,frames in enumerate(previews):
- frames[0].save(OUT/f'preview_{direction}.webp',save_all=True,append_images=frames[1:],duration=33,loop=0,lossless=True)
+ frames[0].save(OUT/f'preview_{direction}.webp',save_all=True,append_images=frames[1:],duration=[33,33,34]*48,loop=0,lossless=True)
 contact=Image.new('RGB',(W*4,H*2))
 for i,f in enumerate([0,20,42,60,80,94,108,140]):contact.paste(previews[0][f],((i%4)*W,(i//4)*H))
 contact.save(OUT/'storyboard.png')
-manifest={'status':'visual_prototype_not_PMDO_runtime_validated','frames':N,'ticks_per_frame':2,'fps':30,'cell':[W,H],'atlas_grid':[12,12],'ground_anchor':ground,'sphere_center':[cx,cy],'sphere_radius':radius,'measured_bounds': [x0,y0,x1,y1],'form_switch_frame':66,'fully_opaque_frames':[48,90],'layers':layernames,'directions':['D','DR','R','UR','U','UL','L','DL'],'coverage_test':'PASS: both forms, eight directions, all four Idle frames covered at frames 60–70','emblem':'original stylized double helix, official silhouette still needs correction','runtime_test':'NOT RUN','universal_fit':'Envelope algorithm demonstrated on Charizard/X only; no all-species roster validation'}
+manifest={'status':'visual_prototype_not_PMDO_runtime_validated','frames':N,'ticks_per_frame':2,'fps':30,'cell':[W,H],'atlas_grid':[12,12],'ground_anchor':ground,'sphere_center':[cx,cy],'sphere_radius':radius,'measured_bounds': [x0,y0,x1,y1],'form_switch_frame':66,'fully_opaque_frames':[48,90],'layers':layernames,'directions':['D','DR','R','UR','U','UL','L','DL'],'coverage_test':'PASS: both forms, eight directions, all four Idle frames covered at frames 60–70','emblem':'hand-drawn flame/S Mega motif; not extracted official art; needs artistic approval','runtime_test':'NOT RUN','universal_fit':'Envelope algorithm demonstrated on Charizard/X only; no all-species roster validation'}
 (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(json.dumps(manifest,indent=2))

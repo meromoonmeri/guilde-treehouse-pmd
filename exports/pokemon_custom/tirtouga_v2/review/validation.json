@@ -1,0 +1,138 @@
+{
+  "sprite_minimum": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+    ],
+    "measurements": {
+      "actions": {
+        "Idle": {
+          "frame": [
+            48,
+            48
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 72,
+          "colors": 14
+        },
+        "Walk": {
+          "frame": [
+            48,
+            48
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 48,
+          "colors": 14
+        }
+      },
+      "global_visible_colors": 14
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "sprite_dungeon": {
+    "technical_precheck": "FAIL",
+    "errors": [
+      "Missing dungeon action: Sleep",
+      "Missing dungeon action: Hurt",
+      "Missing dungeon action: Attack",
+      "Missing dungeon action: Charge",
+      "Missing dungeon action: Swing",
+      "Missing dungeon action: Double",
+      "Missing dungeon action: Rotate",
+      "Missing dungeon action: Hop"
+    ],
+    "warnings": [
+      "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+    ],
+    "measurements": {
+      "actions": {
+        "Idle": {
+          "frame": [
+            48,
+            48
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 72,
+          "colors": 14
+        },
+        "Walk": {
+          "frame": [
+            48,
+            48
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 48,
+          "colors": 14
+        }
+      },
+      "global_visible_colors": 14
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "portrait_minimum": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 13,
+        "Happy": 12,
+        "Angry": 13,
+        "Sad": 13
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "portrait_full": {
+    "technical_precheck": "FAIL",
+    "errors": [
+      "Missing required emotion: Pain",
+      "Missing required emotion: Worried",
+      "Missing required emotion: Crying",
+      "Missing required emotion: Shouting",
+      "Missing required emotion: Teary-Eyed",
+      "Missing required emotion: Determined",
+      "Missing required emotion: Joyous",
+      "Missing required emotion: Inspired",
+      "Missing required emotion: Surprised",
+      "Missing required emotion: Dizzy",
+      "Missing required emotion: Sigh",
+      "Missing required emotion: Stunned"
+    ],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 13,
+        "Happy": 12,
+        "Angry": 13,
+        "Sad": 13
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  }
+}
