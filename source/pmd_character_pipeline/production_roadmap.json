@@ -1,0 +1,75 @@
+{
+  "updated_on": "2026-09-17",
+  "status": "User-requested roadmap; planned entries are not completed assets or background jobs",
+  "order": [
+    {
+      "id": "tirtouga_finish",
+      "subject": "Carapagos",
+      "status": "32 required actions and 16 emotions exported; complete technical prechecks pass; final review and consolidated V5 gallery/package pending",
+      "preserve": "User-approved portraits V3 and canonical backgrounds, identified by approval.json; new portraits are not covered by that approval",
+      "paths": ["source/pokemon_custom/tirtouga_v5", "source/pokemon_custom/tirtouga_portraits_v4"]
+    },
+    {
+      "id": "zarude",
+      "subject": "Zarude standard form",
+      "status": "Initial generated model unapproved/unexported; direction errors need correction",
+      "scope": "Build missing sprites and animation set; preserve the existing sixteen SpriteCollab portraits rather than replace them",
+      "paths": ["source/pokemon_custom/next_species"]
+    },
+    {
+      "id": "terapagos_stellar",
+      "subject": "Terapagos Stellar form, SpriteCollab slot 1024/0002",
+      "status": "Initial generated sheet rejected by user; correct official and native portrait references verified",
+      "gate": "Reconstruct one faithful view before multiple directions. Never derive exports or animations from the rejected sheet. Do not substitute Terastal form 1024/0001.",
+      "paths": ["source/pokemon_custom/next_species/references/terapagos_stellar"]
+    },
+    {
+      "id": "mega_raichu_x",
+      "subject": "Mega Raichu X",
+      "status": "planned; exact references and SpriteCollab resource availability not yet audited",
+      "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
+      "gate": "Verify exact official form identity and anatomy; inspect existing resources and credits before creating or replacing anything. Do not infer a design from ordinary or Alolan Raichu."
+    },
+    {
+      "id": "mega_raichu_y",
+      "subject": "Mega Raichu Y",
+      "status": "planned; exact references and SpriteCollab resource availability not yet audited",
+      "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
+      "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form."
+    },
+    {
+      "id": "dynamax_transformation",
+      "subject": "Dynamax transformation animation",
+      "status": "planned; no assets or engine implementation yet",
+      "scope": "Energy buildup, visible size transition, Dynamax visual state and return sequence",
+      "required": ["Generated and reviewed PMD-style keyframes", "Fluid multiframe sequence and looping hold effects where appropriate", "Independent front/rear/ground effect layers", "Eight gameplay-direction review", "Pre/post envelopes and fixed ground anchor", "GIF per sequence"],
+      "engine_gate": "Visual scaling is not engine size, collision or gameplay integration. Verify actual PMDO support before claiming playability."
+    },
+    {
+      "id": "gigantamax_transformation",
+      "subject": "Gigantamax transformation animation",
+      "status": "planned; no assets or engine implementation yet",
+      "scope": "Energy buildup and transformation revealing the correct species-specific Gigantamax form, plus return sequence",
+      "gate": "Not just an enlarged normal sprite. Reference and provide the actual target form, register both silhouettes, and conceal the form switch at the intended stage.",
+      "pending_choice": "Demonstration species and target form have not yet been selected; do not invent that choice.",
+      "required": ["Generated and reviewed PMD-style keyframes", "Independent effect layers", "Eight gameplay-direction review", "GIF per sequence", "Separate image and runtime tests"]
+    },
+    {
+      "id": "terastallization",
+      "subject": "Terastallization transformation animation",
+      "status": "planned; no assets or engine implementation yet",
+      "scope": "Crystal formation, appearance of the relevant type crown, crystalline hold effects and dissipation",
+      "gate": "Verify crown references per supported type. Generic Terastallization must not be confused with Terapagos Stellar's specific anatomy.",
+      "pending_choice": "Demonstration Pokemon and first supported Tera type(s) are not yet selected; type coverage must be explicitly listed rather than claimed universal.",
+      "required": ["Generated and reviewed PMD-style keyframes", "Separate subject, crown and effect layers", "Fluid multiframe animation", "Eight gameplay-direction review", "GIF per sequence", "Transparent limitations for any unimplemented types"]
+    }
+  ],
+  "standing_requirements": {
+    "character_format": "Follow contract.json and the two reviewed portrait/sprite guides; sprites <=15 visible colors globally with binary alpha, portraits 40x40 opaque and <=15 colors including canonical background",
+    "effects_format": "Independent VFX layers may use their own palette and alpha fades; do not impose the character palette on VFX or contaminate character Anim sheets with VFX halos",
+    "review": "Technical precheck, visual/user approval, public SpriteCollab admissibility, and actual PMDO runtime tests remain distinct gates",
+    "missing_resources": "Audit dictionary keys as resource presence; values are lock flags. Preserve existing credited or locked assets and existing portraits",
+    "references": "A generator prompt and a supplied reference do not prove fidelity. Inspect the output and reject wrong forms before making directional sheets",
+    "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd"
+  }
+}
