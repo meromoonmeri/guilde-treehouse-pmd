@@ -1,0 +1,139 @@
+{
+  "scope": "full profile, 32 mandatory actions; not all optional species-specific attacks or Special placeholders",
+  "base": "new construction using user-approved portraits V3, explicitly NOT recovered V1",
+  "actions": {
+    "Idle": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Walk": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Sleep": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Hurt": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Attack": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Charge": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Swing": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Double": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Rotate": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Hop": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "EventSleep": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Wake": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Eat": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Tumble": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Pose": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Pull": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Pain": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Float": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "DeepBreath": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Nod": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Sit": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "LookUp": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Sink": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Trip": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Laying": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "LeapForth": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Head": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Cringe": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "LostBalance": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "TumbleBack": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "HitGround": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    },
+    "Faint": {
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
+    }
+  },
+  "portrait_status": "USER_APPROVED; canonical backgrounds verified; do not regenerate",
+  "generation_limit": 10,
+  "actions_exported": 32,
+  "actions_missing": [],
+  "generation_limit_note": "Ten sources in V4, two remaining scene sources in V5; no failed generations passed off as files"
+}
