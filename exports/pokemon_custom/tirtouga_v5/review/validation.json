@@ -1,0 +1,1693 @@
+{
+  "technical": {
+    "minimum": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+      ],
+      "measurements": {
+        "actions": {
+          "Idle": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Walk": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 12
+          },
+          "Attack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 34,
+            "colors": 15
+          },
+          "Sleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 96,
+            "colors": 11
+          },
+          "Hurt": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 33,
+            "colors": 12
+          },
+          "Charge": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Swing": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 6,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Hop": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 36,
+            "colors": 14
+          },
+          "Double": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 53,
+            "colors": 15
+          },
+          "Rotate": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 13
+          },
+          "EventSleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 96,
+            "colors": 12
+          },
+          "Wake": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Eat": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 15
+          },
+          "DeepBreath": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Nod": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "LookUp": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Tumble": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Trip": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "LostBalance": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "TumbleBack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "HitGround": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Faint": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Pose": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pull": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pain": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Float": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sit": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sink": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Laying": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "LeapForth": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Head": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Cringe": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          }
+        },
+        "global_visible_colors": 15
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    },
+    "dungeon": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+      ],
+      "measurements": {
+        "actions": {
+          "Idle": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Walk": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 12
+          },
+          "Attack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 34,
+            "colors": 15
+          },
+          "Sleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 96,
+            "colors": 11
+          },
+          "Hurt": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 33,
+            "colors": 12
+          },
+          "Charge": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Swing": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 6,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Hop": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 36,
+            "colors": 14
+          },
+          "Double": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 53,
+            "colors": 15
+          },
+          "Rotate": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 13
+          },
+          "EventSleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 96,
+            "colors": 12
+          },
+          "Wake": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Eat": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 15
+          },
+          "DeepBreath": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Nod": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "LookUp": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Tumble": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Trip": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "LostBalance": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "TumbleBack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "HitGround": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Faint": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Pose": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pull": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pain": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Float": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sit": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sink": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Laying": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "LeapForth": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Head": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Cringe": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          }
+        },
+        "global_visible_colors": 15
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    },
+    "full": {
+      "technical_precheck": "PASS",
+      "errors": [],
+      "warnings": [
+        "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+      ],
+      "measurements": {
+        "actions": {
+          "Idle": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Walk": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 12
+          },
+          "Attack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 34,
+            "colors": 15
+          },
+          "Sleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 96,
+            "colors": 11
+          },
+          "Hurt": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 33,
+            "colors": 12
+          },
+          "Charge": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Swing": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 6,
+            "directions": 8,
+            "ticks": 42,
+            "colors": 13
+          },
+          "Hop": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 8,
+            "ticks": 36,
+            "colors": 14
+          },
+          "Double": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 53,
+            "colors": 15
+          },
+          "Rotate": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 8,
+            "directions": 8,
+            "ticks": 32,
+            "colors": 13
+          },
+          "EventSleep": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 96,
+            "colors": 12
+          },
+          "Wake": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Eat": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 15
+          },
+          "DeepBreath": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Nod": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "LookUp": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Tumble": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 14
+          },
+          "Trip": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "LostBalance": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "TumbleBack": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "HitGround": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Faint": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Pose": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pull": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 11
+          },
+          "Pain": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Float": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sit": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Sink": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 13
+          },
+          "Laying": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "LeapForth": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Head": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          },
+          "Cringe": {
+            "frame": [
+              64,
+              64
+            ],
+            "columns": 4,
+            "directions": 1,
+            "ticks": 48,
+            "colors": 12
+          }
+        },
+        "global_visible_colors": 15
+      },
+      "artistic_review": "NOT_EVALUATED",
+      "runtime_PMDO": "NOT_TESTED",
+      "SpriteCollab_acceptance": "NOT_EVALUATED"
+    }
+  },
+  "actions": {
+    "Idle": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        24,
+        8,
+        5,
+        11
+      ],
+      "kind": "blink / holds; rear views static"
+    },
+    "Walk": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 32,
+      "gif_ms": 530,
+      "durations": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Attack": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 34,
+      "gif_ms": 570,
+      "durations": [
+        10,
+        5,
+        7,
+        12
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Sleep": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 96,
+      "gif_ms": 1600,
+      "durations": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Hurt": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 33,
+      "gif_ms": 550,
+      "durations": [
+        5,
+        9,
+        7,
+        12
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Charge": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 42,
+      "gif_ms": 700,
+      "durations": [
+        8,
+        10,
+        10,
+        14
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Swing": {
+      "directions": 8,
+      "columns": 6,
+      "unique_drawings_per_direction": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "ticks": 42,
+      "gif_ms": 700,
+      "durations": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Hop": {
+      "directions": 8,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 36,
+      "gif_ms": 600,
+      "durations": [
+        10,
+        6,
+        8,
+        12
+      ],
+      "kind": "generated key poses registered and palette-retouched"
+    },
+    "Double": {
+      "directions": 8,
+      "columns": 8,
+      "unique_drawings_per_direction": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "ticks": 53,
+      "gif_ms": 880,
+      "durations": [
+        8,
+        4,
+        5,
+        6,
+        7,
+        4,
+        7,
+        12
+      ],
+      "kind": "two Attack strokes, reusable attack artwork; not eight unique drawings"
+    },
+    "Rotate": {
+      "directions": 8,
+      "columns": 8,
+      "unique_drawings_per_direction": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "ticks": 32,
+      "gif_ms": 530,
+      "durations": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "rotation through eight camera-consistent drawn views, no arbitrary image rotation"
+    },
+    "EventSleep": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 96,
+      "gif_ms": 1600,
+      "durations": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Wake": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Eat": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "DeepBreath": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Nod": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "LookUp": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Tumble": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Trip": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "LostBalance": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "TumbleBack": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "HitGround": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Faint": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Pose": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Pull": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Pain": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Float": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Sit": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Sink": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Laying": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "LeapForth": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Head": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    },
+    "Cringe": {
+      "directions": 1,
+      "columns": 4,
+      "unique_drawings_per_direction": [
+        4
+      ],
+      "ticks": 48,
+      "gif_ms": 800,
+      "durations": [
+        10,
+        8,
+        10,
+        20
+      ],
+      "kind": "single-direction DR cutscene keys; camera/art consistency still under review"
+    }
+  },
+  "manual_source_rejections_and_corrections": [
+    "Native-scale review found magenta matte fragments mapped to the mouth palette on flipper edges; stricter chroma removal added before palette mapping, preserving true warm mouth colors.",
+    "Walk D: generated phases1/2 faced DR; replaced by valid D contact pose and its symmetric paddle counterpart. 2/3 distinct drawings, not four newly generated D drawings.",
+    "Sleep D: all generated views faced sideways; use authored low front crouch from Charge with eyes closed, instead of mislabeling a side view as D.",
+    "Hurt D: side-facing recovery rejected; correct front initial pose reused as recovery.",
+    "Hop: generator apex changed facing and invented beige upright undersides; rejected. Two airborne phases share the correct takeoff drawing at different heights, surrounded by distinct crouch and landing drawings.",
+    "Scene A: first EventSleep row was pixel art but remaining source rows were smooth illustrations; all reconstructed into explicit 15-color native-size candidates, not claimed as hand-drawn native originals.",
+    "Scene B: unwanted titles, captions, grid and lighter magenta removed. Faint initial pose overlapped caption and was replaced by its correct Hurt anticipation.",
+    "Cutscene rows provide one DR orientation, not eight. Tilt/roll animations change body orientation intentionally. These require artistic review before engine submission."
+  ],
+  "palette": [
+    [
+      22,
+      29,
+      41
+    ],
+    [
+      38,
+      47,
+      54
+    ],
+    [
+      48,
+      58,
+      74
+    ],
+    [
+      60,
+      73,
+      92
+    ],
+    [
+      76,
+      90,
+      116
+    ],
+    [
+      94,
+      113,
+      146
+    ],
+    [
+      67,
+      106,
+      166
+    ],
+    [
+      83,
+      129,
+      202
+    ],
+    [
+      116,
+      166,
+      232
+    ],
+    [
+      158,
+      200,
+      212
+    ],
+    [
+      235,
+      248,
+      239
+    ],
+    [
+      119,
+      61,
+      83
+    ],
+    [
+      230,
+      134,
+      150
+    ],
+    [
+      109,
+      140,
+      159
+    ],
+    [
+      43,
+      78,
+      108
+    ]
+  ],
+  "user_approved": "PORTRAITS ONLY; new sprite model and animations not yet approved",
+  "runtime": "NOT TESTED",
+  "artistic_status": "REVIEW CANDIDATE, not certified qualitative/final SpriteCollab art"
+}

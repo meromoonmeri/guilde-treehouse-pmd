@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-09-17",
+  "species": "Terapagos",
+  "form": "Stellar",
+  "pokeapi_pokemon_id": 10277,
+  "spritecollab_slot": "1024/0002",
+  "sources": {
+    "official": {
+      "repository": "PokeAPI/sprites",
+      "commit": "9d7c667b9ce7a400186892777c5affcb24fbeb84",
+      "path": "sprites/pokemon/other/official-artwork/10277.png",
+      "sha256": "4542ab4a07381a2cf84846098897cc0b6464fcdc56b866ec86a74a8b60a681e1"
+    },
+    "portrait": {
+      "repository": "PMDCollab/SpriteCollab",
+      "commit": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+      "path": "portrait/1024/0002",
+      "files": [
+        "Normal.png",
+        "Normal^.png",
+        "credits.txt"
+      ]
+    },
+    "user_repository": "source/pokemon_custom/next_species/references/terapagos_stellar/official.png already present at fc8f595"
+  },
+  "sprite_status": "No 0002 Stellar sprite directory in pinned sprite/1024 listing; base and Terastal sprites must not be relabeled Stellar.",
+  "rejected_generation": "../../generation/terapagos_stellar_idle_views.png",
+  "rejection_reason": "User rejected visual identity. Generic opaque cyan sphere, invented star/crest and simplified turtle fail to reproduce official faceted globe, crown and long crystalline silhouette. Wrong direction poses and jewel arrangement also unverified.",
+  "production_gate": "Do not use this generated atlas as a sprite source or derive animations from it. Reconstruct one faithful reference view first; preserve official body silhouette and crystal anatomy before multidirectional work."
+}
