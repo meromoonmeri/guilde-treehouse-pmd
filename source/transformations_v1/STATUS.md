@@ -1,26 +1,23 @@
-# Pilot work in progress — 2026-09-17
+# Current checkpoint — 2026-09-17
 
-Requested: Dynamax, species-specific Gigantamax, Terastallization and all canonical Tera Jewels, PMD visual quality and real Ground/Dungeon playability.
+## Delivered: three assembled Charizard visual pilots
 
-First demonstration subject: Charizard. Native Gigantamax Idle exists at SpriteCollab0006/0003 and has been downloaded with its credits. It is not an enlarged normal or Mega form. Reference pin3609a86be2a4c8ad7cf255bd2255f044daafe24f.
+`apercu_transformations_v1.html` and `exports/transformations_v1/README.md` are the current deliverable. Dynamax, true species-specific Gigantamax and Fire Terastallization each have eight 240-phase / eight-second transformation GIFs, plus eight separate eight-second hold loops: **48 final GIFs**. Generated VFX extraction/interpolation has now run. Seven transparent layers are paged for direction D; all other rendered directions are reproducible, not all exported as layers.
 
-The first generated `gigantamax_charizard_column.png` is REJECTED: it drew a cartoon dragon in twelve cells instead of an isolated eight-frame VFX. Do not export it or label it canonical.
+`build_sequences.py` assembles descending columns, independent density layers, branching lightning, rising particles, opaque swap pulse, depth-separated cloud orbits; Tera assembles growth, refraction, opaque facets, fracture, fragments, body-clipped highlights and a faceless crown. Native Gigantamax Idle comes from SpriteCollab 0006/0003 at pin 3609a86be2a4c8ad7cf255bd2255f044daafe24f, with its credits retained; one static body pose per direction. Normal Dynamax is a visual ×3 scale, not an engine size/collision change.
 
-Crown visual research covers the canonical type descriptions; first animated art pilots are Fire/Water/Normal. Other crown types remain requested, not yet produced. No assertion of all-type coverage or all-species custom tuning.
+Checks executed: 168 opaque-swap cases; 1,920 body-surface clipping checks; 24 periodic endpoint checks; 48 decoded GIFs at exactly 8,000 ms; RGBA page geometry; original source hashes unchanged; five attachment unit tests. Seam deltas are reported separately: periodic closure is not artistic approval. Manual review of storyboards and all final Tera/Gmax directions performed; crown angles and occlusion remain provisional.
 
-Engine source inspected: RogueCollab/RogueEssence8b7eafafa73ff0c10b9e8fd9348559ee1b5dfe8b. `DirSheet.Import` accepts PNG suffix `.NxM.png` as frame grid, or directory containing `DirData.xml` and sequential numbered PNG files. No fake `.dir` binaries will be written. `GROUND.PlayVFXAnim(BaseAnim, DrawLayer)` exists. Source inspection does NOT mean actual import or playback has passed. The historical PMDO runtime cache is absent in this current workspace.
+## Crown correction still binding
 
-## Correction / attachment checkpoint — 2026-09-17
+Accessories have no integrated head or face; front-gem eyes also removed as promised. Faceless variants intentionally differ from exact canonical jewels. Fire/Water static candidates have eight provisional manually assigned views; Normal generation failed, the remaining 17 static type crowns do not exist. Only Fire has an assembled transformation in this checkpoint.
 
-The earlier phrase “first animated art pilots are Fire/Water/Normal” described intent, not completed assets: **only Fire and Water crown candidates exist**, each with one static temporal frame in eight provisionally assigned/mirrored directions. Normal generation failed. The remaining 17 types are not produced.
+Attachment uses exact single black head and white shadow markers, plus per-form/direction width and seat offsets. No whole-body-bounds fallback. Six local multisheet folders profiled: Charizard, Mega X, Gmax, Carapagos V5 and archived V2/V4. 1,072 local records: 1,012 proposals and 60 blocked poses; 336 selected crown placements rendered separately. This is not complete remote SpriteCollab coverage. Missing local action triples: Charizard 13, Mega X 12, Gmax 1. Per-frame manual overrides exist; horn/ear masks do not.
 
-Latest user requirement: independent accessories with **no integrated head or face**, fitted to the anatomical head of each existing sprite. Front-gem eyes have also been removed as promised; these deliberately faceless variants are not pixel-exact canonical jewels.
+## Remaining gates
 
-- `crown_attachment/`: explicit per-form/direction fit profiles, single black head and white shadow markers, CopyOf resolution and per-frame overrides. Missing/ambiguous markers and uncalibrated fall/roll poses block placement; no whole-body bounding-box fallback.
-- Six local multisheet folders inventoried: Charizard, Mega Charizard X, Gigantamax Charizard and Carapagos V5, plus archived V2/V4. This does **not** cover the full remote SpriteCollab catalogue.
-- 1,072 local frame-direction records: 1,012 fit proposals, 60 blocked. 336 placements rendered in selected previews; the others are not visually verified. Charizard/Mega X/Gmax still lack locally downloaded PNG triples for 13/12/1 declared actions respectively.
-- Updated frontal/side seat offsets on the small forms. The upper ornament is now composited in front of the actor instead of disappearing behind Carapagos's shell; a lower band strip is behind the actor. This is a provisional depth convention, **not** horn/ear-specific occlusion masking.
-- Build verifies source PNG hashes are preserved and seat arithmetic is consistent. Five mechanical unit tests pass (`.venv/bin/python -m unittest source.transformations_v1.crown_attachment.test_attachment -v`). No claim of anatomical approval follows from those tests.
-- Review: `apercu_couronnes_attachees.html`; assets and detailed reports: `exports/crown_attachment_v1/`.
-
-The corrected Gigantamax column source has been generated. `assets.py` contains extraction/interpolation support, but full `load_assets()` export and transformation choreography have not run. **No complete Dynamax/Gigantamax/Tera sequence, crown materialization, persistent body-crystal pass, or actual PMDO Ground/Dungeon import/playback validation is delivered at this checkpoint.** All remain required. Keep approved portraits and native sprite sources unchanged; preserve the deferred Carapagos/Zarude/Stellar/Mega Raichu X/Y queue.
+- **No actual PMDO Ground/Dungeon import/playback test** for these effects. Engine source inspection at RogueEssence 8b7eafafa73ff0c10b9e8fd9348559ee1b5dfe8b is not runtime verification. No fake compiled `.dir` files.
+- All-species anatomical and pre/post silhouette fitting, all-direction layer exports and runtime sequencing remain unfinished.
+- Other Tera types, type-specific materialization and reversed transformations remain unfinished. Crown angle fidelity, face visibility and horn/ear depth need further art review.
+- Generated components plus optical-flow inbetweens and procedural choreography are not 240 hand-drawn frames. The rejected first Gmax source `gigantamax_charizard_column.png` must never be used; corrected isolated VFX source is used instead.
+- Preserve approved Carapagos portraits and canonical backgrounds. Deferred Carapagos final review, Zarude direction repair, rejected Stellar reconstruction and Mega Raichu X/Y identity/resource audits remain in the roadmap.

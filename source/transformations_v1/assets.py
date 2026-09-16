@@ -52,10 +52,10 @@ def atlas(frames,path,cols=8):
 def gif(frames,path,durations=None):
  w,h=frames[0].size;samples=frames[::max(1,len(frames)//24)];mont=Image.new('RGB',(w*len(samples),h))
  for i,f in enumerate(samples):mont.paste(f.convert('RGB'),(i*w,0))
- pal=mont.quantize(colors=256,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
+ pal=mont.quantize(colors=128,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE)
  fs=[f.convert('RGB').quantize(palette=pal,dither=Image.Dither.NONE) for f in frames]
  dur=durations or ([30,30,40]*math.ceil(len(fs)/3))[:len(fs)]
- fs[0].save(path,save_all=True,append_images=fs[1:],duration=dur,loop=0,optimize=False,disposal=2)
+ fs[0].save(path,save_all=True,append_images=fs[1:],duration=dur,loop=0,optimize=True,disposal=1)
 
 def crown_views(kind):
  im=Image.open(SRC/'generation'/f'crown_{kind}_views.png')

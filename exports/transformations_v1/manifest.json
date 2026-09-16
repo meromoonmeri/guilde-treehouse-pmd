@@ -1,0 +1,1398 @@
+{
+  "canvas": [
+    256,
+    288
+  ],
+  "ground_anchor": [
+    128,
+    250
+  ],
+  "frame_ticks": 2,
+  "tick_rate": 60,
+  "sequence_frames": 240,
+  "sequence_ms": 8000,
+  "hold_frames": 240,
+  "hold_ms": 8000,
+  "swap_frame": 132,
+  "layer_order": [
+    "ground",
+    "rear",
+    "actor",
+    "body_surface",
+    "front",
+    "accessory",
+    "veil"
+  ],
+  "source_hashes": {
+    "source/mega_evolution_v1/references/charizard/Idle-Anim.png": "ceeb33e0db05817c2566e964d7b2264d0fb8fdecd480f7245faeafc864bc0d9b",
+    "source/mega_evolution_v1/references/charizard/Idle-Offsets.png": "19250bf33166f1796e68e212816e39678618f8bf65c9258e6924c3329dd067d6",
+    "source/mega_evolution_v1/references/charizard/Idle-Shadow.png": "d7574bee72119c7a75aa9cc70f5c3f46f237f94053074ff14f4e981a5aa56dec",
+    "source/mega_evolution_v1/references/charizard/AnimData.xml": "2501f5c474cc624f18840933f7df291808f302c8ba1a0b6e4c8c5a2f601bd145",
+    "source/mega_evolution_v1/references/charizard/credits.txt": "3a275f456ec2bc3fa899ce4b84bd584f27daab8d5e04101435b2db5c39088088",
+    "source/transformations_v1/references/charizard_gmax/Idle-Anim.png": "6cc5cdac6b77d79254a0c5c25df0663a9ad219e4081ee1fd0423e61c4517a4f5",
+    "source/transformations_v1/references/charizard_gmax/Idle-Offsets.png": "63736d3b9813e616830b944a3ee039dca97a69496b8fe1db7860398d14e6e54f",
+    "source/transformations_v1/references/charizard_gmax/Idle-Shadow.png": "38440e0e842d40a3426d652616e07f8cad72ffb6d5f57e183487e84d8180a30c",
+    "source/transformations_v1/references/charizard_gmax/AnimData.xml": "d54a56e152f95e294ac2928f2491a6cf2b8331f974b7792cc2e8d390b9072e37",
+    "source/transformations_v1/references/charizard_gmax/credits.txt": "3c346eac98986be37bb8bf10cffc3dc7731f36a774d3521d53b9f861cc3c220f",
+    "source/transformations_v1/references/charizard_gmax/inspection_x2.png": "dbabd7f94dd3b6ad2e38851cd7a750808206b832de43e9aa04715657cedd2692"
+  },
+  "directions": [
+    "D",
+    "DR",
+    "R",
+    "UR",
+    "U",
+    "UL",
+    "L",
+    "DL"
+  ],
+  "sequences": {
+    "dynamax": {
+      "gifs": [
+        "gifs/dynamax_D.gif",
+        "gifs/dynamax_DR.gif",
+        "gifs/dynamax_R.gif",
+        "gifs/dynamax_UR.gif",
+        "gifs/dynamax_U.gif",
+        "gifs/dynamax_UL.gif",
+        "gifs/dynamax_L.gif",
+        "gifs/dynamax_DL.gif"
+      ],
+      "hold_gifs": [
+        "gifs/dynamax_hold_D.gif",
+        "gifs/dynamax_hold_DR.gif",
+        "gifs/dynamax_hold_R.gif",
+        "gifs/dynamax_hold_UR.gif",
+        "gifs/dynamax_hold_U.gif",
+        "gifs/dynamax_hold_UL.gif",
+        "gifs/dynamax_hold_L.gif",
+        "gifs/dynamax_hold_DL.gif"
+      ],
+      "direction_D_layers": {
+        "ground": [
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_ground_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "rear": [
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_rear_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "actor": [
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_actor_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "body_surface": [],
+        "front": [
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_front_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "accessory": [],
+        "veil": [
+          {
+            "file": "layers/dynamax/TR_dynamax_veil_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_veil_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/dynamax/TR_dynamax_veil_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          }
+        ]
+      }
+    },
+    "gigantamax": {
+      "gifs": [
+        "gifs/gigantamax_D.gif",
+        "gifs/gigantamax_DR.gif",
+        "gifs/gigantamax_R.gif",
+        "gifs/gigantamax_UR.gif",
+        "gifs/gigantamax_U.gif",
+        "gifs/gigantamax_UL.gif",
+        "gifs/gigantamax_L.gif",
+        "gifs/gigantamax_DL.gif"
+      ],
+      "hold_gifs": [
+        "gifs/gigantamax_hold_D.gif",
+        "gifs/gigantamax_hold_DR.gif",
+        "gifs/gigantamax_hold_R.gif",
+        "gifs/gigantamax_hold_UR.gif",
+        "gifs/gigantamax_hold_U.gif",
+        "gifs/gigantamax_hold_UL.gif",
+        "gifs/gigantamax_hold_L.gif",
+        "gifs/gigantamax_hold_DL.gif"
+      ],
+      "direction_D_layers": {
+        "ground": [
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_ground_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "rear": [
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_rear_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "actor": [
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_actor_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "body_surface": [],
+        "front": [
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_front_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "accessory": [],
+        "veil": [
+          {
+            "file": "layers/gigantamax/TR_gigantamax_veil_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_veil_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/gigantamax/TR_gigantamax_veil_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          }
+        ]
+      }
+    },
+    "tera_fire": {
+      "gifs": [
+        "gifs/tera_fire_D.gif",
+        "gifs/tera_fire_DR.gif",
+        "gifs/tera_fire_R.gif",
+        "gifs/tera_fire_UR.gif",
+        "gifs/tera_fire_U.gif",
+        "gifs/tera_fire_UL.gif",
+        "gifs/tera_fire_L.gif",
+        "gifs/tera_fire_DL.gif"
+      ],
+      "hold_gifs": [
+        "gifs/tera_fire_hold_D.gif",
+        "gifs/tera_fire_hold_DR.gif",
+        "gifs/tera_fire_hold_R.gif",
+        "gifs/tera_fire_hold_UR.gif",
+        "gifs/tera_fire_hold_U.gif",
+        "gifs/tera_fire_hold_UL.gif",
+        "gifs/tera_fire_hold_L.gif",
+        "gifs/tera_fire_hold_DL.gif"
+      ],
+      "direction_D_layers": {
+        "ground": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_ground_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "rear": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_rear_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "actor": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_actor_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "body_surface": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_body_surface_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "front": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_front_D_000.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 0
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_front_D_040.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 40
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_front_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_front_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_front_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          }
+        ],
+        "accessory": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_accessory_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_accessory_D_200.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 200
+          }
+        ],
+        "veil": [
+          {
+            "file": "layers/tera_fire/TR_tera_fire_veil_D_080.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 80
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_veil_D_120.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 120
+          },
+          {
+            "file": "layers/tera_fire/TR_tera_fire_veil_D_160.8x5.png",
+            "cell": [
+              256,
+              288
+            ],
+            "grid": [
+              8,
+              5
+            ],
+            "logical_frames": 40,
+            "padding_frames": 0,
+            "start_frame": 160
+          }
+        ]
+      }
+    }
+  },
+  "runtime_PMDO": "NOT TESTED",
+  "review_camera": {
+    "tera_fire": "2x nearest-neighbor crop (64,136,192,280), preview only; transparent layers retain original canvas"
+  },
+  "layer_export_scope": "All seven layers for direction D; other seven views reproducible from script and existing native direction rows. Page PNGs are import sources, not compiled runtime assets."
+}

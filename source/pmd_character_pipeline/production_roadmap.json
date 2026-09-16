@@ -5,7 +5,7 @@
     {
       "id": "dynamax_transformation",
       "subject": "Dynamax transformation animation",
-      "status": "Generated source art and Charizard pilot references exist; full choreography and PMDO runtime verification not completed",
+      "status": "Charizard visual pilot delivered: eight transformation GIFs and eight periodic hold GIFs, 240 phases / 8 seconds each; seven transparent layers for direction D; real PMDO verification pending",
       "scope": "Energy buildup, visible size transition, Dynamax visual state and return sequence",
       "required": [
         "Generated and reviewed PMD-style keyframes",
@@ -15,12 +15,17 @@
         "Pre/post envelopes and fixed ground anchor",
         "GIF per sequence"
       ],
-      "engine_gate": "Visual scaling is not engine size, collision or gameplay integration. Verify actual PMDO support before claiming playability."
+      "engine_gate": "Visual scaling is not engine size, collision or gameplay integration. Verify actual PMDO support before claiming playability.",
+      "paths": [
+        "source/transformations_v1",
+        "exports/transformations_v1",
+        "apercu_transformations_v1.html"
+      ]
     },
     {
       "id": "gigantamax_transformation",
       "subject": "Gigantamax transformation animation",
-      "status": "Generated source art and Charizard pilot references exist; full choreography and PMDO runtime verification not completed",
+      "status": "Charizard visual pilot delivered: eight transformation GIFs and eight periodic hold GIFs, 240 phases / 8 seconds each; seven transparent layers for direction D; real PMDO verification pending",
       "scope": "Energy buildup and transformation revealing the correct species-specific Gigantamax form, plus return sequence",
       "gate": "Not just an enlarged normal sprite. Reference and provide the actual target form, register both silhouettes, and conceal the form switch at the intended stage.",
       "required": [
@@ -30,12 +35,17 @@
         "GIF per sequence",
         "Separate image and runtime tests"
       ],
-      "pilot": "Charizard to authentic SpriteCollab Gigantamax Charizard (0006/0003), not normal-sprite scaling"
+      "pilot": "Charizard to authentic SpriteCollab Gigantamax Charizard (0006/0003), not normal-sprite scaling",
+      "paths": [
+        "source/transformations_v1",
+        "exports/transformations_v1",
+        "apercu_transformations_v1.html"
+      ]
     },
     {
       "id": "terastallization",
       "subject": "Terastallization transformation animation",
-      "status": "Fire/Water separate faceless crown candidates; six local fit profiles, provisional angles and anatomy; remaining 17 crowns and full sequence not produced",
+      "status": "Charizard visual pilot delivered: eight transformation GIFs and eight periodic hold GIFs, 240 phases / 8 seconds each; seven transparent layers for direction D; real PMDO verification pending",
       "scope": "Crystal formation, appearance of the relevant type crown, crystalline hold effects and dissipation",
       "gate": "Verify crown references per supported type. Generic Terastallization must not be confused with Terapagos Stellar's specific anatomy.",
       "required": [
@@ -46,7 +56,13 @@
         "GIF per sequence",
         "Transparent limitations for any unimplemented types"
       ],
-      "attachment_gate": "Accessory only, no integrated head or face. Per-frame anatomical head markers and species/form/direction tuning; ambiguous poses blocked. Six local folders do not cover the remote catalogue. Ground/Dungeon not tested."
+      "attachment_gate": "Accessory only, no integrated head or face. Per-frame anatomical head markers and species/form/direction tuning; ambiguous poses blocked. Six local folders do not cover the remote catalogue. Ground/Dungeon not tested.",
+      "paths": [
+        "source/transformations_v1",
+        "exports/transformations_v1",
+        "apercu_transformations_v1.html"
+      ],
+      "type_coverage": "Fire transformation only; Fire/Water static faceless crowns provisional; remaining 17 static crowns absent; no all-species coverage"
     },
     {
       "id": "tirtouga_finish",
