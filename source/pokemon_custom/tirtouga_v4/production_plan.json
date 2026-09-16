@@ -3,133 +3,147 @@
   "base": "new construction using user-approved portraits V3, explicitly NOT recovered V1",
   "actions": {
     "Idle": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Walk": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Sleep": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Hurt": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Attack": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Charge": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Swing": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Double": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Rotate": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Hop": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "EventSleep": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Wake": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Eat": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Tumble": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Pose": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Pull": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Pain": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Float": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "DeepBreath": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Nod": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Sit": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "LookUp": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Sink": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Trip": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Laying": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "LeapForth": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Head": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "Cringe": {
-      "status": "planned",
+      "status": "not_generated_limit_reached",
       "exported": false
     },
     "LostBalance": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "TumbleBack": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "HitGround": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     },
     "Faint": {
-      "status": "planned",
-      "exported": false
+      "status": "exported_candidate_requires_art_review",
+      "exported": true
     }
   },
-  "portrait_status": "USER_APPROVED; canonical backgrounds verified; do not regenerate"
+  "portrait_status": "USER_APPROVED; canonical backgrounds verified; do not regenerate",
+  "generation_limit": 10,
+  "actions_exported": 22,
+  "actions_missing": [
+    "Pose",
+    "Pull",
+    "Pain",
+    "Float",
+    "Sit",
+    "Sink",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe"
+  ]
 }

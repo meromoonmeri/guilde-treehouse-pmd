@@ -1,0 +1,12 @@
+{
+  "user_mandate": "Continue to all 32 required full-profile actions; do not ask again whether to complete them.",
+  "blocked_in_this_turn": "Image generation limit 10 reached; Scenes_C and Scenes_D did not generate.",
+  "pending_sheets": {
+    "Scenes_C": ["Pose", "Pull", "Pain", "Float", "Sit", "Sink"],
+    "Scenes_D": ["Laying", "LeapForth", "Head", "Cringe"]
+  },
+  "layout": "Four columns for successive poses, one row per named action, DR reference view for these cutscenes.",
+  "source_quality_correction": "Use the pixel model as the visual style reference. Official art is anatomy reference only: Scenes_A drifted into illustration, which must not be accepted blindly as finished PMD art.",
+  "also_review": ["cross-action body proportions", "floor contact in Walk/Hop", "head and foreflipper marker semantics especially rolling poses", "scene endpoints returning to intended orientation", "native pixel clusters rather than merely reduced/quantized illustration"],
+  "approved_assets_do_not_change": "Portraits V3 and canonical backgrounds, hashes in ../tirtouga_portraits_v3/approval.json"
+}

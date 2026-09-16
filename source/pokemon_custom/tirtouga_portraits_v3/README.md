@@ -20,3 +20,7 @@ Source de référence : SpriteCollab `3609a86be2a4c8ad7cf255bd2255f044daafe24f`,
 Les guides et la configuration SpriteCollab sont documentés dans `source/pmd_character_pipeline/`. Le précontrôle ne vaut ni approbation artistique, ni admissibilité des contenus AI-assisted au dépôt public, ni test d'import PMDO. Pas de remplacement de ressources existantes.
 
 Reconstruire : `.venv/bin/python source/pokemon_custom/tirtouga_portraits_v3/build.py`.
+
+## Validation utilisateur reçue
+
+Le16septembre2026, l'utilisateur a explicitement validé ces portraits. Ils sont **déjà sur les fonds canoniques** ; aucun fond supplémentaire n'est nécessaire. Les fichiers approuvés et leur Normal conservé sont identifiés dans `approval.json`. Ne pas les régénérer/modifier sans nouvelle demande. Cette validation utilisateur est distincte d'une approbation du dépôt public SpriteCollab et ne remplit pas les dix cases d'émotion encore absentes.

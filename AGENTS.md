@@ -172,3 +172,13 @@ Reprise : `source/mega_evolution_v2/`, `renders/mega_evolution_v2/`, galerie aut
 Portraits `tirtouga_portraits_v3` : cinq sources générées séparément Happy/Angry/Sad/Shouting/Surprised, palette choisie (bouche rose explicitement réservée), retouches sourcils,40²opaques,13–15couleurs ; fonds `template.png` **inchangés pixel pour pixel là où visibles**, Normal original byte-identical. MinimumPASS,10émotions obligatoires encore absentes ; pas d'approbation artistique.
 
 Récupération V1 : recherche /home/user, stash (y compris untracked), historique des dossiers, git fsck full sans objets orphelins ; aucun fichier V1 retrouvé. Rapport `source/mega_evolution_v2/recovery_carapagos.md`. L'utilisateur doit fournir une copie de l'image de l'ancien échange pour reprendre exactement son dessin préféré. Les GIF V2 sont marqués archives, pas V1 récupérée.
+
+## Carapagos — choix de base confirmé et premier lot complet à poursuivre
+
+L'utilisateur a choisi **reconstruction depuis les portraits validés** (et non V1 à attendre ou V2 à prolonger), et a confirmé « Toute les animations ». Il valide les cinq portraitsV3 ; ils sont déjà sur les fonds canoniques et leurs hashes sont dans `source/pokemon_custom/tirtouga_portraits_v3/approval.json`. Ne pas les régénérer ni modifier leurs fonds.
+
+`source/pokemon_custom/tirtouga_v4/`, `exports/pokemon_custom/tirtouga_v4/`, galerie `apercu_carapagos_v4_animations.html` : premier lot **22/32actions du profil complet**, dixdonjon en8directions, douzescènes en1vue. Sourcecorpsofficiel+portraitsvalidés, caméranativeTorkoal ;15couleursglobales,cellules64²,XML/triplets/GIF,ZIPplat. Minimum/donjonPASS,completFAIL attendu ;les nouveaux sprites ne sont PAS approuvés artistiquement et aucun testPMDO.
+
+Limite10générations atteinte ; deuxplanches refusées, à produire au prochain tour : Scenes_C(Pose,Pull,Pain,Float,Sit,Sink) et Scenes_D(Laying,LeapForth,Head,Cringe). Pas de fausseactionIdle pour les remplir. `next_batch.json` / `production_plan.json` suivent ce mandat ; ne pas redemander s'il faut les faire. Priorité aussi à la revue/retouche des proportions entreactions et desmarqueurs en roulade ; certainsdessins sources de scène avaient dérivé en illustration. Les erreurs dedirection sont explicitement écartées, plusieursposes réutilisées sont déclarées (Double=deuxfrappesAttack,Rotate=huitvues,Hop=deuxphasesenl'airpartagentledessin). Portraits approuvés ≠ spriteV4 approuvé.
+
+Le GIF MégaDracaufeu demandé est `renders/mega_evolution_v2/gifs/mega_0.gif`, ouvert directement avant le travail, également intégré à la galerieV4. Conserver cet effetV2 sans nouvelle modification non demandée.
