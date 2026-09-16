@@ -1,0 +1,1053 @@
+{
+  "profile": "charizard",
+  "sprite_dir": "source/mega_evolution_v1/references/charizard",
+  "active": true,
+  "records": [
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 0,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 0,
+      "head": [
+        19,
+        18
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -1,
+        -18
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 0,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 0,
+      "head": [
+        18,
+        19
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -2,
+        -17
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 0,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 0,
+      "head": [
+        19,
+        18
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -1,
+        -18
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 0,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 0,
+      "head": [
+        20,
+        19
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        0,
+        -17
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 1,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 1,
+      "head": [
+        27,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        6,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 1,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 1,
+      "head": [
+        28,
+        17
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        7,
+        -19
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 1,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 1,
+      "head": [
+        27,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        6,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 1,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 1,
+      "head": [
+        27,
+        18
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        6,
+        -18
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 2,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 2,
+      "head": [
+        29,
+        15
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        8,
+        -21
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 2,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 2,
+      "head": [
+        30,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        9,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 2,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 2,
+      "head": [
+        29,
+        15
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        8,
+        -21
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 2,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 2,
+      "head": [
+        29,
+        17
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        -1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        8,
+        -19
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 3,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 3,
+      "head": [
+        29,
+        10
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        9,
+        -23
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 3,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 3,
+      "head": [
+        30,
+        11
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        10,
+        -22
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 3,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 3,
+      "head": [
+        29,
+        10
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        9,
+        -23
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 3,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 3,
+      "head": [
+        28,
+        11
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        8,
+        -22
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 4,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 4,
+      "head": [
+        19,
+        7
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -4
+      ],
+      "head_band_width": 11,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -1,
+        -25
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 4,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 4,
+      "head": [
+        20,
+        8
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -4
+      ],
+      "head_band_width": 11,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        0,
+        -24
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 4,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 4,
+      "head": [
+        19,
+        7
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -4
+      ],
+      "head_band_width": 11,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -1,
+        -25
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 4,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 4,
+      "head": [
+        18,
+        8
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -4
+      ],
+      "head_band_width": 11,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -2,
+        -24
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 5,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 5,
+      "head": [
+        10,
+        10
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -10,
+        -23
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 5,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 5,
+      "head": [
+        9,
+        11
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -11,
+        -22
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 5,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 5,
+      "head": [
+        10,
+        10
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -10,
+        -23
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 5,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 5,
+      "head": [
+        12,
+        11
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        0,
+        -5
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -8,
+        -22
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 6,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 6,
+      "head": [
+        10,
+        15
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -9,
+        -21
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 6,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 6,
+      "head": [
+        9,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -10,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 6,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 6,
+      "head": [
+        10,
+        15
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -9,
+        -21
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 6,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 6,
+      "head": [
+        10,
+        17
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 9,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -9,
+        -19
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 7,
+      "frame": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 7,
+      "head": [
+        12,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -7,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 7,
+      "frame": 1,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 7,
+      "head": [
+        11,
+        17
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -8,
+        -19
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 7,
+      "frame": 2,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 7,
+      "head": [
+        12,
+        16
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -7,
+        -20
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 7,
+      "frame": 3,
+      "frame_size": [
+        40,
+        48
+      ],
+      "ticks": 15,
+      "direction": 7,
+      "head": [
+        12,
+        18
+      ],
+      "shadow": [
+        20,
+        28
+      ],
+      "seat_offset": [
+        1,
+        -8
+      ],
+      "head_band_width": 10,
+      "front_overlap_px": 1,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -7,
+        -18
+      ]
+    }
+  ],
+  "skipped_actions": [
+    {
+      "action": "Walk",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Attack",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Strike",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Shoot",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "SpAttack",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Sleep",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Hurt",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Swing",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Double",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Hop",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Charge",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Rotate",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    },
+    {
+      "action": "Faint",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    }
+  ]
+}

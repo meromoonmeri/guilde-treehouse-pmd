@@ -3,25 +3,78 @@
   "status": "User-requested roadmap; planned entries are not completed assets or background jobs",
   "order": [
     {
+      "id": "dynamax_transformation",
+      "subject": "Dynamax transformation animation",
+      "status": "Generated source art and Charizard pilot references exist; full choreography and PMDO runtime verification not completed",
+      "scope": "Energy buildup, visible size transition, Dynamax visual state and return sequence",
+      "required": [
+        "Generated and reviewed PMD-style keyframes",
+        "Fluid multiframe sequence and looping hold effects where appropriate",
+        "Independent front/rear/ground effect layers",
+        "Eight gameplay-direction review",
+        "Pre/post envelopes and fixed ground anchor",
+        "GIF per sequence"
+      ],
+      "engine_gate": "Visual scaling is not engine size, collision or gameplay integration. Verify actual PMDO support before claiming playability."
+    },
+    {
+      "id": "gigantamax_transformation",
+      "subject": "Gigantamax transformation animation",
+      "status": "Generated source art and Charizard pilot references exist; full choreography and PMDO runtime verification not completed",
+      "scope": "Energy buildup and transformation revealing the correct species-specific Gigantamax form, plus return sequence",
+      "gate": "Not just an enlarged normal sprite. Reference and provide the actual target form, register both silhouettes, and conceal the form switch at the intended stage.",
+      "required": [
+        "Generated and reviewed PMD-style keyframes",
+        "Independent effect layers",
+        "Eight gameplay-direction review",
+        "GIF per sequence",
+        "Separate image and runtime tests"
+      ],
+      "pilot": "Charizard to authentic SpriteCollab Gigantamax Charizard (0006/0003), not normal-sprite scaling"
+    },
+    {
+      "id": "terastallization",
+      "subject": "Terastallization transformation animation",
+      "status": "Fire/Water separate faceless crown candidates; six local fit profiles, provisional angles and anatomy; remaining 17 crowns and full sequence not produced",
+      "scope": "Crystal formation, appearance of the relevant type crown, crystalline hold effects and dissipation",
+      "gate": "Verify crown references per supported type. Generic Terastallization must not be confused with Terapagos Stellar's specific anatomy.",
+      "required": [
+        "Generated and reviewed PMD-style keyframes",
+        "Separate subject, crown and effect layers",
+        "Fluid multiframe animation",
+        "Eight gameplay-direction review",
+        "GIF per sequence",
+        "Transparent limitations for any unimplemented types"
+      ],
+      "attachment_gate": "Accessory only, no integrated head or face. Per-frame anatomical head markers and species/form/direction tuning; ambiguous poses blocked. Six local folders do not cover the remote catalogue. Ground/Dungeon not tested."
+    },
+    {
       "id": "tirtouga_finish",
       "subject": "Carapagos",
       "status": "32 required actions and 16 emotions exported; complete technical prechecks pass; final review and consolidated V5 gallery/package pending",
       "preserve": "User-approved portraits V3 and canonical backgrounds, identified by approval.json; new portraits are not covered by that approval",
-      "paths": ["source/pokemon_custom/tirtouga_v5", "source/pokemon_custom/tirtouga_portraits_v4"]
+      "paths": [
+        "source/pokemon_custom/tirtouga_v5",
+        "source/pokemon_custom/tirtouga_portraits_v4"
+      ]
     },
     {
       "id": "zarude",
       "subject": "Zarude standard form",
       "status": "Initial generated model unapproved/unexported; direction errors need correction",
       "scope": "Build missing sprites and animation set; preserve the existing sixteen SpriteCollab portraits rather than replace them",
-      "paths": ["source/pokemon_custom/next_species"]
+      "paths": [
+        "source/pokemon_custom/next_species"
+      ]
     },
     {
       "id": "terapagos_stellar",
       "subject": "Terapagos Stellar form, SpriteCollab slot 1024/0002",
       "status": "Initial generated sheet rejected by user; correct official and native portrait references verified",
       "gate": "Reconstruct one faithful view before multiple directions. Never derive exports or animations from the rejected sheet. Do not substitute Terastal form 1024/0001.",
-      "paths": ["source/pokemon_custom/next_species/references/terapagos_stellar"]
+      "paths": [
+        "source/pokemon_custom/next_species/references/terapagos_stellar"
+      ]
     },
     {
       "id": "mega_raichu_x",
@@ -36,32 +89,6 @@
       "status": "planned; exact references and SpriteCollab resource availability not yet audited",
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
       "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form."
-    },
-    {
-      "id": "dynamax_transformation",
-      "subject": "Dynamax transformation animation",
-      "status": "planned; no assets or engine implementation yet",
-      "scope": "Energy buildup, visible size transition, Dynamax visual state and return sequence",
-      "required": ["Generated and reviewed PMD-style keyframes", "Fluid multiframe sequence and looping hold effects where appropriate", "Independent front/rear/ground effect layers", "Eight gameplay-direction review", "Pre/post envelopes and fixed ground anchor", "GIF per sequence"],
-      "engine_gate": "Visual scaling is not engine size, collision or gameplay integration. Verify actual PMDO support before claiming playability."
-    },
-    {
-      "id": "gigantamax_transformation",
-      "subject": "Gigantamax transformation animation",
-      "status": "planned; no assets or engine implementation yet",
-      "scope": "Energy buildup and transformation revealing the correct species-specific Gigantamax form, plus return sequence",
-      "gate": "Not just an enlarged normal sprite. Reference and provide the actual target form, register both silhouettes, and conceal the form switch at the intended stage.",
-      "pending_choice": "Demonstration species and target form have not yet been selected; do not invent that choice.",
-      "required": ["Generated and reviewed PMD-style keyframes", "Independent effect layers", "Eight gameplay-direction review", "GIF per sequence", "Separate image and runtime tests"]
-    },
-    {
-      "id": "terastallization",
-      "subject": "Terastallization transformation animation",
-      "status": "planned; no assets or engine implementation yet",
-      "scope": "Crystal formation, appearance of the relevant type crown, crystalline hold effects and dissipation",
-      "gate": "Verify crown references per supported type. Generic Terastallization must not be confused with Terapagos Stellar's specific anatomy.",
-      "pending_choice": "Demonstration Pokemon and first supported Tera type(s) are not yet selected; type coverage must be explicitly listed rather than claimed universal.",
-      "required": ["Generated and reviewed PMD-style keyframes", "Separate subject, crown and effect layers", "Fluid multiframe animation", "Eight gameplay-direction review", "GIF per sequence", "Transparent limitations for any unimplemented types"]
     }
   ],
   "standing_requirements": {

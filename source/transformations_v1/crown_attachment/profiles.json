@@ -1,0 +1,277 @@
+{
+  "coordinate_space": "Native sprite pixels, relative to each frame's black head marker; then anchored to its white shadow marker",
+  "note": "Initial manually chosen fit profiles, not user-approved anatomy. Unknown sprites and unsafe poses are blocked rather than placed above whole-body bounds.",
+  "profiles": {
+    "charizard": {
+      "sprite_dir": "source/mega_evolution_v1/references/charizard",
+      "active": true,
+      "head_widths": [
+        10,
+        10,
+        9,
+        10,
+        11,
+        10,
+        9,
+        10
+      ],
+      "seat_offsets": [
+        [
+          0,
+          -8
+        ],
+        [
+          -1,
+          -8
+        ],
+        [
+          -1,
+          -8
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          0,
+          -4
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          1,
+          -8
+        ],
+        [
+          1,
+          -8
+        ]
+      ],
+      "front_overlap_px": 1,
+      "blocked_actions": [
+        "Faint"
+      ]
+    },
+    "mega_charizard_x": {
+      "sprite_dir": "source/mega_evolution_v1/references/mega_charizard_x",
+      "active": true,
+      "head_widths": [
+        12,
+        11,
+        10,
+        11,
+        12,
+        11,
+        10,
+        11
+      ],
+      "seat_offsets": [
+        [
+          0,
+          -9
+        ],
+        [
+          -1,
+          -9
+        ],
+        [
+          -1,
+          -9
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          1,
+          -9
+        ],
+        [
+          1,
+          -9
+        ]
+      ],
+      "front_overlap_px": 1,
+      "blocked_actions": [
+        "Cringe"
+      ]
+    },
+    "gigantamax_charizard": {
+      "sprite_dir": "source/transformations_v1/references/charizard_gmax",
+      "active": true,
+      "head_widths": [
+        22,
+        20,
+        18,
+        20,
+        22,
+        20,
+        18,
+        20
+      ],
+      "seat_offsets": [
+        [
+          0,
+          -8
+        ],
+        [
+          -2,
+          -7
+        ],
+        [
+          -2,
+          -7
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          2,
+          -7
+        ],
+        [
+          2,
+          -7
+        ]
+      ],
+      "front_overlap_px": 2,
+      "blocked_actions": []
+    },
+    "tirtouga_v5": {
+      "sprite_dir": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet",
+      "active": true,
+      "head_widths": [
+        10,
+        11,
+        11,
+        10,
+        10,
+        10,
+        11,
+        11
+      ],
+      "seat_offsets": [
+        [
+          0,
+          -6
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          -3,
+          -6
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "front_overlap_px": 1,
+      "single_row_direction": 1,
+      "blocked_actions": [
+        "Tumble",
+        "TumbleBack",
+        "HitGround",
+        "Faint",
+        "LeapForth",
+        "Cringe",
+        "LostBalance",
+        "Head",
+        "Laying",
+        "Sink"
+      ],
+      "notes": "Existing scene marker anatomy is not yet validated; unsafe rolls/falls/head turns require per-frame seat and orientation overrides."
+    },
+    "tirtouga_v4_archive": {
+      "sprite_dir": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet",
+      "inherits": "tirtouga_v5",
+      "active": false
+    },
+    "tirtouga_v2_archive": {
+      "sprite_dir": "exports/pokemon_custom/tirtouga_v2/sprite_multisheet",
+      "inherits": "tirtouga_v5",
+      "active": false,
+      "head_widths": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "seat_offsets": [
+        [
+          0,
+          -3
+        ],
+        [
+          -2,
+          -3
+        ],
+        [
+          -2,
+          -3
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          2,
+          -3
+        ]
+      ]
+    }
+  }
+}

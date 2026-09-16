@@ -1,0 +1,261 @@
+{
+  "profile": "gigantamax_charizard",
+  "sprite_dir": "source/transformations_v1/references/charizard_gmax",
+  "active": true,
+  "records": [
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 0,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 0,
+      "head": [
+        84,
+        42
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        0,
+        -8
+      ],
+      "head_band_width": 22,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        0,
+        -66
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 1,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 1,
+      "head": [
+        96,
+        39
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        -2,
+        -7
+      ],
+      "head_band_width": 20,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        10,
+        -68
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 2,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 2,
+      "head": [
+        101,
+        40
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        -2,
+        -7
+      ],
+      "head_band_width": 18,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        15,
+        -67
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 3,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 3,
+      "head": [
+        91,
+        36
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        0,
+        -7
+      ],
+      "head_band_width": 20,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        7,
+        -71
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 4,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 4,
+      "head": [
+        84,
+        34
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        0,
+        -7
+      ],
+      "head_band_width": 22,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        0,
+        -73
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 5,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 5,
+      "head": [
+        76,
+        36
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        0,
+        -7
+      ],
+      "head_band_width": 20,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -8,
+        -71
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 6,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 6,
+      "head": [
+        67,
+        40
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        2,
+        -7
+      ],
+      "head_band_width": 18,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -15,
+        -67
+      ]
+    },
+    {
+      "action": "Idle",
+      "source_action": "Idle",
+      "row": 7,
+      "frame": 0,
+      "frame_size": [
+        168,
+        192
+      ],
+      "ticks": 8,
+      "direction": 7,
+      "head": [
+        72,
+        39
+      ],
+      "shadow": [
+        84,
+        100
+      ],
+      "seat_offset": [
+        2,
+        -7
+      ],
+      "head_band_width": 20,
+      "front_overlap_px": 2,
+      "state": "fit_proposal_needs_visual_review",
+      "seat_relative_to_ground": [
+        -10,
+        -68
+      ]
+    }
+  ],
+  "skipped_actions": [
+    {
+      "action": "Rotate",
+      "reason": "reference XML declares action but local PNG triple is absent"
+    }
+  ]
+}
