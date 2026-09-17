@@ -280,5 +280,21 @@
     "runtime_validated": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_generated_frames_palette_cycling": {
+    "request": "Générer les frames elles-mêmes, palette cycling aussi",
+    "source": "source/boreales_frames_generees_v5/",
+    "viewer": "apercu_boreales_generees_palette_v5.html",
+    "generated_drawings": 9,
+    "frames_with_dissolves": 72,
+    "cycle_seconds": 7.2,
+    "palette": "256 entries,72 cyclic tables; fixed index/alpha demonstration",
+    "old_aurora_warp": false,
+    "native_pixels": false,
+    "native_cycle": false,
+    "dedicated_tests": 11,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
