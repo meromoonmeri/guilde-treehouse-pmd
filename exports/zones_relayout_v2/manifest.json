@@ -1,0 +1,536 @@
+{
+  "assets": [
+    {
+      "id": "ice_arena",
+      "title": "Arène de glace élargie",
+      "kind": "terrain_relayout",
+      "source": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "size": [
+        768,
+        480
+      ],
+      "layers": [
+        {
+          "id": "01_sky",
+          "file": "ZonesV2_ice_arena_01_sky.png",
+          "provenance": "01_sky_source.npz"
+        },
+        {
+          "id": "02_snow_floor",
+          "file": "ZonesV2_ice_arena_02_snow_floor.png",
+          "provenance": "02_snow_floor_source.npz"
+        },
+        {
+          "id": "03_distant_needles",
+          "file": "ZonesV2_ice_arena_03_distant_needles.png",
+          "provenance": "03_distant_needles_source.npz"
+        },
+        {
+          "id": "04_back_ice_wall",
+          "file": "ZonesV2_ice_arena_04_back_ice_wall.png",
+          "provenance": "04_back_ice_wall_source.npz"
+        },
+        {
+          "id": "05_front_ice_ridge",
+          "file": "ZonesV2_ice_arena_05_front_ice_ridge.png",
+          "provenance": "05_front_ice_ridge_source.npz"
+        },
+        {
+          "id": "06_approach_fissures",
+          "file": "ZonesV2_ice_arena_06_approach_fissures.png",
+          "provenance": "06_approach_fissures_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "03_distant_needles",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_back_ice_wall",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "03_distant_needles",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            192,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_back_ice_wall",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            192,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "03_distant_needles",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            384,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_back_ice_wall",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            384,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "03_distant_needles",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            576,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_back_ice_wall",
+          "source_rect": [
+            0,
+            0,
+            192,
+            256
+          ],
+          "position": [
+            576,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_front_ice_ridge",
+          "source_rect": [
+            0,
+            272,
+            192,
+            408
+          ],
+          "position": [
+            0,
+            344
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_front_ice_ridge",
+          "source_rect": [
+            0,
+            272,
+            192,
+            408
+          ],
+          "position": [
+            192,
+            344
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_front_ice_ridge",
+          "source_rect": [
+            0,
+            272,
+            192,
+            408
+          ],
+          "position": [
+            384,
+            344
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_front_ice_ridge",
+          "source_rect": [
+            0,
+            272,
+            192,
+            408
+          ],
+          "position": [
+            576,
+            344
+          ],
+          "mask": true
+        },
+        {
+          "layer": "06_approach_fissures",
+          "source_rect": [
+            0,
+            272,
+            80,
+            296
+          ],
+          "position": [
+            64,
+            296
+          ],
+          "mask": true
+        },
+        {
+          "layer": "06_approach_fissures",
+          "source_rect": [
+            112,
+            224,
+            168,
+            256
+          ],
+          "position": [
+            576,
+            264
+          ],
+          "mask": true
+        }
+      ],
+      "limits": "La neige lisse est un aplat réellement présent dans la source, pas une nouvelle texture. Fond cyan et aiguilles lointaines séparés. Les aiguilles cachées par la paroi ne sont pas reconstruites : ne pas déplacer ces deux reliefs indépendamment sans compléter les occultations. Pas de collisions ni accès moteur.",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "animation": "NONE: static layers only",
+      "route_guide": [
+        [
+          8,
+          288
+        ],
+        [
+          208,
+          296
+        ],
+        [
+          384,
+          304
+        ],
+        [
+          576,
+          296
+        ],
+        [
+          752,
+          288
+        ]
+      ],
+      "layout": "Paroi native conservée à sa hauteur ; premier plan reculé de72px et terrain prolongé à768px. Petits groupes de fissures repositionnés."
+    },
+    {
+      "id": "night_sea",
+      "title": "Mer nocturne — nuages redisposés",
+      "kind": "BG_relayout",
+      "source": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "size": [
+        456,
+        240
+      ],
+      "layers": [
+        {
+          "id": "01_sky_with_native_glow",
+          "file": "ZonesV2_night_sea_01_sky_with_native_glow.png",
+          "provenance": "01_sky_with_native_glow_source.npz"
+        },
+        {
+          "id": "02_stars",
+          "file": "ZonesV2_night_sea_02_stars.png",
+          "provenance": "02_stars_source.npz"
+        },
+        {
+          "id": "03_moon",
+          "file": "ZonesV2_night_sea_03_moon.png",
+          "provenance": "03_moon_source.npz"
+        },
+        {
+          "id": "04_upper_clouds",
+          "file": "ZonesV2_night_sea_04_upper_clouds.png",
+          "provenance": "04_upper_clouds_source.npz"
+        },
+        {
+          "id": "05_horizon_clouds",
+          "file": "ZonesV2_night_sea_05_horizon_clouds.png",
+          "provenance": "05_horizon_clouds_source.npz"
+        },
+        {
+          "id": "06_sea",
+          "file": "ZonesV2_night_sea_06_sea.png",
+          "provenance": "06_sea_source.npz"
+        },
+        {
+          "id": "07_moon_reflection",
+          "file": "ZonesV2_night_sea_07_moon_reflection.png",
+          "provenance": "07_moon_reflection_source.npz"
+        },
+        {
+          "id": "08_reef",
+          "file": "ZonesV2_night_sea_08_reef.png",
+          "provenance": "08_reef_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "02_stars",
+          "source_rect": [
+            0,
+            0,
+            456,
+            240
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "03_moon",
+          "source_rect": [
+            0,
+            0,
+            456,
+            240
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_upper_clouds",
+          "source_rect": [
+            0,
+            48,
+            128,
+            96
+          ],
+          "position": [
+            16,
+            40
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_upper_clouds",
+          "source_rect": [
+            176,
+            16,
+            328,
+            88
+          ],
+          "position": [
+            240,
+            24
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_horizon_clouds",
+          "source_rect": [
+            0,
+            0,
+            456,
+            240
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "07_moon_reflection",
+          "source_rect": [
+            0,
+            0,
+            456,
+            240
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "08_reef",
+          "source_rect": [
+            296,
+            104,
+            456,
+            216
+          ],
+          "position": [
+            296,
+            104
+          ],
+          "mask": true
+        }
+      ],
+      "limits": "La lune garde son diamètre64px et sa position native, liée au halo du ciel et à son reflet. Nuages hauts déplacés ; horizon et récif conservés. Les zones découvertes du ciel sont réparées par prélèvement de couleurs du halo natif à rayon correspondant : ce ne sont pas des pixels cachés authentifiés. La découpe nuages/horizon reste à examiner avant animation. Aucun sol praticable.",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "animation": "NONE: static layers only",
+      "sky_repair": "Native halo samples from clear top rows, matched by radius behind upper clouds. Other covered sky pixels use nearest clean native donors. No interpolation or generated colors.",
+      "layout": "Nuage gauche +16,-8 ; nuage haut droit +64,+8 ; récif, lune et reflet inchangés."
+    },
+    {
+      "id": "aurora",
+      "title": "Aurore — préparation en cinq calques",
+      "kind": "BG_layer_preparation",
+      "source": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "size": [
+        264,
+        216
+      ],
+      "layers": [
+        {
+          "id": "01_dark_sky",
+          "file": "ZonesV2_aurora_01_dark_sky.png",
+          "provenance": "01_dark_sky_source.npz"
+        },
+        {
+          "id": "02_stars",
+          "file": "ZonesV2_aurora_02_stars.png",
+          "provenance": "02_stars_source.npz"
+        },
+        {
+          "id": "03_aurora_ribbons",
+          "file": "ZonesV2_aurora_03_aurora_ribbons.png",
+          "provenance": "03_aurora_ribbons_source.npz"
+        },
+        {
+          "id": "04_distant_haze",
+          "file": "ZonesV2_aurora_04_distant_haze.png",
+          "provenance": "04_distant_haze_source.npz"
+        },
+        {
+          "id": "05_ice_foreground",
+          "file": "ZonesV2_aurora_05_ice_foreground.png",
+          "provenance": "05_ice_foreground_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "02_stars",
+          "source_rect": [
+            0,
+            0,
+            264,
+            216
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "03_aurora_ribbons",
+          "source_rect": [
+            0,
+            0,
+            264,
+            216
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "04_distant_haze",
+          "source_rect": [
+            0,
+            0,
+            264,
+            216
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        },
+        {
+          "layer": "05_ice_foreground",
+          "source_rect": [
+            0,
+            0,
+            264,
+            216
+          ],
+          "position": [
+            0,
+            0
+          ],
+          "mask": true
+        }
+      ],
+      "limits": "Composition native conservée, pas un relayout annoncé terminé. Répartition visible en ciel, étoiles, aurore, brume lointaine et glace. Les pointes sont découpées par masques tracés contre la référence ; la brume cachée derrière elles n’est pas reconstruite. Aucune phase animée inventée et aucun terrain praticable.",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "animation": "NONE: static layers only",
+      "layout": "Unchanged native composition; layered preparation only."
+    }
+  ],
+  "grid": 8,
+  "scope": "One additional terrain relayout, one BG layout candidate, one native-composition BG layer preparation. Not three playable maps.",
+  "credits": "User references from commit9ec9a081, originally PMD artwork; scene identity and redistribution rights not independently verified. Original files untouched.",
+  "runtime": "NOT TESTED"
+}

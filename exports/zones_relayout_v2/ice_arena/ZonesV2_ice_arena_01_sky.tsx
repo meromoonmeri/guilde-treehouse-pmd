@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="ZonesV2_ice_arena_01_sky" tilewidth="8" tileheight="8" tilecount="5760" columns="96"><image source="ZonesV2_ice_arena_01_sky.png" width="768" height="480" /></tileset>

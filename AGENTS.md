@@ -308,3 +308,13 @@ Sur « lance toi ! », deux candidats produits dans `source/zones_relayout_v1/`,
 Forêt : falaise complète source288,0,600,216 déplacée à456,0 ; traces de terre en courbe, masses d’arbres/buissons et pierres repositionnées. Pied de falaise d’origine masqué : couverture végétale conservée et raccordée par bandes natives80px chevauchées, pas de faux pied inventé. Passage bleu : paroi240px répétée, crête avant reculée72px ; reste **droit**, coude du guide non implémenté faute de retours natifs. Une différence native au bord623,160 dans la répétition240px, original non « corrigé ».
 
 96testsPASS, dont7nouveaux. TSX8px descriptifs, PNG et ZIP ; aucune collision/import/runtime validée. Parcours orange indicatif seulement. Le rapport d’audit précédent «0relayout» reste historique ; suivi actuel `exports/zones_relayout_v1/production_progress.json` :2candidats, doublonforêt couvert par même source, autres zones/BG purs toujours à produire. Aucun achèvement global de la guilde déduit.
+
+## Lot02 — arène de glace, nuit, aurore
+
+Nouvelle relance « lance toi ! » : `source/zones_relayout_v2/`, `exports/zones_relayout_v2/`, ZIP et `apercu_zones_relayout_v2.html`. **1nouveau terrain (arène768×480,6layers),1BG réagencé (nuit456×240,8layers),1BG préparé sans relayout (aurore264×216,5layers).** Ne pas annoncer trois maps jouables ou une animation.
+
+Arène : modules natifs192px à hauteur d’origine, crête avant reculée72px, vraie neige unie source100,248 ; fissures déplacées. Aiguilles lointaines connectées à leur vraie teinte111,159,231, pas extraction de tous les pixels bleus des parois. Relief caché non reconstruit : plans arrière liés.
+
+Nuit : nuages hauts déplacés+16,-8 et+64,+8 ; lune/halo/reflet/récif fixes. Déplacer le récif révélait une zone native non fournie : tentative abandonnée. Ciel découvert derrière les nuages reconstitué depuis les lignes dégagées du halo natif selon rayon ; RGB réellement prélevés, mais **pas pixels cachés authentifiés**. Pas de fausse animation. Aurore : recomposition EXACTE de l’original,5calques ; pointes masquées contre référence, pas de brume cachée derrière elles.
+
+19PNG de calques,19NPZsource_xy,19TSX8px descriptifs. Originaux9ec9a081 byte-intacts ;104testsPASS (96anciens+8nouveaux). Galerie/ZIP, mais PMDO/Tiled non testés, art non approuvé. Suivi actuel `exports/zones_relayout_v2/production_progress.json` :3terrains candidats cumulés,1BG réagencé,aurore seulement préparée et toujours en attente de layout. Les autres zones/BG et programme guilde restent ouverts.

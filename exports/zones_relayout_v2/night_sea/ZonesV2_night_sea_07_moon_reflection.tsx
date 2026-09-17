@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="ZonesV2_night_sea_07_moon_reflection" tilewidth="8" tileheight="8" tilecount="1710" columns="57"><image source="ZonesV2_night_sea_07_moon_reflection.png" width="456" height="240" /></tileset>

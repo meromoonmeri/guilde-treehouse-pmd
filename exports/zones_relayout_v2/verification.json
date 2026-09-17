@@ -1,0 +1,26 @@
+{
+  "batch_tests_passed": 8,
+  "pixel_source_mismatches": 0,
+  "assets": 3,
+  "layers": 19,
+  "terrain_relayouts": 1,
+  "BG_relayouts": 1,
+  "BG_layer_preparations": 1,
+  "runtime_PMDO": "NOT TESTED",
+  "Tiled_import": "NOT TESTED",
+  "animation": "NONE",
+  "art_approved": false,
+  "checks": [
+    "Source bytes match9ec9a081",
+    "Every visible RGBA pixel matches recorded source coordinates",
+    "Exact layer recomposition, alpha and8px grid",
+    "Aurora composite equals native source exactly",
+    "Moon, reflection and reef unchanged in size and position",
+    "TSX dimensions and image paths"
+  ],
+  "limits": [
+    "Pixel checks do not validate joins, occlusion or gameplay.",
+    "Hidden sky behind moved clouds is reconstructed from native radial halo samples, not authenticated hidden image data.",
+    "Ice background planes are visible partitions, not complete hidden relief."
+  ]
+}

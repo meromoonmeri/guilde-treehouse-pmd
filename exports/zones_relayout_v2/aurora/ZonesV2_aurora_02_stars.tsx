@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="ZonesV2_aurora_02_stars" tilewidth="8" tileheight="8" tilecount="891" columns="33"><image source="ZonesV2_aurora_02_stars.png" width="264" height="216" /></tileset>
