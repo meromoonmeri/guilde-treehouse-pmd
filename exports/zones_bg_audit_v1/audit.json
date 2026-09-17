@@ -1,0 +1,547 @@
+{
+  "scope": "All 23 PNGs from user commit 9ec9a081 and both .rsground files from 3d801c76. Older root references are not a new completed audit here.",
+  "entries": [
+    {
+      "file": "arenapmdskybeach.png",
+      "sha256": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9",
+      "dimensions_px": [
+        456,
+        480
+      ],
+      "kind": "terrain",
+      "title": "Arène côtière",
+      "bg_identification": "Aplat sombre extérieur : hors terrain ; mer latérale et ouverture nord derrière les rochers.",
+      "layers": "Sable, falaises rouges, mer, écume, rochers isolés.",
+      "layout_plan": "Élargir la zone de combat, déplacer les massifs ; conserver une arrivée sud et la perspective nord.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "dimensions_px": [
+        264,
+        216
+      ],
+      "kind": "BG",
+      "title": "Aurore polaire",
+      "bg_identification": "Image de fond complète : ciel étoilé et aurores ; pics de glace au premier plan, aucun sol praticable représenté.",
+      "layers": "Ciel, étoiles, aurores, frise de glace.",
+      "layout_plan": "Réserver au fond d’une future map jouable ; sol à fournir séparément, pas de collision sur le BG.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "bassinchauffantpmdsky.png",
+      "sha256": "fd0ef212c388e67c35ba9da413b94d570c9651af41c2903da8308102399ab628",
+      "dimensions_px": [
+        504,
+        408
+      ],
+      "kind": "mixed",
+      "title": "Clairière / bassin",
+      "bg_identification": "Bande de ciel et nuages à l’horizon ; clairière centrale et approche sud au premier plan.",
+      "layers": "Ciel, canopée lointaine, sol, pierres du bassin, arbres devant.",
+      "layout_plan": "Recomposer le contour rocheux et la clairière sans repeindre leur matériau ; ne pas ajouter d’eau sans décision explicite.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "dimensions_px": [
+        456,
+        240
+      ],
+      "kind": "BG",
+      "title": "Mer nocturne et lune",
+      "bg_identification": "Panorama complet : ciel, lune, étoiles, nuages, mer et reflet ; falaise à droite. Aucun sol de marche représenté.",
+      "layers": "Ciel, étoiles, lune, nuages, mer, reflet lunaire, falaise.",
+      "layout_plan": "BG pour map jouable indépendante ; lune/reflet/nuages séparés, pas d’étirement de la lune.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "entrancearidedungeonpmdsky.png",
+      "sha256": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a",
+      "dimensions_px": [
+        408,
+        288
+      ],
+      "kind": "terrain",
+      "title": "Entrée aride",
+      "bg_identification": "Fond rocheux fermé, pas de ciel indépendant visible.",
+      "layers": "Sol sableux, falaise, bouche de grotte, arbres morts, petits cailloux.",
+      "layout_plan": "Déplacer l’entrée et recomposer les parois avec les textures originales ; maintenir une approche dégagée.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "forêtglomypmdsky.png",
+      "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7",
+      "dimensions_px": [
+        600,
+        312
+      ],
+      "kind": "terrain",
+      "title": "Forêt / grotte claire",
+      "bg_identification": "Canopée arrière ; masse sombre de premier plan en bas, pas un ciel.",
+      "layers": "Sol clair, canopée arrière, falaise blanche, grotte, pierres, canopée avant.",
+      "layout_plan": "Changer le tracé de clairière et la position de la grotte ; conserver la continuité des arbres.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6",
+      "dimensions_px": [
+        504,
+        360
+      ],
+      "kind": "mixed",
+      "title": "Route glacée",
+      "bg_identification": "Ciel bleu et montagnes lointaines à séparer du corridor neigeux.",
+      "layers": "Ciel, montagnes, falaise arrière, neige praticable, rochers et glace avant.",
+      "layout_plan": "Créer un autre coude de route ; ne pas transformer le BG montagneux en obstacles de terrain.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "interiorbedroompmdsky.png",
+      "sha256": "62ced0f4770b8572b10aa4f1a477c8d8d830f715ffc89a75cd7716b0f6992ec5",
+      "dimensions_px": [
+        504,
+        384
+      ],
+      "kind": "interior",
+      "title": "Chambre",
+      "bg_identification": "Marge brune hors pièce ; aucun BG de paysage.",
+      "layers": "Vide extérieur, sol, murs arrière, murs avant, mobilier, tapis, cheminée.",
+      "layout_plan": "Modifier le plan de pièce ; meubles et accès séparés, conserver les textures canoniques du bois.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "junglewaterfallzonepmdsky.png",
+      "sha256": "6cd3c095e1da6075958fbdc5b793a3e0e44c7c9f6dd14d2dad37cd94a9be6193",
+      "dimensions_px": [
+        744,
+        1032
+      ],
+      "kind": "terrain",
+      "title": "Jungle aux cascades",
+      "bg_identification": "Grande paroi arrière verticale ; marges noires hors map.",
+      "layers": "Paroi, eau verticale, bassin/eau au sol, écume, herbe, chemin, végétation.",
+      "layout_plan": "Recomposer la paroi et l’arrivée en plusieurs layers ; ne pas fabriquer des phases d’eau à partir de cette image fixe.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "lakecrystalpmdsky.png",
+      "sha256": "160aba8a222ae914d493385087795c1723c7dbf6f9fa2d6b460915b492a42c96",
+      "dimensions_px": [
+        696,
+        600
+      ],
+      "kind": "terrain",
+      "title": "Lac / sanctuaire cristallin",
+      "bg_identification": "Eau périphérique derrière la plateforme ; pas de ciel.",
+      "layers": "Eau, plateforme cristalline, cristaux, piliers, lumières/reflets.",
+      "layout_plan": "Changer la silhouette de plateforme et les placements ; vérifier la frontière eau/sol avant collision.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "large.P21P02A.png.80cbca09111bb7b67cff974d76c186cb.png",
+      "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7",
+      "dimensions_px": [
+        600,
+        312
+      ],
+      "kind": "duplicate",
+      "title": "Forêt / grotte claire — copie",
+      "bg_identification": "Même image que forêtglomypmdsky.png, vérification SHA-256.",
+      "layers": "Réutiliser la même source, pas un deuxième biome.",
+      "layout_plan": "Un seul chantier de relayout, conserver les deux originaux.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "large.P27P01A.png.c5ad9818930eb0d4f403f64607318c37.png",
+      "sha256": "dadf3a4afbfa3c3b97596c84c02a2b1ed8b2bb03f238874469c4ba760223f0c2",
+      "dimensions_px": [
+        360,
+        312
+      ],
+      "kind": "terrain",
+      "title": "Caverne rocheuse sombre",
+      "bg_identification": "Paroi sombre en haut et aux côtés ; pas de ciel.",
+      "layers": "Fond sombre, paroi, sol, blocs et végétation rare.",
+      "layout_plan": "Nouvelle chambre/entrée en conservant roche et sol natifs.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "large.S01P03A.png.84e22fb77c4061e77b0f546545fed2c7.png",
+      "sha256": "e9145e2170d872d1329c5737a4d96d454546bdf888042dd4f0bfbfeda7a2e2a5",
+      "dimensions_px": [
+        456,
+        456
+      ],
+      "kind": "terrain",
+      "title": "Clairière tropicale et rive",
+      "bg_identification": "Canopée arrière et rivière au sud ; la rivière n’est pas un ciel/BG.",
+      "layers": "Herbe, chemin, arbres, fleurs, rive, eau, ponton, panneau.",
+      "layout_plan": "Replacer clairière et arrivée de rive ; garder les fleurs/arbres/ponton indépendants.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "large.S05P03A.png.301f7a1eadda348357be0801e81faa2a.png",
+      "sha256": "a4b168b07ecd76b154a79a6ea434bc67b8d1d6f6ad7a82ff0711a79a5cedbd94",
+      "dimensions_px": [
+        312,
+        720
+      ],
+      "kind": "terrain",
+      "title": "Couloir rocheux violet",
+      "bg_identification": "Marges sombres et murs latéraux, pas de panorama.",
+      "layers": "Vide, parois arrière, sol du couloir, parois avant, blocs.",
+      "layout_plan": "Modifier les courbes et embranchements ; largeur de marche constante à contrôler.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "oldcastlepmd.png",
+      "sha256": "809f27543260614c133b892cae9572d85dfedc0b2ed28deac5b689805bf20b88",
+      "dimensions_px": [
+        408,
+        408
+      ],
+      "kind": "interior",
+      "title": "Salle dorée / ancien château",
+      "bg_identification": "Mur et sol de salle, pas de panorama.",
+      "layers": "Dallage, motif central, colonnes, coffres, ombres.",
+      "layout_plan": "Recomposer salle et rangées ; motif central conservé, coffres objets indépendants.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "dimensions_px": [
+        504,
+        408
+      ],
+      "kind": "mixed",
+      "title": "Arène de glace",
+      "bg_identification": "Bande de ciel bleu supérieure ; murs de glace arrière et avant entourent le sol.",
+      "layers": "Ciel, glace arrière, neige/sol, glace avant.",
+      "layout_plan": "Changer forme de l’arène et accès, conserver la frise et les matériaux de glace.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "roadundergound.png",
+      "sha256": "77cb97730bc05b3eca0c83b9e7119b9f4043633d9bc948103e1317fb281ec810",
+      "dimensions_px": [
+        504,
+        408
+      ],
+      "kind": "terrain",
+      "title": "Grotte violette à deux issues",
+      "bg_identification": "Marge sombre hors grotte, pas de BG de ciel.",
+      "layers": "Vide, paroi violette, sol, deux bouches, pierres.",
+      "layout_plan": "Replacer les deux issues et le contour de chambre, sans recoloration.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "rockgeyserlike.png",
+      "sha256": "74f5b0f070921f825db45acb1cecfdab494744e988c3a1b00f6e6d39c60f10f8",
+      "dimensions_px": [
+        456,
+        528
+      ],
+      "kind": "terrain",
+      "title": "Terrain de roches / évents",
+      "bg_identification": "Texture de terrain vue de dessus, aucun panorama.",
+      "layers": "Sol ocre, blocs, évents/creux clairs, ombres.",
+      "layout_plan": "Nouvelle répartition des blocs/évents ; leur animation éventuelle exige des phases natives, non fournies ici.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "rockroadpmd.png",
+      "sha256": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4",
+      "dimensions_px": [
+        624,
+        288
+      ],
+      "kind": "terrain",
+      "title": "Passage rocheux bleu",
+      "bg_identification": "Murs sombres arrière et premier plan ; pas de ciel.",
+      "layers": "Fond, paroi arrière, sol du passage, paroi avant, cailloux.",
+      "layout_plan": "Changer courbe et largeur du passage, garder les textures bleutées originales.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "secretgarden.png",
+      "sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f",
+      "dimensions_px": [
+        408,
+        408
+      ],
+      "kind": "terrain",
+      "title": "Jardin secret / puits lumineux",
+      "bg_identification": "Marge verte vide hors plateforme ; faisceau lumineux au fond.",
+      "layers": "Vide, sol herbeux, chemin, arbres, fleurs, rochers, puits, faisceau.",
+      "layout_plan": "Recomposer clairière et position du puits ; faisceau indépendant, sans repeindre le sol.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "starcavepmdsky.png",
+      "sha256": "4aa7edd76aa16bc7674fec693e565e468d2bf266e7be898e3c011eab36de5b45",
+      "dimensions_px": [
+        1008,
+        504
+      ],
+      "kind": "multi_panel",
+      "title": "Grotte étoilée — deux panneaux",
+      "bg_identification": "Deux vues côte à côte, pas un seul panorama continu.",
+      "layers": "Fond sombre, sol bleu, parois, cristaux ; séparer les panneaux avant extraction.",
+      "layout_plan": "Comparer les deux panneaux pour identifier leurs différences ; ne pas déclarer deux frames d’animation sur cette seule base.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "undergroundpmd.png",
+      "sha256": "583c864ead20d75b43ce70daf2a4f261e44bcf028031d085507faade5b063f03",
+      "dimensions_px": [
+        816,
+        408
+      ],
+      "kind": "multi_panel",
+      "title": "Souterrain dallé — deux panneaux",
+      "bg_identification": "Deux vues côte à côte, pas un fond continu.",
+      "layers": "Vide, paroi, dallage, passage ; panneaux distincts.",
+      "layout_plan": "Comparer et extraire séparément ; garder le motif du dallage, pas de duplication arbitraire en map longue.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    },
+    {
+      "file": "wantedpokemontemplate.png",
+      "sha256": "2a568e2e02dde562693d645e2006e036c8a6aa51349c30f483ba2f2ee08b81fd",
+      "dimensions_px": [
+        264,
+        192
+      ],
+      "kind": "UI",
+      "title": "Affiche de recherche",
+      "bg_identification": "Affiche avec portrait et texte décoratif, pas une zone ni un BG jouable.",
+      "layers": "Papier / cadre UI ; portrait à traiter séparément si demandé.",
+      "layout_plan": "Hors lot de terrains ; conserver comme référence de panneau/affiche.",
+      "inspection": "Manual visual review; source game/scene name not independently confirmed",
+      "status": "Inventoried, not relaid out or runtime tested"
+    }
+  ],
+  "maps": [
+    {
+      "file": "cliffdaytest.rsground",
+      "sha256": "6567e19df7a073758d8d52ad1491460067a2dccc1c0d03aa0d1c72b5592e4d2f",
+      "name": "CliffReverietownnordest",
+      "texsize": 1,
+      "obstacle_grid": [
+        123,
+        99
+      ],
+      "background": {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 0,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "",
+          "FrameTime": 1,
+          "StartFrame": -1,
+          "EndFrame": -1,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "0, 0",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      "layers": [
+        {
+          "name": "New Layer",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "00_ciel": 10205,
+            "Altere_Pond_Cliffs": 1,
+            "CanyonCamp": 4
+          }
+        },
+        {
+          "name": "Layer 2",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "v2_promontoire_jour_03": 7503
+          }
+        },
+        {
+          "name": "Layer 2",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "13_avancee_basse_gauche_terrain": 347,
+            "Metano_Town_Cliffs": 2115,
+            "INVERSEPATHWAY": 1891,
+            "CLIFF MIROR-Photoroom": 1096
+          }
+        },
+        {
+          "name": "Layer 4",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "Metano_Town_Objects": 1206
+          }
+        },
+        {
+          "name": "Layer 3",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "P01P01A_layer1": 8,
+            "": 12,
+            "Metano_Town_Animation_Tileset": 2007,
+            "CanyonCamp": 108,
+            "Metano_Town_Animated": 64,
+            "Metano_Town_Objects": 159
+          }
+        },
+        {
+          "name": "Cloud/nuage",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "01_long_cap_jour_02": 600,
+            "Altere_Pond_Objects": 48,
+            "Altere_Pond_Objects_Under": 24,
+            "Metano_Town_Objects": 39,
+            "Metano_Town_Trimmed": 145,
+            "Metano_Inn_Objects": 69
+          }
+        }
+      ],
+      "finding": "BGAnim.AnimIndex is empty; sky actually referenced as 00_ciel within tile layers, not an assigned MapBG animation. Layer names are not trustworthy material labels. Cloud/nuage in cliffdaytest contains mixed prop/terrain sheets, not proof of animated clouds.",
+      "runtime": "NOT TESTED"
+    },
+    {
+      "file": "cliffnordouesttest1.rsground",
+      "sha256": "2cb10918d6bfa8ed687c1412b2d2e7c4aebc545049b9d2d76eb7c16fdb632f19",
+      "name": "",
+      "texsize": 1,
+      "obstacle_grid": [
+        138,
+        98
+      ],
+      "background": {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 0,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "",
+          "FrameTime": 1,
+          "StartFrame": -1,
+          "EndFrame": -1,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "0, 0",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      "layers": [
+        {
+          "name": "Layer 2",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "00_ciel": 8004
+          }
+        },
+        {
+          "name": "Layer 1",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "v2_promontoire_jour_03": 6209,
+            "Altere_Pond_Cliffs": 1
+          }
+        },
+        {
+          "name": "New Layer",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "terrain": 992,
+            "Metano_Altere_Transition_Base": 3070,
+            "terrain (4)": 451,
+            "terrain (3)": 130,
+            "terrain (2)": 94,
+            "INVERSEPATHWAY": 1
+          }
+        },
+        {
+          "name": "Layer 3",
+          "visible": true,
+          "render_layer": 0,
+          "sheet_frame_references": {
+            "INVERSEPATHWAY": 1110,
+            "Metano_Town_Animation_Tileset": 80
+          }
+        }
+      ],
+      "finding": "BGAnim.AnimIndex is empty; sky actually referenced as 00_ciel within tile layers, not an assigned MapBG animation. Layer names are not trustworthy material labels. Cloud/nuage in cliffdaytest contains mixed prop/terrain sheets, not proof of animated clouds.",
+      "runtime": "NOT TESTED"
+    }
+  ],
+  "counts": {
+    "terrain": 12,
+    "BG": 2,
+    "mixed": 3,
+    "interior": 2,
+    "duplicate": 1,
+    "multi_panel": 2,
+    "UI": 1
+  },
+  "workflow": [
+    "Keep source originals immutable and hash recorded.",
+    "Confirm canonical texture source per map; uploaded reference is not automatically a license/provenance proof.",
+    "Extract canonical terrain/walls/objects without recoloring, mirroring or scaling texture pixels.",
+    "Use generated guide only for requested new layout, not final material pixels.",
+    "Build separate BG, ground, paths, walls, water, foreground, shadows and FX layers as applicable, all sharing origin and 8px grid.",
+    "For animations find real native phases, keep motion independent; do not claim a still screenshot provides a cycle.",
+    "Prepare entrances, collision and occlusion separately, then test in PMDO before calling playable."
+  ],
+  "relayouts_produced": 0
+}

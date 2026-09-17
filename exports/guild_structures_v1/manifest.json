@@ -1,0 +1,290 @@
+{
+  "grid_px": 8,
+  "structures": [
+    {
+      "id": "hq",
+      "label": "QG treehouse",
+      "canvas_px": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        240
+      ],
+      "entry_approach_px": [
+        120,
+        232,
+        16,
+        24
+      ],
+      "entry_status": "Placement guide only, not collision or warp data",
+      "origin": "Original generated design, keyed, nearest-neighbor reduced and mapped to native reference RGBs",
+      "layers": [
+        {
+          "id": "01_shadow",
+          "file": "hq/GuildStructuresV1_hq_01_shadow.png",
+          "empty": false
+        },
+        {
+          "id": "02_architecture",
+          "file": "hq/GuildStructuresV1_hq_02_architecture.png",
+          "empty": false
+        },
+        {
+          "id": "03_roof_foliage",
+          "file": "hq/GuildStructuresV1_hq_03_roof_foliage.png",
+          "empty": false
+        },
+        {
+          "id": "04_smoke_study",
+          "file": "hq/GuildStructuresV1_hq_04_smoke_study.png",
+          "empty": true
+        }
+      ],
+      "composite": "hq/GuildStructuresV1_hq_composite.png",
+      "object": "hq/GuildStructuresV1_hq_object.png",
+      "source_crop": [
+        0,
+        0,
+        1102,
+        960
+      ],
+      "native_size": [
+        240,
+        210
+      ]
+    },
+    {
+      "id": "dormitory",
+      "label": "Dortoir",
+      "canvas_px": [
+        128,
+        128
+      ],
+      "anchor_px": [
+        64,
+        112
+      ],
+      "entry_approach_px": [
+        56,
+        104,
+        16,
+        24
+      ],
+      "entry_status": "Placement guide only, not collision or warp data",
+      "origin": "Original generated design, keyed, nearest-neighbor reduced and mapped to native reference RGBs",
+      "layers": [
+        {
+          "id": "01_shadow",
+          "file": "dormitory/GuildStructuresV1_dormitory_01_shadow.png",
+          "empty": false
+        },
+        {
+          "id": "02_architecture",
+          "file": "dormitory/GuildStructuresV1_dormitory_02_architecture.png",
+          "empty": false
+        },
+        {
+          "id": "03_roof_foliage",
+          "file": "dormitory/GuildStructuresV1_dormitory_03_roof_foliage.png",
+          "empty": false
+        },
+        {
+          "id": "04_smoke_study",
+          "file": "dormitory/GuildStructuresV1_dormitory_04_smoke_study.png",
+          "empty": true
+        }
+      ],
+      "composite": "dormitory/GuildStructuresV1_dormitory_composite.png",
+      "object": "dormitory/GuildStructuresV1_dormitory_object.png",
+      "source_crop": [
+        0,
+        0,
+        600,
+        448
+      ],
+      "native_size": [
+        112,
+        85
+      ]
+    },
+    {
+      "id": "refectory",
+      "label": "Réfectoire",
+      "canvas_px": [
+        128,
+        128
+      ],
+      "anchor_px": [
+        64,
+        112
+      ],
+      "entry_approach_px": [
+        56,
+        104,
+        16,
+        24
+      ],
+      "entry_status": "Placement guide only, not collision or warp data",
+      "origin": "Original generated design, keyed, nearest-neighbor reduced and mapped to native reference RGBs",
+      "layers": [
+        {
+          "id": "01_shadow",
+          "file": "refectory/GuildStructuresV1_refectory_01_shadow.png",
+          "empty": false
+        },
+        {
+          "id": "02_architecture",
+          "file": "refectory/GuildStructuresV1_refectory_02_architecture.png",
+          "empty": false
+        },
+        {
+          "id": "03_roof_foliage",
+          "file": "refectory/GuildStructuresV1_refectory_03_roof_foliage.png",
+          "empty": false
+        },
+        {
+          "id": "04_smoke_study",
+          "file": "refectory/GuildStructuresV1_refectory_04_smoke_study.png",
+          "empty": false
+        }
+      ],
+      "composite": "refectory/GuildStructuresV1_refectory_composite.png",
+      "object": "refectory/GuildStructuresV1_refectory_object.png",
+      "source_crop": [
+        600,
+        0,
+        1200,
+        448
+      ],
+      "native_size": [
+        112,
+        101
+      ]
+    },
+    {
+      "id": "infirmary",
+      "label": "Infirmerie",
+      "canvas_px": [
+        128,
+        128
+      ],
+      "anchor_px": [
+        64,
+        112
+      ],
+      "entry_approach_px": [
+        56,
+        104,
+        16,
+        24
+      ],
+      "entry_status": "Placement guide only, not collision or warp data",
+      "origin": "Original generated design, keyed, nearest-neighbor reduced and mapped to native reference RGBs",
+      "layers": [
+        {
+          "id": "01_shadow",
+          "file": "infirmary/GuildStructuresV1_infirmary_01_shadow.png",
+          "empty": false
+        },
+        {
+          "id": "02_architecture",
+          "file": "infirmary/GuildStructuresV1_infirmary_02_architecture.png",
+          "empty": false
+        },
+        {
+          "id": "03_roof_foliage",
+          "file": "infirmary/GuildStructuresV1_infirmary_03_roof_foliage.png",
+          "empty": false
+        },
+        {
+          "id": "04_smoke_study",
+          "file": "infirmary/GuildStructuresV1_infirmary_04_smoke_study.png",
+          "empty": true
+        }
+      ],
+      "composite": "infirmary/GuildStructuresV1_infirmary_composite.png",
+      "object": "infirmary/GuildStructuresV1_infirmary_object.png",
+      "source_crop": [
+        0,
+        448,
+        600,
+        896
+      ],
+      "native_size": [
+        104,
+        94
+      ]
+    },
+    {
+      "id": "workshop",
+      "label": "Atelier / réserve",
+      "canvas_px": [
+        128,
+        128
+      ],
+      "anchor_px": [
+        64,
+        112
+      ],
+      "entry_approach_px": [
+        56,
+        104,
+        16,
+        24
+      ],
+      "entry_status": "Placement guide only, not collision or warp data",
+      "origin": "Original generated design, keyed, nearest-neighbor reduced and mapped to native reference RGBs",
+      "layers": [
+        {
+          "id": "01_shadow",
+          "file": "workshop/GuildStructuresV1_workshop_01_shadow.png",
+          "empty": false
+        },
+        {
+          "id": "02_architecture",
+          "file": "workshop/GuildStructuresV1_workshop_02_architecture.png",
+          "empty": false
+        },
+        {
+          "id": "03_roof_foliage",
+          "file": "workshop/GuildStructuresV1_workshop_03_roof_foliage.png",
+          "empty": false
+        },
+        {
+          "id": "04_smoke_study",
+          "file": "workshop/GuildStructuresV1_workshop_04_smoke_study.png",
+          "empty": true
+        }
+      ],
+      "composite": "workshop/GuildStructuresV1_workshop_composite.png",
+      "object": "workshop/GuildStructuresV1_workshop_object.png",
+      "source_crop": [
+        600,
+        448,
+        1200,
+        896
+      ],
+      "native_size": [
+        112,
+        86
+      ]
+    }
+  ],
+  "art_approved": false,
+  "runtime_PMDO": "NOT TESTED",
+  "layer_limit": "Visible-surface separation, not reconstructed interiors behind removable roofs. Do not use roof-hidden mode as a playable interior.",
+  "textures": "Generated architecture texture informed by native references; native RGB palette, NOT pixel-exact canonical texture reconstruction. Map relayout batch must use actual canonical pixels separately.",
+  "reuse_existing": [
+    "sprites/ponts_pmdo",
+    "exports/vegetation_treehouse_v1"
+  ],
+  "source_reference": {
+    "path": "source/amp_plains_fleurie_v1/references/Metano_Town_Objects.png",
+    "sha256": "58caa3971e4771cc00579ee5321fc5b8a698178cd6c328f586264357d9be00f4",
+    "repository": "https://github.com/Palikadude/Halcyon",
+    "credit": "Native reference belongs to its original PMD / Halcyon contributors, not authored here."
+  },
+  "pending": "Additional retained proposals, interiors, integration, collisions and scene layout remain pending."
+}
