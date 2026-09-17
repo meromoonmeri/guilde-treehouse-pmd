@@ -8,4 +8,4 @@ Compléments natifs explicités : arbres entiers Vast Steppe pour la forêt ; vr
 
 Récupération du workspace de cette relance : checkout revenu à6c4ac5a avec anciens fichiers de maps. Travail ancien sauvegardé en stash nommé, puis avance rapide àFETCH_HEAD438b9288 ; aucun original supprimé, pas de reset ou de stash pop. Branche de session inchangée.
 
-Reproduction : `.venv/bin/python source/zones_south_north_v3/build.py` puis `.venv/bin/python source/zones_south_north_v3/package.py`. Ce dernier lance les11tests dédiés avant rapport/registre/ZIP. Le registre conserve explicitement `all_user_work_finished=false` tant que les autres tâches ne sont pas produites.
+Reproduction : `.venv/bin/python source/zones_south_north_v3/build.py` puis `.venv/bin/python source/zones_south_north_v3/package.py`. Ce dernier lance les12tests dédiés avant rapport/registre/ZIP. Le registre conserve explicitement `all_user_work_finished=false` tant que les autres tâches ne sont pas produites.

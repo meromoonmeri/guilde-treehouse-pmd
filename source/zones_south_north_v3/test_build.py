@@ -52,6 +52,9 @@ class SouthNorthTests(unittest.TestCase):
   for m in self.m['maps']:
    for l in m['layers']:
     p=O/m['id']/l['file'];r=ET.parse(p.with_suffix('.tsx')).getroot();self.assertEqual(int(r.get('tilecount')),m['size'][0]//8*(m['size'][1]//8));self.assertEqual(r.find('image').get('source'),p.name)
+ def test_no_obsolete_layer_exports(self):
+  for m in self.m['maps']:
+   d=O/m['id'];self.assertEqual({p.name for p in d.glob('SouthNorthV3_*.png')},{l['file'] for l in m['layers']});self.assertEqual({p.name for p in d.glob('*_source.npz')},{l['provenance'] for l in m['layers']})
  def test_no_false_runtime_approval(self):
   for m in self.m['maps']:self.assertEqual(m['runtime'],'NOT TESTED');self.assertFalse(m['art_approved']);self.assertIn('not engine',m['connectivity'])
 if __name__=='__main__':unittest.main()

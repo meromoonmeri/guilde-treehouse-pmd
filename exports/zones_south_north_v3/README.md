@@ -17,6 +17,6 @@ Le masque de chemin relie effectivement le bord sud à l’entrée nord, y compr
 
 Références utilisateur `forêtglomypmdsky.png`, `rockroadpmd.png`, `undergroundpmd.png` du commit9ec9a081 ; compléments natifs `vast_steppe_layer_3.png` et `vast_steppe_layer_4.png` provenant des références Halcyon déjà conservées (working-copy1522c7a8, provenance dans `source/amp_plains_fleurie_v1/references/`). Artwork PMD/Halcyon et droits de leurs auteurs respectifs ; pas de licence supplémentaire déduite de ce travail. Originaux vérifiés byte-identiques à438b9288.
 
-11tests dédiésPASS. **Art à examiner ; PMDO/Tiled/collisions/warps NOT TESTED.**
+12tests dédiésPASS. **Art à examiner ; PMDO/Tiled/collisions/warps NOT TESTED.**
 
 Le programme entier reste non terminé. `FULL_PROGRAMME_STATUS.json` reprend les23références :2candidats corrigés sud–nord,1BG réagencé,18références sans nouveau layout répondant encore au suivi actuel,1doublon,1affiche hors map. L’aurore reste une préparation en calques ; l’arène V2 doit être revue selon la direction demandée. Utiliser une référence comme donneur ne termine pas son propre relayout. Bâtiments/annexes retenus, végétation et animations de guilde restent suivis sans déclarer leurs étapes manquantes achevées.
