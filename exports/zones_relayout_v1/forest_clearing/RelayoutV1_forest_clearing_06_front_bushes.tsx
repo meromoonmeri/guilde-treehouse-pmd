@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" tiledversion="1.11.0" name="RelayoutV1_forest_clearing_06_front_bushes" tilewidth="8" tileheight="8" tilecount="4320" columns="96"><image source="RelayoutV1_forest_clearing_06_front_bushes.png" width="768" height="360" /></tileset>

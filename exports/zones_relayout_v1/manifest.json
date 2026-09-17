@@ -1,0 +1,767 @@
+{
+  "maps": [
+    {
+      "id": "forest_clearing",
+      "source": "forêtglomypmdsky.png",
+      "source_sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7",
+      "dimensions": [
+        768,
+        360
+      ],
+      "description": "Clairière élargie, falaise entière déplacée de168px vers l’est ; sentier de terre en courbe, pierres redistribuées et buissons avancés de48px.",
+      "layers": [
+        {
+          "id": "01_ground",
+          "png": "RelayoutV1_forest_clearing_01_ground.png",
+          "provenance": "01_ground_provenance.npz",
+          "pixels": 276480
+        },
+        {
+          "id": "02_back_canopy",
+          "png": "RelayoutV1_forest_clearing_02_back_canopy.png",
+          "provenance": "02_back_canopy_provenance.npz",
+          "pixels": 68504
+        },
+        {
+          "id": "03_cliff_entrance",
+          "png": "RelayoutV1_forest_clearing_03_cliff_entrance.png",
+          "provenance": "03_cliff_entrance_provenance.npz",
+          "pixels": 50185
+        },
+        {
+          "id": "04_earth_patches",
+          "png": "RelayoutV1_forest_clearing_04_earth_patches.png",
+          "provenance": "04_earth_patches_provenance.npz",
+          "pixels": 4549
+        },
+        {
+          "id": "05_stones",
+          "png": "RelayoutV1_forest_clearing_05_stones.png",
+          "provenance": "05_stones_provenance.npz",
+          "pixels": 1800
+        },
+        {
+          "id": "06_front_bushes",
+          "png": "RelayoutV1_forest_clearing_06_front_bushes.png",
+          "provenance": "06_front_bushes_provenance.npz",
+          "pixels": 79728
+        },
+        {
+          "id": "07_cliff_foot_cover",
+          "png": "RelayoutV1_forest_clearing_07_cliff_foot_cover.png",
+          "provenance": "07_cliff_foot_cover_provenance.npz",
+          "pixels": 36683
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_ground",
+          "operation": "native homogeneous floor patch quilting, 8px minimum-error overlap, no blending",
+          "source_rectangles": [
+            [
+              0,
+              144,
+              48,
+              168
+            ],
+            [
+              0,
+              152,
+              48,
+              176
+            ],
+            [
+              0,
+              160,
+              48,
+              184
+            ],
+            [
+              0,
+              168,
+              48,
+              192
+            ],
+            [
+              24,
+              144,
+              72,
+              168
+            ],
+            [
+              24,
+              152,
+              72,
+              176
+            ],
+            [
+              24,
+              160,
+              72,
+              184
+            ],
+            [
+              24,
+              168,
+              72,
+              192
+            ],
+            [
+              48,
+              144,
+              96,
+              168
+            ],
+            [
+              48,
+              152,
+              96,
+              176
+            ],
+            [
+              48,
+              160,
+              96,
+              184
+            ],
+            [
+              48,
+              168,
+              96,
+              192
+            ],
+            [
+              72,
+              144,
+              120,
+              168
+            ],
+            [
+              72,
+              152,
+              120,
+              176
+            ],
+            [
+              72,
+              160,
+              120,
+              184
+            ],
+            [
+              72,
+              168,
+              120,
+              192
+            ],
+            [
+              96,
+              144,
+              144,
+              168
+            ],
+            [
+              96,
+              152,
+              144,
+              176
+            ],
+            [
+              96,
+              160,
+              144,
+              184
+            ],
+            [
+              96,
+              168,
+              144,
+              192
+            ]
+          ],
+          "seed": 37,
+          "start_y": 0
+        },
+        {
+          "layer": "02_back_canopy",
+          "source_rect": [
+            0,
+            0,
+            336,
+            144
+          ],
+          "destination": [
+            0,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "02_back_canopy",
+          "source_rect": [
+            0,
+            0,
+            336,
+            144
+          ],
+          "destination": [
+            192,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "03_cliff_entrance",
+          "source_rect": [
+            288,
+            0,
+            600,
+            216
+          ],
+          "destination": [
+            456,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            176,
+            144,
+            240,
+            176
+          ],
+          "destination": [
+            32,
+            192
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            240,
+            160,
+            280,
+            192
+          ],
+          "destination": [
+            112,
+            216
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            320,
+            144,
+            368,
+            168
+          ],
+          "destination": [
+            192,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            176,
+            144,
+            240,
+            176
+          ],
+          "destination": [
+            272,
+            216
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            240,
+            160,
+            280,
+            192
+          ],
+          "destination": [
+            352,
+            192
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            320,
+            144,
+            368,
+            168
+          ],
+          "destination": [
+            432,
+            168
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_earth_patches",
+          "source_rect": [
+            176,
+            144,
+            240,
+            176
+          ],
+          "destination": [
+            512,
+            152
+          ],
+          "masked": true
+        },
+        {
+          "layer": "05_stones",
+          "source_rect": [
+            400,
+            184,
+            440,
+            208
+          ],
+          "destination": [
+            360,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "05_stones",
+          "source_rect": [
+            96,
+            96,
+            136,
+            120
+          ],
+          "destination": [
+            240,
+            160
+          ],
+          "masked": true
+        },
+        {
+          "layer": "05_stones",
+          "source_rect": [
+            400,
+            184,
+            440,
+            208
+          ],
+          "destination": [
+            544,
+            216
+          ],
+          "masked": true
+        },
+        {
+          "layer": "06_front_bushes",
+          "source_rect": [
+            0,
+            184,
+            240,
+            312
+          ],
+          "destination": [
+            0,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "06_front_bushes",
+          "source_rect": [
+            0,
+            184,
+            240,
+            312
+          ],
+          "destination": [
+            240,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "06_front_bushes",
+          "source_rect": [
+            0,
+            184,
+            240,
+            312
+          ],
+          "destination": [
+            480,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "06_front_bushes",
+          "source_rect": [
+            0,
+            184,
+            48,
+            312
+          ],
+          "destination": [
+            720,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            24,
+            184,
+            104,
+            312
+          ],
+          "destination": [
+            432,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            72,
+            184,
+            152,
+            312
+          ],
+          "destination": [
+            480,
+            232
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            120,
+            184,
+            200,
+            312
+          ],
+          "destination": [
+            528,
+            224
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            168,
+            184,
+            248,
+            312
+          ],
+          "destination": [
+            576,
+            216
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            216,
+            184,
+            296,
+            312
+          ],
+          "destination": [
+            624,
+            192
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            24,
+            184,
+            104,
+            312
+          ],
+          "destination": [
+            672,
+            184
+          ],
+          "masked": true
+        },
+        {
+          "layer": "07_cliff_foot_cover",
+          "source_rect": [
+            72,
+            184,
+            120,
+            312
+          ],
+          "destination": [
+            720,
+            184
+          ],
+          "masked": true
+        }
+      ],
+      "route_guide": [
+        [
+          8,
+          208
+        ],
+        [
+          144,
+          224
+        ],
+        [
+          232,
+          240
+        ],
+        [
+          368,
+          208
+        ],
+        [
+          480,
+          176
+        ],
+        [
+          624,
+          152
+        ]
+      ],
+      "limits": "Pas de BG de ciel. Les ombres natives restent attachées à leurs modules. Entrée et route à vérifier dans PMDO ; aucune animation d’eau ou de feuillage inventée.",
+      "art_approved": false,
+      "runtime_PMDO": "NOT TESTED",
+      "collision": "NOT PROVIDED; route is a review guide, not verified passability."
+    },
+    {
+      "id": "blue_rock_passage",
+      "source": "rockroadpmd.png",
+      "source_sha256": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4",
+      "dimensions": [
+        768,
+        360
+      ],
+      "description": "Passage horizontal élargi : bande de premier plan reculée de72px, modules complets de240px conservés et prolongés à768px.",
+      "layers": [
+        {
+          "id": "01_void",
+          "png": "RelayoutV1_blue_rock_passage_01_void.png",
+          "provenance": "01_void_provenance.npz",
+          "pixels": 276480
+        },
+        {
+          "id": "02_ground",
+          "png": "RelayoutV1_blue_rock_passage_02_ground.png",
+          "provenance": "02_ground_provenance.npz",
+          "pixels": 153600
+        },
+        {
+          "id": "03_back_wall",
+          "png": "RelayoutV1_blue_rock_passage_03_back_wall.png",
+          "provenance": "03_back_wall_provenance.npz",
+          "pixels": 150957
+        },
+        {
+          "id": "04_front_ridge",
+          "png": "RelayoutV1_blue_rock_passage_04_front_ridge.png",
+          "provenance": "04_front_ridge_provenance.npz",
+          "pixels": 43320
+        }
+      ],
+      "operations": [
+        {
+          "layer": "02_ground",
+          "operation": "native homogeneous floor patch quilting, 8px minimum-error overlap, no blending",
+          "source_rectangles": [
+            [
+              0,
+              208,
+              24,
+              224
+            ],
+            [
+              64,
+              208,
+              88,
+              224
+            ],
+            [
+              136,
+              208,
+              160,
+              224
+            ],
+            [
+              168,
+              208,
+              192,
+              224
+            ]
+          ],
+          "seed": 61,
+          "start_y": 160
+        },
+        {
+          "layer": "03_back_wall",
+          "source_rect": [
+            0,
+            0,
+            240,
+            216
+          ],
+          "destination": [
+            0,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "03_back_wall",
+          "source_rect": [
+            0,
+            0,
+            240,
+            216
+          ],
+          "destination": [
+            240,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "03_back_wall",
+          "source_rect": [
+            0,
+            0,
+            240,
+            216
+          ],
+          "destination": [
+            480,
+            0
+          ],
+          "masked": true
+        },
+        {
+          "layer": "03_back_wall",
+          "source_rect": [
+            0,
+            0,
+            48,
+            216
+          ],
+          "destination": [
+            720,
+            0
+          ],
+          "masked": false
+        },
+        {
+          "layer": "04_front_ridge",
+          "source_rect": [
+            0,
+            216,
+            240,
+            288
+          ],
+          "destination": [
+            0,
+            288
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_front_ridge",
+          "source_rect": [
+            0,
+            216,
+            240,
+            288
+          ],
+          "destination": [
+            240,
+            288
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_front_ridge",
+          "source_rect": [
+            0,
+            216,
+            240,
+            288
+          ],
+          "destination": [
+            480,
+            288
+          ],
+          "masked": true
+        },
+        {
+          "layer": "04_front_ridge",
+          "source_rect": [
+            0,
+            216,
+            48,
+            288
+          ],
+          "destination": [
+            720,
+            288
+          ],
+          "masked": true
+        }
+      ],
+      "route_guide": [
+        [
+          8,
+          248
+        ],
+        [
+          192,
+          256
+        ],
+        [
+          384,
+          256
+        ],
+        [
+          576,
+          256
+        ],
+        [
+          752,
+          248
+        ]
+      ],
+      "limits": "Le guide proposait un coude ; non reproduit faute de retours de paroi natifs dans cette référence. Ne pas inventer de raccords par déformation. Sol élargi uniquement avec pixels du couloir natif ; pas de ciel ni d’eau. Grain et jonctions du sol à examiner.",
+      "art_approved": false,
+      "runtime_PMDO": "NOT TESTED",
+      "collision": "NOT PROVIDED; route is a review guide, not verified passability."
+    }
+  ],
+  "workflow": "Generated composition studies only; all exported visible RGB/alpha pixels copied from the unchanged uploaded references with source coordinates. Ground quilting is not applied to cliffs.",
+  "source_identity": "User-provided PMD references from9ec9a081; official scene identity/licensing not independently established.",
+  "grid_px": 8,
+  "runtime": "NOT TESTED",
+  "scope": "First two relayout candidates, not completion of all zones or global guild programme."
+}

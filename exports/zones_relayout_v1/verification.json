@@ -1,0 +1,23 @@
+{
+  "tests_passed": 96,
+  "new_tests": 7,
+  "pixel_source_mismatches": 0,
+  "source_originals_unchanged": true,
+  "layers": 11,
+  "maps": 2,
+  "runtime_PMDO": "NOT TESTED",
+  "Tiled_import": "NOT TESTED",
+  "art_approved": false,
+  "checks": [
+    "Exact source coordinates for every visible RGBA pixel",
+    "Composite equals ordered layers",
+    "Binary alpha, full composite coverage and8px grid",
+    "Original source bytes match9ec9a081",
+    "Whole cliff is one translated native module, not ground quilting"
+  ],
+  "limits": [
+    "Native pixels do not prove artistic seams/collisions/import quality.",
+    "Rock guide bend was not implemented without native return pieces.",
+    "Other reference zones and two panoramic backgrounds remain pending."
+  ]
+}

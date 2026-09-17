@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" tiledversion="1.11.0" name="RelayoutV1_blue_rock_passage_01_void" tilewidth="8" tileheight="8" tilecount="4320" columns="96"><image source="RelayoutV1_blue_rock_passage_01_void.png" width="768" height="360" /></tileset>
