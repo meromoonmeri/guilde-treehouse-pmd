@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV3_forest_cave_07_tree_canopies" tilewidth="8" tileheight="8" columns="64" tilecount="5120"><image source="SouthNorthV3_forest_cave_07_tree_canopies.png" width="512" height="640" /></tileset>

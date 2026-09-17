@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV3_blue_rock_cave_08_front_boulders" tilewidth="8" tileheight="8" columns="64" tilecount="5120"><image source="SouthNorthV3_blue_rock_cave_08_front_boulders.png" width="512" height="640" /></tileset>

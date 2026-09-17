@@ -1,0 +1,98 @@
+"""South-to-north correction. Multi-source native pixels, explicit entrance and continuous path.
+The old horizontal candidates remain historical, not accepted replacements.
+"""
+from pathlib import Path
+import json,hashlib,base64,xml.etree.ElementTree as ET
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+import numpy as np
+from PIL import Image,ImageDraw
+from scipy import ndimage as nd
+R=Path(__file__).resolve().parents[2];O=R/'exports/zones_south_north_v3';W,H=512,640
+FILES=['forêtglomypmdsky.png','rockroadpmd.png','undergroundpmd.png','source/amp_plains_fleurie_v1/references/vast_steppe_layer_3.png','source/amp_plains_fleurie_v1/references/vast_steppe_layer_4.png']
+A=[np.array(Image.open(R/p).convert('RGBA')) for p in FILES]
+class Map:
+ def __init__(self,id):self.id=id;self.layers=[];self.ops=[]
+ def layer(self,name):
+  l=[name,np.zeros((H,W,4),np.uint8),np.full((H,W,3),-1,np.int16)];self.layers.append(l);return l
+ def put(self,l,s,box,pos,mask=None):
+  x0,y0,x1,y1=box;x,y=pos;p=A[s][y0:y1,x0:x1];hh,ww=p.shape[:2];mask=p[:,:,3]>0 if mask is None else mask&(p[:,:,3]>0);assert x>=0 and y>=0 and x+ww<=W and y+hh<=H,(box,pos)
+  sy,sx=np.mgrid[y0:y1,x0:x1];q=np.stack([np.full(sx.shape,s),sx,sy],2);l[1][y:y+hh,x:x+ww][mask]=p[mask];l[2][y:y+hh,x:x+ww][mask]=q[mask];self.ops.append(dict(layer=l[0],source=s,rect=list(box),position=list(pos)))
+ def fill(self,l,s,boxes,mask=None,seed=11):
+  # Overlap quilting is restricted to continuous ground/path materials, never to walls.
+  from source.zones_relayout_v1.build import seam
+  rng=np.random.default_rng(seed);mask=np.ones((H,W),bool) if mask is None else mask;hh=boxes[0][3]-boxes[0][1];ww=boxes[0][2]-boxes[0][0];ov=min(8,hh//2,ww//2)
+  for y in range(0,H,hh-ov):
+   for x in range(0,W,ww-ov):
+    h=min(hh,H-y);w=min(ww,W-x);want=mask[y:y+h,x:x+w]
+    if not want.any():continue
+    old=l[1][y:y+h,x:x+w];occupied=(old[:,:,3]>0)&want;best=None
+    for idx in rng.permutation(len(boxes))[:24]:
+     x0,y0,_,_=boxes[idx];patch=A[s][y0:y0+h,x0:x0+w];cost=((old[:,:,:3].astype(float)-patch[:,:,:3])**2).sum(2);score=cost[occupied].mean() if occupied.any() else rng.random()
+     if best is None or score<best[0]:best=(score,x0,y0,patch,cost)
+    _,x0,y0,patch,cost=best;take=want.copy()
+    if x and w>=ov:take[:,:ov]&=np.arange(ov)[None,:]>=seam(cost[:,:ov])[:,None]
+    if y and h>=ov:take[:ov,:]&=np.arange(ov)[:,None]>=seam(cost[:ov,:].T)[None,:]
+    take|=want&(old[:,:,3]==0);sy,sx=np.mgrid[y0:y0+h,x0:x0+w];q=np.stack([np.full(sx.shape,s),sx,sy],2);old[take]=patch[take];l[2][y:y+h,x:x+w][take]=q[take]
+  self.ops.append(dict(layer=l[0],source=s,method='native ground patch overlap, no blending',patches=boxes,seed=seed))
+ def save(self,title,entrance,pathmask,notes,export_height=640):
+  d=O/self.id;d.mkdir(parents=True,exist_ok=True);comp=Image.new('RGBA',(W,export_height));ls=[];pathmask=pathmask[:export_height]
+  for name,a,q in self.layers:
+   a=a[:export_height];q=q[:export_height];fn=f'SouthNorthV3_{self.id}_{name}.png';im=Image.fromarray(a);im.save(d/fn);comp.alpha_composite(im);np.savez_compressed(d/(name+'_source.npz'),source_sxy=q)
+   root=ET.Element('tileset',version='1.10',name=Path(fn).stem,tilewidth='8',tileheight='8',columns='64',tilecount=str(W//8*(export_height//8)));ET.SubElement(root,'image',source=fn,width=str(W),height=str(export_height));ET.ElementTree(root).write(d/Path(fn).with_suffix('.tsx').name,encoding='utf-8',xml_declaration=True);ls.append(dict(id=name,file=fn,provenance=name+'_source.npz'))
+  comp.save(d/'composite.png');Image.fromarray(np.uint8(pathmask)*255).save(d/'path_connectivity_mask.png');review=comp.copy();dr=ImageDraw.Draw(review);dr.line([(int(np.flatnonzero(pathmask[y]).mean()),y) for y in range(entrance[1],export_height,8) if pathmask[y].any()],fill=(255,90,60,255),width=2);dr.ellipse((entrance[0]-6,entrance[1]-6,entrance[0]+6,entrance[1]+6),outline=(255,255,0,255),width=2);review.save(d/'access_review_NOT_RUNTIME.png')
+  return dict(id=self.id,title=title,size=[W,export_height],orientation='SOUTH_TO_NORTH',entrance=entrance,entrance_trigger_candidate=[entrance[0]-16,entrance[1]-8,32,16],south_access=[224,export_height-8,64,8],layers=ls,operations=self.ops,notes=notes,runtime='NOT TESTED',art_approved=False,connectivity='Pixel path mask continuity only, not engine collision or warp validation.')
+def path_shape(start,width,centers):
+ yy,xx=np.mgrid[:H,:W];ys=np.array([p[1] for p in centers]);xs=np.array([p[0] for p in centers]);middle=np.interp(yy,ys,xs);jitter=((yy//8)%5-2)*1;return (yy>=start)&(np.abs(xx-middle)<=width/2+jitter)
+def forest():
+ m=Map('forest_cave');a=A[0];ground=m.layer('01_soil');m.fill(ground,0,[(x,y,x+24,y+16) for x in [0,24,48,72,96] for y in [144,160,176]],seed=12)
+ pm=path_shape(144,64,[(256,144),(216,256),(248,384),(272,504),(256,639)])
+ # Use only fully native earth interior patches, not green-fringed rectangles.
+ rgb=a[:,:,:3].astype(float);earth=(rgb[:,:,0]>rgb[:,:,1]*1.025)&(rgb[:,:,2]>rgb[:,:,1]*.52);boxes=[]
+ for y in range(144,184):
+  for x in range(176,368):
+   if earth[y:y+8,x:x+8].shape==(8,8) and earth[y:y+8,x:x+8].all():boxes.append((x,y,x+8,y+8))
+ assert boxes;path=m.layer('02_continuous_earth_path');m.fill(path,0,boxes,pm,19)
+ back=m.layer('03_north_canopy')
+ for box,pos in [((0,0,208,144),(0,0)),((128,0,336,144),(304,0))]:
+  x0,y0,x1,y1=box;p=a[y0:y1,x0:x1];rgb=p[:,:,:3].astype(float);mask=(rgb[:,:,1]>rgb[:,:,2]*1.4)&(rgb[:,:,0]<180);m.put(back,0,box,pos,nd.binary_fill_holes(mask))
+ box=(288,0,600,216);p=a[:216,288:600];rgb=p[:,:,:3].astype(float);mask=(rgb[:,:,0]>=rgb[:,:,1]*.97)&(rgb[:,:,2]>=rgb[:,:,1]*.56);lab,n=nd.label(mask);counts=np.bincount(lab.ravel());keep=counts>=12;keep[0]=False;mask=nd.binary_fill_holes(keep[lab]);portal=Image.new('L',(312,216));d=ImageDraw.Draw(portal);d.polygon([(132,100),(148,72),(180,64),(208,88),(200,136),(184,160),(148,144)],fill=255);portal=np.array(portal)>0
+ wall=m.layer('04_white_cliff');m.put(wall,0,box,(80,0),mask&~portal)
+ for x in [384,448]:
+  p=a[:216,536:600];rgb=p[:,:,:3].astype(float);ext=(rgb[:,:,0]>=rgb[:,:,1]*.97)&(rgb[:,:,2]>=rgb[:,:,1]*.56);m.put(wall,0,(536,0,600,216),(x,0),nd.binary_fill_holes(ext))
+ cave=m.layer('05_cave_opening');m.put(cave,0,box,(80,0),mask&portal)
+ # Genuine full native foliage + its corresponding trunk. Complementary Halcyon sources, no recoloring.
+ trunks=m.layer('06_tree_trunks');foliage=m.layer('07_tree_canopies')
+ positions=[(x,y) for y in [128,208,288,368,448,520] for x in [0,368]]+[(72,320),(296,232)]
+ for x,y in positions:
+  m.put(trunks,3,(72,160,120,216),(x+56,y+64));m.put(foliage,4,(16,96,160,216),(x,y))
+ stones=m.layer('08_stones')
+ for pos in [(176,280),(320,400),(176,536)]:
+  p=a[184:208,400:440];rgb=p[:,:,:3].astype(float);mask=(rgb[:,:,2]>rgb[:,:,1]*.65)&(rgb[:,:,0]>rgb[:,:,1]*.95);m.put(stones,0,(400,184,440,208),pos,nd.binary_dilation(nd.binary_fill_holes(mask)))
+ # The original cliff foot had a foreground bush cover; preserve it on the north-east rim only.
+ shrubs=m.layer('09_cliff_foot_bushes');p=a[184:264,408:600];rgb=p[:,:,:3].astype(float);mask=(rgb[:,:,1]>rgb[:,:,0]*1.04)&(rgb[:,:,0]<168)&(rgb[:,:,2]<rgb[:,:,1]*.65)&np.any(p[:,:,:3]!=a[311,0,:3],axis=2);mask=nd.binary_fill_holes(mask);m.put(shrubs,0,(408,184,600,264),(320,184),mask)
+ return m.save('Forêt — arrivée sud, grotte au nord',[256,144],pm,'Sol, chemin et falaise de la référence forêt conservés. Pour disposer de vrais arbres entiers latéraux sans miroir, complément natif Vast Steppe (tronc et canopée séparés), explicitement distinct de la canopée de la référence. Aucun pixel généré ni recoloration. Le pied de falaise demeure couvert comme dans la source.')
+def rock():
+ m=Map('blue_rock_cave');a=A[2][0:408,408:816];bg=m.layer('00_dark_backdrop');bg[1][:]=A[2][0,0];bg[2][:]=[2,0,0]
+ yy,xx=np.mgrid[:408,:408];opaque=np.any(a[:,:,:3]!=A[2][0,0,:3],axis=2)
+ floor_shape=Image.new('L',(408,408));ImageDraw.Draw(floor_shape).polygon([(112,248),(292,248),(276,300),(260,352),(240,408),(160,408),(140,352),(124,300)],fill=255);floor=np.array(floor_shape)>0
+ portal=(xx>=128)&(xx<280)&(yy>=56)&(yy<272);mouth=(xx>=176)&(xx<232)&(yy>=144)&(yy<224)
+ ground=m.layer('01_native_cave_soil');m.put(ground,2,(408,0,816,408),(56,0),floor&~portal)
+ pm=path_shape(248,56,[(256,248),(264,320),(256,408),(256,639)]);global_floor=np.zeros((H,W),bool);global_floor[:408,56:464]=floor;visible_path=pm&global_floor
+ path=m.layer('02_rockroad_path');m.fill(path,1,[(x,208,x+24,224) for x in [0,64,136,168]],visible_path,41)
+ west=m.layer('03_west_native_wall');east=m.layer('04_east_native_wall');m.put(west,2,(408,0,816,408),(56,0),opaque&~floor&~portal&(xx<204));m.put(east,2,(408,0,816,408),(56,0),opaque&~floor&~portal&(xx>=204))
+ gate=m.layer('05_gateway_frame');m.put(gate,2,(408,0,816,408),(56,0),portal&~mouth)
+ cave=m.layer('06_open_cave');m.put(cave,2,(408,0,816,408),(56,0),mouth)
+ # Native rockroad boulder masses frame the north, while coherent real return geometry remains untouched below.
+ north=m.layer('07_rockroad_north_masses')
+ for sx,x in [(0,0),(80,352)]:
+  p=A[1][:216,sx:sx+160];rgb=p[:,:,:3];sy=np.indices(p.shape[:2])[0];mask=np.any(rgb!=A[1][0,80,:3],axis=2)&((sy<176)|(rgb[:,:,0]<95));mask=nd.binary_fill_holes(mask);m.put(north,1,(sx,0,sx+160,216),(x,0),mask)
+ # Full approach mask joins the ground route to the native gateway threshold; this is not a collision claim.
+ access=pm.copy();access[176:248,240:272]=True
+ return m.save('Roches bleues — sud vers entrée souterraine nord',[256,176],access,'Le passage horizontal seul ne contient ni grotte ni retours verticaux. Composition complémentaire depuis le panneau ouvert canonique undergroundpmd : sol, retours gauche/droite et portail intacts à leur échelle. Chemin clair et masses nord viennent de rockroadpmd. Aucune forme miroir ni grotte noire inventée ; portail maçonné natif explicitement signalé.',408)
+def main():
+ O.mkdir(parents=True,exist_ok=True);entries=[forest(),rock()];sources=[dict(id=i,file=f,sha256=hashlib.sha256((R/f).read_bytes()).hexdigest()) for i,f in enumerate(FILES)];manifest=dict(maps=entries,sources=sources,grid=8,status='South-to-north correction candidates. Previous horizontal versions superseded for this request, not deleted.',runtime='NOT TESTED');(O/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+ def uri(p):return 'data:image/png;base64,'+base64.b64encode(p.read_bytes()).decode()
+ data=[{**m,'layers':[{**l,'uri':uri(O/m['id']/l['file'])} for l in m['layers']],'route':uri(O/m['id']/'access_review_NOT_RUNTIME.png')} for m in entries]
+ page='''<!doctype html><html lang="fr"><meta charset="utf-8"><title>Correction · entrées sud → nord</title><style>body{background:#14251f;color:#e3e8d8;font:16px system-ui;max-width:1250px;margin:32px auto;padding:20px}p{line-height:1.6;color:#c7d1bf}.maps{display:flex;flex-wrap:wrap;gap:24px}article{background:#24382e;border:1px solid #4d6249;border-radius:12px;padding:18px;width:550px;box-sizing:border-box}canvas,img{max-width:100%;image-rendering:pixelated}canvas{background:#454047}label{display:inline-block;margin:8px;font-size:13px}h2{font-size:23px}small{color:#edcf83}details{margin:18px 0}</style><h1>Vraies entrées · sud → nord</h1><p>Les anciens élargissements horizontaux ne répondent pas à la demande et sont remplacés ici par deux propositions sud–nord (forêt512×640, roches512×408). Arrivée dégagée au sud, chemin continu et entrée de grotte au nord. Les pixels viennent de sources natives explicitement indiquées, sans rotation, miroir ni recoloration.</p><p>Calques indépendants pour sol, chemin, parois, entrée, arbres et premier plan. Les compléments natifs (arbres entiers et portail ouvert) sont signalés : ils ne sont pas présentés comme présents dans la seule référence initiale. Tests de chemin hors moteur uniquement ; pas de collision/warp validés.</p><div class="maps" id="maps"></div><script>const data=DATA;for(const s of data){const a=document.createElement('article');a.innerHTML='<h2>'+s.title+'</h2><small>NORD · GROTTE ↑<br>'+s.size.join(' × ')+' px · SUD : arrivée au bas de l’image</small>';const c=document.createElement('canvas');c.width=s.size[0];c.height=s.size[1];a.append(c);const controls=document.createElement('div');a.append(controls);const ctx=c.getContext('2d'),imgs=[],checks=[];function draw(){ctx.clearRect(0,0,c.width,c.height);imgs.forEach((im,i)=>{if(checks[i].checked&&im.complete)ctx.drawImage(im,0,0)})}s.layers.forEach(l=>{const label=document.createElement('label'),ch=document.createElement('input');ch.type='checkbox';ch.checked=true;ch.onchange=draw;checks.push(ch);label.append(ch,document.createTextNode(l.id));controls.append(label);const im=new Image();imgs.push(im);im.onload=draw;im.src=l.uri});const d=document.createElement('details');d.innerHTML='<summary>Vérifier le trajet — pas une collision moteur</summary><img src="'+s.route+'">';a.append(d);const p=document.createElement('p');p.textContent=s.notes;a.append(p);document.getElementById('maps').append(a)}</script></html>''';(R/'apercu_entrees_sud_nord_v3.html').write_text(page.replace('const data=DATA;','const data='+json.dumps(data,ensure_ascii=False)+';'));print('2 south-to-north entrances built.')
+if __name__=='__main__':main()

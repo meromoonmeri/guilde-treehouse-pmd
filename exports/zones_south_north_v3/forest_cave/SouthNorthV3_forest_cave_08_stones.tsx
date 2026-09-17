@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV3_forest_cave_08_stones" tilewidth="8" tileheight="8" columns="64" tilecount="5120"><image source="SouthNorthV3_forest_cave_08_stones.png" width="512" height="640" /></tileset>

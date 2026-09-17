@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV3_blue_rock_cave_01_native_cave_soil" tilewidth="8" tileheight="8" columns="64" tilecount="3264"><image source="SouthNorthV3_blue_rock_cave_01_native_cave_soil.png" width="512" height="408" /></tileset>
