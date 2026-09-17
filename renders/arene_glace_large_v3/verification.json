@@ -1,0 +1,25 @@
+{
+  "tests_passed": 13,
+  "javascript_syntax": "PASS",
+  "interactive_browser_test": "NOT RUN",
+  "size": [
+    768,
+    512
+  ],
+  "method": "New whole landscape generation, uniformly scaled; independent regenerated sky and generated clean floor. No map-chunk terrain assembly.",
+  "loop": {
+    "width": 792,
+    "frames": 198,
+    "seconds": 26.4,
+    "frame198_equals_frame0": true,
+    "all_steps_including_join_translate_exactly_4px": true,
+    "spatial_seam_columns_fully_transparent": true
+  },
+  "terrain_stationary": true,
+  "stars_separate": true,
+  "webp_lossless_RGBA": true,
+  "native_game_cycle_recovered": false,
+  "PMDO_runtime": "NOT TESTED",
+  "art_approved": false,
+  "other_zones_complete": false
+}

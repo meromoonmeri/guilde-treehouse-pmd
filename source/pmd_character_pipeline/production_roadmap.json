@@ -1,5 +1,5 @@
 {
-  "updated_on": "2026-09-17",
+  "updated_on": "2026-09-18",
   "status": "User-requested roadmap; planned entries are not completed assets or background jobs",
   "order": [
     {
@@ -249,5 +249,21 @@
     "supersedes_method": "exports/ice_arena_aurora_v1 terrain assembly",
     "scope": "Current generated environment render request; preserve separate Metano-specific canonical restrictions and prior approved assets.",
     "all_environment_work_complete": false
+  },
+  "environment_wide_wrap_correction": {
+    "user_request": "Régénérer le ciel séparément ; aurore wrap overlay boucle parfaite ; arène plus large et moins étirée.",
+    "status": "V3 generated candidate delivered; awaiting visual review; runtime not tested",
+    "source": "source/arene_glace_large_v3/",
+    "renders": "renders/arene_glace_large_v3/",
+    "viewer": "apercu_arene_glace_large_v3.html",
+    "size": [
+      768,
+      512
+    ],
+    "method": "Fresh landscape full-scene generation, uniformly scaled, no map-piece assembly or stretched old portrait. New separate sky, stars, generated floor and terrain depth planes.",
+    "aurora": "Canonical drawing in authored poses, alpha-feathered periodic strip792px. Newly authored horizontal30px/s wrap,198steps,26.4s. Not official extracted cycle.",
+    "tests": 13,
+    "other_zones_complete": false,
+    "runtime_validated": false
   }
 }

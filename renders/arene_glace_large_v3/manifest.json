@@ -1,0 +1,156 @@
+{
+  "size": [
+    768,
+    512
+  ],
+  "previous_size": [
+    512,
+    640
+  ],
+  "layout": "New landscape generation, broad oval arena and short south approach; not a stretched old portrait.",
+  "terrain_method": "Full generated terrain on magenta, generated full floor, disjoint aligned depth layers. No source-map chunk assembly.",
+  "sky": "New separately generated sky; stars extracted into their own static overlay using local median cleanup. Recomposition restores generated sky exactly. No aurora baked in.",
+  "normalization": {
+    "terrain": {
+      "input_size": [
+        1264,
+        848
+      ],
+      "uniform_scale": 0.6037735849056604,
+      "resized_size": [
+        763,
+        512
+      ],
+      "placement": [
+        2,
+        0
+      ],
+      "method": "uniform nearest-neighbor fit; tiny margins padded, not aspect-ratio stretching"
+    },
+    "floor": {
+      "input_size": [
+        1264,
+        848
+      ],
+      "uniform_scale": 0.6037735849056604,
+      "resized_size": [
+        763,
+        512
+      ],
+      "placement": [
+        2,
+        0
+      ],
+      "method": "uniform nearest-neighbor fit; tiny margins padded, not aspect-ratio stretching"
+    },
+    "sky": {
+      "input_size": [
+        1264,
+        848
+      ],
+      "uniform_scale": 0.6037735849056604,
+      "resized_size": [
+        763,
+        512
+      ],
+      "placement": [
+        2,
+        0
+      ],
+      "method": "uniform nearest-neighbor fit; tiny margins padded, not aspect-ratio stretching"
+    }
+  },
+  "sources": [
+    {
+      "file": "renders/arene_glace_large_v3/bruts/terrain_magenta.png",
+      "sha256": "e11bf91583156be315088959a210f561f302dfc141e852b1f1c5a6c3f805a402"
+    },
+    {
+      "file": "renders/arene_glace_large_v3/bruts/sol_complet.png",
+      "sha256": "2025ab60c8c03e59091814a9926c4dc6316a407cdc56628fcca6715d17925d56"
+    },
+    {
+      "file": "renders/arene_glace_large_v3/bruts/ciel.png",
+      "sha256": "e76efb471850348a4dc7b0210ad7ef9eb993952155d033f6f8a13a73715b9d90"
+    }
+  ],
+  "layers": [
+    {
+      "id": "01_sol_complet",
+      "file": "calques/AreneLargeV3_01_sol_complet.png"
+    },
+    {
+      "id": "02_sol_visible",
+      "file": "calques/AreneLargeV3_02_sol_visible.png"
+    },
+    {
+      "id": "03_acces_sud",
+      "file": "calques/AreneLargeV3_03_acces_sud.png"
+    },
+    {
+      "id": "04_reliefs_arriere",
+      "file": "calques/AreneLargeV3_04_reliefs_arriere.png"
+    },
+    {
+      "id": "05_reliefs_avant_gauche",
+      "file": "calques/AreneLargeV3_05_reliefs_avant_gauche.png"
+    },
+    {
+      "id": "06_reliefs_avant_droit",
+      "file": "calques/AreneLargeV3_06_reliefs_avant_droit.png"
+    },
+    {
+      "id": "07_petits_reliefs",
+      "file": "calques/AreneLargeV3_07_petits_reliefs.png"
+    }
+  ],
+  "sky_file": "calques/AreneLargeV3_00_ciel_genere.png",
+  "stars_file": "calques/AreneLargeV3_00b_etoiles.png",
+  "aurora": {
+    "tile": "animation/AreneLargeV3_Aurore_Wrap792.png",
+    "period_width": 792,
+    "height": 240,
+    "viewport_width": 768,
+    "step_pixels": 4,
+    "frames": 198,
+    "frame_ticks": 8,
+    "duration_ms": 26400,
+    "speed_pixels_per_second": 30,
+    "direction": "left",
+    "repeat_x": true,
+    "formula": "viewport(x,y,f)=tile((x+4*(f mod198)) mod792,y)",
+    "sources": [
+      {
+        "file": "exports/ice_arena_aurora_v1/aurora_frames/IceAuroraV1_Ribbons_00.png",
+        "sha256": "985ebfceb32cade26a0ea9ac4a83219c688438257fae9b34dfd570644149aa23",
+        "position": [
+          0,
+          8
+        ]
+      },
+      {
+        "file": "exports/ice_arena_aurora_v1/aurora_frames/IceAuroraV1_Ribbons_16.png",
+        "sha256": "0ec0fc2f17410b3d400aaffae7d2d44566d33be83c5d2687a7ec225cee2d9258",
+        "position": [
+          264,
+          0
+        ]
+      },
+      {
+        "file": "exports/ice_arena_aurora_v1/aurora_frames/IceAuroraV1_Ribbons_32.png",
+        "sha256": "f0dd5244224f040f2f664297bcbee4243f793cc7ed9ab8b1938894162dd1da5c",
+        "position": [
+          528,
+          16
+        ]
+      }
+    ],
+    "edge_treatment": "24px cosine alpha fade on native motif edges,20px fade at their lower edges. First/last tile columns exactly transparent.",
+    "origin": "Canonical aurora drawing in previously authored poses, newly arranged/alpha-feathered for wrap. Not an extracted official game cycle."
+  },
+  "loop_assertion": "Frame198 equals frame0 exactly; frame197→0 advances exactly4px like every other preview step. Continuous viewer clock wraps at26.4seconds.",
+  "runtime_PMDO": "NOT TESTED",
+  "art_approved": false,
+  "other_zones_complete": false,
+  "layer_limit": "Terrain depth partitions; hidden floor generated, hidden cliff backfaces not reconstructed."
+}

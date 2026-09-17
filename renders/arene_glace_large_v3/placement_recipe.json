@@ -1,0 +1,37 @@
+{
+  "type": "descriptive_recipe_not_native_engine_file",
+  "canvas": [
+    768,
+    512
+  ],
+  "order": [
+    "sky",
+    "stars",
+    "aurora_wrap",
+    "01_sol_complet",
+    "02_sol_visible",
+    "03_acces_sud",
+    "04_reliefs_arriere",
+    "05_reliefs_avant_gauche",
+    "06_reliefs_avant_droit",
+    "07_petits_reliefs"
+  ],
+  "aurora_texture": [
+    792,
+    240
+  ],
+  "repeat_x": true,
+  "position": [
+    0,
+    0
+  ],
+  "velocity_px_per_second": [
+    -30,
+    0
+  ],
+  "loop_seconds": 26.4,
+  "preview_frame_ticks": 8,
+  "preview_frames": 198,
+  "formula": "source_x = (screen_x + floor(elapsed_seconds *30)) %792",
+  "note": "Convert timing/movement units for target engine and test parallax/import. Static sky and terrain do not scroll."
+}
