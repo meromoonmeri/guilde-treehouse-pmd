@@ -1,0 +1,7300 @@
+{
+  "date": "2026-09-17",
+  "commit": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+  "upstream_head_matches_pin": true,
+  "scope": "Nine explicitly named guild members, standard/base slots. Relevant cutscene and female variants inspected separately; no identity/gender decision invented.",
+  "contract_note": "The ten-action dungeon and 32-action full profiles are project targets. Missing full actions are not automatically requirements of every quest scene or upstream submission.",
+  "members": [
+    {
+      "english_name": "Gardevoir",
+      "french_name": "Gardevoir",
+      "slot": "0282",
+      "name": "Gardevoir",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "SpAttack",
+        "Appeal",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            12,
+            8,
+            12
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Attack",
+          "copy_of": "Attack",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Charge",
+          "copy_of": "Charge",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "SpAttack": {
+          "source_action": "Appeal",
+          "copy_of": "Appeal",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            6,
+            1,
+            4,
+            5,
+            4,
+            5,
+            4
+          ]
+        },
+        "Appeal": {
+          "source_action": "Appeal",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            6,
+            1,
+            4,
+            5,
+            4,
+            5,
+            4
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            12,
+            6,
+            12
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 14,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          128,
+          320
+        ],
+        "Offsets": [
+          128,
+          320
+        ],
+        "Shadow": [
+          128,
+          320
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Crying.png",
+        "Determined.png",
+        "Dizzy.png",
+        "Happy.png",
+        "Inspired.png",
+        "Joyous.png",
+        "Normal.png",
+        "Pain.png",
+        "Sad.png",
+        "Shouting.png",
+        "Sigh.png",
+        "Stunned.png",
+        "Surprised.png",
+        "Teary-Eyed.png",
+        "Worried.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Farfetch’d",
+      "french_name": "Canarticho",
+      "slot": "0083",
+      "name": "Farfetch_d",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "Twirl",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            6,
+            12,
+            6,
+            12
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            88,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Strike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            4,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Charge",
+          "copy_of": "Charge",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Twirl": {
+          "source_action": "Rotate",
+          "copy_of": "Rotate",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            12,
+            30,
+            12
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 13,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          96,
+          256
+        ],
+        "Offsets": [
+          96,
+          256
+        ],
+        "Shadow": [
+          96,
+          256
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Angry^.png",
+        "Crying.png",
+        "Crying^.png",
+        "Determined.png",
+        "Determined^.png",
+        "Dizzy.png",
+        "Dizzy^.png",
+        "Happy.png",
+        "Happy^.png",
+        "Inspired.png",
+        "Inspired^.png",
+        "Joyous.png",
+        "Joyous^.png",
+        "Normal.png",
+        "Normal^.png",
+        "Pain.png",
+        "Pain^.png",
+        "Sad.png",
+        "Sad^.png",
+        "Shouting.png",
+        "Shouting^.png",
+        "Sigh.png",
+        "Sigh^.png",
+        "Stunned.png",
+        "Stunned^.png",
+        "Surprised.png",
+        "Surprised^.png",
+        "Teary-Eyed.png",
+        "Teary-Eyed^.png",
+        "Worried.png",
+        "Worried^.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Pancham",
+      "french_name": "Pandespiègle",
+      "slot": "0674",
+      "name": "Pancham",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "Punch",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            10,
+            8,
+            10
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Strike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            104
+          ],
+          "durations_ticks": [
+            4,
+            1,
+            2,
+            6,
+            2,
+            3,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Charge",
+          "copy_of": "Charge",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Punch": {
+          "source_action": "Punch",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            55,
+            30,
+            8,
+            12,
+            8,
+            20
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            80,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            64
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 13,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          144,
+          320
+        ],
+        "Offsets": [
+          144,
+          320
+        ],
+        "Shadow": [
+          144,
+          320
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Angry^.png",
+        "Crying.png",
+        "Crying^.png",
+        "Determined.png",
+        "Determined^.png",
+        "Dizzy.png",
+        "Dizzy^.png",
+        "Happy.png",
+        "Happy^.png",
+        "Inspired.png",
+        "Inspired^.png",
+        "Joyous.png",
+        "Joyous^.png",
+        "Normal.png",
+        "Normal^.png",
+        "Pain.png",
+        "Pain^.png",
+        "Sad.png",
+        "Sad^.png",
+        "Shouting.png",
+        "Shouting^.png",
+        "Sigh.png",
+        "Sigh^.png",
+        "Stunned.png",
+        "Stunned^.png",
+        "Surprised.png",
+        "Surprised^.png",
+        "Teary-Eyed.png",
+        "Teary-Eyed^.png",
+        "Worried.png",
+        "Worried^.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Bagon",
+      "french_name": "Draby",
+      "slot": "0371",
+      "name": "Bagon",
+      "sprite_tracker_level": 2,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Bite",
+        "Shoot",
+        "Rumble",
+        "Emit",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate",
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "Faint",
+        "HitGround"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            10,
+            8,
+            10
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Bite": {
+          "source_action": "Bite",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rumble": {
+          "source_action": "Emit",
+          "copy_of": "Emit",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Emit": {
+          "source_action": "Emit",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            6,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            64
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            40,
+            10,
+            14,
+            10
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            64
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "EventSleep": {
+          "source_action": "EventSleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            24
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Wake": {
+          "source_action": "Wake",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            6,
+            14,
+            4,
+            10
+          ]
+        },
+        "Eat": {
+          "source_action": "Eat",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6,
+            8
+          ]
+        },
+        "Tumble": {
+          "source_action": "Tumble",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Pose": {
+          "source_action": "Pose",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            12,
+            2,
+            8
+          ]
+        },
+        "Pull": {
+          "source_action": "Pull",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            10,
+            12,
+            10,
+            12,
+            10,
+            12,
+            10
+          ]
+        },
+        "Pain": {
+          "source_action": "Pain",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            4,
+            1,
+            1,
+            1,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Float": {
+          "source_action": "Float",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            24
+          ],
+          "durations_ticks": [
+            9,
+            18,
+            9,
+            14
+          ]
+        },
+        "DeepBreath": {
+          "source_action": "DeepBreath",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            12,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            10,
+            4
+          ]
+        },
+        "Nod": {
+          "source_action": "Nod",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6
+          ]
+        },
+        "Sit": {
+          "source_action": "Sit",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            8,
+            8
+          ]
+        },
+        "LookUp": {
+          "source_action": "LookUp",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            6
+          ]
+        },
+        "Sink": {
+          "source_action": "Sink",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "Trip": {
+          "source_action": "Trip",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            6,
+            4,
+            4,
+            4
+          ]
+        },
+        "Laying": {
+          "source_action": "Laying",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            24
+          ],
+          "durations_ticks": [
+            12
+          ]
+        },
+        "LeapForth": {
+          "source_action": "LeapForth",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            80
+          ],
+          "durations_ticks": [
+            6,
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "Head": {
+          "source_action": "Head",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            4
+          ]
+        },
+        "Cringe": {
+          "source_action": "Cringe",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            64
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "LostBalance": {
+          "source_action": "LostBalance",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            8
+          ]
+        },
+        "TumbleBack": {
+          "source_action": "TumbleBack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Faint": {
+          "source_action": "Faint",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            12,
+            4,
+            10
+          ]
+        },
+        "HitGround": {
+          "source_action": "HitGround",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            4,
+            4
+          ]
+        }
+      },
+      "action_count": 36,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          96,
+          320
+        ],
+        "Offsets": [
+          96,
+          320
+        ],
+        "Shadow": [
+          96,
+          320
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Crying.png",
+        "Determined.png",
+        "Dizzy.png",
+        "Happy.png",
+        "Inspired.png",
+        "Joyous.png",
+        "Normal.png",
+        "Pain.png",
+        "Sad.png",
+        "Shouting.png",
+        "Sigh.png",
+        "Stunned.png",
+        "Surprised.png",
+        "Teary-Eyed.png",
+        "Worried.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Shroomish",
+      "french_name": "Balignon",
+      "slot": "0285",
+      "name": "Shroomish",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "Twirl",
+        "Shake",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            8,
+            10,
+            8,
+            10
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Attack",
+          "copy_of": "Attack",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Twirl": {
+          "source_action": "Shake",
+          "copy_of": "Shake",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            4,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        "Shake": {
+          "source_action": "Shake",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            4,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            40,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            80,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 14,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          120,
+          192
+        ],
+        "Offsets": [
+          120,
+          192
+        ],
+        "Shadow": [
+          120,
+          192
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Angry^.png",
+        "Crying.png",
+        "Crying^.png",
+        "Determined.png",
+        "Determined^.png",
+        "Dizzy.png",
+        "Dizzy^.png",
+        "Happy.png",
+        "Happy^.png",
+        "Inspired.png",
+        "Inspired^.png",
+        "Joyous.png",
+        "Joyous^.png",
+        "Normal.png",
+        "Normal^.png",
+        "Pain.png",
+        "Pain^.png",
+        "Sad.png",
+        "Sad^.png",
+        "Shouting.png",
+        "Shouting^.png",
+        "Sigh.png",
+        "Sigh^.png",
+        "Stunned.png",
+        "Stunned^.png",
+        "Surprised.png",
+        "Surprised^.png",
+        "Teary-Eyed.png",
+        "Teary-Eyed^.png",
+        "Worried.png",
+        "Worried^.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Happiny",
+      "french_name": "Ptiravi",
+      "slot": "0440",
+      "name": "Happiny",
+      "sprite_tracker_level": 2,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "Dance",
+        "Appeal",
+        "Shake",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate",
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "Faint",
+        "HitGround"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            2,
+            8,
+            4,
+            6,
+            2,
+            8,
+            4
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            6,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Attack",
+          "copy_of": "Attack",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            6,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Dance": {
+          "source_action": "Shake",
+          "copy_of": "Shake",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            4,
+            8,
+            4,
+            8,
+            4,
+            8,
+            4
+          ]
+        },
+        "Appeal": {
+          "source_action": "Shake",
+          "copy_of": "Shake",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            4,
+            8,
+            4,
+            8,
+            4,
+            8,
+            4
+          ]
+        },
+        "Shake": {
+          "source_action": "Shake",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            4,
+            8,
+            4,
+            8,
+            4,
+            8,
+            4
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            30,
+            14,
+            8,
+            14,
+            8
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            64
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "EventSleep": {
+          "source_action": "EventSleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Wake": {
+          "source_action": "Wake",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            6,
+            14,
+            4,
+            10
+          ]
+        },
+        "Eat": {
+          "source_action": "Eat",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6,
+            8
+          ]
+        },
+        "Tumble": {
+          "source_action": "Tumble",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Pose": {
+          "source_action": "Pose",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            12,
+            2,
+            8
+          ]
+        },
+        "Pull": {
+          "source_action": "Pull",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            10,
+            12,
+            10,
+            12,
+            10,
+            12,
+            10
+          ]
+        },
+        "Pain": {
+          "source_action": "Pain",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            1,
+            1,
+            1,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Float": {
+          "source_action": "Float",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            9,
+            18,
+            9,
+            14
+          ]
+        },
+        "DeepBreath": {
+          "source_action": "DeepBreath",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            12,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            10,
+            4
+          ]
+        },
+        "Nod": {
+          "source_action": "Nod",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6
+          ]
+        },
+        "Sit": {
+          "source_action": "Sit",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            8,
+            8,
+            8
+          ]
+        },
+        "LookUp": {
+          "source_action": "LookUp",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            6,
+            6
+          ]
+        },
+        "Sink": {
+          "source_action": "Sink",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "Trip": {
+          "source_action": "Trip",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            6,
+            4,
+            4,
+            4
+          ]
+        },
+        "Laying": {
+          "source_action": "Laying",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            12
+          ]
+        },
+        "LeapForth": {
+          "source_action": "LeapForth",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            72
+          ],
+          "durations_ticks": [
+            6,
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "Head": {
+          "source_action": "Head",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            4
+          ]
+        },
+        "Cringe": {
+          "source_action": "Cringe",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "LostBalance": {
+          "source_action": "LostBalance",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            8
+          ]
+        },
+        "TumbleBack": {
+          "source_action": "TumbleBack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Faint": {
+          "source_action": "Faint",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            12,
+            4,
+            10
+          ]
+        },
+        "HitGround": {
+          "source_action": "HitGround",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            4,
+            4
+          ]
+        }
+      },
+      "action_count": 37,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          160,
+          320
+        ],
+        "Offsets": [
+          160,
+          320
+        ],
+        "Shadow": [
+          160,
+          320
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Crying.png",
+        "Determined.png",
+        "Dizzy.png",
+        "Happy.png",
+        "Inspired.png",
+        "Joyous.png",
+        "Normal.png",
+        "Pain.png",
+        "Sad.png",
+        "Shouting.png",
+        "Sigh.png",
+        "Stunned.png",
+        "Surprised.png",
+        "Teary-Eyed.png",
+        "Worried.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Pachirisu",
+      "french_name": "Pachirisu",
+      "slot": "0417",
+      "name": "Pachirisu",
+      "sprite_tracker_level": 2,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "QuickStrike",
+        "Shoot",
+        "Appeal",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate",
+        "EventSleep",
+        "Wake",
+        "Float",
+        "Laying",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "Faint",
+        "HitGround"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            6,
+            4,
+            6,
+            4,
+            6,
+            4,
+            6,
+            4
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            72
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "QuickStrike": {
+          "source_action": "QuickStrike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            112,
+            120
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            48
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Appeal": {
+          "source_action": "Appeal",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            48
+          ],
+          "durations_ticks": [
+            8,
+            10,
+            8,
+            10,
+            8,
+            10
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            30,
+            1,
+            3,
+            5,
+            6,
+            6,
+            5,
+            3,
+            1
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            96
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            32
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "EventSleep": {
+          "source_action": "EventSleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Wake": {
+          "source_action": "Wake",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            48
+          ],
+          "durations_ticks": [
+            8,
+            6,
+            4,
+            14,
+            10
+          ]
+        },
+        "Eat": {
+          "source_action": "Eat",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6,
+            8
+          ]
+        },
+        "Tumble": {
+          "source_action": "Tumble",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            56
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Pose": {
+          "source_action": "Pose",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            56
+          ],
+          "durations_ticks": [
+            8,
+            1,
+            3,
+            2,
+            8
+          ]
+        },
+        "Pull": {
+          "source_action": "Pull",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            10,
+            12,
+            10,
+            12,
+            10,
+            12,
+            10
+          ]
+        },
+        "Pain": {
+          "source_action": "Pain",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            1,
+            1,
+            1,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Float": {
+          "source_action": "Float",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            32
+          ],
+          "durations_ticks": [
+            9,
+            18,
+            9,
+            14
+          ]
+        },
+        "DeepBreath": {
+          "source_action": "DeepBreath",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            48
+          ],
+          "durations_ticks": [
+            12,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            10,
+            4
+          ]
+        },
+        "Nod": {
+          "source_action": "Nod",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            48
+          ],
+          "durations_ticks": [
+            6,
+            8,
+            6
+          ]
+        },
+        "Sit": {
+          "source_action": "Sit",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            8,
+            8,
+            8
+          ]
+        },
+        "LookUp": {
+          "source_action": "LookUp",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            24
+          ],
+          "durations_ticks": [
+            6,
+            6,
+            6
+          ]
+        },
+        "Sink": {
+          "source_action": "Sink",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            24
+          ],
+          "durations_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "Trip": {
+          "source_action": "Trip",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            6,
+            4,
+            4,
+            4
+          ]
+        },
+        "Laying": {
+          "source_action": "Laying",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            32
+          ],
+          "durations_ticks": [
+            30
+          ]
+        },
+        "LeapForth": {
+          "source_action": "LeapForth",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            72
+          ],
+          "durations_ticks": [
+            6,
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "Head": {
+          "source_action": "Head",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            4
+          ]
+        },
+        "Cringe": {
+          "source_action": "Cringe",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "LostBalance": {
+          "source_action": "LostBalance",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            24
+          ],
+          "durations_ticks": [
+            8,
+            8
+          ]
+        },
+        "TumbleBack": {
+          "source_action": "TumbleBack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            48
+          ],
+          "durations_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "Faint": {
+          "source_action": "Faint",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            12,
+            4,
+            10
+          ]
+        },
+        "HitGround": {
+          "source_action": "HitGround",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            4,
+            4
+          ]
+        }
+      },
+      "action_count": 35,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          360,
+          448
+        ],
+        "Offsets": [
+          360,
+          448
+        ],
+        "Shadow": [
+          360,
+          448
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Crying.png",
+        "Determined.png",
+        "Dizzy.png",
+        "Happy.png",
+        "Inspired.png",
+        "Joyous.png",
+        "Normal.png",
+        "Pain.png",
+        "Sad.png",
+        "Shouting.png",
+        "Sigh.png",
+        "Stunned.png",
+        "Surprised.png",
+        "Teary-Eyed.png",
+        "Worried.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Weavile",
+      "french_name": "Dimoret",
+      "slot": "0461",
+      "name": "Weavile",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "QuickStrike",
+        "Shoot",
+        "SpAttack",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            2,
+            2,
+            4,
+            2,
+            2
+          ]
+        },
+        "QuickStrike": {
+          "source_action": "QuickStrike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            112,
+            136
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            4,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            64
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "SpAttack": {
+          "source_action": "Shoot",
+          "copy_of": "Shoot",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            64
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            60,
+            20
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            80,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 13,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          64,
+          384
+        ],
+        "Offsets": [
+          64,
+          384
+        ],
+        "Shadow": [
+          64,
+          384
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Angry.png",
+        "Crying.png",
+        "Determined.png",
+        "Dizzy.png",
+        "Happy.png",
+        "Inspired.png",
+        "Joyous.png",
+        "Normal.png",
+        "Pain.png",
+        "Sad.png",
+        "Shouting.png",
+        "Sigh.png",
+        "Special0.png",
+        "Special1.png",
+        "Special3.png",
+        "Stunned.png",
+        "Surprised.png",
+        "Teary-Eyed.png",
+        "Worried.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [
+        "Special0",
+        "Special1",
+        "Special3"
+      ],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "english_name": "Politoed",
+      "french_name": "Tarpaud",
+      "slot": "0186",
+      "name": "Politoed",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "RearUp",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            72
+          ],
+          "durations_ticks": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            10
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            104
+          ],
+          "durations_ticks": [
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Attack",
+          "copy_of": "Attack",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            104
+          ],
+          "durations_ticks": [
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            64
+          ],
+          "durations_ticks": [
+            1,
+            1,
+            2,
+            6,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "RearUp": {
+          "source_action": "RearUp",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            64
+          ],
+          "durations_ticks": [
+            40,
+            3,
+            5,
+            3,
+            6
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            96
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 13,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          160,
+          512
+        ],
+        "Offsets": [
+          160,
+          512
+        ],
+        "Shadow": [
+          160,
+          512
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [
+        "Inspired.png",
+        "Normal.png",
+        "Shouting.png",
+        "Surprised.png",
+        "credits.txt"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "missing_reverse_portraits": [
+        "Normal^",
+        "Happy^",
+        "Pain^",
+        "Angry^",
+        "Worried^",
+        "Sad^",
+        "Crying^",
+        "Shouting^",
+        "Teary-Eyed^",
+        "Determined^",
+        "Joyous^",
+        "Inspired^",
+        "Surprised^",
+        "Dizzy^",
+        "Sigh^",
+        "Stunned^"
+      ],
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    }
+  ],
+  "related_variants": [
+    {
+      "slot": "0282/0002",
+      "name": "Gardevoir / Cutscene",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "Strike",
+        "Shoot",
+        "SpAttack",
+        "Appeal",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate",
+        "StandingUp",
+        "Special0",
+        "Special1",
+        "Special2",
+        "Special3",
+        "Pose",
+        "Jump"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            8,
+            12,
+            8,
+            12
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Strike": {
+          "source_action": "Attack",
+          "copy_of": "Attack",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Charge",
+          "copy_of": "Charge",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "SpAttack": {
+          "source_action": "Appeal",
+          "copy_of": "Appeal",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            6,
+            1,
+            4,
+            5,
+            4,
+            5,
+            4
+          ]
+        },
+        "Appeal": {
+          "source_action": "Appeal",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            6,
+            1,
+            4,
+            5,
+            4,
+            5,
+            4
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            32
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            6,
+            12,
+            6,
+            12
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "StandingUp": {
+          "source_action": "StandingUp",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            24
+          ],
+          "durations_ticks": [
+            8
+          ]
+        },
+        "Special0": {
+          "source_action": "Special0",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            6,
+            6,
+            4
+          ]
+        },
+        "Special1": {
+          "source_action": "Appeal",
+          "copy_of": "Appeal",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            6,
+            1,
+            4,
+            5,
+            4,
+            5,
+            4
+          ]
+        },
+        "Special2": {
+          "source_action": "Special2",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            1
+          ]
+        },
+        "Special3": {
+          "source_action": "Special3",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            3,
+            1,
+            4,
+            1,
+            5,
+            1,
+            6,
+            1,
+            7,
+            1,
+            8,
+            1,
+            9,
+            1,
+            1
+          ]
+        },
+        "Pose": {
+          "source_action": "Pose",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            40
+          ],
+          "durations_ticks": [
+            4,
+            4,
+            6
+          ]
+        },
+        "Jump": {
+          "source_action": "Jump",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            24,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            8,
+            1,
+            1,
+            2,
+            2,
+            4
+          ]
+        }
+      },
+      "action_count": 21,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          128,
+          320
+        ],
+        "Offsets": [
+          128,
+          320
+        ],
+        "Shadow": [
+          128,
+          320
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [],
+      "missing_required_portraits": null,
+      "missing_reverse_portraits": null,
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "slot": "0461/0001",
+      "name": "Weavile / Cutscene",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "QuickStrike",
+        "Shoot",
+        "SpAttack",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate",
+        "Special0",
+        "Special1"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            2,
+            2,
+            4,
+            2,
+            2
+          ]
+        },
+        "QuickStrike": {
+          "source_action": "QuickStrike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            112,
+            136
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            4,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            64
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "SpAttack": {
+          "source_action": "Shoot",
+          "copy_of": "Shoot",
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            64
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            60,
+            20
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            80,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            88
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Special0": {
+          "source_action": "Special0",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            6,
+            4,
+            6
+          ]
+        },
+        "Special1": {
+          "source_action": "Special1",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            48
+          ],
+          "durations_ticks": [
+            14,
+            6,
+            6
+          ]
+        }
+      },
+      "action_count": 15,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          64,
+          384
+        ],
+        "Offsets": [
+          64,
+          384
+        ],
+        "Shadow": [
+          64,
+          384
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [],
+      "missing_required_portraits": null,
+      "missing_reverse_portraits": null,
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    },
+    {
+      "slot": "0417/0000/0000/0002",
+      "name": "Pachirisu / Female",
+      "sprite_tracker_level": 1,
+      "sprite_tracker_actions": [
+        "Walk",
+        "Attack",
+        "QuickStrike",
+        "Shoot",
+        "Appeal",
+        "Sleep",
+        "Hurt",
+        "Idle",
+        "Swing",
+        "Double",
+        "Hop",
+        "Charge",
+        "Rotate"
+      ],
+      "xml_actions": {
+        "Walk": {
+          "source_action": "Walk",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            6,
+            4,
+            6,
+            4,
+            6,
+            4,
+            6,
+            4
+          ]
+        },
+        "Attack": {
+          "source_action": "Attack",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            64,
+            72
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "QuickStrike": {
+          "source_action": "QuickStrike",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            112,
+            120
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Shoot": {
+          "source_action": "Shoot",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            48
+          ],
+          "durations_ticks": [
+            1,
+            2,
+            6,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Appeal": {
+          "source_action": "Appeal",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            48
+          ],
+          "durations_ticks": [
+            8,
+            10,
+            8,
+            10,
+            8,
+            10
+          ]
+        },
+        "Sleep": {
+          "source_action": "Sleep",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            32,
+            40
+          ],
+          "durations_ticks": [
+            30,
+            35
+          ]
+        },
+        "Hurt": {
+          "source_action": "Hurt",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            56
+          ],
+          "durations_ticks": [
+            2,
+            8
+          ]
+        },
+        "Idle": {
+          "source_action": "Idle",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            40,
+            56
+          ],
+          "durations_ticks": [
+            30,
+            1,
+            3,
+            5,
+            6,
+            6,
+            5,
+            3,
+            1
+          ]
+        },
+        "Swing": {
+          "source_action": "Swing",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            72,
+            80
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "Double": {
+          "source_action": "Double",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            56,
+            72
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Hop": {
+          "source_action": "Hop",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            96
+          ],
+          "durations_ticks": [
+            2,
+            1,
+            2,
+            3,
+            4,
+            4,
+            3,
+            2,
+            1,
+            2
+          ]
+        },
+        "Charge": {
+          "source_action": "Charge",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            32
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "Rotate": {
+          "source_action": "Rotate",
+          "copy_of": null,
+          "png_triple_present": true,
+          "missing_files": [],
+          "cell": [
+            48,
+            48
+          ],
+          "durations_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "action_count": 13,
+      "declared_actions_with_missing_triples": [],
+      "missing_dungeon_actions": [],
+      "missing_project_full_actions": [
+        "EventSleep",
+        "Wake",
+        "Eat",
+        "Tumble",
+        "Pose",
+        "Pull",
+        "Pain",
+        "Float",
+        "DeepBreath",
+        "Nod",
+        "Sit",
+        "LookUp",
+        "Sink",
+        "Trip",
+        "Laying",
+        "LeapForth",
+        "Head",
+        "Cringe",
+        "LostBalance",
+        "TumbleBack",
+        "HitGround",
+        "Faint"
+      ],
+      "idle_sheet_dimensions": {
+        "Anim": [
+          360,
+          448
+        ],
+        "Offsets": [
+          360,
+          448
+        ],
+        "Shadow": [
+          360,
+          448
+        ]
+      },
+      "idle_triple_geometry_verified": true,
+      "portrait_files": [],
+      "missing_required_portraits": null,
+      "missing_reverse_portraits": null,
+      "optional_special_portraits": [],
+      "sprite_pending": {},
+      "portrait_pending": {},
+      "proof_scope": "Directory existence for all declared triples; XML alias/frame declarations; actual decoding of representative Idle triple only. Not full frame-by-frame artwork or PMDO runtime verification."
+    }
+  ],
+  "other_variant_inventory": [
+    {
+      "path": "0083/0000",
+      "name": "Farfetch_d",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0083/0000/0001",
+      "name": "Farfetch_d / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Normal^": false,
+        "Angry": false,
+        "Angry^": false,
+        "Crying": false,
+        "Crying^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Dizzy": false,
+        "Dizzy^": false,
+        "Happy": false,
+        "Happy^": false,
+        "Inspired": false,
+        "Inspired^": false,
+        "Joyous": false,
+        "Joyous^": false,
+        "Pain": false,
+        "Pain^": false,
+        "Sad": false,
+        "Sad^": false,
+        "Shouting": false,
+        "Shouting^": false,
+        "Sigh": false,
+        "Sigh^": false,
+        "Stunned": false,
+        "Stunned^": false,
+        "Surprised": false,
+        "Surprised^": false,
+        "Teary-Eyed": false,
+        "Teary-Eyed^": false,
+        "Worried": false,
+        "Worried^": false
+      }
+    },
+    {
+      "path": "0083/0001",
+      "name": "Farfetch_d / Galar",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "EventSleep": false,
+        "Wake": false,
+        "Eat": false,
+        "Tumble": false,
+        "Pose": false,
+        "Pull": false,
+        "Pain": false,
+        "Float": false,
+        "DeepBreath": false,
+        "Nod": false,
+        "Sit": false,
+        "LookUp": false,
+        "Sink": false,
+        "Trip": false,
+        "Laying": false,
+        "LeapForth": false,
+        "Head": false,
+        "Cringe": false,
+        "LostBalance": false,
+        "TumbleBack": false,
+        "Faint": false,
+        "HitGround": false
+      },
+      "portrait_files": {
+        "Angry": false,
+        "Angry^": false,
+        "Crying": false,
+        "Crying^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Dizzy": false,
+        "Dizzy^": false,
+        "Happy": false,
+        "Happy^": false,
+        "Inspired": false,
+        "Inspired^": false,
+        "Joyous": false,
+        "Joyous^": false,
+        "Normal": false,
+        "Normal^": false,
+        "Pain": false,
+        "Pain^": false,
+        "Sad": false,
+        "Sad^": false,
+        "Shouting": false,
+        "Shouting^": false,
+        "Sigh": false,
+        "Sigh^": false,
+        "Stunned": false,
+        "Stunned^": false,
+        "Surprised": false,
+        "Surprised^": false,
+        "Teary-Eyed": false,
+        "Teary-Eyed^": false,
+        "Worried": false,
+        "Worried^": false
+      }
+    },
+    {
+      "path": "0083/0001/0001",
+      "name": "Farfetch_d / Galar / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "EventSleep": false,
+        "Wake": false,
+        "Eat": false,
+        "Tumble": false,
+        "Pose": false,
+        "Pull": false,
+        "Pain": false,
+        "Float": false,
+        "DeepBreath": false,
+        "Nod": false,
+        "Sit": false,
+        "LookUp": false,
+        "Sink": false,
+        "Trip": false,
+        "Laying": false,
+        "LeapForth": false,
+        "Head": false,
+        "Cringe": false,
+        "LostBalance": false,
+        "TumbleBack": false,
+        "Faint": false,
+        "HitGround": false
+      },
+      "portrait_files": {
+        "Angry": false,
+        "Angry^": false,
+        "Crying": false,
+        "Crying^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Dizzy": false,
+        "Dizzy^": false,
+        "Happy": false,
+        "Happy^": false,
+        "Inspired": false,
+        "Inspired^": false,
+        "Joyous": false,
+        "Joyous^": false,
+        "Normal": false,
+        "Normal^": false,
+        "Pain": false,
+        "Pain^": false,
+        "Sad": false,
+        "Sad^": false,
+        "Shouting": false,
+        "Shouting^": false,
+        "Sigh": false,
+        "Sigh^": false,
+        "Stunned": false,
+        "Stunned^": false,
+        "Surprised": false,
+        "Surprised^": false,
+        "Teary-Eyed": false,
+        "Teary-Eyed^": false,
+        "Worried": false,
+        "Worried^": false
+      }
+    },
+    {
+      "path": "0083/0002",
+      "name": "Farfetch_d / Altcolor",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Angry^": false,
+        "Shouting^": false,
+        "Sigh^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Inspired^": false,
+        "Crying^": false,
+        "Pain": false,
+        "Happy^": false,
+        "Teary-Eyed^": false,
+        "Sad^": false,
+        "Pain^": false,
+        "Crying": false,
+        "Dizzy^": false,
+        "Worried^": false,
+        "Stunned^": false,
+        "Normal": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Surprised^": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Joyous^": false,
+        "Worried": false,
+        "Normal^": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0083/0002/0001",
+      "name": "Farfetch_d / Altcolor / Shiny",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0186/0000",
+      "name": "Politoed",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0186/0000/0001",
+      "name": "Politoed / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "RearUp": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Shouting": false,
+        "Normal": false,
+        "Inspired": false,
+        "Surprised": false
+      }
+    },
+    {
+      "path": "0186/0000/0001/0002",
+      "name": "Politoed / Shiny / Female",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false
+      }
+    },
+    {
+      "path": "0186/0000/0000",
+      "name": "Politoed",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0186/0000/0000/0002",
+      "name": "Politoed / Female",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": true
+      }
+    },
+    {
+      "path": "0186/0001",
+      "name": "Politoed / Altcolor",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false
+      }
+    },
+    {
+      "path": "0186/0001/0001",
+      "name": "Politoed / Altcolor / Shiny",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false
+      }
+    },
+    {
+      "path": "0186/0001/0001/0002",
+      "name": "Politoed / Altcolor / Shiny / Female",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false
+      }
+    },
+    {
+      "path": "0186/0001/0000",
+      "name": "Politoed / Altcolor",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0186/0001/0000/0002",
+      "name": "Politoed / Altcolor / Female",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false
+      }
+    },
+    {
+      "path": "0282/0000",
+      "name": "Gardevoir",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0282/0000/0001",
+      "name": "Gardevoir / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Sad": false,
+        "Normal": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Stunned": false,
+        "Happy": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Angry": false,
+        "Worried": false
+      }
+    },
+    {
+      "path": "0282/0001",
+      "name": "Gardevoir / Mega",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0282/0001/0001",
+      "name": "Gardevoir / Mega / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Normal": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0282/0002",
+      "name": "Gardevoir / Cutscene",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": true,
+        "Attack": true,
+        "Strike": true,
+        "Shoot": true,
+        "SpAttack": true,
+        "Appeal": true,
+        "Sleep": true,
+        "Hurt": true,
+        "Idle": true,
+        "Swing": true,
+        "Double": true,
+        "Hop": true,
+        "Charge": true,
+        "Rotate": true,
+        "StandingUp": true,
+        "Special0": true,
+        "Special1": true,
+        "Special2": true,
+        "Special3": true,
+        "Pose": true,
+        "Jump": true
+      },
+      "portrait_files": {
+        "Happy": true,
+        "Inspired": true,
+        "Normal": true,
+        "Sigh": true,
+        "Surprised": true,
+        "Worried": true,
+        "Angry": false,
+        "Crying": false,
+        "Determined": false,
+        "Dizzy": false,
+        "Joyous": false,
+        "Pain": false,
+        "Sad": false,
+        "Shouting": false,
+        "Special2": false,
+        "Stunned": false,
+        "Teary-Eyed": false,
+        "Special1": false
+      }
+    },
+    {
+      "path": "0282/0002/0001",
+      "name": "Gardevoir / Cutscene / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "StandingUp": false,
+        "Special0": false,
+        "Special1": false,
+        "Special2": false,
+        "Special3": false,
+        "Pose": false,
+        "Jump": false
+      },
+      "portrait_files": {
+        "Happy": false,
+        "Inspired": false,
+        "Normal": false,
+        "Sigh": false,
+        "Surprised": false,
+        "Worried": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Special2": false,
+        "Angry": false,
+        "Stunned": false,
+        "Special1": false
+      }
+    },
+    {
+      "path": "0282/0003",
+      "name": "Gardevoir / Alternate",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0282/0003/0001",
+      "name": "Gardevoir / Alternate / Shiny",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0285/0000",
+      "name": "Shroomish",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0285/0000/0001",
+      "name": "Shroomish / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Shake": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Normal^": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Angry^": false,
+        "Shouting^": false,
+        "Sigh^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Inspired^": false,
+        "Crying^": false,
+        "Pain": false,
+        "Happy^": false,
+        "Teary-Eyed^": false,
+        "Sad^": false,
+        "Pain^": false,
+        "Crying": false,
+        "Dizzy^": false,
+        "Worried^": false,
+        "Stunned^": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Surprised^": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Joyous^": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0285/0001",
+      "name": "Shroomish / Altcolor",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Twirl": false,
+        "Shake": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Normal^": false
+      }
+    },
+    {
+      "path": "0285/0001/0001",
+      "name": "Shroomish / Altcolor / Shiny",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0371/0000",
+      "name": "Bagon",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0371/0000/0001",
+      "name": "Bagon / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Bite": false,
+        "Shoot": false,
+        "Rumble": false,
+        "Emit": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "EventSleep": false,
+        "Wake": false,
+        "Eat": false,
+        "Tumble": false,
+        "Pose": false,
+        "Pull": false,
+        "Pain": false,
+        "Float": false,
+        "DeepBreath": false,
+        "Nod": false,
+        "Sit": false,
+        "LookUp": false,
+        "Sink": false,
+        "Trip": false,
+        "Laying": false,
+        "LeapForth": false,
+        "Head": false,
+        "Cringe": false,
+        "LostBalance": false,
+        "TumbleBack": false,
+        "Faint": false,
+        "HitGround": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Pain": false,
+        "Surprised": false,
+        "Angry": false,
+        "Crying": false,
+        "Determined": false,
+        "Dizzy": false,
+        "Happy": false,
+        "Inspired": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Sigh": false,
+        "Stunned": false,
+        "Teary-Eyed": false,
+        "Worried": false
+      }
+    },
+    {
+      "path": "0371/0001",
+      "name": "Bagon / Altcolor",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Bite": false,
+        "Shoot": false,
+        "Rumble": false,
+        "Emit": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0371/0001/0001",
+      "name": "Bagon / Altcolor / Shiny",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0417/0000",
+      "name": "Pachirisu",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0417/0000/0001",
+      "name": "Pachirisu / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "EventSleep": false,
+        "Wake": false,
+        "Float": false,
+        "Laying": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0417/0000/0001/0001",
+      "name": "Pachirisu / Shiny / Male",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0417/0000/0001/0002",
+      "name": "Pachirisu / Shiny / Female",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {}
+    },
+    {
+      "path": "0417/0000/0000",
+      "name": "Pachirisu",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0417/0000/0000/0001",
+      "name": "Pachirisu / Male",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0417/0000/0000/0002",
+      "name": "Pachirisu / Female",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "Appeal": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {}
+    },
+    {
+      "path": "0440/0000",
+      "name": "Happiny",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0440/0000/0001",
+      "name": "Happiny / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Dance": false,
+        "Appeal": false,
+        "Shake": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    },
+    {
+      "path": "0440/0001",
+      "name": "Happiny / Altcolor",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Dance": false,
+        "Appeal": false,
+        "Shake": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {}
+    },
+    {
+      "path": "0440/0001/0001",
+      "name": "Happiny / Altcolor / Shiny",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0000",
+      "name": "Weavile",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0000/0001",
+      "name": "Weavile / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Special0": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Special1": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false,
+        "Special2": false
+      }
+    },
+    {
+      "path": "0461/0000/0001/0002",
+      "name": "Weavile / Shiny / Female",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0000/0000",
+      "name": "Weavile",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0000/0000/0002",
+      "name": "Weavile / Female",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0001",
+      "name": "Weavile / Cutscene",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {
+        "Walk": true,
+        "Attack": true,
+        "QuickStrike": true,
+        "Shoot": true,
+        "SpAttack": true,
+        "Sleep": true,
+        "Hurt": true,
+        "Idle": true,
+        "Swing": true,
+        "Double": true,
+        "Hop": true,
+        "Charge": true,
+        "Rotate": true,
+        "Special0": true,
+        "Special1": true
+      },
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0001/0001",
+      "name": "Weavile / Cutscene / Shiny",
+      "sprite_required": true,
+      "portrait_required": false,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false,
+        "Special0": false,
+        "Special1": false
+      },
+      "portrait_files": {}
+    },
+    {
+      "path": "0461/0002",
+      "name": "Weavile / Altcolor",
+      "sprite_required": false,
+      "portrait_required": true,
+      "sprite_files": {},
+      "portrait_files": {
+        "Normal": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Pain": false,
+        "Special0": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Special1": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false,
+        "Special2": false
+      }
+    },
+    {
+      "path": "0461/0002/0001",
+      "name": "Weavile / Altcolor / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "QuickStrike": false,
+        "Shoot": false,
+        "SpAttack": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Angry": false,
+        "Normal": false,
+        "Pain": false,
+        "Surprised": false,
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Determined": false,
+        "Special0": false,
+        "Crying": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Special1": false,
+        "Inspired": false,
+        "Worried": false,
+        "Stunned": false,
+        "Happy": false,
+        "Special2": false
+      }
+    },
+    {
+      "path": "0674/0000",
+      "name": "Pancham",
+      "sprite_required": false,
+      "portrait_required": false,
+      "sprite_files": {},
+      "portrait_files": {}
+    },
+    {
+      "path": "0674/0000/0001",
+      "name": "Pancham / Shiny",
+      "sprite_required": true,
+      "portrait_required": true,
+      "sprite_files": {
+        "Walk": false,
+        "Attack": false,
+        "Strike": false,
+        "Shoot": false,
+        "Punch": false,
+        "Sleep": false,
+        "Hurt": false,
+        "Idle": false,
+        "Swing": false,
+        "Double": false,
+        "Hop": false,
+        "Charge": false,
+        "Rotate": false
+      },
+      "portrait_files": {
+        "Sigh": false,
+        "Joyous": false,
+        "Sad": false,
+        "Shouting": false,
+        "Angry^": false,
+        "Shouting^": false,
+        "Sigh^": false,
+        "Determined": false,
+        "Determined^": false,
+        "Inspired^": false,
+        "Crying^": false,
+        "Pain": false,
+        "Happy^": false,
+        "Teary-Eyed^": false,
+        "Sad^": false,
+        "Pain^": false,
+        "Crying": false,
+        "Dizzy^": false,
+        "Worried^": false,
+        "Stunned^": false,
+        "Normal": false,
+        "Teary-Eyed": false,
+        "Dizzy": false,
+        "Surprised^": false,
+        "Inspired": false,
+        "Surprised": false,
+        "Angry": false,
+        "Joyous^": false,
+        "Worried": false,
+        "Normal^": false,
+        "Stunned": false,
+        "Happy": false
+      }
+    }
+  ],
+  "reference_hashes": {
+    "source/guild_members_audit/references/0371/sprite/AnimData.xml": "fdcf6196f3a7111b9659e3f4ccb903b0bf954e4bedd6795bcc38b47bbf0ac15d",
+    "source/guild_members_audit/references/0371/sprite/credits.txt": "1ccba2f7916d76fbb6bb9a1c26976bd6fcf80b2764c771d2f23257f1cf0568ff",
+    "source/guild_members_audit/references/0371/sprite/Idle-Anim.png": "5c5e2f51b9c0d9c472099ec21ce072ea4b338ded36380e82067e3e7aa663cb3c",
+    "source/guild_members_audit/references/0371/sprite/Idle-Offsets.png": "ce32bfc5f92547312fc20273543eeab5685a9af7560e77190400c7594225a4e0",
+    "source/guild_members_audit/references/0371/sprite/Idle-Shadow.png": "1e33c73a90dd411bc334f61ea50528ae77d2a46921e3773ac7d41e85e341340e",
+    "source/guild_members_audit/references/0371/portrait/credits.txt": "ecc1ec16692735b92fed0558820e0a5e09724b135b0603245ba9550814e4a600",
+    "source/guild_members_audit/references/0371/portrait/Normal.png": "62af61628f5ed508bb33e5d8f292dfe71df5e717214661efe99cbe98a75f61c8",
+    "source/guild_members_audit/references/0674/sprite/AnimData.xml": "d1540baeabf10ee9a6d93e8fe73bc41b107e2be174c0804b7c0c7111447cfca4",
+    "source/guild_members_audit/references/0674/sprite/credits.txt": "ea78eb3e820f05bbc5b35099274fda57d9e10a5a1bc130f78e48815bcfce0621",
+    "source/guild_members_audit/references/0674/sprite/Idle-Anim.png": "23a58708d0a070e714fe9737e6d8124554b0e3db6b1b12f49ba5c42fb705041b",
+    "source/guild_members_audit/references/0674/sprite/Idle-Offsets.png": "7c3767cbdb6dd6ff2ec9e344f22143979b77a708e2358a52022a70bed4eb97f2",
+    "source/guild_members_audit/references/0674/sprite/Idle-Shadow.png": "23e708908728b1119369cd541f003bd0c2499ef43d0e942b23cd6f94a1fe651b",
+    "source/guild_members_audit/references/0674/portrait/credits.txt": "ed4f891fad4cbe2477324600c4963428a355359c2433282e653572eb20908141",
+    "source/guild_members_audit/references/0674/portrait/Normal.png": "12e3979ea5c4dcba82358e91765a3a7bef299c832b7f51ca358f19050c1178c5",
+    "source/guild_members_audit/references/0083/sprite/AnimData.xml": "3c0b1ddce26814f20ef4b605746d1c0cd9a101af28cc62007997f3db22ac7aff",
+    "source/guild_members_audit/references/0083/sprite/credits.txt": "f7fed6a0b91dc61b2765a6ec023c2e609fca638ff6f3b02113900c5bd29e242b",
+    "source/guild_members_audit/references/0083/sprite/Idle-Anim.png": "2f75ab73c640d52d0e43f7fd62e4734074bd6b46d765243068c223a93befb8fc",
+    "source/guild_members_audit/references/0083/sprite/Idle-Offsets.png": "0a4ec552380787f15895f79fa763f35d1629a67ab69f47409f155b63f85da1f3",
+    "source/guild_members_audit/references/0083/sprite/Idle-Shadow.png": "c0ba6d2d4ef8e26824dace9aca22a63c8cc4bd423ffa67d6755e5ad2ec6423d8",
+    "source/guild_members_audit/references/0083/portrait/credits.txt": "b8bb049938ec4dd7804283f1a624c98bc5b61151a1474ce07921c6b9fd1d25af",
+    "source/guild_members_audit/references/0083/portrait/Normal.png": "aef2d88834cc20e354c1c3640df71dbee241247b23e3b9a2500dc95d32b7219d",
+    "source/guild_members_audit/references/0282/sprite/AnimData.xml": "655ccdb89ae914d07d45bc260dc2c367593275e71a2aaceebfc92303189a0a83",
+    "source/guild_members_audit/references/0282/sprite/credits.txt": "6a0472287930f8ea3632836254b6a26adf3a4a6d2e4fa5cdf0050f874717ae83",
+    "source/guild_members_audit/references/0282/sprite/Idle-Anim.png": "2fe861f10c7f0fa574e73891ee98753598755a958416c879f03e5d8b3a19f7c6",
+    "source/guild_members_audit/references/0282/sprite/Idle-Offsets.png": "2a9f9ca0eef3ad088f2eda19197ee4cb0109d3cb4b27c126dd9ddd94c0a4ad3e",
+    "source/guild_members_audit/references/0282/sprite/Idle-Shadow.png": "68c83e91a9a39ef3355b8f1a3bb474180faa46ef443a58acac567a6b54127560",
+    "source/guild_members_audit/references/0282/portrait/credits.txt": "98d764a12f3cfd9ba3fcf94d851d8de89451cb2263eea2d5351e4d6849ffe5fd",
+    "source/guild_members_audit/references/0282/portrait/Normal.png": "6a18b3f35e1007a9ab3acb98df69e5e0cf50220714abf57a33ba5dc2d6b935fe",
+    "source/guild_members_audit/references/0282/0002/sprite/AnimData.xml": "bae820130ec4000546bcea216705f7dec6aac88fd30f9ec20f205a4a18c34126",
+    "source/guild_members_audit/references/0282/0002/sprite/credits.txt": "1e4f3614d54d118249744ee69284e596e85a5141fbabf70e27b6306a1711cadd",
+    "source/guild_members_audit/references/0282/0002/sprite/Idle-Anim.png": "e73e436ae784f7ff511a5d3127d9c60799eb5f13f9e77668175ef39fb1ddcf47",
+    "source/guild_members_audit/references/0282/0002/sprite/Idle-Offsets.png": "31beb47e65f42ac207c14c9f6d74672b849dddc49b7411c56f510ee257b56681",
+    "source/guild_members_audit/references/0282/0002/sprite/Idle-Shadow.png": "1ec150c932f208ce21ceccbfc72b21ef85a17cd42133734ce2a2e0638c49eed7",
+    "source/guild_members_audit/references/0440/sprite/AnimData.xml": "7252fc65bd5e09d19bf89b0d333e7904aa3a76b7719e04d406f01f9e3d0aa9b7",
+    "source/guild_members_audit/references/0440/sprite/credits.txt": "0f64e67442f9d7f2b1a86df5c8bffcc8291b334a243b78c312f59801d354a637",
+    "source/guild_members_audit/references/0440/sprite/Idle-Anim.png": "7a0a6fb8839705643266808b1656f0c03fa24dd389c498c484fee954168d4031",
+    "source/guild_members_audit/references/0440/sprite/Idle-Offsets.png": "8275f85380b067c0df68fe5ea4020bab9cfcde793e50d5863f86fccaafc5c1e7",
+    "source/guild_members_audit/references/0440/sprite/Idle-Shadow.png": "4b5a057ed88de30442d12c6339bf678a007314af306127c03e1b58411e2eb1da",
+    "source/guild_members_audit/references/0440/portrait/credits.txt": "2e7d3eae2a48a45c55eb04393901c3ae56583a3028ea60dac4df9f7ee835517b",
+    "source/guild_members_audit/references/0440/portrait/Normal.png": "0a6a3cc6ecd0cb86fddcd64da2f778cb7de5b19c69a40fd15184334fb4597d41",
+    "source/guild_members_audit/references/0285/sprite/AnimData.xml": "db341fa5a7354e556c9e163f11b46b3f6eea2b6e116a2bf1260d182b72593ae0",
+    "source/guild_members_audit/references/0285/sprite/credits.txt": "fe69837d218fd587817562f12493269e16a806b77671de13ea5f96c329e6bfc5",
+    "source/guild_members_audit/references/0285/sprite/Idle-Anim.png": "0f50136613063412cc4192d796a5499ada293ddfef094ec4b67b5fcc5f43c0c2",
+    "source/guild_members_audit/references/0285/sprite/Idle-Offsets.png": "ab411415426305e8af892d547131153135c18f6be4c6523dc4a876fb9322409f",
+    "source/guild_members_audit/references/0285/sprite/Idle-Shadow.png": "6b0008183a4349eba21e4a7d8334b950d53c6bea406aa525aafece834d8841a3",
+    "source/guild_members_audit/references/0285/portrait/credits.txt": "4d5dce52a04d7ec61afae660fe4313a5d45e1b833d17d44fd29763baecf724b4",
+    "source/guild_members_audit/references/0285/portrait/Normal.png": "0846401b44b4e5889b03125e6676a702d4865fa05f6858d0a96520d1005041bc",
+    "source/guild_members_audit/references/0461/sprite/AnimData.xml": "8005a9b57cac7c4302531db62f1297b5a702d21aa42c9fe681f6e0fd7349ef22",
+    "source/guild_members_audit/references/0461/sprite/credits.txt": "ec985876b581191e9ad259ec52358b54a22fb940fb90070effec3e23b5caa7a6",
+    "source/guild_members_audit/references/0461/sprite/Idle-Anim.png": "c731ef3a1e4379fbc80a5b6a9cb810584a43007fd79b91405e747907237e374b",
+    "source/guild_members_audit/references/0461/sprite/Idle-Offsets.png": "4af1d48d81d1e009dfb77139860333bb066edc770577bc6fcb7d004551df6359",
+    "source/guild_members_audit/references/0461/sprite/Idle-Shadow.png": "90ccdb90075610e46dadb1c0695e7646e10710209d2e16f617f533fd1ddf6730",
+    "source/guild_members_audit/references/0461/portrait/credits.txt": "e48f9173c33a0273fa38a909c09518a8ae6dd9f0715c99843ec404270e5c1c78",
+    "source/guild_members_audit/references/0461/portrait/Normal.png": "79bb50ce53b4ddea94393cbdded813693ba78d506e2f3a7de82f79f5a684ab4c",
+    "source/guild_members_audit/references/0461/0001/sprite/AnimData.xml": "9e99ba6b2416d340b770ba5fce8272c4e6f8ee2f8797eed8b1d448e48a4b1fb2",
+    "source/guild_members_audit/references/0461/0001/sprite/credits.txt": "dd0a2485d9e6b439152171434857a69d2b9cf53bcbbb25800f17a4e6490b84e7",
+    "source/guild_members_audit/references/0461/0001/sprite/Idle-Anim.png": "c731ef3a1e4379fbc80a5b6a9cb810584a43007fd79b91405e747907237e374b",
+    "source/guild_members_audit/references/0461/0001/sprite/Idle-Offsets.png": "4af1d48d81d1e009dfb77139860333bb066edc770577bc6fcb7d004551df6359",
+    "source/guild_members_audit/references/0461/0001/sprite/Idle-Shadow.png": "90ccdb90075610e46dadb1c0695e7646e10710209d2e16f617f533fd1ddf6730",
+    "source/guild_members_audit/references/0417/sprite/AnimData.xml": "d80225e1bd20978e94a92a511bd6f9b3b44280d6deb52122af5b170d4bffab32",
+    "source/guild_members_audit/references/0417/sprite/credits.txt": "7815d18b8cebaffb791bf3765a997c99c62767bb1b10f2667f570a74d46dfde8",
+    "source/guild_members_audit/references/0417/sprite/Idle-Anim.png": "1ba3408f229f13763fe5ca4b92d27167f8192d403134cd4540d9829bd9790123",
+    "source/guild_members_audit/references/0417/sprite/Idle-Offsets.png": "ab10bb0bb5a33fde0d5104f127ec4d71cdf9d85bcec9df18e647147fb8a7b61b",
+    "source/guild_members_audit/references/0417/sprite/Idle-Shadow.png": "cd1e36b8e877329456f5b559785d005c16f064d0e18b00c990af6bd0cf65bd53",
+    "source/guild_members_audit/references/0417/portrait/credits.txt": "c112e1ca2b53171a445ac5be2b5c4d2d51eaf3fbc95169e0b8ea3bb98eb222fb",
+    "source/guild_members_audit/references/0417/portrait/Normal.png": "5b7f9d38a1e810866476bd79781457ccf21ed8ab5fb95b4f6ce16affe376e86e",
+    "source/guild_members_audit/references/0417/0000/0000/0002/sprite/AnimData.xml": "0b536416bf540c8e6d0cf75400e4f69b7c3211f3957de22f0bdbb63226144414",
+    "source/guild_members_audit/references/0417/0000/0000/0002/sprite/credits.txt": "76375794fdb198a6f14386029cac4b4c161edbefa0c85c2fd24d82520d211d87",
+    "source/guild_members_audit/references/0417/0000/0000/0002/sprite/Idle-Anim.png": "6e12eaefa89a3916abb3ca3e5a25b7247b2875304868491b2d9224755a4b29c9",
+    "source/guild_members_audit/references/0417/0000/0000/0002/sprite/Idle-Offsets.png": "1b643cf21c2f4995a4d85fe6dd5d7512a7eccf14c8ea257d5a9457678dca7818",
+    "source/guild_members_audit/references/0417/0000/0000/0002/sprite/Idle-Shadow.png": "42c0990db2aa425146b37ddbbf9c2d38148bc3cd0948e11f43894f4278812c4b",
+    "source/guild_members_audit/references/0186/sprite/AnimData.xml": "224eb79720113c4721312b575214431afa1fde7b078849354cebfb7ba7e077a3",
+    "source/guild_members_audit/references/0186/sprite/credits.txt": "610ccdb711585a10333b324546974199d32deb10809d3044e5b7893ed43f053a",
+    "source/guild_members_audit/references/0186/sprite/Idle-Anim.png": "3d4c60cf710ae0a78ac91592a8ab44326c64cb44c75ab520f8c15aee5c8eae34",
+    "source/guild_members_audit/references/0186/sprite/Idle-Offsets.png": "b167bff75412c34cf14ece843dd25d18b1e3a1778ef88670a27ab75cdcd92a13",
+    "source/guild_members_audit/references/0186/sprite/Idle-Shadow.png": "85eb016ebb0db6ae129620bc951cfbe4d0708da88d35fa235cedaa12fcd3bb36",
+    "source/guild_members_audit/references/0186/portrait/credits.txt": "11ddc9957b8f46677d9d0cf1a6e556785b01e055acc0a795c21295fce60c96e2",
+    "source/guild_members_audit/references/0186/portrait/Normal.png": "faf09c1a2be0b94ff2e5b745e6688ec2c34d3ee94c5aa1b74ceb966b12de5ab0",
+    "source/guild_members_audit/references/0186/portrait/Inspired.png": "9771ec15fab94fcbdc1af140d6f2c0b16b3963078429bd9ed5be4d3415852cbd",
+    "source/guild_members_audit/references/0186/portrait/Shouting.png": "2842fc30c40981ef2c11e7152c2ac7c5cfd3f9ccbe417975d980f53aa3257a8a",
+    "source/guild_members_audit/references/0186/portrait/Surprised.png": "6c7bf33ed075437fb280e11d3f979a0aac743ab79f0ae7592a085e8fda0d8be8"
+  },
+  "downloaded_git_blobs_match_pinned_directory_shas": true,
+  "PMDO_runtime": "NOT TESTED",
+  "quest_scene_action_requirements": "Not supplied / not mapped to scene scripts in this audit",
+  "generated_assets": 0,
+  "recommended_work_order": [
+    "Produce only the 12 missing Politoed portraits, preserving existing portraits.",
+    "Inspect/reuse Gardevoir and Weavile Cutscene assets before new scene drawings.",
+    "For the six scene-incomplete base slots, prioritize Nod/Pose/LookUp/Sit if called by guild dialogue scenes.",
+    "Add other scene actions only against the quest requirements; do not regenerate the three full-profile members.",
+    "Verify exact forms/genders and actual Ground/Dungeon integration."
+  ],
+  "totals": {
+    "members": 9,
+    "missing_required_portraits": 12,
+    "missing_dungeon_actions": 0,
+    "missing_base_project_full_actions": 132,
+    "broken_declared_triples": 0
+  }
+}

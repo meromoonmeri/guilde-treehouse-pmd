@@ -3,6 +3,30 @@
   "status": "User-requested roadmap; planned entries are not completed assets or background jobs",
   "order": [
     {
+      "id": "guild_members_priority",
+      "subject": "Priority audit and missing assets for the nine PMDO quest guild members",
+      "status": "Audit complete against tracker, pinned real listings, XML CopyOf and representative Idle triples; no generation or PMDO runtime test",
+      "members": [
+        "Gardevoir",
+        "Farfetch’d",
+        "Pancham",
+        "Bagon",
+        "Shroomish",
+        "Happiny",
+        "Pachirisu",
+        "Weavile",
+        "Politoed"
+      ],
+      "scope": "Standard/base slots audited; cutscene/female variants inventoried separately, not selected without quest identity context",
+      "priority_1": "Politoed: 12 missing core expressions; preserve its existing Normal/Inspired/Shouting/Surprised and all other members’ complete16 sets",
+      "priority_2": "Map quest scene requirements to 22 missing project-profile actions on each of six base slots; inspect Gardevoir/Weavile Cutscene assets before creating replacements",
+      "already_available": "All nine have dungeon10; Bagon/Happiny/Pachirisu base have full32",
+      "paths": [
+        "exports/guild_members_audit",
+        "source/guild_members_audit"
+      ]
+    },
+    {
       "id": "spritecollab_all_missing",
       "subject": "Entire SpriteCollab missing-resource catalogue",
       "status": "Global pinned inventory built; production required in reviewed batches, not complete",
@@ -156,5 +180,6 @@
     "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd",
     "portrait_identity": "All expression variants must preserve native/approved Normal facial identity and anatomy. Only natural expression movements; no facial redesign."
   },
-  "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced."
+  "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced.",
+  "active_priority": "Nine named guild members override broad production order for now; whole SpriteCollab backlog retained, not cancelled."
 }

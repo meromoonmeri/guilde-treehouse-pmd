@@ -234,3 +234,11 @@ Lot `canonical_expressions_v1` : fonds exacts de chaque émotion de template.png
 ## Carapagos — expressions de face complétées avec la méthode Normal fixe
 
 Dernier lot : `apercu_expressions_canoniques_v2.html`, `exports/pokemon_custom/canonical_expressions_v2/`. Huit nouvelles expressions individuelles ont porté Carapagos à16émotions de face :6originaux approuvés conservés +10propositions anatomiquement bornées depuis Normal. Œil seul modifiable, bec/narine et contour du visage intacts ; fonds canoniques par case. Contrôle technique completPASS, pas de doublons exacts parmi les nouveaux sujets avant fond. **Pas de nouvelle approbation artistique, pas de vues inverses ni testPMDO.** Méga-Raichu repris sans nouveau contenu dans ce lot, deux portraitsY16couleurs toujours bloqués. Ne pas reprendre Terapagos Stellaire portraits.
+
+## Priorité la plus récente — les neuf membres de guilde de la quête PMDO
+
+Prioriser désormais Gardevoir, Farfetch’d, Pancham, Bagon, Shroomish, Happiny, Pachirisu, Weavile, Politoed. Le chantier global reste en file, pas annulé. Audit `exports/guild_members_audit/README.md` et `audit.json` : tracker3609a86 HEAD revérifié, vrais listings/XML/CopyOf et triplesIdle contrôlés, crédits natifs préservés. Aucun testPMDO ni création dans cet audit.
+
+Seul Politoed manque d’émotions parmi16 :12à produire, conserver Normal/Inspired/Shouting/Surprised. Tous les neuf ont donjon10. Bagon/Happiny/Pachirisu base ont32actions du profil ; les six autres manquent chacun22actions de scène du profil projet (132au total dans les bases), pas forcément toutes utilisées par la quête. Gardevoir Cutscene possède notamment Pose/StandingUp/Jump/Special0–3 ; Weavile Cutscene possèdeSpecial0–1 : examiner avant régénération. Pachirisu femelle n’a pas les mêmes scènes que sa base. Pas de forme/gender/Galar/Méga substituée sans indication.
+
+Correction Carapagos réaffirmée : ses portraits approuvés **à bouche ouverte étaient bons**, car référencés canoniquement sans dents visibles. Les préserver. La règle n’est pas « bec toujours fermé » ; une ouverture anatomiquement naturelle du bec est autorisée lorsque l’émotion et la référence la justifient. Adapter le masque à cette articulation, ne pas bloquer tout mouvement à cause d’un masque conçu pour une expression fermée.

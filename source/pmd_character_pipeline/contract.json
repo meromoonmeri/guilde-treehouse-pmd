@@ -88,7 +88,8 @@
       ],
       "allowed_changes": "Only anatomically natural expression movements of eyelids, brows and mouth; no new features, no facial redesign, no default head tilt",
       "workflow": "Single-expression trial from Normal before any expression sheet; inspect native 40px; reject identity drift even when technical format passes",
-      "mask_note": "An explicit per-character editing mask can protect fixed pixels; it is not proof the expression inside the mask is artistically correct"
+      "mask_note": "An explicit per-character editing mask can protect fixed pixels; it is not proof the expression inside the mask is artistically correct",
+      "articulation_exception": "Expression-related mouth/beak opening may change its contour naturally when supported by a canonical reference. Preserve species identity and unaffected traits; editing masks must fit the particular expression, not ban anatomical movement."
     },
     "blocked_subject_slots": {
       "1024/0002": "User rejected generated Stellar Terapagos expressions for inaccurate face shape and asked not to pursue them; retain native Normal/Normal^."
@@ -106,7 +107,8 @@
         "required": "Natural rodent expressions from the Normal muzzle; pain primarily through eyelids and a small closed mouth"
       },
       "tirtouga": {
-        "required": "Same anatomy-lock workflow from approved Normal; preserve beak, nostril and facial outline. Native emotion-appropriate canonical backgrounds. Preserve already approved portraits."
+        "required": "Same anatomy-lock workflow from approved Normal; preserve beak, nostril and facial outline. Native emotion-appropriate canonical backgrounds. Preserve already approved portraits.",
+        "open_beak_policy": "User explicitly reaffirms approved open-mouth portraits: canonical-reference-based natural beak opening is allowed, without visible teeth. Do not impose a permanently closed beak or replace approved open-mouth portraits."
       }
     }
   },
