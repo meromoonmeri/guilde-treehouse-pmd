@@ -1,0 +1,903 @@
+{
+  "scope": "First animated vegetation kit for PMD-style treehouse surroundings, eight original plant designs. Structures not produced in this lot.",
+  "workflow": "Native Halcyon reference -> generator on magenta -> alpha -> native-size palette/registration -> fixed contact cleanup -> wind cycle -> tilesheets/GIFs",
+  "source_hashes": {
+    "branches.png": "b82339169e4d1ae43f47791bb9b80303cccbe7db235b08b94e272f0c020f208a",
+    "grasses_ferns.png": "83e71a2e2db71994845470e5bea18e54712456fe7c4324cc6f987e96ef36107e",
+    "flowers.png": "307e4886b63fc77faa4c0e2762f12ccb122df257d9820fe90ac40dfd1b049d93",
+    "bushes.png": "28e087f0c4cb2b9e5d88162d4478c5be7c3be6cfd82de2b579e70253216cc5a9"
+  },
+  "native_reference_provenance": [
+    {
+      "repo": "Palikadude/Halcyon",
+      "branch": "working-copy",
+      "commit": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+      "path": "Content/Tile/Vast_Steppe_Base.tile",
+      "blob": "fd8681ea6c3ccccf2a2b618cd9233b8f41b18fa5",
+      "sha256": "6abdcf68c3ccf7b552d7bce520d9136056421c6ee449aab8fd4b01760df3a5a5",
+      "local": "Vast_Steppe_Base.tile"
+    },
+    {
+      "repo": "Palikadude/Halcyon",
+      "branch": "working-copy",
+      "commit": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+      "path": "Content/Tile/Vast_Steppe_Flower_Animations.tile",
+      "blob": "62adc8822eb0850a14fb1db1d6007a4b34e2410d",
+      "sha256": "f425600afe751f86872d7327144bdec3466830030b4cf6fd8fe7b80f52506f88",
+      "local": "Vast_Steppe_Flower_Animations.tile"
+    },
+    {
+      "repo": "Palikadude/Halcyon",
+      "branch": "working-copy",
+      "commit": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+      "path": "Content/Tile/Vast_Steppe_Objects.tile",
+      "blob": "5b1e99cbb357b55706f7b578b87129d1a2b3cf2c",
+      "sha256": "c754b27646b4845e39214a0753147a5ca49acf1bf0b868c965ee39bf38e1fca4",
+      "local": "Vast_Steppe_Objects.tile"
+    }
+  ],
+  "palette": [
+    [
+      57,
+      74,
+      41
+    ],
+    [
+      74,
+      90,
+      49
+    ],
+    [
+      82,
+      107,
+      57
+    ],
+    [
+      99,
+      123,
+      66
+    ],
+    [
+      99,
+      132,
+      82
+    ],
+    [
+      123,
+      156,
+      74
+    ],
+    [
+      165,
+      189,
+      115
+    ],
+    [
+      99,
+      74,
+      41
+    ],
+    [
+      156,
+      107,
+      49
+    ],
+    [
+      206,
+      156,
+      74
+    ],
+    [
+      181,
+      74,
+      198
+    ],
+    [
+      207,
+      94,
+      198
+    ],
+    [
+      222,
+      148,
+      247
+    ],
+    [
+      247,
+      206,
+      231
+    ],
+    [
+      247,
+      181,
+      115
+    ],
+    [
+      247,
+      222,
+      115
+    ],
+    [
+      215,
+      173,
+      66
+    ],
+    [
+      181,
+      74,
+      66
+    ],
+    [
+      231,
+      107,
+      87
+    ],
+    [
+      41,
+      57,
+      25
+    ]
+  ],
+  "palette_note": "Seven foliage values from native Halcyon flower/leaf reference; remaining deep shade and bark/flower/berry accents adapted for this kit. Not a portrait15-color constraint.",
+  "assets": [
+    {
+      "id": "grass_fine",
+      "label": "Herbe fine",
+      "file": "grasses_ferns",
+      "grid": [
+        3,
+        2
+      ],
+      "row": 0,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        16,
+        20
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        3,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 0,
+      "source_crop_bounds": [
+        [
+          97,
+          71,
+          307,
+          341
+        ],
+        [
+          95,
+          80,
+          335,
+          341
+        ],
+        [
+          72,
+          80,
+          312,
+          341
+        ]
+      ],
+      "source_anchors": [
+        [
+          192.0,
+          340
+        ],
+        [
+          192.0,
+          340
+        ],
+        [
+          216.0,
+          340
+        ]
+      ],
+      "scale": 0.06666666666666667,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Three generated wind poses, individually registered then native palette and fixed-contact cleanup",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 0,
+      "art_approved": false
+    },
+    {
+      "id": "fern",
+      "label": "Fougere",
+      "file": "grasses_ferns",
+      "grid": [
+        3,
+        2
+      ],
+      "row": 1,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        24,
+        18
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        3,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 1,
+      "source_crop_bounds": [
+        [
+          58,
+          75,
+          346,
+          328
+        ],
+        [
+          61,
+          118,
+          353,
+          328
+        ],
+        [
+          59,
+          105,
+          347,
+          324
+        ]
+      ],
+      "source_anchors": [
+        [
+          206.0,
+          327
+        ],
+        [
+          209.0,
+          327
+        ],
+        [
+          211.0,
+          323
+        ]
+      ],
+      "scale": 0.07114624505928854,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Three generated wind poses, individually registered then native palette and fixed-contact cleanup",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 1,
+      "art_approved": false
+    },
+    {
+      "id": "violet_bells",
+      "label": "Cloches violettes",
+      "file": "flowers",
+      "grid": [
+        6,
+        2
+      ],
+      "row": 0,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        22,
+        24
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        6,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 0,
+      "source_crop_bounds": [
+        [
+          30,
+          51,
+          270,
+          276
+        ],
+        [
+          32,
+          39,
+          279,
+          276
+        ],
+        [
+          32,
+          51,
+          274,
+          276
+        ]
+      ],
+      "source_anchors": [
+        [
+          155.5,
+          275
+        ],
+        [
+          154.0,
+          275
+        ],
+        [
+          159.0,
+          275
+        ]
+      ],
+      "scale": 0.08906882591093117,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Three generated wind poses, individually registered then native palette and fixed-contact cleanup",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 2,
+      "art_approved": false
+    },
+    {
+      "id": "golden_flowers",
+      "label": "Fleurs dorees",
+      "file": "flowers",
+      "grid": [
+        6,
+        2
+      ],
+      "row": 1,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        22,
+        24
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        6,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 1,
+      "source_crop_bounds": [
+        [
+          24,
+          11,
+          272,
+          270
+        ],
+        [
+          27,
+          12,
+          277,
+          271
+        ],
+        [
+          28,
+          8,
+          278,
+          270
+        ]
+      ],
+      "source_anchors": [
+        [
+          147.0,
+          269
+        ],
+        [
+          149.0,
+          270
+        ],
+        [
+          153.5,
+          269
+        ]
+      ],
+      "scale": 0.088,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Native-scale row articulation from generated neutral; mirrored/inconsistent raw poses discarded",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 3,
+      "art_approved": false
+    },
+    {
+      "id": "round_bush",
+      "label": "Buisson rond",
+      "file": "bushes",
+      "grid": [
+        3,
+        2
+      ],
+      "row": 0,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        28,
+        24
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        3,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 0,
+      "source_crop_bounds": [
+        [
+          59,
+          34,
+          398,
+          339
+        ],
+        [
+          59,
+          29,
+          399,
+          351
+        ],
+        [
+          59,
+          29,
+          398,
+          351
+        ]
+      ],
+      "source_anchors": [
+        [
+          228.5,
+          338
+        ],
+        [
+          226.0,
+          350
+        ],
+        [
+          231.0,
+          350
+        ]
+      ],
+      "scale": 0.07453416149068323,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Three generated wind poses, individually registered then native palette and fixed-contact cleanup",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 0,
+      "art_approved": false
+    },
+    {
+      "id": "berry_bush",
+      "label": "Buisson a baies",
+      "file": "bushes",
+      "grid": [
+        3,
+        2
+      ],
+      "row": 1,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "target": [
+        26,
+        24
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        3,
+        2
+      ],
+      "source_columns": [
+        0,
+        1,
+        2
+      ],
+      "source_row": 1,
+      "source_crop_bounds": [
+        [
+          59,
+          27,
+          392,
+          354
+        ],
+        [
+          65,
+          21,
+          411,
+          354
+        ],
+        [
+          47,
+          27,
+          392,
+          354
+        ]
+      ],
+      "source_anchors": [
+        [
+          228.0,
+          353
+        ],
+        [
+          228.0,
+          353
+        ],
+        [
+          228.0,
+          353
+        ]
+      ],
+      "scale": 0.07207207207207207,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Three generated wind poses, individually registered then native palette and fixed-contact cleanup",
+      "rect": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 1,
+      "art_approved": false
+    },
+    {
+      "id": "leafy_branch",
+      "label": "Branche feuillue",
+      "file": "branches",
+      "grid": [
+        5,
+        2
+      ],
+      "row": 0,
+      "columns": [
+        0
+      ],
+      "target": [
+        24,
+        24
+      ],
+      "anchor": "bottom",
+      "source_layout": [
+        5,
+        2
+      ],
+      "source_columns": [
+        0
+      ],
+      "source_row": 0,
+      "source_crop_bounds": [
+        [
+          9,
+          8,
+          348,
+          273
+        ]
+      ],
+      "source_anchors": [
+        [
+          143.0,
+          272
+        ]
+      ],
+      "scale": 0.06862745098039216,
+      "fixed_anchor": [
+        16,
+        28
+      ],
+      "anchor_mode": "bottom",
+      "motion": "Native-scale row articulation from generated neutral; mirrored/inconsistent raw poses discarded",
+      "rect": [
+        64,
+        32,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 2,
+      "art_approved": false
+    },
+    {
+      "id": "hanging_ivy",
+      "label": "Lierre suspendu",
+      "file": "branches",
+      "grid": [
+        5,
+        2
+      ],
+      "row": 1,
+      "columns": [
+        0
+      ],
+      "target": [
+        24,
+        24
+      ],
+      "anchor": "top",
+      "source_layout": [
+        5,
+        2
+      ],
+      "source_columns": [
+        0
+      ],
+      "source_row": 1,
+      "source_crop_bounds": [
+        [
+          63,
+          6,
+          299,
+          274
+        ]
+      ],
+      "source_anchors": [
+        [
+          181.0,
+          6
+        ]
+      ],
+      "scale": 0.08955223880597014,
+      "fixed_anchor": [
+        16,
+        3
+      ],
+      "anchor_mode": "top",
+      "motion": "Native-scale row articulation from generated neutral; mirrored/inconsistent raw poses discarded",
+      "rect": [
+        96,
+        32,
+        32,
+        32
+      ],
+      "placement_tile_size": 8,
+      "subtiles": [
+        4,
+        4
+      ],
+      "sequence": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "durations_game_ticks": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "phase_offset_suggestion": 3,
+      "art_approved": false
+    }
+  ],
+  "phase_sheet_size": [
+    128,
+    64
+  ],
+  "animated_atlas_size": [
+    512,
+    64
+  ],
+  "grid": 8,
+  "phase_count": 4,
+  "unique_pose_count": 3,
+  "sequence": [
+    0,
+    1,
+    0,
+    2
+  ],
+  "duration_game_ticks": [
+    14,
+    14,
+    14,
+    14
+  ],
+  "gif_duration_ms": [
+    230,
+    240,
+    230,
+    230
+  ],
+  "tiled_duration_ms": [
+    233,
+    234,
+    233,
+    233
+  ],
+  "runtime_PMDO": "NOT TESTED",
+  "runtime_Tiled": "NOT TESTED",
+  "art_approved": false,
+  "technical_precheck": "PASS"
+}

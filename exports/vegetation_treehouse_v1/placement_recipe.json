@@ -1,0 +1,4814 @@
+{
+  "grid_pixels": 8,
+  "scope": "Placement recipe only; not an imported PMDO map or compiled .tile asset",
+  "objects": [
+    {
+      "id": "grass_fine",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "fern",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "violet_bells",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "golden_flowers",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 0
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 0
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 1
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 1
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 2
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 2
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 3
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 3
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "round_bush",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 0,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 0,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 0,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 0,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 1,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 1,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 1,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 1,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 2,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 2,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 2,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 2,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 3,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 3,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 3,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 3,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "berry_bush",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 4,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 4,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 4,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 4,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 5,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 5,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 5,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 5,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 6,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 6,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 6,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 6,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 7,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 7,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 7,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 7,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "leafy_branch",
+      "anchor": [
+        16,
+        28
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 8,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 8,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 8,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 8,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 9,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 9,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 9,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 9,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 10,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 10,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 10,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 10,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 11,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 11,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 11,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 11,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    },
+    {
+      "id": "hanging_ivy",
+      "anchor": [
+        16,
+        3
+      ],
+      "cells": [
+        {
+          "local_cell": [
+            0,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            0
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 4
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 4
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            1
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 5
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 5
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            2
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 6
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 6
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            0,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 12,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 12,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 12,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 12,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            1,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 13,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 13,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 13,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 13,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            2,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 14,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 14,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 14,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 14,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        },
+        {
+          "local_cell": [
+            3,
+            3
+          ],
+          "frames": [
+            {
+              "Sheet": "VT1_vegetation_phase_0",
+              "TexLoc": {
+                "X": 15,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_1",
+              "TexLoc": {
+                "X": 15,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_2",
+              "TexLoc": {
+                "X": 15,
+                "Y": 7
+              }
+            },
+            {
+              "Sheet": "VT1_vegetation_phase_3",
+              "TexLoc": {
+                "X": 15,
+                "Y": 7
+              }
+            }
+          ],
+          "duration_game_frames": 14
+        }
+      ]
+    }
+  ]
+}
