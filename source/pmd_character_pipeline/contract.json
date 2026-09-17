@@ -72,6 +72,26 @@
       "primary_template": "template.png",
       "extras_atlas": "Extra_Backgrounds.png",
       "policy": "user-provided canonical background references; preserve originals; crop selected cell, then count subject+background colors together; optional extras require explicit emotion mapping"
+    },
+    "normal_anatomy_lock": {
+      "required": true,
+      "authoritative_reference": "Existing native Normal portrait, or approved Normal model if none exists",
+      "locked_traits": [
+        "facial silhouette",
+        "head proportions",
+        "muzzle and nose anatomy",
+        "cheek shape and placement",
+        "eye implantation and base design",
+        "ears",
+        "markings",
+        "view and framing"
+      ],
+      "allowed_changes": "Only anatomically natural expression movements of eyelids, brows and mouth; no new features, no facial redesign, no default head tilt",
+      "workflow": "Single-expression trial from Normal before any expression sheet; inspect native 40px; reject identity drift even when technical format passes",
+      "mask_note": "An explicit per-character editing mask can protect fixed pixels; it is not proof the expression inside the mask is artistically correct"
+    },
+    "blocked_subject_slots": {
+      "1024/0002": "User rejected generated Stellar Terapagos expressions for inaccurate face shape and asked not to pursue them; retain native Normal/Normal^."
     }
   },
   "sprite": {

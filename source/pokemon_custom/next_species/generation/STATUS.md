@@ -18,3 +18,11 @@ Nouvelles générations effectivement présentes, **aucune exportée ou approuv�
 - `mega_raichu_y_emotions_v2.png` et `zarude_walk_front_v1.png` : appels interrompus, fichiers absents au contrôle.
 
 Dernière correction utilisateur : production de **toutes les créations manquantes de SpriteCollab**, pas seulement cette liste. L’inventaire global figure dans `exports/spritecollab_global/` ; ces brouillons locaux n’y sont pas décomptés comme ressources terminées.
+
+## Correction utilisateur — visage Normal impératif
+
+`terapagos_stellar_emotions_v1.png` est maintenant **REJETÉ PAR L’UTILISATEUR** : la forme du visage n’est pas fidèle à la référence. Ne pas exporter, ne pas compléter, ne pas relancer cette planche. Préserver les portraits Normal/Normal^ natifs. Cette suspension concerne les expressions, pas l’identité du sprite entier traité séparément.
+
+Pour Méga-Raichu X et Y, les traits/anatomie du Normal sont une règle fixe, applicable à toutes les futures expressions : pas de modification de silhouette faciale, proportions, museau/nez, joues, implantation/design des yeux, oreilles ou marquages. Mouvements naturels uniquement. Les anciennes grandes planches ne constituent pas des modèles validés.
+
+Deux nouvelles études individuelles `mega_raichu_{x,y}_happy_locked_v1.png` ont été générées directement depuis chaque Normal. Le script `../portrait_identity.py` ne prélève que les régions yeux/bouche et garde tous les autres pixels natifs inchangés ; il utilise exclusivement la palette native. Résultats 40×40 dans `exports/pokemon_custom/portrait_identity_v1/`, comparaison Normal/Happy et masques explicites. Ce sont des études sobres pour revue anatomique, **pas** des portraits Happy définitivement approuvés ; le fond Normal est conservé pour comparaison, l’association au fond Happy canonique reste à faire. Les tests de masque ne prouvent pas que l’expression est artistiquement réussie.

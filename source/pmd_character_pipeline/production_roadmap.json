@@ -113,7 +113,8 @@
       "paths": [
         "source/pokemon_custom/next_species/references/terapagos_stellar"
       ],
-      "missing_portraits": "15 required emotions; preserve Normal and Normal^. Fresh faithful-model attempt blocked by image-generation limit; no replacement generated."
+      "missing_portraits": "15 required emotions; preserve Normal and Normal^. Fresh faithful-model attempt blocked by image-generation limit; no replacement generated.",
+      "portrait_status": "Blocked by latest user correction: generated expression face inaccurate; do not pursue this portrait sheet. Native Normal and Normal^ preserved. This does not cancel the separate sprite task."
     },
     {
       "id": "mega_raichu_x",
@@ -121,7 +122,8 @@
       "status": "Existing native Normal portrait located and preserved at 0026/0002; sprites absent and15required emotions missing at pinned revision; full official body reference and generation pending",
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
       "gate": "Verify exact official form identity and anatomy; inspect existing resources and credits before creating or replacing anything. Do not infer a design from ordinary or Alolan Raichu.",
-      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_x"
+      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_x",
+      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack."
     },
     {
       "id": "mega_raichu_y",
@@ -129,7 +131,8 @@
       "status": "Existing native Normal portrait located and preserved at 0026/0003; sprites absent and15required emotions missing at pinned revision; full official body reference and generation pending",
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
       "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form.",
-      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_y"
+      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_y",
+      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack."
     }
   ],
   "standing_requirements": {
@@ -138,7 +141,8 @@
     "review": "Technical precheck, visual/user approval, public SpriteCollab admissibility, and actual PMDO runtime tests remain distinct gates",
     "missing_resources": "Audit dictionary keys as resource presence; values are lock flags. Preserve existing credited or locked assets and existing portraits",
     "references": "A generator prompt and a supplied reference do not prove fidelity. Inspect the output and reject wrong forms before making directional sheets",
-    "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd"
+    "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd",
+    "portrait_identity": "All expression variants must preserve native/approved Normal facial identity and anatomy. Only natural expression movements; no facial redesign."
   },
   "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced."
 }

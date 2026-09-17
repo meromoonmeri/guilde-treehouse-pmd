@@ -1,0 +1,111 @@
+{
+  "status": "anatomy-constrained Happy studies, not user-approved emotion exports",
+  "method": "Generated expression guide, restricted to explicit eye/mouth regions; native palette and every other pixel preserved.",
+  "background": "Native Normal background retained for this comparison only; final Happy canonical background mapping still pending.",
+  "subjects": {
+    "mega_raichu_x": {
+      "normal_path": "source/pokemon_custom/next_species/references/mega_raichu_x/Normal.png",
+      "normal_sha256": "5e4581202834d6df39fa7f514738356434286d4e09b7bac46b5fa3228f1df548",
+      "generator_source": "source/pokemon_custom/next_species/generation/mega_raichu_x_happy_locked_v1.png",
+      "changed_pixels": 30,
+      "changed_pixels_outside_editable_regions": 0,
+      "normal_original_unchanged": true,
+      "profile": {
+        "editable": [
+          [
+            13,
+            18,
+            20,
+            25
+          ],
+          [
+            27,
+            18,
+            33,
+            25
+          ],
+          [
+            16,
+            27,
+            30,
+            31
+          ]
+        ],
+        "protected": [
+          [
+            3,
+            22,
+            13,
+            32
+          ],
+          [
+            33,
+            23,
+            36,
+            32
+          ],
+          [
+            21,
+            25,
+            26,
+            27
+          ]
+        ]
+      },
+      "art_approval": false,
+      "technical_scope": "40x40, opaque, native <=15-color palette; this does not certify facial acting"
+    },
+    "mega_raichu_y": {
+      "normal_path": "source/pokemon_custom/next_species/references/mega_raichu_y/Normal.png",
+      "normal_sha256": "5a7bb0709de9e6553acc1b1ab10c839449703ecbc51c1d615e53d376deb8ae98",
+      "generator_source": "source/pokemon_custom/next_species/generation/mega_raichu_y_happy_locked_v1.png",
+      "changed_pixels": 18,
+      "changed_pixels_outside_editable_regions": 0,
+      "normal_original_unchanged": true,
+      "profile": {
+        "editable": [
+          [
+            10,
+            15,
+            18,
+            21
+          ],
+          [
+            24,
+            15,
+            31,
+            21
+          ],
+          [
+            15,
+            22,
+            29,
+            27
+          ]
+        ],
+        "protected": [
+          [
+            4,
+            20,
+            14,
+            29
+          ],
+          [
+            29,
+            20,
+            35,
+            29
+          ],
+          [
+            18,
+            20,
+            24,
+            22
+          ]
+        ]
+      },
+      "art_approval": false,
+      "technical_scope": "40x40, opaque, native <=15-color palette; this does not certify facial acting"
+    }
+  }
+}

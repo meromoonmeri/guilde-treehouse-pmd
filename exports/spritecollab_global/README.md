@@ -27,3 +27,9 @@ Les manques du profil **32 actions du projet** ne sont pas les exigences officie
 Progression distincte : à produire → généré → validation technique → validation artistique → test moteur. Aucun passage automatique de généré à terminé. Les propositions upstream en attente bloquent une production concurrente sans coordination. Les originaux, crédits et portraits approuvés sont conservés. Les essais locaux Zarude/Stellaire/Méga-Raichu en cours restent des brouillons, pas des trous déclarés comblés.
 
 Fichiers : `backlog.json` (détail), `backlog.csv` (tableur), `apercu_spritecollab_global.html` à la racine (recherche et filtres). Reconstruction : `python source/sprite_audit_v2/global_backlog.py`. Ce plan ne lance pas de production autonome en arrière-plan.
+
+## Exceptions utilisateur prioritaires
+
+- `1024/0002` : User rejected generated Stellar Terapagos expressions for inaccurate face shape and asked not to pursue them; retain native Normal/Normal^.
+
+Ces blocages empêchent la production des portraits concernés sans masquer leur absence dans le catalogue. Le travail de sprites reste distinct.
