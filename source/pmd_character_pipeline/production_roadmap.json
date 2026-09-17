@@ -265,5 +265,20 @@
     "tests": 13,
     "other_zones_complete": false,
     "runtime_validated": false
+  },
+  "environment_aurora_intrinsic_animation_correction": {
+    "request": "Boréales animées en plusieurs frames, pas un simple défilement",
+    "source": "source/arene_boreales_v4/",
+    "viewer": "apercu_boreales_animees_v4.html",
+    "intrinsic_poses": 88,
+    "intrinsic_loop_seconds": 8.8,
+    "optional_wrap_loop_seconds": 26.4,
+    "method": "Nonrigid animated folds, height variation and travelling alpha scintillation; preview starts with scroll OFF",
+    "sky_terrain": "V3 preserved byte-identically",
+    "native_cycle_recovered": false,
+    "dedicated_tests": 9,
+    "runtime_validated": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }

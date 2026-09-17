@@ -1,0 +1,24 @@
+{
+  "size": [
+    768,
+    512
+  ],
+  "intrinsic_frames": 88,
+  "frame_ms": 100,
+  "intrinsic_loop_seconds": 8.8,
+  "wrap_frames": 264,
+  "wrap_loop_seconds": 26.4,
+  "scroll_px_per_frame": 3,
+  "tile_size": [
+    792,
+    240
+  ],
+  "motion": "Nonrigid travelling folds, horizontal sway, variable height, vertical undulation and travelling opacity scintillation. RGB from canonical drawing retained. Animated even with scroll disabled.",
+  "native_game_cycle": false,
+  "runtime_tested": false,
+  "terrain_and_sky": "V3 unchanged; separate PNG layers copied byte-identically",
+  "viewer_default": "intrinsic animation ON, scroll OFF to demonstrate real changing poses",
+  "preview_gif": "Scene GIF half size; PNG and transparent WebP full size",
+  "reference": "../arene_glace_large_v3/manifest.json",
+  "credits": "Canonical PMD reference drawing from user-provided aurorepmdsky.png via V1/V3. Pokemon/Nintendo/Creatures/GAME FREAK/Chunsoft; no additional redistribution permission inferred. New authored motion, not recovered official animation."
+}
