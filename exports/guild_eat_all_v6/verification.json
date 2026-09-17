@@ -1,0 +1,2862 @@
+{
+  "scope": "Eat available for nine guild members; not all other guild actions completed.",
+  "food_in_sprite": false,
+  "runtime_PMDO": "NOT TESTED",
+  "new_art_approved": false,
+  "user_selection": "All previously presented guild proposals retained; not automatic approval of these previously unseen four drawings.",
+  "source_pin": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+  "members": [
+    {
+      "slot": "0282",
+      "name": "Gardevoir",
+      "state": "v5_cycle_retained",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        9,
+        7,
+        9,
+        7,
+        7,
+        7,
+        9,
+        7
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Appeal-Anim.png": "3cdb5e32876284234a312ea2606d8e46d8aca469cca01fa34e85c1ce0525caf3",
+        "Appeal-Offsets.png": "553f421507393a205b456b16325191b275e842e6b1a37502242707dab956d014",
+        "Appeal-Shadow.png": "169c0cd05a71b7b7115332bc8ac262aeadb45b57de71ef135c9dd6bec475cf52",
+        "Attack-Anim.png": "7fae0d27e0f22dd1105f766a78ed183b8fe7003979b9df1dd506c1bd9605d7a8",
+        "Attack-Offsets.png": "41405b65880ee585df3a9b00cf4d3c7a98f8e3848a6948281627b1d22c9d0938",
+        "Attack-Shadow.png": "c394e9390430fab4cb700b55df50f42743c012028602d84da8772a7a0815868d",
+        "Charge-Anim.png": "4eade63a292865a7c4eed01a2f537059e81f2c19b8d765f6fcceb5fffe554e36",
+        "Charge-Offsets.png": "671f94e7f0b355f2dea5b634ccef154d78e3c013ce99cd21c4e87b9bb7adc219",
+        "Charge-Shadow.png": "88bebe6f8e0acc32f6397dee783ae0a5cf8e4f180dbc6cb57e336e2a69a19af0",
+        "Double-Anim.png": "4f89402f797723b95922f097b3dfb75097d46842968954a819e7842e02892193",
+        "Double-Offsets.png": "373c45cfa33e6a88641798a24a1e49e35bdfb2b8860c70b0e609c41a8f1a1fa3",
+        "Double-Shadow.png": "da72310d43bea64a3a1ab875931752b2dd86df3c87754859108adfd5312580eb",
+        "Hop-Anim.png": "0dc20321e8740035f227760646f4fd3faffde504512b4ebf1adbe3919c44f4e8",
+        "Hop-Offsets.png": "87d4b8c321098246ec90a3fd0c333a56a7402026adba65d5842a7aef80b01dd5",
+        "Hop-Shadow.png": "4057de4244f7d2b8952f0abc720e7de023e6175b517b641dbac0a8bb99095027",
+        "Hurt-Anim.png": "10272146972f9a456512dba68d3b04a1fc8a50ac9448fe18395cbbce7781adda",
+        "Hurt-Offsets.png": "94558ce04400db7f68bd56a425025f6db0e56eaf414ab301e34bfeaf3f3304f1",
+        "Hurt-Shadow.png": "c663246b82041c89bd426c64d928f17c75b140a2bfadae684db6985e1fe2257d",
+        "Idle-Anim.png": "2fe861f10c7f0fa574e73891ee98753598755a958416c879f03e5d8b3a19f7c6",
+        "Idle-Offsets.png": "2a9f9ca0eef3ad088f2eda19197ee4cb0109d3cb4b27c126dd9ddd94c0a4ad3e",
+        "Idle-Shadow.png": "68c83e91a9a39ef3355b8f1a3bb474180faa46ef443a58acac567a6b54127560",
+        "Rotate-Anim.png": "345e9d8ec7b3dc413a2a6cdd434aea33081087de2310ecbe83cd82a50ff45669",
+        "Rotate-Offsets.png": "a13b6b44f8e4db6d49f95e2fb366a30eeaea485d5f4d4bbd67984950c831bafc",
+        "Rotate-Shadow.png": "1c2f46c83112c32f559817c6b2790ec563f3c95309272e9232b41e71d6b3861a",
+        "Sleep-Anim.png": "890121b721a3a8bc06d713b0d56deaa19df02e75b39197d30d0273504949cfef",
+        "Sleep-Offsets.png": "f09000b72c3f337ba92180c8230f9fcf42397532323a6158946e3eac533e8d24",
+        "Sleep-Shadow.png": "02b60aeb3fc7405686455ca107128344c08a20efd465c0f716cc5856f9871091",
+        "Swing-Anim.png": "1a6ee572ede49c6b3deca2f59eb9e8f7c81f26b920444ad2f7ed8a0234a60fc8",
+        "Swing-Offsets.png": "e95364dba532e7a0c0323c7bba6b85433cf22333a0c99f6446781e41f7994310",
+        "Swing-Shadow.png": "16061e0599b6c1d09653f7184cb3e21471f6945c5e4402735ec2ad0d4308660a",
+        "Walk-Anim.png": "c6b11a75ad15cfb7fb703dcbe30a2d5189d662eab46748ef0494bee04d8df93c",
+        "Walk-Offsets.png": "2f49dd797bd3a492405e1a3efa0cc2b904571ad131e93f614a9725fdcfdafa00",
+        "Walk-Shadow.png": "68c83e91a9a39ef3355b8f1a3bb474180faa46ef443a58acac567a6b54127560"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 40,
+              "colors": 10
+            },
+            "Attack": {
+              "frame": [
+                72,
+                72
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 19,
+              "colors": 10
+            },
+            "Appeal": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 8,
+              "directions": 8,
+              "ticks": 30,
+              "colors": 10
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 10
+            },
+            "Hurt": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 10
+            },
+            "Idle": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 10
+            },
+            "Swing": {
+              "frame": [
+                72,
+                72
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 10
+            },
+            "Double": {
+              "frame": [
+                56,
+                72
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 10
+            },
+            "Hop": {
+              "frame": [
+                32,
+                88
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 10
+            },
+            "Charge": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 10
+            },
+            "Rotate": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 9
+            },
+            "StandingUp": {
+              "frame": [
+                40,
+                24
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 8,
+              "colors": 10
+            },
+            "Special0": {
+              "frame": [
+                40,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 10
+            },
+            "Special1": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 8,
+              "directions": 8,
+              "ticks": 30,
+              "colors": 10
+            },
+            "Special2": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 2,
+              "colors": 8
+            },
+            "Special3": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 24,
+              "directions": 8,
+              "ticks": 60,
+              "colors": 9
+            },
+            "Pose": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 14,
+              "colors": 10
+            },
+            "Jump": {
+              "frame": [
+                24,
+                88
+              ],
+              "columns": 11,
+              "directions": 1,
+              "ticks": 28,
+              "colors": 10
+            },
+            "Eat": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 9
+            },
+            "Nod": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 70,
+              "colors": 9
+            }
+          },
+          "global_visible_colors": 11
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0083",
+      "name": "Canarticho",
+      "state": "new_technical_candidate",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "2f75ab73c640d52d0e43f7fd62e4734074bd6b46d765243068c223a93befb8fc",
+        "Idle-Offsets.png": "0a4ec552380787f15895f79fa763f35d1629a67ab69f47409f155b63f85da1f3",
+        "Idle-Shadow.png": "c0ba6d2d4ef8e26824dace9aca22a63c8cc4bd423ffa67d6755e5ad2ec6423d8",
+        "Charge-Anim.png": "3bc8b319b63236f7457dfc7698a9b5cbff7b5593242a49b2c1827529cbe0ce6c",
+        "Charge-Offsets.png": "a3aa00efa243197a5d0c8b842b2b1a5c0a9ce4e5faa6a9c04b00ea66316e5ed1",
+        "Attack-Shadow.png": "e4fdd4bae4a6adf73f859009eeca88e637cf2bf59a92c8b97b1954cb43d922df",
+        "Attack-Offsets.png": "ab3097782e7091e8ffdc74bf34b2241f241da84303ee43fb4ee19e86f410d1c9",
+        "Charge-Shadow.png": "510d8bc814f9e5b81962b23f18f4ce3f4a3e59999dd3fea52fb87a48b528d814",
+        "Attack-Anim.png": "8e956f38e985a5c840d29266a04db5a8888b8ea4163faa7888d2f43941d3fd6b",
+        "Double-Anim.png": "44a7119f246681bcd9962e3d77052d23dd5ec1bfd3dc5b7dca763d7bbcd030d0",
+        "Double-Offsets.png": "0a8ea129634f610b380c25234b7a769ae55412c71a9b7266d1d248e36219e09d",
+        "Hop-Anim.png": "4ae8a5a049a43b4b1d56cdc8561a6c8c1c35e351e48b67720134f8309c34a321",
+        "Double-Shadow.png": "d5cda1b97b1e2f72ce3259e2dd6ced8ad2904b29267950d7724eadb6eb2d395a",
+        "Hop-Offsets.png": "f66f8f59ee714dd3b933bb6134b466ec01e49486bc3b87b2e0151e2d89cc0ca7",
+        "Hop-Shadow.png": "da7a8b91f98217923ac44d483a29b9f411020ac3f2d5a3605aedee9ca3bf1dca",
+        "Hurt-Anim.png": "7d4b6ec079602bb93c6532b8cba1d6277108613fe2cc268c0d4905c992e85314",
+        "Hurt-Offsets.png": "cbb5bf12e64ca2642c8016023de9f91f7cd2960b6088e511a282d67455228828",
+        "Hurt-Shadow.png": "4973734d088ad25a7f3a2fe09949b183bc8ba0bc0cfc627e93ef21675f194521",
+        "Rotate-Offsets.png": "3d7831e0b82faea843e74d7903c53765ddcd96fc54a2bd20ae9ec0d4107127cb",
+        "Rotate-Shadow.png": "42096db105bcf29b707f51adf3ede0219ccd2cd2cb3ab4efc53ff5da2e2bfc6b",
+        "Rotate-Anim.png": "e5b0ba3d9cc785cae99a9ec9ef89b2607c65e415d667eb2f632745512650c803",
+        "Sleep-Anim.png": "e5891094c7d111c9e12d9ea619e86fb377795523bf598117babb195beb27be76",
+        "Sleep-Offsets.png": "f7449c5c94698c1d783598205c4242691b6da7ad89760e219f90fd002e80eaa1",
+        "Sleep-Shadow.png": "d39e5710df164756cfd3bf0d5c5cf1b005c9655ee3904f2e4b1807cf2ac21330",
+        "Strike-Shadow.png": "5fe92a96e334c04993c36c0fe94644061ebb015b74008a1b7a300fe781f7888e",
+        "Strike-Offsets.png": "b8463aaf3c1f91ae1d97852350204f6a51e50eca93407be3bdd2363b0e27478d",
+        "Swing-Anim.png": "abf0beced9c0bf4e06a92e6571a2c70ce43a52b443aa7097d329c23d755f273d",
+        "Strike-Anim.png": "c5601c6c87e6d757b83c36a2dece8999236c3ef21acb37f20dfc2c6c25e8edce",
+        "Swing-Offsets.png": "b3f07d84938ba79ae40a008f34f02b2528e05750c0ef0356c70fe18c646058a8",
+        "Swing-Shadow.png": "79b4fba7e8d11a212be6865b6aacc604ed7ffa0af7b225f7eccd0dc099a1773f",
+        "Walk-Offsets.png": "0a4ec552380787f15895f79fa763f35d1629a67ab69f47409f155b63f85da1f3",
+        "Walk-Anim.png": "2f75ab73c640d52d0e43f7fd62e4734074bd6b46d765243068c223a93befb8fc",
+        "Walk-Shadow.png": "c0ba6d2d4ef8e26824dace9aca22a63c8cc4bd423ffa67d6755e5ad2ec6423d8"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 12
+            },
+            "Attack": {
+              "frame": [
+                88,
+                80
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 21,
+              "colors": 12
+            },
+            "Strike": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 13,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 12
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 10
+            },
+            "Hurt": {
+              "frame": [
+                48,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 11
+            },
+            "Idle": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 84,
+              "colors": 12
+            },
+            "Swing": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 12
+            },
+            "Double": {
+              "frame": [
+                48,
+                56
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 12
+            },
+            "Hop": {
+              "frame": [
+                24,
+                80
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Charge": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 12
+            },
+            "Rotate": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 12
+            },
+            "Eat": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 12
+            }
+          },
+          "global_visible_colors": 12
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0674",
+      "name": "Pandespiègle",
+      "state": "new_technical_candidate",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        6,
+        7,
+        7,
+        5,
+        6,
+        5,
+        6,
+        7
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "23a58708d0a070e714fe9737e6d8124554b0e3db6b1b12f49ba5c42fb705041b",
+        "Idle-Offsets.png": "7c3767cbdb6dd6ff2ec9e344f22143979b77a708e2358a52022a70bed4eb97f2",
+        "Idle-Shadow.png": "23e708908728b1119369cd541f003bd0c2499ef43d0e942b23cd6f94a1fe651b",
+        "Attack-Anim.png": "f9e17db3b96e734abe13a1a34861ae0d6e1976608c19e97caf6a3eab585fd7a3",
+        "Attack-Offsets.png": "1e48515cb7465ec750dd0d4c32cacce9b20fc128f542a26263afc7f6d078c13f",
+        "Charge-Offsets.png": "4a46898a43c6d55afa29d6de71ea6a86eb799f252cb4b925720cce120c79c38e",
+        "Attack-Shadow.png": "3a84d5571ca5427ac9e0c824ed3859bf1de0cb9439ba814012f372bf25670490",
+        "Charge-Anim.png": "23cc10da2d70c450a52a42e6e5566d3853c8dbc8c549308d6e1ade3dd6ac5e3e",
+        "Charge-Shadow.png": "b3078629dfa46be56d3ec63165df98162b8652a1171063f16c4284c701b48226",
+        "Double-Offsets.png": "3f80319b08ee5c51ab8f78ffa8f59184b06c836c4f47e08c8d89fa4d3be60408",
+        "Double-Anim.png": "27b56352815f73a3774a3af8dd56d408102bb34b284f3fa4707f2ce9a89d1597",
+        "Double-Shadow.png": "cf8d6274326fe805eb7deed76f295d3f9c26611334055e80f1f258270157053d",
+        "Hop-Anim.png": "5741764b619abd506dd98c452fbd1ddd99eab0795fcbcaa61f8beb322a4a7c25",
+        "Hop-Shadow.png": "5df9ceea70f035ef835efa120c5c2a5cf668cfbc83c3cac2fb603e38dbf67081",
+        "Hop-Offsets.png": "b5d0a4686353b9abc093c9ea0dae15f48040d4a61c2e9f4be6005b89237a19b2",
+        "Hurt-Anim.png": "81381f3156247758b6c2df59671c78e66b1cbae5940f329f54fa2e14abbc5edd",
+        "Hurt-Offsets.png": "5260cceaf9c33f8bc58fe77b2dca89b52875bfa599b29ae36cdc61e927e5662b",
+        "Hurt-Shadow.png": "ccbfb96c0e4bb8c0bbb028b84a1f8dbc0c59b4693d1cdcf1850555f56602348e",
+        "Punch-Anim.png": "bdaefa3825e0e73e3572e3023e855c94ef28baafd37f34980689bd4790daf19a",
+        "Punch-Shadow.png": "af455572eba6ae208ec0a3b1c1363d9a29c6adb8eaf994021c2cda4e95e671eb",
+        "Punch-Offsets.png": "71c07293537fbafe2ca4a23907d5f7e902d47e4449a5eada5c46adfb4265d7da",
+        "Rotate-Anim.png": "d0ce3cbe6073ef71fe02cf8b92b29d343a1039ae9d25be2e0611e692101c5a50",
+        "Rotate-Offsets.png": "18134b97849e19d22c1fa6b552eb533244dc893e87f4a642ee4daf9d5149d971",
+        "Rotate-Shadow.png": "353c0a8f12cd512b4aa4ea7b04758687de17fe4e9202ec26efa8c86765b601be",
+        "Sleep-Shadow.png": "02b60aeb3fc7405686455ca107128344c08a20efd465c0f716cc5856f9871091",
+        "Sleep-Anim.png": "12ae0b96caa559bd78f2c6c0dae115e6f70d75d3da75fc9e12fa8a8fa6f9e5d1",
+        "Sleep-Offsets.png": "9d80481a30367115081f8cb465a7c64c0342187b030b6d8ab5999d4f9c16c718",
+        "Strike-Offsets.png": "609f45da138f7ac30f8ebdf07fa4de52a20d863adf9553ff5950b8efb50d6bcd",
+        "Strike-Anim.png": "58621edea35dab51322c1ff1c5d01657995fb3c13fa8eb56973f7d4e8ab8bce8",
+        "Strike-Shadow.png": "5709fa0c7fb8fdbf6a0eb266f431df00ae720dd16ce1be39cf65896fabde9046",
+        "Swing-Offsets.png": "5577c359db35b0447c65a2891672e0113fa67b91cf9a6a8f21eb994efba82ec2",
+        "Swing-Shadow.png": "1e540610feb2e229de764d3a9e4fe2d5a4795d348e14aecd326d418b6ab635fe",
+        "Swing-Anim.png": "e523c46c70344ae00ff90e64688842714f8182fdebc2e44dd00f41b5fa6a30bd",
+        "Walk-Anim.png": "54837b7e18847eca1c9fcf61707f55ef3fae1c11b81eb24506d1d54e5636aa84",
+        "Walk-Offsets.png": "33398c6bbc749ede6545ea34cfc3b1c5650b4d769f49e3735ba6d425bd913f12",
+        "Walk-Shadow.png": "1e33c73a90dd411bc334f61ea50528ae77d2a46921e3773ac7d41e85e341340e"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 11
+            },
+            "Attack": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 21,
+              "colors": 11
+            },
+            "Strike": {
+              "frame": [
+                72,
+                104
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 31,
+              "colors": 11
+            },
+            "Punch": {
+              "frame": [
+                64,
+                72
+              ],
+              "columns": 13,
+              "directions": 8,
+              "ticks": 28,
+              "colors": 12
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 10
+            },
+            "Hurt": {
+              "frame": [
+                48,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 13
+            },
+            "Idle": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 6,
+              "directions": 8,
+              "ticks": 133,
+              "colors": 11
+            },
+            "Swing": {
+              "frame": [
+                80,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 11
+            },
+            "Double": {
+              "frame": [
+                48,
+                64
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 11
+            },
+            "Hop": {
+              "frame": [
+                24,
+                80
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 11
+            },
+            "Charge": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 11
+            },
+            "Rotate": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 11
+            },
+            "Eat": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 11
+            }
+          },
+          "global_visible_colors": 13
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0371",
+      "name": "Draby",
+      "state": "native_preserved",
+      "directions": 1,
+      "frames_per_direction": 4,
+      "ticks": [
+        6,
+        8,
+        6,
+        8
+      ],
+      "unique_drawings": [
+        3
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "5c5e2f51b9c0d9c472099ec21ce072ea4b338ded36380e82067e3e7aa663cb3c",
+        "Idle-Offsets.png": "ce32bfc5f92547312fc20273543eeab5685a9af7560e77190400c7594225a4e0",
+        "Idle-Shadow.png": "1e33c73a90dd411bc334f61ea50528ae77d2a46921e3773ac7d41e85e341340e",
+        "Attack-Shadow.png": "f859513dbb91a1ac302c80a7a02cb3b27722078094b4e2449a757b83aa1d01c4",
+        "Attack-Anim.png": "ecb22e418b56f516ec3081789249c3056b4801a746f3ea61c781315631aaeaec",
+        "Attack-Offsets.png": "fec5dbe4399befc34de2df7024aa6443239faed5faf0df314c5769f9c402d8bb",
+        "Bite-Offsets.png": "b36527b6dbf3fe52df2f78e1d469dc1f5feed918ad1e70e875619398dcb69540",
+        "Bite-Anim.png": "b32277c373770ecfad646276a45494fe04a5172c0cb49bd200ae127e2673e254",
+        "Bite-Shadow.png": "6e5a87e89bd5fca0b4300886327c65b4f8ef52f2c5e76949e8fb0df825031f87",
+        "Charge-Anim.png": "44ed53f4cbacec3521ecb589b150c01eec59608b1b9d186ab94f7ff4e224fa94",
+        "Charge-Shadow.png": "88bebe6f8e0acc32f6397dee783ae0a5cf8e4f180dbc6cb57e336e2a69a19af0",
+        "Charge-Offsets.png": "e5489ef204b3b0355bb9ea50259b35ad97de2d3183cf2b15016b6a61b5bfd451",
+        "Cringe-Anim.png": "435362e9ca9450adbdfd512d35641a7e8694eebdb34998081c8e23bf65629ae7",
+        "Cringe-Offsets.png": "3927ca0057c76ae1af32c25873a779308e8433711474e295f1c2defc1813359e",
+        "Cringe-Shadow.png": "462a4b981cd926651af1807a555287065afe9067a491afc0a801ea0e6f0277e8",
+        "DeepBreath-Anim.png": "d7a42bc9fdf48fbe66984944a8aa6b68aed8b394627f8858808d4b277a023daa",
+        "DeepBreath-Offsets.png": "efc673bae2fc692e22d26913f6b27360eed6e5975c9661ef18ab81ee35ecf9e1",
+        "DeepBreath-Shadow.png": "1556cd89f59c9732f08b515b469457a882f53d3832ef4be9e56c263dca1cf024",
+        "Double-Offsets.png": "e7b1096ac3046c4443374889c457faae8b2ed040bf9c172b46264756f0f89c87",
+        "Double-Anim.png": "3376e5d5e27b184728885881fbe0f68013df072c1734c95260cab7b839270b34",
+        "Double-Shadow.png": "cf8d6274326fe805eb7deed76f295d3f9c26611334055e80f1f258270157053d",
+        "Eat-Anim.png": "fb28d05241e1ee45cbff2a5ddf6545594a56ec04927fe9aeb360386f68cde7e4",
+        "Eat-Shadow.png": "2e6acb9f9ebbfa5ae951c74c27110ab3ccae5963beb5fddbaa73ba2885ab67db",
+        "Eat-Offsets.png": "7193ee70182157a45da93eb92788d9120a7528ef193ef2f8590b46321b552868",
+        "Emit-Anim.png": "c87d42c826776abb4141d1751fcaa08bd8dd9188293f498a9e31f533790981e6",
+        "Emit-Shadow.png": "0e03c9d11fdc4fa0c1b05182c15349ed9dd3e5c67cb0a5c456b99bac8c187831",
+        "EventSleep-Anim.png": "6ae08f75c88713d124a19bd154fd9fd7fe3436d7dfca2a7a36859319df94e76b",
+        "Emit-Offsets.png": "25f224d61d7d2cc55e767b7d5277995cb68db9f96a27341cec3a1b17eb86e0f3",
+        "EventSleep-Offsets.png": "c666c39f54cdfe0a2a2e6cb7147743e3bcd35c813f82ba52cf7398319ea026dc",
+        "EventSleep-Shadow.png": "80dd85544b4f19f8a22874d6feee1fe919c91c8605658a9e488a6ca789e5d872",
+        "Faint-Anim.png": "7fd700aed925295ea7d4b9bec9882b01baa5ae938fd5cb7286dd466ccec78199",
+        "Faint-Offsets.png": "f8605444e3e823b0fa6880a7103b60b739bd817247735540c0876020c65f41dc",
+        "Faint-Shadow.png": "699004e765ed09605ed011918a20f5e67a4dc601261daca1e677961c3a67120a",
+        "Float-Anim.png": "9257e3f17958588e8ddf6945debffb1532ad0d8629105394311df982f9f75441",
+        "Float-Offsets.png": "16cf4580cdf3d6efe95ba5636cd66e11cfb460c6005f3c6f962b011fac6a46ec",
+        "Head-Anim.png": "562890b2795efe66e8733b459dd6216afda5e6b34dad6e0138f31d0cac8ec1c9",
+        "Float-Shadow.png": "17d212ca89067d3a2085827c3c68bc4400802fdd2f6b9d75ab69d9870556e348",
+        "Head-Offsets.png": "8b9449ec4bdf3750ea29586a0ad222ecc80412ccfeb0e31917bd3b2fc43aab38",
+        "Head-Shadow.png": "cf35b40dfa28c5f26cf140c896350ed69e8769e81e5750e4cb49c28d9e04722e",
+        "HitGround-Anim.png": "d1e97d6ca8cca9c5dbd35243916ea56fa2c6e361d98c236eaaefb034dc3ad220",
+        "HitGround-Offsets.png": "2317923243eaa9245e6087a64ef9f24f75396b2367a5b2cf68d61c286b2ff731",
+        "HitGround-Shadow.png": "a8b1fe800cdd32e0c086d9e4f954b76bf12725667dc56d49850a84a3bb8194d7",
+        "Hop-Anim.png": "c612fe7a4a814965ed3f58e64900716950ab4980ea2fd32f73c38e377618ccda",
+        "Hop-Offsets.png": "874f47428bf0fd0548293c6a38c00656793f26ddd9726ca66b6096532c38387a",
+        "Hop-Shadow.png": "4057de4244f7d2b8952f0abc720e7de023e6175b517b641dbac0a8bb99095027",
+        "Hurt-Anim.png": "b6539bc16e526a4615677b2357db3ce88cb27dd2fdf1e996fe2cf6d3fc8e4b56",
+        "Hurt-Shadow.png": "638c0c2c88026829f2028c415e8930c89e75feff7841f1d214d120becfb5c8c0",
+        "Hurt-Offsets.png": "6b66e9ac9dfd3010f3f126f2a8427290a623b4ba18e4eb204967d80baa3c66bc",
+        "Laying-Offsets.png": "2cb396cd45b2a32005cda4d195be69a9805f2c8ee25556c903fc107cf3aa0c76",
+        "Laying-Anim.png": "914f062eb0f494f32986c25d0e0fa907257ba18965e4f6f42739e572c00e76f8",
+        "Laying-Shadow.png": "c7599f7cc11d680aab552166cdbeb4a868109a5f3dd20b8f6a7be3e912bf9960",
+        "LeapForth-Anim.png": "acb5ee394de5881dbeff153c057ac899fae8645b91ff83dd5d586671d8174df6",
+        "LeapForth-Shadow.png": "ad345bd2dcb96bed1e23577361c90c2950dcbffd95a4d8f97dc3ac381f950a14",
+        "LeapForth-Offsets.png": "582d866755fffb80d15bb3250dcb7dfd86c9bce6aa14882457eb0b50a7213575",
+        "LookUp-Offsets.png": "075dcd80937c9a4576f18afc879e268fe2f13738abefd7914de24abe49879994",
+        "LookUp-Anim.png": "393e2599dc94952dfc70c06d1970a773c3b4becbea38ba42a2241101ec462b95",
+        "LookUp-Shadow.png": "e9e067bf73bdc98cbb245d2207a69c35abb0a4d210b196769a60a3e0b1e5dcbf",
+        "LostBalance-Anim.png": "9d4e6e8596c463c99c79c4edf5d14f1901fbbe22e74066e4affcc3e4a10e071f",
+        "LostBalance-Offsets.png": "326885e284dbc95ac3a49ea2dfa9f3513aa00b2eabe74efa54ab35ae64a3b488",
+        "LostBalance-Shadow.png": "e9e067bf73bdc98cbb245d2207a69c35abb0a4d210b196769a60a3e0b1e5dcbf",
+        "Nod-Anim.png": "6b39477e933a524b99f866122abd6e946459b2903d594353c11bc791ed89dbfc",
+        "Nod-Offsets.png": "87c007ff0695a1959ac211facc70739ae77d1dcaa1b1d187820da2dbb396f700",
+        "Nod-Shadow.png": "04fc1c593f38dc518d13b72a75e6a990072fbe89ec95cb5ad32ec0b5ec60aa10",
+        "Pain-Anim.png": "954a7e5afb148b1bba9e79a5c5ed65172dda4ad726053619906c8858231c42e5",
+        "Pain-Offsets.png": "b41e18037af9020a28c7a71fa71683bd3741bfc4d8ee8adfbf834b40ea97665b",
+        "Pain-Shadow.png": "c69e2a3fd5c6178d847029b075e712d888c838cd55fac2c8b2598b1583768826",
+        "Pose-Anim.png": "1797518a9b9c122ea30b0a04f59358c973c5ad5fbbbf2e5d5159dcea39b961ee",
+        "Pose-Offsets.png": "f6e614d7f8a575206d8b094974d5eaa4a016866d86c12d54781a83c78ded4e5b",
+        "Pose-Shadow.png": "9d1564d3b7baf541f65a6750bc389157324fe12126c345818bbef227cf048f08",
+        "Pull-Anim.png": "bec51414c86be9f9c736e371842295d84a29f015ec27e2354556bec235667d79",
+        "Pull-Offsets.png": "c8785f44e2dd457a816627cb10697559aba1b7098cf2b26df8f3e6bf030a2e4c",
+        "Pull-Shadow.png": "4e39364a4845d64a7bf4c932a482c8153724181d79b8dee2fad530517b5765e2",
+        "Rotate-Anim.png": "691461598266637b2ee470aa15fa71b8764855fb444697246e532f6b73d99e93",
+        "Rotate-Shadow.png": "353c0a8f12cd512b4aa4ea7b04758687de17fe4e9202ec26efa8c86765b601be",
+        "Rotate-Offsets.png": "b65bb5910caf1640a8ab6e14bca3d069ddae3ce3001cf3ca709c04a3c27d5df1",
+        "Shoot-Anim.png": "d746bdd5fb39a1c722791d998b470e2c370c134547b40e454dab1dad7484b4ad",
+        "Shoot-Offsets.png": "1cb5f1d5aac5cfbb52b93f4687f9b380c8591ca2208e8ad012c55f46543823e7",
+        "Shoot-Shadow.png": "8ef867841c061aec1d0e494d12a390db14ddbac5ebc8b6bb78e07daba0bb2f53",
+        "Sink-Anim.png": "4381c9ca3f60e719696aa6a4d23baed5c2cccdbcba76b181e5851ee02ed03982",
+        "Sink-Shadow.png": "867f3257f7369a6d5fe2dea721eef71be86f013c2e0f0ae95ac3663777673c40",
+        "Sink-Offsets.png": "474f497578bb6786947c189e46eaf980bd47a71e032f83dd23f5e3e145176307",
+        "Sit-Anim.png": "1b665c0db3649f117b4cb8252e54e70fd5bfa7a88a835ffb44c6ab62d1716ded",
+        "Sit-Offsets.png": "1ac23ba6de271694d4f6b2347a95d3a2ddeacd6bb364081244dfb8211551e85f",
+        "Sit-Shadow.png": "d6644c6abe64e1c7f83723bd69f850ad0f7454bab7b68e134d3c6b55b89772c5",
+        "Sleep-Offsets.png": "b00dfcb9a9486ab429cc4f7fa875e3061a6be1ecb4abf33a83720dc0a1ba751b",
+        "Sleep-Anim.png": "235cf8011001c47121eff5c9fb84a42a61fc0d315aa6a082052b80e2b4a0637c",
+        "Swing-Anim.png": "7b021679acf26b2ed84ed2e783e357cd03a154c62f3906926194c08e631b9fbd",
+        "Sleep-Shadow.png": "02b60aeb3fc7405686455ca107128344c08a20efd465c0f716cc5856f9871091",
+        "Swing-Shadow.png": "aca333f33e3b7d35a14b5573787f34ae6b5aba449bb0d2e01098c52038f684a3",
+        "Swing-Offsets.png": "d8b81ef57fcfac3d123582d943ae2d7b5ac4bf333e87ffbe100f7fe08fdad1e0",
+        "Trip-Anim.png": "c67a0468aafc32a91703fcdae65d8b70f5b28af11d256340e186fca991ae6ccd",
+        "Trip-Offsets.png": "28b3a271299587f95611d273ebddf0dd759e24e0623b0903ebfc51b0a20a1645",
+        "Trip-Shadow.png": "fa358321aa96bb7446838d3f5ecf781626f1a3c77143070ea38393408f1c43e5",
+        "Tumble-Anim.png": "4db95882e8a9d79328c71b11af456c2d654408d0b6b99dac4bb0f18d839591ad",
+        "Tumble-Shadow.png": "3ba3b6983969a968a627d7d7a1ce06d8f4a20220bac7abf2cd6c6b9cd444c7da",
+        "Tumble-Offsets.png": "76299088ebac26ed0fb0b63a3a2d9420ec84024944c1829285a6642c891644ad",
+        "TumbleBack-Anim.png": "0ff008c4088e58d2b4037d4b7cfd50c9c698e498f4123df0f32924413eadc8cc",
+        "TumbleBack-Shadow.png": "4f3698e6fe36b21e8ec3078493e6db2986637f5b86fc10e05556c0d10a6ea3ee",
+        "TumbleBack-Offsets.png": "54971529e94ad7973027fe0fa6ad20ee8929569b63f5ca8c5815b912cf80fffd",
+        "Wake-Anim.png": "d7a298e5d51846ed671a2033e14ad963d833fa9ec51fffc6a1c6414083e41439",
+        "Wake-Offsets.png": "bf2e7781463bfe4fe6082a16956215646177c7d511d7878425cc3331d6850bb4",
+        "Wake-Shadow.png": "fa358321aa96bb7446838d3f5ecf781626f1a3c77143070ea38393408f1c43e5",
+        "Walk-Anim.png": "f0849a61c96507c4310af4d278cb09707e5864ac85c426cd700326022098ecbc",
+        "Walk-Offsets.png": "d3e3584f00e978f7e36ba8dc40f3abb7452a57da4a3b08016dd88100d4132873",
+        "Walk-Shadow.png": "1e33c73a90dd411bc334f61ea50528ae77d2a46921e3773ac7d41e85e341340e"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 10
+            },
+            "Attack": {
+              "frame": [
+                72,
+                72
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 21,
+              "colors": 11
+            },
+            "Bite": {
+              "frame": [
+                72,
+                72
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 21,
+              "colors": 13
+            },
+            "Shoot": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 11,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 14
+            },
+            "Emit": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 25,
+              "colors": 13
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 12
+            },
+            "Hurt": {
+              "frame": [
+                48,
+                64
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 14
+            },
+            "Idle": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 74,
+              "colors": 10
+            },
+            "Swing": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 10
+            },
+            "Double": {
+              "frame": [
+                48,
+                64
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 11
+            },
+            "Hop": {
+              "frame": [
+                32,
+                88
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 13
+            },
+            "Charge": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 14
+            },
+            "Rotate": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 10
+            },
+            "EventSleep": {
+              "frame": [
+                32,
+                24
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 65,
+              "colors": 12
+            },
+            "Wake": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 42,
+              "colors": 10
+            },
+            "Eat": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 4,
+              "directions": 1,
+              "ticks": 28,
+              "colors": 13
+            },
+            "Tumble": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 11
+            },
+            "Pose": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 3,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 14
+            },
+            "Pull": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 7,
+              "directions": 1,
+              "ticks": 76,
+              "colors": 11
+            },
+            "Pain": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 13
+            },
+            "Float": {
+              "frame": [
+                32,
+                24
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 50,
+              "colors": 10
+            },
+            "DeepBreath": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 1,
+              "ticks": 62,
+              "colors": 13
+            },
+            "Nod": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 3,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 11
+            },
+            "Sit": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 11
+            },
+            "LookUp": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 12,
+              "colors": 9
+            },
+            "Sink": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 12,
+              "directions": 1,
+              "ticks": 72,
+              "colors": 8
+            },
+            "Trip": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 10
+            },
+            "Laying": {
+              "frame": [
+                32,
+                24
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 12,
+              "colors": 10
+            },
+            "LeapForth": {
+              "frame": [
+                24,
+                80
+              ],
+              "columns": 6,
+              "directions": 1,
+              "ticks": 14,
+              "colors": 11
+            },
+            "Head": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 4,
+              "colors": 13
+            },
+            "Cringe": {
+              "frame": [
+                24,
+                64
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 10,
+              "colors": 13
+            },
+            "LostBalance": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 16,
+              "colors": 8
+            },
+            "TumbleBack": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 10,
+              "directions": 1,
+              "ticks": 30,
+              "colors": 11
+            },
+            "Faint": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 34,
+              "colors": 10
+            },
+            "HitGround": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 34,
+              "colors": 10
+            }
+          },
+          "global_visible_colors": 15
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0285",
+      "name": "Balignon",
+      "state": "v5_cycle_retained",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        6,
+        6,
+        6,
+        5,
+        3,
+        5,
+        6,
+        6
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Attack-Anim.png": "8eb6ecff1dd9ce4fc14c0abbc6d85549182f53b0ad6f4882b75e7621e01302f2",
+        "Attack-Offsets.png": "200064e00028b0c7e2ac4669152892b71d9cef899e1d7e77f5782140c7555a6f",
+        "Attack-Shadow.png": "beddd95bed100487ba89d300d74fda4c1d72d269939990ee0acc53aed6ca17f2",
+        "Charge-Anim.png": "21474b12a74de3cad06762b191ee1bec98d7e27147ac557ec03d2b2115419e48",
+        "Charge-Offsets.png": "979081812f711a45b15a123f232a882bb432c5b0b34388d3e0ce8f8b2522427e",
+        "Charge-Shadow.png": "80b6400782e32ce1328bf5735c93edf8bfaa9f6c1679e60888ecc7bcd96e2e4a",
+        "Double-Anim.png": "3f469a5f51b3114de4122141c9d8ab53b2867adfb0bc8c06eede5170d39b70db",
+        "Double-Offsets.png": "26d4d0bca14a0569d27b9634dc33e0c2e32a576653a054f392b4f06fdf73acd7",
+        "Double-Shadow.png": "d5cda1b97b1e2f72ce3259e2dd6ced8ad2904b29267950d7724eadb6eb2d395a",
+        "Hop-Anim.png": "2d709e14eda4c52ddfa52232a665dec39ccd556f2c7d2e001f58e0ff80f0adc5",
+        "Hop-Offsets.png": "2dc19382d48feb71d462715e49115bea6f1cdcbaf0cb402b9e914b2751ce7eab",
+        "Hop-Shadow.png": "98d719a8c725c2d295c6ee48cb850fb0f8158723ed34eceb657705e5c17239dc",
+        "Hurt-Anim.png": "43b6b8409ab7b2e77258c6e2bca6d6d388490647d16447917f7dac3fe4c5c581",
+        "Hurt-Offsets.png": "6b2bbaa408c2eae5d284c3e16b427ea2e0e20593b0440f30c90a8d4357bd96c7",
+        "Hurt-Shadow.png": "c598a4c3fc9b723e5936bd5ed74086c34af796aa188d84466b4472b3fb8eb99c",
+        "Idle-Anim.png": "0f50136613063412cc4192d796a5499ada293ddfef094ec4b67b5fcc5f43c0c2",
+        "Idle-Offsets.png": "ab411415426305e8af892d547131153135c18f6be4c6523dc4a876fb9322409f",
+        "Idle-Shadow.png": "6b0008183a4349eba21e4a7d8334b950d53c6bea406aa525aafece834d8841a3",
+        "Rotate-Anim.png": "fd7c88f4449e133b19a4d87c21ae21125f31f3b3945d36f911128af28e0b86c3",
+        "Rotate-Offsets.png": "9f995ea6d50703174ec921fbb9c3d3cf629704a11bba860842e3812defaf9afb",
+        "Rotate-Shadow.png": "d674e076950bf06597fdb5fefbd332592d1b4d01a096df741c2868c4c29ec537",
+        "Shake-Anim.png": "3c726c8b6b9e1b73aed85a55c9f6e62374e439e93c3c54fc353d13c541c34dce",
+        "Shake-Offsets.png": "bee0f4ac2f1230af17e83276b4963bdd1f74859a30f3d8797a221d318ade2958",
+        "Shake-Shadow.png": "e5bbbf6d60c6b692dd942c644525f4773076e7c4e0b36651cd7934758c596626",
+        "Shoot-Anim.png": "7fa18b704b10d17e1d21a87127e41e12e16086d4d84321a467d8cd0cf232efb9",
+        "Shoot-Offsets.png": "550f2a0e8001801410296e8529b27076a6d1a95a9cdbeed009597d68b7f75a32",
+        "Shoot-Shadow.png": "4387d8221b98721e0e183b20d9057f72f4fd3825bcd85497918488319ce1966f",
+        "Sleep-Anim.png": "edf1061d3aedb18f5aa21542dce8c98c3e3354e4736b22ee449f20367a6310c2",
+        "Sleep-Offsets.png": "64c78140ec823aaca02efb11b6fe1e4e13fab43b437fec53c6ddae040f617994",
+        "Sleep-Shadow.png": "d39e5710df164756cfd3bf0d5c5cf1b005c9655ee3904f2e4b1807cf2ac21330",
+        "Swing-Anim.png": "4a6dfcda79a11a157ef5a48ca9a7c092c0db85b343e95540de6e273b1bccdacc",
+        "Swing-Offsets.png": "f69fb1ab19f68db9c8c1b2e5b747db82e9514b090e2a05c6763dbaebfbaa2db0",
+        "Swing-Shadow.png": "84795ea9c44691624197e0a54ba511e7471740493a8d63c0c890d55c63aac378",
+        "Walk-Anim.png": "61c3e316702c35270a785ddd7f73389dbb2ccb8a9b1597795a823f9ab56d76c3",
+        "Walk-Offsets.png": "1a474667b3b214a8c1d6c8e393d9ada35c6b9fa89c5bdbdef6b07d33cdfab165",
+        "Walk-Shadow.png": "e9c6c802301c92ea5705c9cf5a4b89e36a54db777be2896d0ae0c1928471b658"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 9
+            },
+            "Attack": {
+              "frame": [
+                64,
+                72
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 19,
+              "colors": 9
+            },
+            "Shoot": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 13,
+              "directions": 8,
+              "ticks": 28,
+              "colors": 9
+            },
+            "Shake": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 15,
+              "directions": 8,
+              "ticks": 25,
+              "colors": 9
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 11
+            },
+            "Hurt": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 10
+            },
+            "Idle": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 56,
+              "colors": 9
+            },
+            "Swing": {
+              "frame": [
+                80,
+                72
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 9
+            },
+            "Double": {
+              "frame": [
+                48,
+                56
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 9
+            },
+            "Hop": {
+              "frame": [
+                24,
+                72
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 9
+            },
+            "Charge": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 9
+            },
+            "Rotate": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 9
+            },
+            "Eat": {
+              "frame": [
+                32,
+                32
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 9
+            }
+          },
+          "global_visible_colors": 12
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0440",
+      "name": "Ptiravi",
+      "state": "native_preserved",
+      "directions": 1,
+      "frames_per_direction": 4,
+      "ticks": [
+        6,
+        8,
+        6,
+        8
+      ],
+      "unique_drawings": [
+        3
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "7a0a6fb8839705643266808b1656f0c03fa24dd389c498c484fee954168d4031",
+        "Idle-Offsets.png": "8275f85380b067c0df68fe5ea4020bab9cfcde793e50d5863f86fccaafc5c1e7",
+        "Idle-Shadow.png": "4b5a057ed88de30442d12c6339bf678a007314af306127c03e1b58411e2eb1da",
+        "Attack-Offsets.png": "f03e926bd868487d6e0376bdeb2edd07431343f30827c3d364a4f3c25ccfe628",
+        "Attack-Shadow.png": "83c03387f6ba0f49810948b96db9509725f961bb7c7855a1f4fafd0f49e14fa4",
+        "Attack-Anim.png": "854261dcf02b4e6dabf2fa45fc68ffdccc3947a44b86ef74de64ebd47dca7e7f",
+        "Charge-Anim.png": "90fb671e13c3cf2a8044269c85e6a02168f813f31e21975a9eb1825109cd6fd8",
+        "Charge-Offsets.png": "6d8fc955395278122196b824a161eacd1e86aec8e4c17d33e709d43dcb81a7f8",
+        "Charge-Shadow.png": "b3078629dfa46be56d3ec63165df98162b8652a1171063f16c4284c701b48226",
+        "Cringe-Anim.png": "98a7b02fc360a4aec3703924f01fca629931d503f62f970072883aa0c2c2466b",
+        "Cringe-Offsets.png": "d67c7f92dbf53aae0d76fdeaba9484cb2db1109a6dec9c014e88447b1d8e5f02",
+        "Cringe-Shadow.png": "79ab18c86c3345231c9f6e6760574cca4f2baa2208223614161c8c4ab706d9fc",
+        "DeepBreath-Anim.png": "43e450d75ab0a48c2fdeddc43f80f3e8cac38f9821a5efb7290b906f7b1ea8ad",
+        "DeepBreath-Offsets.png": "e5f63dd69182c122e35caf515b24a897e2966542904306b57130d7bf3334646a",
+        "DeepBreath-Shadow.png": "1556cd89f59c9732f08b515b469457a882f53d3832ef4be9e56c263dca1cf024",
+        "Double-Offsets.png": "79830345db31a551dd98b824e9eb0e934e637991bb4d1cf08b8e2528008674df",
+        "Double-Shadow.png": "ad47345e595468f21260a6a9638100c1dbe9b6df7ae189da9844dd8698a69d4f",
+        "Double-Anim.png": "887b793f6db2a76ef45861601a87b4aa9f746773468d5af7479e78a0b0a5167f",
+        "Eat-Offsets.png": "fd7655eb80be649bc0749aac9d8c5d59181b3145046280f3867e6d075f15581d",
+        "Eat-Anim.png": "ee1566bc32d790049caf4f2b57716469506679de69296db53c576d009c11bacc",
+        "Eat-Shadow.png": "fe82ed4b8de8c404f0f4797e5481f32ebe4e8c9e19fd34118113247521734973",
+        "EventSleep-Anim.png": "8281f01b150f0ef5cc782c4d04ba1e9ad8a12a27de8facda76705ce1f41d4efa",
+        "EventSleep-Offsets.png": "af8254e397cf5ed97e8e551624daa45723dd81f2c22a14d302342d8af05cf541",
+        "EventSleep-Shadow.png": "179e277f39d13f619aa0de318fcb572220a52421e3e159cee4544deae3c370a0",
+        "Faint-Offsets.png": "3e96a8b127c51bf0aecc986d4399f69c9f299a8a807dd71b38c633cd873811a4",
+        "Faint-Anim.png": "d519f62daf0c20687d6033f9faea109a17ca05853e4f10d490e12d2c6b1b7825",
+        "Faint-Shadow.png": "699004e765ed09605ed011918a20f5e67a4dc601261daca1e677961c3a67120a",
+        "Float-Anim.png": "2cc3459b9dd15f5a713202bb6faa3bcb9fe12d2221be90e181e7505fbabf4f35",
+        "Float-Offsets.png": "8623569f3bcd57e64e1d2d11fc7fc12d2aa7c792ff0355dabea08ad48bc4feb3",
+        "Float-Shadow.png": "a7329166d93da51e44f20d5ed774483d4a00db72dd0fbac57943a40122ce969e",
+        "Head-Offsets.png": "ef985dd7af937846f798a76aaff735b055c8f7730011bb34f53b5c33d9e28d4f",
+        "Head-Anim.png": "b0c95f716afa30a398e29e3a147af52c6494ed5f25cc1fe4b68d27bf0e03b8b9",
+        "HitGround-Anim.png": "45baad12fc793a174df07e09aeeb892e45d3e59ad1ec251eabc6d3e84fd1d45c",
+        "Head-Shadow.png": "cf35b40dfa28c5f26cf140c896350ed69e8769e81e5750e4cb49c28d9e04722e",
+        "HitGround-Offsets.png": "56efb20b3fd608c9713bcd23926b109e18b3c5a534e83568667a496ab3a5dbdf",
+        "HitGround-Shadow.png": "a8b1fe800cdd32e0c086d9e4f954b76bf12725667dc56d49850a84a3bb8194d7",
+        "Hop-Offsets.png": "2b7ea82d7f4f7b17972e13f1359dda82ca53f1916531aefc8cf624ce510c4dc0",
+        "Hop-Anim.png": "ab42ba4384fb1a5aa42c6ac28943d0c3b558f8118e4284193ddcd0dfa841ac08",
+        "Hurt-Anim.png": "5f5e6f5b9690b911bd9500f01c728df1c46095c7ad6eeea4a57978a6c35333a5",
+        "Hop-Shadow.png": "da7a8b91f98217923ac44d483a29b9f411020ac3f2d5a3605aedee9ca3bf1dca",
+        "Hurt-Shadow.png": "4b04c29b16a65336d214c5853efd6744fca874511c42a13d186aba1f96797d8d",
+        "Hurt-Offsets.png": "5eac1f8a1a27012de34231b4f2d17bf5875d387ba28c9ce124397e3ff9a0fe1c",
+        "Laying-Anim.png": "be3eba07e06064d4195b3610c9433f278ce3f82df0cf361fa4f7db9610ddf1b5",
+        "Laying-Offsets.png": "f3cecda5c72570252077e508edc734883acf1792e3cbecf76b5d6a1956ac6929",
+        "Laying-Shadow.png": "ef9adbbca8b6eba42a941f9551547a66990a99c420d6d8ea59665bbcd345105d",
+        "LeapForth-Anim.png": "e91d813f255d3612319923b196fbe8b0ccfdbab9a470395e6140f65c221a9a10",
+        "LeapForth-Offsets.png": "6c2423f7195e3d4ad404d38c4320fa6c0193bb47597e8a91dad4df26f363352b",
+        "LookUp-Offsets.png": "c8cb35039b341874782cf496af24e6b7d3778fb626646807106366df1b58ba43",
+        "LookUp-Anim.png": "986fad9c96aa073b388cba6e699a4eb070581e322c1563e14451bd50ad0230e6",
+        "LeapForth-Shadow.png": "983677031fd075381a72c48d6d0f6218ea1f2fb07798881c46bbaa5201d8642c",
+        "LookUp-Shadow.png": "02b60aeb3fc7405686455ca107128344c08a20efd465c0f716cc5856f9871091",
+        "LostBalance-Anim.png": "3fa0d2094ec7250d7bec4c638ea2330d2d6da0a803cee2f65e20113723e8ca32",
+        "LostBalance-Offsets.png": "fdd898570006e40214b32ec76e5295cfa1b777d1c1b41079a0672e66ce52b2b3",
+        "LostBalance-Shadow.png": "e9e067bf73bdc98cbb245d2207a69c35abb0a4d210b196769a60a3e0b1e5dcbf",
+        "Nod-Offsets.png": "4c7e869598b7608ad5608eda78c60fa98cb2df259bff446c8675d36319f3c66d",
+        "Nod-Anim.png": "d9e8aaee239af9244d587b5de548855a7ff4a2d2e78fa9c5151570999f36e3dc",
+        "Nod-Shadow.png": "9d1564d3b7baf541f65a6750bc389157324fe12126c345818bbef227cf048f08",
+        "Pain-Anim.png": "83168abc1e6fc0d0ac72adbe718a61791a2f6096756f6977ff713d6b9100a6d1",
+        "Pain-Offsets.png": "3ba418108ef5ced509405d7d6699a30fa75f4c76138a36bc8e44d36a1f21d1bd",
+        "Pain-Shadow.png": "90fef77d6b88e35b630fcb4d8cc7aaceac918d7fb78cd5d121df71a157df9551",
+        "Pose-Shadow.png": "f2bcdb5913ee32fd0bc3e42739fb46ebcbda796ca30421d792c6d9122d554b9a",
+        "Pose-Anim.png": "3bf9ddb90844486bcbec59646f211fd894e61ddb18d570537670da1075b52923",
+        "Pose-Offsets.png": "1e239368d84f6872f04925549ecbcf62eb8220985fc0e3703c602cdaac604fbf",
+        "Pull-Anim.png": "972acc1d040122ade4e915d09a1b75b1c42d63ba30b4f8f4b1c45f3e9afa0964",
+        "Pull-Shadow.png": "4e39364a4845d64a7bf4c932a482c8153724181d79b8dee2fad530517b5765e2",
+        "Pull-Offsets.png": "67d3e74ec572648c9ed90993d56c21e68a1676dc580433c53df0d4bc836513f3",
+        "Rotate-Offsets.png": "4d1951a70642a2a91dbb32986db9e1ed9478a5db89831e959d0aceeafb2af159",
+        "Rotate-Anim.png": "8df33fc55849ee88c25615c9f1a7655d094640ebdaf9dec7435d61012c4eeefc",
+        "Rotate-Shadow.png": "353c0a8f12cd512b4aa4ea7b04758687de17fe4e9202ec26efa8c86765b601be",
+        "Shake-Anim.png": "3887ca6fdbd9d08700304395970d482c99d378670b351345cefe396fec25fcde",
+        "Shake-Shadow.png": "82f6c9f1038cbdc47d7de963a2527dcc97b97bf2b16887bc523403efd79a31e6",
+        "Shake-Offsets.png": "cd256567d828e1067a45b00ee7e030f563976a6a589a295c5e348481b82a9707",
+        "Shoot-Anim.png": "a6c18b5ada81d97cfa050e85dd3a2ee0a7e4a0b513be6152baa267736231f100",
+        "Shoot-Offsets.png": "259a784a4bd048a6f64235d02d9fb4b41091feaf9e18548bbb46348cec88d6bf",
+        "Sink-Anim.png": "0f0503a43146aad7d5c9dba5be9f0a55134c6848cbcbbe550ac1fa22f9daa525",
+        "Shoot-Shadow.png": "ab1b5001dee274ac31d24cc903e480349cf8c8ee81347867ed6bf0c574019bda",
+        "Sink-Shadow.png": "867f3257f7369a6d5fe2dea721eef71be86f013c2e0f0ae95ac3663777673c40",
+        "Sink-Offsets.png": "da01506efd6cb8c2e222f4384a6173c8bdabaa54a475742cac14b0c22bd12ab4",
+        "Sit-Anim.png": "acf8bf89e81438e7c22ae18db569a32ad097b3b89e3671f6ba2b38424caf2533",
+        "Sit-Offsets.png": "2c70348b9da42237a0ff9313395505c97acce8c930bf43f8c7b103cc535f009d",
+        "Sit-Shadow.png": "3e261f93ffc726189d38466f51f1f49f6f4de4c2cebdefd681e7b22310ea4d88",
+        "Sleep-Anim.png": "e584cbb0b3cf0d72dbc8c08465be677ccb08423b4e7322c746c80bb8c118091c",
+        "Sleep-Offsets.png": "f813b34aef043ab0ea87189c3ed22ca45116064278772ebd7c6fdbdc26fd993c",
+        "Sleep-Shadow.png": "02b60aeb3fc7405686455ca107128344c08a20efd465c0f716cc5856f9871091",
+        "Swing-Anim.png": "cd1435b6f2d8e0de68387608889c6cfc3bf4eaec6a8f53659360315afcd4afc5",
+        "Swing-Offsets.png": "b17c2deb0c6695b7e885cf388a2f26c231d443c2675606fce803aa884d02c0ac",
+        "Trip-Anim.png": "ca4335a8507059223800cb839bdb6937e877a9609b9fcce53c85ff8b507e3755",
+        "Swing-Shadow.png": "74e7e6bacb2443c5c9c92664a840eb4c2f1ca5baae760a03889946d2446abd54",
+        "Trip-Shadow.png": "fa358321aa96bb7446838d3f5ecf781626f1a3c77143070ea38393408f1c43e5",
+        "Trip-Offsets.png": "5055a35905068908d21e4b25985c8d30e32195eeb75bcb7c6679c8538302076b",
+        "Tumble-Anim.png": "e1509f41ab5a095f58df6f44ae56d4982dab48a3b08c4e43f967cddb1e4ceef5",
+        "Tumble-Offsets.png": "c1e7d7ae2136b4bf5d129df3e8178845e476ac85d5ecc7da3d17a2ba22fcf038",
+        "Tumble-Shadow.png": "72c925d583ef99862eedd1b0c99c866f4c7a333183f0112ef73d99f45cc8e23b",
+        "TumbleBack-Anim.png": "43fbd3ac3ad5561b25b0f9b579a143699b0399ac0ae203cf56c688632bdb66c7",
+        "TumbleBack-Offsets.png": "38c0477d734f4cc30b413648ec35929e17f17c081d4dd6fccecc66ce1a208708",
+        "TumbleBack-Shadow.png": "4f3698e6fe36b21e8ec3078493e6db2986637f5b86fc10e05556c0d10a6ea3ee",
+        "Wake-Anim.png": "5fe1c6c874a27c15f12c42718990df3c78f51d22cfe3e269a437cdc52f4ff0d0",
+        "Wake-Offsets.png": "dc3dd94af01fd954b721ba299d31cb997a87478a60a128ff781aaf5592f6acb5",
+        "Wake-Shadow.png": "fa358321aa96bb7446838d3f5ecf781626f1a3c77143070ea38393408f1c43e5",
+        "Walk-Anim.png": "6a7a46fbd11c8653c4d3c4f0024303ee43c4ef31e0da57f3919b0e743366aba8",
+        "Walk-Shadow.png": "e07f274100f92c94a33e4d1d11c81af02b0273cd5c3a2d472b2f60fcc203ed96",
+        "Walk-Offsets.png": "a14e932c05a2debaa46041eebec3ca509abfc719fac061346571e1a484ad4725"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 8,
+              "directions": 8,
+              "ticks": 40,
+              "colors": 12
+            },
+            "Attack": {
+              "frame": [
+                64,
+                80
+              ],
+              "columns": 14,
+              "directions": 8,
+              "ticks": 31,
+              "colors": 12
+            },
+            "Shoot": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Shake": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 8,
+              "directions": 8,
+              "ticks": 48,
+              "colors": 12
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 12
+            },
+            "Hurt": {
+              "frame": [
+                48,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 12
+            },
+            "Idle": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 74,
+              "colors": 12
+            },
+            "Swing": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 12
+            },
+            "Double": {
+              "frame": [
+                56,
+                64
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 12
+            },
+            "Hop": {
+              "frame": [
+                24,
+                80
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Charge": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 12
+            },
+            "Rotate": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 12
+            },
+            "EventSleep": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 65,
+              "colors": 12
+            },
+            "Wake": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 42,
+              "colors": 12
+            },
+            "Eat": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 4,
+              "directions": 1,
+              "ticks": 28,
+              "colors": 12
+            },
+            "Tumble": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Pose": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 3,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 12
+            },
+            "Pull": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 7,
+              "directions": 1,
+              "ticks": 76,
+              "colors": 10
+            },
+            "Pain": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Float": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 50,
+              "colors": 12
+            },
+            "DeepBreath": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 9,
+              "directions": 1,
+              "ticks": 62,
+              "colors": 12
+            },
+            "Nod": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 3,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 12
+            },
+            "Sit": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 9
+            },
+            "LookUp": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 12,
+              "colors": 9
+            },
+            "Sink": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 12,
+              "directions": 1,
+              "ticks": 72,
+              "colors": 9
+            },
+            "Trip": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 12
+            },
+            "Laying": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 12,
+              "colors": 12
+            },
+            "LeapForth": {
+              "frame": [
+                24,
+                72
+              ],
+              "columns": 6,
+              "directions": 1,
+              "ticks": 14,
+              "colors": 9
+            },
+            "Head": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 4,
+              "colors": 5
+            },
+            "Cringe": {
+              "frame": [
+                24,
+                56
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 10,
+              "colors": 12
+            },
+            "LostBalance": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 16,
+              "colors": 9
+            },
+            "TumbleBack": {
+              "frame": [
+                24,
+                40
+              ],
+              "columns": 10,
+              "directions": 1,
+              "ticks": 30,
+              "colors": 12
+            },
+            "Faint": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 34,
+              "colors": 12
+            },
+            "HitGround": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 34,
+              "colors": 12
+            }
+          },
+          "global_visible_colors": 13
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0417",
+      "name": "Pachirisu",
+      "state": "native_preserved",
+      "directions": 1,
+      "frames_per_direction": 4,
+      "ticks": [
+        6,
+        8,
+        6,
+        8
+      ],
+      "unique_drawings": [
+        4
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "1ba3408f229f13763fe5ca4b92d27167f8192d403134cd4540d9829bd9790123",
+        "Idle-Offsets.png": "ab10bb0bb5a33fde0d5104f127ec4d71cdf9d85bcec9df18e647147fb8a7b61b",
+        "Idle-Shadow.png": "cd1e36b8e877329456f5b559785d005c16f064d0e18b00c990af6bd0cf65bd53",
+        "Appeal-Anim.png": "df9990f747abc8e453aee08de77c31509ad018fd4c107ca56fcd3e968ff4a833",
+        "Appeal-Offsets.png": "fce9f9b771f3d6b41935a3dbcb82e94fba4bf2ededd6f3cebc26a194baa82b89",
+        "Appeal-Shadow.png": "af0f83f7679f62e89976f22d4128c740b1671aa5f3c85fbf58db14a7f2ac6d69",
+        "Attack-Anim.png": "92834bc95332ae20835d6779850be0fb0ba6e8baaec6d97351eefb1cc8170cb8",
+        "Attack-Shadow.png": "6c0e84e27b4a54169572372d9a43bad6ed6047d7242eaedb99c39163537cfd59",
+        "Attack-Offsets.png": "ed0f55ff8ca69b553613963cda549b20afcac35658cd9af73f26cf86cf7adc2f",
+        "Charge-Offsets.png": "c5c04476cb8df559323b2a5dbedd9117f364b5dd65e9f8c9e152688a8a37d0ad",
+        "Charge-Anim.png": "fca06478e9b28e0b4eb891878256ff522428cd13a92a4721e8e23b377568b631",
+        "Charge-Shadow.png": "f659617938fabab0fe1e587ae9a03e3da54524fd716899c0e21dcc7c842abc95",
+        "Cringe-Anim.png": "254737e40596aa993c6f772b31f3b8394a1b72dd16e8d9eb4334916b0125c028",
+        "Cringe-Offsets.png": "66ab88e44c9d90e761f92f3605e168874d1741338fcbad7d535e7d9bc890ac7c",
+        "Cringe-Shadow.png": "a646b3be0f1689ccba7ca64802fe799c1b80919aac809dc05d03d37bcda291fa",
+        "DeepBreath-Offsets.png": "4ffa4c8d9db63419da85aef3ee33758e6ac0aaa4736375912356b550b35a3ebc",
+        "DeepBreath-Anim.png": "32aadf9cee9651d313c3b3ade4aa6af2e442c7f5cf3ed614f45893eec679add7",
+        "DeepBreath-Shadow.png": "a2bba43590a97ad273764fc1f7780b9d5fa546842f0fa0935027475917c3444c",
+        "Double-Anim.png": "c0827003e0d6cebafa56ea342ab9091ba313e8a8e664abdca8e39784e57674f7",
+        "Double-Offsets.png": "eb0aaa36a888b4e61af577e5a68c82579e5d9128072ca2dac8a6635cdbf2d026",
+        "Double-Shadow.png": "da72310d43bea64a3a1ab875931752b2dd86df3c87754859108adfd5312580eb",
+        "Eat-Anim.png": "8af6290ce066f96ba392c9d59e3dea0b7602a3315bb7025971d256278fe05921",
+        "Eat-Offsets.png": "7598a9a043c55ee36f81c14870566a3dc72eddea1f0ffd9a32c8a7c5b080c1f9",
+        "Eat-Shadow.png": "f10a5c6a02cb82e4464d9b5cde07e5feb4f091b111693770c4cdc3d8a7224494",
+        "EventSleep-Anim.png": "517415002b33b833742399a4b94b9204919cab6d37c7a28c4bba6aaf142fcf7e",
+        "EventSleep-Offsets.png": "8bd3382cc911abc86b9571deeaf4b3b129bc12dc22b16b1f661f7eec1553db6b",
+        "EventSleep-Shadow.png": "3a85eb80bdf16b6786145ed3b313b6043234a6d772a4116e935e6f7101cf61c2",
+        "Faint-Anim.png": "19e8f3cc539ae14eab97ed7a771704bc42d64662aed2a297521524c01fe0a9f8",
+        "Faint-Offsets.png": "1b4dd1fc8c80125074bf52596f13bb6ce6ee885875083b51dbdde030e0105c65",
+        "Faint-Shadow.png": "be51378c6eefa125de1402f21597dbb16bc08b272aaf7458075778b7df270bd8",
+        "Float-Anim.png": "76cfbac90274db004c1cd090d5d90e4c363b4638e9c3cd523acf09031463442b",
+        "Float-Offsets.png": "c083ed8444025f4a9b7196b7d6a39913115c7583732bd749c8421c8fbcfa0d03",
+        "Float-Shadow.png": "20b70b7fbb719a04e2e95870c3a9ccee04d9255d071a4c61a17300880795e3ca",
+        "Head-Anim.png": "c8378ad6e24dac759a0e8a7617eebbb03643950c2324fb4d5980a0c775d6f237",
+        "Head-Offsets.png": "f8bf182fbb6c72959ee536b85d17801b614baf32f8b1ede50d99116f37d689a8",
+        "Head-Shadow.png": "ff349430391ff5011dd6e06d0e2fbe7beb2557a2ae1c61fc302bbd9674ff3248",
+        "HitGround-Anim.png": "777f3652bc5d0cbe9f16b6707ef9dbe26a6f3ab510ec0a5eb046104958343ebc",
+        "HitGround-Offsets.png": "29cf255c8710449146f4dc9bd9ad4a9462c3dba1f8c5f03519054d25e0cece24",
+        "HitGround-Shadow.png": "fb3e202e047a67bd890c7b1d4ed555b74b4972dfa081f4549132eb02402e98fe",
+        "Hop-Anim.png": "8bd8707a51e9694965d17b48d05bbb339b7a5616105530d7dbdc0bb854288bb6",
+        "Hop-Shadow.png": "30edd9679772a18769dd267a4de294ea18ecc22172a01d059fe43e2a53c774cd",
+        "Hop-Offsets.png": "d18f543a79387b4aed9327b88a4b8cb55d2a42df9c6f11c1e15245dae2d91411",
+        "Hurt-Anim.png": "2025c1cbcdad287e1e5d83da79e9fa9e519d5d715db76b15ff7401da2118c0fe",
+        "Hurt-Offsets.png": "bdad0f970800c4e312be4af9e8561a0caffe17c777fb7beba4cfa45a0c9ece7f",
+        "Hurt-Shadow.png": "01b8b44f3960fa15ab79391bc02644b04f0f97cfa1dc7d962940a1a139e9bff8",
+        "Laying-Anim.png": "13c315f959f99b09d9b0c60501e967e06ba73592cf5af74e8fe6f2b4bb8b6cb2",
+        "Laying-Offsets.png": "608911bfeff3965da5e59dd270bc68cb1092ad59977967d1d93e8a889b85a0ec",
+        "LeapForth-Anim.png": "80b8cc5fa24f41342138d9b41102967d50fa174b360086e6677dcf4ad948148b",
+        "Laying-Shadow.png": "ab0b01753c3241ce9966127a63992ddd034f650d50419eba6b38c2ff75950801",
+        "LeapForth-Shadow.png": "983677031fd075381a72c48d6d0f6218ea1f2fb07798881c46bbaa5201d8642c",
+        "LeapForth-Offsets.png": "f2ea6c174cc38db9e53af8da1daddc113661242704d1fd5512520c2c550c9d6d",
+        "LookUp-Anim.png": "1a848c11ed9bde30d0556d69496c4f212adf2c223f4b614c999d6f0323e7dccc",
+        "LookUp-Offsets.png": "ed46b9120f63ff6fcebc3fed0eb863b9086fa8f288fbd3da7c9dd9765e4ec71b",
+        "LookUp-Shadow.png": "c119e59ee0804f8c5453ff7b02e0b0a92e5c44514f6383ef06025989147797af",
+        "LostBalance-Anim.png": "8dc24bef694291242cdbbd6feae380dd389f2c51cbd7d63adc7269bf6b270dba",
+        "LostBalance-Offsets.png": "da64ab458e6d6ad072c9969432c8ee07608a66b4f5b27af4bf4e5267a284c716",
+        "LostBalance-Shadow.png": "541a7365fb121e5eb322a1d5e9b4d20260064bf13ddd1005258a05791916152e",
+        "Nod-Anim.png": "ea62e8c1b9291cd3520bf1fe6916a5f21bd5558a2aad944f00c64c9278c10bb8",
+        "Nod-Offsets.png": "009942f78c8477d0839a4e7f53b2b9a1250c0887d6fa3f3b3ce8373dee456c90",
+        "Nod-Shadow.png": "b4072dff7675e2aa7c01276c20302476409578176b4e97806d61988f063841f1",
+        "Pain-Anim.png": "3f216f5c76c22b8aba1a069b3d184b29066d7d05ac8b0b713c21e21f0163f84e",
+        "Pain-Offsets.png": "b1b71191a6a4bb1fdfd7e5e788450ebaca3174be46f792d72e135532bcea3f51",
+        "Pain-Shadow.png": "eda4ebd008449841c30387ff6a5c59914c600ef33d5fd50df425822ebbd58532",
+        "Pose-Anim.png": "9859380683f2487a33c9870d094f0189dd36502176db636f08750ac69019d0cc",
+        "Pose-Offsets.png": "7bf324c58b097ad0ed3d27b8683e449954ef9c75eb1c168d17ec2de452ba313e",
+        "Pose-Shadow.png": "b20facfb5f5429290c15b29d51cc71aedddf44e4bccd74d68efe74126f79009d",
+        "Pull-Anim.png": "d1d8bf6e7550d96d724ed4eb961cc37a6b62b28b23738cf2e8d72707bf566bc0",
+        "Pull-Offsets.png": "137a2d76f3c3693e6e2675ece997999d4f594442568c334494728f87922a4de2",
+        "Pull-Shadow.png": "8a915c8593cadadacccd30a5dc5d91dd1967bdef0d698758dfdca8ba6c8fa717",
+        "QuickStrike-Anim.png": "78a06d427b241686a962247356501d0623720b9ddcc9977af3a4b2143d4bbdf8",
+        "QuickStrike-Offsets.png": "ac3167108010076e25954614e945402dd589ee0a38c3531aa7889a6613744f62",
+        "QuickStrike-Shadow.png": "c1edb154ca5e12f334a7ab0186f3eb244e1bcbac5e6aa7a322314daafbdcfa5d",
+        "Rotate-Shadow.png": "540adf8c2bf518031c6babfb6b7458145bbcefbcc0f8341b8de84eb1436e1573",
+        "Rotate-Anim.png": "a9e62dec2de52b88133949b8086d3e208e3b08e4a3a42e877ae149ec7d2d55db",
+        "Rotate-Offsets.png": "c5bf981993873e5b133c4c337a627588402da7bcf897fb16d124443689291f25",
+        "Shoot-Offsets.png": "fdcb524bf5886bf1576ed17294720a1e52f7b1f3cc44e07d7a21a6da008e395f",
+        "Shoot-Shadow.png": "78104bc57811e8bfe59ea3c42617867521711e765e8ce07584ac35f6bef2434c",
+        "Sink-Offsets.png": "097bb4c96b20913cde3572696accc690d48a4086d7bfc50257a42825a041ca6d",
+        "Sink-Anim.png": "ce26b401d58a33b6c3c1a0c87c5ffcee8eae890745e08410b5167b0afbcfb802",
+        "Shoot-Anim.png": "68ef7cd418830d2bab46b7861e57f09477879ef00fa0342633ae3e70ffb39b38",
+        "Sit-Offsets.png": "eff2f74cb50bc4d430f369a131ee55404d0b3a6c5f6e333438a1f2f2d6391901",
+        "Sit-Anim.png": "0acaf3dd1791858e926defb47707c15a34441b71607f3f78c2c845dff16e7bac",
+        "Sink-Shadow.png": "638d7d43b80edc43d46e5ebf41d1158fe36285b322593b929a96a67f1268e703",
+        "Sleep-Anim.png": "035245dcf425716acfd9048b92e6e4d1eb3308cd317fb90a81e9e49be1a86024",
+        "Sleep-Offsets.png": "8b6fcc46b540b2dbc64e68562ba5156dfcce92a5215a503c5b0a3e09e2e880ed",
+        "Sit-Shadow.png": "3e261f93ffc726189d38466f51f1f49f6f4de4c2cebdefd681e7b22310ea4d88",
+        "Swing-Anim.png": "062128e02cd668a55ff99ce9232730bcbbb1c7a28ceffe43ead729d10daf3e13",
+        "Swing-Offsets.png": "d68f21818e74477dd8d87416402a5227eb5ee72f2eb3b0156de6cb61cf22b496",
+        "Sleep-Shadow.png": "963c523e22fdba59c22a5ee30b45a7c0611f39a0df719b7e645b04d3de2f062c",
+        "Swing-Shadow.png": "2680ba9662ca038ca1e2e2a5c89d45e457a15b6df0d85e857ca6f8d21227c41f",
+        "Trip-Anim.png": "fc49190631db4a29e1ef68dbc4fd932f3c551342ddee798da9ad43125ed33681",
+        "Trip-Offsets.png": "3ec430ff540a0908755975857e582b0a16e717046c3cd57ebb801d711987d853",
+        "Trip-Shadow.png": "412b59b87548d64a80eb0640a6de6352b7b0b17333f46a9e861fdca420a66dad",
+        "Tumble-Anim.png": "7d4c757b5c228e7babeecb894d63ff534573d8e1521dfb7929674c4b6ccba71b",
+        "Tumble-Offsets.png": "9d8dc988a92a1b70124af28a02df6f7292825b23bb074a3c1c0324a6e0970778",
+        "Tumble-Shadow.png": "ff98ecae1a467c3eb32a24111dae54f56ffea371c98435ed677c1612de787df5",
+        "TumbleBack-Anim.png": "f8e4fef938eef15ccf498383a94e2c43b1a08aa980528926f37feddcb5a071bb",
+        "TumbleBack-Offsets.png": "c2d545d42b8e597a45c9a5ae7f42acadc2a1ab76e03fa0c3bfb99759f0e442e6",
+        "TumbleBack-Shadow.png": "9018948a156c86e9eb9b983e02159bdc47110a124e1efabb400f5451490eaae8",
+        "Wake-Offsets.png": "949e71bdf42a98365d23ca8ab8c30fefc4328e652ab08fdafc063ed414c1627d",
+        "Wake-Anim.png": "29c50581529f7524841e60d57c0ee34a957b85e95f90cc87ed67e6c5982d9c08",
+        "Walk-Anim.png": "57ef9e5aea2d84050a6be6dc60e5a1e6fbe4da8372b676b59997c6b7daa5786d",
+        "Wake-Shadow.png": "a8615f66616bece352684cc754f796ad8113b4467125865d844d226d7023c625",
+        "Walk-Offsets.png": "302030ae1b29a2e6399e4ada98bf641780e5d5507ac58571d8768c54442d47da",
+        "Walk-Shadow.png": "292649706ae03dfc5afd8470708fd00befa44d904fac05dd6fd5309799cd6eea"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 8,
+              "directions": 8,
+              "ticks": 40,
+              "colors": 10
+            },
+            "Attack": {
+              "frame": [
+                64,
+                72
+              ],
+              "columns": 13,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 12
+            },
+            "QuickStrike": {
+              "frame": [
+                112,
+                120
+              ],
+              "columns": 13,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 12
+            },
+            "Shoot": {
+              "frame": [
+                56,
+                48
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 12
+            },
+            "Appeal": {
+              "frame": [
+                40,
+                48
+              ],
+              "columns": 6,
+              "directions": 8,
+              "ticks": 54,
+              "colors": 10
+            },
+            "Sleep": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 10
+            },
+            "Hurt": {
+              "frame": [
+                56,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 10
+            },
+            "Idle": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 60,
+              "colors": 10
+            },
+            "Swing": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 12
+            },
+            "Double": {
+              "frame": [
+                56,
+                72
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 12
+            },
+            "Hop": {
+              "frame": [
+                48,
+                96
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Charge": {
+              "frame": [
+                48,
+                32
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 11
+            },
+            "Rotate": {
+              "frame": [
+                48,
+                48
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 10
+            },
+            "EventSleep": {
+              "frame": [
+                32,
+                32
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 65,
+              "colors": 10
+            },
+            "Wake": {
+              "frame": [
+                48,
+                48
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 42,
+              "colors": 12
+            },
+            "Eat": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 4,
+              "directions": 1,
+              "ticks": 28,
+              "colors": 12
+            },
+            "Tumble": {
+              "frame": [
+                24,
+                56
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Pose": {
+              "frame": [
+                32,
+                56
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 12
+            },
+            "Pull": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 7,
+              "directions": 1,
+              "ticks": 76,
+              "colors": 9
+            },
+            "Pain": {
+              "frame": [
+                48,
+                40
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Float": {
+              "frame": [
+                32,
+                32
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 50,
+              "colors": 10
+            },
+            "DeepBreath": {
+              "frame": [
+                24,
+                48
+              ],
+              "columns": 9,
+              "directions": 1,
+              "ticks": 62,
+              "colors": 12
+            },
+            "Nod": {
+              "frame": [
+                40,
+                48
+              ],
+              "columns": 3,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 10
+            },
+            "Sit": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 24,
+              "colors": 9
+            },
+            "LookUp": {
+              "frame": [
+                24,
+                24
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 18,
+              "colors": 10
+            },
+            "Sink": {
+              "frame": [
+                32,
+                24
+              ],
+              "columns": 12,
+              "directions": 1,
+              "ticks": 72,
+              "colors": 10
+            },
+            "Trip": {
+              "frame": [
+                40,
+                40
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 22,
+              "colors": 12
+            },
+            "Laying": {
+              "frame": [
+                32,
+                32
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 30,
+              "colors": 10
+            },
+            "LeapForth": {
+              "frame": [
+                24,
+                72
+              ],
+              "columns": 6,
+              "directions": 1,
+              "ticks": 14,
+              "colors": 10
+            },
+            "Head": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 1,
+              "directions": 8,
+              "ticks": 4,
+              "colors": 12
+            },
+            "Cringe": {
+              "frame": [
+                32,
+                56
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 10,
+              "colors": 10
+            },
+            "LostBalance": {
+              "frame": [
+                32,
+                24
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 16,
+              "colors": 10
+            },
+            "TumbleBack": {
+              "frame": [
+                24,
+                48
+              ],
+              "columns": 10,
+              "directions": 1,
+              "ticks": 30,
+              "colors": 12
+            },
+            "Faint": {
+              "frame": [
+                40,
+                40
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 34,
+              "colors": 10
+            },
+            "HitGround": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 8,
+              "directions": 1,
+              "ticks": 34,
+              "colors": 12
+            }
+          },
+          "global_visible_colors": 13
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0461",
+      "name": "Dimoret",
+      "state": "new_technical_candidate",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        7,
+        7,
+        4,
+        4,
+        5,
+        4,
+        4,
+        7
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Attack-Anim.png": "8c18e15d7e8de4afc5d90a8a34f29beedc822412032a2a5e8444ade31991f760",
+        "Attack-Offsets.png": "3c11398b66c3add2556b291827a1272dbdca775ab46867f3b0f8eb339bc8c890",
+        "Attack-Shadow.png": "50735ee6159ccf40770ef69e8d17e61675afe8878e8419e03958661d0053b88d",
+        "Charge-Anim.png": "edb558a0b658a2022ecf72c9fee369820fd3828d30e4fff996619b4933765cd5",
+        "Charge-Offsets.png": "b6d33d9d6c9c5e68c5fa558c9c9cabb99c9c3afb14d801f0c39848434ecb38a8",
+        "Charge-Shadow.png": "69437775c23b3e4666078d0f9bbc134143bc42a939f11d58347c9924d53eaee6",
+        "Double-Anim.png": "15998a93ef4aa0a22393463f99471b278f8d5f8eb77ebe2eb517c9fb243d3e74",
+        "Double-Offsets.png": "94dc23a4ad723b391e3cd8b887ff46d17cbecf0af8b9dd269a62258bc1677e75",
+        "Double-Shadow.png": "d6a06a1742e5b08de2a19bf3514ab2fdcce516ef740f2c9f92ae677942e5c1e4",
+        "Hop-Anim.png": "4e16a958626bb4b71649516130eab7700b15ef3db65436916da91712f8e07cb3",
+        "Hop-Offsets.png": "1fb907c00ee52cbbc865af7e31d04f171e2a61bded3ac70246e0715a211ae8f7",
+        "Hop-Shadow.png": "ec08187a3fa5ebc2ffa2e60fa9173d5ae2f5abbc3e1a860f6bbb1924957d5a25",
+        "Hurt-Anim.png": "0ded10e0ccbab101006dd7ce74c77b3a783669a9ebbab7fb7c944eb5ba6cc817",
+        "Hurt-Offsets.png": "959b8d71465bc1e49d18e99a47c2e82b55a0dda403a76d5c685027844941cfce",
+        "Hurt-Shadow.png": "c598a4c3fc9b723e5936bd5ed74086c34af796aa188d84466b4472b3fb8eb99c",
+        "Idle-Anim.png": "c731ef3a1e4379fbc80a5b6a9cb810584a43007fd79b91405e747907237e374b",
+        "Idle-Offsets.png": "4af1d48d81d1e009dfb77139860333bb066edc770577bc6fcb7d004551df6359",
+        "Idle-Shadow.png": "90ccdb90075610e46dadb1c0695e7646e10710209d2e16f617f533fd1ddf6730",
+        "QuickStrike-Anim.png": "b9787fae52b5deef1631a74ecb7dd4cf8084c3b331d0b5bb196f04a3c4b4dc6b",
+        "QuickStrike-Offsets.png": "d7d4e7d696f052c8835fb8e60e0e38d873c18c7edb1cf3aa347046685bc4acec",
+        "QuickStrike-Shadow.png": "421142476ed6f149bd451b7501ee628950443e972bfab4386d9f794361f41433",
+        "Rotate-Anim.png": "a95bf182c0ea059678be50d1d9a4bf520f50c32f96e351ef7783647cf51fe474",
+        "Rotate-Offsets.png": "0153655afc18d82a3e8def2b7cbabb188e43ccab89c5a4274ebf8f8e457b35cb",
+        "Rotate-Shadow.png": "f91fed8e48c7b801b0c158228a61e93e876ba8abfd3e5c518afbea74ed0cd983",
+        "Shoot-Anim.png": "b384dbef5b92e6b061ba63e1a584ce7749f688108aa1482d6c53dcfeb2706706",
+        "Shoot-Offsets.png": "25316821fbe2556dacd8bab05637d373bd94f10d3114cbc2aacbdbb7808617bb",
+        "Shoot-Shadow.png": "4fa79621b6fe7ec5b5a64883ea9ef79959407e42e5092e6fa8fb9bca9f6a1cf5",
+        "Sleep-Anim.png": "660112e2a1e27849af203822431b571b053d7f69453da963f720c71d0307d179",
+        "Sleep-Offsets.png": "e8caee2779aa66a00b8f2b7a8477d89c87f45446cb984cf91e8b5cd5ca2b1808",
+        "Sleep-Shadow.png": "da3904f46e7ee94af1fa14a2e232c610d01587803bf6830c9f78230b05e4d19d",
+        "Swing-Anim.png": "dc303a46501ce61f4f3656740c325533abe0ea52c2fa399ead9a69d58dd65f10",
+        "Swing-Offsets.png": "c09699212188eab549da14ebbb9dffaebf037f38a2442526c301d4f810b496be",
+        "Swing-Shadow.png": "0e6e34d24f2f0f6b981ddd649c8e07e54e656ae4f6f2c3dd7a0d3b3ea5631794",
+        "Walk-Anim.png": "36c8b1acbc91db767e097761067cb0be0a7f10019d2a21c95b713da2cd3d1c5f",
+        "Walk-Offsets.png": "c3523464befdf40f36f54d751f2d5d11c3fa6953f34829346e16de216ca0ccbe",
+        "Walk-Shadow.png": "0843ac7aa314a5a302a0c1998ceb6f73720007a70ca7d3e0684e86d5e608f0c3"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 4,
+              "directions": 8,
+              "ticks": 32,
+              "colors": 12
+            },
+            "Attack": {
+              "frame": [
+                64,
+                88
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 13
+            },
+            "QuickStrike": {
+              "frame": [
+                112,
+                136
+              ],
+              "columns": 11,
+              "directions": 8,
+              "ticks": 25,
+              "colors": 13
+            },
+            "Shoot": {
+              "frame": [
+                32,
+                64
+              ],
+              "columns": 14,
+              "directions": 8,
+              "ticks": 30,
+              "colors": 12
+            },
+            "Sleep": {
+              "frame": [
+                32,
+                40
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 12
+            },
+            "Hurt": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 12
+            },
+            "Idle": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 80,
+              "colors": 12
+            },
+            "Swing": {
+              "frame": [
+                80,
+                88
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 12
+            },
+            "Double": {
+              "frame": [
+                56,
+                72
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 12
+            },
+            "Hop": {
+              "frame": [
+                32,
+                88
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 12
+            },
+            "Charge": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 12
+            },
+            "Rotate": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 12
+            },
+            "Special0": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 16,
+              "colors": 9
+            },
+            "Special1": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 3,
+              "directions": 1,
+              "ticks": 26,
+              "colors": 9
+            },
+            "Eat": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 12
+            }
+          },
+          "global_visible_colors": 13
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    },
+    {
+      "slot": "0186",
+      "name": "Tarpaud",
+      "state": "new_technical_candidate",
+      "directions": 8,
+      "frames_per_direction": 16,
+      "ticks": [
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        7,
+        8,
+        5,
+        4,
+        4,
+        4,
+        4,
+        6,
+        12
+      ],
+      "unique_drawings": [
+        9,
+        9,
+        9,
+        7,
+        5,
+        7,
+        9,
+        9
+      ],
+      "hidden_marker_normalizations": 0,
+      "native_hashes": {
+        "Idle-Anim.png": "3d4c60cf710ae0a78ac91592a8ab44326c64cb44c75ab520f8c15aee5c8eae34",
+        "Idle-Offsets.png": "b167bff75412c34cf14ece843dd25d18b1e3a1778ef88670a27ab75cdcd92a13",
+        "Idle-Shadow.png": "85eb016ebb0db6ae129620bc951cfbe4d0708da88d35fa235cedaa12fcd3bb36",
+        "Attack-Shadow.png": "a6a7eaddc077adc46d0a33159db21ab513f0513aafdaf9e7064cc629ce911bdd",
+        "Attack-Offsets.png": "bfc52dc3ebecef2c4b7bc3d56acf725cdff6f683d76a94646a157c2df1ae5877",
+        "Charge-Anim.png": "cdfabcc3199451b924fa7509f84ab2094c9538accfb91f49e68bcaa7507a5655",
+        "Attack-Anim.png": "60e476f31f9627c99f5c5538a3159f812438b04af456a6b574598411a052156d",
+        "Charge-Shadow.png": "af683ee14cd4df84ee202749ec25409aece47d0978367a2ffd3f450a5ecd0040",
+        "Charge-Offsets.png": "4b96ee74b2f2717df71a5923b1c615d6762d28d0b9e594d0b6faf12fd1dd573c",
+        "Double-Anim.png": "9b322c75886abbbb4a6bac25e13c03f79ce6f9a2b520843c7ec894c3af08a5eb",
+        "Double-Offsets.png": "d840686c4bdd4bde4c064fcd7f13768c52edc07e38ce7dee31f7d2bbacbbc215",
+        "Hop-Offsets.png": "63fb594b7331bfb507ae8dc3b227ae21af8395e94e96252febc02af4c04ae857",
+        "Hop-Anim.png": "4c8db19d287ef659ceac5fbf6cc17a68d30882bc336adbaf8d6a9888aaa22186",
+        "Double-Shadow.png": "e506487904e24068a575cf0707ec110d31b5f5170f1081bf232229396b364598",
+        "Hop-Shadow.png": "4a746123bc57746067540d21cda3cbd77ef9b536a0134bba2e70a44e12f00f8b",
+        "Hurt-Anim.png": "e9424c9b07dace62773edaacee00e5d28c256ab132521a552590317f159869fd",
+        "Hurt-Offsets.png": "6c5808c5f696ccaa1a5811df71295d18eeeee82bcdb0e772d92f42d8b8b1bcda",
+        "Hurt-Shadow.png": "c598a4c3fc9b723e5936bd5ed74086c34af796aa188d84466b4472b3fb8eb99c",
+        "RearUp-Anim.png": "8e6dd4366fb8836abe50248072ed068ce9924f3f6e48ebef4ad3429be61f0f73",
+        "RearUp-Offsets.png": "55cf5b602e704c9ff8e5d837cee0517fd05fa3b9d517ebea174f4de0e2a4d6ce",
+        "RearUp-Shadow.png": "98b12e753f426562b6f50a2a0960b253155343cc1310bd22dbd560378051005f",
+        "Rotate-Offsets.png": "afaebbc3251446d13523c2b45a1fef77e7f6410fd8e4b7e5d1053fcc0b59f547",
+        "Rotate-Anim.png": "2866bc8b0ae8ac3e0a2cc526ec0cfe4fe00e4da55c26c030a8c147cb9274e040",
+        "Shoot-Anim.png": "d6b2e20f0732d260a16a826eb648e1f6291f08f157141de0171e26b8392bee87",
+        "Rotate-Shadow.png": "f91fed8e48c7b801b0c158228a61e93e876ba8abfd3e5c518afbea74ed0cd983",
+        "Shoot-Offsets.png": "df7be863ebedf186ce3812eb0205980cc6dcf1c64e8136f0e28bb39a778b7716",
+        "Shoot-Shadow.png": "685e75a93f7c8bdf62e8b8c257218a0561aa48d7dcabb8dd85b0123996fefc46",
+        "Sleep-Anim.png": "23e9aa62f86073dbf1fdbe4a47b947d67c9672f19bbcaf9c16a535e63eedc688",
+        "Sleep-Offsets.png": "75e0fad6136487f7c79c81a1d955b1cc42ad5feb7f952c840ae6b4a9797775a7",
+        "Sleep-Shadow.png": "a0d55d82d6b02af5d74520339c875217aa2588f4d486574bf0ddda2725b3964d",
+        "Swing-Anim.png": "49f8558beded0c82acffc2a5849b4f53758555cc68f5c25beffe40f5fa7fb7f9",
+        "Swing-Shadow.png": "56673f9532611864dfeb0d0754faab82db2cc8a45054340bf5bee6ad20e3e0bb",
+        "Swing-Offsets.png": "fdcf8ddd579efd1a87478b74817c6b0ac8ada585e2e817d85c78fe687f69bd13",
+        "Walk-Anim.png": "8af17b1f1b60ac7386a242079094bf9fc6a2254dc7e1ebb3b4120734376a7a54",
+        "Walk-Offsets.png": "2e692ba75a1d76e94ca16da3f3f6bfba88fc1b796fcc8f7cb3feed66c9f00023",
+        "Walk-Shadow.png": "78018cf8b5cd4657d394a78c949340db5ef841ae0c5062189a61f027b8af09d0"
+      },
+      "technical_check": {
+        "technical_precheck": "PASS",
+        "errors": [],
+        "warnings": [
+          "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+        ],
+        "measurements": {
+          "actions": {
+            "Walk": {
+              "frame": [
+                40,
+                72
+              ],
+              "columns": 7,
+              "directions": 8,
+              "ticks": 34,
+              "colors": 15
+            },
+            "Attack": {
+              "frame": [
+                72,
+                104
+              ],
+              "columns": 12,
+              "directions": 8,
+              "ticks": 26,
+              "colors": 15
+            },
+            "Shoot": {
+              "frame": [
+                40,
+                64
+              ],
+              "columns": 14,
+              "directions": 8,
+              "ticks": 29,
+              "colors": 15
+            },
+            "RearUp": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 6,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 15
+            },
+            "Sleep": {
+              "frame": [
+                24,
+                32
+              ],
+              "columns": 2,
+              "directions": 1,
+              "ticks": 65,
+              "colors": 13
+            },
+            "Hurt": {
+              "frame": [
+                40,
+                56
+              ],
+              "columns": 2,
+              "directions": 8,
+              "ticks": 10,
+              "colors": 14
+            },
+            "Idle": {
+              "frame": [
+                32,
+                64
+              ],
+              "columns": 5,
+              "directions": 8,
+              "ticks": 57,
+              "colors": 15
+            },
+            "Swing": {
+              "frame": [
+                72,
+                80
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 16,
+              "colors": 15
+            },
+            "Double": {
+              "frame": [
+                48,
+                72
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 36,
+              "colors": 14
+            },
+            "Hop": {
+              "frame": [
+                32,
+                96
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 24,
+              "colors": 15
+            },
+            "Charge": {
+              "frame": [
+                24,
+                48
+              ],
+              "columns": 10,
+              "directions": 8,
+              "ticks": 20,
+              "colors": 14
+            },
+            "Rotate": {
+              "frame": [
+                32,
+                48
+              ],
+              "columns": 9,
+              "directions": 8,
+              "ticks": 18,
+              "colors": 15
+            },
+            "Eat": {
+              "frame": [
+                32,
+                64
+              ],
+              "columns": 16,
+              "directions": 8,
+              "ticks": 91,
+              "colors": 15
+            }
+          },
+          "global_visible_colors": 15
+        },
+        "artistic_review": "NOT_EVALUATED",
+        "runtime_PMDO": "NOT_TESTED",
+        "SpriteCollab_acceptance": "NOT_EVALUATED"
+      }
+    }
+  ],
+  "method": "Four new gesture studies on magenta, followed by explicit pixel-authored native-part articulation. Raw generated facial/accessory/proportion errors not accepted as finished sprites.",
+  "coverage": {
+    "members_with_Eat": 9,
+    "new_cycles": 4,
+    "retained_v5_cycles": 2,
+    "native_Eat_preserved": 3,
+    "eight_direction_cycles": 6,
+    "native_single_view_cycles": 3,
+    "gif_count": 57
+  }
+}
