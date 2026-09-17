@@ -1,0 +1,27 @@
+{
+  "pokemon": "Falinks",
+  "dex": 870,
+  "variant": "0002",
+  "format": "SpriteCollab portrait sheet",
+  "output_folder": "portrait/0870/0002",
+  "output_archive": "portrait-0870-0002.zip",
+  "compatibility_archive": "portrait-0870.zip",
+  "tile_size": [40, 40],
+  "sheet_size": [200, 320],
+  "max_colors_per_tile": 15,
+  "opaque": true,
+  "exact_mirrors": true,
+  "generator": "source/portraits_falinks/build_portraits.py",
+  "verification": "source/portraits_falinks/verify_portraits.py",
+  "order": [
+    "Normal", "Happy", "Pain", "Angry", "Worried", "Sad", "Crying", "Shouting",
+    "Teary-Eyed", "Determined", "Joyous", "Inspired", "Surprised", "Dizzy",
+    "Special0", "Special1", "Sigh", "Stunned", "Special2", "Special3"
+  ],
+  "canonical_source": {
+    "repository": "PMDCollab/SpriteCollab",
+    "commit": "f273fb951f3931503a1c5533e9ff00a19ddd373b",
+    "path": "portrait/0870/0002",
+    "local_reference": "source/portraits_falinks/reference/Normal.png"
+  }
+}
