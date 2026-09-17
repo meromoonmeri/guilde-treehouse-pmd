@@ -1,0 +1,125 @@
+{
+  "preferred_base": "ac15d0fa / politoed_portraits_v1",
+  "preserved_preferred_hashes": {
+    "Normal.png": "faf09c1a2be0b94ff2e5b745e6688ec2c34d3ee94c5aa1b74ceb966b12de5ab0",
+    "Inspired.png": "9771ec15fab94fcbdc1af140d6f2c0b16b3963078429bd9ed5be4d3415852cbd",
+    "Pain.png": "fd2031a404af8c3a16649a2c4d006bab071221451bf71889481b4960199d4b35",
+    "Shouting.png": "2842fc30c40981ef2c11e7152c2ac7c5cfd3f9ccbe417975d980f53aa3257a8a",
+    "Surprised.png": "6c7bf33ed075437fb280e11d3f979a0aac743ab79f0ae7592a085e8fda0d8be8",
+    "Happy.png": "ffb6e5859c04e1550216579f6e44a5b729a42d4af3de75135307cbfc0ab6dd2f",
+    "Angry.png": "8895c39341f56133204cc934530264369c23874538ba4b9642c8586f5fcb3404",
+    "Worried.png": "9e694862adee08cd0659d1ecbe2422c32e98e4c9750db3da760282655da7eab9",
+    "Sad.png": "41ce46ea2e6c7b81cf306d6d51d09da70bd9fc7492e9058150ea5c77924457fa",
+    "Crying.png": "0610b65f35a51ad3d060d174175a59883a5c96f2f0f883c72a4199b2c21d2bdc",
+    "Teary-Eyed.png": "0ff9ecb37b8b01c5c4d14ee0a00ea10cf9cc9464aad4b029a3023bb1e3cad44a",
+    "Determined.png": "2f5c749f9c7b25c872abcb2ca57bd5b72770b29c1a4897416bb229c4180c0aa7",
+    "Joyous.png": "1228a1e0575247271dc7365bbff8b0e84049daa68b82fe4bc0b5ae1385547b43"
+  },
+  "not_selected": "politoed_portraits_v2 whole-face trials kept as unused studies",
+  "new": {
+    "Dizzy": {
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "source": "source/pokemon_custom/politoed_portraits_v3/generation/Dizzy.png",
+      "method": "Generated guide plus explicitly pixel-authored connected spiral on preferred native face",
+      "background_slot": 13
+    },
+    "Special0": {
+      "colors": 15,
+      "technical_precheck": "PASS",
+      "source": "source/pokemon_custom/politoed_portraits_v3/generation/Special0.png",
+      "method": "Whole generated applause portrait keyed from magenta, reduced and palette-cleaned; no native-face paste",
+      "background_slot": 14
+    }
+  },
+  "art_approval_of_additions": false,
+  "missing_required": [
+    "Sigh",
+    "Stunned"
+  ],
+  "background_mapping": {
+    "Dizzy": {
+      "file": "template.png",
+      "slot": 13
+    },
+    "Special0": {
+      "file": "Extra_Backgrounds.png",
+      "rectangle": [
+        40,
+        0,
+        80,
+        40
+      ]
+    }
+  },
+  "runtime_PMDO": "NOT TESTED",
+  "minimum_precheck": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 12,
+        "Happy": 13,
+        "Pain": 13,
+        "Angry": 14,
+        "Worried": 13,
+        "Sad": 13,
+        "Crying": 13,
+        "Shouting": 14,
+        "Teary-Eyed": 13,
+        "Determined": 13,
+        "Joyous": 14,
+        "Inspired": 14,
+        "Surprised": 15,
+        "Dizzy": 13,
+        "Special0": 15
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "full_precheck": {
+    "technical_precheck": "FAIL",
+    "errors": [
+      "Missing required emotion: Sigh",
+      "Missing required emotion: Stunned"
+    ],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 12,
+        "Happy": 13,
+        "Pain": 13,
+        "Angry": 14,
+        "Worried": 13,
+        "Sad": 13,
+        "Crying": 13,
+        "Shouting": 14,
+        "Teary-Eyed": 13,
+        "Determined": 13,
+        "Joyous": 14,
+        "Inspired": 14,
+        "Surprised": 15,
+        "Dizzy": 13,
+        "Special0": 15
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  }
+}

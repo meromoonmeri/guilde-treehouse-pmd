@@ -109,6 +109,16 @@
       "tirtouga": {
         "required": "Same anatomy-lock workflow from approved Normal; preserve beak, nostril and facial outline. Native emotion-appropriate canonical backgrounds. Preserve already approved portraits.",
         "open_beak_policy": "User explicitly reaffirms approved open-mouth portraits: canonical-reference-based natural beak opening is allowed, without visible teeth. Do not impose a permanently closed beak or replace approved open-mouth portraits."
+      },
+      "politoed": {
+        "preferred_base": "User prefers V1/ac15d0fa over V2 whole-face trials. Preserve V1 except targeted Dizzy replacement.",
+        "Dizzy": "Explicit user-requested connected spiral eye (etourdi / KO-like), not merely an eye shifted or concentric rings. Stylized eye-design exception to Normal anatomy lock; preserve remaining face.",
+        "Special0": "User-requested applause, hands meeting, eyes closed, mouth naturally open at green/yellow jaw seam. No teeth or human lips.",
+        "background_mapping": {
+          "Dizzy": "template.png slot13",
+          "Special0": "Extra_Backgrounds.png rectangle [40,0,80,40], warm celebratory rays; explicit optional-slot mapping."
+        },
+        "unused": "V2 Happy/Crying/Sigh/Stunned are studies, not chosen replacements."
       }
     },
     "generation_background": {

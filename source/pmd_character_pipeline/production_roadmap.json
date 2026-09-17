@@ -5,7 +5,7 @@
     {
       "id": "guild_members_priority",
       "subject": "Priority audit and missing assets for the nine PMDO quest guild members",
-      "status": "Audit complete against tracker, pinned real listings, XML CopyOf and representative Idle triples; no generation or PMDO runtime test",
+      "status": "Guild production in progress: preferred Politoed V1 preserved; two targeted portrait additions; Gardevoir/Weavile canonical cutscene packs and front-only Nod candidate. No PMDO runtime test.",
       "members": [
         "Gardevoir",
         "Farfetch’d",
@@ -18,17 +18,25 @@
         "Politoed"
       ],
       "scope": "Standard/base slots audited; cutscene/female variants inventoried separately, not selected without quest identity context",
-      "priority_1": "Politoed: 12 missing core expressions; preserve its existing Normal/Inspired/Shouting/Surprised and all other members’ complete16 sets",
-      "priority_2": "Map quest scene requirements to 22 missing project-profile actions on each of six base slots; inspect Gardevoir/Weavile Cutscene assets before creating replacements",
+      "priority_1": "Keep user-preferred Politoed V1/ac15d0fa; replace only Dizzy with a true spiral eye, add applause Special0 (eyes closed, mouth open). Sigh/Stunned remain absent; disliked V2 must not fill them.",
+      "priority_2": "Continue missing guild scene animations; canonical reuse first. Front-only Nod does not fulfill eight-direction coverage.",
       "already_available": "All nine have dungeon10; Bagon/Happiny/Pachirisu base have full32",
       "paths": [
         "exports/guild_members_audit",
         "source/guild_members_audit",
         "source/pokemon_custom/politoed_portraits_v1",
         "exports/pokemon_custom/politoed_portraits_v1",
-        "apercu_tarpaud_portraits_v1.html"
+        "apercu_tarpaud_portraits_v1.html",
+        "exports/pokemon_custom/politoed_portraits_v3",
+        "exports/guild_scene_animations_v1",
+        "apercu_guilde_scenes_v1.html"
       ],
-      "portrait_progress": "Politoed first production lot:10 generated anatomy-constrained candidates on keyed magenta, composed on exact canonical backgrounds; four native portraits byte-preserved; Sigh/Stunned generation blocked by10-image turn limit. New art not approved; scene animation work not begun."
+      "portrait_progress": "14 core portraits + optional Special0 in V3: 13 V1 portraits byte-identical, targeted pixel-authored spiral from generated guide, generated applause on explicit Extra_Backgrounds slot (40,0)-(80,40). New additions not art-approved.",
+      "scene_progress": {
+        "gardevoir": "All 14 base actions preserved plus 7 exact Cutscene actions (Special1 alias safely materialized from Cutscene Appeal) and a front-only generated/cleaned Nod candidate, 5 frames/3 drawings.",
+        "weavile": "All 13 base actions preserved plus authentic Cutscene Special0/1; not renamed as generic missing actions.",
+        "technical": "Both full base-plus-additions packs PASS local dungeon precheck; PMDO NOT TESTED; no global completion claim."
+      }
     },
     {
       "id": "team_dazzling_diva",
