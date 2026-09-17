@@ -19,7 +19,7 @@
       ],
       "scope": "Standard/base slots audited; cutscene/female variants inventoried separately, not selected without quest identity context",
       "priority_1": "Keep user-preferred Politoed V1/ac15d0fa; replace only Dizzy with a true spiral eye, add applause Special0 (eyes closed, mouth open). Sigh/Stunned remain absent; disliked V2 must not fill them.",
-      "priority_2": "Continue missing guild scene animations; canonical reuse first. Front-only Nod does not fulfill eight-direction coverage.",
+      "priority_2": "Create genuinely missing actions with species-specific morphology, native PMD art direction and individual identity; canonical Specials are references/reuse, not substitutes. Gardevoir Eat must be refined and delicate.",
       "already_available": "All nine have dungeon10; Bagon/Happiny/Pachirisu base have full32",
       "paths": [
         "exports/guild_members_audit",
@@ -29,13 +29,17 @@
         "apercu_tarpaud_portraits_v1.html",
         "exports/pokemon_custom/politoed_portraits_v3",
         "exports/guild_scene_animations_v1",
-        "apercu_guilde_scenes_v1.html"
+        "apercu_guilde_scenes_v1.html",
+        "source/guild_scene_animations_v2",
+        "exports/guild_scene_animations_v2",
+        "apercu_gardevoir_eat_v2.html"
       ],
       "portrait_progress": "14 core portraits + optional Special0 in V3: 13 V1 portraits byte-identical, targeted pixel-authored spiral from generated guide, generated applause on explicit Extra_Backgrounds slot (40,0)-(80,40). New additions not art-approved.",
       "scene_progress": {
         "gardevoir": "All 14 base actions preserved plus 7 exact Cutscene actions (Special1 alias safely materialized from Cutscene Appeal) and a front-only generated/cleaned Nod candidate, 5 frames/3 drawings.",
         "weavile": "All 13 base actions preserved plus authentic Cutscene Special0/1; not renamed as generic missing actions.",
-        "technical": "Both full base-plus-additions packs PASS local dungeon precheck; PMDO NOT TESTED; no global completion claim."
+        "technical": "Both full base-plus-additions packs PASS local dungeon precheck; PMDO NOT TESTED; no global completion claim.",
+        "gardevoir_eat": "V2 front-only Eat candidate: 8 stages, generated arm/berry guide cleaned onto native anatomy, moving hand marker, full local technical precheck PASS. Other seven directions and art/runtime approval pending."
       }
     },
     {

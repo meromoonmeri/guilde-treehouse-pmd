@@ -358,7 +358,15 @@
       "blue": "left hand",
       "white_shadow_marker": "shadow center"
     },
-    "zip_flat": true
+    "zip_flat": true,
+    "species_choreography_policy": {
+      "required": true,
+      "user_example": "Gardevoir Eat: refined delicate eating gesture.",
+      "rule": "Create missing actions around each species morphology, native PMD art direction and individual identity, not generic shared motions or unrelated renamed Specials.",
+      "anatomy": "No invented limbs, human fingers/teeth/faces or forced humanoid choreography on nonhumanoid Pokemon. Native proportions, articulation and appendages are authoritative.",
+      "motion": "Animate actual joints/appendages with anticipation, action and recovery; move body-part markers with the corresponding anatomy; preserve stable ground and contact where appropriate.",
+      "scope": "Complete species with authentic actions are preserved; do not redo Bagon, Happiny or base Pachirisu without an explicit request."
+    }
   },
   "gates": {
     "technical": "local validator is a precheck, not all SpriteBot rules",

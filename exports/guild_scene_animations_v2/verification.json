@@ -1,0 +1,282 @@
+{
+  "action": "Eat",
+  "pokemon": "Gardevoir",
+  "state": "technical_pass",
+  "art_approved": false,
+  "runtime_PMDO": "NOT TESTED",
+  "directions": 1,
+  "remaining_directions": 7,
+  "frames": 8,
+  "durations_ticks": [
+    16,
+    8,
+    8,
+    8,
+    12,
+    8,
+    8,
+    20
+  ],
+  "choreography": [
+    "Petite baie, main basse",
+    "Lever doucement",
+    "Porter a la bouche",
+    "Petite bouchee",
+    "Savourer, yeux fermes",
+    "Abaisser la main",
+    "Relacher le bras",
+    "Repos"
+  ],
+  "active_hand_offsets": [
+    [
+      12,
+      19
+    ],
+    [
+      13,
+      16
+    ],
+    [
+      14,
+      14
+    ],
+    [
+      14,
+      14
+    ],
+    [
+      13,
+      15
+    ],
+    [
+      13,
+      16
+    ],
+    [
+      10,
+      19
+    ],
+    [
+      8,
+      18
+    ]
+  ],
+  "generated_source": "generation/gardevoir_eat_front.png",
+  "cleanup": "Actual generated layout 4x2. Wrong-hand first pose corrected; enlarged generated eyes/facial drift rejected. Generated green forearm and tiny berry isolated, intermediate arm positions adjusted; native face/body/robe and inactive hand restored; active red hand marker animated. Final pose exact native Idle. Not an untouched generated sheet.",
+  "technical_check": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Body-part anatomy, duplicate-frame offset equivalence, protected-asset locks, motion quality and PMDO import still require authoritative/manual checks."
+    ],
+    "measurements": {
+      "actions": {
+        "Walk": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 40,
+          "colors": 10
+        },
+        "Attack": {
+          "frame": [
+            72,
+            72
+          ],
+          "columns": 10,
+          "directions": 8,
+          "ticks": 19,
+          "colors": 10
+        },
+        "Appeal": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 8,
+          "directions": 8,
+          "ticks": 30,
+          "colors": 10
+        },
+        "Sleep": {
+          "frame": [
+            24,
+            32
+          ],
+          "columns": 2,
+          "directions": 1,
+          "ticks": 65,
+          "colors": 10
+        },
+        "Hurt": {
+          "frame": [
+            40,
+            56
+          ],
+          "columns": 2,
+          "directions": 8,
+          "ticks": 10,
+          "colors": 10
+        },
+        "Idle": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 36,
+          "colors": 10
+        },
+        "Swing": {
+          "frame": [
+            72,
+            72
+          ],
+          "columns": 9,
+          "directions": 8,
+          "ticks": 16,
+          "colors": 10
+        },
+        "Double": {
+          "frame": [
+            56,
+            72
+          ],
+          "columns": 16,
+          "directions": 8,
+          "ticks": 36,
+          "colors": 10
+        },
+        "Hop": {
+          "frame": [
+            32,
+            88
+          ],
+          "columns": 10,
+          "directions": 8,
+          "ticks": 24,
+          "colors": 10
+        },
+        "Charge": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 10,
+          "directions": 8,
+          "ticks": 20,
+          "colors": 10
+        },
+        "Rotate": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 9,
+          "directions": 8,
+          "ticks": 18,
+          "colors": 9
+        },
+        "StandingUp": {
+          "frame": [
+            40,
+            24
+          ],
+          "columns": 1,
+          "directions": 8,
+          "ticks": 8,
+          "colors": 10
+        },
+        "Special0": {
+          "frame": [
+            40,
+            40
+          ],
+          "columns": 4,
+          "directions": 8,
+          "ticks": 20,
+          "colors": 10
+        },
+        "Special1": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 8,
+          "directions": 8,
+          "ticks": 30,
+          "colors": 10
+        },
+        "Special2": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 2,
+          "directions": 8,
+          "ticks": 2,
+          "colors": 8
+        },
+        "Special3": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 24,
+          "directions": 8,
+          "ticks": 60,
+          "colors": 9
+        },
+        "Pose": {
+          "frame": [
+            24,
+            40
+          ],
+          "columns": 3,
+          "directions": 1,
+          "ticks": 14,
+          "colors": 10
+        },
+        "Jump": {
+          "frame": [
+            24,
+            88
+          ],
+          "columns": 11,
+          "directions": 1,
+          "ticks": 28,
+          "colors": 10
+        },
+        "Nod": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 5,
+          "directions": 1,
+          "ticks": 41,
+          "colors": 9
+        },
+        "Eat": {
+          "frame": [
+            32,
+            40
+          ],
+          "columns": 8,
+          "directions": 1,
+          "ticks": 88,
+          "colors": 10
+        }
+      },
+      "global_visible_colors": 12
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "inherited_v1": "Base plus canonical Cutscene actions and front Nod retained without rewriting their PNGs."
+}
