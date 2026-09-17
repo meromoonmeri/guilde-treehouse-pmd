@@ -1,0 +1,44 @@
+{
+  "pokemon": "Terapagos",
+  "alternate_spelling": "Terrapagos",
+  "dex": 1024,
+  "format": "SpriteCollab portrait sheet",
+  "tile_size": [40, 40],
+  "sheet_size": [200, 320],
+  "max_colors_per_tile": 15,
+  "generator": "source/portraits_terapagos/build_portraits.py",
+  "verification": "source/portraits_terapagos/verify_portraits.py",
+  "aggregate_archive": "portrait-1024.zip",
+  "canonical_source": {
+    "repository": "PMDCollab/SpriteCollab",
+    "commit": "8f85c1a6556a7ac61fe8987f88da3415cfffb782",
+    "base_path": "portrait/1024"
+  },
+  "variants": {
+    "0000/0001": {
+      "form": "Normal Form",
+      "output_folder": "portrait/1024/0000/0001",
+      "archive": "portrait-1024-0000-0001.zip",
+      "canonical_reference": "source/portraits_terapagos/reference/0000/0001"
+    },
+    "0001": {
+      "form": "Terastal Form",
+      "output_folder": "portrait/1024/0001",
+      "archive": "portrait-1024-0001.zip",
+      "canonical_reference": "source/portraits_terapagos/reference/0001"
+    },
+    "0002": {
+      "form": "Stellar Form",
+      "output_folder": "portrait/1024/0002",
+      "archive": "portrait-1024-0002.zip",
+      "canonical_reference": "source/portraits_terapagos/reference/0002"
+    }
+  },
+  "expressions": [
+    "Normal", "Happy", "Pain", "Angry", "Worried", "Sad", "Crying", "Shouting",
+    "Teary-Eyed", "Determined", "Joyous", "Inspired", "Surprised", "Dizzy",
+    "Special0", "Special1", "Sigh", "Stunned", "Special2", "Special3"
+  ],
+  "mirrors": "exact for generated portraits; upstream mirror PNGs are preserved byte-for-byte",
+  "source_credits": "Each variant keeps its upstream credits.txt and adds generated expressions explicitly."
+}
