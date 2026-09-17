@@ -60,14 +60,18 @@
       "paths": [
         "source/transformations_v1",
         "exports/transformations_v1",
-        "apercu_transformations_v1.html"
+        "apercu_transformations_v1.html",
+        "source/tera_v2",
+        "exports/tera_v2",
+        "apercu_tera_v2.html"
       ],
-      "type_coverage": "Fire transformation only; Fire/Water static faceless crowns provisional; remaining 17 static crowns absent; no all-species coverage"
+      "type_coverage": "Fire transformation only; Fire/Water static faceless crowns provisional; remaining 17 static crowns absent; no all-species coverage",
+      "latest": "Tera V2: 19 generated crown type proposals (Stellar rejected, Flying count wrong); Fire 4 cardinal / Water 8 provisional views / other17 front only. New alpha-preserving glass renderer, 59 local sheets x24 phases plus12 remote sheets x24. Complete catalogue55953 sheets; not all rendered, no PMDO integration."
     },
     {
       "id": "tirtouga_finish",
       "subject": "Carapagos",
-      "status": "32 required actions and 16 emotions exported; complete technical prechecks pass; final review and consolidated V5 gallery/package pending",
+      "status": "32 actions/16 portraits previously exported; consolidated review now in apercu_tera_v2.html; six originals preserved; art and PMDO validation still pending",
       "preserve": "User-approved portraits V3 and canonical backgrounds, identified by approval.json; new portraits are not covered by that approval",
       "paths": [
         "source/pokemon_custom/tirtouga_v5",
@@ -81,7 +85,8 @@
       "scope": "Build missing sprites and animation set; preserve the existing sixteen SpriteCollab portraits rather than replace them",
       "paths": [
         "source/pokemon_custom/next_species"
-      ]
+      ],
+      "latest_attempt": "West correction blocked by image-generation limit; no new file. Existing16portraits preserved; raw wrong-west sprite remains unexported."
     },
     {
       "id": "terapagos_stellar",
@@ -90,21 +95,24 @@
       "gate": "Reconstruct one faithful view before multiple directions. Never derive exports or animations from the rejected sheet. Do not substitute Terastal form 1024/0001.",
       "paths": [
         "source/pokemon_custom/next_species/references/terapagos_stellar"
-      ]
+      ],
+      "missing_portraits": "15 required emotions; preserve Normal and Normal^. Fresh faithful-model attempt blocked by image-generation limit; no replacement generated."
     },
     {
       "id": "mega_raichu_x",
       "subject": "Mega Raichu X",
-      "status": "planned; exact references and SpriteCollab resource availability not yet audited",
+      "status": "Existing native Normal portrait located and preserved at 0026/0002; sprites absent and15required emotions missing at pinned revision; full official body reference and generation pending",
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
-      "gate": "Verify exact official form identity and anatomy; inspect existing resources and credits before creating or replacing anything. Do not infer a design from ordinary or Alolan Raichu."
+      "gate": "Verify exact official form identity and anatomy; inspect existing resources and credits before creating or replacing anything. Do not infer a design from ordinary or Alolan Raichu.",
+      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_x"
     },
     {
       "id": "mega_raichu_y",
       "subject": "Mega Raichu Y",
-      "status": "planned; exact references and SpriteCollab resource availability not yet audited",
+      "status": "Existing native Normal portrait located and preserved at 0026/0003; sprites absent and15required emotions missing at pinned revision; full official body reference and generation pending",
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
-      "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form."
+      "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form.",
+      "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_y"
     }
   ],
   "standing_requirements": {
@@ -114,5 +122,6 @@
     "missing_resources": "Audit dictionary keys as resource presence; values are lock flags. Preserve existing credited or locked assets and existing portraits",
     "references": "A generator prompt and a supplied reference do not prove fidelity. Inspect the output and reject wrong forms before making directional sheets",
     "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd"
-  }
+  },
+  "confirmed_missing_resource_scope": "User explicitly selected existing project queue, not wholesale creation of all missing SpriteCollab characters."
 }

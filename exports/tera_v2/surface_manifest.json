@@ -1,0 +1,2406 @@
+{
+  "phase_count": 24,
+  "phase_ticks": 4,
+  "light_period_ticks": 96,
+  "action_timing": "Unchanged native XML; actor frame and surface phase are independent clocks",
+  "runtime_PMDO": "NOT INTEGRATED OR TESTED",
+  "profiles": {
+    "charizard": {
+      "source_dir": "source/mega_evolution_v1/references/charizard",
+      "active": true,
+      "xml": "surface_banks/charizard/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            40,
+            48
+          ],
+          "sheet_size": [
+            160,
+            384
+          ],
+          "source": "source/mega_evolution_v1/references/charizard/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/charizard/phase_00/Idle-Anim.png",
+            "surface_banks/charizard/phase_01/Idle-Anim.png",
+            "surface_banks/charizard/phase_02/Idle-Anim.png",
+            "surface_banks/charizard/phase_03/Idle-Anim.png",
+            "surface_banks/charizard/phase_04/Idle-Anim.png",
+            "surface_banks/charizard/phase_05/Idle-Anim.png",
+            "surface_banks/charizard/phase_06/Idle-Anim.png",
+            "surface_banks/charizard/phase_07/Idle-Anim.png",
+            "surface_banks/charizard/phase_08/Idle-Anim.png",
+            "surface_banks/charizard/phase_09/Idle-Anim.png",
+            "surface_banks/charizard/phase_10/Idle-Anim.png",
+            "surface_banks/charizard/phase_11/Idle-Anim.png",
+            "surface_banks/charizard/phase_12/Idle-Anim.png",
+            "surface_banks/charizard/phase_13/Idle-Anim.png",
+            "surface_banks/charizard/phase_14/Idle-Anim.png",
+            "surface_banks/charizard/phase_15/Idle-Anim.png",
+            "surface_banks/charizard/phase_16/Idle-Anim.png",
+            "surface_banks/charizard/phase_17/Idle-Anim.png",
+            "surface_banks/charizard/phase_18/Idle-Anim.png",
+            "surface_banks/charizard/phase_19/Idle-Anim.png",
+            "surface_banks/charizard/phase_20/Idle-Anim.png",
+            "surface_banks/charizard/phase_21/Idle-Anim.png",
+            "surface_banks/charizard/phase_22/Idle-Anim.png",
+            "surface_banks/charizard/phase_23/Idle-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": [
+        {
+          "action": "Walk",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Attack",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Strike",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Shoot",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "SpAttack",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Sleep",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Hurt",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Swing",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Double",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Hop",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Charge",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Rotate",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Faint",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        }
+      ]
+    },
+    "mega_charizard_x": {
+      "source_dir": "source/mega_evolution_v1/references/mega_charizard_x",
+      "active": true,
+      "xml": "surface_banks/mega_charizard_x/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            48,
+            56
+          ],
+          "sheet_size": [
+            192,
+            448
+          ],
+          "source": "source/mega_evolution_v1/references/mega_charizard_x/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/mega_charizard_x/phase_00/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_01/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_02/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_03/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_04/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_05/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_06/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_07/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_08/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_09/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_10/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_11/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_12/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_13/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_14/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_15/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_16/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_17/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_18/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_19/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_20/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_21/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_22/Idle-Anim.png",
+            "surface_banks/mega_charizard_x/phase_23/Idle-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": [
+        {
+          "action": "Walk",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Attack",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Shoot",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "SpAttack",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Sleep",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Hurt",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Swing",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Double",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Hop",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Charge",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Rotate",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        },
+        {
+          "action": "Cringe",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        }
+      ]
+    },
+    "gigantamax_charizard": {
+      "source_dir": "source/transformations_v1/references/charizard_gmax",
+      "active": true,
+      "xml": "surface_banks/gigantamax_charizard/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            168,
+            192
+          ],
+          "sheet_size": [
+            168,
+            1536
+          ],
+          "source": "source/transformations_v1/references/charizard_gmax/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/gigantamax_charizard/phase_00/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_01/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_02/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_03/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_04/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_05/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_06/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_07/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_08/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_09/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_10/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_11/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_12/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_13/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_14/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_15/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_16/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_17/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_18/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_19/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_20/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_21/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_22/Idle-Anim.png",
+            "surface_banks/gigantamax_charizard/phase_23/Idle-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": [
+        {
+          "action": "Rotate",
+          "reason": "reference XML declares action but local PNG triple is absent"
+        }
+      ]
+    },
+    "tirtouga_v5": {
+      "source_dir": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet",
+      "active": true,
+      "xml": "surface_banks/tirtouga_v5/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Idle-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Idle-Anim.png"
+          ]
+        },
+        {
+          "action": "Walk",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Walk-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Walk-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Walk-Anim.png"
+          ]
+        },
+        {
+          "action": "Attack",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Attack-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Attack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Attack-Anim.png"
+          ]
+        },
+        {
+          "action": "Sleep",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Sleep-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Sleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Sleep-Anim.png"
+          ]
+        },
+        {
+          "action": "Hurt",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Hurt-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Hurt-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Hurt-Anim.png"
+          ]
+        },
+        {
+          "action": "Charge",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Charge-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Charge-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Charge-Anim.png"
+          ]
+        },
+        {
+          "action": "Swing",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            384,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Swing-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Swing-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Swing-Anim.png"
+          ]
+        },
+        {
+          "action": "Hop",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Hop-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Hop-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Hop-Anim.png"
+          ]
+        },
+        {
+          "action": "Double",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            512,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Double-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Double-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Double-Anim.png"
+          ]
+        },
+        {
+          "action": "Rotate",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            512,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Rotate-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Rotate-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Rotate-Anim.png"
+          ]
+        },
+        {
+          "action": "EventSleep",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/EventSleep-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/EventSleep-Anim.png"
+          ]
+        },
+        {
+          "action": "Wake",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Wake-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Wake-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Wake-Anim.png"
+          ]
+        },
+        {
+          "action": "Eat",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Eat-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Eat-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Eat-Anim.png"
+          ]
+        },
+        {
+          "action": "DeepBreath",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/DeepBreath-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/DeepBreath-Anim.png"
+          ]
+        },
+        {
+          "action": "Nod",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Nod-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Nod-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Nod-Anim.png"
+          ]
+        },
+        {
+          "action": "LookUp",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/LookUp-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/LookUp-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/LookUp-Anim.png"
+          ]
+        },
+        {
+          "action": "Tumble",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Tumble-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Tumble-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Tumble-Anim.png"
+          ]
+        },
+        {
+          "action": "Trip",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Trip-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Trip-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Trip-Anim.png"
+          ]
+        },
+        {
+          "action": "LostBalance",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/LostBalance-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/LostBalance-Anim.png"
+          ]
+        },
+        {
+          "action": "TumbleBack",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/TumbleBack-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/TumbleBack-Anim.png"
+          ]
+        },
+        {
+          "action": "HitGround",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/HitGround-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/HitGround-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/HitGround-Anim.png"
+          ]
+        },
+        {
+          "action": "Faint",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Faint-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Faint-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Faint-Anim.png"
+          ]
+        },
+        {
+          "action": "Pose",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Pose-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Pose-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Pose-Anim.png"
+          ]
+        },
+        {
+          "action": "Pull",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Pull-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Pull-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Pull-Anim.png"
+          ]
+        },
+        {
+          "action": "Pain",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Pain-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Pain-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Pain-Anim.png"
+          ]
+        },
+        {
+          "action": "Float",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Float-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Float-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Float-Anim.png"
+          ]
+        },
+        {
+          "action": "Sit",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Sit-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Sit-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Sit-Anim.png"
+          ]
+        },
+        {
+          "action": "Sink",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Sink-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Sink-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Sink-Anim.png"
+          ]
+        },
+        {
+          "action": "Laying",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Laying-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Laying-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Laying-Anim.png"
+          ]
+        },
+        {
+          "action": "LeapForth",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/LeapForth-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/LeapForth-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/LeapForth-Anim.png"
+          ]
+        },
+        {
+          "action": "Head",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Head-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Head-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Head-Anim.png"
+          ]
+        },
+        {
+          "action": "Cringe",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v5/sprite_multisheet/Cringe-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v5/phase_00/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_01/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_02/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_03/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_04/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_05/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_06/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_07/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_08/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_09/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_10/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_11/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_12/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_13/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_14/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_15/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_16/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_17/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_18/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_19/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_20/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_21/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_22/Cringe-Anim.png",
+            "surface_banks/tirtouga_v5/phase_23/Cringe-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": []
+    },
+    "tirtouga_v4_archive": {
+      "source_dir": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet",
+      "active": false,
+      "xml": "surface_banks/tirtouga_v4_archive/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Idle-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Idle-Anim.png"
+          ]
+        },
+        {
+          "action": "Walk",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Walk-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Walk-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Walk-Anim.png"
+          ]
+        },
+        {
+          "action": "Attack",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Attack-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Attack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Attack-Anim.png"
+          ]
+        },
+        {
+          "action": "Sleep",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Sleep-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Sleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Sleep-Anim.png"
+          ]
+        },
+        {
+          "action": "Hurt",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Hurt-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Hurt-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Hurt-Anim.png"
+          ]
+        },
+        {
+          "action": "Charge",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Charge-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Charge-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Charge-Anim.png"
+          ]
+        },
+        {
+          "action": "Swing",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            384,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Swing-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Swing-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Swing-Anim.png"
+          ]
+        },
+        {
+          "action": "Hop",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Hop-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Hop-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Hop-Anim.png"
+          ]
+        },
+        {
+          "action": "Double",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            512,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Double-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Double-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Double-Anim.png"
+          ]
+        },
+        {
+          "action": "Rotate",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            512,
+            512
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Rotate-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Rotate-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Rotate-Anim.png"
+          ]
+        },
+        {
+          "action": "EventSleep",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/EventSleep-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/EventSleep-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/EventSleep-Anim.png"
+          ]
+        },
+        {
+          "action": "Wake",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Wake-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Wake-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Wake-Anim.png"
+          ]
+        },
+        {
+          "action": "Eat",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Eat-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Eat-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Eat-Anim.png"
+          ]
+        },
+        {
+          "action": "DeepBreath",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/DeepBreath-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/DeepBreath-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/DeepBreath-Anim.png"
+          ]
+        },
+        {
+          "action": "Nod",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Nod-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Nod-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Nod-Anim.png"
+          ]
+        },
+        {
+          "action": "LookUp",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/LookUp-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/LookUp-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/LookUp-Anim.png"
+          ]
+        },
+        {
+          "action": "Tumble",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Tumble-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Tumble-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Tumble-Anim.png"
+          ]
+        },
+        {
+          "action": "Trip",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Trip-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Trip-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Trip-Anim.png"
+          ]
+        },
+        {
+          "action": "LostBalance",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/LostBalance-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/LostBalance-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/LostBalance-Anim.png"
+          ]
+        },
+        {
+          "action": "TumbleBack",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/TumbleBack-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/TumbleBack-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/TumbleBack-Anim.png"
+          ]
+        },
+        {
+          "action": "HitGround",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/HitGround-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/HitGround-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/HitGround-Anim.png"
+          ]
+        },
+        {
+          "action": "Faint",
+          "native_cell": [
+            64,
+            64
+          ],
+          "sheet_size": [
+            256,
+            64
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v4/sprite_multisheet/Faint-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v4_archive/phase_00/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_01/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_02/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_03/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_04/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_05/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_06/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_07/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_08/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_09/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_10/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_11/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_12/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_13/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_14/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_15/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_16/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_17/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_18/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_19/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_20/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_21/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_22/Faint-Anim.png",
+            "surface_banks/tirtouga_v4_archive/phase_23/Faint-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": []
+    },
+    "tirtouga_v2_archive": {
+      "source_dir": "exports/pokemon_custom/tirtouga_v2/sprite_multisheet",
+      "active": false,
+      "xml": "surface_banks/tirtouga_v2_archive/AnimData.xml",
+      "actions": [
+        {
+          "action": "Idle",
+          "native_cell": [
+            48,
+            48
+          ],
+          "sheet_size": [
+            192,
+            384
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v2/sprite_multisheet/Idle-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v2_archive/phase_00/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_01/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_02/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_03/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_04/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_05/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_06/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_07/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_08/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_09/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_10/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_11/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_12/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_13/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_14/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_15/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_16/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_17/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_18/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_19/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_20/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_21/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_22/Idle-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_23/Idle-Anim.png"
+          ]
+        },
+        {
+          "action": "Walk",
+          "native_cell": [
+            48,
+            48
+          ],
+          "sheet_size": [
+            192,
+            384
+          ],
+          "source": "exports/pokemon_custom/tirtouga_v2/sprite_multisheet/Walk-Anim.png",
+          "phase_files": [
+            "surface_banks/tirtouga_v2_archive/phase_00/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_01/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_02/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_03/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_04/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_05/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_06/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_07/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_08/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_09/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_10/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_11/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_12/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_13/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_14/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_15/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_16/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_17/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_18/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_19/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_20/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_21/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_22/Walk-Anim.png",
+            "surface_banks/tirtouga_v2_archive/phase_23/Walk-Anim.png"
+          ]
+        }
+      ],
+      "declared_actions_without_local_sources": []
+    }
+  }
+}

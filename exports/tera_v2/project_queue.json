@@ -1,0 +1,1403 @@
+{
+  "scope": "User selected existing project queue, not production of every missing SpriteCollab asset",
+  "pin": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+  "carapagos": {
+    "local_actions": 32,
+    "local_portraits": 16,
+    "approved_original_hashes_preserved": {
+      "Angry.png": "c124fd68f56db4b334e5409a780fbb050045ccc09ca400c3af0325d20558c227",
+      "Happy.png": "5a186843688a243af23081e32613cb5a260265529e84da8684c33f8d9a526fcd",
+      "Normal.png": "1dc67d39bb14b5bd563f7bb41b38a365800b3973fb39345feab8ca1b2ff2fbb3",
+      "Sad.png": "925f74253a12208fcd366e6de7c38bf5a0146544e561107f7abf7bcdc504b153",
+      "Shouting.png": "4c3edf41c2904bf7f1208a5c9222b140aaec298fd934870005299bf0fbc441b8",
+      "Surprised.png": "7ce8a11d1002d91de6bc20f2bc45ccd2c90507d6010fe51c09738748047e1806"
+    },
+    "status": "Previously exported; consolidated review added, not new artwork or final art/PMDO approval"
+  },
+  "priority": [
+    {
+      "slot": "0893",
+      "name": "Zarude",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1024/0002",
+      "name": "Terapagos / Stellar",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0026/0002",
+      "name": "Raichu / Mega_X",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0026/0003",
+      "name": "Raichu / Mega_Y",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    }
+  ],
+  "base_missing_sprite_species": [
+    {
+      "slot": "0514",
+      "name": "Simisear",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0516",
+      "name": "Simipour",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Determined",
+        "Pain",
+        "Special3",
+        "Teary-Eyed",
+        "Happy",
+        "Shouting",
+        "Crying",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0520",
+      "name": "Tranquill",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0522",
+      "name": "Blitzle",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0523",
+      "name": "Zebstrika",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0538",
+      "name": "Throh",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0558",
+      "name": "Crustle",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0564",
+      "name": "Tirtouga",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0565",
+      "name": "Carracosta",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0591",
+      "name": "Amoonguss",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Angry^",
+        "Shouting^",
+        "Sigh^",
+        "Determined",
+        "Determined^",
+        "Inspired^",
+        "Crying^",
+        "Pain",
+        "Happy^",
+        "Teary-Eyed^",
+        "Sad^",
+        "Pain^",
+        "Crying",
+        "Dizzy^",
+        "Worried^",
+        "Stunned^",
+        "Teary-Eyed",
+        "Dizzy",
+        "Surprised^",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Joyous^",
+        "Worried",
+        "Normal^",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0592",
+      "name": "Frillish",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0616",
+      "name": "Shelmet",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0626",
+      "name": "Bouffalant",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0668",
+      "name": "Pyroar",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0732",
+      "name": "Trumbeak",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0735",
+      "name": "Gumshoos",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Special0",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0756",
+      "name": "Shiinotic",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Normal",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy",
+        "Special0",
+        "Special2"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0765",
+      "name": "Oranguru",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Pain",
+        "Normal",
+        "Angry",
+        "Happy",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Worried",
+        "Stunned"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0837",
+      "name": "Rolycoly",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Special3",
+        "Special0",
+        "Crying",
+        "Normal",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0838",
+      "name": "Carkol",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0839",
+      "name": "Coalossal",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0847",
+      "name": "Barraskewda",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0866",
+      "name": "Mr_Rime",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0870",
+      "name": "Falinks",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0878",
+      "name": "Cufant",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0893",
+      "name": "Zarude",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0931",
+      "name": "Squawkabilly",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0942",
+      "name": "Maschiff",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0943",
+      "name": "Mabosstiff",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Angry"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0944",
+      "name": "Shroodle",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0947",
+      "name": "Brambleghast",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0949",
+      "name": "Toedscruel",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0950",
+      "name": "Klawf",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0954",
+      "name": "Rabsca",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Special3",
+        "Special0",
+        "Normal",
+        "Special1"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0956",
+      "name": "Espathra",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0962",
+      "name": "Bombirdier",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Special0",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0973",
+      "name": "Flamigo",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Joyous",
+        "Pain",
+        "Surprised",
+        "Happy"
+      ],
+      "missing_required_portraits": [
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Inspired",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0986",
+      "name": "Brute_Bonnet",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0993",
+      "name": "Iron_Jugulis",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "0999",
+      "name": "Gimmighoul",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1001",
+      "name": "Wo_Chien",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1002",
+      "name": "Chien_Pao",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^",
+        "Shouting",
+        "Shouting^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1008",
+      "name": "Miraidon",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1014",
+      "name": "Okidogi",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Normal^"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1022",
+      "name": "Iron_Boulder",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal"
+      ],
+      "missing_required_portraits": [
+        "Happy",
+        "Pain",
+        "Angry",
+        "Worried",
+        "Sad",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    },
+    {
+      "slot": "1023",
+      "name": "Iron_Crown",
+      "existing_sprite_actions": [],
+      "existing_portraits": [
+        "Normal",
+        "Sigh",
+        "Joyous",
+        "Sad",
+        "Shouting",
+        "Determined",
+        "Pain",
+        "Special0",
+        "Crying",
+        "Teary-Eyed",
+        "Dizzy",
+        "Special1",
+        "Inspired",
+        "Surprised",
+        "Angry",
+        "Worried",
+        "Stunned",
+        "Happy"
+      ],
+      "missing_required_portraits": [],
+      "policy": "Preserve every existing native portrait; values in tracker dictionaries are lock flags, not presence flags",
+      "status": "Not produced in this generation-limited turn"
+    }
+  ],
+  "base_count": 46,
+  "base_missing_normal_portrait_count": 0,
+  "priority_missing_portrait_count": 45,
+  "blocked_generation_attempts": [
+    "zarude_west_v2.png",
+    "terapagos_stellar_front_v2.png"
+  ],
+  "generation_limit": "10 successful crown generations; later Zarude and Stellar calls blocked; no files produced for them"
+}
