@@ -1,0 +1,25 @@
+{
+  "batch_tests_passed": 10,
+  "animation_steps": 64,
+  "frame_ticks": 6,
+  "duration_seconds": 6.4,
+  "authored_motion": true,
+  "recovered_canonical_cycle": false,
+  "PNG_rgb_source_mismatches": 0,
+  "static_terrain_motion": false,
+  "terrain_runtime": "NOT TESTED",
+  "art_approved": false,
+  "checks": [
+    "Canonical input hashes",
+    "Per-frame native aurora source coordinates",
+    "Frame64 equals frame0",
+    "At most1px column displacement between adjacent phases including wrap",
+    "Native star shapes/RGB, alpha-only twinkle",
+    "Real GIF frame count,6.4s duration, infinite loop",
+    "Static terrain invariant across sampled scene phases",
+    "All128PNG match atlas cells",
+    "Native palette in static layers",
+    "Central south approach stays clear of rendered ice"
+  ],
+  "limits": "No engine collision, warp, import or parallax test. New motion, not an official recovered animation. Color-reduced GIFs are previews; losslessWebP and PNG are authoritative."
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "editor_placement_recipe_not_native_engine_file",
+  "frame_count": 64,
+  "frame_ticks": 6,
+  "frame_size_px": [
+    264,
+    216
+  ],
+  "atlas_columns": 8,
+  "map_background_origin_px": [
+    120,
+    0
+  ],
+  "render_order": [
+    "01_dark_sky",
+    "Ribbons animated",
+    "Stars animated",
+    "02_native_haze",
+    "03_native_distant_ice",
+    "04_snow_ground",
+    "05_south_approach",
+    "06_north_ice_rim",
+    "07_side_ice_and_ramp",
+    "08_native_fissures"
+  ],
+  "entrance_candidate_px": [
+    224,
+    704,
+    64,
+    16
+  ],
+  "arena_target_px": [
+    256,
+    456
+  ],
+  "parallax": "Not configured or runtime-tested; BG motion is separate from terrain.",
+  "collision_imported": false
+}

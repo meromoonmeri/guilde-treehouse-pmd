@@ -1,0 +1,73 @@
+{
+  "inspected": [
+    {
+      "repository": "Palikadude/Halcyon",
+      "tree_sha": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+      "truncated": false,
+      "matching_paths": [],
+      "BG_paths": [
+        "Content/BG/Chapter_1.dir",
+        "Content/BG/Chapter_2.dir",
+        "Content/BG/Chapter_3.dir",
+        "Content/BG/Chapter_4.dir",
+        "Content/BG/Dream_Back.dir",
+        "Content/BG/Dream_Front.dir",
+        "Content/BG/Dusknoir.dir",
+        "Content/BG/SE5_Wind_Background.dir",
+        "Content/BG/Steam.dir",
+        "Content/BG/Title_Screen_Background.dir",
+        "Content/BG/Wanted_Poster.dir"
+      ],
+      "finding": "No matching scene aurora cycle identified; attack Aurora_Beam is not the background."
+    },
+    {
+      "repository": "audinowho/DumpAsset",
+      "tree_sha": "3e767571f9dd94270b848b3a73de9bec2553a2eb",
+      "truncated": false,
+      "matching_paths": [
+        "Content/Particle/Aurora_Beam_Custom.dir",
+        "Content/Sound/Battle/DUN_Aurora_Beam.ogg",
+        "Content/Sound/Battle/DUN_Aurora_Beam_2.ogg",
+        "Data/Skill/aurora_beam.json",
+        "Data/Skill/aurora_veil.json"
+      ],
+      "BG_paths": [
+        "Content/BG/Blizzard.dir",
+        "Content/BG/Clouds_Overhead.dir",
+        "Content/BG/Cloudy_Sky.dir",
+        "Content/BG/Cosmic_Power.dir",
+        "Content/BG/Dawn.dir",
+        "Content/BG/Distortion.dir",
+        "Content/BG/Fog.dir",
+        "Content/BG/Fog_2.dir",
+        "Content/BG/Haze.dir",
+        "Content/BG/Heat_Wave.dir",
+        "Content/BG/Inverse.dir",
+        "Content/BG/Leaf_Storm.dir",
+        "Content/BG/Magic_Room.dir",
+        "Content/BG/Ominous_Wind.dir",
+        "Content/BG/Petal_Blizzard.dir",
+        "Content/BG/Pre_Battle.dir",
+        "Content/BG/Psychic.dir",
+        "Content/BG/Refresh.dir",
+        "Content/BG/Sandstorm.dir",
+        "Content/BG/Silver_Wind.dir",
+        "Content/BG/Sky.dir",
+        "Content/BG/Snow.dir",
+        "Content/BG/Trick_Room.dir",
+        "Content/BG/White.dir",
+        "Content/BG/Wonder_Room.dir"
+      ],
+      "finding": "No matching scene aurora cycle identified; attack Aurora_Beam is not the background."
+    },
+    {
+      "repository": "audinowho/PMDODump",
+      "tree_sha": "e87e1949647520ce773728956f4ba14225328a50",
+      "truncated": false,
+      "matching_paths": [],
+      "BG_paths": [],
+      "finding": "No matching scene aurora cycle identified; attack Aurora_Beam is not the background."
+    }
+  ],
+  "limit": "These inspected repositories only. Not an exhaustive absence proof."
+}

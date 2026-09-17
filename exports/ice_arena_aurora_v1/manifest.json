@@ -1,0 +1,212 @@
+{
+  "title": "Arène de glace sous les aurores",
+  "size": [
+    512,
+    720
+  ],
+  "orientation": "South entrance to central/northern arena, not a lateral corridor",
+  "artwork": "Native PMD reference pixels; original references unchanged. Generated image is only a layout guide.",
+  "animation_origin": "NEW AUTHORED MOTION on canonical artwork. NOT a recovered canonical game cycle.",
+  "native_animation_search": "No matching cycle identified in inspected complete repository trees. Aurora_Beam_Custom is an attack, not this BG. Search is not an exhaustive proof of absence.",
+  "frames": 64,
+  "frame_ticks": 6,
+  "duration_seconds": 6.4,
+  "animation": [
+    "Aurora: integer per-column vertical wave, up to6px, no RGB interpolation",
+    "Stars: native shapes and RGB, authored alpha twinkle178..255"
+  ],
+  "background_origin": [
+    120,
+    0
+  ],
+  "frame_size": [
+    264,
+    216
+  ],
+  "atlas_grid": [
+    8,
+    8
+  ],
+  "loop": true,
+  "static_layers": [
+    {
+      "id": "01_dark_sky",
+      "file": "static/IceAuroraV1_01_dark_sky.png"
+    },
+    {
+      "id": "02_native_haze",
+      "file": "static/IceAuroraV1_02_native_haze.png"
+    },
+    {
+      "id": "03_native_distant_ice",
+      "file": "static/IceAuroraV1_03_native_distant_ice.png"
+    },
+    {
+      "id": "04_snow_ground",
+      "file": "static/IceAuroraV1_04_snow_ground.png"
+    },
+    {
+      "id": "05_south_approach",
+      "file": "static/IceAuroraV1_05_south_approach.png"
+    },
+    {
+      "id": "06_north_ice_rim",
+      "file": "static/IceAuroraV1_06_north_ice_rim.png"
+    },
+    {
+      "id": "07_side_ice_and_ramp",
+      "file": "static/IceAuroraV1_07_side_ice_and_ramp.png"
+    },
+    {
+      "id": "08_native_fissures",
+      "file": "static/IceAuroraV1_08_native_fissures.png"
+    }
+  ],
+  "static_order_note": "Sky, animated ribbons, animated stars, haze, distant ice, ground, approach, rear rim, side ice, fissures.",
+  "terrain_operations": [
+    {
+      "layer": "06_north_ice_rim",
+      "source_rect": [
+        0,
+        0,
+        192,
+        256
+      ],
+      "destination": [
+        64,
+        128
+      ]
+    },
+    {
+      "layer": "06_north_ice_rim",
+      "source_rect": [
+        192,
+        0,
+        384,
+        256
+      ],
+      "destination": [
+        256,
+        128
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        0,
+        272,
+        96,
+        408
+      ],
+      "destination": [
+        0,
+        344
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        96,
+        272,
+        192,
+        408
+      ],
+      "destination": [
+        416,
+        344
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        48,
+        272,
+        144,
+        408
+      ],
+      "destination": [
+        0,
+        472
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        96,
+        272,
+        192,
+        408
+      ],
+      "destination": [
+        416,
+        472
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        0,
+        272,
+        96,
+        408
+      ],
+      "destination": [
+        112,
+        584
+      ]
+    },
+    {
+      "layer": "07_side_ice_and_ramp",
+      "source_rect": [
+        96,
+        272,
+        192,
+        408
+      ],
+      "destination": [
+        304,
+        584
+      ]
+    },
+    {
+      "layer": "08_native_fissures",
+      "source_rect": [
+        112,
+        224,
+        168,
+        256
+      ],
+      "destination": [
+        128,
+        424
+      ]
+    },
+    {
+      "layer": "08_native_fissures",
+      "source_rect": [
+        112,
+        224,
+        168,
+        256
+      ],
+      "destination": [
+        336,
+        464
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "file": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "file": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    }
+  ],
+  "runtime_PMDO": "NOT TESTED",
+  "art_approved": false,
+  "collision": "NOT PROVIDED. Snow mask is only visible-surface geometry; raised ice must be considered separately.",
+  "completion_scope": "One animated scene proposal. Other requested zones/guild assets remain open."
+}
