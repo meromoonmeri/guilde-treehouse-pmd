@@ -23,8 +23,31 @@
       "already_available": "All nine have dungeon10; Bagon/Happiny/Pachirisu base have full32",
       "paths": [
         "exports/guild_members_audit",
-        "source/guild_members_audit"
-      ]
+        "source/guild_members_audit",
+        "source/pokemon_custom/politoed_portraits_v1",
+        "exports/pokemon_custom/politoed_portraits_v1",
+        "apercu_tarpaud_portraits_v1.html"
+      ],
+      "portrait_progress": "Politoed first production lot:10 generated anatomy-constrained candidates on keyed magenta, composed on exact canonical backgrounds; four native portraits byte-preserved; Sigh/Stunned generation blocked by10-image turn limit. New art not approved; scene animation work not begun."
+    },
+    {
+      "id": "team_dazzling_diva",
+      "subject": "Team Dazzling: Lopunny / Mawile / Tsareena (Lockpin / Mysdibule / Sucreine)",
+      "status": "Queued after the missing guild-member assets are finished; no animation created yet",
+      "scope": "Species-specific diva performance animations following actual anatomy and native PMD scale; exact native animation/portrait resources to audit before generation",
+      "gate": "User-selected membership is authoritative; do not substitute the canonical team roster or generic human acting."
+    },
+    {
+      "id": "battle_launch_canonical_pmdo",
+      "subject": "Battle launch animation based on the canonical PMDO battle transition",
+      "status": "Queued after Team Dazzling; native transition assets and engine hooks not yet inspected for this task",
+      "gate": "Identify and inspect the actual canonical PMDO transition before design; do not substitute a generic transition and call it canonical. Separate visual deliverable and Ground/Dungeon runtime validation."
+    },
+    {
+      "id": "return_canonical_maps",
+      "subject": "Resume map creation with canonical PMD textures as before",
+      "status": "Queued after missing guild resources, Team Dazzling and battle launch",
+      "scope": "Return to existing native-reference and layered canonical-texture workflow; preserve approved maps/backgrounds and original textures."
     },
     {
       "id": "spritecollab_all_missing",
@@ -181,5 +204,5 @@
     "portrait_identity": "All expression variants must preserve native/approved Normal facial identity and anatomy. Only natural expression movements; no facial redesign."
   },
   "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced.",
-  "active_priority": "Nine named guild members override broad production order for now; whole SpriteCollab backlog retained, not cancelled."
+  "active_priority": "Produce missing assets for the nine guild members first, then Team Dazzling diva animations, canonical PMDO battle launch, then canonical-texture maps. Other backlog retained."
 }

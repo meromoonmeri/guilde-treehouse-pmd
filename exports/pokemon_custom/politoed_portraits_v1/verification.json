@@ -1,0 +1,223 @@
+{
+  "scope": "Politoed base slot0186 front portraits only",
+  "source_pin": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+  "workflow": "generator on pure magenta -> chroma key to alpha -> expression-region cleanup against native Normal -> exact canonical emotion background",
+  "anatomy_policy": "Frog identity preserved. No human lips or second smile inside yellow jaw. This closed-mouth batch changes only the original eye and its immediate tear area. Existing canonically open-mouth portraits stay untouched.",
+  "generated_limit": 10,
+  "generation_blocked": [
+    "Sigh",
+    "Stunned"
+  ],
+  "portraits": {
+    "Normal": {
+      "existing_native_preserved": true,
+      "sha256": "faf09c1a2be0b94ff2e5b745e6688ec2c34d3ee94c5aa1b74ceb966b12de5ab0"
+    },
+    "Inspired": {
+      "existing_native_preserved": true,
+      "sha256": "9771ec15fab94fcbdc1af140d6f2c0b16b3963078429bd9ed5be4d3415852cbd"
+    },
+    "Shouting": {
+      "existing_native_preserved": true,
+      "sha256": "2842fc30c40981ef2c11e7152c2ac7c5cfd3f9ccbe417975d980f53aa3257a8a"
+    },
+    "Surprised": {
+      "existing_native_preserved": true,
+      "sha256": "6c7bf33ed075437fb280e11d3f979a0aac743ab79f0ae7592a085e8fda0d8be8"
+    },
+    "Happy": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Happy_magenta.png",
+      "magenta_pixels_removed": 349013,
+      "native_face_pixels_changed": 37,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 1,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Pain": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Pain_magenta.png",
+      "magenta_pixels_removed": 349028,
+      "native_face_pixels_changed": 46,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 2,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Angry": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Angry_magenta.png",
+      "magenta_pixels_removed": 348999,
+      "native_face_pixels_changed": 30,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 3,
+      "colors": 14,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Worried": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Worried_magenta.png",
+      "magenta_pixels_removed": 349027,
+      "native_face_pixels_changed": 46,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 4,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Sad": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Sad_magenta.png",
+      "magenta_pixels_removed": 348990,
+      "native_face_pixels_changed": 56,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 5,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Crying": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Crying_magenta.png",
+      "magenta_pixels_removed": 350067,
+      "native_face_pixels_changed": 57,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 6,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Teary-Eyed": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Teary-Eyed_magenta.png",
+      "magenta_pixels_removed": 348985,
+      "native_face_pixels_changed": 25,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 8,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Determined": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Determined_magenta.png",
+      "magenta_pixels_removed": 349008,
+      "native_face_pixels_changed": 39,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 9,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Joyous": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Joyous_magenta.png",
+      "magenta_pixels_removed": 348956,
+      "native_face_pixels_changed": 59,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 10,
+      "colors": 14,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    },
+    "Dizzy": {
+      "raw_generated": "source/pokemon_custom/politoed_portraits_v1/generation/Dizzy_magenta.png",
+      "magenta_pixels_removed": 348998,
+      "native_face_pixels_changed": 43,
+      "outside_eye_and_tear_area_changed": 0,
+      "native_subject_alpha_preserved": true,
+      "visible_canonical_background_pixels_exact": 534,
+      "canonical_slot": 13,
+      "colors": 13,
+      "technical_precheck": "PASS",
+      "art_approved": false
+    }
+  },
+  "template_sha256": "a2ef76f2f40063b91d46e6b1df2627c09417b36328568cca0e816c7a8ed90b4c",
+  "duplicate_new_subject_pairs": [],
+  "missing_required": [
+    "Sigh",
+    "Stunned"
+  ],
+  "runtime_PMDO": "NOT TESTED",
+  "partial_sheet_precheck": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 12,
+        "Happy": 13,
+        "Pain": 13,
+        "Angry": 14,
+        "Worried": 13,
+        "Sad": 13,
+        "Crying": 13,
+        "Shouting": 14,
+        "Teary-Eyed": 13,
+        "Determined": 13,
+        "Joyous": 14,
+        "Inspired": 14,
+        "Surprised": 15,
+        "Dizzy": 13
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "full_sheet_precheck": {
+    "technical_precheck": "FAIL",
+    "errors": [
+      "Missing required emotion: Sigh",
+      "Missing required emotion: Stunned"
+    ],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 12,
+        "Happy": 13,
+        "Pain": 13,
+        "Angry": 14,
+        "Worried": 13,
+        "Sad": 13,
+        "Crying": 13,
+        "Shouting": 14,
+        "Teary-Eyed": 13,
+        "Determined": 13,
+        "Joyous": 14,
+        "Inspired": 14,
+        "Surprised": 15,
+        "Dizzy": 13
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  }
+}

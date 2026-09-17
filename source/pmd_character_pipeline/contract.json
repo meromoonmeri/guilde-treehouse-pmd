@@ -110,6 +110,17 @@
         "required": "Same anatomy-lock workflow from approved Normal; preserve beak, nostril and facial outline. Native emotion-appropriate canonical backgrounds. Preserve already approved portraits.",
         "open_beak_policy": "User explicitly reaffirms approved open-mouth portraits: canonical-reference-based natural beak opening is allowed, without visible teeth. Do not impose a permanently closed beak or replace approved open-mouth portraits."
       }
+    },
+    "generation_background": {
+      "required": "solid #FF00FF magenta",
+      "stage_order": [
+        "generate an anatomy-faithful animal expression on magenta",
+        "chroma-key magenta to transparent alpha",
+        "native-size anatomical/palette cleanup",
+        "compose on the exact canonical emotion background",
+        "verify final opaque40x40 portrait and <=15 colors including background"
+      ],
+      "do_not": "Do not ask the generator to paint the canonical background; do not leave magenta or transparency in final filled cells; do not erase genuine pink facial markings during keying."
     }
   },
   "sprite": {
