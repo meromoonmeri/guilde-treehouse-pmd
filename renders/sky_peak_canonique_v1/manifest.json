@@ -1,0 +1,56 @@
+{
+  "canvas": [
+    504,
+    504
+  ],
+  "reference_commit": "8b7e760",
+  "layout": "Terrain repris directement du GIF sans deplacement ni redimensionnement. Essais de nouveaux plateaux rejetes.",
+  "native_flower_frames": 4,
+  "native_duration_ms": [
+    200,
+    200,
+    200,
+    200
+  ],
+  "smooth_frames": 32,
+  "smooth_frame_ms": 50,
+  "smooth_loop_ms": 1600,
+  "flower_colors": [
+    "corail doux",
+    "peche",
+    "creme",
+    "mauve"
+  ],
+  "clouds": {
+    "wrap_x": 504,
+    "far_px_s": -2,
+    "near_px_s": -6,
+    "far_period_s": 252,
+    "near_period_s": 84
+  },
+  "modes": {
+    "jour": [
+      "01_ciel",
+      "02_etoiles",
+      "03_lune_halo",
+      "04a_nuages_lointains_wrap",
+      "04b_montagnes",
+      "04c_nuages_proches_wrap",
+      "05_sol_et_rebord_herbeux",
+      "06_paroi_et_rochers",
+      "07_fleurs"
+    ],
+    "nuit": [
+      "01_ciel",
+      "02_etoiles",
+      "03_lune_halo",
+      "04a_nuages_lointains_wrap",
+      "04b_montagnes",
+      "04c_nuages_proches_wrap",
+      "05_sol_et_rebord_herbeux",
+      "06_paroi_et_rochers",
+      "07_fleurs"
+    ]
+  },
+  "note_animation": "Les WebP courts montrent les fleurs avec nuages fixes; la galerie fait defiler les nuages sur leurs horloges longues sans saut a 1,6s."
+}

@@ -1,0 +1,552 @@
+{
+  "target_pmdo": "0.8.12",
+  "filter_source_blob": "438383f479e2d80a6a0b3be4cced4087470d9835",
+  "filter_source_colors_checked": 1421,
+  "existing_three_night_sheets_exact": true,
+  "generated_rgb_pixels": 0,
+  "modules": {
+    "herbe": [
+      "Base",
+      [
+        0,
+        640,
+        128,
+        768
+      ]
+    ],
+    "face": [
+      "Cliffs",
+      [
+        912,
+        464,
+        976,
+        512
+      ]
+    ],
+    "retour": [
+      "Cliffs",
+      [
+        680,
+        464,
+        744,
+        512
+      ]
+    ],
+    "couronne": [
+      "Cliffs",
+      [
+        912,
+        448,
+        976,
+        464
+      ]
+    ],
+    "pied": [
+      "Cliffs",
+      [
+        912,
+        528,
+        976,
+        544
+      ]
+    ],
+    "portail": [
+      "Cliffs",
+      [
+        840,
+        416,
+        912,
+        544
+      ]
+    ],
+    "passage": [
+      "Cliffs",
+      [
+        680,
+        448,
+        744,
+        544
+      ]
+    ]
+  },
+  "rock_source": {
+    "file": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+    "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+    "rect": [
+      912,
+      464,
+      976,
+      512
+    ],
+    "scale": 1,
+    "file_control": "METANO_ROCHE_NATIVE_64x48.png"
+  },
+  "runtime_tested": false,
+  "zones": [
+    {
+      "id": "01_crete_sillage",
+      "title": "La crête du Sillage",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 780,
+        "E": 746,
+        "S": 983
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 301,
+      "terrain_sha256": "58a7cbec46765b48e5aae6e599f4619a1dc3cf8f0c2926bc825b50d81474c51e"
+    },
+    {
+      "id": "02_caps_relies",
+      "title": "Les caps reliés",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 742,
+        "E": 750,
+        "S": 961
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 264,
+      "terrain_sha256": "fa5b69382a582589ed4e6674dceb7cad54102dc3445058a17b1f3a3a032e0063"
+    },
+    {
+      "id": "03_eventail_strates",
+      "title": "L’éventail des strates",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 766,
+        "E": 779,
+        "S": 1168
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 425,
+      "terrain_sha256": "9ccf779b09f04da2adb2d25ecee040abf24d3003a66c28bc1573532b3e506cc8"
+    },
+    {
+      "id": "04_lagune_occident",
+      "title": "La lagune d’Occident",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 605,
+        "E": 786,
+        "S": 1168
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 322,
+      "terrain_sha256": "c39700fa275e66297bc39dc31720b2fe308f85d94704e6176cf47d25509b78e4"
+    },
+    {
+      "id": "05_cote_quatre_pointes",
+      "title": "La côte aux quatre pointes",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 805,
+        "E": 694,
+        "S": 750
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 319,
+      "terrain_sha256": "509c2cb16e32e622a339e57a997878f1878b7ffa94938c8fdf82604c45deb6ca"
+    },
+    {
+      "id": "06_sommet_balcon",
+      "title": "Le sommet au balcon",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 755,
+        "E": 754,
+        "S": 1168
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 333,
+      "terrain_sha256": "4d9677255cf3c6167d81f0455c709bfcf1cf4e132d8d7727ae9c226724fa54d9"
+    },
+    {
+      "id": "07_cap_chenal",
+      "title": "Le cap du Chenal",
+      "kind": "falaise",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 765,
+        "E": 754,
+        "S": 1052
+      },
+      "door": null,
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 268,
+      "terrain_sha256": "2b14c67d2c592950d766b7cbbf51e240e749058d7a20431310b63efa6542591a"
+    },
+    {
+      "id": "08_antre_crochu",
+      "title": "L’antre Crochu",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 755,
+        "E": 755,
+        "S": 1168
+      },
+      "door": {
+        "module": "portail",
+        "position": [
+          544,
+          360
+        ],
+        "threshold": [
+          576,
+          496
+        ],
+        "spawn": [
+          576,
+          704
+        ],
+        "layout_reference": "Crooked Cavern: vestibule central et epaules enveloppantes"
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 342,
+      "terrain_sha256": "81e9b76b9939bc3553e12b4ff80c6b4d87959a315accce805d38ca523437a9e8"
+    },
+    {
+      "id": "09_grotte_marees",
+      "title": "La grotte des Marées",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 758,
+        "E": 764,
+        "S": 1168
+      },
+      "door": {
+        "module": "portail",
+        "position": [
+          784,
+          432
+        ],
+        "threshold": [
+          816,
+          568
+        ],
+        "spawn": [
+          576,
+          720
+        ],
+        "layout_reference": "Brine Cave: corniche asymetrique et acces recule"
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 338,
+      "terrain_sha256": "7f291736024cdeb91018b3051c7de3b4c4e2ae3f96e34f2788c5600f720b2f23"
+    },
+    {
+      "id": "10_defile_brume",
+      "title": "Le défilé de Brume",
+      "kind": "donjon",
+      "size": [
+        1168,
+        912
+      ],
+      "source_size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 765,
+        "E": 823,
+        "S": 1168
+      },
+      "door": {
+        "module": "passage",
+        "position": [
+          456,
+          336
+        ],
+        "threshold": [
+          576,
+          208
+        ],
+        "spawn": [
+          576,
+          752
+        ],
+        "layout_reference": "Drenched Bluff: corridor ouvert entre deux epaules"
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png",
+        "05_ACCES_NATIF.png"
+      ],
+      "shape_differences_after_crop": 0,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 293,
+      "terrain_sha256": "71609b8eb43e6f934f83b54acf202785b03623ba3257b8050d8d5424291deb53"
+    }
+  ]
+}

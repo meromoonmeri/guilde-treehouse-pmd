@@ -1,0 +1,25 @@
+{
+  "method": "existing layout + authoritative Metano rock and grass reference -> image generator on magenta -> chroma extraction",
+  "generated_image": "renders/falaise_metano_temoin/01_crete_sillage_magenta.png",
+  "size": [
+    1168,
+    912
+  ],
+  "reference_files": [
+    {
+      "path": "source/falaise_metano_temoin/01_layout_metano_magenta.png",
+      "sha256": "8f799899e6a914c27bc600ad49b8646d84f70d2ea44cf6736bbb1582e3544a32"
+    },
+    {
+      "path": "source/falaises_generees/reference_canonique.png",
+      "sha256": "2afa395eb6492133e80af899b7d2a53c3c56b1434702d87d54aa947f278d18c7"
+    }
+  ],
+  "transparent_pixels": 189020,
+  "retained_terrain_pixel_changes_during_export": 0,
+  "image_resampled": false,
+  "native_tile_equality_claimed": false,
+  "all_cliff_joins_certified_seamless": false,
+  "native_mod_modified": false,
+  "ocean_animation_modified": false
+}

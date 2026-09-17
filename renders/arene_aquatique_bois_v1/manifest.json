@@ -1,0 +1,106 @@
+{
+  "size": [
+    480,
+    312
+  ],
+  "source": "images.png",
+  "reference_commit": "3b96b74399b53f4b772139df9e977e30e5b72e66",
+  "frames": 40,
+  "frame_ms": 80,
+  "loop_ms": 3200,
+  "falls": [
+    {
+      "x": 31,
+      "width": 14,
+      "foot_y": 99
+    },
+    {
+      "x": 79,
+      "width": 30,
+      "foot_y": 150
+    },
+    {
+      "x": 200,
+      "width": 15,
+      "foot_y": 43
+    },
+    {
+      "x": 280,
+      "width": 15,
+      "foot_y": 43
+    },
+    {
+      "x": 400,
+      "width": 30,
+      "foot_y": 150
+    },
+    {
+      "x": 449,
+      "width": 14,
+      "foot_y": 99
+    }
+  ],
+  "static": [
+    "02_ombre_arene",
+    "03_rochers_peripheriques",
+    "04_couronne_pierre_humide",
+    "05_plancher_arene_bois",
+    "06_passerelle_sud"
+  ],
+  "animated": [
+    "01_eau_bassin",
+    "07_liseres_eau_pierre",
+    "10_cascade_01",
+    "10_cascade_02",
+    "10_cascade_03",
+    "10_cascade_04",
+    "10_cascade_05",
+    "10_cascade_06",
+    "20_ecume_impact_01",
+    "20_ecume_impact_02",
+    "20_ecume_impact_03",
+    "20_ecume_impact_04",
+    "20_ecume_impact_05",
+    "20_ecume_impact_06",
+    "30_remous_01",
+    "30_remous_02",
+    "30_remous_03",
+    "30_remous_04",
+    "30_remous_05",
+    "30_remous_06"
+  ],
+  "order": [
+    "01_eau_bassin",
+    "02_ombre_arene",
+    "03_rochers_peripheriques",
+    "04_couronne_pierre_humide",
+    "05_plancher_arene_bois",
+    "06_passerelle_sud",
+    "07_liseres_eau_pierre",
+    "10_cascade_01",
+    "10_cascade_02",
+    "10_cascade_03",
+    "10_cascade_04",
+    "10_cascade_05",
+    "10_cascade_06",
+    "20_ecume_impact_01",
+    "20_ecume_impact_02",
+    "20_ecume_impact_03",
+    "20_ecume_impact_04",
+    "20_ecume_impact_05",
+    "20_ecume_impact_06",
+    "30_remous_01",
+    "30_remous_02",
+    "30_remous_03",
+    "30_remous_04",
+    "30_remous_05",
+    "30_remous_06"
+  ],
+  "provenance": {
+    "platform": "generated, magenta keyed, resized204x240, placed138,72; gray stone, timber arena and bridge separated",
+    "rocks": "reference boulder pixels within documented regions, recolored wet slate",
+    "water": "previously generated siphons_ecoulement_v3 water material, reindexed to8color pool palette, periodic bounded2px warp; adapted material, NOT native water",
+    "falls_foam_ripples": "procedural animation, reference cascade positions; artistic2D not fluid simulation"
+  },
+  "runtime_pmdo_validated": false
+}

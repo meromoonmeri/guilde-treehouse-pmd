@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "runtime_pmdo_tested": false,
+  "zones": [
+    {
+      "asset": "cote_v2_promontoire",
+      "pixels": [
+        1312,
+        816
+      ],
+      "reconstructed_sea_phases": 8,
+      "pixel_differences": 0
+    },
+    {
+      "asset": "cote_v2_terrasse",
+      "pixels": [
+        1200,
+        896
+      ],
+      "reconstructed_sea_phases": 8,
+      "pixel_differences": 0
+    }
+  ],
+  "checks": [
+    "native binary headers, offsets, PNG payloads and premultiplied alpha",
+    "all map tile/BG references resolve; X-major 8px grids",
+    "terrain, sky, clouds and all 8 sea phases reconstruct source pixels",
+    "native background wrap period and one-pixel seam continuity",
+    "empty structure/object layers, Top=4, empty collision scaffold",
+    "installer dry-run, legacy/namespaced scripts, index merge/backup, idempotence, conflict refusal"
+  ]
+}

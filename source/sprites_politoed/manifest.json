@@ -1,0 +1,77 @@
+{
+  "pokemon": "Politoed",
+  "dex": 186,
+  "format": "SpriteCollab multi-sheet",
+  "pmdo_import": true,
+  "wan_export": "Use PMDO after importing the multi-sheet folder; no proprietary WAN binary is committed",
+  "output_folder": "sprite/0186",
+  "output_archive": "sprite-0186.zip",
+  "gif_previews": {
+    "folder": "gifs/0186",
+    "archive": "gifs-0186.zip",
+    "script": "source/sprites_politoed/make_gifs.py",
+    "direction": "down/front (PMD direction 0)",
+    "timing": "AnimData.xml at 60 game ticks per second"
+  },
+  "guide": {
+    "title": "How to Make PMD Sprites for SkyTemple",
+    "url": "https://docs.google.com/presentation/d/1SH2onT2yttVuznohr4yi3Uh07y4lNLcLlHGT_YWNGmo/edit?usp=drivesdk",
+    "slides": 42,
+    "retrieved": "2026-09-15"
+  },
+  "canonical_source": {
+    "repository": "PMDCollab/SpriteCollab",
+    "commit": "132ddf5673927e9a7af7f18b15d46f3ccefc74c",
+    "path": "sprite/0186",
+    "local_copy": "source/sprites_politoed/canonical"
+  },
+  "animation_indices": {
+    "dungeon": {
+      "0": "Walk",
+      "1": "Attack",
+      "2": "Strike (CopyOf Attack)",
+      "3": "Shoot",
+      "4": "RearUp",
+      "5": "Sleep",
+      "6": "Hurt",
+      "7": "Idle",
+      "8": "Swing",
+      "9": "Double",
+      "10": "Hop",
+      "11": "Charge",
+      "12": "Rotate"
+    },
+    "starter": {
+      "13": "EventSleep",
+      "14": "Wake",
+      "15": "Eat",
+      "16": "Tumble",
+      "17": "Pose",
+      "18": "Pull",
+      "19": "Pain",
+      "20": "Float",
+      "21": "DeepBreath",
+      "22": "Nod",
+      "23": "Sit",
+      "24": "LookUp",
+      "25": "Sink",
+      "26": "Trip",
+      "27": "Laying",
+      "28": "LeapForth",
+      "29": "Head",
+      "30": "Cringe",
+      "31": "LostBalance",
+      "32": "TumbleBack",
+      "33": "Faint",
+      "34": "HitGround"
+    }
+  },
+  "constraints": {
+    "sprite_palette_colors": 15,
+    "transparent_alpha_only": true,
+    "frame_dimensions_even": true,
+    "direction_order": ["down", "down-right", "right", "up-right", "up", "up-left", "left", "down-left"]
+  },
+  "generated_animations": "source/sprites_politoed/build_sprites.py",
+  "verification": "python source/sprites_politoed/verify_sprites.py"
+}

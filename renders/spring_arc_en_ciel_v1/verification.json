@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "144 PNG décodés",
+    "4 piles de calques exactes ; 156 images WebP identiques aux recompositions des PNG communs + offsets",
+    "Raccords des deux lumières contrôlés (pas de saut supérieur au max interne +25%)"
+  ],
+  "light_steps": {
+    "faisceau": {
+      "maximum": 0.05699166666666667,
+      "raccord_38_00": 0.055593055555555555
+    },
+    "halo_bassin": {
+      "maximum": 0.21655625,
+      "raccord_38_00": 0.21082152777777777
+    }
+  },
+  "runtime_validated": false
+}

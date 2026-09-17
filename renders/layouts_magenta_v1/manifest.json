@@ -1,0 +1,558 @@
+{
+  "method": "Generator magenta -> alpha cleanup -> protected native fluid frames -> aligned layers and coherent palettes",
+  "runtime_validated": false,
+  "scenes": [
+    {
+      "id": "cote_ardoise_rosee",
+      "title": "Côte · ardoise rosée",
+      "biome": "cote",
+      "palette_index": 0,
+      "size": [
+        648,
+        504
+      ],
+      "source": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+      "source_sha256": "7175b0db1e730451ecb02f45a797d7dff610125a52557cc65294ead60737bbf5",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cote_ardoise_rosee_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cote_ardoise_rosee_03_ombres_contact.png"
+        },
+        {
+          "name": "04_parois_arriere",
+          "file": "cote_ardoise_rosee_04_parois_arriere.png"
+        },
+        {
+          "name": "05_relief_avant",
+          "file": "cote_ardoise_rosee_05_relief_avant.png"
+        },
+        {
+          "name": "06_ouverture",
+          "file": "cote_ardoise_rosee_06_ouverture.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cote_ardoise_rosee_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "cote_ardoise_rosee_01_animation_000.png",
+          "cote_ardoise_rosee_01_animation_001.png",
+          "cote_ardoise_rosee_01_animation_002.png",
+          "cote_ardoise_rosee_01_animation_003.png",
+          "cote_ardoise_rosee_01_animation_004.png",
+          "cote_ardoise_rosee_01_animation_005.png",
+          "cote_ardoise_rosee_01_animation_006.png",
+          "cote_ardoise_rosee_01_animation_007.png",
+          "cote_ardoise_rosee_01_animation_008.png",
+          "cote_ardoise_rosee_01_animation_009.png",
+          "cote_ardoise_rosee_01_animation_010.png",
+          "cote_ardoise_rosee_01_animation_011.png",
+          "cote_ardoise_rosee_01_animation_012.png",
+          "cote_ardoise_rosee_01_animation_013.png",
+          "cote_ardoise_rosee_01_animation_014.png",
+          "cote_ardoise_rosee_01_animation_015.png",
+          "cote_ardoise_rosee_01_animation_016.png",
+          "cote_ardoise_rosee_01_animation_017.png",
+          "cote_ardoise_rosee_01_animation_018.png",
+          "cote_ardoise_rosee_01_animation_019.png",
+          "cote_ardoise_rosee_01_animation_020.png",
+          "cote_ardoise_rosee_01_animation_021.png",
+          "cote_ardoise_rosee_01_animation_022.png",
+          "cote_ardoise_rosee_01_animation_023.png",
+          "cote_ardoise_rosee_01_animation_024.png",
+          "cote_ardoise_rosee_01_animation_025.png",
+          "cote_ardoise_rosee_01_animation_026.png",
+          "cote_ardoise_rosee_01_animation_027.png",
+          "cote_ardoise_rosee_01_animation_028.png",
+          "cote_ardoise_rosee_01_animation_029.png"
+        ],
+        "durations_ms": [
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130
+        ],
+        "cycle_ms": 3900,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "cote_cuivre_lagon",
+      "title": "Côte · cuivre et lagon",
+      "biome": "cote",
+      "palette_index": 1,
+      "size": [
+        648,
+        504
+      ],
+      "source": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+      "source_sha256": "7175b0db1e730451ecb02f45a797d7dff610125a52557cc65294ead60737bbf5",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cote_cuivre_lagon_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cote_cuivre_lagon_03_ombres_contact.png"
+        },
+        {
+          "name": "04_parois_arriere",
+          "file": "cote_cuivre_lagon_04_parois_arriere.png"
+        },
+        {
+          "name": "05_relief_avant",
+          "file": "cote_cuivre_lagon_05_relief_avant.png"
+        },
+        {
+          "name": "06_ouverture",
+          "file": "cote_cuivre_lagon_06_ouverture.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cote_cuivre_lagon_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "cote_cuivre_lagon_01_animation_000.png",
+          "cote_cuivre_lagon_01_animation_001.png",
+          "cote_cuivre_lagon_01_animation_002.png",
+          "cote_cuivre_lagon_01_animation_003.png",
+          "cote_cuivre_lagon_01_animation_004.png",
+          "cote_cuivre_lagon_01_animation_005.png",
+          "cote_cuivre_lagon_01_animation_006.png",
+          "cote_cuivre_lagon_01_animation_007.png",
+          "cote_cuivre_lagon_01_animation_008.png",
+          "cote_cuivre_lagon_01_animation_009.png",
+          "cote_cuivre_lagon_01_animation_010.png",
+          "cote_cuivre_lagon_01_animation_011.png",
+          "cote_cuivre_lagon_01_animation_012.png",
+          "cote_cuivre_lagon_01_animation_013.png",
+          "cote_cuivre_lagon_01_animation_014.png",
+          "cote_cuivre_lagon_01_animation_015.png",
+          "cote_cuivre_lagon_01_animation_016.png",
+          "cote_cuivre_lagon_01_animation_017.png",
+          "cote_cuivre_lagon_01_animation_018.png",
+          "cote_cuivre_lagon_01_animation_019.png",
+          "cote_cuivre_lagon_01_animation_020.png",
+          "cote_cuivre_lagon_01_animation_021.png",
+          "cote_cuivre_lagon_01_animation_022.png",
+          "cote_cuivre_lagon_01_animation_023.png",
+          "cote_cuivre_lagon_01_animation_024.png",
+          "cote_cuivre_lagon_01_animation_025.png",
+          "cote_cuivre_lagon_01_animation_026.png",
+          "cote_cuivre_lagon_01_animation_027.png",
+          "cote_cuivre_lagon_01_animation_028.png",
+          "cote_cuivre_lagon_01_animation_029.png"
+        ],
+        "durations_ms": [
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130,
+          130
+        ],
+        "cycle_ms": 3900,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "cristal_boreal",
+      "title": "Cristal · boréal",
+      "biome": "cristal",
+      "palette_index": 0,
+      "size": [
+        456,
+        504
+      ],
+      "source": "large.D17P33A.gif.188f8399cf4c18292d9ecdd2454bcd10.gif",
+      "source_sha256": "87bca5bada455cb9099db4202c30ad2b863243504bef0aa5761834cf269e0bd6",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cristal_boreal_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cristal_boreal_03_ombres_contact.png"
+        },
+        {
+          "name": "04_cristaux_gauche",
+          "file": "cristal_boreal_04_cristaux_gauche.png"
+        },
+        {
+          "name": "05_cristaux_droit",
+          "file": "cristal_boreal_05_cristaux_droit.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cristal_boreal_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "cristal_boreal_01_animation_000.png",
+          "cristal_boreal_01_animation_001.png",
+          "cristal_boreal_01_animation_002.png",
+          "cristal_boreal_01_animation_003.png",
+          "cristal_boreal_01_animation_004.png",
+          "cristal_boreal_01_animation_005.png",
+          "cristal_boreal_01_animation_006.png",
+          "cristal_boreal_01_animation_007.png",
+          "cristal_boreal_01_animation_008.png",
+          "cristal_boreal_01_animation_009.png",
+          "cristal_boreal_01_animation_010.png",
+          "cristal_boreal_01_animation_011.png"
+        ],
+        "durations_ms": [
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160
+        ],
+        "cycle_ms": 1920,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "cristal_opalin",
+      "title": "Cristal · opalin",
+      "biome": "cristal",
+      "palette_index": 1,
+      "size": [
+        456,
+        504
+      ],
+      "source": "large.D17P33A.gif.188f8399cf4c18292d9ecdd2454bcd10.gif",
+      "source_sha256": "87bca5bada455cb9099db4202c30ad2b863243504bef0aa5761834cf269e0bd6",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cristal_opalin_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cristal_opalin_03_ombres_contact.png"
+        },
+        {
+          "name": "04_cristaux_gauche",
+          "file": "cristal_opalin_04_cristaux_gauche.png"
+        },
+        {
+          "name": "05_cristaux_droit",
+          "file": "cristal_opalin_05_cristaux_droit.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cristal_opalin_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "cristal_opalin_01_animation_000.png",
+          "cristal_opalin_01_animation_001.png",
+          "cristal_opalin_01_animation_002.png",
+          "cristal_opalin_01_animation_003.png",
+          "cristal_opalin_01_animation_004.png",
+          "cristal_opalin_01_animation_005.png",
+          "cristal_opalin_01_animation_006.png",
+          "cristal_opalin_01_animation_007.png",
+          "cristal_opalin_01_animation_008.png",
+          "cristal_opalin_01_animation_009.png",
+          "cristal_opalin_01_animation_010.png",
+          "cristal_opalin_01_animation_011.png"
+        ],
+        "durations_ms": [
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160,
+          160
+        ],
+        "cycle_ms": 1920,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "foret_mousse_doree",
+      "title": "Forêt · mousse dorée",
+      "biome": "foret",
+      "palette_index": 0,
+      "size": [
+        504,
+        480
+      ],
+      "source": "large.D24P31A.gif.b7e3b3cf5ed2c5764be99be522e52427.gif",
+      "source_sha256": "fbfe6df9227c3908aa3a40d7a5db94d4215cb393eee840675a3f0f96606c90d7",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_mousse_doree_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_mousse_doree_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_mousse_doree_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_mousse_doree_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_mousse_doree_06_petits_decors.png"
+        }
+      ],
+      "animation": null,
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "foret_emeraude",
+      "title": "Forêt · émeraude",
+      "biome": "foret",
+      "palette_index": 1,
+      "size": [
+        504,
+        480
+      ],
+      "source": "large.D24P31A.gif.b7e3b3cf5ed2c5764be99be522e52427.gif",
+      "source_sha256": "fbfe6df9227c3908aa3a40d7a5db94d4215cb393eee840675a3f0f96606c90d7",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_emeraude_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_emeraude_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_emeraude_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_emeraude_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_emeraude_06_petits_decors.png"
+        }
+      ],
+      "animation": null,
+      "hidden_ground": "generator plate",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "sables_ocre",
+      "title": "Sables · ocre",
+      "biome": "sables",
+      "palette_index": 0,
+      "size": [
+        456,
+        384
+      ],
+      "source": "large.D14P11A.gif.de6fb5fd180b164fe8a67715f1d7ee5c.gif",
+      "source_sha256": "af89e0b55222b83ea39669b4da60a4fd3de2ae3f8dc9367f052bc50ef7fa44ef",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "sables_ocre_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "sables_ocre_03_ombres_contact.png"
+        },
+        {
+          "name": "04_rochers_arriere",
+          "file": "sables_ocre_04_rochers_arriere.png"
+        },
+        {
+          "name": "05_rochers_avant",
+          "file": "sables_ocre_05_rochers_avant.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "sables_ocre_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "sables_ocre_01_animation_000.png",
+          "sables_ocre_01_animation_001.png",
+          "sables_ocre_01_animation_002.png",
+          "sables_ocre_01_animation_003.png",
+          "sables_ocre_01_animation_004.png",
+          "sables_ocre_01_animation_005.png"
+        ],
+        "durations_ms": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "cycle_ms": 360,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "tiled24px patch from generated dry sand",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    },
+    {
+      "id": "sables_rose_desert",
+      "title": "Sables · rose du désert",
+      "biome": "sables",
+      "palette_index": 1,
+      "size": [
+        456,
+        384
+      ],
+      "source": "large.D14P11A.gif.de6fb5fd180b164fe8a67715f1d7ee5c.gif",
+      "source_sha256": "af89e0b55222b83ea39669b4da60a4fd3de2ae3f8dc9367f052bc50ef7fa44ef",
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "sables_rose_desert_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "sables_rose_desert_03_ombres_contact.png"
+        },
+        {
+          "name": "04_rochers_arriere",
+          "file": "sables_rose_desert_04_rochers_arriere.png"
+        },
+        {
+          "name": "05_rochers_avant",
+          "file": "sables_rose_desert_05_rochers_avant.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "sables_rose_desert_07_raccord_reference.png"
+        }
+      ],
+      "animation": {
+        "files": [
+          "sables_rose_desert_01_animation_000.png",
+          "sables_rose_desert_01_animation_001.png",
+          "sables_rose_desert_01_animation_002.png",
+          "sables_rose_desert_01_animation_003.png",
+          "sables_rose_desert_01_animation_004.png",
+          "sables_rose_desert_01_animation_005.png"
+        ],
+        "durations_ms": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ],
+        "cycle_ms": 360,
+        "source_sequence_preserved": true,
+        "colors_transformed": true
+      },
+      "hidden_ground": "tiled24px patch from generated dry sand",
+      "contact_shadows": "reconstructed, not native",
+      "native_runtime_validated": false
+    }
+  ]
+}

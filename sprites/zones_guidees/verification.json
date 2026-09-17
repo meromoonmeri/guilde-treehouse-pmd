@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "pinned_source_blobs": 7,
+  "atlas_entries_source_identical": 9731,
+  "tile_pixel_differences": 0,
+  "png_alpha_roundtrip_differences": 0,
+  "native_animations": 1377,
+  "zones": [
+    {
+      "zone": "01_cirque",
+      "dry_source_whitelist": "PASS",
+      "all_layer_and_composite_pngs_different_pixels": 0,
+      "distinct_water_phases": 4
+    },
+    {
+      "zone": "02_terrasses",
+      "dry_source_whitelist": "PASS",
+      "all_layer_and_composite_pngs_different_pixels": 0,
+      "distinct_water_phases": 4
+    }
+  ],
+  "not_certified": [
+    "Aesthetic continuity of every joint",
+    "PMDO runtime import, collisions, navigation and transitions",
+    "Generated proposal pixels: not canonical",
+    "Reduced comparison PNG and GIF previews: not import assets"
+  ]
+}

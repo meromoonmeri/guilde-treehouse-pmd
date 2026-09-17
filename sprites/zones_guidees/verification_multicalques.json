@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "original_compositions_modified": false,
+  "guild_reference_commit": "6c4ac5aad90da4f670d4965ec3d37a3ea38b5c78",
+  "zones": [
+    {
+      "id": "01_cirque",
+      "layers_wet": 6,
+      "layers_dry": 3,
+      "water_frames": 4,
+      "png_aseprite_tiled_different_pixels": 0,
+      "tile_assignments_disjoint_and_source_identical": true
+    },
+    {
+      "id": "02_terrasses",
+      "layers_wet": 6,
+      "layers_dry": 3,
+      "water_frames": 4,
+      "png_aseprite_tiled_different_pixels": 0,
+      "tile_assignments_disjoint_and_source_identical": true
+    }
+  ],
+  "limits": [
+    "No interactive Aseprite/Tiled application validation",
+    "No gameplay or collision validation"
+  ]
+}

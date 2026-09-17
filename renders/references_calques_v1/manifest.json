@@ -1,0 +1,46 @@
+{
+  "canvas": [
+    960,
+    600
+  ],
+  "frames": 64,
+  "frame_ms": 80,
+  "cycle_ms": 5120,
+  "animation": "Reconstruction, géométrie fixe et modulation cyclique douce du reflet; pas animation originale récupérée.",
+  "scenes": {
+    "coucher": {
+      "layers": [
+        "01_ciel.png",
+        "02_etoiles.png",
+        "03_nuages.png",
+        "04_soleil.png",
+        "05_mer.png",
+        "06_reflet.png",
+        "07_falaise.png"
+      ],
+      "reference": "IMG_4899.jpeg"
+    },
+    "nuit": {
+      "layers": [
+        "01_ciel.png",
+        "02_etoiles.png",
+        "03_nuages.png",
+        "04_lune_halo.png",
+        "05_mer.png",
+        "06_reflet.png",
+        "07_falaise.png"
+      ],
+      "reference": "IMG_4889.png"
+    },
+    "guilde": {
+      "layers": [
+        "01_ciel.png",
+        "02_etoiles.png",
+        "03_nuages.png",
+        "05_montagnes_foret.png",
+        "07_falaise.png"
+      ],
+      "reference": "IMG_4900.gif"
+    }
+  }
+}

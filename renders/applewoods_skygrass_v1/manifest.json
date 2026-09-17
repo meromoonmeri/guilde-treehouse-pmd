@@ -1,0 +1,688 @@
+{
+  "size": [
+    552,
+    408
+  ],
+  "frames": 4,
+  "frame_ms": 200,
+  "cycle_ms": 800,
+  "static_layers": [
+    "01_herbe_reconstituee",
+    "02_chemin_et_lisiere",
+    "04_ombres_contact",
+    "03_feuillage_bas_des_fleurs",
+    "10_pommier_00",
+    "10_pommier_02",
+    "10_pommier_01",
+    "10_pommier_03",
+    "10_pommier_06",
+    "10_pommier_05",
+    "10_pommier_07",
+    "10_pommier_04",
+    "20_entree_profondeur",
+    "21_entree_tronc_racines",
+    "22_entree_canopee",
+    "10_pommier_08",
+    "10_pommier_10",
+    "10_pommier_09",
+    "10_pommier_11",
+    "10_pommier_12",
+    "10_pommier_14",
+    "10_pommier_15",
+    "10_pommier_13",
+    "10_pommier_17",
+    "10_pommier_19",
+    "10_pommier_16",
+    "10_pommier_18"
+  ],
+  "animation_groups": [
+    "30_fleurs_gauche",
+    "31_fleurs_droite",
+    "32_fleurs_autour_entree"
+  ],
+  "render_order": [
+    "01_herbe_reconstituee",
+    "02_chemin_et_lisiere",
+    "04_ombres_contact",
+    "03_feuillage_bas_des_fleurs",
+    "10_pommier_00",
+    "10_pommier_02",
+    "10_pommier_01",
+    "10_pommier_03",
+    "10_pommier_06",
+    "10_pommier_05",
+    "10_pommier_07",
+    "10_pommier_04",
+    "20_entree_profondeur",
+    "21_entree_tronc_racines",
+    "22_entree_canopee",
+    "10_pommier_08",
+    "10_pommier_10",
+    "10_pommier_09",
+    "10_pommier_11",
+    "10_pommier_12",
+    "10_pommier_14",
+    "10_pommier_15",
+    "10_pommier_13",
+    "10_pommier_17",
+    "10_pommier_19",
+    "10_pommier_16",
+    "10_pommier_18",
+    "30_fleurs_gauche",
+    "31_fleurs_droite",
+    "32_fleurs_autour_entree"
+  ],
+  "trees": [
+    {
+      "name": "10_pommier_00",
+      "variant": 0,
+      "root": [
+        37,
+        65
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_01",
+      "variant": 2,
+      "root": [
+        137,
+        72
+      ],
+      "width": 112
+    },
+    {
+      "name": "10_pommier_02",
+      "variant": 0,
+      "root": [
+        421,
+        67
+      ],
+      "width": 110
+    },
+    {
+      "name": "10_pommier_03",
+      "variant": 2,
+      "root": [
+        520,
+        72
+      ],
+      "width": 113
+    },
+    {
+      "name": "10_pommier_04",
+      "variant": 1,
+      "root": [
+        36,
+        154
+      ],
+      "width": 113
+    },
+    {
+      "name": "10_pommier_05",
+      "variant": 3,
+      "root": [
+        142,
+        148
+      ],
+      "width": 106
+    },
+    {
+      "name": "10_pommier_06",
+      "variant": 1,
+      "root": [
+        421,
+        146
+      ],
+      "width": 107
+    },
+    {
+      "name": "10_pommier_07",
+      "variant": 3,
+      "root": [
+        517,
+        149
+      ],
+      "width": 112
+    },
+    {
+      "name": "10_pommier_08",
+      "variant": 2,
+      "root": [
+        33,
+        234
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_09",
+      "variant": 0,
+      "root": [
+        132,
+        237
+      ],
+      "width": 106
+    },
+    {
+      "name": "10_pommier_10",
+      "variant": 2,
+      "root": [
+        420,
+        236
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_11",
+      "variant": 0,
+      "root": [
+        517,
+        240
+      ],
+      "width": 113
+    },
+    {
+      "name": "10_pommier_12",
+      "variant": 3,
+      "root": [
+        30,
+        328
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_13",
+      "variant": 1,
+      "root": [
+        132,
+        334
+      ],
+      "width": 107
+    },
+    {
+      "name": "10_pommier_14",
+      "variant": 3,
+      "root": [
+        421,
+        328
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_15",
+      "variant": 1,
+      "root": [
+        518,
+        328
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_16",
+      "variant": 0,
+      "root": [
+        37,
+        437
+      ],
+      "width": 112
+    },
+    {
+      "name": "10_pommier_17",
+      "variant": 2,
+      "root": [
+        137,
+        435
+      ],
+      "width": 106
+    },
+    {
+      "name": "10_pommier_18",
+      "variant": 0,
+      "root": [
+        416,
+        442
+      ],
+      "width": 114
+    },
+    {
+      "name": "10_pommier_19",
+      "variant": 2,
+      "root": [
+        526,
+        435
+      ],
+      "width": 114
+    }
+  ],
+  "entrance_tree": {
+    "origin": [
+      146,
+      -47
+    ],
+    "size": [
+      260,
+      221
+    ],
+    "door_local_bbox": [
+      114,
+      164,
+      146,
+      201
+    ]
+  },
+  "flower_sources": [
+    {
+      "bbox": [
+        96,
+        143,
+        121,
+        167
+      ]
+    },
+    {
+      "bbox": [
+        263,
+        150,
+        288,
+        167
+      ]
+    },
+    {
+      "bbox": [
+        191,
+        169,
+        217,
+        192
+      ]
+    },
+    {
+      "bbox": [
+        287,
+        193,
+        313,
+        216
+      ]
+    },
+    {
+      "bbox": [
+        312,
+        222,
+        337,
+        239
+      ]
+    },
+    {
+      "bbox": [
+        312,
+        294,
+        337,
+        311
+      ]
+    },
+    {
+      "bbox": [
+        191,
+        337,
+        217,
+        360
+      ]
+    },
+    {
+      "bbox": [
+        407,
+        359,
+        432,
+        383
+      ]
+    },
+    {
+      "bbox": [
+        239,
+        383,
+        264,
+        407
+      ]
+    },
+    {
+      "bbox": [
+        479,
+        385,
+        504,
+        408
+      ]
+    }
+  ],
+  "flower_sites": [
+    {
+      "center": [
+        211,
+        308
+      ],
+      "origin": [
+        199,
+        296
+      ],
+      "sprite": 0,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        329,
+        330
+      ],
+      "origin": [
+        317,
+        322
+      ],
+      "sprite": 1,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        360,
+        296
+      ],
+      "origin": [
+        347,
+        285
+      ],
+      "sprite": 2,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        339,
+        396
+      ],
+      "origin": [
+        326,
+        385
+      ],
+      "sprite": 3,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        205,
+        241
+      ],
+      "origin": [
+        193,
+        233
+      ],
+      "sprite": 4,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        216,
+        369
+      ],
+      "origin": [
+        204,
+        361
+      ],
+      "sprite": 5,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        370,
+        319
+      ],
+      "origin": [
+        357,
+        308
+      ],
+      "sprite": 6,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        334,
+        370
+      ],
+      "origin": [
+        322,
+        358
+      ],
+      "sprite": 7,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        347,
+        274
+      ],
+      "origin": [
+        335,
+        262
+      ],
+      "sprite": 8,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        362,
+        221
+      ],
+      "origin": [
+        350,
+        210
+      ],
+      "sprite": 9,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        362,
+        346
+      ],
+      "origin": [
+        350,
+        334
+      ],
+      "sprite": 0,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        182,
+        227
+      ],
+      "origin": [
+        170,
+        219
+      ],
+      "sprite": 1,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        211,
+        275
+      ],
+      "origin": [
+        198,
+        264
+      ],
+      "sprite": 2,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        194,
+        352
+      ],
+      "origin": [
+        181,
+        341
+      ],
+      "sprite": 3,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        340,
+        240
+      ],
+      "origin": [
+        328,
+        232
+      ],
+      "sprite": 4,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        230,
+        245
+      ],
+      "origin": [
+        218,
+        237
+      ],
+      "sprite": 5,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        203,
+        396
+      ],
+      "origin": [
+        190,
+        385
+      ],
+      "sprite": 6,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        179,
+        324
+      ],
+      "origin": [
+        167,
+        312
+      ],
+      "sprite": 7,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        183,
+        148
+      ],
+      "origin": [
+        171,
+        136
+      ],
+      "sprite": 8,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        322,
+        300
+      ],
+      "origin": [
+        310,
+        289
+      ],
+      "sprite": 9,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        211,
+        333
+      ],
+      "origin": [
+        199,
+        321
+      ],
+      "sprite": 0,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        320,
+        256
+      ],
+      "origin": [
+        308,
+        248
+      ],
+      "sprite": 1,
+      "phase_offset": 1
+    },
+    {
+      "center": [
+        237,
+        304
+      ],
+      "origin": [
+        224,
+        293
+      ],
+      "sprite": 2,
+      "phase_offset": 2
+    },
+    {
+      "center": [
+        189,
+        263
+      ],
+      "origin": [
+        176,
+        252
+      ],
+      "sprite": 3,
+      "phase_offset": 3
+    },
+    {
+      "center": [
+        354,
+        149
+      ],
+      "origin": [
+        342,
+        141
+      ],
+      "sprite": 4,
+      "phase_offset": 0
+    },
+    {
+      "center": [
+        159,
+        217
+      ],
+      "origin": [
+        147,
+        209
+      ],
+      "sprite": 5,
+      "phase_offset": 1
+    }
+  ],
+  "sources": {
+    "layout": "Apple_Woods_entrance_TDS.png, reference commit46e93da",
+    "grass": "Sky Peak gif_0.png style, generated ground layers",
+    "flowers": "source/sky_peak_v1/gif_0.png to gif_3.png, four original200ms phases, extracted/repositioned without recoloring or resizing",
+    "trees": "new isolated magenta generations; shared foliage palette"
+  },
+  "tests": {
+    "opaque_compositions": true,
+    "ora_exact": true,
+    "approach_to_trunk_clear": true,
+    "all_four_saved_frames_recompose": true,
+    "four_unique_compositions": true,
+    "native_flower_pixels_preserved_without_resizing": true,
+    "flower_layers_exact_source_phase_assembly": true,
+    "flowers_off_path": true,
+    "twenty_individual_tree_layers": true
+  },
+  "runtime_pmdo_validated": false,
+  "related_water_delivery": "renders/siphons_ecoulement_v3; forest completed first as requested."
+}

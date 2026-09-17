@@ -1,0 +1,507 @@
+{
+  "scenes": [
+    {
+      "id": "foret_mousse_immersive",
+      "title": "Forêt mousse · feuillage immersif",
+      "parent": "foret_mousse_doree",
+      "kind": "forest",
+      "size": [
+        504,
+        480
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_mousse_immersive_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_mousse_immersive_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_mousse_immersive_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_mousse_immersive_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_mousse_immersive_06_petits_decors.png"
+        },
+        {
+          "name": "08_ombre_feuillage",
+          "file": "foret_mousse_immersive_08_ombre_feuillage.png"
+        },
+        {
+          "name": "09_feuillage_gauche",
+          "file": "foret_mousse_immersive_09_feuillage_gauche.png"
+        },
+        {
+          "name": "10_feuillage_droit",
+          "file": "foret_mousse_immersive_10_feuillage_droit.png"
+        }
+      ],
+      "animation_groups": [],
+      "cycle_ms": 0,
+      "preview_step_ms": 0,
+      "proof": {
+        "central_access_corridor_uncovered": true,
+        "leaves_from": "rameaux_premier_plan.png",
+        "new_border_is_static": true
+      },
+      "runtime_validated": false
+    },
+    {
+      "id": "foret_emeraude_immersive",
+      "title": "Forêt émeraude · feuillage immersif",
+      "parent": "foret_emeraude",
+      "kind": "forest",
+      "size": [
+        504,
+        480
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "foret_emeraude_immersive_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "foret_emeraude_immersive_03_ombres_contact.png"
+        },
+        {
+          "name": "04_massif_gauche",
+          "file": "foret_emeraude_immersive_04_massif_gauche.png"
+        },
+        {
+          "name": "05_massif_droit",
+          "file": "foret_emeraude_immersive_05_massif_droit.png"
+        },
+        {
+          "name": "06_petits_decors",
+          "file": "foret_emeraude_immersive_06_petits_decors.png"
+        },
+        {
+          "name": "08_ombre_feuillage",
+          "file": "foret_emeraude_immersive_08_ombre_feuillage.png"
+        },
+        {
+          "name": "09_feuillage_gauche",
+          "file": "foret_emeraude_immersive_09_feuillage_gauche.png"
+        },
+        {
+          "name": "10_feuillage_droit",
+          "file": "foret_emeraude_immersive_10_feuillage_droit.png"
+        }
+      ],
+      "animation_groups": [],
+      "cycle_ms": 0,
+      "preview_step_ms": 0,
+      "proof": {
+        "central_access_corridor_uncovered": true,
+        "leaves_from": "rameaux_premier_plan.png",
+        "new_border_is_static": true
+      },
+      "runtime_validated": false
+    },
+    {
+      "id": "sables_siphons_eau",
+      "title": "Sables · siphons d’eau",
+      "parent": "sables_ocre",
+      "kind": "water",
+      "size": [
+        456,
+        384
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "sables_siphons_eau_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "sables_siphons_eau_03_ombres_contact.png"
+        },
+        {
+          "name": "04_rochers_arriere",
+          "file": "sables_siphons_eau_04_rochers_arriere.png"
+        },
+        {
+          "name": "05_rochers_avant",
+          "file": "sables_siphons_eau_05_rochers_avant.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "sables_siphons_eau_07_raccord_reference.png"
+        },
+        {
+          "name": "06_galet_decale",
+          "file": "sables_siphons_eau_06_galet_decale.png"
+        }
+      ],
+      "animation_groups": [
+        {
+          "name": "01_siphons_eau_adaptes",
+          "durations_ms": [
+            60,
+            60,
+            60,
+            60,
+            60,
+            60
+          ],
+          "position": "under",
+          "origin": "new water color adaptation of6 native sand phases",
+          "files": [
+            "sables_siphons_eau_01_siphons_eau_adaptes_000.png",
+            "sables_siphons_eau_01_siphons_eau_adaptes_001.png",
+            "sables_siphons_eau_01_siphons_eau_adaptes_002.png",
+            "sables_siphons_eau_01_siphons_eau_adaptes_003.png",
+            "sables_siphons_eau_01_siphons_eau_adaptes_004.png",
+            "sables_siphons_eau_01_siphons_eau_adaptes_005.png"
+          ]
+        }
+      ],
+      "cycle_ms": 360,
+      "preview_step_ms": 60,
+      "proof": {
+        "sand_sequence_adapted_not_native_water": true,
+        "pebble_shift": {
+          "delta": [
+            4,
+            -2
+          ],
+          "source_bbox": [
+            440,
+            191,
+            452,
+            202
+          ],
+          "sprite_pixels": 99
+        },
+        "fluid_alpha_unchanged": true
+      },
+      "runtime_validated": false
+    },
+    {
+      "id": "cristal_irise",
+      "title": "Passage cristallin · bleu rose blanc",
+      "parent": "cristal_boreal",
+      "kind": "iridescent",
+      "size": [
+        456,
+        504
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cristal_irise_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cristal_irise_03_ombres_contact.png"
+        },
+        {
+          "name": "04_cristaux_gauche",
+          "file": "cristal_irise_04_cristaux_gauche.png"
+        },
+        {
+          "name": "05_cristaux_droit",
+          "file": "cristal_irise_05_cristaux_droit.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cristal_irise_07_raccord_reference.png"
+        }
+      ],
+      "animation_groups": [
+        {
+          "name": "01_animation_base",
+          "durations_ms": [
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160,
+            160
+          ],
+          "position": "under",
+          "origin": "native sequence, color-transformed in parent",
+          "files": [
+            "cristal_irise_01_animation_base_000.png",
+            "cristal_irise_01_animation_base_001.png",
+            "cristal_irise_01_animation_base_002.png",
+            "cristal_irise_01_animation_base_003.png",
+            "cristal_irise_01_animation_base_004.png",
+            "cristal_irise_01_animation_base_005.png",
+            "cristal_irise_01_animation_base_006.png",
+            "cristal_irise_01_animation_base_007.png",
+            "cristal_irise_01_animation_base_008.png",
+            "cristal_irise_01_animation_base_009.png",
+            "cristal_irise_01_animation_base_010.png",
+            "cristal_irise_01_animation_base_011.png"
+          ]
+        },
+        {
+          "name": "08_reflets_bleu_rose_blanc",
+          "durations_ms": [
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "position": "over",
+          "origin": "new fixed-RGB iridescent reflection, opacity pulse",
+          "files": [
+            "cristal_irise_08_reflets_bleu_rose_blanc_000.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_001.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_002.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_003.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_004.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_005.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_006.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_007.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_008.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_009.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_010.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_011.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_012.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_013.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_014.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_015.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_016.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_017.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_018.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_019.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_020.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_021.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_022.png",
+            "cristal_irise_08_reflets_bleu_rose_blanc_023.png"
+          ]
+        }
+      ],
+      "cycle_ms": 1920,
+      "preview_step_ms": 80,
+      "proof": {
+        "fixed_rgb_no_hue_drift": true,
+        "native_base_cycle_ms": 1920,
+        "new_reflection_cycle_ms": 1920
+      },
+      "runtime_validated": false
+    },
+    {
+      "id": "cote_cendres_lave",
+      "title": "Coastal Cave · cendres et lave",
+      "parent": "cote_ardoise_rosee",
+      "kind": "lava",
+      "size": [
+        648,
+        504
+      ],
+      "layers": [
+        {
+          "name": "02_sol_reconstitue",
+          "file": "cote_cendres_lave_02_sol_reconstitue.png"
+        },
+        {
+          "name": "03_ombres_contact",
+          "file": "cote_cendres_lave_03_ombres_contact.png"
+        },
+        {
+          "name": "04_parois_arriere",
+          "file": "cote_cendres_lave_04_parois_arriere.png"
+        },
+        {
+          "name": "05_relief_avant",
+          "file": "cote_cendres_lave_05_relief_avant.png"
+        },
+        {
+          "name": "06_ouverture",
+          "file": "cote_cendres_lave_06_ouverture.png"
+        },
+        {
+          "name": "07_raccord_reference",
+          "file": "cote_cendres_lave_07_raccord_reference.png"
+        }
+      ],
+      "animation_groups": [
+        {
+          "name": "01_lave_adaptee",
+          "durations_ms": [
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130
+          ],
+          "position": "under",
+          "origin": "lava color adaptation of30 source water phases, not native lava",
+          "files": [
+            "cote_cendres_lave_01_lave_adaptee_000.png",
+            "cote_cendres_lave_01_lave_adaptee_001.png",
+            "cote_cendres_lave_01_lave_adaptee_002.png",
+            "cote_cendres_lave_01_lave_adaptee_003.png",
+            "cote_cendres_lave_01_lave_adaptee_004.png",
+            "cote_cendres_lave_01_lave_adaptee_005.png",
+            "cote_cendres_lave_01_lave_adaptee_006.png",
+            "cote_cendres_lave_01_lave_adaptee_007.png",
+            "cote_cendres_lave_01_lave_adaptee_008.png",
+            "cote_cendres_lave_01_lave_adaptee_009.png",
+            "cote_cendres_lave_01_lave_adaptee_010.png",
+            "cote_cendres_lave_01_lave_adaptee_011.png",
+            "cote_cendres_lave_01_lave_adaptee_012.png",
+            "cote_cendres_lave_01_lave_adaptee_013.png",
+            "cote_cendres_lave_01_lave_adaptee_014.png",
+            "cote_cendres_lave_01_lave_adaptee_015.png",
+            "cote_cendres_lave_01_lave_adaptee_016.png",
+            "cote_cendres_lave_01_lave_adaptee_017.png",
+            "cote_cendres_lave_01_lave_adaptee_018.png",
+            "cote_cendres_lave_01_lave_adaptee_019.png",
+            "cote_cendres_lave_01_lave_adaptee_020.png",
+            "cote_cendres_lave_01_lave_adaptee_021.png",
+            "cote_cendres_lave_01_lave_adaptee_022.png",
+            "cote_cendres_lave_01_lave_adaptee_023.png",
+            "cote_cendres_lave_01_lave_adaptee_024.png",
+            "cote_cendres_lave_01_lave_adaptee_025.png",
+            "cote_cendres_lave_01_lave_adaptee_026.png",
+            "cote_cendres_lave_01_lave_adaptee_027.png",
+            "cote_cendres_lave_01_lave_adaptee_028.png",
+            "cote_cendres_lave_01_lave_adaptee_029.png"
+          ]
+        },
+        {
+          "name": "08_lueur_chaleur_berge",
+          "durations_ms": [
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130,
+            130
+          ],
+          "position": "over",
+          "origin": "new subtle heat glow",
+          "files": [
+            "cote_cendres_lave_08_lueur_chaleur_berge_000.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_001.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_002.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_003.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_004.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_005.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_006.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_007.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_008.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_009.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_010.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_011.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_012.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_013.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_014.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_015.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_016.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_017.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_018.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_019.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_020.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_021.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_022.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_023.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_024.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_025.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_026.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_027.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_028.png",
+            "cote_cendres_lave_08_lueur_chaleur_berge_029.png"
+          ]
+        }
+      ],
+      "cycle_ms": 3900,
+      "preview_step_ms": 130,
+      "proof": {
+        "ash_gray_static_terrain": true,
+        "lava_is_adapted_not_native": true,
+        "source_cycle_ms": 3900,
+        "fluid_alpha_unchanged": true
+      },
+      "runtime_validated": false
+    }
+  ],
+  "runtime_validated": false
+}

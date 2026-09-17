@@ -1,0 +1,519 @@
+{
+  "target_pmdo": "0.8.12",
+  "filter_source_blob": "438383f479e2d80a6a0b3be4cced4087470d9835",
+  "filter_source_colors_checked": 1421,
+  "existing_three_night_sheets_exact": true,
+  "generated_rgb_pixels": 0,
+  "modules": {
+    "herbe": [
+      "Base",
+      [
+        0,
+        640,
+        128,
+        768
+      ]
+    ],
+    "face": [
+      "Cliffs",
+      [
+        912,
+        464,
+        976,
+        512
+      ]
+    ],
+    "retour": [
+      "Cliffs",
+      [
+        680,
+        464,
+        744,
+        512
+      ]
+    ],
+    "couronne": [
+      "Cliffs",
+      [
+        912,
+        448,
+        976,
+        464
+      ]
+    ],
+    "pied": [
+      "Cliffs",
+      [
+        912,
+        528,
+        976,
+        544
+      ]
+    ]
+  },
+  "rock_source": {
+    "file": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+    "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+    "rect": [
+      912,
+      464,
+      976,
+      512
+    ],
+    "scale": 1,
+    "file_control": "METANO_ROCHE_NATIVE_64x48.png"
+  },
+  "runtime_tested": false,
+  "zones": [
+    {
+      "id": "01_cap_large",
+      "title": "Le grand cap",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1120,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1120,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 777,
+        "E": 69,
+        "S": 993
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 299,
+      "terrain_sha256": "edd4a59ac692a23b82cdfb63f1f78570a963c07703a8867117417b6303c36dc8"
+    },
+    {
+      "id": "02_terrasse_croissant",
+      "title": "La terrasse en croissant",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1160,
+        904
+      ],
+      "crop": [
+        8,
+        0,
+        1168,
+        904
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 29,
+        "E": 422,
+        "S": 107
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 336,
+      "terrain_sha256": "65346fb51d4b8a1e48e5fe41f15267bc1fae2a1dba22facbed947849f10946a0"
+    },
+    {
+      "id": "03_double_belvedere",
+      "title": "Le double belvédère",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 509,
+        "E": 912,
+        "S": 1168
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 311,
+      "terrain_sha256": "44b22655f45808f26bebee7a904546de55534b87e61d4fded289495aae2b3e80"
+    },
+    {
+      "id": "04_pointe_sinueuse",
+      "title": "La pointe sinueuse",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1128,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1128,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 673,
+        "E": 174,
+        "S": 1044
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 365,
+      "terrain_sha256": "8cd7253aaf092085b8af48e9a73810371609d94f01edefb8aadedf9fef6713b3"
+    },
+    {
+      "id": "05_grande_mesa",
+      "title": "La grande mesa",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1144,
+        904
+      ],
+      "crop": [
+        8,
+        0,
+        1152,
+        904
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 85,
+        "E": 103,
+        "S": 24
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 331,
+      "terrain_sha256": "e9883113f5c2f2e784f816c8b39c128a5ff97feeb1b2a49f01de24da423ccc0a"
+    },
+    {
+      "id": "06_crique_profonde",
+      "title": "La crique profonde",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1128,
+        912
+      ],
+      "crop": [
+        40,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 110,
+        "E": 348,
+        "S": 451
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 359,
+      "terrain_sha256": "62bab921b50183978b90d65b3e1ef5b353e5dc34c215cbf1b766844a2b751232"
+    },
+    {
+      "id": "07_balcon_haut",
+      "title": "Le haut balcon",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1096,
+        912
+      ],
+      "crop": [
+        72,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 126,
+        "E": 751,
+        "S": 1053
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 315,
+      "terrain_sha256": "a105f2d1734ad56fa4aad0a43fde65b1e2ead1f671236e2906e84adb3f8d59c5"
+    },
+    {
+      "id": "08_terrasses_decalees",
+      "title": "Les terrasses décalées",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1152,
+        912
+      ],
+      "crop": [
+        8,
+        0,
+        1160,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 38,
+        "E": 127,
+        "S": 996
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 462,
+      "terrain_sha256": "5d54363922645a4543385ac09a2802ff2d0e49005b0f8c569de4f4f3bb6703b7"
+    },
+    {
+      "id": "09_cap_eventail",
+      "title": "Le cap en éventail",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1112,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1112,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 892,
+        "E": 84,
+        "S": 548
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 427594,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 260,
+      "terrain_sha256": "6e14e54b430abd29d89de5bcb45a1ec90fe3491880ed3d256ce0b747514fd3a3"
+    },
+    {
+      "id": "10_esplanade_arrondie",
+      "title": "L’esplanade arrondie",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1136,
+        912
+      ],
+      "crop": [
+        32,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 28,
+        "E": 788,
+        "S": 1095
+      },
+      "layers": [
+        "00_HERBE_NATIVE.png",
+        "01_FACES_NATIVE.png",
+        "02_RETOURS_NATIVE.png",
+        "03_COURONNES_NATIVE.png",
+        "04_PIEDS_NATIVE.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1,
+      "generated_rgb_pixels": 0,
+      "native_module_placements": 351,
+      "terrain_sha256": "3df6cfbe9e7ae9701eccca3cf31dd238fb14db5088e24597719345ee7014405f"
+    }
+  ]
+}

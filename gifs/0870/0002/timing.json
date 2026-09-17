@@ -1,0 +1,1009 @@
+{
+  "pokemon": "Falinks",
+  "dex": 870,
+  "variant": "0002",
+  "direction": 0,
+  "timing_source": "sprite/0870/0002/AnimData.xml",
+  "game_ticks_per_second": 60,
+  "gif_min_delay_ms": 20,
+  "animations": [
+    {
+      "name": "Walk",
+      "file": "Walk.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        24
+      ],
+      "source_frames": 4,
+      "frames": 4,
+      "duration_game_ticks": [
+        6,
+        8,
+        6,
+        8
+      ],
+      "duration_gif_ms": [
+        100,
+        130,
+        100,
+        130
+      ],
+      "loop_gif_ms": 460
+    },
+    {
+      "name": "Attack",
+      "file": "Attack.gif",
+      "direction": 0,
+      "frame_size": [
+        64,
+        72
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        70,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 310
+    },
+    {
+      "name": "Strike",
+      "file": "Strike.gif",
+      "direction": 0,
+      "frame_size": [
+        64,
+        72
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        70,
+        20,
+        20,
+        20,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 310
+    },
+    {
+      "name": "Shoot",
+      "file": "Shoot.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        40
+      ],
+      "source_frames": 14,
+      "frames": 14,
+      "duration_game_ticks": [
+        1,
+        1,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "duration_gif_ms": [
+        20,
+        20,
+        30,
+        70,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        20,
+        20,
+        30
+      ],
+      "loop_gif_ms": 420
+    },
+    {
+      "name": "RearUp",
+      "file": "RearUp.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        40
+      ],
+      "source_frames": 6,
+      "frames": 5,
+      "duration_game_ticks": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "duration_gif_ms": [
+        100,
+        100,
+        200,
+        100,
+        100
+      ],
+      "loop_gif_ms": 600
+    },
+    {
+      "name": "Sleep",
+      "file": "Sleep.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        24
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        30,
+        35
+      ],
+      "duration_gif_ms": [
+        500,
+        580
+      ],
+      "loop_gif_ms": 1080
+    },
+    {
+      "name": "Hurt",
+      "file": "Hurt.gif",
+      "direction": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        2,
+        8
+      ],
+      "duration_gif_ms": [
+        30,
+        130
+      ],
+      "loop_gif_ms": 160
+    },
+    {
+      "name": "Idle",
+      "file": "Idle.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 6,
+      "frames": 6,
+      "duration_game_ticks": [
+        40,
+        1,
+        1,
+        4,
+        2,
+        1
+      ],
+      "duration_gif_ms": [
+        670,
+        20,
+        20,
+        70,
+        30,
+        20
+      ],
+      "loop_gif_ms": 830
+    },
+    {
+      "name": "Swing",
+      "file": "Swing.gif",
+      "direction": 0,
+      "frame_size": [
+        72,
+        72
+      ],
+      "source_frames": 9,
+      "frames": 9,
+      "duration_game_ticks": [
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "duration_gif_ms": [
+        30,
+        20,
+        30,
+        30,
+        50,
+        30,
+        30,
+        20,
+        20
+      ],
+      "loop_gif_ms": 260
+    },
+    {
+      "name": "Double",
+      "file": "Double.gif",
+      "direction": 0,
+      "frame_size": [
+        48,
+        56
+      ],
+      "source_frames": 16,
+      "frames": 16,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        50,
+        50,
+        50,
+        30,
+        50,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 560
+    },
+    {
+      "name": "Hop",
+      "file": "Hop.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        72
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        1,
+        2,
+        3,
+        4,
+        4,
+        3,
+        2,
+        1,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        20,
+        30,
+        50,
+        70,
+        70,
+        50,
+        30,
+        20,
+        30
+      ],
+      "loop_gif_ms": 400
+    },
+    {
+      "name": "Charge",
+      "file": "Charge.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        24
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 300
+    },
+    {
+      "name": "Rotate",
+      "file": "Rotate.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        24
+      ],
+      "source_frames": 9,
+      "frames": 9,
+      "duration_game_ticks": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 270
+    },
+    {
+      "name": "EventSleep",
+      "file": "EventSleep.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        24
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        30,
+        35
+      ],
+      "duration_gif_ms": [
+        500,
+        580
+      ],
+      "loop_gif_ms": 1080
+    },
+    {
+      "name": "Wake",
+      "file": "Wake.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 5,
+      "frames": 4,
+      "duration_game_ticks": [
+        8,
+        6,
+        14,
+        4,
+        10
+      ],
+      "duration_gif_ms": [
+        130,
+        100,
+        230,
+        240
+      ],
+      "loop_gif_ms": 700
+    },
+    {
+      "name": "Eat",
+      "file": "Eat.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        32
+      ],
+      "source_frames": 4,
+      "frames": 4,
+      "duration_game_ticks": [
+        6,
+        8,
+        6,
+        8
+      ],
+      "duration_gif_ms": [
+        100,
+        130,
+        100,
+        130
+      ],
+      "loop_gif_ms": 460
+    },
+    {
+      "name": "Tumble",
+      "file": "Tumble.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        32
+      ],
+      "source_frames": 8,
+      "frames": 8,
+      "duration_game_ticks": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "duration_gif_ms": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop_gif_ms": 400
+    },
+    {
+      "name": "Pose",
+      "file": "Pose.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        40
+      ],
+      "source_frames": 5,
+      "frames": 5,
+      "duration_game_ticks": [
+        8,
+        6,
+        6,
+        6,
+        8
+      ],
+      "duration_gif_ms": [
+        130,
+        100,
+        100,
+        100,
+        130
+      ],
+      "loop_gif_ms": 560
+    },
+    {
+      "name": "Pull",
+      "file": "Pull.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        32
+      ],
+      "source_frames": 7,
+      "frames": 7,
+      "duration_game_ticks": [
+        10,
+        12,
+        10,
+        12,
+        10,
+        12,
+        10
+      ],
+      "duration_gif_ms": [
+        170,
+        200,
+        170,
+        200,
+        170,
+        200,
+        170
+      ],
+      "loop_gif_ms": 1280
+    },
+    {
+      "name": "Pain",
+      "file": "Pain.gif",
+      "direction": 0,
+      "frame_size": [
+        40,
+        48
+      ],
+      "source_frames": 12,
+      "frames": 9,
+      "duration_game_ticks": [
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        90,
+        20,
+        20,
+        30,
+        120,
+        30,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 400
+    },
+    {
+      "name": "Float",
+      "file": "Float.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 4,
+      "frames": 4,
+      "duration_game_ticks": [
+        9,
+        18,
+        9,
+        14
+      ],
+      "duration_gif_ms": [
+        150,
+        300,
+        150,
+        230
+      ],
+      "loop_gif_ms": 830
+    },
+    {
+      "name": "DeepBreath",
+      "file": "DeepBreath.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 9,
+      "frames": 6,
+      "duration_game_ticks": [
+        12,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        10,
+        4
+      ],
+      "duration_gif_ms": [
+        200,
+        100,
+        100,
+        300,
+        270,
+        70
+      ],
+      "loop_gif_ms": 1040
+    },
+    {
+      "name": "Nod",
+      "file": "Nod.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 3,
+      "frames": 3,
+      "duration_game_ticks": [
+        6,
+        8,
+        6
+      ],
+      "duration_gif_ms": [
+        100,
+        130,
+        100
+      ],
+      "loop_gif_ms": 330
+    },
+    {
+      "name": "Sit",
+      "file": "Sit.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 3,
+      "frames": 3,
+      "duration_game_ticks": [
+        8,
+        8,
+        8
+      ],
+      "duration_gif_ms": [
+        130,
+        130,
+        130
+      ],
+      "loop_gif_ms": 390
+    },
+    {
+      "name": "LookUp",
+      "file": "LookUp.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 3,
+      "frames": 3,
+      "duration_game_ticks": [
+        6,
+        8,
+        6
+      ],
+      "duration_gif_ms": [
+        100,
+        130,
+        100
+      ],
+      "loop_gif_ms": 330
+    },
+    {
+      "name": "Sink",
+      "file": "Sink.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 12,
+      "frames": 10,
+      "duration_game_ticks": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "duration_gif_ms": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        300
+      ],
+      "loop_gif_ms": 1200
+    },
+    {
+      "name": "Trip",
+      "file": "Trip.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        40
+      ],
+      "source_frames": 5,
+      "frames": 5,
+      "duration_game_ticks": [
+        4,
+        6,
+        4,
+        4,
+        4
+      ],
+      "duration_gif_ms": [
+        70,
+        100,
+        70,
+        70,
+        70
+      ],
+      "loop_gif_ms": 380
+    },
+    {
+      "name": "Laying",
+      "file": "Laying.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        24
+      ],
+      "source_frames": 1,
+      "frames": 1,
+      "duration_game_ticks": [
+        12
+      ],
+      "duration_gif_ms": [
+        200
+      ],
+      "loop_gif_ms": 200
+    },
+    {
+      "name": "LeapForth",
+      "file": "LeapForth.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        48
+      ],
+      "source_frames": 6,
+      "frames": 6,
+      "duration_game_ticks": [
+        6,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "duration_gif_ms": [
+        100,
+        20,
+        20,
+        30,
+        30,
+        30
+      ],
+      "loop_gif_ms": 230
+    },
+    {
+      "name": "Head",
+      "file": "Head.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 1,
+      "frames": 1,
+      "duration_game_ticks": [
+        4
+      ],
+      "duration_gif_ms": [
+        70
+      ],
+      "loop_gif_ms": 70
+    },
+    {
+      "name": "Cringe",
+      "file": "Cringe.gif",
+      "direction": 0,
+      "frame_size": [
+        24,
+        32
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        2,
+        8
+      ],
+      "duration_gif_ms": [
+        30,
+        130
+      ],
+      "loop_gif_ms": 160
+    },
+    {
+      "name": "LostBalance",
+      "file": "LostBalance.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        40
+      ],
+      "source_frames": 2,
+      "frames": 2,
+      "duration_game_ticks": [
+        8,
+        8
+      ],
+      "duration_gif_ms": [
+        130,
+        130
+      ],
+      "loop_gif_ms": 260
+    },
+    {
+      "name": "TumbleBack",
+      "file": "TumbleBack.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        40
+      ],
+      "source_frames": 10,
+      "frames": 10,
+      "duration_game_ticks": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "duration_gif_ms": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "loop_gif_ms": 500
+    },
+    {
+      "name": "Faint",
+      "file": "Faint.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        32
+      ],
+      "source_frames": 4,
+      "frames": 4,
+      "duration_game_ticks": [
+        8,
+        12,
+        4,
+        10
+      ],
+      "duration_gif_ms": [
+        130,
+        200,
+        70,
+        170
+      ],
+      "loop_gif_ms": 570
+    },
+    {
+      "name": "HitGround",
+      "file": "HitGround.gif",
+      "direction": 0,
+      "frame_size": [
+        32,
+        32
+      ],
+      "source_frames": 8,
+      "frames": 8,
+      "duration_game_ticks": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        4
+      ],
+      "duration_gif_ms": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        100,
+        70,
+        70
+      ],
+      "loop_gif_ms": 590
+    }
+  ]
+}

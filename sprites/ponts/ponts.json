@@ -1,0 +1,23 @@
+{
+  "tile_size": [
+    64,
+    64
+  ],
+  "columns": [
+    "horizontal_ouest",
+    "horizontal_centre",
+    "horizontal_est",
+    "vertical_nord",
+    "vertical_centre",
+    "vertical_sud"
+  ],
+  "rows": "4 phases synchronisées, de haut en bas",
+  "durations_ms": [
+    180,
+    180,
+    180,
+    180
+  ],
+  "origin": "Création originale inspirée de PMD, pas de sprites extraits du jeu.",
+  "walking_area": "Bande centrale, coordonnées transversales 20 à 44 px. Collisions à configurer dans le moteur."
+}

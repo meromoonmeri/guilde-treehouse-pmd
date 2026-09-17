@@ -1,0 +1,39 @@
+{
+  "animated": false,
+  "layouts": [
+    {
+      "id": "01",
+      "title": "Entree centrale",
+      "layers": [
+        "01_sol.png",
+        "02_paroi.png",
+        "03_rochers.png",
+        "04_vegetation.png"
+      ],
+      "entrance_shift_x": 0
+    },
+    {
+      "id": "02",
+      "title": "Entree a gauche",
+      "layers": [
+        "01_sol.png",
+        "02_paroi.png",
+        "03_rochers.png",
+        "04_vegetation.png"
+      ],
+      "entrance_shift_x": -24
+    },
+    {
+      "id": "03",
+      "title": "Entree a droite",
+      "layers": [
+        "01_sol.png",
+        "02_paroi.png",
+        "03_rochers.png",
+        "04_vegetation.png"
+      ],
+      "entrance_shift_x": 24
+    }
+  ],
+  "note": "Paroi canonique grise du pack precedent, disposition modifiee sans particules."
+}

@@ -1,0 +1,627 @@
+{
+  "pmdo_target": "0.8.12",
+  "serialization_version": "0.8.12.0",
+  "rogueessence_commit": "4961b2271bb0cace74f40f6a85e799e8e4848ace",
+  "reference_agent_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+  "native_runtime_tested": false,
+  "clouds": {
+    "source_size": [
+      480,
+      408
+    ],
+    "crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "strip_size": [
+      1440,
+      208
+    ],
+    "speed_px_s": -4
+  },
+  "sea_frame_length": 10,
+  "rock": {
+    "file": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+    "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+    "rect": [
+      912,
+      464,
+      976,
+      512
+    ],
+    "scale": 1,
+    "file_control": "METANO_ROCHE_NATIVE_64x48.png"
+  },
+  "zones": [
+    {
+      "id": "01_cap_large",
+      "title": "Le grand cap",
+      "size": [
+        1120,
+        912
+      ],
+      "new": true,
+      "entry": [
+        560,
+        304
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        0,
+        0,
+        1120,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_01_cap_large_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_01_cap_large_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "02_terrasse_croissant",
+      "title": "La terrasse en croissant",
+      "size": [
+        1160,
+        904
+      ],
+      "new": true,
+      "entry": [
+        576,
+        208
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        8,
+        0,
+        1168,
+        904
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_02_terrasse_croissant_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_02_terrasse_croissant_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "03_double_belvedere",
+      "title": "Le double belvédère",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        592,
+        224
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_03_double_belvedere_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_03_double_belvedere_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "04_pointe_sinueuse",
+      "title": "La pointe sinueuse",
+      "size": [
+        1128,
+        912
+      ],
+      "new": true,
+      "entry": [
+        560,
+        352
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        0,
+        0,
+        1128,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_04_pointe_sinueuse_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_04_pointe_sinueuse_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "05_grande_mesa",
+      "title": "La grande mesa",
+      "size": [
+        1144,
+        904
+      ],
+      "new": true,
+      "entry": [
+        560,
+        288
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        8,
+        0,
+        1152,
+        904
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_05_grande_mesa_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_05_grande_mesa_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "06_crique_profonde",
+      "title": "La crique profonde",
+      "size": [
+        1128,
+        912
+      ],
+      "new": true,
+      "entry": [
+        560,
+        208
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        40,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_06_crique_profonde_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_06_crique_profonde_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "07_balcon_haut",
+      "title": "Le haut balcon",
+      "size": [
+        1096,
+        912
+      ],
+      "new": true,
+      "entry": [
+        544,
+        304
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        72,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_07_balcon_haut_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_07_balcon_haut_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "08_terrasses_decalees",
+      "title": "Les terrasses décalées",
+      "size": [
+        1152,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        320
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        8,
+        0,
+        1160,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_08_terrasses_decalees_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_08_terrasses_decalees_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "09_cap_eventail",
+      "title": "Le cap en éventail",
+      "size": [
+        1112,
+        912
+      ],
+      "new": true,
+      "entry": [
+        544,
+        304
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        0,
+        0,
+        1112,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_09_cap_eventail_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_09_cap_eventail_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    },
+    {
+      "id": "10_esplanade_arrondie",
+      "title": "L’esplanade arrondie",
+      "size": [
+        1136,
+        912
+      ],
+      "new": true,
+      "entry": [
+        560,
+        304
+      ],
+      "planes": [
+        "Herbe - forme V2",
+        "Roche Metano native",
+        "Lisiere protegee",
+        "Ombres - volumes V2"
+      ],
+      "crop": [
+        32,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "variants": {
+        "jour": {
+          "asset": "v30812_10_esplanade_arrondie_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v30812_10_esplanade_arrondie_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "approved generated geometry; native Metano rock; separate lighting"
+    }
+  ]
+}

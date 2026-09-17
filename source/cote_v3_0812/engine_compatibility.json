@@ -1,0 +1,119 @@
+{
+  "pmdo_version": "0.8.12",
+  "engine_repository": "PMDCollab/PMDC",
+  "engine_tag": "v0.8.12",
+  "rogueessence_commit": "4961b2271bb0cace74f40f6a85e799e8e4848ace",
+  "container_version": "0.8.12.0",
+  "files": [
+    {
+      "file": "RogueEssence/Ground/Maps/GroundMap.cs",
+      "blob": "4de961810123826e825c7bcfb43ccc5758b138b8",
+      "sha256": "90598634c0b4b9e7f60a40896dd72be7627a95cb0c07cf743dafceb7d1b8997b",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Ground/Maps/EntityLayer.cs",
+      "blob": "0ff0c09cfc8c5da08ed23c28d464447e3924fccd",
+      "sha256": "daa285ca28e017d5e885d5a81c3e77867dbc206e335605a409443e06bc1f6b50",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Ground/Maps/GroundMarker.cs",
+      "blob": "655c20c064ef181a8096a054d3646d832c00ebac",
+      "sha256": "2f27d31ff54fea7b2c26c1b32c22d994fea8bbddc506ec19809492adc9b6015c",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Ground/Maps/GroundWall.cs",
+      "blob": "ad6a7b3c94df9111556db1012e7c22d57e48593a",
+      "sha256": "ae6ca23ad6e712ac456781972b24eec1467edc45900dd97be53b4a8efa1abf5d",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/Animation/Backgrounds/LayeredBG.cs",
+      "blob": "72a4e805ed0017e28611fe1969993a348a397db6",
+      "sha256": "271d206003db69fabb80d0648b85828e9bd6cfb77e7e5d7128511cc93a6387a8",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/Animation/Backgrounds/MapBG.cs",
+      "blob": "f2b58ef92739b29de378a217ebbce7fe4e0022e4",
+      "sha256": "cc07e08651b659d77a03078d12b57b75dedf1c862dc062c4fb44bc31e5a958a7",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/DirSheet.cs",
+      "blob": "a9e806474280df83215ff1a6f9b5284cece98702",
+      "sha256": "7bda4ac6ad20c71b3907bef1c81c6b918227ff8364512c6cea06987547bed09a",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/BaseSheet.cs",
+      "blob": "638cf17c53bb587a95efdc9e0eca5a39f7bf667b",
+      "sha256": "e991f0f0143d833876580aaa90527cba6ef6dec09230477cd89b8fd8b3cf2bb1",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/TileSheet.cs",
+      "blob": "a27abd04e0e087a78273347d8db2572073059255",
+      "sha256": "dc3ae90122473330513690e075e1c8fdc998bae0442bed19b8869d6885ab71b0",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/Indices/TileIndex.cs",
+      "blob": "f208c714c82514af8af23ee91ccce9bca8388f3c",
+      "sha256": "98593be72ae2f8969b2c6a5d3b7377c2d00295d4b7a997508b82061ce91a20c2",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Dungeon/Maps/MapLayer.cs",
+      "blob": "98c40f947199abf641a2d60187fd4e5304e0576b",
+      "sha256": "f97b623baef18187c7f6d82213974582f0db5431cf75b81aee9e8ef6497fd809",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Dungeon/Tiles/TileLayer.cs",
+      "blob": "17d485c77d6dc2d8c7c1747f0f4fdde4badab7b4",
+      "sha256": "966e10c4cc2bba3274e405ac7dd1599913e91bf08070e91fdd94f1bc9ea6a16e",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Dungeon/Tiles/AutoTile.cs",
+      "blob": "5d9cc10060b9e02c920cb3e5d3292c6dea766644",
+      "sha256": "e736117b7087d05b4f7bde7503c59990ebd04cff9767ed6ea88f8c73d157b684",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Data/Serializer.cs",
+      "blob": "4abfa641860d129a63b1c6853c45e4ec16282fc5",
+      "sha256": "5b091a59dbb5296d40544cca8346c65b1be0ed407b16a69ee41fd77bdb8f7891",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Dev/Converters/UpgradeConverters.cs",
+      "blob": "8a73f54a8ea1d3b5a05d80a724a6c56e988a4f88",
+      "sha256": "e7d85f8b1d3e2e2e0271fdb367fe9cced6293fbb2557e1869c1695df8db89d6e",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Content/Animation/Sprites.cs",
+      "blob": "f12a6867b55546b315e37d794cb95a6cd9bc6a59",
+      "sha256": "f10b56c5e6b0277cd687a3c8fd75e5f96f30f93f5b2c6ef6486b69aa4da8d261",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/PathMod.cs",
+      "blob": "eda762f1f0d069f113aa1e72a5853bafdbed1ad5",
+      "sha256": "505a5317d737b4ca40917e83fb5ff9c591e8922a9ab2132267f61b6c2d82dd79",
+      "same_as_previously_audited_source": true
+    },
+    {
+      "file": "RogueEssence/Lua/LuaEngine.cs",
+      "blob": "2cfb7a74e4070e1fc21c9b21600522d3ebbb954a",
+      "sha256": "c3a2ae74041d326793be2b8781a0ed9223aa988f3e22d5421a17fbf9b89b1472",
+      "same_as_previously_audited_source": false
+    }
+  ],
+  "runtime_tested": false,
+  "runtime_attempt": "Official Linux release download and .NET SDK host inaccessible from this environment (TLS connection failure); no engine/UI opening claimed."
+}

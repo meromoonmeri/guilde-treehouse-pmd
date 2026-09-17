@@ -1,0 +1,46 @@
+{
+  "canvas": [
+    456,
+    432
+  ],
+  "reference_commit": "00cb874",
+  "reference_file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Dungeon Boss Rooms - Northern Range.png",
+  "terrain": "Nouvelle generation guidee par la reference, pas des tuiles natives identiques",
+  "arena_center": [
+    228,
+    216
+  ],
+  "scenes": [
+    {
+      "id": "jour",
+      "layers": [
+        "01_ciel.png",
+        "02_etoiles.png",
+        "03_lune_halo.png",
+        "04_profondeur.png",
+        "05_rochers_arriere.png",
+        "06_arene_centrale.png",
+        "07_socle_arene.png",
+        "08_falaises_avant.png",
+        "09_brume_overlay.png"
+      ]
+    },
+    {
+      "id": "nuit",
+      "layers": [
+        "01_ciel.png",
+        "02_etoiles.png",
+        "03_lune_halo.png",
+        "04_profondeur.png",
+        "05_rochers_arriere.png",
+        "06_arene_centrale.png",
+        "07_socle_arene.png",
+        "08_falaises_avant.png",
+        "09_brume_overlay.png"
+      ]
+    }
+  ],
+  "overlay": "Brume statique tres legere separee du ciel et du terrain",
+  "night": "Filtre Abyss exact sur terrain",
+  "animated": false
+}

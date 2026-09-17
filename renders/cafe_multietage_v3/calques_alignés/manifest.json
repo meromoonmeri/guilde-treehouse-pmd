@@ -1,0 +1,158 @@
+{
+  "size": [
+    1264,
+    843
+  ],
+  "common_base": "00_salle_vide.png",
+  "layers": [
+    {
+      "name": "01_mur_casse_remplacement",
+      "origin": "Generated local wall replacement; placement locked to common base"
+    },
+    {
+      "name": "02_ombre_debris",
+      "origin": "Generated cast shadow extracted locally"
+    },
+    {
+      "name": "03_debris_bois",
+      "origin": "Generated splintered wood extracted locally"
+    },
+    {
+      "name": "04_rubans",
+      "origin": "Generated canonical-guided ribbons, isolated; not native sprites"
+    },
+    {
+      "name": "05_spirales_sol_murs",
+      "origin": "Generated Spinda-reference markings, isolated from unchanged base"
+    },
+    {
+      "name": "06_table_gauche",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        192,
+        192,
+        240,
+        240
+      ],
+      "destination": [
+        220,
+        505
+      ],
+      "scale": 3,
+      "rgba_sha256": "51f5701659b1e4f5ecaad82f968c4590859c9a9dc4d37c738e0cabe8cf3d1366"
+    },
+    {
+      "name": "07_table_droite",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        456,
+        192,
+        504,
+        240
+      ],
+      "destination": [
+        906,
+        505
+      ],
+      "scale": 3,
+      "rgba_sha256": "7ae6c5173e59c8ca4445a8a978a6719b0f347a53d9cbfa9fdc8441e42a5a1c75"
+    },
+    {
+      "name": "08_table_avant",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        240,
+        232,
+        288,
+        280
+      ],
+      "destination": [
+        487,
+        595
+      ],
+      "scale": 3,
+      "rgba_sha256": "5c7a67fa11ab0bc6103f18fd6a52a04143649f9b984e04f6b29203246c123a42"
+    },
+    {
+      "name": "09_comptoir_gauche",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        190,
+        160,
+        318,
+        178
+      ],
+      "destination": [
+        175,
+        395
+      ],
+      "scale": 3,
+      "rgba_sha256": "48c39feaef08e4e52385911188529a419f87872203d60170e1d6d7cd09d108c4"
+    },
+    {
+      "name": "10_comptoir_droit",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        386,
+        160,
+        506,
+        178
+      ],
+      "destination": [
+        720,
+        395
+      ],
+      "scale": 3,
+      "rgba_sha256": "9a9a8151e6d31d0fd0fe59cee83941fe462484ed1b565e4adc214a9b322fc17e"
+    },
+    {
+      "name": "11_decor_comptoir_spinda",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        190,
+        88,
+        318,
+        160
+      ],
+      "destination": [
+        175,
+        179
+      ],
+      "scale": 3,
+      "rgba_sha256": "437522733b5ec2a53eedee6d4c98fc8df9a693d724c561e5d0a5f88d345d80e0"
+    },
+    {
+      "name": "12_decor_comptoir_bleu",
+      "origin": "EoSO native reconstructed map",
+      "source_box": [
+        386,
+        80,
+        514,
+        160
+      ],
+      "destination": [
+        720,
+        155
+      ],
+      "scale": 3,
+      "rgba_sha256": "a7c400965faa091d9733eaa16f20e020d3db55df1e800055c05ec867647d04cf"
+    }
+  ],
+  "states": {
+    "salle_vide": [],
+    "salle_spirales": [
+      "05_spirales_sol_murs"
+    ],
+    "salle_mur_casse": [
+      "01_mur_casse_remplacement",
+      "02_ombre_debris",
+      "03_debris_bois"
+    ]
+  },
+  "checks": {
+    "broken_identical_outside_local_layers": true,
+    "threshold_unchanged": true,
+    "all_layers_same_size": true
+  },
+  "runtime_validated": false
+}

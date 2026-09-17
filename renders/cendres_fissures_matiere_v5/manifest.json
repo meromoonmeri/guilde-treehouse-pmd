@@ -1,0 +1,737 @@
+{
+  "size": [
+    648,
+    504
+  ],
+  "frames": 64,
+  "frame_ms": 100,
+  "cycle_ms": 6400,
+  "static_layers": [
+    "03a_contact_refroidi",
+    "03_sol_chemin",
+    "04_rebords_rocheux",
+    "05_parois_grotte",
+    "06_profondeur_grotte",
+    "06b_raccord_roche",
+    "08_gorges_fissures"
+  ],
+  "animation_groups": [
+    "01_magma_palette_cycling",
+    "02_chauffe_locale",
+    "09_magma_fissures",
+    "10_eruption_matiere_00",
+    "10_eruption_matiere_01",
+    "10_eruption_matiere_02",
+    "10_eruption_matiere_03",
+    "10_eruption_matiere_04",
+    "10_eruption_matiere_05"
+  ],
+  "render_order": [
+    "01_magma_palette_cycling",
+    "02_chauffe_locale",
+    "03a_contact_refroidi",
+    "03_sol_chemin",
+    "04_rebords_rocheux",
+    "05_parois_grotte",
+    "06_profondeur_grotte",
+    "06b_raccord_roche",
+    "08_gorges_fissures",
+    "09_magma_fissures",
+    "10_eruption_matiere_00",
+    "10_eruption_matiere_01",
+    "10_eruption_matiere_02",
+    "10_eruption_matiere_03",
+    "10_eruption_matiere_04",
+    "10_eruption_matiere_05"
+  ],
+  "vents": [
+    {
+      "anchor": [
+        57,
+        367
+      ],
+      "offset": 0,
+      "scale": 0.85,
+      "molten_anchor_fraction": 0.7824324324324324
+    },
+    {
+      "anchor": [
+        547,
+        331
+      ],
+      "offset": 11,
+      "scale": 1.05,
+      "molten_anchor_fraction": 0.7972972972972973
+    },
+    {
+      "anchor": [
+        129,
+        406
+      ],
+      "offset": 24,
+      "scale": 1.0,
+      "molten_anchor_fraction": 0.8729729729729729
+    },
+    {
+      "anchor": [
+        580,
+        426
+      ],
+      "offset": 38,
+      "scale": 0.9,
+      "molten_anchor_fraction": 0.7635135135135135
+    },
+    {
+      "anchor": [
+        51,
+        477
+      ],
+      "offset": 47,
+      "scale": 1.1,
+      "molten_anchor_fraction": 0.8378378378378378
+    },
+    {
+      "anchor": [
+        521,
+        481
+      ],
+      "offset": 56,
+      "scale": 0.95,
+      "molten_anchor_fraction": 0.8945945945945946
+    }
+  ],
+  "event_stages": [
+    "bulle_basse",
+    "gonflement",
+    "bulle_fissuree",
+    "eclatement",
+    "jet_naissant",
+    "colonne",
+    "retombee",
+    "residu"
+  ],
+  "timeline": [
+    [
+      "bulle_basse",
+      "bulle_fissuree",
+      "retombee",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "bulle_basse",
+      "eclatement",
+      "retombee",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "bulle_basse",
+      "eclatement",
+      "retombee",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "bulle_basse",
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "gonflement",
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "gonflement",
+      "jet_naissant",
+      "residu",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "gonflement",
+      "jet_naissant",
+      "residu",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "bulle_fissuree",
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse"
+    ],
+    [
+      "bulle_fissuree",
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse"
+    ],
+    [
+      "bulle_fissuree",
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse"
+    ],
+    [
+      "bulle_fissuree",
+      "colonne",
+      "repos",
+      "repos",
+      "repos",
+      "bulle_basse"
+    ],
+    [
+      "eclatement",
+      "colonne",
+      "repos",
+      "repos",
+      "repos",
+      "gonflement"
+    ],
+    [
+      "eclatement",
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "gonflement"
+    ],
+    [
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "gonflement"
+    ],
+    [
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "gonflement"
+    ],
+    [
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "bulle_fissuree"
+    ],
+    [
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "eclatement"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "eclatement"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant"
+    ],
+    [
+      "colonne",
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant"
+    ],
+    [
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant"
+    ],
+    [
+      "retombee",
+      "repos",
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "jet_naissant"
+    ],
+    [
+      "retombee",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree",
+      "colonne"
+    ],
+    [
+      "retombee",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree",
+      "colonne"
+    ],
+    [
+      "retombee",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "bulle_fissuree",
+      "colonne"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "bulle_basse",
+      "eclatement",
+      "colonne"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "eclatement",
+      "colonne"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant",
+      "colonne"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant",
+      "retombee"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "gonflement",
+      "jet_naissant",
+      "retombee"
+    ],
+    [
+      "residu",
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "jet_naissant",
+      "retombee"
+    ],
+    [
+      "repos",
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "retombee"
+    ],
+    [
+      "repos",
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "retombee"
+    ],
+    [
+      "repos",
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "repos",
+      "eclatement",
+      "colonne",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "repos",
+      "eclatement",
+      "colonne",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "colonne",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "retombee",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "retombee",
+      "residu"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "retombee",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "gonflement",
+      "colonne",
+      "retombee",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "gonflement",
+      "colonne",
+      "retombee",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "retombee",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "bulle_fissuree",
+      "retombee",
+      "residu",
+      "repos"
+    ],
+    [
+      "repos",
+      "repos",
+      "eclatement",
+      "retombee",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_basse",
+      "eclatement",
+      "retombee",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "retombee",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_basse",
+      "jet_naissant",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "gonflement",
+      "jet_naissant",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "gonflement",
+      "colonne",
+      "residu",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "repos",
+      "repos",
+      "repos"
+    ],
+    [
+      "repos",
+      "bulle_fissuree",
+      "colonne",
+      "repos",
+      "repos",
+      "repos"
+    ]
+  ],
+  "fissures": {
+    "roots": [
+      {
+        "label": 1,
+        "rock_anchor": [
+          35,
+          175
+        ],
+        "lava_anchor": [
+          34,
+          175
+        ]
+      },
+      {
+        "label": 2,
+        "rock_anchor": [
+          386,
+          215
+        ],
+        "lava_anchor": [
+          386,
+          216
+        ]
+      },
+      {
+        "label": 3,
+        "rock_anchor": [
+          141,
+          258
+        ],
+        "lava_anchor": [
+          140,
+          258
+        ]
+      },
+      {
+        "label": 4,
+        "rock_anchor": [
+          595,
+          230
+        ],
+        "lava_anchor": [
+          596,
+          230
+        ]
+      },
+      {
+        "label": 5,
+        "rock_anchor": [
+          146,
+          262
+        ],
+        "lava_anchor": [
+          145,
+          262
+        ]
+      },
+      {
+        "label": 6,
+        "rock_anchor": [
+          473,
+          349
+        ],
+        "lava_anchor": [
+          474,
+          349
+        ]
+      },
+      {
+        "label": 7,
+        "rock_anchor": [
+          272,
+          441
+        ],
+        "lava_anchor": [
+          271,
+          441
+        ]
+      }
+    ],
+    "pixels": 4081,
+    "mask": "MASQUE_FISSURES.png",
+    "fixed_indices": "INDICES_FISSURES.png",
+    "phase_travel_pixels_per_bin": 6
+  },
+  "origin": {
+    "terrain": "V4 preserved; dark cut grooves and animated fissure overlay added",
+    "magma": "V4 fixed-index cycling PNGs copied byte-for-byte",
+    "eruptions": "new 8-pose generation; live magma texture reprojected onto each shape, lifted/stretching UVs and bounded thermal relief, exact material match at feet"
+  },
+  "tests": {
+    "opaque_compositions": true,
+    "ora_exact": true,
+    "eruption_feet_match_live_magma": true,
+    "eruptions_off_terrain": true,
+    "central_corridor_free_of_fissures": true,
+    "all_64_saved_compositions_recompose": true,
+    "64_unique_compositions": true,
+    "magma_cycling_preserved_byte_for_byte": true,
+    "all_parent_terrain_layers_unchanged": true,
+    "fissure_alpha_fixed_and_only_on_rock": true,
+    "fissure_frames_use_shared_palette_tables": true,
+    "distinct_fissure_frames": 64,
+    "protected_corridor_unchanged_all_frames": true,
+    "saved_eruption_contact_pixels_match_live_magma": true,
+    "eruption_colors_in_shared_16_color_ramp": true,
+    "all_sites_preserve_causal_sequence": true,
+    "bubble_extraction_has_no_lower_row_jet_fragments": true
+  },
+  "runtime_pmdo_validated": false
+}

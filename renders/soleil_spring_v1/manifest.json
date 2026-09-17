@@ -1,0 +1,49 @@
+{
+  "sun": {
+    "size": [
+      96,
+      96
+    ],
+    "position": [
+      702,
+      212
+    ],
+    "keyframes": 8,
+    "frames": 64,
+    "frame_ms": 80,
+    "period_ms": 5120,
+    "method": "Génération 8 clés puis recalage, disque verrouillé, variation 22%, interpolation alpha prémultiplié"
+  },
+  "clouds": {
+    "canvas": [
+      960,
+      600
+    ],
+    "wrap_x": 960,
+    "speed_px_s": -8,
+    "period_s": 120,
+    "draw_order": "APRÈS soleil/lune, AVANT mer et falaise",
+    "modes": [
+      "jour",
+      "coucher",
+      "nuit"
+    ]
+  },
+  "spring": {
+    "size": [
+      600,
+      600
+    ],
+    "cell_px": 24,
+    "cycles": [
+      3,
+      13
+    ],
+    "frame_ticks": 10,
+    "engine_hz": 60,
+    "joint_frames": 39,
+    "period_ms": 6500,
+    "layout": "Carte Halcyon conservée ; variante générée du pourtour. Bassin et toutes cellules animées natifs conservés.",
+    "runtime_validated": false
+  }
+}

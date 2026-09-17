@@ -1,0 +1,69 @@
+{
+  "canvas": [
+    600,
+    600
+  ],
+  "frames": 39,
+  "ticks_per_frame": 10,
+  "engine_hz": 60,
+  "period_ms": 6500,
+  "light": "Nouvelle coloration spectrale cyclique, pixels clairs préservés, cycle 39 phases. Ni coloration native Halcyon ni animation originale inchangée.",
+  "layouts": [
+    {
+      "id": "01_source_centrale",
+      "title": "Source centrale",
+      "offset": [
+        0,
+        0
+      ],
+      "layers": [
+        "01_decor_sans_lumiere.png",
+        "02_eau_cascades.png",
+        "03_halo_arc_en_ciel.png",
+        "04_faisceau_arc_en_ciel.png"
+      ]
+    },
+    {
+      "id": "02_source_gauche",
+      "title": "Source décalée à gauche",
+      "offset": [
+        -64,
+        0
+      ],
+      "layers": [
+        "01_decor_sans_lumiere.png",
+        "02_eau_cascades.png",
+        "03_halo_arc_en_ciel.png",
+        "04_faisceau_arc_en_ciel.png"
+      ]
+    },
+    {
+      "id": "03_source_droite",
+      "title": "Source décalée à droite",
+      "offset": [
+        64,
+        0
+      ],
+      "layers": [
+        "01_decor_sans_lumiere.png",
+        "02_eau_cascades.png",
+        "03_halo_arc_en_ciel.png",
+        "04_faisceau_arc_en_ciel.png"
+      ]
+    },
+    {
+      "id": "04_grande_clairiere",
+      "title": "Grande clairière",
+      "offset": [
+        0,
+        -32
+      ],
+      "layers": [
+        "01_decor_sans_lumiere.png",
+        "02_eau_cascades.png",
+        "03_halo_arc_en_ciel.png",
+        "04_faisceau_arc_en_ciel.png"
+      ]
+    }
+  ]
+}

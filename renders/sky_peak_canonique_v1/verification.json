@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Terrain source 504x504 : pixels hors fleurs exacts, aucune translation ni resize",
+    "Jour/nuit : recompositions exactes ; 64 frames WebP identiques aux PNG des calques",
+    "4 clés exactement conservées aux phases 00,08,16,24",
+    "Nuages : identité spatiale au wrap504, horloges indépendantes"
+  ],
+  "runtime_validated": false
+}

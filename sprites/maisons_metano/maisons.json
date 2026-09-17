@@ -1,0 +1,445 @@
+{
+  "schema": 1,
+  "grid_px": 8,
+  "target": "PMDO Ground, TexSize=1",
+  "native_reference_sizes_px": [
+    [
+      80,
+      111
+    ],
+    [
+      96,
+      96
+    ],
+    [
+      110,
+      99
+    ]
+  ],
+  "reference": "Palikadude/Halcyon",
+  "source_commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "origin": "10 nouvelles créations via générateur, pas des extractions du jeu",
+  "animation": "aucune, structures fixes",
+  "houses": [
+    {
+      "id": 1,
+      "name": "Feuillue",
+      "files": {
+        "jour": "01_feuillue_jour.png",
+        "nuit": "01_feuillue_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        0,
+        0,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        0,
+        0,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        74
+      ],
+      "content_offset_px": [
+        8,
+        46
+      ],
+      "scale_from_generated": 0.13333333333333333
+    },
+    {
+      "id": 2,
+      "name": "Vannerie",
+      "files": {
+        "jour": "02_vannerie_jour.png",
+        "nuit": "02_vannerie_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        112,
+        0,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        14,
+        0,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        83
+      ],
+      "content_offset_px": [
+        8,
+        37
+      ],
+      "scale_from_generated": 0.13852813852813853
+    },
+    {
+      "id": 3,
+      "name": "Galets",
+      "files": {
+        "jour": "03_galets_jour.png",
+        "nuit": "03_galets_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        224,
+        0,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        28,
+        0,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        89
+      ],
+      "content_offset_px": [
+        8,
+        31
+      ],
+      "scale_from_generated": 0.13773314203730272
+    },
+    {
+      "id": 4,
+      "name": "Nénuphar",
+      "files": {
+        "jour": "04_nenuphar_jour.png",
+        "nuit": "04_nenuphar_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        336,
+        0,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        42,
+        0,
+        14,
+        16
+      ],
+      "content_size_px": [
+        104,
+        85
+      ],
+      "content_offset_px": [
+        4,
+        35
+      ],
+      "scale_from_generated": 0.1554559043348281
+    },
+    {
+      "id": 5,
+      "name": "Gland",
+      "files": {
+        "jour": "05_gland_jour.png",
+        "nuit": "05_gland_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        448,
+        0,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        56,
+        0,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        99
+      ],
+      "content_offset_px": [
+        8,
+        21
+      ],
+      "scale_from_generated": 0.1568627450980392
+    },
+    {
+      "id": 6,
+      "name": "Argile",
+      "files": {
+        "jour": "06_argile_jour.png",
+        "nuit": "06_argile_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        0,
+        128,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        0,
+        16,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        95
+      ],
+      "content_offset_px": [
+        8,
+        25
+      ],
+      "scale_from_generated": 0.15946843853820597
+    },
+    {
+      "id": 7,
+      "name": "Pivoine",
+      "files": {
+        "jour": "07_pivoine_jour.png",
+        "nuit": "07_pivoine_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        112,
+        128,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        14,
+        16,
+        14,
+        16
+      ],
+      "content_size_px": [
+        104,
+        100
+      ],
+      "content_offset_px": [
+        4,
+        20
+      ],
+      "scale_from_generated": 0.16613418530351437
+    },
+    {
+      "id": 8,
+      "name": "Mousse",
+      "files": {
+        "jour": "08_mousse_jour.png",
+        "nuit": "08_mousse_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        224,
+        128,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        28,
+        16,
+        14,
+        16
+      ],
+      "content_size_px": [
+        96,
+        93
+      ],
+      "content_offset_px": [
+        8,
+        27
+      ],
+      "scale_from_generated": 0.1568627450980392
+    },
+    {
+      "id": 9,
+      "name": "Ginkgo",
+      "files": {
+        "jour": "09_ginkgo_jour.png",
+        "nuit": "09_ginkgo_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        336,
+        128,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        42,
+        16,
+        14,
+        16
+      ],
+      "content_size_px": [
+        99,
+        112
+      ],
+      "content_offset_px": [
+        6,
+        8
+      ],
+      "scale_from_generated": 0.16045845272206305
+    },
+    {
+      "id": 10,
+      "name": "Coquille",
+      "files": {
+        "jour": "10_coquille_jour.png",
+        "nuit": "10_coquille_nuit.png"
+      },
+      "canvas_px": [
+        112,
+        128
+      ],
+      "canvas_cells": [
+        14,
+        16
+      ],
+      "baseline_px": 120,
+      "placement_anchor_px": [
+        56,
+        120
+      ],
+      "atlas_rect_px": [
+        448,
+        128,
+        112,
+        128
+      ],
+      "atlas_rect_cells": [
+        56,
+        16,
+        14,
+        16
+      ],
+      "content_size_px": [
+        103,
+        112
+      ],
+      "content_offset_px": [
+        4,
+        8
+      ],
+      "scale_from_generated": 0.17364341085271318
+    }
+  ]
+}

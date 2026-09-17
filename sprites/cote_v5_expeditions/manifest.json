@@ -1,0 +1,753 @@
+{
+  "pmdo_target": "0.8.12",
+  "serialization_version": "0.8.12.0",
+  "rogueessence_commit": "4961b2271bb0cace74f40f6a85e799e8e4848ace",
+  "reference_agent_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+  "native_runtime_tested": false,
+  "night_filter": "Abyss V4 tools/tile_night.py, blob 438383f4",
+  "clouds": {
+    "source_size": [
+      480,
+      408
+    ],
+    "crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "strip_size": [
+      1440,
+      208
+    ],
+    "speed_px_s": -4
+  },
+  "sea_frame_length": 10,
+  "rock": {
+    "file": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+    "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+    "rect": [
+      912,
+      464,
+      976,
+      512
+    ],
+    "scale": 1,
+    "file_control": "METANO_ROCHE_NATIVE_64x48.png"
+  },
+  "zones": [
+    {
+      "id": "01_crete_sillage",
+      "title": "La crête du Sillage",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_01_crete_sillage_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_01_crete_sillage_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "02_caps_relies",
+      "title": "Les caps reliés",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_02_caps_relies_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_02_caps_relies_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "03_eventail_strates",
+      "title": "L’éventail des strates",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_03_eventail_strates_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_03_eventail_strates_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "04_lagune_occident",
+      "title": "La lagune d’Occident",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        272
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_04_lagune_occident_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_04_lagune_occident_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "05_cote_quatre_pointes",
+      "title": "La côte aux quatre pointes",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_05_cote_quatre_pointes_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_05_cote_quatre_pointes_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "06_sommet_balcon",
+      "title": "Le sommet au balcon",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_06_sommet_balcon_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_06_sommet_balcon_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "07_cap_chenal",
+      "title": "Le cap du Chenal",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        304
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "falaise",
+      "door": null,
+      "variants": {
+        "jour": {
+          "asset": "v50812_07_cap_chenal_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_07_cap_chenal_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "08_antre_crochu",
+      "title": "L’antre Crochu",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        704
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "donjon",
+      "door": {
+        "module": "portail",
+        "position": [
+          544,
+          360
+        ],
+        "threshold": [
+          576,
+          496
+        ],
+        "spawn": [
+          576,
+          704
+        ],
+        "layout_reference": "Crooked Cavern: vestibule central et epaules enveloppantes"
+      },
+      "variants": {
+        "jour": {
+          "asset": "v50812_08_antre_crochu_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_08_antre_crochu_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "09_grotte_marees",
+      "title": "La grotte des Marées",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        720
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "donjon",
+      "door": {
+        "module": "portail",
+        "position": [
+          784,
+          432
+        ],
+        "threshold": [
+          816,
+          568
+        ],
+        "spawn": [
+          576,
+          720
+        ],
+        "layout_reference": "Brine Cave: corniche asymetrique et acces recule"
+      },
+      "variants": {
+        "jour": {
+          "asset": "v50812_09_grotte_marees_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_09_grotte_marees_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    },
+    {
+      "id": "10_defile_brume",
+      "title": "Le défilé de Brume",
+      "size": [
+        1168,
+        912
+      ],
+      "new": true,
+      "entry": [
+        576,
+        752
+      ],
+      "planes": [
+        "Herbe Metano native",
+        "Faces Metano natives",
+        "Retours Metano natifs",
+        "Couronnes Metano natives",
+        "Pieds Metano natifs",
+        "Acces de donjon Metano"
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "attached_edges": [
+        "W",
+        "E",
+        "S"
+      ],
+      "kind": "donjon",
+      "door": {
+        "module": "passage",
+        "position": [
+          456,
+          336
+        ],
+        "threshold": [
+          576,
+          208
+        ],
+        "spawn": [
+          576,
+          752
+        ],
+        "layout_reference": "Drenched Bluff: corridor ouvert entre deux epaules"
+      },
+      "variants": {
+        "jour": {
+          "asset": "v50812_10_defile_brume_jour",
+          "layers": [
+            "jour_00.png",
+            "jour_01.png",
+            "jour_02.png",
+            "jour_03.png",
+            "jour_04.png",
+            "jour_05.png"
+          ],
+          "composition": "jour_composition.png"
+        },
+        "nuit": {
+          "asset": "v50812_10_defile_brume_nuit",
+          "layers": [
+            "nuit_00.png",
+            "nuit_01.png",
+            "nuit_02.png",
+            "nuit_03.png",
+            "nuit_04.png",
+            "nuit_05.png"
+          ],
+          "composition": "nuit_composition.png"
+        }
+      },
+      "terrain_provenance": "new organic layout; all terrain RGB from native Metano modules; exact Abyss night filter"
+    }
+  ]
+}

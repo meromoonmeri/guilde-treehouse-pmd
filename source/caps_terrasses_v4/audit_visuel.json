@@ -1,0 +1,71 @@
+{
+  "status": "PARTIEL_DESSIN",
+  "generated": 10,
+  "retained_after_visual_review": 8,
+  "to_regenerate": 2,
+  "palette_membership_checks_passed": 10,
+  "canonical_shape_identity_proved": false,
+  "reason_not_regenerated_this_turn": "image tool refused the 07 revision: limit of 10 generations reached; no revision file was produced",
+  "entries": [
+    {
+      "id": "07_anse_gauche",
+      "status": "A_REGENERER",
+      "note": "Roche en petits galets verticaux et couronne en chapelet : le motif ne reprend pas la référence Métano. La palette verrouillée ne corrige pas cette erreur de dessin.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "08_crochet_droit",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Couronne continue au retour concave ; herbe et paroi se rejoignent sans bande détachée visible. Grain plus dense sur le flanc droit ; pas de certification des tuiles pixel à pixel.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "09_paliers_decales_droits",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Deux paliers distincts ; les couronnes suivent les arrondis et rejoignent les faces. Matériau et teintes proches de la référence après correction.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "10_double_balcon_gauche",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Deux balcons lisibles, couronne et roche cohérentes dans les coupes inspectées. Extrémités de couronne un peu relevées : détail à surveiller lors du placement. Recalage vertical documenté.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "11_corniche_oblique_gauche",
+      "status": "A_REGENERER",
+      "note": "Rebord lisse en double bande et gros blocs trop simplifiés, différents de la couronne et du grain Métano demandés. Ne pas présenter comme une falaise conforme au contrôle de dessin.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "12_paroi_haute_droite",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Couronne irrégulière continue autour du renfoncement ; retour rocheux ombré cohérent, herbe jointe au rebord dans le gros plan.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "13_avancee_basse_gauche",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Couronne découpée et retour arrondi cohérents avec la présentation Métano. Coupe choisie manuellement sur le vrai bord avant, pas sur le bord arrière du plateau.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "14_echancrure_droite",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Retour concave lisible et rebord continu. Ajout à la palette de l’ombre mauve native 96,56,88, vérifiée dans Cliffs, pour éviter d’éclaircir artificiellement le creux. La profondeur reste une interprétation générée.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "15_trois_gradins_gauches",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Trois niveaux distincts et raccords herbe/roche lisibles ; couronnes locales cohérentes. Les extrémités ne sont pas des autotiles certifiés.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    },
+    {
+      "id": "16_balcon_renfonce_droit",
+      "status": "RETENU_VISUELLEMENT",
+      "note": "Couronne fine suivant le balcon ; même famille de roche et d’herbe. Texture répétitive sur la grande face : observation conservée, pas une preuve de seamlessness entre cartes.",
+      "scope": "review of full scene and native-size crown crop; not an engine test or tile-identity proof"
+    }
+  ]
+}

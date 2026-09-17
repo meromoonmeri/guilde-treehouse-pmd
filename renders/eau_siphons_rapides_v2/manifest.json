@@ -1,0 +1,70 @@
+{
+  "size": [
+    456,
+    384
+  ],
+  "frames": 48,
+  "frame_ms": 40,
+  "cycle_ms": 1920,
+  "static_layers": [
+    "03_ombres_contact",
+    "04_rochers_arriere",
+    "05_rochers_avant",
+    "06_galet_decale",
+    "07_chaussee_surface",
+    "08_chaussee_rebords"
+  ],
+  "animation_groups": [
+    "01_eau_palette_cycling",
+    "02_courants_aspiration",
+    "03_spirales_siphons",
+    "04_ecume_bordures",
+    "09_reflets_rochers"
+  ],
+  "render_order": [
+    "01_eau_palette_cycling",
+    "02_courants_aspiration",
+    "03_spirales_siphons",
+    "04_ecume_bordures",
+    "03_ombres_contact",
+    "04_rochers_arriere",
+    "05_rochers_avant",
+    "06_galet_decale",
+    "07_chaussee_surface",
+    "08_chaussee_rebords",
+    "09_reflets_rochers"
+  ],
+  "destination": {
+    "main_whirlpool_center": [
+      231,
+      144
+    ],
+    "landing_top_y": 176,
+    "safe_approach_mask": "masque_approche_sud_palier.png"
+  },
+  "motion": {
+    "clockwise_inward_streamlets": 309,
+    "particle_periods_ms": [
+      1920,
+      960,
+      640
+    ],
+    "spiral_period_ms": 240,
+    "native_six_pose_cycle_accelerated_ms": 240,
+    "palette_entries": 24,
+    "palette_shift_per_frame": 2,
+    "wet_foam_period_ms": 240
+  },
+  "tests": {
+    "opaque_all_frames": true,
+    "ora_exact": true,
+    "south_to_landing_connected_24px_interior": true,
+    "water_hidden_beneath_dry_causeway": true,
+    "all_48_png_compositions_recompose": true,
+    "48_unique_full_frames": true,
+    "dry_walking_interior_unchanged_in_every_frame": true,
+    "palette_color_set_fixed_indices_cycle": true,
+    "streamlet_radius_strictly_decreases_before_respawn": true
+  },
+  "runtime_pmdo_validated": false
+}

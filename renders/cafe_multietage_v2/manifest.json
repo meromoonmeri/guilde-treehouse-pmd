@@ -1,0 +1,652 @@
+{
+  "levels": [
+    {
+      "id": "A_ss2",
+      "variant": "A",
+      "floor_id": "ss2",
+      "title": "Sous-sol −2",
+      "family": "Spinda",
+      "size": [
+        728,
+        472
+      ],
+      "extension": [
+        32,
+        16
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 0,
+      "window_boxes": [],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            364,
+            380
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            280,
+            320,
+            416,
+            408
+          ],
+          "destination_box": [
+            296,
+            336,
+            432,
+            424
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "A/ss2"
+    },
+    {
+      "id": "A_ss1",
+      "variant": "A",
+      "floor_id": "ss1",
+      "title": "Sous-sol −1",
+      "family": "Spinda",
+      "size": [
+        728,
+        472
+      ],
+      "extension": [
+        32,
+        16
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 0,
+      "window_boxes": [],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            364,
+            380
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            280,
+            320,
+            416,
+            408
+          ],
+          "destination_box": [
+            296,
+            336,
+            432,
+            424
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "A/ss1"
+    },
+    {
+      "id": "A_accueil",
+      "variant": "A",
+      "floor_id": "accueil",
+      "title": "Accueil",
+      "family": "Metano",
+      "size": [
+        488,
+        336
+      ],
+      "extension": [
+        32,
+        16
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 48,
+      "window_boxes": [
+        [
+          160,
+          32,
+          208,
+          80
+        ],
+        [
+          280,
+          32,
+          328,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            308,
+            316
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            272,
+            296,
+            344,
+            336
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "A/accueil"
+    },
+    {
+      "id": "A_etage1",
+      "variant": "A",
+      "floor_id": "etage1",
+      "title": "Étage +1",
+      "family": "Metano",
+      "size": [
+        488,
+        336
+      ],
+      "extension": [
+        32,
+        16
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 48,
+      "window_boxes": [
+        [
+          96,
+          32,
+          144,
+          80
+        ],
+        [
+          224,
+          32,
+          272,
+          80
+        ],
+        [
+          336,
+          32,
+          384,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            308,
+            316
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            272,
+            296,
+            344,
+            336
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "A/etage1"
+    },
+    {
+      "id": "A_etage2",
+      "variant": "A",
+      "floor_id": "etage2",
+      "title": "Étage +2",
+      "family": "Metano",
+      "size": [
+        488,
+        336
+      ],
+      "extension": [
+        32,
+        16
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 32,
+      "window_boxes": [
+        [
+          168,
+          48,
+          200,
+          80
+        ],
+        [
+          288,
+          48,
+          320,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            308,
+            316
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            272,
+            296,
+            344,
+            336
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "A/etage2"
+    },
+    {
+      "id": "B_ss2",
+      "variant": "B",
+      "floor_id": "ss2",
+      "title": "Sous-sol −2",
+      "family": "Spinda",
+      "size": [
+        744,
+        480
+      ],
+      "extension": [
+        48,
+        24
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 0,
+      "window_boxes": [],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            372,
+            388
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            280,
+            320,
+            416,
+            408
+          ],
+          "destination_box": [
+            304,
+            344,
+            440,
+            432
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "B/ss2"
+    },
+    {
+      "id": "B_ss1",
+      "variant": "B",
+      "floor_id": "ss1",
+      "title": "Sous-sol −1",
+      "family": "Spinda",
+      "size": [
+        744,
+        480
+      ],
+      "extension": [
+        48,
+        24
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 0,
+      "window_boxes": [],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            372,
+            388
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            280,
+            320,
+            416,
+            408
+          ],
+          "destination_box": [
+            304,
+            344,
+            440,
+            432
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "B/ss1"
+    },
+    {
+      "id": "B_accueil",
+      "variant": "B",
+      "floor_id": "accueil",
+      "title": "Accueil",
+      "family": "Metano",
+      "size": [
+        504,
+        344
+      ],
+      "extension": [
+        48,
+        24
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 48,
+      "window_boxes": [
+        [
+          168,
+          32,
+          216,
+          80
+        ],
+        [
+          288,
+          32,
+          336,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            316,
+            324
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            280,
+            304,
+            352,
+            344
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "B/accueil"
+    },
+    {
+      "id": "B_etage1",
+      "variant": "B",
+      "floor_id": "etage1",
+      "title": "Étage +1",
+      "family": "Metano",
+      "size": [
+        504,
+        344
+      ],
+      "extension": [
+        48,
+        24
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 48,
+      "window_boxes": [
+        [
+          112,
+          32,
+          160,
+          80
+        ],
+        [
+          224,
+          32,
+          272,
+          80
+        ],
+        [
+          352,
+          32,
+          400,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            316,
+            324
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            280,
+            304,
+            352,
+            344
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "B/etage1"
+    },
+    {
+      "id": "B_etage2",
+      "variant": "B",
+      "floor_id": "etage2",
+      "title": "Étage +2",
+      "family": "Metano",
+      "size": [
+        504,
+        344
+      ],
+      "extension": [
+        48,
+        24
+      ],
+      "window_shape": "circular",
+      "bay_windows": false,
+      "window_diameter": 32,
+      "window_boxes": [
+        [
+          176,
+          48,
+          208,
+          80
+        ],
+        [
+          296,
+          48,
+          328,
+          80
+        ]
+      ],
+      "connections": [
+        {
+          "direction": "accès original",
+          "xy": [
+            316,
+            324
+          ],
+          "target": "extérieur / seuil canonique",
+          "source_box": [
+            256,
+            280,
+            328,
+            320
+          ],
+          "destination_box": [
+            280,
+            304,
+            352,
+            344
+          ]
+        }
+      ],
+      "layers": [
+        "00_fond_canonique",
+        "01_sol_vide",
+        "03_bois_murs",
+        "04_bordure_rocheuse",
+        "05_cadres_fenetres",
+        "06_escaliers"
+      ],
+      "path": "B/etage2"
+    }
+  ],
+  "materials": {
+    "plancher": {
+      "file": "Metano_Town_Cafe_Base.png",
+      "box": [
+        128,
+        160,
+        192,
+        224
+      ],
+      "rgba_sha256": "18e6cf0b0c3c67c794e8b4b8f7743039b9274c8baf73df6963967e493e15c0c5"
+    },
+    "panneau_bois": {
+      "file": "Metano_Town_Cafe_Base.png",
+      "box": [
+        128,
+        48,
+        160,
+        80
+      ],
+      "rgba_sha256": "e39467ac8999299fc86e24d99187736ef18fcb1b121d0f7bf033083562209941"
+    },
+    "montant": {
+      "file": "Metano_Town_Cafe_Base.png",
+      "box": [
+        104,
+        48,
+        112,
+        80
+      ],
+      "rgba_sha256": "4fc8b4c31ec03bd22987c2e341bc81742b9c63e57b7785d38bae76c4ceef7d32"
+    },
+    "traverse": {
+      "file": "Metano_Town_Cafe_Base.png",
+      "box": [
+        120,
+        80,
+        152,
+        88
+      ],
+      "rgba_sha256": "798795bea49c1af1eb82106a1cd37c4fd9b687b8a685a20a118a6bd8aa63d3a3"
+    },
+    "escalier": {
+      "file": "SpindaCafe1.png",
+      "box": [
+        320,
+        336,
+        384,
+        392
+      ],
+      "rgba_sha256": "10afdb7187614e8de21ec26e19195600a17abb64d55f70e997d4b81211a857c5"
+    }
+  },
+  "window_views": "232233.png, paysage canonique fourni précédemment; fenêtres = nouveaux assemblages de poutres natives",
+  "native_texture_scale": 1,
+  "grid_px": 8,
+  "runtime_validated": false,
+  "furniture": false,
+  "access_policy": "Original threshold and its lighting copied without resizing; no invented floor links"
+}

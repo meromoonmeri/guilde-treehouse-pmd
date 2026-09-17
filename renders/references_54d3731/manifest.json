@@ -1,0 +1,286 @@
+{
+  "reference_commit": "54d3731",
+  "static": true,
+  "scenes": [
+    {
+      "id": "01_murky_entree",
+      "title": "Entree forestiere verte",
+      "size": [
+        400,
+        320
+      ],
+      "raw": "01_murky_entree_corrigee.png",
+      "layers": {
+        "jour": [
+          "05_sol_visible",
+          "06_roche_et_racines_arriere",
+          "07_feuillage_avant",
+          "08_grotte_axiale"
+        ],
+        "nuit": [
+          "05_sol_visible",
+          "06_roche_et_racines_arriere",
+          "07_feuillage_avant",
+          "08_grotte_axiale"
+        ]
+      },
+      "notes": [
+        "Grotte dans axe du chemin, vert/terre brun, aucun decor ajoute volontairement."
+      ]
+    },
+    {
+      "id": "02_murky_clairiere",
+      "title": "Clairiere de Murky Forest",
+      "size": [
+        336,
+        500
+      ],
+      "raw": "02_murky_clairiere.png",
+      "layers": {
+        "jour": [
+          "05_sol_visible",
+          "06_roche_et_racines_arriere",
+          "07_feuillage_avant",
+          "08_racines_du_fond"
+        ],
+        "nuit": [
+          "05_sol_visible",
+          "06_roche_et_racines_arriere",
+          "07_feuillage_avant",
+          "08_racines_du_fond"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "03_armaldo_interieur",
+      "title": "Interieur Armaldo",
+      "size": [
+        480,
+        320
+      ],
+      "raw": "03_armaldo_interieur.png",
+      "layers": {
+        "jour": [
+          "05_sol_de_la_piece",
+          "06_parois_racines_arriere",
+          "07_parois_avant",
+          "08_foyer_non_anime",
+          "09_mobilier_et_raccords"
+        ],
+        "nuit": [
+          "05_sol_de_la_piece",
+          "06_parois_racines_arriere",
+          "07_parois_avant",
+          "08_foyer_non_anime",
+          "09_mobilier_et_raccords"
+        ]
+      },
+      "notes": [
+        "Interieur: variante source + nuit, aucun astre ajoute a la piece."
+      ]
+    },
+    {
+      "id": "04_plage",
+      "title": "Plage",
+      "size": [
+        768,
+        432
+      ],
+      "raw": "04_plage.png",
+      "layers": {
+        "jour": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "05_sable_visible",
+          "06_rochers_arriere",
+          "07_rochers_palmiers_avant",
+          "08_mer_et_ecume_fixe"
+        ],
+        "nuit": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "05_sable_visible",
+          "06_rochers_arriere",
+          "07_rochers_palmiers_avant",
+          "08_mer_et_ecume_fixe"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "05_chemin_plage",
+      "title": "Chemin vers la plage",
+      "size": [
+        400,
+        400
+      ],
+      "raw": "05_chemin_plage.png",
+      "layers": {
+        "jour": [
+          "05_chemin_et_sol_visible",
+          "06_arbres_arriere",
+          "07_arbres_et_rochers_avant"
+        ],
+        "nuit": [
+          "05_chemin_et_sol_visible",
+          "06_arbres_arriere",
+          "07_arbres_et_rochers_avant"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "06_mont_foudre",
+      "title": "Mont Foudre - arene",
+      "size": [
+        432,
+        352
+      ],
+      "raw": "06_mont_foudre.png",
+      "layers": {
+        "jour": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "04_nuages_arriere",
+          "05_arene_centrale",
+          "06_rochers_et_aiguilles",
+          "07_paroi_du_plateau",
+          "12_nuages_avant"
+        ],
+        "nuit": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "04_nuages_arriere",
+          "05_arene_centrale",
+          "06_rochers_et_aiguilles",
+          "07_paroi_du_plateau",
+          "12_nuages_avant"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "07_foret_energetique",
+      "title": "Lisiere - foret energetique",
+      "size": [
+        480,
+        336
+      ],
+      "raw": "07_foret_energetique_entree.png",
+      "layers": {
+        "jour": [
+          "05_clairiere_et_chemin",
+          "06_troncs_arriere",
+          "07_feuillage_avant",
+          "08_passage_entre_racines"
+        ],
+        "nuit": [
+          "05_clairiere_et_chemin",
+          "06_troncs_arriere",
+          "07_feuillage_avant",
+          "08_passage_entre_racines"
+        ]
+      },
+      "notes": [
+        "Friend Area convertie en entree naturelle; aucun batiment ni pont ajoute."
+      ]
+    },
+    {
+      "id": "08_foret_champignons",
+      "title": "Entree du sous-bois champignon",
+      "size": [
+        456,
+        360
+      ],
+      "raw": "08_foret_champignons_entree.png",
+      "layers": {
+        "jour": [
+          "05_clairiere_visible",
+          "06_grands_champignons_arriere",
+          "07_champignons_avant",
+          "08_entree_sous_le_chapeau",
+          "09_tronc_couche"
+        ],
+        "nuit": [
+          "05_clairiere_visible",
+          "06_grands_champignons_arriere",
+          "07_champignons_avant",
+          "08_entree_sous_le_chapeau",
+          "09_tronc_couche"
+        ]
+      },
+      "notes": [
+        "Friend Area convertie en entree naturelle; aucun batiment ni pont ajoute."
+      ]
+    },
+    {
+      "id": "09_lac_cascade",
+      "title": "Grotte derriere la cascade",
+      "size": [
+        456,
+        304
+      ],
+      "raw": "09_lac_cascade_entree.png",
+      "layers": {
+        "jour": [
+          "05_eau_du_lac_fixe",
+          "06_berge_rocheuse_arriere",
+          "07_arbres_berges_avant",
+          "08_grotte_derriere_cascade",
+          "09_rideau_eau_ecume_fixe",
+          "10_ilot_central"
+        ],
+        "nuit": [
+          "05_eau_du_lac_fixe",
+          "06_berge_rocheuse_arriere",
+          "07_arbres_berges_avant",
+          "08_grotte_derriere_cascade",
+          "09_rideau_eau_ecume_fixe",
+          "10_ilot_central"
+        ]
+      },
+      "notes": [
+        "Friend Area convertie en entree naturelle; aucun batiment ni pont ajoute.",
+        "Acces a la grotte depuis le lac: navigation non definie, pas de collision/runtime valide."
+      ]
+    },
+    {
+      "id": "10_foret_neige",
+      "title": "Passage forestier enneige",
+      "size": [
+        456,
+        500
+      ],
+      "raw": "10_foret_neige_corrigee.png",
+      "layers": {
+        "jour": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "05_chemin_enneige",
+          "06_montagnes_et_sapins_arriere",
+          "07_sapins_avant"
+        ],
+        "nuit": [
+          "01_ciel",
+          "02_etoiles",
+          "03_lune_halo",
+          "05_chemin_enneige",
+          "06_montagnes_et_sapins_arriere",
+          "07_sapins_avant"
+        ]
+      },
+      "notes": []
+    }
+  ],
+  "notes": [
+    "10 scenes derives de 7 fichiers uniques; Energetic Forest (1) est un doublon exact.",
+    "Partitions de profondeur conservant la recomposition; surfaces masquees non reconstruites.",
+    "Versions source/jour et nuit Abyss; aucune animation ajoutee."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "01_cirque",
+  "name": "Le cirque des sources",
+  "guide": "source/zones_guidees/generateur_01.png",
+  "guide_sha256": "c903be6ac8b27f5d55f16fd1b26c817e580cbc913962eab97b33768a3b7a591c",
+  "guide_px": [
+    1200,
+    896
+  ],
+  "final_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "river_center_px": 1184,
+  "cliff_bands_px": [
+    [
+      248,
+      464
+    ],
+    [
+      616,
+      744
+    ],
+    [
+      1072,
+      1232
+    ]
+  ],
+  "method": "Generator proposal -> coherent native interior pattern + nearest canonical boundary tiles with seam reranking. Only the guide is resampled; no guide pixels enter final assets.",
+  "active_cliff_cells": 17549
+}

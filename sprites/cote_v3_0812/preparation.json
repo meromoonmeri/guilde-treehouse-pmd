@@ -1,0 +1,430 @@
+{
+  "target_pmdo": "0.8.12",
+  "serializer_version": "0.8.12.0",
+  "rock_source": {
+    "file": "source/falaises_metano/natifs/Metano_Town_Cliffs.tile",
+    "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+    "rect": [
+      912,
+      464,
+      976,
+      512
+    ],
+    "scale": 1,
+    "file_control": "METANO_ROCHE_NATIVE_64x48.png"
+  },
+  "lighting": "separate translucent layer; derived from approved macro shading, not baked into native material",
+  "runtime_tested": false,
+  "zones": [
+    {
+      "id": "01_cap_large",
+      "title": "Le grand cap",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1120,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1120,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 777,
+        "E": 69,
+        "S": 993
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "02_terrasse_croissant",
+      "title": "La terrasse en croissant",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1160,
+        904
+      ],
+      "crop": [
+        8,
+        0,
+        1168,
+        904
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 29,
+        "E": 422,
+        "S": 107
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "03_double_belvedere",
+      "title": "Le double belvédère",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1168,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 509,
+        "E": 912,
+        "S": 1168
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "04_pointe_sinueuse",
+      "title": "La pointe sinueuse",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1128,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1128,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 673,
+        "E": 174,
+        "S": 1044
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "05_grande_mesa",
+      "title": "La grande mesa",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1144,
+        904
+      ],
+      "crop": [
+        8,
+        0,
+        1152,
+        904
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 85,
+        "E": 103,
+        "S": 24
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "06_crique_profonde",
+      "title": "La crique profonde",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1128,
+        912
+      ],
+      "crop": [
+        40,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 110,
+        "E": 348,
+        "S": 451
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "07_balcon_haut",
+      "title": "Le haut balcon",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1096,
+        912
+      ],
+      "crop": [
+        72,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 126,
+        "E": 751,
+        "S": 1053
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "08_terrasses_decalees",
+      "title": "Les terrasses décalées",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1152,
+        912
+      ],
+      "crop": [
+        8,
+        0,
+        1160,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 38,
+        "E": 127,
+        "S": 996
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "09_cap_eventail",
+      "title": "Le cap en éventail",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1112,
+        912
+      ],
+      "crop": [
+        0,
+        0,
+        1112,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "W",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 892,
+        "E": 84,
+        "S": 548
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 427594,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    },
+    {
+      "id": "10_esplanade_arrondie",
+      "title": "L’esplanade arrondie",
+      "source_size": [
+        1168,
+        912
+      ],
+      "size": [
+        1136,
+        912
+      ],
+      "crop": [
+        32,
+        0,
+        1168,
+        912
+      ],
+      "exits": [
+        "W",
+        "E",
+        "S"
+      ],
+      "original_land_connections": [
+        "E",
+        "S"
+      ],
+      "edge_contact_pixels": {
+        "W": 28,
+        "E": 788,
+        "S": 1095
+      },
+      "layers": [
+        "00_HERBE.png",
+        "01_ROCHE_METANO.png",
+        "02_LISIERE.png",
+        "03_OMBRES.png"
+      ],
+      "grass_cleanup_pixels": 0,
+      "shape_differences_after_crop": 0,
+      "rock_reference_scale": 1
+    }
+  ]
+}

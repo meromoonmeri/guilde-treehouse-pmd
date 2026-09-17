@@ -1,0 +1,69 @@
+{
+  "user_commit": "3bc185bec2d5aa295f32825927db9d25bb936f75",
+  "branch": "arena/01a095e8-guilde-treehouse-pmd",
+  "inputs": [
+    {
+      "path": "IMG_4888.jpeg",
+      "size_px": [
+        3840,
+        2400
+      ],
+      "sha256": "c9c4384c39c9611084fcfb85d0da62182b05d96e3c944c28c9e0b34118a0ad4a"
+    },
+    {
+      "path": "IMG_4889.png",
+      "size_px": [
+        3840,
+        2400
+      ],
+      "sha256": "4dc288cb0253123bd28e4ecbd5982f7e0cbc3dadc24ae8b9cd7f2c690b9b76be"
+    },
+    {
+      "path": "IMG_4890.png",
+      "size_px": [
+        1384,
+        488
+      ],
+      "sha256": "f0f59c7986b48b744e2e072506ef0b45f772810f600caae83b3c75e834688d5c"
+    },
+    {
+      "path": "IMG_4892.png",
+      "size_px": [
+        1512,
+        1152
+      ],
+      "sha256": "a96c6f8e3ca5e8dc0537baca8908d01e974392aa5699fde56a556860d0808442"
+    },
+    {
+      "path": "source/falaises_generees/reference_canonique.png",
+      "size_px": [
+        1080,
+        432
+      ],
+      "sha256": "2afa395eb6492133e80af899b7d2a53c3c56b1434702d87d54aa947f278d18c7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "source/layouts_commit_3bc185b/01_promontoire_bekipan.png",
+      "size_px": [
+        1312,
+        816
+      ],
+      "sha256": "5efcc5c8f560da2d3a889ab66f8040331aa91c66df076bd9b5a76d01ba2fee9e"
+    },
+    {
+      "path": "source/layouts_commit_3bc185b/02_terrasse_campement.png",
+      "size_px": [
+        1200,
+        896
+      ],
+      "sha256": "41241e536d598b82b7e99a7c01d29fb4dad070ab808cdd6fca50bedacba19c13"
+    }
+  ],
+  "method": "Actual image-generator calls using committed layout images and Metano reference; daylight reinterpretations; camp cliff-foot correction via image edit",
+  "canonical_pixels_verified": false,
+  "native_scale_verified": false,
+  "pmdo_import_tested": false,
+  "night_variant_generated": false
+}

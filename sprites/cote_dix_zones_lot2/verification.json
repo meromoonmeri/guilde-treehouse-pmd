@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "maps": 20,
+  "new_layouts": 10,
+  "day_night_variants": 20,
+  "styled_previous_variants": 0,
+  "pmdo_runtime_tested": false,
+  "source_agent_blobs_exact": true,
+  "cloud_pixels_preserved": true,
+  "night_formula_exact": true,
+  "sea_native_frame_length": 10,
+  "cloud_speed_px_s": -4,
+  "zones": [
+    {
+      "id": "11_anses_jumelles",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "12_balcon_asymetrique",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "13_chapelet",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "14_corniches_paralleles",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "15_mesas_decalees",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "16_couronne",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "17_chenal",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "18_esplanade",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "19_eperon",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    },
+    {
+      "id": "20_marches_levant",
+      "variants": 2,
+      "tile_pixel_differences": 0,
+      "png_composition_differences": 0
+    }
+  ],
+  "limits": [
+    "GPU rounding on translucent stars not tested",
+    "native-module adaptation of the concept guide, not identical silhouettes",
+    "north/side shoreline tiles have river-blue pixels removed through alpha",
+    "new module junctions, collision and gameplay need in-engine review"
+  ],
+  "installer_index_merge_and_protection": "PASS",
+  "standalone_viewer_lossless_images": 118
+}

@@ -1,0 +1,2282 @@
+{
+  "size": [
+    456,
+    408
+  ],
+  "static_layers": [
+    "01_herbe_vast_steppe",
+    "02_chemin_sable_metano",
+    "03_ombres_contact",
+    "04_falaises_brun_clair",
+    "05_rochers_brun_clair",
+    "06_petits_rochers",
+    "10_arbre_pmd_01",
+    "10_arbre_pmd_00"
+  ],
+  "animation_groups": [
+    {
+      "name": "20_fleurs_sol_8gf",
+      "native_frame_length_game_frames": 8,
+      "files": [
+        "amp_fleurie_20_fleurs_sol_8gf_000.png",
+        "amp_fleurie_20_fleurs_sol_8gf_001.png",
+        "amp_fleurie_20_fleurs_sol_8gf_002.png",
+        "amp_fleurie_20_fleurs_sol_8gf_003.png"
+      ]
+    },
+    {
+      "name": "20_fleurs_sol_10gf",
+      "native_frame_length_game_frames": 10,
+      "files": [
+        "amp_fleurie_20_fleurs_sol_10gf_000.png",
+        "amp_fleurie_20_fleurs_sol_10gf_001.png",
+        "amp_fleurie_20_fleurs_sol_10gf_002.png",
+        "amp_fleurie_20_fleurs_sol_10gf_003.png"
+      ]
+    },
+    {
+      "name": "20_fleurs_sol_14gf",
+      "native_frame_length_game_frames": 14,
+      "files": [
+        "amp_fleurie_20_fleurs_sol_14gf_000.png",
+        "amp_fleurie_20_fleurs_sol_14gf_001.png",
+        "amp_fleurie_20_fleurs_sol_14gf_002.png",
+        "amp_fleurie_20_fleurs_sol_14gf_003.png"
+      ]
+    },
+    {
+      "name": "21_floraison_arbres_8gf",
+      "native_frame_length_game_frames": 8,
+      "files": [
+        "amp_fleurie_21_floraison_arbres_8gf_000.png",
+        "amp_fleurie_21_floraison_arbres_8gf_001.png",
+        "amp_fleurie_21_floraison_arbres_8gf_002.png",
+        "amp_fleurie_21_floraison_arbres_8gf_003.png"
+      ]
+    },
+    {
+      "name": "21_floraison_arbres_10gf",
+      "native_frame_length_game_frames": 10,
+      "files": [
+        "amp_fleurie_21_floraison_arbres_10gf_000.png",
+        "amp_fleurie_21_floraison_arbres_10gf_001.png",
+        "amp_fleurie_21_floraison_arbres_10gf_002.png",
+        "amp_fleurie_21_floraison_arbres_10gf_003.png"
+      ]
+    },
+    {
+      "name": "21_floraison_arbres_14gf",
+      "native_frame_length_game_frames": 14,
+      "files": [
+        "amp_fleurie_21_floraison_arbres_14gf_000.png",
+        "amp_fleurie_21_floraison_arbres_14gf_001.png",
+        "amp_fleurie_21_floraison_arbres_14gf_002.png",
+        "amp_fleurie_21_floraison_arbres_14gf_003.png"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "game_frame": 0,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_000.png"
+    },
+    {
+      "game_frame": 8,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_001.png"
+    },
+    {
+      "game_frame": 10,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_002.png"
+    },
+    {
+      "game_frame": 14,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_003.png"
+    },
+    {
+      "game_frame": 16,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_004.png"
+    },
+    {
+      "game_frame": 20,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_005.png"
+    },
+    {
+      "game_frame": 24,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_006.png"
+    },
+    {
+      "game_frame": 28,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_007.png"
+    },
+    {
+      "game_frame": 30,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_008.png"
+    },
+    {
+      "game_frame": 32,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_009.png"
+    },
+    {
+      "game_frame": 40,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_010.png"
+    },
+    {
+      "game_frame": 42,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_011.png"
+    },
+    {
+      "game_frame": 48,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_012.png"
+    },
+    {
+      "game_frame": 50,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_013.png"
+    },
+    {
+      "game_frame": 56,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_014.png"
+    },
+    {
+      "game_frame": 60,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_015.png"
+    },
+    {
+      "game_frame": 64,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_016.png"
+    },
+    {
+      "game_frame": 70,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_017.png"
+    },
+    {
+      "game_frame": 72,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_018.png"
+    },
+    {
+      "game_frame": 80,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_019.png"
+    },
+    {
+      "game_frame": 84,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_020.png"
+    },
+    {
+      "game_frame": 88,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_021.png"
+    },
+    {
+      "game_frame": 90,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_022.png"
+    },
+    {
+      "game_frame": 96,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_023.png"
+    },
+    {
+      "game_frame": 98,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_024.png"
+    },
+    {
+      "game_frame": 100,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_025.png"
+    },
+    {
+      "game_frame": 104,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_026.png"
+    },
+    {
+      "game_frame": 110,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_027.png"
+    },
+    {
+      "game_frame": 112,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_028.png"
+    },
+    {
+      "game_frame": 120,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_029.png"
+    },
+    {
+      "game_frame": 126,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_030.png"
+    },
+    {
+      "game_frame": 128,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_031.png"
+    },
+    {
+      "game_frame": 130,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_032.png"
+    },
+    {
+      "game_frame": 136,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_003.png"
+    },
+    {
+      "game_frame": 140,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_033.png"
+    },
+    {
+      "game_frame": 144,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_034.png"
+    },
+    {
+      "game_frame": 150,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_035.png"
+    },
+    {
+      "game_frame": 152,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_008.png"
+    },
+    {
+      "game_frame": 154,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_036.png"
+    },
+    {
+      "game_frame": 160,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_037.png"
+    },
+    {
+      "game_frame": 168,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_001.png"
+    },
+    {
+      "game_frame": 170,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_002.png"
+    },
+    {
+      "game_frame": 176,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_038.png"
+    },
+    {
+      "game_frame": 180,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_039.png"
+    },
+    {
+      "game_frame": 182,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_005.png"
+    },
+    {
+      "game_frame": 184,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_006.png"
+    },
+    {
+      "game_frame": 190,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_040.png"
+    },
+    {
+      "game_frame": 192,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_017.png"
+    },
+    {
+      "game_frame": 196,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_009.png"
+    },
+    {
+      "game_frame": 200,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_010.png"
+    },
+    {
+      "game_frame": 208,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_020.png"
+    },
+    {
+      "game_frame": 210,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_013.png"
+    },
+    {
+      "game_frame": 216,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_041.png"
+    },
+    {
+      "game_frame": 220,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_042.png"
+    },
+    {
+      "game_frame": 224,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_016.png"
+    },
+    {
+      "game_frame": 230,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_043.png"
+    },
+    {
+      "game_frame": 232,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_044.png"
+    },
+    {
+      "game_frame": 238,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_018.png"
+    },
+    {
+      "game_frame": 240,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_019.png"
+    },
+    {
+      "game_frame": 248,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_030.png"
+    },
+    {
+      "game_frame": 250,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_045.png"
+    },
+    {
+      "game_frame": 252,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_022.png"
+    },
+    {
+      "game_frame": 256,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_023.png"
+    },
+    {
+      "game_frame": 260,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_046.png"
+    },
+    {
+      "game_frame": 264,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_033.png"
+    },
+    {
+      "game_frame": 266,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_026.png"
+    },
+    {
+      "game_frame": 270,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_027.png"
+    },
+    {
+      "game_frame": 272,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_047.png"
+    },
+    {
+      "game_frame": 280,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_029.png"
+    },
+    {
+      "game_frame": 288,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_000.png"
+    },
+    {
+      "game_frame": 290,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_048.png"
+    },
+    {
+      "game_frame": 294,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_032.png"
+    },
+    {
+      "game_frame": 296,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_003.png"
+    },
+    {
+      "game_frame": 300,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_049.png"
+    },
+    {
+      "game_frame": 304,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_005.png"
+    },
+    {
+      "game_frame": 308,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_034.png"
+    },
+    {
+      "game_frame": 310,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_035.png"
+    },
+    {
+      "game_frame": 312,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_008.png"
+    },
+    {
+      "game_frame": 320,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_050.png"
+    },
+    {
+      "game_frame": 322,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_037.png"
+    },
+    {
+      "game_frame": 328,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_011.png"
+    },
+    {
+      "game_frame": 330,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_051.png"
+    },
+    {
+      "game_frame": 336,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_038.png"
+    },
+    {
+      "game_frame": 340,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_039.png"
+    },
+    {
+      "game_frame": 344,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_015.png"
+    },
+    {
+      "game_frame": 350,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_040.png"
+    },
+    {
+      "game_frame": 352,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_017.png"
+    },
+    {
+      "game_frame": 360,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_052.png"
+    },
+    {
+      "game_frame": 364,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_010.png"
+    },
+    {
+      "game_frame": 368,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_020.png"
+    },
+    {
+      "game_frame": 370,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_053.png"
+    },
+    {
+      "game_frame": 376,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_022.png"
+    },
+    {
+      "game_frame": 378,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_041.png"
+    },
+    {
+      "game_frame": 380,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_042.png"
+    },
+    {
+      "game_frame": 384,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_025.png"
+    },
+    {
+      "game_frame": 390,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_054.png"
+    },
+    {
+      "game_frame": 392,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_044.png"
+    },
+    {
+      "game_frame": 400,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_055.png"
+    },
+    {
+      "game_frame": 406,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_019.png"
+    },
+    {
+      "game_frame": 408,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_030.png"
+    },
+    {
+      "game_frame": 410,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_045.png"
+    },
+    {
+      "game_frame": 416,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_032.png"
+    },
+    {
+      "game_frame": 420,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_046.png"
+    },
+    {
+      "game_frame": 424,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_033.png"
+    },
+    {
+      "game_frame": 430,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_056.png"
+    },
+    {
+      "game_frame": 432,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_035.png"
+    },
+    {
+      "game_frame": 434,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_047.png"
+    },
+    {
+      "game_frame": 440,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_057.png"
+    },
+    {
+      "game_frame": 448,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_000.png"
+    },
+    {
+      "game_frame": 450,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_048.png"
+    },
+    {
+      "game_frame": 456,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_002.png"
+    },
+    {
+      "game_frame": 460,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_058.png"
+    },
+    {
+      "game_frame": 462,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_049.png"
+    },
+    {
+      "game_frame": 464,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_005.png"
+    },
+    {
+      "game_frame": 470,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_059.png"
+    },
+    {
+      "game_frame": 472,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_040.png"
+    },
+    {
+      "game_frame": 476,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_008.png"
+    },
+    {
+      "game_frame": 480,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_050.png"
+    },
+    {
+      "game_frame": 488,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_010.png"
+    },
+    {
+      "game_frame": 490,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_051.png"
+    },
+    {
+      "game_frame": 496,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_013.png"
+    },
+    {
+      "game_frame": 500,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_060.png"
+    },
+    {
+      "game_frame": 504,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_015.png"
+    },
+    {
+      "game_frame": 510,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_061.png"
+    },
+    {
+      "game_frame": 512,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_043.png"
+    },
+    {
+      "game_frame": 518,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_017.png"
+    },
+    {
+      "game_frame": 520,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_052.png"
+    },
+    {
+      "game_frame": 528,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_019.png"
+    },
+    {
+      "game_frame": 530,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_004.png"
+    },
+    {
+      "game_frame": 532,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_053.png"
+    },
+    {
+      "game_frame": 536,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_022.png"
+    },
+    {
+      "game_frame": 540,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_007.png"
+    },
+    {
+      "game_frame": 544,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_046.png"
+    },
+    {
+      "game_frame": 546,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_025.png"
+    },
+    {
+      "game_frame": 550,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_054.png"
+    },
+    {
+      "game_frame": 552,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_027.png"
+    },
+    {
+      "game_frame": 560,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_055.png"
+    },
+    {
+      "game_frame": 568,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_029.png"
+    },
+    {
+      "game_frame": 570,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_014.png"
+    },
+    {
+      "game_frame": 574,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_045.png"
+    },
+    {
+      "game_frame": 576,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_032.png"
+    },
+    {
+      "game_frame": 580,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_062.png"
+    },
+    {
+      "game_frame": 584,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_049.png"
+    },
+    {
+      "game_frame": 588,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_033.png"
+    },
+    {
+      "game_frame": 590,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_056.png"
+    },
+    {
+      "game_frame": 592,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_035.png"
+    },
+    {
+      "game_frame": 600,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_021.png"
+    },
+    {
+      "game_frame": 602,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_057.png"
+    },
+    {
+      "game_frame": 608,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_037.png"
+    },
+    {
+      "game_frame": 610,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_024.png"
+    },
+    {
+      "game_frame": 616,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_002.png"
+    },
+    {
+      "game_frame": 620,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_058.png"
+    },
+    {
+      "game_frame": 624,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_039.png"
+    },
+    {
+      "game_frame": 630,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_059.png"
+    },
+    {
+      "game_frame": 632,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_040.png"
+    },
+    {
+      "game_frame": 640,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_031.png"
+    },
+    {
+      "game_frame": 644,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_050.png"
+    },
+    {
+      "game_frame": 648,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_010.png"
+    },
+    {
+      "game_frame": 650,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_063.png"
+    },
+    {
+      "game_frame": 656,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_053.png"
+    },
+    {
+      "game_frame": 658,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_013.png"
+    },
+    {
+      "game_frame": 660,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_060.png"
+    },
+    {
+      "game_frame": 664,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_042.png"
+    },
+    {
+      "game_frame": 670,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_036.png"
+    },
+    {
+      "game_frame": 672,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_043.png"
+    },
+    {
+      "game_frame": 680,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_001.png"
+    },
+    {
+      "game_frame": 686,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_052.png"
+    },
+    {
+      "game_frame": 688,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_019.png"
+    },
+    {
+      "game_frame": 690,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_004.png"
+    },
+    {
+      "game_frame": 696,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_045.png"
+    },
+    {
+      "game_frame": 700,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_007.png"
+    },
+    {
+      "game_frame": 704,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_046.png"
+    },
+    {
+      "game_frame": 710,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_009.png"
+    },
+    {
+      "game_frame": 712,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_056.png"
+    },
+    {
+      "game_frame": 714,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_027.png"
+    },
+    {
+      "game_frame": 720,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_012.png"
+    },
+    {
+      "game_frame": 728,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_029.png"
+    },
+    {
+      "game_frame": 730,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_014.png"
+    },
+    {
+      "game_frame": 736,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_048.png"
+    },
+    {
+      "game_frame": 740,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_016.png"
+    },
+    {
+      "game_frame": 742,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_062.png"
+    },
+    {
+      "game_frame": 744,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_049.png"
+    },
+    {
+      "game_frame": 750,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_018.png"
+    },
+    {
+      "game_frame": 752,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_059.png"
+    },
+    {
+      "game_frame": 756,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_035.png"
+    },
+    {
+      "game_frame": 760,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_021.png"
+    },
+    {
+      "game_frame": 768,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_050.png"
+    },
+    {
+      "game_frame": 770,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_024.png"
+    },
+    {
+      "game_frame": 776,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_051.png"
+    },
+    {
+      "game_frame": 780,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_026.png"
+    },
+    {
+      "game_frame": 784,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_039.png"
+    },
+    {
+      "game_frame": 790,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_028.png"
+    },
+    {
+      "game_frame": 792,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_061.png"
+    },
+    {
+      "game_frame": 798,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_040.png"
+    },
+    {
+      "game_frame": 800,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_031.png"
+    },
+    {
+      "game_frame": 808,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_052.png"
+    },
+    {
+      "game_frame": 810,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_003.png"
+    },
+    {
+      "game_frame": 812,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_063.png"
+    },
+    {
+      "game_frame": 816,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_053.png"
+    },
+    {
+      "game_frame": 820,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_034.png"
+    },
+    {
+      "game_frame": 824,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_007.png"
+    },
+    {
+      "game_frame": 826,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_042.png"
+    },
+    {
+      "game_frame": 830,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_036.png"
+    },
+    {
+      "game_frame": 832,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_054.png"
+    },
+    {
+      "game_frame": 840,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_001.png"
+    },
+    {
+      "game_frame": 848,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_055.png"
+    },
+    {
+      "game_frame": 850,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_038.png"
+    },
+    {
+      "game_frame": 854,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_004.png"
+    },
+    {
+      "game_frame": 856,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_045.png"
+    },
+    {
+      "game_frame": 860,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_006.png"
+    },
+    {
+      "game_frame": 864,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_062.png"
+    },
+    {
+      "game_frame": 868,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_046.png"
+    },
+    {
+      "game_frame": 870,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_009.png"
+    },
+    {
+      "game_frame": 872,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_056.png"
+    },
+    {
+      "game_frame": 880,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_020.png"
+    },
+    {
+      "game_frame": 882,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_012.png"
+    },
+    {
+      "game_frame": 888,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_057.png"
+    },
+    {
+      "game_frame": 890,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_041.png"
+    },
+    {
+      "game_frame": 896,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_048.png"
+    },
+    {
+      "game_frame": 900,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_016.png"
+    },
+    {
+      "game_frame": 904,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_058.png"
+    },
+    {
+      "game_frame": 910,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_018.png"
+    },
+    {
+      "game_frame": 912,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_059.png"
+    },
+    {
+      "game_frame": 920,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_030.png"
+    },
+    {
+      "game_frame": 924,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_021.png"
+    },
+    {
+      "game_frame": 928,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_050.png"
+    },
+    {
+      "game_frame": 930,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_023.png"
+    },
+    {
+      "game_frame": 936,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_063.png"
+    },
+    {
+      "game_frame": 938,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_051.png"
+    },
+    {
+      "game_frame": 940,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_026.png"
+    },
+    {
+      "game_frame": 944,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_060.png"
+    },
+    {
+      "game_frame": 950,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_047.png"
+    },
+    {
+      "game_frame": 952,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_061.png"
+    },
+    {
+      "game_frame": 960,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_000.png"
+    },
+    {
+      "game_frame": 966,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_031.png"
+    },
+    {
+      "game_frame": 968,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_052.png"
+    },
+    {
+      "game_frame": 970,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_003.png"
+    },
+    {
+      "game_frame": 976,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_004.png"
+    },
+    {
+      "game_frame": 980,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_034.png"
+    },
+    {
+      "game_frame": 984,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_007.png"
+    },
+    {
+      "game_frame": 990,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_008.png"
+    },
+    {
+      "game_frame": 992,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_009.png"
+    },
+    {
+      "game_frame": 994,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_054.png"
+    },
+    {
+      "game_frame": 1000,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_011.png"
+    },
+    {
+      "game_frame": 1008,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_055.png"
+    },
+    {
+      "game_frame": 1010,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_038.png"
+    },
+    {
+      "game_frame": 1016,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_014.png"
+    },
+    {
+      "game_frame": 1020,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_015.png"
+    },
+    {
+      "game_frame": 1022,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_006.png"
+    },
+    {
+      "game_frame": 1024,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_062.png"
+    },
+    {
+      "game_frame": 1030,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_017.png"
+    },
+    {
+      "game_frame": 1032,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_018.png"
+    },
+    {
+      "game_frame": 1036,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_056.png"
+    },
+    {
+      "game_frame": 1040,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_020.png"
+    },
+    {
+      "game_frame": 1048,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_021.png"
+    },
+    {
+      "game_frame": 1050,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_041.png"
+    },
+    {
+      "game_frame": 1056,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_024.png"
+    },
+    {
+      "game_frame": 1060,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_025.png"
+    },
+    {
+      "game_frame": 1064,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_058.png"
+    },
+    {
+      "game_frame": 1070,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_044.png"
+    },
+    {
+      "game_frame": 1072,
+      "duration_game_frames": 6,
+      "duration_ms": 100,
+      "png": "amp_fleurie_composition_028.png"
+    },
+    {
+      "game_frame": 1078,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_059.png"
+    },
+    {
+      "game_frame": 1080,
+      "duration_game_frames": 8,
+      "duration_ms": 133,
+      "png": "amp_fleurie_composition_030.png"
+    },
+    {
+      "game_frame": 1088,
+      "duration_game_frames": 2,
+      "duration_ms": 34,
+      "png": "amp_fleurie_composition_031.png"
+    },
+    {
+      "game_frame": 1090,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_032.png"
+    },
+    {
+      "game_frame": 1092,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_023.png"
+    },
+    {
+      "game_frame": 1096,
+      "duration_game_frames": 4,
+      "duration_ms": 66,
+      "png": "amp_fleurie_composition_063.png"
+    },
+    {
+      "game_frame": 1100,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_033.png"
+    },
+    {
+      "game_frame": 1104,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_034.png"
+    },
+    {
+      "game_frame": 1106,
+      "duration_game_frames": 4,
+      "duration_ms": 67,
+      "png": "amp_fleurie_composition_060.png"
+    },
+    {
+      "game_frame": 1110,
+      "duration_game_frames": 2,
+      "duration_ms": 33,
+      "png": "amp_fleurie_composition_047.png"
+    },
+    {
+      "game_frame": 1112,
+      "duration_game_frames": 8,
+      "duration_ms": 134,
+      "png": "amp_fleurie_composition_036.png"
+    }
+  ],
+  "loop_game_frames": 1120,
+  "loop_ms": 18667,
+  "unique_composed_pngs": 64,
+  "frame_events": 272,
+  "flower_sites": [
+    {
+      "kind": "ground",
+      "center": [
+        427,
+        379
+      ],
+      "origin": [
+        415,
+        367
+      ],
+      "clock": 8,
+      "offset": 0
+    },
+    {
+      "kind": "ground",
+      "center": [
+        386,
+        302
+      ],
+      "origin": [
+        374,
+        290
+      ],
+      "clock": 10,
+      "offset": 1
+    },
+    {
+      "kind": "ground",
+      "center": [
+        188,
+        180
+      ],
+      "origin": [
+        176,
+        168
+      ],
+      "clock": 14,
+      "offset": 2
+    },
+    {
+      "kind": "ground",
+      "center": [
+        303,
+        304
+      ],
+      "origin": [
+        291,
+        292
+      ],
+      "clock": 8,
+      "offset": 3
+    },
+    {
+      "kind": "ground",
+      "center": [
+        380,
+        350
+      ],
+      "origin": [
+        368,
+        338
+      ],
+      "clock": 10,
+      "offset": 0
+    },
+    {
+      "kind": "ground",
+      "center": [
+        25,
+        261
+      ],
+      "origin": [
+        13,
+        249
+      ],
+      "clock": 14,
+      "offset": 1
+    },
+    {
+      "kind": "ground",
+      "center": [
+        346,
+        329
+      ],
+      "origin": [
+        334,
+        317
+      ],
+      "clock": 8,
+      "offset": 2
+    },
+    {
+      "kind": "ground",
+      "center": [
+        33,
+        373
+      ],
+      "origin": [
+        21,
+        361
+      ],
+      "clock": 10,
+      "offset": 3
+    },
+    {
+      "kind": "ground",
+      "center": [
+        186,
+        225
+      ],
+      "origin": [
+        174,
+        213
+      ],
+      "clock": 14,
+      "offset": 0
+    },
+    {
+      "kind": "ground",
+      "center": [
+        276,
+        189
+      ],
+      "origin": [
+        264,
+        177
+      ],
+      "clock": 8,
+      "offset": 1
+    },
+    {
+      "kind": "ground",
+      "center": [
+        378,
+        390
+      ],
+      "origin": [
+        366,
+        378
+      ],
+      "clock": 10,
+      "offset": 2
+    },
+    {
+      "kind": "ground",
+      "center": [
+        353,
+        286
+      ],
+      "origin": [
+        341,
+        274
+      ],
+      "clock": 14,
+      "offset": 3
+    },
+    {
+      "kind": "ground",
+      "center": [
+        431,
+        224
+      ],
+      "origin": [
+        419,
+        212
+      ],
+      "clock": 8,
+      "offset": 0
+    },
+    {
+      "kind": "ground",
+      "center": [
+        187,
+        354
+      ],
+      "origin": [
+        175,
+        342
+      ],
+      "clock": 10,
+      "offset": 1
+    },
+    {
+      "kind": "ground",
+      "center": [
+        276,
+        322
+      ],
+      "origin": [
+        264,
+        310
+      ],
+      "clock": 14,
+      "offset": 2
+    },
+    {
+      "kind": "ground",
+      "center": [
+        95,
+        241
+      ],
+      "origin": [
+        83,
+        229
+      ],
+      "clock": 8,
+      "offset": 3
+    },
+    {
+      "kind": "ground",
+      "center": [
+        259,
+        261
+      ],
+      "origin": [
+        247,
+        249
+      ],
+      "clock": 10,
+      "offset": 0
+    },
+    {
+      "kind": "ground",
+      "center": [
+        261,
+        356
+      ],
+      "origin": [
+        249,
+        344
+      ],
+      "clock": 14,
+      "offset": 1
+    },
+    {
+      "kind": "ground",
+      "center": [
+        431,
+        339
+      ],
+      "origin": [
+        419,
+        327
+      ],
+      "clock": 8,
+      "offset": 2
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        90,
+        324
+      ],
+      "origin": [
+        84,
+        317
+      ],
+      "clock": 10,
+      "offset": 1
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        112,
+        318
+      ],
+      "origin": [
+        106,
+        311
+      ],
+      "clock": 14,
+      "offset": 2
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        62,
+        301
+      ],
+      "origin": [
+        56,
+        294
+      ],
+      "clock": 8,
+      "offset": 3
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        44,
+        337
+      ],
+      "origin": [
+        38,
+        330
+      ],
+      "clock": 10,
+      "offset": 0
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        26,
+        322
+      ],
+      "origin": [
+        20,
+        315
+      ],
+      "clock": 14,
+      "offset": 1
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        84,
+        300
+      ],
+      "origin": [
+        78,
+        293
+      ],
+      "clock": 8,
+      "offset": 2
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        61,
+        321
+      ],
+      "origin": [
+        55,
+        314
+      ],
+      "clock": 10,
+      "offset": 3
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        103,
+        338
+      ],
+      "origin": [
+        97,
+        331
+      ],
+      "clock": 14,
+      "offset": 0
+    },
+    {
+      "kind": "canopy",
+      "tree": 0,
+      "center": [
+        41,
+        308
+      ],
+      "origin": [
+        35,
+        301
+      ],
+      "clock": 8,
+      "offset": 1
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        345,
+        233
+      ],
+      "origin": [
+        339,
+        226
+      ],
+      "clock": 10,
+      "offset": 1
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        309,
+        236
+      ],
+      "origin": [
+        303,
+        229
+      ],
+      "clock": 14,
+      "offset": 2
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        330,
+        189
+      ],
+      "origin": [
+        324,
+        182
+      ],
+      "clock": 8,
+      "offset": 3
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        358,
+        213
+      ],
+      "origin": [
+        352,
+        206
+      ],
+      "clock": 10,
+      "offset": 0
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        365,
+        233
+      ],
+      "origin": [
+        359,
+        226
+      ],
+      "clock": 14,
+      "offset": 1
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        333,
+        215
+      ],
+      "origin": [
+        327,
+        208
+      ],
+      "clock": 8,
+      "offset": 2
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        309,
+        215
+      ],
+      "origin": [
+        303,
+        208
+      ],
+      "clock": 10,
+      "offset": 3
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        388,
+        221
+      ],
+      "origin": [
+        382,
+        214
+      ],
+      "clock": 14,
+      "offset": 0
+    },
+    {
+      "kind": "canopy",
+      "tree": 1,
+      "center": [
+        287,
+        219
+      ],
+      "origin": [
+        281,
+        212
+      ],
+      "clock": 8,
+      "offset": 1
+    }
+  ],
+  "tree_sources": [
+    {
+      "source_box": [
+        16,
+        96,
+        160,
+        216
+      ],
+      "trim_box": [
+        8,
+        16,
+        134,
+        112
+      ],
+      "origin": [
+        8,
+        277
+      ],
+      "size": [
+        126,
+        96
+      ],
+      "trunk_alpha_rebuilt": true,
+      "native_rgb_no_recolor_no_resize": true
+    },
+    {
+      "source_box": [
+        336,
+        96,
+        480,
+        216
+      ],
+      "trim_box": [
+        8,
+        8,
+        134,
+        104
+      ],
+      "origin": [
+        273,
+        181
+      ],
+      "size": [
+        126,
+        96
+      ],
+      "trunk_alpha_rebuilt": true,
+      "native_rgb_no_recolor_no_resize": true
+    }
+  ],
+  "references_commit": "1522c7a8b7a34d70078e11ed605b21d563b0dc51",
+  "source_notes": {
+    "layout": "Amp_Plains_entrance_TD.png; gray rock components recolored, two dead-tree components removed",
+    "grass": "Vast_Steppe_Base.png crop240,264–288,312 tiled, native colors",
+    "sand": "native Metano sample; generated magenta path used only as geometry guide",
+    "trees": "existing PMD sprites reused in Halcyon Vast Steppe; no AI generation, no RGB recoloring or resizing; trunk alpha isolated from grass",
+    "blossoms": "new placement of actual Vast Steppe petals on the existing canopies, not a claim that these flowering variants are untouched official sprites",
+    "flowers": "native 4-step sequence0,1,0,2 with8/10/14 game-frame clocks"
+  },
+  "tests": {
+    "opaque_all_compositions": true,
+    "ora_exact": true,
+    "central_24px_access_clear": true
+  },
+  "runtime_pmdo_validated": false
+}

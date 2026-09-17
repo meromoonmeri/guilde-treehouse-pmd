@@ -1,0 +1,33 @@
+{
+  "checks": [
+    "373 PNG décodés",
+    "10 terrains jour/nuit : filtre Abyss exact, calques 960×600",
+    "30 compositions : égalité pixel par pixel avec les calques exportés",
+    "4 animations × 64 phases : raccord cyclique sans saut numérique supérieur aux autres transitions (+25% tolérance)",
+    "Nuages : identité pixel au wrap de 960 px ; période 240 s à 4 px/s",
+    "Ciel jour : égalité exacte avec le PNG du ZIP après mise au format nearest"
+  ],
+  "cyclic_metrics": {
+    "etoiles": {
+      "mean_step_max": 0.004071245234204792,
+      "step_63_to_00": 0.003977856072984749
+    },
+    "astres/halo": {
+      "mean_step_max": 0.04965209524782134,
+      "step_63_to_00": 0.013369311683006544
+    },
+    "reflets/lune/frames": {
+      "mean_step_max": 4.761823879720889,
+      "step_63_to_00": 1.108366884899783
+    },
+    "reflets/soleil/frames": {
+      "mean_step_max": 9.347295459709716,
+      "step_63_to_00": 2.200169000482858
+    }
+  },
+  "limitations": [
+    "Pas de validation PMDO/GPU",
+    "Tests de raccord numériques, pas preuve de qualité artistique",
+    "Dessins générés non natifs, réserves visuelles documentées"
+  ]
+}

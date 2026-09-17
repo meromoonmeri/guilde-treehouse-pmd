@@ -1,0 +1,57 @@
+{
+  "status": "OK",
+  "source_blobs_verified": 7,
+  "canonical_atlas_entries_checked": 10621,
+  "source_tile_pixel_differences": 0,
+  "atlas_premultiplied_roundtrip_differences": 0,
+  "layouts": [
+    {
+      "layout": "01_rempart",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "02_paliers",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "03_terrasses",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    }
+  ],
+  "not_verified": [
+    "PMDO runtime import",
+    "Collisions and transitions",
+    "Artistic/topological continuity at all new joins",
+    "Standalone original cascade timing (10 ticks chosen; river timing verified in original map)"
+  ]
+}

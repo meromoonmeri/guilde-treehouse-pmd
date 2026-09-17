@@ -1,0 +1,103 @@
+{
+  "size": [
+    648,
+    504
+  ],
+  "frames": 64,
+  "frame_ms": 120,
+  "cycle_ms": 7680,
+  "vents": [
+    {
+      "position": [
+        291,
+        66
+      ],
+      "phase_offset": 0,
+      "max_height": 77
+    },
+    {
+      "position": [
+        379,
+        127
+      ],
+      "phase_offset": 9,
+      "max_height": 100
+    },
+    {
+      "position": [
+        251,
+        199
+      ],
+      "phase_offset": 23,
+      "max_height": 74
+    },
+    {
+      "position": [
+        186,
+        270
+      ],
+      "phase_offset": 36,
+      "max_height": 92
+    },
+    {
+      "position": [
+        344,
+        296
+      ],
+      "phase_offset": 17,
+      "max_height": 109
+    },
+    {
+      "position": [
+        282,
+        360
+      ],
+      "phase_offset": 43,
+      "max_height": 81
+    },
+    {
+      "position": [
+        416,
+        414
+      ],
+      "phase_offset": 31,
+      "max_height": 98
+    },
+    {
+      "position": [
+        343,
+        474
+      ],
+      "phase_offset": 53,
+      "max_height": 86
+    }
+  ],
+  "static_layers": [
+    "03_sol_chemin",
+    "04_rebords_rocheux",
+    "05_reliefs_sombres",
+    "06_events_volcaniques"
+  ],
+  "animation_groups": [
+    "01_lave_visqueuse",
+    "02_lueur_rives",
+    "07_colonne_00",
+    "07_colonne_01",
+    "07_colonne_02",
+    "07_colonne_03",
+    "07_colonne_04",
+    "07_colonne_05",
+    "07_colonne_06",
+    "07_colonne_07"
+  ],
+  "origin": "Generated gray terrain and flame poses keyed from magenta; new periodic advected-noise lava, no native water frames reused.",
+  "tests": {
+    "north_south_connected_24px_interior": true,
+    "all_compositions_opaque": true,
+    "ora_recomposition_exact": true,
+    "lava_mean_step": 1.2767825566762199,
+    "lava_wrap_step": 1.2843823486184598,
+    "all_64_saved_frames_recompose": true
+  },
+  "runtime_pmdo_validated": false
+}

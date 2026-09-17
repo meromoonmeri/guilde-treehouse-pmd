@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "pmdo": "0.8.12.0",
+  "ground_deserialized": 40,
+  "new_ground": 20,
+  "previous_ground": 20,
+  "assertions": [
+    "non-null native Ground",
+    "width/height",
+    "TexSize",
+    "layer count",
+    "marker count"
+  ],
+  "method": "actual PMDO DataManager.GetGround in headless Lua startup hook",
+  "graphics_constant_initialized": {
+    "DungeonTexSize": 3
+  },
+  "startup_restored": true,
+  "editor_graphics_tested": false,
+  "gpu_assets_tested": false,
+  "gameplay_tested": false
+}

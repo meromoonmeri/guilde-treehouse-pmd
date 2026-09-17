@@ -1,0 +1,103 @@
+{
+  "target": "PMDO 0.8.12 Linux x64",
+  "platform": "Linux x86_64",
+  "installed": true,
+  "executable_started": true,
+  "editor_started": false,
+  "map_opened_in_engine": false,
+  "official_release": "https://github.com/PMDCollab/PMDC/releases/tag/v0.8.12",
+  "official_asset": "https://github.com/PMDCollab/PMDC/releases/download/v0.8.12/pmdc-linux-x64.zip",
+  "asset_id": 406230348,
+  "expected_size_bytes": 77503089,
+  "attempts": [
+    {
+      "method": "curl HTTPS official release",
+      "result": "SSL_ERROR_SYSCALL on release-assets.githubusercontent.com; no archive downloaded"
+    },
+    {
+      "method": "GitHub API asset with Accept application/octet-stream",
+      "result": "Redirect to official release asset fails with EOF; zero-byte response"
+    },
+    {
+      "method": "apt-get update Debian HTTP",
+      "result": "Repository connection failures; dependency installation unavailable"
+    },
+    {
+      "method": "apt-get update Debian HTTPS using separate source file",
+      "result": "TLS handshake terminated; dependency installation unavailable"
+    },
+    {
+      "method": "RUNTIMEPMDO Git blob API download",
+      "result": "Archive retrieved; CRC and SHA-256 verified against official release digest"
+    },
+    {
+      "method": "PMDO -help",
+      "result": "PASS, exit 0"
+    },
+    {
+      "method": "PMDO -dev after base assets installation",
+      "result": "Native crash, exit 139; no editor window validated"
+    },
+    {
+      "method": "PMDO -dev with bundled LD_LIBRARY_PATH and SDL offscreen/dummy",
+      "result": "Native crash, exit 139"
+    },
+    {
+      "method": "PMDO -guide",
+      "result": "Loaded data and generated Moves/Items/Abilities guides; process timed out during encounters after 90 seconds; not a complete guide-generation test"
+    },
+    {
+      "method": "PMDO -guide -quest with headless test hook",
+      "result": "PASS 20 maps; exit 0"
+    }
+  ],
+  "available": [
+    "PMDO 0.8.12 executable and bundled .NET 8.0.26",
+    "Base assets",
+    "Actual headless Ground loader",
+    "Python image audits"
+  ],
+  "missing": [
+    "working graphical editor session",
+    "Xvfb command",
+    "confirmed graphics stack"
+  ],
+  "next_step": "Diagnose editor native crash and supply a working display/render stack. No runtime ZIP upload is needed now.",
+  "cli_source_checked": "PMDC/Program.cs at v0.8.12: -dev, -quest [folder], -asset [path], -appdata [path]",
+  "map_opened_in_engine_note": "No graphical map opening. Actual native headless Ground deserialization succeeded for 20 maps; see native_ground_deserialization.",
+  "runtime_source": {
+    "repo": "meromoonmeri/RUNTIMEPMDO",
+    "commit": "61c005e1dc9fd4eee6e6e7fcde77364de33d291e",
+    "file": "pmdc-linux-x64.zip",
+    "sha256": "c64f72afd27b96d5a870f71e44d05ee1e952909e86b9a53d0479163763c61577",
+    "matches_official_release_digest": true
+  },
+  "observed_version": "0.8.12.0",
+  "observed_dotnet": "8.0.26",
+  "base_assets": {
+    "repo": "audinowho/DumpAsset",
+    "commit": "3e767571f9dd94270b848b3a73de9bec2553a2eb",
+    "path": ".cache/pmdo-runtime/engine/PMDO",
+    "initial_missing_file": "Base/PathParams.xml",
+    "missing_base_resources_resolved": true
+  },
+  "native_ground_deserialization": {
+    "status": "PASS",
+    "count": 20,
+    "pack": "cotes_metano_abyss_0812_pmdo.zip",
+    "pack_sha256": "d1a14cdba7a0b4eae40b021fe972a1cb9c5172d498261ac45ce3a2e3eca74b43",
+    "method": "Actual PMDO binary -guide -quest with temporary Lua startup hook calling DataManager.Instance.GetGround",
+    "assertions": [
+      "non-null map",
+      "expected width/height in cells",
+      "TexSize=1",
+      "9 layers",
+      "entity layer present"
+    ],
+    "graphics_initialization_substitute": "GraphicsManager.DungeonTexSize=3 for deserialization collision-grid construction",
+    "native_graphics_resources_loaded": false,
+    "gpu_render_tested": false,
+    "main_lua_restored": true,
+    "results": "source/pmdo_runtime/ground_load_results.tsv"
+  }
+}

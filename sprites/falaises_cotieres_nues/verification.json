@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "canonical_metano_terrain": false,
+  "pmdo_runtime_tested": false,
+  "unique_export_names": true,
+  "checks": [
+    {
+      "zone": "01_promontoire",
+      "terrain_visible_generated_pixels_modified": 0,
+      "backdrop_source_recomposition_different_pixels": 0,
+      "still_composition_different_pixels": 0,
+      "sky_frames": 8,
+      "distinct_sky_positions": 5,
+      "distinct_sea_frames": 5
+    },
+    {
+      "zone": "02_terrasse",
+      "terrain_visible_generated_pixels_modified": 0,
+      "backdrop_source_recomposition_different_pixels": 0,
+      "still_composition_different_pixels": 0,
+      "sky_frames": 8,
+      "distinct_sky_positions": 5,
+      "distinct_sea_frames": 5
+    }
+  ],
+  "visual_review": "Generated terrain inspected without buildings, trees, paths, caves and props. Layouts remain approximate, not exact reproductions."
+}

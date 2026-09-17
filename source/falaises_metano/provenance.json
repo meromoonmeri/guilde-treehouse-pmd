@@ -1,0 +1,45 @@
+{
+  "reference": "Palikadude/Halcyon",
+  "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "map": "Data/Ground/metano_town.rsground",
+  "map_sha256": "4feeb2809876b580cb840ba6e1c985ed4e25a947193162073225a54150eed47f",
+  "patches_from_composed_Base_and_Cliffs_xyxy_px": {
+    "herbe": [
+      0,
+      640,
+      128,
+      768
+    ],
+    "rebord": [
+      912,
+      448,
+      976,
+      472
+    ],
+    "roche": [
+      912,
+      472,
+      976,
+      520
+    ],
+    "pied": [
+      912,
+      528,
+      976,
+      544
+    ],
+    "escalier": [
+      744,
+      432,
+      808,
+      544
+    ],
+    "sable": [
+      248,
+      32,
+      256,
+      40
+    ]
+  },
+  "method": "Textures natives échantillonnées sans redimensionnement. Géométrie des trois extensions nouvelle ; grandes parois prolongées par répétition des motifs."
+}

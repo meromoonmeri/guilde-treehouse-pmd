@@ -1,0 +1,113 @@
+{
+  "canvas": [
+    504,
+    504
+  ],
+  "layout_reference": "2cwdrrs469f61.gif au commit8b7e760",
+  "layout_change": {
+    "source_x": [
+      0,
+      142,
+      174,
+      330,
+      362,
+      503
+    ],
+    "destination_x": [
+      0,
+      136,
+      162,
+      342,
+      368,
+      503
+    ],
+    "max_horizontal_displacement_px": 12,
+    "vertical_displacement_px": 0,
+    "method": "Redistribution horizontale nearest des pixels natifs : prairie centrale élargie, relief existant conservé, aucune nouvelle terrasse"
+  },
+  "flower_frames": 32,
+  "flower_frame_ms": 50,
+  "flower_period_ms": 1600,
+  "clouds": {
+    "width": 504,
+    "far_px_s": -2,
+    "near_px_s": -6
+  },
+  "modes": [
+    {
+      "id": "aube",
+      "title": "Aube",
+      "layers": [
+        "01_ciel",
+        "02_etoiles",
+        "03_astre_halo",
+        "04a_nuages_lointains_wrap",
+        "04b_montagnes",
+        "04c_nuages_proches_wrap",
+        "05_sol_et_rebord_herbeux",
+        "06_paroi_et_rochers",
+        "07_fleurs"
+      ]
+    },
+    {
+      "id": "jour",
+      "title": "Jour",
+      "layers": [
+        "01_ciel",
+        "02_etoiles",
+        "03_astre_halo",
+        "04a_nuages_lointains_wrap",
+        "04b_montagnes",
+        "04c_nuages_proches_wrap",
+        "05_sol_et_rebord_herbeux",
+        "06_paroi_et_rochers",
+        "07_fleurs"
+      ]
+    },
+    {
+      "id": "crepuscule",
+      "title": "Crépuscule",
+      "layers": [
+        "01_ciel",
+        "02_etoiles",
+        "03_astre_halo",
+        "04a_nuages_lointains_wrap",
+        "04b_montagnes",
+        "04c_nuages_proches_wrap",
+        "05_sol_et_rebord_herbeux",
+        "06_paroi_et_rochers",
+        "07_fleurs"
+      ]
+    },
+    {
+      "id": "heure_bleue",
+      "title": "Heure bleue",
+      "layers": [
+        "01_ciel",
+        "02_etoiles",
+        "03_astre_halo",
+        "04a_nuages_lointains_wrap",
+        "04b_montagnes",
+        "04c_nuages_proches_wrap",
+        "05_sol_et_rebord_herbeux",
+        "06_paroi_et_rochers",
+        "07_fleurs"
+      ]
+    },
+    {
+      "id": "nuit",
+      "title": "Nuit",
+      "layers": [
+        "01_ciel",
+        "02_etoiles",
+        "03_astre_halo",
+        "04a_nuages_lointains_wrap",
+        "04b_montagnes",
+        "04c_nuages_proches_wrap",
+        "05_sol_et_rebord_herbeux",
+        "06_paroi_et_rochers",
+        "07_fleurs"
+      ]
+    }
+  ]
+}

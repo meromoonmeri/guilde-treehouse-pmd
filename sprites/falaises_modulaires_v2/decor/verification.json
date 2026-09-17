@@ -1,0 +1,20 @@
+{
+  "status": "OK",
+  "maps": [
+    {
+      "layout": "04_balcon",
+      "cells": 49152,
+      "phases": 4,
+      "pixel_differences": 0,
+      "water_layer_separate": true
+    }
+  ],
+  "native_atlas_roundtrip": "pixel exact",
+  "animations": 115,
+  "not_checked": [
+    "Lancement dans PMDO ou interface Tiled",
+    "Collisions et chemins praticables",
+    "Raccord à une Ground existante",
+    "Validation artistique des layouts"
+  ]
+}

@@ -4,3 +4,22 @@ __pycache__/
 .DS_Store
 .env
 .env.*
+
+.venv/
+
+# V3: reproducible intermediate/composite copies; native exports remain in the
+# standalone lossless viewer and PMDO ZIP. Keep approved sources and core layers.
+/sprites/cote_v3_0812/*/AVANT_ROCHE.png
+/sprites/cote_v3_0812/*/jour_*.png
+/sprites/cote_v3_0812/*/nuit_*.png
+
+# Native Abyss correction: PNG copies regenerate from pinned native sheets and
+# approved masks; final pixels are embedded losslessly in the viewer/native ZIP.
+/sprites/cote_v4_abyss/*/*.png
+
+# New expedition PNGs are reproducible; final pixels are in the lossless viewer
+# and native mod ZIP. Keep native masks and placement metadata in Git.
+/sprites/cote_v5_expeditions/*/0[0-5]_*.png
+/sprites/cote_v5_expeditions/*/TERRAIN.png
+/sprites/cote_v5_expeditions/*/jour_*.png
+/sprites/cote_v5_expeditions/*/nuit_*.png
