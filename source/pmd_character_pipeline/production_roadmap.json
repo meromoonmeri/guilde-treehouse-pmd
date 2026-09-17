@@ -5,7 +5,7 @@
     {
       "id": "guild_members_priority",
       "subject": "Priority audit and missing assets for the nine PMDO quest guild members",
-      "status": "Three eight-direction cycles reconstructed and first checkpoint successfully pushed; remaining guild animations still pending.",
+      "status": "Eat available for 9/9: four new eight-view candidates, two retained V5 cycles, three native single-view cycles. Art/runtime pending; 124 full32 actions remain unproduced.",
       "members": [
         "Gardevoir",
         "Farfetch’d",
@@ -35,7 +35,10 @@
         "apercu_gardevoir_eat_v2.html",
         "exports/guild_scene_recovery_v5",
         "source/guild_scene_recovery_v5",
-        "apercu_guilde_reconstruction_v5.html"
+        "apercu_guilde_reconstruction_v5.html",
+        "exports/guild_eat_all_v6",
+        "source/guild_eat_all_v6",
+        "apercu_guilde_eat_tous_v6.html"
       ],
       "portrait_progress": "14 core portraits + optional Special0 in V3: 13 V1 portraits byte-identical, targeted pixel-authored spiral from generated guide, generated applause on explicit Extra_Backgrounds slot (40,0)-(80,40). New additions not art-approved.",
       "scene_progress": {
@@ -59,7 +62,9 @@
           "remaining_project_actions_without_local_cycle": 128,
           "note": "New reconstruction after unpushed V3/V4 commits were unavailable, not byte-identical recovery."
         }
-      }
+      },
+      "current_progress": "exports/guild_eat_all_v6/production_progress.json",
+      "guild_proposals_selection": "All previously presented guild proposals retained by user: buildings/treehouse HQ and annexes, vegetation, member animations. Not approval of unseen art or runtime; structures still pending."
     },
     {
       "id": "team_dazzling_diva",

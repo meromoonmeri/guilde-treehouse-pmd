@@ -13,6 +13,12 @@ sys.path.insert(0,str(ROOT))
 from source.guild_scene_recovery_v5.build import native,points,markers,lerp,export_action,EASE,EAT_TICKS,DIRS
 MEMBERS=[('0282','Gardevoir'),('0083','Canarticho'),('0674','Pandespiègle'),('0371','Draby'),('0285','Balignon'),('0440','Ptiravi'),('0417','Pachirisu'),('0461','Dimoret'),('0186','Tarpaud')]
 NEW={'0083','0674','0461','0186'}
+NEW_TICKS={
+ '0083':[6,4,4,3,3,4,5,4,5,4,3,3,4,4,4,6],
+ '0674':[6,4,3,3,4,4,5,4,5,4,4,3,3,4,5,8],
+ '0461':[8,4,3,3,3,3,4,5,6,4,3,3,3,4,5,8],
+ '0186':[8,4,4,4,4,5,7,4,7,4,5,4,4,4,5,10],
+}
 DUCK_HEAD=[(6,2,16,15),(8,2,19,14),(10,2,21,12),(9,2,20,12),(7,1,18,12),(4,2,15,12),(3,2,14,14),(5,2,16,14)]
 DUCK_PITCH=[0,0,0,1,1,2,2,1,2,1,1,0,0,0,0,0]
 # Separate anatomy-specific, per-view trajectories. No direction is manufactured by mirroring.
@@ -189,7 +195,7 @@ def main():
   adjustments=0
   if slot in NEW:
    views=native(slot);rows,masks=duck_cycle(views) if slot=='0083' else paw_cycle(slot,views);adjustments=normalize_identical_frames(rows)
-   export_action(pack,ET.parse(base/'AnimData.xml').getroot(),'Eat',rows,EAT_TICKS);status='new_technical_candidate'
+   export_action(pack,ET.parse(base/'AnimData.xml').getroot(),'Eat',rows,NEW_TICKS[slot]);status='new_technical_candidate'
    for d,mask in enumerate(masks):Image.fromarray(np.uint8(mask)*255).save(OUT/'masks'/f'{slot}_{DIRS[d]}_protected.png')
   rows,ticks=read_action(pack);previews(slot,rows,ticks)
   check=run('sprite',pack,'dungeon');assert check['technical_precheck']=='PASS',(slot,check['errors'])
