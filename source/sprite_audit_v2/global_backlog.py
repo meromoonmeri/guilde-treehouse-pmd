@@ -90,7 +90,7 @@ def build():
     (OUT / 'backlog.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     with (OUT / 'backlog.csv').open('w', newline='') as f:
         columns = ['slot', 'name', 'canonical', 'sprite_required', 'portrait_required', 'sprite_entirely_absent', 'sprite_incomplete_upstream', 'missing_required_portraits', 'missing_reverse_portraits', 'coordination_required', 'production_state']
-        writer = csv.DictWriter(f, columns)
+        writer = csv.DictWriter(f, columns, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({k: ';'.join(row[k]) if isinstance(row[k], list) else row[k] for k in columns})
