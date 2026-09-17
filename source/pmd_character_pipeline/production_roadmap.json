@@ -3,6 +3,23 @@
   "status": "User-requested roadmap; planned entries are not completed assets or background jobs",
   "order": [
     {
+      "id": "spritecollab_all_missing",
+      "subject": "Entire SpriteCollab missing-resource catalogue",
+      "status": "Global pinned inventory built; production required in reviewed batches, not complete",
+      "paths": [
+        "exports/spritecollab_global",
+        "source/sprite_audit_v2/global_backlog.py",
+        "apercu_spritecollab_global.html"
+      ],
+      "rules": [
+        "Preserve existing native resources and credits",
+        "Review upstream pending submissions before competing work",
+        "Do not count project-only action requirements as upstream omissions",
+        "Preserve non-required slots in inventory for applicability review",
+        "Generated drafts are not approved exports"
+      ]
+    },
+    {
       "id": "dynamax_transformation",
       "subject": "Dynamax transformation animation",
       "status": "Charizard visual pilot delivered: eight transformation GIFs and eight periodic hold GIFs, 240 phases / 8 seconds each; seven transparent layers for direction D; real PMDO verification pending",
@@ -123,5 +140,5 @@
     "references": "A generator prompt and a supplied reference do not prove fidelity. Inspect the output and reject wrong forms before making directional sheets",
     "persistence": "Checkpoint and push source work and deliverables on arena/01a095e8-guilde-treehouse-pmd"
   },
-  "confirmed_missing_resource_scope": "User explicitly selected existing project queue, not wholesale creation of all missing SpriteCollab characters."
+  "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced."
 }
