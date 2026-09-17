@@ -336,3 +336,13 @@ Arène512×720, approche sud vers zone centrale/nord,8calques statiques. Aurore 
 **Distinction impérative : dessin canonique, animation NOUVELLE proposée.** Arbres complets Halcyon/DumpAsset/PMDODump inspectés, pas de cycle correspondant identifié ; `Aurora_Beam_Custom` est une attaque. Recherche enregistrée avec SHAtree, pas preuve d’absence exhaustive. L’utilisateur a été averti avant génération du mouvement. Ne pas prétendre avoir extrait le cycle original du jeu.
 
 10tests dédiésPASS : coordonnées sources, boucle fermée, pas maximal1px entre phases, alpha étoiles seulement, terrain invariant, atlas/PNG/GIF, accès central sans glace superposée. Masque neige≠collision. Pas d’import/warp/parallaxPMDO validé ; autres zones/programme guilde ouverts. Exemple arène sans grotte ajoutée, pas une entrée de donjon annoncée achevée.
+
+## Correction de méthode — rendus générés, PAS assemblage de bouts de maps
+
+L’utilisateur rejette la méthode appliquée à la dernière arène : « méthode que tu avais fais dans render genere, pas des bouts de map ». **Pour cette demande et les prochains rendus concernés, revenir à la composition générée complète, pas à une mosaïque de prélèvements même vérifiée pixel-exacte.** Les règles spécifiquement imposées à Métano restent distinctes ; ne pas généraliser leur contrainte de copie native à tous les rendus générés demandés.
+
+Pipeline retrouvé : `source/layouts_magenta_v1/WORKFLOW.md` et build.py, terrain Northern magenta. Nouveau lot `source/arene_glace_generee_v2/`, `renders/arene_glace_generee_v2/`, ZIP et `apercu_arene_glace_generee_v2.html`. Deux générations complètes : terrain cohérent sur magenta et sol sous les reliefs. Normalisation512×640, alpha/nettoyage,7calques terrain +2fond, masques, ORA éditable,128PNG animés, GIF/WebP6,4s. **Terrain redessiné référencéPMD, pas pixels natifs certifiés.** Aucun morceau de map n’est utilisé pour reconstruire le terrain de ce lot.
+
+Aurores et étoiles reprises byte-identiques du lot précédent ; dessin canonique mais mouvement original proposé, toujours PAS cycle officiel récupéré. Rendu unique reconstitué exactement par les plans ; sol caché généré, faces cachées des reliefs non complétées pour mouvements arbitraires. Les calques restent des plans éditables d’une composition, pas une banque d’objets tous indépendants.11tests dédiésPASS, JavaScript syntaxe contrôlée ; runtime/collisions non validés.
+
+Cette arène remplace la méthode terrain de `exports/ice_arena_aurora_v1`, conservée historiquement. Ne pas continuer cette méthode rejetée sous prétexte de fidélitéRGB. Les autres zones ne sont pas déclarées terminées et les validations antérieures ne sont pas effacées implicitement.

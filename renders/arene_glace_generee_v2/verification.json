@@ -1,0 +1,20 @@
+{
+  "tests_passed": 11,
+  "method": "Whole generated terrain and separately generated full floor, then layer separation. No cropped-map terrain assembly.",
+  "checks": [
+    "Two saved generated inputs with hashes",
+    "Exact recomposition of normalized keyed terrain",
+    "Disjoint visible masks cover the whole terrain",
+    "Clean generated hidden floor, no repeated source-map patches",
+    "Binary alpha and removal of magenta",
+    "Retained background animation bytes unchanged",
+    "Complete6.4second GIF loop and exact decoded delta frames",
+    "Static generated terrain invariant across phases",
+    "ORA layer recomposition matches scene phase0"
+  ],
+  "canonical_terrain_pixels": false,
+  "native_animation_cycle_recovered": false,
+  "PMDO_runtime": "NOT TESTED",
+  "art_approved": false,
+  "other_zones_complete": false
+}

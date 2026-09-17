@@ -240,5 +240,14 @@
     "portrait_identity": "All expression variants must preserve native/approved Normal facial identity and anatomy. Only natural expression movements; no facial redesign."
   },
   "confirmed_missing_resource_scope": "Latest user correction OVERRIDES previous project-only selection: ALL missing SpriteCollab creations, including forms and variants. Global inventory in exports/spritecollab_global; no claim all are produced.",
-  "active_priority": "Produce missing assets for the nine guild members first, then Team Dazzling diva animations, canonical PMDO battle launch, then canonical-texture maps. Other backlog retained."
+  "active_priority": "Produce missing assets for the nine guild members first, then Team Dazzling diva animations, canonical PMDO battle launch, then canonical-texture maps. Other backlog retained.",
+  "environment_render_method_correction": {
+    "instruction": "Use prior generated renders workflow: one coherent generated terrain on magenta, full generated floor, cleanup and aligned layers; not collages of map chunks.",
+    "current_example": "renders/arene_glace_generee_v2",
+    "terrain_native_pixel_exact": false,
+    "background_motion": "Canonical aurora artwork with retained authored motion, not an extracted official cycle",
+    "supersedes_method": "exports/ice_arena_aurora_v1 terrain assembly",
+    "scope": "Current generated environment render request; preserve separate Metano-specific canonical restrictions and prior approved assets.",
+    "all_environment_work_complete": false
+  }
 }

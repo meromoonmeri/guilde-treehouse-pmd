@@ -1,0 +1,77 @@
+{
+  "size": [
+    512,
+    640
+  ],
+  "workflow": "Whole terrain generation on magenta -> alpha cleanup -> generated full floor underlay -> aligned depth/ground/path layers -> independent background animation",
+  "previous_workflow_reference": [
+    "source/layouts_magenta_v1/WORKFLOW.md",
+    "source/layouts_magenta_v1/build.py",
+    "source/corrections_northern_v1/build.py"
+  ],
+  "terrain_origin": "NEW GENERATED DRAWING referenced to PMD materials. Not pixel-exact canonical terrain and not a collage of cropped maps.",
+  "terrain_inputs": [
+    {
+      "file": "renders/arene_glace_generee_v2/bruts/terrain_magenta.png",
+      "sha256": "5abf6e7e2f2782506790209ee6ab8b3a6c6ad1aa620c38eb16c29e1d8bcf4a5a"
+    },
+    {
+      "file": "renders/arene_glace_generee_v2/bruts/sol_complet.png",
+      "sha256": "980cda26fb2f08410177dc85f46320da7c7167ee9b751d120dd3d71d5badf7da"
+    }
+  ],
+  "normalization": "Whole generated images normalized to512x640 with nearest-neighbor; no individual map pieces pasted or tiled.",
+  "layers": [
+    {
+      "id": "01_sol_complet_genere",
+      "file": "calques/AreneGenV2_01_sol_complet_genere.png"
+    },
+    {
+      "id": "02_sol_visible",
+      "file": "calques/AreneGenV2_02_sol_visible.png"
+    },
+    {
+      "id": "03_chemin_sud",
+      "file": "calques/AreneGenV2_03_chemin_sud.png"
+    },
+    {
+      "id": "04_reliefs_arriere",
+      "file": "calques/AreneGenV2_04_reliefs_arriere.png"
+    },
+    {
+      "id": "05_reliefs_avant_gauche",
+      "file": "calques/AreneGenV2_05_reliefs_avant_gauche.png"
+    },
+    {
+      "id": "06_reliefs_avant_droit",
+      "file": "calques/AreneGenV2_06_reliefs_avant_droit.png"
+    },
+    {
+      "id": "07_petits_reliefs",
+      "file": "calques/AreneGenV2_07_petits_reliefs.png"
+    }
+  ],
+  "background_layers": [
+    "calques/AreneGenV2_00_ciel.png",
+    "calques/AreneGenV2_00b_brume_lointaine.png"
+  ],
+  "animation": {
+    "frames": 64,
+    "milliseconds": 100,
+    "seconds": 6.4,
+    "origin": "Reuse of NEW AUTHORED motion on canonical aurora art from previous batch; not a recovered official cycle.",
+    "position": [
+      120,
+      0
+    ],
+    "folders": [
+      "animation/aurores",
+      "animation/etoiles"
+    ]
+  },
+  "layer_limit": "Depth partitions of one coherent render. Hidden floor is separately generated; hidden backs/sides of relief masses are not completed for arbitrary repositioning.",
+  "supersedes": "exports/ice_arena_aurora_v1 terrain method, rejected as map-piece assembly. Old files preserved.",
+  "runtime_PMDO": "NOT TESTED",
+  "art_approved": false,
+  "other_zones_complete": false
+}
