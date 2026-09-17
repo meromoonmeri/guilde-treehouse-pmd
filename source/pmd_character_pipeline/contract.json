@@ -92,6 +92,22 @@
     },
     "blocked_subject_slots": {
       "1024/0002": "User rejected generated Stellar Terapagos expressions for inaccurate face shape and asked not to pursue them; retain native Normal/Normal^."
+    },
+    "species_expression_rules": {
+      "raichu": {
+        "applies_to": "Raichu including Mega X/Y",
+        "forbidden": [
+          "human lips",
+          "lip biting or sucking",
+          "visible teeth",
+          "human grimaces",
+          "invented facial folds"
+        ],
+        "required": "Natural rodent expressions from the Normal muzzle; pain primarily through eyelids and a small closed mouth"
+      },
+      "tirtouga": {
+        "required": "Same anatomy-lock workflow from approved Normal; preserve beak, nostril and facial outline. Native emotion-appropriate canonical backgrounds. Preserve already approved portraits."
+      }
     }
   },
   "sprite": {

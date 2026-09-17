@@ -92,8 +92,10 @@
       "preserve": "User-approved portraits V3 and canonical backgrounds, identified by approval.json; new portraits are not covered by that approval",
       "paths": [
         "source/pokemon_custom/tirtouga_v5",
-        "source/pokemon_custom/tirtouga_portraits_v4"
-      ]
+        "source/pokemon_custom/tirtouga_portraits_v4",
+        "exports/pokemon_custom/canonical_expressions_v1"
+      ],
+      "latest_portrait_batch": "canonical_expressions_v1: fixed native anatomy, natural animal expression rules, canonical emotion backgrounds. X has five new technically valid candidates; Y has three plus two blocked at16colors; Carapagos has new Pain/Worried plus six original approved portraits preserved. No art approval or final full pack."
     },
     {
       "id": "zarude",
@@ -123,7 +125,11 @@
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
       "gate": "Verify exact official form identity and anatomy; inspect existing resources and credits before creating or replacing anything. Do not infer a design from ordinary or Alolan Raichu.",
       "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_x",
-      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack."
+      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack.",
+      "latest_portrait_batch": "canonical_expressions_v1: fixed native anatomy, natural animal expression rules, canonical emotion backgrounds. X has five new technically valid candidates; Y has three plus two blocked at16colors; Carapagos has new Pain/Worried plus six original approved portraits preserved. No art approval or final full pack.",
+      "paths": [
+        "exports/pokemon_custom/canonical_expressions_v1"
+      ]
     },
     {
       "id": "mega_raichu_y",
@@ -132,7 +138,11 @@
       "scope": "Distinct form model, missing sprite animations and portraits; compatible with the Mega Evolution effect timeline",
       "gate": "Verify exact official form identity independently from X; no simple recolor presented as a separate form.",
       "reference_path": "source/pokemon_custom/next_species/references/mega_raichu_y",
-      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack."
+      "portrait_rule": "Exact native Normal facial anatomy is mandatory. Prior broad expression sheets not accepted; one constrained Happy study now generated, no art approval or final emotion pack.",
+      "latest_portrait_batch": "canonical_expressions_v1: fixed native anatomy, natural animal expression rules, canonical emotion backgrounds. X has five new technically valid candidates; Y has three plus two blocked at16colors; Carapagos has new Pain/Worried plus six original approved portraits preserved. No art approval or final full pack.",
+      "paths": [
+        "exports/pokemon_custom/canonical_expressions_v1"
+      ]
     }
   ],
   "standing_requirements": {
