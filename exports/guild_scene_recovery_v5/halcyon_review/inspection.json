@@ -1,0 +1,180 @@
+{
+  "halcyon_pin": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "engine_pin": "8b7eafafa73ff0c10b9e8fd9348559ee1b5dfe8b",
+  "gfxparams_pin": "3e767571f9dd94270b848b3a73de9bec2553a2eb",
+  "scope": "Three real Halcyon guild members, base-form first Eat sequences. Not all candidates/forms, not a runtime test.",
+  "scene_separation": "Eat: init.lua lines141-152; eating emote:154-165; independent Food_* objects:168-180.",
+  "examples": [
+    {
+      "species": 286,
+      "name": "Chapignon",
+      "engine_action": 48,
+      "internal_index": 15,
+      "base_position": 44,
+      "tile": [
+        36,
+        38
+      ],
+      "sequences": 1,
+      "first_sequence": [
+        [
+          6,
+          5,
+          6,
+          false,
+          -1,
+          -10,
+          0,
+          4
+        ],
+        [
+          7,
+          5,
+          8,
+          false,
+          -2,
+          -9,
+          0,
+          4
+        ],
+        [
+          6,
+          5,
+          6,
+          false,
+          -1,
+          -10,
+          0,
+          4
+        ],
+        [
+          0,
+          6,
+          8,
+          false,
+          1,
+          -9,
+          0,
+          4
+        ]
+      ],
+      "sha256": "653269c0058a5e33162ee5b316459a575ba60784335c479fcd6d5cf5841bfe1e",
+      "gif": "Halcyon_286_Eat.gif",
+      "visual_review": "No food drawn in the inspected four-frame sequence."
+    },
+    {
+      "species": 408,
+      "name": "Kranidos",
+      "engine_action": 48,
+      "internal_index": 15,
+      "base_position": 44,
+      "tile": [
+        26,
+        32
+      ],
+      "sequences": 1,
+      "first_sequence": [
+        [
+          3,
+          5,
+          6,
+          false,
+          -1,
+          -4,
+          0,
+          4
+        ],
+        [
+          4,
+          5,
+          8,
+          false,
+          -1,
+          -3,
+          0,
+          4
+        ],
+        [
+          5,
+          5,
+          6,
+          false,
+          -1,
+          -4,
+          0,
+          4
+        ],
+        [
+          6,
+          5,
+          8,
+          false,
+          -1,
+          -3,
+          0,
+          4
+        ]
+      ],
+      "sha256": "ebbe5d446636e0d327b295dd5bfc3b72127f216a21463e173701735001f9a4b2",
+      "gif": "Halcyon_408_Eat.gif",
+      "visual_review": "No food drawn in the inspected four-frame sequence."
+    },
+    {
+      "species": 531,
+      "name": "Nanmeouie",
+      "engine_action": 48,
+      "internal_index": 19,
+      "base_position": 44,
+      "tile": [
+        30,
+        34
+      ],
+      "sequences": 1,
+      "first_sequence": [
+        [
+          1,
+          5,
+          6,
+          false,
+          0,
+          -7,
+          0,
+          4
+        ],
+        [
+          2,
+          5,
+          8,
+          false,
+          1,
+          -7,
+          0,
+          4
+        ],
+        [
+          1,
+          5,
+          6,
+          true,
+          0,
+          -7,
+          0,
+          4
+        ],
+        [
+          2,
+          5,
+          8,
+          true,
+          -1,
+          -7,
+          0,
+          4
+        ]
+      ],
+      "sha256": "3261b84f4a02759feb16edd34b53697561ae331a2c21d1da3f532e4035f5cea7",
+      "gif": "Halcyon_531_Eat.gif",
+      "visual_review": "No food drawn in the inspected four-frame sequence."
+    }
+  ]
+}

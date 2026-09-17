@@ -5,7 +5,7 @@
     {
       "id": "guild_members_priority",
       "subject": "Priority audit and missing assets for the nine PMDO quest guild members",
-      "status": "Guild production in progress: preferred Politoed V1 preserved; two targeted portrait additions; Gardevoir/Weavile canonical cutscene packs and front-only Nod candidate. No PMDO runtime test.",
+      "status": "Three eight-direction cycles reconstructed and first checkpoint successfully pushed; remaining guild animations still pending.",
       "members": [
         "Gardevoir",
         "Farfetch’d",
@@ -19,7 +19,7 @@
       ],
       "scope": "Standard/base slots audited; cutscene/female variants inventoried separately, not selected without quest identity context",
       "priority_1": "Keep user-preferred Politoed V1/ac15d0fa; replace only Dizzy with a true spiral eye, add applause Special0 (eyes closed, mouth open). Sigh/Stunned remain absent; disliked V2 must not fill them.",
-      "priority_2": "Create genuinely missing actions with species-specific morphology, native PMD art direction and individual identity; canonical Specials are references/reuse, not substitutes. Gardevoir Eat must be refined and delicate.",
+      "priority_2": "Continue missing species-specific guild animations with complete cycles, appropriate direction coverage, GIFs and regular pushes. No baked-in food; no unrelated renamed Specials.",
       "already_available": "All nine have dungeon10; Bagon/Happiny/Pachirisu base have full32",
       "paths": [
         "exports/guild_members_audit",
@@ -32,14 +32,33 @@
         "apercu_guilde_scenes_v1.html",
         "source/guild_scene_animations_v2",
         "exports/guild_scene_animations_v2",
-        "apercu_gardevoir_eat_v2.html"
+        "apercu_gardevoir_eat_v2.html",
+        "exports/guild_scene_recovery_v5",
+        "source/guild_scene_recovery_v5",
+        "apercu_guilde_reconstruction_v5.html"
       ],
       "portrait_progress": "14 core portraits + optional Special0 in V3: 13 V1 portraits byte-identical, targeted pixel-authored spiral from generated guide, generated applause on explicit Extra_Backgrounds slot (40,0)-(80,40). New additions not art-approved.",
       "scene_progress": {
         "gardevoir": "All 14 base actions preserved plus 7 exact Cutscene actions (Special1 alias safely materialized from Cutscene Appeal) and a front-only generated/cleaned Nod candidate, 5 frames/3 drawings.",
         "weavile": "All 13 base actions preserved plus authentic Cutscene Special0/1; not renamed as generic missing actions.",
         "technical": "Both full base-plus-additions packs PASS local dungeon precheck; PMDO NOT TESTED; no global completion claim.",
-        "gardevoir_eat": "V2 front-only Eat candidate: 8 stages, generated arm/berry guide cleaned onto native anatomy, moving hand marker, full local technical precheck PASS. Other seven directions and art/runtime approval pending."
+        "gardevoir_eat": "V2 front-only Eat candidate: 8 stages, generated arm/berry guide cleaned onto native anatomy, moving hand marker, full local technical precheck PASS. Other seven directions and art/runtime approval pending.",
+        "recovery_v5": {
+          "actions": [
+            "Gardevoir Eat",
+            "Gardevoir Nod",
+            "Shroomish Eat"
+          ],
+          "directions": 8,
+          "steps_per_view": 16,
+          "cycle_gifs": 27,
+          "halcyon_reference_gifs": 3,
+          "food_in_sprite": false,
+          "first_successful_push": "adb28898",
+          "state": "technical_pass; art/runtime pending",
+          "remaining_project_actions_without_local_cycle": 128,
+          "note": "New reconstruction after unpushed V3/V4 commits were unavailable, not byte-identical recovery."
+        }
       }
     },
     {

@@ -365,7 +365,8 @@
       "rule": "Create missing actions around each species morphology, native PMD art direction and individual identity, not generic shared motions or unrelated renamed Specials.",
       "anatomy": "No invented limbs, human fingers/teeth/faces or forced humanoid choreography on nonhumanoid Pokemon. Native proportions, articulation and appendages are authoritative.",
       "motion": "Animate actual joints/appendages with anticipation, action and recovery; move body-part markers with the corresponding anatomy; preserve stable ground and contact where appropriate.",
-      "scope": "Complete species with authentic actions are preserved; do not redo Bagon, Happiny or base Pachirisu without an explicit request."
+      "scope": "Complete species with authentic actions are preserved; do not redo Bagon, Happiny or base Pachirisu without an explicit request.",
+      "food_separation": "Eat character animation must contain gesture only, without baked-in food. Halcyon dinner uses separate Eat, eating emote and Food_* scene objects; confirmed on three actual compiled Eat sequences."
     }
   },
   "gates": {
