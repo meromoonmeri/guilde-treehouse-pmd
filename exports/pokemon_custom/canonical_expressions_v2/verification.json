@@ -1,0 +1,469 @@
+{
+  "status": "generated and constrained candidates, not art-approved or PMDO-tested",
+  "subjects": {
+    "mega_raichu_x": {
+      "expressions": {
+        "Normal": {
+          "preserved_original": true,
+          "sha256": "5e4581202834d6df39fa7f514738356434286d4e09b7bac46b5fa3228f1df548"
+        },
+        "Happy": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_x_happy_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 14,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 1,
+          "visible_background_pixels_preserved": 369,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Angry": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_x_Angry_locked_v2.png",
+          "technical_status": "PASS",
+          "colors": 15,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 3,
+          "visible_background_pixels_preserved": 369,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Sad": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_x_Sad_locked_v2.png",
+          "technical_status": "PASS",
+          "colors": 14,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 5,
+          "visible_background_pixels_preserved": 369,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Surprised": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_x_Surprised_locked_v2.png",
+          "technical_status": "PASS",
+          "colors": 15,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 12,
+          "visible_background_pixels_preserved": 369,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Pain": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_x_Pain_animal_v3.png",
+          "technical_status": "PASS",
+          "colors": 14,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 2,
+          "visible_background_pixels_preserved": 369,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        }
+      },
+      "missing_required": [
+        "Worried",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "normal_sha256": "5e4581202834d6df39fa7f514738356434286d4e09b7bac46b5fa3228f1df548",
+      "face_mask": {
+        "editable": [
+          [
+            13,
+            18,
+            20,
+            25
+          ],
+          [
+            27,
+            18,
+            33,
+            25
+          ],
+          [
+            16,
+            27,
+            30,
+            31
+          ]
+        ],
+        "protected": [
+          [
+            3,
+            22,
+            13,
+            32
+          ],
+          [
+            33,
+            23,
+            36,
+            32
+          ],
+          [
+            21,
+            25,
+            26,
+            27
+          ]
+        ]
+      },
+      "background_colors_removed": [
+        [
+          119,
+          199,
+          215
+        ],
+        [
+          178,
+          221,
+          201
+        ],
+        [
+          239,
+          255,
+          200
+        ]
+      ]
+    },
+    "mega_raichu_y": {
+      "expressions": {
+        "Normal": {
+          "preserved_original": true,
+          "sha256": "5a7bb0709de9e6553acc1b1ab10c839449703ecbc51c1d615e53d376deb8ae98"
+        },
+        "Happy": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_y_happy_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 15,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 1,
+          "visible_background_pixels_preserved": 368,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Angry": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_y_Angry_locked_v2.png",
+          "technical_status": "BLOCKED_PALETTE_BUDGET",
+          "colors": 16,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 3,
+          "visible_background_pixels_preserved": 368,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Sad": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_y_Sad_locked_v2.png",
+          "technical_status": "PASS",
+          "colors": 15,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 5,
+          "visible_background_pixels_preserved": 368,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Surprised": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_y_Surprised_locked_v2.png",
+          "technical_status": "BLOCKED_PALETTE_BUDGET",
+          "colors": 16,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 12,
+          "visible_background_pixels_preserved": 368,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        },
+        "Pain": {
+          "source": "source/pokemon_custom/next_species/generation/mega_raichu_y_Pain_animal_v3.png",
+          "technical_status": "PASS",
+          "colors": 15,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 2,
+          "visible_background_pixels_preserved": 368,
+          "art_approval": false,
+          "mouth_policy": "No human lips, lip-biting or visible teeth; restricted mouth palette"
+        }
+      },
+      "missing_required": [
+        "Angry",
+        "Worried",
+        "Crying",
+        "Shouting",
+        "Teary-Eyed",
+        "Determined",
+        "Joyous",
+        "Inspired",
+        "Surprised",
+        "Dizzy",
+        "Sigh",
+        "Stunned"
+      ],
+      "normal_sha256": "5a7bb0709de9e6553acc1b1ab10c839449703ecbc51c1d615e53d376deb8ae98",
+      "face_mask": {
+        "editable": [
+          [
+            10,
+            15,
+            18,
+            21
+          ],
+          [
+            24,
+            15,
+            31,
+            21
+          ],
+          [
+            15,
+            22,
+            29,
+            27
+          ]
+        ],
+        "protected": [
+          [
+            4,
+            20,
+            14,
+            29
+          ],
+          [
+            29,
+            20,
+            35,
+            29
+          ],
+          [
+            18,
+            20,
+            24,
+            22
+          ]
+        ]
+      },
+      "background_colors_removed": [
+        [
+          125,
+          200,
+          213
+        ],
+        [
+          193,
+          223,
+          184
+        ],
+        [
+          234,
+          242,
+          186
+        ]
+      ]
+    },
+    "tirtouga": {
+      "expressions": {
+        "Angry": {
+          "preserved_original": true,
+          "sha256": "c124fd68f56db4b334e5409a780fbb050045ccc09ca400c3af0325d20558c227"
+        },
+        "Happy": {
+          "preserved_original": true,
+          "sha256": "5a186843688a243af23081e32613cb5a260265529e84da8684c33f8d9a526fcd"
+        },
+        "Normal": {
+          "preserved_original": true,
+          "sha256": "1dc67d39bb14b5bd563f7bb41b38a365800b3973fb39345feab8ca1b2ff2fbb3"
+        },
+        "Sad": {
+          "preserved_original": true,
+          "sha256": "925f74253a12208fcd366e6de7c38bf5a0146544e561107f7abf7bcdc504b153"
+        },
+        "Shouting": {
+          "preserved_original": true,
+          "sha256": "4c3edf41c2904bf7f1208a5c9222b140aaec298fd934870005299bf0fbc441b8"
+        },
+        "Surprised": {
+          "preserved_original": true,
+          "sha256": "7ce8a11d1002d91de6bc20f2bc45ccd2c90507d6010fe51c09738748047e1806"
+        },
+        "Pain": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Pain_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 12,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 2,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Worried": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Worried_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 4,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Crying": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Crying_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 6,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Teary-Eyed": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Teary-Eyed_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 8,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Determined": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Determined_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 9,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Joyous": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Joyous_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 10,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Inspired": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Inspired_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 11,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Dizzy": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Dizzy_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 12,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 13,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Sigh": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Sigh_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 12,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 16,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        },
+        "Stunned": {
+          "source": "source/pokemon_custom/next_species/generation/tirtouga_Stunned_locked_v1.png",
+          "technical_status": "PASS",
+          "colors": 13,
+          "outside_expression_subject_pixels_changed": 0,
+          "canonical_background_slot": 17,
+          "visible_background_pixels_preserved": 533,
+          "art_approval": false,
+          "mouth_policy": "Entire beak and nostril untouched; expression uses visible eye only"
+        }
+      },
+      "missing_required": [],
+      "normal_sha256": "1dc67d39bb14b5bd563f7bb41b38a365800b3973fb39345feab8ca1b2ff2fbb3",
+      "face_mask": {
+        "editable": [
+          [
+            11,
+            17,
+            19,
+            29
+          ]
+        ],
+        "protected": [
+          [
+            19,
+            0,
+            40,
+            40
+          ]
+        ]
+      },
+      "background_colors_removed": [
+        [
+          118,
+          198,
+          214
+        ],
+        [
+          177,
+          220,
+          201
+        ],
+        [
+          238,
+          254,
+          200
+        ]
+      ]
+    }
+  },
+  "canonical_template_sha256": "a2ef76f2f40063b91d46e6b1df2627c09417b36328568cca0e816c7a8ed90b4c",
+  "carapagos_full_front_precheck": {
+    "technical_precheck": "PASS",
+    "errors": [],
+    "warnings": [
+      "Expression, composition, background and asymmetrical anatomy require visual review."
+    ],
+    "measurements": {
+      "size": [
+        200,
+        160
+      ],
+      "emotions": {
+        "Normal": 13,
+        "Happy": 14,
+        "Pain": 12,
+        "Angry": 13,
+        "Worried": 13,
+        "Sad": 13,
+        "Crying": 13,
+        "Shouting": 14,
+        "Teary-Eyed": 13,
+        "Determined": 13,
+        "Joyous": 13,
+        "Inspired": 13,
+        "Surprised": 15,
+        "Dizzy": 12,
+        "Sigh": 12,
+        "Stunned": 13
+      }
+    },
+    "artistic_review": "NOT_EVALUATED",
+    "runtime_PMDO": "NOT_TESTED",
+    "SpriteCollab_acceptance": "NOT_EVALUATED"
+  },
+  "carapagos_duplicate_raster_pairs": [],
+  "carapagos_duplicate_new_subject_pairs": []
+}

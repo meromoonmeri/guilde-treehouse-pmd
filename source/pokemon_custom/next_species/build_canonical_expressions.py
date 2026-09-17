@@ -10,6 +10,7 @@ sys.path.insert(0,str(Path(__file__).parent))
 from portrait_identity import constrained_expression, PROFILES, ROOT, SRC
 
 OUT=ROOT/'exports/pokemon_custom/canonical_expressions_v1'
+GALLERY=ROOT/'apercu_expressions_canoniques_v1.html'
 CONTRACT=json.loads((ROOT/'source/pmd_character_pipeline/contract.json').read_text())
 BG=Image.open(ROOT/'template.png').convert('RGBA')
 OLD=ROOT/'exports/pokemon_custom/tirtouga_portraits_v3'
@@ -85,13 +86,16 @@ def build():
    if p.exists():
     idx=CONTRACT['portrait']['emotions'].index(emotion);sheet.paste(Image.open(p),(idx%5*40,idx//5*40))
   sheet.save(folder/'portraits_partial.png')
-  order=['Normal']+cfg['emotions'];contact=Image.new('RGB',(len(order)*160,198),(20,29,43));draw=ImageDraw.Draw(contact)
+  order=CONTRACT['portrait']['required_full'] if cfg.get('show_preserved') else ['Normal']+cfg['emotions']
+  columns=4 if cfg.get('show_preserved') else len(order)
+  contact=Image.new('RGB',(columns*160,((len(order)+columns-1)//columns)*198),(20,29,43));draw=ImageDraw.Draw(contact)
   for i,emotion in enumerate(order):
    p=folder/'portraits_individual'/f'{emotion}.png'
    if not p.exists():p=folder/'review'/f'{emotion}.png'
-   contact.paste(Image.open(p).resize((160,160),Image.Resampling.NEAREST),(i*160,24))
-   label=emotion+(' [16c / revue]' if entries[emotion].get('technical_status')=='BLOCKED_PALETTE_BUDGET' else '')
-   draw.text((i*160+6,6),label,fill='white')
+   ox=i%columns*160;oy=i//columns*198
+   contact.paste(Image.open(p).resize((160,160),Image.Resampling.NEAREST),(ox,oy+24))
+   label=emotion+(' [conserve]' if entries[emotion].get('preserved_original') else '')+(' [16c / revue]' if entries[emotion].get('technical_status')=='BLOCKED_PALETTE_BUDGET' else '')
+   draw.text((ox+6,oy+6),label,fill='white')
   contact.save(folder/'review/expressions_x4.png');rows.append((name,folder/'review/expressions_x4.png'))
   report['subjects'][name]={'expressions':entries,'missing_required':[e for e in CONTRACT['portrait']['required_full'] if not (folder/'portraits_individual'/f'{e}.png').exists()],'normal_sha256':keep['Normal.png'],'face_mask':profile,'background_colors_removed':cfg['bg']}
  assert hashlib.sha256((ROOT/'template.png').read_bytes()).hexdigest()==template_sha
@@ -101,7 +105,7 @@ def build():
  for name,p in rows:
   html+='<section><h2>'+name+'</h2><img alt="Comparaison des expressions" src="data:image/png;base64,'+base64.b64encode(p.read_bytes()).decode()+'"><p>Manquants dans ce lot : '+', '.join(report['subjects'][name]['missing_required'])+'</p></section>'
  html+='<small>La préservation des pixels hors zones d’expression et des fonds est testée ; la justesse anatomique de l’expression elle-même exige une revue visuelle. Voir exports/pokemon_custom/canonical_expressions_v1/verification.json.</small></html>'
- (ROOT/'apercu_expressions_canoniques_v1.html').write_text(html)
+ GALLERY.write_text(html)
  print(json.dumps({n:{e:v.get('technical_status','ORIGINAL_PRESERVED') for e,v in r['expressions'].items()} for n,r in report['subjects'].items()},indent=2))
 
 if __name__=='__main__':build()

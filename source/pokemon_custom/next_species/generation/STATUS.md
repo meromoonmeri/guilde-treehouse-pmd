@@ -34,3 +34,9 @@ Raichu ne doit pas avoir de lèvres humaines, se mordre la lèvre ni montrer des
 Carapagos suit désormais la même méthode depuis son Normal approuvé : nouvelles sources `tirtouga_Pain_locked_v1.png` et `tirtouga_Worried_locked_v1.png`, œil seul modifiable ; bec, narine et reste du visage natifs conservés.
 
 `build_canonical_expressions.py` produit `exports/pokemon_custom/canonical_expressions_v1/` et `apercu_expressions_canoniques_v1.html` : 12 propositions placées sur leurs fonds canoniques (10 techniquement exportables ; Angry et Surprised de Méga Y à16couleurs sont explicitement bloqués et rangés en review, pas portraits_individual). Pas de réduction silencieuse de palette qui recolorerait les traits fixes. Normal X/Y conservés ; six portraits approuvés de Carapagos copiés avec hashes identiques. Les nouveaux candidats restent non approuvés artistiquement. Les planches sont partielles, pas des packs complets. Les vues inversées ne sont pas produites.
+
+## Carapagos — huit expressions supplémentaires, méthode anatomique verrouillée
+
+Nouvelles sources individuelles : `tirtouga_{Crying,Teary-Eyed,Determined,Joyous,Inspired,Dizzy,Sigh,Stunned}_locked_v1.png`. Elles ont été assemblées dans `canonical_expressions_v2` depuis le Normal approuvé, œil seul modifiable, puis fond canonique de chaque émotion. Revue de la planche4×4 effectuée ; bec/narine et silhouette conservés hors masque. Six portraits approuvés restent inchangés. Les dix nouveaux sujets ne sont pas des copies exactes entre eux ; l’écart des seuls fonds n’est pas utilisé comme preuve de nouvelles expressions.
+
+Seize émotions de face Carapagos présentes, profil technique completPASS ; **pas** d’approbation artistique automatique, de vues inverses produites, de validation PMDO ou de soumission SpriteCollab acceptée. Raichu X/Y sont repris sans nouvelles créations dans ce lot ; les deux blocages16couleurs de Y restent ouverts. Terapagos Stellaire portraits toujours bloqué.
