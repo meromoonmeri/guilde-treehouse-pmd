@@ -1,12 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
-## Nouveau — Grotte glaciaire boréale, chemin Sud → Nord
+## Nouvelle zone glaciale — grotte au nord et aurore animée
 
-- **[Ouvrir l’aperçu animé et les calques](apercu_grotte_glaciaire_boreale_v1.html)**.
-- [Rendu, PNG, OpenRaster, masques et notice](renders/grotte_glaciaire_boreale_v1/README.md) · [archive autonome](renders/grotte_glaciaire_boreale_v1_pack.zip).
-- [Brief, build et 11 contrôles dédiés](source/grotte_glaciaire_boreale_v1/STATUS.md).
+- **[Ouvrir l’aperçu animé à calques activables](apercu_zone_glaciale_grotte_boreale_v1.html)** : nouvelle vallée glaciale, arrivée au sud, chemin vers une grotte naturelle au nord et ciel boréal animé.
+- [PNG, ORA, 16 frames, masques et notice](renders/zone_glaciale_grotte_boreale_v1/README.md) · [archive complète](renders/zone_glaciale_grotte_boreale_v1_pack.zip).
+- [Scripts de reconstruction et 53 contrôles](source/zone_glaciale_grotte_boreale_v1/STATUS.md).
 
-Nouvelle proposition **768 × 640 px** : un chemin enneigé entre au sud et rejoint le seuil d’une grotte au nord, encadrée de falaises et cristaux de glace. Le ciel nocturne est indépendant ; l’aurore possède **16 phases transparentes de 120 ms** et s’anime sur place, sans wrap ni défilement. La méthode Guilde est conservée : sources générées séparées (terrain magenta, ciel, planche d’aurores), détourage, calques de surfaces visibles, ORA, masques, aperçu et contrôles. Les sorties sont un rendu PMD inspiré, **pas** des tuiles canoniques, une Ground PMDO, des collisions ou un test moteur.
+Toile **1264 × 1008 px** (grille descriptive 8 px). Terrain et aurore sont des compositions générées sur magenta, détourées et séparées selon la méthode Guilde ; le ciel opaque, les étoiles, l’aurore, le sol, le chemin, les falaises, le cadre et la profondeur de la grotte restent indépendants. L’aurore propose 16 phases de 100 ms avec onde transversale et palette cycling, sans scroll ni wrap. **C’est un rendu multicouche à examiner, pas un tileset/Ground PMDO, une collision, un warp ou un test runtime validé.**
 
 ## Dix créations supplémentaires — contrôle Métano renforcé
 

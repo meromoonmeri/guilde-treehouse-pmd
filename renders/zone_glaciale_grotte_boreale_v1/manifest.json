@@ -1,0 +1,174 @@
+{
+  "title": "Zone glaciale — grotte boréale V1",
+  "canvas_px": [
+    1264,
+    1008
+  ],
+  "grid_px": 8,
+  "grid_cells": [
+    158,
+    126
+  ],
+  "scope": "rendu multicouche éditable; pas un tileset, Ground, collision ni import PMDO certifié",
+  "brief": "chemin praticable visuellement du sud au nord vers une grande grotte naturelle glaciaire; ciel nocturne à aurore animée",
+  "route": {
+    "from": {
+      "edge": "sud",
+      "approx_px": [
+        632,
+        1007
+      ]
+    },
+    "to": {
+      "feature": "seuil de grotte nord",
+      "approx_px": [
+        632,
+        548
+      ]
+    },
+    "minimum_geometric_half_width_px": 25,
+    "validation": "masque géométrique continu uniquement; pas une collision moteur"
+  },
+  "sources": [
+    {
+      "file": "renders/zone_glaciale_grotte_boreale_v1/bruts/terrain_grotte_glace_magenta.png",
+      "sha256": "9b8ffa233f93a8d83033a9d29f8dd5469e865cc69c14e999f03b3a058040e068",
+      "role": "composition terrain générée sur magenta"
+    },
+    {
+      "file": "renders/zone_glaciale_grotte_boreale_v1/bruts/ciel_nuit_sans_boreale.png",
+      "sha256": "0365cc858865c549ecfb086d8a20d257331b721be36212c4d242311c1458fbf8",
+      "role": "ciel opaque généré séparément"
+    },
+    {
+      "file": "renders/zone_glaciale_grotte_boreale_v1/bruts/aurore_ruban_magenta.png",
+      "sha256": "ebeb0a73e67088c29cfe2697453aa1444c7eb2d7c306a6e8cc0e9bd96330e94c",
+      "role": "dessin d'aurore généré sur magenta"
+    }
+  ],
+  "matting": {
+    "terrain": {
+      "source_size": [
+        1264,
+        848
+      ],
+      "crop": [
+        0,
+        0,
+        1264,
+        808
+      ],
+      "placement": [
+        0,
+        200
+      ],
+      "normalization": "crop vertical de 40 px de fond magenta inférieur, puis translation de 200 px pour ouvrir le ciel; aucun redimensionnement",
+      "magenta_pixels_removed": 97766,
+      "opaque_pixels": 923546
+    },
+    "sky_stars": {
+      "source_size": [
+        1264,
+        848
+      ],
+      "source_placement": [
+        0,
+        0
+      ],
+      "bottom_extension": 160,
+      "method": "différence au médian local 9×9, composantes lumineuses de 1 à 52 px au-dessus de l'horizon",
+      "star_pixels": 351,
+      "star_components": 33
+    },
+    "aurora": {
+      "source_size": [
+        1376,
+        768
+      ],
+      "crop": [
+        56,
+        0,
+        1320,
+        600
+      ],
+      "background_method": "magenta pur + composante magenta reliée aux bords; composants <56 px retirés",
+      "opaque_pixels_after_crop": 337958,
+      "kept_components": 14
+    }
+  },
+  "layers": [
+    {
+      "id": "00_ciel_nuit",
+      "file": "calques/ZoneGlacialeV1_00_ciel_nuit.png",
+      "role": "fond opaque"
+    },
+    {
+      "id": "00b_etoiles",
+      "file": "calques/ZoneGlacialeV1_00b_etoiles.png",
+      "role": "overlay transparent fixe"
+    },
+    {
+      "id": "00c_aurore",
+      "file": "animation/frames/ZoneGlacialeV1_Aurore_00.png",
+      "role": "overlay transparent animé"
+    },
+    {
+      "id": "01_sol_reconstitue",
+      "file": "calques/ZoneGlacialeV1_01_sol_reconstitue.png",
+      "role": "sol reconstitué sous relief"
+    },
+    {
+      "id": "02_sol_vallee_visible",
+      "file": "calques/ZoneGlacialeV1_02_sol_vallee_visible.png",
+      "role": "sol de vallée visible"
+    },
+    {
+      "id": "03_chemin_sud_nord",
+      "file": "calques/ZoneGlacialeV1_03_chemin_sud_nord.png",
+      "role": "chemin sud → nord"
+    },
+    {
+      "id": "04_falaise_nord_glace",
+      "file": "calques/ZoneGlacialeV1_04_falaise_nord_glace.png",
+      "role": "falaise glaciaire nord"
+    },
+    {
+      "id": "05_falaises_laterales",
+      "file": "calques/ZoneGlacialeV1_05_falaises_laterales.png",
+      "role": "falaises latérales"
+    },
+    {
+      "id": "06_encadrement_grotte",
+      "file": "calques/ZoneGlacialeV1_06_encadrement_grotte.png",
+      "role": "encadrement de grotte"
+    },
+    {
+      "id": "07_obscurite_grotte",
+      "file": "calques/ZoneGlacialeV1_07_obscurite_grotte.png",
+      "role": "profondeur de grotte"
+    },
+    {
+      "id": "08_cristaux_rochers_avant",
+      "file": "calques/ZoneGlacialeV1_08_cristaux_rochers_avant.png",
+      "role": "cristaux et rochers avant"
+    }
+  ],
+  "animation": {
+    "frames": 16,
+    "frame_ms": 100,
+    "duration_s": 1.6,
+    "movement": "onde transversale verticale par colonne; sans scroll ni wrap",
+    "formula": "dy(x,f)=round(8*sin(2π*(2x/W-f/16))+3*sin(2π*(5x/W+2f/16+0.17)))",
+    "palette_cycling": "indices fixes; rampes cyan 2..5 et violet-rose 6..9 tournent à contre-courant, période quatre",
+    "loop": "frame 16 est mathématiquement identique à frame 0 avant encodage"
+  },
+  "outputs": {
+    "composition": "COMPOSITION.png",
+    "editable_ora": "zone_glaciale_grotte_boreale_v1.ora",
+    "animation_webp": "animation/aurore_16frames.webp",
+    "viewer": "apercu_zone_glaciale_grotte_boreale_v1.html"
+  },
+  "art_approved": false,
+  "runtime_PMDO": "NOT TESTED",
+  "credits": "Références Pokémon Mystery Dungeon fournies dans le dépôt; nouveaux rendus générés à revoir artistiquement. Pokémon / Nintendo / Creatures / GAME FREAK / Chunsoft."
+}
