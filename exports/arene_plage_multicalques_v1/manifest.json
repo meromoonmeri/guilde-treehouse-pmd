@@ -1,0 +1,256 @@
+{
+  "version": "BeachArenaMulticalquesV1",
+  "title": "PMD Sky Beach Arena — Multicalques & Animated Water Palette Cycling",
+  "source": {
+    "file": "arenapmdskybeach.png",
+    "sha256": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9",
+    "dimensions": [
+      456,
+      480
+    ],
+    "method": "Canonical native pixel quilting and macro-module preservation"
+  },
+  "grid": 8,
+  "layouts": [
+    {
+      "id": "01_grande_arene_plage_ouverte",
+      "title": "Grande Arène Côtière Ouverte",
+      "description": "Vaste arène de combat circulaire en sable dégagée au centre (diamètre 240 px), flanquée de falaises rouges reculées à l’Est et à l’Ouest, avec vue sur l’océan au Nord et eau animée en palette cycling canonique sur son propre calque.",
+      "size": [
+        512,
+        512
+      ],
+      "layers": [
+        {
+          "id": "00_fond_ocean_profond",
+          "file_day": "01_grande_arene_plage_ouverte_00_fond_ocean_profond_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_00_fond_ocean_profond_nuit.png",
+          "provenance": "00_fond_ocean_profond_source.npz"
+        },
+        {
+          "id": "01_arene_sable_sol",
+          "file_day": "01_grande_arene_plage_ouverte_01_arene_sable_sol_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_01_arene_sable_sol_nuit.png",
+          "provenance": "01_arene_sable_sol_source.npz"
+        },
+        {
+          "id": "03_ecume_rivage",
+          "file_day": "01_grande_arene_plage_ouverte_03_ecume_rivage_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_03_ecume_rivage_nuit.png",
+          "provenance": "03_ecume_rivage_source.npz"
+        },
+        {
+          "id": "04_falaises_rouges_fond",
+          "file_day": "01_grande_arene_plage_ouverte_04_falaises_rouges_fond_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_04_falaises_rouges_fond_nuit.png",
+          "provenance": "04_falaises_rouges_fond_source.npz"
+        },
+        {
+          "id": "05_massifs_rocheux_lateraux",
+          "file_day": "01_grande_arene_plage_ouverte_05_massifs_rocheux_lateraux_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_05_massifs_rocheux_lateraux_nuit.png",
+          "provenance": "05_massifs_rocheux_lateraux_source.npz"
+        },
+        {
+          "id": "06_rochers_et_recifs_premier_plan",
+          "file_day": "01_grande_arene_plage_ouverte_06_rochers_et_recifs_premier_plan_jour.png",
+          "file_night": "01_grande_arene_plage_ouverte_06_rochers_et_recifs_premier_plan_nuit.png",
+          "provenance": "06_rochers_et_recifs_premier_plan_source.npz"
+        }
+      ],
+      "water_frames": [
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_00.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_01.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_02.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_03.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_04.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_05.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_06.png",
+        "01_grande_arene_plage_ouverte_02_eau_mer_frame_07.png"
+      ],
+      "composite_day": "01_grande_arene_plage_ouverte_composite_jour.png",
+      "composite_night": "01_grande_arene_plage_ouverte_composite_nuit.png",
+      "scene_gif_day": "01_grande_arene_plage_ouverte_scene_animee_jour.gif",
+      "scene_gif_night": "01_grande_arene_plage_ouverte_scene_animee_nuit.gif",
+      "water_gif": "01_grande_arene_plage_ouverte_02_eau_mer_animee_seule.gif"
+    },
+    {
+      "id": "02_defile_cotier_terrasse",
+      "title": "Défilé Côtier et Terrasse Maritime",
+      "description": "Sentier de sable sinueux longeant un défilé de falaises rouges, menant à une terrasse rocheuse surélevée au Nord-Est. L’océan s’engouffre dans une grande baie animée sur le flanc Ouest avec rouleaux de ressac en palette cycling.",
+      "size": [
+        512,
+        512
+      ],
+      "layers": [
+        {
+          "id": "00_fond_ocean_profond",
+          "file_day": "02_defile_cotier_terrasse_00_fond_ocean_profond_jour.png",
+          "file_night": "02_defile_cotier_terrasse_00_fond_ocean_profond_nuit.png",
+          "provenance": "00_fond_ocean_profond_source.npz"
+        },
+        {
+          "id": "01_arene_sable_sol",
+          "file_day": "02_defile_cotier_terrasse_01_arene_sable_sol_jour.png",
+          "file_night": "02_defile_cotier_terrasse_01_arene_sable_sol_nuit.png",
+          "provenance": "01_arene_sable_sol_source.npz"
+        },
+        {
+          "id": "03_ecume_rivage",
+          "file_day": "02_defile_cotier_terrasse_03_ecume_rivage_jour.png",
+          "file_night": "02_defile_cotier_terrasse_03_ecume_rivage_nuit.png",
+          "provenance": "03_ecume_rivage_source.npz"
+        },
+        {
+          "id": "04_falaises_rouges_fond",
+          "file_day": "02_defile_cotier_terrasse_04_falaises_rouges_fond_jour.png",
+          "file_night": "02_defile_cotier_terrasse_04_falaises_rouges_fond_nuit.png",
+          "provenance": "04_falaises_rouges_fond_source.npz"
+        },
+        {
+          "id": "05_massifs_rocheux_lateraux",
+          "file_day": "02_defile_cotier_terrasse_05_massifs_rocheux_lateraux_jour.png",
+          "file_night": "02_defile_cotier_terrasse_05_massifs_rocheux_lateraux_nuit.png",
+          "provenance": "05_massifs_rocheux_lateraux_source.npz"
+        },
+        {
+          "id": "06_rochers_et_recifs_premier_plan",
+          "file_day": "02_defile_cotier_terrasse_06_rochers_et_recifs_premier_plan_jour.png",
+          "file_night": "02_defile_cotier_terrasse_06_rochers_et_recifs_premier_plan_nuit.png",
+          "provenance": "06_rochers_et_recifs_premier_plan_source.npz"
+        }
+      ],
+      "water_frames": [
+        "02_defile_cotier_terrasse_02_eau_mer_frame_00.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_01.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_02.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_03.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_04.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_05.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_06.png",
+        "02_defile_cotier_terrasse_02_eau_mer_frame_07.png"
+      ],
+      "composite_day": "02_defile_cotier_terrasse_composite_jour.png",
+      "composite_night": "02_defile_cotier_terrasse_composite_nuit.png",
+      "scene_gif_day": "02_defile_cotier_terrasse_scene_animee_jour.gif",
+      "scene_gif_night": "02_defile_cotier_terrasse_scene_animee_nuit.gif",
+      "water_gif": "02_defile_cotier_terrasse_02_eau_mer_animee_seule.gif"
+    },
+    {
+      "id": "03_atoll_sable_double_recif",
+      "title": "Atoll de Sable et Double Récif",
+      "description": "Arène insulaire en atoll de sable au centre, baignée par la mer animée sur ses deux flancs Est et Ouest. Deux récifs côtiers jumeaux encadrent le passage, surplombés au Nord par une grande arche de falaise rouge.",
+      "size": [
+        512,
+        512
+      ],
+      "layers": [
+        {
+          "id": "00_fond_ocean_profond",
+          "file_day": "03_atoll_sable_double_recif_00_fond_ocean_profond_jour.png",
+          "file_night": "03_atoll_sable_double_recif_00_fond_ocean_profond_nuit.png",
+          "provenance": "00_fond_ocean_profond_source.npz"
+        },
+        {
+          "id": "01_arene_sable_sol",
+          "file_day": "03_atoll_sable_double_recif_01_arene_sable_sol_jour.png",
+          "file_night": "03_atoll_sable_double_recif_01_arene_sable_sol_nuit.png",
+          "provenance": "01_arene_sable_sol_source.npz"
+        },
+        {
+          "id": "03_ecume_rivage",
+          "file_day": "03_atoll_sable_double_recif_03_ecume_rivage_jour.png",
+          "file_night": "03_atoll_sable_double_recif_03_ecume_rivage_nuit.png",
+          "provenance": "03_ecume_rivage_source.npz"
+        },
+        {
+          "id": "04_falaises_rouges_fond",
+          "file_day": "03_atoll_sable_double_recif_04_falaises_rouges_fond_jour.png",
+          "file_night": "03_atoll_sable_double_recif_04_falaises_rouges_fond_nuit.png",
+          "provenance": "04_falaises_rouges_fond_source.npz"
+        },
+        {
+          "id": "05_massifs_rocheux_lateraux",
+          "file_day": "03_atoll_sable_double_recif_05_massifs_rocheux_lateraux_jour.png",
+          "file_night": "03_atoll_sable_double_recif_05_massifs_rocheux_lateraux_nuit.png",
+          "provenance": "05_massifs_rocheux_lateraux_source.npz"
+        },
+        {
+          "id": "06_rochers_et_recifs_premier_plan",
+          "file_day": "03_atoll_sable_double_recif_06_rochers_et_recifs_premier_plan_jour.png",
+          "file_night": "03_atoll_sable_double_recif_06_rochers_et_recifs_premier_plan_nuit.png",
+          "provenance": "06_rochers_et_recifs_premier_plan_source.npz"
+        }
+      ],
+      "water_frames": [
+        "03_atoll_sable_double_recif_02_eau_mer_frame_00.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_01.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_02.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_03.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_04.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_05.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_06.png",
+        "03_atoll_sable_double_recif_02_eau_mer_frame_07.png"
+      ],
+      "composite_day": "03_atoll_sable_double_recif_composite_jour.png",
+      "composite_night": "03_atoll_sable_double_recif_composite_nuit.png",
+      "scene_gif_day": "03_atoll_sable_double_recif_scene_animee_jour.gif",
+      "scene_gif_night": "03_atoll_sable_double_recif_scene_animee_nuit.gif",
+      "water_gif": "03_atoll_sable_double_recif_02_eau_mer_animee_seule.gif"
+    }
+  ],
+  "animation": {
+    "mode": "Canonical Indexed Palette Cycling (Cycling Panel)",
+    "frame_count": 8,
+    "frame_ms": 120,
+    "loop_ms": 960,
+    "cycle_colors_rgb": [
+      [
+        23,
+        63,
+        143
+      ],
+      [
+        31,
+        79,
+        151
+      ],
+      [
+        39,
+        87,
+        135
+      ],
+      [
+        31,
+        119,
+        167
+      ],
+      [
+        31,
+        135,
+        175
+      ],
+      [
+        47,
+        167,
+        215
+      ],
+      [
+        31,
+        191,
+        231
+      ],
+      [
+        55,
+        207,
+        247
+      ]
+    ],
+    "geometry_static": true,
+    "layer": "02_eau_mer_palette_cycling"
+  },
+  "grading_night": {
+    "formula": "Abyss V4 / Sharpedo exact luminance weighting"
+  },
+  "runtime": "NOT TESTED"
+}

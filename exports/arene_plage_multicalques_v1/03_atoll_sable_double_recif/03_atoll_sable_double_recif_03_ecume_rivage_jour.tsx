@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="03_atoll_sable_double_recif_03_ecume_rivage_jour" tilewidth="8" tileheight="8" columns="64" tilecount="4096"><image source="03_atoll_sable_double_recif_03_ecume_rivage_jour.png" width="512" height="512" /></tileset>

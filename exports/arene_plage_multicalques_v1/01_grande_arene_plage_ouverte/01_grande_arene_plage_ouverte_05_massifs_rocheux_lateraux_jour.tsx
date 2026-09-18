@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="01_grande_arene_plage_ouverte_05_massifs_rocheux_lateraux_jour" tilewidth="8" tileheight="8" columns="64" tilecount="4096"><image source="01_grande_arene_plage_ouverte_05_massifs_rocheux_lateraux_jour.png" width="512" height="512" /></tileset>
