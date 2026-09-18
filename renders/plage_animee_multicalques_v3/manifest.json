@@ -1,0 +1,59 @@
+{
+  "version": "PlageAnimeeMulticalquesV3",
+  "title": "PMD Sky Beach Arena — Wrap Clouds & Palette Cycling Water Multicalques",
+  "size": [
+    768,
+    512
+  ],
+  "frames": 32,
+  "frame_ms": 100,
+  "loop_ms": 3200,
+  "layers": [
+    {
+      "id": "00_ciel_pmd",
+      "file": "00_ciel_pmd_jour.png",
+      "type": "static_sky"
+    },
+    {
+      "id": "01_nuages_wrap",
+      "file": "01_nuages_wrap_jour.png",
+      "type": "wrap_clouds_overlay",
+      "period": 768,
+      "shift_per_frame": 24
+    },
+    {
+      "id": "02_eau_mer_animee",
+      "file": "02_eau_mer_animee_jour.png",
+      "type": "palette_cycling_water",
+      "cycle_colors": 8,
+      "phases": 32
+    },
+    {
+      "id": "03_ecume_rivage",
+      "file": "03_ecume_rivage_jour.png",
+      "type": "surf_foam"
+    },
+    {
+      "id": "04_sable_plage",
+      "file": "04_sable_plage_jour.png",
+      "type": "quilted_sand_arena"
+    },
+    {
+      "id": "05_falaises_et_rochers",
+      "file": "05_falaises_et_rochers_jour.png",
+      "type": "red_cliffs_over_sand"
+    },
+    {
+      "id": "06_rochers_avant_plan",
+      "file": "06_rochers_avant_plan_jour.png",
+      "type": "foreground_reefs"
+    }
+  ],
+  "outputs": {
+    "composition_png": "COMPOSITION_JOUR.png",
+    "animation_webp": "ANIMATION_WRAP.webp",
+    "scene_gif": "SCENE_ANIMEE.gif",
+    "scene_night_gif": "SCENE_ANIMEE_NUIT.gif",
+    "water_gif": "02_eau_mer_animee_seule.gif"
+  }
+}
