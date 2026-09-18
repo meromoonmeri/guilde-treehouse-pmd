@@ -414,5 +414,22 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_guide_couches_v14": {
+    "request": "Calques exacts de la référence + 15 frames de mouvement élégant : changement de couleur harmonieux des boréales, même design/texture, à la place des boréales statiques",
+    "source": "source/arene_guide_couches_v14/",
+    "viewer": "apercu_arene_guide_couches_v14.html",
+    "layers_exact": true,
+    "cristaux_sombres_au_terrain": true,
+    "recomposition_exacte": true,
+    "frames": 15,
+    "duree_ms": 120,
+    "cycle_s": 1.8,
+    "harmonieux": "interpolation lineaire circulaire des rampes, pas adjacent < saut/2",
+    "frame0_egale_guide": true,
+    "dedicated_tests": 9,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
