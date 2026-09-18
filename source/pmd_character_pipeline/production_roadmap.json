@@ -296,5 +296,23 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_pmdsky_reference_animation": {
+    "request": "Frames animées subtiles du ciel boréal PMD Sky lui-même, pas de wrap, pas de dessins nouveaux mélangés",
+    "source": "source/boreales_pmdsky_v7/",
+    "viewer": "apercu_ciel_boreal_pmdsky_v7.html",
+    "frames": 24,
+    "frame_ms": 120,
+    "cycle_s": 2.88,
+    "method": "reference image modulated: proportional luminance +/-7.5% on curtains, overlay veil +/-11%, integer-period cosines, frame0 = exact reference",
+    "no_wrap": true,
+    "no_translation": true,
+    "no_palette_global_hue": true,
+    "peaks_clouds_stars_unchanged": true,
+    "official_cycle_extracted": false,
+    "dedicated_tests": 12,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }

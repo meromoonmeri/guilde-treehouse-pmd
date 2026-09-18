@@ -1,0 +1,16 @@
+{
+  "source": "aurorepmdsky.png (reference PMD Sky fournie)",
+  "reference_sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+  "frames": 24,
+  "duree_ms": 120,
+  "cycle_s": 2.88,
+  "methode": "L'image de reference elle-meme, annee par frame : variation proportionnelle de luminosite (max ±7,5 %) sur les pixels du rideau et de voile (max ±11 %) sur l'overlay. Aucun deplacement, aucun warp, aucun wrap, aucune rotation de teinte.",
+  "frame0": "reference exacte, difference nulle",
+  "protege": "pics de glace, nuages d horizon et etoiles non modulates",
+  "overlay": "extraction alpha de la reference, voile interieur rempli (alpha 64), petites composantes enlevees, bords fondus pour la scene 768x512 (pose fixe x=120,y=0)",
+  "boucle": "toutes les modulations sont des cosinus a periodes entieres : frame 24 = frame 0",
+  "cycle_officiel": "INCONNU : timings et amplitudes choisis, subtils ; pas le cycle extrait du jeu",
+  "terrain_ciel_V3": "copies byte-identiques",
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes"
+}
