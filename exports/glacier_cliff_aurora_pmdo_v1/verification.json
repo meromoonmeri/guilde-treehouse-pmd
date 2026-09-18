@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "target": "PMDO 0.8.12.0",
+  "ground": "glacier_cliff_aurora_v1",
+  "serialized_ground": true,
+  "native_tile_byte_exact": true,
+  "native_tile_references_resolved": 1812,
+  "grid_cells": [
+    72,
+    54
+  ],
+  "dimensions_px": [
+    576,
+    432
+  ],
+  "tex_size": 3,
+  "walkable_cells": 1328,
+  "blocked_cells": 2560,
+  "wall_cells": 288,
+  "markers": [
+    "arena_seuil",
+    "entrance",
+    "entrance_sud"
+  ],
+  "entry_to_arena_path": true,
+  "canonical_backgrounds": 4,
+  "canonical_reference_hashes": true,
+  "installer_merge_idempotence_and_conflict_protection": true,
+  "runtime": {
+    "pmdo_binary_deserialization": "PASS",
+    "graphics_editor": "NOT RUN",
+    "gpu_render": "NOT RUN",
+    "collision_and_connectivity": "PASS (serialized-grid audit)"
+  },
+  "limits": [
+    "The report proves file/schema/reference/collision integrity, not a graphical PMDO session.",
+    "The aurora is a static canonical frame; no unverified official animation cycle is included.",
+    "Dungeon destination is intentionally not bound; connect arena_seuil in the host quest."
+  ]
+}

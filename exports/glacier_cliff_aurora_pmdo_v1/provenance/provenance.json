@@ -1,0 +1,382 @@
+{
+  "status": "built",
+  "pmdo_target": "0.8.12.0",
+  "ground": "glacier_cliff_aurora_v1",
+  "dimensions_px": [
+    576,
+    432
+  ],
+  "grid_cells": [
+    72,
+    54
+  ],
+  "tex_size": 3,
+  "generated_guide_not_imported": "renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png",
+  "native_tile": {
+    "source": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile",
+    "asset": "Content/Tile/VastIceMountain.tile",
+    "sha256": "b03051c74b794482acd587615f14e46b44bfda1e06190fcfc1ff76c70c2ce5a1",
+    "tile_px": 24
+  },
+  "autotiles": {
+    "floor": "source/donjons_dtef_v2/references/DumpAsset/Data/AutoTile/vast_ice_mountain_floor.json",
+    "wall": "source/donjons_dtef_v2/references/DumpAsset/Data/AutoTile/vast_ice_mountain_wall.json",
+    "secondary": "source/donjons_dtef_v2/references/DumpAsset/Data/AutoTile/vast_ice_mountain_secondary.json"
+  },
+  "backgrounds": [
+    {
+      "asset": "Content/BG/GLACIER_NIGHT_BASE.dir",
+      "png": "bgnightbackgroundpmdskyda.png",
+      "source": "bgnightbackgroundpmdskyda.png",
+      "size": [
+        456,
+        240
+      ],
+      "sha256_source": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "sha256_png": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+    },
+    {
+      "asset": "Content/BG/GLACIER_AURORA_CANONICAL.dir",
+      "png": "aurorepmdsky.png",
+      "source": "aurorepmdsky.png",
+      "size": [
+        264,
+        216
+      ],
+      "sha256_source": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "sha256_png": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "asset": "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
+      "png": "provenance/derived/iceroad_mountains_strip.png",
+      "source": "iceroadpmdsky.png",
+      "size": [
+        504,
+        96
+      ],
+      "sha256_source": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6",
+      "sha256_png": "6fbea58289df535071df6d4c30e836049af13dc943be95903928bcdfb2aa328e"
+    },
+    {
+      "asset": "Content/BG/GLACIER_SNOW_FOREST.dir",
+      "png": "provenance/derived/snow_forest_strip.png",
+      "source": "source/references_54d3731/snow.png",
+      "size": [
+        522,
+        216
+      ],
+      "sha256_source": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79",
+      "sha256_png": "d0a71fe8b822e12bf280d90a4cc5fb13e1d9026d4f2304e41a1a82b868473846"
+    }
+  ],
+  "canonical_references": {
+    "night": {
+      "path": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "size": [
+        456,
+        240
+      ]
+    },
+    "aurora": {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "size": [
+        264,
+        216
+      ]
+    },
+    "mountains": {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6",
+      "size": [
+        504,
+        360
+      ]
+    },
+    "arena_reference": {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "size": [
+        504,
+        408
+      ]
+    },
+    "forest": {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79",
+      "size": [
+        522,
+        573
+      ]
+    }
+  },
+  "layout": {
+    "floor_cells": 1328,
+    "wall_cells": 288,
+    "south_entry_cells": [
+      [
+        32,
+        42
+      ],
+      [
+        33,
+        42
+      ],
+      [
+        34,
+        42
+      ],
+      [
+        35,
+        42
+      ],
+      [
+        36,
+        42
+      ],
+      [
+        37,
+        42
+      ],
+      [
+        38,
+        42
+      ],
+      [
+        39,
+        42
+      ],
+      [
+        32,
+        43
+      ],
+      [
+        33,
+        43
+      ],
+      [
+        34,
+        43
+      ],
+      [
+        35,
+        43
+      ],
+      [
+        36,
+        43
+      ],
+      [
+        37,
+        43
+      ],
+      [
+        38,
+        43
+      ],
+      [
+        39,
+        43
+      ],
+      [
+        32,
+        44
+      ],
+      [
+        33,
+        44
+      ],
+      [
+        34,
+        44
+      ],
+      [
+        35,
+        44
+      ],
+      [
+        36,
+        44
+      ],
+      [
+        37,
+        44
+      ],
+      [
+        38,
+        44
+      ],
+      [
+        39,
+        44
+      ],
+      [
+        32,
+        45
+      ],
+      [
+        33,
+        45
+      ],
+      [
+        34,
+        45
+      ],
+      [
+        35,
+        45
+      ],
+      [
+        36,
+        45
+      ],
+      [
+        37,
+        45
+      ],
+      [
+        38,
+        45
+      ],
+      [
+        39,
+        45
+      ],
+      [
+        32,
+        46
+      ],
+      [
+        33,
+        46
+      ],
+      [
+        34,
+        46
+      ],
+      [
+        35,
+        46
+      ],
+      [
+        36,
+        46
+      ],
+      [
+        37,
+        46
+      ],
+      [
+        38,
+        46
+      ],
+      [
+        39,
+        46
+      ],
+      [
+        32,
+        47
+      ],
+      [
+        33,
+        47
+      ],
+      [
+        34,
+        47
+      ],
+      [
+        35,
+        47
+      ],
+      [
+        36,
+        47
+      ],
+      [
+        37,
+        47
+      ],
+      [
+        38,
+        47
+      ],
+      [
+        39,
+        47
+      ],
+      [
+        32,
+        48
+      ],
+      [
+        33,
+        48
+      ],
+      [
+        34,
+        48
+      ],
+      [
+        35,
+        48
+      ],
+      [
+        36,
+        48
+      ],
+      [
+        37,
+        48
+      ],
+      [
+        38,
+        48
+      ],
+      [
+        39,
+        48
+      ],
+      [
+        32,
+        49
+      ],
+      [
+        33,
+        49
+      ],
+      [
+        34,
+        49
+      ],
+      [
+        35,
+        49
+      ],
+      [
+        36,
+        49
+      ],
+      [
+        37,
+        49
+      ],
+      [
+        38,
+        49
+      ],
+      [
+        39,
+        49
+      ]
+    ],
+    "arena_view": "top/north arena, south approach, forest and snow mountains below/in front"
+  },
+  "animation": {
+    "aurora": "static canonical frame",
+    "official_cycle": false,
+    "proposal": "not included in native Ground"
+  }
+}
