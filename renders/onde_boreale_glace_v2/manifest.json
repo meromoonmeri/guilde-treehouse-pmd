@@ -1,0 +1,659 @@
+{
+  "title": "Onde boréale générée — couleurs et légère ondulation",
+  "date": "2026-09-18",
+  "canvas": [
+    768,
+    640
+  ],
+  "raw": "bruts/onde_pmd_magenta.png",
+  "raw_sha256": "213619aae68393624c543876d2372515fb9e864209db0cc7ef802e29038a0328",
+  "references": [
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    }
+  ],
+  "master_normalization": {
+    "source_size": [
+      1792,
+      592
+    ],
+    "crop_xyxy": [
+      68,
+      53,
+      1719,
+      552
+    ],
+    "crop_size": [
+      1651,
+      499
+    ],
+    "normalized_size": [
+      556,
+      168
+    ],
+    "offset_xy": [
+      106,
+      14
+    ],
+    "method": "Recadrage de l’effet, normalisation uniforme nearest vers maximum672×168, alpha dérivé de luminance ; ciel jamais peint."
+  },
+  "shared": {
+    "jour_ciel": "climat/ICE_ENTRY_V1_ciel_jour.png",
+    "jour_etoiles": "climat/ICE_ENTRY_V1_etoiles_jour.png",
+    "jour_nuages_bande": "climat/ICE_ENTRY_V1_nuages_bande_jour.png",
+    "nuit_ciel": "climat/ICE_ENTRY_V1_ciel_nuit.png",
+    "nuit_etoiles": "climat/ICE_ENTRY_V1_etoiles_nuit.png",
+    "nuit_nuages_bande": "climat/ICE_ENTRY_V1_nuages_bande_nuit.png"
+  },
+  "preserved_files": [
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_ciel_jour.png",
+      "output": "climat/ICE_ENTRY_V1_ciel_jour.png",
+      "sha256": "5b816e5f32b43e8cc06f8e5d0331bf4d21043dac16e06a8a10e612069a3c6ca9"
+    },
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_etoiles_jour.png",
+      "output": "climat/ICE_ENTRY_V1_etoiles_jour.png",
+      "sha256": "c8debe2b57d85baa2ca09596dd98ba413710ee9ffe11630a11fce005260f7b58"
+    },
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_nuages_bande_jour.png",
+      "output": "climat/ICE_ENTRY_V1_nuages_bande_jour.png",
+      "sha256": "a34ec18fc8f9c54cbcfb635b500e9be04a3c53c14e7d396792e09f4f96ebf861"
+    },
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_ciel_nuit.png",
+      "output": "climat/ICE_ENTRY_V1_ciel_nuit.png",
+      "sha256": "533d20bf184789ff59767267fd30b1b4ce7e204ab5f52169caa56ced1c68250b"
+    },
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_etoiles_nuit.png",
+      "output": "climat/ICE_ENTRY_V1_etoiles_nuit.png",
+      "sha256": "18a485321462fd0a34c114165c4f2bed2a7690bc7946702e9420ace8eac7ca89"
+    },
+    {
+      "source": "renders/entrees_glace_v1/climat/ICE_ENTRY_V1_nuages_bande_nuit.png",
+      "output": "climat/ICE_ENTRY_V1_nuages_bande_nuit.png",
+      "sha256": "88bf764ed8b1db9b7696d3121ffc01e9c5148c6ec0a9c369dfb33da2823ea884"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_01_sol_avec_chemin_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_01_sol_avec_chemin_jour.png",
+      "sha256": "cc95d2a261c0ce3e1bb084cb8e69c2340b4bbea44732ae5938c4ac2a84857ce0"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_02_profondeur_grotte_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_02_profondeur_grotte_jour.png",
+      "sha256": "080f6752d3113d77a29a2523178523dbae3c6cb5fa99f7bf4a65e966c41f359a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_03_cliffs_reliefs_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_03_cliffs_reliefs_jour.png",
+      "sha256": "d85d10104fe7c708437338888a636540b1a17a07fa3fa1075bad097998044df3"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_04_immersion_gauche_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_04_immersion_gauche_jour.png",
+      "sha256": "24377f12b91c7d321bb3d8469e7248e6a572f253c55622b8be5174ae8e9226b1"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_05_immersion_droite_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_05_immersion_droite_jour.png",
+      "sha256": "d9f98bcce9c22d4b7a6e7d4b3ae0d80e12c30cc7ba1d134016fb3c8140443302"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_01_sol_avec_chemin_nuit.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_01_sol_avec_chemin_nuit.png",
+      "sha256": "61e8256edd4552ad9bb4fe4b081227182a9b694bb9037cb6e5701d725b181d47"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_02_profondeur_grotte_nuit.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_02_profondeur_grotte_nuit.png",
+      "sha256": "b50da0e7f1cb0fc11c9162c7fe85197fe54f49f34c65de96cc6c6856e762923e"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_03_cliffs_reliefs_nuit.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_03_cliffs_reliefs_nuit.png",
+      "sha256": "f6539b67347c5d39790cf623da48bdf80ecc99b29df86eb93d3cb5f9223cb2dc"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_04_immersion_gauche_nuit.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_04_immersion_gauche_nuit.png",
+      "sha256": "9766304cae203f4654bfb2c63caccf04d04bf0d6c34af77684367d7adb06feed"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_05_immersion_droite_nuit.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_05_immersion_droite_nuit.png",
+      "sha256": "57b9aa4077f4e76861a02218f35a1bd47ab9b2149285fb185cee9c1d8c633f23"
+    },
+    {
+      "source": "renders/entrees_glace_v1/01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_scene_jour.png",
+      "output": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_scene_jour.png",
+      "sha256": "bcfee1cd128770bd96c5eda3f084760cde9e19b934ae271ffa0172b65b5882ce"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_01_sol_avec_chemin_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_01_sol_avec_chemin_jour.png",
+      "sha256": "e5ce8c6533a581863dabc9cab373dd97fee3f26b20698f18fe0bc476d2ecf799"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_02_profondeur_grotte_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_02_profondeur_grotte_jour.png",
+      "sha256": "77db588f8001fb1a0049833d46d34c84baf7ed0cf6991d6f8b72265c51ba361a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_03_cliffs_reliefs_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_03_cliffs_reliefs_jour.png",
+      "sha256": "49e0725ea1eae1289f154e2af3093b4572c6748850888b894d112048a727a83a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_04_immersion_gauche_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_04_immersion_gauche_jour.png",
+      "sha256": "789d3822c9caccdc6993d102555dc0ebc9aef5e3be82cb58b954c1d68b6d2eb9"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_05_immersion_droite_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_05_immersion_droite_jour.png",
+      "sha256": "9b082470130445660b094fd9dd799386c8c869be4d36d657f05bd3dac8b63b8a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_01_sol_avec_chemin_nuit.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_01_sol_avec_chemin_nuit.png",
+      "sha256": "bd6f4b24c6b5a27a7ebcbfa0bfc95f2320239bb655eb7cca0c5e08a01786a81a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_02_profondeur_grotte_nuit.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_02_profondeur_grotte_nuit.png",
+      "sha256": "c5e4d2c83925d5972820bb5ebd6a71b63476c3ac16d3307e85d0ef1e9eedb655"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_03_cliffs_reliefs_nuit.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_03_cliffs_reliefs_nuit.png",
+      "sha256": "1306594ef07ced687e5bba8c2e2a9be6ab74221761990094c4b806a23d54555a"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_04_immersion_gauche_nuit.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_04_immersion_gauche_nuit.png",
+      "sha256": "8040f6e70d9265581da870c95c03784c414cdbb070d0b8ebfc014a34998432c0"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_05_immersion_droite_nuit.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_05_immersion_droite_nuit.png",
+      "sha256": "1af6cd56aa73be3bcc9ef47bbaf3af81307081f8ad88057cbbd006f78a527642"
+    },
+    {
+      "source": "renders/entrees_glace_v1/02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_scene_jour.png",
+      "output": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_scene_jour.png",
+      "sha256": "f569d7488efdbe9cf8605c968416e009666035f45ac6ff167c1eeef89cae3ba0"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_01_sol_avec_chemin_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_01_sol_avec_chemin_jour.png",
+      "sha256": "5f56e61a26adfc1afa7a3cf21e2a63fa8a6c5be4a608fb16d968a0799a18188b"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_02_profondeur_grotte_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_02_profondeur_grotte_jour.png",
+      "sha256": "0d0bc8b7aaa49f81ed73ad4d1c73656a3dd1ba07b87e9cb0c8d60012b825ccc7"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_03_cliffs_reliefs_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_03_cliffs_reliefs_jour.png",
+      "sha256": "dae953e66d78a9ceb5652f4f51e8a0df31b2260ad8260f2a9083bb9b9a040b15"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_04_immersion_gauche_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_04_immersion_gauche_jour.png",
+      "sha256": "8bd4959e1795ae5fa503bbdd3af685218e4325a5a14ebba4acbe8e721f09d996"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_05_immersion_droite_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_05_immersion_droite_jour.png",
+      "sha256": "788f9ac06e5e8fbc8ef0a64ab502e0ec292945a147aac9e358d62554cf911515"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_01_sol_avec_chemin_nuit.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_01_sol_avec_chemin_nuit.png",
+      "sha256": "bf48e423897c1f5f9e2b7d4a9dedc050b4e90055f3f4d2b34e252abf14563297"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_02_profondeur_grotte_nuit.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_02_profondeur_grotte_nuit.png",
+      "sha256": "74e0b6fa5e80ad6fcc2328c116acb13adad11f5ee4369f189293cf348d12b02f"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_03_cliffs_reliefs_nuit.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_03_cliffs_reliefs_nuit.png",
+      "sha256": "66ef0d5e80c36505c069071458fa6e6477265207d1dd900377c7a892d2ee06b5"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_04_immersion_gauche_nuit.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_04_immersion_gauche_nuit.png",
+      "sha256": "07a241ad3df91bf85511c26fdc8166f00357da55d713d4edabea4407b8e1db21"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_05_immersion_droite_nuit.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_05_immersion_droite_nuit.png",
+      "sha256": "7eab010769a008a18275dce2ae49a969428ceac349b23b639b202f6d25f3c3dd"
+    },
+    {
+      "source": "renders/entrees_glace_v1/03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_scene_jour.png",
+      "output": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_jour.png",
+      "sha256": "428135583db9293045ed05fa0f1632db61a73741016360cb789276493b9ec8bc"
+    }
+  ],
+  "aurora": {
+    "frames": [
+      "aurore/GLACE_BOREALE_V2_onde_00.png",
+      "aurore/GLACE_BOREALE_V2_onde_01.png",
+      "aurore/GLACE_BOREALE_V2_onde_02.png",
+      "aurore/GLACE_BOREALE_V2_onde_03.png",
+      "aurore/GLACE_BOREALE_V2_onde_04.png",
+      "aurore/GLACE_BOREALE_V2_onde_05.png",
+      "aurore/GLACE_BOREALE_V2_onde_06.png",
+      "aurore/GLACE_BOREALE_V2_onde_07.png",
+      "aurore/GLACE_BOREALE_V2_onde_08.png",
+      "aurore/GLACE_BOREALE_V2_onde_09.png",
+      "aurore/GLACE_BOREALE_V2_onde_10.png",
+      "aurore/GLACE_BOREALE_V2_onde_11.png",
+      "aurore/GLACE_BOREALE_V2_onde_12.png",
+      "aurore/GLACE_BOREALE_V2_onde_13.png",
+      "aurore/GLACE_BOREALE_V2_onde_14.png",
+      "aurore/GLACE_BOREALE_V2_onde_15.png",
+      "aurore/GLACE_BOREALE_V2_onde_16.png",
+      "aurore/GLACE_BOREALE_V2_onde_17.png",
+      "aurore/GLACE_BOREALE_V2_onde_18.png",
+      "aurore/GLACE_BOREALE_V2_onde_19.png",
+      "aurore/GLACE_BOREALE_V2_onde_20.png",
+      "aurore/GLACE_BOREALE_V2_onde_21.png",
+      "aurore/GLACE_BOREALE_V2_onde_22.png",
+      "aurore/GLACE_BOREALE_V2_onde_23.png",
+      "aurore/GLACE_BOREALE_V2_onde_24.png",
+      "aurore/GLACE_BOREALE_V2_onde_25.png",
+      "aurore/GLACE_BOREALE_V2_onde_26.png",
+      "aurore/GLACE_BOREALE_V2_onde_27.png",
+      "aurore/GLACE_BOREALE_V2_onde_28.png",
+      "aurore/GLACE_BOREALE_V2_onde_29.png",
+      "aurore/GLACE_BOREALE_V2_onde_30.png",
+      "aurore/GLACE_BOREALE_V2_onde_31.png"
+    ],
+    "frame_ms": 125,
+    "period_ms": 4000,
+    "colors": "LUT de 256 entrées, 32 teintes du dessin × 8 groupes de phase spatiale ; rotation douce de teinte ±0,115 tour, HSV valeur/saturation fixes.",
+    "wave": "dy(x,t)=round(enveloppe*(1,5 sin(2π(x/448−t/32))+0,5 sin(2π(x/176+t/32))))",
+    "displacement_max_px": 2,
+    "horizontal_translation_px": 0,
+    "generated_drawings_used": 1,
+    "transparent_webp": "aurore/GLACE_BOREALE_V2_onde_transparente.webp",
+    "on_approved_sky_webp": "GLACE_BOREALE_V2_sur_ciel_nuit.webp"
+  },
+  "clouds": {
+    "strip_width": 1440,
+    "speed_px_s": -4,
+    "period_ms": 360000,
+    "loop_webps": "Nuages fixes phase0 : seules couleur et onde bouclent sur4s.",
+    "excerpt_webps": "64frames×125ms=8s, nuages en vrai wrap à−4px/s, une seule lecture ; pas de saut de raccord masqué.",
+    "viewer": "Wrap continu 360s indépendant de l’aurore4s, tous deux bouclent exactement en360s."
+  },
+  "zones": [
+    {
+      "id": "01_seuil_du_givre",
+      "title": "Seuil du Givre",
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_05_immersion_droite_nuit.png"
+        }
+      },
+      "scene_jour": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_scene_jour.png",
+      "scene_nuit": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_scene_nuit.png",
+      "webp_loop": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_boucle_onde.webp",
+      "webp_cloud_excerpt": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_nuages_wrap_extrait_8s.webp",
+      "ora_nuit": "01_seuil_du_givre/GLACE_BOREALE_V2_01_seuil_du_givre_nuit.ora",
+      "frames_nuit": [
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_00.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_01.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_02.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_03.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_04.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_05.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_06.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_07.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_08.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_09.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_10.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_11.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_12.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_13.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_14.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_15.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_16.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_17.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_18.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_19.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_20.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_21.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_22.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_23.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_24.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_25.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_26.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_27.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_28.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_29.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_30.png",
+        "01_seuil_du_givre/frames_nuit/GLACE_BOREALE_V2_01_seuil_du_givre_scene_31.png"
+      ],
+      "route_centerline": [
+        [
+          380,
+          639
+        ],
+        [
+          378,
+          575
+        ],
+        [
+          384,
+          496
+        ],
+        [
+          378,
+          424
+        ],
+        [
+          386,
+          365
+        ],
+        [
+          382,
+          338
+        ]
+      ],
+      "threshold_xy": [
+        382,
+        338
+      ]
+    },
+    {
+      "id": "02_anse_des_neiges",
+      "title": "Anse des Neiges",
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_05_immersion_droite_nuit.png"
+        }
+      },
+      "scene_jour": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_scene_jour.png",
+      "scene_nuit": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_scene_nuit.png",
+      "webp_loop": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_boucle_onde.webp",
+      "webp_cloud_excerpt": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_nuages_wrap_extrait_8s.webp",
+      "ora_nuit": "02_anse_des_neiges/GLACE_BOREALE_V2_02_anse_des_neiges_nuit.ora",
+      "frames_nuit": [
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_00.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_01.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_02.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_03.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_04.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_05.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_06.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_07.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_08.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_09.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_10.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_11.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_12.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_13.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_14.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_15.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_16.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_17.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_18.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_19.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_20.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_21.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_22.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_23.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_24.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_25.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_26.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_27.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_28.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_29.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_30.png",
+        "02_anse_des_neiges/frames_nuit/GLACE_BOREALE_V2_02_anse_des_neiges_scene_31.png"
+      ],
+      "route_centerline": [
+        [
+          369,
+          639
+        ],
+        [
+          368,
+          586
+        ],
+        [
+          370,
+          533
+        ],
+        [
+          340,
+          500
+        ],
+        [
+          263,
+          476
+        ],
+        [
+          198,
+          443
+        ],
+        [
+          169,
+          395
+        ],
+        [
+          192,
+          351
+        ],
+        [
+          255,
+          325
+        ],
+        [
+          329,
+          324
+        ],
+        [
+          400,
+          359
+        ],
+        [
+          460,
+          377
+        ],
+        [
+          530,
+          378
+        ],
+        [
+          580,
+          353
+        ],
+        [
+          592,
+          314
+        ],
+        [
+          592,
+          294
+        ]
+      ],
+      "threshold_xy": [
+        592,
+        294
+      ]
+    },
+    {
+      "id": "03_col_des_aiguilles",
+      "title": "Col des Aiguilles",
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_05_immersion_droite_nuit.png"
+        }
+      },
+      "scene_jour": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_jour.png",
+      "scene_nuit": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_nuit.png",
+      "webp_loop": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_boucle_onde.webp",
+      "webp_cloud_excerpt": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_nuages_wrap_extrait_8s.webp",
+      "ora_nuit": "03_col_des_aiguilles/GLACE_BOREALE_V2_03_col_des_aiguilles_nuit.ora",
+      "frames_nuit": [
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_00.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_01.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_02.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_03.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_04.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_05.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_06.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_07.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_08.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_09.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_10.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_11.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_12.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_13.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_14.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_15.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_16.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_17.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_18.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_19.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_20.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_21.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_22.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_23.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_24.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_25.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_26.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_27.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_28.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_29.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_30.png",
+        "03_col_des_aiguilles/frames_nuit/GLACE_BOREALE_V2_03_col_des_aiguilles_scene_31.png"
+      ],
+      "route_centerline": [
+        [
+          379,
+          639
+        ],
+        [
+          379,
+          592
+        ],
+        [
+          393,
+          559
+        ],
+        [
+          424,
+          529
+        ],
+        [
+          495,
+          503
+        ],
+        [
+          536,
+          458
+        ],
+        [
+          537,
+          414
+        ],
+        [
+          495,
+          376
+        ],
+        [
+          427,
+          347
+        ],
+        [
+          339,
+          336
+        ],
+        [
+          255,
+          330
+        ],
+        [
+          186,
+          322
+        ],
+        [
+          171,
+          301
+        ],
+        [
+          171,
+          287
+        ]
+      ],
+      "threshold_xy": [
+        171,
+        287
+      ]
+    }
+  ],
+  "limits": [
+    "Nouveau dessin généré référencé PMD, pas texture native ni cycle officiel extrait.",
+    "Les trois layouts et leurs dix plans terrain jour/nuit sont copiés byte-identiques de V1.",
+    "Ciels, étoiles et six familles de nuages validés copiés byte-identiques ; aucun ciel V3/Caps.",
+    "32 frames animées issues d’un seul dessin ; pas32dessins générés.",
+    "Pas de collisions/warp/Ground/rendu moteur nouveau."
+  ]
+}

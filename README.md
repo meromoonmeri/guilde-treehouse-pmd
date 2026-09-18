@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouvelle onde boréale — couleurs + légère ondulation, PNG et WebP
+
+**[Voir les animations directement sur GitHub](renders/onde_boreale_glace_v2/README.md)** · **[Planche PNG](renders/onde_boreale_glace_v2/PLANCHE_ONDE_ET_TROIS_ZONES.png)** · **[Atelier interactif](apercu_onde_boreale_glace_v2.html)**
+
+Un nouveau dessin d’onde généré seul sur transparence, **32 frames / 4 s**, couleurs mobiles et ondulation verticale **±2 px**, sans wrap de l’aurore. Posé sur le **ciel nocturne validé Guilde/Sharpedo**, avec les étoiles et les six familles de nuages conservées. Les trois layouts glacés et leurs calques de terrain restent byte-identiques à V1.
+
+[32 PNG de l’onde seule](renders/onde_boreale_glace_v2/aurore/README.md) · [Seuil du Givre](renders/onde_boreale_glace_v2/01_seuil_du_givre/README.md) · [Anse des Neiges](renders/onde_boreale_glace_v2/02_anse_des_neiges/README.md) · [Col des Aiguilles](renders/onde_boreale_glace_v2/03_col_des_aiguilles/README.md).
+
+Les WebP de composition bouclent l’aurore sur 4 s avec nuages fixes ; les extraits de 8 s montrent aussi le vrai wrap des nuages à −4 px/s, en une seule lecture pour éviter un faux raccord. Wrap continu dans l’atelier. **41 contrôles d’assets et 21 tests de galerie (DOM simulé) passent** ; aucun test moteur ou cycle officiel PMD revendiqué.
+
+
 ## Entrées glacées — trois layouts sud → grotte nord + climat validé
 
 **[Planche jour/nuit](renders/entrees_glace_v1/PLANCHE_ENTREES_GLACE.png)** · **[Atelier animé et calques](apercu_entrees_glace_v1.html)** · **[Kit PNG / ORA / frames](renders/entrees_glace_v1/ICE_ENTRY_V1_pack.zip)**

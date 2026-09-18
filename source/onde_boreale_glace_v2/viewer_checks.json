@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "type": "DOM simulé et fichiers locaux, pas Chromium",
+  "checks_count": 21,
+  "checks": [
+    "3 layouts,9 cases de calques",
+    "Réduction des mouvements respectée",
+    "Sélection layout0",
+    "Liens WebP/ORA0",
+    "Sélection layout1",
+    "Liens WebP/ORA1",
+    "Sélection layout2",
+    "Liens WebP/ORA2",
+    "Jour sans onde mais avec sol/ciel corrects",
+    "Nuit avec onde",
+    "Frame suivante =1, lecture pausée",
+    "Seek2s =frame16",
+    "Onde seule =1plan sur canevas768×224",
+    "Ciel seul + étoiles + onde, sans terrain/nuages",
+    "Wrap : deux copies jointives au raccord",
+    "Après360s, position nuage0 et onde0",
+    "Nuages désactivables",
+    "Onde désactivable",
+    "Zoom2x",
+    "Zoom ajusté",
+    "Tous les chemins demandés existent"
+  ]
+}
