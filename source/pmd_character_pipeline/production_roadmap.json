@@ -314,5 +314,22 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_ondulation_glace_v8": {
+    "request": "Glace sur les zones grises latérales ; aurore animée en ondulations générées ; méthode habituelle inchangée",
+    "source": "source/boreales_ondulation_glace_v8/",
+    "viewer": "apercu_arene_ondulation_glace_v8.html",
+    "aurora_poses": 8,
+    "frames": 32,
+    "frame_ms": 125,
+    "cycle_s": 4.0,
+    "aurora_method": "generated drawn poses, premultiplied dissolves, vertical undulation, zero horizontal translation, no wrap",
+    "ice_backdrop": true,
+    "grey_voids_filled": true,
+    "sky_terrain_V3_unchanged": true,
+    "dedicated_tests": 10,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }

@@ -1,0 +1,20 @@
+{
+  "aurore": {
+    "poses_dessinees_generees": 8,
+    "etapes": 32,
+    "duree_ms": 125,
+    "cycle_s": 4.0,
+    "methode": "8 dessins generes (planche 2x4, fond magenta) -> alpha -> 4 fondus premultiplies par paire ; ondulation verticale des cretes, pas de translation horizontale, pas de wrap",
+    "brut_sha256": "cbe17a479233639fa13367f71a98c5f7b17dca368bec01a1f364f4bc843d54ea"
+  },
+  "glace": {
+    "role": "parois laterales + plaine du fond derriere le terrain ; remplit les zones grises des cotes",
+    "position": "0,0 sur 768x512, statique, entre aurore et terrain",
+    "brut_sha256": "6054f73e3ff5fc8c34a6b95b09357f7c0de4a8e12e1be878ec5555fbced3df62"
+  },
+  "calques_V3": "copies byte-identiques",
+  "wrap": false,
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cycle_officiel": "INCONNU : dessins et rythme choisis, pas le cycle du jeu"
+}
