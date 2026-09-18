@@ -1,0 +1,23 @@
+{
+  "texture": {
+    "source": "aurorepmdsky.png : texture canonique du ciel boreal PMD Sky, recuperee telle quelle",
+    "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+    "extraction": "rubans lumineux via luminosite+saturation, ciel sombre retire (lum~21/sat~63 non retenu), etoiles isolees exclues, zone nuages/pics (y>=144) hors calque, fondu bas 134->144, x2 nearest, bords lateraux a zero"
+  },
+  "onde": {
+    "frames": 10,
+    "duree_ms": 160,
+    "cycle_s": 1.6,
+    "physique": "onde transversale : deplacement STRICTEMENT vertical par colonne, phase voyageant horizontalement, 2+5 longueurs d'onde entieres, enveloppe 40 px, boucle exacte frame 10 = frame 0",
+    "layers": "chaque frame est un calque independant couches/EffetBorealeV10_frame_XX.png (528x288 RGBA), pose une fois a (120,0)"
+  },
+  "contexte": {
+    "ciel_etoiles": "V3 byte-identiques",
+    "glace": "V8 byte-identique",
+    "terrain": "V3 byte-identique"
+  },
+  "wrap": false,
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cadence": "choisie par nous, pas le cycle officiel du jeu (non recupere)"
+}

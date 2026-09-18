@@ -346,5 +346,21 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_effet_boreale_canonique_v10": {
+    "request": "Effet onde boréal canonique récupéré (aurorepmdsky.png), sans ciel derrière, animé sur son propre layer en plusieurs frames",
+    "source": "source/effet_boreale_canonique_v10/",
+    "viewer": "apercu_effet_boreale_canonique_v10.html",
+    "texture": "canonical PMD Sky aurora image, luminous ribbons extracted like stars were, no baked sky, stars excluded",
+    "layers": 10,
+    "frame_ms": 160,
+    "cycle_s": 1.6,
+    "physics": "pure transverse wave, per-column vertical shift, travelling phase, exact loop",
+    "context_byte_identical": true,
+    "wrap": false,
+    "dedicated_tests": 9,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
