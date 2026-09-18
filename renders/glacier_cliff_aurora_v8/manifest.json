@@ -1,0 +1,189 @@
+{
+  "schema": "glacier_cliff_aurora_layered_generation_v8",
+  "generated_with_image_generator": true,
+  "from_scratch": true,
+  "native_pmdo_import": false,
+  "order": [
+    "arena_cliff",
+    "snow_forest_border",
+    "distant_mountains",
+    "near_snow_crags",
+    "canonical_night_sky",
+    "aurora_palette_cycle"
+  ],
+  "magenta_key": "#ff00ff",
+  "references": [
+    {
+      "path": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile",
+      "sha256": "b03051c74b794482acd587615f14e46b44bfda1e06190fcfc1ff76c70c2ce5a1"
+    },
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    },
+    {
+      "path": "source/references_54d3731/path.png",
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b"
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79"
+    },
+    {
+      "path": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+    },
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    }
+  ],
+  "layers": [
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/01_arena_cliff_base_magenta.png",
+      "sha256": "92ba5325314ff884599323c252fc3312332afe0e454a4084fa75d692d4714999",
+      "size": [
+        1210,
+        864
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/02_snow_forest_border_magenta.png",
+      "sha256": "0f7269e33eed4796de350e4f7cd470b0584a94080de7a664b0bcdcef4eaf94de",
+      "size": [
+        1210,
+        864
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/03_distant_mountains_magenta.png",
+      "sha256": "8e74405a0f7ad2d2d750f29f332afaab42c3738f200b75c36d2360f3bb5d258c",
+      "size": [
+        1210,
+        864
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/04_near_snow_crags_magenta.png",
+      "sha256": "ad8c5a1640e61694047d83d6473d9ff800bb69f89d12402cea1da0e2dfa4e82c",
+      "size": [
+        1210,
+        864
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/05_night_sky_canonical_magenta.png",
+      "sha256": "7a5ff20b2ab39766df55f59463218816461d61eef3f8c18427f10b8b2009bc3c",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/06_aurora_palette_cycle_source_magenta.png",
+      "sha256": "8f80ba0f8e22284262843ed693f887e4154c057a599361e62de1c0bfccd83f3a",
+      "size": [
+        1424,
+        749
+      ]
+    }
+  ],
+  "animation": {
+    "source": "renders/glacier_cliff_aurora_v8/layers/06_aurora_palette_cycle_source_magenta.png",
+    "frames": [
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_00.png",
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_01.png",
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_02.png",
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_03.png",
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_04.png",
+      "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_05.png"
+    ],
+    "method": "same generated silhouette, palette-only hue cycling",
+    "preview": "renders/glacier_cliff_aurora_v8/aurora_palette_cycle.gif"
+  },
+  "cycle_frames": [
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_00.png",
+      "sha256": "bdd3540c1bf3bc1e5ddbd68ea947b313c9f21717019d52abe1219f987cf14746",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_01.png",
+      "sha256": "c3fa0c0031dc6420ab35d7db2562f6b0059a581a6a0a3baa0cc1ed0e15e73814",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_02.png",
+      "sha256": "8f5d04209d84162df7da4d7b5120efec41ce0586714598d95876209d74c9c7a7",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_03.png",
+      "sha256": "309860a2d9f82db16992f352ae2f5203898fa86719b0d33881fe12b9a8cad118",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_04.png",
+      "sha256": "b0c74a699f015363d20efa54d3b5c5ec5c6da8d86f7955cbfae4eaba0c28043f",
+      "size": [
+        1424,
+        749
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/layers/aurora_palette_cycle/frame_05.png",
+      "sha256": "1537a9cc6a22eba4215964def5da20bf4a36ba0a7f764e71311a1dd2f89bf48f",
+      "size": [
+        1424,
+        749
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "path": "renders/glacier_cliff_aurora_v8/composition/07_map_pre_aurora.png",
+      "sha256": "71bbce817762b1aadcea219402e27407efd4214dcd48410ae3435f56d96518a6",
+      "size": [
+        1210,
+        864
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/aurora_palette_cycle.gif",
+      "sha256": "ffad84c523053921f8e2443d51f65d447773d43b7c980afd3b3421140466397c",
+      "size": null
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/aurora_palette_cycle_contact_sheet.png",
+      "sha256": "8cf16b94f1009862855c7f16417b47c669ae9c6764e8f7718f16ea0c002e3b28",
+      "size": [
+        1092,
+        392
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v8/composition/frame_00_final_map_fit.png",
+      "sha256": "e8a4ad5ffd96c38e6b11e1f773c56bd3837af17c420d0d678fea25c4909cec5f",
+      "size": [
+        1210,
+        864
+      ]
+    }
+  ]
+}
