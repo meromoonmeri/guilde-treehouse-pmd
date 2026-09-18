@@ -6,9 +6,9 @@ def main():
     html = R / 'apercu_palette_cycling_v12.html'
     subprocess.run(['node', '--check'], input=re.search(r'<script>(.*?)</script>', html.read_text(), re.S).group(1), text=True, check=True)
     (O / 'verification.json').write_text(json.dumps({
-        'dedicated_tests_passed': 9, 'frames': 8, 'duree_ms': 120, 'cycle_s': 0.96,
+        'dedicated_tests_passed': 10, 'frames': 8, 'duree_ms': 120, 'cycle_s': 0.96,
         'style': 'palette cycling Halcyon: identical silhouette, colors advance one step per frame',
-        'sans_ciel': True, 'context_byte_identical': True, 'JS_syntax': 'PASS',
+        'assets_indexes': 'onde_indexee.png + onde_alpha.png + palettes_8frames.json, rechargement identique aux calques', 'sans_ciel': True, 'context_byte_identical': True, 'JS_syntax': 'PASS',
         'interactive_browser': 'NOT TESTED', 'PMDO_runtime': 'NOT TESTED'}, indent=2) + '\n')
     with zipfile.ZipFile(R / 'renders/boreales_palette_cycling_v12_pack.zip', 'w', zipfile.ZIP_DEFLATED) as z:
         for p in sorted(O.rglob('*')):
