@@ -202,7 +202,10 @@ def main():
             assert png == source_path.read_bytes()
 
     retrieval = prov["texture_retrieval"]
-    assert {r["role"] for r in retrieval} == {"night", "aurora", "mountains", "arena_reference", "forest"}
+    assert {r["role"] for r in retrieval} == {
+        "sky", "aurora", "distant_mountains", "ground_ice_reference",
+        "path_reference", "trees_and_snow_forest",
+    }
     for record in retrieval:
         source = ROOT / record["source"]
         delivered = OUT / record["delivered_reference"]
@@ -211,13 +214,15 @@ def main():
     for key, record in prov["canonical_references"].items():
         assert sha256(ROOT / record["path"]) == record["sha256"]
     layer_manifest = json.loads((OUT / "layers/layer_manifest.json").read_text(encoding="utf-8"))
-    assert len(layer_manifest["layers"]) == 9
-    assert [item["file"] for item in layer_manifest["layers"][:5]] == [
+    assert len(layer_manifest["layers"]) == 12
+    assert [item["file"] for item in layer_manifest["layers"][:7]] == [
         "layers/00_night_sky_canonical.png",
         "layers/01_aurora_canonical.png",
         "layers/02_mountains_iceroad_native_crop.png",
-        "layers/03_snow_forest_below_native_crop.png",
-        "layers/04_arena_material_reference_canonical.png",
+        "layers/03_trees_snow_native_crop.png",
+        "layers/04_forest_below_path_native_crop.png",
+        "layers/05_arena_material_reference_canonical.png",
+        "layers/06_south_path_reference_canonical.png",
     ]
     assert all((OUT / item["file"]).is_file() for item in layer_manifest["layers"])
     assert not any(p.suffix.lower() in {".png", ".jpg", ".webp"} and "guide" in p.name.lower()
@@ -245,8 +250,8 @@ def main():
         "wall_cells": len(wall),
         "markers": sorted(markers),
         "entry_to_arena_path": True,
-        "canonical_backgrounds": 4,
-        "named_layer_exports": 9,
+        "canonical_backgrounds": 5,
+        "named_layer_exports": 12,
         "canonical_reference_hashes": True,
         "installer_merge_idempotence_and_conflict_protection": True,
         "runtime": {

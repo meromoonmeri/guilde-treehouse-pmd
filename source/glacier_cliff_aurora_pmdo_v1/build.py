@@ -26,11 +26,12 @@ GUIDE = ROOT / "renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.
 # The references are artwork, not generated PMDO textures.  The two cropped
 # strips retain their native pixels and have their provenance recorded below.
 REFS = {
-    "night": ROOT / "bgnightbackgroundpmdskyda.png",
+    "sky": ROOT / "bgnightbackgroundpmdskyda.png",
     "aurora": ROOT / "aurorepmdsky.png",
-    "mountains": ROOT / "iceroadpmdsky.png",
-    "arena_reference": ROOT / "pmdskyicearena.png",
-    "forest": ROOT / "source/references_54d3731/snow.png",
+    "distant_mountains": ROOT / "iceroadpmdsky.png",
+    "ground_ice_reference": ROOT / "pmdskyicearena.png",
+    "path_reference": ROOT / "source/references_54d3731/path.png",
+    "trees_and_snow_forest": ROOT / "source/references_54d3731/snow.png",
 }
 
 WIDTH, HEIGHT = 72, 54                 # 576 x 432 px at the collision grid
@@ -266,7 +267,8 @@ def build_ground(floor, wall, tables):
             {"BG": background("GLACIER_NIGHT_BASE", 0)},
             {"BG": background("GLACIER_AURORA_CANONICAL", 0)},
             {"BG": background("GLACIER_DISTANT_MOUNTAINS", 120)},
-            {"BG": background("GLACIER_SNOW_FOREST", 216)},
+            {"BG": background("GLACIER_SNOW_TREES", 216)},
+            {"BG": background("GLACIER_SNOW_FOREST_PATH", 376)},
         ]},
         "BlankBG": blank_tile(),
         "Layers": layers,
@@ -351,13 +353,15 @@ def retrieve_canonical_textures():
 def build_backgrounds():
     derived = OUT / "provenance/derived"
     # Crop boundaries are native-pixel selections, not generated artwork.
-    exact_crop(REFS["mountains"], derived / "iceroad_mountains_strip.png", "504x96+0+24")
-    exact_crop(REFS["forest"], derived / "snow_forest_strip.png", "522x216+0+140")
+    exact_crop(REFS["distant_mountains"], derived / "iceroad_mountains_strip.png", "504x96+0+24")
+    exact_crop(REFS["trees_and_snow_forest"], derived / "snow_trees_strip.png", "522x160+0+160")
+    exact_crop(REFS["trees_and_snow_forest"], derived / "snow_path_strip.png", "522x216+0+357")
     assets = {
-        "GLACIER_NIGHT_BASE": (REFS["night"], REFS["night"]),
+        "GLACIER_NIGHT_BASE": (REFS["sky"], REFS["sky"]),
         "GLACIER_AURORA_CANONICAL": (REFS["aurora"], REFS["aurora"]),
-        "GLACIER_DISTANT_MOUNTAINS": (derived / "iceroad_mountains_strip.png", REFS["mountains"]),
-        "GLACIER_SNOW_FOREST": (derived / "snow_forest_strip.png", REFS["forest"]),
+        "GLACIER_DISTANT_MOUNTAINS": (derived / "iceroad_mountains_strip.png", REFS["distant_mountains"]),
+        "GLACIER_SNOW_TREES": (derived / "snow_trees_strip.png", REFS["trees_and_snow_forest"]),
+        "GLACIER_SNOW_FOREST_PATH": (derived / "snow_path_strip.png", REFS["trees_and_snow_forest"]),
     }
     records = []
     for name, (png, source) in assets.items():
@@ -405,15 +409,17 @@ def make_preview(ground, floor, wall, native_records):
                        stdout=subprocess.DEVNULL)
         return output
 
-    def cell_frames(layer_index, cells):
+    def cell_frames(layer_index, cells, allowed=None):
         layer = ground["Object"]["Layers"][layer_index]
         result = {}
         for x, col in enumerate(layer["Tiles"]):
             for y, tile in enumerate(col):
-                if tile["Layers"]:
+                if (allowed is None or (x, y) in allowed) and tile["Layers"]:
                     result[(x, y)] = tile["Layers"][0]["Frames"][0]
         return result
 
+    access_cells = {(x, y) for y in range(42, 50) for x in range(32, 40)}
+    path_png = render(cell_frames(0, floor, access_cells), "native_access_path_layer.png")
     floor_png = render(cell_frames(0, floor), "native_floor_layer.png")
     wall_png = render(cell_frames(1, wall), "native_wall_layer.png")
     foreground_png = render(cell_frames(4, wall), "native_foreground_layer.png")
@@ -425,20 +431,25 @@ def make_preview(ground, floor, wall, native_records):
     background = OUT / "preview/canonical_background_reconstruction.png"
     aurora_tile = OUT / "tests/aurora_repeat.png"
     mountain_tile = OUT / "tests/mountain_repeat.png"
-    forest_tile = OUT / "tests/forest_repeat.png"
+    trees_tile = OUT / "tests/trees_repeat.png"
+    path_tile = OUT / "tests/forest_path_repeat.png"
     subprocess.run(["convert", "-size", f"{WIDTH*8}x216", "tile:" + str(refs / "aurorepmdsky.png"),
                     "-crop", f"{WIDTH*8}x216+0+0", "+repage", str(aurora_tile)],
                    check=True, stdout=subprocess.DEVNULL)
     subprocess.run(["convert", "-size", f"{WIDTH*8}x96", "tile:" + str(derived / "iceroad_mountains_strip.png"),
                     "-crop", f"{WIDTH*8}x96+0+0", "+repage", str(mountain_tile)],
                    check=True, stdout=subprocess.DEVNULL)
-    subprocess.run(["convert", "-size", f"{WIDTH*8}x216", "tile:" + str(derived / "snow_forest_strip.png"),
-                    "-crop", f"{WIDTH*8}x216+0+0", "+repage", str(forest_tile)],
+    subprocess.run(["convert", "-size", f"{WIDTH*8}x160", "tile:" + str(derived / "snow_trees_strip.png"),
+                    "-crop", f"{WIDTH*8}x160+0+0", "+repage", str(trees_tile)],
+                   check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(["convert", "-size", f"{WIDTH*8}x216", "tile:" + str(derived / "snow_path_strip.png"),
+                    "-crop", f"{WIDTH*8}x216+0+0", "+repage", str(path_tile)],
                    check=True, stdout=subprocess.DEVNULL)
     subprocess.run(["convert", "-size", f"{WIDTH*8}x{HEIGHT*8}", "xc:#07153d",
                     str(aurora_tile), "-geometry", "+0+0", "-compose", "over", "-composite",
                     str(mountain_tile), "-geometry", "+0+120", "-compose", "over", "-composite",
-                    str(forest_tile), "-geometry", "+0+216", "-compose", "over", "-composite",
+                    str(trees_tile), "-geometry", "+0+216", "-compose", "over", "-composite",
+                    str(path_tile), "-geometry", "+0+376", "-compose", "over", "-composite",
                     str(background)], check=True, stdout=subprocess.DEVNULL)
     scene = OUT / "preview/native_ground_reconstruction.png"
     subprocess.run(["composite", "-compose", "over", str(floor_png), str(background), str(scene)],
@@ -478,12 +489,15 @@ def write_layer_exports():
         ("00_night_sky_canonical.png", refs / "bgnightbackgroundpmdskyda.png", "canonical", "Background GLACIER_NIGHT_BASE"),
         ("01_aurora_canonical.png", refs / "aurorepmdsky.png", "canonical", "Background GLACIER_AURORA_CANONICAL"),
         ("02_mountains_iceroad_native_crop.png", derived / "iceroad_mountains_strip.png", "canonical_crop", "Background GLACIER_DISTANT_MOUNTAINS"),
-        ("03_snow_forest_below_native_crop.png", derived / "snow_forest_strip.png", "canonical_crop", "Background GLACIER_SNOW_FOREST"),
-        ("04_arena_material_reference_canonical.png", refs / "pmdskyicearena.png", "canonical_reference_only", "Reference for Ground arena material; not direct PNG import"),
-        ("05_arena_floor_vast_ice_reconstruction.png", preview / "native_floor_layer.png", "review_only_native_reconstruction", "Ground layer 00"),
-        ("06_cliff_walls_vast_ice_reconstruction.png", preview / "native_wall_layer.png", "review_only_native_reconstruction", "Ground layer 01/02"),
-        ("07_foreground_ice_rim_reconstruction.png", preview / "native_foreground_layer.png", "review_only_native_reconstruction", "Ground layer 04 Top=4"),
-        ("08_collision_grid_diagnostic.png", preview / "collision_grid.png", "review_only_collision", "Serialized obstacles; never imported"),
+        ("03_trees_snow_native_crop.png", derived / "snow_trees_strip.png", "canonical_crop", "Background GLACIER_SNOW_TREES"),
+        ("04_forest_below_path_native_crop.png", derived / "snow_path_strip.png", "canonical_crop", "Background GLACIER_SNOW_FOREST_PATH"),
+        ("05_arena_material_reference_canonical.png", refs / "pmdskyicearena.png", "canonical_reference_only", "Reference for Ground arena material; not direct PNG import"),
+        ("06_south_path_reference_canonical.png", refs / "path.png", "canonical_reference_only", "Reference for south access path; not direct PNG import"),
+        ("07_south_path_vast_ice_reconstruction.png", preview / "native_access_path_layer.png", "review_only_native_reconstruction", "South access cells in Ground layer 00"),
+        ("08_arena_floor_vast_ice_reconstruction.png", preview / "native_floor_layer.png", "review_only_native_reconstruction", "Ground layer 00"),
+        ("09_cliff_walls_vast_ice_reconstruction.png", preview / "native_wall_layer.png", "review_only_native_reconstruction", "Ground layer 01/02"),
+        ("10_foreground_ice_rim_reconstruction.png", preview / "native_foreground_layer.png", "review_only_native_reconstruction", "Ground layer 04 Top=4"),
+        ("11_collision_grid_diagnostic.png", preview / "collision_grid.png", "review_only_collision", "Serialized obstacles; never imported"),
     ]
     manifest = []
     for name, source, provenance, engine_role in exports:
@@ -543,17 +557,18 @@ ressource native PMDO. Les calques du Ground sont :
 
 Les fonds sont des `.dir` PMDO separes. Les pixels sont issus des references
 canoniques suivantes : `aurorepmdsky.png`, `iceroadpmdsky.png`,
-`bgnightbackgroundpmdskyda.png` et `source/references_54d3731/snow.png`.
-Le generateur les recupere au debut du build, les copie byte a byte dans
+`bgnightbackgroundpmdskyda.png`, `source/references_54d3731/path.png` et
+`source/references_54d3731/snow.png` pour les arbres enneiges. Le generateur
+les recupere au debut du build, les copie byte a byte dans
 `provenance/references/` et arrete la production si un hash change. Les bandes
 montagne/foret sont des crops de pixels natifs documentes dans
 `provenance/provenance.json`.
 
 Le dossier `layers/` expose la pile demandee : nuit, aurore, montagnes,
-foret en contrebas, reference de materiau d'arene, sol d'arene, parois,
-rebord avant et collision. Les cinq premiers sont des sources/crops ou une
-reference canonique ; les quatre derniers sont des reconstructions de controle
-depuis `VastIceMountain.tile`, pas des textures
+foret en contrebas, reference de materiau d'arene, chemin d'acces, sol
+d'arene, parois, rebord avant et collision. Les sept premiers sont des
+sources/crops ou des references canoniques ; les cinq derniers sont des
+reconstructions de controle depuis `VastIceMountain.tile`, pas des textures
 inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
 importer.
 

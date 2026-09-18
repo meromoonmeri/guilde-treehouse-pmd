@@ -32,22 +32,33 @@
         504,
         96
       ],
-      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d",
+      "sha256": "8569fe13c22d94b80acaa91204926fc409e943565259f370819a0bd0fff97580",
       "importable": false
     },
     {
-      "file": "layers/03_snow_forest_below_native_crop.png",
+      "file": "layers/03_trees_snow_native_crop.png",
       "provenance": "canonical_crop",
-      "engine_role": "Background GLACIER_SNOW_FOREST",
+      "engine_role": "Background GLACIER_SNOW_TREES",
+      "size": [
+        522,
+        160
+      ],
+      "sha256": "e63180d31250ec1ffe9c2e1afdbde3e28c5ebda4b53bb470049dec9f51650303",
+      "importable": false
+    },
+    {
+      "file": "layers/04_forest_below_path_native_crop.png",
+      "provenance": "canonical_crop",
+      "engine_role": "Background GLACIER_SNOW_FOREST_PATH",
       "size": [
         522,
         216
       ],
-      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c",
+      "sha256": "509fdf6bcc2b048f8d5658f44147364342fb11d1772afa8c9ad2c5092e1dce68",
       "importable": false
     },
     {
-      "file": "layers/04_arena_material_reference_canonical.png",
+      "file": "layers/05_arena_material_reference_canonical.png",
       "provenance": "canonical_reference_only",
       "engine_role": "Reference for Ground arena material; not direct PNG import",
       "size": [
@@ -58,47 +69,69 @@
       "importable": false
     },
     {
-      "file": "layers/05_arena_floor_vast_ice_reconstruction.png",
+      "file": "layers/06_south_path_reference_canonical.png",
+      "provenance": "canonical_reference_only",
+      "engine_role": "Reference for south access path; not direct PNG import",
+      "size": [
+        420,
+        380
+      ],
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b",
+      "importable": false
+    },
+    {
+      "file": "layers/07_south_path_vast_ice_reconstruction.png",
+      "provenance": "review_only_native_reconstruction",
+      "engine_role": "South access cells in Ground layer 00",
+      "size": [
+        576,
+        432
+      ],
+      "sha256": "82bcfa5d108bd48f911403249d31afa3b6134d189483e83d6d1be050cea1b862",
+      "importable": false
+    },
+    {
+      "file": "layers/08_arena_floor_vast_ice_reconstruction.png",
       "provenance": "review_only_native_reconstruction",
       "engine_role": "Ground layer 00",
       "size": [
         576,
         432
       ],
-      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6",
+      "sha256": "4949f31ae82025971d4e47f10c2a7cbe3f6ab25d32b209dbdc8cb28a4859ee49",
       "importable": false
     },
     {
-      "file": "layers/06_cliff_walls_vast_ice_reconstruction.png",
+      "file": "layers/09_cliff_walls_vast_ice_reconstruction.png",
       "provenance": "review_only_native_reconstruction",
       "engine_role": "Ground layer 01/02",
       "size": [
         576,
         432
       ],
-      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b",
+      "sha256": "7a4a7d054c89cd27320f17945938290a904e8bdbab6b87f5cd9fd66ed42d5bf5",
       "importable": false
     },
     {
-      "file": "layers/07_foreground_ice_rim_reconstruction.png",
+      "file": "layers/10_foreground_ice_rim_reconstruction.png",
       "provenance": "review_only_native_reconstruction",
       "engine_role": "Ground layer 04 Top=4",
       "size": [
         576,
         432
       ],
-      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72",
+      "sha256": "de7e1cec9ceedc867d72065f71130c4ff043844fb9773258a533b31af663af9f",
       "importable": false
     },
     {
-      "file": "layers/08_collision_grid_diagnostic.png",
+      "file": "layers/11_collision_grid_diagnostic.png",
       "provenance": "review_only_collision",
       "engine_role": "Serialized obstacles; never imported",
       "size": [
         576,
         432
       ],
-      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a",
+      "sha256": "e8c9c9b06adb3881ce22522750fcda442f6d8d331ff01cc616b7b7e38f262785",
       "importable": false
     }
   ]

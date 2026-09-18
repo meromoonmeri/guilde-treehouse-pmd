@@ -11,7 +11,7 @@
     {
       "path": "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
       "bytes": 8422,
-      "sha256": "33ac67ba90122945895a06033187088cc228c38c5770c4589bc3aa9a016f57f8"
+      "sha256": "0366eafdea862baddaf0d769c95b6171b14226c7c4a0dfeac82e9d532944817f"
     },
     {
       "path": "Content/BG/GLACIER_NIGHT_BASE.dir",
@@ -19,9 +19,14 @@
       "sha256": "9f5b6178429fe74b0a831994966a5900454db075db8007567eb406cb8a64f647"
     },
     {
-      "path": "Content/BG/GLACIER_SNOW_FOREST.dir",
-      "bytes": 13872,
-      "sha256": "997ca93131ce5a129b8e59e7f0e5a51b5584f8d891420527f6529c03eb221f64"
+      "path": "Content/BG/GLACIER_SNOW_FOREST_PATH.dir",
+      "bytes": 8890,
+      "sha256": "d6f738183014fb0b03715b7e1ec8b42ffbc514417fe6e99665e9e54ccd1fa525"
+    },
+    {
+      "path": "Content/BG/GLACIER_SNOW_TREES.dir",
+      "bytes": 11059,
+      "sha256": "eb8589a5a721825129551ef2dc848531c7b140cf60f87ed03438356fde939213"
     },
     {
       "path": "Content/Tile/VastIceMountain.tile",
@@ -35,8 +40,8 @@
     },
     {
       "path": "Data/Ground/glacier_cliff_aurora_v1.rsground",
-      "bytes": 1644749,
-      "sha256": "75498b5ec0d9c52053d6b7bc8246936f0dec7661885036bb1e96307788f2062d"
+      "bytes": 1645041,
+      "sha256": "5613182fbb1fc4437ff86e93e06827f7f91bccec66e5216872e9d559cd119248"
     },
     {
       "path": "Data/Script/glacier_cliff_aurora/ground/glacier_cliff_aurora_v1/init.lua",
@@ -60,8 +65,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3638,
-      "sha256": "abe74a90b7da7fcefba2d2024bdbcec99d1d103d888a4a9afe329c3611b8bb07"
+      "bytes": 3717,
+      "sha256": "b9dc56408647fa0153583c50c7e0b4f51327f272747cc77d74f790bc59f6dc3e"
     },
     {
       "path": "layers/00_night_sky_canonical.png",
@@ -76,82 +81,107 @@
     {
       "path": "layers/02_mountains_iceroad_native_crop.png",
       "bytes": 8398,
-      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d"
+      "sha256": "8569fe13c22d94b80acaa91204926fc409e943565259f370819a0bd0fff97580"
     },
     {
-      "path": "layers/03_snow_forest_below_native_crop.png",
-      "bytes": 13848,
-      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c"
+      "path": "layers/03_trees_snow_native_crop.png",
+      "bytes": 11035,
+      "sha256": "e63180d31250ec1ffe9c2e1afdbde3e28c5ebda4b53bb470049dec9f51650303"
     },
     {
-      "path": "layers/04_arena_material_reference_canonical.png",
+      "path": "layers/04_forest_below_path_native_crop.png",
+      "bytes": 8866,
+      "sha256": "509fdf6bcc2b048f8d5658f44147364342fb11d1772afa8c9ad2c5092e1dce68"
+    },
+    {
+      "path": "layers/05_arena_material_reference_canonical.png",
       "bytes": 68454,
       "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
     },
     {
-      "path": "layers/05_arena_floor_vast_ice_reconstruction.png",
+      "path": "layers/06_south_path_reference_canonical.png",
+      "bytes": 89728,
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b"
+    },
+    {
+      "path": "layers/07_south_path_vast_ice_reconstruction.png",
+      "bytes": 1018,
+      "sha256": "82bcfa5d108bd48f911403249d31afa3b6134d189483e83d6d1be050cea1b862"
+    },
+    {
+      "path": "layers/08_arena_floor_vast_ice_reconstruction.png",
       "bytes": 2772,
-      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6"
+      "sha256": "4949f31ae82025971d4e47f10c2a7cbe3f6ab25d32b209dbdc8cb28a4859ee49"
     },
     {
-      "path": "layers/06_cliff_walls_vast_ice_reconstruction.png",
+      "path": "layers/09_cliff_walls_vast_ice_reconstruction.png",
       "bytes": 6763,
-      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b"
+      "sha256": "7a4a7d054c89cd27320f17945938290a904e8bdbab6b87f5cd9fd66ed42d5bf5"
     },
     {
-      "path": "layers/07_foreground_ice_rim_reconstruction.png",
+      "path": "layers/10_foreground_ice_rim_reconstruction.png",
       "bytes": 3873,
-      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72"
+      "sha256": "de7e1cec9ceedc867d72065f71130c4ff043844fb9773258a533b31af663af9f"
     },
     {
-      "path": "layers/08_collision_grid_diagnostic.png",
+      "path": "layers/11_collision_grid_diagnostic.png",
       "bytes": 593,
-      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a"
+      "sha256": "e8c9c9b06adb3881ce22522750fcda442f6d8d331ff01cc616b7b7e38f262785"
     },
     {
       "path": "layers/layer_manifest.json",
-      "bytes": 3222,
-      "sha256": "0f27037c41c1ce85e4425144cc98d2969c9ddeeb6b87026cd70ecafffeb7545d"
+      "bytes": 4266,
+      "sha256": "e0e36d8f47f897e350e689192544f8a2d6b516fc0fd71b9e7dee02d9fa7dea05"
     },
     {
       "path": "preview/canonical_background_reconstruction.png",
-      "bytes": 30219,
-      "sha256": "676ee3ad41fd7cad3d9b24b1d8b2aebc5173ae140c722e92a2778e2b5686ef2c"
+      "bytes": 30283,
+      "sha256": "80531f00c6ea76810a4b997c8fae70a2cb05c91666086a8b8a0acec7be7b9694"
     },
     {
       "path": "preview/collision_grid.png",
       "bytes": 593,
-      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a"
+      "sha256": "e8c9c9b06adb3881ce22522750fcda442f6d8d331ff01cc616b7b7e38f262785"
+    },
+    {
+      "path": "preview/native_access_path_layer.png",
+      "bytes": 1018,
+      "sha256": "82bcfa5d108bd48f911403249d31afa3b6134d189483e83d6d1be050cea1b862"
     },
     {
       "path": "preview/native_floor_layer.png",
       "bytes": 2772,
-      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6"
+      "sha256": "4949f31ae82025971d4e47f10c2a7cbe3f6ab25d32b209dbdc8cb28a4859ee49"
     },
     {
       "path": "preview/native_foreground_layer.png",
       "bytes": 3873,
-      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72"
+      "sha256": "de7e1cec9ceedc867d72065f71130c4ff043844fb9773258a533b31af663af9f"
     },
     {
       "path": "preview/native_ground_reconstruction.png",
-      "bytes": 27056,
-      "sha256": "9ad3fe0d5a301c1379d5174882e5a745ebbe9ff346744359c8d6ebbc200e5d2b"
+      "bytes": 26376,
+      "sha256": "855a8cfe15cfdf287899a6088eb77c051187fb325206bac807bfa0276caad9e4"
     },
     {
       "path": "preview/native_wall_layer.png",
       "bytes": 6763,
-      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b"
+      "sha256": "7a4a7d054c89cd27320f17945938290a904e8bdbab6b87f5cd9fd66ed42d5bf5"
     },
     {
       "path": "provenance/derived/iceroad_mountains_strip.png",
       "bytes": 8398,
-      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d"
+      "sha256": "8569fe13c22d94b80acaa91204926fc409e943565259f370819a0bd0fff97580"
     },
     {
-      "path": "provenance/derived/snow_forest_strip.png",
-      "bytes": 13848,
-      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c"
+      "path": "provenance/derived/snow_path_strip.png",
+      "bytes": 8866,
+      "sha256": "509fdf6bcc2b048f8d5658f44147364342fb11d1772afa8c9ad2c5092e1dce68"
+    },
+    {
+      "path": "provenance/derived/snow_trees_strip.png",
+      "bytes": 11035,
+      "sha256": "e63180d31250ec1ffe9c2e1afdbde3e28c5ebda4b53bb470049dec9f51650303"
     },
     {
       "path": "provenance/layout_guide_reference.txt",
@@ -160,8 +190,8 @@
     },
     {
       "path": "provenance/provenance.json",
-      "bytes": 11365,
-      "sha256": "5fffde87bc5b080cc4283229fa7b2a37c38341d17588bb8daf28d7c96c6a2836"
+      "bytes": 13471,
+      "sha256": "184a6cadcd4cf93c33416f7e0a53e3fab06a29fe3251791f73d351b9cb7087ca"
     },
     {
       "path": "provenance/references/aurorepmdsky.png",
@@ -179,6 +209,11 @@
       "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
     },
     {
+      "path": "provenance/references/path.png",
+      "bytes": 89728,
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b"
+    },
+    {
       "path": "provenance/references/pmdskyicearena.png",
       "bytes": 68454,
       "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
@@ -190,8 +225,8 @@
     },
     {
       "path": "verification.json",
-      "bytes": 1131,
-      "sha256": "5c7027871dcffba429d4cd2fb3f84360fc026f6d59a3beab7e156d495119c4f6"
+      "bytes": 1132,
+      "sha256": "788d7a649331bc533291bcd533d31745c6b8c02eb86b91afc3a939bb6744a8c4"
     }
   ],
   "excluded_from_zip": [

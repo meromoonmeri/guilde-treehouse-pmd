@@ -80,7 +80,8 @@ def main():
             "Content/BG/GLACIER_AURORA_CANONICAL.dir",
             "Content/BG/GLACIER_NIGHT_BASE.dir",
             "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
-            "Content/BG/GLACIER_SNOW_FOREST.dir",
+            "Content/BG/GLACIER_SNOW_TREES.dir",
+            "Content/BG/GLACIER_SNOW_FOREST_PATH.dir",
             "provenance/provenance.json",
         }
         assert required <= names, sorted(required - names)
