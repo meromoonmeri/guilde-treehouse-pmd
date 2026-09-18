@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checks_count": 29,
+  "checks": [
+    "Références et bruts épinglés",
+    "Huit plans RGBA960×720, grille8px",
+    "01_ciel_bleu_noir : transparence propre",
+    "01_ciel_bleu_noir : aucune clé magenta opaque",
+    "02_etoiles_natives : transparence propre",
+    "02_etoiles_natives : aucune clé magenta opaque",
+    "03_lune_canonique : transparence propre",
+    "03_lune_canonique : aucune clé magenta opaque",
+    "04_montagnes_lointaines : transparence propre",
+    "04_montagnes_lointaines : aucune clé magenta opaque",
+    "05_sol_complet_et_acces_sud : transparence propre",
+    "05_sol_complet_et_acces_sud : aucune clé magenta opaque",
+    "06_reliefs_arriere : transparence propre",
+    "06_reliefs_arriere : aucune clé magenta opaque",
+    "07_immersion_gauche : transparence propre",
+    "07_immersion_gauche : aucune clé magenta opaque",
+    "08_immersion_droite : transparence propre",
+    "08_immersion_droite : aucune clé magenta opaque",
+    "65 lignes sombres du ciel validé inchangées",
+    "Prolongement bleu-noir sans stries, RGB issu de la source",
+    "Étoiles natives inchangées",
+    "Lune native33×36,516pixels visibles, RGBA exacts",
+    "Lune placée sans redessin, resampling ni recoloration",
+    "Recomposition des quatre plans terrain exacte",
+    "Panorama indépendant, placement et normalisation exacts",
+    "Recomposition finale PNG exacte",
+    "ORA huit plans : recomposition et mergedimage exacts",
+    "Accès sud→centre, corridor16px sur le masque du sol visible",
+    "Lune entièrement visible devant le ciel, non cachée par montagne"
+  ],
+  "not_tested": [
+    "Échelle en jeu, collisions et gameplay PMDO",
+    "RenduGPU ou intégration Ground",
+    "Approbation artistique utilisateur"
+  ],
+  "note": "Le contrôle du corridor est une vérification sur les masques, pas un test de déplacement moteur."
+}

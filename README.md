@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Arène du Croissant — glace, montagnes Sky Peak et lune native
+
+**[Voir la composition PNG](renders/arene_glace_sky_peak_v1/ARENE_SKYPEAK_V1_composition_nuit.png)** · **[Huit calques / notice](renders/arene_glace_sky_peak_v1/README.md)** · **[Atelier des calques](apercu_arene_glace_sky_peak_v1.html)** · **[Kit PNG / ORA](renders/arene_glace_sky_peak_v1/ARENE_SKYPEAK_V1_pack.zip)**
+
+Nouvelle arène ovale accessible au sud, panorama de montagnes enneigées au loin façon Sky Peak, ciel bleu-noir étoilé et **croissant natif 33×36 repris sans redessin ni agrandissement**. Composition **960×720**, huit plans alignés, sol complété sous les reliefs. Terrain et montagnes générés d’après les références PMD ; lune et étoiles issues des feuilles natives. Ciel adapté depuis les lignes sombres de la source validée. Pas d’aurore ou d’animation ajoutée. **29 contrôles de fichiers PASS**, aucune intégration ou collision moteur revendiquée.
+
+
 ## Nouvelle onde boréale — couleurs + légère ondulation, PNG et WebP
 
 **[Voir les animations directement sur GitHub](renders/onde_boreale_glace_v2/README.md)** · **[Planche PNG](renders/onde_boreale_glace_v2/PLANCHE_ONDE_ET_TROIS_ZONES.png)** · **[Atelier interactif](apercu_onde_boreale_glace_v2.html)**
