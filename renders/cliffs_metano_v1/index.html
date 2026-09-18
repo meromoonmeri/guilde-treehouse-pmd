@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atelier Métano · Falaises</title>
+<style>
+:root{color-scheme:dark;--bg:#101b22;--panel:#182831;--line:#31444d;--ink:#e7ecdc;--muted:#a1b6b6;--lime:#d8e885}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,sans-serif}header{padding:25px 32px 21px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;align-items:center}.eyebrow{color:var(--lime);letter-spacing:.15em;font-size:11px;font-weight:700}h1{font-size:27px;margin:5px 0 2px;font-weight:550}header p{margin:0;color:var(--muted);font-size:13px}.button,button,select{font:inherit;border:1px solid var(--line);background:#233741;color:var(--ink);border-radius:7px;padding:8px 12px;text-decoration:none;cursor:pointer}.button.primary{background:var(--lime);color:#1a2b23;border-color:var(--lime);font-weight:650}button:hover,.button:hover{filter:brightness(1.12)}button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid var(--lime);outline-offset:3px}.layout{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:calc(100vh - 133px)}aside{padding:22px 16px;border-right:1px solid var(--line)}.section-label{font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin:0 0 14px}.card{width:100%;display:block;text-align:left;margin-bottom:13px;padding:8px;background:#14232b;border:1px solid var(--line);border-radius:8px}.card[aria-pressed=true]{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime)}.card img{display:block;width:100%;aspect-ratio:1.7;object-fit:contain;image-rendering:pixelated;background:#23343f;border-radius:4px}.card strong{display:block;font-size:13px;margin:9px 4px 0}.card small{display:block;color:var(--muted);margin:2px 4px 3px;font-size:11px}.aside-note{font-size:12px;color:var(--muted);padding:10px 5px}.aside-note a{color:var(--lime)}main{min-width:0;padding:24px 28px}.title-row{display:flex;align-items:start;justify-content:space-between;gap:15px}h2{font-weight:500;font-size:24px;margin:0}#meta{font-size:12px;color:var(--muted);margin:3px 0 16px}.badge{padding:4px 9px;border:1px solid #52634d;color:var(--lime);font-size:11px;border-radius:20px;white-space:nowrap}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:14px;font-size:13px}.toolbar label{display:flex;align-items:center;gap:7px}input{accent-color:var(--lime)}select{font-size:13px;padding:6px}.viewport{position:relative;overflow:auto;border:1px solid var(--line);border-radius:8px;min-height:220px;max-height:72vh;background:repeating-conic-gradient(#22313b 0% 25%,#2b3c46 0% 50%) 0 0/24px 24px}.viewport.magenta{background:#f0f}canvas{display:block;image-rendering:pixelated;max-width:none;margin:auto}#status{font-size:12px;color:var(--muted);margin:7px 0 17px}.layers{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.layers strong{font-weight:500;color:var(--muted)}.layers label{white-space:nowrap}.layers.disabled label{opacity:.5}#review{font-size:13px;max-width:900px;color:#bfccc9;margin:17px 0}.downloads{display:flex;gap:9px;flex-wrap:wrap;font-size:13px}.notice{margin:23px 0 8px;font-size:12px;color:var(--muted);max-width:960px}.notice strong{color:#dce3d3}a{color:var(--lime)}@media(max-width:800px){header{padding:20px;align-items:start;flex-direction:column;gap:12px}.layout{display:block}aside{padding:16px;border-right:0;border-bottom:1px solid var(--line)}#cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.card{margin:0}.card strong{font-size:11px}.card small,.aside-note,.section-label{display:none}main{padding:19px 16px}.title-row{flex-wrap:wrap}.viewport{max-height:65vh}}@media(max-width:470px){#cards{grid-template-columns:repeat(2,minmax(0,1fr))}h1{font-size:23px}}
+</style></head><body>
+<header><div><div class="eyebrow">ATELIER DE TERRAIN / LOT 01</div><h1>Les falaises de Métano</h1><p>Deux sprites isolés, deux nouvelles zones. La matière Métano, de nouvelles silhouettes.</p></div><a class="button primary" href="METANO_CLIFFS_V1_pack.zip" download>Télécharger le kit ↓</a></header>
+<div class="layout"><aside><p class="section-label">Les compositions</p><nav id="cards" aria-label="Sélectionner une falaise"></nav><div class="aside-note">Références du dépôt<br><a href="../../source/falaises_generees/reference_canonique.png" target="_blank" rel="noopener">Scène canonique ↗</a><br><a href="../../source/caps_terrasses_v4/reference_matiere_stricte.png" target="_blank" rel="noopener">Échantillons natifs ↗</a><br><br><a href="README.md">Notice et import</a> · <a href="manifest.json">Provenance</a></div></aside>
+<main><div class="title-row"><div><h2 id="title"></h2><p id="meta"></p></div><span class="badge">Candidat · non testé en jeu</span></div>
+<div class="toolbar"><label>Ambiance <select id="mode"><option value="jour">Jour</option><option value="nuit">Nuit Abyss</option></select></label><label>Fond <select id="back"><option value="alpha">Transparence</option><option value="magenta">Magenta</option><option value="scene">Contexte marin</option></select></label><label>Zoom <select id="zoom"><option value="fit">Ajuster</option><option value="1">1× pixels</option><option value="2">2× pixels</option></select></label><label><input type="checkbox" id="grid">Grille 8 px</label></div>
+<div class="viewport" id="viewport"><canvas id="canvas" width="1264" height="848" aria-label="Aperçu de la falaise sélectionnée"></canvas></div><p id="status" role="status">Chargement…</p>
+<div class="layers" id="layer-controls"><strong>Calques</strong><label><input type="checkbox" id="terrain" checked>Terrain complet</label><label><input type="checkbox" id="ciel" checked>Ciel</label><label><input type="checkbox" id="astres" checked>Astres</label><label><input type="checkbox" id="nuages" checked>Nuages natifs (wrap)</label><label><input type="checkbox" id="ocean" checked>Océan</label><label><input type="checkbox" id="animate">Animer mer / nuages</label></div>
+<p id="review"></p><div class="downloads"><a class="button" id="png" download>PNG transparent ↓</a><a class="button" id="ora" download>Calques .ora ↓</a><a class="button" id="scene-png" download>Scène PNG ↓</a><a class="button" id="raw" target="_blank" rel="noopener">Brut magenta ↗</a></div>
+<p class="notice"><strong>Ce qui est livré :</strong> des terrains générés avec les références Métano, détourés et ramenés aux 328 couleurs natives de la palette du lot V4. Les motifs ne sont pas des copies certifiées des tuiles du jeu. Herbe, roche et bordures restent réunies dans le calque terrain. Les fichiers ORA séparent terrain, ciel validé, astres, nuages natifs et océan (phase 0). Le contexte marin est une démonstration, pas un nouveau biome aquatique.</p><p class="notice">1264 × 848 px, terrain sans redimensionnement. Grille d’import PNG to Tileset : 8 px, échelle à calibrer dans votre projet. Ni collisions, ni Ground, ni raccord automatique. Ciels jour/nuit et six familles de nuages validés : c16efe12, sans resampling. Wrap nuages −4 px/s, période 360 s. Océan V3 : 64 phases × 50 ms. <a href="PLANCHE_FALAISES_METANO.png">Voir la planche des quatre compositions ↗</a></p>
+</main></div>
+<script id="manifest-data" type="application/json">{
+  "title": "Falaises Métano — premier lot",
+  "date": "2026-09-18",
+  "method": "Références natives → génération sur magenta → détourage V4 → couleurs de la palette Métano V4 → variante Abyss. Aucune reconstruction de tuiles natives.",
+  "palette": "source/caps_terrasses_v4/palette_canonique.json",
+  "palette_sha256": "bf35d83a9b59aa1a1b28db76285750156c77530cfe6c5992084d135828af9835",
+  "references": [
+    {
+      "path": "source/falaises_generees/reference_canonique.png",
+      "sha256": "2afa395eb6492133e80af899b7d2a53c3c56b1434702d87d54aa947f278d18c7"
+    },
+    {
+      "path": "source/caps_terrasses_v4/reference_matiere_stricte.png",
+      "sha256": "5795249a0fe1b47777232064e2b0432c8c73433a84959e5a4b5fb0cfd9ffdf72"
+    },
+    {
+      "path": "renders/caps_terrasses_v4/08_crochet_droit_terrain.png",
+      "sha256": "a3e4ad6283610c535d17f8e31e731f7cd466ca4ad4cf2b163f625a6441cf6bba"
+    },
+    {
+      "path": "renders/falaise_metano_temoin/01_crete_sillage_transparent.png",
+      "sha256": "31f0b47f226e056810d9e4addef6fc35eb5a903a779c9305d8ae700daffa29f3"
+    }
+  ],
+  "ocean": {
+    "frames": 64,
+    "duration_ms": 50,
+    "period_ms": 3200,
+    "origin": "Caps/Terrasses V3, interpolation de palette ; pas un nouveau cycle officiel extrait"
+  },
+  "approved_backgrounds": {
+    "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+    "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+    "cloud_crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "cloud_destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "cloud_strip_size": [
+      1440,
+      208
+    ],
+    "cloud_speed_px_s": -4,
+    "cloud_loop_s": 360,
+    "sources": [
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+        "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+        "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+        "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+        "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+      }
+    ]
+  },
+  "backgrounds": [
+    {
+      "approved_family": true,
+      "kind": "ciel",
+      "mode": "jour",
+      "export": "contexte/METANO_CLIFFS_V1_ciel_jour.png",
+      "resampled": false
+    },
+    {
+      "approved_family": true,
+      "kind": "astres",
+      "mode": "jour",
+      "export": "contexte/METANO_CLIFFS_V1_astres_jour.png",
+      "resampled": false
+    },
+    {
+      "approved_family": true,
+      "kind": "nuages",
+      "mode": "jour",
+      "export": "contexte/METANO_CLIFFS_V1_nuages_jour.png",
+      "resampled": false
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_00.png",
+      "sha256": "032a2c7c62ac54846b606c6b079bca506f3260523dd1526d1758a1b784a82da2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_00.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_01.png",
+      "sha256": "f296d1174564a73942eabbc5b0ffd3ba64ed5d05784527bb187c2fa4a6ea1d0b",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_01.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_02.png",
+      "sha256": "ce471216431f537687cf894a1341388b0a090d0a7b91e04b50c5f4b26405e3ce",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_02.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_03.png",
+      "sha256": "f3152eac392991da934e09b492bddbc4e7b1023323750218a2451db7b32611e6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_03.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_04.png",
+      "sha256": "f64f0015b2bb05b207570ce046fa47efe5df54a353556b2417e1a51e5acd2cc7",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_04.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_05.png",
+      "sha256": "72ede669ff985d3dfc0f591a95bdd75143b62802c59ca4ce7847fd13b8a934d9",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_05.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_06.png",
+      "sha256": "b6c7572519a7e1cc653310ffc5687508e569891c70a2aeecf39c605fdd8bc6ff",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_06.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_07.png",
+      "sha256": "81695ad048a4b44b994ab0bb630b4a8f5de528c9f49d278ba95df9cb1edf52a5",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_07.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_08.png",
+      "sha256": "d1876429af76182c9bee78bbb16a21b6cf4cdff193659be6af35c3fdc2b29cd3",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_08.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_09.png",
+      "sha256": "768e775c6daaf45ac255556ab67b7fce344c4c9e356b4a284b2d82e7678834fc",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_09.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_10.png",
+      "sha256": "b413fdde49aa284b509a18839d7e2e47d05ed9654cbc77e7ac24d655d5ee6818",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_10.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_11.png",
+      "sha256": "2f148d720a520a057e95a27ab430180f819fbaf04b9a3dd3b748d9b5fe8ed994",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_11.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_12.png",
+      "sha256": "4650132e75cc320197ccbf160c4b93d870e30814584d98d80cc11080142295f1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_12.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_13.png",
+      "sha256": "2b76726a6fae7f4ea628a3fe775769734cad3db2289e026988ec7412939bcb9c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_13.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_14.png",
+      "sha256": "1cf729cf21050b248266485c7e0928967b7d4e9d783b259ecb7f3eeb12b566b8",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_14.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_15.png",
+      "sha256": "f8a2b600886c8e48688cb4d837df553e9044e7dfd8fbb4b23dbb7d4f47942877",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_15.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_16.png",
+      "sha256": "8a0f1a48de745e34b3e4ee7fad6c585381320b0955c3b525396f99d26af9bde4",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_16.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_17.png",
+      "sha256": "214d2f9e0ad8799819bc8ab155c8af93f0a2da0ff572246fea0fb62a8d760309",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_17.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_18.png",
+      "sha256": "7ba83bd043bde0280520d7a69826964c5c5fa0dccad34de5b51a707694d33a28",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_18.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_19.png",
+      "sha256": "b0d5947ecc9ea29da88376a875577a5a2f8983f194d58084d19e924a055a7464",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_19.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_20.png",
+      "sha256": "8cab74348be4d031c7294a399974617ff32b32770e03286d9679e7dced1f5573",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_20.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_21.png",
+      "sha256": "50c9c6950f65e6203b07af43b2f043e278e8d39e7ef9f840e00889740addc46f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_21.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_22.png",
+      "sha256": "9e456d84efddb639ee553f75d3b11c2b65b5bb2ec5b2d82396901bca0c81d35f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_22.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_23.png",
+      "sha256": "85759a9a57a35b7ac0c89c293dc68582603413ff8586455ed6e9fc08572eb80c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_23.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_24.png",
+      "sha256": "c478aabc1ef52eba552c84d513ca1e543d4e8f4f1256474691548b546a2375e2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_24.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_25.png",
+      "sha256": "e63c2608340320d646c36de68b72ece2135318cb44ef58f9eccfcfb02c3614b1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_25.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_26.png",
+      "sha256": "bcb37dd6ceb2bc77118677c0cd273fe17c1316d7ea00a5cd1176b41be413c16c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_26.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_27.png",
+      "sha256": "81a4b59c532eab3519a0adc3687a538ef62be538a8f457fb8d79f34cbef82e78",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_27.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_28.png",
+      "sha256": "83f1f7b72eac85ab837367450791479c649f78dbbe79d5b103c42b021f078ac9",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_28.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_29.png",
+      "sha256": "4d5222da824c3d964e4054469220b82da38385cb01088af8672239854f09d9bb",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_29.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_30.png",
+      "sha256": "6a6a47e45a330797a92e223f088da4197bc6bdf74b0fe9559d9fcd314703911f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_30.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_31.png",
+      "sha256": "eb2d610ac403cb31438d9718f90800cfbe87e4d9d0bb00a585b4a3bcea05211e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_31.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_32.png",
+      "sha256": "d9fc067bd0a0098981ca7549cda355f0e9dc068f612da3e3091db8a69c2118a6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_32.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_33.png",
+      "sha256": "e3fe6b1b6f2edd72a934c60fd06713770fe4d35a0e2ff4e1880d264a7952d761",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_33.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_34.png",
+      "sha256": "98a20c63c2aeb2e0a6df0e0da3e6b4235a950548615649ef92a43a06f3711c5d",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_34.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_35.png",
+      "sha256": "5fe82d3858e3fd951a04b38b50dfbbb52ad335d9b955310872f5d3f69b971c6c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_35.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_36.png",
+      "sha256": "4e94cbcfec1c8ee954fb4cac10d44d224f0d34786140eaa88e612946a20fe69c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_36.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_37.png",
+      "sha256": "f3659fe1eeae81b45716b8f5fa60e7da64b0ea34552ec80f5a58cf1d665a724b",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_37.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_38.png",
+      "sha256": "126e101e5eae4616e4d6bf48b3f0b81770661bd13517848eabd711d0d974315a",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_38.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_39.png",
+      "sha256": "c44fbb1f1c228386cce5c3a59baeea34e507080d3f63ba4a89ac14bbe4d83a6c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_39.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_40.png",
+      "sha256": "36d7caa329b87667f4c5ab0406efcf115dfd7369affc063e62089270a9d8b6a6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_40.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_41.png",
+      "sha256": "7780144606c3cc0020eaf4d6a83441ee1fcabe4335ff5f2cb4ab359377027023",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_41.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_42.png",
+      "sha256": "8ddc6c3d3d4821d3f00334d9461831e51be741661219dad58eb4afd22b14a31e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_42.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_43.png",
+      "sha256": "7561f3da058f884913b7496e5a1d62a64f22dc084dd3536c3ef5e158de43d494",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_43.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_44.png",
+      "sha256": "00a2d7321df1d8a190061c2e3102af151a1aeea39aa36c25afa7073d24f77fa1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_44.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_45.png",
+      "sha256": "c7ff6ec7ba277dceb9e017c94dd07ec5ad720f9b6869ef43eff366601c43a7d6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_45.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_46.png",
+      "sha256": "86d40568a4dd3d7e3056c5a71e5c2d57e82884e92204d87dd07e5bba40bb36df",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_46.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_47.png",
+      "sha256": "447c9bd51a523e2654720fb9d5f8d17bc1faddfe46fc2c1a9c8348d086b309d6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_47.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_48.png",
+      "sha256": "8d5be465473ae56e11e2d8984f16b3059591649b7d702ec627271c6db3adb1e5",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_48.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_49.png",
+      "sha256": "e31b906e7823b90f7f29687a03e5a675ade49df79a633beed53ae6edfe3c34eb",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_49.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_50.png",
+      "sha256": "c9fa6ba8a71d1fbd6dcf4dafe3d6c3e8df029ff21481d495af089b673729d665",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_50.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_51.png",
+      "sha256": "4a2c6d3e8a777c7e15a2ae4bca6262be3891be55b49fa06274f6fd411160ece9",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_51.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_52.png",
+      "sha256": "f981c82c7c39d836839204b2953949c27cc12a5609068a4a7b0c6bfa57335140",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_52.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_53.png",
+      "sha256": "b38718f5c3470d02bc28577ae2251ec5418798cd5b43634c5402a65bb33405da",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_53.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_54.png",
+      "sha256": "2ada7577f10de5da638bd2401ec7f7488ce26797b1d0be52766997b1ed58a736",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_54.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_55.png",
+      "sha256": "cf4d80ab4658f29863bb18aec3e0005e3558e864bf8b67b7d186fa824c780273",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_55.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_56.png",
+      "sha256": "861e506b3fa956fa31fa3a931e3c0f245f1fd006e27dd21c4538948bcbc34a37",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_56.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_57.png",
+      "sha256": "fb07beda002836f6ff62ab358057124c3216033b61e7b7f98aa2b27c531d7e56",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_57.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_58.png",
+      "sha256": "abce396351b2ec92bd1d866b57fc6d1c26785ff648fb7c16f0cf01e27067bf88",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_58.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_59.png",
+      "sha256": "f774d2be7bb465944cb2e43e67583e4d02a0a63f16ef1c897122fb3d2caae525",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_59.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_60.png",
+      "sha256": "1ad6e9951ec1a70c6652bdbf5faf28118e276b98150431076cd4d298c3cb3f8d",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_60.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_61.png",
+      "sha256": "5798ac953a73b9bf35e224d88acbad42060236c5ed808e79dd70a2677a2f52e2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_61.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_62.png",
+      "sha256": "859b0fc1d208161483125a937c5056bc704e00dbe00f1561344f340a492dee27",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_62.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/jour_63.png",
+      "sha256": "3060ef603f1863fb3c9107df3a58c16451e46d4674d60894bdf77a3086828d96",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_jour_63.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "approved_family": true,
+      "kind": "ciel",
+      "mode": "nuit",
+      "export": "contexte/METANO_CLIFFS_V1_ciel_nuit.png",
+      "resampled": false
+    },
+    {
+      "approved_family": true,
+      "kind": "astres",
+      "mode": "nuit",
+      "export": "contexte/METANO_CLIFFS_V1_astres_nuit.png",
+      "resampled": false
+    },
+    {
+      "approved_family": true,
+      "kind": "nuages",
+      "mode": "nuit",
+      "export": "contexte/METANO_CLIFFS_V1_nuages_nuit.png",
+      "resampled": false
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_00.png",
+      "sha256": "ca0443cdab2e4368b3d00042a8de0ccf979c0751415b1c69ff83ec011e61106b",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_00.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_01.png",
+      "sha256": "2b4364cef50c32f132de3bfea2c6d907eed2dff9d7c64e349ea3123e6413c781",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_01.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_02.png",
+      "sha256": "446c0914bdafc1e3d9d0b9a9476a31b3584e11e7ff369c6c1320f23169cd9d5e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_02.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_03.png",
+      "sha256": "2645d766ceb9a9b7f53e9684f8eac35104b5de64de7053baf65211d1498d765a",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_03.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_04.png",
+      "sha256": "71ddac2437efe03ca96f18fd8e42704919b72b06b1165927f87e780bdda58676",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_04.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_05.png",
+      "sha256": "ad319aa88c7cda4cd1f24ecf7627167a70d2d4eb714c0a514d9a6b61acf02d62",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_05.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_06.png",
+      "sha256": "db40326726428d0468a992f183846761376465920608ac309b23247f6d9b614a",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_06.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_07.png",
+      "sha256": "8dbdcae227a5547199879cc03a930caf926e390def5ea14b270637ff07a3bf32",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_07.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_08.png",
+      "sha256": "d8f800d1366a4ea4f10ff643a57b3e0b1afa745fe05d5851eaa4f3ac05f45d95",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_08.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_09.png",
+      "sha256": "d22e3ce389886e7398eebfb28175997e31692964714875fcc201ac8a0f794625",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_09.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_10.png",
+      "sha256": "714632030389508cce5ad9d23160b5bb877c61072d7f256fa17664e87b581b5f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_10.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_11.png",
+      "sha256": "afdb0ea611ff54b2f980441951236c7dfe62d2d80750f29714489e5349029c0b",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_11.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_12.png",
+      "sha256": "9203f2d2071573248b58ca20a70b87f3f5372c020ac8d70a0d3890a9d79c53cb",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_12.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_13.png",
+      "sha256": "cfe0e20921f316fa81f98dac3f9ad4adf5bd59241790cc119e29a84833ecf058",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_13.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_14.png",
+      "sha256": "82a41190d9af071abe4823b05adbf9f7e20cd22abac7f51ca25cf6c423dae810",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_14.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_15.png",
+      "sha256": "c2e06137fd594744e49cfd843f2b29726b7763923593f1f5a2894c4f7d96710d",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_15.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_16.png",
+      "sha256": "3d0b1508f2329170b1d523dcefeb7c3083eafde36b88142acf389d3de0bd8106",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_16.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_17.png",
+      "sha256": "ccff15d2ff9fea7d48626f80a3b1b2ec9905371b66902e5ade315040b3fa35a3",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_17.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_18.png",
+      "sha256": "ffdd280c2acf3093ccb59fd373a7b5e37d3efe4e99e34d574f183886659dd814",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_18.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_19.png",
+      "sha256": "c1bd8b664a6ac36cbec01332dce363be60b6af3487e5a67a04663a7df1821b8d",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_19.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_20.png",
+      "sha256": "55c3af686e7acba62e89372efdca4b43eb187f06f54986213758672c525df770",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_20.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_21.png",
+      "sha256": "004d5d8638033b07755e027442b0a9e2fb651bc3c684324ebc7d74bce66f58be",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_21.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_22.png",
+      "sha256": "50e13f7c62052b4e4a57475f73c72999f2143d1192166577925f7110ce4cd2e2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_22.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_23.png",
+      "sha256": "ed55329184d99509e09b29310ff070cc7359c2301ea80d9127ff190b7c6a818f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_23.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_24.png",
+      "sha256": "43ae74d89a6527652dd4309c99a7c350b81a9abe9b0c9d33fb0cb35d366ba376",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_24.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_25.png",
+      "sha256": "69289935de8ebfeedee66e0eb0ba41e810726a2ea55b717edef991de46672a21",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_25.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_26.png",
+      "sha256": "42c80c083c3f5663dc550a075f3c4c3578ac07709d86cc43df1ba53fa330ce33",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_26.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_27.png",
+      "sha256": "cdb16d001d16e6bfd965c004ee738fa9c79f8312aa52933e82f17878f6f1fc7f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_27.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_28.png",
+      "sha256": "ac794a6faa03c4fb0ff60c2842ff2b480c52010d1ed744b87b20a59a50eccaaf",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_28.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_29.png",
+      "sha256": "edc44a1ed3dd09a117a46edfa7635d37b8df12e74e13110fa0d0ba958124823e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_29.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_30.png",
+      "sha256": "0c18feece8ab38998e63225044d86d72ebfda077296da5d0fca9453db075fb26",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_30.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_31.png",
+      "sha256": "170faca75b325f0999bc6fab379279a186930d2111dad9803ed115f8dc79bca9",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_31.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_32.png",
+      "sha256": "1c8f7002a3fde079c010e9475a3abd05607334eb539b829373cb031344b8414f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_32.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_33.png",
+      "sha256": "15a06ad87f1c5c4adde1a51ebbe367828eaee84aec5e9e301e1cea0ef49909d1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_33.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_34.png",
+      "sha256": "c06bea5c2ebfb9317c6a0a0d4290784016958381dd5b3ea3a7f312d4a0ddbdc1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_34.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_35.png",
+      "sha256": "b845e3bad21702418890d0d4c6a37a1ab77e321b2cc2555962575c0dd864b755",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_35.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_36.png",
+      "sha256": "106f96d35542c802b53d0b8ce48b9577ab0692ee9720e3271e3ab8ab3e094114",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_36.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_37.png",
+      "sha256": "76aa7d32d4e708b298ce6a781f76309eb64e00886fb0f18145e4d52ea82a309e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_37.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_38.png",
+      "sha256": "08f2bb350ef04fd4bb0afb745e62e796481a7b9c604b085258dd88c4d357101e",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_38.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_39.png",
+      "sha256": "677816b973d2791e33d44a38f3522d3280ce05d834414ddc1eaf5748784f71f1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_39.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_40.png",
+      "sha256": "2418a343ca4049a8748293dc81945be2702dd1759a1d29aa62f397ddecb40a6f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_40.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_41.png",
+      "sha256": "81fd7d81548e17de9d9d5338184fc84c3a689c00ab92a4fd084206535de0a992",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_41.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_42.png",
+      "sha256": "c36a55dc68cd0426325dee296f6d5d9d98e555166dbebfc74c87418fd1a6a65c",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_42.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_43.png",
+      "sha256": "871daa9205bf2d9fc4d59bd04e0db3fb64750e32de4c2c373c4d3dd56c7e41bd",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_43.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_44.png",
+      "sha256": "e65eceae6a474599351db30697decca93be3e57bcf9dd74df73484b3672a9fc0",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_44.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_45.png",
+      "sha256": "26dd5bc7f473745bf4f1f323d9c07a4dd029083b01ddc4ea39d0d62dc7ffc017",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_45.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_46.png",
+      "sha256": "2353e62af0d9dd67711ed8863450f863e17d3e3636311b66f19c55bbf002eec5",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_46.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_47.png",
+      "sha256": "9aa75afe4dd9e6a5f783420e3704f1ce402393a8a0304bc50b7dd9d7538f0592",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_47.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_48.png",
+      "sha256": "edd6a687b9d9c04c852af01b21982de9710fe19c6bcbfa8d0bc241875541091a",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_48.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_49.png",
+      "sha256": "a9a046d5fe37b15d3e1511ac5481bd395a748605c9f75209bb3f948d40dbe01f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_49.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_50.png",
+      "sha256": "0405d69d6e6410fe22361d3d9c05fac37b5307faef6870ea69dbf908488b6afc",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_50.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_51.png",
+      "sha256": "fc6a7b6e32ed8d8b927eb3eebbac9e3c8968461d3047cd9a0a179bc1644c4604",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_51.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_52.png",
+      "sha256": "1124a098fda58a3acc1b1f295d30869ec743a1c0c44b3561b8333b1524f407b2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_52.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_53.png",
+      "sha256": "888643cfaa7d515ce0dc1512fe1d40ae5c1bb5ae9bb52c3992a91747ca4f5570",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_53.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_54.png",
+      "sha256": "ed2d9a9d82aeb257b44270c67a0ebc03f662110a71c94118fa306bc48d8065e6",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_54.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_55.png",
+      "sha256": "a8ba5cac79239ee9953562893d0685863f164dd6c232f73a9d8c8f30fbc471cf",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_55.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_56.png",
+      "sha256": "069aadbf068aa16b33d564a61c7c9837600a53ae14c9300c986e478dcf2fb752",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_56.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_57.png",
+      "sha256": "c92c42ae835af75b9ef129dedfd377adb496b71ab5c3281d6e87238bcffff323",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_57.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_58.png",
+      "sha256": "993261da13f199953e1397b32c9dde4412d5df81674f0d3ce804a88600314fde",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_58.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_59.png",
+      "sha256": "5f7b623961e84ddf8e4936f5457a102b28b90d0967ae254706f02410671956ae",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_59.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_60.png",
+      "sha256": "ae48d0f1d087c6d03fd2381dfda2ebdc0e04d44a7b4c54b66c5a8f8c422092c1",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_60.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_61.png",
+      "sha256": "b0a99f2cda682ff8a8a29204a45734c89f29885d21977277d24d0234dffa466f",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_61.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_62.png",
+      "sha256": "73c74c39490a5cc495d0c9cdb66d8e7fe533d5fc02a10f757919888adfc635f2",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_62.png",
+      "resized_nearest_for_demonstration_only": true
+    },
+    {
+      "source": "renders/caps_terrasses_v3/ocean/nuit_63.png",
+      "sha256": "597a03425426d8c2e4cf80ae05dcae83808797cf5d203c1663535bcbd8680a01",
+      "export": "contexte/METANO_CLIFFS_V1_ocean_nuit_63.png",
+      "resized_nearest_for_demonstration_only": true
+    }
+  ],
+  "zones": [
+    {
+      "id": "01_cap_des_alizes",
+      "title": "Cap des Alizés",
+      "kind": "Sprite isolé",
+      "size": [
+        1264,
+        848
+      ],
+      "opaque_bbox_xyxy": [
+        41,
+        46,
+        1223,
+        806
+      ],
+      "raw": "bruts/01_cap_des_alizes_corrige.png",
+      "raw_sha256": "2b56cff42c416cc12f4e8a8d0ee93e2c9797d1a3853815ccda9a28d7398cb6cd",
+      "terrain_sha256": "b2c50c65fc5c22a85b36051d96b96b6067bb3b6f2340711dd29204fc0bcd4ea7",
+      "files": {
+        "terrain_jour": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_terrain_jour.png",
+        "scene_jour": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_scene_jour.png",
+        "ora_jour": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_jour.ora",
+        "terrain_nuit": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_terrain_nuit.png",
+        "scene_nuit": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_scene_nuit.png",
+        "ora_nuit": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_nuit.ora",
+        "magenta": "01_cap_des_alizes/METANO_CLIFFS_V1_01_cap_des_alizes_magenta.png"
+      },
+      "visual_review": "Plateau asymétrique et retour concave. Petite terrasse parasite retirée au second passage. Grain plus grossier que la référence native ; échelle à apprécier en jeu.",
+      "status": "Candidat inspecté — validation utilisateur et moteur à faire",
+      "resampled": false,
+      "canonical_pixels": false,
+      "layers": [
+        "ciel",
+        "astres",
+        "nuages",
+        "ocean",
+        "terrain"
+      ]
+    },
+    {
+      "id": "02_balcon_du_levant",
+      "title": "Balcon du Levant",
+      "kind": "Sprite isolé",
+      "size": [
+        1264,
+        848
+      ],
+      "opaque_bbox_xyxy": [
+        36,
+        38,
+        1228,
+        808
+      ],
+      "raw": "bruts/02_balcon_du_levant.png",
+      "raw_sha256": "69b108881ab41e31b08642b0d36e5e919eb064ee10ab378c99b9ccbc4e60cf89",
+      "terrain_sha256": "0ddde4cea22ffcd5125ac733bcb5701f56208767b1e6335a5975aec9b5015821",
+      "files": {
+        "terrain_jour": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_terrain_jour.png",
+        "scene_jour": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_scene_jour.png",
+        "ora_jour": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_jour.ora",
+        "terrain_nuit": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_terrain_nuit.png",
+        "scene_nuit": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_scene_nuit.png",
+        "ora_nuit": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_nuit.ora",
+        "magenta": "02_balcon_du_levant/METANO_CLIFFS_V1_02_balcon_du_levant_magenta.png"
+      },
+      "visual_review": "Long balcon courbe, ombre mauve sur le retour gauche. Sol continu ; face assez régulière, pas un module raccordable automatiquement.",
+      "status": "Candidat inspecté — validation utilisateur et moteur à faire",
+      "resampled": false,
+      "canonical_pixels": false,
+      "layers": [
+        "ciel",
+        "astres",
+        "nuages",
+        "ocean",
+        "terrain"
+      ]
+    },
+    {
+      "id": "03_defile_des_explorateurs",
+      "title": "Défilé des Explorateurs",
+      "kind": "Nouvelle zone",
+      "size": [
+        1264,
+        848
+      ],
+      "opaque_bbox_xyxy": [
+        31,
+        0,
+        1234,
+        848
+      ],
+      "raw": "bruts/03_cirque_des_explorateurs_corrige.png",
+      "raw_sha256": "a9256050b14dc46f9fc0f88a88f2471c7c2748de40288bb1ad6908eef66622ae",
+      "terrain_sha256": "0fab530506e45d0d27172d5d3752f6ce505aae21bbba8721995e31ea87f52541",
+      "files": {
+        "terrain_jour": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_terrain_jour.png",
+        "scene_jour": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_scene_jour.png",
+        "ora_jour": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_jour.ora",
+        "terrain_nuit": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_terrain_nuit.png",
+        "scene_nuit": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_scene_nuit.png",
+        "ora_nuit": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_nuit.ora",
+        "magenta": "03_defile_des_explorateurs/METANO_CLIFFS_V1_03_defile_des_explorateurs_magenta.png"
+      },
+      "visual_review": "Le second passage a ouvert le mur central : défilé sud-nord entre deux hauteurs, escalier à droite. Ce n’est plus le cirque fermé initialement demandé au générateur. Accès visibles, collisions non fournies.",
+      "status": "Candidat inspecté — validation utilisateur et moteur à faire",
+      "resampled": false,
+      "canonical_pixels": false,
+      "layers": [
+        "ciel",
+        "astres",
+        "nuages",
+        "ocean",
+        "terrain"
+      ]
+    },
+    {
+      "id": "04_terrasses_du_sillage",
+      "title": "Terrasses du Sillage",
+      "kind": "Nouvelle zone",
+      "size": [
+        1264,
+        848
+      ],
+      "opaque_bbox_xyxy": [
+        0,
+        0,
+        1264,
+        848
+      ],
+      "raw": "bruts/04_terrasses_du_sillage.png",
+      "raw_sha256": "5140b5107ec03c9b80f09bb81f77bfa51fa63b15568e02d4e304f98d49894bea",
+      "terrain_sha256": "f8e11ef08040982c4b814b0361d6f5ed96a7a1dc1e23d180889d71a6d9169747",
+      "files": {
+        "terrain_jour": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_terrain_jour.png",
+        "scene_jour": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_scene_jour.png",
+        "ora_jour": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_jour.ora",
+        "terrain_nuit": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_terrain_nuit.png",
+        "scene_nuit": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_scene_nuit.png",
+        "ora_nuit": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_nuit.ora",
+        "magenta": "04_terrasses_du_sillage/METANO_CLIFFS_V1_04_terrasses_du_sillage_magenta.png"
+      },
+      "visual_review": "Approche sud-ouest, grande volée centrale et plateau nord-est. Le générateur a ajouté des plages de sable et une banquette intermédiaire. Escalier dessiné, pas extrait du tileset natif.",
+      "status": "Candidat inspecté — validation utilisateur et moteur à faire",
+      "resampled": false,
+      "canonical_pixels": false,
+      "layers": [
+        "ciel",
+        "astres",
+        "nuages",
+        "ocean",
+        "terrain"
+      ]
+    }
+  ],
+  "limits": [
+    "Terrain indivisible : herbe/roche/bordures dans le même calque, comme Caps/Terrasses V3-V4.",
+    "Les ORA contiennent cinq plans alignés : ciel validé, astres, nuages natifs, océan phase 0, terrain. Pas de sol caché reconstruit.",
+    "Échelle du générateur conservée, pas une échelle native certifiée.",
+    "Pas de Ground, autotile, collisions, raccords automatiques ou test PMDO.",
+    "Métano est la référence utilisée. Aucune nouvelle extraction spécifique de Bourg-Trésor."
+  ]
+}
+</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('manifest-data').textContent),$=id=>document.getElementById(id),canvas=$('canvas'),ctx=canvas.getContext('2d');
+let selected=0,frame=0,cloudOffset=0,request=0,cache=new Map(),lastFrame=-1;
+function image(path){if(!cache.has(path)){cache.set(path,new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>{cache.delete(path);reject(new Error('Image introuvable : '+path));};im.src=path;}));}return cache.get(path);}
+function fit(){let z=$('zoom').value;let w=z==='fit'?Math.min(canvas.width,$('viewport').clientWidth):canvas.width*Number(z);canvas.style.width=w+'px';canvas.style.height=(w*canvas.height/canvas.width)+'px';}
+async function draw(){const ticket=++request,r=data.zones[selected],mode=$('mode').value,scene=$('back').value==='scene',paths=[];
+ $('viewport').classList.toggle('magenta',$('back').value==='magenta');
+ for(const name of ['ciel','astres','nuages','ocean']){const el=$(name);el.disabled=!scene;if(scene&&el.checked)paths.push(`contexte/METANO_CLIFFS_V1_${name==='nuages'?'nuages_bande':name}_${mode}${name==='ocean'?'_'+String(frame).padStart(2,'0'):''}.png`);}
+ $('animate').disabled=!scene||(!$('ocean').checked&&!$('nuages').checked);
+ if($('terrain').checked)paths.push(r.files['terrain_'+mode]);
+ try{const images=await Promise.all(paths.map(image));if(ticket!==request)return;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.imageSmoothingEnabled=false;images.forEach(im=>{if(im.width===1440){for(let x=-cloudOffset;x<canvas.width;x+=1440)ctx.drawImage(im,x,0);}else ctx.drawImage(im,0,0);});
+ if($('grid').checked){ctx.beginPath();for(let x=0;x<canvas.width;x+=8){ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,canvas.height);}for(let y=0;y<canvas.height;y+=8){ctx.moveTo(0,y+.5);ctx.lineTo(canvas.width,y+.5);}ctx.strokeStyle='rgba(240,255,230,.17)';ctx.lineWidth=1;ctx.stroke();}
+ $('status').textContent=`${r.kind} · ${r.size.join(' × ')} px · ${mode==='jour'?'Palette Métano':'Filtre Abyss'}${scene?' · Océan '+String(frame+1).padStart(2,'0')+'/64':''}`;
+ }catch(err){if(ticket===request)$('status').textContent=err.message;}
+}
+function select(i){selected=i;let r=data.zones[i];$('title').textContent=r.title;$('meta').textContent=`${String(i+1).padStart(2,'0')} / 04 — ${r.kind} · PNG RGBA + projet OpenRaster`;$('review').textContent=r.visual_review;document.querySelectorAll('.card').forEach((el,n)=>el.setAttribute('aria-pressed',n===i?'true':'false'));links();draw();}
+function links(){let r=data.zones[selected],mode=$('mode').value;$('png').href=r.files['terrain_'+mode];$('ora').href=r.files['ora_'+mode];$('scene-png').href=r.files['scene_'+mode];$('raw').href=r.raw;}
+data.zones.forEach((r,i)=>{const b=document.createElement('button');b.className='card';b.type='button';b.setAttribute('aria-pressed','false');const im=document.createElement('img');im.src=r.files.terrain_jour;im.alt='';const title=document.createElement('strong');title.textContent=r.title;const type=document.createElement('small');type.textContent=r.kind;b.append(im,title,type);b.addEventListener('click',()=>select(i));$('cards').append(b);});
+for(const id of ['mode','back','grid','terrain','ciel','astres','nuages','ocean','animate'])$(id).addEventListener('change',()=>{if(!$('animate').checked){frame=0;cloudOffset=0;}links();draw();});
+$('zoom').addEventListener('change',fit);new ResizeObserver(fit).observe($('viewport'));
+$('animate').checked=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+function tick(time){if(!document.hidden&&$('animate').checked&&$('back').value==='scene'&&($('ocean').checked||$('nuages').checked)){let f=Math.floor(time/50)%64,c=Math.floor(time*4/1000)%1440;if(f!==lastFrame||c!==cloudOffset){lastFrame=f;frame=f;cloudOffset=c;draw();}}requestAnimationFrame(tick);}
+select(0);fit();requestAnimationFrame(tick);
+</script></body></html>

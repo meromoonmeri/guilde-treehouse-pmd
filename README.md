@@ -1,5 +1,23 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrées glacées — trois layouts sud → grotte nord + climat validé
+
+**[Planche jour/nuit](renders/entrees_glace_v1/PLANCHE_ENTREES_GLACE.png)** · **[Atelier animé et calques](apercu_entrees_glace_v1.html)** · **[Kit PNG / ORA / frames](renders/entrees_glace_v1/ICE_ENTRY_V1_pack.zip)**
+
+**Seuil du Givre**, **Anse des Neiges**, **Col des Aiguilles** : trois nouvelles compositions glacées référencées PMD, 768×640, cinq calques de terrain chacune en jour/nuit. Sol avec chemin, profondeur de grotte, cliffs/reliefs et deux bordures d’immersion. Ciel et étoiles séparés ; **les bonnes sources Guilde/Sharpedo c16efe12**, six familles de nuages natifs en wrap −4px/s. Onde boréale10frames indépendante, alternative palette cyclingV12 disponible. [Notice et limites](renders/entrees_glace_v1/README.md) · [140contrôles de fichiers](source/entrees_glace_v1/verification.json) · [19tests de galerie, DOM simulé](source/entrees_glace_v1/viewer_checks.json).
+
+**Correction du lot de falaises ci-dessous :** remplacement des mauvais ciels/nuages CapsV3 par les ciels jour/nuit et les six familles validés. Astres séparés, nuages en wrap ; terrains inchangés, scènes/ORA/ZIP actualisés. Aucun test PMDO revendiqué.
+
+
+## Nouveau — falaises Métano, sprites et zones (18 septembre 2026)
+
+**[Voir les quatre compositions](renders/cliffs_metano_v1/PLANCHE_FALAISES_METANO.png)** · **[Atelier jour/nuit et calques](apercu_cliffs_metano_v1.html)** · **[Télécharger le kit PNG / ORA](renders/cliffs_metano_v1/METANO_CLIFFS_V1_pack.zip)**
+
+Deux sprites isolés (**Cap des Alizés**, **Balcon du Levant**) et deux nouvelles zones (**Défilé des Explorateurs**, **Terrasses du Sillage**), d’après les références Métano déjà utilisées dans le dépôt. Génération sur magenta, détourage transparent, palette native V4 et nuit Abyss ; dimensions **1264 × 848**, terrain non redimensionné. Les ORA séparent terrain complet, ciel validé, astres, nuages natifs et océan. **Dessins générés référencés, pas tuiles natives certifiées ; échelle et collisions à vérifier en jeu.** Aucun asset existant remplacé.
+
+[Notice, limites et import 8 px](renders/cliffs_metano_v1/README.md) · [Méthode reproductible](source/cliffs_metano_v1/README.md) · [60 contrôles de fichiers](source/cliffs_metano_v1/verification.json). Galerie testée par syntaxe/DOM simulé et HTTP, pas par navigateur réel ni PMDO.
+
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

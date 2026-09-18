@@ -1,0 +1,1165 @@
+{
+  "title": "Trois entrées de grotte glacées",
+  "date": "2026-09-18",
+  "canvas": [
+    768,
+    640
+  ],
+  "zones": [
+    {
+      "id": "01_seuil_du_givre",
+      "title": "Seuil du Givre",
+      "description": "Approche directe sud → grotte au nord, clairière large, bordures de glace au premier plan.",
+      "raw": "bruts/01_seuil_du_givre.png",
+      "raw_sha256": "b0cca656a5b11e19621917c4de4053f8a9fe9c9baac72db1edc0bb4f8db6f148",
+      "normalization": {
+        "source_size": [
+          1264,
+          848
+        ],
+        "scale_uniform": 0.6037735849056604,
+        "resized_size": [
+          763,
+          512
+        ],
+        "offset": [
+          2,
+          128
+        ],
+        "method": "nearest uniforme, aucune déformation anisotrope ; bande de ciel indépendante au-dessus"
+      },
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_05_immersion_droite_nuit.png"
+        }
+      },
+      "files": {
+        "scene_jour": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_scene_jour.png",
+        "ora_jour": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_jour.ora",
+        "scene_nuit": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_scene_nuit.png",
+        "ora_nuit": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_nuit.ora",
+        "preview_webp": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_onde_preview.webp",
+        "preview_gif": "01_seuil_du_givre/ICE_ENTRY_V1_01_seuil_du_givre_onde_preview.gif"
+      },
+      "route_centerline": [
+        [
+          380,
+          639
+        ],
+        [
+          378,
+          575
+        ],
+        [
+          384,
+          496
+        ],
+        [
+          378,
+          424
+        ],
+        [
+          386,
+          365
+        ],
+        [
+          382,
+          338
+        ]
+      ],
+      "threshold_xy": [
+        382,
+        338
+      ],
+      "south_xy": [
+        380,
+        639
+      ],
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "runtime_PMDO": "NOT TESTED",
+      "art_approved": false
+    },
+    {
+      "id": "02_anse_des_neiges",
+      "title": "Anse des Neiges",
+      "description": "Chemin courbe autour d’un massif central, grotte au nord-est, encadrement rocheux immersif.",
+      "raw": "bruts/02_anse_des_neiges.png",
+      "raw_sha256": "4faaa9f9956388ef705b4ae8e20486f68d8636de73041a4ae73f1ba8847ab6c0",
+      "normalization": {
+        "source_size": [
+          1264,
+          848
+        ],
+        "scale_uniform": 0.6037735849056604,
+        "resized_size": [
+          763,
+          512
+        ],
+        "offset": [
+          2,
+          128
+        ],
+        "method": "nearest uniforme, aucune déformation anisotrope ; bande de ciel indépendante au-dessus"
+      },
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_05_immersion_droite_nuit.png"
+        }
+      },
+      "files": {
+        "scene_jour": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_scene_jour.png",
+        "ora_jour": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_jour.ora",
+        "scene_nuit": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_scene_nuit.png",
+        "ora_nuit": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_nuit.ora",
+        "preview_webp": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_onde_preview.webp",
+        "preview_gif": "02_anse_des_neiges/ICE_ENTRY_V1_02_anse_des_neiges_onde_preview.gif"
+      },
+      "route_centerline": [
+        [
+          369,
+          639
+        ],
+        [
+          368,
+          586
+        ],
+        [
+          370,
+          533
+        ],
+        [
+          340,
+          500
+        ],
+        [
+          263,
+          476
+        ],
+        [
+          198,
+          443
+        ],
+        [
+          169,
+          395
+        ],
+        [
+          192,
+          351
+        ],
+        [
+          255,
+          325
+        ],
+        [
+          329,
+          324
+        ],
+        [
+          400,
+          359
+        ],
+        [
+          460,
+          377
+        ],
+        [
+          530,
+          378
+        ],
+        [
+          580,
+          353
+        ],
+        [
+          592,
+          314
+        ],
+        [
+          592,
+          294
+        ]
+      ],
+      "threshold_xy": [
+        592,
+        294
+      ],
+      "south_xy": [
+        369,
+        639
+      ],
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "runtime_PMDO": "NOT TESTED",
+      "art_approved": false
+    },
+    {
+      "id": "03_col_des_aiguilles",
+      "title": "Col des Aiguilles",
+      "description": "Approche en S entre une grande aiguille et des banquettes enneigées, grotte au nord-ouest. Le chemin sud a été reconnecté au générateur.",
+      "raw": "bruts/03_col_des_aiguilles_final.png",
+      "raw_sha256": "c1bf98f7d92c0951940a729586410bac772c725908a62c1285e2351443e90541",
+      "normalization": {
+        "source_size": [
+          1264,
+          848
+        ],
+        "scale_uniform": 0.6037735849056604,
+        "resized_size": [
+          763,
+          512
+        ],
+        "offset": [
+          2,
+          128
+        ],
+        "method": "nearest uniforme, aucune déformation anisotrope ; bande de ciel indépendante au-dessus"
+      },
+      "size": [
+        768,
+        640
+      ],
+      "layers": {
+        "jour": {
+          "01_sol_avec_chemin": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_01_sol_avec_chemin_jour.png",
+          "02_profondeur_grotte": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_02_profondeur_grotte_jour.png",
+          "03_cliffs_reliefs": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_03_cliffs_reliefs_jour.png",
+          "04_immersion_gauche": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_04_immersion_gauche_jour.png",
+          "05_immersion_droite": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_05_immersion_droite_jour.png"
+        },
+        "nuit": {
+          "01_sol_avec_chemin": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_01_sol_avec_chemin_nuit.png",
+          "02_profondeur_grotte": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_02_profondeur_grotte_nuit.png",
+          "03_cliffs_reliefs": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_03_cliffs_reliefs_nuit.png",
+          "04_immersion_gauche": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_04_immersion_gauche_nuit.png",
+          "05_immersion_droite": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_05_immersion_droite_nuit.png"
+        }
+      },
+      "files": {
+        "scene_jour": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_scene_jour.png",
+        "ora_jour": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_jour.ora",
+        "scene_nuit": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_scene_nuit.png",
+        "ora_nuit": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_nuit.ora",
+        "preview_webp": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_onde_preview.webp",
+        "preview_gif": "03_col_des_aiguilles/ICE_ENTRY_V1_03_col_des_aiguilles_onde_preview.gif"
+      },
+      "route_centerline": [
+        [
+          379,
+          639
+        ],
+        [
+          379,
+          592
+        ],
+        [
+          393,
+          559
+        ],
+        [
+          424,
+          529
+        ],
+        [
+          495,
+          503
+        ],
+        [
+          536,
+          458
+        ],
+        [
+          537,
+          414
+        ],
+        [
+          495,
+          376
+        ],
+        [
+          427,
+          347
+        ],
+        [
+          339,
+          336
+        ],
+        [
+          255,
+          330
+        ],
+        [
+          186,
+          322
+        ],
+        [
+          171,
+          301
+        ],
+        [
+          171,
+          287
+        ]
+      ],
+      "threshold_xy": [
+        171,
+        287
+      ],
+      "south_xy": [
+        379,
+        639
+      ],
+      "palette_locked": true,
+      "canonical_tile_identity": false,
+      "runtime_PMDO": "NOT TESTED",
+      "art_approved": false
+    }
+  ],
+  "shared": {
+    "jour_ciel": "climat/ICE_ENTRY_V1_ciel_jour.png",
+    "jour_etoiles": "climat/ICE_ENTRY_V1_etoiles_jour.png",
+    "jour_nuages_bande": "climat/ICE_ENTRY_V1_nuages_bande_jour.png",
+    "nuit_ciel": "climat/ICE_ENTRY_V1_ciel_nuit.png",
+    "nuit_etoiles": "climat/ICE_ENTRY_V1_etoiles_nuit.png",
+    "nuit_nuages_bande": "climat/ICE_ENTRY_V1_nuages_bande_nuit.png"
+  },
+  "climate_provenance": {
+    "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+    "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+    "cloud_crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "cloud_destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "cloud_strip_size": [
+      1440,
+      208
+    ],
+    "cloud_speed_px_s": -4,
+    "cloud_loop_s": 360,
+    "sources": [
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+        "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+        "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+        "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+        "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+      }
+    ]
+  },
+  "ice_palette_rgb": [
+    [
+      0,
+      111,
+      183
+    ],
+    [
+      7,
+      55,
+      87
+    ],
+    [
+      15,
+      63,
+      111
+    ],
+    [
+      15,
+      79,
+      127
+    ],
+    [
+      15,
+      87,
+      127
+    ],
+    [
+      23,
+      95,
+      143
+    ],
+    [
+      31,
+      79,
+      151
+    ],
+    [
+      31,
+      95,
+      135
+    ],
+    [
+      31,
+      111,
+      167
+    ],
+    [
+      31,
+      119,
+      191
+    ],
+    [
+      39,
+      103,
+      143
+    ],
+    [
+      39,
+      127,
+      191
+    ],
+    [
+      47,
+      95,
+      159
+    ],
+    [
+      47,
+      111,
+      151
+    ],
+    [
+      47,
+      135,
+      199
+    ],
+    [
+      55,
+      95,
+      159
+    ],
+    [
+      55,
+      103,
+      167
+    ],
+    [
+      55,
+      111,
+      151
+    ],
+    [
+      55,
+      111,
+      183
+    ],
+    [
+      55,
+      119,
+      159
+    ],
+    [
+      55,
+      175,
+      215
+    ],
+    [
+      63,
+      103,
+      167
+    ],
+    [
+      63,
+      119,
+      167
+    ],
+    [
+      63,
+      135,
+      191
+    ],
+    [
+      63,
+      135,
+      199
+    ],
+    [
+      71,
+      119,
+      183
+    ],
+    [
+      71,
+      127,
+      167
+    ],
+    [
+      71,
+      135,
+      167
+    ],
+    [
+      71,
+      135,
+      183
+    ],
+    [
+      71,
+      159,
+      215
+    ],
+    [
+      79,
+      119,
+      183
+    ],
+    [
+      79,
+      135,
+      191
+    ],
+    [
+      79,
+      143,
+      199
+    ],
+    [
+      87,
+      119,
+      183
+    ],
+    [
+      87,
+      135,
+      199
+    ],
+    [
+      87,
+      151,
+      207
+    ],
+    [
+      87,
+      183,
+      215
+    ],
+    [
+      95,
+      143,
+      207
+    ],
+    [
+      95,
+      151,
+      183
+    ],
+    [
+      95,
+      159,
+      207
+    ],
+    [
+      95,
+      159,
+      215
+    ],
+    [
+      95,
+      175,
+      231
+    ],
+    [
+      95,
+      191,
+      223
+    ],
+    [
+      103,
+      143,
+      199
+    ],
+    [
+      103,
+      167,
+      215
+    ],
+    [
+      103,
+      199,
+      223
+    ],
+    [
+      111,
+      151,
+      215
+    ],
+    [
+      111,
+      159,
+      231
+    ],
+    [
+      111,
+      167,
+      199
+    ],
+    [
+      111,
+      175,
+      231
+    ],
+    [
+      111,
+      199,
+      231
+    ],
+    [
+      119,
+      159,
+      207
+    ],
+    [
+      119,
+      159,
+      215
+    ],
+    [
+      119,
+      159,
+      223
+    ],
+    [
+      119,
+      167,
+      215
+    ],
+    [
+      119,
+      167,
+      231
+    ],
+    [
+      119,
+      175,
+      215
+    ],
+    [
+      119,
+      183,
+      231
+    ],
+    [
+      119,
+      191,
+      239
+    ],
+    [
+      119,
+      207,
+      231
+    ],
+    [
+      127,
+      167,
+      215
+    ],
+    [
+      127,
+      175,
+      215
+    ],
+    [
+      127,
+      175,
+      231
+    ],
+    [
+      127,
+      183,
+      215
+    ],
+    [
+      127,
+      207,
+      239
+    ],
+    [
+      135,
+      167,
+      223
+    ],
+    [
+      135,
+      175,
+      215
+    ],
+    [
+      135,
+      183,
+      223
+    ],
+    [
+      135,
+      191,
+      231
+    ],
+    [
+      135,
+      215,
+      239
+    ],
+    [
+      143,
+      175,
+      231
+    ],
+    [
+      143,
+      183,
+      239
+    ],
+    [
+      143,
+      191,
+      215
+    ],
+    [
+      143,
+      191,
+      231
+    ],
+    [
+      143,
+      207,
+      247
+    ],
+    [
+      151,
+      183,
+      223
+    ],
+    [
+      151,
+      191,
+      239
+    ],
+    [
+      151,
+      199,
+      223
+    ],
+    [
+      151,
+      199,
+      239
+    ],
+    [
+      151,
+      215,
+      239
+    ],
+    [
+      159,
+      199,
+      231
+    ],
+    [
+      159,
+      207,
+      231
+    ],
+    [
+      167,
+      199,
+      247
+    ],
+    [
+      167,
+      215,
+      247
+    ],
+    [
+      167,
+      223,
+      247
+    ],
+    [
+      175,
+      199,
+      231
+    ],
+    [
+      175,
+      207,
+      239
+    ],
+    [
+      175,
+      215,
+      239
+    ],
+    [
+      175,
+      223,
+      255
+    ],
+    [
+      183,
+      207,
+      239
+    ],
+    [
+      183,
+      207,
+      247
+    ],
+    [
+      183,
+      215,
+      239
+    ],
+    [
+      183,
+      223,
+      247
+    ],
+    [
+      183,
+      231,
+      247
+    ],
+    [
+      191,
+      215,
+      247
+    ],
+    [
+      191,
+      223,
+      247
+    ],
+    [
+      199,
+      223,
+      247
+    ],
+    [
+      199,
+      223,
+      255
+    ],
+    [
+      199,
+      231,
+      247
+    ],
+    [
+      199,
+      239,
+      255
+    ],
+    [
+      207,
+      231,
+      247
+    ],
+    [
+      207,
+      239,
+      255
+    ],
+    [
+      223,
+      239,
+      255
+    ],
+    [
+      223,
+      255,
+      255
+    ],
+    [
+      231,
+      239,
+      247
+    ],
+    [
+      239,
+      247,
+      255
+    ],
+    [
+      247,
+      247,
+      255
+    ],
+    [
+      255,
+      255,
+      255
+    ]
+  ],
+  "references": [
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    },
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    }
+  ],
+  "hidden_floor": {
+    "source": "bruts/sol_neige_doux.png",
+    "sha256": "1c87fa2e4e2661bce26bb676de7d229b1319d87f83c1ad5cf95880c49420c05b",
+    "method": "Nouvelle sous-couche générée ; pixels visibles des sols et chemins préservés après palette. Faces cachées des cliffs non reconstituées."
+  },
+  "aurora": {
+    "frames": 10,
+    "frame_ms": 160,
+    "period_ms": 1600,
+    "wrap": false,
+    "sources": [
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_00.png",
+        "sha256": "cf11997c9fbfce429b3a1cad444ffc1780cbe9e7e41b0c674fa268519fbb8ed3",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_00.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_01.png",
+        "sha256": "bfb6d5ac88e3c988e489d60fb018c720a522af40955b8c8ce98f903b2b4c9546",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_01.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_02.png",
+        "sha256": "d16979ff66f535dc532dc23ccf76cd41b74d94aa79f568f686085fc4d4a80237",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_02.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_03.png",
+        "sha256": "959590196e88a0db972a68b3c8553f674d483ed8bcd4fe13df99fcf7a476a9d5",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_03.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_04.png",
+        "sha256": "c0e30b438b30cf636067091da797ac96718ea0a190ccc4dd1c608c3056a5cd57",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_04.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_05.png",
+        "sha256": "33589dba82195d6957d487245b4ea1018bf5c89a789cd466137d8a81fa0c2154",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_05.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_06.png",
+        "sha256": "f408965328b57784238ac867965bd5cbae4a94a1d43dd647bd8aed4e1ce155df",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_06.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_07.png",
+        "sha256": "f615b4e0fe06456e63a091016bb196181aa4bf52a3fe76a6b55db869b0abfb4f",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_07.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_08.png",
+        "sha256": "c158f9827cbadaa4ca787c1739944ef7b069572c5fb001b40c22fdbb241eb70b",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_08.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      },
+      {
+        "source": "renders/effet_boreale_canonique_v10/couches/EffetBorealeV10_frame_09.png",
+        "sha256": "4465a95f32d1345f6c725c32937f41e60816891eac1611241b373d31cb5f2248",
+        "output": "climat/ICE_ENTRY_V1_onde_canonique_09.png",
+        "removed_small_components_lt_pixels": 40,
+        "offset": [
+          120,
+          0
+        ],
+        "resampled": false
+      }
+    ],
+    "description": "Texture canonique PMD du lot V10, mouvement adapté existant ; petites composantes détachées retirées pour séparer les étoiles. Pas le cycle officiel retrouvé."
+  },
+  "cycling_alternative": {
+    "frames": [
+      "climat/ICE_ENTRY_V1_palette_cycling_00.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_01.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_02.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_03.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_04.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_05.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_06.png",
+      "climat/ICE_ENTRY_V1_palette_cycling_07.png"
+    ],
+    "frame_ms": 120,
+    "source": "boreales_palette_cycling_v12",
+    "note": "Dessin généré V12 conservé byte-identique, pas une texture native extraite."
+  },
+  "clouds": {
+    "strip_width": 1440,
+    "height": 208,
+    "velocity_px_s": -4,
+    "period_ms": 360000,
+    "overlay": true,
+    "formula": "x(t)=-floor(t_ms*4/1000) mod1440 ; dessiner les copies jointives"
+  },
+  "layer_order": [
+    "ciel",
+    "etoiles",
+    "onde",
+    "01_sol_avec_chemin",
+    "02_profondeur_grotte",
+    "03_cliffs_reliefs",
+    "04_immersion_gauche",
+    "05_immersion_droite",
+    "nuages_overlay"
+  ],
+  "limits": [
+    "Nouveaux dessins générés référencés, palette issue des PNG canoniques ; pas de motifs natifs certifiés.",
+    "Sol caché généré, faces cachées des reliefs non reconstituées.",
+    "PNG et ORA, pas de Ground/collisions/warp ni runtime PMDO.",
+    "GIF/WebP de scène : onde seule en boucle, nuages phase0 fixes ; wrap nuages dans le viewer et la recette."
+  ]
+}
