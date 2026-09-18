@@ -40,6 +40,18 @@ class IceArenaLayersTests(unittest.TestCase):
         for k in LAYERS:
             self.assertEqual(int(masks[k].sum()), self.rep['layer_pixel_counts'][k])
 
+    def test_four_layer_partition_terrain_bordure_cliff_sky(self):
+        sky = np.array(Image.open(O/'layers/sky.png').convert('RGBA'))[:, :, 3] > 0
+        masks = {k: self.layers[k][:, :, 3] > 0 for k in ['terrain', 'bordure', 'cliff']}
+        masks['sky'] = sky
+        total = sum(m.astype(int) for m in masks.values())
+        self.assertTrue((total == 1).all(), 'terrain/bordure/cliff/sky must partition the reference')
+        comp = np.zeros((*self.src.shape[:2], 4), np.uint8)
+        for name in ['sky', 'terrain', 'bordure', 'cliff']:
+            arr = np.array(Image.open(O/'layers'/f'{name}.png').convert('RGBA'))
+            comp = np.where(arr[:, :, 3:4] > 0, arr, comp)
+        self.assertTrue(np.array_equal(comp[:, :, :3], self.src))
+
     def test_layer_pixels_come_from_reference(self):
         for k in LAYERS:
             lay = self.layers[k]; m = lay[:, :, 3] > 0

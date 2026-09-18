@@ -100,6 +100,10 @@ def main():
     for name in ['ciel', 'boreal', 'terrain', 'bordure', 'cliff']:
         L[name] = rgba(src, masks[name])
         Image.fromarray(L[name]).save(OUT/'layers'/f'{name}.png')
+    # Combined convenience layer: Sky = ciel + aurore (the 4-layer reading
+    # terrain/bordure/cliff/Sky). Not part of the 5-way partition.
+    sky_full = masks['ciel'] | masks['boreal']
+    Image.fromarray(rgba(src, sky_full)).save(OUT/'layers'/'sky.png')
 
     frames = []
     for t in range(T):
@@ -133,6 +137,8 @@ def main():
               'mask': str(MASK.relative_to(ROOT)), 'layers': ORDER, 'frames': T, 'frame_ms': FPS_MS,
               'hue_turns': HUE_TURNS, 'wave_amplitude_px': WAVE_AMP, 'wave_periods': WAVE_K,
               'layer_pixel_counts': {k: int(masks[k].sum()) for k in ORDER},
+              'sky_pixels': int(sky_full.sum()),
+              'four_layer_reading': ['terrain', 'bordure', 'cliff', 'sky'],
               'reconstruction_exact': reconstruct, 'art_approved': False, 'runtime_PMDO': 'NOT TESTED'}
     (OUT/'verification.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     viewer(report, L, frames)
