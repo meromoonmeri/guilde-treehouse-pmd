@@ -1,6 +1,52 @@
 {
-  "schema": "glacier_cliff_aurora_layer_stack_v1",
+  "schema": "glacier_cliff_aurora_layer_stack_v2",
   "note": "Canonical source layers are separate; native Ground layers remain authoritative. Review reconstructions are not native textures.",
+  "background_layers": [
+    {
+      "asset": "GLACIER_NIGHT_BASE",
+      "role": "static canonical sky",
+      "frames": 1
+    },
+    {
+      "asset": "GLACIER_AURORA_PALETTE_CYCLE",
+      "role": "independent palette cycle above sky",
+      "frames": 6,
+      "frame_time": 6
+    },
+    {
+      "asset": "GLACIER_DISTANT_MOUNTAINS",
+      "role": "distant mountain layer",
+      "frames": 1
+    },
+    {
+      "asset": "GLACIER_SNOW_TREES",
+      "role": "snow trees below",
+      "frames": 1
+    },
+    {
+      "asset": "GLACIER_SNOW_FOREST_PATH",
+      "role": "forest and path below",
+      "frames": 1
+    }
+  ],
+  "ground_layers": [
+    {
+      "layer": 0,
+      "role": "playable arena floor and south access"
+    },
+    {
+      "layer": 1,
+      "role": "arena cliff walls and rim"
+    },
+    {
+      "layer": 2,
+      "role": "cliff secondary details"
+    },
+    {
+      "layer": 4,
+      "role": "foreground ice rim"
+    }
+  ],
   "layers": [
     {
       "file": "layers/00_night_sky_canonical.png",
@@ -16,7 +62,7 @@
     {
       "file": "layers/01_aurora_canonical.png",
       "provenance": "canonical",
-      "engine_role": "Background GLACIER_AURORA_CANONICAL",
+      "engine_role": "Background GLACIER_AURORA_PALETTE_CYCLE — source frame",
       "size": [
         264,
         216
@@ -32,7 +78,7 @@
         504,
         96
       ],
-      "sha256": "dba7524eb4fe07c7299bec8f7b0387f961c336c5bf91893adf367506f6e95b71",
+      "sha256": "b249ec827824c06355f2c12c36f47ac42382e916a3c73baaae2077137ed0a956",
       "importable": false
     },
     {
@@ -43,7 +89,7 @@
         522,
         160
       ],
-      "sha256": "a136416397e0bad9b3e3b81770c3c5d58038485a64fd7b42912c42c7882051f1",
+      "sha256": "2abcaae40500782a44054e2449f844eca3fb63e072292075ea2571fcc201c755",
       "importable": false
     },
     {
@@ -54,7 +100,7 @@
         522,
         216
       ],
-      "sha256": "11fccd63223d72d96b5b915a82b7f72223a0b5ecfbc93a52fe0561e1de8d4968",
+      "sha256": "6c31a7da2afeebc372ec56119f96ba46260f703bf3ca65983072064da1df6f7d",
       "importable": false
     },
     {
@@ -87,7 +133,7 @@
         576,
         432
       ],
-      "sha256": "7c4dbb1954afaa56228f43c6d4fb7daf907377ca04d386d3b918bf0303656549",
+      "sha256": "07ebaa66058d2f0915cd00e530d19ccdb0924342dbf871a05c846d7880e0833b",
       "importable": false
     },
     {
@@ -98,7 +144,7 @@
         576,
         432
       ],
-      "sha256": "5ff0228a53c1e20c921d24e1791196a2a6e0726f866ed4ece0e1bdde10ad1bb2",
+      "sha256": "7fb086b16daa418bd2c2560b709226b71d5f5ecdc1297229475d9dcdfe5b8841",
       "importable": false
     },
     {
@@ -109,7 +155,7 @@
         576,
         432
       ],
-      "sha256": "6db667293179eaef7185559168cc8136937123c43a37efe38666db3b5c47f722",
+      "sha256": "93b8ac898131a50cd22dd2893170790017bb37e01f5ba0836cecf300f248be56",
       "importable": false
     },
     {
@@ -120,7 +166,7 @@
         576,
         432
       ],
-      "sha256": "36793b297a133337a0c62511de4c6687280dc880d3b80bb01710c1c620ba3b1c",
+      "sha256": "78875f295d55983095ddebe4911e85fb4bdca13935a0b016ae5a37dea8457157",
       "importable": false
     },
     {
@@ -131,7 +177,7 @@
         576,
         432
       ],
-      "sha256": "146d2dfafd98b8a05ff1eee0d643f70c0bf5b4849131b539ad43b4205c3eb530",
+      "sha256": "ec09620ba73b7b289ebdee75108f23c30cb332f2a5a1d3ca012e4cdf214c4adb",
       "importable": false
     }
   ]

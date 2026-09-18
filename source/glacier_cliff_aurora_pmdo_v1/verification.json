@@ -26,6 +26,13 @@
   "canonical_backgrounds": 5,
   "named_layer_exports": 12,
   "canonical_reference_hashes": true,
+  "aurora_palette_cycle": {
+    "asset": "Content/BG/GLACIER_AURORA_PALETTE_CYCLE.dir",
+    "frames": 6,
+    "frame_time": 6,
+    "independent_from_sky": true,
+    "derived_from_canonical_reference": true
+  },
   "installer_merge_idempotence_and_conflict_protection": true,
   "runtime": {
     "pmdo_binary_deserialization": "PASS",
@@ -35,7 +42,7 @@
   },
   "limits": [
     "The report proves file/schema/reference/collision integrity, not a graphical PMDO session.",
-    "The aurora is a static canonical frame; no unverified official animation cycle is included.",
+    "The aurora palette cycle is a derived six-frame layer, not an official source animation claim.",
     "Dungeon destination is intentionally not bound; connect arena_seuil in the host quest."
   ]
 }

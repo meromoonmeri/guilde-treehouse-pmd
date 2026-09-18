@@ -1,8 +1,8 @@
 # Glacier Cliff Aurora — Ground PMDO 0.8.12
 
 Carte PMDO native et editable : une arene de glace jouable au sommet, une
-arrivee sud, une vue vers une foret enneigee et des montagnes, avec l'aurore
-canonique sur un calque de fond distinct.
+arrivee sud, une vue vers une foret enneigee et des montagnes, avec le ciel
+canonique et l'aurore animee sur deux calques de fond independants.
 
 ## Fichier principal
 
@@ -29,7 +29,9 @@ canoniques suivantes : `aurorepmdsky.png`, `iceroadpmdsky.png`,
 les recupere au debut du build, les copie byte a byte dans
 `provenance/references/` et arrete la production si un hash change. Les bandes
 montagne/foret sont des crops de pixels natifs documentes dans
-`provenance/provenance.json`.
+`provenance/provenance.json`. L'aurore utilise la frame canonique comme source,
+puis un cycle de palette de 6 frames dans `GLACIER_AURORA_PALETTE_CYCLE.dir` ;
+le ciel `GLACIER_NIGHT_BASE.dir` reste immobile et independant.
 
 Le dossier `layers/` expose la pile demandee : nuit, aurore, montagnes,
 foret en contrebas, reference de materiau d'arene, chemin d'acces, sol
@@ -40,13 +42,16 @@ inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
 importer.
 
 Le guide genere
-`renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png` n'est
-pas importe dans le Ground et n'est pas une texture de jeu.
+`renders/glacier_cliff_aurora_v3/raw/native_tileset_reference_composition_magenta.png` a ete
+compose avec les previews raster du vrai tileset `VastIceMountain.tile` et les
+references canoniques. Il n'est pas importe dans le Ground et n'est pas une
+texture de jeu.
 
-L'aurore livree est une image canonique statique. Aucun cycle d'animation PMDO
-officiel n'ayant ete etabli pour ce panorama, aucune animation inventee n'est
-presentee comme native. Une proposition d'animation peut etre ajoutee plus
-tard dans un calque/tileset explicitement marque comme tel.
+L'aurore livree est un calque anime independant : 6 frames derivees par
+palette cycling depuis la frame canonique, avec le ciel masque en transparence.
+Ce cycle est une adaptation de composition, pas une animation officielle
+attribuee a la source. Le fichier `.dir` et les frames derivees sont declares
+explicitement dans `provenance/provenance.json`.
 
 ## Installation
 

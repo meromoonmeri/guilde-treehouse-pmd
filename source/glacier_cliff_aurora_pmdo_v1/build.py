@@ -21,7 +21,7 @@ HERE = Path(__file__).resolve().parent
 OUT = ROOT / "exports/glacier_cliff_aurora_pmdo_v1"
 TILE_SOURCE = ROOT / "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile"
 AUTOTILE_DIR = ROOT / "source/donjons_dtef_v2/references/DumpAsset/Data/AutoTile"
-GUIDE = ROOT / "renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png"
+GUIDE = ROOT / "renders/glacier_cliff_aurora_v3/raw/native_tileset_reference_composition_magenta.png"
 
 # The references are artwork, not generated PMDO textures.  The two cropped
 # strips retain their native pixels and have their provenance recorded below.
@@ -38,6 +38,13 @@ WIDTH, HEIGHT = 72, 54                 # 576 x 432 px at the collision grid
 TILE_PX = 8
 TEX_SIZE = 3                            # VastIceMountain native tile images are 24 px
 ASSET = "glacier_cliff_aurora_v1"
+AURORA_ASSET = "GLACIER_AURORA_PALETTE_CYCLE"
+AURORA_FRAME_COUNT = 6
+AURORA_FRAME_TIME = 6
+AURORA_FRAME_SIZE = (264, 160)
+# A narrow loop keeps the canonical cyan/magenta palette harmonious with the
+# ice arena; it cycles color, not geometry, and returns smoothly to frame zero.
+AURORA_HUE_SHIFTS = (0.0, 0.008, 0.016, 0.024, 0.016, 0.008)
 
 
 def sha256(path: Path) -> str:
@@ -67,6 +74,59 @@ def write_dir(path: Path, png: bytes, width: int, height: int):
     # direction count, frame count.
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(struct.pack("<q", len(png)) + png + struct.pack("<4i", width, height, 0, 1))
+
+
+def write_dir_sheet(path: Path, frames: list[Path], frame_width: int, frame_height: int):
+    """Write a real multi-frame DirSheet with one independent frame per PNG.
+
+    RogueEssence stores a horizontal frame atlas followed by the dimensions of
+    one frame, direction mode and frame count.  The aurora therefore animates
+    as its own BG asset; the canonical night sky remains a one-frame asset.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    sheet = path.parent.parent.parent / "tests" / "aurora_palette_cycle_sheet.png"
+    subprocess.run(
+        ["convert", *[str(frame) for frame in frames], "+append", "png:" + str(sheet)],
+        check=True,
+        stdout=subprocess.DEVNULL,
+    )
+    png = sheet.read_bytes()
+    path.write_bytes(
+        struct.pack("<q", len(png)) + png
+        + struct.pack("<4i", frame_width, frame_height, 0, len(frames))
+    )
+
+
+def build_aurora_palette_cycle():
+    """Derive a transparent six-frame palette cycle from the canonical aurora.
+
+    The dark sky pixels are alpha-keyed out, so the independent animated layer
+    sits over GLACIER_NIGHT_BASE.  Hue values are rotated modulo one in HSL;
+    pixel geometry and the canonical source frame remain unchanged.
+    """
+    derived = OUT / "provenance/derived"
+    frames_dir = derived / "aurora_palette_cycle"
+    frames_dir.mkdir(parents=True, exist_ok=True)
+    source = REFS["aurora"]
+    width, height = AURORA_FRAME_SIZE
+    base = frames_dir / "base_keyed.png"
+    subprocess.run([
+        "convert", str(source), "-crop", f"{width}x{height}+0+0", "+repage",
+        "-alpha", "on", "-colorspace", "HSL", "-channel", "A",
+        "-fx", "((g>0.32)&&(b>0.16))?1:0", "+channel", "-colorspace", "sRGB",
+        "png:" + str(base),
+    ], check=True, stdout=subprocess.DEVNULL)
+    frames = []
+    for index in range(AURORA_FRAME_COUNT):
+        frame = frames_dir / f"frame_{index:02d}.png"
+        shift = AURORA_HUE_SHIFTS[index]
+        subprocess.run([
+            "convert", str(base), "-colorspace", "HSL", "-channel", "R",
+            "-fx", f"mod(r+{shift:.8f},1)", "+channel", "-colorspace", "sRGB",
+            "png:" + str(frame),
+        ], check=True, stdout=subprocess.DEVNULL)
+        frames.append(frame)
+    return frames, base
 
 
 def exact_crop(source: Path, destination: Path, geometry: str):
@@ -212,12 +272,13 @@ def make_layer(name: str, layer_number: int, cells: set[tuple[int, int]], table:
     return {"Name": name, "Layer": layer_number, "Visible": True, "Tiles": tiles}
 
 
-def background(name: str, y: int, repeat: bool = True):
+def background(name: str, y: int, repeat: bool = True, frame_time: int = 1,
+               start_frame: int = -1, end_frame: int = -1, anim_dir: int = -1):
     return {
         "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
         "MapLoc": {"X": 0, "Y": y},
-        "BGAnim": {"AnimIndex": name, "FrameTime": 1, "StartFrame": -1,
-                    "EndFrame": -1, "AnimDir": -1, "Alpha": 255, "AnimFlip": 0},
+        "BGAnim": {"AnimIndex": name, "FrameTime": frame_time, "StartFrame": start_frame,
+                    "EndFrame": end_frame, "AnimDir": anim_dir, "Alpha": 255, "AnimFlip": 0},
         "BGMovement": {"X": 0, "Y": 0}, "Parallax": "1, 1",
         "RepeatX": repeat, "RepeatY": False,
     }
@@ -255,8 +316,8 @@ def build_ground(floor, wall, tables):
         "Comment": (
             "PMDO 0.8.12. Terrain canonique VastIceMountain.tile. "
             "Sol, parois, fond et collisions sont separes. "
-            "Le guide genere n'est jamais importe. Aurore statique canonique; "
-            "aucun cycle anime officiel n'a ete affirme."
+            "Le guide genere n'est jamais importe. Le ciel reste canonique et "
+            "l'aurore est un calque anime independant, derive par palette cycling."
         ),
         "obstacles": obstacles(floor),
         "rand": {"$type": "RogueElements.ReRandom, RogueElements", "FirstSeed": 0,
@@ -265,7 +326,8 @@ def build_ground(floor, wall, tables):
         "Status": {},
         "Background": {"$type": "RogueEssence.Dungeon.LayeredBG, RogueEssence", "Layers": [
             {"BG": background("GLACIER_NIGHT_BASE", 0)},
-            {"BG": background("GLACIER_AURORA_CANONICAL", 0)},
+            {"BG": background(AURORA_ASSET, 0, True, AURORA_FRAME_TIME,
+                                  0, AURORA_FRAME_COUNT - 1, 1)},
             {"BG": background("GLACIER_DISTANT_MOUNTAINS", 120)},
             {"BG": background("GLACIER_SNOW_TREES", 216)},
             {"BG": background("GLACIER_SNOW_FOREST_PATH", 376)},
@@ -356,9 +418,9 @@ def build_backgrounds():
     exact_crop(REFS["distant_mountains"], derived / "iceroad_mountains_strip.png", "504x96+0+24")
     exact_crop(REFS["trees_and_snow_forest"], derived / "snow_trees_strip.png", "522x160+0+160")
     exact_crop(REFS["trees_and_snow_forest"], derived / "snow_path_strip.png", "522x216+0+357")
+    aurora_frames, aurora_base = build_aurora_palette_cycle()
     assets = {
         "GLACIER_NIGHT_BASE": (REFS["sky"], REFS["sky"]),
-        "GLACIER_AURORA_CANONICAL": (REFS["aurora"], REFS["aurora"]),
         "GLACIER_DISTANT_MOUNTAINS": (derived / "iceroad_mountains_strip.png", REFS["distant_mountains"]),
         "GLACIER_SNOW_TREES": (derived / "snow_trees_strip.png", REFS["trees_and_snow_forest"]),
         "GLACIER_SNOW_FOREST_PATH": (derived / "snow_path_strip.png", REFS["trees_and_snow_forest"]),
@@ -373,7 +435,32 @@ def build_backgrounds():
             png_record = str(png.relative_to(ROOT))
         records.append({"asset": f"Content/BG/{name}.dir", "png": png_record,
                         "source": str(source.relative_to(ROOT)), "size": [w, h],
-                        "sha256_source": sha256(source), "sha256_png": sha256(png)})
+                        "sheet_size": [w, h], "frames": 1,
+                        "sha256_source": sha256(source), "sha256_png": sha256(png),
+                        "animation": None})
+
+    aurora_asset = OUT / "Content/BG" / f"{AURORA_ASSET}.dir"
+    write_dir_sheet(aurora_asset, aurora_frames, *AURORA_FRAME_SIZE)
+    sheet_png = OUT / "tests/aurora_palette_cycle_sheet.png"
+    records.append({
+        "asset": f"Content/BG/{AURORA_ASSET}.dir",
+        "png": str(aurora_base.relative_to(OUT)),
+        "source": str(REFS["aurora"].relative_to(ROOT)),
+        "size": list(AURORA_FRAME_SIZE),
+        "sheet_size": list(png_size(sheet_png)),
+        "frames": AURORA_FRAME_COUNT,
+        "sha256_source": sha256(REFS["aurora"]),
+        "sha256_png": sha256(sheet_png),
+        "animation": {
+            "method": "independent_hsl_palette_cycle",
+            "hue_shifts": list(AURORA_HUE_SHIFTS),
+            "frame_time": AURORA_FRAME_TIME,
+            "frame_files": [str(frame.relative_to(OUT)) for frame in aurora_frames],
+            "base_keyed": str(aurora_base.relative_to(OUT)),
+            "sky_asset": "Content/BG/GLACIER_NIGHT_BASE.dir",
+            "official_cycle": False,
+        },
+    })
     return records
 
 
@@ -433,7 +520,7 @@ def make_preview(ground, floor, wall, native_records):
     mountain_tile = OUT / "tests/mountain_repeat.png"
     trees_tile = OUT / "tests/trees_repeat.png"
     path_tile = OUT / "tests/forest_path_repeat.png"
-    subprocess.run(["convert", "-size", f"{WIDTH*8}x216", "tile:" + str(refs / "aurorepmdsky.png"),
+    subprocess.run(["convert", "-size", f"{WIDTH*8}x216", "tile:" + str(derived / "aurora_palette_cycle/frame_00.png"),
                     "-crop", f"{WIDTH*8}x216+0+0", "+repage", str(aurora_tile)],
                    check=True, stdout=subprocess.DEVNULL)
     subprocess.run(["convert", "-size", f"{WIDTH*8}x96", "tile:" + str(derived / "iceroad_mountains_strip.png"),
@@ -476,8 +563,9 @@ def make_preview(ground, floor, wall, native_records):
 def write_layer_exports():
     """Expose the requested stack as editable review layers.
 
-    The first four are exact canonical inputs/crops used by Background; the
-    last four are native-tile reconstructions or collision diagnostics.  The
+    The first seven are exact canonical inputs/crops used by Background or
+    retained as references; the last five are native-tile reconstructions or
+    collision diagnostics.  The
     latter are deliberately marked review-only and are not presented as new
     PMDO textures.
     """
@@ -487,7 +575,7 @@ def write_layer_exports():
     preview = OUT / "preview"
     exports = [
         ("00_night_sky_canonical.png", refs / "bgnightbackgroundpmdskyda.png", "canonical", "Background GLACIER_NIGHT_BASE"),
-        ("01_aurora_canonical.png", refs / "aurorepmdsky.png", "canonical", "Background GLACIER_AURORA_CANONICAL"),
+        ("01_aurora_canonical.png", refs / "aurorepmdsky.png", "canonical", "Background GLACIER_AURORA_PALETTE_CYCLE — source frame"),
         ("02_mountains_iceroad_native_crop.png", derived / "iceroad_mountains_strip.png", "canonical_crop", "Background GLACIER_DISTANT_MOUNTAINS"),
         ("03_trees_snow_native_crop.png", derived / "snow_trees_strip.png", "canonical_crop", "Background GLACIER_SNOW_TREES"),
         ("04_forest_below_path_native_crop.png", derived / "snow_path_strip.png", "canonical_crop", "Background GLACIER_SNOW_FOREST_PATH"),
@@ -515,8 +603,21 @@ def write_layer_exports():
     # these PNGs are a named layer handoff for visual editing and audit.
     (layer_dir / "layer_manifest.json").write_text(
         json.dumps({
-            "schema": "glacier_cliff_aurora_layer_stack_v1",
+            "schema": "glacier_cliff_aurora_layer_stack_v2",
             "note": "Canonical source layers are separate; native Ground layers remain authoritative. Review reconstructions are not native textures.",
+            "background_layers": [
+                {"asset": "GLACIER_NIGHT_BASE", "role": "static canonical sky", "frames": 1},
+                {"asset": AURORA_ASSET, "role": "independent palette cycle above sky", "frames": AURORA_FRAME_COUNT, "frame_time": AURORA_FRAME_TIME},
+                {"asset": "GLACIER_DISTANT_MOUNTAINS", "role": "distant mountain layer", "frames": 1},
+                {"asset": "GLACIER_SNOW_TREES", "role": "snow trees below", "frames": 1},
+                {"asset": "GLACIER_SNOW_FOREST_PATH", "role": "forest and path below", "frames": 1},
+            ],
+            "ground_layers": [
+                {"layer": 0, "role": "playable arena floor and south access"},
+                {"layer": 1, "role": "arena cliff walls and rim"},
+                {"layer": 2, "role": "cliff secondary details"},
+                {"layer": 4, "role": "foreground ice rim"},
+            ],
             "layers": manifest,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
@@ -534,8 +635,8 @@ return {}
     (OUT / "README.md").write_text("""# Glacier Cliff Aurora — Ground PMDO 0.8.12
 
 Carte PMDO native et editable : une arene de glace jouable au sommet, une
-arrivee sud, une vue vers une foret enneigee et des montagnes, avec l'aurore
-canonique sur un calque de fond distinct.
+arrivee sud, une vue vers une foret enneigee et des montagnes, avec le ciel
+canonique et l'aurore animee sur deux calques de fond independants.
 
 ## Fichier principal
 
@@ -562,7 +663,9 @@ canoniques suivantes : `aurorepmdsky.png`, `iceroadpmdsky.png`,
 les recupere au debut du build, les copie byte a byte dans
 `provenance/references/` et arrete la production si un hash change. Les bandes
 montagne/foret sont des crops de pixels natifs documentes dans
-`provenance/provenance.json`.
+`provenance/provenance.json`. L'aurore utilise la frame canonique comme source,
+puis un cycle de palette de 6 frames dans `GLACIER_AURORA_PALETTE_CYCLE.dir` ;
+le ciel `GLACIER_NIGHT_BASE.dir` reste immobile et independant.
 
 Le dossier `layers/` expose la pile demandee : nuit, aurore, montagnes,
 foret en contrebas, reference de materiau d'arene, chemin d'acces, sol
@@ -573,13 +676,16 @@ inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
 importer.
 
 Le guide genere
-`renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png` n'est
-pas importe dans le Ground et n'est pas une texture de jeu.
+`renders/glacier_cliff_aurora_v3/raw/native_tileset_reference_composition_magenta.png` a ete
+compose avec les previews raster du vrai tileset `VastIceMountain.tile` et les
+references canoniques. Il n'est pas importe dans le Ground et n'est pas une
+texture de jeu.
 
-L'aurore livree est une image canonique statique. Aucun cycle d'animation PMDO
-officiel n'ayant ete etabli pour ce panorama, aucune animation inventee n'est
-presentee comme native. Une proposition d'animation peut etre ajoutee plus
-tard dans un calque/tileset explicitement marque comme tel.
+L'aurore livree est un calque anime independant : 6 frames derivees par
+palette cycling depuis la frame canonique, avec le ciel masque en transparence.
+Ce cycle est une adaptation de composition, pas une animation officielle
+attribuee a la source. Le fichier `.dir` et les frames derivees sont declares
+explicitement dans `provenance/provenance.json`.
 
 ## Installation
 
@@ -642,8 +748,15 @@ etre liee au quest utilisateur via `arena_seuil`.
             "south_entry_cells": [[x, y] for y in range(42, 50) for x in range(32, 40)],
             "arena_view": "top/north arena, south approach, forest and snow mountains below/in front",
         },
-        "animation": {"aurora": "static canonical frame", "official_cycle": False,
-                       "proposal": "not included in native Ground"},
+        "animation": {
+            "aurora": "independent palette cycling derived from canonical frame",
+            "asset": f"Content/BG/{AURORA_ASSET}.dir",
+            "frames": AURORA_FRAME_COUNT,
+            "frame_time": AURORA_FRAME_TIME,
+            "sky_independent": True,
+            "official_cycle": False,
+            "proposal": "derived layer explicitly included in native Ground",
+        },
     }
     (OUT / "provenance/provenance.json").write_text(json.dumps(prov, ensure_ascii=False, indent=2), encoding="utf-8")
     (OUT / "provenance/layout_guide_reference.txt").write_text(

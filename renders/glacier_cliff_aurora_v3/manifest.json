@@ -1,0 +1,120 @@
+{
+  "schema": "glacier_cliff_aurora_generated_tileset_reference_v3",
+  "kind": "generated_harmonious_composition_guide_only",
+  "magenta_background": "#ff00ff",
+  "native_pmdo_import": false,
+  "generator_inputs": [
+    {
+      "role": "native_tileset_preview_floor",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/preview/native_floor_layer.png",
+      "sha256": "cb855f47e06ec571e71bd3d5d91ec8ee84b4569eec537f680db851c2832842e5",
+      "size": [
+        576,
+        432
+      ]
+    },
+    {
+      "role": "native_tileset_preview_walls",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/preview/native_wall_layer.png",
+      "sha256": "282fa27a71a46cb00f9e6e5a468819acfe757f6f2513869cd87daef3ee87448f",
+      "size": [
+        576,
+        432
+      ]
+    },
+    {
+      "role": "native_tileset_preview_foreground",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/preview/native_foreground_layer.png",
+      "sha256": "c72afa130d560f1aabebc8fe8b84693834d315c98d3ceaecc5673865c12a17fa",
+      "size": [
+        576,
+        432
+      ]
+    },
+    {
+      "role": "native_tileset_preview_south_path",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/preview/native_access_path_layer.png",
+      "sha256": "9ae77fef4d4093842f0f5467e3e8c9dded58b15aff3a0eebd98c19cbadc91015",
+      "size": [
+        576,
+        432
+      ]
+    },
+    {
+      "role": "canonical_arena",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/05_arena_material_reference_canonical.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "size": [
+        504,
+        408
+      ]
+    },
+    {
+      "role": "canonical_path",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/06_south_path_reference_canonical.png",
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b",
+      "size": [
+        420,
+        380
+      ]
+    },
+    {
+      "role": "canonical_mountains",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/02_mountains_iceroad_native_crop.png",
+      "sha256": "8e5c6fe9c9575d35240b979ba74c2dea3b3dcaa7f0a2619de857144adb311d14",
+      "size": [
+        504,
+        96
+      ]
+    },
+    {
+      "role": "canonical_trees",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/03_trees_snow_native_crop.png",
+      "sha256": "a5a45b2218e5fade6c744aec1709669f829a5e969a02f3581ceba37ff4d577f1",
+      "size": [
+        522,
+        160
+      ]
+    },
+    {
+      "role": "canonical_sky",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/00_night_sky_canonical.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "size": [
+        456,
+        240
+      ]
+    },
+    {
+      "role": "canonical_aurora",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/layers/01_aurora_canonical.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "size": [
+        264,
+        216
+      ]
+    },
+    {
+      "role": "native_tileset_binary",
+      "file": "exports/glacier_cliff_aurora_pmdo_v1/Content/Tile/VastIceMountain.tile",
+      "sha256": "b03051c74b794482acd587615f14e46b44bfda1e06190fcfc1ff76c70c2ce5a1",
+      "size": 89826
+    }
+  ],
+  "output": {
+    "file": "renders/glacier_cliff_aurora_v3/raw/native_tileset_reference_composition_magenta.png",
+    "sha256": "cb97d0bf9ec6a614f36cb8f598228ffb69758550943f9d2d656694b9f4c85618",
+    "size": [
+      1376,
+      768
+    ]
+  },
+  "requested_layer_relationships": {
+    "aurora": "separate animated palette-cycle layer above static canonical sky",
+    "arena_cliff": "separate native tile Ground layers for walls/foreground rim",
+    "forest_below": "separate GLACIER_SNOW_TREES and GLACIER_SNOW_FOREST_PATH backgrounds",
+    "distant_mountains": "separate GLACIER_DISTANT_MOUNTAINS background",
+    "playability": "native Ground collision grid and south access remain authoritative"
+  },
+  "note": "The generated image is a visual guide; native PMDO output uses canonical .dir assets and byte-exact VastIceMountain.tile."
+}

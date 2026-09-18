@@ -11,7 +11,7 @@
     54
   ],
   "tex_size": 3,
-  "generated_guide_not_imported": "renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png",
+  "generated_guide_not_imported": "renders/glacier_cliff_aurora_v3/raw/native_tileset_reference_composition_magenta.png",
   "native_tile": {
     "source": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile",
     "asset": "Content/Tile/VastIceMountain.tile",
@@ -106,7 +106,7 @@
     {
       "file": "layers/01_aurora_canonical.png",
       "provenance": "canonical",
-      "engine_role": "Background GLACIER_AURORA_CANONICAL",
+      "engine_role": "Background GLACIER_AURORA_PALETTE_CYCLE — source frame",
       "size": [
         264,
         216
@@ -122,7 +122,7 @@
         504,
         96
       ],
-      "sha256": "dba7524eb4fe07c7299bec8f7b0387f961c336c5bf91893adf367506f6e95b71",
+      "sha256": "b249ec827824c06355f2c12c36f47ac42382e916a3c73baaae2077137ed0a956",
       "importable": false
     },
     {
@@ -133,7 +133,7 @@
         522,
         160
       ],
-      "sha256": "a136416397e0bad9b3e3b81770c3c5d58038485a64fd7b42912c42c7882051f1",
+      "sha256": "2abcaae40500782a44054e2449f844eca3fb63e072292075ea2571fcc201c755",
       "importable": false
     },
     {
@@ -144,7 +144,7 @@
         522,
         216
       ],
-      "sha256": "11fccd63223d72d96b5b915a82b7f72223a0b5ecfbc93a52fe0561e1de8d4968",
+      "sha256": "6c31a7da2afeebc372ec56119f96ba46260f703bf3ca65983072064da1df6f7d",
       "importable": false
     },
     {
@@ -177,7 +177,7 @@
         576,
         432
       ],
-      "sha256": "7c4dbb1954afaa56228f43c6d4fb7daf907377ca04d386d3b918bf0303656549",
+      "sha256": "07ebaa66058d2f0915cd00e530d19ccdb0924342dbf871a05c846d7880e0833b",
       "importable": false
     },
     {
@@ -188,7 +188,7 @@
         576,
         432
       ],
-      "sha256": "5ff0228a53c1e20c921d24e1791196a2a6e0726f866ed4ece0e1bdde10ad1bb2",
+      "sha256": "7fb086b16daa418bd2c2560b709226b71d5f5ecdc1297229475d9dcdfe5b8841",
       "importable": false
     },
     {
@@ -199,7 +199,7 @@
         576,
         432
       ],
-      "sha256": "6db667293179eaef7185559168cc8136937123c43a37efe38666db3b5c47f722",
+      "sha256": "93b8ac898131a50cd22dd2893170790017bb37e01f5ba0836cecf300f248be56",
       "importable": false
     },
     {
@@ -210,7 +210,7 @@
         576,
         432
       ],
-      "sha256": "36793b297a133337a0c62511de4c6687280dc880d3b80bb01710c1c620ba3b1c",
+      "sha256": "78875f295d55983095ddebe4911e85fb4bdca13935a0b016ae5a37dea8457157",
       "importable": false
     },
     {
@@ -221,7 +221,7 @@
         576,
         432
       ],
-      "sha256": "146d2dfafd98b8a05ff1eee0d643f70c0bf5b4849131b539ad43b4205c3eb530",
+      "sha256": "ec09620ba73b7b289ebdee75108f23c30cb332f2a5a1d3ca012e4cdf214c4adb",
       "importable": false
     }
   ],
@@ -234,19 +234,14 @@
         456,
         240
       ],
-      "sha256_source": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
-      "sha256_png": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
-    },
-    {
-      "asset": "Content/BG/GLACIER_AURORA_CANONICAL.dir",
-      "png": "aurorepmdsky.png",
-      "source": "aurorepmdsky.png",
-      "size": [
-        264,
-        216
+      "sheet_size": [
+        456,
+        240
       ],
-      "sha256_source": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
-      "sha256_png": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+      "frames": 1,
+      "sha256_source": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "sha256_png": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "animation": null
     },
     {
       "asset": "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
@@ -256,8 +251,14 @@
         504,
         96
       ],
+      "sheet_size": [
+        504,
+        96
+      ],
+      "frames": 1,
       "sha256_source": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6",
-      "sha256_png": "dba7524eb4fe07c7299bec8f7b0387f961c336c5bf91893adf367506f6e95b71"
+      "sha256_png": "b249ec827824c06355f2c12c36f47ac42382e916a3c73baaae2077137ed0a956",
+      "animation": null
     },
     {
       "asset": "Content/BG/GLACIER_SNOW_TREES.dir",
@@ -267,8 +268,14 @@
         522,
         160
       ],
+      "sheet_size": [
+        522,
+        160
+      ],
+      "frames": 1,
       "sha256_source": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79",
-      "sha256_png": "a136416397e0bad9b3e3b81770c3c5d58038485a64fd7b42912c42c7882051f1"
+      "sha256_png": "2abcaae40500782a44054e2449f844eca3fb63e072292075ea2571fcc201c755",
+      "animation": null
     },
     {
       "asset": "Content/BG/GLACIER_SNOW_FOREST_PATH.dir",
@@ -278,8 +285,53 @@
         522,
         216
       ],
+      "sheet_size": [
+        522,
+        216
+      ],
+      "frames": 1,
       "sha256_source": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79",
-      "sha256_png": "11fccd63223d72d96b5b915a82b7f72223a0b5ecfbc93a52fe0561e1de8d4968"
+      "sha256_png": "6c31a7da2afeebc372ec56119f96ba46260f703bf3ca65983072064da1df6f7d",
+      "animation": null
+    },
+    {
+      "asset": "Content/BG/GLACIER_AURORA_PALETTE_CYCLE.dir",
+      "png": "provenance/derived/aurora_palette_cycle/base_keyed.png",
+      "source": "aurorepmdsky.png",
+      "size": [
+        264,
+        160
+      ],
+      "sheet_size": [
+        1584,
+        160
+      ],
+      "frames": 6,
+      "sha256_source": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "sha256_png": "e63c9fc22657d6599f010ea143328d314f4b6f7035a6d1b196e924d084e1d154",
+      "animation": {
+        "method": "independent_hsl_palette_cycle",
+        "hue_shifts": [
+          0.0,
+          0.008,
+          0.016,
+          0.024,
+          0.016,
+          0.008
+        ],
+        "frame_time": 6,
+        "frame_files": [
+          "provenance/derived/aurora_palette_cycle/frame_00.png",
+          "provenance/derived/aurora_palette_cycle/frame_01.png",
+          "provenance/derived/aurora_palette_cycle/frame_02.png",
+          "provenance/derived/aurora_palette_cycle/frame_03.png",
+          "provenance/derived/aurora_palette_cycle/frame_04.png",
+          "provenance/derived/aurora_palette_cycle/frame_05.png"
+        ],
+        "base_keyed": "provenance/derived/aurora_palette_cycle/base_keyed.png",
+        "sky_asset": "Content/BG/GLACIER_NIGHT_BASE.dir",
+        "official_cycle": false
+      }
     }
   ],
   "canonical_references": {
@@ -596,8 +648,12 @@
     "arena_view": "top/north arena, south approach, forest and snow mountains below/in front"
   },
   "animation": {
-    "aurora": "static canonical frame",
+    "aurora": "independent palette cycling derived from canonical frame",
+    "asset": "Content/BG/GLACIER_AURORA_PALETTE_CYCLE.dir",
+    "frames": 6,
+    "frame_time": 6,
+    "sky_independent": true,
     "official_cycle": false,
-    "proposal": "not included in native Ground"
+    "proposal": "derived layer explicitly included in native Ground"
   }
 }

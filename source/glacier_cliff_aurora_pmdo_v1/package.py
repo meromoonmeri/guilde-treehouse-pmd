@@ -77,7 +77,7 @@ def main():
             "Mod.xml", "INSTALLER.py", "README.md", "verification.json",
             "Content/Tile/VastIceMountain.tile", "Content/Tile/index.idx",
             "Data/Ground/glacier_cliff_aurora_v1.rsground",
-            "Content/BG/GLACIER_AURORA_CANONICAL.dir",
+            "Content/BG/GLACIER_AURORA_PALETTE_CYCLE.dir",
             "Content/BG/GLACIER_NIGHT_BASE.dir",
             "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
             "Content/BG/GLACIER_SNOW_TREES.dir",

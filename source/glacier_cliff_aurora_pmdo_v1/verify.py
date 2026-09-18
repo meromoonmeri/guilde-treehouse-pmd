@@ -61,9 +61,9 @@ def dir_payload(path: Path):
     png = data[8:8 + n]
     width, height, directions, frames = struct.unpack_from("<4i", data, 8 + n)
     assert len(data) == 8 + n + 16
-    assert directions == 0 and frames == 1
-    assert png_size(png) == (width, height)
-    return png, (width, height)
+    assert directions == 0 and frames > 0
+    assert png_size(png) == (width * frames, height)
+    return png, (width, height), (directions, frames)
 
 
 def layer_cells(layer):
@@ -139,6 +139,18 @@ def main():
     assert all(len(layer["Tiles"]) == 72 for layer in obj["Layers"])
     assert all(len(column) == 54 for layer in obj["Layers"] for column in layer["Tiles"])
     assert len(obj["obstacles"]) == 72 and all(len(c) == 54 for c in obj["obstacles"])
+    bg_layers = obj["Background"]["Layers"]
+    bg_names = [entry["BG"]["BGAnim"]["AnimIndex"] for entry in bg_layers]
+    assert bg_names == [
+        "GLACIER_NIGHT_BASE", "GLACIER_AURORA_PALETTE_CYCLE",
+        "GLACIER_DISTANT_MOUNTAINS", "GLACIER_SNOW_TREES",
+        "GLACIER_SNOW_FOREST_PATH",
+    ]
+    assert bg_layers[0]["BG"]["BGAnim"]["StartFrame"] == -1
+    aurora_anim = bg_layers[1]["BG"]["BGAnim"]
+    assert aurora_anim["FrameTime"] == 6
+    assert aurora_anim["StartFrame"] == 0 and aurora_anim["EndFrame"] == 5
+    assert aurora_anim["AnimDir"] == 1
 
     source_bytes, native, payloads = tile_node(SOURCE_TILE)
     delivered_bytes, delivered, delivered_payloads = tile_node(TILE_PATH)
@@ -188,18 +200,26 @@ def main():
     assert obj["Entities"][0]["GroundObjects"] == []
     assert obj["Entities"][0]["Spawners"] == []
 
-    # Check the four .dir headers and their canonical/source relations.
+    # Check the five .dir headers and their canonical/source relations.
     prov = json.loads((OUT / "provenance/provenance.json").read_text(encoding="utf-8"))
     for record in prov["backgrounds"]:
-        png, size = dir_payload(OUT / record["asset"])
+        png, size, sheet = dir_payload(OUT / record["asset"])
         assert list(size) == record["size"]
+        assert list(png_size(png)) == record["sheet_size"]
+        assert sheet[1] == record["frames"]
         assert sha256(OUT / record["asset"]) != ""
         source_path = ROOT / record["source"]
         assert sha256(source_path) == record["sha256_source"]
         if record["asset"].endswith("NIGHT_BASE.dir"):
             assert png == source_path.read_bytes()
-        if record["asset"].endswith("AURORA_CANONICAL.dir"):
-            assert png == source_path.read_bytes()
+            assert sheet == (0, 1)
+        if record["asset"].endswith("AURORA_PALETTE_CYCLE.dir"):
+            assert sheet == (0, 6)
+            assert record["animation"]["sky_asset"].endswith("GLACIER_NIGHT_BASE.dir")
+            assert record["animation"]["official_cycle"] is False
+            frame_paths = [OUT / frame for frame in record["animation"]["frame_files"]]
+            assert all(path.is_file() for path in frame_paths)
+            assert len({sha256(path) for path in frame_paths}) > 1
 
     retrieval = prov["texture_retrieval"]
     assert {r["role"] for r in retrieval} == {
@@ -253,6 +273,13 @@ def main():
         "canonical_backgrounds": 5,
         "named_layer_exports": 12,
         "canonical_reference_hashes": True,
+        "aurora_palette_cycle": {
+            "asset": "Content/BG/GLACIER_AURORA_PALETTE_CYCLE.dir",
+            "frames": 6,
+            "frame_time": 6,
+            "independent_from_sky": True,
+            "derived_from_canonical_reference": True,
+        },
         "installer_merge_idempotence_and_conflict_protection": True,
         "runtime": {
             "pmdo_binary_deserialization": native_runtime,
@@ -262,7 +289,7 @@ def main():
         },
         "limits": [
             "The report proves file/schema/reference/collision integrity, not a graphical PMDO session.",
-            "The aurora is a static canonical frame; no unverified official animation cycle is included.",
+            "The aurora palette cycle is a derived six-frame layer, not an official source animation claim.",
             "Dungeon destination is intentionally not bound; connect arena_seuil in the host quest.",
         ],
     }
