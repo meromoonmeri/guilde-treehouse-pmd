@@ -1,0 +1,331 @@
+{
+  "title": "Arène — roche/glace référencées, horizon très lointain et vallée boisée",
+  "canvas": [
+    960,
+    896
+  ],
+  "layers": {
+    "01_ciel_bleu_noir": "calques/ARENE_SKYPEAK_V3_01_ciel_bleu_noir.png",
+    "02_etoiles_natives": "calques/ARENE_SKYPEAK_V3_02_etoiles_natives.png",
+    "02b_aurore_panoramique": "calques/ARENE_SKYPEAK_V3_02b_aurore_panoramique.png",
+    "03_lune_canonique": "calques/ARENE_SKYPEAK_V3_03_lune_canonique.png",
+    "04_montagnes_horizon": "calques/ARENE_SKYPEAK_V3_04_montagnes_horizon.png",
+    "05_vallee_mer_de_sapins": "calques/ARENE_SKYPEAK_V3_05_vallee_mer_de_sapins.png",
+    "06_sol_visible_acces_sud": "calques/ARENE_SKYPEAK_V3_06_sol_visible_acces_sud.png",
+    "07_roches_glaces_arriere": "calques/ARENE_SKYPEAK_V3_07_roches_glaces_arriere.png",
+    "08_immersion_gauche": "calques/ARENE_SKYPEAK_V3_08_immersion_gauche.png",
+    "09_immersion_droite": "calques/ARENE_SKYPEAK_V3_09_immersion_droite.png"
+  },
+  "composition": "ARENE_SKYPEAK_V3_composition_nuit.png",
+  "webp": "ARENE_SKYPEAK_V3_composition_animee.webp",
+  "ora": "ARENE_SKYPEAK_V3_editable.ora",
+  "scene_frames": {
+    "0": "frames_composition/ARENE_SKYPEAK_V3_scene_00.png",
+    "8": "frames_composition/ARENE_SKYPEAK_V3_scene_08.png",
+    "16": "frames_composition/ARENE_SKYPEAK_V3_scene_16.png",
+    "24": "frames_composition/ARENE_SKYPEAK_V3_scene_24.png"
+  },
+  "effect_frames": [
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_00.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_01.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_02.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_03.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_04.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_05.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_06.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_07.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_08.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_09.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_10.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_11.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_12.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_13.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_14.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_15.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_16.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_17.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_18.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_19.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_20.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_21.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_22.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_23.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_24.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_25.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_26.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_27.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_28.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_29.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_30.png",
+    "../arene_glace_sky_peak_v2/aurore/ARENE_SKYPEAK_V2_onde_31.png"
+  ],
+  "retained": [
+    {
+      "layer": "01_ciel_bleu_noir",
+      "source": "renders/arene_glace_sky_peak_v2/calques/ARENE_SKYPEAK_V2_01_ciel_bleu_noir.png",
+      "sha256": "5881edc73196fb4f596f115437c8b4574cb3a5961a6b4c5d9fab68ff2df834ef",
+      "method": "Original 960×720 pixels retained, canvas extended downward without resampling."
+    },
+    {
+      "layer": "02_etoiles_natives",
+      "source": "renders/arene_glace_sky_peak_v2/calques/ARENE_SKYPEAK_V2_02_etoiles_natives.png",
+      "sha256": "0d28025899790b15d167b49cc6a355e6f9a65d3aae403b6f1ed0826f789d101f",
+      "method": "Original 960×720 pixels retained, canvas extended downward without resampling."
+    },
+    {
+      "layer": "02b_aurore_panoramique",
+      "source": "renders/arene_glace_sky_peak_v2/calques/ARENE_SKYPEAK_V2_02b_aurore_panoramique.png",
+      "sha256": "1b6e9652f56c1041cacd5541577f1bbd388719bf7467bb64b72f1a6f1d11dffa",
+      "method": "Original 960×720 pixels retained, canvas extended downward without resampling."
+    },
+    {
+      "layer": "03_lune_canonique",
+      "source": "renders/arene_glace_sky_peak_v2/calques/ARENE_SKYPEAK_V2_03_lune_canonique.png",
+      "sha256": "f3e463e905c5da2c85a4a262a778b779a0c4792a504eaef4f7ac0171411da590",
+      "method": "Original 960×720 pixels retained, canvas extended downward without resampling."
+    }
+  ],
+  "references": [
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79"
+    },
+    {
+      "path": "source/sky_peak_v1/232233_reference.png",
+      "sha256": "7a3264c2962b66c4e979552d500e5872127d84571de58178da5ffedc35d47881"
+    }
+  ],
+  "raws": [
+    {
+      "path": "bruts/arene_matiere_canonique_magenta.png",
+      "sha256": "0a291596d3b36a74566ede4b5f1fd88fc7f1942a24656acf7bf08bd2270ef6f5"
+    },
+    {
+      "path": "bruts/mer_de_sapins_magenta.png",
+      "sha256": "96ff56cbe2b781039a4cbf08b3a41a050b906f7c2af8c1df56cc2a42c00abd58"
+    },
+    {
+      "path": "bruts/mer_de_sapins_profonde_magenta.png",
+      "sha256": "441c6f307ecc5568fb71fb31ab390215a9dd97469b7bb47fa334c18d76a9aa20"
+    },
+    {
+      "path": "bruts/montagnes_tres_lointaines_magenta.png",
+      "sha256": "1b889773043d7f8ef30c63b80266aae105945381ff6cda281ed01a599d0c2934"
+    }
+  ],
+  "normalization": {
+    "mountains": {
+      "input_size": [
+        1808,
+        153
+      ],
+      "output_size": [
+        960,
+        81
+      ],
+      "xy": [
+        0,
+        160
+      ],
+      "resampling": "nearest, uniform",
+      "crop": [
+        0,
+        233,
+        1808,
+        386
+      ]
+    },
+    "forest": {
+      "input_size": [
+        1200,
+        875
+      ],
+      "output_size": [
+        960,
+        700
+      ],
+      "xy": [
+        0,
+        213
+      ],
+      "resampling": "nearest, uniform",
+      "crop": [
+        0,
+        21,
+        1200,
+        896
+      ]
+    },
+    "terrain": {
+      "input_size": [
+        1264,
+        848
+      ],
+      "output_size": [
+        960,
+        644
+      ],
+      "xy": [
+        0,
+        270
+      ],
+      "resampling": "nearest, uniform"
+    }
+  },
+  "terrain_floor_polygon": [
+    [
+      493,
+      254
+    ],
+    [
+      553,
+      248
+    ],
+    [
+      720,
+      251
+    ],
+    [
+      698,
+      279
+    ],
+    [
+      739,
+      296
+    ],
+    [
+      895,
+      329
+    ],
+    [
+      926,
+      409
+    ],
+    [
+      918,
+      483
+    ],
+    [
+      1000,
+      533
+    ],
+    [
+      890,
+      547
+    ],
+    [
+      808,
+      583
+    ],
+    [
+      731,
+      622
+    ],
+    [
+      705,
+      738
+    ],
+    [
+      711,
+      848
+    ],
+    [
+      494,
+      848
+    ],
+    [
+      501,
+      788
+    ],
+    [
+      542,
+      747
+    ],
+    [
+      550,
+      694
+    ],
+    [
+      534,
+      619
+    ],
+    [
+      494,
+      579
+    ],
+    [
+      386,
+      561
+    ],
+    [
+      310,
+      537
+    ],
+    [
+      248,
+      541
+    ],
+    [
+      228,
+      498
+    ],
+    [
+      268,
+      491
+    ],
+    [
+      268,
+      443
+    ],
+    [
+      264,
+      414
+    ],
+    [
+      320,
+      400
+    ],
+    [
+      308,
+      376
+    ],
+    [
+      340,
+      356
+    ],
+    [
+      412,
+      356
+    ],
+    [
+      415,
+      319
+    ],
+    [
+      485,
+      305
+    ]
+  ],
+  "aurora": {
+    "source": "renders/arene_glace_sky_peak_v2",
+    "frames": 32,
+    "frame_ms": 125,
+    "horizontal_scroll": false,
+    "vertical_amplitude_px": 2
+  },
+  "limits": [
+    "Roche/glace, montagnes et forêt sont des générations guidées par les références canoniques, pas des copies de tuiles originales. Aucune certification de texture ou échelle native.",
+    "Terrain régénéré selon la demande ; aucun filtre de recoloration ajouté après génération.",
+    "Sol et reliefs : partition exacte des pixels visibles, sans reconstruction des surfaces cachées.",
+    "Ciel, étoiles, lune native et aurore V2 conservés dans leur emprise originale. Seul le canevas est prolongé vers le bas.",
+    "Pas de Ground, collision, warp ou validation GPU pour cette illustration."
+  ]
+}

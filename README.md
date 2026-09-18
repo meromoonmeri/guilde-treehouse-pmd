@@ -1,5 +1,18 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Arène V3 — roche/glace référencées, montagnes à l’horizon, vallée enneigée
+
+**[Animation WebP](renders/arene_glace_sky_peak_v3/ARENE_SKYPEAK_V3_composition_animee.webp)** · **[Composition PNG](renders/arene_glace_sky_peak_v3/ARENE_SKYPEAK_V3_composition_nuit.png)** · **[Dix calques / notice](renders/arene_glace_sky_peak_v3/README.md)** · **[Atelier](apercu_arene_glace_sky_peak_v3.html)**
+
+Terrain régénéré d’après IceArena/IceRoad, pics de glace et masses rocheuses enneigées ; montagnes réduites à l’horizon et **mer de sapins dans la vallée entre cet horizon et l’arène sur sa falaise**. Dessins générés référencés, pas tuiles canoniques copiées. Ciel, étoiles, lune native et aurore panoramique V2 conservés ; canevas960×896. Dix PNG de calques, quatre poses PNG, WebP32phases et ORA. **17tests d’assets +13tests UI simulés PASS**, sans certification moteur.
+
+## cliffnordouesttest1 — nuages en overlay ; mer encore en attente
+
+**[Patch natif et installation](exports/cliffnordouesttest1_animation_v1/README.md)** · **[Ground racine](cliffnordouesttest1.rsground)** · **[Audit du diff](exports/cliffnordouesttest1_animation_v1/audit.json)**
+
+Ajout d’un seul statut visuel : six familles de nuages validés, wrap−4px/s sur `DrawLayer.Top`. **Tous les octets hors `Status`, les quatre calques, les collisions et les entités sont inchangés.** Installer également les deux nouvelles dépendancesBG/MapStatus. **14contrôles de préservation et13contrôles natifs PMDO0.8.12 PASS** ; pas de renduGPU validé. **La mer reste inchangée** : ses banques personnalisées exactes (`v2_promontoire_jour_03.tile`, `terrain*.tile`) sont nécessaires pour terminer sans altérer le reste.
+
+
 ## Arène du Croissant V2 — aurore panoramique et sapins enneigés
 
 **[Voir l’animation WebP](renders/arene_glace_sky_peak_v2/ARENE_SKYPEAK_V2_composition_animee.webp)** · **[Composition PNG](renders/arene_glace_sky_peak_v2/ARENE_SKYPEAK_V2_composition_nuit.png)** · **[Calques et 32 frames sur GitHub](renders/arene_glace_sky_peak_v2/README.md)** · **[Atelier](apercu_arene_glace_sky_peak_v2.html)**

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Ten aligned PNG layers, 960×896 divisible by8",
+    "All raw generations retained and hash-pinned",
+    "Canonical reference files unchanged",
+    "Sky/stars/moon/aurora retain original V2 pixels, positions and scale",
+    "Visible terrain split reconstructs the generated master exactly",
+    "Geometric southern approach remains open through visible floor mask",
+    "Mountain ridge is shallow at horizon, not foreground-scale",
+    "Forest fills entire lower field below distant horizon",
+    "Forest shown between mountains and rear arena rim",
+    "Native crescent remains 33×36 at 800,64 with 516 visible pixels",
+    "Lossless WebP has32 frames, indefinite 4-second loop",
+    "All32 frames exactly recompose; terrain and moon stationary",
+    "Four individually viewable composition keyframe PNGs",
+    "Panoramic aurora remains visible on both sky edges",
+    "No horizontal aurora scroll or new palette processing",
+    "OpenRaster CRC and merged preview correct",
+    "No saturated magenta backdrop left in any layer"
+  ],
+  "count": 17,
+  "engine_tested": false,
+  "limits": "Image geometry/pixel checks only; no native-texture, collision or GPU certification."
+}

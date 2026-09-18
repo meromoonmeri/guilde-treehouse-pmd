@@ -1,0 +1,21 @@
+{
+  "status": "PASS_CLOUDS_ONLY",
+  "count": 14,
+  "checks": [
+    "Original pinned to aac14ae4 and SHA256",
+    "Root and distributable Ground byte-identical",
+    "Only Object.Status differs structurally",
+    "All bytes outside Status untouched (BOM, CRLF, formatting included)",
+    "All tile placements AND animation frame lists unchanged",
+    "Collision geometry and tags unchanged",
+    "Sea and waterfall not guessed or altered",
+    "Visual-only hidden status, no gameplay state",
+    "Native Top overlay, horizontal -4px/s wrap",
+    "Native BG binary contains exact premultiplied PNG and static frame metadata",
+    "Clouds restricted to original sky band, map-height vertical period",
+    "Matching visual MapStatusData, no carryover or gameplay hooks",
+    "One-play8s effect-only preview, not a fake short wrap",
+    "Real PMDO deserialization passed13 checks; no GPU claim"
+  ],
+  "sea_status": "BLOCKED_MISSING_BANKS"
+}

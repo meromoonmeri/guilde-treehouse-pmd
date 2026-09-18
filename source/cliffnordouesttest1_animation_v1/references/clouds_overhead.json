@@ -1,0 +1,111 @@
+﻿{
+  "Version": "0.8.9.0",
+  "Object": {
+    "$type": "RogueEssence.Data.MapStatusData, RogueEssence",
+    "Name": {
+      "DefaultText": "Clouds Overhead",
+      "LocalTexts": {
+        "fr": "Nuages en altitude"
+      }
+    },
+    "Desc": {
+      "DefaultText": "Slow cloud shadows drifting over the map.",
+      "LocalTexts": {
+        "fr": "Ombres de nuages qui derivent lentement au-dessus de la carte."
+      }
+    },
+    "Released": true,
+    "Comment": "Ombres de nuages en derive lente. Cree le 2026-08-02 : quatre appels a GROUND:AddMapStatus('clouds_overhead') existaient depuis longtemps dans le mod (metano_town, altere_pond, metano_altere_transition, gloomy_forest_entrance) alors que le MapStatus n'avait jamais ete cree. Voir docs/AUDIT_GROUNDS_BOSS_ENTRANCE.",
+    "CarryOver": false,
+    "Emitter": {
+      "$type": "RogueEssence.Content.OverlayEmitter, RogueEssence",
+      "LocHeight": 0,
+      "finished": false,
+      "Offset": 0,
+      "Anim": {
+        "AnimIndex": "Steam",
+        "FrameTime": 3,
+        "StartFrame": -1,
+        "EndFrame": -1,
+        "AnimDir": -1,
+        "Alpha": 70,
+        "AnimFlip": 0
+      },
+      "Movement": {
+        "X": -6,
+        "Y": 0
+      },
+      "FadeIn": 0,
+      "FadeOut": 0,
+      "Layer": 4,
+      "Color": "255, 255, 255, 40"
+    },
+    "DefaultHidden": false,
+    "StatusStates": [],
+    "OnMapRefresh": [],
+    "RepeatMethod": {
+      "$type": "PMDC.Dungeon.MapStatusRefreshEvent, PMDC"
+    },
+    "ProximityEvent": {
+      "Radius": -1,
+      "TargetAlignments": 0,
+      "BeforeExplosions": [],
+      "OnEquips": [],
+      "OnPickups": [],
+      "BeforeStatusAdds": [],
+      "BeforeStatusAddings": [],
+      "OnStatusAdds": [],
+      "OnStatusRemoves": [],
+      "OnMapStatusAdds": [],
+      "OnMapStatusRemoves": [],
+      "OnMapStarts": [],
+      "OnTurnStarts": [],
+      "OnTurnEnds": [],
+      "OnMapTurnEnds": [],
+      "OnWalks": [],
+      "OnDeaths": [],
+      "OnRefresh": [],
+      "BeforeTryActions": [],
+      "BeforeActions": [],
+      "OnActions": [],
+      "BeforeHittings": [],
+      "BeforeBeingHits": [],
+      "AfterHittings": [],
+      "AfterBeingHits": [],
+      "OnHitTiles": [],
+      "AfterActions": [],
+      "UserElementEffects": [],
+      "TargetElementEffects": [],
+      "ModifyHPs": [],
+      "RestoreHPs": []
+    },
+    "OnEquips": [],
+    "OnPickups": [],
+    "BeforeStatusAdds": [],
+    "BeforeStatusAddings": [],
+    "OnStatusAdds": [],
+    "OnStatusRemoves": [],
+    "OnMapStatusAdds": [],
+    "OnMapStatusRemoves": [],
+    "OnMapStarts": [],
+    "OnTurnStarts": [],
+    "OnTurnEnds": [],
+    "OnMapTurnEnds": [],
+    "OnWalks": [],
+    "OnDeaths": [],
+    "OnRefresh": [],
+    "BeforeTryActions": [],
+    "BeforeActions": [],
+    "OnActions": [],
+    "BeforeHittings": [],
+    "BeforeBeingHits": [],
+    "AfterHittings": [],
+    "AfterBeingHits": [],
+    "OnHitTiles": [],
+    "AfterActions": [],
+    "UserElementEffects": [],
+    "TargetElementEffects": [],
+    "ModifyHPs": [],
+    "RestoreHPs": []
+  }
+}

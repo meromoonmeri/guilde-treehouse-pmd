@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "pmdo": "0.8.12.0",
+  "assertions": [
+    "Ground deserialized by PMDO 0.8.12\tPASS",
+    "Original 138x98 grid and TexSize=1\tPASS",
+    "Four original tile layers\tPASS",
+    "No extra decoration or entity layer\tPASS",
+    "Exactly one visual status\tPASS",
+    "Hidden visual-only status\tPASS",
+    "Native OverlayEmitter type\tPASS",
+    "Continuous horizontal movement -4 px/s\tPASS",
+    "Top overlay above tile layers\tPASS",
+    "Native cloud BG reference\tPASS",
+    "MapStatusData resource deserialized\tPASS",
+    "No gameplay states or refresh events\tPASS",
+    "Resource uses same overlay\tPASS"
+  ],
+  "startup_and_resources_restored": true,
+  "method": "Real PMDO DataManager.GetGround and GetMapStatus via temporary Lua hook, -guide",
+  "GPU_tested": false,
+  "cloud_playback_tested": false,
+  "missing_custom_tile_banks_loaded": false,
+  "sea_modified": false
+}

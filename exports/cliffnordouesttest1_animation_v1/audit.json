@@ -1,0 +1,181 @@
+{
+  "status": "PARTIAL_CLOUDS_ONLY_SEA_BLOCKED",
+  "date": "2026-09-18",
+  "target": "cliffnordouesttest1.rsground",
+  "original_commit": "aac14ae4",
+  "original_sha256": "2cb10918d6bfa8ed687c1412b2d2e7c4aebc545049b9d2d76eb7c16fdb632f19",
+  "patched_sha256": "a098806ab4505765eb3981f56557264591448f467466acdf3073d5395de6caee",
+  "root_applied": true,
+  "only_changed_json_path": "Object.Status.cliffnw_native_cloud_overlay",
+  "byte_reversible": true,
+  "all_existing_fields_identical": true,
+  "preserved": [
+    "All four tile layers and every Frames/FrameLength",
+    "obstacles",
+    "rand",
+    "Background",
+    "BlankBG",
+    "Decorations",
+    "Entities",
+    "AssetName",
+    "Music",
+    "EdgeView",
+    "NoSwitching",
+    "ViewCenter",
+    "ViewOffset",
+    "Name",
+    "Released",
+    "Comment",
+    "TexSize"
+  ],
+  "clouds": {
+    "texture": "CLIFFNW_NATIVE_CLOUD_OVERLAY",
+    "size": [
+      1440,
+      784
+    ],
+    "cloud_y": 208,
+    "movement_px_s": [
+      -4,
+      0
+    ],
+    "native_draw_layer": 4,
+    "draw_layer_name": "Top",
+    "cycle_seconds": 360,
+    "alpha": 255,
+    "native_families": 6,
+    "provenance": {
+      "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+      "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+      "cloud_crops": [
+        [
+          16,
+          24,
+          168,
+          72
+        ],
+        [
+          176,
+          8,
+          272,
+          72
+        ],
+        [
+          272,
+          16,
+          368,
+          64
+        ],
+        [
+          72,
+          80,
+          168,
+          128
+        ],
+        [
+          176,
+          72,
+          296,
+          128
+        ],
+        [
+          320,
+          64,
+          472,
+          128
+        ]
+      ],
+      "cloud_destinations": [
+        [
+          32,
+          40
+        ],
+        [
+          272,
+          16
+        ],
+        [
+          504,
+          72
+        ],
+        [
+          728,
+          32
+        ],
+        [
+          920,
+          80
+        ],
+        [
+          1160,
+          24
+        ]
+      ],
+      "cloud_strip_size": [
+        1440,
+        208
+      ],
+      "cloud_speed_px_s": -4,
+      "cloud_loop_s": 360,
+      "sources": [
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+          "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+          "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+          "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+          "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+        }
+      ]
+    },
+    "preview": "8-second one-play effect-only excerpt, not full Ground render."
+  },
+  "sea": {
+    "modified": false,
+    "reason": "Custom texture banks absent from this checkout and searched public repository trees. Material identity and original pixels cannot be verified. No assumed water tiles or palette animation applied.",
+    "required_custom_banks": [
+      "v2_promontoire_jour_03",
+      "terrain",
+      "terrain (2)",
+      "terrain (3)",
+      "terrain (4)"
+    ]
+  },
+  "all_ground_banks": [
+    "00_ciel",
+    "Altere_Pond_Cliffs",
+    "INVERSEPATHWAY",
+    "Metano_Altere_Transition_Base",
+    "Metano_Town_Animation_Tileset",
+    "terrain",
+    "terrain (2)",
+    "terrain (3)",
+    "terrain (4)",
+    "v2_promontoire_jour_03"
+  ],
+  "engine_source": {
+    "repo": "RogueCollab/RogueEssence",
+    "commit": "8b7eafafa73ff0c10b9e8fd9348559ee1b5dfe8b",
+    "files": [
+      "RogueEssence/Ground/GSceneZone.cs",
+      "RogueEssence/Content/Animation/Emitters/OverlayEmitter.cs",
+      "RogueEssence/Content/Animation/OverlayAnim.cs",
+      "RogueEssence/Content/Animation/Sprites.cs"
+    ]
+  },
+  "limits": [
+    "Only native headless validation, if separately reported. No GPU/animation playback claim.",
+    "Requires original custom tile banks already installed in the user project.",
+    "OverlayEmitter repeats X and Y; vertical period equals this Ground height. No visible duplicate inside its 784-pixel bounds.",
+    "MapStatus starts on entering the Ground; editor-only display is not guaranteed.",
+    "Sea remains entirely unchanged until exact bank assets are supplied."
+  ]
+}

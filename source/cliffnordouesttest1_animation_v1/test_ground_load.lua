@@ -1,0 +1,32 @@
+-- Run only in the disposable runtime cache; no GPU initialization.
+local env=luanet.import_type('System.Environment')
+local gfx=luanet.import_type('RogueEssence.Content.GraphicsManager')
+local dm=luanet.import_type('RogueEssence.Data.DataManager')
+local drawlayer=luanet.import_type('RogueEssence.Content.DrawLayer')
+local output=assert(io.open('cliffnw_cloud_test.tsv','w'))
+local function check(label,value)
+ assert(value,label)
+ output:write(label..'\tPASS\n');output:flush()
+end
+local ok,err=pcall(function()
+ gfx.DungeonTexSize=3
+ local m=dm.Instance:GetGround('cliffnordouesttest1')
+ check('Ground deserialized by PMDO 0.8.12',m~=nil)
+ check('Original 138x98 grid and TexSize=1',m.Width==138 and m.Height==98 and m.TexSize==1)
+ check('Four original tile layers',m.Layers.Count==4)
+ check('No extra decoration or entity layer',m.Decorations.Count==1 and m.Entities.Count==1)
+ check('Exactly one visual status',m.Status.Count==1)
+ local s=m.Status['cliffnw_native_cloud_overlay']
+ check('Hidden visual-only status',s.Hidden and s.StatusStates.Count==0)
+ check('Native OverlayEmitter type',s.Emitter:GetType().Name=='OverlayEmitter')
+ check('Continuous horizontal movement -4 px/s',s.Emitter.Movement.X==-4 and s.Emitter.Movement.Y==0)
+ check('Top overlay above tile layers',s.Emitter.Layer==drawlayer.Top)
+ check('Native cloud BG reference',s.Emitter.Anim.AnimIndex=='CLIFFNW_NATIVE_CLOUD_OVERLAY')
+ local resource=dm.Instance:GetMapStatus('cliffnw_native_cloud_overlay')
+ check('MapStatusData resource deserialized',resource~=nil and resource.DefaultHidden)
+ check('No gameplay states or refresh events',resource.StatusStates.Count==0 and resource.OnMapRefresh.Count==0)
+ check('Resource uses same overlay',resource.Emitter.Anim.AnimIndex==s.Emitter.Anim.AnimIndex)
+end)
+if not ok then output:write('FAIL\t'..tostring(err)..'\n') end
+output:close();print('CLIFFNW_NATIVE '..(ok and 'PASS' or tostring(err)))
+env.Exit(ok and 0 or 1)
