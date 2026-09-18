@@ -1,0 +1,26 @@
+{
+  "guide": {
+    "source": "source/ice_arena_aurora_v1/generation/layout_guide.png",
+    "taille": [
+      928,
+      1152
+    ],
+    "sha256": "26b423434fc1292fb337239e99e0d1b633afb05e34d9e5499617e0761148f47f"
+  },
+  "calques": {
+    "ciel_fixe": "navy inonde depuis le haut, sans aurore ni etoiles",
+    "etoiles_fixes": "petites taches claires isolees (1-40 px)",
+    "aurore": "pixels satures de la zone ciel ; 8 frames palette cycling ; frame 0 = origine exacte",
+    "terrain_fixe": "tout le reste (murailles, cratere, chemin)"
+  },
+  "animation": {
+    "frames": 8,
+    "duree_ms": 120,
+    "cycle_s": 0.96,
+    "principe": "aurore independante du ciel : palette cycling des rampes (cyan +1, magenta -1) ; ciel/etoiles/terrain figes",
+    "boucle": "exacte (periode 4 | 8)"
+  },
+  "frame0_egale_guide": true,
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes"
+}

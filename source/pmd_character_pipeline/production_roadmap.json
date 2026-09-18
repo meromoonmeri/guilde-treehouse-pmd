@@ -394,5 +394,25 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_guide_couches_v13": {
+    "request": "Rebaser sur layout_guide.png (V1), faire les plusieurs layers, aurores animées indépendantes du ciel",
+    "source": "source/arene_guide_couches_v13/",
+    "viewer": "apercu_arene_guide_couches_v13.html",
+    "layers": [
+      "ciel_fixe",
+      "etoiles_fixes",
+      "aurore_8frames_palette_cycling",
+      "terrain_fixe"
+    ],
+    "frames": 8,
+    "duree_ms": 120,
+    "frame0_egale_guide": true,
+    "recomposition_exacte": true,
+    "aurore_independante": true,
+    "dedicated_tests": 8,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
