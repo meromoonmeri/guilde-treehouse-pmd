@@ -1,0 +1,907 @@
+{
+  "version": "RockLayoutsV1",
+  "title": "PMD Canonical Rock Map Layouts",
+  "maps": [
+    {
+      "id": "01_defile_rocheux_bleu",
+      "title": "Défilé rocheux bleu — Entrée Sud-Nord",
+      "size": [
+        512,
+        512
+      ],
+      "orientation": "SOUTH_TO_NORTH",
+      "entrance": [
+        256,
+        140
+      ],
+      "access_box": [
+        216,
+        504,
+        80,
+        8
+      ],
+      "layers": [
+        {
+          "id": "00_fond_obscurite",
+          "file": "RockV1_01_defile_rocheux_bleu_00_fond_obscurite.png",
+          "provenance": "00_fond_obscurite_source.npz"
+        },
+        {
+          "id": "01_sol_rocheux",
+          "file": "RockV1_01_defile_rocheux_bleu_01_sol_rocheux.png",
+          "provenance": "01_sol_rocheux_source.npz"
+        },
+        {
+          "id": "02_chemin_defile",
+          "file": "RockV1_01_defile_rocheux_bleu_02_chemin_defile.png",
+          "provenance": "02_chemin_defile_source.npz"
+        },
+        {
+          "id": "03_parois_rocheuses_fond",
+          "file": "RockV1_01_defile_rocheux_bleu_03_parois_rocheuses_fond.png",
+          "provenance": "03_parois_rocheuses_fond_source.npz"
+        },
+        {
+          "id": "04_corniches_et_retours",
+          "file": "RockV1_01_defile_rocheux_bleu_04_corniches_et_retours.png",
+          "provenance": "04_corniches_et_retours_source.npz"
+        },
+        {
+          "id": "05_portail_entree_donjon",
+          "file": "RockV1_01_defile_rocheux_bleu_05_portail_entree_donjon.png",
+          "provenance": "05_portail_entree_donjon_source.npz"
+        },
+        {
+          "id": "06_falaises_premier_plan",
+          "file": "RockV1_01_defile_rocheux_bleu_06_falaises_premier_plan.png",
+          "provenance": "06_falaises_premier_plan_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_sol_rocheux",
+          "source": 0,
+          "method": "native ground patch overlap seam, no blending",
+          "patches": [
+            [
+              0,
+              208,
+              24,
+              224
+            ],
+            [
+              64,
+              208,
+              88,
+              224
+            ],
+            [
+              136,
+              208,
+              160,
+              224
+            ],
+            [
+              168,
+              208,
+              192,
+              224
+            ]
+          ],
+          "seed": 33
+        },
+        {
+          "layer": "02_chemin_defile",
+          "source": 0,
+          "method": "native ground patch overlap seam, no blending",
+          "patches": [
+            [
+              0,
+              208,
+              24,
+              224
+            ],
+            [
+              64,
+              208,
+              88,
+              224
+            ],
+            [
+              136,
+              208,
+              160,
+              224
+            ],
+            [
+              168,
+              208,
+              192,
+              224
+            ]
+          ],
+          "seed": 49
+        },
+        {
+          "layer": "03_parois_rocheuses_fond",
+          "source": 0,
+          "rect": [
+            0,
+            0,
+            240,
+            176
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "layer": "03_parois_rocheuses_fond",
+          "source": 0,
+          "rect": [
+            0,
+            0,
+            240,
+            176
+          ],
+          "position": [
+            240,
+            0
+          ]
+        },
+        {
+          "layer": "03_parois_rocheuses_fond",
+          "source": 0,
+          "rect": [
+            0,
+            0,
+            32,
+            176
+          ],
+          "position": [
+            480,
+            0
+          ]
+        },
+        {
+          "layer": "04_corniches_et_retours",
+          "source": 0,
+          "rect": [
+            0,
+            120,
+            160,
+            216
+          ],
+          "position": [
+            0,
+            180
+          ]
+        },
+        {
+          "layer": "04_corniches_et_retours",
+          "source": 0,
+          "rect": [
+            0,
+            120,
+            144,
+            216
+          ],
+          "position": [
+            0,
+            310
+          ]
+        },
+        {
+          "layer": "04_corniches_et_retours",
+          "source": 0,
+          "rect": [
+            80,
+            120,
+            240,
+            216
+          ],
+          "position": [
+            352,
+            180
+          ]
+        },
+        {
+          "layer": "04_corniches_et_retours",
+          "source": 0,
+          "rect": [
+            96,
+            120,
+            240,
+            216
+          ],
+          "position": [
+            368,
+            310
+          ]
+        },
+        {
+          "layer": "05_portail_entree_donjon",
+          "source": 1,
+          "rect": [
+            536,
+            56,
+            688,
+            248
+          ],
+          "position": [
+            180,
+            24
+          ]
+        },
+        {
+          "layer": "06_falaises_premier_plan",
+          "source": 0,
+          "rect": [
+            0,
+            216,
+            160,
+            288
+          ],
+          "position": [
+            0,
+            440
+          ]
+        },
+        {
+          "layer": "06_falaises_premier_plan",
+          "source": 0,
+          "rect": [
+            0,
+            216,
+            160,
+            288
+          ],
+          "position": [
+            352,
+            440
+          ]
+        }
+      ],
+      "notes": "Défilé naturel de basalte bleu orienté Sud-Nord. Accès dégagé en bas, chemin sinueux entre corniches rocheuses, menant au portail souterrain maçonné de PMD Sky (panneau undergroundpmd). 100% textures natives, zéro déformation.",
+      "runtime": "NOT TESTED",
+      "art_approved": false,
+      "connectivity": "Continuous walkable path mask verified geometrically. Engine collision and warp triggers not tested."
+    },
+    {
+      "id": "02_plateau_volcanique_croisement",
+      "title": "Plateau volcanique des Évents — Carrefour 4 Voies",
+      "size": [
+        512,
+        512
+      ],
+      "orientation": "CROSSROADS_4_WAY",
+      "entrance": [
+        256,
+        16
+      ],
+      "access_box": [
+        208,
+        504,
+        96,
+        8
+      ],
+      "layers": [
+        {
+          "id": "01_bedrock_ocre_sol",
+          "file": "RockV1_02_plateau_volcanique_croisement_01_bedrock_ocre_sol.png",
+          "provenance": "01_bedrock_ocre_sol_source.npz"
+        },
+        {
+          "id": "02_terrasses_et_plateaux",
+          "file": "RockV1_02_plateau_volcanique_croisement_02_terrasses_et_plateaux.png",
+          "provenance": "02_terrasses_et_plateaux_source.npz"
+        },
+        {
+          "id": "03_parois_et_escarpements",
+          "file": "RockV1_02_plateau_volcanique_croisement_03_parois_et_escarpements.png",
+          "provenance": "03_parois_et_escarpements_source.npz"
+        },
+        {
+          "id": "04_events_et_fumerolles",
+          "file": "RockV1_02_plateau_volcanique_croisement_04_events_et_fumerolles.png",
+          "provenance": "04_events_et_fumerolles_source.npz"
+        },
+        {
+          "id": "05_eboulis_et_blocs",
+          "file": "RockV1_02_plateau_volcanique_croisement_05_eboulis_et_blocs.png",
+          "provenance": "05_eboulis_et_blocs_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_bedrock_ocre_sol",
+          "source": 2,
+          "method": "native ground patch overlap seam, no blending",
+          "patches": [
+            [
+              144,
+              192,
+              168,
+              216
+            ],
+            [
+              168,
+              192,
+              192,
+              216
+            ],
+            [
+              240,
+              192,
+              264,
+              216
+            ],
+            [
+              144,
+              216,
+              168,
+              240
+            ],
+            [
+              240,
+              216,
+              264,
+              240
+            ],
+            [
+              144,
+              240,
+              168,
+              264
+            ],
+            [
+              240,
+              240,
+              264,
+              264
+            ],
+            [
+              144,
+              264,
+              168,
+              288
+            ],
+            [
+              240,
+              264,
+              264,
+              288
+            ],
+            [
+              192,
+              336,
+              216,
+              360
+            ],
+            [
+              216,
+              336,
+              240,
+              360
+            ]
+          ],
+          "seed": 77
+        },
+        {
+          "layer": "02_terrasses_et_plateaux",
+          "source": 2,
+          "rect": [
+            0,
+            0,
+            160,
+            144
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "layer": "02_terrasses_et_plateaux",
+          "source": 2,
+          "rect": [
+            296,
+            0,
+            456,
+            144
+          ],
+          "position": [
+            352,
+            0
+          ]
+        },
+        {
+          "layer": "02_terrasses_et_plateaux",
+          "source": 2,
+          "rect": [
+            0,
+            384,
+            144,
+            528
+          ],
+          "position": [
+            0,
+            368
+          ]
+        },
+        {
+          "layer": "02_terrasses_et_plateaux",
+          "source": 2,
+          "rect": [
+            312,
+            384,
+            456,
+            528
+          ],
+          "position": [
+            368,
+            368
+          ]
+        },
+        {
+          "layer": "03_parois_et_escarpements",
+          "source": 2,
+          "rect": [
+            160,
+            0,
+            296,
+            48
+          ],
+          "position": [
+            188,
+            0
+          ]
+        },
+        {
+          "layer": "04_events_et_fumerolles",
+          "source": 2,
+          "rect": [
+            224,
+            56,
+            280,
+            96
+          ],
+          "position": [
+            80,
+            72
+          ]
+        },
+        {
+          "layer": "04_events_et_fumerolles",
+          "source": 2,
+          "rect": [
+            320,
+            176,
+            376,
+            216
+          ],
+          "position": [
+            368,
+            80
+          ]
+        },
+        {
+          "layer": "04_events_et_fumerolles",
+          "source": 2,
+          "rect": [
+            80,
+            248,
+            136,
+            288
+          ],
+          "position": [
+            64,
+            232
+          ]
+        },
+        {
+          "layer": "04_events_et_fumerolles",
+          "source": 2,
+          "rect": [
+            320,
+            320,
+            376,
+            360
+          ],
+          "position": [
+            392,
+            240
+          ]
+        },
+        {
+          "layer": "04_events_et_fumerolles",
+          "source": 2,
+          "rect": [
+            200,
+            440,
+            256,
+            480
+          ],
+          "position": [
+            88,
+            392
+          ]
+        },
+        {
+          "layer": "05_eboulis_et_blocs",
+          "source": 2,
+          "rect": [
+            160,
+            144,
+            208,
+            184
+          ],
+          "position": [
+            160,
+            160
+          ]
+        },
+        {
+          "layer": "05_eboulis_et_blocs",
+          "source": 2,
+          "rect": [
+            256,
+            320,
+            304,
+            360
+          ],
+          "position": [
+            304,
+            296
+          ]
+        }
+      ],
+      "notes": "Grand plateau volcanique d’évents et fumerolles en carrefour complet (Sud, Nord, Ouest, Est). Les cinq évents canoniques sont distribués sur les terrasses surélevées pour préserver une circulation fluide au centre. Roches et bedrock ocre 100% natifs.",
+      "runtime": "NOT TESTED",
+      "art_approved": false,
+      "connectivity": "Continuous walkable path mask verified geometrically. Engine collision and warp triggers not tested."
+    },
+    {
+      "id": "03_caverne_violette_deux_galeries",
+      "title": "Caverne Violette — Deux Galeries Nord",
+      "size": [
+        512,
+        512
+      ],
+      "orientation": "DUAL_BRANCH_NORTH",
+      "entrance": [
+        148,
+        96
+      ],
+      "access_box": [
+        216,
+        504,
+        80,
+        8
+      ],
+      "layers": [
+        {
+          "id": "00_obscurite_fond",
+          "file": "RockV1_03_caverne_violette_deux_galeries_00_obscurite_fond.png",
+          "provenance": "00_obscurite_fond_source.npz"
+        },
+        {
+          "id": "01_sol_caverne",
+          "file": "RockV1_03_caverne_violette_deux_galeries_01_sol_caverne.png",
+          "provenance": "01_sol_caverne_source.npz"
+        },
+        {
+          "id": "02_parois_violettes_fond",
+          "file": "RockV1_03_caverne_violette_deux_galeries_02_parois_violettes_fond.png",
+          "provenance": "02_parois_violettes_fond_source.npz"
+        },
+        {
+          "id": "03_bouches_et_galeries",
+          "file": "RockV1_03_caverne_violette_deux_galeries_03_bouches_et_galeries.png",
+          "provenance": "03_bouches_et_galeries_source.npz"
+        },
+        {
+          "id": "04_pilier_central_et_parois_laterales",
+          "file": "RockV1_03_caverne_violette_deux_galeries_04_pilier_central_et_parois_laterales.png",
+          "provenance": "04_pilier_central_et_parois_laterales_source.npz"
+        },
+        {
+          "id": "05_stalagmites_premier_plan",
+          "file": "RockV1_03_caverne_violette_deux_galeries_05_stalagmites_premier_plan.png",
+          "provenance": "05_stalagmites_premier_plan_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_sol_caverne",
+          "source": 3,
+          "method": "native ground patch overlap seam, no blending",
+          "patches": [
+            [
+              192,
+              208,
+              216,
+              232
+            ],
+            [
+              192,
+              232,
+              216,
+              256
+            ],
+            [
+              192,
+              256,
+              216,
+              280
+            ],
+            [
+              192,
+              280,
+              216,
+              304
+            ],
+            [
+              192,
+              304,
+              216,
+              328
+            ],
+            [
+              216,
+              208,
+              240,
+              232
+            ],
+            [
+              216,
+              232,
+              240,
+              256
+            ],
+            [
+              216,
+              256,
+              240,
+              280
+            ],
+            [
+              216,
+              280,
+              240,
+              304
+            ],
+            [
+              216,
+              304,
+              240,
+              328
+            ],
+            [
+              240,
+              208,
+              264,
+              232
+            ],
+            [
+              240,
+              232,
+              264,
+              256
+            ],
+            [
+              240,
+              256,
+              264,
+              280
+            ],
+            [
+              240,
+              280,
+              264,
+              304
+            ],
+            [
+              240,
+              304,
+              264,
+              328
+            ],
+            [
+              264,
+              208,
+              288,
+              232
+            ],
+            [
+              264,
+              232,
+              288,
+              256
+            ],
+            [
+              264,
+              256,
+              288,
+              280
+            ],
+            [
+              264,
+              280,
+              288,
+              304
+            ],
+            [
+              264,
+              304,
+              288,
+              328
+            ]
+          ],
+          "seed": 89
+        },
+        {
+          "layer": "02_parois_violettes_fond",
+          "source": 3,
+          "rect": [
+            40,
+            48,
+            120,
+            144
+          ],
+          "position": [
+            56,
+            32
+          ]
+        },
+        {
+          "layer": "02_parois_violettes_fond",
+          "source": 3,
+          "rect": [
+            384,
+            48,
+            464,
+            144
+          ],
+          "position": [
+            376,
+            32
+          ]
+        },
+        {
+          "layer": "03_bouches_et_galeries",
+          "source": 3,
+          "rect": [
+            116,
+            90,
+            180,
+            138
+          ],
+          "position": [
+            116,
+            56
+          ]
+        },
+        {
+          "layer": "03_bouches_et_galeries",
+          "source": 3,
+          "rect": [
+            324,
+            90,
+            388,
+            138
+          ],
+          "position": [
+            332,
+            56
+          ]
+        },
+        {
+          "layer": "04_pilier_central_et_parois_laterales",
+          "source": 3,
+          "rect": [
+            184,
+            88,
+            320,
+            184
+          ],
+          "position": [
+            188,
+            56
+          ]
+        },
+        {
+          "layer": "04_pilier_central_et_parois_laterales",
+          "source": 3,
+          "rect": [
+            40,
+            144,
+            96,
+            360
+          ],
+          "position": [
+            48,
+            128
+          ]
+        },
+        {
+          "layer": "04_pilier_central_et_parois_laterales",
+          "source": 3,
+          "rect": [
+            408,
+            144,
+            464,
+            360
+          ],
+          "position": [
+            408,
+            128
+          ]
+        },
+        {
+          "layer": "05_stalagmites_premier_plan",
+          "source": 3,
+          "rect": [
+            64,
+            344,
+            160,
+            408
+          ],
+          "position": [
+            48,
+            440
+          ]
+        },
+        {
+          "layer": "05_stalagmites_premier_plan",
+          "source": 3,
+          "rect": [
+            344,
+            344,
+            440,
+            408
+          ],
+          "position": [
+            352,
+            440
+          ]
+        }
+      ],
+      "notes": "Chambre souterraine en améthyste violette avec entrée sud et bifurcation vers deux galeries distinctes au nord (Nord-Ouest et Nord-Est), séparées par un massif pilier rocheux central. 100% textures natives, bouches de tunnel authentiques.",
+      "runtime": "NOT TESTED",
+      "art_approved": false,
+      "connectivity": "Continuous walkable path mask verified geometrically. Engine collision and warp triggers not tested."
+    }
+  ],
+  "sources": [
+    {
+      "id": 0,
+      "file": "rockroadpmd.png",
+      "sha256": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4"
+    },
+    {
+      "id": 1,
+      "file": "undergroundpmd.png",
+      "sha256": "583c864ead20d75b43ce70daf2a4f261e44bcf028031d085507faade5b063f03"
+    },
+    {
+      "id": 2,
+      "file": "rockgeyserlike.png",
+      "sha256": "74f5b0f070921f825db45acb1cecfdab494744e988c3a1b00f6e6d39c60f10f8"
+    },
+    {
+      "id": 3,
+      "file": "roadundergound.png",
+      "sha256": "77cb97730bc05b3eca0c83b9e7119b9f4043633d9bc948103e1317fb281ec810"
+    },
+    {
+      "id": 4,
+      "file": "entrancearidedungeonpmdsky.png",
+      "sha256": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a"
+    }
+  ],
+  "grid": 8,
+  "status": "Canonical multi-layout rock maps constructed with exact reference pixels.",
+  "runtime": "NOT TESTED"
+}

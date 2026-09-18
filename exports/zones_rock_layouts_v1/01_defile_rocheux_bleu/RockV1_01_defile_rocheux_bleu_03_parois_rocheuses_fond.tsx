@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="RockV1_01_defile_rocheux_bleu_03_parois_rocheuses_fond" tilewidth="8" tileheight="8" columns="64" tilecount="4096"><image source="RockV1_01_defile_rocheux_bleu_03_parois_rocheuses_fond.png" width="512" height="512" /></tileset>
