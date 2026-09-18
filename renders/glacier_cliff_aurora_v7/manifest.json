@@ -1,0 +1,54 @@
+{
+  "schema": "glacier_cliff_aurora_pixel_artist_composition_v7",
+  "generated_with_image_generator": true,
+  "from_scratch": true,
+  "native_pmdo_import": false,
+  "composition_roles": [
+    "night_sky",
+    "independent_aurora_palette_cycle",
+    "distant_mountains",
+    "snow_forest_below",
+    "arena_floor",
+    "arena_cliff",
+    "south_access_path"
+  ],
+  "references": [
+    {
+      "path": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile",
+      "sha256": "b03051c74b794482acd587615f14e46b44bfda1e06190fcfc1ff76c70c2ce5a1"
+    },
+    {
+      "path": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+    },
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    },
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "path": "source/references_54d3731/path.png",
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b"
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79"
+    }
+  ],
+  "output": {
+    "path": "renders/glacier_cliff_aurora_v7/final_map_from_scratch_pixel_artist.png",
+    "sha256": "757790f81ca722bc22f287d0a567df8685aeccbd3b53e7b473ba68053e455c24",
+    "size": [
+      1079,
+      976
+    ]
+  },
+  "note": "Reference composition only; native playable map uses the canonical PMDO tile/ground assets."
+}
