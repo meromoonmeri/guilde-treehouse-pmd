@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Arène du Croissant V2 — aurore panoramique et sapins enneigés
+
+**[Voir l’animation WebP](renders/arene_glace_sky_peak_v2/ARENE_SKYPEAK_V2_composition_animee.webp)** · **[Composition PNG](renders/arene_glace_sky_peak_v2/ARENE_SKYPEAK_V2_composition_nuit.png)** · **[Calques et 32 frames sur GitHub](renders/arene_glace_sky_peak_v2/README.md)** · **[Atelier](apercu_arene_glace_sky_peak_v2.html)**
+
+L’aurore remplit désormais **les deux côtés du ciel, jusqu’aux bords**, avec une animation de couleur et une légère ondulation ±2 px. Sapins enneigés ajoutés derrière l’arène ; terrain, accès sud, bordures immersives, montagnes Sky Peak, ciel bleu-noir, étoiles et lune native **conservés byte-identiques à V1**. Dix calques, 32 PNG d’effet, 32 PNG de composition, trois WebP et un ORA. 23 contrôles d’assets et 13 contrôles UI (DOM simulé) passent ; pas de validation moteur.
+
+
 ## Arène du Croissant — glace, montagnes Sky Peak et lune native
 
 **[Voir la composition PNG](renders/arene_glace_sky_peak_v1/ARENE_SKYPEAK_V1_composition_nuit.png)** · **[Huit calques / notice](renders/arene_glace_sky_peak_v1/README.md)** · **[Atelier des calques](apercu_arene_glace_sky_peak_v1.html)** · **[Kit PNG / ORA](renders/arene_glace_sky_peak_v1/ARENE_SKYPEAK_V1_pack.zip)**

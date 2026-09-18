@@ -1,5 +1,7 @@
 # Arène du Croissant — glace et panorama Sky Peak
 
+> **Suite : [V2 avec sapins enneigés et aurore sur les deux côtés du ciel](../arene_glace_sky_peak_v2/README.md).** Les huit calques de cette V1 sont conservés inchangés.
+
 ![Arène glacée, montagnes enneigées et lune native](ARENE_SKYPEAK_V1_composition_nuit.png)
 
 **[Composition PNG](ARENE_SKYPEAK_V1_composition_nuit.png)** · **[Calques activables](index.html)** · **[Projet OpenRaster](ARENE_SKYPEAK_V1_editable.ora)** · **[Kit PNG / ORA](ARENE_SKYPEAK_V1_pack.zip)**

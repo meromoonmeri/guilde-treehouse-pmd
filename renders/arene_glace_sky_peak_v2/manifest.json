@@ -1,0 +1,435 @@
+{
+  "title": "Arène du Croissant — aurore sur les deux côtés",
+  "date": "2026-09-18",
+  "canvas": [
+    960,
+    720
+  ],
+  "layers": {
+    "01_ciel_bleu_noir": "calques/ARENE_SKYPEAK_V2_01_ciel_bleu_noir.png",
+    "02_etoiles_natives": "calques/ARENE_SKYPEAK_V2_02_etoiles_natives.png",
+    "02b_aurore_panoramique": "calques/ARENE_SKYPEAK_V2_02b_aurore_panoramique.png",
+    "03_lune_canonique": "calques/ARENE_SKYPEAK_V2_03_lune_canonique.png",
+    "04_montagnes_lointaines": "calques/ARENE_SKYPEAK_V2_04_montagnes_lointaines.png",
+    "04b_sapins_enneiges": "calques/ARENE_SKYPEAK_V2_04b_sapins_enneiges.png",
+    "05_sol_complet_et_acces_sud": "calques/ARENE_SKYPEAK_V2_05_sol_complet_et_acces_sud.png",
+    "06_reliefs_arriere": "calques/ARENE_SKYPEAK_V2_06_reliefs_arriere.png",
+    "07_immersion_gauche": "calques/ARENE_SKYPEAK_V2_07_immersion_gauche.png",
+    "08_immersion_droite": "calques/ARENE_SKYPEAK_V2_08_immersion_droite.png"
+  },
+  "preserved": [
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_01_ciel_bleu_noir.png",
+      "output": "calques/ARENE_SKYPEAK_V2_01_ciel_bleu_noir.png",
+      "sha256": "5881edc73196fb4f596f115437c8b4574cb3a5961a6b4c5d9fab68ff2df834ef"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_02_etoiles_natives.png",
+      "output": "calques/ARENE_SKYPEAK_V2_02_etoiles_natives.png",
+      "sha256": "0d28025899790b15d167b49cc6a355e6f9a65d3aae403b6f1ed0826f789d101f"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_03_lune_canonique.png",
+      "output": "calques/ARENE_SKYPEAK_V2_03_lune_canonique.png",
+      "sha256": "f3e463e905c5da2c85a4a262a778b779a0c4792a504eaef4f7ac0171411da590"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_04_montagnes_lointaines.png",
+      "output": "calques/ARENE_SKYPEAK_V2_04_montagnes_lointaines.png",
+      "sha256": "7b51da8a84ca85a08f907763bcda3d734b152e4c88a46e3c8ce3c7142a7ecce5"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_05_sol_complet_et_acces_sud.png",
+      "output": "calques/ARENE_SKYPEAK_V2_05_sol_complet_et_acces_sud.png",
+      "sha256": "ef579579e2769988c44ed65f20d4fd80c1c52c0e7581bf09840a70f191de7a31"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_06_reliefs_arriere.png",
+      "output": "calques/ARENE_SKYPEAK_V2_06_reliefs_arriere.png",
+      "sha256": "9e3f67a71c1a3751817820db4b0d99bd62c8b9397c518bb40a5407bb2b5126c3"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_07_immersion_gauche.png",
+      "output": "calques/ARENE_SKYPEAK_V2_07_immersion_gauche.png",
+      "sha256": "4a2170afd72fc80594043b82d6c17face30a581e1b643075c2b309dabdc34e52"
+    },
+    {
+      "source": "renders/arene_glace_sky_peak_v1/calques/ARENE_SKYPEAK_V1_08_immersion_droite.png",
+      "output": "calques/ARENE_SKYPEAK_V2_08_immersion_droite.png",
+      "sha256": "3b6b11648b99e8557c35b984f8a56aaa8d3de83b37debbef39ee52ca0c88b262"
+    }
+  ],
+  "new_raws": [
+    {
+      "path": "bruts/aurore_panoramique_magenta.png",
+      "sha256": "16f154b5edcc7f52b25fb8f1f086de82799f89d51fd65d5e5f00c9f616a1210b"
+    },
+    {
+      "path": "bruts/sapins_enneiges_magenta.png",
+      "sha256": "d91ad1d67c951d3fc40f0dcdd056ad151067ba70e31921afdc51d545328f7cab"
+    }
+  ],
+  "references": [
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "path": "renders/onde_boreale_glace_v2/bruts/onde_pmd_magenta.png",
+      "sha256": "213619aae68393624c543876d2372515fb9e864209db0cc7ef802e29038a0328"
+    },
+    {
+      "path": "renders/arene_glace_sky_peak_v1/ARENE_SKYPEAK_V1_composition_nuit.png",
+      "sha256": "c0f281a8b6d4f3f5229188bbfc90331875397e3a821fbb87a8f9b376bd3844da"
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79"
+    }
+  ],
+  "forest": {
+    "crop": [
+      0,
+      63,
+      1792,
+      539
+    ],
+    "resized_size": [
+      640,
+      170
+    ],
+    "position": [
+      160,
+      175
+    ],
+    "resampling": "nearest uniforme, bois en plan intermédiaire derrière le relief"
+  },
+  "aurora": {
+    "raw_size": [
+      1808,
+      592
+    ],
+    "normalized_size": [
+      1056,
+      346
+    ],
+    "position": [
+      -48,
+      -8
+    ],
+    "scale_uniform": 0.584070796460177,
+    "horizontal_translation": 0,
+    "amplitude_max_px": 2,
+    "frame_ms": 125,
+    "frames": [
+      "aurore/ARENE_SKYPEAK_V2_onde_00.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_01.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_02.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_03.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_04.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_05.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_06.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_07.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_08.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_09.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_10.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_11.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_12.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_13.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_14.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_15.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_16.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_17.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_18.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_19.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_20.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_21.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_22.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_23.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_24.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_25.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_26.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_27.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_28.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_29.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_30.png",
+      "aurore/ARENE_SKYPEAK_V2_onde_31.png"
+    ],
+    "period_ms": 4000,
+    "indexed": "aurore/ARENE_SKYPEAK_V2_indices.png",
+    "alpha": "aurore/ARENE_SKYPEAK_V2_alpha.png",
+    "palette": "aurore/ARENE_SKYPEAK_V2_palettes.json",
+    "description": "Nouvelle composition panoramique générée couvrant les deux bords, sans miroir/tuilage du petit ruban central, puis animation de palette et ondulation verticale ±2px. Aucun wrap de l’aurore."
+  },
+  "coverage_per_frame": [
+    {
+      "frame": 0,
+      "left_visible_sky_pixels": 18431,
+      "right_visible_sky_pixels": 21870,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 1,
+      "left_visible_sky_pixels": 18462,
+      "right_visible_sky_pixels": 21891,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 2,
+      "left_visible_sky_pixels": 18471,
+      "right_visible_sky_pixels": 21916,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 3,
+      "left_visible_sky_pixels": 18493,
+      "right_visible_sky_pixels": 21957,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 4,
+      "left_visible_sky_pixels": 18558,
+      "right_visible_sky_pixels": 21965,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 5,
+      "left_visible_sky_pixels": 18580,
+      "right_visible_sky_pixels": 22012,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 6,
+      "left_visible_sky_pixels": 18640,
+      "right_visible_sky_pixels": 22010,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 7,
+      "left_visible_sky_pixels": 18660,
+      "right_visible_sky_pixels": 22008,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 8,
+      "left_visible_sky_pixels": 18669,
+      "right_visible_sky_pixels": 22010,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 9,
+      "left_visible_sky_pixels": 18699,
+      "right_visible_sky_pixels": 22048,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 10,
+      "left_visible_sky_pixels": 18734,
+      "right_visible_sky_pixels": 22030,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 11,
+      "left_visible_sky_pixels": 18746,
+      "right_visible_sky_pixels": 22019,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 12,
+      "left_visible_sky_pixels": 18750,
+      "right_visible_sky_pixels": 22011,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 13,
+      "left_visible_sky_pixels": 18751,
+      "right_visible_sky_pixels": 21989,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 14,
+      "left_visible_sky_pixels": 18742,
+      "right_visible_sky_pixels": 21969,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 15,
+      "left_visible_sky_pixels": 18728,
+      "right_visible_sky_pixels": 21945,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 16,
+      "left_visible_sky_pixels": 18693,
+      "right_visible_sky_pixels": 21906,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 17,
+      "left_visible_sky_pixels": 18662,
+      "right_visible_sky_pixels": 21885,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 18,
+      "left_visible_sky_pixels": 18653,
+      "right_visible_sky_pixels": 21860,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 19,
+      "left_visible_sky_pixels": 18631,
+      "right_visible_sky_pixels": 21819,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 20,
+      "left_visible_sky_pixels": 18566,
+      "right_visible_sky_pixels": 21811,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 21,
+      "left_visible_sky_pixels": 18544,
+      "right_visible_sky_pixels": 21764,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 22,
+      "left_visible_sky_pixels": 18484,
+      "right_visible_sky_pixels": 21766,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 23,
+      "left_visible_sky_pixels": 18464,
+      "right_visible_sky_pixels": 21768,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 24,
+      "left_visible_sky_pixels": 18455,
+      "right_visible_sky_pixels": 21766,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 25,
+      "left_visible_sky_pixels": 18425,
+      "right_visible_sky_pixels": 21728,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 26,
+      "left_visible_sky_pixels": 18390,
+      "right_visible_sky_pixels": 21746,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 27,
+      "left_visible_sky_pixels": 18378,
+      "right_visible_sky_pixels": 21757,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 28,
+      "left_visible_sky_pixels": 18374,
+      "right_visible_sky_pixels": 21765,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 29,
+      "left_visible_sky_pixels": 18373,
+      "right_visible_sky_pixels": 21787,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 30,
+      "left_visible_sky_pixels": 18382,
+      "right_visible_sky_pixels": 21807,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    },
+    {
+      "frame": 31,
+      "left_visible_sky_pixels": 18396,
+      "right_visible_sky_pixels": 21831,
+      "left_edge_alpha_pixels": 209,
+      "right_edge_alpha_pixels": 261
+    }
+  ],
+  "composition": "ARENE_SKYPEAK_V2_composition_nuit.png",
+  "webp": "ARENE_SKYPEAK_V2_composition_animee.webp",
+  "sky_webp": "ARENE_SKYPEAK_V2_ciel_aurore_lune.webp",
+  "overlay_webp": "aurore/ARENE_SKYPEAK_V2_onde_transparente.webp",
+  "ora": "ARENE_SKYPEAK_V2_editable.ora",
+  "scene_frames": [
+    "frames_composition/ARENE_SKYPEAK_V2_scene_00.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_01.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_02.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_03.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_04.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_05.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_06.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_07.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_08.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_09.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_10.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_11.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_12.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_13.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_14.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_15.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_16.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_17.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_18.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_19.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_20.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_21.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_22.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_23.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_24.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_25.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_26.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_27.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_28.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_29.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_30.png",
+    "frames_composition/ARENE_SKYPEAK_V2_scene_31.png"
+  ],
+  "limits": [
+    "Terrain, montagnes, ciel, étoiles et lune de V1 conservés byte-identiques. Ciel V1 bleu-noir dérivé des65lignes sombres validées, pas le fichier entier de climat.",
+    "Sapins et aurore : nouvelles générations référencées, pas textures/cycle natifs extraits.",
+    "Un dessin d’aurore,32étapes animées ; pas32dessins générés.",
+    "Pas de nouveaux nuages, pas de Ground/collisions/warp ni test moteur."
+  ]
+}

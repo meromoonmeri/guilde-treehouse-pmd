@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks_count": 23,
+  "checks": [
+    "Huit calques V1 conservés byte-identiques",
+    "Bruts et références épinglés",
+    "Dix plans alignés960×720, divisibles par8",
+    "32frames reconstructibles depuis indices/LUT/déplacement",
+    "Onde seule : alpha propre, pas de magenta/terrain ou ciel opaque",
+    "Chaque colonne du panorama possède des pixels d’aurore",
+    "Chaque bord conserve >100pixels alpha à toutes les phases",
+    "Aurore réellement visible dans les deux côtés du ciel : >15000pixels par côté/frame",
+    "32 compositions exactes de dix plans",
+    "Terrain opaque inchangé dans toutes les compositions",
+    "Pixels opaques de lune natifs jamais recouverts par l’aurore",
+    "32frames distinctes",
+    "Amplitude≤2px, mouvement non statique",
+    "Pas de saut final : déplacement≤1px/colonne entre deux frames",
+    "Boucle exacte32=0",
+    "Aucune translation horizontale",
+    "Palette évolutive sans saut de raccord",
+    "Valeur HSV constante à arrondiRGB près",
+    "PNG de présentation = composition phase0",
+    "WebP composition :32frames,4s,alpha/RGB visibles exacts",
+    "WebP onde transparente :32frames,4s,alpha/RGB visibles exacts",
+    "WebP ciel et lune :32frames,4s,alpha/RGB visibles exacts",
+    "ORA dix calques et PNG recomposés exactement"
+  ],
+  "minimum_visible_pixels_left": 18373,
+  "minimum_visible_pixels_right": 21728,
+  "not_tested": [
+    "Validation artistique utilisateur",
+    "Rendu GPU, collisions ou navigation PMDO",
+    "Motifs natifs ou cycle officiel d’aurore"
+  ]
+}
