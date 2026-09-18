@@ -11,7 +11,7 @@
     {
       "path": "Content/BG/GLACIER_DISTANT_MOUNTAINS.dir",
       "bytes": 8422,
-      "sha256": "cbf982f6756f52babf47e4af0056fa067e04b47d974c99416a0cb3f6b03db2b8"
+      "sha256": "33ac67ba90122945895a06033187088cc228c38c5770c4589bc3aa9a016f57f8"
     },
     {
       "path": "Content/BG/GLACIER_NIGHT_BASE.dir",
@@ -21,7 +21,7 @@
     {
       "path": "Content/BG/GLACIER_SNOW_FOREST.dir",
       "bytes": 13872,
-      "sha256": "5f1a99ad49a7dd2bc7f2692055947c2f1f692bf2d48f6394faa7589f698b8df0"
+      "sha256": "997ca93131ce5a129b8e59e7f0e5a51b5584f8d891420527f6529c03eb221f64"
     },
     {
       "path": "Content/Tile/VastIceMountain.tile",
@@ -60,48 +60,98 @@
     },
     {
       "path": "README.md",
-      "bytes": 3068,
-      "sha256": "cbbd57d1dce3a96501605df2112e2864877eb649e7c353b06362dcbefe34481f"
+      "bytes": 3638,
+      "sha256": "abe74a90b7da7fcefba2d2024bdbcec99d1d103d888a4a9afe329c3611b8bb07"
+    },
+    {
+      "path": "layers/00_night_sky_canonical.png",
+      "bytes": 41197,
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+    },
+    {
+      "path": "layers/01_aurora_canonical.png",
+      "bytes": 28689,
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "path": "layers/02_mountains_iceroad_native_crop.png",
+      "bytes": 8398,
+      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d"
+    },
+    {
+      "path": "layers/03_snow_forest_below_native_crop.png",
+      "bytes": 13848,
+      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c"
+    },
+    {
+      "path": "layers/04_arena_material_reference_canonical.png",
+      "bytes": 68454,
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "path": "layers/05_arena_floor_vast_ice_reconstruction.png",
+      "bytes": 2772,
+      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6"
+    },
+    {
+      "path": "layers/06_cliff_walls_vast_ice_reconstruction.png",
+      "bytes": 6763,
+      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b"
+    },
+    {
+      "path": "layers/07_foreground_ice_rim_reconstruction.png",
+      "bytes": 3873,
+      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72"
+    },
+    {
+      "path": "layers/08_collision_grid_diagnostic.png",
+      "bytes": 593,
+      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a"
+    },
+    {
+      "path": "layers/layer_manifest.json",
+      "bytes": 3222,
+      "sha256": "0f27037c41c1ce85e4425144cc98d2969c9ddeeb6b87026cd70ecafffeb7545d"
     },
     {
       "path": "preview/canonical_background_reconstruction.png",
       "bytes": 30219,
-      "sha256": "d38bcaa467f328e9a4ddc54d734c5750d8160027566efceb25e9462172c9ad07"
+      "sha256": "676ee3ad41fd7cad3d9b24b1d8b2aebc5173ae140c722e92a2778e2b5686ef2c"
     },
     {
       "path": "preview/collision_grid.png",
       "bytes": 593,
-      "sha256": "509993bb5e88be6e5248d5e8737b4ff7a1fcf2dc46a74000c3dd91243e463d8a"
+      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a"
     },
     {
       "path": "preview/native_floor_layer.png",
       "bytes": 2772,
-      "sha256": "40687dc980e9f7c2fc312d386535fe7e0957c09ff243939cb73f1de2c8098170"
+      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6"
     },
     {
       "path": "preview/native_foreground_layer.png",
       "bytes": 3873,
-      "sha256": "270e52a90e823ae1cc65c85da13063c227434eb8205233e8afffcd724f333212"
+      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72"
     },
     {
       "path": "preview/native_ground_reconstruction.png",
       "bytes": 27056,
-      "sha256": "8f22f9b5d3ffd3321fb0a678157d86ba4812634a7d24f97e76997519e313a9ed"
+      "sha256": "9ad3fe0d5a301c1379d5174882e5a745ebbe9ff346744359c8d6ebbc200e5d2b"
     },
     {
       "path": "preview/native_wall_layer.png",
       "bytes": 6763,
-      "sha256": "3b212e04ca6414aca7868b5508f2c92899597a3fe562c14f876063cecdd5eb11"
+      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b"
     },
     {
       "path": "provenance/derived/iceroad_mountains_strip.png",
       "bytes": 8398,
-      "sha256": "6fbea58289df535071df6d4c30e836049af13dc943be95903928bcdfb2aa328e"
+      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d"
     },
     {
       "path": "provenance/derived/snow_forest_strip.png",
       "bytes": 13848,
-      "sha256": "d0a71fe8b822e12bf280d90a4cc5fb13e1d9026d4f2304e41a1a82b868473846"
+      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c"
     },
     {
       "path": "provenance/layout_guide_reference.txt",
@@ -110,8 +160,8 @@
     },
     {
       "path": "provenance/provenance.json",
-      "bytes": 6402,
-      "sha256": "cbeadc230d15ffe39d13ba847e0f8441f62cf070cc8307c06737295e86bab157"
+      "bytes": 11365,
+      "sha256": "5fffde87bc5b080cc4283229fa7b2a37c38341d17588bb8daf28d7c96c6a2836"
     },
     {
       "path": "provenance/references/aurorepmdsky.png",
@@ -140,8 +190,8 @@
     },
     {
       "path": "verification.json",
-      "bytes": 1103,
-      "sha256": "6bbfb2e6e9563cdbe6642405fdcb7b46c208ca367851d190e273fcbd7236f499"
+      "bytes": 1131,
+      "sha256": "5c7027871dcffba429d4cd2fb3f84360fc026f6d59a3beab7e156d495119c4f6"
     }
   ],
   "excluded_from_zip": [

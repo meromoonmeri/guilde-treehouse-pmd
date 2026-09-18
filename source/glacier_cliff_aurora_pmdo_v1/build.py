@@ -315,8 +315,37 @@ def setup_dirs():
               OUT / "Data/Script/ground" / ASSET,
               OUT / "Data/Script/glacier_cliff_aurora/ground" / ASSET,
               OUT / "provenance/references", OUT / "provenance/derived",
-              OUT / "preview", OUT / "tests"]:
+              OUT / "layers", OUT / "preview", OUT / "tests"]:
         p.mkdir(parents=True, exist_ok=True)
+
+
+def retrieve_canonical_textures():
+    """Retrieve the canonical inputs into the deliverable with hash checks.
+
+    This is intentionally a local canonical-source retrieval, not a generated
+    image lookup: missing or changed references stop the build before any
+    Ground file is written.
+    """
+    destination = OUT / "provenance/references"
+    records = []
+    for role, source in REFS.items():
+        if not source.is_file():
+            raise FileNotFoundError(f"canonical texture missing: {source}")
+        target = destination / source.name
+        shutil.copyfile(source, target)
+        source_hash = sha256(source)
+        target_hash = sha256(target)
+        if source_hash != target_hash:
+            raise RuntimeError(f"canonical texture copy changed: {source}")
+        records.append({
+            "role": role,
+            "source": str(source.relative_to(ROOT)),
+            "delivered_reference": str(target.relative_to(OUT)),
+            "sha256": source_hash,
+            "size": list(png_size(source)),
+            "retrieval": "workspace canonical source copied byte-exact; generated guide excluded",
+        })
+    return records
 
 
 def build_backgrounds():
@@ -433,7 +462,54 @@ def make_preview(ground, floor, wall, native_records):
                    stdout=subprocess.DEVNULL)
 
 
-def write_docs(ground, floor, wall, background_records):
+def write_layer_exports():
+    """Expose the requested stack as editable review layers.
+
+    The first four are exact canonical inputs/crops used by Background; the
+    last four are native-tile reconstructions or collision diagnostics.  The
+    latter are deliberately marked review-only and are not presented as new
+    PMDO textures.
+    """
+    layer_dir = OUT / "layers"
+    refs = OUT / "provenance/references"
+    derived = OUT / "provenance/derived"
+    preview = OUT / "preview"
+    exports = [
+        ("00_night_sky_canonical.png", refs / "bgnightbackgroundpmdskyda.png", "canonical", "Background GLACIER_NIGHT_BASE"),
+        ("01_aurora_canonical.png", refs / "aurorepmdsky.png", "canonical", "Background GLACIER_AURORA_CANONICAL"),
+        ("02_mountains_iceroad_native_crop.png", derived / "iceroad_mountains_strip.png", "canonical_crop", "Background GLACIER_DISTANT_MOUNTAINS"),
+        ("03_snow_forest_below_native_crop.png", derived / "snow_forest_strip.png", "canonical_crop", "Background GLACIER_SNOW_FOREST"),
+        ("04_arena_material_reference_canonical.png", refs / "pmdskyicearena.png", "canonical_reference_only", "Reference for Ground arena material; not direct PNG import"),
+        ("05_arena_floor_vast_ice_reconstruction.png", preview / "native_floor_layer.png", "review_only_native_reconstruction", "Ground layer 00"),
+        ("06_cliff_walls_vast_ice_reconstruction.png", preview / "native_wall_layer.png", "review_only_native_reconstruction", "Ground layer 01/02"),
+        ("07_foreground_ice_rim_reconstruction.png", preview / "native_foreground_layer.png", "review_only_native_reconstruction", "Ground layer 04 Top=4"),
+        ("08_collision_grid_diagnostic.png", preview / "collision_grid.png", "review_only_collision", "Serialized obstacles; never imported"),
+    ]
+    manifest = []
+    for name, source, provenance, engine_role in exports:
+        target = layer_dir / name
+        shutil.copyfile(source, target)
+        manifest.append({
+            "file": str(target.relative_to(OUT)),
+            "provenance": provenance,
+            "engine_role": engine_role,
+            "size": list(png_size(target)),
+            "sha256": sha256(target),
+            "importable": provenance in {"canonical", "canonical_crop"} and engine_role.startswith("Background") is False,
+        })
+    # The actual PMDO importable assets remain the .dir/.tile/.rsground files;
+    # these PNGs are a named layer handoff for visual editing and audit.
+    (layer_dir / "layer_manifest.json").write_text(
+        json.dumps({
+            "schema": "glacier_cliff_aurora_layer_stack_v1",
+            "note": "Canonical source layers are separate; native Ground layers remain authoritative. Review reconstructions are not native textures.",
+            "layers": manifest,
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    return manifest
+
+
+def write_docs(ground, floor, wall, background_records, retrieval_records, layer_records):
     (OUT / "Mod.xml").write_text(make_mod_xml(), encoding="utf-8")
     lua = """-- Glacier Cliff Aurora: the map is data-driven; no fake transition is hidden here.
 -- Bind `entrance` / `arena_seuil` to the destination dungeon in the host quest.
@@ -468,8 +544,20 @@ ressource native PMDO. Les calques du Ground sont :
 Les fonds sont des `.dir` PMDO separes. Les pixels sont issus des references
 canoniques suivantes : `aurorepmdsky.png`, `iceroadpmdsky.png`,
 `bgnightbackgroundpmdskyda.png` et `source/references_54d3731/snow.png`.
-Les bandes montagne/foret sont des crops de pixels natifs documentes dans
-`provenance/provenance.json`. Le guide genere
+Le generateur les recupere au debut du build, les copie byte a byte dans
+`provenance/references/` et arrete la production si un hash change. Les bandes
+montagne/foret sont des crops de pixels natifs documentes dans
+`provenance/provenance.json`.
+
+Le dossier `layers/` expose la pile demandee : nuit, aurore, montagnes,
+foret en contrebas, reference de materiau d'arene, sol d'arene, parois,
+rebord avant et collision. Les cinq premiers sont des sources/crops ou une
+reference canonique ; les quatre derniers sont des reconstructions de controle
+depuis `VastIceMountain.tile`, pas des textures
+inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
+importer.
+
+Le guide genere
 `renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png` n'est
 pas importe dans le Ground et n'est pas une texture de jeu.
 
@@ -527,6 +615,8 @@ etre liee au quest utilisateur via `arena_seuil`.
         },
         "autotiles": {k: str((AUTOTILE_DIR / f"vast_ice_mountain_{k}.json").relative_to(ROOT))
                       for k in ("floor", "wall", "secondary")},
+        "texture_retrieval": retrieval_records,
+        "layer_stack": layer_records,
         "backgrounds": background_records,
         "canonical_references": {
             key: {"path": str(path.relative_to(ROOT)), "sha256": sha256(path),
@@ -568,11 +658,9 @@ def main():
     (OUT / "Data/Ground" / f"{ASSET}.rsground").write_text(
         json.dumps(ground, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
+    retrieval_records = retrieve_canonical_textures()
     background_records = build_backgrounds()
-    for key, path in REFS.items():
-        shutil.copyfile(path, OUT / "provenance/references" / path.name)
     write_index()
-    write_docs(ground, floor, wall, background_records)
     make_preview(
         ground,
         floor,
@@ -580,7 +668,9 @@ def main():
          **{p: ground["Object"]["Layers"][4]["Tiles"][p[0]][p[1]] for p in wall}},
         native_records,
     )
-    print(f"Built {ASSET}: {WIDTH}x{HEIGHT} collision cells, {len(floor)} walkable, {len(wall)} wall cells")
+    layer_records = write_layer_exports()
+    write_docs(ground, floor, wall, background_records, retrieval_records, layer_records)
+    print(f"Built {ASSET}: {WIDTH}x{HEIGHT} collision cells, {len(floor)} walkable, {len(wall)} wall cells; {len(layer_records)} named layers")
 
 
 if __name__ == "__main__":

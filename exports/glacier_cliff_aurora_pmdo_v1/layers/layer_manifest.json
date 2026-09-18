@@ -1,0 +1,105 @@
+{
+  "schema": "glacier_cliff_aurora_layer_stack_v1",
+  "note": "Canonical source layers are separate; native Ground layers remain authoritative. Review reconstructions are not native textures.",
+  "layers": [
+    {
+      "file": "layers/00_night_sky_canonical.png",
+      "provenance": "canonical",
+      "engine_role": "Background GLACIER_NIGHT_BASE",
+      "size": [
+        456,
+        240
+      ],
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "importable": false
+    },
+    {
+      "file": "layers/01_aurora_canonical.png",
+      "provenance": "canonical",
+      "engine_role": "Background GLACIER_AURORA_CANONICAL",
+      "size": [
+        264,
+        216
+      ],
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "importable": false
+    },
+    {
+      "file": "layers/02_mountains_iceroad_native_crop.png",
+      "provenance": "canonical_crop",
+      "engine_role": "Background GLACIER_DISTANT_MOUNTAINS",
+      "size": [
+        504,
+        96
+      ],
+      "sha256": "8a741a15ad20aaca79c952c824202e09d18c141769cbc3939c743cbd40e8e70d",
+      "importable": false
+    },
+    {
+      "file": "layers/03_snow_forest_below_native_crop.png",
+      "provenance": "canonical_crop",
+      "engine_role": "Background GLACIER_SNOW_FOREST",
+      "size": [
+        522,
+        216
+      ],
+      "sha256": "4f6e1fad3bdbdcd2d851ce14193953453fd2a2842c3d8bf14ad8f47a3f25617c",
+      "importable": false
+    },
+    {
+      "file": "layers/04_arena_material_reference_canonical.png",
+      "provenance": "canonical_reference_only",
+      "engine_role": "Reference for Ground arena material; not direct PNG import",
+      "size": [
+        504,
+        408
+      ],
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "importable": false
+    },
+    {
+      "file": "layers/05_arena_floor_vast_ice_reconstruction.png",
+      "provenance": "review_only_native_reconstruction",
+      "engine_role": "Ground layer 00",
+      "size": [
+        576,
+        432
+      ],
+      "sha256": "6bec3dc999e2f8dc603a81076c9b0a0a615c666d289a85ee8e2eadb98e0aa9b6",
+      "importable": false
+    },
+    {
+      "file": "layers/06_cliff_walls_vast_ice_reconstruction.png",
+      "provenance": "review_only_native_reconstruction",
+      "engine_role": "Ground layer 01/02",
+      "size": [
+        576,
+        432
+      ],
+      "sha256": "23a9816f710de33cd53cfb4eb1a0e1fe4182147e05dcbcb5e1478cee530c852b",
+      "importable": false
+    },
+    {
+      "file": "layers/07_foreground_ice_rim_reconstruction.png",
+      "provenance": "review_only_native_reconstruction",
+      "engine_role": "Ground layer 04 Top=4",
+      "size": [
+        576,
+        432
+      ],
+      "sha256": "969197d9f4cce86d3f362834c0ce31188096c12d05f4a98ec1fa94a61cc55d72",
+      "importable": false
+    },
+    {
+      "file": "layers/08_collision_grid_diagnostic.png",
+      "provenance": "review_only_collision",
+      "engine_role": "Serialized obstacles; never imported",
+      "size": [
+        576,
+        432
+      ],
+      "sha256": "521909e63890dde92737b880a3480711d69dde5eef7fa68377a0364d3765285a",
+      "importable": false
+    }
+  ]
+}

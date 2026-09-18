@@ -25,8 +25,20 @@ ressource native PMDO. Les calques du Ground sont :
 Les fonds sont des `.dir` PMDO separes. Les pixels sont issus des references
 canoniques suivantes : `aurorepmdsky.png`, `iceroadpmdsky.png`,
 `bgnightbackgroundpmdskyda.png` et `source/references_54d3731/snow.png`.
-Les bandes montagne/foret sont des crops de pixels natifs documentes dans
-`provenance/provenance.json`. Le guide genere
+Le generateur les recupere au debut du build, les copie byte a byte dans
+`provenance/references/` et arrete la production si un hash change. Les bandes
+montagne/foret sont des crops de pixels natifs documentes dans
+`provenance/provenance.json`.
+
+Le dossier `layers/` expose la pile demandee : nuit, aurore, montagnes,
+foret en contrebas, reference de materiau d'arene, sol d'arene, parois,
+rebord avant et collision. Les cinq premiers sont des sources/crops ou une
+reference canonique ; les quatre derniers sont des reconstructions de controle
+depuis `VastIceMountain.tile`, pas des textures
+inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
+importer.
+
+Le guide genere
 `renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png` n'est
 pas importe dans le Ground et n'est pas une texture de jeu.
 
