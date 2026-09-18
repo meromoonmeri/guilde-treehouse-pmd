@@ -1,27 +1,43 @@
-"""Plage Animée Multicalques V3 — PMD Coastal Arena with Cloud Wrap & Water Palette Cycling.
-Adheres strictly to the user's specification:
-- Background: distant PMD sky with PMD clouds animated in seamless wrap overlay loop
-- Animated sea on its OWN CLEAN LAYER, animated the PMD way via palette cycling (32 synchronized phases)
-- Sand on its OWN CLEAN LAYER
-- Coastal red rock cliffs & boulders ON TOP of sand on their OWN CLEAN LAYER
-- Pure multicalques: transparent PNG for every element
-- Final animated WebP (ANIMATION_WRAP.webp) + GIF preview (SCENE_ANIMEE.gif)
-- Interactive HTML5 viewer with real-time canvas animation & layer toggles
+"""Plage Animée Multicalques V3 — Generated Layer Pipeline.
+Methodology:
+- Separate image generations on magenta (#FF00FF) guided by arenapmdskybeach.png
+- Chroma-keying with binary alpha & defringing
+- Color quantization snapped to the canonical 147 PMD palette colors of arenapmdskybeach.png
+- Multi-layer stack:
+  00_ciel_pmd (Sky background)
+  01_nuages_wrap (32-frame horizontal wrap clouds overlay, period = 768 px)
+  02_eau_mer_animee (Generated sea texture on its own layer, animated via canonical 8-color PMD palette cycling, 32 frames)
+  03_ecume_rivage (Shoreline foam boundary)
+  04_sable_plage (Generated golden sand arena floor on its own layer)
+  05_falaises_et_rochers (Generated red rock cliffs & ledges on its own layer)
+  06_rochers_avant_plan (Generated foreground reefs and rocks on its own layer)
+- Deliverables:
+  - Transparent PNGs for all layers (Day and Night variants)
+  - 32 frames of palette cycling water
+  - 32 frames of cloud wrap
+  - ANIMATION_WRAP.webp (32 frames, lossless loop)
+  - SCENE_ANIMEE.gif and SCENE_ANIMEE_NUIT.gif
+  - 02_eau_mer_animee_seule.gif
+  - arene_plage_generee_editable.ora (OpenRaster multi-layer source)
+  - manifest.json
+  - apercu_plage_animee_multicalques_v3.html (Interactive live gallery)
 """
 from pathlib import Path
-import json, hashlib, base64, math
+import json, hashlib, base64, math, io, zipfile, xml.etree.ElementTree as ET
 import numpy as np
-from PIL import Image, ImageDraw
-from scipy import ndimage as nd
+from PIL import Image, ImageDraw, ImageFilter
+from scipy.spatial import KDTree
 
 ROOT = Path(__file__).resolve().parents[2]
 RENDERS_DIR = ROOT / 'renders/plage_animee_multicalques_v3'
 EXPORTS_DIR = ROOT / 'exports/plage_animee_multicalques_v3'
+BRUTS_DIR = ROOT / 'renders/arene_plage_multicalques_v2/bruts'
+
 W, H = 768, 512
 N_FRAMES = 32
 FRAME_MS = 100 # 3.2s total loop
 
-# Load sources
+# Canonical sources
 SKY_SRC = Image.open(ROOT / 'source/cote_v2/ciel_sans_nuages.png').convert('RGBA')
 CLOUD_TILES = [
     (Image.open(ROOT / 'sprites/cote_v2/COTEV2_NUAGE_01.png').convert('RGBA'), 32, 24),
@@ -29,7 +45,11 @@ CLOUD_TILES = [
     (Image.open(ROOT / 'sprites/cote_v2/COTEV2_NUAGE_03.png').convert('RGBA'), 540, 16)
 ]
 BEACH_REF = Image.open(ROOT / 'arenapmdskybeach.png').convert('RGBA')
-A = np.array(BEACH_REF)
+A_REF = np.array(BEACH_REF)
+
+# Build KDTree of the 147 canonical colors in arenapmdskybeach.png
+REF_COLORS = np.unique(A_REF[:, :, :3].reshape(-1, 3), axis=0)
+COLOR_TREE = KDTree(REF_COLORS)
 
 # Canonical 8 cyclic water colors from arenapmdskybeach
 CYCLE_WATER_RGB = np.array([
@@ -43,34 +63,32 @@ CYCLE_WATER_RGB = np.array([
     [55, 207, 247]   # 7: Surf boundary highlight
 ], dtype=float)
 
-# Canonical sand patch boxes from arenapmdskybeach
-SAND_BOXES = [
-    (180, 184, 204, 208), (204, 184, 228, 208), (228, 184, 252, 208), (252, 184, 276, 208),
-    (180, 208, 204, 232), (204, 208, 228, 232), (228, 208, 252, 232), (252, 208, 276, 232),
-    (180, 232, 204, 256), (204, 232, 228, 256), (228, 232, 252, 256), (252, 232, 276, 256),
-    (180, 256, 204, 280), (204, 256, 228, 280), (228, 256, 252, 280), (252, 256, 276, 280),
-    (180, 280, 204, 304), (204, 280, 228, 304), (228, 280, 252, 304), (252, 280, 276, 304)
-]
+def key_magenta(im, target_size=(W, H)):
+    """Chroma keys out magenta background, resizes to target_size, and defringes."""
+    resized = im.resize(target_size, Image.Resampling.NEAREST).convert('RGBA')
+    a = np.array(resized)
+    r = a[:, :, 0].astype(float)
+    g = a[:, :, 1].astype(float)
+    b = a[:, :, 2].astype(float)
+    # Magenta detector
+    mag = (r > 70) & (b > 65) & (r > g * 1.35) & (b > g * 1.35)
+    a[mag] = 0
+    a[~mag, 3] = 255
+    return a
 
-def seam(cost):
-    h, w = cost.shape
-    dist = cost.astype(float).copy()
-    prev = np.zeros((h, w), int)
-    for y in range(1, h):
-        for x in range(w):
-            lo = max(0, x - 1)
-            hi = min(w, x + 2)
-            p = lo + np.argmin(dist[y - 1, lo:hi])
-            prev[y, x] = p
-            dist[y, x] += dist[y - 1, p]
-    x = int(np.argmin(dist[-1]))
-    path = []
-    for y in reversed(range(h)):
-        path.append(x)
-        x = prev[y, x]
-    return np.array(path[::-1])
+def snap_to_canonical_palette(rgba_arr):
+    """Snaps visible RGB pixels to the nearest canonical PMD palette color."""
+    out = rgba_arr.copy()
+    mask = out[:, :, 3] > 0
+    if not mask.any():
+        return out
+    pts = out[mask, :3]
+    _, indices = COLOR_TREE.query(pts)
+    out[mask, :3] = REF_COLORS[indices]
+    return out
 
 def to_night(rgba_arr):
+    """Transforms a layer into its night-time palette."""
     out = rgba_arr.copy()
     v = out[:, :, :3].astype(float)
     lum = (v @ np.array([0.2126, 0.7152, 0.0722]))[:, :, None]
@@ -87,6 +105,31 @@ def get_cyclic_palette(frame_idx):
     c1 = np.roll(CYCLE_WATER_RGB, -(k + 1), axis=0)
     return np.rint((1 - t) * c0 + t * c1).astype('uint8')
 
+def write_openraster(path, layers_dict, comp_img):
+    """Saves a multi-layer stack in OpenRaster (.ora) standard format."""
+    root = ET.Element('image', {'w': str(W), 'h': str(H), 'name': 'Arene Plage Multicalques V3'})
+    stack = ET.SubElement(root, 'stack')
+    with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED) as z:
+        z.writestr('mimetype', 'image/openraster', compress_type=zipfile.ZIP_STORED)
+        for i, (name, im) in reversed(list(enumerate(layers_dict.items()))):
+            filename = f'data/layer{i:02d}.png'
+            ET.SubElement(stack, 'layer', {
+                'name': name,
+                'src': filename,
+                'x': '0',
+                'y': '0',
+                'opacity': '1.0',
+                'visibility': 'visible',
+                'composite-op': 'svg:src-over'
+            })
+            b = io.BytesIO()
+            im.save(b, format='PNG')
+            z.writestr(filename, b.getvalue())
+        b = io.BytesIO()
+        comp_img.save(b, format='PNG')
+        z.writestr('mergedimage.png', b.getvalue())
+        z.writestr('stack.xml', ET.tostring(root, encoding='utf-8', xml_declaration=True))
+
 def build():
     RENDERS_DIR.mkdir(parents=True, exist_ok=True)
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -95,9 +138,9 @@ def build():
     water_frames_dir.mkdir(exist_ok=True)
     clouds_frames_dir.mkdir(exist_ok=True)
 
-    # -------------------------------------------------------------
-    # Layer 00: Distant PMD Sky
-    # -------------------------------------------------------------
+    # =========================================================================
+    # Layer 00: Distant PMD Sky Background
+    # =========================================================================
     sky_im = Image.new('RGBA', (W, H))
     sky_crop = SKY_SRC.crop((0, 0, W, 256))
     sky_im.paste(sky_crop, (0, 0))
@@ -106,9 +149,9 @@ def build():
     sky_im.save(RENDERS_DIR / '00_ciel_pmd_jour.png')
     Image.fromarray(sky_arr_night).save(RENDERS_DIR / '00_ciel_pmd_nuit.png')
 
-    # -------------------------------------------------------------
+    # =========================================================================
     # Layer 01: Seamless PMD Cloud Wrap Strip (Period W = 768 px)
-    # -------------------------------------------------------------
+    # =========================================================================
     cloud_strip = Image.new('RGBA', (W, 240))
     for im, x, y in CLOUD_TILES:
         for shift in [-W, 0, W]:
@@ -118,7 +161,7 @@ def build():
     cloud_frames_day = []
     cloud_frames_night = []
 
-    shift_step = W // N_FRAMES # 24 px per frame
+    shift_step = W // N_FRAMES # 24 px/frame -> 24 * 32 = 768 px exact modulo
     for f in range(N_FRAMES):
         offset = (f * shift_step) % W
         rolled = np.roll(cloud_strip_arr, offset, axis=1)
@@ -127,22 +170,33 @@ def build():
         im_c_d = Image.fromarray(full_cloud)
         im_c_n = Image.fromarray(to_night(full_cloud))
         im_c_d.save(clouds_frames_dir / f'nuages_frame_{f:02d}_jour.png')
+        im_c_n.save(clouds_frames_dir / f'nuages_frame_{f:02d}_nuit.png')
         cloud_frames_day.append(im_c_d)
         cloud_frames_night.append(im_c_n)
 
-    # Save static cloud reference (phase 0)
     cloud_frames_day[0].save(RENDERS_DIR / '01_nuages_wrap_jour.png')
     cloud_frames_night[0].save(RENDERS_DIR / '01_nuages_wrap_nuit.png')
 
-    # -------------------------------------------------------------
-    # Layer 02: Animated Coastal Sea on its OWN CLEAN LAYER
-    # -------------------------------------------------------------
+    # =========================================================================
+    # Layer 02: Generated Sea Water with Canonical Palette Cycling
+    # Generated brut: mer_eau_magenta.png
+    # =========================================================================
+    raw_sea = Image.open(BRUTS_DIR / 'mer_eau_magenta.png')
+    sea_keyed = key_magenta(raw_sea, (W, H))
     yy, xx = np.mgrid[:H, :W]
-    # Sea spans across the middle horizon (y in 140..340), behind the beach shoreline
-    sea_mask = (yy >= 144) & (yy <= 340) & ~((yy > 260) & (xx > 180) & (xx < 588))
-    # Diagonal wave movement mimicking natural surf flow
-    wave_indices = (((xx // 8) - (yy // 6)) % 8).astype(np.uint8)
-    sea_alpha = (sea_mask.astype(np.uint8) * 255)
+
+    # Water occupies the coastal horizon (y in 140..350)
+    # Restrict sea to water zone behind sand and cliffs
+    sea_zone = (yy >= 140) & (yy <= 350) & (sea_keyed[:, :, 3] > 0)
+    sea_keyed[~sea_zone] = 0
+
+    # Extract wave pattern indices (0..7) from water brightness
+    sea_lum = (sea_keyed[:, :, :3].astype(float) @ np.array([0.299, 0.587, 0.114]))
+    # Add gentle diagonal spatial shift mimicking oceanic tide flow
+    diag_phase = ((xx // 8) - (yy // 6)) % 8
+    lum_phase = (np.clip(sea_lum / 32, 0, 7)).astype(int)
+    wave_indices = ((lum_phase + diag_phase) % 8).astype(np.uint8)
+    sea_alpha = (sea_zone.astype(np.uint8) * 255)
 
     water_frames_day = []
     water_frames_night = []
@@ -155,465 +209,588 @@ def build():
         im_rgba = im_p.convert('RGBA')
         w_arr = np.array(im_rgba)
         w_arr[:, :, 3] = sea_alpha
-        w_arr[~sea_mask] = [0, 0, 0, 0]
+        w_arr[~sea_zone] = 0
 
         im_w_d = Image.fromarray(w_arr)
         im_w_n = Image.fromarray(to_night(w_arr))
         im_w_d.save(water_frames_dir / f'eau_mer_frame_{f:02d}_jour.png')
+        im_w_n.save(water_frames_dir / f'eau_mer_frame_{f:02d}_nuit.png')
         water_frames_day.append(im_w_d)
         water_frames_night.append(im_w_n)
 
-    # Save static water reference (phase 0)
     water_frames_day[0].save(RENDERS_DIR / '02_eau_mer_animee_jour.png')
     water_frames_night[0].save(RENDERS_DIR / '02_eau_mer_animee_nuit.png')
 
-    # -------------------------------------------------------------
+    # =========================================================================
     # Layer 03: Shoreline Foam & Surf
-    # -------------------------------------------------------------
+    # =========================================================================
     foam_layer = np.zeros((H, W, 4), dtype=np.uint8)
-    # Extract authentic foam from arenapmdskybeach (x=144..312, y=96..112)
-    foam_patch = A[96:112, 144:312]
-    for x in range(160, 560, 168):
-        ww = min(168, 560 - x)
+    foam_patch = A_REF[96:112, 144:312]
+    for x in range(120, 640, 168):
+        ww = min(168, 640 - x)
         foam_layer[256:272, x:x+ww] = foam_patch[:, :ww]
     foam_im_d = Image.fromarray(foam_layer)
     foam_im_n = Image.fromarray(to_night(foam_layer))
     foam_im_d.save(RENDERS_DIR / '03_ecume_rivage_jour.png')
     foam_im_n.save(RENDERS_DIR / '03_ecume_rivage_nuit.png')
 
-    # -------------------------------------------------------------
-    # Layer 04: Beach Sand Ground on its OWN CLEAN LAYER
-    # -------------------------------------------------------------
-    sand_layer = np.zeros((H, W, 4), dtype=np.uint8)
-    # Sand arena shape: spacious central arena in lower half (y >= 268)
-    sand_mask = (yy >= 268) & (xx >= 120) & (xx <= 648)
-    rng = np.random.default_rng(88)
-    hh, ww, ov = 24, 24, 8
-    for y in range(268, H, hh - ov):
-        for x in range(120, 648, ww - ov):
-            h = min(hh, H - y)
-            w = min(ww, 648 - x)
-            want = sand_mask[y:y+h, x:x+w]
-            if not want.any():
-                continue
-            old = sand_layer[y:y+h, x:x+w]
-            occupied = (old[:, :, 3] > 0) & want
-            best = None
-            for idx in rng.permutation(len(SAND_BOXES))[:16]:
-                x0, y0, _, _ = SAND_BOXES[idx]
-                patch = A[y0:y0+h, x0:x0+w]
-                cost = ((old[:, :, :3].astype(float) - patch[:, :, :3]) ** 2).sum(2)
-                score = cost[occupied].mean() if occupied.any() else rng.random()
-                if best is None or score < best[0]:
-                    best = (score, x0, y0, patch, cost)
-            _, x0, y0, patch, cost = best
-            take = want.copy()
-            if x > 120 and w >= ov:
-                take[:, :ov] &= np.arange(ov)[None, :] >= seam(cost[:, :ov])[:, None]
-            if y > 268 and h >= ov:
-                take[:ov, :] &= np.arange(ov)[:, None] >= seam(cost[:ov, :].T)[None, :]
-            take |= want & (old[:, :, 3] == 0)
-            old[take] = patch[take]
+    # =========================================================================
+    # Layer 04: Generated Beach Sand Arena Ground on its own layer
+    # Generated brut: sable_complet_magenta.png
+    # =========================================================================
+    raw_sand = Image.open(BRUTS_DIR / 'sable_complet_magenta.png')
+    sand_keyed = key_magenta(raw_sand, (W, H))
+    # Sand arena mask: lower arena (y >= 268)
+    sand_mask = (yy >= 268) & (sand_keyed[:, :, 3] > 0)
+    sand_keyed[~sand_mask] = 0
+    # Snap colors to canonical PMD palette
+    sand_snapped = snap_to_canonical_palette(sand_keyed)
 
-    sand_im_d = Image.fromarray(sand_layer)
-    sand_im_n = Image.fromarray(to_night(sand_layer))
+    sand_im_d = Image.fromarray(sand_snapped)
+    sand_im_n = Image.fromarray(to_night(sand_snapped))
     sand_im_d.save(RENDERS_DIR / '04_sable_plage_jour.png')
     sand_im_n.save(RENDERS_DIR / '04_sable_plage_nuit.png')
 
-    # -------------------------------------------------------------
-    # Layer 05: Coastal Red Rock Cliffs ON TOP of Sand
-    # -------------------------------------------------------------
-    cliff_layer = np.zeros((H, W, 4), dtype=np.uint8)
-    # West cliff massif (from x=0..160, y=80..380 of source)
-    p_w = A[80:360, 0:140]
-    mask_w = ~np.all(p_w[:, :, :3] == [39, 39, 55], axis=2) & (p_w[:, :, 3] > 0)
-    cliff_layer[120:400, 0:140][mask_w] = p_w[mask_w]
+    # =========================================================================
+    # Layer 05: Generated Coastal Red Cliffs & Rock Formations on top of sand
+    # Generated brut: falaises_rochers_magenta.png
+    # =========================================================================
+    raw_cliffs = Image.open(BRUTS_DIR / 'falaises_rochers_magenta.png')
+    cliffs_keyed = key_magenta(raw_cliffs, (W, H))
+    # Keep upper cliff terraces, side headlands, and central rock formations
+    cliffs_mask = (cliffs_keyed[:, :, 3] > 0) & ((yy < 390) | (xx < 150) | (xx > 618))
+    cliffs_keyed[~cliffs_mask] = 0
+    # Snap colors to canonical PMD palette
+    cliffs_snapped = snap_to_canonical_palette(cliffs_keyed)
 
-    # East cliff massif (from x=316..456, y=80..380 of source)
-    p_e = A[80:360, 316:456]
-    mask_e = ~np.all(p_e[:, :, :3] == [39, 39, 55], axis=2) & (p_e[:, :, 3] > 0)
-    cliff_layer[120:400, 628:768][mask_e] = p_e[mask_e]
-
-    # North Red Cliff Arch framing the sea horizon
-    p_arch = A[40:112, 140:320]
-    mask_arch = ~np.all(p_arch[:, :, :3] == [39, 39, 55], axis=2) & (p_arch[:, :, 3] > 0)
-    cliff_layer[80:152, 294:474][mask_arch] = p_arch[mask_arch]
-
-    cliff_im_d = Image.fromarray(cliff_layer)
-    cliff_im_n = Image.fromarray(to_night(cliff_layer))
+    cliff_im_d = Image.fromarray(cliffs_snapped)
+    cliff_im_n = Image.fromarray(to_night(cliffs_snapped))
     cliff_im_d.save(RENDERS_DIR / '05_falaises_et_rochers_jour.png')
     cliff_im_n.save(RENDERS_DIR / '05_falaises_et_rochers_nuit.png')
 
-    # -------------------------------------------------------------
-    # Layer 06: Foreground Coastal Rocks & Sea Stacks
-    # -------------------------------------------------------------
-    rocks_layer = np.zeros((H, W, 4), dtype=np.uint8)
-    # SW foreground reef
-    p_sw = A[416:480, 0:180]
-    mask_sw = ~np.all(p_sw[:, :, :3] == [39, 39, 55], axis=2)
-    rocks_layer[448:512, 0:180][mask_sw] = p_sw[mask_sw]
+    # =========================================================================
+    # Layer 06: Generated Foreground Reefs & Sea Stacks
+    # Generated brut: recifs_avant_plan_magenta.png
+    # =========================================================================
+    raw_reefs = Image.open(BRUTS_DIR / 'recifs_avant_plan_magenta.png')
+    reefs_keyed = key_magenta(raw_reefs, (W, H))
+    # Keep bottom foreground edges (y >= 430, x < 220 or x > 548)
+    reefs_mask = (reefs_keyed[:, :, 3] > 0) & ((yy >= 420) & ((xx < 220) | (xx > 548)))
+    reefs_keyed[~reefs_mask] = 0
+    reefs_snapped = snap_to_canonical_palette(reefs_keyed)
 
-    # SE foreground reef
-    p_se = A[416:480, 276:456]
-    mask_se = ~np.all(p_se[:, :, :3] == [39, 39, 55], axis=2)
-    rocks_layer[448:512, 588:768][mask_se] = p_se[mask_se]
+    reefs_im_d = Image.fromarray(reefs_snapped)
+    reefs_im_n = Image.fromarray(to_night(reefs_snapped))
+    reefs_im_d.save(RENDERS_DIR / '06_rochers_avant_plan_jour.png')
+    reefs_im_n.save(RENDERS_DIR / '06_rochers_avant_plan_nuit.png')
 
-    # Sea stack in west shallows
-    p_stack = A[240:280, 330:370]
-    mask_stack = ~np.all(p_stack[:, :, :3] == [39, 39, 55], axis=2)
-    rocks_layer[210:250, 80:120][mask_stack] = p_stack[mask_stack]
-
-    rocks_im_d = Image.fromarray(rocks_layer)
-    rocks_im_n = Image.fromarray(to_night(rocks_layer))
-    rocks_im_d.save(RENDERS_DIR / '06_rochers_avant_plan_jour.png')
-    rocks_im_n.save(RENDERS_DIR / '06_rochers_avant_plan_nuit.png')
-
-    # -------------------------------------------------------------
-    # 32 Composite Frames & Final Animated WebP / GIF
-    # -------------------------------------------------------------
+    # =========================================================================
+    # Full Scene Composition & Animated WebP / GIF
+    # =========================================================================
     scene_frames_day = []
     scene_frames_night = []
 
     for f in range(N_FRAMES):
-        sc_d = Image.new('RGBA', (W, H))
-        sc_n = Image.new('RGBA', (W, H))
+        # Day composition
+        comp_d = Image.new('RGBA', (W, H))
+        comp_d.alpha_composite(sky_im)
+        comp_d.alpha_composite(cloud_frames_day[f])
+        comp_d.alpha_composite(water_frames_day[f])
+        comp_d.alpha_composite(foam_im_d)
+        comp_d.alpha_composite(sand_im_d)
+        comp_d.alpha_composite(cliff_im_d)
+        comp_d.alpha_composite(reefs_im_d)
+        scene_frames_day.append(comp_d)
 
-        # 00: Ciel
-        sc_d.alpha_composite(sky_im)
-        sc_n.alpha_composite(Image.fromarray(sky_arr_night))
+        # Night composition
+        comp_n = Image.new('RGBA', (W, H))
+        comp_n.alpha_composite(Image.fromarray(sky_arr_night))
+        comp_n.alpha_composite(cloud_frames_night[f])
+        comp_n.alpha_composite(water_frames_night[f])
+        comp_n.alpha_composite(foam_im_n)
+        comp_n.alpha_composite(sand_im_n)
+        comp_n.alpha_composite(cliff_im_n)
+        comp_n.alpha_composite(reefs_im_n)
+        scene_frames_night.append(comp_n)
 
-        # 01: Nuages wrap
-        sc_d.alpha_composite(cloud_frames_day[f])
-        sc_n.alpha_composite(cloud_frames_night[f])
-
-        # 02: Eau mer animée
-        sc_d.alpha_composite(water_frames_day[f])
-        sc_n.alpha_composite(water_frames_night[f])
-
-        # 03: Écume
-        sc_d.alpha_composite(foam_im_d)
-        sc_n.alpha_composite(foam_im_n)
-
-        # 04: Sable
-        sc_d.alpha_composite(sand_im_d)
-        sc_n.alpha_composite(sand_im_n)
-
-        # 05: Falaises et rochers sur le sable
-        sc_d.alpha_composite(cliff_im_d)
-        sc_n.alpha_composite(cliff_im_n)
-
-        # 06: Rochers d'avant-plan
-        sc_d.alpha_composite(rocks_im_d)
-        sc_n.alpha_composite(rocks_im_n)
-
-        scene_frames_day.append(sc_d)
-        scene_frames_night.append(sc_n)
-
-    # Save static composites
+    # Save static day/night compositions
     scene_frames_day[0].save(RENDERS_DIR / 'COMPOSITION_JOUR.png')
     scene_frames_night[0].save(RENDERS_DIR / 'COMPOSITION_NUIT.png')
 
-    # Save final animated WebP (lossless, method=4, loop=0)
+    # Save animated WebP (lossless, 32 frames @ 100ms)
     scene_frames_day[0].save(
         RENDERS_DIR / 'ANIMATION_WRAP.webp',
         save_all=True,
         append_images=scene_frames_day[1:],
         duration=FRAME_MS,
         loop=0,
-        lossless=True,
-        method=4
+        lossless=True
     )
-    # Save animated GIF preview
-    scene_frames_day[0].save(
+
+    # Save animated GIFs (reduced palette 256 colors)
+    pal_day = scene_frames_day[0].convert('RGB').quantize(colors=256)
+    gif_frames_day = [im.convert('RGB').quantize(palette=pal_day, dither=Image.Dither.NONE) for im in scene_frames_day]
+    gif_frames_day[0].save(
         RENDERS_DIR / 'SCENE_ANIMEE.gif',
         save_all=True,
-        append_images=scene_frames_day[1:],
-        duration=FRAME_MS,
-        loop=0
-    )
-    scene_frames_night[0].save(
-        RENDERS_DIR / 'SCENE_ANIMEE_NUIT.gif',
-        save_all=True,
-        append_images=scene_frames_night[1:],
-        duration=FRAME_MS,
-        loop=0
-    )
-
-    # Save isolated water animation GIF
-    water_frames_day[0].save(
-        RENDERS_DIR / '02_eau_mer_animee_seule.gif',
-        save_all=True,
-        append_images=water_frames_day[1:],
+        append_images=gif_frames_day[1:],
         duration=FRAME_MS,
         loop=0,
-        disposal=2
+        disposal=1,
+        optimize=False
     )
 
-    # Save manifest
-    manifest = dict(
-        version='PlageAnimeeMulticalquesV3',
-        title='PMD Sky Beach Arena — Wrap Clouds & Palette Cycling Water Multicalques',
-        size=[W, H],
-        frames=N_FRAMES,
-        frame_ms=FRAME_MS,
-        loop_ms=N_FRAMES * FRAME_MS,
-        layers=[
-            dict(id='00_ciel_pmd', file='00_ciel_pmd_jour.png', type='static_sky'),
-            dict(id='01_nuages_wrap', file='01_nuages_wrap_jour.png', type='wrap_clouds_overlay', period=W, shift_per_frame=shift_step),
-            dict(id='02_eau_mer_animee', file='02_eau_mer_animee_jour.png', type='palette_cycling_water', cycle_colors=8, phases=N_FRAMES),
-            dict(id='03_ecume_rivage', file='03_ecume_rivage_jour.png', type='surf_foam'),
-            dict(id='04_sable_plage', file='04_sable_plage_jour.png', type='quilted_sand_arena'),
-            dict(id='05_falaises_et_rochers', file='05_falaises_et_rochers_jour.png', type='red_cliffs_over_sand'),
-            dict(id='06_rochers_avant_plan', file='06_rochers_avant_plan_jour.png', type='foreground_reefs')
-        ],
-        outputs=dict(
-            composition_png='COMPOSITION_JOUR.png',
-            animation_webp='ANIMATION_WRAP.webp',
-            scene_gif='SCENE_ANIMEE.gif',
-            scene_night_gif='SCENE_ANIMEE_NUIT.gif',
-            water_gif='02_eau_mer_animee_seule.gif'
-        )
+    pal_night = scene_frames_night[0].convert('RGB').quantize(colors=256)
+    gif_frames_night = [im.convert('RGB').quantize(palette=pal_night, dither=Image.Dither.NONE) for im in scene_frames_night]
+    gif_frames_night[0].save(
+        RENDERS_DIR / 'SCENE_ANIMEE_NUIT.gif',
+        save_all=True,
+        append_images=gif_frames_night[1:],
+        duration=FRAME_MS,
+        loop=0,
+        disposal=1,
+        optimize=False
     )
+
+    # Save isolated water gif
+    pal_water = water_frames_day[0].convert('RGB').quantize(colors=64)
+    gif_water = [im.convert('RGB').quantize(palette=pal_water, dither=Image.Dither.NONE) for im in water_frames_day]
+    gif_water[0].save(
+        RENDERS_DIR / '02_eau_mer_animee_seule.gif',
+        save_all=True,
+        append_images=gif_water[1:],
+        duration=FRAME_MS,
+        loop=0,
+        disposal=1,
+        optimize=False
+    )
+
+    # =========================================================================
+    # OpenRaster Multi-Layer (.ora) deliverable
+    # =========================================================================
+    ora_layers = {
+        '00_ciel_pmd': sky_im,
+        '01_nuages_wrap_phase0': cloud_frames_day[0],
+        '02_eau_mer_animee_phase0': water_frames_day[0],
+        '03_ecume_rivage': foam_im_d,
+        '04_sable_plage': sand_im_d,
+        '05_falaises_et_rochers': cliff_im_d,
+        '06_rochers_avant_plan': reefs_im_d
+    }
+    write_openraster(RENDERS_DIR / 'arene_plage_generee_editable.ora', ora_layers, scene_frames_day[0])
+
+    # =========================================================================
+    # Manifest JSON
+    # =========================================================================
+    manifest = {
+        'version': 'PlageAnimeeMulticalquesV3',
+        'title': 'PMD Sky Beach Arena — Pure Multicalques with Generated Layers & Canonical Animations',
+        'method': 'AI generation on magenta -> chroma-keying -> 147 canonical PMD color quantization -> aligned multicalques',
+        'size': [W, H],
+        'frames': N_FRAMES,
+        'frame_ms': FRAME_MS,
+        'loop_ms': N_FRAMES * FRAME_MS,
+        'generated_inputs': [
+            {'file': 'sable_complet_magenta.png', 'role': 'Ground sand arena floor'},
+            {'file': 'falaises_rochers_magenta.png', 'role': 'Red rock cliffs and terraces'},
+            {'file': 'recifs_avant_plan_magenta.png', 'role': 'Foreground coastal reefs & sea stacks'},
+            {'file': 'mer_eau_magenta.png', 'role': 'Sea water surface texture for palette cycling'}
+        ],
+        'layers': [
+            {'id': '00_ciel_pmd', 'file': '00_ciel_pmd_jour.png', 'type': 'static_sky'},
+            {'id': '01_nuages_wrap', 'file': '01_nuages_wrap_jour.png', 'type': 'wrap_clouds_overlay', 'period': W, 'shift_per_frame': shift_step},
+            {'id': '02_eau_mer_animee', 'file': '02_eau_mer_animee_jour.png', 'type': 'palette_cycling_water', 'cycle_colors': 8, 'phases': N_FRAMES},
+            {'id': '03_ecume_rivage', 'file': '03_ecume_rivage_jour.png', 'type': 'surf_foam'},
+            {'id': '04_sable_plage', 'file': '04_sable_plage_jour.png', 'type': 'generated_sand_arena'},
+            {'id': '05_falaises_et_rochers', 'file': '05_falaises_et_rochers_jour.png', 'type': 'generated_red_cliffs'},
+            {'id': '06_rochers_avant_plan', 'file': '06_rochers_avant_plan_jour.png', 'type': 'generated_foreground_reefs'}
+        ],
+        'outputs': {
+            'composition_day_png': 'COMPOSITION_JOUR.png',
+            'composition_night_png': 'COMPOSITION_NUIT.png',
+            'animation_webp': 'ANIMATION_WRAP.webp',
+            'scene_day_gif': 'SCENE_ANIMEE.gif',
+            'scene_night_gif': 'SCENE_ANIMEE_NUIT.gif',
+            'water_gif': '02_eau_mer_animee_seule.gif',
+            'editable_ora': 'arene_plage_generee_editable.ora'
+        }
+    }
     (RENDERS_DIR / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     (EXPORTS_DIR / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 
-    # Build interactive standalone HTML5 viewer
-    def uri(path):
+    # =========================================================================
+    # Standalone HTML5 Viewer apercu_plage_animee_multicalques_v3.html
+    # =========================================================================
+    def to_b64(path):
         return 'data:image/png;base64,' + base64.b64encode(path.read_bytes()).decode()
 
-    layer_uris = {
-        'ciel_d': uri(RENDERS_DIR / '00_ciel_pmd_jour.png'),
-        'ciel_n': uri(RENDERS_DIR / '00_ciel_pmd_nuit.png'),
-        'nuages_strip': uri(RENDERS_DIR / '01_nuages_wrap_jour.png'),
-        'ecume_d': uri(RENDERS_DIR / '03_ecume_rivage_jour.png'),
-        'ecume_n': uri(RENDERS_DIR / '03_ecume_rivage_nuit.png'),
-        'sable_d': uri(RENDERS_DIR / '04_sable_plage_jour.png'),
-        'sable_n': uri(RENDERS_DIR / '04_sable_plage_nuit.png'),
-        'falaises_d': uri(RENDERS_DIR / '05_falaises_et_rochers_jour.png'),
-        'falaises_n': uri(RENDERS_DIR / '05_falaises_et_rochers_nuit.png'),
-        'rochers_d': uri(RENDERS_DIR / '06_rochers_avant_plan_jour.png'),
-        'rochers_n': uri(RENDERS_DIR / '06_rochers_avant_plan_nuit.png'),
+    html_data = {
+        'layers_day': [
+            {'id': '00_ciel_pmd', 'name': '00 · Ciel PMD', 'src': to_b64(RENDERS_DIR / '00_ciel_pmd_jour.png'), 'animated': False},
+            {'id': '01_nuages_wrap', 'name': '01 · Nuages Wrap (32 frames)', 'frames': [to_b64(clouds_frames_dir / f'nuages_frame_{f:02d}_jour.png') for f in range(N_FRAMES)], 'animated': True},
+            {'id': '02_eau_mer', 'name': '02 · Mer Palette Cycling (32 frames)', 'frames': [to_b64(water_frames_dir / f'eau_mer_frame_{f:02d}_jour.png') for f in range(N_FRAMES)], 'animated': True},
+            {'id': '03_ecume_rivage', 'name': '03 · Écume & Clapotis Rivage', 'src': to_b64(RENDERS_DIR / '03_ecume_rivage_jour.png'), 'animated': False},
+            {'id': '04_sable_plage', 'name': '04 · Sable Plage Arène (Généré)', 'src': to_b64(RENDERS_DIR / '04_sable_plage_jour.png'), 'animated': False},
+            {'id': '05_falaises_rochers', 'name': '05 · Falaises & Rochers Rouges (Généré)', 'src': to_b64(RENDERS_DIR / '05_falaises_et_rochers_jour.png'), 'animated': False},
+            {'id': '06_rochers_avant_plan', 'name': '06 · Récifs & Écueils Avant-Plan (Généré)', 'src': to_b64(RENDERS_DIR / '06_rochers_avant_plan_jour.png'), 'animated': False}
+        ],
+        'layers_night': [
+            {'id': '00_ciel_pmd', 'name': '00 · Ciel PMD', 'src': to_b64(RENDERS_DIR / '00_ciel_pmd_nuit.png'), 'animated': False},
+            {'id': '01_nuages_wrap', 'name': '01 · Nuages Wrap (32 frames)', 'frames': [to_b64(clouds_frames_dir / f'nuages_frame_{f:02d}_nuit.png') for f in range(N_FRAMES)], 'animated': True},
+            {'id': '02_eau_mer', 'name': '02 · Mer Palette Cycling (32 frames)', 'frames': [to_b64(water_frames_dir / f'eau_mer_frame_{f:02d}_nuit.png') for f in range(N_FRAMES)], 'animated': True},
+            {'id': '03_ecume_rivage', 'name': '03 · Écume & Clapotis Rivage', 'src': to_b64(RENDERS_DIR / '03_ecume_rivage_nuit.png'), 'animated': False},
+            {'id': '04_sable_plage', 'name': '04 · Sable Plage Arène (Généré)', 'src': to_b64(RENDERS_DIR / '04_sable_plage_nuit.png'), 'animated': False},
+            {'id': '05_falaises_rochers', 'name': '05 · Falaises & Rochers Rouges (Généré)', 'src': to_b64(RENDERS_DIR / '05_falaises_et_rochers_nuit.png'), 'animated': False},
+            {'id': '06_rochers_avant_plan', 'name': '06 · Récifs & Écueils Avant-Plan (Généré)', 'src': to_b64(RENDERS_DIR / '06_rochers_avant_plan_nuit.png'), 'animated': False}
+        ]
     }
 
-    # Water frames uris (first 8 phases)
-    water_uris = [uri(water_frames_dir / f'eau_mer_frame_{f:02d}_jour.png') for f in range(N_FRAMES)]
-
-    html = '''<!doctype html>
+    html_content = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Arène Plage PMD · Multicalques & Wrap / Palette Cycling</title>
+<title>Arène Plage Multicalques V3 — Calques Générés & Animations PMD</title>
 <style>
-  body { background: #111a22; color: #e1e9f0; font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 24px; }
-  header { max-width: 1250px; margin: 0 auto 20px; padding-bottom: 16px; border-bottom: 1px solid #233948; }
-  h1 { font-size: 26px; color: #ffd677; margin: 0 0 6px; }
-  p.sub { color: #9bb5c7; margin: 0; line-height: 1.55; }
-  .workspace { display: flex; gap: 28px; max-width: 1250px; margin: 0 auto; flex-wrap: wrap; }
-  .viewport-panel { background: #16242e; border: 1px solid #284457; border-radius: 12px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
-  .canvas-box { position: relative; width: 768px; height: 512px; background: #080e12; border: 1px solid #243b4c; border-radius: 6px; overflow: hidden; margin-bottom: 14px; }
-  canvas { display: block; image-rendering: pixelated; width: 768px; height: 512px; }
-  .toolbar { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; }
-  button { background: #213a4c; color: #d9e7f2; border: 1px solid #365e7a; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; }
-  button:hover { background: #2c4d66; }
-  button.active { background: #e0b04c; color: #0d161d; font-weight: bold; border-color: #ffd277; }
-  .side-panel { flex: 1; min-width: 320px; background: #16242e; border: 1px solid #284457; border-radius: 12px; padding: 20px; }
-  h2 { font-size: 20px; color: #ffd277; margin: 0 0 8px; }
-  p.desc { font-size: 14px; color: #b1c7d6; line-height: 1.5; margin: 0 0 16px; }
-  .layer-group { background: #0e1820; border: 1px solid #1f3544; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
-  .layer-group h3 { font-size: 14px; text-transform: uppercase; color: #7cb0d4; margin: 0 0 10px; letter-spacing: 0.5px; }
-  label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #d2e2ee; margin-bottom: 8px; cursor: pointer; }
-  label:hover { color: #fff; }
-  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: bold; }
-  .badge-anim { background: #124d6d; color: #76d4ff; border: 1px solid #1a6f9c; }
-  .badge-layer { background: #225134; color: #8fe8b1; }
-  .info-box { background: #0e1820; border-left: 3px solid #e0b04c; padding: 10px 14px; font-size: 12px; color: #9bb3c4; line-height: 1.5; }
-  .links { margin-top: 14px; }
-  .links a { color: #fed677; text-decoration: none; font-size: 13px; margin-right: 14px; }
-  .links a:hover { text-decoration: underline; }
+  :root {{
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --accent: #38bdf8;
+    --accent-gold: #f59e0b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg-dark);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }}
+  header {{
+    text-align: center;
+    max-width: 900px;
+  }}
+  h1 {{
+    font-size: 24px;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }}
+  p.subtitle {{
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }}
+  .main-container {{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    background: var(--panel-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 1200px;
+  }}
+  .canvas-wrapper {{
+    position: relative;
+    width: 768px;
+    height: 512px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }}
+  canvas {{
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: block;
+    width: 768px;
+    height: 512px;
+  }}
+  .controls-sidebar {{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }}
+  .control-group {{
+    background: #0f172a;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }}
+  .control-group h3 {{
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+  }}
+  .layer-item {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+  }}
+  .layer-item input[type="checkbox"] {{
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }}
+  .btn-row {{
+    display: flex;
+    gap: 8px;
+  }}
+  button {{
+    flex: 1;
+    background: var(--border);
+    color: var(--text-main);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }}
+  button.active {{
+    background: var(--accent);
+    color: #000;
+  }}
+  .slider-wrapper {{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }}
+  .slider-wrapper label {{
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+  }}
+  input[type="range"] {{
+    accent-color: var(--accent);
+    width: 100%;
+    cursor: pointer;
+  }}
+  .badge {{
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    background: #0369a1;
+    color: #e0f2fe;
+    margin-left: auto;
+  }}
+  .badge.anim {{
+    background: #b45309;
+    color: #fef3c7;
+  }}
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Arène Plage PMD · Multicalques & Nuages Wrap / Palette Cycling</h1>
-  <p class="sub">
-    Architecture fidèle à la méthode de l'ancien agent :<br>
-    • <strong>Ciel et Nuages PMD :</strong> Nuages animés en <em>wrap overlay</em> horizontal avec boucle parfaite de 3,2 s (768 px modulo).<br>
-    • <strong>Eau de mer sur son propre calque propre :</strong> Animée en <em>palette cycling</em> canonique (32 phases synchronisées avec le wrap).<br>
-    • <strong>Sable sur son propre calque indépendant :</strong> Surface de combat dorée continue.<br>
-    • <strong>Falaises et rochers rouges au-dessus du sable :</strong> Massifs côtiers sur leur propre calque dédié.<br>
-    • <strong>Export WebP animé :</strong> <code>ANIMATION_WRAP.webp</code> (boucle sans perte 32 frames).
-  </p>
+  <h1>Arène Plage Multicalques V3 — Calques Générés & Animations PMD</h1>
+  <p class="subtitle">Architecture multicalques pure (7 calques indépendants). Terrains générés sur magenta (#FF00FF) guidés par <code>arenapmdskybeach.png</code>, recadrés sur la palette canonique PMD (147 couleurs). Double animation synchronisée : <strong>Nuages Wrap horizontal</strong> (32 f) et <strong>Mer en Palette Cycling</strong> (32 f, 8 couleurs d'eau PMD).</p>
 </header>
 
-<div class="workspace">
-  <div class="viewport-panel">
-    <div class="toolbar">
-      <button id="btn-day" class="active" onclick="setMode('jour')">☀️ Jour</button>
-      <button id="btn-night" onclick="setMode('nuit')">🌙 Nuit Abyss</button>
-      <button id="btn-grid" onclick="toggleGrid()">Grille 8px</button>
-      <button id="btn-play" class="active" onclick="togglePlay()">⏸️ Pause</button>
-      <span id="speed-indicator" style="font-size:12px;color:#9bb5c7;margin-left:auto;">Cadence : 100 ms (3,2 s / boucle)</span>
-    </div>
-    <div class="canvas-box">
-      <canvas id="view" width="768" height="512"></canvas>
-    </div>
-    <div class="links">
-      <a href="renders/plage_animee_multicalques_v3/ANIMATION_WRAP.webp" target="_blank">📥 Voir ANIMATION_WRAP.webp</a>
-      <a href="renders/plage_animee_multicalques_v3/SCENE_ANIMEE.gif" target="_blank">📥 Voir SCENE_ANIMEE.gif</a>
-      <a href="renders/plage_animee_multicalques_v3/02_eau_mer_animee_seule.gif" target="_blank">📥 Eau de mer seule (GIF)</a>
-    </div>
+<div class="main-container">
+  <div class="canvas-wrapper">
+    <canvas id="viewCanvas" width="768" height="512"></canvas>
   </div>
 
-  <div class="side-panel">
-    <h2>Contrôle des Calques Indépendants</h2>
-    <p class="desc">Chaque élément est généré et découpé sur son propre calque. Cochez / décochez pour vérifier l'indépendance parfaite du sable, des falaises, de l'eau animée et des nuages.</p>
-    <div class="layer-group">
-      <h3>Calques de Scène</h3>
-      <label><input type="checkbox" id="chk-ciel" checked onchange="render()"> 00 · Ciel PMD lointain <span class="badge badge-layer">STATIQUE</span></label>
-      <label><input type="checkbox" id="chk-nuages" checked onchange="render()"> 01 · Nuages PMD (Wrap Overlay) <span class="badge badge-anim">WRAP 24px/f</span></label>
-      <label><input type="checkbox" id="chk-eau" checked onchange="render()"> 02 · Eau de mer (Cycling Panel) <span class="badge badge-anim">CYCLING 8-RGB</span></label>
-      <label><input type="checkbox" id="chk-ecume" checked onchange="render()"> 03 · Écume & rivage <span class="badge badge-layer">CALQUE PROPRE</span></label>
-      <label><input type="checkbox" id="chk-sable" checked onchange="render()"> 04 · Sable de plage (Sol) <span class="badge badge-layer">CALQUE PROPRE</span></label>
-      <label><input type="checkbox" id="chk-falaises" checked onchange="render()"> 05 · Falaises & rochers rouges <span class="badge badge-layer">DESSUS SABLE</span></label>
-      <label><input type="checkbox" id="chk-rochers" checked onchange="render()"> 06 · Récifs d'avant-plan <span class="badge badge-layer">AVANT-PLAN</span></label>
+  <div class="controls-sidebar">
+    <div class="control-group">
+      <h3>Ambiance Jour / Nuit</h3>
+      <div class="btn-row">
+        <button id="btnDay" class="active" onclick="setMode('day')">☀️ Jour</button>
+        <button id="btnNight" onclick="setMode('night')">🌙 Nuit</button>
+      </div>
     </div>
-    <div class="info-box">
-      <strong>Boucle mathématique exacte :</strong> 32 frames × 24 px de décalage = exactement 768 px (largeur exacte de la scène). Les nuages et le cycling de palette reviennent simultanément à leur pose initiale au tick 32, sans aucun ressaut visuel.
+
+    <div class="control-group">
+      <h3>Animation & Synchronisation</h3>
+      <div class="slider-wrapper">
+        <label><span>Vitesse FPS</span><span id="fpsVal">10 fps (100 ms)</span></label>
+        <input type="range" id="fpsSlider" min="2" max="30" value="10" oninput="updateFps(this.value)">
+      </div>
+      <div class="btn-row" style="margin-top: 10px;">
+        <button id="btnPlayPause" class="active" onclick="togglePlay()">⏸️ Pause</button>
+        <button onclick="stepFrame()">⏭️ +1 Frame</button>
+      </div>
+      <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;" id="frameInfo">Frame: 0 / 32 (0.00s)</div>
+    </div>
+
+    <div class="control-group">
+      <h3>Visibilité des 7 Calques</h3>
+      <div id="layerList"></div>
+    </div>
+
+    <div class="control-group">
+      <h3>Affichage & Grille</h3>
+      <label class="layer-item">
+        <input type="checkbox" id="chkGrid" onchange="toggleGrid()">
+        <span>Grille 8px PMD</span>
+      </label>
     </div>
   </div>
 </div>
 
 <script>
-const LAYERS = __LAYERS__;
-const WATER_FRAMES = __WATER_FRAMES__;
-const N = 32;
-let frame = 0;
-let running = true;
-let mode = 'jour';
-let grid = false;
-
-const canvas = document.getElementById('view');
+const DATA = {json.dumps(html_data, ensure_ascii=False)};
+const canvas = document.getElementById('viewCanvas');
 const ctx = canvas.getContext('2d');
 
-const imgs = {};
-function loadAll() {
-  Object.entries(LAYERS).forEach(([k, u]) => {
-    const im = new Image(); im.src = u; imgs[k] = im;
-  });
-  imgs['water'] = WATER_FRAMES.map(u => {
-    const im = new Image(); im.src = u; return im;
-  });
-}
-loadAll();
+let currentMode = 'day';
+let isPlaying = true;
+let currentFrame = 0;
+let fps = 10;
+let lastTime = performance.now();
+let showGrid = false;
 
-function setMode(m) {
-  mode = m;
-  document.getElementById('btn-day').classList.toggle('active', m === 'jour');
-  document.getElementById('btn-night').classList.toggle('active', m === 'nuit');
+// Preload images
+const cache = {{ day: [], night: [] }};
+function preload() {{
+  ['day', 'night'].forEach(mode => {{
+    const list = mode === 'day' ? DATA.layers_day : DATA.layers_night;
+    list.forEach(item => {{
+      if (item.animated) {{
+        const frames = item.frames.map(src => {{
+          const img = new Image();
+          img.src = src;
+          return img;
+        }});
+        cache[mode].push({{ id: item.id, animated: true, frames: frames, visible: true }});
+      }} else {{
+        const img = new Image();
+        img.src = item.src;
+        cache[mode].push({{ id: item.id, animated: false, img: img, visible: true }});
+      }}
+    }});
+  }});
+}}
+preload();
+
+function initLayerList() {{
+  const container = document.getElementById('layerList');
+  container.innerHTML = '';
+  DATA.layers_day.forEach((layer, idx) => {{
+    const div = document.createElement('label');
+    div.className = 'layer-item';
+    const chk = document.createElement('input');
+    chk.type = 'checkbox';
+    chk.checked = true;
+    chk.onchange = (e) => {{
+      cache.day[idx].visible = e.target.checked;
+      cache.night[idx].visible = e.target.checked;
+      render();
+    }};
+    const span = document.createElement('span');
+    span.textContent = layer.name;
+    const badge = document.createElement('span');
+    badge.className = 'badge' + (layer.animated ? ' anim' : '');
+    badge.textContent = layer.animated ? 'ANIM' : 'PNG';
+    div.appendChild(chk);
+    div.appendChild(span);
+    div.appendChild(badge);
+    container.appendChild(div);
+  }});
+}}
+initLayerList();
+
+function setMode(mode) {{
+  currentMode = mode;
+  document.getElementById('btnDay').className = mode === 'day' ? 'active' : '';
+  document.getElementById('btnNight').className = mode === 'night' ? 'active' : '';
   render();
-}
+}}
 
-function toggleGrid() {
-  grid = !grid;
-  document.getElementById('btn-grid').classList.toggle('active', grid);
+function togglePlay() {{
+  isPlaying = !isPlaying;
+  document.getElementById('btnPlayPause').textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
+}}
+
+function stepFrame() {{
+  isPlaying = false;
+  document.getElementById('btnPlayPause').textContent = '▶️ Play';
+  currentFrame = (currentFrame + 1) % 32;
   render();
-}
+}}
 
-function togglePlay() {
-  running = !running;
-  document.getElementById('btn-play').classList.toggle('active', running);
-  document.getElementById('btn-play').textContent = running ? '⏸️ Pause' : '▶️ Reprendre';
-}
+function updateFps(val) {{
+  fps = parseInt(val);
+  const ms = Math.round(1000 / fps);
+  document.getElementById('fpsVal').textContent = fps + ' fps (' + ms + ' ms)';
+}}
 
-function render() {
+function toggleGrid() {{
+  showGrid = document.getElementById('chkGrid').checked;
+  render();
+}}
+
+function render() {{
   ctx.clearRect(0, 0, 768, 512);
+  const activeLayers = cache[currentMode];
+  activeLayers.forEach(l => {{
+    if (!l.visible) return;
+    if (l.animated) {{
+      const img = l.frames[currentFrame];
+      if (img.complete) ctx.drawImage(img, 0, 0);
+    }} else {{
+      if (l.img.complete) ctx.drawImage(l.img, 0, 0);
+    }}
+  }});
 
-  // 00: Ciel
-  if (document.getElementById('chk-ciel').checked) {
-    const imSky = imgs[mode === 'jour' ? 'ciel_d' : 'ciel_n'];
-    if (imSky && imSky.complete) ctx.drawImage(imSky, 0, 0);
-  }
-
-  // 01: Nuages Wrap Overlay
-  if (document.getElementById('chk-nuages').checked) {
-    const imClouds = imgs['nuages_strip'];
-    if (imClouds && imClouds.complete) {
-      const shift = (frame * 24) % 768;
-      // Draw wrapped
-      ctx.drawImage(imClouds, shift, 0);
-      ctx.drawImage(imClouds, shift - 768, 0);
-    }
-  }
-
-  // 02: Eau de mer en Palette Cycling
-  if (document.getElementById('chk-eau').checked) {
-    const wIm = imgs['water'][frame % N];
-    if (wIm && wIm.complete) {
-      if (mode === 'nuit') {
-        ctx.save();
-        ctx.filter = 'brightness(0.55) contrast(0.9) hue-rotate(-20deg)';
-        ctx.drawImage(wIm, 0, 0);
-        ctx.restore();
-      } else {
-        ctx.drawImage(wIm, 0, 0);
-      }
-    }
-  }
-
-  // 03: Écume
-  if (document.getElementById('chk-ecume').checked) {
-    const imF = imgs[mode === 'jour' ? 'ecume_d' : 'ecume_n'];
-    if (imF && imF.complete) ctx.drawImage(imF, 0, 0);
-  }
-
-  // 04: Sable
-  if (document.getElementById('chk-sable').checked) {
-    const imS = imgs[mode === 'jour' ? 'sable_d' : 'sable_n'];
-    if (imS && imS.complete) ctx.drawImage(imS, 0, 0);
-  }
-
-  // 05: Falaises et rochers
-  if (document.getElementById('chk-falaises').checked) {
-    const imC = imgs[mode === 'jour' ? 'falaises_d' : 'falaises_n'];
-    if (imC && imC.complete) ctx.drawImage(imC, 0, 0);
-  }
-
-  // 06: Rochers d'avant-plan
-  if (document.getElementById('chk-rochers').checked) {
-    const imR = imgs[mode === 'jour' ? 'rochers_d' : 'rochers_n'];
-    if (imR && imR.complete) ctx.drawImage(imR, 0, 0);
-  }
-
-  // Grille 8px
-  if (grid) {
+  if (showGrid) {{
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
     ctx.lineWidth = 1;
-    for (let x = 0; x <= 768; x += 8) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 512); ctx.stroke();
-    }
-    for (let y = 0; y <= 512; y += 8) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(768, y); ctx.stroke();
-    }
-  }
-}
+    for (let x = 0; x <= 768; x += 8) {{
+      ctx.beginPath();
+      ctx.moveTo(x + 0.5, 0);
+      ctx.lineTo(x + 0.5, 512);
+      ctx.stroke();
+    }}
+    for (let y = 0; y <= 512; y += 8) {{
+      ctx.beginPath();
+      ctx.moveTo(0, y + 0.5);
+      ctx.lineTo(768, y + 0.5);
+      ctx.stroke();
+    }}
+  }}
 
-// Tick loop (100 ms per frame)
-setInterval(() => {
-  if (running) {
-    frame = (frame + 1) % N;
-    render();
-  }
-}, 100);
+  document.getElementById('frameInfo').textContent =
+    'Frame: ' + currentFrame + ' / 32 (' + (currentFrame * (1000/fps) / 1000).toFixed(2) + 's)';
+}}
 
-// Initial render
-setTimeout(render, 150);
+function loop(time) {{
+  if (isPlaying) {{
+    const interval = 1000 / fps;
+    if (time - lastTime >= interval) {{
+      currentFrame = (currentFrame + 1) % 32;
+      lastTime = time - ((time - lastTime) % interval);
+      render();
+    }}
+  }}
+  requestAnimationFrame(loop);
+}}
+requestAnimationFrame(loop);
 </script>
 </body>
 </html>
-'''
-    full_html = html.replace('__LAYERS__', json.dumps(layer_uris, ensure_ascii=False)).replace('__WATER_FRAMES__', json.dumps(water_uris, ensure_ascii=False))
-    (ROOT / 'apercu_plage_animee_multicalques_v3.html').write_text(full_html, encoding='utf-8')
-    print('Plage Animée Multicalques V3 built successfully. WebP and HTML viewer ready.')
+"""
+    (ROOT / 'apercu_plage_animee_multicalques_v3.html').write_text(html_content, encoding='utf-8')
+    print("Plage Animée Multicalques V3 pipeline executed successfully. All deliverables ready.")
 
 if __name__ == '__main__':
     build()

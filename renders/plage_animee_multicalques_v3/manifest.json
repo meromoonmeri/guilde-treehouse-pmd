@@ -1,6 +1,7 @@
 {
   "version": "PlageAnimeeMulticalquesV3",
-  "title": "PMD Sky Beach Arena — Wrap Clouds & Palette Cycling Water Multicalques",
+  "title": "PMD Sky Beach Arena — Pure Multicalques with Generated Layers & Canonical Animations",
+  "method": "AI generation on magenta -> chroma-keying -> 147 canonical PMD color quantization -> aligned multicalques",
   "size": [
     768,
     512
@@ -8,6 +9,24 @@
   "frames": 32,
   "frame_ms": 100,
   "loop_ms": 3200,
+  "generated_inputs": [
+    {
+      "file": "sable_complet_magenta.png",
+      "role": "Ground sand arena floor"
+    },
+    {
+      "file": "falaises_rochers_magenta.png",
+      "role": "Red rock cliffs and terraces"
+    },
+    {
+      "file": "recifs_avant_plan_magenta.png",
+      "role": "Foreground coastal reefs & sea stacks"
+    },
+    {
+      "file": "mer_eau_magenta.png",
+      "role": "Sea water surface texture for palette cycling"
+    }
+  ],
   "layers": [
     {
       "id": "00_ciel_pmd",
@@ -36,24 +55,26 @@
     {
       "id": "04_sable_plage",
       "file": "04_sable_plage_jour.png",
-      "type": "quilted_sand_arena"
+      "type": "generated_sand_arena"
     },
     {
       "id": "05_falaises_et_rochers",
       "file": "05_falaises_et_rochers_jour.png",
-      "type": "red_cliffs_over_sand"
+      "type": "generated_red_cliffs"
     },
     {
       "id": "06_rochers_avant_plan",
       "file": "06_rochers_avant_plan_jour.png",
-      "type": "foreground_reefs"
+      "type": "generated_foreground_reefs"
     }
   ],
   "outputs": {
-    "composition_png": "COMPOSITION_JOUR.png",
+    "composition_day_png": "COMPOSITION_JOUR.png",
+    "composition_night_png": "COMPOSITION_NUIT.png",
     "animation_webp": "ANIMATION_WRAP.webp",
-    "scene_gif": "SCENE_ANIMEE.gif",
+    "scene_day_gif": "SCENE_ANIMEE.gif",
     "scene_night_gif": "SCENE_ANIMEE_NUIT.gif",
-    "water_gif": "02_eau_mer_animee_seule.gif"
+    "water_gif": "02_eau_mer_animee_seule.gif",
+    "editable_ora": "arene_plage_generee_editable.ora"
   }
 }
