@@ -1,0 +1,31 @@
+{
+  "halcyon": {
+    "grille_px": 8,
+    "aurore_position": [
+      80,
+      24
+    ],
+    "position_multiple_de_8": true,
+    "frames_nommage_uniforme": "AuroreV15_00..07.png",
+    "frames_taille_uniforme": [
+      768,
+      256
+    ],
+    "duree_ms_uniforme": 150,
+    "ordre_des_calques": [
+      "ciel_fixe",
+      "etoiles_fixes",
+      "aurore (8 frames)",
+      "terrain_fixe"
+    ],
+    "pas_de_wrap": true
+  },
+  "methode": "canonique : terrain genere plein cadre avec bande magenta -> alpha par inondation ; planche 2x4 generee pour les ondulations -> 8 frames 768x256",
+  "bruts_sha256": {
+    "terrain": "0c41aa1ee1827f2bbe72e3be6aa3bfe0c3a7a41be876896d4fbda16cff56bf61",
+    "boreale": "410c15f8831545fe2fca35fe45420226ece53ae416454679396104c5ae90602b"
+  },
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cycle_officiel": "INCONNU : poses et cadence choisis"
+}

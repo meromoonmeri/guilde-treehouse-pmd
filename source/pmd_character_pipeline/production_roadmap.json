@@ -431,5 +431,36 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_halcyon_v15": {
+    "request": "Méthode canonique de map au générateur + ondulations boréales multi-frames + conversion aux critères Halcyon/Palika",
+    "source": "source/arene_halcyon_v15/",
+    "viewer": "apercu_arene_halcyon_v15.html",
+    "methode": "canonique: full-frame generated terrain, magenta flood alpha",
+    "frames_ondulation": 8,
+    "taille_frame": [
+      768,
+      256
+    ],
+    "duree_ms": 150,
+    "halcyon": {
+      "grille_8px": true,
+      "position_aurore": [
+        80,
+        24
+      ],
+      "nommage_uniforme": true,
+      "sans_wrap": true,
+      "calques": [
+        "ciel_fixe",
+        "etoiles_fixes",
+        "aurore_x8",
+        "terrain_fixe"
+      ]
+    },
+    "dedicated_tests": 8,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
