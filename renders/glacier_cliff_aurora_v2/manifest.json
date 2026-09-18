@@ -1,0 +1,131 @@
+{
+  "schema": "glacier_cliff_aurora_magenta_layer_guide_v2",
+  "kind": "generated_composition_guide_only",
+  "magenta_background": "#ff00ff",
+  "native_pmdo_import": false,
+  "canonical_references": [
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6",
+      "size": [
+        504,
+        360
+      ]
+    },
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef",
+      "size": [
+        504,
+        408
+      ]
+    },
+    {
+      "path": "source/references_54d3731/path.png",
+      "sha256": "047bc77b58d65990381deba1fd3a8db8fad7ab9f8b893fdd5dc00cea2a481e1b",
+      "size": [
+        420,
+        380
+      ]
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79",
+      "size": [
+        522,
+        573
+      ]
+    },
+    {
+      "path": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7",
+      "size": [
+        456,
+        240
+      ]
+    },
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430",
+      "size": [
+        264,
+        216
+      ]
+    },
+    {
+      "path": "forêtglomypmdsky.png",
+      "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7",
+      "size": [
+        600,
+        312
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/00_sky_aurora_magenta_guide.png",
+      "sha256": "298aad38cacd220c6b4e7b8add662463042782e5f7a6fc0ca2a23229884bc21d",
+      "size": [
+        1134,
+        928
+      ],
+      "magenta_mask_guide": true
+    },
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/01_distant_mountains_magenta_guide.png",
+      "sha256": "91d50f622fb7728848ad0f8a356443d326853d3b7b674b9134f2db0b342235bb",
+      "size": [
+        1210,
+        864
+      ],
+      "magenta_mask_guide": true
+    },
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/02_snow_trees_forest_magenta_guide.png",
+      "sha256": "8b88e9134d359b826b90925103419a7e33f15910a43c522ca1988e049cd38cb1",
+      "size": [
+        991,
+        1088
+      ],
+      "magenta_mask_guide": true
+    },
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/03_arena_floor_magenta_guide.png",
+      "sha256": "0d927754b9c861017230031726889dd760a814883c49e6850638e75f7e1ff65a",
+      "size": [
+        1210,
+        864
+      ],
+      "magenta_mask_guide": true
+    },
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/04_cliff_walls_foreground_magenta_guide.png",
+      "sha256": "51b9807e7d1d385a173b1ff6542d281860bc5dcbeace1d80fda1ff9a745faf45",
+      "size": [
+        1146,
+        928
+      ],
+      "magenta_mask_guide": true
+    },
+    {
+      "file": "renders/glacier_cliff_aurora_v2/layers/05_south_access_path_magenta_guide.png",
+      "sha256": "978366fa45df793d6720a51681966263eea9ad002d7e13bab9a2b3e6762c73b4",
+      "size": [
+        1079,
+        976
+      ],
+      "magenta_mask_guide": true
+    }
+  ],
+  "composition": "top-of-cliff ice arena in foreground/center, south access, snowy forest and trees below/in front, distant mountains, night sky and aurora",
+  "note": "Generated images are masks/composition references only. Native PMDO output is built from VastIceMountain.tile and canonical .dir assets.",
+  "composition_guide": {
+    "file": "renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png",
+    "sha256": "9439f5fea1aeb48f9f426f1e0fd9bcdeccb16f7f0d10ec272d53acfed5736fbf",
+    "size": [
+      1376,
+      768
+    ],
+    "magenta_mask_guide": true
+  }
+}

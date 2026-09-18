@@ -21,7 +21,7 @@ HERE = Path(__file__).resolve().parent
 OUT = ROOT / "exports/glacier_cliff_aurora_pmdo_v1"
 TILE_SOURCE = ROOT / "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile"
 AUTOTILE_DIR = ROOT / "source/donjons_dtef_v2/references/DumpAsset/Data/AutoTile"
-GUIDE = ROOT / "renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png"
+GUIDE = ROOT / "renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png"
 
 # The references are artwork, not generated PMDO textures.  The two cropped
 # strips retain their native pixels and have their provenance recorded below.
@@ -573,7 +573,7 @@ inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
 importer.
 
 Le guide genere
-`renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png` n'est
+`renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png` n'est
 pas importe dans le Ground et n'est pas une texture de jeu.
 
 L'aurore livree est une image canonique statique. Aucun cycle d'animation PMDO

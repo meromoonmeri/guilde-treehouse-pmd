@@ -40,7 +40,7 @@ inventees. Le Ground PMDO et ses `.dir`/`.tile` restent les fichiers a
 importer.
 
 Le guide genere
-`renders/glacier_cliff_aurora_v1/raw/canonical_composition_guide.png` n'est
+`renders/glacier_cliff_aurora_v2/raw/canonical_layer_composition_guide_magenta.png` n'est
 pas importe dans le Ground et n'est pas une texture de jeu.
 
 L'aurore livree est une image canonique statique. Aucun cycle d'animation PMDO
