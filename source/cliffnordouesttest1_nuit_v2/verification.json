@@ -1,0 +1,28 @@
+{
+  "status": "PASS_NIGHT_CLOUDS_SEA_BLOCKED",
+  "count": 20,
+  "checks": [
+    "Original and daytime files pinned by SHA256",
+    "Root matches distributed night Ground and manifest",
+    "Only Object.Status differs from the user original",
+    "Every byte outside Status preserved, including BOM and CRLF",
+    "All four tile layers and all frame lists unchanged",
+    "Collisions, entities and decorations unchanged",
+    "Only night status, no stacked daytime lighting",
+    "Ordered native MultiSwitchEmitter: lighting before clouds",
+    "Both overlays use Top",
+    "Lighting stays still at opacity176",
+    "Clouds drift at minus4px/s independently",
+    "Both BG files match premultiplied PNG and native static metadata",
+    "Night cloud RGB follows approved Guilde/Sharpedo recipe exactly",
+    "Cloud alpha, scale, placement and six-family geometry preserved",
+    "Clouds remain in sky band only",
+    "Full-screen1px texture has exact navy RGB",
+    "Resource matches status; no carryover or gameplay hooks",
+    "8-second cloud-only preview exact; one play, not a fake short cycle",
+    "Sea still unmodified, missing banks explicitly reported",
+    "Real PMDO21 load/lifecycle tests pass; no GPU claim"
+  ],
+  "GPU_tested": false,
+  "sea_animated": false
+}

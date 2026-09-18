@@ -1,0 +1,63 @@
+{
+  "status": "NIGHT_AND_CLOUDS_READY_SEA_BLOCKED",
+  "target": "cliffnordouesttest1.rsground",
+  "original_commit": "aac14ae4",
+  "day_cloud_commit": "34d40dc0",
+  "original_sha256": "2cb10918d6bfa8ed687c1412b2d2e7c4aebc545049b9d2d76eb7c16fdb632f19",
+  "day_cloud_sha256": "a098806ab4505765eb3981f56557264591448f467466acdf3073d5395de6caee",
+  "patched_sha256": "841332a2a1e93a3a76ca7745c1aee56b6ab8c73c725a47532531e83bb4385b2a",
+  "root_applied": true,
+  "only_changed_json_path": "Object.Status",
+  "all_bytes_outside_status_unchanged": true,
+  "all_tiles_collisions_entities_metadata_unchanged": true,
+  "night": {
+    "method": "Native full-screen translucent navy overlay; NOT recolored tile banks or a new canonical night sky. Characters and decorations receive the same scene lighting.",
+    "rgb": [
+      8,
+      14,
+      36
+    ],
+    "alpha": 176,
+    "native_bg_size": [
+      1,
+      1
+    ],
+    "order": [
+      "night_veil",
+      "night_clouds"
+    ],
+    "draw_layer": "Top",
+    "reference_formula": "out = original * (1 - 176/255) + (8,14,36) * 176/255; night clouds drawn afterward"
+  },
+  "clouds": {
+    "mode": "nuit",
+    "recipe": "source/ciels_valides.py / Guilde-Sharpedo c16efe12",
+    "texture_size": [
+      1440,
+      784
+    ],
+    "y": 208,
+    "speed_px_s": -4,
+    "cycle_seconds": 360,
+    "native_families": 6,
+    "alpha_and_geometry_unchanged": true
+  },
+  "sea": {
+    "modified": false,
+    "reason": "Custom texture banks absent from this checkout and searched public repository trees. Material identity and original pixels cannot be verified. No assumed water tiles or palette animation applied.",
+    "required_custom_banks": [
+      "v2_promontoire_jour_03",
+      "terrain",
+      "terrain (2)",
+      "terrain (3)",
+      "terrain (4)"
+    ]
+  },
+  "limits": [
+    "Missing custom banks prevent full-map preview and sea identification.",
+    "No stars, moon, new terrain, sky replacement, collisions or script changes.",
+    "Native headless emitter tests are reported separately; no GPU or actual game playback validation.",
+    "Night is non-destructive global lighting, not an exact canonical per-material night-palette conversion."
+  ],
+  "engine_source": "RogueCollab/RogueEssence 8b7eafafa73ff0c10b9e8fd9348559ee1b5dfe8b: SingleEmitter.cs, OverlayEmitter.cs, OverlayAnim.cs, BaseGroundScene.cs"
+}

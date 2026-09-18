@@ -1,12 +1,12 @@
 # cliffnordouesttest1 — overlay de nuages uniquement
 
-**Livraison partielle : nuages préparés et ajoutés au Ground racine ; mer NON modifiée.**
+**Archive de la version jour (commit34d40dc0). Le Ground racine est désormais en [mode nuit V2](../cliffnordouesttest1_nuit_v2/README.md). Mer NON modifiée dans les deux versions.**
 
 ## Fichiers à installer ensemble
 
 Le dossier [`a_copier/`](a_copier/) contient exactement trois ressources à fusionner dans votre mod, PMDO fermé et après sauvegarde :
 
-1. [`Data/Ground/cliffnordouesttest1.rsground`](a_copier/Data/Ground/cliffnordouesttest1.rsground) — identique au [Ground racine](../../cliffnordouesttest1.rsground).
+1. [`Data/Ground/cliffnordouesttest1.rsground`](a_copier/Data/Ground/cliffnordouesttest1.rsground) — version jour conservée, distincte du Ground racine nocturne.
 2. [`Content/BG/CLIFFNW_NATIVE_CLOUD_OVERLAY.dir`](a_copier/Content/BG/CLIFFNW_NATIVE_CLOUD_OVERLAY.dir) — texture native de l’overlay.
 3. [`Data/MapStatus/cliffnw_native_cloud_overlay.json`](a_copier/Data/MapStatus/cliffnw_native_cloud_overlay.json) — statut purement visuel, masqué et sans événement de gameplay.
 

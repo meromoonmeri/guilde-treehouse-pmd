@@ -1,0 +1,21 @@
+Ground deserializes	PASS
+Grid and tile scale retained	PASS
+Four original tile layers	PASS
+Original decoration/entity layer counts	PASS
+Single night status, no daytime duplicate	PASS
+Hidden visual-only status	PASS
+Native ordered MultiSwitchEmitter	PASS
+First child is native night veil	PASS
+Night opacity176 and stationary	PASS
+Second child is native night clouds	PASS
+Cloud speed minus4px per second	PASS
+Both overlays above tile layers	PASS
+Visual MapStatusData loads	PASS
+No gameplay states or refresh events	PASS
+Resource matches the two ordered emitters	PASS
+Creates exactly two native Top animations	PASS
+Veil spawns before moving clouds	PASS
+Both animations have indefinite lifetimes	PASS
+Further updates do not duplicate overlays	PASS
+Native cloud clock advances one second	PASS
+Both child emitters stop with their parent	PASS

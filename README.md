@@ -6,9 +6,15 @@
 
 Terrain régénéré d’après IceArena/IceRoad, pics de glace et masses rocheuses enneigées ; montagnes réduites à l’horizon et **mer de sapins dans la vallée entre cet horizon et l’arène sur sa falaise**. Dessins générés référencés, pas tuiles canoniques copiées. Ciel, étoiles, lune native et aurore panoramique V2 conservés ; canevas960×896. Dix PNG de calques, quatre poses PNG, WebP32phases et ORA. **17tests d’assets +13tests UI simulés PASS**, sans certification moteur.
 
-## cliffnordouesttest1 — nuages en overlay ; mer encore en attente
+## cliffnordouesttest1 — mode nuit et nuages nocturnes
 
-**[Patch natif et installation](exports/cliffnordouesttest1_animation_v1/README.md)** · **[Ground racine](cliffnordouesttest1.rsground)** · **[Audit du diff](exports/cliffnordouesttest1_animation_v1/audit.json)**
+**[Installation / quatre fichiers natifs](exports/cliffnordouesttest1_nuit_v2/README.md)** · **[Ground racine nocturne](cliffnordouesttest1.rsground)** · **[Audit](exports/cliffnordouesttest1_nuit_v2/audit.json)**
+
+Ajout demandé : **éclairage bleu nuit non destructif**, puis nuages Guilde/Sharpedo nocturnes en overlayTop, wrap−4px/s. Aucun calque, collision, entité, texture ou script remplacé ; tous les octets horsStatus sont conservés. Il s’agit d’un voile d’éclairage, pas d’une conversion canonique des palettes du terrain. **20tests de préservation et21tests natifs de chargement/cycle de vie PASS**, sans renduGPU validé. **Mer toujours non animée** : les banques personnalisées exactes restent nécessaires. ArèneV3 déjà nocturne, inchangée.
+
+## Historique jour — nuages en overlay ; mer en attente
+
+**[Version jour archivée](exports/cliffnordouesttest1_animation_v1/README.md)** · **[Ground jour](exports/cliffnordouesttest1_animation_v1/a_copier/Data/Ground/cliffnordouesttest1.rsground)** · **[Audit du diff](exports/cliffnordouesttest1_animation_v1/audit.json)**
 
 Ajout d’un seul statut visuel : six familles de nuages validés, wrap−4px/s sur `DrawLayer.Top`. **Tous les octets hors `Status`, les quatre calques, les collisions et les entités sont inchangés.** Installer également les deux nouvelles dépendancesBG/MapStatus. **14contrôles de préservation et13contrôles natifs PMDO0.8.12 PASS** ; pas de renduGPU validé. **La mer reste inchangée** : ses banques personnalisées exactes (`v2_promontoire_jour_03.tile`, `terrain*.tile`) sont nécessaires pour terminer sans altérer le reste.
 

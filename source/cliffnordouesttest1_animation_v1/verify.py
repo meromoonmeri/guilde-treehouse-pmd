@@ -6,9 +6,9 @@ R=Path(__file__).resolve().parents[2];HERE=Path(__file__).parent;O=R/'exports/cl
 def main():
  checks=[]
  def check(name,ok):assert ok,name;checks.append(name)
- audit=json.loads((O/'audit.json').read_text());name=audit['target'];old=subprocess.check_output(['git','show',audit['original_commit']+':'+name],cwd=R);new=(R/name).read_bytes()
+ audit=json.loads((O/'audit.json').read_text());name=audit['target'];old=subprocess.check_output(['git','show',audit['original_commit']+':'+name],cwd=R);new=(O/'a_copier/Data/Ground'/name).read_bytes()
  check('Original pinned to aac14ae4 and SHA256',hashlib.sha256(old).hexdigest()==audit['original_sha256'])
- check('Root and distributable Ground byte-identical',new==(O/'a_copier/Data/Ground'/name).read_bytes() and hashlib.sha256(new).hexdigest()==audit['patched_sha256'])
+ check('Archived daytime Ground matches its recorded SHA256',new==(O/'a_copier/Data/Ground'/name).read_bytes() and hashlib.sha256(new).hexdigest()==audit['patched_sha256'])
  before=json.loads(old.decode('utf-8-sig'));after=json.loads(new.decode('utf-8-sig'));o=after['Object'];status=o['Status'];assert len(status)==1
  restored=copy.deepcopy(after);restored['Object']['Status']={}
  check('Only Object.Status differs structurally',restored==before)

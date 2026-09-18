@@ -3,7 +3,7 @@
   "count": 14,
   "checks": [
     "Original pinned to aac14ae4 and SHA256",
-    "Root and distributable Ground byte-identical",
+    "Archived daytime Ground matches its recorded SHA256",
     "Only Object.Status differs structurally",
     "All bytes outside Status untouched (BOM, CRLF, formatting included)",
     "All tile placements AND animation frame lists unchanged",
