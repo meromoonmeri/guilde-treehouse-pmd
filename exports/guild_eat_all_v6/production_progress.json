@@ -1,2370 +1,2393 @@
 {
-  "scope": "Nine guild members, project full32 profile. Not the global SpriteCollab inventory. Native availability comes from the pinned audit, not proof of local import.",
-  "source_pin": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
-  "counts": {
-    "native_available": 156,
-    "to_produce": 124,
-    "technical_pass": 7,
-    "native_cutscene_reuse": 1
+ "scope": "Nine guild members, project full32 profile. Not the global SpriteCollab inventory. Native availability comes from the pinned audit, not proof of local import.",
+ "source_pin": "3609a86be2a4c8ad7cf255bd2255f044daafe24f",
+ "counts": {
+  "native_available": 156,
+  "to_produce": 112,
+  "technical_pass": 19,
+  "native_cutscene_reuse": 1
+ },
+ "members": [
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "french_name": "Gardevoir",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pull",
+    "Float",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
   },
-  "members": [
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "french_name": "Gardevoir",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "french_name": "Canarticho",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pose",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Nod",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "french_name": "Pandespiègle",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pose",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Nod",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "french_name": "Draby",
-      "remaining_without_local_cycle": []
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "french_name": "Balignon",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pose",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Nod",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "french_name": "Ptiravi",
-      "remaining_without_local_cycle": []
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "french_name": "Pachirisu",
-      "remaining_without_local_cycle": []
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "french_name": "Dimoret",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pose",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Nod",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "french_name": "Tarpaud",
-      "remaining_without_local_cycle": [
-        "EventSleep",
-        "Wake",
-        "Tumble",
-        "Pose",
-        "Pull",
-        "Pain",
-        "Float",
-        "DeepBreath",
-        "Nod",
-        "Sit",
-        "LookUp",
-        "Sink",
-        "Trip",
-        "Laying",
-        "LeapForth",
-        "Head",
-        "Cringe",
-        "LostBalance",
-        "TumbleBack",
-        "HitGround",
-        "Faint"
-      ]
-    }
-  ],
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "french_name": "Canarticho",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pose",
+    "Pull",
+    "Float",
+    "Nod",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "french_name": "Pandespiègle",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pose",
+    "Pull",
+    "Float",
+    "Nod",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "french_name": "Draby",
+   "remaining_without_local_cycle": [],
+   "produced_in_v7": []
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "french_name": "Balignon",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pose",
+    "Pull",
+    "Float",
+    "Nod",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "french_name": "Ptiravi",
+   "remaining_without_local_cycle": [],
+   "produced_in_v7": []
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "french_name": "Pachirisu",
+   "remaining_without_local_cycle": [],
+   "produced_in_v7": []
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "french_name": "Dimoret",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pose",
+    "Pull",
+    "Float",
+    "Nod",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "french_name": "Tarpaud",
+   "remaining_without_local_cycle": [
+    "EventSleep",
+    "Wake",
+    "Tumble",
+    "Pose",
+    "Pull",
+    "Float",
+    "Nod",
+    "Sit",
+    "LookUp",
+    "Sink",
+    "Trip",
+    "Laying",
+    "LeapForth",
+    "Head",
+    "Cringe",
+    "LostBalance",
+    "TumbleBack",
+    "HitGround",
+    "Faint"
+   ],
+   "produced_in_v7": [
+    "Pain",
+    "DeepBreath"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_cutscene_reuse",
+   "directions": 1,
+   "quest_applicability": "Not runtime verified"
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0282",
+   "pokemon": "Gardevoir",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0083",
+   "pokemon": "Farfetch’d",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0674",
+   "pokemon": "Pancham",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0371",
+   "pokemon": "Bagon",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0285",
+   "pokemon": "Shroomish",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0440",
+   "pokemon": "Happiny",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0417",
+   "pokemon": "Pachirisu",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0461",
+   "pokemon": "Weavile",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Idle",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Walk",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Sleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Hurt",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Attack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Charge",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Swing",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Double",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Rotate",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Hop",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "native_available"
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "EventSleep",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Wake",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Eat",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "technical_pass",
+   "cycle_complete": true,
+   "directions": 8,
+   "art_approved": false,
+   "created_here": true
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Tumble",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Pose",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Pull",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Pain",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Float",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "DeepBreath",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Nod",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Sit",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "LookUp",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Sink",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Trip",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Laying",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "LeapForth",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Head",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Cringe",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "LostBalance",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "TumbleBack",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "HitGround",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  },
+  {
+   "slot": "0186",
+   "pokemon": "Politoed",
+   "action": "Faint",
+   "runtime_PMDO": "NOT TESTED",
+   "state": "to_produce",
+   "cycle_complete": false
+  }
+ ],
+ "limits": "Seven cycles pass local technical checks; art/runtime acceptance still pending. Eight-direction cycles do not complete all guild assets.",
+ "eat_coverage": "9/9 members; six eight-view cycles and three unchanged native single-view cycles.",
+ "v7": {
+  "lot": "exports/guild_scene_actions_v7",
   "actions": [
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_cutscene_reuse",
-      "directions": 1,
-      "quest_applicability": "Not runtime verified"
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0282",
-      "pokemon": "Gardevoir",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0083",
-      "pokemon": "Farfetch’d",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0674",
-      "pokemon": "Pancham",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0371",
-      "pokemon": "Bagon",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0285",
-      "pokemon": "Shroomish",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0440",
-      "pokemon": "Happiny",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0417",
-      "pokemon": "Pachirisu",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0461",
-      "pokemon": "Weavile",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Idle",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Walk",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Sleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Hurt",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Attack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Charge",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Swing",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Double",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Rotate",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Hop",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "native_available"
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "EventSleep",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Wake",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Eat",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "technical_pass",
-      "cycle_complete": true,
-      "directions": 8,
-      "art_approved": false,
-      "created_here": true
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Tumble",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Pose",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Pull",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Pain",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Float",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "DeepBreath",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Nod",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Sit",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "LookUp",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Sink",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Trip",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Laying",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "LeapForth",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Head",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Cringe",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "LostBalance",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "TumbleBack",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "HitGround",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    },
-    {
-      "slot": "0186",
-      "pokemon": "Politoed",
-      "action": "Faint",
-      "runtime_PMDO": "NOT TESTED",
-      "state": "to_produce",
-      "cycle_complete": false
-    }
+   "Pain",
+   "DeepBreath"
   ],
-  "limits": "Seven cycles pass local technical checks; art/runtime acceptance still pending. Eight-direction cycles do not complete all guild assets.",
-  "eat_coverage": "9/9 members; six eight-view cycles and three unchanged native single-view cycles."
+  "note": "Pure translations of pinned native Hurt/Idle frames; technical pass, not art approval."
+ }
 }
