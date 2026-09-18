@@ -1,55 +1,69 @@
 {
   "version": "PlageAnimeeMulticalquesV3",
-  "title": "Arène Plage PMD Sky — Multicalques Harmonieux & Double Animation Synchronisée",
+  "title": "Arène Plage PMD Sky — Calques Générés Alignés & Eau Canonique PMD Port",
   "dimensions": [
-    768,
-    512
+    648,
+    504
   ],
-  "frames": 32,
-  "frame_ms": 100,
-  "loop_ms": 3200,
-  "source_reference": "arenapmdskybeach.png",
-  "source_sha256": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9",
+  "frames": 30,
+  "frame_ms": 130,
+  "loop_ms": 3900,
+  "water_source": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+  "water_sha256": "7175b0db1e730451ecb02f45a797d7dff610125a52557cc65294ead60737bbf5",
+  "terrain_sources": [
+    "renders/arene_plage_multicalques_v3/bruts/terrain_magenta.png",
+    "renders/arene_plage_multicalques_v3/bruts/sol_complet.png"
+  ],
   "layers": [
     {
       "id": "00_ciel_pmd",
       "file": "00_ciel_pmd_jour.png",
-      "description": "Ciel distant PMD Sky"
+      "description": "Ciel distant PMD Sky azur"
     },
     {
       "id": "01_nuages_wrap",
       "file": "01_nuages_wrap_jour.png",
-      "description": "Nuages PMD animés en wrap horizontal 768px (32 frames, pas 24px/f)"
+      "description": "Nuages PMD animés en wrap horizontal continu (30 frames, période 648 px)"
     },
     {
-      "id": "02_eau_mer_animee",
-      "file": "02_eau_mer_animee_jour.png",
-      "description": "Eau de mer dans la baie animée par palette cycling canonique à 8 phases (32 frames)"
+      "id": "02_eau_mer_port",
+      "file": "02_eau_mer_port_jour.png",
+      "description": "Eau de mer authentique PMD Sky Port (30 frames, 130 ms, 10 teintes marines)"
     },
     {
-      "id": "03_ecume_rivage",
-      "file": "03_ecume_rivage_jour.png",
-      "description": "Ressac et écume blanche contourant naturellement la baie"
+      "id": "03_sol_sable_complet",
+      "file": "03_sol_sable_complet_jour.png",
+      "description": "Sol de sable complet généré sous-jacent"
     },
     {
-      "id": "04_sable_plage",
-      "file": "04_sable_plage_jour.png",
-      "description": "Arène en sable doré matelassé avec coutures régulières"
+      "id": "04_sol_sable_visible",
+      "file": "04_sol_sable_visible_jour.png",
+      "description": "Arène centrale en sable doré fin"
     },
     {
-      "id": "05_ombres_contact",
-      "file": "07_ombres_contact_jour.png",
-      "description": "Ombres de contact ancrant les falaises et rochers sur le sable"
+      "id": "05_falaises_arriere",
+      "file": "05_falaises_arriere_jour.png",
+      "description": "Parois et arche de falaise rouge d'arrière-plan"
     },
     {
-      "id": "06_falaises_et_rochers",
-      "file": "05_falaises_et_rochers_jour.png",
-      "description": "Falaises rouges, plateaux et arche centrale"
+      "id": "06_falaises_gauche",
+      "file": "06_falaises_gauche_jour.png",
+      "description": "Massif de falaise rouge flanc ouest"
     },
     {
-      "id": "07_rochers_avant_plan",
-      "file": "06_rochers_avant_plan_jour.png",
+      "id": "07_falaises_droite",
+      "file": "07_falaises_droite_jour.png",
+      "description": "Massif de falaise rouge flanc est"
+    },
+    {
+      "id": "08_rochers_avant_plan",
+      "file": "08_rochers_avant_plan_jour.png",
       "description": "Récifs côtiers et écueils de premier plan"
+    },
+    {
+      "id": "09_ombres_contact",
+      "file": "09_ombres_contact_jour.png",
+      "description": "Ombres de contact ancrant les reliefs sur le sable"
     }
   ],
   "outputs": {
@@ -58,7 +72,7 @@
     "animation_webp": "ANIMATION_WRAP.webp",
     "scene_gif_day": "SCENE_ANIMEE.gif",
     "scene_gif_night": "SCENE_ANIMEE_NUIT.gif",
-    "water_gif": "02_eau_mer_animee_seule.gif",
+    "water_gif": "02_eau_mer_port_animee_seule.gif",
     "openraster_ora": "arene_plage_generee_editable.ora"
   }
 }
