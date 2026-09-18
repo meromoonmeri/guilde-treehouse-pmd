@@ -379,5 +379,20 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_palette_cycling_v12": {
+    "request": "Onde boréale générée sans ciel, mouvement logique séquentiel en palette cycling, style Halcyon",
+    "source": "source/boreales_palette_cycling_v12/",
+    "viewer": "apercu_palette_cycling_v12.html",
+    "frames": 8,
+    "duree_ms": 120,
+    "cycle_s": 0.96,
+    "own_layer": true,
+    "sans_ciel": true,
+    "method": "generated sheet: identical silhouette, colors advanced one step per frame (palette cycling)",
+    "dedicated_tests": 9,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
