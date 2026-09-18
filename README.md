@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveau — Grotte glaciaire boréale, chemin Sud → Nord
+
+- **[Ouvrir l’aperçu animé et les calques](apercu_grotte_glaciaire_boreale_v1.html)**.
+- [Rendu, PNG, OpenRaster, masques et notice](renders/grotte_glaciaire_boreale_v1/README.md) · [archive autonome](renders/grotte_glaciaire_boreale_v1_pack.zip).
+- [Brief, build et 11 contrôles dédiés](source/grotte_glaciaire_boreale_v1/STATUS.md).
+
+Nouvelle proposition **768 × 640 px** : un chemin enneigé entre au sud et rejoint le seuil d’une grotte au nord, encadrée de falaises et cristaux de glace. Le ciel nocturne est indépendant ; l’aurore possède **16 phases transparentes de 120 ms** et s’anime sur place, sans wrap ni défilement. La méthode Guilde est conservée : sources générées séparées (terrain magenta, ciel, planche d’aurores), détourage, calques de surfaces visibles, ORA, masques, aperçu et contrôles. Les sorties sont un rendu PMD inspiré, **pas** des tuiles canoniques, une Ground PMDO, des collisions ou un test moteur.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

@@ -1,0 +1,342 @@
+{
+  "title": "Grotte glaciaire boréale V1",
+  "canvas_px": [
+    768,
+    640
+  ],
+  "presentation_grid_px": 8,
+  "orientation": "arrival at the south edge, continuous snowy route to the north ice-cave threshold",
+  "workflow": [
+    "separate generated terrain on magenta, generated sky without aurora, and generated aurora pose sheet",
+    "border-connected magenta removed by flood fill; enclosed violet/fuchsia light accents retained",
+    "full generated terrain retained as one composition and partitioned into editable visible-surface layers",
+    "four coherent generated aurora poses anchored and alpha-premultiplied interpolated into sixteen in-place frames",
+    "non-destructive PNG masks, ORA, animation previews, manifest, tests and standalone layer viewer"
+  ],
+  "inputs": [
+    {
+      "id": "terrain",
+      "file": "source/grotte_glaciaire_boreale_v1/generation/terrain_magenta.png",
+      "sha256": "4698aa5e6c415abb69398b967035423df3bf0a41c8187131d472039949ac3dcc",
+      "size": [
+        1376,
+        768
+      ]
+    },
+    {
+      "id": "aurora_sheet",
+      "file": "source/grotte_glaciaire_boreale_v1/generation/aurore_8_poses_magenta.png",
+      "sha256": "351ac40a60e4d78c9f389e04295bc5eca94ba1f36675442a3d073fa5eaff8781",
+      "size": [
+        1134,
+        928
+      ]
+    },
+    {
+      "id": "sky",
+      "file": "source/grotte_glaciaire_boreale_v1/generation/ciel_nuit_sans_aurore.png",
+      "sha256": "7a6814b7de5bd5aca68cb83f15d8d597493b3e2885f8b96bc0213a98cbc329e9",
+      "size": [
+        1376,
+        768
+      ]
+    }
+  ],
+  "magenta_extraction": {
+    "terrain_border_pixels_removed": 194382,
+    "method": "chroma candidate plus 4-connected flood fill from the external image border"
+  },
+  "terrain": {
+    "origin": "new complete generated ravine/cave composition, not assembled from map fragments",
+    "normalization": {
+      "source_size": [
+        1376,
+        768
+      ],
+      "render_size": [
+        768,
+        429
+      ],
+      "placement": [
+        0,
+        211
+      ],
+      "uniform_scale": 0.5581395348837209,
+      "method": "uniform nearest-neighbor scale, bottom anchored; open sky intentionally retained above"
+    },
+    "visible_surface_partition_only": true,
+    "layers": [
+      {
+        "id": "02_neige_et_sol",
+        "label": "Neige et sol visibles",
+        "file": "calques/GrotteGlaciaireV1_02_neige_et_sol.png"
+      },
+      {
+        "id": "03_chemin_sud_nord",
+        "label": "Chemin praticable Sud → Nord",
+        "file": "calques/GrotteGlaciaireV1_03_chemin_sud_nord.png"
+      },
+      {
+        "id": "04_grotte_et_seuil",
+        "label": "Vide de la grotte et seuil",
+        "file": "calques/GrotteGlaciaireV1_04_grotte_et_seuil.png"
+      },
+      {
+        "id": "05_falaise_nord",
+        "label": "Falaise nord / couronne",
+        "file": "calques/GrotteGlaciaireV1_05_falaise_nord.png"
+      },
+      {
+        "id": "06_falaise_gauche",
+        "label": "Falaise latérale gauche",
+        "file": "calques/GrotteGlaciaireV1_06_falaise_gauche.png"
+      },
+      {
+        "id": "07_falaise_droite",
+        "label": "Falaise latérale droite",
+        "file": "calques/GrotteGlaciaireV1_07_falaise_droite.png"
+      },
+      {
+        "id": "08_rochers_cristaux_avant",
+        "label": "Rochers et cristaux de premier plan",
+        "file": "calques/GrotteGlaciaireV1_08_rochers_cristaux_avant.png"
+      }
+    ]
+  },
+  "sky": {
+    "origin": "new generated opaque night sky without aurora",
+    "normalization": {
+      "source_size": [
+        1376,
+        768
+      ],
+      "crop_rect": [
+        227,
+        0,
+        1149,
+        768
+      ],
+      "output_size": [
+        768,
+        640
+      ],
+      "scale": 0.8329718004338394,
+      "method": "center crop then uniform nearest-neighbor scale; no anisotropic resize"
+    },
+    "file": "calques/GrotteGlaciaireV1_00_ciel_nuit.png",
+    "animated": false
+  },
+  "aurora": {
+    "origin": "four selected generated poses, interpolated into a new proposed in-place animation; not an official recovered PMD cycle",
+    "sheet_grid": [
+      2,
+      4
+    ],
+    "candidate_poses": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "selected_source_poses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "not_integrated_source_poses": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "selection_reason": "poses 0–3 maintain the same anchored ribbon family; later raw cells have larger silhouette/hue drift and remain archived in the untouched source sheet",
+    "pairwise_iou_raw_poses": [
+      [
+        1.0,
+        0.888504,
+        0.869602,
+        0.840348,
+        0.673139,
+        0.652205,
+        0.526501,
+        0.469627
+      ],
+      [
+        0.888504,
+        1.0,
+        0.825747,
+        0.832314,
+        0.640089,
+        0.627717,
+        0.502496,
+        0.45745
+      ],
+      [
+        0.869602,
+        0.825747,
+        1.0,
+        0.813577,
+        0.644956,
+        0.624435,
+        0.508746,
+        0.469724
+      ],
+      [
+        0.840348,
+        0.832314,
+        0.813577,
+        1.0,
+        0.71603,
+        0.694942,
+        0.566076,
+        0.514433
+      ],
+      [
+        0.673139,
+        0.640089,
+        0.644956,
+        0.71603,
+        1.0,
+        0.855016,
+        0.682987,
+        0.585142
+      ],
+      [
+        0.652205,
+        0.627717,
+        0.624435,
+        0.694942,
+        0.855016,
+        1.0,
+        0.684377,
+        0.583556
+      ],
+      [
+        0.526501,
+        0.502496,
+        0.508746,
+        0.566076,
+        0.682987,
+        0.684377,
+        1.0,
+        0.701672
+      ],
+      [
+        0.469627,
+        0.45745,
+        0.469724,
+        0.514433,
+        0.585142,
+        0.583556,
+        0.701672,
+        1.0
+      ]
+    ],
+    "alignment": [
+      {
+        "source_pose": 0,
+        "centroid_before": [
+          390.817,
+          139.832
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "centroid_after": [
+          390.817,
+          139.832
+        ]
+      },
+      {
+        "source_pose": 1,
+        "centroid_before": [
+          392.174,
+          139.047
+        ],
+        "offset_px": [
+          -1,
+          1
+        ],
+        "centroid_after": [
+          391.174,
+          140.047
+        ]
+      },
+      {
+        "source_pose": 2,
+        "centroid_before": [
+          400.045,
+          140.792
+        ],
+        "offset_px": [
+          -9,
+          -1
+        ],
+        "centroid_after": [
+          392.368,
+          139.62
+        ]
+      },
+      {
+        "source_pose": 3,
+        "centroid_before": [
+          400.715,
+          141.645
+        ],
+        "offset_px": [
+          -10,
+          -2
+        ],
+        "centroid_after": [
+          392.283,
+          139.567
+        ]
+      }
+    ],
+    "frames": 16,
+    "frame_ms": 120,
+    "cycle_ms": 1920,
+    "interpolation": "four intervals × four steps; premultiplied-alpha crossfades, no geometric scroll or wrap",
+    "loop": "virtual frame 16 equals frame 0 exactly",
+    "wrap": false,
+    "placement": [
+      0,
+      0
+    ],
+    "frames_directory": "animation/aurore_frames",
+    "webp": "animation/aurore_16frames.webp"
+  },
+  "path_audit": {
+    "direction": "south to north",
+    "arrival_edge": "south/bottom edge",
+    "target": "ice-cave threshold at north",
+    "minimum_visual_mask_width_px": 71,
+    "route_mask": "masques/GrotteGlaciaireV1_03_chemin_sud_nord.png",
+    "collision": "NOT CONFIGURED — visual continuity is not a PMDO collision test"
+  },
+  "render_order": [
+    "00_ciel_nuit",
+    "01_aurore_phase_00",
+    "02_neige_et_sol",
+    "03_chemin_sud_nord",
+    "04_grotte_et_seuil",
+    "05_falaise_nord",
+    "06_falaise_gauche",
+    "07_falaise_droite",
+    "08_rochers_cristaux_avant"
+  ],
+  "ora": "grotte_glaciaire_boreale_v1.ora",
+  "runtime_PMDO": "NOT TESTED",
+  "art_approved": false,
+  "limits": [
+    "Generated PMD-inspired artwork is not a canonical-native tile extraction.",
+    "Visible-surface layer separation does not reconstruct every hidden cliff backface or interior.",
+    "No Ground, tileset, parallax setup, collision, warp, GPU test or runtime PMDO test is provided."
+  ]
+}
