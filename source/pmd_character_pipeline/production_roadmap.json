@@ -331,5 +331,20 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_onde_boreale_v9": {
+    "request": "Recommencer : 10 frames, chacune sur son propre layer, physique et logique d'onde boréale",
+    "source": "source/onde_boreale_v9/",
+    "viewer": "apercu_onde_boreale_v9.html",
+    "layers": 10,
+    "frame_ms": 160,
+    "cycle_s": 1.6,
+    "physics": "pure transverse wave, per-column vertical shift, travelling phase, 2+5 integer wavelengths, exact 10-frame loop",
+    "context_byte_identical": true,
+    "wrap": false,
+    "dedicated_tests": 10,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }

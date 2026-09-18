@@ -1,0 +1,23 @@
+{
+  "master": {
+    "brut_sha256": "fe400c58ac9165111d5bfbaa55010c54bf21fb17cef5f82e1f1706c6135fd5b2",
+    "extrait": "rideau_master_extrait.png (768x256, plus grande composante, voile interieur rempli, fonds blanc/magenta/lavande retires par composantes, bords demeles contre le fond le plus proche)"
+  },
+  "onde": {
+    "frames": 10,
+    "duree_ms": 160,
+    "cycle_s": 1.6,
+    "physique": "onde transversale : deplacement STRICTEMENT vertical de chaque colonne, phase voyageant horizontalement ; train principal 2 longueurs d'onde (amplitude 12 px) + secondaire 5 longueurs d'onde (5 px), enveloppe de bord 48 px",
+    "boucle": "phases a periodes entieres en x et t : frame 10 = frame 0 exactement",
+    "layers": "chaque frame est un calque independant couches/OndeBorealeV9_frame_XX.png (768x256 RGBA)"
+  },
+  "contexte": {
+    "ciel": "V3+V8 byte-identique",
+    "glace": "V8 byte-identique",
+    "terrain": "V3 (AreneLargeV3_02_sol_visible) byte-identique"
+  },
+  "wrap": false,
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cycle_officiel": "INCONNU : onde dessinee et cadencee par nous, pas le cycle du jeu"
+}
