@@ -1,0 +1,35 @@
+{
+  "type": "descriptive_recipe_not_native_engine_file",
+  "canvas": [
+    648,
+    504
+  ],
+  "order": [
+    "00_ciel_pmd",
+    "00b_etoiles",
+    "01_nuages_wrap",
+    "02_eau_mer_port",
+    "03_ecume_rivage",
+    "04_sol_sable_complet",
+    "05_sol_sable_visible",
+    "06_acces_sud",
+    "07_falaises_rouges_arriere",
+    "08_falaises_rouges_gauche",
+    "09_falaises_rouges_droite",
+    "10_rochers_arriere_plan",
+    "11_rochers_avant_plan",
+    "12_ombres_contact"
+  ],
+  "water_animation": {
+    "frames": 30,
+    "frame_duration_ms": 130,
+    "loop_ms": 3900,
+    "origin": "D25 Port canonical palette cycling"
+  },
+  "clouds_wrap": {
+    "velocity_px_per_second": 166.15,
+    "repeat_x": true,
+    "period_frames": 30
+  },
+  "note": "Chaque élément est sur son propre calque indépendant. Le sol complet sous-jacent prévient tout trou de rendu."
+}

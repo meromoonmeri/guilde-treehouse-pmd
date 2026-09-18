@@ -1,0 +1,123 @@
+{
+  "version": "ArenePlageMulticalquesV3",
+  "title": "Arène de Plage Multicalques V3 — PMD Sky Port Water & 14 Independent Layers",
+  "dimensions": [
+    648,
+    504
+  ],
+  "grid_unit": 8,
+  "frame_count": 30,
+  "frame_duration_ms": 130,
+  "loop_duration_ms": 3900,
+  "sources": [
+    {
+      "file": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+      "type": "PMD Sky Port Canonical Water Animation (30 frames, 130 ms)"
+    },
+    {
+      "file": "arenapmdskybeach.png",
+      "type": "PMD Sky Beach Arena Master Textures"
+    },
+    {
+      "file": "renders/arene_plage_multicalques_v3/bruts/terrain_magenta.png",
+      "type": "Raw Generated Beach Terrain on Magenta"
+    },
+    {
+      "file": "renders/arene_plage_multicalques_v3/bruts/sol_complet.png",
+      "type": "Raw Generated Underlying Sand Floor"
+    }
+  ],
+  "layers": [
+    {
+      "id": "00_ciel_pmd",
+      "name": "Ciel lointain PMD Sky",
+      "file_day": "calques/ArenePlageV3_00_ciel_pmd_jour.png",
+      "file_night": "calques/ArenePlageV3_00_ciel_pmd_nuit.png"
+    },
+    {
+      "id": "00b_etoiles",
+      "name": "Étoiles nocturnes isolées",
+      "file_day": "calques/ArenePlageV3_00b_etoiles.png",
+      "file_night": "calques/ArenePlageV3_00b_etoiles.png"
+    },
+    {
+      "id": "01_nuages_wrap",
+      "name": "Nuages en wrap horizontal (30 frames)",
+      "file_day": "calques/ArenePlageV3_01_nuages_wrap_jour.png",
+      "file_night": "calques/ArenePlageV3_01_nuages_wrap_nuit.png"
+    },
+    {
+      "id": "02_eau_mer_port",
+      "name": "Eau de mer animée Port D25 (30 frames)",
+      "file_day": "calques/ArenePlageV3_02_eau_mer_port_jour.png",
+      "file_night": "calques/ArenePlageV3_02_eau_mer_port_nuit.png"
+    },
+    {
+      "id": "03_ecume_rivage",
+      "name": "Écume et ressac du rivage",
+      "file_day": "calques/ArenePlageV3_03_ecume_rivage_jour.png",
+      "file_night": "calques/ArenePlageV3_03_ecume_rivage_nuit.png"
+    },
+    {
+      "id": "04_sol_sable_complet",
+      "name": "Sous-sol continu de sable (underlay)",
+      "file_day": "calques/ArenePlageV3_04_sol_sable_complet_jour.png",
+      "file_night": "calques/ArenePlageV3_04_sol_sable_complet_nuit.png"
+    },
+    {
+      "id": "05_sol_sable_visible",
+      "name": "Arène de sable centrale dégagée",
+      "file_day": "calques/ArenePlageV3_05_sol_sable_visible_jour.png",
+      "file_night": "calques/ArenePlageV3_05_sol_sable_visible_nuit.png"
+    },
+    {
+      "id": "06_acces_sud",
+      "name": "Approche et chemin sud praticable",
+      "file_day": "calques/ArenePlageV3_06_acces_sud_jour.png",
+      "file_night": "calques/ArenePlageV3_06_acces_sud_nuit.png"
+    },
+    {
+      "id": "07_falaises_rouges_arriere",
+      "name": "Falaises rouges d’arrière-plan et arche",
+      "file_day": "calques/ArenePlageV3_07_falaises_rouges_arriere_jour.png",
+      "file_night": "calques/ArenePlageV3_07_falaises_rouges_arriere_nuit.png"
+    },
+    {
+      "id": "08_falaises_rouges_gauche",
+      "name": "Massif rocheux flanc ouest (gauche)",
+      "file_day": "calques/ArenePlageV3_08_falaises_rouges_gauche_jour.png",
+      "file_night": "calques/ArenePlageV3_08_falaises_rouges_gauche_nuit.png"
+    },
+    {
+      "id": "09_falaises_rouges_droite",
+      "name": "Massif rocheux flanc est (droit)",
+      "file_day": "calques/ArenePlageV3_09_falaises_rouges_droite_jour.png",
+      "file_night": "calques/ArenePlageV3_09_falaises_rouges_droite_nuit.png"
+    },
+    {
+      "id": "10_rochers_arriere_plan",
+      "name": "Récifs côtiers de mi-plan (rivage)",
+      "file_day": "calques/ArenePlageV3_10_rochers_arriere_plan_jour.png",
+      "file_night": "calques/ArenePlageV3_10_rochers_arriere_plan_nuit.png"
+    },
+    {
+      "id": "11_rochers_avant_plan",
+      "name": "Récifs rocheux de premier plan",
+      "file_day": "calques/ArenePlageV3_11_rochers_avant_plan_jour.png",
+      "file_night": "calques/ArenePlageV3_11_rochers_avant_plan_nuit.png"
+    },
+    {
+      "id": "12_ombres_contact",
+      "name": "Ombres de contact portées au sol",
+      "file_day": "calques/ArenePlageV3_12_ombres_contact_jour.png",
+      "file_night": "calques/ArenePlageV3_12_ombres_contact_nuit.png"
+    }
+  ],
+  "timing": {
+    "frames": 30,
+    "fps": 7.6923076923076925,
+    "frame_ms": 130,
+    "loop_ms": 3900
+  },
+  "night_grading": "Abyss V4 luminance weighting"
+}
