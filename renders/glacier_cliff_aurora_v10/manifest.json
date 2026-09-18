@@ -1,0 +1,61 @@
+{
+  "schema": "glacier_cliff_aurora_clearing_ice_cliff_snow_forest_sky_v10",
+  "generated_with_image_generator": true,
+  "layout_reference": "renders/glacier_cliff_aurora_v9/clairiere_lisiere_foret_montagnes_aurore.png",
+  "roles": [
+    "open_snow_clearing",
+    "ice_cliff_edge",
+    "snow_forest_below",
+    "distant_mountains",
+    "sky_moon_clouds_canonical_aurora"
+  ],
+  "references": [
+    {
+      "path": "renders/glacier_cliff_aurora_v9/clairiere_lisiere_foret_montagnes_aurore.png",
+      "sha256": "7fbed4f855e94b9a1228ee2cd96f5983d895de6edcfda58b4a61f8373ef369ee"
+    },
+    {
+      "path": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "path": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    },
+    {
+      "path": "source/references_54d3731/snow.png",
+      "sha256": "414fb254959ca49c82a5cf0572de9b1f7c4b702a115596e6233ef4d95889ab79"
+    },
+    {
+      "path": "bgnightbackgroundpmdskyda.png",
+      "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+    },
+    {
+      "path": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "path": "source/paysage_reference/nuit_03_nuages.png",
+      "sha256": "bcdd6b1725332cba2f51db41d2bd9a6ae9d914ebfb86fd619059620412a9b82e"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "renders/glacier_cliff_aurora_v10/layers/01_sky_moon_clouds_aurora_magenta.png",
+      "sha256": "2f61a9804ee646fee20283de2deff5a99abecaca14d32dc03722da1fd241ac06",
+      "size": [
+        1264,
+        843
+      ]
+    },
+    {
+      "path": "renders/glacier_cliff_aurora_v10/final_clairiere_falaise_glace_foret_sky.png",
+      "sha256": "00d1c2b9e94c6ddc168a579a1b6ac161fa370ef57a583b880aa62e2ce7bdd4bd",
+      "size": [
+        1264,
+        843
+      ]
+    }
+  ],
+  "native_pmdo_import": false
+}
