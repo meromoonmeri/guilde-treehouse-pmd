@@ -146,7 +146,9 @@
         "source_to_ground_coordinates_identical": 2169
       }
     ],
-    "interpretation": "Native 8px cells and direct source-to-map coordinates; no source-cell magnification present in these original terrain layers."
+    "interpretation": "Native 8px cells and direct source-to-map coordinates; no source-cell magnification present in these original terrain layers.",
+    "re_measured": false,
+    "re_measurement_note": "Reference .rsground absent at the expected path in this environment; these are the recorded measurements carried over unchanged, not a fresh read."
   },
   "code_findings": {
     "native_grid_is_not_a_complete_cliff_module": true,

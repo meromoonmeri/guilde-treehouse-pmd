@@ -2,4 +2,6 @@ Pillow
 numpy
 scipy
 opencv-python-headless
+# Les suites de contrôle (source/**/test_*.py) tournent sous pytest : voir pytest.ini
+pytest
 # Pour vérifier le navigateur : playwright

@@ -35,7 +35,21 @@ if p.exists():
         assert used==direct
         layers.append({'name':l['Name'],'grid':[len(l['Tiles']),len(l['Tiles'][0])],'placed_cells':used,'source_to_ground_coordinates_identical':direct})
     report['original_ground']={'blob':blob,'TexSize':ground['TexSize'],'layers':layers,'interpretation':'Native 8px cells and direct source-to-map coordinates; no source-cell magnification present in these original terrain layers.'}
-else:report['original_ground']={'available':False}
+else:
+    # The reference Ground lives outside the repo, so a fresh sandbox may not have
+    # it. Never downgrade a measurement already recorded in the tracked report:
+    # carry it over, flagged as not re-read, instead of writing available:false.
+    previous={}
+    if (D/'mesures.json').exists():
+        try:previous=json.loads((D/'mesures.json').read_text())
+        except Exception:previous={}
+    carried=previous.get('original_ground') or {}
+    if carried.get('available') is False or 'blob' not in carried:
+        report['original_ground']={'available':False}
+    else:
+        report['original_ground']=dict(carried)
+        report['original_ground']['re_measured']=False
+        report['original_ground']['re_measurement_note']='Reference .rsground absent at the expected path in this environment; these are the recorded measurements carried over unchanged, not a fresh read.'
 for z in M['zones']:
     folder=O/z['id'];tm=json.loads((folder/'eau.tmj').read_text());ids=tm['layers'][1]['data'];hmap={g:source_sig(g) for g in set(ids)-{0}}
     totals=[0,0];missing=[0,0]

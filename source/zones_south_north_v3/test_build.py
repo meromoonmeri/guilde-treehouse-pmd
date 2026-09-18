@@ -1,9 +1,10 @@
-import unittest,json,hashlib,subprocess,xml.etree.ElementTree as ET
+import unittest,json,hashlib,sys,xml.etree.ElementTree as ET
 from pathlib import Path
 import numpy as np
 from scipy import ndimage as nd
 from PIL import Image
 R=Path(__file__).resolve().parents[2];O=R/'exports/zones_south_north_v3'
+sys.path.insert(0,str(R/'source'));import git_provenance
 class SouthNorthTests(unittest.TestCase):
  def setUp(self):self.m=json.loads((O/'manifest.json').read_text())
  def test_two_south_north_maps(self):
@@ -27,12 +28,15 @@ class SouthNorthTests(unittest.TestCase):
   # The manifest sha256 values were recorded from the pinned historical commit,
   # so hash equality alone proves identity. The extra byte-for-byte comparison
   # against `git show 438b9288:<file>` only runs when that object is reachable;
-  # shallow or squashed checkouts (where it is absent) keep the hash check.
-  pinned='438b9288'
-  reachable=subprocess.run(['git','cat-file','-e',pinned+'^{commit}'],cwd=R,stderr=subprocess.DEVNULL).returncode==0
+  # shallow or squashed checkouts (where it is absent) keep the hash check and
+  # report the gap as a skip instead of passing silently.
+  missing=[]
   for s in self.m['sources']:
    raw=(R/s['file']).read_bytes();self.assertEqual(hashlib.sha256(raw).hexdigest(),s['sha256'])
-   if reachable:self.assertEqual(raw,subprocess.check_output(['git','show',pinned+':'+s['file']],cwd=R))
+   blob=git_provenance.pinned_blob('438b9288',s['file'],R)
+   if blob is None: missing.append(s['file']);continue
+   self.assertEqual(raw,blob)
+  if missing: self.skipTest(f"pinned commit 438b9288 not in this checkout (shallow); hash-vs-manifest checked, blob comparison skipped for {len(missing)}/{len(self.m['sources'])} sources")
  def test_composite_rebuild_and_alpha(self):
   for m in self.m['maps']:
    c=Image.new('RGBA',tuple(m['size']))
