@@ -1,0 +1,28 @@
+{
+  "scope": "Generator-guided decomposition of the V1 guide into 5 layers (terrain/bordure/cliff/ciel/boreal); composite equals the reference. Aurora animated (hue cycle + slight undulation). Geometry not regenerated.",
+  "source": "source/ice_arena_aurora_v1/generation/layout_guide.png",
+  "source_sha256": "26b423434fc1292fb337239e99e0d1b633afb05e34d9e5499617e0761148f47f",
+  "mask": "source/ice_arena_multicalques_v2/generation/layer_masks_guide.png",
+  "layers": [
+    "ciel",
+    "boreal",
+    "terrain",
+    "bordure",
+    "cliff"
+  ],
+  "frames": 24,
+  "frame_ms": 120,
+  "hue_turns": 1,
+  "wave_amplitude_px": 2,
+  "wave_periods": 2,
+  "layer_pixel_counts": {
+    "ciel": 199955,
+    "boreal": 23150,
+    "terrain": 385883,
+    "bordure": 79760,
+    "cliff": 380308
+  },
+  "reconstruction_exact": true,
+  "art_approved": false,
+  "runtime_PMDO": "NOT TESTED"
+}
