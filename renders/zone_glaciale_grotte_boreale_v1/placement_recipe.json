@@ -1,0 +1,29 @@
+{
+  "type": "descriptive render placement, not a PMDO file",
+  "canvas_px": [
+    1264,
+    1008
+  ],
+  "order_bottom_to_top": [
+    "00_ciel_nuit",
+    "00b_etoiles",
+    "00c_aurore_frame_xx",
+    "01_sol_reconstitue",
+    "02_sol_vallee_visible",
+    "03_chemin_sud_nord",
+    "04_falaise_nord_glace",
+    "05_falaises_laterales",
+    "06_encadrement_grotte",
+    "07_obscurite_grotte",
+    "08_cristaux_rochers_avant"
+  ],
+  "animation": {
+    "frames": 16,
+    "frame_ms": 100,
+    "loop": true,
+    "scroll": false,
+    "wrap": false
+  },
+  "route": "centre sud (632,1007) vers seuil de grotte nord (632,548)",
+  "note": "Configurer colliders, occlusion et warp dans le moteur cible; le masque de corridor est uniquement un contrôle de composition."
+}

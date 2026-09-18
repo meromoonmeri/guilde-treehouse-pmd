@@ -1,0 +1,393 @@
+{
+  "status": "PASS",
+  "canvas_px": [
+    1264,
+    1008
+  ],
+  "grid_px": 8,
+  "animation": {
+    "frames": 16,
+    "frame_ms": 100,
+    "duration_s": 1.6
+  },
+  "checks": [
+    {
+      "name": "canevas déclaré",
+      "pass": true,
+      "actual": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "canevas divisible par la grille",
+      "pass": true,
+      "grid": 8,
+      "cells": [
+        158,
+        126
+      ]
+    },
+    {
+      "name": "cellules déclarées",
+      "pass": true,
+      "actual": [
+        158,
+        126
+      ]
+    },
+    {
+      "name": "provenance des trois bruts",
+      "pass": true,
+      "sources": [
+        "renders/zone_glaciale_grotte_boreale_v1/bruts/aurore_ruban_magenta.png",
+        "renders/zone_glaciale_grotte_boreale_v1/bruts/ciel_nuit_sans_boreale.png",
+        "renders/zone_glaciale_grotte_boreale_v1/bruts/terrain_grotte_glace_magenta.png"
+      ]
+    },
+    {
+      "name": "hash brut terrain_grotte_glace_magenta.png",
+      "pass": true,
+      "sha256": "9b8ffa233f93a8d83033a9d29f8dd5469e865cc69c14e999f03b3a058040e068"
+    },
+    {
+      "name": "hash brut ciel_nuit_sans_boreale.png",
+      "pass": true,
+      "sha256": "0365cc858865c549ecfb086d8a20d257331b721be36212c4d242311c1458fbf8"
+    },
+    {
+      "name": "hash brut aurore_ruban_magenta.png",
+      "pass": true,
+      "sha256": "ebeb0a73e67088c29cfe2697453aa1444c7eb2d7c306a6e8cc0e9bd96330e94c"
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_00_ciel_nuit.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_00b_etoiles.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_01_sol_reconstitue.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_02_sol_vallee_visible.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_03_chemin_sud_nord.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_04_falaise_nord_glace.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_05_falaises_laterales.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_06_encadrement_grotte.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_07_obscurite_grotte.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_08_cristaux_rochers_avant.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "les 16 calques d'aurore existent",
+      "pass": true,
+      "frames": 16
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_00.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_01.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_02.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_03.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_04.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_05.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_06.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_07.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_08.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_09.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_10.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_11.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_12.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_13.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_14.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "dimension ZoneGlacialeV1_Aurore_15.png",
+      "pass": true,
+      "size": [
+        1264,
+        1008
+      ]
+    },
+    {
+      "name": "pixels terrain conservés après détourage",
+      "pass": true,
+      "retained_pixels": 923546
+    },
+    {
+      "name": "partition/recomposition terrain exacte",
+      "pass": true,
+      "layers": 7
+    },
+    {
+      "name": "corridor géométrique continu sud→grotte",
+      "pass": true,
+      "start": [
+        632,
+        1007
+      ],
+      "goal": [
+        632,
+        548
+      ],
+      "components": 1
+    },
+    {
+      "name": "frame 0 issue des indices/palette",
+      "pass": true
+    },
+    {
+      "name": "fermeture mathématique frame 16 = frame 0",
+      "pass": true
+    },
+    {
+      "name": "onde non rigide entre frames 0 et 4",
+      "pass": true,
+      "alpha_iou": 0.843257
+    },
+    {
+      "name": "animation contient des phases distinctes",
+      "pass": true
+    },
+    {
+      "name": "aurore source indexée",
+      "pass": true,
+      "mode": "P"
+    },
+    {
+      "name": "alpha de l'asset auroral aligné",
+      "pass": true,
+      "size": [
+        1264,
+        600
+      ]
+    },
+    {
+      "name": "aucun magenta de fond dans l'aurore",
+      "pass": true,
+      "per_frame": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "recomposition exacte de la scène phase 0",
+      "pass": true
+    },
+    {
+      "name": "WebP animé",
+      "pass": true,
+      "frames": 16
+    },
+    {
+      "name": "GIF aurore animé",
+      "pass": true,
+      "frames": 16
+    },
+    {
+      "name": "GIF scène animé",
+      "pass": true,
+      "frames": 16
+    },
+    {
+      "name": "ORA mimetype",
+      "pass": true
+    },
+    {
+      "name": "ORA contient 11 calques",
+      "pass": true
+    },
+    {
+      "name": "ORA étiquette ses calques",
+      "pass": true
+    },
+    {
+      "name": "viewer autonome embarqué",
+      "pass": true
+    },
+    {
+      "name": "syntaxe JavaScript viewer",
+      "pass": true,
+      "node": "--check PASS"
+    }
+  ],
+  "scope": "contrôles de fichiers et de recomposition; ni revue artistique ni import/runtime PMDO"
+}
