@@ -1,0 +1,30 @@
+{
+  "planche": {
+    "brut_sha256": "fe101e48821275e806114b12b39ee13ecc090b103bef6010332c14ab96470eae",
+    "generee_avec": [
+      "aurorepmdsky.png (texture canonique)",
+      "notre ciel V3 (harmonisation)"
+    ],
+    "poses_dessinees": 8,
+    "grille_reelle": [
+      2,
+      4
+    ]
+  },
+  "extraction": "magenta de bord et panneau navy cuits retires ; rubans lumineux (sat/lum), petites composantes enlevees, demelage magenta, recadrage, calque 768x300 centre, bords fondus",
+  "suite": {
+    "etapes": 16,
+    "poses": 8,
+    "fondus": "50 % entre poses adjacentes (etapes impaires)",
+    "duree_ms": 120,
+    "cycle_s": 1.92,
+    "subtilite": "seuls coeurs/shimmer/franges varient ; positions de rubans identiques",
+    "boucle": "exacte : 16 etapes periodiques, etape 16 = etape 0"
+  },
+  "pose_scena": "calque pose une fois a (0,0) sur 768x512 entre ciel V3+etoiles et glace V8+terrain V3",
+  "contexte": "V3/V8 byte-identiques",
+  "wrap": false,
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cycle_officiel": "INCONNU : suite dessinee et cadencee par nous"
+}

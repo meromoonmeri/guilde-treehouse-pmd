@@ -362,5 +362,22 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_boreale_suite_generee_v11": {
+    "request": "Passer les boréals dans le générateur : suite d'animation subtile sur son propre layer, à poser sur notre ciel de zone",
+    "source": "source/boreales_suite_generee_v11/",
+    "viewer": "apercu_boreale_suite_generee_v11.html",
+    "generation": "8 poses with canonical texture + our zone sky as references, subtle core/shimmer motion, locked positions",
+    "extraction": "geometric flood-fill background removal; navy interior kept as harmonised veil; magenta cracks transparent",
+    "etapes": 16,
+    "duree_ms": 120,
+    "cycle_s": 1.92,
+    "own_layer": true,
+    "context_byte_identical": true,
+    "wrap": false,
+    "dedicated_tests": 9,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }

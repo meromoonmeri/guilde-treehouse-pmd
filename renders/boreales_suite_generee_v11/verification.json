@@ -1,0 +1,16 @@
+{
+  "dedicated_tests_passed": 9,
+  "poses": 8,
+  "etapes": 16,
+  "duree_ms": 120,
+  "cycle_s": 1.92,
+  "generation": "canonical texture + our zone sky as references, subtle suite, locked positions",
+  "extraction": "geometric flood-fill background removal (colour-distance fails: hearts too close to bg magenta)",
+  "own_layer_no_baked_sky": true,
+  "context_byte_identical": true,
+  "wrap": false,
+  "JS_syntax": "PASS",
+  "interactive_browser": "NOT TESTED",
+  "PMDO_runtime": "NOT TESTED",
+  "native_cycle_extracted": false
+}
