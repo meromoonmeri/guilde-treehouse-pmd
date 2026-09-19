@@ -409,6 +409,10 @@ Utilisateur : « Les layer sont pas exactement celui de la référence / Tu dois
 
 Utilisateur : « méthode canonique de création de map avec le générateur + animations boréal en plusieurs frames d'ondulation + convertir la zone aux critères de Halcyon Palika ». Terrain généré plein cadre 928×1152 (bande magenta), alpha par inondation (pointes de pics dépassant dans la bande = terrain légitime, zéro magenta résiduel — ne pas exiger top transparent). Planche 2×4 d'ondulations générée → 8 frames AuroreV15_00..07.png strictement 768×256, 150 ms, posées à (80,24) sur grille 8 px. Calques Halcyon empilés : ciel navy uniforme / étoiles V14 / aurore / terrain, sans wrap. Sources `source/arene_halcyon_v15/`, rendus/ZIP `renders/arene_halcyon_v15*`, aperçu racine `apercu_arene_halcyon_v15.html`. 8 tests PASS. NB : np.any(mask!=mask, axis=2) plante sur tableaux 2D — comparer directement.
 
+## Entrée forêt Sinister Woods V1 — générateur imposé, 7 calques
+
+Utilisateur : « Tu vas utiliser ton générateur dimage » (interrompt la piste relayout natif, conservée inachevée dans `source/sinister_woods_entry_v1/` + `exports/sinister_woods_entry_v1/`). Nouvelle entrée indépendante : textures inventées DA PMD autorisées, pas contrainte Métano/native. 2 générations fond magenta : terrain forêt sombre (chemin sud→bosquet nord) + avant-plan (troncs/feuillages). Canvas commun 656×1376 (÷8) par crop, jamais d'étirement. Keying magenta par region growing + despill (frange 1px sinon) ; zéro magenta résiduel testé. Découpe : sol reconstitué (échantillonnage same-image, pas sol caché d'origine), chemin (teinte olive-tan LUM>110 + seuil vers grotte), 32 rochers, arbres G/D (plans latéraux hors corridor chemin+44px ; racines du corridor restent au sol), grotte sombre, avant-plan. Sources `source/sinister_woods_gen_v1/`, rendus/ZIP `renders/sinister_woods_gen_v1*`, aperçu racine `apercu_sinister_woods_v1.html`. 32 tests PASS (recomposition exacte, disjointure, connectivité sud→grotte, travée 72px). Proposition générée : PAS tuiles natives, PAS approbation artistique, PAS test PMDO.
+
 ## Entree foret Sinister Woods — rendu genere impose (19 septembre 2026)
 
 Utilisateur : « une entree de foret style sinister wood avec des arbre etc », puis
@@ -429,3 +433,11 @@ PAS tuiles natives, aucun test PMDO. Tentative native interrompue conservee
 avec statut (`source/sinister_woods_entry_v1/STATUS.md`), non livrable.
 NB : ne jamais batcher plusieurs edit_file sur le MEME fichier (ecrasements ;
 un seul survit). Sandbox reset .venv reconstruite (pillow numpy scipy).
+
+## Fusion 19 septembre 2026 — deux variantes Sinister Woods conservees
+
+Deux commits freres (4369a7f4 partition 1408x768/45 tests, dfc3614c terrain+FG
+656x1376/32 tests) fusionnes sans ecrasement : galeries `apercu_sinister_woods_gen_v1.html`
+et `apercu_sinister_woods_v1.html`, scripts B deplaces vers
+`source/sinister_woods_terrain_fg_v1/`, ZIP B renomme
+`renders/sinister_woods_v1_terrain_fg_pack.zip`, README combine.

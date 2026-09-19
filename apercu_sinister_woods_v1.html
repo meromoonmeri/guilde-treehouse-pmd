@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sinister Woods — entrée de forêt générée v1 (7 calques)</title>
+<style>
+body{background:#14161c;color:#cfd3e0;font-family:sans-serif;margin:0;padding:16px}
+h1{font-size:20px} .warn{color:#f0b429;font-size:13px}
+#ctrl{position:sticky;top:0;background:#1d2029;padding:10px;border-radius:8px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+label{font-size:13px;white-space:nowrap} button{cursor:pointer}
+#stage{margin-top:12px;overflow:auto;border:1px solid #333;border-radius:8px;background:#0c0d12}
+canvas{image-rendering:pixelated;display:block;margin:0 auto}
+</style>
+</head>
+<body>
+<h1>Entrée de forêt style Sinister Woods — v1 (générateur, 7 calques)</h1>
+<p class="warn">Proposition générée dans la DA PMD — PAS des tuiles natives, ni approbation artistique, ni test PMDO. Arrivée sud → bosquet sombre au nord. Canvas 656×1376 (÷8).</p>
+<div id="ctrl">
+<label><input type="checkbox" data-l="0" checked> 01 sol</label>
+<label><input type="checkbox" data-l="1" checked> 02 chemin</label>
+<label><input type="checkbox" data-l="2" checked> 03 rochers</label>
+<label><input type="checkbox" data-l="3" checked> 04 arbres gauche</label>
+<label><input type="checkbox" data-l="4" checked> 05 arbres droit</label>
+<label><input type="checkbox" data-l="5" checked> 06 grotte</label>
+<label><input type="checkbox" data-l="6" checked> 07 avant-plan</label>
+<label><input type="checkbox" id="grid"> grille 8px</label>
+<button id="z05">0.5×</button><button id="z1">1×</button><button id="z2">2×</button>
+<button id="iso">isoler: aucun</button>
+</div>
+<div id="stage"><canvas id="cv" width="656" height="1376"></canvas></div>
+<script>
+const FILES=["01_sol.png","02_chemin.png","03_rochers.png","04_arbres_gauche.png","05_arbres_droit.png","06_grotte.png","07_avant_plan.png"];
+const BASE="renders/sinister_woods_gen_v1/layers/";
+const imgs=FILES.map(f=>{const i=new Image();i.src=BASE+f;return i;});
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+let zoom=0.5,iso=-1;
+const boxes=[...document.querySelectorAll("[data-l]")];
+function draw(){
+  ctx.imageSmoothingEnabled=false;
+  ctx.clearRect(0,0,656,1376);
+  boxes.forEach((b,i)=>{ if(iso>=0?i===iso:b.checked) ctx.drawImage(imgs[i],0,0); });
+  if(document.getElementById("grid").checked){
+    ctx.strokeStyle="rgba(255,0,255,.35)";ctx.lineWidth=1/zoom;ctx.beginPath();
+    for(let x=0;x<=656;x+=8){ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,1376);}
+    for(let y=0;y<=1376;y+=8){ctx.moveTo(0,y+.5);ctx.lineTo(656,y+.5);}
+    ctx.stroke();
+  }
+  cv.style.width=656*zoom+"px";cv.style.height=1376*zoom+"px";
+}
+let loaded=0;imgs.forEach(i=>{i.onload=()=>{if(++loaded===7)draw();};});
+boxes.forEach(b=>b.onchange=draw);
+document.getElementById("grid").onchange=draw;
+document.getElementById("z05").onclick=()=>{zoom=0.5;draw();};
+document.getElementById("z1").onclick=()=>{zoom=1;draw();};
+document.getElementById("z2").onclick=()=>{zoom=2;draw();};
+document.getElementById("iso").onclick=e=>{iso=iso>=6?-1:iso+1;e.target.textContent="isoler: "+(iso<0?"aucun":FILES[iso]);draw();};
+</script>
+</body>
+</html>
