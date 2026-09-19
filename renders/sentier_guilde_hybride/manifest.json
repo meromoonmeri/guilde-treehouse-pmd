@@ -1,5 +1,5 @@
 {
-  "title": "Sentier de la Guilde Hybride (PMDO audinowho)",
+  "title": "Sentier de la Guilde Hybride — Layout d'origine retexturé",
   "source_map": "audinowho/DumpAsset/Data/Ground/guild_path.rsground",
   "source_tileset": "audinowho/DumpAsset/Content/Tile/GuildPath.tile",
   "dimensions_px": [
@@ -17,20 +17,20 @@
   "materials": {
     "path_sand": {
       "name": "Sable de Treasure Town Beach",
-      "source": "Beach & Path to Beach.png",
-      "palette_colors": 42,
+      "source": "beach_sand_bank.png (Beach & Path to Beach)",
+      "palette_colors": 67,
       "pixels": 63877
     },
     "meadow_grass": {
       "name": "Verdure de Sky Peak",
-      "source": "SkyPeak4thPass.png",
-      "palette_colors": 19,
+      "source": "skypeak_grass_bank.png (SkyPeak4thPass)",
+      "palette_colors": 14,
       "pixels": 109941
     },
     "canopy_tree": {
       "name": "Verdure de Métano Town Tree",
-      "source": "TownBase.png",
-      "palette_colors": 55,
+      "source": "metano_tree_leaves_bank.png (TownBase)",
+      "palette_colors": 41,
       "pixels": 129734
     },
     "flowers": {

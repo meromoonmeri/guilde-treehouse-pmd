@@ -74,21 +74,18 @@ def main():
     recomposed.alpha_composite(l4_im)
     assert recomposed.tobytes() == terrain_im.tobytes(), "Recomposed layers do not match terrain.png!"
 
-    # 5. Check palettes
-    beach_im = Image.open(HERE / 'sources/crop_path_beach.png')
-    b_arr = np.array(beach_im)
-    b_sand = (b_arr[:, :, 0] > 160) & (b_arr[:, :, 1] > 110) & (b_arr[:, :, 2] > 60) & (b_arr[:, :, 0] > b_arr[:, :, 2] + 40)
-    b_set = {tuple(c) for c in np.unique(b_arr[b_sand, :3], axis=0).tolist()}
+    # 5. Check palettes against canonical banks
+    beach_bank = Image.open(HERE / 'sources/beach_sand_bank.png')
+    b_cols = np.unique(np.array(beach_bank).reshape(-1, 3), axis=0)
+    b_set = {tuple(c) for c in b_cols.tolist()}
 
-    skypeak_im = Image.open(HERE / 'sources/SkyPeak4thPass.png')
-    sp_arr = np.array(skypeak_im)
-    sp_grass = (sp_arr[:, :, 1] > sp_arr[:, :, 0] + 15) & (sp_arr[:, :, 1] > sp_arr[:, :, 2] * 1.4) & (sp_arr[:, :, 3] == 255)
-    sp_set = {tuple(c) for c in np.unique(sp_arr[sp_grass, :3], axis=0).tolist()}
+    sp_bank = Image.open(HERE / 'sources/skypeak_grass_bank.png')
+    sp_cols = np.unique(np.array(sp_bank).reshape(-1, 3), axis=0)
+    sp_set = {tuple(c) for c in sp_cols.tolist()}
 
-    town_im = Image.open(HERE / 'sources/TownBase.png')
-    mt_arr = np.array(town_im)
-    mt_leaves = (mt_arr[:, :, 1] > mt_arr[:, :, 0] + 15) & (mt_arr[:, :, 1] > mt_arr[:, :, 2] + 25) & (mt_arr[:, :, 3] == 255)
-    mt_set = {tuple(c) for c in np.unique(mt_arr[mt_leaves, :3], axis=0).tolist()}
+    tree_bank = Image.open(HERE / 'sources/metano_tree_leaves_bank.png')
+    mt_cols = np.unique(np.array(tree_bank).reshape(-1, 3), axis=0)
+    mt_set = {tuple(c) for c in mt_cols.tolist()}
 
     u1 = np.unique(np.array(l1_im)[a1, :3], axis=0)
     u2 = np.unique(np.array(l2_im)[a2, :3], axis=0)
