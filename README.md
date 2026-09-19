@@ -52,6 +52,7 @@ Copier le dossier `metano_expeditions` dans `MODS`, puis lancer `OUVRIR_EDITEUR.
 
 - **[Manuel détaillé des méthodes PMDO](MANUEL_METHODE_PMDO.md)** — ressources natives, layouts, échelle, calques, filtre Abyss, animations, formats, installation, tests et limites.
 - **[Fiche de synthèse : méthode de production des maps (générateur + pipeline natif)](METHODE_PRODUCTION_MAPS.md)** — les sept étapes, les deux régimes Métano / nouvelles entrées, les commandes d’audit vérifiées et les limites, avec les chemins réels du dépôt.
+- [Revue mesurée des optimisations proposées pour `build_zones_guidees.py`](source/revue_optimisations_zones_guidees/REVUE.md) — poids de raccord, voisinage 4 directions, lisière, variation des intérieurs, nommage, validation : chiffres sur les deux zones réelles, rien d’appliqué.
 - [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le lot de sept falaises et trois entrées désormais livré ci-dessus. Moteur installé ; éditeur graphique encore en échec dans cet environnement.
 
 
