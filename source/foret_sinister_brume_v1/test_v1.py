@@ -87,7 +87,7 @@ if os.path.exists(os.path.join(REN, "SinisterGenV1.ora")):
     z = zipfile.ZipFile(os.path.join(REN, "SinisterGenV1.ora"))
     names = z.namelist()
     check("ora_content", "stack.xml" in names and sum(n.startswith("data/") for n in names) == 8, str(len(names)))
-check("gallery", os.path.exists(os.path.join(ROOT, "apercu_foret_sinister_v1.html")))
+check("gallery", os.path.exists(os.path.join(ROOT, "apercu_foret_sinister_brume_v1.html")))
 check("zip", os.path.exists(os.path.join(ROOT, "renders", "foret_sinister_brume_v1_pack.zip")))
 
 print("ALL %d PASS" % len(passed))
