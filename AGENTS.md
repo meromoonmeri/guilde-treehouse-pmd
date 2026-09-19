@@ -88,21 +88,17 @@ marqueurs), sans GPU. L’éditeur graphique reste en échec ; ne pas confondre
 ce résultat avec un test de rendu, de collisions en mouvement ou de gameplay.
 Le manuel exhaustif est `MANUEL_METHODE_PMDO.md`, complété par la notice du lot.
 
-
 ## V6 — demande de repassage des zones et calques forêt/grotte
 
 L’utilisateur demande de repasser les zones assemblées manuellement dans le générateur pour en corriger les défauts sans perdre les compositions. Ne pas écraser les natifs. Dix propositions produites dans `renders/retouches_zones_v6/` ; 01/04/10 à reprendre. Deux kits provisoires dans `renders/entrees_calques_v6/` sont découpés depuis des images antérieures : ne pas les présenter comme les nouveaux atlas générés. La limite réelle de dix générations a empêché ces atlas et les trois reprises. Voir la liste priorisée dans `source/retouches_v6/README.md`. Références TSR Murky Forest/Armaldo et Halcyon Apricorn Grove réellement inspectées. Les nouvelles entrées restent libres en textures PMD ; les retouches Métano gardent ses références de matière.
-
 
 ## Dernière correction — conserver la méthode Métano texturée sur magenta
 
 L’utilisateur rejette le changement de matériau et rejette les layouts plats comme livrable. **Le générateur reprend la roche ET l’herbe Métano avec les références existantes, conserve le layout et génère la falaise texturée sur fond magenta.** Ne pas revenir aux essais V7/V8. Témoin : `renders/falaise_metano_temoin/`. Référence utilisée : `source/falaises_generees/reference_canonique.png`. Vérifier ce témoin avant une génération en série. Ne pas prétendre que les pixels générés sont canoniques ; ne pas remplacer les cartes natives. L’amélioration demandée du cycle océan est encore en attente.
 
-
 ## Caps / Terrasses V3 — dernières variantes face à la mer
 
 L’utilisateur demande des calques comme Terrasse V2 et Cap V2 : falaise latérale, très proche caméra, face à la mer. Six variantes texturées via générateur sur magenta dans `renders/caps_terrasses_v3/`, avec références V2 et Métano, PNG terrain et nuit à 1640×656 sans resampling. La 04 est décalée de 256 px à gauche pour cadrage. Terrain complet séparé de ciel/nuages/océan, pas roche et herbe séparées. `apercu_caps_terrasses_v3.html` montre les calques. La demande antérieure d’océan plus fluide est maintenant réalisée **dans ces exports PNG et cet aperçu** : 64 phases à 50 ms, boucle 3,2 s, interpolation de palette à indices/alpha fixes. Elle n’est PAS intégrée au mod natif existant. Voir `source/caps_terrasses_v3/README.md` et les tests ; ne pas annoncer un nouveau test moteur.
-
 
 ## Dix variantes supplémentaires — Caps/Terrasses V4 audités
 
@@ -428,3 +424,39 @@ Méthode retenue (conforme « le générateur fournit le guide, jamais les pixel
 Tests dédiés 6 PASS (reconstruction, partition disjointe, pixels= référence, alpha binaire, frame0+changement de couleur, amplitude). Suite globale 247 passed, 3 skipped. Ne pas prétendre que cette décomposition valide l'import PMDO ni les collisions.
 
 Précision (même lot) : en plus des 5 calques de base, `layers/sky.png` = ciel+aurore fournit la lecture à **4 calques** demandée terrain / bordure / cliff / Sky ; le test `test_four_layer_partition_...` vérifie que cette lecture recompose aussi exactement la référence. L'aurore reste isolée et animée pour la demande de couleur/ondulation. Suite 248 passed.
+
+## Perte du lot V13/V14 et reprise
+
+Le sandbox a été **réapprovisionné** en cours de session : le checkout est redevenu un clone shallow sur
+`e387ae7b` (fin de V12). Les lots « aurore plus présente » (V13) et « zones sud → nord » (V14), commit
+local `d3871aef` (≈58 Mo de pack, 15 tests, README/AGENTS à jour), n'ont **jamais été poussés** — le push
+avait échoué sur un `GH_TOKEN` expiré — et ne sont pas dans l'objet DB : ils sont perdus, non restaurables
+ici. Rien des lots V1 à V12 n'est touché. À refaire entièrement si l'utilisateur le redemande, à partir
+des fichiers canoniques toujours présents.
+
+## Zones magenta V1 — plusieurs couches animées sur `cristal_boreal`
+
+Utilisateur : « je veux plusieurs layer animée de la zone boréal v1 » → quatre couches animées **en plus**
+de la séquence native protégée, dans `renders/cristal_boreal_layers_animees_v1/`, sans retoucher la base.
+`08_aurore_ciel` = `onde_indexee.png`+`onde_alpha.png` de V12 redimensionnés en NEAREST et rejoués par
+rotation de palette seule (8×120 ms) ; `09_eclats_cristaux` = rotation des 4 classes de luminance du
+relief `04`+`05`+raccord `07` (8×240 ms) ; `10_scintillement_givre` = points vifs des poses natives hors
+zone protégée, sélection tournante sur 12 diagonales de 8 px (12×160 ms) ; `11_lueur_sol` = le **même** plan
+d'aurore rééchantillonné décalé de 6 px/pose sur le sol visible (8×240 ms). Scène maîtresse 48 poses de
+40 ms, cycle 1 920 ms, pile `01` → cinq calques statiques → `09 10 11` → `08`. Douze poses natives et cinq
+calques recopiés **octet pour octet** ; garantie centrale re-testée depuis les livrables : à chaque pose,
+la pile sans voile égale la pose native teintée sur les 167 059 px protégés (alpha compris). 18 tests PASS,
+`.ora` de 53 calques (poses de chaque couche, pose 0 seule visible), `manifest.json` avec provenances et
+empreintes, galerie mono-fichier `apercu_cristal_boreal_layers_animees_v1.html` (cases par couche, curseur
+maître, écart recomposition × scène livrée affiché), pack ZIP. **Deux pièges à retenir** : (1) le ciel de
+cette zone est *entièrement* dans la zone protégée (`~terrain`∩`~preserve` = 437 px sur tout le canevas, 0 px
+dans la bande haute) — l'aurore ne peut donc qu'être un **voile séparé alpha ≤ 96, retirable**
+(`SCENE_SANS_VOILE.webp`, `COMPOSITION_SANS_VOILE.png`), jamais un fondu dans la base ; (2) hors zone
+protégée, les douze poses du GIF sont identiques, donc « recopier le natif frame par frame » produisait
+douze images semblables — c'est la **sélection** qui tourne, pas un déplacement. Autre piège : l'encodeur
+WebP **fusionne les poses consécutives identiques** en cumulant leurs durées (48 poses → 24 images encodées,
+cycle conservé), `n_frames` n'est pas une preuve d'animation ; `quality=100` reste lossy et faisait
+disparaître une couche entière, tout est `lossless=True`. `terrain_detoure.png` est un RGBA : le tracé est
+dans l'alpha, pas en luminance. Aucun pinceau, aucune couleur inventée. Pas de collision, pas de warp, pas
+d'import moteur, pas de test PMD Online ni navigateur de jeu ; art non approuvé. Sources
+`source/cristal_boreal_layers_animees_v1/` (`build.py`, `test_build.py`, `package.py --check`, `STATUS.md`).

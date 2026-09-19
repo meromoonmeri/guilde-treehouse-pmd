@@ -1,0 +1,33 @@
+{
+  "lot": "cristal_boreal_layers_animees_v1",
+  "tests_dedies": "18 PASS",
+  "syntaxe_js_galerie": "PASS",
+  "controles": {
+    "zone_protegee_identique_a_la_pose_native": true,
+    "le_voile_ne_touche_que_le_ciel": true,
+    "poses_de_la_sequence_native_recopyees_octet_pour_octet": true,
+    "couches_ajoutees_n_ecrivent_pas_sur_la_zone_protegee": {
+      "09_eclats_cristaux": 0,
+      "10_scintillement_givre": 0,
+      "11_lueur_sol": 0
+    },
+    "alpha_max_du_voile": 96,
+    "scene_livree": {
+      "poses_encodées": 24,
+      "regle": "l'encodeur WebP fusionne les poses consécutives identiques en additionnant leurs durées ; les 48 poses de la scène en donnent 24 encodées, le cycle de 1920 ms et chaque durée sont conservés"
+    }
+  },
+  "cycle_maitre_ms": 1920,
+  "poses_maitresse": 48,
+  "couches_animees": [
+    "01_animation_eau_protegee",
+    "08_aurore_ciel",
+    "09_eclats_cristaux",
+    "10_scintillement_givre",
+    "11_lueur_sol"
+  ],
+  "base_recopiee": "cinq calques et douze poses du lot V1 à l octet près",
+  "art_approved": false,
+  "runtime_pmdo": "NON TESTÉ",
+  "reserve": "aucune collision, aucun warp, aucun import moteur vérifié ; aperçu navigateur non testé"
+}

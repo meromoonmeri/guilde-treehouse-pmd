@@ -1,0 +1,220 @@
+{
+  "zone": "cristal_boreal",
+  "biome": "cristal",
+  "titre": "Cristal · boréal — couches animées multiples",
+  "taille": [
+    456,
+    504
+  ],
+  "grille": 8,
+  "base": "renders/layouts_magenta_v1/zones/cristal_boreal (cinq calques statiques recopiés à l'identique)",
+  "methode": "aucun pinceau : recopie exacte, rotation d'indices de palette, échantillonnage décalé, voile déclaré",
+  "cycle_maitre_ms": 1920,
+  "pas_maitre_ms": 40,
+  "poses_maitresse": 48,
+  "zone_protegee": {
+    "pixels": 167059,
+    "frames_natives": 12,
+    "duree_ms": 160,
+    "garantie": "à chaque pose de la scène maîtresse, la pile sans voile est égale à la frame native correspondante sur toute la zone protégée, et les douze poses livrées du lot V1 sont recopiées fichier par fichier"
+  },
+  "voile": {
+    "calque": "08_aurore_ciel",
+    "alpha_max": 96,
+    "empreinte": "ciel au-dessus du terrain",
+    "retirable": "COMPOSITION_SANS_VOILE.png et SCENE_SANS_VOILE.webp sont la même scène sans lui"
+  },
+  "couches": {
+    "01_animation_eau_protegee": {
+      "regions_px": 167059,
+      "source": "renders/layouts_magenta_v1/zones/cristal_boreal",
+      "regles": "les douze poses livrées par le lot V1, recopiées fichier par fichier, octet pour octet, sans retouche ni re-encodage",
+      "copie_identique": true,
+      "frames": 12,
+      "duree_ms": 160,
+      "cycle_ms": 1920,
+      "pixels_actifs": 167059,
+      "pixels_hors_zone_protegee": 0,
+      "ecrites_sur_zone_protegee": 2004708,
+      "alpha_tries": [
+        0,
+        255
+      ]
+    },
+    "08_aurore_ciel": {
+      "regions_px": 46120,
+      "source": "renders/boreales_palette_cycling_v12/onde_indexee.png",
+      "source_sha256": "cb55e465fe213007d54426976fcc017cdaf10256bcab798598dde1dbde98b583",
+      "palette_sha256": "2e1fe2d47f9a9f4474d258b4a872893458f5ca6ccc295664537ff8adc4f0f198",
+      "silhouette": "figée, seule la palette tourne",
+      "hauteur": 152,
+      "alpha_max": 96,
+      "empreinte": "bande de ciel au-dessus du terrain, lignes 0 à 151",
+      "regles": "indices et alpha redimensionnés en NEAREST, aucun mélange, aucune couleur ajoutée ; le plan est posé en voile à 96/255 sur le ciel, il ne remplace aucun pixel, il les éclaire et reste retirable",
+      "frames": 8,
+      "duree_ms": 120,
+      "cycle_ms": 960,
+      "pixels_actifs": 46120,
+      "pixels_hors_zone_protegee": 0,
+      "ecrites_sur_zone_protegee": 111336,
+      "alpha_tries": [
+        0,
+        96
+      ]
+    },
+    "09_eclats_cristaux": {
+      "regions_px": 23461,
+      "sources": [
+        "04_cristaux_gauche",
+        "05_cristaux_droit",
+        "07_raccord_reference"
+      ],
+      "sha256": [
+        "5ee9b6f6d852fea7cb6239c1919081d42080dcb694a31bca0e0d2892f9fdff50",
+        "3ddbe3e33b542fac173004ce32d85cd960649fd16d5f29ad3f42a8b911ec191b",
+        "611d2865fe350b256018567f0be3ec603eb621f5a34696a1b341cf226f7c5fd5"
+      ],
+      "nb_classes": 4,
+      "regles": "les seules couleurs posées sont les couleurs les plus fréquentes d'une classe de luminance du socle livré, jamais une moyenne",
+      "source": "",
+      "frames": 8,
+      "duree_ms": 240,
+      "cycle_ms": 1920,
+      "pixels_actifs": 23461,
+      "pixels_hors_zone_protegee": 23461,
+      "ecrites_sur_zone_protegee": 0,
+      "alpha_tries": [
+        0,
+        255
+      ]
+    },
+    "10_scintillement_givre": {
+      "regions_px": 9748,
+      "source": "large.D17P33A.gif.188f8399cf4c18292d9ecdd2454bcd10.gif",
+      "source_sha256": "87bca5bada455cb9099db4202c30ad2b863243504bef0aa5761834cf269e0bd6",
+      "diagonales": 12,
+      "bandes_par_pose": 2,
+      "regles": "pixels vifs (luminance > 200) des poses natives elles-mêmes, hors zone protégée, sélection tournante sur 12 diagonales de 8 px dont deux allumées par pose, teintes tint(cristal, boréal) du lot V1",
+      "frames": 12,
+      "duree_ms": 160,
+      "cycle_ms": 1920,
+      "pixels_actifs": 9748,
+      "pixels_hors_zone_protegee": 9748,
+      "ecrites_sur_zone_protegee": 0,
+      "alpha_tries": [
+        0,
+        255
+      ]
+    },
+    "11_lueur_sol": {
+      "regions_px": 39304,
+      "source": "plans intermédiaires de 08_aurore_ciel (ruban V12 rejoué)",
+      "regles": "échantillonnage du même plan indexé, décalage vertical de 6 px par pose avec repli périodique, opacité de voile 96, posé seulement sur le sol visible hors zone protégée",
+      "frames": 8,
+      "duree_ms": 240,
+      "cycle_ms": 1920,
+      "pixels_actifs": 39304,
+      "pixels_hors_zone_protegee": 39304,
+      "ecrites_sur_zone_protegee": 0,
+      "alpha_tries": [
+        0,
+        96
+      ]
+    }
+  },
+  "controle_des_regions": "controles/regions_des_couches.png : une nuance par couche animée, le bleu sombre est la zone protégée que rien n'écrase",
+  "limites": "Les cinq calques statiques et les douze poses natives de la zone V1 sont recopiés à l'identique, fichier par fichier. L'aurore vient de l'image indexée du lot V12, redimensionnée au plus proche voisin et rejouée par rotation de palette seule, posée en voile à 96/255 sur le ciel : c'est le seul calque qui porte sur la zone protégée, il est retirable (SCENE_SANS_VOILE.webp, COMPOSITION_SANS_VOILE.png). Les éclats, le givre et la lueur ne posent que des pixels déjà présents dans leurs sources et jamais sur la zone protégée. Les boucles WebP fusionnent les poses consécutives identiques en additionnant leurs durées : le décodage renvoie donc moins d'images que de poses, pour le même cycle. Aucun pinceau, aucune couleur inventée, aucune collision, aucun warp, aucun rendu validé dans PMD Online ; art non approuvé.",
+  "ora": {
+    "fichier": "cristal_boreal_layers_animees.ora",
+    "calques": 53,
+    "octets": 1927389,
+    "visibles": 10,
+    "fusion": "l'image aplatie du fichier est la pose 0 de la scène avec voile"
+  },
+  "controles": {
+    "zone_protegee_identique_a_la_pose_native": true,
+    "le_voile_ne_touche_que_le_ciel": true,
+    "poses_de_la_sequence_native_recopyees_octet_pour_octet": true,
+    "couches_ajoutees_n_ecrivent_pas_sur_la_zone_protegee": {
+      "09_eclats_cristaux": 0,
+      "10_scintillement_givre": 0,
+      "11_lueur_sol": 0
+    },
+    "alpha_max_du_voile": 96,
+    "scene_livree": {
+      "poses_encodées": 24,
+      "regle": "l'encodeur WebP fusionne les poses consécutives identiques en additionnant leurs durées ; les 48 poses de la scène en donnent 24 encodées, le cycle de 1920 ms et chaque durée sont conservés"
+    }
+  },
+  "ordre_pile": [
+    "01_animation_eau_protegee",
+    "02_sol_reconstitue",
+    "03_ombres_contact",
+    "04_cristaux_gauche",
+    "05_cristaux_droit",
+    "07_raccord_reference",
+    "09_eclats_cristaux",
+    "10_scintillement_givre",
+    "11_lueur_sol",
+    "08_aurore_ciel"
+  ],
+  "base_sha256": {
+    "02_sol_reconstitue": "eea63458802baaae962fbcf28bf10953327f0e2f3b28d3633b7267e1ddca740e",
+    "03_ombres_contact": "b7b005a90091c05ea2089abe1b22bc3e5445043e931cee54051580c34dd0b000",
+    "04_cristaux_gauche": "5ee9b6f6d852fea7cb6239c1919081d42080dcb694a31bca0e0d2892f9fdff50",
+    "05_cristaux_droit": "3ddbe3e33b542fac173004ce32d85cd960649fd16d5f29ad3f42a8b911ec191b",
+    "07_raccord_reference": "611d2865fe350b256018567f0be3ec603eb621f5a34696a1b341cf226f7c5fd5"
+  },
+  "fichiers_sha256": {
+    "01_animation_eau_protegee/frame_00.png": "fc0b754dbb31fc1f761e85d65798b43593ac11369376dde67de4a34ef7a1461b",
+    "01_animation_eau_protegee/frame_01.png": "90df28abe5aedd69c7c1bc4edd2d4a6a819c0447ecc214b9ecfc776923ded213",
+    "01_animation_eau_protegee/frame_02.png": "bde7e086c3ae02b3e3b3558b725ed2237aac1e7ac1a181b57f8af5335a9bf4e7",
+    "01_animation_eau_protegee/frame_03.png": "fbb8951df2c60115b1f392bad3cbc4b810e09b9fe2162ec5afe15238d6c751fa",
+    "01_animation_eau_protegee/frame_04.png": "d299b64357882fe891802f2663c02b437ac3a77307d7441afe4b28cb44d6a093",
+    "01_animation_eau_protegee/frame_05.png": "90df28abe5aedd69c7c1bc4edd2d4a6a819c0447ecc214b9ecfc776923ded213",
+    "01_animation_eau_protegee/frame_06.png": "327825f6dd61ca8862d2e8d8fcae02e83ce29c9583aba2d9220bc0153ea13aaa",
+    "01_animation_eau_protegee/frame_07.png": "90df28abe5aedd69c7c1bc4edd2d4a6a819c0447ecc214b9ecfc776923ded213",
+    "01_animation_eau_protegee/frame_08.png": "d299b64357882fe891802f2663c02b437ac3a77307d7441afe4b28cb44d6a093",
+    "01_animation_eau_protegee/frame_09.png": "fbb8951df2c60115b1f392bad3cbc4b810e09b9fe2162ec5afe15238d6c751fa",
+    "01_animation_eau_protegee/frame_10.png": "bde7e086c3ae02b3e3b3558b725ed2237aac1e7ac1a181b57f8af5335a9bf4e7",
+    "01_animation_eau_protegee/frame_11.png": "90df28abe5aedd69c7c1bc4edd2d4a6a819c0447ecc214b9ecfc776923ded213",
+    "08_aurore_ciel/frame_00.png": "8ea5d1358d2493e9ced744a76579f1d8bdcd9f4eeacc972bd83c5f4b06eda382",
+    "08_aurore_ciel/frame_01.png": "42d617560ff020dbaf73069e655230beb22174c838218fd4d25d7e77cedcaec4",
+    "08_aurore_ciel/frame_02.png": "0c392c68e5c4cb4099a6eb072f7b559aefdf1285ba7c031994bdc29931e715e2",
+    "08_aurore_ciel/frame_03.png": "34c7ab2d094ebd326e34fef039593c6b7529a52aa3a2396705da9df4515994d3",
+    "08_aurore_ciel/frame_04.png": "8ea5d1358d2493e9ced744a76579f1d8bdcd9f4eeacc972bd83c5f4b06eda382",
+    "08_aurore_ciel/frame_05.png": "42d617560ff020dbaf73069e655230beb22174c838218fd4d25d7e77cedcaec4",
+    "08_aurore_ciel/frame_06.png": "0c392c68e5c4cb4099a6eb072f7b559aefdf1285ba7c031994bdc29931e715e2",
+    "08_aurore_ciel/frame_07.png": "34c7ab2d094ebd326e34fef039593c6b7529a52aa3a2396705da9df4515994d3",
+    "09_eclats_cristaux/frame_00.png": "af3bb7396e573d4e0dc239423f46923d2f226378e5617365b97eaefbbca771cd",
+    "09_eclats_cristaux/frame_01.png": "662a746c704a36b2f2dc118457318259e1a5807bc50271cd8a585340d0b3b438",
+    "09_eclats_cristaux/frame_02.png": "614fc7e247b74cdeecb9fa07e931091a19c3273486f93b8776c93866f6054d27",
+    "09_eclats_cristaux/frame_03.png": "c2854f211a1a2b35cfa370123b90a80f212fecaef669d65e2370c2c419fd0b93",
+    "09_eclats_cristaux/frame_04.png": "af3bb7396e573d4e0dc239423f46923d2f226378e5617365b97eaefbbca771cd",
+    "09_eclats_cristaux/frame_05.png": "662a746c704a36b2f2dc118457318259e1a5807bc50271cd8a585340d0b3b438",
+    "09_eclats_cristaux/frame_06.png": "614fc7e247b74cdeecb9fa07e931091a19c3273486f93b8776c93866f6054d27",
+    "09_eclats_cristaux/frame_07.png": "c2854f211a1a2b35cfa370123b90a80f212fecaef669d65e2370c2c419fd0b93",
+    "10_scintillement_givre/frame_00.png": "f98449e7da21475749ba363185910ce3071b34f22aa89ed368824af61e7ad39d",
+    "10_scintillement_givre/frame_01.png": "9e8a5e9daf14c3c830069d466200266ac835e33e8aa9228cc9f6d4467d8c9819",
+    "10_scintillement_givre/frame_02.png": "993d27dd7f22b22ded1723ed685cbaa09b2816ba384dce5612442a1ed9d836d5",
+    "10_scintillement_givre/frame_03.png": "909f2a84a3599a0b20485ee64d7d5ce1ea728efdc077539e7b2976da211447a7",
+    "10_scintillement_givre/frame_04.png": "5c6884b8dff79e7eddde26f1c96e902a15b1e1ea8b8f940c78f373d7da150c64",
+    "10_scintillement_givre/frame_05.png": "03e939d8f175501358807b2d141ca073542298f3df3b68e0ae4cbe9e135aaa0a",
+    "10_scintillement_givre/frame_06.png": "8863780ae8a8fb4b81a2d14d7f118f2e44e90ed1db18a1668310dbe3c595fe62",
+    "10_scintillement_givre/frame_07.png": "c185f069e7f225417f3eb56eceeea15adbcb73f6e512118a006c57638aef1c63",
+    "10_scintillement_givre/frame_08.png": "2eb58cff1e1e1603cd32d182215161758266a2264776dd20b219288ead2da459",
+    "10_scintillement_givre/frame_09.png": "edea9f8e5f5d000e70a79190ec604747e49664d714ae1cb31835e50fabd05ec7",
+    "10_scintillement_givre/frame_10.png": "d05fa6ddf5913fb301430e094f715bc0cb1c1a572797b42713ddd7e6b83e9aad",
+    "10_scintillement_givre/frame_11.png": "c656179542e1a13158cedf46da0bce7de08caae9c28d850c19610de655560f36",
+    "11_lueur_sol/frame_00.png": "ad25eda7e981ebec5b835804c6c983a055f58fb51c91e4afe324de3cfb856416",
+    "11_lueur_sol/frame_01.png": "a967dd02499b66667920e14c47ba4c4683f7b218a0035f033b033f320cad3099",
+    "11_lueur_sol/frame_02.png": "dab8c1563429c90aa94d772b6cdf5b62d1da2f214fef9f5165800fec6af93008",
+    "11_lueur_sol/frame_03.png": "41811ed8434b69c553f85e03eb68eb8574a266e108434f4133980443c08bf813",
+    "11_lueur_sol/frame_04.png": "cc987bba3947a07c4ba00e2f648e5ff34b0bfc79ea8e604c42cffedbe700e2f3",
+    "11_lueur_sol/frame_05.png": "0f42ab30a4b28178e81a3bb62b2158e365128662c1e81656ceeb00d483b6beeb",
+    "11_lueur_sol/frame_06.png": "7a003d567d2c3a776e43be507f29e3bb8052fe9e11f87c67f49d8ef50952405b",
+    "11_lueur_sol/frame_07.png": "15fb8b6f058d844cbf6aa43e469510ff2de057dbb67f4f489ef71f1543273e01"
+  },
+  "art_approved": false,
+  "runtime": "NON TESTÉ"
+}
