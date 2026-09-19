@@ -51,6 +51,7 @@ Copier le dossier `metano_expeditions` dans `MODS`, puis lancer `OUVRIR_EDITEUR.
 **Nouveau : [PMDO installé depuis RUNTIMEPMDO et 20 Ground désérialisés par le vrai moteur](source/pmdo_runtime/README.md)**. Test sans affichage réussi ; rendu dans l’éditeur non validé. Les mentions antérieures « non testé moteur » décrivent les contrôles à la date de construction des packs.
 
 - **[Manuel détaillé des méthodes PMDO](MANUEL_METHODE_PMDO.md)** — ressources natives, layouts, échelle, calques, filtre Abyss, animations, formats, installation, tests et limites.
+- **[Fiche de synthèse : méthode de production des maps (générateur + pipeline natif)](METHODE_PRODUCTION_MAPS.md)** — les sept étapes, les deux régimes Métano / nouvelles entrées, les commandes d’audit vérifiées et les limites, avec les chemins réels du dépôt.
 - [Étude de Crooked Cavern, Brine Cave et Drenched Bluff](source/cote_v5_expeditions/README.md) pour le lot de sept falaises et trois entrées désormais livré ci-dessus. Moteur installé ; éditeur graphique encore en échec dans cet environnement.
 
 
