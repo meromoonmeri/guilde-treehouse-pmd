@@ -11,7 +11,12 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "renders" / "arene_metano_v16"
 SIZE = (928, 1152)
-TERRAIN_LAYERS = ["00_sol_herbe_metano", "01_falaises_metano"]
+TERRAIN_LAYERS = [
+    "00_sol_herbe_metano",
+    "01_cliffs_faces_metano",
+    "02_cliffs_couronnes_metano",
+    "03_cliffs_pieds_metano",
+]
 N_CLOUD_FRAMES = 55
 CLOUD_STEP = 40
 CLOUD_WIDTH = 2200
@@ -29,22 +34,23 @@ def main() -> None:
     results = {"status": "PASS", "layout_reference_sha256": sha(OUT / "layout_reference" / "V15_terrain_layout_reference.png"), "modes": {}, "clouds": {}}
 
     for mode in ("jour", "nuit"):
-        sol = Image.open(OUT / mode / f"{TERRAIN_LAYERS[0]}.png").convert("RGBA")
-        cliff = Image.open(OUT / mode / f"{TERRAIN_LAYERS[1]}.png").convert("RGBA")
-        assert sol.size == SIZE and cliff.size == SIZE
-        terrain = Image.alpha_composite(sol, cliff)
+        terrain_layers = [Image.open(OUT / mode / f"{name}.png").convert("RGBA") for name in TERRAIN_LAYERS]
+        assert all(layer.size == SIZE for layer in terrain_layers)
+        terrain = Image.new("RGBA", SIZE)
+        for layer in terrain_layers:
+            terrain = Image.alpha_composite(terrain, layer)
         a = np.asarray(terrain)[:, :, 3] > 0
         # The layout mask is sampled on the 8 px grid; native tiles are allowed
         # to have their own transparent fringe, but never create terrain outside it.
         assert not np.any(a & ~mask), mode
         expected = Image.open(OUT / mode / "TERRAIN_METANO.png").convert("RGBA")
         assert terrain.tobytes() == expected.tobytes(), mode
-        assert np.any(np.asarray(sol)[:, :, 3]) and np.any(np.asarray(cliff)[:, :, 3])
+        assert all(np.any(np.asarray(layer)[:, :, 3]) for layer in terrain_layers)
         frames = sorted((OUT / mode / "overlay_nuages").glob("NuagesWrap_*.png"))
         assert len(frames) == N_CLOUD_FRAMES
         for frame in frames:
             assert Image.open(frame).size == SIZE
-        results["modes"][mode] = {"terrain_recomposition": "exact", "terrain_layers": 2, "cloud_frames": len(frames)}
+        results["modes"][mode] = {"terrain_recomposition": "exact", "terrain_layers": len(TERRAIN_LAYERS), "cloud_frames": len(frames)}
 
     # A 2200 px strip at 40 px/frame has a 55-frame period. The next phase
     # (not emitted as a duplicate) is exactly the first phase spatially.

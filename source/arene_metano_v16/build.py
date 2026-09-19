@@ -153,16 +153,20 @@ def build_mode(mode: str, terrain_assignments: list[dict], grass_assignments: li
     directory.mkdir(parents=True, exist_ok=True)
     (directory / "overlay_nuages").mkdir(parents=True, exist_ok=True)
     grass = render_assignments(grass_assignments)
-    cliffs = render_assignments(cliff_assignments)
+    face = render_assignments([p for p in cliff_assignments if p["role"] == "face"])
+    crown = render_assignments([p for p in cliff_assignments if p["role"] == "crown"])
+    foot = render_assignments([p for p in cliff_assignments if p["role"] == "foot"])
     clouds = cloud_frames
     sky = Image.open(REF_SKY).convert("RGBA")
     stars = Image.open(REF_STARS).convert("RGBA")
     if mode == "nuit":
-        grass, cliffs, sky, stars = apply_night([grass, cliffs, sky, stars])
+        grass, face, crown, foot, sky, stars = apply_night([grass, face, crown, foot, sky, stars])
         clouds = apply_night(cloud_frames)
     layers = {
         "00_sol_herbe_metano": grass,
-        "01_falaises_metano": cliffs,
+        "01_cliffs_faces_metano": face,
+        "02_cliffs_couronnes_metano": crown,
+        "03_cliffs_pieds_metano": foot,
     }
     for name, image in layers.items():
         image.save(directory / f"{name}.png", optimize=True)
@@ -172,8 +176,8 @@ def build_mode(mode: str, terrain_assignments: list[dict], grass_assignments: li
         frame.save(directory / "overlay_nuages" / f"NuagesWrap_{i:02d}.png", optimize=True)
     # Terrain-only composition is transparent around the exact V15 silhouette.
     terrain_only = Image.new("RGBA", SIZE)
-    terrain_only = Image.alpha_composite(terrain_only, grass)
-    terrain_only = Image.alpha_composite(terrain_only, cliffs)
+    for image in layers.values():
+        terrain_only = Image.alpha_composite(terrain_only, image)
     terrain_only.save(directory / "TERRAIN_METANO.png", optimize=True)
     preview = Image.new("RGBA", SIZE)
     preview = Image.alpha_composite(preview, sky)
@@ -240,9 +244,12 @@ def main() -> None:
                     c = {"gid": gid, "sheet": CLIFF, "source": list(source), "image": bank.image(gid)}
                 else:
                     c = choose(cliff_candidates, np.full((8, 8), target, dtype=bool), x + y * w)
-                cp = {"x": x, "y": y, "image": c["image"], "source": c["source"], "gid": c["gid"]}
+                top_edge = y == 0 or not cliff[y - 1, x]
+                bottom_edge = y == h - 1 or not cliff[y + 1, x]
+                role = "crown" if top_edge else "foot" if bottom_edge else "face"
+                cp = {"x": x, "y": y, "role": role, "image": c["image"], "source": c["source"], "gid": c["gid"]}
                 cliff_assignments.append(cp)
-                placements["cliff"].append({"dest": [x, y], "source": c["source"], "sheet": CLIFF})
+                placements["cliff"].append({"dest": [x, y], "role": role, "source": c["source"], "sheet": CLIFF})
     clouds = make_cloud_frames()
     modes = {mode: build_mode(mode, grass_assignments, grass_assignments,
                                cliff_assignments, clouds) for mode in ("jour", "nuit")}
@@ -272,7 +279,7 @@ def main() -> None:
             "loop_duration_ms": (Image.open(CLOUDS).width // CLOUD_STEP) * 100,
             "last_emitted_frame_is_not_duplicate": True,
         },
-        "layer_order": ["bg_00_ciel_fixe", "bg_01_etoiles_fixes", "overlay_nuages", "00_sol_herbe_metano", "01_falaises_metano"],
+        "layer_order": ["bg_00_ciel_fixe", "bg_01_etoiles_fixes", "overlay_nuages", "00_sol_herbe_metano", "01_cliffs_faces_metano", "02_cliffs_couronnes_metano", "03_cliffs_pieds_metano"],
         "modes": modes,
         "reference_sha256": sha(REFERENCE),
         "runtime_PMDO": "NON TESTE",

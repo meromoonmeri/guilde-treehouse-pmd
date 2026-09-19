@@ -40,13 +40,17 @@
     "bg_01_etoiles_fixes",
     "overlay_nuages",
     "00_sol_herbe_metano",
-    "01_falaises_metano"
+    "01_cliffs_faces_metano",
+    "02_cliffs_couronnes_metano",
+    "03_cliffs_pieds_metano"
   ],
   "modes": {
     "jour": {
       "layers": [
         "00_sol_herbe_metano",
-        "01_falaises_metano"
+        "01_cliffs_faces_metano",
+        "02_cliffs_couronnes_metano",
+        "03_cliffs_pieds_metano"
       ],
       "cloud_frames": 55,
       "terrain_sha256": "737f81353b863baa3f2f5d77aad099e7e9a8a2fa280e0923bfb9ff5c3de61f28",
@@ -55,7 +59,9 @@
     "nuit": {
       "layers": [
         "00_sol_herbe_metano",
-        "01_falaises_metano"
+        "01_cliffs_faces_metano",
+        "02_cliffs_couronnes_metano",
+        "03_cliffs_pieds_metano"
       ],
       "cloud_frames": 55,
       "terrain_sha256": "38713e91403fb5bcde84cf18d8cacb67a88b48604c2dc7d5959a488a07e7c320",
