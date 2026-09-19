@@ -1,0 +1,94 @@
+{
+  "title": "Sentier de la Guilde Redessiné — Méthode Halcyon Palika",
+  "author_style": "Palika / Palikadude (Halcyon PMD)",
+  "dimensions": {
+    "width_px": 408,
+    "height_px": 744,
+    "cols_tiles": 17,
+    "rows_tiles": 31,
+    "tile_size_px": 24,
+    "total_tiles": 527
+  },
+  "palette": {
+    "name": "Halcyon Apricorn Glade & Grove canonical palette",
+    "colors_count": 395,
+    "out_of_palette_pixels": 0
+  },
+  "layers_palika": [
+    {
+      "id": 0,
+      "name": "Base",
+      "description": "Sol continu 100% plein en terre battue d Apricorn Grove et pelouse de clairiere",
+      "active_tiles": 527,
+      "total_tiles": 527,
+      "coverage_pct": 100.0,
+      "sheet": "GuildPath_Halcyon_Base"
+    },
+    {
+      "id": 1,
+      "name": "Objects",
+      "description": "Vegetation basse, bordures herbeuses du sentier, fleurs sauvages, buissons",
+      "active_tiles": 407,
+      "total_tiles": 527,
+      "coverage_pct": 77.2,
+      "sheet": "GuildPath_Halcyon_Objects"
+    },
+    {
+      "id": 2,
+      "name": "Trees",
+      "description": "Troncs d arbres, racines massives et canopee basse (niveau joueur et collisions)",
+      "active_tiles": 378,
+      "total_tiles": 527,
+      "coverage_pct": 71.7,
+      "sheet": "GuildPath_Halcyon_Trees"
+    },
+    {
+      "id": 3,
+      "name": "Big Tree",
+      "description": "Grande canopee ancienne d Apricorn Glade archant au-dessus du joueur (Fringe/Overhead)",
+      "active_tiles": 199,
+      "total_tiles": 527,
+      "coverage_pct": 37.8,
+      "sheet": "GuildPath_Halcyon_BigTree"
+    },
+    {
+      "id": 4,
+      "name": "Shadows",
+      "description": "Ombres portees volumetriques douces d Apricorn Glade sur le sol et la vegetation",
+      "active_tiles": 435,
+      "total_tiles": 527,
+      "coverage_pct": 82.5,
+      "sheet": "GuildPath_Halcyon_Shadows"
+    }
+  ],
+  "files": {
+    "rsground": "sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_palika.rsground",
+    "tmj": "sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_palika.tmj",
+    "sheets_tile": [
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_Base.tile",
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_Objects.tile",
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_Trees.tile",
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_BigTree.tile",
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_Shadows.tile",
+      "sprites/sentier_guilde_halcyon_pmdo/GuildPath_Halcyon_Complet.tile"
+    ],
+    "renders_day": [
+      "renders/sentier_guilde_halcyon/00_palika_base.png",
+      "renders/sentier_guilde_halcyon/01_palika_objects.png",
+      "renders/sentier_guilde_halcyon/02_palika_trees.png",
+      "renders/sentier_guilde_halcyon/03_palika_big_tree.png",
+      "renders/sentier_guilde_halcyon/04_palika_shadows.png",
+      "renders/sentier_guilde_halcyon/composite_palika.png"
+    ],
+    "renders_night": [
+      "renders/sentier_guilde_halcyon/00_palika_base_nuit.png",
+      "renders/sentier_guilde_halcyon/01_palika_objects_nuit.png",
+      "renders/sentier_guilde_halcyon/02_palika_trees_nuit.png",
+      "renders/sentier_guilde_halcyon/03_palika_big_tree_nuit.png",
+      "renders/sentier_guilde_halcyon/04_palika_shadows_nuit.png",
+      "renders/sentier_guilde_halcyon/composite_palika_nuit.png"
+    ],
+    "contact_sheet": "renders/sentier_guilde_halcyon/PLANCHE_HALCYON_PALIKA_CALQUES.png",
+    "interactive_viewer": "apercu_sentier_guilde_halcyon.html"
+  }
+}

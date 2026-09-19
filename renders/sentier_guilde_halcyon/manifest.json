@@ -1,0 +1,56 @@
+{
+  "title": "Sentier de la Guilde Redessiné Style Halcyon",
+  "generator_sources": [
+    "Apricorn_Glade_Trees.png",
+    "Apricorn_Grove_Base.png",
+    "Apricorn_Glade_Big_Tree.png"
+  ],
+  "dimensions_px": [
+    408,
+    744
+  ],
+  "tiles_24px": [
+    17,
+    31
+  ],
+  "tiles_8px": [
+    51,
+    93
+  ],
+  "palette_size": 319,
+  "deltaE76_median": 3.301,
+  "layers": {
+    "01_sentier_sol": 70842,
+    "02_prairies_verdure": 25463,
+    "03_arbres_canopee": 207247
+  },
+  "files": {
+    "layers": [
+      "01_sentier_sol.png",
+      "02_prairies_verdure.png",
+      "03_arbres_canopee.png"
+    ],
+    "night_layers": [
+      "01_sentier_sol_nuit.png",
+      "02_prairies_verdure_nuit.png",
+      "03_arbres_canopee_nuit.png"
+    ],
+    "composites": [
+      "terrain.png",
+      "terrain_nuit.png",
+      "terrain_magenta.png",
+      "terrain_2x_highres.png"
+    ],
+    "pmdo": [
+      "../../sprites/sentier_guilde_halcyon_pmdo/GuildPathHalcyon.png",
+      "../../sprites/sentier_guilde_halcyon_pmdo/GuildPathHalcyon.tile",
+      "../../sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon.rsground",
+      "../../sprites/sentier_guilde_halcyon_pmdo/GuildPathHalcyon.tsj",
+      "../../sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon.tmj"
+    ],
+    "contact_sheets": [
+      "PLANCHE_HALCYON_SENTIER.png",
+      "AUDIT_HALCYON_MATIERES.png"
+    ]
+  }
+}
