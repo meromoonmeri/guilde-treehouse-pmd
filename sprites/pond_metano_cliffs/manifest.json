@@ -1,0 +1,129 @@
+{
+  "name": "METANO_CLIFF_POND_SPRITES",
+  "target_engine": "PMDO 0.8.12 Dev / Tiled 1.10",
+  "grid_px": 8,
+  "animation": {
+    "frames": 4,
+    "frame_length_ticks": 10,
+    "duration_ms_per_frame": 167,
+    "timing_proof": "source/eau_metano/animations_carte.json"
+  },
+  "prefabs": {
+    "01_promontoire": {
+      "name": "Petite Mare de Promontoire",
+      "size_px": [
+        80,
+        64
+      ],
+      "grid_tiles": [
+        10,
+        8
+      ],
+      "desc": "Étang compact adapté pour un rebord ou promontoire rocheux étroit.",
+      "files": [
+        "01_promontoire/METANO_CLIFF_POND_01_SCENE.png",
+        "01_promontoire/METANO_CLIFF_POND_01_SOL.png",
+        "01_promontoire/METANO_CLIFF_POND_01_OBJETS.png",
+        "01_promontoire/METANO_CLIFF_POND_01_ANIMATION.gif"
+      ]
+    },
+    "02_alcove": {
+      "name": "Étang d’Alcôve de Paroi",
+      "size_px": [
+        144,
+        112
+      ],
+      "grid_tiles": [
+        18,
+        14
+      ],
+      "desc": "Étang niché contre une haute paroi de falaise au nord, avec 3 pierres de gué pour traverser.",
+      "files": [
+        "02_alcove/METANO_CLIFF_POND_02_SCENE.png",
+        "02_alcove/METANO_CLIFF_POND_02_SOL_FALAISE.png",
+        "02_alcove/METANO_CLIFF_POND_02_OBJETS.png",
+        "02_alcove/METANO_CLIFF_POND_02_ANIMATION.gif"
+      ]
+    },
+    "03_cascade": {
+      "name": "Grand Bassin de Falaise avec Cascade & Déversoir",
+      "size_px": [
+        208,
+        160
+      ],
+      "grid_tiles": [
+        26,
+        20
+      ],
+      "desc": "Grand bassin scénique avec cascade amont tombant dans l’eau, grand rocher naturel et déversoir sud.",
+      "files": [
+        "03_cascade/METANO_CLIFF_POND_03_SCENE.png",
+        "03_cascade/METANO_CLIFF_POND_03_SOL_FALAISE.png",
+        "03_cascade/METANO_CLIFF_POND_03_OBJETS.png",
+        "03_cascade/METANO_CLIFF_POND_03_ANIMATION.gif"
+      ]
+    },
+    "04_cuvette_rocheuse": {
+      "name": "Cuvette Rocheuse Pure",
+      "size_px": [
+        112,
+        88
+      ],
+      "grid_tiles": [
+        14,
+        11
+      ],
+      "desc": "Bassin 100% minéral creusé à même la roche de falaise sans herbe, pour pics rocheux et crêtes.",
+      "files": [
+        "04_cuvette_rocheuse/METANO_CLIFF_POND_04_SCENE.png",
+        "04_cuvette_rocheuse/METANO_CLIFF_POND_04_ROCHE.png",
+        "04_cuvette_rocheuse/METANO_CLIFF_POND_04_OBJETS.png",
+        "04_cuvette_rocheuse/METANO_CLIFF_POND_04_ANIMATION.gif"
+      ]
+    },
+    "05_deversoir": {
+      "name": "Déversoir & Chute de Falaise",
+      "size_px": [
+        64,
+        96
+      ],
+      "grid_tiles": [
+        8,
+        12
+      ],
+      "desc": "Seuil rocheux où l’eau de l’étang s’évacue en cascade verticale vers le niveau inférieur.",
+      "files": [
+        "05_deversoir/METANO_CLIFF_POND_05_SCENE.png",
+        "05_deversoir/METANO_CLIFF_POND_05_FALAISE.png",
+        "05_deversoir/METANO_CLIFF_POND_05_ANIMATION.gif"
+      ]
+    }
+  },
+  "modular_tileset": {
+    "file": "METANO_POND_CLIFF_TILESET.png",
+    "size_px": [
+      192,
+      192
+    ],
+    "grid_tiles": [
+      24,
+      24
+    ],
+    "total_tiles": 576,
+    "animated_sheet": "METANO_POND_CLIFF_TILESET_ANIM_4F.png",
+    "pmdo_tile": "METANO_POND_CLIFF_TILESET.tile",
+    "tiled_tsj": "METANO_POND_CLIFF_TILESET.tsj"
+  },
+  "integration_example": {
+    "file": "METANO_CLIFF_TERRASSE_POND_EXEMPLE.png",
+    "gif": "METANO_CLIFF_TERRASSE_POND_EXEMPLE.gif",
+    "size_px": [
+      256,
+      224
+    ],
+    "grid_tiles": [
+      32,
+      28
+    ]
+  }
+}
