@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plage Pokémon Mystery Dungeon Sky — Version Large Animée (10 Calques)</title>
+  <style>
+    :root {
+      --bg: #101318;
+      --panel: #1a1e27;
+      --border: #2c3444;
+      --text: #e6ebf2;
+      --muted: #8b99ae;
+      --gold: #f5d57b;
+      --cyan: #52c8ea;
+      --magenta: #ff00ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 24px;
+    }
+    header {
+      max-width: 1440px;
+      margin: 0 auto 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      letter-spacing: -0.5px;
+      color: var(--gold);
+    }
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .badge-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: #242c3d;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--cyan);
+    }
+    .badge.gold { color: var(--gold); }
+    .badge.mag { color: #ff55ff; border-color: #ff00ff; }
+    
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 20px;
+    }
+    
+    .canvas-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 6px;
+    }
+    button, select {
+      background: #232a38;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    button:hover, select:hover {
+      border-color: var(--gold);
+    }
+    button.active {
+      background: var(--gold);
+      color: #101318;
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+    button.active-mag {
+      background: #ff00ff;
+      color: #ffffff;
+      border-color: #ff00ff;
+      font-weight: 700;
+    }
+    
+    .viewport {
+      width: 100%;
+      height: 480px;
+      background: #0b0d13;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .viewport.bg-magenta {
+      background: #ff00ff !important;
+    }
+    .viewport.bg-trans {
+      background-image: 
+        linear-gradient(45deg, #181c26 25%, transparent 25%), 
+        linear-gradient(-45deg, #181c26 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #181c26 75%), 
+        linear-gradient(-45deg, transparent 75%, #181c26 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    }
+    
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+    
+    .sidebar {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h2 small {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: normal;
+    }
+    
+    .layer-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: #202634;
+      border: 1px solid #283144;
+    }
+    .layer-item:hover {
+      border-color: #3b465e;
+    }
+    .layer-item input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+    .layer-name {
+      flex: 1;
+      font-weight: 500;
+    }
+    .layer-tag {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #151a24;
+      color: var(--muted);
+    }
+    .layer-tag.anim {
+      color: var(--cyan);
+      border: 1px solid rgba(82, 200, 234, 0.3);
+    }
+    
+    .info-box {
+      background: #141822;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .info-box strong {
+      color: var(--text);
+    }
+    
+    .gallery {
+      max-width: 1440px;
+      margin: 30px auto 0;
+    }
+    .gallery h2 {
+      margin-bottom: 14px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #000;
+      image-rendering: pixelated;
+    }
+    .card-body {
+      padding: 12px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Plage PMD Sky Large — Mer Animée & Multicalque</h1>
+      <div class="subtitle">Layout original étendu à 1152 × 432 px | 10 Calques Canoniques | Rendu Fond Magenta #FF00FF</div>
+    </div>
+    <div class="badge-bar">
+      <div class="badge">1152 × 432 px</div>
+      <div class="badge">48 × 18 Tuiles (24px)</div>
+      <div class="badge gold">10 Calques Stricts</div>
+      <div class="badge">Mer & Écume Animées (4F)</div>
+      <div class="badge mag">Fond Magenta Canonique</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Main Stage -->
+    <div class="canvas-panel">
+      <div class="toolbar">
+        <div class="btn-group">
+          <button id="btnDay" class="active">Jour</button>
+          <button id="btnNight">Nuit (Abyss)</button>
+        </div>
+        <div class="btn-group">
+          <button id="btnBgTrans" class="active">Transparence</button>
+          <button id="btnBgDark">Fond Sombre</button>
+          <button id="btnBgMag">Fond Magenta (#FF00FF)</button>
+        </div>
+        <div class="btn-group">
+          <button id="btnPlay" class="active">Pause Mer</button>
+          <button id="btnFrame1">F1</button>
+          <button id="btnFrame2">F2</button>
+          <button id="btnFrame3">F3</button>
+          <button id="btnFrame4">F4</button>
+        </div>
+        <div class="btn-group">
+          <button id="btnGrid">Grille 24px</button>
+          <select id="selZoom">
+            <option value="fit">Ajuster</option>
+            <option value="1" selected>1× Natif (1152×432)</option>
+            <option value="2">2× Pixels</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="viewport bg-trans" id="viewport">
+        <canvas id="stage" width="1152" height="432"></canvas>
+      </div>
+
+      <div class="info-box">
+        <strong>Spécifications Canoniques PMDO :</strong> Le layout original de la plage PMD Sky est élargi de 768 px à 1152 px (+50% d'espace de sable et d'océan). La mer et l'écume battent en boucle cyclique de 4 frames (800 ms/cycle). L'équation de recomposition multi-calque alpha est rigoureusement exacte (Delta = 0).
+      </div>
+    </div>
+
+    <!-- Sidebar Layer Controls -->
+    <div class="sidebar">
+      <h2>10 Calques Canoniques <small>Max 10 / 10</small></h2>
+
+      <div id="layerList" style="display:flex; flex-direction:column; gap:8px;">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="btn-group" style="margin-top: 10px;">
+        <button id="btnAllLayers" style="flex:1;">Tous Actifs</button>
+        <button id="btnResetLayers" style="flex:1;">Réinitialiser</button>
+      </div>
+
+      <div class="info-box" style="margin-top:auto;">
+        <strong>Conformité Mots-Clés :</strong><br>
+        • Sable : <code>05_sable</code><br>
+        • Chemin : <code>07_chemin</code><br>
+        • Cliff : <code>02_cliff_arriere</code> & <code>08_cliff_plage</code><br>
+        • Roche : <code>03_roche_arriere</code> & <code>09_roche_plage</code><br>
+        • Tree : <code>10_tree</code><br>
+        • Mer : <code>04_mer</code> & <code>06_ecume_mer</code> (animées)<br>
+        • Ciel : <code>01_ciel</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <h2>Livrables & Visualisations Exportées</h2>
+    <div class="gallery-grid">
+      <div class="card">
+        <img src="renders/plage_pmd_sky_large/plage_pmd_sky_animee.gif" alt="GIF Animé Jour">
+        <div class="card-body">
+          <div class="card-title">GIF Animé Jour (Mer & Écume)</div>
+          <div class="card-desc">Cycle 4 frames 800ms avec déferlement sur sable.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="renders/plage_pmd_sky_large/plage_pmd_sky_magenta_animee.gif" alt="GIF Magenta">
+        <div class="card-body">
+          <div class="card-title">GIF Fond Magenta Canonique</div>
+          <div class="card-desc">Chroma key #FF00FF pour contrôle de collision et masquage.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="renders/plage_pmd_sky_large/plage_pmd_sky_nuit_animee.gif" alt="GIF Nuit">
+        <div class="card-body">
+          <div class="card-title">GIF Nuit Abyss</div>
+          <div class="card-desc">Palette nocturne avec lune et reflets marins.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="renders/plage_pmd_sky_large/PLANCHE_PLAGE_LARGE_CALQUES_MAGENTA.png" alt="Planche Contact">
+        <div class="card-body">
+          <div class="card-title">Planche Contact Calques & Magenta</div>
+          <div class="card-desc">Vue d'ensemble des 10 calques et des 4 frames.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="renders/plage_pmd_sky_large/AUDIT_PLAGE_LARGE.png" alt="Feuille d'Audit">
+        <div class="card-body">
+          <div class="card-title">Rapport d'Audit Technique</div>
+          <div class="card-desc">Validation 100% des dimensions, calques et PMDO.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const LAYERS_DEF = [
+      { id: '01_ciel', name: '01. Ciel & Horizon', tag: 'ciel' },
+      { id: '02_cliff_arriere', name: '02. Cliff Arrière', tag: 'cliff' },
+      { id: '03_roche_arriere', name: '03. Roche Arrière', tag: 'roche' },
+      { id: '04_mer', name: '04. Mer Océan (Animée)', tag: 'mer', anim: true },
+      { id: '05_sable', name: '05. Sable Plage (Sol)', tag: 'sable' },
+      { id: '06_ecume_mer', name: '06. Écume Mer (Animée)', tag: 'mer', anim: true },
+      { id: '07_chemin', name: '07. Chemin Battu', tag: 'chemin' },
+      { id: '08_cliff_plage', name: '08. Cliff Plage', tag: 'cliff' },
+      { id: '09_roche_plage', name: '09. Roche Plage', tag: 'roche' },
+      { id: '10_tree', name: '10. Tree (Palmiers)', tag: 'tree' }
+    ];
+
+    let isNight = false;
+    let bgMode = 'trans'; // 'trans', 'dark', 'mag'
+    let currentFrame = 0; // 0, 1, 2, 3
+    let isPlaying = true;
+    let showGrid = false;
+    let zoomMode = '1';
+
+    // State of layers visibility
+    const layerActive = {};
+    LAYERS_DEF.forEach(l => layerActive[l.id] = true);
+
+    // Preload images
+    const imagesCache = {};
+    function getLayerPath(layerId, frameIdx, nightMode, magentaMode) {
+      const mode = nightMode ? (magentaMode ? 'nuit_magenta' : 'nuit') : (magentaMode ? 'magenta' : 'jour');
+      const suffix = magentaMode ? '_magenta' : '';
+      const nSuffix = nightMode && magentaMode ? '_nuit_magenta' : '';
+      
+      let baseName = layerId;
+      if (layerId === '04_mer' || layerId === '06_ecume_mer') {
+        baseName += `_f${frameIdx + 1}`;
+      }
+      
+      if (nightMode && magentaMode) {
+        return `renders/plage_pmd_sky_large/nuit_magenta/${baseName}${nSuffix}.png`;
+      } else if (magentaMode) {
+        return `renders/plage_pmd_sky_large/magenta/${baseName}${suffix}.png`;
+      } else if (nightMode) {
+        return `renders/plage_pmd_sky_large/nuit/${baseName}.png`;
+      } else {
+        return `renders/plage_pmd_sky_large/jour/${baseName}.png`;
+      }
+    }
+
+    // Build sidebar
+    const layerListEl = document.getElementById('layerList');
+    LAYERS_DEF.forEach(layer => {
+      const row = document.createElement('label');
+      row.className = 'layer-item';
+      row.innerHTML = `
+        <input type="checkbox" id="chk_${layer.id}" checked>
+        <span class="layer-name">${layer.name}</span>
+        <span class="layer-tag ${layer.anim ? 'anim' : ''}">${layer.anim ? '4 FRAMES' : layer.tag.toUpperCase()}</span>
+      `;
+      row.querySelector('input').addEventListener('change', (e) => {
+        layerActive[layer.id] = e.target.checked;
+        draw();
+      });
+      layerListEl.appendChild(row);
+    });
+
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const viewport = document.getElementById('viewport');
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (bgMode === 'mag') {
+        ctx.fillStyle = '#ff00ff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else if (bgMode === 'dark') {
+        ctx.fillStyle = '#0b0d13';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Draw active layers in canonical composition order
+      LAYERS_DEF.forEach(layer => {
+        if (!layerActive[layer.id]) return;
+        const p = getLayerPath(layer.id, currentFrame, isNight, bgMode === 'mag');
+        
+        let img = imagesCache[p];
+        if (!img) {
+          img = new Image();
+          img.src = p;
+          img.onload = () => draw();
+          imagesCache[p] = img;
+        } else if (img.complete && img.naturalWidth > 0) {
+          ctx.drawImage(img, 0, 0);
+        }
+      });
+
+      // Overlay PMDO Grid if enabled
+      if (showGrid) {
+        ctx.strokeStyle = 'rgba(245, 213, 123, 0.25)';
+        ctx.lineWidth = 1;
+        for (let x = 0; x <= canvas.width; x += 24) {
+          ctx.beginPath();
+          ctx.moveTo(x + 0.5, 0);
+          ctx.lineTo(x + 0.5, canvas.height);
+          ctx.stroke();
+        }
+        for (let y = 0; y <= canvas.height; y += 24) {
+          ctx.beginPath();
+          ctx.moveTo(0, y + 0.5);
+          ctx.lineTo(canvas.width, y + 0.5);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Animation Loop
+    let animTimer = setInterval(() => {
+      if (isPlaying) {
+        currentFrame = (currentFrame + 1) % 4;
+        updateFrameButtons();
+        draw();
+      }
+    }, 200);
+
+    function updateFrameButtons() {
+      [1, 2, 3, 4].forEach(f => {
+        const btn = document.getElementById(`btnFrame${f}`);
+        if (f - 1 === currentFrame) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // UI Listeners
+    document.getElementById('btnDay').addEventListener('click', () => {
+      isNight = false;
+      document.getElementById('btnDay').classList.add('active');
+      document.getElementById('btnNight').classList.remove('active');
+      draw();
+    });
+    document.getElementById('btnNight').addEventListener('click', () => {
+      isNight = true;
+      document.getElementById('btnNight').classList.add('active');
+      document.getElementById('btnDay').classList.remove('active');
+      draw();
+    });
+
+    document.getElementById('btnBgTrans').addEventListener('click', () => {
+      bgMode = 'trans';
+      viewport.className = 'viewport bg-trans';
+      document.getElementById('btnBgTrans').classList.add('active');
+      document.getElementById('btnBgDark').classList.remove('active');
+      document.getElementById('btnBgMag').classList.remove('active');
+      draw();
+    });
+    document.getElementById('btnBgDark').addEventListener('click', () => {
+      bgMode = 'dark';
+      viewport.className = 'viewport';
+      document.getElementById('btnBgDark').classList.add('active');
+      document.getElementById('btnBgTrans').classList.remove('active');
+      document.getElementById('btnBgMag').classList.remove('active');
+      draw();
+    });
+    document.getElementById('btnBgMag').addEventListener('click', () => {
+      bgMode = 'mag';
+      viewport.className = 'viewport bg-magenta';
+      document.getElementById('btnBgMag').classList.add('active');
+      document.getElementById('btnBgTrans').classList.remove('active');
+      document.getElementById('btnBgDark').classList.remove('active');
+      draw();
+    });
+
+    const btnPlay = document.getElementById('btnPlay');
+    btnPlay.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      btnPlay.textContent = isPlaying ? 'Pause Mer' : 'Animer Mer';
+      btnPlay.classList.toggle('active', isPlaying);
+    });
+
+    [1, 2, 3, 4].forEach(f => {
+      document.getElementById(`btnFrame${f}`).addEventListener('click', () => {
+        currentFrame = f - 1;
+        updateFrameButtons();
+        draw();
+      });
+    });
+
+    document.getElementById('btnGrid').addEventListener('click', (e) => {
+      showGrid = !showGrid;
+      e.target.classList.toggle('active', showGrid);
+      draw();
+    });
+
+    const selZoom = document.getElementById('selZoom');
+    selZoom.addEventListener('change', (e) => {
+      const z = e.target.value;
+      if (z === 'fit') {
+        canvas.style.width = '100%';
+        canvas.style.height = 'auto';
+      } else if (z === '1') {
+        canvas.style.width = '1152px';
+        canvas.style.height = '432px';
+      } else if (z === '2') {
+        canvas.style.width = '2304px';
+        canvas.style.height = '864px';
+      }
+    });
+
+    document.getElementById('btnAllLayers').addEventListener('click', () => {
+      LAYERS_DEF.forEach(l => {
+        layerActive[l.id] = true;
+        document.getElementById(`chk_${l.id}`).checked = true;
+      });
+      draw();
+    });
+    document.getElementById('btnResetLayers').addEventListener('click', () => {
+      LAYERS_DEF.forEach(l => {
+        layerActive[l.id] = true;
+        document.getElementById(`chk_${l.id}`).checked = true;
+      });
+      draw();
+    });
+
+    // Initial draw
+    updateFrameButtons();
+    draw();
+  </script>
+</body>
+</html>

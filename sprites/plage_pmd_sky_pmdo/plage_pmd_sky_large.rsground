@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "map_name": "plage_pmd_sky_large",
+  "biome": "beach_pmd_sky",
+  "dimensions": {
+    "pixels": {
+      "width": 1152,
+      "height": 432
+    },
+    "tiles_24px": {
+      "columns": 48,
+      "rows": 18
+    },
+    "tiles_8px": {
+      "columns": 144,
+      "rows": 54
+    }
+  },
+  "layers_count": 10,
+  "layers_order": [
+    "01_ciel",
+    "02_cliff_arriere",
+    "03_roche_arriere",
+    "04_mer",
+    "05_sable",
+    "06_ecume_mer",
+    "07_chemin",
+    "08_cliff_plage",
+    "09_roche_plage",
+    "10_tree"
+  ],
+  "animated_layers": {
+    "04_mer": {
+      "frames": 4,
+      "frame_duration_ms": 200,
+      "loop_ms": 800
+    },
+    "06_ecume_mer": {
+      "frames": 4,
+      "frame_duration_ms": 200,
+      "loop_ms": 800
+    }
+  },
+  "unique_tiles_24px": 796
+}
