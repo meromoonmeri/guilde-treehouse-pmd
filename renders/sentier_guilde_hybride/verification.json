@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "map": "guild_path",
+  "dimensions_px": [
+    408,
+    744
+  ],
+  "tiles_24px": [
+    17,
+    31
+  ],
+  "tiles_8px": [
+    51,
+    93
+  ],
+  "sand_layer_pixels": 63877,
+  "meadow_layer_pixels": 109941,
+  "canopy_layer_pixels": 129734,
+  "flowers_layer_pixels": 7724,
+  "recomposition_match": true,
+  "pmdo_tile_decoded_match": true,
+  "palette_compliance": {
+    "sand_treasure_town_beach": {
+      "allowed": 42,
+      "used": 38,
+      "out_of_palette": 0
+    },
+    "verdure_sky_peak": {
+      "allowed": 19,
+      "used": 15,
+      "out_of_palette": 0
+    },
+    "verdure_metano_town_tree": {
+      "allowed": 55,
+      "used": 43,
+      "out_of_palette": 0
+    }
+  }
+}

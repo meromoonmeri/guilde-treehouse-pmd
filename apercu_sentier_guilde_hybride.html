@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sentier de la Guilde Hybride — PMDO audinowho</title>
+  <style>
+    :root {
+      --bg-dark: #0f171e;
+      --card-bg: #18232d;
+      --card-border: #2c3e50;
+      --accent: #4ecdc4;
+      --accent-gold: #f4d06f;
+      --accent-green: #77e099;
+      --accent-sand: #fb923c;
+      --accent-blue: #38bdf8;
+      --accent-pink: #f472b6;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #141d26;
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand h1 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-pass { background: rgba(119, 224, 153, 0.2); color: var(--accent-green); border: 1px solid var(--accent-green); }
+    .badge-canon { background: rgba(244, 208, 111, 0.2); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    select, button {
+      background: #22313f;
+      color: var(--text);
+      border: 1px solid var(--card-border);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    select:hover, button:hover {
+      background: #2c3e50;
+      border-color: var(--accent);
+    }
+    button.active {
+      background: var(--accent);
+      color: #0f171e;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .main-layout {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 72px);
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 360px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--card-border);
+      padding: 18px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .panel-section {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .layer-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 9px;
+      margin-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .layer-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .layer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .layer-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .layer-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .btn-solo {
+      font-size: 10px;
+      padding: 2px 7px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+    }
+    .btn-solo:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .layer-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      padding-left: 22px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .metric-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 7px;
+      border-radius: 4px;
+    }
+    .metric-item .val {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-family: monospace;
+    }
+    .metric-item .lbl {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .viewport-container {
+      flex: 1;
+      position: relative;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .canvas-wrapper {
+      position: relative;
+      width: 408px;
+      height: 744px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+      transform-origin: center center;
+    }
+    .canvas-checker {
+      background-image:
+        linear-gradient(45deg, #18222b 25%, transparent 25%),
+        linear-gradient(-45deg, #18222b 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #18222b 75%),
+        linear-gradient(-45deg, transparent 75%, #18222b 75%);
+      background-size: 24px 24px;
+      background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+      background-color: #121920;
+    }
+    .canvas-magenta { background-color: #ff00ff; }
+    .canvas-dark { background-color: #10161d; }
+    .canvas-sea { background-color: #173b52; }
+
+    .layer-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+      pointer-events: none;
+      display: none;
+    }
+    .layer-image.visible {
+      display: block;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      display: none;
+    }
+    .grid-overlay.active-8 {
+      display: block;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+      background-size: 8px 8px;
+    }
+    .grid-overlay.active-24 {
+      display: block;
+      background-image:
+        linear-gradient(to right, rgba(244, 208, 111, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(244, 208, 111, 0.3) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .info-footer {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: rgba(15, 23, 30, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-family: monospace;
+      color: var(--accent-gold);
+      display: flex;
+      gap: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1>Sentier de la Guilde Hybride <span class="badge badge-canon">PMDO audinowho</span> <span class="badge badge-pass">3 Matières Canoniques</span></h1>
+    <p>guild_path.rsground : Sable de Treasure Town Beach · Verdure de Sky Peak · Verdure de Métano Town Tree</p>
+  </div>
+
+  <div class="controls-bar">
+    <button id="btnCompare" style="background: #2b3a4a; border-color: var(--accent-gold); color: var(--accent-gold);">Voir Original audinowho</button>
+    <button id="btnDayNight">Mode : Jour</button>
+
+    <select id="bgSelect">
+      <option value="canvas-checker">Fond : Damier</option>
+      <option value="canvas-magenta">Fond : Magenta #FF00FF</option>
+      <option value="canvas-sea">Fond : Océan Métano</option>
+      <option value="canvas-dark">Fond : Sombre</option>
+    </select>
+
+    <select id="zoomSelect">
+      <option value="0.75">Zoom 75%</option>
+      <option value="1" selected>Zoom 100% (Natif)</option>
+      <option value="1.5">Zoom 150%</option>
+      <option value="2">Zoom 200%</option>
+    </select>
+
+    <select id="gridSelect">
+      <option value="off">Grille : Sans</option>
+      <option value="8">Grille : 8px (Sous-tuiles)</option>
+      <option value="24">Grille : 24px (Cases PMDO)</option>
+    </select>
+  </div>
+</header>
+
+<div class="main-layout">
+  <div class="sidebar">
+    <div class="panel-section">
+      <div class="section-title">
+        <span>Calques du Sentier</span>
+        <div style="display:flex; gap:4px;">
+          <button id="btnAllLayers" style="padding:2px 5px; font-size:10px;">Tous</button>
+          <button id="btnNoneLayers" style="padding:2px 5px; font-size:10px;">Aucun</button>
+        </div>
+      </div>
+
+      <!-- Calque 1 : Sable Plage -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_sable" checked>
+            <span class="layer-dot" style="background: var(--accent-sand);"></span>
+            <span>01 · Sable Treasure Town Beach</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('sable')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Sentier central battu</span>
+          <span>63 875 px (21.0%)</span>
+        </div>
+      </div>
+
+      <!-- Calque 2 : Verdure Sky Peak -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_skypeak" checked>
+            <span class="layer-dot" style="background: var(--accent-green);"></span>
+            <span>02 · Verdure de Sky Peak</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('skypeak')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Prairies, talus et clairières</span>
+          <span>109 810 px (36.2%)</span>
+        </div>
+      </div>
+
+      <!-- Calque 3 : Arbres Métano -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_arbres" checked>
+            <span class="layer-dot" style="background: var(--accent-blue);"></span>
+            <span>03 · Arbre Métano Town</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('arbres')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Canopée et bordures forestières</span>
+          <span>129 867 px (42.8%)</span>
+        </div>
+      </div>
+
+      <!-- Calque 4 : Fleurs Tropicales -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_fleurs" checked>
+            <span class="layer-dot" style="background: var(--accent-pink);"></span>
+            <span>04 · Décorations Florales</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('fleurs')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>19 fleurs tropicales natives</span>
+          <span>7 724 px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Métriques & Moteur -->
+    <div class="panel-section">
+      <div class="section-title">Caractéristiques Moteur PMDO</div>
+      <div class="metric-grid">
+        <div class="metric-item">
+          <div class="val">408 × 744</div>
+          <div class="lbl">Dimensions (px)</div>
+        </div>
+        <div class="metric-item">
+          <div class="val">17 × 31</div>
+          <div class="lbl">Cases PMDO (24px)</div>
+        </div>
+        <div class="metric-item">
+          <div class="val">51 × 93</div>
+          <div class="lbl">Tuiles (8px)</div>
+        </div>
+        <div class="metric-item">
+          <div class="val" style="color:var(--accent-green)">0 px</div>
+          <div class="lbl">Hors Palette</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Fichiers & Planches -->
+    <div class="panel-section">
+      <div class="section-title">Documents & Planches</div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <a href="renders/sentier_guilde_hybride/PLANCHE_SENTIER_GUILDE.png" target="_blank" style="color:var(--accent); font-size:12px; text-decoration:none;">
+          &#128269; Planche Comparatif & Calques
+        </a>
+        <a href="renders/sentier_guilde_hybride/AUDIT_MATIERES_HYBRIDES.png" target="_blank" style="color:var(--accent-gold); font-size:12px; text-decoration:none;">
+          &#128269; Audit Matières 4x (3 Sources)
+        </a>
+        <a href="sprites/sentier_guilde_pmdo/GuildPath.tile" target="_blank" style="color:var(--text-muted); font-size:12px; text-decoration:none;">
+          &#128190; Télécharger GuildPath.tile (PMDO)
+        </a>
+        <a href="sprites/sentier_guilde_pmdo/guild_path.rsground" target="_blank" style="color:var(--text-muted); font-size:12px; text-decoration:none;">
+          &#128196; Télécharger guild_path.rsground
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="viewport-container">
+    <div id="canvasWrapper" class="canvas-wrapper canvas-checker">
+      <!-- Original view -->
+      <img id="img_original" class="layer-image" src="source/sentier_guilde_hybride/dump/GuildPath.png" alt="Original audinowho">
+      <!-- Hybrid layers -->
+      <img id="layer_sable" class="layer-image visible" src="renders/sentier_guilde_hybride/01_sable_plage.png" alt="Sable Plage">
+      <img id="layer_skypeak" class="layer-image visible" src="renders/sentier_guilde_hybride/02_verdure_skypeak.png" alt="Verdure Sky Peak">
+      <img id="layer_arbres" class="layer-image visible" src="renders/sentier_guilde_hybride/03_arbres_metano.png" alt="Arbres Métano">
+      <img id="layer_fleurs" class="layer-image visible" src="renders/sentier_guilde_hybride/04_decorations_fleurs.png" alt="Fleurs Tropicales">
+      <div id="gridOverlay" class="grid-overlay"></div>
+    </div>
+
+    <div class="info-footer">
+      <span id="footerMode">CARTE HYBRIDE</span>
+      <span>408 × 744 px (17 × 31 cases de 24 px)</span>
+      <span style="color:var(--accent-green);">100% CANONIQUE</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  let isNight = false;
+  let showOriginal = false;
+
+  const btnCompare = document.getElementById('btnCompare');
+  const btnDayNight = document.getElementById('btnDayNight');
+  const bgSelect = document.getElementById('bgSelect');
+  const zoomSelect = document.getElementById('zoomSelect');
+  const gridSelect = document.getElementById('gridSelect');
+
+  const canvasWrapper = document.getElementById('canvasWrapper');
+  const gridOverlay = document.getElementById('gridOverlay');
+
+  const imgOriginal = document.getElementById('img_original');
+  const imgSable = document.getElementById('layer_sable');
+  const imgSkyPeak = document.getElementById('layer_skypeak');
+  const imgArbres = document.getElementById('layer_arbres');
+  const imgFleurs = document.getElementById('layer_fleurs');
+
+  const chkSable = document.getElementById('chk_sable');
+  const chkSkyPeak = document.getElementById('chk_skypeak');
+  const chkArbres = document.getElementById('chk_arbres');
+  const chkFleurs = document.getElementById('chk_fleurs');
+
+  function updateSources() {
+    const suffix = isNight ? '_nuit.png' : '.png';
+    const base = 'renders/sentier_guilde_hybride/';
+    imgSable.src = `${base}01_sable_plage${suffix}`;
+    imgSkyPeak.src = `${base}02_verdure_skypeak${suffix}`;
+    imgArbres.src = `${base}03_arbres_metano${suffix}`;
+    imgFleurs.src = `${base}04_decorations_fleurs${suffix}`;
+  }
+
+  function updateVisibility() {
+    if (showOriginal) {
+      imgOriginal.classList.add('visible');
+      imgSable.classList.remove('visible');
+      imgSkyPeak.classList.remove('visible');
+      imgArbres.classList.remove('visible');
+      imgFleurs.classList.remove('visible');
+      document.getElementById('footerMode').textContent = 'ORIGINAL AUDINOWHO';
+    } else {
+      imgOriginal.classList.remove('visible');
+      imgSable.classList.toggle('visible', chkSable.checked);
+      imgSkyPeak.classList.toggle('visible', chkSkyPeak.checked);
+      imgArbres.classList.toggle('visible', chkArbres.checked);
+      imgFleurs.classList.toggle('visible', chkFleurs.checked);
+      document.getElementById('footerMode').textContent = 'CARTE HYBRIDE';
+    }
+  }
+
+  function soloLayer(layerKey) {
+    showOriginal = false;
+    btnCompare.textContent = 'Voir Original audinowho';
+    btnCompare.classList.remove('active');
+    chkSable.checked = (layerKey === 'sable');
+    chkSkyPeak.checked = (layerKey === 'skypeak');
+    chkArbres.checked = (layerKey === 'arbres');
+    chkFleurs.checked = (layerKey === 'fleurs');
+    updateVisibility();
+  }
+
+  btnCompare.addEventListener('click', () => {
+    showOriginal = !showOriginal;
+    btnCompare.textContent = showOriginal ? 'Voir Carte Hybride' : 'Voir Original audinowho';
+    btnCompare.classList.toggle('active', showOriginal);
+    updateVisibility();
+  });
+
+  btnDayNight.addEventListener('click', () => {
+    isNight = !isNight;
+    btnDayNight.textContent = isNight ? 'Mode : Nuit (Abyss)' : 'Mode : Jour';
+    btnDayNight.classList.toggle('active', isNight);
+    updateSources();
+  });
+
+  bgSelect.addEventListener('change', (e) => {
+    canvasWrapper.className = `canvas-wrapper ${e.target.value}`;
+  });
+
+  zoomSelect.addEventListener('change', (e) => {
+    const scale = parseFloat(e.target.value);
+    canvasWrapper.style.transform = `scale(${scale})`;
+  });
+
+  gridSelect.addEventListener('change', (e) => {
+    gridOverlay.className = 'grid-overlay';
+    if (e.target.value === '8') {
+      gridOverlay.classList.add('active-8');
+    } else if (e.target.value === '24') {
+      gridOverlay.classList.add('active-24');
+    }
+  });
+
+  document.getElementById('btnAllLayers').addEventListener('click', () => {
+    showOriginal = false;
+    btnCompare.textContent = 'Voir Original audinowho';
+    btnCompare.classList.remove('active');
+    chkSable.checked = true;
+    chkSkyPeak.checked = true;
+    chkArbres.checked = true;
+    chkFleurs.checked = true;
+    updateVisibility();
+  });
+
+  document.getElementById('btnNoneLayers').addEventListener('click', () => {
+    showOriginal = false;
+    btnCompare.textContent = 'Voir Original audinowho';
+    btnCompare.classList.remove('active');
+    chkSable.checked = false;
+    chkSkyPeak.checked = false;
+    chkArbres.checked = false;
+    chkFleurs.checked = false;
+    updateVisibility();
+  });
+
+  [chkSable, chkSkyPeak, chkArbres, chkFleurs].forEach(chk => {
+    chk.addEventListener('change', () => {
+      showOriginal = false;
+      btnCompare.textContent = 'Voir Original audinowho';
+      btnCompare.classList.remove('active');
+      updateVisibility();
+    });
+  });
+
+  updateSources();
+  updateVisibility();
+</script>
+
+</body>
+</html>

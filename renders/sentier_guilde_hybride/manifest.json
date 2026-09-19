@@ -1,0 +1,73 @@
+{
+  "title": "Sentier de la Guilde Hybride (PMDO audinowho)",
+  "source_map": "audinowho/DumpAsset/Data/Ground/guild_path.rsground",
+  "source_tileset": "audinowho/DumpAsset/Content/Tile/GuildPath.tile",
+  "dimensions_px": [
+    408,
+    744
+  ],
+  "tiles_24px": [
+    17,
+    31
+  ],
+  "tiles_8px": [
+    51,
+    93
+  ],
+  "materials": {
+    "path_sand": {
+      "name": "Sable de Treasure Town Beach",
+      "source": "Beach & Path to Beach.png",
+      "palette_colors": 42,
+      "pixels": 63877
+    },
+    "meadow_grass": {
+      "name": "Verdure de Sky Peak",
+      "source": "SkyPeak4thPass.png",
+      "palette_colors": 19,
+      "pixels": 109941
+    },
+    "canopy_tree": {
+      "name": "Verdure de Métano Town Tree",
+      "source": "TownBase.png",
+      "palette_colors": 55,
+      "pixels": 129734
+    },
+    "flowers": {
+      "name": "Fleurs tropicales natives (Flowers_Tropical_1..5)",
+      "source": "DumpAsset/Content/Object/",
+      "count": 19,
+      "pixels": 7724
+    }
+  },
+  "files": {
+    "layers": [
+      "01_sable_plage.png",
+      "02_verdure_skypeak.png",
+      "03_arbres_metano.png",
+      "04_decorations_fleurs.png"
+    ],
+    "night_layers": [
+      "01_sable_plage_nuit.png",
+      "02_verdure_skypeak_nuit.png",
+      "03_arbres_metano_nuit.png",
+      "04_decorations_fleurs_nuit.png"
+    ],
+    "composites": [
+      "terrain.png",
+      "terrain_nuit.png",
+      "terrain_magenta.png"
+    ],
+    "pmdo": [
+      "../../sprites/sentier_guilde_pmdo/GuildPath.png",
+      "../../sprites/sentier_guilde_pmdo/GuildPath.tile",
+      "../../sprites/sentier_guilde_pmdo/guild_path.rsground",
+      "../../sprites/sentier_guilde_pmdo/GuildPath.tsj",
+      "../../sprites/sentier_guilde_pmdo/guild_path.tmj"
+    ],
+    "contact_sheets": [
+      "PLANCHE_SENTIER_GUILDE.png",
+      "AUDIT_MATIERES_HYBRIDES.png"
+    ]
+  }
+}
