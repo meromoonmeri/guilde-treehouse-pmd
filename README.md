@@ -4,7 +4,7 @@
 
 La synthèse opérationnelle de tous les README est maintenant centralisée dans [`METHODE_COMPOSITION_MAPS_PMD.md`](METHODE_COMPOSITION_MAPS_PMD.md). Elle impose, avant toute nouvelle map, la référence canonique, l’analyse du layout, la fiche des layers, la séparation des textures, la recomposition et les niveaux de validation. Les rendus validés restent des références immuables ; aucune zone existante n’est redessinée pour fabriquer un nouvel export.
 
-**Première map produite avec cette méthode :** [`renders/cote_metano_v6_chenal/README.md`](renders/cote_metano_v6_chenal/README.md) — Les Terrasses du Chenal, 10 layers alignés, textures natives Métano, 4 phases de rivière et variantes jour/nuit. Composition vérifiée par code ; intégration PMDO/runtime encore ouverte.
+**Map courante produite avec cette méthode :** [`renders/arene_metano_v16/README.md`](renders/arene_metano_v16/README.md) — extension Métano Town basée sur le layout de la dernière zone V15, herbe et cliffs Métano séparés, ciel/étoiles indépendants et overlay de nuages en wrap parfait. Composition vérifiée par code ; intégration PMDO/runtime encore ouverte. Le prototype côtier V6 précédent n’est pas retenu comme méthode de référence.
 
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
