@@ -408,3 +408,13 @@ Utilisateur : « Les layer sont pas exactement celui de la référence / Tu dois
 ## V15 — zone canonique générée, critères Halcyon/Palika
 
 Utilisateur : « méthode canonique de création de map avec le générateur + animations boréal en plusieurs frames d'ondulation + convertir la zone aux critères de Halcyon Palika ». Terrain généré plein cadre 928×1152 (bande magenta), alpha par inondation (pointes de pics dépassant dans la bande = terrain légitime, zéro magenta résiduel — ne pas exiger top transparent). Planche 2×4 d'ondulations générée → 8 frames AuroreV15_00..07.png strictement 768×256, 150 ms, posées à (80,24) sur grille 8 px. Calques Halcyon empilés : ciel navy uniforme / étoiles V14 / aurore / terrain, sans wrap. Sources `source/arene_halcyon_v15/`, rendus/ZIP `renders/arene_halcyon_v15*`, aperçu racine `apercu_arene_halcyon_v15.html`. 8 tests PASS. NB : np.any(mask!=mask, axis=2) plante sur tableaux 2D — comparer directement.
+
+## Structures Métano Town / Treasure Town — validation des terrains 13–17 et carte terminée
+
+L’utilisateur valide l’ensemble des **terrains créés entre le 13 et le 17 septembre 2026** et confirme la méthode « références canoniques + reconstruction aux tuiles natives ». Cette livraison ajoute les **sprites de structures style Métano Town / Treasure Town** et **termine la carte** en posant ces structures sur un terrain natif.
+
+Références de textures : **Palikadude/Halcyon** (master `da6c2130`, feuilles `Metano_*` 8 px), **Minemaker0430/ExplorersOfSkyOrigins** (main `bed9449`, `TreasureTown*` / `GuildOutside*` 24 px, `treasure_town.rsground`, `guild_outside.rsground`) et **audinowho/PMDODump** (formats/données PMDO, pas de pixels). `exports/structures_metano_treasure_v1/provenance.json` fige commit+sha256 ; `test_build.py` contrôle que les copies locales sont byte-identiques.
+
+Huit structures extraites pixel-par-pixel (Réserve Kangaskhan, Boutique Kecleon, Expertise Xatu, Banque Duskull, Liaison Élekable, Dojo Ossatueur, QG Guilde jour/nuit), détourées par propagation depuis les bords (aucun pixel généré/recoloré/rééchantillonné), atlas 24 px, puis carte village terminée : `map/village_00_terrain.png` + `map/village_01_structures.png` + composite, et Tiled `village.tmx`/`village_sol.tsx`. Nuit du QG = masque alpha du jour (géométrie identique vérifiée).
+
+`source/structures_metano_treasure_v1/` (native.py lecteur .tile/.rsground, build.py, test_build.py), `exports/structures_metano_treasure_v1/`, galerie `apercu_structures_metano_treasure_v1.html`. Tous les tests passent (pixels canoniques, alignement 24 px, atlas/carte recomposables, TMX/TSX valides, références intactes). **Pas d’import PMDO réel, collisions/warps non configurés.**

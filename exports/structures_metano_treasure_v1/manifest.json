@@ -1,0 +1,212 @@
+{
+  "grid_px": 24,
+  "method": "Extraction canonique + détourage par propagation depuis les bords. Aucun pixel généré, recoloré ou rééchantillonné.",
+  "terrains_13_17_septembre": "validés par l’utilisateur ; cette livraison ajoute les structures et termine la carte village.",
+  "structures": [
+    {
+      "id": "kangaskhan_reserve",
+      "label": "Réserve Kangaskhan",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        144,
+        144
+      ],
+      "file": "individuels/StructureTT_kangaskhan_reserve.png",
+      "atlas_rect_px": [
+        0,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "id": "kecleon_boutique",
+      "label": "Boutique Kecleon",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        144,
+        120
+      ],
+      "file": "individuels/StructureTT_kecleon_boutique.png",
+      "atlas_rect_px": [
+        168,
+        0,
+        144,
+        120
+      ]
+    },
+    {
+      "id": "xatu_expertise",
+      "label": "Expertise Xatu",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        144,
+        120
+      ],
+      "file": "individuels/StructureTT_xatu_expertise.png",
+      "atlas_rect_px": [
+        336,
+        0,
+        144,
+        120
+      ]
+    },
+    {
+      "id": "duskull_banque",
+      "label": "Banque Duskull",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        144,
+        144
+      ],
+      "file": "individuels/StructureTT_duskull_banque.png",
+      "atlas_rect_px": [
+        504,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "id": "electivire_liaison",
+      "label": "Liaison Élekable",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        168,
+        96
+      ],
+      "file": "individuels/StructureTT_electivire_liaison.png",
+      "atlas_rect_px": [
+        0,
+        144,
+        168,
+        96
+      ]
+    },
+    {
+      "id": "marowak_dojo",
+      "label": "Dojo Ossatueur",
+      "style": "Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        120,
+        96
+      ],
+      "file": "individuels/StructureTT_marowak_dojo.png",
+      "atlas_rect_px": [
+        168,
+        144,
+        120,
+        96
+      ]
+    },
+    {
+      "id": "guilde_qg",
+      "label": "QG de la Guilde (Wigglytuff)",
+      "style": "Guilde / Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        168,
+        120
+      ],
+      "file": "individuels/StructureTT_guilde_qg.png",
+      "atlas_rect_px": [
+        336,
+        144,
+        168,
+        120
+      ]
+    },
+    {
+      "id": "guilde_qg_nuit",
+      "label": "QG de la Guilde (nuit)",
+      "style": "Guilde / Treasure Town",
+      "cell_px": 24,
+      "size_px": [
+        168,
+        120
+      ],
+      "file": "individuels/StructureTT_guilde_qg_nuit.png",
+      "atlas_rect_px": [
+        504,
+        144,
+        168,
+        120
+      ]
+    }
+  ],
+  "atlas": "Structures_TreasureTown_atlas.png",
+  "map": {
+    "size_px": [
+      576,
+      336
+    ],
+    "layers": [
+      "map/village_00_terrain.png",
+      "map/village_01_structures.png"
+    ],
+    "composite": "map/village_composite.png",
+    "placements": [
+      {
+        "id": "guilde_qg",
+        "cell": [
+          9,
+          0
+        ]
+      },
+      {
+        "id": "kecleon_boutique",
+        "cell": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "kangaskhan_reserve",
+        "cell": [
+          6,
+          2
+        ]
+      },
+      {
+        "id": "duskull_banque",
+        "cell": [
+          16,
+          2
+        ]
+      },
+      {
+        "id": "xatu_expertise",
+        "cell": [
+          2,
+          9
+        ]
+      },
+      {
+        "id": "electivire_liaison",
+        "cell": [
+          15,
+          9
+        ]
+      },
+      {
+        "id": "marowak_dojo",
+        "cell": [
+          10,
+          9
+        ]
+      }
+    ]
+  },
+  "not_validated": [
+    "Import PMDO réel",
+    "Collisions / warps / occlusion",
+    "Appréciation artistique"
+  ],
+  "credits": "Ressources natives © leurs auteurs (Palikadude/Halcyon, Minemaker0430/ExplorersOfSkyOrigins)."
+}

@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveau — sprites de structures Métano Town / Treasure Town + carte village terminée
+
+- **[Galerie des 8 structures et de la carte](apercu_structures_metano_treasure_v1.html)** — sprites extraits pixel-par-pixel des feuilles canoniques Treasure Town / Guilde (24 px), détourés par propagation depuis les bords ; carte village terminée (terrain natif + calque structures).
+- **[Pack ZIP](exports/structures_metano_treasure_v1_pack.zip)** · [catalogue, méthode et limites](exports/structures_metano_treasure_v1/README.md).
+- Références de textures : **Palikadude/Halcyon**, **Minemaker0430/ExplorersOfSkyOrigins** et **audinowho/PMDODump** (formats). Provenance commit+sha256 dans `exports/structures_metano_treasure_v1/provenance.json`.
+
+Les terrains créés entre le **13 et le 17 septembre sont validés** ; cette livraison ajoute les structures et termine la carte. Reconstruction : `python source/structures_metano_treasure_v1/build.py` ; tests : `python source/structures_metano_treasure_v1/test_build.py` (pixels canoniques, alignement 24 px, atlas/carte recomposables, TMX/TSX valides). Pas d’import PMDO réel ni collisions configurées.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
