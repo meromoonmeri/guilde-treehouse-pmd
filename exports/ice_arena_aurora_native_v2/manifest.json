@@ -1,0 +1,41 @@
+{
+  "title": "V1 layout / recovered native aurora mechanism",
+  "layout": [
+    512,
+    720
+  ],
+  "BG_size": [
+    264,
+    216
+  ],
+  "BG_origin": [
+    120,
+    0
+  ],
+  "grid_px": 8,
+  "native_source": "v38p05a",
+  "native_source_match": "RGBA exact with aurorepmdsky.png",
+  "animation": "Two native BPC drawings, effect 5/3, 120 ticks each; no geometric motion or palette animation.",
+  "ticks": 240,
+  "unique_coefficient_pairs": 33,
+  "nominal_preview_seconds": 4,
+  "color_port": "Original BPL RGB8; floor((upper*EVA + lower*EVB)/16), NOT bit-exact DS RGB555/LCD rendering.",
+  "coefficient_note": "EVA and EVB independently quantized by the native code: sum can be 15, not always 16. Do not normalize.",
+  "layers": "Two actual native opaque BPC layers; five editorial separated components recompose every port frame exactly.",
+  "stars": "Native drawings/blend replace old invented twinkle; overlapping stars/ribbons remain together in Ribbons.",
+  "terrain": "Eight original static files copied byte-for-byte; five foreground terrain layers remain active and unchanged.",
+  "generator_used": false,
+  "resampling": false,
+  "wrap": false,
+  "native_game_capture": false,
+  "PMDO_gpu_or_gameplay_validated": false,
+  "collision_validated": false,
+  "art_approval": "pending",
+  "sources_manifest": "../../source/ice_arena_aurora_native_v2/references/sources.json",
+  "dependencies": {
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "skytemple-files": "1.8.5"
+  }
+}

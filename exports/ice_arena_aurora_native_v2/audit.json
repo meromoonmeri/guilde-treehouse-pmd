@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "count": 49,
+  "checks": [
+    {
+      "check": "Pinned source: files/MAP_BG/v38p05a.bma",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: files/MAP_BG/v38p05a.bpc",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: files/MAP_BG/v38p05a.bpl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: files/language-specific/EU/SCRIPT/D52P32A/n09a1207.ssb",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: files/language-specific/EU/SCRIPT/D52P32A/n09a1207.ssa",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: src/overlay_11_022E9A78.c",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: src/main_02009F9C.c",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: asm/overlay_11.s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: asm/overlay_11_022EE5E4.s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: asm/overlay_11_022EA024.s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: asm/main_0200B33C.s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: asm/main_rodata_020925A0.s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: RogueEssence/Content/DirSheet.cs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: RogueEssence/Content/Animation/Backgrounds/MapBG.cs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Pinned source: RogueEssence/Content/Animation/AnimData.cs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Native BPC0 equals user reference, every RGBA pixel",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Exactly two layers, no BPA tile animation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "No native palette animation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "240 samples and 33 coefficient pairs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "All ticks match independent decrementing fade-state model",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Period and seam are cyclic, with no repeated endpoint added",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Native independent coefficient quantization retained",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "4,000 ms WebP timing, nominal 60 ticks/s",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_01_dark_sky.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_02_native_haze.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_03_native_distant_ice.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_04_snow_ground.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_05_south_approach.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_06_north_ice_rim.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_07_side_ice_and_ramp.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V1 byte preservation: IceAuroraV1_08_native_fissures.png",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "All eight V1 static layers retained",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Every exported state uses only same-XY native RGB8 weighted by EVA/EVB",
+      "status": "PASS",
+      "detail": "No displacement, recolor curve, scale, rotation, wrap or invented frame."
+    },
+    {
+      "check": "All 165 separated component PNGs recompose the 33 complete BG states exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Non-sky components contain no opaque flat-sky matte",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "All components are binary-alpha and correctly premultiplied for .dir",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Every opaque terrain pixel is unchanged at every state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "All pixels outside native BG rectangle equal V1 at every state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Both animation endpoints preserve original BPL RGB8 exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: BGComposite",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: Sky",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: Ribbons",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: Stars",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: Haze",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO .dir header and all 240 frame slots: DistantIce",
+      "status": "PASS",
+      "detail": "Binary/PNG reader check; NOT native GPU load."
+    },
+    {
+      "check": "PMDO recipes: names resolve, 240-frame loop, one tick per frame, no scroll/wrap",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "Lossless WebP pixels and complete timeline: background",
+      "status": "PASS",
+      "detail": "56 encoded frames after identical-frame merging"
+    },
+    {
+      "check": "Lossless WebP pixels and complete timeline: scene",
+      "status": "PASS",
+      "detail": "56 encoded frames after identical-frame merging"
+    },
+    {
+      "check": "Testing and color-port limits are explicit",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "method": "Pinned-file hashes, source-derived math models, PNG composition and .dir container/slot audits",
+  "native_ARM_executed": false,
+  "DS_emulator_tested": false,
+  "PMDO_runtime_tested": false,
+  "PMDO_GPU_tested": false,
+  "collision_or_gameplay_tested": false
+}

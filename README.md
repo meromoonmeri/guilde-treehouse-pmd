@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Layout V1 — mécanisme natif des aurores retrouvé
+
+**[Animation WebP](exports/ice_arena_aurora_native_v2/review/scene.webp)** · **[Atelier](exports/ice_arena_aurora_native_v2/review/index.html)** · **[PNG séparés / import PMDO](exports/ice_arena_aurora_native_v2/README.md)** · **[Preuve native et sources figées](source/ice_arena_aurora_native_v2/README.md)**
+
+Retour à la **V1 verticale 512 × 720**, sans déplacer son terrain. Le fond natif `v38p05a` fournit deux vrais dessins d’aurore ; le script et le moteur les alternent par fondu **120 + 120 ticks**, sans déformation ni wrap. Huit statiques V1 conservés byte-identiques, cinq composants animés séparés, 33 états/240 ticks et six assets BG PMDO à noms inédits. **49 contrôles de fichiers/calculs + 15 contrôles DOM simulés PASS.** Port RGB8 du mécanisme natif, **pas une capture DS RGB555 ni une validation GPU/collisions PMDO**. Anciennes versions et Ground utilisateur inchangés.
+
 ## Arène V3 — roche/glace référencées, montagnes à l’horizon, vallée enneigée
 
 **[Animation WebP](renders/arene_glace_sky_peak_v3/ARENE_SKYPEAK_V3_composition_animee.webp)** · **[Composition PNG](renders/arene_glace_sky_peak_v3/ARENE_SKYPEAK_V3_composition_nuit.png)** · **[Dix calques / notice](renders/arene_glace_sky_peak_v3/README.md)** · **[Atelier](apercu_arene_glace_sky_peak_v3.html)**

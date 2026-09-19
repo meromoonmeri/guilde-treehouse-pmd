@@ -1,0 +1,164 @@
+{
+  "schema": "placement_recipe_NOT_a_Ground_file",
+  "target": "PMDO 0.8.12",
+  "origin_px": [
+    120,
+    0
+  ],
+  "choose_one": {
+    "one_complete_BG": [
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_BGComposite",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      }
+    ],
+    "five_editable_components": [
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_Sky",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_Ribbons",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_Stars",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_Haze",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      },
+      {
+        "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+        "MapLoc": {
+          "X": 120,
+          "Y": 0
+        },
+        "BGAnim": {
+          "AnimIndex": "IceAuroraNativeV2_DistantIce",
+          "FrameTime": 1,
+          "StartFrame": 0,
+          "EndFrame": 239,
+          "AnimDir": -1,
+          "Alpha": 255,
+          "AnimFlip": 0
+        },
+        "BGMovement": {
+          "X": 0,
+          "Y": 0
+        },
+        "Parallax": "1, 1",
+        "RepeatX": false,
+        "RepeatY": false
+      }
+    ]
+  },
+  "render_order": [
+    "static/01_dark_sky",
+    "chosen native BG option",
+    "static/04 through 08"
+  ],
+  "disable_old_effects": [
+    "IceAuroraV1_Ribbons",
+    "IceAuroraV1_Stars"
+  ],
+  "old_static_02_03": "Retained as byte-identical files; replaced in rendering by native BG components, do not double-draw.",
+  "collision": "NOT PROVIDED",
+  "runtime_tested": false
+}

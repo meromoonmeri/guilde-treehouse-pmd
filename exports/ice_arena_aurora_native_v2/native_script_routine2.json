@@ -1,0 +1,39 @@
+[
+  {
+    "offset": 4492,
+    "opcode": "back2_SetEffect",
+    "params": [
+      "5",
+      "120"
+    ]
+  },
+  {
+    "offset": 4495,
+    "opcode": "Wait",
+    "params": [
+      "120"
+    ]
+  },
+  {
+    "offset": 4497,
+    "opcode": "back2_SetEffect",
+    "params": [
+      "3",
+      "120"
+    ]
+  },
+  {
+    "offset": 4500,
+    "opcode": "Wait",
+    "params": [
+      "120"
+    ]
+  },
+  {
+    "offset": 4502,
+    "opcode": "Jump",
+    "params": [
+      "4492"
+    ]
+  }
+]

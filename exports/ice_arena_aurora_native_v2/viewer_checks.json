@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "count": 15,
+  "method": "Node VM with simulated DOM, image load callbacks and canvas call recording",
+  "real_browser": false,
+  "GPU_rendered": false,
+  "checks": [
+    {
+      "check": "All embedded PNG references reached load callbacks",
+      "status": "PASS"
+    },
+    {
+      "check": "Playback controls enabled after loading",
+      "status": "PASS"
+    },
+    {
+      "check": "Native pixel smoothing disabled on both canvases",
+      "status": "PASS"
+    },
+    {
+      "check": "Five independent background components exposed",
+      "status": "PASS"
+    },
+    {
+      "check": "V1 sky and five foreground terrain layers exposed",
+      "status": "PASS"
+    },
+    {
+      "check": "BG is positioned at (120,0), without a scaled draw call",
+      "status": "PASS"
+    },
+    {
+      "check": "Nominal 60 Hz reaches the lower native endpoint at 2 seconds",
+      "status": "PASS"
+    },
+    {
+      "check": "240-tick playback wraps to phase zero at 4 seconds",
+      "status": "PASS"
+    },
+    {
+      "check": "Pause stops time advancement",
+      "status": "PASS"
+    },
+    {
+      "check": "Scrubbing pauses and displays selected tick",
+      "status": "PASS"
+    },
+    {
+      "check": "Aurora checkbox removes just one background component",
+      "status": "PASS"
+    },
+    {
+      "check": "Restore re-enables all eleven displayed layers",
+      "status": "PASS"
+    },
+    {
+      "check": "2x inspection changes CSS only",
+      "status": "PASS"
+    },
+    {
+      "check": "Initial-phase button resets and pauses playback",
+      "status": "PASS"
+    },
+    {
+      "check": "Color-port and runtime limitations remain visible",
+      "status": "PASS"
+    }
+  ]
+}
