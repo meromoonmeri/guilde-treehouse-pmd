@@ -416,7 +416,22 @@ def write_viewer(renders: dict[str, Image.Image], original: dict[str, Image.Imag
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--preview', action='store_true', help='rendu composite seul dans .cache/beach/')
+    parser.add_argument('--zip-only', action='store_true', help='re-crée le ZIP depuis le projet déjà construit (après verify.py et runtime_test.py)')
     args = parser.parse_args()
+    if args.zip_only:
+        for name in ('verification.json', 'runtime_verification.json'):
+            if (HERE / name).exists():
+                data = json.loads((HERE / name).read_text())
+                data.pop('zip_sha256', None)  # l'archive ne peut pas contenir son propre hachage
+                (PACK / name).write_text(json.dumps(data, ensure_ascii=False, indent=1))
+        write_zip()
+        report_path = HERE / 'verification.json'
+        if report_path.exists():
+            report = json.loads(report_path.read_text())
+            report['zip_sha256'] = hashlib.sha256(ZIP.read_bytes()).hexdigest()
+            report_path.write_text(json.dumps(report, ensure_ascii=False, indent=1))
+        print('ZIP', ZIP.name, hashlib.sha256(ZIP.read_bytes()).hexdigest())
+        return
     sheets = load_sheets()
     source = load_ground(REF / 'EoSO__beach.rsground')['Object']
     ground, mapping = assemble(source)

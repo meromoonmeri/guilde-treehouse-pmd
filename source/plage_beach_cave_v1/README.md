@@ -10,7 +10,7 @@ Explorers of Sky (fond `D01P11A`) telle que livrée par Explorers of Sky Origins
 - Mesures de raccord et choix des blocs : `ANALYSE.md` / `analyse.json`.
 - Plan de cellules : `layout.py` ; correspondances cellule → source : `cell_mapping.json`.
 - Provenance (dépôt, commit, SHA-256, blobs Git) : `provenance.json`.
-- Vérification : `verify.py` → `verification.json`.
+- Vérification : `verify.py` → `verification.json` ; chargement natif : `runtime_test.py` → `runtime_verification.json`.
 
 ## Livrables (racine du dépôt)
 
@@ -39,7 +39,10 @@ Explorers of Sky (fond `D01P11A`) telle que livrée par Explorers of Sky Origins
   de la carte EoSO ; les feuilles livrées sont identiques octet pour octet aux
   feuilles sources ; aucune image générée, recolorée, tournée ou redimensionnée.
 - La mer n'est jamais figée : 315 cellules animées × 17 frames, `FrameLength` 16.
-- **Non testé dans le moteur** (voir `verification.json` : `native_runtime_tested`).
-  Un aperçu HTML ne valide ni collisions ni déclencheurs.
+- **Chargé par le vrai PMDO 0.8.12, sans affichage** (`runtime_test.py` →
+  `runtime_verification.json` : `DataManager.GetGround` dans un hook Lua du
+  binaire officiel, 45 × 20, TexSize 3, 3 calques, cellule de mer à 17 frames).
+  Rendu GPU, éditeur, collisions en jeu et déclencheurs **non testés** ; un
+  aperçu HTML ne les valide pas non plus.
 - La variante crépuscule EoSO (`dusk_beach`) n'est pas produite (flipbook de
   toute la carte avec bulles cuites : non ré-assemblable sans doublons).

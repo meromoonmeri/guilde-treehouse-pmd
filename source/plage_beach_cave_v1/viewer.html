@@ -51,7 +51,7 @@ code{background:#242833;padding:1px 5px;border-radius:4px;font-size:12px}
   <h2>Ce que montre cet aperçu</h2>
   <p>Le rendu est recomposé dans le navigateur à partir des PNG par calque exportés par <code>build.py</code> : calque <code>Back</code>, 17 bandes de mer (<code>Anim</code>, rangées 0–6), calque <code>Front</code>. Cadence : 16 ticks à 60 Hz par frame (≈ 267 ms), soit un cycle de ≈ 4,5 s, comme dans le Ground d'origine. Les calques Back et Front sont statiques dans le Ground ; seule la mer est animée.</p>
   <p id="stats"></p>
-  <div class="warn"><strong>Un aperçu HTML ne vaut pas une validation dans le moteur.</strong> Il ne teste ni les collisions, ni les déclencheurs, ni le rendu GPU de PMDO. Ouvrir le Ground dans l'éditeur (<code>OUVRIR_EDITEUR</code>) pour valider raccords et déplacements.</div>
+  <div class="warn"><strong>Un aperçu HTML ne vaut pas une validation dans le moteur.</strong> Le Ground a été désérialisé par le vrai PMDO 0.8.12 sans affichage (<code>runtime_verification.json</code>) ; le rendu GPU, les collisions en jeu et les déclencheurs ne sont pas testés. Ouvrir le Ground dans l'éditeur (<code>OUVRIR_EDITEUR</code>) pour valider raccords et déplacements.</div>
   <h2>Composition</h2>
   <p>Arrivée à droite (marqueur <code>Entrance</code>), plage de sable libre au centre, bouche de <strong>Beach Cave</strong> à gauche (déclencheur <code>Beach_Cave_Entrance</code>), sortie par le couloir du bord droit (<code>Exit</code>). Détails et méthode : <code>source/plage_beach_cave_v1/SPEC.md</code>, mesures : <code>ANALYSE.md</code>.</p>
 </section>

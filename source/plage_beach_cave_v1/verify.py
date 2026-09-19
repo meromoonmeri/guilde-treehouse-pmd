@@ -286,12 +286,16 @@ def main():
     R.check('tiled map dims', tmj['width'] == L.NEW_W and tmj['height'] == L.NEW_H and tmj['tilewidth'] == CELL and all(len(l['data']) == L.NEW_W * L.NEW_H for l in tmj['layers']))
     R.check('tiled tsx present', all((OUT / 'tiled' / t['source']).is_file() for t in tmj['tilesets']))
 
+    runtime = json.loads((HERE / 'runtime_verification.json').read_text()) if (HERE / 'runtime_verification.json').exists() else {}
+    if runtime:
+        R.check('native PMDO 0.8.12 headless load (runtime_test.py)', runtime.get('status') == 'PASS' and runtime.get('asset') == L.ASSET, runtime.get('rows'))
     report = {
         'status': 'PASS' if R.failed == 0 else 'FAIL', 'lot': 'plage_beach_cave_v1', 'zip': ZIP.name, 'zip_sha256': sha256(ZIP),
         'ground': f'{L.ASSET}.rsground', 'ground_sha256': hashlib.sha256(ground_zip).hexdigest(),
         'grid_cells': [L.NEW_W, L.NEW_H], 'pixels': [L.NEW_W * CELL, L.NEW_H * CELL], 'cell_px': CELL,
         'source_commit': provenance['commit'], 'seams': seam_report, 'free_obstacle_cells': len(free),
-        'native_runtime_tested': False, 'editor_tested': False, 'gpu_render_tested': False,
+        'native_runtime_tested': runtime.get('status') == 'PASS', 'native_runtime': runtime or None,
+        'editor_tested': False, 'gpu_render_tested': False,
         'checks': R.checks, 'failed': R.failed,
     }
     (HERE / 'verification.json').write_text(json.dumps(report, ensure_ascii=False, indent=1))

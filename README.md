@@ -5,7 +5,7 @@
 - **[Aperçu animé, calques et comparaison avec l’original](apercu_plage_beach_cave_v1.html)** · **[Pack PMDO 0.8.12](plage_beach_cave_v1_pmdo_0812.zip)** (`plage_beach_cave_v1/`, Ground `plage_bc1_grande_jour`, 3 feuilles `PLAGE_BC1_*` copiées octet pour octet, `INSTALLER.py`, `OUVRIR_EDITEUR`).
 - [PNG par calque, 17 bandes de mer, GIF/WebP, Tiled](exports/plage_beach_cave_v1/) · [composition](source/plage_beach_cave_v1/SPEC.md) · [mesures de raccord](source/plage_beach_cave_v1/ANALYSE.md) · [provenance](source/plage_beach_cave_v1/provenance.json) · [vérification (79 contrôles)](source/plage_beach_cave_v1/verification.json).
 
-45 × 20 cellules de 24 px (1080 × 480) au lieu de 33 × 16 : ré-assemblage cellule par cellule de la plage EoSO (fond PMD Sky `D01P11A`, commit `bed94499`), mer animée canonique **17 frames par cellule** (16 ticks), grotte Beach Cave à gauche, arrivée et sortie à droite, ≈ 3× de sable libre. Aucune image générée ni redessinée ; **non testé dans le moteur** ; variante crépuscule non produite (flipbook de toute la carte).
+45 × 20 cellules de 24 px (1080 × 480) au lieu de 33 × 16 : ré-assemblage cellule par cellule de la plage EoSO (fond PMD Sky `D01P11A`, commit `bed94499`), mer animée canonique **17 frames par cellule** (16 ticks), grotte Beach Cave à gauche, arrivée et sortie à droite, ≈ 3× de sable libre. Aucune image générée ni redessinée ; Ground **chargé par le vrai PMDO 0.8.12 sans affichage** ([runtime](source/plage_beach_cave_v1/runtime_verification.json)) — rendu GPU, éditeur et gameplay non testés ; variante crépuscule non produite (flipbook de toute la carte).
 
 ## Dix créations supplémentaires — contrôle Métano renforcé
 

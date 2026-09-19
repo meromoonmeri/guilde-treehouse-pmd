@@ -2,7 +2,7 @@
  "status": "PASS",
  "lot": "plage_beach_cave_v1",
  "zip": "plage_beach_cave_v1_pmdo_0812.zip",
- "zip_sha256": "d405df10e77a801db052b3eb6a3cbc6e86e075273f9767dbab5a27cd3c8f2706",
+ "zip_sha256": "c06312bb52d63a1682ec66be957873d029f28841996f8285972bc9af37d0397d",
  "ground": "plage_bc1_grande_jour.rsground",
  "ground_sha256": "93d28b41eaa11c436ace499058e7c1d75f652a6cd5b77c20bb00ad78b4350632",
  "grid_cells": [
@@ -193,7 +193,39 @@
   }
  },
  "free_obstacle_cells": 2892,
- "native_runtime_tested": false,
+ "native_runtime_tested": true,
+ "native_runtime": {
+  "status": "PASS",
+  "pmdo": "0.8.12.0",
+  "method": "DataManager.Instance:GetGround dans un hook Lua de démarrage du vrai binaire PMDO (-guide -quest), sans affichage",
+  "asset": "plage_bc1_grande_jour",
+  "assertions": [
+   "Ground non nul",
+   "Width 45 / Height 20 cellules",
+   "TexSize 3",
+   "3 calques",
+   "1 marqueur",
+   "2 GroundObjects",
+   "cellule de mer (10,4) : 17 frames, FrameLength 16, feuille PLAGE_BC1_ANIM",
+   "cellule de sable (20,10) : 1 frame PLAGE_BC1_LAYER1, Front vide"
+  ],
+  "rows": [
+   "plage_bc1_grande_jour\t45\t20\t3\t3\t17\tPASS"
+  ],
+  "return_code": 0,
+  "startup_restored": true,
+  "graphics_constant_initialized": {
+   "DungeonTexSize": 3
+  },
+  "editor_graphics_tested": false,
+  "gpu_assets_tested": false,
+  "gameplay_tested": false,
+  "engine": {
+   "zip": "pmdc-linux-x64.zip v0.8.12",
+   "sha256": "c64f72afd27b96d5a870f71e44d05ee1e952909e86b9a53d0479163763c61577",
+   "base_assets": "audinowho/DumpAsset@3e767571f9dd94270b848b3a73de9bec2553a2eb"
+  }
+ },
  "editor_tested": false,
  "gpu_render_tested": false,
  "checks": [
@@ -276,46 +308,6 @@
    "check": "reference EoSO__D01P11A_bpa5_0.tile git blob",
    "status": "PASS",
    "detail": "082d4be4f865"
-  },
-  {
-   "check": "github blob EoSO__beach.rsground",
-   "status": "PASS",
-   "detail": "2b85028bf766d783a35aaf1286364b001c043e70"
-  },
-  {
-   "check": "github blob EoSO__D01P11A_layer1.tile",
-   "status": "PASS",
-   "detail": "549a27f888fac41f203d0824ff8435e108943a8f"
-  },
-  {
-   "check": "github blob EoSO__D01P11A_layer2.tile",
-   "status": "PASS",
-   "detail": "71feea9c81b015d249b8479799f5ccd38c88d0c6"
-  },
-  {
-   "check": "github blob EoSO__beach_animation.tile",
-   "status": "PASS",
-   "detail": "2d3767cde02c157e851b24a06c37f095712e56a8"
-  },
-  {
-   "check": "github blob EoSO__beach_init.lua",
-   "status": "PASS",
-   "detail": "cd155621df1017819edf646eff1e916daf183459"
-  },
-  {
-   "check": "github blob EoSO__dusk_beach.rsground",
-   "status": "PASS",
-   "detail": "4b2115fc2d4318942467693290a3ba348dfd9050"
-  },
-  {
-   "check": "github blob EoSO__DuskBeach.tile",
-   "status": "PASS",
-   "detail": "206a4f7e7de543b750c46a5d428540a3a2bfb9ae"
-  },
-  {
-   "check": "github blob EoSO__D01P11A_bpa5_0.tile",
-   "status": "PASS",
-   "detail": "082d4be4f8656b4c5d83b6270172ce4230d2b06d"
   },
   {
    "check": "zip integrity",
@@ -800,6 +792,13 @@
    "check": "tiled tsx present",
    "status": "PASS",
    "detail": null
+  },
+  {
+   "check": "native PMDO 0.8.12 headless load (runtime_test.py)",
+   "status": "PASS",
+   "detail": [
+    "plage_bc1_grande_jour\t45\t20\t3\t3\t17\tPASS"
+   ]
   }
  ],
  "failed": 0
