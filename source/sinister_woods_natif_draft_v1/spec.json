@@ -1,0 +1,70 @@
+{
+  "lot": "sinister_woods_natif_draft_v1",
+  "scene": {"width": 512, "height": 640, "grid": 8},
+  "method": "south_north_native_relayout (V3 optimised): generated guide = composition only, final pixels 100% native, NPZ provenance per layer",
+  "guide_reused": "source/zones_south_north_v3/generation/forest_guide.png (clearing + north grove + winding path composition)",
+  "mood": "Sinister Woods style: dark dense forest, arrival south, dark grove arch north",
+  "sources": {
+    "mystifying": "Mystifying_Forest_entrance_TDS.png",
+    "jungle": "Southern_Jungle_entrance_S.png"
+  },
+  "notes": [
+    "No Foggy Forest pixels (brighter palette would clash with Sinister mood); no camp structures anywhere.",
+    "No white-cliff cave: north objective is a dark grove arch, coherent with the dark palette.",
+    "No mirror/rotation/scale/recolor on any native pixel. Trunk/canopy split is a horizontal cut with 8px overlap on canopy."
+  ],
+  "soil_fields": {
+    "GF1": [0, 16, 96, 112],
+    "GF2": [512, 32, 592, 112],
+    "tile": 64
+  },
+  "path_field": [272, 240, 344, 296],
+  "path_curve": [[640, 256], [500, 296], [380, 224], [260, 288], [150, 256]],
+  "path_width": 72,
+  "clearing": {"center": [256, 140], "r": 78},
+  "arrival_apron": [216, 600, 296, 640],
+  "grove": {
+    "interior_src": {"src": "jungle", "box": [8, 150, 120, 280]},
+    "interior_dst": [200, 40],
+    "deepslot_src": {"src": "mystifying", "box": [280, 0, 328, 56]},
+    "deepslot_dst": [232, 84]
+  },
+  "trees": [
+    {"name": "W1", "src": "mystifying", "box": [0, 48, 208, 256], "dst": [-40, 36]},
+    {"name": "E1", "src": "mystifying", "box": [440, 56, 600, 248], "dst": [344, 48]},
+    {"name": "W2", "src": "mystifying", "box": [0, 280, 208, 464], "dst": [-40, 272]},
+    {"name": "E2", "src": "mystifying", "box": [436, 280, 600, 464], "dst": [340, 272]},
+    {"name": "W3", "src": "mystifying", "box": [24, 72, 208, 256], "dst": [-40, 452]},
+    {"name": "E3", "src": "mystifying", "box": [456, 72, 600, 248], "dst": [360, 456]}
+  ],
+  "trunk_split": 0.55,
+  "canopy_overlap": 8,
+  "leaves_arch": [
+    {"src": "jungle", "box": [96, 8, 200, 160], "dst": [150, 0]},
+    {"src": "jungle", "box": [300, 0, 408, 160], "dst": [258, 0]}
+  ],
+  "fringe": [
+    {"src": "jungle", "box": [0, 60, 80, 340], "dst": [-8, 170]},
+    {"src": "jungle", "box": [424, 60, 504, 340], "dst": [440, 170]},
+    {"src": "jungle", "box": [0, 300, 110, 432], "dst": [-6, 508]},
+    {"src": "jungle", "box": [394, 300, 504, 432], "dst": [408, 508]}
+  ],
+  "rocks": [
+    {"src": "mystifying", "box": [144, 252, 186, 288], "dst": [168, 218]},
+    {"src": "mystifying", "box": [239, 216, 274, 252], "dst": [330, 258]},
+    {"src": "mystifying", "box": [326, 212, 371, 251], "dst": [318, 420]},
+    {"src": "mystifying", "box": [409, 192, 454, 234], "dst": [176, 428]},
+    {"src": "mystifying", "box": [134, 342, 174, 374], "dst": [196, 118]},
+    {"src": "mystifying", "box": [330, 342, 368, 376], "dst": [314, 108]},
+    {"src": "mystifying", "box": [414, 342, 458, 378], "dst": [150, 560]}
+  ],
+  "tufts": [
+    {"src": "mystifying", "box": [170, 452, 236, 504], "dst": [150, 330]},
+    {"src": "mystifying", "box": [370, 452, 436, 504], "dst": [330, 350]},
+    {"src": "mystifying", "box": [170, 452, 236, 504], "dst": [320, 520]},
+    {"src": "mystifying", "box": [370, 452, 436, 504], "dst": [150, 520]},
+    {"src": "mystifying", "box": [170, 452, 236, 504], "dst": [60, 600]},
+    {"src": "mystifying", "box": [370, 452, 436, 504], "dst": [392, 600]}
+  ],
+  "layers_order": ["01_soil", "02_path", "03_undergrowth", "04_rocks", "05_grove_dark", "06_trunks", "07_canopies", "08_fringe"]
+}
