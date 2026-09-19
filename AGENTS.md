@@ -408,3 +408,20 @@ Utilisateur : « Les layer sont pas exactement celui de la référence / Tu dois
 ## V15 — zone canonique générée, critères Halcyon/Palika
 
 Utilisateur : « méthode canonique de création de map avec le générateur + animations boréal en plusieurs frames d'ondulation + convertir la zone aux critères de Halcyon Palika ». Terrain généré plein cadre 928×1152 (bande magenta), alpha par inondation (pointes de pics dépassant dans la bande = terrain légitime, zéro magenta résiduel — ne pas exiger top transparent). Planche 2×4 d'ondulations générée → 8 frames AuroreV15_00..07.png strictement 768×256, 150 ms, posées à (80,24) sur grille 8 px. Calques Halcyon empilés : ciel navy uniforme / étoiles V14 / aurore / terrain, sans wrap. Sources `source/arene_halcyon_v15/`, rendus/ZIP `renders/arene_halcyon_v15*`, aperçu racine `apercu_arene_halcyon_v15.html`. 8 tests PASS. NB : np.any(mask!=mask, axis=2) plante sur tableaux 2D — comparer directement.
+
+## Entrée Sinister Woods au générateur — lot v1 livré (19 septembre 2026)
+
+L'utilisateur a interrompu la tentative native (relayout sud→nord depuis Mystifying/Jungle)
+et ordonné d'utiliser le générateur d'images. Nouveau lot `renders/sinister_woods_gen_v1/`,
+scripts `source/sinister_woods_gen_v1/`, galerie `apercu_sinister_woods_gen_v1.html`.
+Trois bruts magenta : terrain 848×1264, 5 spécimens d'arbres/buissons + 3 cailloux,
+frises (masses latérales connectées à l'arche : découpe à chevauchement 6px, pas de vide).
+Scène 512×640, 11 calques, pulsation du bosquet 4 phases + lucioles procédurales 8×150ms,
+GIF, ORA, ZIP. 53 tests PASS (zéro magenta/violet, recomposition exacte, dimensions ÷8).
+**Pixels générés, pas natifs** : resampling LANCZOS documenté, VFX procéduraux, pas de
+collisions ni test PMDO, art non approuvé. Bugs corrigés en session : inversion
+distance_transform_edt (fond vs forme), seuillage magenta élargi + despill global.
+Le brouillon natif inachevé `source/sinister_woods_entry_v1/` est conservé tel quel
+(boîtes rochers/touffes non recalées, coutures frises non traitées) ; ne pas le
+présenter comme un livrable. Sandbox réinitialisée une 5e fois (venv reconstruite,
+rien de perdu).

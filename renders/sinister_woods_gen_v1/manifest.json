@@ -1,0 +1,148 @@
+{
+  "lot": "sinister_woods_gen_v1",
+  "scene": {
+    "w": 512,
+    "h": 640
+  },
+  "method": "GENERATED render (magenta keying). Not native tiles.",
+  "bruts": {
+    "arbres_specimens.png": "86067b1b2c86e3cd72e47db11ed3f815f5f67af4c0bcfc771a20140bcbbdff75",
+    "frises_avant_plan.png": "2c13fc4e55a16e1617aa95fc63c208d7c9f7680c1eea252609b27d76deb3a5ce",
+    "terrain_foret_sombre.png": "31d360ec962d3df3f4490f2f687a3e497304ef3ef9fc6d3361832b4ad1599402"
+  },
+  "references": [
+    "Mystifying_Forest_entrance_TDS.png",
+    "Southern_Jungle_entrance_S.png"
+  ],
+  "terrain_crop": {
+    "box": [
+      36,
+      60,
+      812,
+      1030
+    ],
+    "src": [
+      848,
+      1264
+    ]
+  },
+  "cut_columns": [
+    337,
+    822
+  ],
+  "specimens": {
+    "arbre_A": [
+      393,
+      18,
+      748,
+      526,
+      109114
+    ],
+    "arbre_B": [
+      758,
+      4,
+      1124,
+      419,
+      91379
+    ],
+    "arbre_C": [
+      0,
+      2,
+      380,
+      391,
+      83715
+    ],
+    "buisson_A": [
+      598,
+      580,
+      941,
+      866,
+      65694
+    ],
+    "buisson_B": [
+      212,
+      580,
+      556,
+      867,
+      65659
+    ],
+    "caillou_1": [
+      327,
+      292,
+      376,
+      326,
+      1102
+    ],
+    "caillou_2": [
+      1084,
+      346,
+      1119,
+      378,
+      847
+    ],
+    "caillou_3": [
+      641,
+      495,
+      674,
+      521,
+      636
+    ]
+  },
+  "frises": {
+    "frise_gauche": [
+      19,
+      3,
+      343,
+      744
+    ],
+    "arche_haut": [
+      331,
+      300,
+      828,
+      744
+    ],
+    "frise_droite": [
+      816,
+      3,
+      1101,
+      744
+    ],
+    "herbe_bas": [
+      140,
+      763,
+      985,
+      923
+    ]
+  },
+  "layers_order": [
+    "00_base_terrain",
+    "01_arbre_B_devant_gauche",
+    "02_arbre_C_devant_droit",
+    "03_arbre_A_milieu_gauche",
+    "04_buisson_A_milieu",
+    "05_buisson_B_milieu",
+    "06_frise_gauche",
+    "07_frise_droite",
+    "08_arche_grove",
+    "09_herbe_bas_gauche",
+    "10_herbe_bas_droite"
+  ],
+  "counts": {
+    "00_base_terrain": 327680,
+    "01_arbre_B_devant_gauche": 16458,
+    "02_arbre_C_devant_droit": 14180,
+    "03_arbre_A_milieu_gauche": 14039,
+    "04_buisson_A_milieu": 8095,
+    "05_buisson_B_milieu": 8039,
+    "06_frise_gauche": 57468,
+    "07_frise_droite": 60452,
+    "08_arche_grove": 41159,
+    "09_herbe_bas_gauche": 12960,
+    "10_herbe_bas_droite": 14173
+  },
+  "anim": {
+    "pulse": 4,
+    "fireflies": 8,
+    "gif_ms": 150
+  }
+}
