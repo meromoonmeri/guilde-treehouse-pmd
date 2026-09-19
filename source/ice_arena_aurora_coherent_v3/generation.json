@@ -1,0 +1,33 @@
+{
+  "tool": "functions.generate_image",
+  "passes": 2,
+  "purpose": "Proposition de terrain cohérent sur un seul calque, pas reconstruction native certifiée",
+  "input_references": [
+    {
+      "file": "exports/ice_arena_aurora_native_v2/review/scene_upper.png",
+      "sha256": "99222734cb138e2cf23d146cc4fdd9986ee5deaae759bd4bc839a146be72b7e6"
+    },
+    {
+      "file": "source/ice_arena_aurora_coherent_v3/references/terrain_guide_magenta.png",
+      "sha256": "47abe6fb46a7b55b0c15679125e8a6a86aa9059a68a78d1e9d46b06cbceacd81"
+    },
+    {
+      "file": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    }
+  ],
+  "pass_1": {
+    "output": "renders/ice_arena_aurora_coherent_v3/bruts/terrain_generated.png",
+    "instruction_summary": "Terrain seul sur magenta ; même composition générale V1, mur nord continu, arène centrale et approche sud ; ciel existant uniquement comme contexte de lumière ; aucune aurore à générer."
+  },
+  "pass_2": {
+    "input": "renders/ice_arena_aurora_coherent_v3/bruts/terrain_generated.png",
+    "output": "renders/ice_arena_aurora_coherent_v3/bruts/terrain_generated_refined.png",
+    "instruction_summary": "Remplacer les groupes répétés de cônes par une face de glace massive continue, faces verticales larges et asymétriques, couronne de neige et parois latérales reliées. Garder arène/entrée et ciel magenta."
+  },
+  "instruction_record": "Summaries, not verbatim prompts. Full generation calls are in the session tool history.",
+  "postprocessing": "Chroma-key; empty top crop y87; generated art only fit 512x576 nearest at (0,144). No native background resize/recolor.",
+  "native_reference_commit": "f10176369e707128d97a4590d5c8a78895433fe5",
+  "source_pmd_icearena_last_commit": "e387ae7b71c469bfd56a82d32f5b3cb0561b5c24",
+  "approval": "PENDING"
+}

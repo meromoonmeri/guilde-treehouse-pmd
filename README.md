@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Falaise continue — correction générée, ciel et aurores conservés
+
+**[Animation](renders/ice_arena_aurora_coherent_v3/composition.webp)** · **[Avant / après](renders/ice_arena_aurora_coherent_v3/review/before_after.png)** · **[Atelier](renders/ice_arena_aurora_coherent_v3/index.html)** · **[Sept calques et notice](renders/ice_arena_aurora_coherent_v3/README.md)**
+
+Proposition demandée au générateur : remplacer les groupes de pics assemblés par une paroi de glace continue, avec des épaules reliées aux flancs. **Terrain sur un seul calque**, arène centrale et arrivée sud ; mêmes pixels, placement et cadence du ciel/aurores de V2 native. Bruts conservés, PNG, ORA, WebP et trois assets BG à noms inédits. **Terrain généré, pas reconstruction native certifiée ; ajustement du dessin généré au format documenté.** 21 contrôles de fichiers/pixels et 15 tests DOM simulés PASS ; pas de validation GPU/collisions. Anciennes versions et Ground utilisateur inchangés.
+
 ## Layout V1 — mécanisme natif des aurores retrouvé
 
 **[Animation WebP](exports/ice_arena_aurora_native_v2/review/scene.webp)** · **[Atelier](exports/ice_arena_aurora_native_v2/review/index.html)** · **[PNG séparés / import PMDO](exports/ice_arena_aurora_native_v2/README.md)** · **[Preuve native et sources figées](source/ice_arena_aurora_native_v2/README.md)**

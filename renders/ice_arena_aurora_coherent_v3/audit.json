@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "count": 21,
+  "checks": [
+    {
+      "check": "Generated terrain alpha is empty in upper 144 rows",
+      "status": "PASS"
+    },
+    {
+      "check": "Generated terrain uses binary alpha, transparent RGB zero",
+      "status": "PASS"
+    },
+    {
+      "check": "No chroma-key magenta remains in visible terrain",
+      "status": "PASS"
+    },
+    {
+      "check": "Open southern snow approach is present at bottom center",
+      "status": "PASS"
+    },
+    {
+      "check": "Outer sky copied byte-for-byte from native V2",
+      "status": "PASS"
+    },
+    {
+      "check": "Native initial Sky copied byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "Native initial Ribbons copied byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "Native initial Stars copied byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "Native initial Haze copied byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "Native initial DistantIce copied byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "All 33 compositions preserve exposed native background pixels exactly",
+      "status": "PASS"
+    },
+    {
+      "check": "Terrain remains exactly identical across all 33 states",
+      "status": "PASS"
+    },
+    {
+      "check": "Canvas unchanged, source BG remains at (120,0), no BG scale",
+      "status": "PASS"
+    },
+    {
+      "check": "Original 240-tick timing reused without edits",
+      "status": "PASS"
+    },
+    {
+      "check": "Seven editable ORA layers recompose phase zero exactly",
+      "status": "PASS"
+    },
+    {
+      "check": "Native-derived animated .dir is byte-identical, only basename changes",
+      "status": "PASS"
+    },
+    {
+      "check": "Static PMDO container roundtrip: SkyBase",
+      "status": "PASS"
+    },
+    {
+      "check": "Static PMDO container roundtrip: Terrain",
+      "status": "PASS"
+    },
+    {
+      "check": "Every recorded native dependency still has its original hash",
+      "status": "PASS"
+    },
+    {
+      "check": "Reused BG files match the published V2 SHA256 inventory",
+      "status": "PASS"
+    },
+    {
+      "check": "Lossless animated WebP preserves every visible frame and totals 4000ms",
+      "status": "PASS"
+    }
+  ],
+  "type": "file/pixel/container checks only",
+  "GPU_tested": false,
+  "collision_tested": false
+}

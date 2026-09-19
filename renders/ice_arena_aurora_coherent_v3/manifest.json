@@ -1,0 +1,868 @@
+{
+  "title": "Falaise continue - proposition generee, fond valide conserve",
+  "date": "2026-09-20",
+  "canvas": [
+    512,
+    720
+  ],
+  "old_versions_untouched": true,
+  "native_background_reference_commit": "f10176369e707128d97a4590d5c8a78895433fe5",
+  "terrain_origin": "AI GENERATED, two generator passes; NOT native terrain reconstruction",
+  "generator_output_size": [
+    864,
+    1232
+  ],
+  "generated_only_transform": {
+    "key": "R>G+24 and B>G+24",
+    "crop": [
+      0,
+      87,
+      864,
+      1232
+    ],
+    "resize": [
+      512,
+      576
+    ],
+    "filter": "nearest-neighbor",
+    "placement": [
+      0,
+      144
+    ],
+    "aspect_ratio_preserved": false
+  },
+  "terrain_fit_note": "Only generated art is fitted to the canvas; native pixels and timing are never scaled or changed.",
+  "layout": "General V1 composition retained: northern cliff, central arena, southern entrance. Generated terrain geometry differs; not a byte-identical terrain edit.",
+  "native_BG_origin": [
+    120,
+    0
+  ],
+  "native_BG_size": [
+    264,
+    216
+  ],
+  "native_BG_modified": false,
+  "native_BG_color_limit": "Existing RGB8 port, not a bit-exact DS RGB555/LCD capture; unchanged from native V2.",
+  "layer_count": 7,
+  "terrain_layer_count": 1,
+  "hidden_terrain_reconstructed": false,
+  "art_approval": "PENDING USER REVIEW",
+  "PMDO_GPU_validated": false,
+  "collision_validated": false,
+  "raws": [
+    {
+      "file": "bruts/terrain_generated.png",
+      "sha256": "bc97ba9e630a2acd5915b982e505053f776e2e6b2e9920ec327ca8944683a3d1"
+    },
+    {
+      "file": "bruts/terrain_generated_refined.png",
+      "sha256": "57ef1c225c51a42be1f9e8530550c531404023c29b46f890c4a22fc3ca681742"
+    }
+  ],
+  "unchanged_native_dependencies": [
+    {
+      "path": "exports/ice_arena_aurora_native_v2/static/IceAuroraNativeV2_01_dark_sky.png",
+      "sha256": "b3bdbeabcc172ac37167845cc0b973e2d91c11f5e2e4a565c82b8e0bf86b19ae"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/timeline.json",
+      "sha256": "ced82f2b6be6652e507333c91caa45c8f69e0a003a8f1bbbfabfd9f0225c593e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a16_b00_BGComposite.png",
+      "sha256": "a2640e367549178958c671095467416008947cf0acfc46102b794554cc87776d"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a16_b00_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a16_b00_Ribbons.png",
+      "sha256": "363688bd1cb634b0b18ffd75b75847b5e422b01ab602458e7736275fac85be67"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a16_b00_Stars.png",
+      "sha256": "e5d700d6b5505a47d2f6cc0ff4ca5884b2c3813d96817a73a9b3383c316533a1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a16_b00_Haze.png",
+      "sha256": "a8a8ba09260c5beead5477fed100e46d8972da13e8ea9776cef3abe06e04ec34"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a16_b00_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a15_b00_BGComposite.png",
+      "sha256": "b1066c5fc30f1914fc15d3b16e46a634a540bc683929ce99c47ce496ff616bf8"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a15_b00_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a15_b00_Ribbons.png",
+      "sha256": "8541927e11c2b51d0d89bc68f40f37c19254d8756f719e404cb3fa5be7b1ebd8"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a15_b00_Stars.png",
+      "sha256": "ca83f3fad597b4eb8d3987b2c344c92005693e753e0429f46fbc71f8b307601b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a15_b00_Haze.png",
+      "sha256": "567101be91b5a5045648c948ba261ec4140852923d1a4023707f5e0e706f95b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a15_b00_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a15_b01_BGComposite.png",
+      "sha256": "890a97c79a8775d878a148eeb229b00c08170b0f7390ce14c2f4c13164192acb"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a15_b01_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a15_b01_Ribbons.png",
+      "sha256": "ac206d3777ecc28cf14b72de787826e15127b019cc020a08fa4ac2dfb2fe3c6c"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a15_b01_Stars.png",
+      "sha256": "5fb7fed20769c9fcbaff5bd16837e689297da5cd1705e7fb97ec626e826542fb"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a15_b01_Haze.png",
+      "sha256": "51fd4c27287a52cf5fbb51666994bc6812a40a822c2107e8e41d29a412520ab2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a15_b01_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a14_b01_BGComposite.png",
+      "sha256": "68eeaece824476c05d992f0052305453cf68225e4a17c3f884ec69684606d4e3"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a14_b01_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a14_b01_Ribbons.png",
+      "sha256": "2affc54af3f3358cbdfd6c0f03e50fc708562c5229cc7a3826d88fd848bc60cf"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a14_b01_Stars.png",
+      "sha256": "4eeb49aff3f7985d4e1bf9fc3b5b65110f8386552d369d4053272829163a8025"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a14_b01_Haze.png",
+      "sha256": "30ae444bbb690e0974843ca13ff7974ce11f5763d1b853a8cf8f3f46aad704e2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a14_b01_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a14_b02_BGComposite.png",
+      "sha256": "c96dc51075aace10f6ffd03223edeba243a5ca28277555d61d83c43591f2d387"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a14_b02_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a14_b02_Ribbons.png",
+      "sha256": "3a66c6101cfabf4e8aa89e139de39f2bcc9e700642b0b717e9670f2c51bcb1de"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a14_b02_Stars.png",
+      "sha256": "8fe43bf45b67c6c2696106505b437710d96bb0304af9c7e479185c86a833a9d4"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a14_b02_Haze.png",
+      "sha256": "486a7d540f1cfb70534d332b165540c0a27b37badef815a8289eef9897d3266f"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a14_b02_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a13_b02_BGComposite.png",
+      "sha256": "a80888404f93f7ce8a044c78a1d7b1424107d19c392258de57e382bb55a8cbf6"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a13_b02_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a13_b02_Ribbons.png",
+      "sha256": "cd9e47f3b6a594f7af9e5e1ae7e250c234616741741a4b5a9971dc54418f3fef"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a13_b02_Stars.png",
+      "sha256": "ddb3596708fa600248eae7c77ca464c86d3a7beab340429d59aac353a906be77"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a13_b02_Haze.png",
+      "sha256": "b5e691cb0f9834d8f72879e1b2ed2b198110413350ac1e18d31ba2a410b6c829"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a13_b02_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a13_b03_BGComposite.png",
+      "sha256": "07140bd427a28bce4d32051b4717e1ce1c36fec5d907125944fc34fec4fa65b7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a13_b03_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a13_b03_Ribbons.png",
+      "sha256": "71a00d4969759e78811b97b109cb5fc06bef4c07cf1d8e92d3d5eb0b5a77fb57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a13_b03_Stars.png",
+      "sha256": "417275129fdcf1d067053344d86c2d847b44447cee734bf52904c75887da8f57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a13_b03_Haze.png",
+      "sha256": "5cbfdd7502d943b08cc134281d1103d6186ccf33c39c8c1af0f201b647a69e8b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a13_b03_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a12_b03_BGComposite.png",
+      "sha256": "6416a5bc1918153559d5e21ea131ab7325cfa7d9dc74322d1c5e26297e0302d4"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a12_b03_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a12_b03_Ribbons.png",
+      "sha256": "1613a2123f39986597745a0762ed32fe5caf14789d1de5aead712d63160c6f3e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a12_b03_Stars.png",
+      "sha256": "fb617ac06ce9143c45372735c80d2ae06e584ea106f0956f4d88a8296b7c174f"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a12_b03_Haze.png",
+      "sha256": "206321236af8b420fef6ae5e44364a4b7d8086d164b4c7091500477b255b4fc7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a12_b03_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a12_b04_BGComposite.png",
+      "sha256": "1dc0102cae63a2f87c8dc01a7df1eccc7fb628586871c872a8903e3b626a519b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a12_b04_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a12_b04_Ribbons.png",
+      "sha256": "453f47b1f803e948fb96a376d94594bd8ba2376c890024c8b47bd7f73e33ff33"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a12_b04_Stars.png",
+      "sha256": "ebd34b457e3f31397b1d5d9c2362e847921fbd1c04a944d8312f677b1ec841b3"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a12_b04_Haze.png",
+      "sha256": "552b05cbde9741b1e97297cb9bc4a23076d54846964a15f9fef5ff570755b9aa"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a12_b04_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a11_b04_BGComposite.png",
+      "sha256": "54039361f5c58f71f0987d43cf87352dc2fc469b3948c8eb461a2d9e8bae36d1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a11_b04_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a11_b04_Ribbons.png",
+      "sha256": "6451220c487316517b8387de2466a963de19cb31f4f3863ed8b1b92bdb2267cb"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a11_b04_Stars.png",
+      "sha256": "29b6ae77490306495f8d6b9d5f70cf06de04aadfbebb0809b8c2d603a25a89ce"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a11_b04_Haze.png",
+      "sha256": "371819875d17e0f562c65c7a03473aa0c59d6e901497fd4c81f02b435b303178"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a11_b04_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a11_b05_BGComposite.png",
+      "sha256": "7fb9165511fbc0e1350f69765713702b08db3438b794e3bb952d3b3733d5d649"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a11_b05_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a11_b05_Ribbons.png",
+      "sha256": "db39922fb147ab1a0ae33d594dc2527de33b2eab1da1c0ca7a5c80b8b6c9a235"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a11_b05_Stars.png",
+      "sha256": "b69d56437ca8862d537676c594f3d8222a1df36d77c33a2308d1da68b349429c"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a11_b05_Haze.png",
+      "sha256": "c65da708ec363f6050b2bc7162a314e392d1a81a188fffddc7946035bf50cabf"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a11_b05_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a10_b05_BGComposite.png",
+      "sha256": "c47e14ad7baaa376ed75fb4fbfcf161b5a567d3351197f5a9dcb267d8a7fca6f"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a10_b05_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a10_b05_Ribbons.png",
+      "sha256": "58ef3aef3d70a025bf4ea2ae7617943b0bbf3d1648ff13b7b359d1c520f78dd1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a10_b05_Stars.png",
+      "sha256": "acd66fd49907b207b7db94b5b4f82407f9622669273250b6c91148e7f0baedad"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a10_b05_Haze.png",
+      "sha256": "a461c234c7b8921a37eeee5bd62ded859c1a36374fc8de283f189d9f2511cbe1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a10_b05_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a10_b06_BGComposite.png",
+      "sha256": "abdf8734d25c9ad4b1c87616a205c3bf0e170a55172a0caeb088b84597ae9458"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a10_b06_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a10_b06_Ribbons.png",
+      "sha256": "d11397c36d8eb943fff4887617548adf0aa65ee40d0165474e01be24fe30eccb"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a10_b06_Stars.png",
+      "sha256": "900d3f5f5ba67d5d047ff727956cdac8f8dcee2e9952cce303a15219bef7e1be"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a10_b06_Haze.png",
+      "sha256": "e2cff80f5bafe350dfb561fce53cf9669d393b16dc430d3eeb9464a9186b3a5a"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a10_b06_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a09_b06_BGComposite.png",
+      "sha256": "82db8315051cec0e4395e6f8c703d7747fb7173b9e8043d8d040368fe22ac7de"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a09_b06_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a09_b06_Ribbons.png",
+      "sha256": "0cc93a1994a6f7122ee1acdaa4e91b2646517a7d459371a45d8dcb3b800e3962"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a09_b06_Stars.png",
+      "sha256": "cde10aacd79bdee60b1adbfa06b97f0135cc32a29e069bdde770a91e4b2ae517"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a09_b06_Haze.png",
+      "sha256": "7b1808306f214ff73a1863eb2e05f59f54e7f6049e39c953de1d20763167b0b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a09_b06_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a09_b07_BGComposite.png",
+      "sha256": "37602ac0ea0e6c8f936efedc1d7989060018aa7e222720bd9cf843fddbb4e9c8"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a09_b07_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a09_b07_Ribbons.png",
+      "sha256": "97baf90754a2a2c32a0be6789b41f18880f769c7c9a3e38e304799f89cf9d7ec"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a09_b07_Stars.png",
+      "sha256": "dd450d219a2095d2679133f469f468d17941ab95a94920634d61ceb0fdc005b7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a09_b07_Haze.png",
+      "sha256": "ecb90376965a0c75264c450edf9608fb08c61f2ef1dec9f5c027c3e602e54374"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a09_b07_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a08_b07_BGComposite.png",
+      "sha256": "4241b7a7a3fc5bf7650e10e3788be82e225f81a5bc7064d26587dd3047106972"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a08_b07_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a08_b07_Ribbons.png",
+      "sha256": "70fd7562724ed4eafaafbd777345b757ad5710c8672d2e7f0c03d7b893b05fd5"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a08_b07_Stars.png",
+      "sha256": "ec2b7e4d83534424298f7b68fa1359fcdc609f10ae7c9b35b6debabedb05acb7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a08_b07_Haze.png",
+      "sha256": "2d3f0e24feefd89945d58dc3a6ce12bf005d242f745e3f7f3bf150f7177221bc"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a08_b07_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a08_b08_BGComposite.png",
+      "sha256": "dbf32b821b3ccce79a77ad815b199ad12659a3414c5bc6202b225e4291eefe26"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a08_b08_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a08_b08_Ribbons.png",
+      "sha256": "1818a57ff3b9290d1453bb7b8bc604db2b326a7af986a95067a15792371ab365"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a08_b08_Stars.png",
+      "sha256": "5fce635faea0ed06472391db6d6f1c41b03a19d87dfef40187c99fc9b38bad02"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a08_b08_Haze.png",
+      "sha256": "dc087286de51c2bb05746660ed2b8f433fb34b7fc20c7195d92b96868661e250"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a08_b08_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a07_b08_BGComposite.png",
+      "sha256": "021ec3c8a12587cf473f8fe401d5c3f08256b29993ae92d4581c93c3372e5bf9"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a07_b08_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a07_b08_Ribbons.png",
+      "sha256": "7fb420c16b34c4c7c4693e4eeff085b96a9610e63e3b497e79febef2cd25e18a"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a07_b08_Stars.png",
+      "sha256": "5138921b65ca05b01278fc8d9b935da2ba6019d683d91baf3e7b7c0e1c14a293"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a07_b08_Haze.png",
+      "sha256": "c2b40882f21bb02bdb66e9ab163d9e7b9ec6107b74ff21c81ba4c2808acd7d82"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a07_b08_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a07_b09_BGComposite.png",
+      "sha256": "5df3a18134963b549e33ed4fa45296e3de99e771053c18b6d466abe5d692692b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a07_b09_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a07_b09_Ribbons.png",
+      "sha256": "91042ebd93e981433c43a7600aaea3234cf5c73b8676fe84a742371b064bfd64"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a07_b09_Stars.png",
+      "sha256": "cbadc0a4b11af391341f3d572f8592b9e38ad2339318279ad54711010836e7b1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a07_b09_Haze.png",
+      "sha256": "7aee8ae02cad9301c8fbbc50f541e689f74bc83e84d03787e8cbeebc5e644a52"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a07_b09_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a06_b09_BGComposite.png",
+      "sha256": "d6f351fa3fd1ef704dfde697be44270a6ea7a9d42cba21be98685a91b3e10703"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a06_b09_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a06_b09_Ribbons.png",
+      "sha256": "eebac649e9bf377229d8b5df81ec00618ac5b359a5915ff437516a9bf6b89299"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a06_b09_Stars.png",
+      "sha256": "622b784b9a5373ea558e5509ee79b679b16d24d4754105204ebd6a54947fac13"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a06_b09_Haze.png",
+      "sha256": "a3cff9b5b70c29ed50723b795188cb70f57f3e87cad14c692dc333d7b2bc7b6b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a06_b09_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a06_b10_BGComposite.png",
+      "sha256": "23bcf28db803e60f98a3df46a59e631d42446dab2ac4683aca998bff6641f4ad"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a06_b10_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a06_b10_Ribbons.png",
+      "sha256": "77598e6c3f9dcb79372d6b3516b5b65fc308a7d5b0a0ad239cb287df9c44ca6c"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a06_b10_Stars.png",
+      "sha256": "34525fb79744a847379893fadca818d833a7a7428f12bdab028a58a63fd0d5d5"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a06_b10_Haze.png",
+      "sha256": "b238514954f364ffb108a34651c578fae3e5b88f2ecf3a7c97b2efe5f2b470f7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a06_b10_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a05_b10_BGComposite.png",
+      "sha256": "64fbd586360a7d52b89e85475c05bf18155cefec717d5ab9c0ca4177ced7f62b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a05_b10_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a05_b10_Ribbons.png",
+      "sha256": "9caaad69b9b5a859799d1031e03eaa6773bb99ac2374b42d0277528ab6ace8f3"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a05_b10_Stars.png",
+      "sha256": "0f392807dfab3f295862d8eb9900af657c3d8c5cf477ccee76120a9263ea4359"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a05_b10_Haze.png",
+      "sha256": "efb41e6991e5b142c59d7b6b18383eeff3cf425270ddd0fd810fa157fccd5abd"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a05_b10_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a05_b11_BGComposite.png",
+      "sha256": "1871e9d8395367ddd2e8aa89503e3bf16e0477a781a3685d7715726c9b0e4c5b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a05_b11_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a05_b11_Ribbons.png",
+      "sha256": "2d5376977f92b26d8664f43a57ec6abc2a1b563f31eb7d16cfb1e09477a5e3e8"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a05_b11_Stars.png",
+      "sha256": "64f0186421dd589e0e81fb3840d80611559894d64b65b9f6cc4af74be171be63"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a05_b11_Haze.png",
+      "sha256": "0639024776ee2f6da6fcfc89738b8c154d587d4183b5113f6206e8d48da525d1"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a05_b11_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a04_b11_BGComposite.png",
+      "sha256": "c8fd9f76273c7878a3197544220a64e1bd17107d1a6dcf4dbc2c5824b3d75f28"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a04_b11_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a04_b11_Ribbons.png",
+      "sha256": "5ab022ca171817fd6416f3b8d5527e5c31acd958e8a744ccd23cbc4588513231"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a04_b11_Stars.png",
+      "sha256": "a27fcaf337b35b9da1c43c8fd6516ea41506830e855c64f104f80e9c0bab3277"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a04_b11_Haze.png",
+      "sha256": "037e715300e5a6d3192cba2c381e33882af954aedb00a4ca6f40729c551caf8d"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a04_b11_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a04_b12_BGComposite.png",
+      "sha256": "94d9933756b9b1cbc020de9d86549b356a370882ace357c90154000140ec6b58"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a04_b12_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a04_b12_Ribbons.png",
+      "sha256": "c217423c0a5aaf5ea65b3a8bacfed48789762240030bdad23b86a26bed780d4a"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a04_b12_Stars.png",
+      "sha256": "974e010d01f762b63f23b0b714f9fdab6d49ab94e73f7f3afaaba0216df40299"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a04_b12_Haze.png",
+      "sha256": "2ad2bd46a8c66221a37ed7ede4576296299655eb4c06ff2143aa51897448a533"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a04_b12_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a03_b12_BGComposite.png",
+      "sha256": "7a0175d9c154094430f1d1fa1fce43ff8d769c650dead60b2076debd7702b50d"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a03_b12_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a03_b12_Ribbons.png",
+      "sha256": "39640ca065e0c7bfcf973926c89a57ff4459c271eadccd6ec69d250754f123a2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a03_b12_Stars.png",
+      "sha256": "62550ef6d39fe38450d59dce080c87373c6ea3762be8e9dd4a189f8338e99765"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a03_b12_Haze.png",
+      "sha256": "a8394ec4290d3b0d066c86d1d68b1fd6646290bf7596a6888f18e297d881701e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a03_b12_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a03_b13_BGComposite.png",
+      "sha256": "dc79130b991968f3f27e693a204036cee7c1ea08062b706bd408090a73528d70"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a03_b13_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a03_b13_Ribbons.png",
+      "sha256": "6fdabf9e85350fb6afcca1dfd1d7cfed6c19366aa3562b1fd25e8d58877af4be"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a03_b13_Stars.png",
+      "sha256": "f005faaa4378da8046b9b1276926ec03c18bf5aa8ba66696005091bb5aa1501e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a03_b13_Haze.png",
+      "sha256": "fd3d020aa30e2ca12a6eb885aab2240256239d84e611755fa4ba055d19fdb310"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a03_b13_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a02_b13_BGComposite.png",
+      "sha256": "17d4976374d7e709851fb2bcf00b420ce0b8b4bf9da92e256d9e23931774a9db"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a02_b13_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a02_b13_Ribbons.png",
+      "sha256": "ebd4df4ba6c3d3a03a86e9b866e700f3969a0062b8c30faed973630824904953"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a02_b13_Stars.png",
+      "sha256": "4fb90a816b157ebc61a223a4c83abe3f926f87e51afe9105c69c2b6e2b912c80"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a02_b13_Haze.png",
+      "sha256": "f2324b683095c477a963a52fe09b1bf3e55e8fd3893bba96befa15abff4426e3"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a02_b13_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a02_b14_BGComposite.png",
+      "sha256": "f01113fe5e7980d4225351dc518cafef0b852d8193732035e055c6f11c9de3b8"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a02_b14_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a02_b14_Ribbons.png",
+      "sha256": "62dfefa02e5e304898baf6b0b42b76d1b03cd78222ef983a1e864ab6d77f9fc6"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a02_b14_Stars.png",
+      "sha256": "93c6654620b834f01bf63a79d31694e32770da3b34dc308ab9864ef20b387d50"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a02_b14_Haze.png",
+      "sha256": "6beb9629e3ad220702af7a154254c523a38b3367076d4e79f54929bd00f46586"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a02_b14_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a01_b14_BGComposite.png",
+      "sha256": "726c256093b836335f3db7c8a4f9083d24d97c379bb12361b50cffa77056ff1b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a01_b14_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a01_b14_Ribbons.png",
+      "sha256": "20d5de1d3a243db55537f36d8c1917843f5b5b1b7d7332e3a517cc262b1564be"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a01_b14_Stars.png",
+      "sha256": "4568b0fc398cf5b0b290f108678a982f18d5bd067c0cc52216da6738c2d23811"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a01_b14_Haze.png",
+      "sha256": "263186ce32413d15c0adb0922142f04208b188498c12b7530cd003214ab43a0a"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a01_b14_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a01_b15_BGComposite.png",
+      "sha256": "58114f62871f455549ad340f152a404ec2d21aeca0527f1c5f94fc020d63da5b"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a01_b15_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a01_b15_Ribbons.png",
+      "sha256": "d4f1b841eab7ed6b63a9d2a704b9cbfc6300c2362ab474991767af7c18fab03a"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a01_b15_Stars.png",
+      "sha256": "7b422467417bd551e59085cb08084dc16391cfd1fda49f6dd9f38ddd88abc74d"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a01_b15_Haze.png",
+      "sha256": "a0f090fc427e01e8b135727c5c8c138b7adb71bf5035ae71a873351270d22bb7"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a01_b15_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a00_b15_BGComposite.png",
+      "sha256": "ed3dc35e6360f77d104cbc1e72e1ce47f3216e31626a69a9343e50d14cc8f39f"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a00_b15_Sky.png",
+      "sha256": "5c518ef3aa5e4d504a4ab9fd43bb122f0eded6dbaa245948001434efba9ea003"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a00_b15_Ribbons.png",
+      "sha256": "c16658d6a5fff7e651933ca4edc6f5325a528fc68e3e144add8f8c047e2a1133"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a00_b15_Stars.png",
+      "sha256": "3ed848c61f14609c1c46ee3aa5169b1b8432f663166ab4f2fd8439f7e0c9abde"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a00_b15_Haze.png",
+      "sha256": "bec7fb1e6149c8a531158a2ebcdb64144ff241935b682d8245efbf743c80fcc9"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a00_b15_DistantIce.png",
+      "sha256": "b7f62003dbafb963cbf3d05f010a6c8bef160d66a1e9cea306825aaeb47eb4b2"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/BGComposite/IceAuroraNativeV2_a00_b16_BGComposite.png",
+      "sha256": "169a3ffeaf7d9cdecb60b1656178715e4bcad4bcf0b2fc0b864cb02a8b816b17"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Sky/IceAuroraNativeV2_a00_b16_Sky.png",
+      "sha256": "a59e5686b1d772eef6d8ce5940223e19e6ba86c791397f2ceba838af3134ee57"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a00_b16_Ribbons.png",
+      "sha256": "17e28104c5d1c9705b053a86cd4b62eeb8eaf746547a121b75a432ebc29e9ceb"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Stars/IceAuroraNativeV2_a00_b16_Stars.png",
+      "sha256": "afb9efbf2f499135f854556ddcc0033dee69fbc2dc139fb0a58b0b5918ebc647"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/Haze/IceAuroraNativeV2_a00_b16_Haze.png",
+      "sha256": "d8d137765ab4606394b6aaed1181d60dee2481a2ac1115c152d67675f0ae6922"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/frames/DistantIce/IceAuroraNativeV2_a00_b16_DistantIce.png",
+      "sha256": "7a253c3373438392009de0dfbf9bf1fd98d16247bd4a2934f1c5f8595910481e"
+    },
+    {
+      "path": "exports/ice_arena_aurora_native_v2/pmdo/Content/BG/IceAuroraNativeV2_BGComposite.dir",
+      "sha256": "c69db50b85074798f1f298cc695a6623a4593d796054bf2ba8c093e75448a0a6"
+    }
+  ]
+}
