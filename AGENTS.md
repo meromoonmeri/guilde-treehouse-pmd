@@ -408,3 +408,19 @@ Utilisateur : « Les layer sont pas exactement celui de la référence / Tu dois
 ## V15 — zone canonique générée, critères Halcyon/Palika
 
 Utilisateur : « méthode canonique de création de map avec le générateur + animations boréal en plusieurs frames d'ondulation + convertir la zone aux critères de Halcyon Palika ». Terrain généré plein cadre 928×1152 (bande magenta), alpha par inondation (pointes de pics dépassant dans la bande = terrain légitime, zéro magenta résiduel — ne pas exiger top transparent). Planche 2×4 d'ondulations générée → 8 frames AuroreV15_00..07.png strictement 768×256, 150 ms, posées à (80,24) sur grille 8 px. Calques Halcyon empilés : ciel navy uniforme / étoiles V14 / aurore / terrain, sans wrap. Sources `source/arene_halcyon_v15/`, rendus/ZIP `renders/arene_halcyon_v15*`, aperçu racine `apercu_arene_halcyon_v15.html`. 8 tests PASS. NB : np.any(mask!=mask, axis=2) plante sur tableaux 2D — comparer directement.
+
+## Forêt Sinister générée V1 — demande générateur + push avec compos/anim
+L'utilisateur a interrompu le relayout natif (« Tu vas utiliser ton générateur
+d'image ») puis exigé : push + compos PNG + animations + WebP obligatoires,
+HTML de présentation en +, ET une version générateur + méthode canonique en
+plusieurs layers façon Palika/Halcyon avec tuiles natives.
+Lot livré : `renders/foret_sinister_generee_v1/` (2 bruts 848×1264, 8 calques
+PNG en partition exacte du brut, 8 frames, WebP sans perte + GIF),
+`renders/foret_sinister_generee_v1_pack.zip`, galerie
+`apercu_foret_sinister_v1.html`, scripts `source/foret_sinister_generee_v1/`,
+28 tests PASS. Dessin généré intégré, PAS natif ; sol reconstitué par
+diffusion ; animation proposée (frame0 = brut, boucle fermée). Le brouillon
+natif `source/sinister_woods_entry_v1/` + `exports/sinister_woods_entry_v1/`
+reste inachevé (boîtes rochers/touffes à reprendre) ; ne pas le présenter
+comme un lot. Prochaine étape : version canonique multicouche tuiles natives
+(Vast Steppe/Halcyon) guidée par ce brut.
