@@ -1,5 +1,9 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Méthode de composition des prochaines maps
+
+La synthèse opérationnelle de tous les README est maintenant centralisée dans [`METHODE_COMPOSITION_MAPS_PMD.md`](METHODE_COMPOSITION_MAPS_PMD.md). Elle impose, avant toute nouvelle map, la référence canonique, l’analyse du layout, la fiche des layers, la séparation des textures, la recomposition et les niveaux de validation. Les rendus validés restent des références immuables ; aucune zone existante n’est redessinée pour fabriquer un nouvel export.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
