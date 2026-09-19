@@ -1,0 +1,20 @@
+{
+  "dedicated_tests_passed": 7,
+  "corrections": {
+    "trou_central": "regenere : bord sombre 5471 px (V15) -> 226 px (V16), sol continu",
+    "aurores": "style de la reference (coeur magenta, liseres cyan, franges rayons), 10 frames"
+  },
+  "halcyon_criteria": {
+    "stacked_fixed_layers": true,
+    "uniform_frame_size_768x256": true,
+    "uniform_frame_naming_AuroreV16_00..09": true,
+    "uniform_duration_ms": 130,
+    "position_on_8px_grid": true,
+    "no_wrap": true,
+    "loop": "frame 10 \u2248 frame 0"
+  },
+  "extraction": "inondation magenta + seuil serre d<40 sur le magenta cuit enferme ; JAMAIS de fill_holes (lecon V9)",
+  "JS_syntax": "PASS",
+  "interactive_browser": "NOT TESTED",
+  "PMDO_runtime": "NOT TESTED"
+}

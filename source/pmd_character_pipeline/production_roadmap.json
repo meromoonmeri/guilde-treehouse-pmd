@@ -462,5 +462,32 @@
     "runtime_tested": false,
     "art_approved": false,
     "other_zones_complete": false
+  },
+  "environment_halcyon_v16": {
+    "request": "Zone sans trou au centre + boréales du style de la référence en 10 frames de boucle parfaite",
+    "source": "source/arene_halcyon_v16/",
+    "viewer": "apercu_arene_halcyon_v16.html",
+    "sol_continu": true,
+    "bord_sombre_redu": "5471 -> 226 px",
+    "frames": 10,
+    "taille_frame": [
+      768,
+      256
+    ],
+    "duree_ms": 130,
+    "boucle_parfaite": true,
+    "halcyon": {
+      "grille_8px": true,
+      "position_aurore": [
+        80,
+        24
+      ],
+      "nommage_uniforme": true,
+      "sans_wrap": true
+    },
+    "dedicated_tests": 7,
+    "runtime_tested": false,
+    "art_approved": false,
+    "other_zones_complete": false
   }
 }
