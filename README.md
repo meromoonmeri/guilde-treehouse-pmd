@@ -1,5 +1,15 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Map indépendante Métano Town
+
+La map indépendante basée sur le layout de la dernière zone de référence est documentée dans [`renders/arene_metano_v16/README.md`](renders/arene_metano_v16/README.md), avec aperçu multicouche [`apercu_arene_metano_v16.html`](apercu_arene_metano_v16.html). Le layout de référence est conservé comme guide ; le sol et les cliffs finaux proviennent des tilesets canoniques Métano Town.
+
+## Méthode de composition des prochaines maps
+
+La synthèse opérationnelle de tous les README est maintenant centralisée dans [`METHODE_COMPOSITION_MAPS_PMD.md`](METHODE_COMPOSITION_MAPS_PMD.md). Elle impose, avant toute nouvelle map, la référence canonique, l’analyse du layout, la fiche des layers, la séparation des textures, la recomposition et les niveaux de validation. Les rendus validés restent des références immuables ; aucune zone existante n’est redessinée pour fabriquer un nouvel export.
+
+**Map courante produite avec cette méthode :** [`renders/arene_metano_v16/README.md`](renders/arene_metano_v16/README.md) — extension Métano Town basée sur le layout de la dernière zone V15, herbe et cliffs Métano séparés, ciel/étoiles indépendants et overlay de nuages en wrap parfait. Composition vérifiée par code ; intégration PMDO/runtime encore ouverte. Le prototype côtier V6 précédent n’est pas retenu comme méthode de référence.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
