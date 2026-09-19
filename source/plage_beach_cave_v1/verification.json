@@ -1,0 +1,806 @@
+{
+ "status": "PASS",
+ "lot": "plage_beach_cave_v1",
+ "zip": "plage_beach_cave_v1_pmdo_0812.zip",
+ "zip_sha256": "d405df10e77a801db052b3eb6a3cbc6e86e075273f9767dbab5a27cd3c8f2706",
+ "ground": "plage_bc1_grande_jour.rsground",
+ "ground_sha256": "93d28b41eaa11c436ace499058e7c1d75f652a6cd5b77c20bb00ad78b4350632",
+ "grid_cells": [
+  45,
+  20
+ ],
+ "pixels": [
+  1080,
+  480
+ ],
+ "cell_px": 24,
+ "source_commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+ "seams": {
+  "method": "MSE RGBA sur le rendu du calque seul (17 frames), paires de cellules voisines absentes de la carte d origine, comparées au pire raccord du même calque dans la carte d origine",
+  "Back": {
+   "original_max_horizontal": 13072.0,
+   "original_max_vertical": 13952.0,
+   "new_horizontal_pairs": 20,
+   "max_horizontal": 1430.0,
+   "new_vertical_pairs": 155,
+   "max_vertical": 687.3,
+   "worst_horizontal": [
+    [
+     1430.0,
+     [
+      22,
+      5
+     ]
+    ],
+    [
+     462.0,
+     [
+      22,
+      7
+     ]
+    ],
+    [
+     169.3,
+     [
+      22,
+      1
+     ]
+    ],
+    [
+     60.7,
+     [
+      22,
+      2
+     ]
+    ],
+    [
+     60.0,
+     [
+      22,
+      8
+     ]
+    ]
+   ],
+   "worst_vertical": [
+    [
+     687.3,
+     [
+      38,
+      10
+     ]
+    ],
+    [
+     687.3,
+     [
+      30,
+      12
+     ]
+    ],
+    [
+     687.3,
+     [
+      18,
+      9
+     ]
+    ],
+    [
+     687.3,
+     [
+      10,
+      12
+     ]
+    ],
+    [
+     421.3,
+     [
+      30,
+      13
+     ]
+    ]
+   ]
+  },
+  "Anim": {
+   "original_max_horizontal": 5762.5,
+   "original_max_vertical": 51414.5,
+   "new_horizontal_pairs": 5,
+   "max_horizontal": 325.8,
+   "new_vertical_pairs": 0,
+   "max_vertical": 0.0,
+   "worst_horizontal": [
+    [
+     325.8,
+     [
+      22,
+      5
+     ]
+    ],
+    [
+     244.8,
+     [
+      22,
+      6
+     ]
+    ],
+    [
+     169.3,
+     [
+      22,
+      1
+     ]
+    ],
+    [
+     60.7,
+     [
+      22,
+      2
+     ]
+    ],
+    [
+     2.7,
+     [
+      22,
+      0
+     ]
+    ]
+   ],
+   "worst_vertical": []
+  },
+  "Front": {
+   "original_max_horizontal": 10193.0,
+   "original_max_vertical": 22817.7,
+   "new_horizontal_pairs": 0,
+   "max_horizontal": 0.0,
+   "new_vertical_pairs": 40,
+   "max_vertical": 19204.7,
+   "worst_horizontal": [],
+   "worst_vertical": [
+    [
+     19204.7,
+     [
+      4,
+      11
+     ]
+    ],
+    [
+     19204.7,
+     [
+      4,
+      10
+     ]
+    ],
+    [
+     19204.7,
+     [
+      4,
+      9
+     ]
+    ],
+    [
+     19204.7,
+     [
+      4,
+      8
+     ]
+    ],
+    [
+     16762.0,
+     [
+      42,
+      12
+     ]
+    ]
+   ]
+  }
+ },
+ "free_obstacle_cells": 2892,
+ "native_runtime_tested": false,
+ "editor_tested": false,
+ "gpu_render_tested": false,
+ "checks": [
+  {
+   "check": "reference EoSO__beach.rsground sha256",
+   "status": "PASS",
+   "detail": "c3ba98151ffb1383"
+  },
+  {
+   "check": "reference EoSO__beach.rsground git blob",
+   "status": "PASS",
+   "detail": "2b85028bf766"
+  },
+  {
+   "check": "reference EoSO__D01P11A_layer1.tile sha256",
+   "status": "PASS",
+   "detail": "e4d9365c2cdddffb"
+  },
+  {
+   "check": "reference EoSO__D01P11A_layer1.tile git blob",
+   "status": "PASS",
+   "detail": "549a27f888fa"
+  },
+  {
+   "check": "reference EoSO__D01P11A_layer2.tile sha256",
+   "status": "PASS",
+   "detail": "47960347c15a8390"
+  },
+  {
+   "check": "reference EoSO__D01P11A_layer2.tile git blob",
+   "status": "PASS",
+   "detail": "71feea9c81b0"
+  },
+  {
+   "check": "reference EoSO__beach_animation.tile sha256",
+   "status": "PASS",
+   "detail": "596a83cb7cfe7e35"
+  },
+  {
+   "check": "reference EoSO__beach_animation.tile git blob",
+   "status": "PASS",
+   "detail": "2d3767cde02c"
+  },
+  {
+   "check": "reference EoSO__beach_init.lua sha256",
+   "status": "PASS",
+   "detail": "22ddc04eeb451d95"
+  },
+  {
+   "check": "reference EoSO__beach_init.lua git blob",
+   "status": "PASS",
+   "detail": "cd155621df10"
+  },
+  {
+   "check": "reference EoSO__dusk_beach.rsground sha256",
+   "status": "PASS",
+   "detail": "5f3fea10650631ad"
+  },
+  {
+   "check": "reference EoSO__dusk_beach.rsground git blob",
+   "status": "PASS",
+   "detail": "4b2115fc2d43"
+  },
+  {
+   "check": "reference EoSO__DuskBeach.tile sha256",
+   "status": "PASS",
+   "detail": "da38c3ead607d195"
+  },
+  {
+   "check": "reference EoSO__DuskBeach.tile git blob",
+   "status": "PASS",
+   "detail": "206a4f7e7de5"
+  },
+  {
+   "check": "reference EoSO__D01P11A_bpa5_0.tile sha256",
+   "status": "PASS",
+   "detail": "4f8fae102fe7caf6"
+  },
+  {
+   "check": "reference EoSO__D01P11A_bpa5_0.tile git blob",
+   "status": "PASS",
+   "detail": "082d4be4f865"
+  },
+  {
+   "check": "github blob EoSO__beach.rsground",
+   "status": "PASS",
+   "detail": "2b85028bf766d783a35aaf1286364b001c043e70"
+  },
+  {
+   "check": "github blob EoSO__D01P11A_layer1.tile",
+   "status": "PASS",
+   "detail": "549a27f888fac41f203d0824ff8435e108943a8f"
+  },
+  {
+   "check": "github blob EoSO__D01P11A_layer2.tile",
+   "status": "PASS",
+   "detail": "71feea9c81b015d249b8479799f5ccd38c88d0c6"
+  },
+  {
+   "check": "github blob EoSO__beach_animation.tile",
+   "status": "PASS",
+   "detail": "2d3767cde02c157e851b24a06c37f095712e56a8"
+  },
+  {
+   "check": "github blob EoSO__beach_init.lua",
+   "status": "PASS",
+   "detail": "cd155621df1017819edf646eff1e916daf183459"
+  },
+  {
+   "check": "github blob EoSO__dusk_beach.rsground",
+   "status": "PASS",
+   "detail": "4b2115fc2d4318942467693290a3ba348dfd9050"
+  },
+  {
+   "check": "github blob EoSO__DuskBeach.tile",
+   "status": "PASS",
+   "detail": "206a4f7e7de543b750c46a5d428540a3a2bfb9ae"
+  },
+  {
+   "check": "github blob EoSO__D01P11A_bpa5_0.tile",
+   "status": "PASS",
+   "detail": "082d4be4f8656b4c5d83b6270172ce4230d2b06d"
+  },
+  {
+   "check": "zip integrity",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_LAYER1 pack identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_LAYER1 zip identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_LAYER2 pack identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_LAYER2 zip identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_ANIM pack identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_BC1_ANIM zip identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground present",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground == pack ground",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "unique tile/ground basenames",
+   "status": "PASS",
+   "detail": [
+    "PLAGE_BC1_ANIM.tile",
+    "PLAGE_BC1_LAYER1.tile",
+    "PLAGE_BC1_LAYER2.tile",
+    "plage_bc1_grande_jour.rsground"
+   ]
+  },
+  {
+   "check": "zip has installer, Mod.xml, lua, index",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "ground version 0.8.12.0",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "TexSize 3 (24 px)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "asset name",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "layers Back/Anim/Front in order",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "all layers 45 x 20",
+   "status": "PASS",
+   "detail": [
+    [
+     45,
+     20
+    ]
+   ]
+  },
+  {
+   "check": "columns rectangular",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "pixel dims multiples of 24 and 8",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "every frame references an existing delivered cell",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "every cell sequence exists in the source layer (byte-identical payloads)",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "cell_mapping.json consistent with delivered ground",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "non-empty cell counts",
+   "status": "PASS",
+   "detail": {
+    "Back": 900,
+    "Anim": 315,
+    "Front": 407
+   }
+  },
+  {
+   "check": "anim cells: 17 frames, FrameLength 16",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anim cells occupy rows 0-6 of every column",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "static-across-frames anim cells = original + inserted far-sea cells",
+   "status": "PASS",
+   "detail": [
+    171,
+    135
+   ]
+  },
+  {
+   "check": "open-sea cells rows 3-6 really animated (no static water fill)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "17 distinct composite frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "row 3 animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "row 4 animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "row 5 animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "row 6 animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "frame00.png == composite",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "back layer png",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "front layer png",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "17 sea strips png",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "gif 17 frames",
+   "status": "PASS",
+   "detail": 17
+  },
+  {
+   "check": "webp 17 frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "Back: new adjacencies no worse than original seams",
+   "status": "PASS",
+   "detail": {
+    "original_max_horizontal": 13072.0,
+    "original_max_vertical": 13952.0,
+    "new_horizontal_pairs": 20,
+    "max_horizontal": 1430.0,
+    "new_vertical_pairs": 155,
+    "max_vertical": 687.3,
+    "worst_horizontal": [
+     [
+      1430.0,
+      [
+       22,
+       5
+      ]
+     ],
+     [
+      462.0,
+      [
+       22,
+       7
+      ]
+     ],
+     [
+      169.3,
+      [
+       22,
+       1
+      ]
+     ],
+     [
+      60.7,
+      [
+       22,
+       2
+      ]
+     ],
+     [
+      60.0,
+      [
+       22,
+       8
+      ]
+     ]
+    ],
+    "worst_vertical": [
+     [
+      687.3,
+      [
+       38,
+       10
+      ]
+     ],
+     [
+      687.3,
+      [
+       30,
+       12
+      ]
+     ],
+     [
+      687.3,
+      [
+       18,
+       9
+      ]
+     ],
+     [
+      687.3,
+      [
+       10,
+       12
+      ]
+     ],
+     [
+      421.3,
+      [
+       30,
+       13
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "check": "Anim: new adjacencies no worse than original seams",
+   "status": "PASS",
+   "detail": {
+    "original_max_horizontal": 5762.5,
+    "original_max_vertical": 51414.5,
+    "new_horizontal_pairs": 5,
+    "max_horizontal": 325.8,
+    "new_vertical_pairs": 0,
+    "max_vertical": 0.0,
+    "worst_horizontal": [
+     [
+      325.8,
+      [
+       22,
+       5
+      ]
+     ],
+     [
+      244.8,
+      [
+       22,
+       6
+      ]
+     ],
+     [
+      169.3,
+      [
+       22,
+       1
+      ]
+     ],
+     [
+      60.7,
+      [
+       22,
+       2
+      ]
+     ],
+     [
+      2.7,
+      [
+       22,
+       0
+      ]
+     ]
+    ],
+    "worst_vertical": []
+   }
+  },
+  {
+   "check": "Front: new adjacencies no worse than original seams",
+   "status": "PASS",
+   "detail": {
+    "original_max_horizontal": 10193.0,
+    "original_max_vertical": 22817.7,
+    "new_horizontal_pairs": 0,
+    "max_horizontal": 0.0,
+    "new_vertical_pairs": 40,
+    "max_vertical": 19204.7,
+    "worst_horizontal": [],
+    "worst_vertical": [
+     [
+      19204.7,
+      [
+       4,
+       11
+      ]
+     ],
+     [
+      19204.7,
+      [
+       4,
+       10
+      ]
+     ],
+     [
+      19204.7,
+      [
+       4,
+       9
+      ]
+     ],
+     [
+      19204.7,
+      [
+       4,
+       8
+      ]
+     ],
+     [
+      16762.0,
+      [
+       42,
+       12
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "check": "obstacle grid 135 x 60",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "obstacle bounds consistent",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "entities: Entrance, Exit, Beach_Cave_Entrance",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "entrance marker on free ground inside map",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "cave trigger reachable from entrance",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "exit trigger reachable and touching the right edge",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "right edge free corridor rows 22-41 (8 px) only",
+   "status": "PASS",
+   "detail": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ]
+  },
+  {
+   "check": "inserted sand rows walkable where no Front detail",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "free cell count grows with the map",
+   "status": "PASS",
+   "detail": 2892
+  },
+  {
+   "check": "index.idx == tile headers",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "Mod.xml namespace/version",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "installer copies ground, sheets, scripts and merges index",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "installer idempotent on identical files",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "tiled map dims",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "tiled tsx present",
+   "status": "PASS",
+   "detail": null
+  }
+ ],
+ "failed": 0
+}

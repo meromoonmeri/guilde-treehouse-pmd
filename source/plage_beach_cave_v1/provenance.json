@@ -1,0 +1,75 @@
+{
+  "source_repository": "https://github.com/Minemaker0430/ExplorersOfSkyOrigins",
+  "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+  "origin": "Textures PMD Explorers of Sky (fond D01P11A « Beach ») telles que livrees par Explorers of Sky Origins (PMDO).",
+  "files": {
+    "EoSO__beach.rsground": {
+      "eoso_path": "Data/Ground/beach.rsground",
+      "bytes": 816562,
+      "sha256": "c3ba98151ffb13833c0d093a4b42fdee40213a56edc0bf02a0870f140d4c374a",
+      "git_blob_sha1": "2b85028bf766d783a35aaf1286364b001c043e70"
+    },
+    "EoSO__D01P11A_layer1.tile": {
+      "eoso_path": "Content/Tile/D01P11A_layer1.tile",
+      "bytes": 62600,
+      "sha256": "e4d9365c2cdddffb733f29bd0e1cd85feeb4eec8e1ae3498bbe316802cf10f96",
+      "git_blob_sha1": "549a27f888fac41f203d0824ff8435e108943a8f"
+    },
+    "EoSO__D01P11A_layer2.tile": {
+      "eoso_path": "Content/Tile/D01P11A_layer2.tile",
+      "bytes": 122920,
+      "sha256": "47960347c15a83907377b9c5835950d2fffa875baec212cbf51cc9811b5f7898",
+      "git_blob_sha1": "71feea9c81b015d249b8479799f5ccd38c88d0c6"
+    },
+    "EoSO__beach_animation.tile": {
+      "eoso_path": "Content/Tile/beach_animation.tile",
+      "bytes": 429369,
+      "sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a",
+      "git_blob_sha1": "2d3767cde02c157e851b24a06c37f095712e56a8"
+    },
+    "EoSO__beach_init.lua": {
+      "eoso_path": "Data/Script/eos/ground/beach/init.lua",
+      "bytes": 3593,
+      "sha256": "22ddc04eeb451d9523f02241c9f5be07a215d8994945d7ba5849d1ba20789b51",
+      "git_blob_sha1": "cd155621df1017819edf646eff1e916daf183459"
+    },
+    "EoSO__dusk_beach.rsground": {
+      "eoso_path": "Data/Ground/dusk_beach.rsground",
+      "bytes": 1251634,
+      "sha256": "5f3fea10650631adf49810947ed07e5706f9712d486672e0c2c4284b48795242",
+      "git_blob_sha1": "4b2115fc2d4318942467693290a3ba348dfd9050"
+    },
+    "EoSO__DuskBeach.tile": {
+      "eoso_path": "Content/Tile/DuskBeach.tile",
+      "bytes": 812660,
+      "sha256": "da38c3ead607d195298b8433a713e01cf2f93662b7e3fcc5707d25fb08f76788",
+      "git_blob_sha1": "206a4f7e7de543b750c46a5d428540a3a2bfb9ae"
+    },
+    "EoSO__D01P11A_bpa5_0.tile": {
+      "eoso_path": "Content/Tile/D01P11A_bpa5_0.tile",
+      "bytes": 698,
+      "sha256": "4f8fae102fe7caf6c9f5230b1f7c8860a8b1360d42c152362831411334b1180a",
+      "git_blob_sha1": "082d4be4f8656b4c5d83b6270172ce4230d2b06d"
+    }
+  },
+  "delivered_sheets": {
+    "PLAGE_BC1_LAYER1": {
+      "copied_from": "EoSO__D01P11A_layer1.tile",
+      "byte_identical": true
+    },
+    "PLAGE_BC1_LAYER2": {
+      "copied_from": "EoSO__D01P11A_layer2.tile",
+      "byte_identical": true
+    },
+    "PLAGE_BC1_ANIM": {
+      "copied_from": "EoSO__beach_animation.tile",
+      "byte_identical": true
+    }
+  },
+  "method": "ré-assemblage cellule par cellule (24 px) ; aucune image générée, recolorée, tournée ou redimensionnée",
+  "unused_references": [
+    "EoSO__dusk_beach.rsground",
+    "EoSO__DuskBeach.tile",
+    "EoSO__D01P11A_bpa5_0.tile"
+  ]
+}

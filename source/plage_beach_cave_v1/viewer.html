@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Plage Beach Cave (grande) · plage_beach_cave_v1 · PMDO 0.8.12</title>
+<style>
+:root{color-scheme:dark}
+body{margin:0;background:#15171c;color:#e8e6df;font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{padding:14px 18px 8px;border-bottom:1px solid #2b2f38;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+header h1{font-size:18px;margin:0;color:#ffe27a}
+header .small{color:#a8a59b;font-size:12px}
+header a{color:#8fd1ff}
+.bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 18px;border-bottom:1px solid #2b2f38;background:#1b1e25}
+.bar label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+.bar button{background:#2a2f3a;color:#e8e6df;border:1px solid #3a4050;border-radius:6px;padding:4px 10px;cursor:pointer}
+.bar button.on{background:#4b6cb7;border-color:#6d8be0}
+.bar input[type=range]{width:220px}
+main{padding:14px 18px;overflow:auto}
+.stage{display:inline-block;background:#0c0d10;border:1px solid #2b2f38;image-rendering:pixelated}
+canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+section.notes{padding:0 18px 22px;max-width:1080px;color:#cfccc2}
+section.notes h2{font-size:15px;color:#ffe27a;margin:18px 0 6px}
+section.notes p{margin:6px 0}
+code{background:#242833;padding:1px 5px;border-radius:4px;font-size:12px}
+.warn{border-left:3px solid #e0a13a;padding:6px 10px;background:#232019;margin-top:10px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Plage « Beach Cave », grande — lot plage_beach_cave_v1</h1>
+  <span class="small" id="dims"></span>
+  <span class="small">Cellules canoniques PMD Sky (D01P11A) via Explorers of Sky Origins · mer animée 17 frames · PMDO 0.8.12</span>
+  <a href="__ZIP__" download>Pack PMDO ↓</a>
+</header>
+<div class="bar">
+  <span>Carte :</span>
+  <button id="bNew" class="on">Nouvelle (45 × 20)</button>
+  <button id="bOld">Original EoSO (33 × 16)</button>
+  <span style="width:10px"></span>
+  <label><input type="checkbox" id="lBack" checked> Back (sable, fond)</label>
+  <label><input type="checkbox" id="lAnim" checked> Mer animée</label>
+  <label><input type="checkbox" id="lFront" checked> Front (rochers, palmiers)</label>
+  <label><input type="checkbox" id="lGrid"> Grille 24 px</label>
+  <span style="width:10px"></span>
+  <button id="bPlay" class="on">⏸ Pause</button>
+  <label>Frame <input type="range" id="frame" min="0" max="16" value="0"> <span id="fno">0</span>/16</label>
+  <label>Zoom <select id="zoom"><option>1</option><option selected>2</option><option>3</option></select>×</label>
+</div>
+<main><div class="stage"><canvas id="c"></canvas></div></main>
+<section class="notes">
+  <h2>Ce que montre cet aperçu</h2>
+  <p>Le rendu est recomposé dans le navigateur à partir des PNG par calque exportés par <code>build.py</code> : calque <code>Back</code>, 17 bandes de mer (<code>Anim</code>, rangées 0–6), calque <code>Front</code>. Cadence : 16 ticks à 60 Hz par frame (≈ 267 ms), soit un cycle de ≈ 4,5 s, comme dans le Ground d'origine. Les calques Back et Front sont statiques dans le Ground ; seule la mer est animée.</p>
+  <p id="stats"></p>
+  <div class="warn"><strong>Un aperçu HTML ne vaut pas une validation dans le moteur.</strong> Il ne teste ni les collisions, ni les déclencheurs, ni le rendu GPU de PMDO. Ouvrir le Ground dans l'éditeur (<code>OUVRIR_EDITEUR</code>) pour valider raccords et déplacements.</div>
+  <h2>Composition</h2>
+  <p>Arrivée à droite (marqueur <code>Entrance</code>), plage de sable libre au centre, bouche de <strong>Beach Cave</strong> à gauche (déclencheur <code>Beach_Cave_Entrance</code>), sortie par le couloir du bord droit (<code>Exit</code>). Détails et méthode : <code>source/plage_beach_cave_v1/SPEC.md</code>, mesures : <code>ANALYSE.md</code>.</p>
+</section>
+<script>
+const DATA=__DATA__;
+const $=id=>document.getElementById(id);
+const imgs={back:null,front:null,anim:[],orig:[]};
+function load(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=src;});}
+let mode='new',frame=0,playing=true,last=0;
+const cv=$('c'),ctx=cv.getContext('2d');
+function draw(){
+  const z=+$('zoom').value;
+  const w=mode==='new'?DATA.w:DATA.ow,h=mode==='new'?DATA.h:DATA.oh;
+  cv.width=w*z;cv.height=h*z;ctx.imageSmoothingEnabled=false;
+  ctx.fillStyle='#0c0d10';ctx.fillRect(0,0,cv.width,cv.height);
+  if(mode==='new'){
+    if($('lBack').checked)ctx.drawImage(imgs.back,0,0,w*z,h*z);
+    if($('lAnim').checked)ctx.drawImage(imgs.anim[frame],0,0,w*z,7*DATA.cell*z);
+    if($('lFront').checked)ctx.drawImage(imgs.front,0,0,w*z,h*z);
+  }else{
+    ctx.drawImage(imgs.orig[frame],0,0,w*z,h*z);
+  }
+  if($('lGrid').checked){
+    ctx.strokeStyle='rgba(255,255,255,0.28)';ctx.lineWidth=1;ctx.beginPath();
+    for(let x=0;x<=w;x+=DATA.cell){ctx.moveTo(x*z+0.5,0);ctx.lineTo(x*z+0.5,h*z);}
+    for(let y=0;y<=h;y+=DATA.cell){ctx.moveTo(0,y*z+0.5);ctx.lineTo(w*z,y*z+0.5);}
+    ctx.stroke();
+  }
+  $('fno').textContent=frame;$('frame').value=frame;
+}
+function tick(t){
+  if(playing&&t-last>=DATA.frameMs){last=t;frame=(frame+1)%17;draw();}
+  requestAnimationFrame(tick);
+}
+(async()=>{
+  imgs.back=await load(DATA.images.back);imgs.front=await load(DATA.images.front);
+  imgs.anim=await Promise.all(DATA.images.anim.map(load));imgs.orig=await Promise.all(DATA.images.orig.map(load));
+  $('dims').textContent=`${DATA.w} × ${DATA.h} px · ${DATA.w/DATA.cell} × ${DATA.h/DATA.cell} cellules de ${DATA.cell} px`;
+  const s=DATA.stats;$('stats').textContent=`Cellules : ${s.cells} · Front non vides : ${s.front_cells} · mer animée : ${s.anim_cells} cellules × 17 frames · détails retirés : ${s.removed} · replacés : ${s.placed}.`;
+  draw();requestAnimationFrame(tick);
+})();
+$('bNew').onclick=()=>{mode='new';$('bNew').classList.add('on');$('bOld').classList.remove('on');draw();};
+$('bOld').onclick=()=>{mode='old';$('bOld').classList.add('on');$('bNew').classList.remove('on');draw();};
+$('bPlay').onclick=()=>{playing=!playing;$('bPlay').textContent=playing?'⏸ Pause':'▶ Lecture';$('bPlay').classList.toggle('on',playing);};
+$('frame').oninput=e=>{playing=false;$('bPlay').textContent='▶ Lecture';$('bPlay').classList.remove('on');frame=+e.target.value;draw();};
+for(const id of['lBack','lAnim','lFront','lGrid','zoom'])$(id).onchange=draw;
+</script>
+</body>
+</html>
