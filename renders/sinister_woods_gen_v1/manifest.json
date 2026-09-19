@@ -1,0 +1,87 @@
+{
+  "lot": "sinister_woods_gen_v1",
+  "scene": {
+    "width": 1408,
+    "height": 768,
+    "grid": 8
+  },
+  "method": "generated render (PMD-style invented textures), magenta cutout, color/spatial partition",
+  "planes": [
+    {
+      "id": "01_sol",
+      "label": "Sol du couloir central"
+    },
+    {
+      "id": "02_chemin",
+      "label": "Chemin (arrivee sud -> grotte nord)"
+    },
+    {
+      "id": "03_rochers",
+      "label": "Rochers"
+    },
+    {
+      "id": "04_buissons",
+      "label": "Buissons"
+    },
+    {
+      "id": "05_vegetation",
+      "label": "Masses vegetales laterales/hautes"
+    },
+    {
+      "id": "06_ombres",
+      "label": "Ombres et creux profonds"
+    },
+    {
+      "id": "07_grotte",
+      "label": "Grotte / ouverture nord"
+    }
+  ],
+  "files": {
+    "SinisterGen_01_sol.png": {
+      "sha256": "ffdf05b330f207c80f02417b4d7ba9764122e673c651858b5c3bf6f0eaf4a9e5",
+      "opaque_px": 119218
+    },
+    "SinisterGen_02_chemin.png": {
+      "sha256": "acb1db8d35aa11840215e724d36783043f02f0410d31c67bb12219b2f2290e1d",
+      "opaque_px": 56707
+    },
+    "SinisterGen_03_rochers.png": {
+      "sha256": "8511a7f9e0cf2c7b330f014b5defe3f391dc232feb0abee67e3801486c4c21a9",
+      "opaque_px": 5907
+    },
+    "SinisterGen_04_buissons.png": {
+      "sha256": "cc7bc0eb5c3551fb0bfba0487329a1d3f5b9e614136b9dade117e457b35faf12",
+      "opaque_px": 912
+    },
+    "SinisterGen_05_vegetation.png": {
+      "sha256": "f982acb5629e234e72d7f93d09e940738304312cc9c796a897cf86c05955970d",
+      "opaque_px": 633599
+    },
+    "SinisterGen_06_ombres.png": {
+      "sha256": "af2a8b468b5833dc739ded38f8a8e4fd5adfad9798849d93ef065faa00963172",
+      "opaque_px": 108892
+    },
+    "SinisterGen_07_grotte.png": {
+      "sha256": "756c6eb4eb2387fd7e19ee2e863fd70db92f260580d46ea1e13f3ede014d9491",
+      "opaque_px": 11157
+    },
+    "SinisterGen_composite.png": {
+      "sha256": "a842a11cf44e6d54ed3e1e3bfc85d6b78acd9faf1a16829cfb5ce870fb53da1b"
+    },
+    "SinisterGen_00_sol_nu.png": {
+      "sha256": "e523a52c72a3314cc77fd47b9b2f276e526626c87d02ea90d776686145efb61b"
+    },
+    "bruts/foret_entree_magenta.png": {
+      "sha256": "573dce824cd2a41d74d04f4a36bb285222e22ec0ea4d4ad5492789932e3145f5"
+    },
+    "bruts/sol_nu_magenta.png": {
+      "sha256": "e523a52c72a3314cc77fd47b9b2f276e526626c87d02ea90d776686145efb61b"
+    }
+  },
+  "limits": [
+    "Generated art, NOT native certified tiles; no PMDO import tested.",
+    "Visible-surface partition; hidden parts under masses not reconstructed.",
+    "Blue parasites removed by local ring-median inpaint (documented).",
+    "Bonus bare ground is a separate generation (path course differs), texture donor only."
+  ]
+}

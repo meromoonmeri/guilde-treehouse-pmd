@@ -408,3 +408,24 @@ Utilisateur : « Les layer sont pas exactement celui de la référence / Tu dois
 ## V15 — zone canonique générée, critères Halcyon/Palika
 
 Utilisateur : « méthode canonique de création de map avec le générateur + animations boréal en plusieurs frames d'ondulation + convertir la zone aux critères de Halcyon Palika ». Terrain généré plein cadre 928×1152 (bande magenta), alpha par inondation (pointes de pics dépassant dans la bande = terrain légitime, zéro magenta résiduel — ne pas exiger top transparent). Planche 2×4 d'ondulations générée → 8 frames AuroreV15_00..07.png strictement 768×256, 150 ms, posées à (80,24) sur grille 8 px. Calques Halcyon empilés : ciel navy uniforme / étoiles V14 / aurore / terrain, sans wrap. Sources `source/arene_halcyon_v15/`, rendus/ZIP `renders/arene_halcyon_v15*`, aperçu racine `apercu_arene_halcyon_v15.html`. 8 tests PASS. NB : np.any(mask!=mask, axis=2) plante sur tableaux 2D — comparer directement.
+
+## Entree foret Sinister Woods — rendu genere impose (19 septembre 2026)
+
+Utilisateur : « une entree de foret style sinister wood avec des arbre etc », puis
+« Tu vas utiliser ton generateur dimage » (interrompt la tentative native).
+Methode rendus generes : 2 generations 1408x768 (scene + sol nu), decoupe magenta
+par inondation (regle large anti-frange, 0 residu), 7 plans par partition
+couleur/spatiale, recomposition exacte testee. Sources
+`source/sinister_woods_gen_v1/`, rendus/ZIP `renders/sinister_woods_gen_v1*`,
+galerie racine `apercu_sinister_woods_gen_v1.html`. 45 tests PASS.
+
+Points techniques : 5 parasites bleus retires par inpaint median en anneaux
+(contours inclus par dilation, sinon ovale sombre residuel) ; grotte = pixels
+noir-violet (SUM<110 ET G-R<12 — la luminosite seule confond ouverture et
+feuillage, tous deux SUM~60) + cadre elliptique documente ; sol/vegetation =
+split spatial (dilation 90 px autour du chemin), la couleur ne les separe pas.
+Sol nu = generation separee (trace different), donneur uniquement. Art genere,
+PAS tuiles natives, aucun test PMDO. Tentative native interrompue conservee
+avec statut (`source/sinister_woods_entry_v1/STATUS.md`), non livrable.
+NB : ne jamais batcher plusieurs edit_file sur le MEME fichier (ecrasements ;
+un seul survit). Sandbox reset .venv reconstruite (pillow numpy scipy).
