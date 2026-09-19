@@ -1,6 +1,6 @@
-"""Generate interactive multi-layer HTML viewer for the Halcyon Palika Guild Path."""
+"""Generate interactive multi-layer HTML viewer for the Halcyon Guild Path."""
 from pathlib import Path
-import base64, json
+import base64
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'renders/sentier_guilde_halcyon'
@@ -8,39 +8,30 @@ OUT = ROOT / 'renders/sentier_guilde_halcyon'
 def b64(path):
     return f"data:image/png;base64,{base64.b64encode(path.read_bytes()).decode('ascii')}"
 
-base_day = b64(OUT / '00_palika_base.png')
-base_night = b64(OUT / '00_palika_base_nuit.png')
+sol_day = b64(OUT / '00_sol.png')
+sol_night = b64(OUT / '00_sol_nuit.png')
 
-obj_day = b64(OUT / '01_palika_objects.png')
-obj_night = b64(OUT / '01_palika_objects_nuit.png')
+chemin_day = b64(OUT / '01_chemin.png')
+chemin_night = b64(OUT / '01_chemin_nuit.png')
 
-trees_day = b64(OUT / '02_palika_trees.png')
-trees_night = b64(OUT / '02_palika_trees_nuit.png')
+veg_day = b64(OUT / '02_vegetation.png')
+veg_night = b64(OUT / '02_vegetation_nuit.png')
 
-big_tree_day = b64(OUT / '03_palika_big_tree.png')
-big_tree_night = b64(OUT / '03_palika_big_tree_nuit.png')
+arbres_day = b64(OUT / '03_arbres.png')
+arbres_night = b64(OUT / '03_arbres_nuit.png')
 
-shadows_day = b64(OUT / '04_palika_shadows.png')
-shadows_night = b64(OUT / '04_palika_shadows_nuit.png')
+premier_plan_day = b64(OUT / '04_premier_plan.png')
+premier_plan_night = b64(OUT / '04_premier_plan_nuit.png')
 
-comp_day = b64(OUT / 'composite_palika.png')
-comp_night = b64(OUT / 'composite_palika_nuit.png')
-
-# Player sprite (Pachirisu walk frame)
-pachi_path = ROOT / 'exports/guild_eat_all_v6/characters/0417/Walk-Anim.png'
-from PIL import Image
-pachi_crop = Image.open(pachi_path).crop((0, 0, 40, 56))
-import io
-buf = io.BytesIO()
-pachi_crop.save(buf, format='PNG')
-player_b64 = f"data:image/png;base64,{base64.b64encode(buf.getvalue()).decode('ascii')}"
+comp_day = b64(OUT / 'composition.png')
+comp_night = b64(OUT / 'composition_nuit.png')
 
 html_content = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sentier de la Guilde — Méthode Halcyon Palika (Multi-Calques PMDO)</title>
+<title>Sentier de la Guilde — Calques et Composition Finale (Halcyon)</title>
 <style>
   :root {{
     --bg-dark: #0a0f18;
@@ -49,7 +40,7 @@ html_content = f"""<!DOCTYPE html>
     --accent-cyan: #38bdf8;
     --accent-gold: #f4d06f;
     --accent-green: #4ade80;
-    --accent-purple: #c084fc;
+    --accent-orange: #fb923c;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
   }}
@@ -103,7 +94,6 @@ html_content = f"""<!DOCTYPE html>
     .main-layout {{ grid-template-columns: 1fr; }}
   }}
 
-  /* MAP VIEWPORT */
   .viewport-container {{
     background: var(--panel-bg);
     border: 1px solid var(--panel-border);
@@ -136,7 +126,6 @@ html_content = f"""<!DOCTYPE html>
   .btn:hover {{ background: #334155; color: white; }}
   .btn.active {{ background: #0284c7; border-color: #38bdf8; color: white; }}
 
-  /* STACKED STAGE */
   .stage-wrapper {{
     position: relative;
     width: 408px;
@@ -146,7 +135,6 @@ html_content = f"""<!DOCTYPE html>
     border-radius: 4px;
     overflow: hidden;
     perspective: 1200px;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   }}
   .stage-inner {{
     position: absolute;
@@ -170,35 +158,12 @@ html_content = f"""<!DOCTYPE html>
     pointer-events: none;
   }}
 
-  /* 2.5D Explosion offsets */
-  .stage-wrapper.exploded #layer-base {{ transform: translateZ(0px); box-shadow: 0 0 20px rgba(0,0,0,0.8); }}
-  .stage-wrapper.exploded #layer-objects {{ transform: translateZ(50px); }}
-  .stage-wrapper.exploded #layer-shadows {{ transform: translateZ(90px); }}
-  .stage-wrapper.exploded #layer-trees {{ transform: translateZ(140px); }}
-  .stage-wrapper.exploded #layer-player {{ transform: translateZ(160px); }}
-  .stage-wrapper.exploded #layer-big-tree {{ transform: translateZ(220px); }}
+  .stage-wrapper.exploded #layer-sol {{ transform: translateZ(0px); box-shadow: 0 0 20px rgba(0,0,0,0.8); }}
+  .stage-wrapper.exploded #layer-chemin {{ transform: translateZ(50px); }}
+  .stage-wrapper.exploded #layer-vegetation {{ transform: translateZ(100px); }}
+  .stage-wrapper.exploded #layer-arbres {{ transform: translateZ(160px); }}
+  .stage-wrapper.exploded #layer-premier-plan {{ transform: translateZ(230px); }}
 
-  /* Player sprite demo */
-  #layer-player {{
-    position: absolute;
-    width: 40px;
-    height: 56px;
-    top: 360px;
-    left: 184px;
-    image-rendering: pixelated;
-    z-index: 10;
-    transition: transform 0.6s;
-    animation: pachi-walk 6s infinite alternate ease-in-out;
-  }}
-  @keyframes pachi-walk {{
-    0% {{ transform: translate(0, 0); }}
-    25% {{ transform: translate(-30px, -80px); }}
-    50% {{ transform: translate(30px, -180px); }}
-    75% {{ transform: translate(10px, -280px); }}
-    100% {{ transform: translate(0px, -350px); }}
-  }}
-
-  /* CONTROLS & SIDEBAR */
   .controls-container {{
     display: flex;
     flex-direction: column;
@@ -219,7 +184,7 @@ html_content = f"""<!DOCTYPE html>
     align-items: center;
     gap: 8px;
   }}
-  
+
   .layer-item {{
     background: #162235;
     border: 1px solid #23334d;
@@ -312,13 +277,13 @@ html_content = f"""<!DOCTYPE html>
 
 <header>
   <div>
-    <h1>Sentier de la Guilde <span class="tag">MÉTHODE HALCYON PALIKA</span></h1>
-    <p class="subtitle">Architecture multicalques native PMDO avec arbres d'Apricorn Glade et textures de sol d'Apricorn Grove (Palika / Halcyon)</p>
+    <h1>Sentier de la Guilde <span class="tag">CALQUES SÉPARÉS & COMPOSITION</span></h1>
+    <p class="subtitle">Génération des calques indépendants (Sol / Chemin / Végétation / Arbres / 1er Plan) avec textures et arbres de Halcyon</p>
     <div class="badge-row">
       <span class="badge">Résolution native : 408 × 744 px</span>
       <span class="badge">Grille : 17 × 31 cases de 24 px</span>
-      <span class="badge">Palette Halcyon : 395 couleurs (0 hors-palette)</span>
-      <span class="badge">Format moteur : .rsground + .tile + .tmj</span>
+      <span class="badge">Palette Halcyon : 395 couleurs (0 erreur)</span>
+      <span class="badge">Projet : OpenRaster .ora + .rsground + .tmj</span>
     </div>
   </div>
   <div style="display:flex; gap:10px;">
@@ -328,167 +293,128 @@ html_content = f"""<!DOCTYPE html>
 </header>
 
 <main class="main-layout">
-  <!-- VIEWPORT -->
   <div class="viewport-container">
     <div class="viewport-toolbar">
-      <span style="font-size:0.85rem; color:var(--text-muted);">Viewport PMDO interactif (Z-Order en temps réel)</span>
+      <span style="font-size:0.85rem; color:var(--text-muted);">Composition dynamique en temps réel</span>
       <button class="btn" onclick="resetLayers()">Réinitialiser Calques</button>
     </div>
 
     <div class="stage-wrapper" id="stage">
       <div class="stage-inner">
-        <!-- Layer 0: Base (Ground) -->
-        <img id="layer-base" class="map-layer" src="{base_day}" alt="Base Ground">
-        <!-- Layer 1: Objects (Meadow & details) -->
-        <img id="layer-objects" class="map-layer" src="{obj_day}" alt="Objects">
-        <!-- Layer 4: Shadows -->
-        <img id="layer-shadows" class="map-layer" src="{shadows_day}" alt="Shadows">
-        <!-- Layer 2: Trees (Collision & trunks) -->
-        <img id="layer-trees" class="map-layer" src="{trees_day}" alt="Trees">
-        <!-- Animated player between Trees and Overhead Canopy -->
-        <img id="layer-player" src="{player_b64}" alt="Player Sprite" title="Explorateur sous la canopée">
-        <!-- Layer 3: Big Tree (Overhead Canopy) -->
-        <img id="layer-big-tree" class="map-layer" src="{big_tree_day}" alt="Big Tree Overhead">
+        <!-- Layer 0: Sol -->
+        <img id="layer-sol" class="map-layer" src="{sol_day}" alt="Calque Sol">
+        <!-- Layer 1: Chemin -->
+        <img id="layer-chemin" class="map-layer" src="{chemin_day}" alt="Calque Chemin">
+        <!-- Layer 2: Végétation -->
+        <img id="layer-vegetation" class="map-layer" src="{veg_day}" alt="Calque Végétation">
+        <!-- Layer 3: Arbres -->
+        <img id="layer-arbres" class="map-layer" src="{arbres_day}" alt="Calque Arbres">
+        <!-- Layer 4: Premier Plan -->
+        <img id="layer-premier-plan" class="map-layer" src="{premier_plan_day}" alt="Calque Premier Plan">
       </div>
     </div>
     <div style="font-size:0.8rem; color:var(--text-muted); margin-top:14px; text-align:center;">
-      Observez le joueur (Pachirisu) : il marche <strong>SUR</strong> le sol, <strong>DERRIÈRE</strong> les troncs, et <strong>SOUS</strong> la canopée haute !
+      Activez ou désactivez les calques ci-contre pour voir la composition se reconstruire.
     </div>
   </div>
 
-  <!-- CONTROLS -->
   <div class="controls-container">
-    <!-- LAYER MANAGER -->
     <div class="card">
-      <div class="card-title">🥞 Gestionnaire des Calques (Méthode Halcyon Palika)</div>
-      
-      <!-- Layer 3: Big Tree Overhead -->
+      <div class="card-title">🥞 Calques Générés Séparément</div>
+
+      <!-- Layer 4: Premier Plan -->
       <div class="layer-item">
         <div class="layer-header">
           <label class="layer-label">
-            <input type="checkbox" id="chk-big-tree" checked onchange="updateLayer('big-tree')">
-            <span>3. Big Tree (Canopée Haute)</span>
+            <input type="checkbox" id="chk-premier-plan" checked onchange="updateLayer('premier-plan')">
+            <span style="color:var(--accent-purple);">04_premier_plan.png</span>
           </label>
-          <span class="layer-badge">199 cases · Z: Overhead</span>
+          <span class="layer-badge">169 cases · Canopée haute</span>
         </div>
         <div class="layer-slider">
           <span>Opacité</span>
-          <input type="range" id="op-big-tree" min="0" max="100" value="100" oninput="updateOpacity('big-tree')">
-          <span id="txt-big-tree">100%</span>
+          <input type="range" id="op-premier-plan" min="0" max="100" value="100" oninput="updateOpacity('premier-plan')">
+          <span id="txt-premier-plan">100%</span>
         </div>
-        <div class="layer-desc">Frondaisons et couronnes de feuilles d'Apricorn Glade passant au-dessus du joueur (Fringe / Objects Over).</div>
+        <div class="layer-desc">Frondaisons hautes et branches d'Apricorn Glade Big Tree passant au-dessus du joueur.</div>
       </div>
 
-      <!-- Player Simulation -->
-      <div class="layer-item" style="border-left: 3px solid #38bdf8;">
-        <div class="layer-header">
-          <label class="layer-label">
-            <input type="checkbox" id="chk-player" checked onchange="togglePlayer()">
-            <span style="color:#38bdf8;">🎮 Sprite Joueur (Pachirisu)</span>
-          </label>
-          <span class="layer-badge">Niveau de tri Y</span>
-        </div>
-        <div class="layer-desc">Marche le long du sentier entre les troncs et sous la grande canopée pour tester l'occlusion.</div>
-      </div>
-
-      <!-- Layer 2: Trees -->
+      <!-- Layer 3: Arbres -->
       <div class="layer-item">
         <div class="layer-header">
           <label class="layer-label">
-            <input type="checkbox" id="chk-trees" checked onchange="updateLayer('trees')">
-            <span>2. Trees (Arbres & Troncs)</span>
+            <input type="checkbox" id="chk-arbres" checked onchange="updateLayer('arbres')">
+            <span style="color:var(--accent-green);">03_arbres.png</span>
           </label>
-          <span class="layer-badge">378 cases · Z: Collision</span>
+          <span class="layer-badge">391 cases · Troncs & canopée</span>
         </div>
         <div class="layer-slider">
           <span>Opacité</span>
-          <input type="range" id="op-trees" min="0" max="100" value="100" oninput="updateOpacity('trees')">
-          <span id="txt-trees">100%</span>
+          <input type="range" id="op-arbres" min="0" max="100" value="100" oninput="updateOpacity('arbres')">
+          <span id="txt-arbres">100%</span>
         </div>
-        <div class="layer-desc">Troncs d'Apricorn Glade, racines au sol, souches et bordures d'obstacles bloquants (niveau collision PMDO).</div>
+        <div class="layer-desc">Arbres complets d'Apricorn Glade : troncs en bois brun, racines au sol et parois forestières.</div>
       </div>
 
-      <!-- Layer 4: Shadows -->
+      <!-- Layer 2: Végétation -->
       <div class="layer-item">
         <div class="layer-header">
           <label class="layer-label">
-            <input type="checkbox" id="chk-shadows" checked onchange="updateLayer('shadows')">
-            <span>4. Shadows (Ombres Portées)</span>
+            <input type="checkbox" id="chk-vegetation" checked onchange="updateLayer('vegetation')">
+            <span style="color:#a3e635;">02_vegetation.png</span>
           </label>
-          <span class="layer-badge">435 cases · Z: Décor</span>
+          <span class="layer-badge">407 cases · Sous-bois & fleurs</span>
         </div>
         <div class="layer-slider">
           <span>Opacité</span>
-          <input type="range" id="op-shadows" min="0" max="100" value="100" oninput="updateOpacity('shadows')">
-          <span id="txt-shadows">100%</span>
+          <input type="range" id="op-vegetation" min="0" max="100" value="100" oninput="updateOpacity('vegetation')">
+          <span id="txt-vegetation">100%</span>
         </div>
-        <div class="layer-desc">Ombres volumétriques douces projetées sous la canopée sur le sentier et la végétation (palette d'ardoise Halcyon).</div>
+        <div class="layer-desc">Touffes d'herbes denses, parterres de fleurs sauvages et buissons bas bordant le sentier.</div>
       </div>
 
-      <!-- Layer 1: Objects -->
+      <!-- Layer 1: Chemin -->
       <div class="layer-item">
         <div class="layer-header">
           <label class="layer-label">
-            <input type="checkbox" id="chk-objects" checked onchange="updateLayer('objects')">
-            <span>1. Objects (Sous-bois & Fleurs)</span>
+            <input type="checkbox" id="chk-chemin" checked onchange="updateLayer('chemin')">
+            <span style="color:var(--accent-orange);">01_chemin.png</span>
           </label>
-          <span class="layer-badge">407 cases · Z: Sol supérieur</span>
+          <span class="layer-badge">240 cases · Sentier sinueux</span>
         </div>
         <div class="layer-slider">
           <span>Opacité</span>
-          <input type="range" id="op-objects" min="0" max="100" value="100" oninput="updateOpacity('objects')">
-          <span id="txt-objects">100%</span>
+          <input type="range" id="op-chemin" min="0" max="100" value="100" oninput="updateOpacity('chemin')">
+          <span id="txt-chemin">100%</span>
         </div>
-        <div class="layer-desc">Bordures herbeuses d'Apricorn Grove, touffes d'herbe, fleurs sauvages et parterres naturels.</div>
+        <div class="layer-desc">Sentier sinueux en terre battue et graviers dorés d'Apricorn Grove de Halcyon.</div>
       </div>
 
-      <!-- Layer 0: Base -->
+      <!-- Layer 0: Sol -->
       <div class="layer-item">
         <div class="layer-header">
           <label class="layer-label">
-            <input type="checkbox" id="chk-base" checked onchange="updateLayer('base')">
-            <span>0. Base (Sol & Sentier)</span>
+            <input type="checkbox" id="chk-sol" checked onchange="updateLayer('sol')">
+            <span style="color:var(--accent-gold);">00_sol.png</span>
           </label>
           <span class="layer-badge">527 cases · 100% plein</span>
         </div>
         <div class="layer-slider">
           <span>Opacité</span>
-          <input type="range" id="op-base" min="0" max="100" value="100" oninput="updateOpacity('base')">
-          <span id="txt-base">100%</span>
+          <input type="range" id="op-sol" min="0" max="100" value="100" oninput="updateOpacity('sol')">
+          <span id="txt-sol">100%</span>
         </div>
-        <div class="layer-desc">Fondation continue en terre battue d'Apricorn Grove et pelouse de sous-bois. Aucun trou noir sous les arbres.</div>
+        <div class="layer-desc">Sol de base continu d'Apricorn Grove. Texture de terre et pelouse sans aucun vide sous les arbres.</div>
       </div>
     </div>
 
-    <!-- SPECS & ENGINE COMPLIANCE -->
     <div class="card">
-      <div class="card-title">📊 Fiche Technique PMDO (Méthode Palika)</div>
-      <div class="stat-grid">
-        <div class="stat-item">
-          <div class="stat-val">5 Calques</div>
-          <div class="stat-lbl">Conforme apricorn_glade.rsground</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-val">395 Coul.</div>
-          <div class="stat-lbl">Palette authentique Halcyon (0 erreur)</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-val">24 px</div>
-          <div class="stat-lbl">Taille native de cellule (TexSize: 24)</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-val">17 × 31</div>
-          <div class="stat-lbl">527 cases par calque (408×744 px)</div>
-        </div>
-      </div>
-
-      <div style="margin-top:16px;">
-        <div class="card-title" style="font-size:0.95rem;">📁 Fichiers Moteur et Planches</div>
-        <div class="links-list">
-          <a class="link-btn" href="renders/sentier_guilde_halcyon/PLANCHE_HALCYON_PALIKA_CALQUES.png" target="_blank">🖼️ Ouvrir la Planche Contact Multi-Calques (2100×1300)</a>
-          <a class="link-btn" href="sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_palika.rsground" download>💾 Télécharger guild_path_halcyon_palika.rsground</a>
-          <a class="link-btn" href="sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_palika.tmj" download>🗺️ Télécharger la carte Tiled (guild_path_halcyon_palika.tmj)</a>
-        </div>
+      <div class="card-title">📁 Fichiers Composés et Téléchargements</div>
+      <div class="links-list">
+        <a class="link-btn" href="renders/sentier_guilde_halcyon/PLANCHE_CALQUES_HALCYON.png" target="_blank">🖼️ Ouvrir la Planche Contact Multi-Calques (2100×1300)</a>
+        <a class="link-btn" href="renders/sentier_guilde_halcyon/sentier_guilde_halcyon.ora" download>🎨 Télécharger le projet OpenRaster (sentier_guilde_halcyon.ora)</a>
+        <a class="link-btn" href="sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_layers.rsground" download>💾 Télécharger la carte PMDO (guild_path_halcyon_layers.rsground)</a>
+        <a class="link-btn" href="sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_layers.tmj" download>🗺️ Télécharger la carte Tiled (guild_path_halcyon_layers.tmj)</a>
       </div>
     </div>
   </div>
@@ -500,18 +426,18 @@ html_content = f"""<!DOCTYPE html>
 
   const assets = {{
     day: {{
-      base: "{base_day}",
-      objects: "{obj_day}",
-      trees: "{trees_day}",
-      big_tree: "{big_tree_day}",
-      shadows: "{shadows_day}"
+      sol: "{sol_day}",
+      chemin: "{chemin_day}",
+      vegetation: "{veg_day}",
+      arbres: "{arbres_day}",
+      premier_plan: "{premier_plan_day}"
     }},
     night: {{
-      base: "{base_night}",
-      objects: "{obj_night}",
-      trees: "{trees_night}",
-      big_tree: "{big_tree_night}",
-      shadows: "{shadows_night}"
+      sol: "{sol_night}",
+      chemin: "{chemin_night}",
+      vegetation: "{veg_night}",
+      arbres: "{arbres_night}",
+      premier_plan: "{premier_plan_night}"
     }}
   }};
 
@@ -522,11 +448,11 @@ html_content = f"""<!DOCTYPE html>
     btn.innerHTML = isNight ? '☀️ Mode Jour' : '🌙 Mode Nuit (Abyss)';
     btn.classList.toggle('active', isNight);
 
-    document.getElementById('layer-base').src = set.base;
-    document.getElementById('layer-objects').src = set.objects;
-    document.getElementById('layer-trees').src = set.trees;
-    document.getElementById('layer-big-tree').src = set.big_tree;
-    document.getElementById('layer-shadows').src = set.shadows;
+    document.getElementById('layer-sol').src = set.sol;
+    document.getElementById('layer-chemin').src = set.chemin;
+    document.getElementById('layer-vegetation').src = set.vegetation;
+    document.getElementById('layer-arbres').src = set.arbres;
+    document.getElementById('layer-premier-plan').src = set.premier_plan;
   }}
 
   function toggleExploded() {{
@@ -551,21 +477,13 @@ html_content = f"""<!DOCTYPE html>
     txt.innerText = op + '%';
   }}
 
-  function togglePlayer() {{
-    const chk = document.getElementById('chk-player');
-    const p = document.getElementById('layer-player');
-    p.style.display = chk.checked ? 'block' : 'none';
-  }}
-
   function resetLayers() {{
-    ['base', 'objects', 'trees', 'big-tree', 'shadows'].forEach(id => {{
+    ['sol', 'chemin', 'vegetation', 'arbres', 'premier-plan'].forEach(id => {{
       document.getElementById('chk-' + id).checked = true;
       document.getElementById('op-' + id).value = 100;
       updateLayer(id);
       updateOpacity(id);
     }});
-    document.getElementById('chk-player').checked = true;
-    togglePlayer();
   }}
 </script>
 

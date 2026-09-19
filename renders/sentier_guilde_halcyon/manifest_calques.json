@@ -1,0 +1,66 @@
+{
+  "title": "Sentier de la Guilde — Calques Séparés et Composition Finale Halcyon",
+  "dimensions": {
+    "width_px": 408,
+    "height_px": 744,
+    "cols": 17,
+    "rows": 31,
+    "tile_size": 24
+  },
+  "palette": {
+    "count": 395,
+    "out_of_palette": 0
+  },
+  "layers": [
+    {
+      "id": "00_sol",
+      "name": "Sol de fond continu",
+      "file": "00_sol.png",
+      "file_nuit": "00_sol_nuit.png",
+      "mask": "MASQUE_SOL.png",
+      "active_tiles": 527
+    },
+    {
+      "id": "01_chemin",
+      "name": "Tracé du sentier en terre battue",
+      "file": "01_chemin.png",
+      "file_nuit": "01_chemin_nuit.png",
+      "mask": "MASQUE_CHEMIN.png",
+      "active_tiles": 240
+    },
+    {
+      "id": "02_vegetation",
+      "name": "Végétation basse, sous-bois et fleurs",
+      "file": "02_vegetation.png",
+      "file_nuit": "02_vegetation_nuit.png",
+      "mask": "MASQUE_VEGETATION.png",
+      "active_tiles": 407
+    },
+    {
+      "id": "03_arbres",
+      "name": "Arbres, troncs et canopée Apricorn Glade",
+      "file": "03_arbres.png",
+      "file_nuit": "03_arbres_nuit.png",
+      "mask": "MASQUE_ARBRES.png",
+      "active_tiles": 391
+    },
+    {
+      "id": "04_premier_plan",
+      "name": "Frondaisons de premier plan overhead",
+      "file": "04_premier_plan.png",
+      "file_nuit": "04_premier_plan_nuit.png",
+      "mask": "MASQUE_PREMIER_PLAN.png",
+      "active_tiles": 169
+    }
+  ],
+  "compositions": [
+    "composition.png",
+    "composition_nuit.png",
+    "sans_chemin.png"
+  ],
+  "openraster": "sentier_guilde_halcyon.ora",
+  "pmdo": {
+    "rsground": "sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_layers.rsground",
+    "tmj": "sprites/sentier_guilde_halcyon_pmdo/guild_path_halcyon_layers.tmj"
+  }
+}
