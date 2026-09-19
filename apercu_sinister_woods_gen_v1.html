@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<title>Entrée Sinister Woods — générée, 11 calques + anim</title>
+<style>
+body{background:#0d1410;color:#d7e5d7;font-family:sans-serif;margin:0;padding:16px}
+h1{font-size:20px} .wrap{display:flex;gap:16px;flex-wrap:wrap}
+#stage{position:relative;width:512px;height:640px;background:#000}
+#stage img{position:absolute;left:0;top:0;width:512px;height:640px;image-rendering:pixelated}
+#grid{position:absolute;left:0;top:0;width:512px;height:640px;display:none;pointer-events:none;
+background-image:linear-gradient(#0f03 1px,transparent 1px),linear-gradient(90deg,#0f03 1px,transparent 1px);
+background-size:8px 8px}
+.panel{max-width:380px} label{display:block;margin:3px 0;font-size:14px}
+button{margin:4px 4px 4px 0} .note{font-size:13px;color:#9db89d} code{color:#cfe6cf}
+img.preview{max-width:100%;image-rendering:pixelated;border:1px solid #334}
+</style></head><body>
+<h1>Entrée de forêt style Sinister Woods — lot généré v1</h1>
+<p class="note">Pixels <b>générés</b> (détourage magenta), PAS des tuiles natives. Références :
+<code>Mystifying_Forest_entrance_TDS.png</code>, <code>Southern_Jungle_entrance_S.png</code>.
+Scène 512×640. Arrivée sud, bosquet sombre au nord. Animation : pulsation du bosquet (4 phases)
++ lucioles procédurales (8 phases, 150 ms).</p>
+<div class="wrap">
+<div id="stage"><img id="l-00_base_terrain" src="renders/sinister_woods_gen_v1/calques/00_base_terrain.png"><img id="l-01_arbre_B_devant_gauche" src="renders/sinister_woods_gen_v1/calques/01_arbre_B_devant_gauche.png"><img id="l-02_arbre_C_devant_droit" src="renders/sinister_woods_gen_v1/calques/02_arbre_C_devant_droit.png"><img id="l-03_arbre_A_milieu_gauche" src="renders/sinister_woods_gen_v1/calques/03_arbre_A_milieu_gauche.png"><img id="l-04_buisson_A_milieu" src="renders/sinister_woods_gen_v1/calques/04_buisson_A_milieu.png"><img id="l-05_buisson_B_milieu" src="renders/sinister_woods_gen_v1/calques/05_buisson_B_milieu.png"><img id="l-06_frise_gauche" src="renders/sinister_woods_gen_v1/calques/06_frise_gauche.png"><img id="l-07_frise_droite" src="renders/sinister_woods_gen_v1/calques/07_frise_droite.png"><img id="l-08_arche_grove" src="renders/sinister_woods_gen_v1/calques/08_arche_grove.png"><img id="l-09_herbe_bas_gauche" src="renders/sinister_woods_gen_v1/calques/09_herbe_bas_gauche.png"><img id="l-10_herbe_bas_droite" src="renders/sinister_woods_gen_v1/calques/10_herbe_bas_droite.png"><img class="fx" id="p-0" src="renders/sinister_woods_gen_v1/anim/pulse_0.png" style="display:none"><img class="fx" id="p-1" src="renders/sinister_woods_gen_v1/anim/pulse_1.png" style="display:none"><img class="fx" id="p-2" src="renders/sinister_woods_gen_v1/anim/pulse_2.png" style="display:none"><img class="fx" id="p-3" src="renders/sinister_woods_gen_v1/anim/pulse_3.png" style="display:none"><img class="fx" id="f-0" src="renders/sinister_woods_gen_v1/anim/firefly_0.png" style="display:none"><img class="fx" id="f-1" src="renders/sinister_woods_gen_v1/anim/firefly_1.png" style="display:none"><img class="fx" id="f-2" src="renders/sinister_woods_gen_v1/anim/firefly_2.png" style="display:none"><img class="fx" id="f-3" src="renders/sinister_woods_gen_v1/anim/firefly_3.png" style="display:none"><img class="fx" id="f-4" src="renders/sinister_woods_gen_v1/anim/firefly_4.png" style="display:none"><img class="fx" id="f-5" src="renders/sinister_woods_gen_v1/anim/firefly_5.png" style="display:none"><img class="fx" id="f-6" src="renders/sinister_woods_gen_v1/anim/firefly_6.png" style="display:none"><img class="fx" id="f-7" src="renders/sinister_woods_gen_v1/anim/firefly_7.png" style="display:none"><div id="grid"></div></div>
+<div class="panel">
+<button id="play">Lecture anim</button>
+<button id="stop">Stop</button>
+<button id="toggleGrid">Grille 8px</button>
+<button id="all">Tous</button>
+<button id="none">Aucun</button>
+<div id="boxes"><label><input type="checkbox" data-l="00_base_terrain" checked> 00 — Terrain de base (opaque)</label><label><input type="checkbox" data-l="01_arbre_B_devant_gauche" checked> 01 — Grand arbre devant gauche</label><label><input type="checkbox" data-l="02_arbre_C_devant_droit" checked> 02 — Grand arbre devant droit</label><label><input type="checkbox" data-l="03_arbre_A_milieu_gauche" checked> 03 — Arbre milieu gauche</label><label><input type="checkbox" data-l="04_buisson_A_milieu" checked> 04 — Buisson milieu</label><label><input type="checkbox" data-l="05_buisson_B_milieu" checked> 05 — Buisson milieu</label><label><input type="checkbox" data-l="06_frise_gauche" checked> 06 — Frise sombre gauche</label><label><input type="checkbox" data-l="07_frise_droite" checked> 07 — Frise sombre droite</label><label><input type="checkbox" data-l="08_arche_grove" checked> 08 — Arche de lianes (bosquet)</label><label><input type="checkbox" data-l="09_herbe_bas_gauche" checked> 09 — Herbes avant-plan gauche</label><label><input type="checkbox" data-l="10_herbe_bas_droite" checked> 10 — Herbes avant-plan droit</label></div>
+<p class="note">Phases : <span id="ph">–</span></p>
+<h3>Aperçu animé (GIF)</h3>
+<img class="preview" src="renders/sinister_woods_gen_v1/scene_animee.gif">
+<h3>Calques sources</h3>
+<p class="note">PNG dans <code>renders/sinister_woods_gen_v1/calques/</code>,
+bruts dans <code>bruts/</code>, ORA multicouche + ZIP à côté.</p>
+</div></div>
+<script>
+const order=["00_base_terrain", "01_arbre_B_devant_gauche", "02_arbre_C_devant_droit", "03_arbre_A_milieu_gauche", "04_buisson_A_milieu", "05_buisson_B_milieu", "06_frise_gauche", "07_frise_droite", "08_arche_grove", "09_herbe_bas_gauche", "10_herbe_bas_droite"];
+document.querySelectorAll('#boxes input').forEach(cb=>{
+  cb.addEventListener('change',()=>{
+    document.getElementById('l-'+cb.dataset.l).style.display=cb.checked?'block':'none';
+  });
+});
+document.getElementById('all').onclick=()=>{document.querySelectorAll('#boxes input').forEach(cb=>{cb.checked=true;document.getElementById('l-'+cb.dataset.l).style.display='block';});};
+document.getElementById('none').onclick=()=>{document.querySelectorAll('#boxes input').forEach(cb=>{cb.checked=false;document.getElementById('l-'+cb.dataset.l).style.display='none';});};
+document.getElementById('toggleGrid').onclick=()=>{const g=document.getElementById('grid');g.style.display=g.style.display==='block'?'none':'block';};
+let timer=null,fr=0;
+function show(f){
+  for(let i=0;i<4;i++)document.getElementById('p-'+i).style.display=(i===f%%4)?'block':'none';
+  for(let i=0;i<8;i++)document.getElementById('f-'+i).style.display=(i===f)?'block':'none';
+  document.getElementById('ph').textContent='pulse '+(f%%4+1)+'/4 — lucioles '+(f+1)+'/8';
+}
+document.getElementById('play').onclick=()=>{if(timer)return;timer=setInterval(()=>{fr=(fr+1)%%8;show(fr);},150);show(fr);};
+document.getElementById('stop').onclick=()=>{clearInterval(timer);timer=null;for(let i=0;i<4;i++)document.getElementById('p-'+i).style.display='none';for(let i=0;i<8;i++)document.getElementById('f-'+i).style.display='none';document.getElementById('ph').textContent='–';};
+</script></body></html>

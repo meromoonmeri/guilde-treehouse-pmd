@@ -1,0 +1,47 @@
+{
+  "lot": "sinister_woods_entry_v1",
+  "scene": {
+    "width": 512,
+    "height": 640,
+    "grid": 8
+  },
+  "layers_order": [
+    "01_soil",
+    "02_path",
+    "03_undergrowth",
+    "04_rocks",
+    "05_grove_dark",
+    "06_trunks",
+    "07_canopies",
+    "08_fringe"
+  ],
+  "sources": {
+    "mystifying": {
+      "file": "Mystifying_Forest_entrance_TDS.png",
+      "sha256": "9f45d140aebe5559d9d1ea8d5891825d4450e7a550ba30d6be97af1af9e3e941",
+      "size": [
+        600,
+        504
+      ]
+    },
+    "jungle": {
+      "file": "Southern_Jungle_entrance_S.png",
+      "sha256": "c072590a2c07853be0185eab60e6f9f0023ce707548b3e4038f7993f28dc1e77",
+      "size": [
+        504,
+        432
+      ]
+    }
+  },
+  "guide": "source/zones_south_north_v3/generation/forest_guide.png (clearing + north grove + winding path composition)",
+  "counts": {
+    "01_soil": 327680,
+    "02_path": 51060,
+    "03_undergrowth": 144,
+    "04_rocks": 1728,
+    "05_grove_dark": 14560,
+    "06_trunks": 80740,
+    "07_canopies": 133972,
+    "08_fringe": 67776
+  }
+}
