@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>Forêt Sinister V1 — entrée générée + animation</title>
+<style>
+body{background:#0b120d;color:#dfe;margin:0;font-family:sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:16px}
+.view{position:relative;width:424px;height:632px;margin:8px auto;border:1px solid #456}
+.view img.layer{position:absolute;left:0;top:0;width:424px;height:632px;image-rendering:auto}
+.panel{background:#142014;padding:10px;margin:10px 0;border-radius:8px}
+label{display:inline-block;margin:3px 8px}
+.grid8{position:absolute;left:0;top:0;width:424px;height:632px;display:none;pointer-events:none;
+background-image:linear-gradient(#f0f 1px,transparent 1px),linear-gradient(90deg,#f0f 1px,transparent 1px);
+background-size:4px 4px;opacity:.35}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.row img{max-width:424px;border:1px solid #456}
+small{color:#9b9}
+</style></head><body><div class="wrap">
+<h1>Forêt Sinister V1 <small>rendu généré 848×1264 + brume/lucioles 4,8 s</small></h1>
+<div class="panel"><b>Calques</b> (recomposition exacte du brut) :<br>    <label><input type="checkbox" data-layer="01_sol" checked> 01_sol</label>
+    <label><input type="checkbox" data-layer="02_chemin" checked> 02_chemin</label>
+    <label><input type="checkbox" data-layer="03_sous_bois" checked> 03_sous_bois</label>
+    <label><input type="checkbox" data-layer="04_rochers" checked> 04_rochers</label>
+    <label><input type="checkbox" data-layer="05_troncs" checked> 05_troncs</label>
+    <label><input type="checkbox" data-layer="06_canpees" checked> 06_canpees</label>
+    <label><input type="checkbox" data-layer="07_profondeur" checked> 07_profondeur</label>
+    <label><input type="checkbox" data-layer="08_fringe" checked> 08_fringe</label><br>
+<label><input type="checkbox" id="grid"> grille 8 px</label>
+<label><input type="checkbox" id="anim" checked> animation overlay</label></div>
+<div class="view" id="view">
+<img class="layer" data-layer="01_sol" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_01_sol.png">
+<img class="layer" data-layer="02_chemin" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_02_chemin.png">
+<img class="layer" data-layer="03_sous_bois" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_03_sous_bois.png">
+<img class="layer" data-layer="04_rochers" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_04_rochers.png">
+<img class="layer" data-layer="05_troncs" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_05_troncs.png">
+<img class="layer" data-layer="06_canpees" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_06_canpees.png">
+<img class="layer" data-layer="07_profondeur" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_07_profondeur.png">
+<img class="layer" data-layer="08_fringe" src="renders/foret_sinister_generee_v1/calques/SinisterGenV1_08_fringe.png">
+<div class="grid8" id="grid8"></div>
+</div>
+<div class="panel"><b>Animation</b> — 48 frames × 100 ms, boucle exacte.<br>
+<img src="renders/foret_sinister_generee_v1/preview_scene.webp" width="424" alt="preview anime">
+<br><small>Fichiers : anim_overlay.webp (overlay seul) · preview_scene.gif · anim/overlay_*.png</small></div>
+<div class="panel"><b>Composition</b> (PNG = brut généré, 0 px d'écart) :<br>
+<div class="row"><img src="renders/foret_sinister_generee_v1/SinisterGenV1_composite.png" style="max-width:424px"></div></div>
+<div class="panel"><b>Bruts &amp; contrôles</b><div class="row">
+<img src="renders/foret_sinister_generee_v1/bruts/foret_sinister_complete.png" width="300">
+<img src="renders/foret_sinister_generee_v1/review/planche_masques.png" width="300">
+<img src="renders/foret_sinister_generee_v1/review/sol_reconstitue.png" width="300">
+</div><small>Comptes : 08_fringe 176051 px / 07_profondeur 64368 px / 06_canpees 473193 px / 05_troncs 22662 px / 04_rochers 12139 px / 03_sous_bois 122989 px / 02_chemin 74185 px / 01_sol 1071872 px</small></div>
+<div class="panel"><small>Dessin généré (réfs Mystifying Forest + guide V3), pas des pixels natifs.
+Calques = partitions de surfaces visibles. Sol caché reconstitué. Aucun test PMDO/GPU/collision.
+ORA éditable + ZIP dans renders/foret_sinister_generee_v1*. Reproduction : voir README du lot.</small></div>
+</div>
+<script>
+const view=document.getElementById('view');
+const layers=[...view.querySelectorAll('img.layer')];
+document.querySelectorAll('input[data-layer]').forEach(cb=>cb.onchange=()=>{
+const img=layers.find(i=>i.dataset.layer===cb.dataset.layer);img.style.display=cb.checked?'block':'none';});
+document.getElementById('grid').onchange=e=>{document.getElementById('grid8').style.display=e.target.checked?'block':'none';};
+const ov=document.createElement('img');ov.src='renders/foret_sinister_generee_v1/anim/overlay_00.png';
+ov.style.cssText='position:absolute;left:0;top:0;width:424px;height:632px';view.appendChild(ov);
+let f=0;setInterval(()=>{if(!document.getElementById('anim').checked){ov.style.display='none';return;}
+ov.style.display='block';f=(f+1)%48;ov.src='renders/foret_sinister_generee_v1/anim/overlay_'+String(f).padStart(2,'0')+'.png';},100);
+</script></body></html>
