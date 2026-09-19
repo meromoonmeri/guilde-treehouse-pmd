@@ -1,0 +1,97 @@
+{
+  "id": "foret_neigee_entree_nord_sud",
+  "source_generated_guide": "renders/palika_zones_v1/generated_guides/foret_neigee_entree_zone_nord_sud_4x3.png",
+  "source_generated_sha256": "e478176f052ff2bd911f266615903f1eb5a654d6ffea2c316ead222cbb2a4446",
+  "source_generated_dimensions": [
+    1200,
+    896
+  ],
+  "delivery_dimensions": [
+    2048,
+    1536
+  ],
+  "grid": {
+    "tile_px": 8,
+    "columns": 256,
+    "rows": 192,
+    "origin": [
+      0,
+      0
+    ]
+  },
+  "method": "Palika/Halcyon-inspired generated composition -> transparent semantic layers; no procedural terrain generation",
+  "layer_order_bottom_to_top": [
+    {
+      "id": "00_montagnes_arriere_plan",
+      "name": "Chaîne de montagnes PMD au loin",
+      "file": "layers/00_montagnes_arriere_plan.png"
+    },
+    {
+      "id": "01_sol",
+      "name": "Sol de zone",
+      "file": "layers/01_sol.png"
+    },
+    {
+      "id": "02_chemin",
+      "name": "Chemin sud vers nord",
+      "file": "layers/02_chemin.png"
+    },
+    {
+      "id": "03_bordures",
+      "name": "Bordures du passage",
+      "file": "layers/03_bordures.png"
+    },
+    {
+      "id": "04_parois",
+      "name": "Parois et retours rocheux",
+      "file": "layers/04_parois.png"
+    },
+    {
+      "id": "05_rochers",
+      "name": "Rochers",
+      "file": "layers/05_rochers.png"
+    },
+    {
+      "id": "06_vegetation_basse",
+      "name": "Végétation basse",
+      "file": "layers/06_vegetation_basse.png"
+    },
+    {
+      "id": "07_arbres_massifs",
+      "name": "Arbres et massifs",
+      "file": "layers/07_arbres_massifs.png"
+    },
+    {
+      "id": "09_entree_foret",
+      "name": "Entrée de la forêt enneigée",
+      "file": "layers/09_entree_foret.png"
+    },
+    {
+      "id": "08_ombres_profondeur",
+      "name": "Ombres et profondeur",
+      "file": "layers/08_ombres_profondeur.png"
+    }
+  ],
+  "exports": [
+    "COMPOSITION.png",
+    "zone_seche.ora",
+    "zone_seche.aseprite",
+    "zone_seche.tmj"
+  ],
+  "checks": {
+    "rgba_layers": true,
+    "common_canvas": true,
+    "disjoint_alpha_masks": true,
+    "ordered_reconstruction_exact": true,
+    "path_reaches_south": true,
+    "path_reaches_north": true,
+    "runtime_pmdo_validated": false,
+    "collision_validated": false
+  },
+  "notes": [
+    "The image generator produced the two visual guides independently.",
+    "The generator returned 1200x896; Lanczos fit to Palika's requested 2048x1536 map canvas is the only scale correction.",
+    "Layer pixels are copied from the generated guide; Python supplies masks, alignment, controls, and exports only.",
+    "The layers are generated composition assets, not certified canonical Halcyon tiles."
+  ]
+}

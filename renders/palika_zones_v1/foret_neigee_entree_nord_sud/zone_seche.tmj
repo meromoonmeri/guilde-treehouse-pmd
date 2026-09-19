@@ -1,0 +1,171 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.10.2",
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "width": 256,
+  "height": 192,
+  "tilewidth": 8,
+  "tileheight": 8,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "00_montagnes_arriere_plan",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/00_montagnes_arriere_plan.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 2,
+      "name": "01_sol",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/01_sol.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 3,
+      "name": "02_chemin",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/02_chemin.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 4,
+      "name": "03_bordures",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/03_bordures.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 5,
+      "name": "04_parois",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/04_parois.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 6,
+      "name": "05_rochers",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/05_rochers.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 7,
+      "name": "06_vegetation_basse",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/06_vegetation_basse.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 8,
+      "name": "07_arbres_massifs",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/07_arbres_massifs.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 9,
+      "name": "09_entree_foret",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/09_entree_foret.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    },
+    {
+      "id": 10,
+      "name": "08_ombres_profondeur",
+      "type": "imagelayer",
+      "x": 0,
+      "y": 0,
+      "offsetx": 0,
+      "offsety": 0,
+      "opacity": 1,
+      "visible": true,
+      "image": "layers/08_ombres_profondeur.png",
+      "imagewidth": 2048,
+      "imageheight": 1536
+    }
+  ],
+  "properties": [
+    {
+      "name": "palika_method",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "generated_guide_only",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "source_scale_correction",
+      "type": "string",
+      "value": "1200x896 to 2048x1536 after generator output"
+    }
+  ]
+}

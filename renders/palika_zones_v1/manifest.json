@@ -1,0 +1,33 @@
+{
+  "method": "Palika/Halcyon-inspired multi-layer export of two separately generated compositions",
+  "canvas": {
+    "width": 2048,
+    "height": 1536,
+    "tilewidth": 8,
+    "tileheight": 8,
+    "grid": [
+      256,
+      192
+    ]
+  },
+  "zones": [
+    {
+      "id": "vast_steppe_automne_sud_nord",
+      "composition": "vast_steppe_automne_sud_nord/COMPOSITION.png",
+      "ora": "vast_steppe_automne_sud_nord/zone_seche.ora",
+      "aseprite": "vast_steppe_automne_sud_nord/zone_seche.aseprite",
+      "tmj": "vast_steppe_automne_sud_nord/zone_seche.tmj"
+    },
+    {
+      "id": "foret_neigee_entree_nord_sud",
+      "composition": "foret_neigee_entree_nord_sud/COMPOSITION.png",
+      "ora": "foret_neigee_entree_nord_sud/zone_seche.ora",
+      "aseprite": "foret_neigee_entree_nord_sud/zone_seche.aseprite",
+      "tmj": "foret_neigee_entree_nord_sud/zone_seche.tmj"
+    }
+  ],
+  "limitations": [
+    "No PMDO import, collision, or runtime validation has been performed.",
+    "Generated guides are not canonical Halcyon tiles."
+  ]
+}
