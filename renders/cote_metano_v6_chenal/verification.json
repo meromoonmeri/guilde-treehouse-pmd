@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "canvas": [
+    1024,
+    768
+  ],
+  "grid_px": 8,
+  "modes": {
+    "jour": {
+      "layer_count": 10,
+      "recomposition_max_channel_error": 0,
+      "files_sha256": {
+        "00_sol_herbe.png": "2aabdd110b5ba4031ab4cc063b504c8a4b36e4dc1aaef4d909da6a95a952261d",
+        "01_faces_falaise.png": "248b7854536a808668156757048c28621819ca00e03d95a9d495f04975fbd419",
+        "02_retours.png": "5c1c3a835250e55bbaa83e927e1530e956283a56286cf8d34dcf6d627ce93279",
+        "03_couronnes.png": "c8f0af39189657f8f498a0cc634c8818a63cdd108dad304ccd60d417756b2dcf",
+        "04_pieds.png": "53ac67e62953a1c5e17d60e124baee2890aab0dd0c599495cfbf847113941fdc",
+        "05_eau_fond.png": "66cc4fb403d248e2aafb2ebadf3f8cbef62798a91b2bda50e8efd46790274f7b",
+        "06_eau_phase_01.png": "cb105b74aee9c4d2f237ec8d2f087141b0f8aec519fdc083758da610e8cc2ed1",
+        "07_eau_phase_02.png": "d1542574e09efac1d2fd0d4f0f07b99dc3831d9be0ccbdb540e71eff78f23078",
+        "08_eau_phase_03.png": "98fdac8eb13e2313f5e4a45e83916e1d5aa72077824f55ee7d048b7278e6980f",
+        "09_eau_phase_04.png": "c705a7fd841b6b8729c358bfc0aa0760cc3ea773539298af5b2b54b340ecf707"
+      }
+    },
+    "nuit": {
+      "layer_count": 10,
+      "recomposition_max_channel_error": 0,
+      "files_sha256": {
+        "00_sol_herbe.png": "9605902e3f9250fbbef2c3f17eb6c1f90997069e08656e4cfa76d9877360b116",
+        "01_faces_falaise.png": "1bce331962ad274420685422b46e87800215046c20e158b06ed202803d57be44",
+        "02_retours.png": "936a76ec4ccc5f899e0ee494367071a2a229351d58cff948dfa47e19f912b381",
+        "03_couronnes.png": "c51f1332987a6bd8435926f4f555d9033bb345cbb7d0ef4122bf6b67dd0f31ec",
+        "04_pieds.png": "3d3331917287ae81d4ae6cc21bc0e0bbfedc6089f0b10cdacee1969efceb2ef7",
+        "05_eau_fond.png": "c2e4bc1996ae75418913dbda0db84fb0d0bf340f689bcad02079365cfceee8d4",
+        "06_eau_phase_01.png": "254c1ebb8b230d45e3936a1ca147b63b861d608ed1eaced508fb8490e5b98c00",
+        "07_eau_phase_02.png": "e0a21aa323ff04e322c69dac5d58de3d1c44734e44eb3625a3d6d07ee66fd5d4",
+        "08_eau_phase_03.png": "832d58b4c6eee2192244d32888879710867895a68bf59b96e29aa8f1152fe990",
+        "09_eau_phase_04.png": "efbd0ec50b5d2b4d08e782584292138e7a63887d3dd0d002ddac94e25caa2b11"
+      }
+    }
+  },
+  "checks": {
+    "terrain_water_disjoint": true,
+    "route_on_grass": true,
+    "west_east_south_contacts": true,
+    "native_day_terrain_generated_rgb_pixels": 0,
+    "native_day_terrain_resampled": false,
+    "water_phases": 4
+  },
+  "limitations": [
+    "No PMDO Ground was created in this PNG composition pass.",
+    "Collision and transition behavior require an editor/runtime pass.",
+    "The water bed is an explicitly documented substrate adaptation; phase pixels are native Métano river pixels.",
+    "Artistic review at 1x is still pending."
+  ]
+}

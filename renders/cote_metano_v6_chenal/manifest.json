@@ -1,0 +1,7226 @@
+{
+  "id": "cote_metano_v6_chenal",
+  "title": "Les Terrasses du Chenal",
+  "mode": "A — extension de matière Métano canonique",
+  "canvas": [
+    1024,
+    768
+  ],
+  "grid_px": 8,
+  "tex_size": 1,
+  "layout": {
+    "arrival": [
+      480,
+      704
+    ],
+    "route": "south_to_north via the central neck; grass continuity, no invented path tile",
+    "water": "winding canonical river cut between three terraces",
+    "connections": [
+      "west",
+      "east",
+      "south"
+    ]
+  },
+  "references": {
+    "layout_grammar": [
+      "source/cote_v5_expeditions/README.md",
+      "sprites/cote_v5_expeditions/layouts.json",
+      "renders/metano_expeditions_actuel/README.md"
+    ],
+    "terrain_day": [
+      "source/cote_v4_abyss/natifs/Metano_Town_Base.tile",
+      "source/cote_v4_abyss/natifs/Metano_Town_Cliffs.tile",
+      "source/cote_v4_abyss/natifs/Metano_Town_Fringe.tile"
+    ],
+    "terrain_night": [
+      "source/cote_v4_abyss/natifs/Metano_Town_Base_Night.tile",
+      "source/cote_v4_abyss/natifs/Metano_Town_Cliffs_Night.tile",
+      "source/cote_v4_abyss/natifs/Metano_Town_Fringe_Night.tile"
+    ],
+    "water": [
+      "sprites/eau_metano/Riviere_Metano_Compacte.png",
+      "sprites/eau_metano/README.md"
+    ],
+    "review_background_only": [
+      "sprites/cote_v2/01_promontoire/COTEV2_01_00_CIEL_SANS_NUAGES.png",
+      "sprites/cote_v2/01_promontoire/COTEV2_01_01_NUAGES_POSITION_0.png",
+      "sprites/cote_v2/01_promontoire/COTEV2_01_02_MER_PALETTE_00.png"
+    ],
+    "night_filter": "source/cote_v4_abyss/night.py and Abyss V4 reference blob 438383f4"
+  },
+  "layers": [
+    "00_sol_herbe",
+    "01_faces_falaise",
+    "02_retours",
+    "03_couronnes",
+    "04_pieds",
+    "05_eau_fond",
+    "06_eau_phase_01",
+    "07_eau_phase_02",
+    "08_eau_phase_03",
+    "09_eau_phase_04"
+  ],
+  "provenance": {
+    "generated_rgb_pixels_day_terrain": 0,
+    "scaled_or_rotated_native_pixels": false,
+    "generated_layout_only": true,
+    "water_bed": "opaque substrate sampled from the most common opaque RGB in the canonical river bank; canonical river pixels remain in phase overlays"
+  },
+  "placements": {
+    "jour": [
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          0
+        ],
+        "selected_pixels": 3020
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          0
+        ],
+        "selected_pixels": 13898
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          0
+        ],
+        "selected_pixels": 2754
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          0
+        ],
+        "selected_pixels": 308
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          0
+        ],
+        "selected_pixels": 128
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          128
+        ],
+        "selected_pixels": 14886
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          128
+        ],
+        "selected_pixels": 15389
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          128
+        ],
+        "selected_pixels": 12160
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          128
+        ],
+        "selected_pixels": 10227
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          128
+        ],
+        "selected_pixels": 2069
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          128
+        ],
+        "selected_pixels": 5009
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          128
+        ],
+        "selected_pixels": 16327
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          128
+        ],
+        "selected_pixels": 14131
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          256
+        ],
+        "selected_pixels": 12844
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          256
+        ],
+        "selected_pixels": 15665
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          256
+        ],
+        "selected_pixels": 16033
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          256
+        ],
+        "selected_pixels": 4128
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          256
+        ],
+        "selected_pixels": 1384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          256
+        ],
+        "selected_pixels": 3057
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          256
+        ],
+        "selected_pixels": 15173
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          256
+        ],
+        "selected_pixels": 16323
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          384
+        ],
+        "selected_pixels": 5216
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 6235
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 4690
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 12925
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          384
+        ],
+        "selected_pixels": 15452
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          384
+        ],
+        "selected_pixels": 2925
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 6386
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 4985
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          512
+        ],
+        "selected_pixels": 12904
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          512
+        ],
+        "selected_pixels": 3874
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          640
+        ],
+        "selected_pixels": 11482
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          640
+        ],
+        "selected_pixels": 669
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          640
+        ],
+        "selected_pixels": 16139
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          96
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 1202
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          144
+        ],
+        "selected_pixels": 508
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          192
+        ],
+        "selected_pixels": 88
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 2425
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          192
+        ],
+        "selected_pixels": 1664
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          192
+        ],
+        "selected_pixels": 1463
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 1134
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          240
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 2950
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          240
+        ],
+        "selected_pixels": 135
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 1022
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          288
+        ],
+        "selected_pixels": 384
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          288
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 2343
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          336
+        ],
+        "selected_pixels": 1197
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          336
+        ],
+        "selected_pixels": 434
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          336
+        ],
+        "selected_pixels": 285
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          336
+        ],
+        "selected_pixels": 143
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          336
+        ],
+        "selected_pixels": 208
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 2108
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          336
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          336
+        ],
+        "selected_pixels": 1037
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          336
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          336
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 3071
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 1475
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 306
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 3040
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 2629
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 1854
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 2822
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          432
+        ],
+        "selected_pixels": 1241
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          432
+        ],
+        "selected_pixels": 1751
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          432
+        ],
+        "selected_pixels": 1856
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          432
+        ],
+        "selected_pixels": 2149
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          432
+        ],
+        "selected_pixels": 2440
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          432
+        ],
+        "selected_pixels": 2867
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 487
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 268
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          432
+        ],
+        "selected_pixels": 1793
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          432
+        ],
+        "selected_pixels": 2296
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          432
+        ],
+        "selected_pixels": 2704
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          432
+        ],
+        "selected_pixels": 3011
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          480
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 528
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          480
+        ],
+        "selected_pixels": 15
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          480
+        ],
+        "selected_pixels": 195
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          96
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 281
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          144
+        ],
+        "selected_pixels": 257
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 255
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          192
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          192
+        ],
+        "selected_pixels": 425
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 42
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 87
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          240
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 219
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 510
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          336
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          336
+        ],
+        "selected_pixels": 429
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          336
+        ],
+        "selected_pixels": 283
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          336
+        ],
+        "selected_pixels": 141
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          336
+        ],
+        "selected_pixels": 117
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 120
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          336
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          336
+        ],
+        "selected_pixels": 510
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          336
+        ],
+        "selected_pixels": 45
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          336
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 83
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 225
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 364
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 389
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 120
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 62
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 463
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 448
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 132
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 38
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 167
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          128
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          160
+        ],
+        "selected_pixels": 102
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          160
+        ],
+        "selected_pixels": 78
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          176
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          208
+        ],
+        "selected_pixels": 76
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          208
+        ],
+        "selected_pixels": 511
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          208
+        ],
+        "selected_pixels": 368
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          224
+        ],
+        "selected_pixels": 1
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          224
+        ],
+        "selected_pixels": 57
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 57
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          256
+        ],
+        "selected_pixels": 30
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          256
+        ],
+        "selected_pixels": 27
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          272
+        ],
+        "selected_pixels": 42
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          272
+        ],
+        "selected_pixels": 46
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          304
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          320
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 274
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          352
+        ],
+        "selected_pixels": 238
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          352
+        ],
+        "selected_pixels": 219
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          352
+        ],
+        "selected_pixels": 26
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          352
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          352
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          352
+        ],
+        "selected_pixels": 217
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          368
+        ],
+        "selected_pixels": 293
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          368
+        ],
+        "selected_pixels": 429
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          368
+        ],
+        "selected_pixels": 285
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          368
+        ],
+        "selected_pixels": 143
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          368
+        ],
+        "selected_pixels": 92
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          368
+        ],
+        "selected_pixels": 293
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          368
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          368
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 83
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 227
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 369
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 394
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 4
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 331
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 426
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          400
+        ],
+        "selected_pixels": 56
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          400
+        ],
+        "selected_pixels": 4
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          400
+        ],
+        "selected_pixels": 134
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          400
+        ],
+        "selected_pixels": 477
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          400
+        ],
+        "selected_pixels": 25
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          416
+        ],
+        "selected_pixels": 60
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          416
+        ],
+        "selected_pixels": 1
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 38
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          448
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          464
+        ],
+        "selected_pixels": 114
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 116
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          496
+        ],
+        "selected_pixels": 51
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          160
+        ],
+        "selected_pixels": 149
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          176
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          192
+        ],
+        "selected_pixels": 68
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 27
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          208
+        ],
+        "selected_pixels": 96
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          224
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          256
+        ],
+        "selected_pixels": 65
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          272
+        ],
+        "selected_pixels": 126
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          272
+        ],
+        "selected_pixels": 116
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          272
+        ],
+        "selected_pixels": 435
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          272
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 5
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          288
+        ],
+        "selected_pixels": 383
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          288
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          352
+        ],
+        "selected_pixels": 7
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          352
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          352
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          368
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          368
+        ],
+        "selected_pixels": 13
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          400
+        ],
+        "selected_pixels": 69
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          416
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          432
+        ],
+        "selected_pixels": 267
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 70
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 154
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          432
+        ],
+        "selected_pixels": 49
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          448
+        ],
+        "selected_pixels": 238
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          448
+        ],
+        "selected_pixels": 511
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          448
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          448
+        ],
+        "selected_pixels": 393
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          448
+        ],
+        "selected_pixels": 109
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          448
+        ],
+        "selected_pixels": 26
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          448
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          448
+        ],
+        "selected_pixels": 3
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          448
+        ],
+        "selected_pixels": 436
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          448
+        ],
+        "selected_pixels": 249
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          448
+        ],
+        "selected_pixels": 20
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          464
+        ],
+        "selected_pixels": 104
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          464
+        ],
+        "selected_pixels": 392
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          464
+        ],
+        "selected_pixels": 417
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          464
+        ],
+        "selected_pixels": 16
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          464
+        ],
+        "selected_pixels": 248
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          464
+        ],
+        "selected_pixels": 469
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          464
+        ],
+        "selected_pixels": 306
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          480
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 191
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          480
+        ],
+        "selected_pixels": 15
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          480
+        ],
+        "selected_pixels": 195
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          496
+        ],
+        "selected_pixels": 103
+      }
+    ],
+    "nuit": [
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          0
+        ],
+        "selected_pixels": 3020
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          0
+        ],
+        "selected_pixels": 13898
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          0
+        ],
+        "selected_pixels": 2754
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          0
+        ],
+        "selected_pixels": 308
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          0
+        ],
+        "selected_pixels": 128
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          128
+        ],
+        "selected_pixels": 14886
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          128
+        ],
+        "selected_pixels": 15389
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          128
+        ],
+        "selected_pixels": 12160
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          128
+        ],
+        "selected_pixels": 10227
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          128
+        ],
+        "selected_pixels": 2069
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          128
+        ],
+        "selected_pixels": 5009
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          128
+        ],
+        "selected_pixels": 16327
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          128
+        ],
+        "selected_pixels": 14131
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          256
+        ],
+        "selected_pixels": 12844
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          256
+        ],
+        "selected_pixels": 15665
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          256
+        ],
+        "selected_pixels": 16033
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          256
+        ],
+        "selected_pixels": 4128
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          256
+        ],
+        "selected_pixels": 1384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          256
+        ],
+        "selected_pixels": 3057
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          256
+        ],
+        "selected_pixels": 15173
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          256
+        ],
+        "selected_pixels": 16323
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          384
+        ],
+        "selected_pixels": 5216
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 6235
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 4690
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 12925
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          384
+        ],
+        "selected_pixels": 15452
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          384
+        ],
+        "selected_pixels": 2925
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 6386
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 4985
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          512
+        ],
+        "selected_pixels": 12904
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          512
+        ],
+        "selected_pixels": 3874
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          512
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          0,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          128,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          256,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          384,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          512,
+          640
+        ],
+        "selected_pixels": 11482
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          640,
+          640
+        ],
+        "selected_pixels": 669
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          768,
+          640
+        ],
+        "selected_pixels": 16139
+      },
+      {
+        "layer": "00_sol_herbe",
+        "module": [
+          0,
+          640,
+          128,
+          768
+        ],
+        "source_sheet": "Base",
+        "destination": [
+          896,
+          640
+        ],
+        "selected_pixels": 16384
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          96
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 1202
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          144
+        ],
+        "selected_pixels": 508
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          192
+        ],
+        "selected_pixels": 88
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 2425
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          192
+        ],
+        "selected_pixels": 1664
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          192
+        ],
+        "selected_pixels": 1463
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 1134
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          240
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 2950
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          240
+        ],
+        "selected_pixels": 135
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 1022
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          288
+        ],
+        "selected_pixels": 384
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          288
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 2343
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          336
+        ],
+        "selected_pixels": 1197
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          336
+        ],
+        "selected_pixels": 434
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          336
+        ],
+        "selected_pixels": 285
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          336
+        ],
+        "selected_pixels": 143
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          336
+        ],
+        "selected_pixels": 208
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 2108
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          336
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          336
+        ],
+        "selected_pixels": 1037
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          336
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          336
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 3072
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 3071
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 1475
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 306
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 3040
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 2629
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 1854
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 2822
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          432
+        ],
+        "selected_pixels": 1241
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          432
+        ],
+        "selected_pixels": 1751
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          432
+        ],
+        "selected_pixels": 1856
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          432
+        ],
+        "selected_pixels": 2149
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          432
+        ],
+        "selected_pixels": 2440
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          432
+        ],
+        "selected_pixels": 2867
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 487
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 268
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          432
+        ],
+        "selected_pixels": 1793
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          432
+        ],
+        "selected_pixels": 2296
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          432
+        ],
+        "selected_pixels": 2704
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          432
+        ],
+        "selected_pixels": 3011
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          480
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 528
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          480
+        ],
+        "selected_pixels": 15
+      },
+      {
+        "layer": "01_faces_falaise",
+        "module": [
+          912,
+          464,
+          976,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          480
+        ],
+        "selected_pixels": 195
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          96
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 281
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          144
+        ],
+        "selected_pixels": 257
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 255
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          192
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          192
+        ],
+        "selected_pixels": 425
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 42
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 87
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          240
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 219
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 510
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          336
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          336
+        ],
+        "selected_pixels": 429
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          336
+        ],
+        "selected_pixels": 283
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          336
+        ],
+        "selected_pixels": 141
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          336
+        ],
+        "selected_pixels": 117
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 120
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          336
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          336
+        ],
+        "selected_pixels": 510
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          336
+        ],
+        "selected_pixels": 45
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          336
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 83
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 225
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 364
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 389
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 120
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 62
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 463
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 448
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 132
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 38
+      },
+      {
+        "layer": "02_retours",
+        "module": [
+          680,
+          464,
+          744,
+          512
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 167
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          128
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          144
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          160
+        ],
+        "selected_pixels": 102
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          160
+        ],
+        "selected_pixels": 78
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          176
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 179
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          208
+        ],
+        "selected_pixels": 76
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          208
+        ],
+        "selected_pixels": 511
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          208
+        ],
+        "selected_pixels": 368
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          224
+        ],
+        "selected_pixels": 1
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          224
+        ],
+        "selected_pixels": 57
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          240
+        ],
+        "selected_pixels": 57
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          256
+        ],
+        "selected_pixels": 30
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          256
+        ],
+        "selected_pixels": 27
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          272
+        ],
+        "selected_pixels": 42
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          272
+        ],
+        "selected_pixels": 46
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          304
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          320
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          336
+        ],
+        "selected_pixels": 274
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          336
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          352
+        ],
+        "selected_pixels": 238
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          352
+        ],
+        "selected_pixels": 219
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          352
+        ],
+        "selected_pixels": 26
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          352
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          352
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          352
+        ],
+        "selected_pixels": 217
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          368
+        ],
+        "selected_pixels": 293
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          368
+        ],
+        "selected_pixels": 429
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          368
+        ],
+        "selected_pixels": 285
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          368
+        ],
+        "selected_pixels": 143
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          368
+        ],
+        "selected_pixels": 92
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          368
+        ],
+        "selected_pixels": 293
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          368
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          368
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          384
+        ],
+        "selected_pixels": 83
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          384
+        ],
+        "selected_pixels": 227
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          384
+        ],
+        "selected_pixels": 369
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          384
+        ],
+        "selected_pixels": 394
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          384
+        ],
+        "selected_pixels": 4
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          384
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          384
+        ],
+        "selected_pixels": 331
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          384
+        ],
+        "selected_pixels": 34
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          384
+        ],
+        "selected_pixels": 426
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          400
+        ],
+        "selected_pixels": 56
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          400
+        ],
+        "selected_pixels": 4
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          400
+        ],
+        "selected_pixels": 134
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          400
+        ],
+        "selected_pixels": 477
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          400
+        ],
+        "selected_pixels": 25
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          416
+        ],
+        "selected_pixels": 60
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          416
+        ],
+        "selected_pixels": 1
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 38
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          448
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          464
+        ],
+        "selected_pixels": 114
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 116
+      },
+      {
+        "layer": "03_couronnes",
+        "module": [
+          912,
+          448,
+          976,
+          464
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          496
+        ],
+        "selected_pixels": 51
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          160
+        ],
+        "selected_pixels": 149
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          176
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          192
+        ],
+        "selected_pixels": 68
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          192
+        ],
+        "selected_pixels": 27
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          208
+        ],
+        "selected_pixels": 96
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          224
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          240
+        ],
+        "selected_pixels": 93
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          256
+        ],
+        "selected_pixels": 65
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          272
+        ],
+        "selected_pixels": 126
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          272
+        ],
+        "selected_pixels": 116
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          272
+        ],
+        "selected_pixels": 435
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          576,
+          272
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          288
+        ],
+        "selected_pixels": 5
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          448,
+          288
+        ],
+        "selected_pixels": 383
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          512,
+          288
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          352
+        ],
+        "selected_pixels": 7
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          352
+        ],
+        "selected_pixels": 18
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          352
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          368
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          368
+        ],
+        "selected_pixels": 13
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          384
+        ],
+        "selected_pixels": 61
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          400
+        ],
+        "selected_pixels": 69
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          416
+        ],
+        "selected_pixels": 73
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          432
+        ],
+        "selected_pixels": 267
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          432
+        ],
+        "selected_pixels": 70
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          432
+        ],
+        "selected_pixels": 154
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          432
+        ],
+        "selected_pixels": 49
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          0,
+          448
+        ],
+        "selected_pixels": 238
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          64,
+          448
+        ],
+        "selected_pixels": 511
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          128,
+          448
+        ],
+        "selected_pixels": 512
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          448
+        ],
+        "selected_pixels": 393
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          448
+        ],
+        "selected_pixels": 109
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          448
+        ],
+        "selected_pixels": 26
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          448
+        ],
+        "selected_pixels": 47
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          704,
+          448
+        ],
+        "selected_pixels": 3
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          448
+        ],
+        "selected_pixels": 436
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          448
+        ],
+        "selected_pixels": 249
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          448
+        ],
+        "selected_pixels": 20
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          192,
+          464
+        ],
+        "selected_pixels": 104
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          256,
+          464
+        ],
+        "selected_pixels": 392
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          464
+        ],
+        "selected_pixels": 417
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          768,
+          464
+        ],
+        "selected_pixels": 16
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          832,
+          464
+        ],
+        "selected_pixels": 248
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          464
+        ],
+        "selected_pixels": 469
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          464
+        ],
+        "selected_pixels": 306
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          320,
+          480
+        ],
+        "selected_pixels": 66
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          480
+        ],
+        "selected_pixels": 191
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          896,
+          480
+        ],
+        "selected_pixels": 15
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          960,
+          480
+        ],
+        "selected_pixels": 195
+      },
+      {
+        "layer": "04_pieds",
+        "module": [
+          912,
+          528,
+          976,
+          544
+        ],
+        "source_sheet": "Cliffs",
+        "destination": [
+          384,
+          496
+        ],
+        "selected_pixels": 103
+      }
+    ]
+  },
+  "status": {
+    "image_checks": "verify.py required after build",
+    "pmdo_runtime": false,
+    "art_review": "pending"
+  },
+  "files": {
+    "jour/00_sol_herbe.png": "2aabdd110b5ba4031ab4cc063b504c8a4b36e4dc1aaef4d909da6a95a952261d",
+    "jour/01_faces_falaise.png": "248b7854536a808668156757048c28621819ca00e03d95a9d495f04975fbd419",
+    "jour/02_retours.png": "5c1c3a835250e55bbaa83e927e1530e956283a56286cf8d34dcf6d627ce93279",
+    "jour/03_couronnes.png": "c8f0af39189657f8f498a0cc634c8818a63cdd108dad304ccd60d417756b2dcf",
+    "jour/04_pieds.png": "53ac67e62953a1c5e17d60e124baee2890aab0dd0c599495cfbf847113941fdc",
+    "jour/05_eau_fond.png": "66cc4fb403d248e2aafb2ebadf3f8cbef62798a91b2bda50e8efd46790274f7b",
+    "jour/06_eau_phase_01.png": "cb105b74aee9c4d2f237ec8d2f087141b0f8aec519fdc083758da610e8cc2ed1",
+    "jour/07_eau_phase_02.png": "d1542574e09efac1d2fd0d4f0f07b99dc3831d9be0ccbdb540e71eff78f23078",
+    "jour/08_eau_phase_03.png": "98fdac8eb13e2313f5e4a45e83916e1d5aa72077824f55ee7d048b7278e6980f",
+    "jour/09_eau_phase_04.png": "c705a7fd841b6b8729c358bfc0aa0760cc3ea773539298af5b2b54b340ecf707",
+    "jour/COMPOSITION.png": "d555e2f0b7bbacc3ff79eb59a64c9a062dc42e1a2928c6adeb1b95fbf4fa9940",
+    "jour/PREVIEW.png": "e5e0a44b6094f65272afd324a550adfcf1e89b33d4c5ebdee2d237c3b06e6940",
+    "jour/bg_00_ciel.png": "7890b90fc39139a681ad52e36f16d9b9b3b96ec7fae1bab97c15659a1b464319",
+    "jour/bg_01_nuages.png": "8a64f3d068c2203375e6f84785d7eb4f155f9505adababa4cb98a2bf54340845",
+    "jour/bg_02_mer_revue.png": "17149e3c3bde9550fd7b5b3c4a94c32df15c7bcdc84611410cba626f478eebf6",
+    "masques/grass.png": "c31833370ae0b9ce8b5ed2389455dd1dc278ca47940c0a7ea252ffbb65e927b6",
+    "masques/route.png": "20b823d9fe4c5b18b6dea4eb78199acbb5bce897d776ab0151c2e14d16002d34",
+    "masques/terrain.png": "5cca6760f8fd0c3d8ebc3884255f16df22ea7a84f86fc0a38eaa3a6fc3380a57",
+    "masques/water.png": "79cc5e3b3ab1cdb994ffbb4b5879882ae39e8f5c4c4a21e0842ce2404ea33a0b",
+    "nuit/00_sol_herbe.png": "9605902e3f9250fbbef2c3f17eb6c1f90997069e08656e4cfa76d9877360b116",
+    "nuit/01_faces_falaise.png": "1bce331962ad274420685422b46e87800215046c20e158b06ed202803d57be44",
+    "nuit/02_retours.png": "936a76ec4ccc5f899e0ee494367071a2a229351d58cff948dfa47e19f912b381",
+    "nuit/03_couronnes.png": "c51f1332987a6bd8435926f4f555d9033bb345cbb7d0ef4122bf6b67dd0f31ec",
+    "nuit/04_pieds.png": "3d3331917287ae81d4ae6cc21bc0e0bbfedc6089f0b10cdacee1969efceb2ef7",
+    "nuit/05_eau_fond.png": "c2e4bc1996ae75418913dbda0db84fb0d0bf340f689bcad02079365cfceee8d4",
+    "nuit/06_eau_phase_01.png": "254c1ebb8b230d45e3936a1ca147b63b861d608ed1eaced508fb8490e5b98c00",
+    "nuit/07_eau_phase_02.png": "e0a21aa323ff04e322c69dac5d58de3d1c44734e44eb3625a3d6d07ee66fd5d4",
+    "nuit/08_eau_phase_03.png": "832d58b4c6eee2192244d32888879710867895a68bf59b96e29aa8f1152fe990",
+    "nuit/09_eau_phase_04.png": "efbd0ec50b5d2b4d08e782584292138e7a63887d3dd0d002ddac94e25caa2b11",
+    "nuit/COMPOSITION.png": "44c80eeda835c5604c69bbc2252bfc6e16a15d8d3d6bc0b59251105705ea6b78",
+    "nuit/PREVIEW.png": "77cdfb9a1486237b51d09c52c76213d5053d4b7cc24a50226426af7b1c5f769b",
+    "nuit/bg_00_ciel.png": "05d8fa8af4c34f73cdd559ac962a3df5c633727764f4654ff48627126d25e2d0",
+    "nuit/bg_01_nuages.png": "ee71957ed7824dc6eabba1f5d5303ccb609b493bf9063f90224c987f15003308",
+    "nuit/bg_02_mer_revue.png": "5476d157c30645acb4dfe7c91dc2218a6081c9796093154d1001a638a0bad484"
+  }
+}

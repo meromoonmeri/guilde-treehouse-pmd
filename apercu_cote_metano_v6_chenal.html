@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Les Terrasses du Chenal — Métano V6</title>
+<style>
+  :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+  body { margin: 0; background: #101923; color: #f4f6f8; }
+  header { padding: 14px 18px 8px; }
+  h1 { margin: 0 0 4px; font-size: 20px; }
+  p { margin: 4px 0; color: #b8c4d0; font-size: 13px; }
+  main { display: grid; grid-template-columns: minmax(720px, 1fr) 260px; gap: 18px; padding: 0 18px 18px; }
+  #viewport { width: min(1024px, calc(100vw - 330px)); aspect-ratio: 4 / 3; overflow: hidden; position: relative; background: #0a2a48; image-rendering: pixelated; box-shadow: 0 0 0 1px #3b5267; }
+  #viewport img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; pointer-events: none; }
+  #viewport .terrain { display: none; }
+  #viewport[data-bg="off"] .background { display: none; }
+  #viewport[data-bg="off"] { background: #090d12; }
+  #viewport[data-grid="on"]::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .20; background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 8px 8px; }
+  aside { background: #17232e; padding: 14px; border-radius: 8px; align-self: start; }
+  label { display: block; margin: 9px 0; font-size: 13px; }
+  fieldset { border: 1px solid #3d5265; margin: 0 0 12px; padding: 8px 10px; }
+  legend { color: #b8c4d0; font-size: 12px; }
+  button, select { width: 100%; padding: 7px; margin: 4px 0; background: #263747; border: 1px solid #526b80; color: white; border-radius: 4px; }
+  .note { margin-top: 14px; line-height: 1.35; }
+  code { color: #9ed8ff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Les Terrasses du Chenal — Métano V6</h1>
+  <p>Composition native 8 px · jour/nuit Abyss · terrain séparé en 10 layers · 4 phases de rivière.</p>
+</header>
+<main>
+  <section id="viewport" data-bg="on" data-grid="off">
+    <img class="background bg-ciel" alt="Ciel" />
+    <img class="background bg-nuages" alt="Nuages" />
+    <img class="background bg-mer" alt="Fond mer de contrôle" />
+    <img class="terrain terrain-00" alt="Sol herbe" />
+    <img class="terrain terrain-01" alt="Faces" />
+    <img class="terrain terrain-02" alt="Retours" />
+    <img class="terrain terrain-03" alt="Couronnes" />
+    <img class="terrain terrain-04" alt="Pieds" />
+    <img class="terrain terrain-05" alt="Fond de l'eau" />
+    <img class="terrain terrain-water" alt="Phase de rivière" />
+  </section>
+  <aside>
+    <fieldset><legend>Ambiance</legend>
+      <label><input type="radio" name="mode" value="jour" checked> Jour</label>
+      <label><input type="radio" name="mode" value="nuit"> Nuit — Abyss V4</label>
+    </fieldset>
+    <fieldset><legend>Animation de l'eau</legend>
+      <label for="phase">Phase <output id="phaseOut">1</output> / 4</label>
+      <input id="phase" type="range" min="1" max="4" value="1" step="1" style="width:100%">
+      <button id="play">Lecture</button>
+    </fieldset>
+    <fieldset><legend>Lecture des couches</legend>
+      <label><input id="bg" type="checkbox" checked> Fonds de contrôle séparés</label>
+      <label><input id="terrain" type="checkbox" checked> Terrain</label>
+      <label><input id="grid" type="checkbox"> Grille 8 px</label>
+    </fieldset>
+    <button id="openManifest">Ouvrir le manifest JSON</button>
+    <p class="note">Les fonds visibles sont des références réutilisées uniquement pour l'aperçu. Les PNG terrain transparents sont les assets de composition. La map n'est pas encore un Ground PMDO jouable.</p>
+  </aside>
+</main>
+<script>
+const root = 'renders/cote_metano_v6_chenal/';
+const viewport = document.querySelector('#viewport');
+const phase = document.querySelector('#phase');
+const phaseOut = document.querySelector('#phaseOut');
+const modeInputs = [...document.querySelectorAll('input[name="mode"]')];
+const terrain = document.querySelector('#terrain');
+const bg = document.querySelector('#bg');
+const grid = document.querySelector('#grid');
+const img = name => document.querySelector('.' + name);
+function mode() { return modeInputs.find(x => x.checked).value; }
+function refresh() {
+  const m = mode(), base = root + m + '/';
+  img('bg-ciel').src = base + 'bg_00_ciel.png';
+  img('bg-nuages').src = base + 'bg_01_nuages.png';
+  img('bg-mer').src = base + 'bg_02_mer_revue.png';
+  for (let i = 0; i < 6; i++) img('terrain-0' + i).src = base + String(i).padStart(2, '0') + '_' + ['sol_herbe','faces_falaise','retours','couronnes','pieds','eau_fond'][i] + '.png';
+  img('terrain-water').src = base + String(5 + Number(phase.value)).padStart(2, '0') + '_eau_phase_0' + phase.value + '.png';
+  phaseOut.value = phase.value;
+}
+function visibility() {
+  viewport.dataset.bg = bg.checked ? 'on' : 'off';
+  viewport.dataset.grid = grid.checked ? 'on' : 'off';
+  document.querySelectorAll('.terrain').forEach(x => x.style.display = terrain.checked ? 'block' : 'none');
+}
+modeInputs.forEach(x => x.addEventListener('change', refresh));
+phase.addEventListener('input', refresh);
+bg.addEventListener('change', visibility); terrain.addEventListener('change', visibility); grid.addEventListener('change', visibility);
+document.querySelector('#openManifest').onclick = () => window.open(root + 'manifest.json', '_blank');
+let timer = null;
+document.querySelector('#play').onclick = e => { if (timer) { clearInterval(timer); timer = null; e.target.textContent = 'Lecture'; } else { e.target.textContent = 'Pause'; timer = setInterval(() => { phase.value = phase.value === '4' ? '1' : String(Number(phase.value) + 1); refresh(); }, 167); } };
+refresh(); visibility();
+</script>
+</body>
+</html>
