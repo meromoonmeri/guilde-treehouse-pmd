@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouveau — Cliff Métano / Halcyon (méthode validée)
+
+- **[Galerie du cliff](apercu_cliff_metano_halcyon_v1.html)** — falaise composée uniquement de tuiles canoniques 8 px, chute animée 4 frames natives.
+- [Méthode, tests et limites](exports/cliff_metano_halcyon_v1/README.md) · `test_cliff.py` : 0 bloc non canonique.
+
+## Nouveau — Entrée de forêt (arbres Halcyon identiques, sol Vast Steppe, rochers Amp Plains)
+
+- **[Galerie de l'entrée de forêt](apercu_entree_foret_halcyon_v1.html)** — calques sol / rochers / arbres activables.
+- Les arbres sont les **mêmes sprites canoniques de Halcyon** sur leur propre calque ; le générateur ne fournit que le placement. Sol `Vast_Steppe_Base`, rochers `Amp Plains Entrance`.
+- [Pack + détails](exports/entree_foret_halcyon_v1/README.md) · tests : 0 pixel hors référence.
+
 ## Nouveau — sprites de structures Métano Town / Treasure Town + carte village terminée
 
 - **[Galerie des 8 structures et de la carte](apercu_structures_metano_treasure_v1.html)** — sprites extraits pixel-par-pixel des feuilles canoniques Treasure Town / Guilde (24 px), détourés par propagation depuis les bords ; carte village terminée (terrain natif + calque structures).

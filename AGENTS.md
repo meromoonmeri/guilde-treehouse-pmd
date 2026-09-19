@@ -418,3 +418,22 @@ Références de textures : **Palikadude/Halcyon** (master `da6c2130`, feuilles `
 Huit structures extraites pixel-par-pixel (Réserve Kangaskhan, Boutique Kecleon, Expertise Xatu, Banque Duskull, Liaison Élekable, Dojo Ossatueur, QG Guilde jour/nuit), détourées par propagation depuis les bords (aucun pixel généré/recoloré/rééchantillonné), atlas 24 px, puis carte village terminée : `map/village_00_terrain.png` + `map/village_01_structures.png` + composite, et Tiled `village.tmx`/`village_sol.tsx`. Nuit du QG = masque alpha du jour (géométrie identique vérifiée).
 
 `source/structures_metano_treasure_v1/` (native.py lecteur .tile/.rsground, build.py, test_build.py), `exports/structures_metano_treasure_v1/`, galerie `apercu_structures_metano_treasure_v1.html`. Tous les tests passent (pixels canoniques, alignement 24 px, atlas/carte recomposables, TMX/TSX valides, références intactes). **Pas d’import PMDO réel, collisions/warps non configurés.**
+
+## Entrée de forêt — arbres Halcyon identiques, sol Vast Steppe, rochers Amp Plains
+
+Correction utilisateur : les arbres générés n'étaient pas ceux de Halcyon. Désormais les
+arbres sont les **mêmes sprites canoniques** extraits de `Vast_Steppe_Objects/Fringe`
+(`exports/entree_foret_halcyon_v1/trees_canoniques/`), posés sur leur propre calque ; le
+générateur ne fournit que le **masque de placement** (`generation/placement_arbres.png`).
+Sol = tuiles canoniques `Vast_Steppe_Base` ; rochers = `Amp Plains Entrance`
+(ExplorersOfSkyOrigins). Tests : sol/rochers/arbres 0 pixel hors référence, composite
+recomposable, TMX/TSX valides. `source/entree_foret_halcyon_v1/`, galerie
+`apercu_entree_foret_halcyon_v1.html`.
+
+## Cliff Métano / Halcyon — méthode validée
+
+Nouvelle falaise composée uniquement de tuiles canoniques 8 px (`Metano_Town_Base/Cliffs/
+Animation_Tileset`), faces par répétition de rangées natives, chute 4 frames natives.
+`test_cliff.py` : 0 bloc non canonique sur herbe/falaises/eau. `source/cliff_metano_halcyon_v1/`,
+`exports/cliff_metano_halcyon_v1/`, galerie `apercu_cliff_metano_halcyon_v1.html`.
+Pas d'import PMDO réel ; collisions non fournies.

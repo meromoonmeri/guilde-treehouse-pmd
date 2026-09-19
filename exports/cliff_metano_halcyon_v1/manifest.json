@@ -1,0 +1,37 @@
+{
+  "reference": "Palikadude/Halcyon",
+  "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "size_px": [
+    1024,
+    768
+  ],
+  "grid_px": 8,
+  "cellules": [
+    128,
+    96
+  ],
+  "sources": {
+    "Metano_Town_Base": {
+      "sha256": "ee17ebd268f05bd71e337e1ac5773426d8038b9df169c4cb4344fe656a9a6409",
+      "tiles": 35646
+    },
+    "Metano_Town_Cliffs": {
+      "sha256": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+      "tiles": 2169
+    },
+    "Metano_Town_Animation_Tileset": {
+      "sha256": "51ee6afbd9da3747e060bf9c1f3dd3d9305853fbcb7cbf582b51b6fbea81e8d0",
+      "tiles": 4367
+    }
+  },
+  "layers": [
+    "herbe.png",
+    "falaises.png",
+    "eau_frame_1..4.png"
+  ],
+  "method": "Méthode validée : tuiles canoniques 8 px uniquement, faces hautes par répétition de rangées natives, chute en 4 frames natives.",
+  "not_validated": [
+    "Import PMDO réel",
+    "Collisions / transitions"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "size_px": [
+    512,
+    384
+  ],
+  "grid_px": 8,
+  "layers": [
+    "entree_00_sol.png",
+    "entree_01_rochers.png",
+    "entree_02_arbres.png"
+  ],
+  "composite": "entree_composite.png",
+  "sources": {
+    "sol": "Vast_Steppe_Base (Halcyon, canonique 8 px)",
+    "rochers": "Amp Plains Entrance (ExplorersOfSkyOrigins, canonique 24 px)",
+    "arbres": "sprites canoniques Halcyon (Vast_Steppe_Objects/Fringe), placement (masque) issu du générateur, calque propre"
+  },
+  "not_validated": [
+    "Import PMDO réel",
+    "Collisions / warps"
+  ]
+}
