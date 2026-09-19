@@ -2,9 +2,11 @@
 
 ## Statut et objectif
 
-Cette livraison est une **nouvelle map indépendante**. Elle ne remplace aucune zone validée, ne modifie pas Métano Town et ne reprend pas la géométrie d'une map existante comme carte finale.
+Cette livraison est une **nouvelle map indépendante**. Elle ne remplace aucune zone validée et ne modifie pas Métano Town. Le layout de la dernière zone de référence est utilisé comme étude de composition ; la map finale reçoit sa propre composition multicouche et ses propres textures Métano.
 
-La dernière zone ajoutée au commit de référence sert uniquement de **référence de layout**. La matière finale est construite séparément avec les textures canoniques Métano Town.
+## Correction appliquée
+
+La map ne reprend pas la méthode de la précédente Côte Métano V6 : celle-ci assemblait des modules sur des polygones procéduraux et ne correspondait pas au workflow du dernier agent.
 
 Cette V16 reprend précisément la méthode demandée :
 
@@ -12,7 +14,7 @@ Cette V16 reprend précisément la méthode demandée :
 2. son alpha et sa lecture des surfaces servent uniquement à produire les masques de layout ;
 3. tous les pixels générés de glace, de sol ou de cliff de V15 sont exclus du résultat final ;
 4. les cellules finales sont sélectionnées dans les tilesets canoniques Métano Town en grille 8 px ;
-5. l'herbe et le cliff final sont exportés en couches séparées ;
+5. l'herbe, les faces, les couronnes et les pieds de cliff sont exportés en couches séparées ;
 6. ciel, étoiles et nuages sont séparés du terrain ;
 7. aucune structure ni mer n'est ajoutée.
 
@@ -41,8 +43,10 @@ La sélection est effectuée cellule par cellule à partir de la géométrie alp
 ### Terrain
 
 - `00_sol_herbe_metano.png` : remplissage du sol par tuiles natives Base Métano.
-- `01_falaises_metano.png` : cliff séparé, composé uniquement de tuiles natives Cliffs Métano.
-- `TERRAIN_METANO.png` : recomposition transparente de ces deux couches.
+- `01_cliffs_faces_metano.png` : faces verticales, tuiles natives Cliffs Métano.
+- `02_cliffs_couronnes_metano.png` : couronnes et bords supérieurs, tuiles natives Cliffs Métano.
+- `03_cliffs_pieds_metano.png` : pieds et retours bas, tuiles natives Cliffs Métano.
+- `TERRAIN_METANO.png` : recomposition transparente de ces quatre couches.
 
 ### Background et overlay
 
@@ -72,8 +76,8 @@ Contrôles exécutés par `source/arene_metano_v16/verify.py` :
 
 - alpha du layout V15 utilisé comme référence et non comme texture ;
 - terrain final contenu dans le masque de layout ;
-- recomposition exacte sol + cliffs ;
-- deux couches Métano non vides ;
+- recomposition exacte des quatre couches terrain Métano ;
+- quatre couches Métano non vides ;
 - 55 frames de nuages sur canvas uniforme ;
 - wrap spatial et retour temporel exact ;
 - absence de structure et de mer ;

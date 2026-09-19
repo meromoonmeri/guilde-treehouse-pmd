@@ -33,7 +33,9 @@
     <img id="stars" alt="Étoiles fixes">
     <img id="clouds" alt="Nuages wrap">
     <img id="grass" alt="Sol herbe Métano">
-    <img id="cliffs" alt="Falaises Métano">
+    <img id="cliffFaces" alt="Faces de cliffs Métano">
+    <img id="cliffCrowns" alt="Couronnes de cliffs Métano">
+    <img id="cliffFeet" alt="Pieds de cliffs Métano">
   </section>
   <aside>
     <fieldset><legend>Ambiance</legend>
@@ -50,7 +52,9 @@
       <label><input id="showStars" type="checkbox" checked> Étoiles</label>
       <label><input id="showClouds" type="checkbox" checked> Nuages wrap</label>
       <label><input id="showGrass" type="checkbox" checked> Herbe Métano</label>
-      <label><input id="showCliffs" type="checkbox" checked> Cliffs Métano</label>
+      <label><input id="showCliffFaces" type="checkbox" checked> Faces de cliffs Métano</label>
+      <label><input id="showCliffCrowns" type="checkbox" checked> Couronnes de cliffs Métano</label>
+      <label><input id="showCliffFeet" type="checkbox" checked> Pieds de cliffs Métano</label>
       <label><input id="showGrid" type="checkbox"> Grille 8 px</label>
     </fieldset>
     <button id="manifest">Ouvrir le manifest</button>
@@ -71,7 +75,9 @@ function refresh() {
   document.querySelector('#stars').src = base + 'bg_01_etoiles_fixes.png';
   document.querySelector('#clouds').src = base + 'overlay_nuages/NuagesWrap_' + String(frame.value).padStart(2, '0') + '.png';
   document.querySelector('#grass').src = base + '00_sol_herbe_metano.png';
-  document.querySelector('#cliffs').src = base + '01_falaises_metano.png';
+  document.querySelector('#cliffFaces').src = base + '01_cliffs_faces_metano.png';
+  document.querySelector('#cliffCrowns').src = base + '02_cliffs_couronnes_metano.png';
+  document.querySelector('#cliffFeet').src = base + '03_cliffs_pieds_metano.png';
   out.value = frame.value;
 }
 function visibility() {
@@ -79,12 +85,14 @@ function visibility() {
   setLayer('stars', document.querySelector('#showStars'));
   setLayer('clouds', document.querySelector('#showClouds'));
   setLayer('grass', document.querySelector('#showGrass'));
-  setLayer('cliffs', document.querySelector('#showCliffs'));
+  setLayer('cliffFaces', document.querySelector('#showCliffFaces'));
+  setLayer('cliffCrowns', document.querySelector('#showCliffCrowns'));
+  setLayer('cliffFeet', document.querySelector('#showCliffFeet'));
   view.dataset.grid = document.querySelector('#showGrid').checked ? 'on' : 'off';
 }
 modeInputs.forEach(x => x.addEventListener('change', refresh));
 frame.addEventListener('input', refresh);
-['showSky','showStars','showClouds','showGrass','showCliffs','showGrid'].forEach(id => document.querySelector('#' + id).addEventListener('change', visibility));
+['showSky','showStars','showClouds','showGrass','showCliffFaces','showCliffCrowns','showCliffFeet','showGrid'].forEach(id => document.querySelector('#' + id).addEventListener('change', visibility));
 document.querySelector('#manifest').onclick = () => window.open(root + 'manifest.json', '_blank');
 let timer = null;
 document.querySelector('#play').onclick = e => { if (timer) { clearInterval(timer); timer = null; e.target.textContent = 'Lecture'; } else { e.target.textContent = 'Pause'; timer = setInterval(() => { frame.value = frame.value === '54' ? '0' : String(Number(frame.value) + 1); refresh(); }, 100); } };
