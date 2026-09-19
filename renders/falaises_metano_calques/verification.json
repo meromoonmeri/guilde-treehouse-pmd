@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "allowed_palette_size": 328,
+  "modules": {
+    "01_promontoire": {
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "terrain_out_of_palette": 0,
+      "water_pixels": 0,
+      "recomposition_identical": true,
+      "layers": {
+        "01_sol_herbe": {
+          "pixels": 347400,
+          "unique_colors": 67,
+          "palette_pass": true
+        },
+        "02_bordures_rebord": {
+          "pixels": 55485,
+          "unique_colors": 297,
+          "palette_pass": true
+        },
+        "03_parois_roche": {
+          "pixels": 388969,
+          "unique_colors": 253,
+          "palette_pass": true
+        },
+        "04_pied_falaise": {
+          "pixels": 24580,
+          "unique_colors": 159,
+          "palette_pass": true
+        }
+      },
+      "pmdo_tile_verified": true,
+      "tiled_tsj_verified": true
+    },
+    "02_double_terrasse": {
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "terrain_out_of_palette": 0,
+      "water_pixels": 0,
+      "recomposition_identical": true,
+      "layers": {
+        "01_sol_herbe": {
+          "pixels": 374128,
+          "unique_colors": 62,
+          "palette_pass": true
+        },
+        "02_bordures_rebord": {
+          "pixels": 29278,
+          "unique_colors": 273,
+          "palette_pass": true
+        },
+        "03_parois_roche": {
+          "pixels": 481319,
+          "unique_colors": 252,
+          "palette_pass": true
+        },
+        "04_pied_falaise": {
+          "pixels": 23864,
+          "unique_colors": 190,
+          "palette_pass": true
+        }
+      },
+      "pmdo_tile_verified": true,
+      "tiled_tsj_verified": true
+    },
+    "03_cirque_gradins": {
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "terrain_out_of_palette": 0,
+      "water_pixels": 0,
+      "recomposition_identical": true,
+      "layers": {
+        "01_sol_herbe": {
+          "pixels": 397675,
+          "unique_colors": 64,
+          "palette_pass": true
+        },
+        "02_bordures_rebord": {
+          "pixels": 55027,
+          "unique_colors": 285,
+          "palette_pass": true
+        },
+        "03_parois_roche": {
+          "pixels": 489763,
+          "unique_colors": 252,
+          "palette_pass": true
+        },
+        "04_pied_falaise": {
+          "pixels": 24032,
+          "unique_colors": 155,
+          "palette_pass": true
+        }
+      },
+      "pmdo_tile_verified": true,
+      "tiled_tsj_verified": true
+    },
+    "04_echancrure": {
+      "dimensions_px": [
+        1376,
+        768
+      ],
+      "tiles_8px": [
+        172,
+        96
+      ],
+      "terrain_out_of_palette": 0,
+      "water_pixels": 0,
+      "recomposition_identical": true,
+      "layers": {
+        "01_sol_herbe": {
+          "pixels": 308747,
+          "unique_colors": 52,
+          "palette_pass": true
+        },
+        "02_bordures_rebord": {
+          "pixels": 21023,
+          "unique_colors": 246,
+          "palette_pass": true
+        },
+        "03_parois_roche": {
+          "pixels": 532266,
+          "unique_colors": 253,
+          "palette_pass": true
+        },
+        "04_pied_falaise": {
+          "pixels": 18263,
+          "unique_colors": 156,
+          "palette_pass": true
+        }
+      },
+      "pmdo_tile_verified": true,
+      "tiled_tsj_verified": true
+    }
+  }
+}

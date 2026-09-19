@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falaises Métano Town — Découpage Multicalques Canonique</title>
+  <style>
+    :root {
+      --bg-dark: #0f171e;
+      --card-bg: #18232d;
+      --card-border: #2c3e50;
+      --accent: #4ecdc4;
+      --accent-gold: #f4d06f;
+      --accent-green: #77e099;
+      --accent-purple: #c084fc;
+      --accent-orange: #fb923c;
+      --accent-blue: #38bdf8;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #141d26;
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-pass { background: rgba(119, 224, 153, 0.2); color: var(--accent-green); border: 1px solid var(--accent-green); }
+    .badge-canon { background: rgba(244, 208, 111, 0.2); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    select, button {
+      background: #22313f;
+      color: var(--text);
+      border: 1px solid var(--card-border);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    select:hover, button:hover {
+      background: #2c3e50;
+      border-color: var(--accent);
+    }
+    button.active {
+      background: var(--accent);
+      color: #0f171e;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .main-layout {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 80px);
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 360px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--card-border);
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .panel-section {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .layer-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+    .layer-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .layer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .layer-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .layer-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .btn-solo {
+      font-size: 11px;
+      padding: 2px 8px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+    }
+    .btn-solo:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .layer-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      padding-left: 24px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .metric-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .metric-item .val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-family: monospace;
+    }
+    .metric-item .lbl {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .viewport-container {
+      flex: 1;
+      position: relative;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .canvas-wrapper {
+      position: relative;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+      transform-origin: center center;
+    }
+    .canvas-checker {
+      background-image:
+        linear-gradient(45deg, #18222b 25%, transparent 25%),
+        linear-gradient(-45deg, #18222b 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #18222b 75%),
+        linear-gradient(-45deg, transparent 75%, #18222b 75%);
+      background-size: 24px 24px;
+      background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+      background-color: #121920;
+    }
+    .canvas-magenta { background-color: #ff00ff; }
+    .canvas-dark { background-color: #10161d; }
+    .canvas-sea { background-color: #173b52; }
+
+    .layer-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+      pointer-events: none;
+      display: none;
+    }
+    .layer-image.visible {
+      display: block;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      display: none;
+    }
+    .grid-overlay.active {
+      display: block;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+      background-size: 8px 8px;
+    }
+
+    .info-footer {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(15, 23, 30, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--accent-gold);
+      display: flex;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1>Falaises Métano Town <span class="badge badge-canon">4 Calques Natifs</span> <span class="badge badge-pass">0 Erreur Palette</span></h1>
+    <p>Architecture en calques disjoints : Sol Herbe, Bordures / Rebord, Parois rocheuses, Pied de falaise</p>
+  </div>
+
+  <div class="controls-bar">
+    <select id="moduleSelect">
+      <option value="01_promontoire">01 · Cap Promontoire (1640 × 656 px)</option>
+      <option value="02_double_terrasse">02 · Double Terrasse Étagée (1640 × 656 px)</option>
+      <option value="03_cirque_gradins">03 · Cirque de Gradins (1640 × 656 px)</option>
+      <option value="04_echancrure">04 · Échancrure et Éperon (1376 × 768 px)</option>
+    </select>
+
+    <button id="btnDayNight">Mode : Jour</button>
+
+    <select id="bgSelect">
+      <option value="canvas-checker">Fond : Damier transparent</option>
+      <option value="canvas-magenta">Fond : Magenta #FF00FF</option>
+      <option value="canvas-sea">Fond : Océan Métano</option>
+      <option value="canvas-dark">Fond : Sombre PMD</option>
+    </select>
+
+    <select id="zoomSelect">
+      <option value="0.5">Zoom 50%</option>
+      <option value="1" selected>Zoom 100% (Natif)</option>
+      <option value="1.5">Zoom 150%</option>
+      <option value="2">Zoom 200%</option>
+      <option value="3">Zoom 300%</option>
+    </select>
+
+    <button id="btnGrid">Grille 8px : OFF</button>
+  </div>
+</header>
+
+<div class="main-layout">
+  <div class="sidebar">
+    <div class="panel-section">
+      <div class="section-title">
+        <span>Gestion des Calques</span>
+        <div style="display:flex; gap:4px;">
+          <button id="btnAllLayers" style="padding:2px 6px; font-size:11px;">Tous</button>
+          <button id="btnNoneLayers" style="padding:2px 6px; font-size:11px;">Aucun</button>
+        </div>
+      </div>
+
+      <!-- Calque 1 : Sol Herbe -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_sol" checked>
+            <span class="layer-dot" style="background: #9fd847;"></span>
+            <span>01 · Sol (Herbe Métano)</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('sol')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Plateau supérieur jaune-vert</span>
+          <span id="px_sol">347 400 px</span>
+        </div>
+      </div>
+
+      <!-- Calque 2 : Bordures Rebord -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_bordure" checked>
+            <span class="layer-dot" style="background: #f4d06f;"></span>
+            <span>02 · Bordures & Couronnes</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('bordure')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Rebord découpé ondulé</span>
+          <span id="px_bordure">55 485 px</span>
+        </div>
+      </div>
+
+      <!-- Calque 3 : Parois Roche -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_parois" checked>
+            <span class="layer-dot" style="background: #c084fc;"></span>
+            <span>03 · Parois Rocheuses</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('parois')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Strates & ombres mauves</span>
+          <span id="px_parois">388 969 px</span>
+        </div>
+      </div>
+
+      <!-- Calque 4 : Pied de Falaise -->
+      <div class="layer-card">
+        <div class="layer-header">
+          <label class="layer-label">
+            <input type="checkbox" id="chk_pied" checked>
+            <span class="layer-dot" style="background: #fb923c;"></span>
+            <span>04 · Pied de Falaise</span>
+          </label>
+          <button class="btn-solo" onclick="soloLayer('pied')">Seul</button>
+        </div>
+        <div class="layer-meta">
+          <span>Transition base inférieure</span>
+          <span id="px_pied">24 580 px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Métriques & Conformité -->
+    <div class="panel-section">
+      <div class="section-title">Contrôle & Métriques PMDO</div>
+      <div class="metric-grid">
+        <div class="metric-item">
+          <div class="val" id="metricDim">1640 × 656</div>
+          <div class="lbl">Dimensions (px)</div>
+        </div>
+        <div class="metric-item">
+          <div class="val" id="metricTiles">205 × 82</div>
+          <div class="lbl">Grille (tuiles 8px)</div>
+        </div>
+        <div class="metric-item">
+          <div class="val" id="metricDelta">4.60</div>
+          <div class="lbl">ΔE76 Médian</div>
+        </div>
+        <div class="metric-item">
+          <div class="val" style="color:var(--accent-green)">0 px</div>
+          <div class="lbl">Hors Palette</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Documents & Planches -->
+    <div class="panel-section">
+      <div class="section-title">Planches d'Audit</div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <a href="renders/falaises_metano_calques/PLANCHE_FALAISES_CALQUES.png" target="_blank" style="color:var(--accent); font-size:12px; text-decoration:none;">
+          &#128269; Voir la Planche 4 Calques (Contact Sheet)
+        </a>
+        <a href="renders/falaises_metano_calques/AUDIT_DETAILS_MATIERE.png" target="_blank" style="color:var(--accent-gold); font-size:12px; text-decoration:none;">
+          &#128269; Voir l'Audit Matière 4x (Références natives)
+        </a>
+        <a href="renders/falaises_metano_calques/AUDIT.md" target="_blank" style="color:var(--text-muted); font-size:12px; text-decoration:none;">
+          &#128196; Rapport d'Audit Markdown
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="viewport-container">
+    <div id="canvasWrapper" class="canvas-wrapper canvas-checker">
+      <img id="layer_sol" class="layer-image visible" alt="Sol Herbe">
+      <img id="layer_bordure" class="layer-image visible" alt="Bordure Rebord">
+      <img id="layer_parois" class="layer-image visible" alt="Parois Roche">
+      <img id="layer_pied" class="layer-image visible" alt="Pied Falaise">
+      <div id="gridOverlay" class="grid-overlay"></div>
+    </div>
+
+    <div class="info-footer">
+      <span id="footerMod">01_promontoire</span>
+      <span id="footerDim">1640 × 656 px</span>
+      <span id="footerStatus" style="color:var(--accent-green);">100% CANONIQUE</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const MODULES_DATA = {
+    '01_promontoire': {
+      title: 'Cap Promontoire',
+      width: 1640,
+      height: 656,
+      tiles: '205 × 82',
+      deltaE: '4.60',
+      pixels: { sol: '347 400', bordure: '55 485', parois: '388 969', pied: '24 580' }
+    },
+    '02_double_terrasse': {
+      title: 'Double Terrasse Étagée',
+      width: 1640,
+      height: 656,
+      tiles: '205 × 82',
+      deltaE: '2.17',
+      pixels: { sol: '374 128', bordure: '29 278', parois: '481 319', pied: '23 864' }
+    },
+    '03_cirque_gradins': {
+      title: 'Cirque de Gradins',
+      width: 1640,
+      height: 656,
+      tiles: '205 × 82',
+      deltaE: '6.06',
+      pixels: { sol: '397 675', bordure: '55 027', parois: '489 763', pied: '24 032' }
+    },
+    '04_echancrure': {
+      title: 'Échancrure et Éperon',
+      width: 1376,
+      height: 768,
+      tiles: '172 × 96',
+      deltaE: '3.45',
+      pixels: { sol: '308 747', bordure: '21 023', parois: '532 266', pied: '18 263' }
+    }
+  };
+
+  let currentModule = '01_promontoire';
+  let isNight = false;
+  let isGrid = false;
+
+  const moduleSelect = document.getElementById('moduleSelect');
+  const btnDayNight = document.getElementById('btnDayNight');
+  const bgSelect = document.getElementById('bgSelect');
+  const zoomSelect = document.getElementById('zoomSelect');
+  const btnGrid = document.getElementById('btnGrid');
+
+  const canvasWrapper = document.getElementById('canvasWrapper');
+  const gridOverlay = document.getElementById('gridOverlay');
+
+  const chkSol = document.getElementById('chk_sol');
+  const chkBordure = document.getElementById('chk_bordure');
+  const chkParois = document.getElementById('chk_parois');
+  const chkPied = document.getElementById('chk_pied');
+
+  const imgSol = document.getElementById('layer_sol');
+  const imgBordure = document.getElementById('layer_bordure');
+  const imgParois = document.getElementById('layer_parois');
+  const imgPied = document.getElementById('layer_pied');
+
+  function updateSources() {
+    const data = MODULES_DATA[currentModule];
+    const basePath = `renders/falaises_metano_calques/${currentModule}/`;
+    const suffix = isNight ? '_nuit.png' : '.png';
+
+    imgSol.src = `${basePath}01_sol_herbe${suffix}`;
+    imgBordure.src = `${basePath}02_bordures_rebord${suffix}`;
+    imgParois.src = `${basePath}03_parois_roche${suffix}`;
+    imgPied.src = `${basePath}04_pied_falaise${suffix}`;
+
+    canvasWrapper.style.width = `${data.width}px`;
+    canvasWrapper.style.height = `${data.height}px`;
+
+    document.getElementById('metricDim').textContent = `${data.width} × ${data.height}`;
+    document.getElementById('metricTiles').textContent = data.tiles;
+    document.getElementById('metricDelta').textContent = data.deltaE;
+
+    document.getElementById('px_sol').textContent = `${data.pixels.sol} px`;
+    document.getElementById('px_bordure').textContent = `${data.pixels.bordure} px`;
+    document.getElementById('px_parois').textContent = `${data.pixels.parois} px`;
+    document.getElementById('px_pied').textContent = `${data.pixels.pied} px`;
+
+    document.getElementById('footerMod').textContent = currentModule;
+    document.getElementById('footerDim').textContent = `${data.width} × ${data.height} px (${data.tiles} tuiles)`;
+  }
+
+  function updateVisibility() {
+    imgSol.classList.toggle('visible', chkSol.checked);
+    imgBordure.classList.toggle('visible', chkBordure.checked);
+    imgParois.classList.toggle('visible', chkParois.checked);
+    imgPied.classList.toggle('visible', chkPied.checked);
+  }
+
+  function soloLayer(layerKey) {
+    chkSol.checked = (layerKey === 'sol');
+    chkBordure.checked = (layerKey === 'bordure');
+    chkParois.checked = (layerKey === 'parois');
+    chkPied.checked = (layerKey === 'pied');
+    updateVisibility();
+  }
+
+  moduleSelect.addEventListener('change', (e) => {
+    currentModule = e.target.value;
+    updateSources();
+  });
+
+  btnDayNight.addEventListener('click', () => {
+    isNight = !isNight;
+    btnDayNight.textContent = isNight ? 'Mode : Nuit (Abyss)' : 'Mode : Jour';
+    btnDayNight.classList.toggle('active', isNight);
+    updateSources();
+  });
+
+  bgSelect.addEventListener('change', (e) => {
+    canvasWrapper.className = `canvas-wrapper ${e.target.value}`;
+  });
+
+  zoomSelect.addEventListener('change', (e) => {
+    const scale = parseFloat(e.target.value);
+    canvasWrapper.style.transform = `scale(${scale})`;
+  });
+
+  btnGrid.addEventListener('click', () => {
+    isGrid = !isGrid;
+    gridOverlay.classList.toggle('active', isGrid);
+    btnGrid.textContent = isGrid ? 'Grille 8px : ON' : 'Grille 8px : OFF';
+    btnGrid.classList.toggle('active', isGrid);
+  });
+
+  document.getElementById('btnAllLayers').addEventListener('click', () => {
+    chkSol.checked = true;
+    chkBordure.checked = true;
+    chkParois.checked = true;
+    chkPied.checked = true;
+    updateVisibility();
+  });
+
+  document.getElementById('btnNoneLayers').addEventListener('click', () => {
+    chkSol.checked = false;
+    chkBordure.checked = false;
+    chkParois.checked = false;
+    chkPied.checked = false;
+    updateVisibility();
+  });
+
+  [chkSol, chkBordure, chkParois, chkPied].forEach(chk => {
+    chk.addEventListener('change', updateVisibility);
+  });
+
+  // Initial load
+  updateSources();
+  updateVisibility();
+</script>
+
+</body>
+</html>

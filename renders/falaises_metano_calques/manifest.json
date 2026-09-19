@@ -1,0 +1,209 @@
+{
+  "title": "Falaises Métano Town — Découpage Multicalques Canonique",
+  "version": "1.0",
+  "palette_reference": "source/caps_terrasses_v4/palette_canonique.json",
+  "palette_size": 328,
+  "night_filter": "Abyss to Ascension V4 (tools/tile_night.py)",
+  "modules": [
+    {
+      "id": "01_promontoire",
+      "title": "Cap Promontoire",
+      "description": "Avancée centrale en falaise avec vaste plateau herbeux supérieur, corniches étagées et retours arrondis.",
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "directory": "renders/falaises_metano_calques/01_promontoire",
+      "terrain_day": "01_promontoire/terrain.png",
+      "terrain_night": "01_promontoire/terrain_nuit.png",
+      "terrain_magenta": "01_promontoire/terrain_magenta.png",
+      "pmdo_tile": "01_promontoire/terrain.tile",
+      "tiled_tsj": "01_promontoire/terrain.tsj",
+      "layers": {
+        "01_sol_herbe": {
+          "title": "Sol — Herbe Métano Town",
+          "file_day": "01_sol_herbe.png",
+          "file_night": "01_sol_herbe_nuit.png",
+          "file_mask": "masques/masque_01_sol_herbe.png",
+          "pixels": 347400
+        },
+        "02_bordures_rebord": {
+          "title": "Bordures et Couronnes canoniques",
+          "file_day": "02_bordures_rebord.png",
+          "file_night": "02_bordures_rebord_nuit.png",
+          "file_mask": "masques/masque_02_bordures_rebord.png",
+          "pixels": 55485
+        },
+        "03_parois_roche": {
+          "title": "Parois rocheuses stratifiées",
+          "file_day": "03_parois_roche.png",
+          "file_night": "03_parois_roche_nuit.png",
+          "file_mask": "masques/masque_03_parois_roche.png",
+          "pixels": 388969
+        },
+        "04_pied_falaise": {
+          "title": "Pied de falaise",
+          "file_day": "04_pied_falaise.png",
+          "file_night": "04_pied_falaise_nuit.png",
+          "file_mask": "masques/masque_04_pied_falaise.png",
+          "pixels": 24580
+        }
+      }
+    },
+    {
+      "id": "02_double_terrasse",
+      "title": "Double Terrasse Étagée",
+      "description": "Deux terrasses superposées avec retours concaves, couronnes découpées et parois rocheuses stratifiées.",
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "directory": "renders/falaises_metano_calques/02_double_terrasse",
+      "terrain_day": "02_double_terrasse/terrain.png",
+      "terrain_night": "02_double_terrasse/terrain_nuit.png",
+      "terrain_magenta": "02_double_terrasse/terrain_magenta.png",
+      "pmdo_tile": "02_double_terrasse/terrain.tile",
+      "tiled_tsj": "02_double_terrasse/terrain.tsj",
+      "layers": {
+        "01_sol_herbe": {
+          "title": "Sol — Herbe Métano Town",
+          "file_day": "01_sol_herbe.png",
+          "file_night": "01_sol_herbe_nuit.png",
+          "file_mask": "masques/masque_01_sol_herbe.png",
+          "pixels": 374128
+        },
+        "02_bordures_rebord": {
+          "title": "Bordures et Couronnes canoniques",
+          "file_day": "02_bordures_rebord.png",
+          "file_night": "02_bordures_rebord_nuit.png",
+          "file_mask": "masques/masque_02_bordures_rebord.png",
+          "pixels": 29278
+        },
+        "03_parois_roche": {
+          "title": "Parois rocheuses stratifiées",
+          "file_day": "03_parois_roche.png",
+          "file_night": "03_parois_roche_nuit.png",
+          "file_mask": "masques/masque_03_parois_roche.png",
+          "pixels": 481319
+        },
+        "04_pied_falaise": {
+          "title": "Pied de falaise",
+          "file_day": "04_pied_falaise.png",
+          "file_night": "04_pied_falaise_nuit.png",
+          "file_mask": "masques/masque_04_pied_falaise.png",
+          "pixels": 23864
+        }
+      }
+    },
+    {
+      "id": "03_cirque_gradins",
+      "title": "Cirque de Gradins",
+      "description": "Gradins rocheux en fer à cheval avec escarpement central et décrochés latéraux herbeux.",
+      "dimensions_px": [
+        1640,
+        656
+      ],
+      "tiles_8px": [
+        205,
+        82
+      ],
+      "directory": "renders/falaises_metano_calques/03_cirque_gradins",
+      "terrain_day": "03_cirque_gradins/terrain.png",
+      "terrain_night": "03_cirque_gradins/terrain_nuit.png",
+      "terrain_magenta": "03_cirque_gradins/terrain_magenta.png",
+      "pmdo_tile": "03_cirque_gradins/terrain.tile",
+      "tiled_tsj": "03_cirque_gradins/terrain.tsj",
+      "layers": {
+        "01_sol_herbe": {
+          "title": "Sol — Herbe Métano Town",
+          "file_day": "01_sol_herbe.png",
+          "file_night": "01_sol_herbe_nuit.png",
+          "file_mask": "masques/masque_01_sol_herbe.png",
+          "pixels": 397675
+        },
+        "02_bordures_rebord": {
+          "title": "Bordures et Couronnes canoniques",
+          "file_day": "02_bordures_rebord.png",
+          "file_night": "02_bordures_rebord_nuit.png",
+          "file_mask": "masques/masque_02_bordures_rebord.png",
+          "pixels": 55027
+        },
+        "03_parois_roche": {
+          "title": "Parois rocheuses stratifiées",
+          "file_day": "03_parois_roche.png",
+          "file_night": "03_parois_roche_nuit.png",
+          "file_mask": "masques/masque_03_parois_roche.png",
+          "pixels": 489763
+        },
+        "04_pied_falaise": {
+          "title": "Pied de falaise",
+          "file_day": "04_pied_falaise.png",
+          "file_night": "04_pied_falaise_nuit.png",
+          "file_mask": "masques/masque_04_pied_falaise.png",
+          "pixels": 24032
+        }
+      }
+    },
+    {
+      "id": "04_echancrure",
+      "title": "Échancrure et Éperon",
+      "description": "Éperon rocheux frontal et profonde échancrure concave avec corniches superposées.",
+      "dimensions_px": [
+        1376,
+        768
+      ],
+      "tiles_8px": [
+        172,
+        96
+      ],
+      "directory": "renders/falaises_metano_calques/04_echancrure",
+      "terrain_day": "04_echancrure/terrain.png",
+      "terrain_night": "04_echancrure/terrain_nuit.png",
+      "terrain_magenta": "04_echancrure/terrain_magenta.png",
+      "pmdo_tile": "04_echancrure/terrain.tile",
+      "tiled_tsj": "04_echancrure/terrain.tsj",
+      "layers": {
+        "01_sol_herbe": {
+          "title": "Sol — Herbe Métano Town",
+          "file_day": "01_sol_herbe.png",
+          "file_night": "01_sol_herbe_nuit.png",
+          "file_mask": "masques/masque_01_sol_herbe.png",
+          "pixels": 308747
+        },
+        "02_bordures_rebord": {
+          "title": "Bordures et Couronnes canoniques",
+          "file_day": "02_bordures_rebord.png",
+          "file_night": "02_bordures_rebord_nuit.png",
+          "file_mask": "masques/masque_02_bordures_rebord.png",
+          "pixels": 21023
+        },
+        "03_parois_roche": {
+          "title": "Parois rocheuses stratifiées",
+          "file_day": "03_parois_roche.png",
+          "file_night": "03_parois_roche_nuit.png",
+          "file_mask": "masques/masque_03_parois_roche.png",
+          "pixels": 532266
+        },
+        "04_pied_falaise": {
+          "title": "Pied de falaise",
+          "file_day": "04_pied_falaise.png",
+          "file_night": "04_pied_falaise_nuit.png",
+          "file_mask": "masques/masque_04_pied_falaise.png",
+          "pixels": 18263
+        }
+      }
+    }
+  ],
+  "contact_sheets": [
+    "PLANCHE_FALAISES_CALQUES.png",
+    "AUDIT_DETAILS_MATIERE.png"
+  ]
+}
