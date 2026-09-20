@@ -1,6 +1,15 @@
 # Méthode de production approuvée — zones Métano
 
-## Priorité nouvelle — Spinda V5 : seuil exact montré par l’utilisateur
+## Priorité courante — audit des quatre escaliers N/S
+
+Dernière correction utilisateur : conserver l’escalier de référence et le placer au NORD ou au SUD selon l’étage, pas le redessiner en version latérale. Le choix initial E/O est remplacé. **Accueil0 : N monte vers café+1, S descend vers casino−1. Casino−1 : N monte vers accueil0. Café+1 : S descend vers accueil0.** Retours opposés N↔S ; passages E/O entre salons sans changement de niveau.
+
+Audit livré dans `renders/cafe_spinda_revisite_v5/audit/` : image annotée, `AUDIT.md`, `plan_escaliers.json`, `verification.json`. Script `source/cafe_spinda_revisite_v5/audit_escaliers.py`. Bases générées V4 conservées, marches de l’entrée choisie réutilisées exactement à l’échelle V4, sans rotation/étirement. Nord : module232,56 +palier/cheeks ; café sud :232,324 ; accueil sud intact. Ancien trou sous les marches nord corrigé (coupe jusqu’à128, pas136). Quatre accès/2liens réciproques, pixels source exacts, contacts au sol et bandes40px opaques, empreintes16px, deux contre-tests PASS. **PAS une validation collision, warp ou runtime PMDO.**
+
+Prototypes latéraux et anciens guides explicitement obsolètes, conservés comme historiques. Les nouvelles générations N/S d’essai ne sont pas utilisées : retouches locales sur la V4 pour garder le vrai dessin choisi. PNG d’audit régénérables dans `audit/exports/`, ignorés pour éviter les doublons. Les deux sorties de l’accueil sont internes : accès extérieur non défini, ne pas ajouter une troisième sortie sans accord. Mobilier/rubans/tapis V5 restent à produire ; l’audit n’est pas une livraison de tout le kit.
+
+
+## Historique — premier prototype Spinda V5, avant la correction N/S
 
 L’utilisateur demande désormais des fenêtres, escaliers et meubles **générés pour correspondre aux maps**, les références natives servant de modèles ; rubans ajustés aux murs, tapis rouges modulaires et décorations séparées. Il choisit deux sorties LATÉRALES à l’accueil (montée + descente), supprimant la sortie sud ; retour montant en sous-sol, descendant à l’étage.
 

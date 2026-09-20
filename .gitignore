@@ -40,3 +40,6 @@ __pycache__/
 # Casino: bare terrain is regenerated losslessly from the retained corrected raw.
 /renders/casino_network_v1/terrain_vide.webp
 /renders/casino_network_v1/export_png/
+
+# V5 placement audit: exact PNG exports regenerate from retained V4 reference.
+/renders/cafe_spinda_revisite_v5/audit/exports/

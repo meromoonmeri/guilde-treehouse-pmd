@@ -1,6 +1,14 @@
 # Guilde Treehouse — passages ouverts PMD
 
-## Café & Casino Spinda — génération séparée, cinq zones sur trois niveaux
+## Audit actuel — escaliers nord/sud selon l’étage
+
+**[Plan annoté des quatre accès](renders/cafe_spinda_revisite_v5/audit/Audit_escaliers_nord_sud.jpg)** · [Audit et limites](renders/cafe_spinda_revisite_v5/audit/AUDIT.md) · [Coordonnées et destinations](renders/cafe_spinda_revisite_v5/audit/plan_escaliers.json).
+
+Accueil0 : **nord monte vers+1, sud descend vers−1**. Sous-sol : nord remonte à l’accueil. Café supérieur : sud redescend à l’accueil. Même escalier de référence, sans variante latérale ; retours réciproques et contacts d’image vérifiés. Ancien trou au pied nord corrigé. PNG régénérables par `source/cafe_spinda_revisite_v5/audit_escaliers.py`.
+
+Les anciens guides latéraux sont obsolètes. **Pas de warps/collisions PMDO installés ; accès extérieur non défini.** Cet audit ne livre pas encore les meubles, rubans et tapis V5 demandés. Les versions ci-dessous restent conservées.
+
+## Version V4 conservée — cinq zones Spinda sur trois niveaux
 
 - **[Atelier : cinq salles, calques et catalogue indépendant](apercu_cafe_spinda_reseau_v4.html)**.
 - [Accueil choisi sur magenta](renders/cafe_spinda_reseau_v4/SpindaV4_accueil_magenta.webp) · [Café avec vrais croisillons](renders/cafe_spinda_reseau_v4/SpindaV4_cafe_croisillons_magenta.webp) · **[Pack PNG](renders/cafe_spinda_reseau_v4/SpindaV4_pack.zip)**.
