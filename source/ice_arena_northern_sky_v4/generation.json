@@ -1,0 +1,39 @@
+{
+  "tool": "functions.generate_image",
+  "generated_images": 1,
+  "panels": 2,
+  "reference_art_commit": "f10176369e707128d97a4590d5c8a78895433fe5",
+  "terrain_reference_commit": "6184e2b578f5d60f479f49b406ea6ad189a3466b",
+  "references": [
+    {
+      "file": "source/ice_arena_northern_sky_v4/references/aurora_A_on_black.png",
+      "sha256": "927526071f88348b9ddd476f02269e3efdde5e73488fb137b02a8fe5bd4df5d9"
+    },
+    {
+      "file": "source/ice_arena_northern_sky_v4/references/aurora_B_on_black.png",
+      "sha256": "c9019551bc0e255936282ce5e34a1e02a8b9288c494abcf3ccd4a98e6478464f"
+    },
+    {
+      "file": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a16_b00_Ribbons.png",
+      "sha256": "363688bd1cb634b0b18ffd75b75847b5e422b01ab602458e7736275fac85be67"
+    },
+    {
+      "file": "exports/ice_arena_aurora_native_v2/frames/Ribbons/IceAuroraNativeV2_a00_b16_Ribbons.png",
+      "sha256": "17e28104c5d1c9705b053a86cd4b62eeb8eaf746547a121b75a432ebc29e9ceb"
+    },
+    {
+      "file": "renders/ice_arena_aurora_coherent_v3/layers/IceAuroraCoherentV3_Terrain.png",
+      "sha256": "df82ce59cb459d0a4dedb8c8e5457cc1e2f4121b7e5ec69fe722dc5f7ad20d7d"
+    },
+    {
+      "file": "source/ciels_valides.py",
+      "sha256": "8481a4135a8e57e263ca325fd48ad13f5e2a4b7781192c3b489de89b9f23efdf"
+    }
+  ],
+  "instruction_summary": "Two stacked panoramic aurora keyframes, same cyan/turquoise and violet motifs as the two supplied native poses, full-width curtains, related framing and spatial anchors, on black without sky/stars/clouds/terrain. A is the expanded first pose, B the alternate pose. No horizontal scrolling.",
+  "prompt_record": "Summary, not verbatim; complete call is in session tool history.",
+  "raw": "bruts/aurora_two_keyframes.png",
+  "raw_sha256": "8899d9e041e3be814cf1beacd93d4674fbdbacef054f6f2b2a1f95ad719e83e5",
+  "note": "The model added a divider despite the request; rows493..499 are excluded. Two GENERATED poses, NOT 64 model-generated images or official game frames. Intermediates are a deterministic cosine crossfade.",
+  "generated_key_processing": "Nearest resize, shared 64-color median-cut palette without dithering, black matte to light alpha; only generated poses altered."
+}

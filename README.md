@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Ciel nordique V4 — aurores panoramiques, étoiles scintillantes et nuages lointains
+
+**[Animation bouclée](renders/ice_arena_northern_sky_v4/composition_loop.webp)** · **[Extrait avec nuages mobiles](renders/ice_arena_northern_sky_v4/composition_clouds_excerpt.webp)** · **[Atelier](renders/ice_arena_northern_sky_v4/index.html)** · **[Calques et notice](renders/ice_arena_northern_sky_v4/README.md)**
+
+Terrain V3 **conservé byte-identique**. Deux poses d’aurore repassées au générateur d’après les références, étendues sur **512 px**, puis 64 intercalaires en fondu A→B→A sans scroll ; 190 étoiles à scintillement décalé, nuages nocturnes Guilde/Sharpedo en dérive lente. **Extension générée, pas frames officielles ni pixels identiques aux aurores natives.** Cinq calques/ORA, PNG individuels, assets BG PMDO à noms uniques. 23 contrôles de fichiers/calculs + 15 tests DOM simulés PASS ; pas de rendu GPU/collisions validés. Le WebP bouclé fixe les nuages ; l’atelier les fait dériver sans faux raccord.
+
 ## Falaise continue — correction générée, ciel et aurores conservés
 
 **[Animation](renders/ice_arena_aurora_coherent_v3/composition.webp)** · **[Avant / après](renders/ice_arena_aurora_coherent_v3/review/before_after.png)** · **[Atelier](renders/ice_arena_aurora_coherent_v3/index.html)** · **[Sept calques et notice](renders/ice_arena_aurora_coherent_v3/README.md)**

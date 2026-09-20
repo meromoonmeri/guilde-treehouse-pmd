@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "count": 15,
+  "method": "simulated DOM / canvas-call recording",
+  "real_browser": false,
+  "GPU_tested": false,
+  "checks": [
+    {
+      "check": "Images load before controls are enabled",
+      "status": "PASS"
+    },
+    {
+      "check": "Five layer toggles available",
+      "status": "PASS"
+    },
+    {
+      "check": "Background and terrain separated in render order",
+      "status": "PASS"
+    },
+    {
+      "check": "Pixel smoothing disabled",
+      "status": "PASS"
+    },
+    {
+      "check": "No canvas scaling of effect or terrain textures",
+      "status": "PASS"
+    },
+    {
+      "check": "Second key pose at 3.2 seconds",
+      "status": "PASS"
+    },
+    {
+      "check": "Aurora loops at 6.4 seconds",
+      "status": "PASS"
+    },
+    {
+      "check": "Clouds do not reset with the aurora loop",
+      "status": "PASS"
+    },
+    {
+      "check": "Pause stops playback time",
+      "status": "PASS"
+    },
+    {
+      "check": "Scrubbing displays chosen phase and pauses",
+      "status": "PASS"
+    },
+    {
+      "check": "Aurora can be hidden independently",
+      "status": "PASS"
+    },
+    {
+      "check": "All five layers can be restored",
+      "status": "PASS"
+    },
+    {
+      "check": "Inspection zoom changes CSS only",
+      "status": "PASS"
+    },
+    {
+      "check": "Reset returns to initial paused state",
+      "status": "PASS"
+    },
+    {
+      "check": "Generated art and runtime limits remain visible",
+      "status": "PASS"
+    }
+  ]
+}

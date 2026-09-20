@@ -1,0 +1,122 @@
+{
+  "schema": "placement_recipe_NOT_a_Ground",
+  "render_back_to_front": [
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV4_Sky",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV4_Stars",
+        "FrameTime": 6,
+        "StartFrame": 0,
+        "EndFrame": 63,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV4_Aurora",
+        "FrameTime": 6,
+        "StartFrame": 0,
+        "EndFrame": 63,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV4_CloudStrip",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": -2,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": true,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV4_Terrain",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    }
+  ],
+  "runtime_tested": false,
+  "collisions_provided": false
+}

@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "count": 23,
+  "checks": [
+    {
+      "check": "V3 terrain preserved byte-for-byte",
+      "status": "PASS"
+    },
+    {
+      "check": "Sky RGBs come only from approved Guilde/Sharpedo night sheet",
+      "status": "PASS"
+    },
+    {
+      "check": "Both generated poses reach left and right sky edges",
+      "status": "PASS"
+    },
+    {
+      "check": "Generated separator is excluded from both crops",
+      "status": "PASS"
+    },
+    {
+      "check": "Closed aurora loop: sample 64 exactly equals sample 0",
+      "status": "PASS"
+    },
+    {
+      "check": "Aurora seam has at most two premultiplied levels of change",
+      "status": "PASS"
+    },
+    {
+      "check": "Panoramic alpha spans entire 512px width at all phases",
+      "status": "PASS"
+    },
+    {
+      "check": "Small native star motifs available",
+      "status": "PASS"
+    },
+    {
+      "check": "190 spaced visible-sky star placements",
+      "status": "PASS"
+    },
+    {
+      "check": "Star loop is closed without position changes",
+      "status": "PASS"
+    },
+    {
+      "check": "Star scintillation varies across the cycle",
+      "status": "PASS"
+    },
+    {
+      "check": "Cloud strip wraps continuously at 720 seconds",
+      "status": "PASS"
+    },
+    {
+      "check": "Clouds are not falsely frozen in continuous playback",
+      "status": "PASS"
+    },
+    {
+      "check": "All terrain pixels unchanged in every scene and cloud sample",
+      "status": "PASS"
+    },
+    {
+      "check": "Sky occupies whole map width, no old 264px central window",
+      "status": "PASS"
+    },
+    {
+      "check": "composition_loop.webp duration/loop flags",
+      "status": "PASS"
+    },
+    {
+      "check": "composition_clouds_excerpt.webp duration/loop flags",
+      "status": "PASS"
+    },
+    {
+      "check": "Five ORA layers recompose phase zero exactly",
+      "status": "PASS"
+    },
+    {
+      "check": "PMDO container and every frame slot: Sky",
+      "status": "PASS"
+    },
+    {
+      "check": "PMDO container and every frame slot: Stars",
+      "status": "PASS"
+    },
+    {
+      "check": "PMDO container and every frame slot: Aurora",
+      "status": "PASS"
+    },
+    {
+      "check": "PMDO container and every frame slot: CloudStrip",
+      "status": "PASS"
+    },
+    {
+      "check": "PMDO container and every frame slot: Terrain",
+      "status": "PASS"
+    }
+  ],
+  "native_engine_or_GPU_test": false
+}

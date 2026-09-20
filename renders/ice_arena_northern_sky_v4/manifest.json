@@ -1,0 +1,229 @@
+{
+  "canvas": [
+    512,
+    720
+  ],
+  "terrain_source": "renders/ice_arena_aurora_coherent_v3/layers/IceAuroraCoherentV3_Terrain.png",
+  "terrain_sha256": "df82ce59cb459d0a4dedb8c8e5457cc1e2f4121b7e5ec69fe722dc5f7ad20d7d",
+  "terrain_changed": false,
+  "aurora_origin": "TWO GENERATED panoramic keyframes referenced to original native poses; not official frames or native pixel-identical artwork",
+  "raw_sha256": "8899d9e041e3be814cf1beacd93d4674fbdbacef054f6f2b2a1f95ad719e83e5",
+  "raw_size": [
+    1072,
+    992
+  ],
+  "generated_panel_crops": [
+    [
+      0,
+      0,
+      1072,
+      493
+    ],
+    [
+      0,
+      500,
+      1072,
+      992
+    ]
+  ],
+  "generated_only_resize": [
+    512,
+    240
+  ],
+  "filter": "nearest",
+  "shared_generated_key_palette_colors": 64,
+  "palette_note": "Shared median-cut palette for the two generated poses only, no dithering; not a native-palette certification",
+  "black_key": "max channel <=10 removed on keyframes; light unpremultiplied to alpha",
+  "animation": "64 computed cosine crossfade frames A -> B -> A, same XY, no scrolling/warping/optical flow",
+  "frame_ticks": 6,
+  "aurora_star_period_seconds": 6.4,
+  "native_timing_claimed": false,
+  "star_count": 190,
+  "star_motion": "authored alpha only, native RGB motifs at fixed new positions; peak alpha normalized to 255 then modulated 0.58..1",
+  "clouds": {
+    "source": {
+      "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+      "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+      "cloud_crops": [
+        [
+          16,
+          24,
+          168,
+          72
+        ],
+        [
+          176,
+          8,
+          272,
+          72
+        ],
+        [
+          272,
+          16,
+          368,
+          64
+        ],
+        [
+          72,
+          80,
+          168,
+          128
+        ],
+        [
+          176,
+          72,
+          296,
+          128
+        ],
+        [
+          320,
+          64,
+          472,
+          128
+        ]
+      ],
+      "cloud_destinations": [
+        [
+          32,
+          40
+        ],
+        [
+          272,
+          16
+        ],
+        [
+          504,
+          72
+        ],
+        [
+          728,
+          32
+        ],
+        [
+          920,
+          80
+        ],
+        [
+          1160,
+          24
+        ]
+      ],
+      "cloud_strip_size": [
+        1440,
+        208
+      ],
+      "cloud_speed_px_s": -4,
+      "cloud_loop_s": 360,
+      "sources": [
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+          "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+          "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+          "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+        },
+        {
+          "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+          "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+        }
+      ]
+    },
+    "opacity_factor": 0.3,
+    "offset_y": 80,
+    "movement_px_s": [
+      -2,
+      0
+    ],
+    "strip_size": [
+      1440,
+      288
+    ],
+    "period_seconds": 720
+  },
+  "all_effects_common_period_seconds": 1440,
+  "preview_files": {
+    "composition_loop.webp": {
+      "ms": 6400,
+      "loop": 0,
+      "encoded_frames": 64
+    },
+    "composition_clouds_excerpt.webp": {
+      "ms": 8000,
+      "loop": 1,
+      "encoded_frames": 80
+    }
+  },
+  "loop_preview_clouds": "fixed, to avoid false wrap reset at 6.4s",
+  "excerpt": "8s continuous clouds, single play; not seamless loop",
+  "sky": "Uniform dark color sampled at (0,0) from approved Guilde/Sharpedo night sky; no new RGBs",
+  "dir_atlases": {
+    "Sky": {
+      "size": [
+        512,
+        720
+      ],
+      "frame_size": [
+        512,
+        720
+      ],
+      "frames": 1,
+      "columns": 1
+    },
+    "Stars": {
+      "size": [
+        4096,
+        2304
+      ],
+      "frame_size": [
+        512,
+        288
+      ],
+      "frames": 64,
+      "columns": 8
+    },
+    "Aurora": {
+      "size": [
+        4096,
+        1920
+      ],
+      "frame_size": [
+        512,
+        240
+      ],
+      "frames": 64,
+      "columns": 8
+    },
+    "CloudStrip": {
+      "size": [
+        1440,
+        288
+      ],
+      "frame_size": [
+        1440,
+        288
+      ],
+      "frames": 1,
+      "columns": 1
+    },
+    "Terrain": {
+      "size": [
+        512,
+        720
+      ],
+      "frame_size": [
+        512,
+        720
+      ],
+      "frames": 1,
+      "columns": 1
+    }
+  },
+  "GPU_tested": false,
+  "collisions_tested": false,
+  "art_approval": "pending"
+}
