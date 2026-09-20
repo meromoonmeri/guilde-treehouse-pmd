@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "check": "192 distinct aurora PNG samples",
+      "status": "PASS"
+    },
+    {
+      "check": "Initial composition matches layers",
+      "status": "PASS"
+    },
+    {
+      "check": "All decoded frames equal PNG references: composition_loop.webp",
+      "status": "PASS"
+    },
+    {
+      "check": "All decoded frames equal PNG references: aurora_loop.webp",
+      "status": "PASS"
+    },
+    {
+      "check": "All decoded frames equal PNG references: stars_loop.webp",
+      "status": "PASS"
+    },
+    {
+      "check": "All 448 encoded frames decoded and checked",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 0 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 1 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 2 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 3 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 4 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Pair 5 midpoint is spatially warped, not a mere dissolve",
+      "status": "PASS"
+    },
+    {
+      "check": "Actual ORA ZIP layers and merged image agree",
+      "status": "PASS"
+    },
+    {
+      "check": "All literal viewer image/download paths exist",
+      "status": "PASS"
+    },
+    {
+      "check": "No remote/localhost dependencies in browser code",
+      "status": "PASS"
+    },
+    {
+      "check": "Six approved cloud families unscaled; only approved night grade and alpha",
+      "status": "PASS"
+    },
+    {
+      "check": "Published old delivery unchanged: ice_arena_northern_sky_v4",
+      "status": "PASS"
+    },
+    {
+      "check": "Published old delivery unchanged: ice_arena_aurora_coherent_v3",
+      "status": "PASS"
+    },
+    {
+      "check": "Recorded source/export hashes unchanged",
+      "status": "PASS"
+    }
+  ],
+  "count": 19,
+  "decoded_frames": 448,
+  "status": "PASS",
+  "not_a_game_test": true
+}

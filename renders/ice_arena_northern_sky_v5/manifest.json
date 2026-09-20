@@ -1,0 +1,388 @@
+{
+  "date": "2026-09-21",
+  "canvas": [
+    512,
+    864
+  ],
+  "old_canvas": [
+    512,
+    720
+  ],
+  "sky_header_height": 288,
+  "old_sky_header_height": 144,
+  "terrain": {
+    "raw_size": [
+      864,
+      1232
+    ],
+    "crop": [
+      0,
+      248,
+      864,
+      1232
+    ],
+    "generated_only_resize": [
+      512,
+      576
+    ],
+    "placement": [
+      0,
+      288
+    ],
+    "filter": "nearest",
+    "aspect_ratio_preserved": false,
+    "raw_sha256": "1b3f29aaef500655ffdb5cbe5afdf4c3ab073a087791716765d8e69e15660083"
+  },
+  "terrain_origin": "GENERATED correction, not native tiles; entire new terrain is an editable single layer",
+  "aurora": {
+    "raw_size": [
+      1072,
+      992
+    ],
+    "crops": [
+      [
+        0,
+        0,
+        534,
+        328
+      ],
+      [
+        540,
+        0,
+        1072,
+        328
+      ],
+      [
+        0,
+        333,
+        534,
+        659
+      ],
+      [
+        540,
+        333,
+        1072,
+        659
+      ],
+      [
+        0,
+        665,
+        534,
+        992
+      ],
+      [
+        540,
+        665,
+        1072,
+        992
+      ]
+    ],
+    "generated_only_resize": [
+      512,
+      320
+    ],
+    "shared_key_palette": 64,
+    "flow_method": "Bidirectional Farneback, Gaussian regularization, value channel, displacement capped to 14px, inverse warps + eased blend",
+    "flow_stats": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "forward": {
+          "raw_p95_px": 5.441095352172852,
+          "raw_max_px": 11.390666961669922,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 11.390666961669922
+        },
+        "backward": {
+          "raw_p95_px": 5.573831081390381,
+          "raw_max_px": 11.412859916687012,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 11.412859916687012
+        }
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "forward": {
+          "raw_p95_px": 12.34758186340332,
+          "raw_max_px": 16.134620666503906,
+          "clipped_fraction": 0.031005859375,
+          "limited_max_px": 14.000001907348633
+        },
+        "backward": {
+          "raw_p95_px": 12.339977264404297,
+          "raw_max_px": 15.930567741394043,
+          "clipped_fraction": 0.03128662109375,
+          "limited_max_px": 14.000001907348633
+        }
+      },
+      {
+        "pair": [
+          2,
+          3
+        ],
+        "forward": {
+          "raw_p95_px": 5.390920639038086,
+          "raw_max_px": 6.323845863342285,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 6.323845863342285
+        },
+        "backward": {
+          "raw_p95_px": 5.384788513183594,
+          "raw_max_px": 6.321100234985352,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 6.321100234985352
+        }
+      },
+      {
+        "pair": [
+          3,
+          4
+        ],
+        "forward": {
+          "raw_p95_px": 6.478870391845703,
+          "raw_max_px": 8.63619613647461,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 8.63619613647461
+        },
+        "backward": {
+          "raw_p95_px": 6.505295276641846,
+          "raw_max_px": 21.036922454833984,
+          "clipped_fraction": 0.002142333984375,
+          "limited_max_px": 14.000001907348633
+        }
+      },
+      {
+        "pair": [
+          4,
+          5
+        ],
+        "forward": {
+          "raw_p95_px": 1.2628751993179321,
+          "raw_max_px": 2.0694684982299805,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 2.0694684982299805
+        },
+        "backward": {
+          "raw_p95_px": 1.2644222974777222,
+          "raw_max_px": 2.0274202823638916,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 2.0274202823638916
+        }
+      },
+      {
+        "pair": [
+          5,
+          0
+        ],
+        "forward": {
+          "raw_p95_px": 10.743510246276855,
+          "raw_max_px": 21.829736709594727,
+          "clipped_fraction": 0.00225830078125,
+          "limited_max_px": 14.000001907348633
+        },
+        "backward": {
+          "raw_p95_px": 10.698532104492188,
+          "raw_max_px": 12.245902061462402,
+          "clipped_fraction": 0.0,
+          "limited_max_px": 12.245902061462402
+        }
+      }
+    ],
+    "subpixel_sampling": "bilinear, generated aurora only",
+    "key_interval_frames": 32,
+    "max_warp_coordinate_step_bound_px": 0.6872233929727672,
+    "raw_sha256": "2cf369c85abbf94cbb73e8a2df5ef34d2058edff1271676ac9e16218467f6c98"
+  },
+  "aurora_origin": "Six generated key poses, 192 computed bidirectional flow intermediates; not official frames or a physical simulation",
+  "aurora_frames": 192,
+  "aurora_fps": 30,
+  "period_s": 6.4,
+  "old_aurora_fps": 10,
+  "stars": {
+    "count": 300,
+    "frames": 64,
+    "fps": 10,
+    "new_placements_and_alpha": true,
+    "native_RGB_unscaled": true
+  },
+  "climate": {
+    "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+    "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+    "cloud_crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "cloud_destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "cloud_strip_size": [
+      1440,
+      208
+    ],
+    "cloud_speed_px_s": -4,
+    "cloud_loop_s": 360,
+    "sources": [
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+        "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+        "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+        "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+        "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+      }
+    ]
+  },
+  "clouds": {
+    "native_strip": [
+      1440,
+      448
+    ],
+    "offset_y": 224,
+    "opacity": 0.3,
+    "speed_px_s": -2,
+    "period_s": 720,
+    "combined_period_s": 1440
+  },
+  "webp_scene_clouds": "fixed for a genuinely looping 6.4s preview; live viewer/recipe have continuous drifting clouds",
+  "native_dir": {
+    "Sky": {
+      "atlas_size": [
+        512,
+        864
+      ],
+      "frame_size": [
+        512,
+        864
+      ],
+      "frames": 1,
+      "columns": 1,
+      "GPU_uncompressed_MiB": 1.69
+    },
+    "Stars": {
+      "atlas_size": [
+        4096,
+        3584
+      ],
+      "frame_size": [
+        512,
+        448
+      ],
+      "frames": 64,
+      "columns": 8,
+      "GPU_uncompressed_MiB": 56.0
+    },
+    "Aurora": {
+      "atlas_size": [
+        8192,
+        3840
+      ],
+      "frame_size": [
+        512,
+        320
+      ],
+      "frames": 192,
+      "columns": 16,
+      "GPU_uncompressed_MiB": 120.0
+    },
+    "CloudStrip": {
+      "atlas_size": [
+        1440,
+        448
+      ],
+      "frame_size": [
+        1440,
+        448
+      ],
+      "frames": 1,
+      "columns": 1,
+      "GPU_uncompressed_MiB": 2.46
+    },
+    "Terrain": {
+      "atlas_size": [
+        512,
+        864
+      ],
+      "frame_size": [
+        512,
+        864
+      ],
+      "frames": 1,
+      "columns": 1,
+      "GPU_uncompressed_MiB": 1.69
+    }
+  },
+  "native_GPU_validated": false,
+  "collision_validated": false,
+  "art_approval": "pending",
+  "old_versions_untouched": true
+}

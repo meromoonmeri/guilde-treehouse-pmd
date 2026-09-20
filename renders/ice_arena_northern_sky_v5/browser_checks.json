@@ -1,0 +1,157 @@
+{
+  "count": 29,
+  "checks": [
+    {
+      "check": "All six scene images load in actual Chromium",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Default desktop view is native size",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "WebP aurora really animates in browser",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Opaque terrain remains stationary while sky animates",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Phase-zero button opens PNG inspection",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Actual browser phase-zero rendering matches PNG within 2 levels",
+      "status": "PASS",
+      "detail": {
+        "max_RGB_error": 2,
+        "mean_RGB_error": 0.014052402826003086
+      }
+    },
+    {
+      "check": "Previous wraps zero to191",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Next wraps191 tozero",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Scrub selects exact aurora and star PNGs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Inspection clouds are placed at the selected time",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle hides sky",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle restores sky",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle hides stars",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle restores stars",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle hides aurora",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle restores aurora",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle hides clouds",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle restores clouds",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle hides terrain",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Layer toggle restores terrain",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Animation resumes using WebP",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Hidden layers survive mode change",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Cloud drift does not reset every6.4s",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Cloud displacement continues through6.4s boundary",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "2x zoom updates scroll surface",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Mobile fit shows the whole scene width",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "No mobile page-level horizontal overflow",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "No JavaScript errors",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "No failed page assets",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "status": "PASS",
+  "browser": "153.0.8010.0",
+  "renderer": "real headless Chromium (software rendering)",
+  "PMDO_GPU_tested": false
+}

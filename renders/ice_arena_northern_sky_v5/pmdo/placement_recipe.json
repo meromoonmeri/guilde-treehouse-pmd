@@ -1,0 +1,123 @@
+{
+  "schema": "recipe_NOT_a_Ground",
+  "render_order": [
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV5_Sky",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV5_Stars",
+        "FrameTime": 6,
+        "StartFrame": 0,
+        "EndFrame": 63,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV5_Aurora",
+        "FrameTime": 2,
+        "StartFrame": 0,
+        "EndFrame": 191,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV5_CloudStrip",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": -2,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": true,
+      "RepeatY": false
+    },
+    {
+      "$type": "RogueEssence.Dungeon.MapBG, RogueEssence",
+      "MapLoc": {
+        "X": 0,
+        "Y": 0
+      },
+      "BGAnim": {
+        "AnimIndex": "NorthernSkyV5_Terrain",
+        "FrameTime": 1,
+        "StartFrame": 0,
+        "EndFrame": 0,
+        "AnimDir": -1,
+        "Alpha": 255,
+        "AnimFlip": 0
+      },
+      "BGMovement": {
+        "X": 0,
+        "Y": 0
+      },
+      "Parallax": "1, 1",
+      "RepeatX": false,
+      "RepeatY": false
+    }
+  ],
+  "GPU_warning": "Aurora texture 8192x3840 =120MiB; requires hardware test. Use PNG/ORA for art review first.",
+  "runtime_tested": false,
+  "collisions_provided": false
+}

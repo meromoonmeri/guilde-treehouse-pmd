@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-21",
+  "tool": "functions.generate_image",
+  "new_calls": 3,
+  "prompt_preservation": "Faithful summaries, NOT verbatim transcripts of the tool prompts. Raw outputs and exact input images are retained.",
+  "baseline_commit": "6887214060eaa9005dabcf771572504051ceacdd",
+  "composition_specification": "512x864 final canvas; +144px sky above the previous composition; aurora effect512x320 across width; connected wall, central arena and naturally flared southern snow access; separate sky/stars/aurora/clouds/terrain; no edits to older deliveries.",
+  "calls": [
+    {
+      "output": "renders/ice_arena_northern_sky_v5/bruts/terrain_entry_repaired.png",
+      "output_sha256": "992259aa846f7973d4c57ddfabec99f3cefdca11f95da8eefe3fea17da9ee712",
+      "inputs": [
+        {
+          "path": "source/ice_arena_northern_sky_v5/references/terrain_previous_on_magenta.png",
+          "sha256": "4f0189785153a56452d68cc0b5b19db179c2bc361372aca144d3952864b44fbd"
+        },
+        {
+          "path": "source/ice_arena_northern_sky_v5/references/entry_defect.png",
+          "sha256": "1c7476dfb8a7576c2cd92de8324981c6e69920b2c7e3f00d105ee605a2db90cf"
+        }
+      ],
+      "prompt_summary": "Reprendre le relief existant sur magenta, garder l’identité de la paroi nord et des épaules reliées ; reconstruire le tiers inférieur en approche neigeuse continue, supprimer les piliers tronqués et encoches rectangulaires, évaser l’accès entre des berges basses arrondies. Pas de pont, marche, trou ou collage. La première sortie a encore une bande sombre centrale ; elle est conservée comme étape non retenue.",
+      "selected_for_final": false
+    },
+    {
+      "output": "renders/ice_arena_northern_sky_v5/bruts/aurora_six_poses.png",
+      "output_sha256": "2cf369c85abbf94cbb73e8a2df5ef34d2058edff1271676ac9e16218467f6c98",
+      "inputs": [
+        {
+          "path": "source/ice_arena_northern_sky_v5/references/aurora_identity.png",
+          "sha256": "ab8992ed224eac93d7b374d0c52c76684176f4a35b158e7728a95d453ba71475"
+        }
+      ],
+      "prompt_summary": "Planche de six poses successives, deux colonnes et trois rangées, même identité cyan/turquoise et violet/magenta dans chaque panneau. Ondulation modeste des plis, ancrages/cadrage/éclat stables, dernière pose proche de la première ; pas six ciels différents ni défilement global. Fond noir sans astres, nuages ou terrain ; séparateurs blancs autorisés. Cible1024x960 ; résultat1072x992.",
+      "selected_for_final": true
+    },
+    {
+      "output": "renders/ice_arena_northern_sky_v5/bruts/terrain_entry_refined.png",
+      "output_sha256": "1b3f29aaef500655ffdb5cbe5afdf4c3ab073a087791716765d8e69e15660083",
+      "inputs": [
+        {
+          "path": "renders/ice_arena_northern_sky_v5/bruts/terrain_entry_repaired.png",
+          "sha256": "992259aa846f7973d4c57ddfabec99f3cefdca11f95da8eefe3fea17da9ee712"
+        }
+      ],
+      "prompt_summary": "Corriger une seconde fois le bas : supprimer la bande centrale rectangulaire et ses deux limites verticales de couleur. Un seul plan neigeux bleu pâle de l’arène au bord sud ; bords définis par de vraies berges rocheuses basses et courbes, non par des lignes de découpe dans le sol. Réunir les plages blanches latérales au sol, garder le nord et le cadrage dans leur intention. Sortie complète sur magenta, pas un patch.",
+      "selected_for_final": true
+    }
+  ],
+  "baseline_files": [
+    {
+      "path": "renders/ice_arena_northern_sky_v4/keyframes/NorthernSkyV4_Aurora_A.png",
+      "sha256": "6bbd3d6926b0d322fe1c8e7ea9ba08ea1fa3ac6629af44682387281ec205113d"
+    },
+    {
+      "path": "renders/ice_arena_northern_sky_v4/layers/NorthernSkyV4_Terrain.png",
+      "sha256": "df82ce59cb459d0a4dedb8c8e5457cc1e2f4121b7e5ec69fe722dc5f7ad20d7d"
+    },
+    {
+      "path": "source/ciels_valides.py",
+      "sha256": "8481a4135a8e57e263ca325fd48ad13f5e2a4b7781192c3b489de89b9f23efdf"
+    }
+  ]
+}

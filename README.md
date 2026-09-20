@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Ciel nordique V5 — plus de hauteur, ondulation à 30 Hz, entrée raccordée
+
+**[Nouvelle boucle](renders/ice_arena_northern_sky_v5/composition_loop.webp)** · **[Entrée avant / après](renders/ice_arena_northern_sky_v5/review/entry_before_after.png)** · **[Atelier](renders/ice_arena_northern_sky_v5/index.html)** · **[PNG, calques et méthode](renders/ice_arena_northern_sky_v5/README.md)**
+
+Canevas **512 × 864**, bande de ciel libre **288 px au lieu de 144**. **Six poses générées → 192 échantillons à 30 images/s**, avec interpolation spatiale bidirectionnelle et raccord cyclique, plutôt qu’un simple fondu A/B. Approche sud régénérée : neige continue et berges courbes, sans bande centrale rectangulaire. 300 étoiles, mêmes familles de nuages approuvées. **Terrain et aurores générés, pas des tuiles ou une animation native certifiées.** 22 contrôles de construction, vérification des **448 frames WebP décodées**, **29 contrôles dans un vrai Chromium headless** ; pas de validation PMDO GPU/collisions. Les textures BG animées nécessitent environ 176 MiB et un test matériel. Toutes les anciennes versions restent intactes.
+
 ## Ciel nordique V4 — aurores panoramiques, étoiles scintillantes et nuages lointains
 
 **[Animation bouclée](renders/ice_arena_northern_sky_v4/composition_loop.webp)** · **[Extrait avec nuages mobiles](renders/ice_arena_northern_sky_v4/composition_clouds_excerpt.webp)** · **[Atelier](renders/ice_arena_northern_sky_v4/index.html)** · **[Calques et notice](renders/ice_arena_northern_sky_v4/README.md)**

@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "count": 22,
+  "checks": [
+    {
+      "check": "New sky header is 288px, vs 144px in V4",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Terrain alpha keyed, no magenta visible",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Central strip is opaque with continuous snow color (sample, not topology proof)",
+      "status": "PASS",
+      "detail": {
+        "visible_sample_rect": [
+          224,
+          584,
+          288,
+          864
+        ],
+        "RGB_max_deviation": 11.0,
+        "not_collision_validation": true
+      }
+    },
+    {
+      "check": "192 samples at 30Hz, 3x V4 temporal sampling",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Every generated key pose is reached exactly",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Cyclic sample 192 equals sample zero",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Warp coordinate speed bounded below 0.7 px per frame",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "All flow vectors are bounded to 14px",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Aurora covers both edges in every frame",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Loop seam is not an outlier in frame-to-frame RGB change",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "300 fixed star placements, native RGB motifs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Cloud wrap remains 720s and independent of aurora loop",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Terrain remains stationary in every output phase",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Exact animation duration: composition_loop.webp",
+      "status": "PASS",
+      "detail": {
+        "encoded_frames": 192,
+        "duration_ms": 6400
+      }
+    },
+    {
+      "check": "Exact animation duration: aurora_loop.webp",
+      "status": "PASS",
+      "detail": {
+        "encoded_frames": 192,
+        "duration_ms": 6400
+      }
+    },
+    {
+      "check": "Exact animation duration: stars_loop.webp",
+      "status": "PASS",
+      "detail": {
+        "encoded_frames": 64,
+        "duration_ms": 6400
+      }
+    },
+    {
+      "check": "Five ORA layers recompose exactly",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Native-format container and all slots: Sky",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Native-format container and all slots: Stars",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Native-format container and all slots: Aurora",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Native-format container and all slots: CloudStrip",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Native-format container and all slots: Terrain",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "GPU_tested": false,
+  "collision_tested": false
+}
