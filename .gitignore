@@ -23,3 +23,16 @@ __pycache__/
 /sprites/cote_v5_expeditions/*/TERRAIN.png
 /sprites/cote_v5_expeditions/*/jour_*.png
 /sprites/cote_v5_expeditions/*/nuit_*.png
+
+# Beach V1: these duplicate exports remain byte-exact inside BeachNetwork_pack.zip.
+# restore_exports.py extracts them on demand before verify/package. The viewer
+# uses the preserved PNG layers and lossless WebP atlases, not these copies.
+/renders/beach_network_v1/*/jour/animation/**/*.png
+/renders/beach_network_v1/*/nuit/animation/**/*.png
+/renders/beach_network_v1/*/jour/*.ora
+/renders/beach_network_v1/*/nuit/*.ora
+# Flat V1 composition copies are likewise preserved in the same archive.
+/renders/beach_network_v1/*/jour/composition.png
+/renders/beach_network_v1/*/nuit/composition.png
+# Optional full-size PNG decoding; atlases remain the authoritative saved data.
+/renders/beach_extension_v2/export_png/

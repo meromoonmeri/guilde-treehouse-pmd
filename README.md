@@ -1,5 +1,33 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Extension sud — quatre nouvelles plages, réseau de dix cartes
+
+- **[Atelier animé : 4 nouvelles cartes / réseau complet de 10](apercu_extension_plage_v2.html)**.
+- [Quatre nouveaux modules, jour](renders/beach_extension_v2/BeachExt_extension_jour.png) · [aperçu du réseau à 50 %](renders/beach_extension_v2/BeachExt_reseau_apercu_50pct.webp) · [plan des connexions](renders/beach_extension_v2/BeachExt_plan_reseau.png).
+- [Pack autonome 07–10](renders/beach_extension_v2/BeachExtension_4modules.zip) · [méthode, formats et import](renders/beach_extension_v2/README.md).
+
+**Deux nouveaux T, une nouvelle croix et une baie coudée**, raccordés à 05S par 07N. Dix cartes au total, douze liaisons, vingt-sept accès et trois sorties libres. Les six cartes V1, leur archive et le ciel/nuages ne sont pas modifiés. Jour/nuit, 80 nouveaux PNG de calques et 512 frames eau/écume dans des atlas lossless ; exporteur PNG inclus dans le pack.
+
+Treize contrôles d’assets PASS ; viewers combiné et autonome contrôlés en DOM simulé ; 520 exports PNG vérifiés sans perte ; ZIP CRC/identité PASS. Pas de navigateur graphique ni PMDO validé. Les contours rocheux peuvent encore demander des retouches aux jointures. Sources : `source/beach_extension_v2/`.
+
+## Réseau de plage — six modules raccordables, ciel régénéré sans lune
+
+- **[Atelier animé : ensemble, six zones, plage de référence et calques](apercu_reseau_plage_v1.html)**.
+- [Ensemble de jour](renders/beach_network_v1/BeachNetwork_ensemble_jour.png) · [nouveau ciel sur la plage](renders/beach_network_v1/BeachNetwork_plage_ciel_corrige_nuit.png) · [plan des accès](renders/beach_network_v1/BeachNetwork_plan_connexions.png).
+- [Pack ZIP](renders/beach_network_v1/BeachNetwork_pack.zip) · [méthode, animations et limites](renders/beach_network_v1/README.md).
+
+Six nouvelles maps 512×512, dont un carrefour T et un carrefour croix, quinze accès de 96 px, sept connexions internes et une sortie pour extension. Bandes de sable identiques, chemins connectés ; les contours rocheux ne sont pas tous certifiés seamless. Ciel **régénéré sans lune**, trois petits nuages en overlay wrap **64 s**. Eau/écume séparées, **3,2 s**, nouveau liseré d’écume jusqu’à 3 px aux contacts. Terrain de référence V1 conservé ; aucune récupération des V2/V3 absentes n’est revendiquée.
+
+**13 tests assets PASS**, interactions en DOM simulé PASS, ZIP CRC/identité PASS. Générations référencées PMD, pas des tuiles natives certifiées ; pas de navigateur graphique ni de runtime PMDO validé. Sources : `source/beach_network_v1/`.
+
+## Beach — référence conservée, neuf calques et eau animée
+
+- **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.
+- [Animation WebP](renders/beach_layers_v1/BeachV1_plage_animee.webp) · [GIF](renders/beach_layers_v1/BeachV1_plage_animee.gif) · [document OpenRaster](renders/beach_layers_v1/BeachV1_calques.ora) · [pack ZIP](renders/beach_layers_v1/BeachV1_pack.zip).
+- [Méthode, provenance et import 8 px](renders/beach_layers_v1/README.md).
+
+`DSVFS.png` conservée en 702×466 ; neuf partitions visibles, deux pistes mer/écume de 64 phases (3,2 s). Phase 0 exacte, décor et contacts fixes. Mouvement nouveau guidé par la planche Beach, **pas un cycle officiel récupéré**. Option d’import 704×472 par transparence ajoutée, sans étirement. Dix tests d’assets PASS, viewer contrôlé en DOM simulé ; PMDO non testé. Les anciens lots restent inchangés.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
