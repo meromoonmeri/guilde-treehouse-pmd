@@ -36,3 +36,7 @@ __pycache__/
 /renders/beach_network_v1/*/nuit/composition.png
 # Optional full-size PNG decoding; atlases remain the authoritative saved data.
 /renders/beach_extension_v2/export_png/
+
+# Casino: bare terrain is regenerated losslessly from the retained corrected raw.
+/renders/casino_network_v1/terrain_vide.webp
+/renders/casino_network_v1/export_png/

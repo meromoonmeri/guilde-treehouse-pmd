@@ -1,5 +1,7 @@
 # Casino Ledian — réseau, terrain préservé et objets PMD indépendants
 
+**Mise à jour :** l’utilisateur autorise maintenant une génération indépendante du réseau, réaménagée façon casino. L’ancien blocage de la pièce jointe ne s’applique plus à ce chantier. Réalisation : `source/casino_network_v1/`, `renders/casino_network_v1/`, viewer `apercu_casino_reseau_v1.html`. L’étude Krow Bank ci-dessous reste la référence native ; les paragraphes de préparation sont historiques.
+
 ## Demande actuelle — remplace l’interdiction de décoration précédente
 
 L’utilisateur a renvoyé visuellement sa première proposition de salle : grande pièce de pierre, parois rocheuses brun-gris, sol dallé continu et entrée au sud. Il demande maintenant **un réseau de casino sur le terrain Ledian**, avec **tapis rouges, estrades, rideaux, mobilier et kiosques sur des calques distincts**, inspirés des objets de Métano/Halcyon, particulièrement la structure liée à Murkrow.

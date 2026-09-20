@@ -2,6 +2,19 @@
 
 ## Demande actuelle
 
+### Livraison actuelle — Casino Network V1
+
+L’utilisateur autorise désormais de **générer directement un réseau casino indépendant** de l’imagejointe, réaménagé surlesmatièresLedian. Ancienblocageuploadlevépourcechantier. Il demande aussi décorassorti, torches/fourneaux et vraiesframesde flammeHalcyon.
+
+- `source/casino_network_v1/`, `renders/casino_network_v1/`, `apercu_casino_reseau_v1.html`.
+- Terrain1024² crééenunecompositioncontinue ;4secteurs512² (scène,salon,accueil,jeux),4liaisons etentréeS. Ne revendique pas permutationarbitrairementseamless des secteurs.
+- 38instancesdecalques ; tapisnatifscontinus, estrade/rideaux/kiosques/tables générés séparément, KrowBanknatif,8braseros,2corpsfourneau générés. Mobilierdéplaçabledansviewer ; terrainviderecomposableexactement.
+- 4poses deLedian_Dojo_Animated.tile reconstruites depuisGroundlayer1, rectanglecellules14,11–18,19,FrameLength6ticks. Brasero32×64 = flamme32×40+supportconstant. Pixels/cadencevérifiés ;100ms/poseà60Hz,400msloop. Aucun cycle de feu inventé.
+- 13testsassetsPASS ; DOMsimuléviewer/ZIP PASS ;154PNGexportés depuiskit etcomparésauxpixelsattendus. Pas denavigateurgraphique niPMDOvalidé. Footprintsrectangulairesindicatifs, cheminprincipaltapisdégagement8pxpassant ; pascollisions/hauteursmoteur.
+- SeptbrutsarchivésWebPlossless ; premierterrainpanoramique écarté, correction1024²retenue ; fourneaugénérécomportait3corps, seulmilieucompletutilisé.
+- Pourbudget : copieembarquée7Mo deBeachV1`renders/beach_layers_v1/index.html` remplacéeparredirectionversviewerracineoriginalinchangé. ImagesetZIPanciensinchangés,testDOMV1PASS. Cloneinitialementreset3d4ea6f0,puisrestauréparffdepuisbranchepoussée ; stashancienétatconservé,nepaspopautomatiquement.
+
+
 ### Dernière évolution — casino Ledian, étude des objets Métano
 
 L’utilisateur demande désormais **un réseaucasino avec tapisrouges, estrades, rideaux et structures/kiosques PMD sur leurs propres calques**, plus une baseLedianvide. Il a montré la première salle choisie. L’interdictiondedéco précédente est remplacée pour les overlays, pas pour la base.

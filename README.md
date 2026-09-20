@@ -1,5 +1,15 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Casino des braises — réseau indépendant, décor séparé et feu natif
+
+- **[Atelier multicalque : terrain vide, casino aménagé, objets déplaçables](apercu_casino_reseau_v1.html)**.
+- [Composition](renders/casino_network_v1/Casino_reseau_decore.webp) · [aperçu animé](renders/casino_network_v1/Casino_apercu_anime.webp) · [pack autonome](renders/casino_network_v1/Casino_pack.zip).
+- [Méthode, import PNG et provenance](renders/casino_network_v1/README.md).
+
+**Quatre secteurs reliés sur un nouveau terrain1024²**, inspiré des matières Ledian et réaménagé pour le casino : scène, salon, accueil/change et tables. **38 instances de calques**, tapis continus, estrade, rideaux, kiosques, Krow Bank natif, tables, huit braseros et deux nouveaux fourneaux. Le terrain reste intact sous les objets.
+
+Les flammes sont les **quatre vraies poses de Ledian/Halcyon**, reconstruites depuis les tracks du Ground, à6ticks par pose ; support et flamme séparés, sans resampling. Treize contrôles d’assets PASS, viewer en DOM simulé PASS, export de154PNG exacts testé pour l’ensemble et les quatre secteurs. Pas de runtime PMDO ni de navigateur graphique validé. Sources : `source/casino_network_v1/`.
+
 ## Extension sud — quatre nouvelles plages, réseau de dix cartes
 
 - **[Atelier animé : 4 nouvelles cartes / réseau complet de 10](apercu_extension_plage_v2.html)**.

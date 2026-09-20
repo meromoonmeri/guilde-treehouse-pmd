@@ -209,7 +209,8 @@ def main():
     template=(Path(__file__).parent/'viewer.html').read_text()
     page=template.replace('__BEACH_DATA__',json.dumps(data,ensure_ascii=False))
     (ROOT/'apercu_beach_calques_v1.html').write_text(page)
-    (OUT/'index.html').write_text(page.replace('href="renders/beach_layers_v1/', 'href="'))
+    # Avoid storing the same 7 MB embedded viewer twice; the root viewer stays standalone.
+    (OUT/'index.html').write_text('<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=../../apercu_beach_calques_v1.html"><title>Beach · ouvrir l’atelier</title></head><body><p><a href="../../apercu_beach_calques_v1.html">Ouvrir l’atelier Beach V1</a></p></body></html>\n')
     print(f'Built {len(layers)} layers, {N} water + {N} foam frames, native {w}×{h}, import {pw}×{ph}.')
 
 if __name__=='__main__':main()
