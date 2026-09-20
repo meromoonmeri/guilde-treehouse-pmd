@@ -97,3 +97,6 @@ Référence Spinda : `Minemaker0430/ExplorersOfSkyOrigins`, commit `4e7422acc263
 Ancien café agrandi par bandes, anciens cafés V1–V3, casino et Beach conservés. Pour le budget, les grands bruts Beach ont été archivés losslessly avec leurs empreintes et le viewer Beach utilise ses PNG existants plutôt que leurs doublons embarqués ; aucun rendu ou ZIP Beach n’a été modifié.
 
 Attribution : créateurs/contributeurs PMD, Minemaker0430/EoSO et Palikadude/Halcyon. Leur disponibilité publique ne constitue pas une licence générale de redistribution.
+
+### Stockage des études supplantées
+Les sept études non retenues sont maintenant conservées **à l’identique dans l’historique Git**, avec commit et SHA256 dans `bruts/archived_studies.json`. Les cinq bruts actifs, rendus, calques et ZIP restent en place. Le vérificateur lit ces archives directement ; restauration facultative : `python source/cafe_spinda_reseau_v4/archive_studies.py --restore`. Aucune livraison approuvée n’est supprimée.

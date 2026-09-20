@@ -1,0 +1,3209 @@
+{
+  "scope": "combined",
+  "rooms": [
+    {
+      "id": "01_anse_ouest",
+      "title": "Anse du couchant",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        0,
+        0
+      ],
+      "raw": "01_anse_ouest.png",
+      "ports": [
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "02_carrefour_t",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "04_passage_ouest",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/01_anse_ouest/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                24,
+                61,
+                101,
+                68
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/01_anse_ouest/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                65,
+                58,
+                63,
+                74
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/01_anse_ouest/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/01_anse_ouest/nuit/calques/BeachNetwork_01_anse_ouest_nuit_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/01_anse_ouest/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                24,
+                61,
+                101,
+                68
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/01_anse_ouest/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                65,
+                58,
+                63,
+                74
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/01_anse_ouest/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/01_anse_ouest/jour/calques/BeachNetwork_01_anse_ouest_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/01_anse_ouest/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                24,
+                61,
+                101,
+                68
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/01_anse_ouest/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                65,
+                58,
+                63,
+                74
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/01_anse_ouest/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "E": true,
+        "S": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "02_carrefour_t",
+      "title": "Carrefour des palmes · T",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        1,
+        0
+      ],
+      "raw": "02_carrefour_t.png",
+      "ports": [
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "01_anse_ouest",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "03_anse_est",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "05_carrefour_croix",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/02_carrefour_t/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                379,
+                68,
+                84,
+                77
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/02_carrefour_t/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                377,
+                65,
+                89,
+                83
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/02_carrefour_t/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/02_carrefour_t/nuit/calques/BeachNetwork_02_carrefour_t_nuit_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/02_carrefour_t/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                379,
+                68,
+                84,
+                77
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/02_carrefour_t/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                377,
+                65,
+                89,
+                83
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/02_carrefour_t/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/02_carrefour_t/jour/calques/BeachNetwork_02_carrefour_t_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/02_carrefour_t/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                379,
+                68,
+                84,
+                77
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/02_carrefour_t/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                377,
+                65,
+                89,
+                83
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/02_carrefour_t/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "W": true,
+        "E": true,
+        "S": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "03_anse_est",
+      "title": "Anse des roches rouges",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        2,
+        0
+      ],
+      "raw": "03_anse_est_corrigee.png",
+      "ports": [
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "02_carrefour_t",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "06_passage_est",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/03_anse_est/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                323,
+                68,
+                124,
+                100
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/03_anse_est/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                320,
+                66,
+                128,
+                105
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/03_anse_est/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/03_anse_est/nuit/calques/BeachNetwork_03_anse_est_nuit_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/03_anse_est/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                323,
+                68,
+                124,
+                100
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/03_anse_est/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                320,
+                66,
+                128,
+                105
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/03_anse_est/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/03_anse_est/jour/calques/BeachNetwork_03_anse_est_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/03_anse_est/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                323,
+                68,
+                124,
+                100
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/03_anse_est/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                320,
+                66,
+                128,
+                105
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/03_anse_est/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "W": true,
+        "S": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "04_passage_ouest",
+      "title": "Passage des écueils",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        0,
+        1
+      ],
+      "raw": "04_passage_ouest.png",
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "01_anse_ouest",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "05_carrefour_croix",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_08_acces_E.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/04_passage_ouest/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                62,
+                314,
+                143,
+                149
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/04_passage_ouest/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                59,
+                312,
+                148,
+                154
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/04_passage_ouest/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/04_passage_ouest/nuit/calques/BeachNetwork_04_passage_ouest_nuit_08_acces_E.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/04_passage_ouest/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                62,
+                314,
+                143,
+                149
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/04_passage_ouest/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                59,
+                312,
+                148,
+                154
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/04_passage_ouest/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/04_passage_ouest/jour/calques/BeachNetwork_04_passage_ouest_jour_08_acces_E.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/04_passage_ouest/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                62,
+                314,
+                143,
+                149
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/04_passage_ouest/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                59,
+                312,
+                148,
+                154
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/04_passage_ouest/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "E": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "05_carrefour_croix",
+      "title": "Grand carrefour · croix",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        1,
+        1
+      ],
+      "raw": "05_carrefour_croix.png",
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "02_carrefour_t",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "06_passage_est",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "07_carrefour_dunes",
+          "reserved_extension": false
+        },
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "04_passage_ouest",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/05_carrefour_croix/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                75
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/05_carrefour_croix/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                81
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/05_carrefour_croix/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/calques/BeachNetwork_05_carrefour_croix_nuit_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                75
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/05_carrefour_croix/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                81
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/05_carrefour_croix/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/05_carrefour_croix/jour/calques/BeachNetwork_05_carrefour_croix_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/05_carrefour_croix/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                75
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/05_carrefour_croix/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                81
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/05_carrefour_croix/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "E": true,
+        "S": true,
+        "W": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "06_passage_est",
+      "title": "Anse des marées",
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        2,
+        1
+      ],
+      "raw": "06_passage_est.png",
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "03_anse_est",
+          "reserved_extension": false
+        },
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "05_carrefour_croix",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/06_passage_est/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/06_passage_est/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                167,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/06_passage_est/jour/composition.png"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/06_passage_est/nuit/calques/BeachNetwork_06_passage_est_nuit_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/06_passage_est/nuit/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/06_passage_est/nuit/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                167,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/06_passage_est/nuit/composition.png"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_network_v1/06_passage_est/jour/calques/BeachNetwork_06_passage_est_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_network_v1/06_passage_est/jour/BeachNetwork_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_network_v1/06_passage_est/jour/BeachNetwork_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                167,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_network_v1/06_passage_est/jour/composition.png"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "W": true
+      },
+      "original_generated_size": [
+        1024,
+        1024
+      ],
+      "new": false
+    },
+    {
+      "id": "07_carrefour_dunes",
+      "title": "Carrefour des dunes",
+      "new": true,
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        1,
+        2
+      ],
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "05_carrefour_croix",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "08_carrefour_lagon",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "09_place_palmes",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_06_eau_atlas.webp",
+              "rect": [
+                103,
+                105,
+                59,
+                129
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                103,
+                64,
+                134
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_composition.webp"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/calques/BeachExt_07_carrefour_dunes_nuit_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/BeachExt_07_carrefour_dunes_nuit_06_eau_atlas.webp",
+              "rect": [
+                103,
+                105,
+                59,
+                129
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/nuit/BeachExt_07_carrefour_dunes_nuit_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                103,
+                64,
+                134
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/07_carrefour_dunes/nuit/BeachExt_07_carrefour_dunes_nuit_composition.webp"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/calques/BeachExt_07_carrefour_dunes_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_06_eau_atlas.webp",
+              "rect": [
+                103,
+                105,
+                59,
+                129
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                103,
+                64,
+                134
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/07_carrefour_dunes/jour/BeachExt_07_carrefour_dunes_jour_composition.webp"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "E": true,
+        "S": true
+      },
+      "raw": "07_carrefour_dunes_corrige.webp"
+    },
+    {
+      "id": "08_carrefour_lagon",
+      "title": "Carrefour du lagon",
+      "new": true,
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "ports": [
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "07_carrefour_dunes",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": null,
+          "reserved_extension": true
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": "10_baie_abritee",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_06_eau_atlas.webp",
+              "rect": [
+                364,
+                67,
+                104,
+                85
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_07_ecume_atlas.webp",
+              "rect": [
+                362,
+                64,
+                108,
+                91
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_composition.webp"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/calques/BeachExt_08_carrefour_lagon_nuit_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/BeachExt_08_carrefour_lagon_nuit_06_eau_atlas.webp",
+              "rect": [
+                364,
+                67,
+                104,
+                85
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/nuit/BeachExt_08_carrefour_lagon_nuit_07_ecume_atlas.webp",
+              "rect": [
+                362,
+                64,
+                108,
+                91
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/08_carrefour_lagon/nuit/BeachExt_08_carrefour_lagon_nuit_composition.webp"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_W.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/calques/BeachExt_08_carrefour_lagon_jour_08_acces_S.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_06_eau_atlas.webp",
+              "rect": [
+                364,
+                67,
+                104,
+                85
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_07_ecume_atlas.webp",
+              "rect": [
+                362,
+                64,
+                108,
+                91
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/08_carrefour_lagon/jour/BeachExt_08_carrefour_lagon_jour_composition.webp"
+        }
+      },
+      "connectivity": {
+        "W": true,
+        "E": true,
+        "S": true
+      },
+      "raw": "08_carrefour_lagon.webp"
+    },
+    {
+      "id": "09_place_palmes",
+      "title": "Place des palmes",
+      "new": true,
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        1,
+        3
+      ],
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "07_carrefour_dunes",
+          "reserved_extension": false
+        },
+        {
+          "direction": "E",
+          "point": [
+            504,
+            256
+          ],
+          "width": 96,
+          "target": "10_baie_abritee",
+          "reserved_extension": false
+        },
+        {
+          "direction": "S",
+          "point": [
+            256,
+            504
+          ],
+          "width": 96,
+          "target": null,
+          "reserved_extension": true
+        },
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": null,
+          "reserved_extension": true
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                76
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                82
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_composition.webp"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/09_place_palmes/nuit/calques/BeachExt_09_place_palmes_nuit_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/09_place_palmes/nuit/BeachExt_09_place_palmes_nuit_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                76
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/09_place_palmes/nuit/BeachExt_09_place_palmes_nuit_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                82
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/09_place_palmes/nuit/BeachExt_09_place_palmes_nuit_composition.webp"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_E",
+              "label": "Accès E",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_E.png"
+            },
+            {
+              "id": "08_acces_S",
+              "label": "Accès S",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_S.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/09_place_palmes/jour/calques/BeachExt_09_place_palmes_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_06_eau_atlas.webp",
+              "rect": [
+                103,
+                102,
+                80,
+                76
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_07_ecume_atlas.webp",
+              "rect": [
+                101,
+                99,
+                84,
+                82
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/09_place_palmes/jour/BeachExt_09_place_palmes_jour_composition.webp"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "E": true,
+        "S": true,
+        "W": true
+      },
+      "raw": "09_place_palmes.webp"
+    },
+    {
+      "id": "10_baie_abritee",
+      "title": "Baie abritée",
+      "new": true,
+      "size": [
+        512,
+        512
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "ports": [
+        {
+          "direction": "N",
+          "point": [
+            256,
+            8
+          ],
+          "width": 96,
+          "target": "08_carrefour_lagon",
+          "reserved_extension": false
+        },
+        {
+          "direction": "W",
+          "point": [
+            8,
+            256
+          ],
+          "width": 96,
+          "target": "09_place_palmes",
+          "reserved_extension": false
+        }
+      ],
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                166,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_composition.webp"
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/calques/BeachExt_10_baie_abritee_nuit_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/BeachExt_10_baie_abritee_nuit_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/10_baie_abritee/nuit/BeachExt_10_baie_abritee_nuit_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                166,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/10_baie_abritee/nuit/BeachExt_10_baie_abritee_nuit_composition.webp"
+        },
+        "crepuscule": {
+          "layers": [
+            {
+              "id": "01_sable",
+              "label": "Sable",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_01_sable.png"
+            },
+            {
+              "id": "02_roches_nord",
+              "label": "Roches arrière",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_02_roches_nord.png"
+            },
+            {
+              "id": "03_roches_cotes",
+              "label": "Roches latérales",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_03_roches_cotes.png"
+            },
+            {
+              "id": "04_roches_sud",
+              "label": "Roches avant",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_04_roches_sud.png"
+            },
+            {
+              "id": "05_palmiers",
+              "label": "Palmiers et plantes",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_05_palmiers.png"
+            },
+            {
+              "id": "06_eau",
+              "label": "Eau",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_06_eau.png"
+            },
+            {
+              "id": "07_ecume",
+              "label": "Écume",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_07_ecume.png"
+            },
+            {
+              "id": "08_acces_N",
+              "label": "Accès N",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_08_acces_N.png"
+            },
+            {
+              "id": "08_acces_W",
+              "label": "Accès W",
+              "file": "../beach_extension_v2/10_baie_abritee/jour/calques/BeachExt_10_baie_abritee_jour_08_acces_W.png"
+            }
+          ],
+          "animation": {
+            "06_eau": {
+              "file": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_06_eau_atlas.webp",
+              "rect": [
+                260,
+                282,
+                162,
+                151
+              ],
+              "columns": 8,
+              "frames": 32
+            },
+            "07_ecume": {
+              "file": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_07_ecume_atlas.webp",
+              "rect": [
+                258,
+                280,
+                166,
+                156
+              ],
+              "columns": 8,
+              "frames": 32
+            }
+          },
+          "frame_ms": 100,
+          "frames": 32,
+          "composition": "../beach_extension_v2/10_baie_abritee/jour/BeachExt_10_baie_abritee_jour_composition.webp"
+        }
+      },
+      "connectivity": {
+        "N": true,
+        "W": true
+      },
+      "raw": "10_baie_abritee.webp"
+    }
+  ],
+  "reference_beach": {
+    "id": "plage_reference",
+    "title": "Plage de référence · ciel corrigé",
+    "size": [
+      702,
+      466
+    ],
+    "ports": [],
+    "modes": {
+      "jour": {
+        "layers": [
+          {
+            "id": "02_sable",
+            "label": "Sable et accès",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_02_sable.png"
+          },
+          {
+            "id": "03_mer",
+            "label": "Mer · surface",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_03_mer.png"
+          },
+          {
+            "id": "04_ecume",
+            "label": "Écume et liserés",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_04_ecume.png"
+          },
+          {
+            "id": "05_falaises_fond",
+            "label": "Falaises du fond",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_05_falaises_fond.png"
+          },
+          {
+            "id": "06_vegetation_fond",
+            "label": "Palmiers et plantes du fond",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_06_vegetation_fond.png"
+          },
+          {
+            "id": "07_vegetation_proche",
+            "label": "Palmiers et plantes proches",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_07_vegetation_proche.png"
+          },
+          {
+            "id": "08_rochers_rivage",
+            "label": "Rochers du rivage",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_08_rochers_rivage.png"
+          },
+          {
+            "id": "09_ilots",
+            "label": "Îlots rocheux",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_09_ilots.png"
+          }
+        ],
+        "animation": {
+          "03_mer": {
+            "file": "../beach_network_v1/plage_reference/jour/BeachNetwork_03_mer_atlas.webp",
+            "rect": [
+              0,
+              278,
+              702,
+              188
+            ],
+            "columns": 8,
+            "frames": 64
+          },
+          "04_ecume": {
+            "file": "../beach_network_v1/plage_reference/jour/BeachNetwork_04_ecume_atlas.webp",
+            "rect": [
+              0,
+              275,
+              702,
+              191
+            ],
+            "columns": 8,
+            "frames": 64
+          }
+        },
+        "frame_ms": 50,
+        "frames": 64
+      },
+      "nuit": {
+        "layers": [
+          {
+            "id": "02_sable",
+            "label": "Sable et accès",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_02_sable.png"
+          },
+          {
+            "id": "03_mer",
+            "label": "Mer · surface",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_03_mer.png"
+          },
+          {
+            "id": "04_ecume",
+            "label": "Écume et liserés",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_04_ecume.png"
+          },
+          {
+            "id": "05_falaises_fond",
+            "label": "Falaises du fond",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_05_falaises_fond.png"
+          },
+          {
+            "id": "06_vegetation_fond",
+            "label": "Palmiers et plantes du fond",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_06_vegetation_fond.png"
+          },
+          {
+            "id": "07_vegetation_proche",
+            "label": "Palmiers et plantes proches",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_07_vegetation_proche.png"
+          },
+          {
+            "id": "08_rochers_rivage",
+            "label": "Rochers du rivage",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_08_rochers_rivage.png"
+          },
+          {
+            "id": "09_ilots",
+            "label": "Îlots rocheux",
+            "file": "../beach_network_v1/plage_reference/nuit/calques/BeachNetwork_reference_nuit_09_ilots.png"
+          }
+        ],
+        "animation": {
+          "03_mer": {
+            "file": "../beach_network_v1/plage_reference/nuit/BeachNetwork_03_mer_atlas.webp",
+            "rect": [
+              0,
+              278,
+              702,
+              188
+            ],
+            "columns": 8,
+            "frames": 64
+          },
+          "04_ecume": {
+            "file": "../beach_network_v1/plage_reference/nuit/BeachNetwork_04_ecume_atlas.webp",
+            "rect": [
+              0,
+              275,
+              702,
+              191
+            ],
+            "columns": 8,
+            "frames": 64
+          }
+        },
+        "frame_ms": 50,
+        "frames": 64
+      },
+      "crepuscule": {
+        "layers": [
+          {
+            "id": "02_sable",
+            "label": "Sable et accès",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_02_sable.png"
+          },
+          {
+            "id": "03_mer",
+            "label": "Mer · surface",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_03_mer.png"
+          },
+          {
+            "id": "04_ecume",
+            "label": "Écume et liserés",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_04_ecume.png"
+          },
+          {
+            "id": "05_falaises_fond",
+            "label": "Falaises du fond",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_05_falaises_fond.png"
+          },
+          {
+            "id": "06_vegetation_fond",
+            "label": "Palmiers et plantes du fond",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_06_vegetation_fond.png"
+          },
+          {
+            "id": "07_vegetation_proche",
+            "label": "Palmiers et plantes proches",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_07_vegetation_proche.png"
+          },
+          {
+            "id": "08_rochers_rivage",
+            "label": "Rochers du rivage",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_08_rochers_rivage.png"
+          },
+          {
+            "id": "09_ilots",
+            "label": "Îlots rocheux",
+            "file": "../beach_network_v1/plage_reference/jour/calques/BeachNetwork_reference_jour_09_ilots.png"
+          }
+        ],
+        "animation": {
+          "03_mer": {
+            "file": "../beach_network_v1/plage_reference/jour/BeachNetwork_03_mer_atlas.webp",
+            "rect": [
+              0,
+              278,
+              702,
+              188
+            ],
+            "columns": 8,
+            "frames": 64
+          },
+          "04_ecume": {
+            "file": "../beach_network_v1/plage_reference/jour/BeachNetwork_04_ecume_atlas.webp",
+            "rect": [
+              0,
+              275,
+              702,
+              191
+            ],
+            "columns": 8,
+            "frames": 64
+          }
+        },
+        "frame_ms": 50,
+        "frames": 64
+      }
+    }
+  },
+  "layouts": {
+    "extension": {
+      "title": "Extension sud · 4 nouvelles cartes",
+      "origin": [
+        1,
+        2
+      ],
+      "cols": 2,
+      "rows": 2,
+      "rooms": [
+        "07_carrefour_dunes",
+        "08_carrefour_lagon",
+        "09_place_palmes",
+        "10_baie_abritee"
+      ]
+    },
+    "reseau": {
+      "title": "Réseau complet · 10 cartes",
+      "origin": [
+        0,
+        0
+      ],
+      "cols": 3,
+      "rows": 4,
+      "rooms": [
+        "01_anse_ouest",
+        "02_carrefour_t",
+        "03_anse_est",
+        "04_passage_ouest",
+        "05_carrefour_croix",
+        "06_passage_est",
+        "07_carrefour_dunes",
+        "08_carrefour_lagon",
+        "09_place_palmes",
+        "10_baie_abritee"
+      ]
+    }
+  },
+  "version": "Beach — ciels V3",
+  "period_ms": 64000,
+  "runtime_PMDO": "NOT TESTED",
+  "terrain_crepuscule": "Unchanged day terrain; sky treatment only",
+  "sky_assets": {
+    "jour": {
+      "sky": "fonds/BeachSkyV3_ciel_jour.png",
+      "cloud": "../beach_network_v1/fonds/BeachNetwork_nuages_jour_wrap.png",
+      "stars": "fonds/BeachSkyV3_etoiles_jour.png",
+      "horizon": "#a8e6fd",
+      "size": [
+        512,
+        112
+      ],
+      "cloud_period_ms": 64000
+    },
+    "crepuscule": {
+      "sky": "fonds/BeachSkyV3_ciel_crepuscule.png",
+      "cloud": "fonds/BeachSkyV3_nuages_crepuscule_wrap.png",
+      "stars": "fonds/BeachSkyV3_etoiles_crepuscule.png",
+      "horizon": "#ee7a53",
+      "size": [
+        512,
+        112
+      ],
+      "cloud_period_ms": 64000
+    },
+    "nuit": {
+      "sky": "fonds/BeachSkyV3_ciel_nuit.png",
+      "cloud": "../beach_network_v1/fonds/BeachNetwork_nuages_nuit_wrap.png",
+      "stars": "fonds/BeachSkyV3_etoiles_nuit.png",
+      "horizon": "#073787",
+      "size": [
+        512,
+        112
+      ],
+      "cloud_period_ms": 64000
+    }
+  }
+}

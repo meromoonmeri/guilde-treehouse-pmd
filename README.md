@@ -1,6 +1,17 @@
 # Guilde Treehouse — passages ouverts PMD
 
-## Audit actuel — escaliers nord/sud selon l’étage
+## Nouvelle livraison — Spinda N/S & trois ciels Beach
+
+- **[Spinda : nouvelles salles, oculus café et 26 calques](apercu_cafe_spinda_revisite_v6.html)** · [Aperçu](renders/cafe_spinda_revisite_v6/Spinda_generations_NS.jpg) · [Kit PNG](renders/cafe_spinda_revisite_v6/SpindaV6_pack.zip).
+- **[Plages : jour / crépuscule / nuit](apercu_plages_ciels_v3.html)** · [Aperçu des trois ambiances](renders/beach_sky_gradient_v3/Plages_trois_ambiances.jpg) · [Fonds et overlays](renders/beach_sky_gradient_v3/BeachSkyV3_fonds.zip).
+
+Trois nouvelles salles suivent le plan approuvé : accueil N↑/S↓, casino N↑, café S↓ ; accès latéraux au même niveau. Nouvelle fenêtre conçue pour le café, pas le sprite de la guilde. Les marches sont générées d’après la référence, **pas des pixels natifs identiques**. Deux salons V4 conservés ; mobilier/rubans/tapis assortis restent à produire.
+
+Ciels appliqués aux dix cartes et à la plage de référence, sans lune, petits nuages en boucle64s, étoiles séparées. Jour/nuit issus des banques PMDO ; crépuscule violet-corail adapté de la référence JPEG, pas natif certifié. Terrains/eau/écume conservés ; au crépuscule, terrain de jour sans filtre ajouté.
+
+Serveur commun : `python source/cafe_spinda_revisite_v6/serve.py` (port8006). [Méthode Spinda](renders/cafe_spinda_revisite_v6/README.md) · [Méthode ciels](renders/beach_sky_gradient_v3/README.md). PNG/archives, recomposition et DOM testés ; **pas de validation PMDO ni d’approbation artistique des nouvelles images**. Les sept anciennes études V4 supplantées sont archivées à l’identique dans Git et restaurables ; les livraisons antérieures restent accessibles.
+
+## Audit N/S approuvé — référence historique
 
 **[Plan annoté des quatre accès](renders/cafe_spinda_revisite_v5/audit/Audit_escaliers_nord_sud.jpg)** · [Audit et limites](renders/cafe_spinda_revisite_v5/audit/AUDIT.md) · [Coordonnées et destinations](renders/cafe_spinda_revisite_v5/audit/plan_escaliers.json).
 

@@ -1,17 +1,18 @@
 """Check source identity, independent rooms, exact layering and reciprocal design links."""
 from pathlib import Path
-import sys,json,hashlib
+import sys,json,hashlib,io
 import numpy as np
 from PIL import Image
 from scipy import ndimage as nd
 S=Path(__file__).resolve().parent;R=S.parents[1];sys.path.insert(0,str(S));from build import O,SPECS,base,load,compose,sha
+from archive_studies import read_bytes
 sys.path.insert(0,str(R/'source/cote_v5_expeditions'));from audit_references import tiles,straight
 
 def main():
  m=json.loads((O/'manifest.json').read_text());checks=[]
  def passed(s):checks.append(s);print('PASS',s)
  for e in json.loads((O/'bruts/provenance_etudes.json').read_text()):
-  p=O/'bruts'/e['file'];assert sha(p)==e['webp_sha256'];assert hashlib.sha256(load(p).tobytes()).hexdigest()==e['rgba_sha256']
+  p=O/'bruts'/e['file'];data=read_bytes(p);assert hashlib.sha256(data).hexdigest()==e['webp_sha256'];assert hashlib.sha256(Image.open(io.BytesIO(data)).convert('RGBA').tobytes()).hexdigest()==e['rgba_sha256']
  passed('All 12 generated originals/intermediates archived losslessly with recorded original PNG and RGBA hashes')
  rooms={r['id']:r for r in m['rooms']};assert len(rooms)==5 and sorted(set(r['level'] for r in rooms.values()))==[-1,0,1];assert len(set(r['raw'] for r in rooms.values()))==5
  passed('Five separate generated rooms, three levels; selected accueil retained as direction, no strip-based enlargement')

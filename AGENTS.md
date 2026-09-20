@@ -1,6 +1,16 @@
 # Méthode de production approuvée — zones Métano
 
-## Priorité courante — audit des quatre escaliers N/S
+## État actif — générations N/S V6 et ciels Beach trois ambiances
+
+Après approbation de l’audit (« Parfait, passe à la génération »), trois nouvelles salles sont livrées dans `renders/cafe_spinda_revisite_v6/` : accueil N↑/S↓, casino N↑/E plat, café S↓/E plat. Deux salons V4 conservés. Atelier `apercu_cafe_spinda_revisite_v6.html`, 26 calques PNG contenus dans le ZIP et lus directement par l’atelier (pas de doublons). Quatre bruts complets archivés WebP lossless : 3 salles + nouvel oculus café. **Escaliers redessinés par le générateur d’après la référence : pas identité pixel de l’audit V5.** Repères recalés N[304,88]/arrivée[304,200], S[304,384]/arrivée[304,280] ; graphe réciproque testé, aucune installation moteur.
+
+Fenêtre café générée avec cadre miel et vitrage doux, 72×72 séparée, sans utiliser le sprite Guild_Heros_Room_Objects. Deux instances café, trois salon haut. Le plan N/S est approuvé, **ces nouvelles images ne sont pas encore approuvées artistiquement**. Pas de nouvelle sortie extérieure. Mobilier/rubans/tapis assortis encore à produire ; le catalogue et les flammes sont hérités de V4, pas de nouveaux meubles revendiqués.
+
+Portée ciel confirmée par l’utilisateur : **réseau Beach dix cartes + plage de référence uniquement**. `renders/beach_sky_gradient_v3/`, atelier `apercu_plages_ciels_v3.html`. Jour/nuit : lignes natives 8px issues des banques EoSO, sans changement de couleur/échelle ; nuit comparée au GIF fourni (70 lignes identiques). Crépuscule violet-corail reconstitué d’après `IMG_4888.jpeg` : **pas un sprite natif certifié**. Sans lune, étoiles fixes et petits nuages séparés ; wrap64s. Terrains et animations antérieurs inchangés (réseau32×100ms, référence64×50ms). Au crépuscule, terrain de jour conservé sans filtre. 39 sélections/modes/layouts testés en DOM simulé. Aucun navigateur graphique testé : téléchargement Chromium refusé par TLS. Aucun runtime PMDO.
+
+Pour la limite de stockage, sept études V4 supplantées sont conservées bit-identiques dans l’historique Git via `bruts/archived_studies.json` ; cinq bruts actifs, anciens calques/rendus et ZIP inchangés. Vérificateur adapté, restauration `python source/cafe_spinda_reseau_v4/archive_studies.py --restore`. Ne pas supprimer d’autres livraisons arbitrairement. Scripts de build/tests dans les deux nouveaux dossiers source ; serveur commun `python source/cafe_spinda_revisite_v6/serve.py`, port8006, lié à0.0.0.0.
+
+## Historique approuvé — audit des quatre escaliers N/S
 
 Dernière correction utilisateur : conserver l’escalier de référence et le placer au NORD ou au SUD selon l’étage, pas le redessiner en version latérale. Le choix initial E/O est remplacé. **Accueil0 : N monte vers café+1, S descend vers casino−1. Casino−1 : N monte vers accueil0. Café+1 : S descend vers accueil0.** Retours opposés N↔S ; passages E/O entre salons sans changement de niveau.
 
