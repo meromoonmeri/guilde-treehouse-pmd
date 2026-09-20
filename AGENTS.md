@@ -1,5 +1,12 @@
 # Méthode de production approuvée — zones Métano
 
+## Plage falaises rouges V1 — méthode hybride choisie (20 septembre 2026)
+
+L'utilisateur a relancé la production de maps en choisissant explicitement : map = `arenapmdskybeach.png` ; méthode = **hybride** (génération guidée par la référence canonique, puis quantification de chaque pixel opaque vers les **147 couleurs natives exactes de la référence** en CIEDE2000) ; livraison = **version sèche + version animée** ; format = **standard** (calques PNG + ORA + viewer hors-ligne + manifeste + tests).
+
+Lot : `source/plage_rouge_v1/`, `renders/plage_rouge_v1/`, ZIP, `apercu_plage_rouge_v1.html`. Canvas 344×512 (grille 8 px), 7 calques (fond void option, mer 16 frames, sable, parois falaises, bordures herbe, ombres objets, objets), 11 sprites décoratifs extraits de la planche objet. Eau = 8 cellules réordonnées (cycle Hamiltonien) + 8 fondus 50 %, silhouette maîtresse commune ; règle permanente respectée (pas d'eau statique déguisée). Ombres au sol = ellipses calculées, marquées non natives. Pose peinte `mer_f0` vérifiée alignée (1,07 %) et conservée en export statique. 19 tests PASS. **Limites : conformité palette ≠ preuve de motif/art ; animation proposée pas cycle officiel ; art non approuvé ; collisions/warps/runtime PMDO NON TESTÉS.** La contrainte Métano « pixels natifs pixel-exacts » reste séparée et ne s'applique pas à ce lot. Programme : 17 autres références toujours en attente de layout.
+
+
 ## Correction utilisateur du 13 septembre 2026 — nouvelles entrées indépendantes
 
 Pour les nouvelles entrées de donjon indépendantes, l’utilisateur autorise expressément des **textures inventées dans la DA PMD**, via le générateur, avec de nombreux layouts et biomes. La contrainte des falaises/structures Métano exactes ne s’applique que lorsqu’il demande d’étendre Métano. Ne pas réimposer cette contrainte aux nouvelles entrées. Consulter les Ground PMD Sky comme références et publier des PNG visibles avec leurs chemins GitHub.

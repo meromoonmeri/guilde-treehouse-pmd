@@ -1,0 +1,266 @@
+{
+  "lot": "plage_rouge_v1",
+  "choix_utilisateur": {
+    "map": "plage falaises rouges (arenapmdskybeach)",
+    "methode": "hybride : generation + quantification palette canonique 147 couleurs (CIEDE2000)",
+    "animations": "seche + animee (8 phases d eau)",
+    "format": "standard"
+  },
+  "canvas": [
+    344,
+    512
+  ],
+  "grille_px": 8,
+  "normalisation": "brut 848x1264 -> 344x512 NEAREST (ratio natif, arrondi 8)",
+  "palette_native": {
+    "source": "arenapmdskybeach.png",
+    "couleurs": 147
+  },
+  "mer_f0_aligne_sur_terrain": true,
+  "mer_f0_terrain_diff_ratio": 0.010727661285203445,
+  "frames_mer": {
+    "n": 16,
+    "poses_planche": 8,
+    "fondus_50pct": 8,
+    "ordre_optimise": [
+      0,
+      1,
+      3,
+      5,
+      7,
+      6,
+      4,
+      2
+    ],
+    "sauts_moyens_rgb": [
+      3.2298969216941917,
+      4.8667425008426015,
+      4.219799741602067,
+      3.804017806987979,
+      3.321010279743849,
+      3.745632513200764,
+      3.6237220537018313,
+      5.327196382428941
+    ],
+    "duree_ms": 120,
+    "silhouette": "masque maitre commun",
+    "boucle": "cycle propose (poses reordonnees + fondus), pas le cycle officiel PMD"
+  },
+  "ombres": "calculees (ellipses alpha 72, sable uniquement), PAS textures natives",
+  "placements": [
+    {
+      "nom": "rocher_mousse",
+      "x": 192,
+      "y": 48,
+      "w": 34,
+      "h": 26,
+      "sur_eau": true,
+      "grille8": true
+    },
+    {
+      "nom": "bloc_lisse",
+      "x": 112,
+      "y": 88,
+      "w": 26,
+      "h": 18,
+      "sur_eau": true,
+      "grille8": true
+    },
+    {
+      "nom": "amas_cailloux",
+      "x": 96,
+      "y": 216,
+      "w": 34,
+      "h": 23,
+      "sur_eau": false,
+      "grille8": true
+    },
+    {
+      "nom": "galet_roux",
+      "x": 176,
+      "y": 208,
+      "w": 16,
+      "h": 14,
+      "sur_eau": false,
+      "grille8": true
+    },
+    {
+      "nom": "rocher_plat",
+      "x": 152,
+      "y": 352,
+      "w": 30,
+      "h": 28,
+      "sur_eau": false,
+      "grille8": true
+    },
+    {
+      "nom": "touffe_herbe",
+      "x": 112,
+      "y": 152,
+      "w": 24,
+      "h": 24,
+      "sur_eau": false,
+      "grille8": true
+    },
+    {
+      "nom": "plante_littorale",
+      "x": 240,
+      "y": 232,
+      "w": 28,
+      "h": 25,
+      "sur_eau": false,
+      "grille8": true
+    },
+    {
+      "nom": "arbrisseau_roux",
+      "x": 248,
+      "y": 280,
+      "w": 30,
+      "h": 25,
+      "sur_eau": false,
+      "grille8": true
+    }
+  ],
+  "audit_palette": {
+    "sable": {
+      "n": 79098,
+      "dE_moy": 1.2120458884118408,
+      "dE_p95": 1.9495190959049633,
+      "dE_max": 15.06505731034754
+    },
+    "falaises": {
+      "n": 58668,
+      "dE_moy": 2.6041345970113543,
+      "dE_p95": 5.377915940196309,
+      "dE_max": 22.706179407645767
+    },
+    "bordures_herbe": {
+      "n": 4017,
+      "dE_moy": 3.0864298736238083,
+      "dE_p95": 5.4242501646402586,
+      "dE_max": 11.020706301244982
+    },
+    "objets": {
+      "n": 3694,
+      "dE_moy": 6.428894738562134,
+      "dE_p95": 16.985455134078304,
+      "dE_max": 24.624865821670504
+    },
+    "mer_f00": {
+      "n": 34345,
+      "dE_moy": 3.5430039994451334,
+      "dE_p95": 9.282849623061201,
+      "dE_max": 31.807133849321495
+    },
+    "mer_f01": {
+      "n": 34345,
+      "dE_moy": 3.574110150112609,
+      "dE_p95": 8.938460455140827,
+      "dE_max": 31.780578768718758
+    },
+    "mer_f02": {
+      "n": 34345,
+      "dE_moy": 3.5543969341865664,
+      "dE_p95": 8.857428841920274,
+      "dE_max": 31.792153857876507
+    },
+    "mer_f03": {
+      "n": 34345,
+      "dE_moy": 3.632814061450362,
+      "dE_p95": 8.501191589368856,
+      "dE_max": 31.782438462881462
+    },
+    "mer_f04": {
+      "n": 34345,
+      "dE_moy": 3.6303086645388816,
+      "dE_p95": 8.713632871924622,
+      "dE_max": 31.790673759598405
+    },
+    "mer_f05": {
+      "n": 34345,
+      "dE_moy": 3.5991323537634274,
+      "dE_p95": 7.979130063950187,
+      "dE_max": 31.782438462881462
+    },
+    "mer_f06": {
+      "n": 34345,
+      "dE_moy": 3.490389952699089,
+      "dE_p95": 5.923305702762084,
+      "dE_max": 31.782438462881462
+    },
+    "mer_f07": {
+      "n": 34345,
+      "dE_moy": 3.5721870325639924,
+      "dE_p95": 5.9482919474522555,
+      "dE_max": 31.782438462881462
+    },
+    "mer_f08": {
+      "n": 34345,
+      "dE_moy": 3.5903683161026496,
+      "dE_p95": 7.084485598114495,
+      "dE_max": 31.813411911101678
+    },
+    "mer_f09": {
+      "n": 34345,
+      "dE_moy": 3.604550802673943,
+      "dE_p95": 6.9178139410396,
+      "dE_max": 31.781678912256766
+    },
+    "mer_f10": {
+      "n": 34345,
+      "dE_moy": 3.597435279856207,
+      "dE_p95": 7.280727787459739,
+      "dE_max": 31.790673759598405
+    },
+    "mer_f11": {
+      "n": 34345,
+      "dE_moy": 3.578097824175872,
+      "dE_p95": 6.085932190820874,
+      "dE_max": 31.774199722317814
+    },
+    "mer_f12": {
+      "n": 34345,
+      "dE_moy": 3.5039499279217763,
+      "dE_p95": 6.038810627516903,
+      "dE_max": 31.782438462881462
+    },
+    "mer_f13": {
+      "n": 34345,
+      "dE_moy": 3.5436530093710994,
+      "dE_p95": 5.948671326794487,
+      "dE_max": 31.775678162516066
+    },
+    "mer_f14": {
+      "n": 34345,
+      "dE_moy": 3.523803480757003,
+      "dE_p95": 6.600479959060936,
+      "dE_max": 31.79890556933115
+    },
+    "mer_f15": {
+      "n": 34345,
+      "dE_moy": 3.584855139631994,
+      "dE_p95": 8.356462671711508,
+      "dE_max": 31.790673759598405
+    },
+    "mer_pose_peinte": {
+      "n": 34345,
+      "dE_moy": 2.022103100489015,
+      "dE_p95": 4.580720479109836,
+      "dE_max": 12.509610391425072
+    },
+    "_note": "conformite palette != preuve de motif/art ; ombres non quantifiees (alpha calcule)"
+  },
+  "bruts_sha256": {
+    "mer_f0.png": "04901964e737f0bb09ee023c1d66cb12ee32a0a7b89419c4615e7e1b13dc2633",
+    "sprites_deco.png": "ad01303ae26933e754b377a1f66dfc77c561647ddd73f8eb5d458ed4cd982c3b",
+    "terrain_magenta.png": "90ed6529172bb5523f7d9c6b755b0d3ea822a3a42450ed9a78dc26d3c894c56a",
+    "vagues_8frames.png": "73992d3bb625170c639eb604fd80c5512e470cdb1d54cd551a00e86539633b78"
+  },
+  "reference_sha256": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9",
+  "limites": [
+    "pixels generes quantifies, pas tuiles natives Metano",
+    "art non approuve",
+    "cycle eau propose, pas natif",
+    "runtime/PMDO/collisions NON TESTES"
+  ]
+}
