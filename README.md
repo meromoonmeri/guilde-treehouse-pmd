@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Beach Cave canonique — l’Anse des Marées
+
+- **[Aperçu animé du Ground canonique](apercu_beach_cave_anse_des_marees.html)** : 24 phases natives, zoom pixel et composition canonique conservée.
+- **[Pack PMDO 0.8.12](beach_cave_anse_des_marees_pmdo.zip)** : Ground `v50812_beach_cave_anse_des_marees`, feuille `BeachCavePit.tile` et index séparé.
+- [Méthode, audit et provenance](source/beach_cave_v1/README.md) · [contrat de layout](renders/beach_cave_v1/layout.json) · [rapport de provenance](source/beach_cave_v1/provenance.json).
+
+Cette livraison respecte la contrainte canonique : elle réutilise directement `beach_cave_pit.rsground` et `BeachCavePit.tile` de `Minemaker0430/ExplorersOfSkyOrigins`, au commit épinglé dans le rapport. Le guide généré reste un guide de composition hors import ; aucun de ses pixels n'entre dans le Ground final. La désérialisation PMDO, le rendu GPU, les collisions et la destination du donjon restent à valider dans le moteur.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

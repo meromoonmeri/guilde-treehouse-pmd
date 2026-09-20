@@ -1,0 +1,23 @@
+{
+  "id": "beach_cave_anse_des_marees",
+  "title": "Beach Cave — l’Anse des Marées",
+  "target": "PMDO 0.8.12",
+  "ground": "v50812_beach_cave_anse_des_marees.rsground",
+  "size_px": [
+    456,
+    480
+  ],
+  "TexSize": 3,
+  "tile_size_px": 24,
+  "layers": [
+    "Terrain canonique Beach Cave Pit"
+  ],
+  "canonical_source": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/BeachCavePit.tile",
+  "canonical_map_source": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach_cave_pit.rsground",
+  "generated_guide": "renders/beach_cave_v1/guide_composition_generated.png",
+  "generated_guide_used_as_pixels": false,
+  "native_only": true,
+  "frame_preview_count": 24,
+  "runtime_engine_tested": false,
+  "destination_configured": false
+}

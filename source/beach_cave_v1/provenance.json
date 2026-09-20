@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "scope": "canonical reference provenance and source frame resolution; no engine/GPU validation",
+  "eoso": {
+    "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+    "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+    "files": [
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Data/Ground/beach.rsground",
+        "blob": "2b85028bf766d783a35aaf1286364b001c043e70",
+        "sha256": "c3ba98151ffb13833c0d093a4b42fdee40213a56edc0bf02a0870f140d4c374a",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach.rsground"
+      },
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Data/Ground/beach_cave_pit.rsground",
+        "blob": "d0f62904b782491c1bd763b7342495e59d87ada4",
+        "sha256": "57bb79b922161014e71eed3347430df6f43e679e6f092a30fb7954cbf169cff8",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach_cave_pit.rsground"
+      },
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Content/Tile/D01P11A_layer1.tile",
+        "blob": "549a27f888fac41f203d0824ff8435e108943a8f",
+        "sha256": "e4d9365c2cdddffb733f29bd0e1cd85feeb4eec8e1ae3498bbe316802cf10f96",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/D01P11A_layer1.tile"
+      },
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Content/Tile/D01P11A_layer2.tile",
+        "blob": "71feea9c81b015d249b8479799f5ccd38c88d0c6",
+        "sha256": "47960347c15a83907377b9c5835950d2fffa875baec212cbf51cc9811b5f7898",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/D01P11A_layer2.tile"
+      },
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Content/Tile/beach_animation.tile",
+        "blob": "2d3767cde02c157e851b24a06c37f095712e56a8",
+        "sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach_animation.tile"
+      },
+      {
+        "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+        "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+        "path": "Content/Tile/BeachCavePit.tile",
+        "blob": "db95cdbc596b268b3266dd89ff359ef2e714d89f",
+        "sha256": "3fba3799c2f4d35017916d85240896ed9f2b0caf77cbbf0609bf71ca4296835a",
+        "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/BeachCavePit.tile"
+      }
+    ],
+    "maps": [
+      {
+        "layers": [
+          {
+            "name": "Back",
+            "visible": true,
+            "occupied_cells": 528,
+            "animated_cells": 0,
+            "frame_lengths": [
+              10
+            ],
+            "referenced_sheets": {
+              "D01P11A_layer1": 528
+            }
+          },
+          {
+            "name": "Anim",
+            "visible": true,
+            "occupied_cells": 231,
+            "animated_cells": 231,
+            "frame_lengths": [
+              16
+            ],
+            "referenced_sheets": {
+              "beach_animation": 231
+            }
+          },
+          {
+            "name": "Front",
+            "visible": true,
+            "occupied_cells": 298,
+            "animated_cells": 0,
+            "frame_lengths": [
+              10
+            ],
+            "referenced_sheets": {
+              "D01P11A_layer2": 298
+            }
+          }
+        ],
+        "size_px": [
+          792,
+          384
+        ],
+        "name": "beach",
+        "version": "0.8.11.0",
+        "TexSize": 3,
+        "grid_cells": [
+          33,
+          16
+        ],
+        "sheets": [
+          {
+            "name": "D01P11A_layer1",
+            "tile_size_px": 24,
+            "index_entries": 528,
+            "sha256": "e4d9365c2cdddffb733f29bd0e1cd85feeb4eec8e1ae3498bbe316802cf10f96"
+          },
+          {
+            "name": "D01P11A_layer2",
+            "tile_size_px": 24,
+            "index_entries": 298,
+            "sha256": "47960347c15a83907377b9c5835950d2fffa875baec212cbf51cc9811b5f7898"
+          },
+          {
+            "name": "beach_animation",
+            "tile_size_px": 24,
+            "index_entries": 3927,
+            "sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a"
+          }
+        ],
+        "entities": {
+          "MapChars": 0,
+          "GroundObjects": 2,
+          "Spawners": 3,
+          "Markers": 2
+        },
+        "composition": "source/beach_cave_v1/audit/beach_composition.png"
+      },
+      {
+        "layers": [
+          {
+            "name": "Terrain",
+            "visible": true,
+            "occupied_cells": 380,
+            "animated_cells": 380,
+            "frame_lengths": [
+              8
+            ],
+            "referenced_sheets": {
+              "BeachCavePit": 380
+            }
+          }
+        ],
+        "size_px": [
+          456,
+          480
+        ],
+        "name": "beach_cave_pit",
+        "version": "0.8.12.0",
+        "TexSize": 3,
+        "grid_cells": [
+          19,
+          20
+        ],
+        "sheets": [
+          {
+            "name": "BeachCavePit",
+            "tile_size_px": 24,
+            "index_entries": 8740,
+            "sha256": "3fba3799c2f4d35017916d85240896ed9f2b0caf77cbbf0609bf71ca4296835a"
+          }
+        ],
+        "entities": {
+          "MapChars": 2,
+          "GroundObjects": 1,
+          "Spawners": 3,
+          "Markers": 2
+        },
+        "composition": "source/beach_cave_v1/audit/beach_cave_pit_composition.png"
+      }
+    ]
+  },
+  "final_native_source": {
+    "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+    "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+    "path": "Content/Tile/BeachCavePit.tile",
+    "local": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/BeachCavePit.tile",
+    "sha256": "3fba3799c2f4d35017916d85240896ed9f2b0caf77cbbf0609bf71ca4296835a",
+    "tile_size_px": 24
+  },
+  "forbidden_in_final": [
+    "generated guide pixels",
+    "rotation, scaling, recoloring or interpolation of canonical cells",
+    "automatic crop of a generated panel sheet"
+  ]
+}

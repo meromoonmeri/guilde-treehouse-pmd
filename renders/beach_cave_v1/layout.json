@@ -1,0 +1,49 @@
+{
+  "id": "beach_cave_anse_des_marees",
+  "title": "Beach Cave — l’Anse des Marées",
+  "kind": "reconstruction canonique de l'entrée Beach Cave",
+  "reference_map": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach_cave_pit.rsground",
+  "grid_px": 24,
+  "tex_size": 3,
+  "grid_cells": [
+    19,
+    20
+  ],
+  "size_px": [
+    456,
+    480
+  ],
+  "function": "vestibule aquatique de donjon, arrivée au sud et cavité au nord",
+  "layout_decision": "conserver la composition canonique auditée plutôt que réinventer sa géométrie",
+  "depth_order": [
+    "parois rocheuses",
+    "eau et écume",
+    "plage et seuil"
+  ],
+  "edges": {
+    "north": "cavité rocheuse",
+    "south": "arrivée canonique",
+    "west": "paroi et bassin",
+    "east": "paroi et bassin"
+  },
+  "entrance": {
+    "name": "Entrance",
+    "xy": [
+      244,
+      364
+    ],
+    "direction": 4
+  },
+  "dungeon_threshold": {
+    "name": "donjon_seuil",
+    "xy": [
+      220,
+      4
+    ],
+    "direction": 0,
+    "width_px": 48
+  },
+  "canonical_only": true,
+  "generated_guide_used_as_pixels": false,
+  "source_version": "0.8.12.0"
+}
