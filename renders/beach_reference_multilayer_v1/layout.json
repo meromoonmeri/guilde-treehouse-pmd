@@ -1,0 +1,28 @@
+{
+  "id": "beach_reference_multilayer_v1",
+  "title": "Beach — référence en calques alternatifs",
+  "ground": "v50812_beach_reference_multilayer_v1.rsground",
+  "grid_cells": [
+    33,
+    16
+  ],
+  "size_px": [
+    792,
+    384
+  ],
+  "tex_size": 3,
+  "tile_size_px": 24,
+  "layers": [
+    "Back canonique",
+    "Anim canonique",
+    "Front canonique"
+  ],
+  "reference_ground": "source/beach_cave_v1/references/ExplorersOfSkyOrigins/beach.rsground",
+  "animation_source": "beach_animation.tile",
+  "animation_frames": 17,
+  "animation_frame_length": 16,
+  "generated_pixels_used_in_final": 0,
+  "magenta_preview_only": true,
+  "runtime_engine_tested": false,
+  "destination_configured": false
+}
