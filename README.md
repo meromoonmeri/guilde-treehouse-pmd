@@ -1,5 +1,15 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Grand Café Métano — Halcyon agrandi, mobilier à part
+
+- **[Atelier du café : terrain, calques et catalogue indépendant](apercu_cafe_halcyon_agrandi_v1.html)**.
+- [PNG sur fond magenta](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_terrain_magenta.png) · [terrain transparent](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_terrain_transparent.png) · [pack autonome](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_pack.zip).
+- [Méthode, sources et import8px](renders/cafe_halcyon_agrandi_v1/README.md).
+
+**840×576 au lieu de456×320** : surface du canevas×3,32, pixels natifs inchangés. Cinq calques de terrain ; quatre vraies planches de mobilier Halcyon séparées ; quatre poses natives de flammes et de brasero, supports et fourneau facultatif séparés. **Aucun meuble, Pokémon ou feu placé sur la salle** ; seuls les rubans muraux fixes du café original sont conservés.
+
+11contrôles assets PASS : pixels et banques vérifiés, entrée sud unique56px, continuité et recomposition exactes. DOM normal et ZIP extrait PASS. Pas de Ground, collision, NPC, warp ou validation PMDO ; le fourneau facultatif est généré, pas natif. Sources : `source/cafe_halcyon_agrandi_v1/`. Anciennes livraisons conservées.
+
 ## Casino des braises — réseau indépendant, décor séparé et feu natif
 
 - **[Atelier multicalque : terrain vide, casino aménagé, objets déplaçables](apercu_casino_reseau_v1.html)**.

@@ -2,12 +2,21 @@
 
 ## Demande actuelle
 
+### Livraison active — café Halcyon agrandi
+
+Utilisateur : reprendre directement le café d’Halcyon et l’agrandir pour PMDO. Livraison `renders/cafe_halcyon_agrandi_v1/`, viewer `apercu_cafe_halcyon_agrandi_v1.html`, scripts dans `source/cafe_halcyon_agrandi_v1/`.
+
+Terrain840×576 au lieu de456×320 (canevas×3,32), entièrement en vrais pixels natifs sans resampling, cinq calques, magenta +alpha. Bandes entières64px, coins conservés, portail sud complet56px de sol ; pas de seconde ouverture ni de trait alpha sur son seuil. Quatre planches meubles natives et deuxatlas feu/fourposes, huitPNG individuels, support et fourneau facultatif non natif séparés. Zéro mobilier/feu/PNJ posé. Rubans fixes muraux du café source conservés, pas présentés comme des objets détachables.
+
+11contrôles assets PASS, viewer/ZIP en DOM simulé PASS, pas de navigateur graphique ni de validation PMDO. Collisions/transitions/NPCs non configurés. Sources déjà présentes dans `source/cafe_multietage_v1/references/`. Anciens cafés/casino inchangés. Brouillon casino bois mis en attente, pas de terrain choisi ; prototype Arcanin archivé sans perte, non natif/non validé/non inclus dans le café.
+
+
 ### Rappel prioritaire — magenta et kiosques sans PNJ intégré
 
 Utilisateur : push + toutes les zones générées sur fond magenta, kiosques vides permettant le placement ultérieur de Pokémon dans l’éditeur. Consigne inscrite dansAGENTS. Ajout Casino : exports terrain/réseau surmagenta pur ; deux plansarrière/avant par type de kiosque, troisrepèresPNJ avecpointclient (`editeur/placements_pnj.json`), sans aucuneentitéPokemon ajoutée. Recomposition des sprites existants exacte. Le kit remplace les sprites fusionnés lors de l’intégration, ne pas les empiler ; pas d’intégration PMDO revendiquée. `editor_setup.py` appelé parbuild, kitinclusdansZIP, exportPNGoption`--magenta`.
 
 
-### Livraison actuelle — Casino Network V1
+### Livraison précédente — Casino Network V1
 
 L’utilisateur autorise désormais de **générer directement un réseau casino indépendant** de l’imagejointe, réaménagé surlesmatièresLedian. Ancienblocageuploadlevépourcechantier. Il demande aussi décorassorti, torches/fourneaux et vraiesframesde flammeHalcyon.
 

@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "normal": {
+    "terrain_images": 5,
+    "catalogue_cards": 6,
+    "animation_frames": 4,
+    "portable": false
+  },
+  "portable": {
+    "terrain_images": 5,
+    "catalogue_cards": 6,
+    "animation_frames": 4,
+    "portable": true
+  },
+  "checks": [
+    "terrain-only map; furniture/animation stay in separate catalogue",
+    "all five layer toggles",
+    "zoom, magenta/checkerboard, grid and reserved-space guides",
+    "four poses, source cadence, pause, manual pose and loop wrap",
+    "all dynamic/static files resolve in normal and extracted portable viewer"
+  ],
+  "graphical_browser": "NOT TESTED",
+  "runtime_PMDO": "NOT TESTED"
+}
