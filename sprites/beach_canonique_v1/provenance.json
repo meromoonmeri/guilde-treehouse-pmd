@@ -1,0 +1,343 @@
+{
+  "repository": "Minemaker0430/ExplorersOfSkyOrigins",
+  "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+  "sources": {
+    "D01P11A_layer1": {
+      "path": "Content/Tile/D01P11A_layer1.tile",
+      "git_blob_sha1": "549a27f888fac41f203d0824ff8435e108943a8f",
+      "sha256": "e4d9365c2cdddffb733f29bd0e1cd85feeb4eec8e1ae3498bbe316802cf10f96",
+      "tiles": 528
+    },
+    "D01P11A_layer2": {
+      "path": "Content/Tile/D01P11A_layer2.tile",
+      "git_blob_sha1": "71feea9c81b015d249b8479799f5ccd38c88d0c6",
+      "sha256": "47960347c15a83907377b9c5835950d2fffa875baec212cbf51cc9811b5f7898",
+      "tiles": 298
+    },
+    "beach_animation": {
+      "path": "Content/Tile/beach_animation.tile",
+      "git_blob_sha1": "2d3767cde02c157e851b24a06c37f095712e56a8",
+      "sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a",
+      "tiles": 3927
+    }
+  },
+  "tile_px": 24,
+  "frames": 17,
+  "frame_ticks": 16,
+  "stride": 33,
+  "maps": [
+    {
+      "id": "01_cote_reference",
+      "name": "La côte de la référence",
+      "description": "Mer au nord, grande plage, falaises aux deux bords, palmiers et herbe au sud : la composition de la planche TSR, en tuiles natives animées.",
+      "shore": 8,
+      "blocks": [
+        [
+          "falaise_gauche",
+          0,
+          5
+        ],
+        [
+          "falaise_droite",
+          35,
+          5
+        ],
+        [
+          "palmiers_gauche",
+          6,
+          19
+        ],
+        [
+          "palmiers_milieu",
+          24,
+          21
+        ],
+        [
+          "rochers_petits",
+          18,
+          17
+        ],
+        [
+          "buisson",
+          32,
+          19
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "02_crique_palmiers",
+      "name": "La crique aux palmiers",
+      "description": "Rivage plus haut, trois bosquets de palmiers sur le sable et falaises resserrées.",
+      "shore": 6,
+      "blocks": [
+        [
+          "falaise_gauche",
+          0,
+          3
+        ],
+        [
+          "falaise_droite",
+          35,
+          3
+        ],
+        [
+          "palmiers_gauche",
+          4,
+          17
+        ],
+        [
+          "palmiers_milieu",
+          16,
+          19
+        ],
+        [
+          "palmiers_milieu",
+          28,
+          17
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "03_lagon_rocheux",
+      "name": "Le lagon rocheux",
+      "description": "Grande mer piquetée d’îlots rocheux natifs, plage basse ouverte.",
+      "shore": 12,
+      "blocks": [
+        [
+          "falaise_droite",
+          8,
+          1
+        ],
+        [
+          "falaise_droite",
+          26,
+          4
+        ],
+        [
+          "rochers_petits",
+          20,
+          21
+        ],
+        [
+          "buisson",
+          34,
+          22
+        ],
+        [
+          "palmiers_milieu",
+          10,
+          22
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "04_plage_etroite",
+      "name": "La plage étroite",
+      "description": "Couloir de sable encadré de hautes falaises empilées, comme un accès abrité.",
+      "shore": 10,
+      "blocks": [
+        [
+          "falaise_gauche",
+          0,
+          7
+        ],
+        [
+          "falaise_gauche",
+          0,
+          15
+        ],
+        [
+          "falaise_droite",
+          35,
+          7
+        ],
+        [
+          "falaise_basse",
+          34,
+          14
+        ],
+        [
+          "palmiers_gauche",
+          5,
+          23
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "05_double_rivage",
+      "name": "Le double rivage",
+      "description": "Mer au nord et chenal d’eau animée traversant le sable, palmiers entre les deux.",
+      "shore": 6,
+      "channel": 20,
+      "blocks": [
+        [
+          "falaise_gauche",
+          0,
+          3
+        ],
+        [
+          "falaise_droite",
+          35,
+          3
+        ],
+        [
+          "palmiers_milieu",
+          18,
+          14
+        ],
+        [
+          "buisson",
+          12,
+          16
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "06_anse_rocheuse",
+      "name": "L’anse rocheuse",
+      "description": "Un îlot rocheux face à la plage, falaises et palmiers en cadre.",
+      "shore": 8,
+      "blocks": [
+        [
+          "falaise_droite",
+          16,
+          1
+        ],
+        [
+          "falaise_gauche",
+          0,
+          5
+        ],
+        [
+          "falaise_droite",
+          35,
+          5
+        ],
+        [
+          "palmiers_milieu",
+          20,
+          20
+        ],
+        [
+          "rochers_petits",
+          12,
+          18
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    }
+  ],
+  "rules": [
+    "Every placed tile is an exact copy of a native EoSO 24px tile",
+    "Water is the native beach_animation 17-frame cycle, FrameLength 16",
+    "No rotation, flip, recolor, rescale or repainted pixel",
+    "New compositions inspired by the TSR beach reference; not official maps"
+  ]
+}
