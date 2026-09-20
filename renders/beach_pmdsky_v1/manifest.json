@@ -1,0 +1,37 @@
+{
+  "titre": "Plage PMD Sky — six propositions de layout",
+  "reference_style": ["arenapmdskybeach.png", "DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Time _ Darkness - Backgrounds - Beach & Path to Beach.png"],
+  "methode": "Propositions générées dans la DA PMD Sky (consigne du 13 septembre 2026 : textures inventées dans la DA autorisées pour les nouvelles zones indépendantes). Images ancrées sur la référence de plage du jeu. Ce ne sont PAS des tilesets natifs certifiés : après choix d'un layout, reconstruction en tuiles 8 px / calques à prévoir si destiné à l'import moteur.",
+  "layouts": [
+    {
+      "fichier": "01_anse_ouverte.png",
+      "nom": "L'anse ouverte",
+      "description": "Grande plage ouverte au nord sur la mer, falaises rouges en cadre, palmiers épars et passage de sable vers le sud. Layout de base polyvalent pour une entrée de donjon côtière."
+    },
+    {
+      "fichier": "02_ponton.png",
+      "nom": "Le ponton",
+      "description": "Plage resserrée avec ponton de bois dans l'eau turquoise, deux îlots rocheux et cageot près de l'accès. Bon point de départ narratif (départ en mer, pêche, départ d'expédition)."
+    },
+    {
+      "fichier": "03_epave.png",
+      "nom": "L'épave",
+      "description": "Navire de bois échoué et penché sur le sable, tonneaux et planches dispersés, crique abritée à l'est. Layout à fort potentiel d'objets et de quête."
+    },
+    {
+      "fichier": "04_descente_mer.png",
+      "nom": "La descente à la mer",
+      "description": "Couloir de sable descendant vers une mer agitée, herbe et buissons au sud, palmiers en sentinelles. Proche du 'Path to Beach' des références TSR ; bon couloir de transition entre deux zones."
+    },
+    {
+      "fichier": "05_crique_grotte.png",
+      "nom": "La crique à grotte",
+      "description": "Crique fermée par de hautes falaises, bras de mer calme au nord et entrée de grotte sombre dans la paroi est. Layout idéal pour enchaîner plage puis donjon souterrain."
+    },
+    {
+      "fichier": "06_lagon.png",
+      "nom": "Le lagon",
+      "description": "Lagon turquoise piqueté de rochers émergés cerclés d'écume, plage courbe au sud et bosquet de palmiers sur herbe. Layout le plus 'paradis', adapté à une zone de repos ou de village."
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Plage PMD Sky — six propositions de layout à choisir
+
+- **[Galerie des six propositions](apercu_beach_pmdsky_v1.html)** — anse ouverte, ponton, épave, descente à la mer, crique à grotte, lagon ; clic pour inspecter en grand.
+- **[PNG et manifeste](renders/beach_pmdsky_v1/README.md)** : compositions générées dans la DA PMD Sky, ancrées sur `arenapmdskybeach.png` et la planche TSR « Beach & Path to Beach ».
+- Statut : propositions de composition, pas des tilesets natifs. Après ton choix, je reconstruis la carte retenue en tuiles 8 px / calques (méthode Spriter Pro) si elle doit entrer dans le moteur.
+
 ## Spriter Pro — studio de cartes canoniques, six nouvelles maps
 
 - **[Aperçu interactif des six cartes](apercu_spriter_pro_v1.html)** — sec / eau animée 4 phases, zoom 1×–3×, grille 8 px et export PNG.
