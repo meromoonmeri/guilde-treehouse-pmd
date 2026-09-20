@@ -4,6 +4,21 @@
 
 ## Réseau et aménagement
 
+### Fond magenta et kiosques prêts à recevoir un PNJ
+
+Les zones sont conçues/générées sur **magenta `#FF00FF`**. Les exports transparents servent à l’import, ils ne remplacent pas les références sur fond magenta. Dans le dépôt : `Casino_terrain_magenta.webp` et `Casino_reseau_magenta.webp` montrent le terrain et la composition sur magenta pur, sans changer les pixels visibles.
+
+Le dossier **`editeur/`**, également inclus dans le ZIP, fournit des plans arrière/avant pour le kiosque généré et Krow Bank. Ils recomposent exactement les sprites existants. **Aucun Pokémon n’est dessiné dans ces kiosques** : `placements_pnj.json` indique trois postes réservés, les repères de pieds du marchand, le point d’interaction du client et des suggestions de collision.
+
+Dans l’éditeur, remplacer le kiosque fusionné par : **arrière → Pokémon indépendant → devant/comptoir**. Ne pas garder l’ancien sprite complet par-dessus. Les repères sont des indications visuelles en pixels, à adapter au pivot/gabarit du Pokémon ; ils ne constituent pas des entités PMDO déjà configurées. Le motif de tête de Murkrow de Krow Bank appartient à son architecture, pas à un marchand intégré. Laisser le poste marchand et les accès clients libres de mobilier.
+
+Le viewer existant conserve ses38instances ; ce kit prépare l’ajout ultérieur de PNJ dans l’éditeur. Pour exporter une map ou un secteur sur magenta tout en conservant les calques transparents :
+
+```sh
+python export_png.py --sector accueil --magenta
+```
+
+
 **Nouveau terrain généré indépendamment**, à la demande de l’utilisateur : les matières de Ledian servent de référence, mais la map n’est ni l’ancienne salle jointe, ni un réarrangement de ses pixels. Une seule composition continue1024×1024 assure la continuité spatiale ; elle se divise en quatre secteurs512×512 :
 
 ```text

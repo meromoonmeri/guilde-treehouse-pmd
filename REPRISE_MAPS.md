@@ -2,6 +2,11 @@
 
 ## Demande actuelle
 
+### Rappel prioritaire — magenta et kiosques sans PNJ intégré
+
+Utilisateur : push + toutes les zones générées sur fond magenta, kiosques vides permettant le placement ultérieur de Pokémon dans l’éditeur. Consigne inscrite dansAGENTS. Ajout Casino : exports terrain/réseau surmagenta pur ; deux plansarrière/avant par type de kiosque, troisrepèresPNJ avecpointclient (`editeur/placements_pnj.json`), sans aucuneentitéPokemon ajoutée. Recomposition des sprites existants exacte. Le kit remplace les sprites fusionnés lors de l’intégration, ne pas les empiler ; pas d’intégration PMDO revendiquée. `editor_setup.py` appelé parbuild, kitinclusdansZIP, exportPNGoption`--magenta`.
+
+
 ### Livraison actuelle — Casino Network V1
 
 L’utilisateur autorise désormais de **générer directement un réseau casino indépendant** de l’imagejointe, réaménagé surlesmatièresLedian. Ancienblocageuploadlevépourcechantier. Il demande aussi décorassorti, torches/fourneaux et vraiesframesde flammeHalcyon.

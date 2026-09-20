@@ -3,7 +3,7 @@ from pathlib import Path
 import json,zipfile,hashlib
 ROOT=Path(__file__).resolve().parents[2];P=ROOT/'renders/casino_network_v1';SRC=Path(__file__).parent
 m=json.loads((P/'manifest.json').read_text());files={}
-for folder in ['calques','objets','animations']:
+for folder in ['calques','objets','animations','editeur']:
  for path in (P/folder).rglob('*'):
   if path.is_file():files[str(path.relative_to(P))]=path.read_bytes()
 for name in ['manifest.json','flammes_provenance.json','verification.json','verification_viewer.json','verification_export.json']:

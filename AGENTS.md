@@ -464,3 +464,12 @@ Dernière demande : générer directement un réseau indépendant de l’image c
 13testsassetsPASS, DOMsimulénormal/ZIP PASS,154PNGalignés(ensemble+4secteurs) pixelsvérifiés. Cheminprincipaldes tapisconnectéavec8pxdégagement après empreintesmeublespardéfaut ; **pas collisionsnatives/warps/hauteurs testées enmoteur**. AperçuWebPanimé exact enalphaetRGBvisibles ; RGBsousalpha0 peuventdifférerduPNG. Cadencevérifiéedanssourcepasinventée. AucunruntimePMDO/navigateurgraphiquevalidé.
 
 Préserverbudget : seulescopiesintermédiaires terrain_vide.webp etexport_png sontignorées/reconstructibles. Ancienrenders/beach_layers_v1/index.html(duplication7Mo) redirigemaintenantvers../../apercu_beach_calques_v1.html, dontlecontenuautonomeestinchangé ; imagesetZIPBeachV1inchangés, testDOMV1repassé. Cloneavaitété réinitialiséau3d4ea6f0 : reprise parfetch+mergeff-onlyvers a91c3bd6 surlamêmebranche ; ancienétatlocalpréservédansstash«Preserve restored workspace…», nepaslepopautomatiquementsurlanouvellelivraison.
+
+
+## Consigne permanente — fond magenta et places de PNJ libres
+
+Dernier rappel utilisateur : **toutes les zones générées doivent être sur fond magenta**, et pensées pour des **kiosques vides où des Pokémon pourront être placés ensuite dans l’éditeur**. Fond de génération/référence `#FF00FF` ; les calques PNG d’import restent transparents. Ne pas intégrer de PNJ ou de silhouette-placeholder dans les images, ne pas cuire les structures dans le sol ; préserver un poste libre derrière le comptoir et l’accès client.
+
+Casino : `source/casino_network_v1/editor_setup.py` produit deux plans arrière/avant par type de kiosque et `renders/casino_network_v1/editeur/placements_pnj.json` avec3emplacements liés aux hôtes existants. Recomposition exacte des anciens sprites, aucun Pokémon ajouté. Ordre d’intégration : fond → PNJ ajouté dans l’éditeur → devant/comptoir. Le viewer actuel conserve ses38instances fusionnées ; remplacer le kiosque fusionné par les deux plans lors de l’intégration, ne pas les superposer au sprite complet. Repères visuels et collisions suggérées uniquement, pas d’entités ou de Ground PMDO créés. Repères à ajuster au gabarit/pivot du Pokémon.
+
+`Casino_terrain_magenta.webp` et `Casino_reseau_magenta.webp` sont des exports opaques surmagenta pur, distincts des calques transparents. `export_png.py --magenta` exporte aussi la composition du secteur choisi surmagenta, sans modifier l’alpha des calques. Le kit PNJ est inclus dans le ZIP ; grosses vuesmagenta conservées dans le dépôt, régénérables par script.

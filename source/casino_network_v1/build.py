@@ -73,6 +73,8 @@ def main():
  composite.save(OUT/'Casino_apercu_anime.webp',save_all=True,append_images=[render(data,k) for k in range(1,4)],duration=100,loop=0,lossless=True,method=6,exact=True)
  page=(Path(__file__).parent/'viewer.html').read_text().replace('__DATA__',json.dumps(data,ensure_ascii=False))
  (ROOT/'apercu_casino_reseau_v1.html').write_text(page);(OUT/'index.html').write_text(page.replace('const ROOT="renders/casino_network_v1/"','const ROOT="./"'))
+ from source.casino_network_v1.editor_setup import main as editor_setup
+ editor_setup()
  print('Built',len(layers),'independent layer instances, 4 connected sectors, 8 native braziers, 2 furnaces with native fire.')
 
 def render(data,frame=0,groups=None):

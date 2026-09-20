@@ -5,6 +5,7 @@
 - **[Atelier multicalque : terrain vide, casino aménagé, objets déplaçables](apercu_casino_reseau_v1.html)**.
 - [Composition](renders/casino_network_v1/Casino_reseau_decore.webp) · [aperçu animé](renders/casino_network_v1/Casino_apercu_anime.webp) · [pack autonome](renders/casino_network_v1/Casino_pack.zip).
 - [Méthode, import PNG et provenance](renders/casino_network_v1/README.md).
+- [Réseau sur magenta](renders/casino_network_v1/Casino_reseau_magenta.webp) · [terrain sur magenta](renders/casino_network_v1/Casino_terrain_magenta.webp) · [kiosques vides : repères PNJ et calques arrière/avant](renders/casino_network_v1/editeur/placements_pnj.json).
 
 **Quatre secteurs reliés sur un nouveau terrain1024²**, inspiré des matières Ledian et réaménagé pour le casino : scène, salon, accueil/change et tables. **38 instances de calques**, tapis continus, estrade, rideaux, kiosques, Krow Bank natif, tables, huit braseros et deux nouveaux fourneaux. Le terrain reste intact sous les objets.
 
