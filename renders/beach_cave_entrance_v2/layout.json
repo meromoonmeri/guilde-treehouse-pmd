@@ -1,0 +1,55 @@
+{
+  "id": "beach_cave_entrance_v2",
+  "title": "Beach Cave Entrance V2 — la Crique des Palmes",
+  "grid_cells": [
+    33,
+    18
+  ],
+  "size_px": [
+    792,
+    432
+  ],
+  "tex_size": 3,
+  "tile_size_px": 24,
+  "layout": "different cell composition: central cave mouth, south-north promenade, central canonical lagoon, palms moved west",
+  "layers": [
+    "background",
+    "animation",
+    "water",
+    "foreground"
+  ],
+  "reference_animation_frames": 17,
+  "reference_animation_frame_length": 16,
+  "water_frames": 23,
+  "water_frame_length": 8,
+  "entrance": {
+    "name": "Entrance",
+    "xy": [
+      388,
+      388
+    ],
+    "direction": 4
+  },
+  "dungeon_threshold": {
+    "name": "donjon_seuil",
+    "xy": [
+      388,
+      124
+    ],
+    "direction": 0,
+    "width_px": 48
+  },
+  "magenta_preview_only": true,
+  "generated_guide_used_as_pixels": false,
+  "canonical_sources": [
+    "Content/Tile/D01P11A_layer1.tile",
+    "Content/Tile/beach_animation.tile",
+    "Content/Tile/D01P11A_layer2.tile",
+    "Content/Tile/BeachCavePit.tile"
+  ],
+  "ground": "v50812_beach_cave_entrance_v2.rsground",
+  "preview_frames": 36,
+  "runtime_engine_tested": false,
+  "destination_configured": false,
+  "guide": "renders/beach_cave_entrance_v2/guide_layout_magenta.png"
+}
