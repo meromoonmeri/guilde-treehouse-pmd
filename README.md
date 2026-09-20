@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Spriter Pro — studio de cartes canoniques, six nouvelles maps
+
+- **[Aperçu interactif des six cartes](apercu_spriter_pro_v1.html)** — sec / eau animée 4 phases, zoom 1×–3×, grille 8 px et export PNG.
+- **[Pack `sprites/spriter_pro_v1/`](sprites/spriter_pro_v1/README.md)** : six compositions neuves (lac suspendu, double cirque, deux torrents, grande face, étangs d’altitude, trois chutes), PNG natifs, calques, `.tmj`, atlas `Metano_Spriter_Pro_8px` (PNG/TSJ/`.tile`), provenance et contrôle.
+- **Outils** : `python source/build_spriter_pro.py` (construction) et `python source/verify_spriter_pro.py` (contrôle indépendant). Ajouter une carte = la déclarer dans `source/spriter_pro/layouts.py`.
+
+Chaque cellule posée est la copie exacte d’une tuile canonique Métano ; le vérificateur recontrôle les white-lists par calque et recompose les PNG à zéro différence. Collisions, transitions et ouverture PMDO restent à configurer ; ce pack ne modifie aucun lot antérieur (layouts 01–03 dans `sprites/metano_pixel_perfect/`).
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

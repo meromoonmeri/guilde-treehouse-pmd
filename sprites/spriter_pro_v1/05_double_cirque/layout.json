@@ -1,0 +1,88 @@
+{
+  "id": "05_double_cirque",
+  "name": "Le double cirque",
+  "description": "Deux parois superposées, deux doubles chutes parallèles et deux bassins entre les niveaux.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 240,
+      "extra": 128,
+      "flats": 24
+    },
+    {
+      "x": -192,
+      "offset": 760,
+      "extra": 128,
+      "flats": 28
+    }
+  ],
+  "streams": [
+    {
+      "x": 640,
+      "walls": [
+        0,
+        1
+      ]
+    },
+    {
+      "x": 1408,
+      "walls": [
+        0,
+        1
+      ]
+    }
+  ],
+  "lakes": [
+    {
+      "x": 256,
+      "top": 944,
+      "rows": 24
+    },
+    {
+      "x": 1792,
+      "top": 992,
+      "rows": 20
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 640,
+      "top_px": 696,
+      "bottom_px": 912
+    },
+    {
+      "center_x_px": 640,
+      "top_px": 1216,
+      "bottom_px": 1432
+    },
+    {
+      "center_x_px": 1408,
+      "top_px": 696,
+      "bottom_px": 912
+    },
+    {
+      "center_x_px": 1408,
+      "top_px": 1216,
+      "bottom_px": 1432
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

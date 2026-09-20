@@ -1,0 +1,88 @@
+{
+  "id": "08_etangs_altitude",
+  "name": "Les étangs d’altitude",
+  "description": "Deux étages de parois percés par deux chutes jumelles ; deux étangs canoniques posés au-dessus des couronnes.",
+  "ribbons": [
+    {
+      "x": -64,
+      "offset": 224,
+      "extra": 128,
+      "flats": 26
+    },
+    {
+      "x": -192,
+      "offset": 928,
+      "extra": 64,
+      "flats": 28
+    }
+  ],
+  "streams": [
+    {
+      "x": 576,
+      "walls": [
+        0,
+        1
+      ]
+    },
+    {
+      "x": 1472,
+      "walls": [
+        0,
+        1
+      ]
+    }
+  ],
+  "lakes": [
+    {
+      "x": 224,
+      "top": 96,
+      "rows": 28
+    },
+    {
+      "x": 1824,
+      "top": 128,
+      "rows": 24
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 576,
+      "top_px": 680,
+      "bottom_px": 896
+    },
+    {
+      "center_x_px": 576,
+      "top_px": 1384,
+      "bottom_px": 1536
+    },
+    {
+      "center_x_px": 1472,
+      "top_px": 680,
+      "bottom_px": 896
+    },
+    {
+      "center_x_px": 1472,
+      "top_px": 1384,
+      "bottom_px": 1536
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "04_lac_suspendu",
+  "name": "Le lac suspendu",
+  "description": "Un plateau nord élevé alimente une grande chute centrale ; deux bassins canoniques isolés posés dans la plaine.",
+  "ribbons": [
+    {
+      "x": -64,
+      "offset": 224,
+      "extra": 192,
+      "flats": 27
+    }
+  ],
+  "streams": [
+    {
+      "x": 1024,
+      "walls": [
+        0
+      ]
+    }
+  ],
+  "lakes": [
+    {
+      "x": 512,
+      "top": 1104,
+      "rows": 24
+    },
+    {
+      "x": 1536,
+      "top": 1240,
+      "rows": 20
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 1024,
+      "top_px": 680,
+      "bottom_px": 960
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

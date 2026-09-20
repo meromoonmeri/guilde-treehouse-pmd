@@ -1,0 +1,111 @@
+{
+  "status": "OK",
+  "source_blobs_verified": 7,
+  "canonical_atlas_entries_checked": 10678,
+  "source_tile_pixel_differences": 0,
+  "atlas_premultiplied_roundtrip_differences": 0,
+  "layouts": [
+    {
+      "layout": "04_lac_suspendu",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 1,
+      "lakes": 2,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "05_double_cirque",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 4,
+      "lakes": 2,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "06_deux_torrents",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 6,
+      "lakes": 0,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "07_grande_face",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 1,
+      "lakes": 2,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "08_etangs_altitude",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 4,
+      "lakes": 2,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    },
+    {
+      "layout": "09_trois_chutes",
+      "native_px": [
+        2048,
+        1536
+      ],
+      "grid_cells": [
+        256,
+        192
+      ],
+      "waterfalls": 3,
+      "lakes": 1,
+      "dry_source_whitelist": "grass + cliffs only; no roads, stairs, cave or water columns",
+      "png_recomposition_differences": 0,
+      "distinct_water_frames": 4
+    }
+  ],
+  "not_verified": [
+    "PMDO runtime import",
+    "Collisions and transitions",
+    "Artistic/topological continuity at all new joins",
+    "Standalone original cascade timing (10 ticks chosen; river timing verified in original map)"
+  ]
+}

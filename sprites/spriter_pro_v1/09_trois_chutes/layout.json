@@ -1,0 +1,76 @@
+{
+  "id": "09_trois_chutes",
+  "name": "Les trois chutes",
+  "description": "Un grand palier médian franchi par trois chutes réparties ; un lac de plateau au nord.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 480,
+      "extra": 192,
+      "flats": 24
+    }
+  ],
+  "streams": [
+    {
+      "x": 384,
+      "walls": [
+        0
+      ]
+    },
+    {
+      "x": 1152,
+      "walls": [
+        0
+      ]
+    },
+    {
+      "x": 1728,
+      "walls": [
+        0
+      ]
+    }
+  ],
+  "lakes": [
+    {
+      "x": 768,
+      "top": 320,
+      "rows": 32
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 384,
+      "top_px": 936,
+      "bottom_px": 1216
+    },
+    {
+      "center_x_px": 1152,
+      "top_px": 936,
+      "bottom_px": 1216
+    },
+    {
+      "center_x_px": 1728,
+      "top_px": 936,
+      "bottom_px": 1216
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

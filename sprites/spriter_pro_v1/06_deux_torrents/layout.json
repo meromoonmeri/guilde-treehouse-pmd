@@ -1,0 +1,95 @@
+{
+  "id": "06_deux_torrents",
+  "name": "Les deux torrents",
+  "description": "Trois niveaux en gradins ; deux torrents à triple chute descendent toute la carte.",
+  "ribbons": [
+    {
+      "x": -64,
+      "offset": 224,
+      "extra": 128,
+      "flats": 26
+    },
+    {
+      "x": -160,
+      "offset": 608,
+      "extra": 128,
+      "flats": 27
+    },
+    {
+      "x": -256,
+      "offset": 880,
+      "extra": 96,
+      "flats": 28
+    }
+  ],
+  "streams": [
+    {
+      "x": 512,
+      "walls": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "x": 1536,
+      "walls": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "lakes": [],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 512,
+      "top_px": 680,
+      "bottom_px": 896
+    },
+    {
+      "center_x_px": 512,
+      "top_px": 1064,
+      "bottom_px": 1280
+    },
+    {
+      "center_x_px": 512,
+      "top_px": 1336,
+      "bottom_px": 1520
+    },
+    {
+      "center_x_px": 1536,
+      "top_px": 680,
+      "bottom_px": 896
+    },
+    {
+      "center_x_px": 1536,
+      "top_px": 1064,
+      "bottom_px": 1280
+    },
+    {
+      "center_x_px": 1536,
+      "top_px": 1336,
+      "bottom_px": 1520
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}

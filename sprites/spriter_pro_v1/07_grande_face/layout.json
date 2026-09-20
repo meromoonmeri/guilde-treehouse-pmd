@@ -1,0 +1,59 @@
+{
+  "id": "07_grande_face",
+  "name": "La grande face",
+  "description": "Une paroi de 43 rangées de face au centre de la carte, une chute unique et deux bassins au pied.",
+  "ribbons": [
+    {
+      "x": 0,
+      "offset": 296,
+      "extra": 256,
+      "flats": 24
+    }
+  ],
+  "streams": [
+    {
+      "x": 1024,
+      "walls": [
+        0
+      ]
+    }
+  ],
+  "lakes": [
+    {
+      "x": 384,
+      "top": 1312,
+      "rows": 24
+    },
+    {
+      "x": 1664,
+      "top": 1312,
+      "rows": 24
+    }
+  ],
+  "dimensions_px": [
+    2048,
+    1536
+  ],
+  "cellules": [
+    256,
+    192
+  ],
+  "grid_px": 8,
+  "waterfalls": [
+    {
+      "center_x_px": 1024,
+      "top_px": 752,
+      "bottom_px": 1096
+    }
+  ],
+  "dry_layers": [
+    "herbe",
+    "falaises_bordures"
+  ],
+  "wet_layers": [
+    "herbe",
+    "falaises_bordures",
+    "berges_eau",
+    "eau_animee"
+  ]
+}
