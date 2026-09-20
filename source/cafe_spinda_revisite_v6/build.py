@@ -8,7 +8,8 @@ R=Path(__file__).resolve().parents[2];S=Path(__file__).resolve().parent;O=R/'ren
 import importlib.util
 _spec=importlib.util.spec_from_file_location('spinda_v4_build',R/'source/cafe_spinda_reseau_v4/build.py');_old=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_old);SPECS=_old.SPECS;oldbase=_old.base
 # Running this file as __main__ imports the historical build module under its own name.
-def rgba(p):return Image.open(p).convert('RGBA')
+_aspec=importlib.util.spec_from_file_location('spinda_archive',R/'source/cafe_spinda_revisite_v7/archive.py');_arc=importlib.util.module_from_spec(_aspec);_aspec.loader.exec_module(_arc)
+def rgba(p):return Image.open(p).convert('RGBA') if hasattr(p,'read') else _arc.image(p)
 def digest(b):return hashlib.sha256(b).hexdigest()
 def png(im):
  b=io.BytesIO();im.save(b,format='PNG',optimize=True);return b.getvalue()
@@ -20,9 +21,9 @@ def archive():
  records=[]
  for name in ['accueil','casino','cafe','fenetre_cafe']:
   p=O/'bruts'/f'{name}.webp';source=R/'.cache/spinda6'/f'{name}.png'
-  if not p.exists():
+  if not p.exists() and not any((R/e['path'])==p for e in _arc.entries()):
    im=rgba(source);im.save(p,lossless=True,exact=True,method=6);assert rgba(p).tobytes()==im.tobytes()
-  im=rgba(p);records.append({'original_png_sha256':digest(source.read_bytes()) if source.exists() else next((x.get('original_png_sha256') for x in json.loads((O/'generation_provenance.json').read_text())['generations'] if x['file']==str(p.relative_to(O))),None),'file':str(p.relative_to(O)),'size':list(im.size),'rgba_sha256':digest(im.tobytes()),'webp_sha256':digest(p.read_bytes()),'native':False})
+  im=rgba(p);records.append({'original_png_sha256':digest(source.read_bytes()) if source.exists() else next((x.get('original_png_sha256') for x in json.loads((O/'generation_provenance.json').read_text())['generations'] if x['file']==str(p.relative_to(O))),None),'file':str(p.relative_to(O)),'size':list(im.size),'rgba_sha256':digest(im.tobytes()),'webp_sha256':digest(_arc.data(p)),'native':False})
  (O/'generation_provenance.json').write_text(json.dumps({'generations':records,'references':['renders/cafe_spinda_revisite_v5/audit/exports/SpindaV5_audit_*_magenta.png','source/cafe_spinda_revisite_v5/references/escalier_entree_accueil.png','source/cafe_spinda_reseau_v4/references/spinda_design_reference.png'],'window_reference':'Spinda design and V4 café architecture only; Guild_Heros_Room_Objects not used','stairs':'Generated interpretation of the approved reference, NOT pixel-identical native stairs','artistic_approval':'Awaiting user review of these new generations'},indent=2)+'\n')
 
 def build():

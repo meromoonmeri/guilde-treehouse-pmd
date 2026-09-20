@@ -1,5 +1,18 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Spinda V7 — corrections et tilesheets de mobilier
+
+**[Atelier V7](apercu_cafe_spinda_revisite_v7.html)** · [Corrections visuelles](renders/cafe_spinda_revisite_v7/SpindaV7_corrections.jpg) · [Mobilier à l’échelle](renders/cafe_spinda_revisite_v7/SpindaV7_mobilier.jpg)
+
+- Fenêtres32×32 (28px visibles), au lieu des grands oculus précédents.
+- Escaliers N accueil/casino occultés par le mur, sans palier supérieur visible ; bordures basses corrigées. Hors raccord N, architecture inchangée.
+- **30 objets/modules natifs** audités EoSO/Halcyon, dont les comptoirs Spinda et Qulbutoké extraits à1× du Ground, avec pixels visibles identiques à la référence. Détourage documenté, pas de reconstruction IA des parties cachées.
+- **4 créations Kirlia/Charmilly** et **4 tilesheets PNG** avec index8px. Mobilier non préplacé.
+
+**[Pack objets / tilesheets](renders/cafe_spinda_revisite_v7/SpindaV7_objets_tilesheets.zip)** · **[Pack complet autonome](renders/cafe_spinda_revisite_v7/SpindaV7_complet.zip)** · [Audit des dimensions](renders/cafe_spinda_revisite_v7/audit/AUDIT.md) · [Méthode et limites](renders/cafe_spinda_revisite_v7/README.md)
+
+Serveur : `python source/cafe_spinda_revisite_v7/serve.py --port 8007`. Les anciens rendus/ZIP sont conservés. Bruts complets V6/V7 archivés sans perte dans l’historique Git, lecture/restauration vérifiée ; les sept anciennes études V4 restent également restaurables. Pas de validation moteur PMDO ni d’approbation artistique revendiquée.
+
 ## Nouvelle livraison — Spinda N/S & trois ciels Beach
 
 - **[Spinda : nouvelles salles, oculus café et 26 calques](apercu_cafe_spinda_revisite_v6.html)** · [Aperçu](renders/cafe_spinda_revisite_v6/Spinda_generations_NS.jpg) · [Kit PNG](renders/cafe_spinda_revisite_v6/SpindaV6_pack.zip).

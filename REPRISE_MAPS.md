@@ -1,6 +1,20 @@
 # Reprise des maps — 20 septembre 2026
 
-## État actif — générations N/S V6 et ciels Beach trois ambiances
+## État actif — Spinda V7 : petites fenêtres, montées occultées, mobilier audité
+
+Dernière demande : fenêtres beaucoup plus petites ; ne plus montrer le palier/étage au-delà des marches montantes ; corriger leurs bordures ; auditer les tailles EoSO/Halcyon ; fournir les vrais comptoirs Spinda/Qulbutoké et des créations Kirlia/Charmilly.
+
+Livraison `renders/cafe_spinda_revisite_v7/`, atelier `apercu_cafe_spinda_revisite_v7.html`. Fenêtre propre au café en32×32, diamètre28 au lieu de64 ; centres préservés. Rectangles N accueil/casino[200,0,400,184] corrigés par génération référencée : marches dans l’ombre sous le mur, joues basses sans volutes, aucun étage supérieur visible. Architecture hors rectangle bit-identique, S/E/O et graphe conservés. Module de raccord contient aussi mur/sol ; pas un escalier natif autonome.
+
+Audit de8banques : EoSO SpindaCafe1/2, Halcyon objets/Over Café Metano, auberge, réfectoire. **30 objets/modules natifs**, **4 créations** (comptoirs frontaux Kirlia/Charmilly, banquette, desserte), **4 tilesheets** : PNG séparés +index de rectangles8px. Tables Spinda43×43 (canevas48×48), comptoirs natifs120×96 de canevas (120×88 visibles). Comptoirs = détourage manuel du Ground ; pixels RGBA visibles identiques à la référence, pas de reconstruction IA des parties cachées par les rubans. Natifs jamais redimensionnés/recolorés/retournés. Les créations sont explicitement non natives, normalisées avec aspect conservé. Aucune fenêtre Guilde réutilisée. Rien de ce mobilier n’est préposé sur les maps.
+
+Deux ZIP : objets/tilesheets et pack complet autonome avec26PNG de salles +catalogue +atelier. Le dépôt lit les calques V6 avec deltas explicites ; le ZIP matérialise tous les calques. Tests d’images/pixels, archives, atlas et DOM simulé. Pas de navigateur graphique/PMDO, aucune approbation artistique des nouvelles images revendiquée.
+
+Sources complètes préservées sans perte dans Git : **les4bruts V6 et7générations V7** (y compris2premières perspectives de comptoir non retenues), index `source/cafe_spinda_revisite_v7/raws/archive.json`, lecteur/restaurateur `archive.py`. Les ZIP/rendus V6 restent bit-identiques ; ancien build adapté au lecteur d’archive et testé. Le serveur sert aussi les anciennes URL de bruts depuis Git. Serveur V7 : `python source/cafe_spinda_revisite_v7/serve.py --port 8007`, 0.0.0.0. Préserver l’historique complet pour reconstruire les sources archivées. Beach trois ambiances inchangé.
+
+Les rubans natifs sont des modules de bibliothèque, pas un ajustement automatique sur les nouveaux murs. Pas de nouvelle collection de tapis rouges annoncée. Collisions, warps et validation moteur restent à faire.
+
+## Historique — générations N/S V6 et ciels Beach trois ambiances
 
 Après approbation de l’audit (« Parfait, passe à la génération »), trois nouvelles salles sont livrées dans `renders/cafe_spinda_revisite_v6/` : accueil N↑/S↓, casino N↑/E plat, café S↓/E plat. Deux salons V4 conservés. Atelier `apercu_cafe_spinda_revisite_v6.html`, 26 calques PNG contenus dans le ZIP et lus directement par l’atelier (pas de doublons). Quatre bruts complets archivés WebP lossless : 3 salles + nouvel oculus café. **Escaliers redessinés par le générateur d’après la référence : pas identité pixel de l’audit V5.** Repères recalés N[304,88]/arrivée[304,200], S[304,384]/arrivée[304,280] ; graphe réciproque testé, aucune installation moteur.
 
