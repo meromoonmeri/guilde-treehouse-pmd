@@ -1,5 +1,14 @@
 # Reprise des maps — 20 septembre 2026
 
+## Priorité nouvelle — Spinda V5 : seuil exact montré par l’utilisateur
+
+L’utilisateur demande désormais des fenêtres, escaliers et meubles **générés pour correspondre aux maps**, les références natives servant de modèles ; rubans ajustés aux murs, tapis rouges modulaires et décorations séparées. Il choisit deux sorties LATÉRALES à l’accueil (montée + descente), supprimant la sortie sud ; retour montant en sous-sol, descendant à l’étage.
+
+Il insiste ensuite, image à l’appui, pour reprendre **le petit escalier de l’ancienne entrée sud de l’accueil** : marches gris-brun peu profondes, rebords rocheux recourbés, lumière dorée qui décroît vers l’extérieur. Pas de bois massif, rampe blanche, spirale, porte massive ou hautes marches latérales ressemblant à une barrière. Voir `source/cafe_spinda_revisite_v5/WORKFLOW.md` avant de continuer.
+
+V5 est EN COURS, pas livré : un prototype généré de descente vers l’ouest128×72 et une fenêtre générée56×64 dans `renders/cafe_spinda_revisite_v5/prototypes/`, non approuvés/non placés. Les six essais de salles ne sont pas retenus. Intermédiaires de recherche V5 en.cache, non livrés ; empreintes enregistrées. Référence du seuil conservée, ainsi que les PNG normalisés. Aucun mobilier/ruban/tapis V5 encore produit, aucun pack ou atelier V5 terminé. V4 et toutes les anciennes livraisons restent intactes. Branche de session inchangée.
+
+
 ## Correction prioritaire — Spinda V4 généré, cinq pièces et trois niveaux
 
 L’utilisateur a corrigé explicitement la méthode : **génération avec références canoniques, bordures immersives, zones séparées, réseau à plusieurs étages, fenêtres circulaires à croisillons** ; puis « voilà regarde café spinda reprend ce design là ». Ne PAS reprendre les bandes Métano comme solution à cette demande. L’accueil `accueil_spinda_fidele` option1 a été choisi ; quatre déclinaisons séparées ont suivi. Café et salon haut ont été régénérés une seconde fois pour retirer façade avant et faux ovales muraux. Bruts retenus indiqués dans le manifeste ; douze bruts/études conservés losslessly avec empreintes. Les autres salles n’ont pas encore d’approbation artistique utilisateur.
