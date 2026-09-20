@@ -1,0 +1,166 @@
+{
+  "mode": "sévère — zéro tolérance texture inventée",
+  "native_reference": "D01P11A_layer1/2 + beach_animation (4753 tuiles 24x24)",
+  "resultats": [
+    {
+      "file": "sable_plage.png",
+      "size": [
+        1408,
+        768
+      ],
+      "sha256": "15ea1131907587d4defc435f6ccc533e0106c9a7139f58596f28bad2646ff5ec",
+      "couleurs_terrain": 32052,
+      "couleurs_hors_palette_native": 32051,
+      "exemples_hors_palette": [
+        [
+          128,
+          127,
+          124
+        ],
+        [
+          215,
+          217,
+          216
+        ],
+        [
+          224,
+          209,
+          170
+        ],
+        [
+          255,
+          215,
+          202
+        ],
+        [
+          162,
+          139,
+          110
+        ]
+      ],
+      "pourcentage_dans_palette": 0.0,
+      "status_severe": "FAIL",
+      "conclusion": "NON CONFORME — texture inventée, rejeté sévère"
+    },
+    {
+      "file": "cliff_falaise.png",
+      "size": [
+        1408,
+        768
+      ],
+      "sha256": "35e07a841522c7fb219ac47514964a9d4aa573a8aa1b71eb07a2f9b1942250ff",
+      "couleurs_terrain": 175926,
+      "couleurs_hors_palette_native": 175918,
+      "exemples_hors_palette": [
+        [
+          148,
+          201,
+          74
+        ],
+        [
+          101,
+          165,
+          103
+        ],
+        [
+          146,
+          85,
+          43
+        ],
+        [
+          135,
+          78,
+          53
+        ],
+        [
+          62,
+          28,
+          8
+        ]
+      ],
+      "pourcentage_dans_palette": 0.0,
+      "status_severe": "FAIL",
+      "conclusion": "NON CONFORME — texture inventée, rejeté sévère"
+    },
+    {
+      "file": "grotte_entree.png",
+      "size": [
+        1408,
+        768
+      ],
+      "sha256": "cd50d4e9df59dfef9462bd9fc5e0f5642b50ed5197b5d396f72616f5b9342588",
+      "couleurs_terrain": 108285,
+      "couleurs_hors_palette_native": 108270,
+      "exemples_hors_palette": [
+        [
+          180,
+          87,
+          65
+        ],
+        [
+          215,
+          129,
+          103
+        ],
+        [
+          220,
+          111,
+          108
+        ],
+        [
+          55,
+          15,
+          23
+        ],
+        [
+          27,
+          12,
+          27
+        ]
+      ],
+      "pourcentage_dans_palette": 0.01,
+      "status_severe": "FAIL",
+      "conclusion": "NON CONFORME — texture inventée, rejeté sévère"
+    },
+    {
+      "file": "mer_ocean.png",
+      "size": [
+        1408,
+        768
+      ],
+      "sha256": "2308a131d162c8749f20e3931feba69d3eafe123b103bdc41fe417ba21517ee5",
+      "couleurs_terrain": 97415,
+      "couleurs_hors_palette_native": 97415,
+      "exemples_hors_palette": [
+        [
+          31,
+          198,
+          202
+        ],
+        [
+          140,
+          240,
+          248
+        ],
+        [
+          53,
+          210,
+          207
+        ],
+        [
+          139,
+          223,
+          227
+        ],
+        [
+          22,
+          181,
+          191
+        ]
+      ],
+      "pourcentage_dans_palette": 0.0,
+      "status_severe": "FAIL",
+      "conclusion": "NON CONFORME — texture inventée, rejeté sévère"
+    }
+  ]
+}
