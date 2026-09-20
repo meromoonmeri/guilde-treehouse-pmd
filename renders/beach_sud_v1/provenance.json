@@ -1,0 +1,48 @@
+{
+  "reference_repo": "Minemaker0430/ExplorersOfSkyOrigins",
+  "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+  "file_original": "Data/Ground/beach.rsground",
+  "version": "0.8.11.0",
+  "texSize": 3,
+  "orig_dimensions_px": [
+    792,
+    384
+  ],
+  "new_dimensions_px": [
+    1056,
+    576
+  ],
+  "new_tiles": [
+    44,
+    24
+  ],
+  "plus_grande": "+264px largeur, +192px hauteur, x2.00 surface",
+  "sheets": {
+    "D01P11A_layer1.tile": {
+      "sha256": "e4d9365c2cdddffb733f29bd0e1cd85feeb4eec8e1ae3498bbe316802cf10f96",
+      "tileSize": 24,
+      "count": 528
+    },
+    "beach_animation.tile": {
+      "sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a",
+      "tileSize": 24,
+      "count": 3927
+    },
+    "D01P11A_layer2.tile": {
+      "sha256": "47960347c15a83907377b9c5835950d2fffa875baec212cbf51cc9811b5f7898",
+      "tileSize": 24,
+      "count": 298
+    }
+  },
+  "original_hash": "c3ba98151ffb13833c0d093a4b42fdee40213a56edc0bf02a0870f140d4c374a",
+  "method": "copie exacte tuiles 24x24 sans recoloration/rotation/echelle/miroir, grille 24px, plage au sud par remapping y, largeur etendue par tuilage x%33, gap sud-centre 96x48",
+  "ciel": "jour repris bleu mer origine, nuit navy + etoiles/lune halcyon (non natif EoSO, separe)",
+  "generateur_texture_audit": "terrain_beach_sud.png genere : 0 tuile identique, palette sable #F5E6B8 vs native #FFF7A7, vagues diagonales absentes -> rejete",
+  "layers": [
+    "00_ciel_jour",
+    "01_back",
+    "02_anim_00",
+    "03_front",
+    "02_anim_01..16"
+  ]
+}
