@@ -1,0 +1,31 @@
+{
+  "source_repository": "https://github.com/Minemaker0430/ExplorersOfSkyOrigins",
+  "commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+  "origin": "Textures PMD Explorers of Sky (cave cotiere Brine_Cave_Entrance : grotte a gauche, mer en bas) telles que livrees par Explorers of Sky Origins (PMDO). La mer de la plage D01P11A n'existe qu'en haut de carte : la placer en bas exigerait une rotation, interdite — d'ou ce choix de source.",
+  "files": {
+    "EoSO__Brine_Cave_Entrance.rsground": {
+      "eoso_path": "Data/Ground/Brine_Cave_Entrance.rsground",
+      "bytes": 1020585,
+      "sha256": "a253bb1fd7983c4a5a281866cac92b45a8a1a36fda2d21072b941244c10f196b",
+      "git_blob_sha1": "8536cb3dfd9674cbec9fa317fb71cb65eeaeaffd"
+    },
+    "EoSO__Brine_Cave_Entrance.tile": {
+      "eoso_path": "Content/Tile/Brine Cave Entrance.tile",
+      "bytes": 485512,
+      "sha256": "a65c63677e4e63ed14c2754eff463db7bb9db7cae8feb7cb236e8cfc251a96ec",
+      "git_blob_sha1": "9dfe2aed871a7a5569a4ab7b0d81138717b7b1e2"
+    }
+  },
+  "delivered_sheets": {
+    "PLAGE_CV2_BRINE": {
+      "copied_from": "EoSO__Brine Cave Entrance.tile",
+      "byte_identical": true
+    }
+  },
+  "method": "ré-assemblage cellule par cellule (24 px, flipbooks 15 frames entiers) ; aucune image générée, recolorée, tournée ou redimensionnée",
+  "composition_guides": [
+    "references/candidats_mer_autre_cote.png",
+    "references/guide_composition_L1.png",
+    "references/guide_composition_L2.png"
+  ]
+}

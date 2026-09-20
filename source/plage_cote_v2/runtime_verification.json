@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "pmdo": "0.8.12.0",
+  "method": "DataManager.Instance:GetGround dans un hook Lua de démarrage du vrai binaire PMDO (-guide -quest), sans affichage",
+  "assets": {
+    "crique": "plage_cv2_crique",
+    "anse": "plage_cv2_anse"
+  },
+  "assertions": [
+    "Ground non nul",
+    "35 x 21 (crique) et 43 x 21 (anse) cellules",
+    "TexSize 3",
+    "1 calque",
+    "1 marqueur",
+    "2 GroundObjects",
+    "cellule de mer (10,18) : 15 frames, FrameLength 8, feuille PLAGE_CV2_BRINE",
+    "cellule de mur (0,0) et de sortie (dernière colonne, rangée 12) : 15 frames"
+  ],
+  "rows": [
+    "plage_cv2_crique\t35\t21\t3\t1\t15\tPASS",
+    "plage_cv2_anse\t43\t21\t3\t1\t15\tPASS"
+  ],
+  "return_code": 0,
+  "startup_restored": true,
+  "graphics_constant_initialized": {
+    "DungeonTexSize": 3
+  },
+  "editor_graphics_tested": false,
+  "gpu_assets_tested": false,
+  "gameplay_tested": false,
+  "engine": {
+    "zip": "pmdc-linux-x64.zip v0.8.12",
+    "sha256": "c64f72afd27b96d5a870f71e44d05ee1e952909e86b9a53d0479163763c61577",
+    "base_assets": "audinowho/DumpAsset@3e767571f9dd94270b848b3a73de9bec2553a2eb"
+  }
+}

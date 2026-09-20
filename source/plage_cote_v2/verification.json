@@ -1,0 +1,892 @@
+{
+ "status": "PASS",
+ "lot": "plage_cote_v2",
+ "zip": "plage_cote_v2_pmdo_0812.zip",
+ "zip_sha256": "1cc4fa9fd89a5bc64f88ce971a837ec63c49f41ffe3994118b7d06072e6911d2",
+ "grounds": {
+  "crique": "plage_cv2_crique",
+  "anse": "plage_cv2_anse"
+ },
+ "grid_cells": {
+  "crique": [
+   35,
+   21
+  ],
+  "anse": [
+   43,
+   21
+  ]
+ },
+ "pixels": {
+  "crique": [
+   840,
+   504
+  ],
+  "anse": [
+   1032,
+   504
+  ]
+ },
+ "cell_px": 24,
+ "source_commit": "bed944992c32e7e7927cc3480c72edb0b1782e26",
+ "seams": {
+  "method": "MSE RGBA sur le rendu composite (15 frames), paires de cellules voisines absentes de la carte source, comparées au pire raccord de la source",
+  "source_max_horizontal": 750.7,
+  "source_max_vertical": 3458.2,
+  "crique": {
+   "new_horizontal_pairs": 13,
+   "max_horizontal": 584.2,
+   "new_vertical_pairs": 8,
+   "max_vertical": 1732.7,
+   "documented_sea_phase_skip": {
+    "pairs": 3,
+    "max": 3236.3,
+    "values": [
+     3236.3,
+     1322.7,
+     1138.7
+    ]
+   },
+   "worst_horizontal": [
+    [
+     584.2,
+     [
+      26,
+      20
+     ]
+    ],
+    [
+     403.7,
+     [
+      26,
+      19
+     ]
+    ],
+    [
+     305.3,
+     [
+      33,
+      12
+     ]
+    ],
+    [
+     305.3,
+     [
+      32,
+      12
+     ]
+    ],
+    [
+     305.3,
+     [
+      25,
+      12
+     ]
+    ]
+   ],
+   "worst_vertical": [
+    [
+     1732.7,
+     [
+      34,
+      11
+     ]
+    ],
+    [
+     1732.7,
+     [
+      26,
+      11
+     ]
+    ],
+    [
+     852.0,
+     [
+      33,
+      11
+     ]
+    ],
+    [
+     852.0,
+     [
+      25,
+      11
+     ]
+    ],
+    [
+     166.0,
+     [
+      34,
+      13
+     ]
+    ]
+   ]
+  },
+  "anse": {
+   "new_horizontal_pairs": 22,
+   "max_horizontal": 584.2,
+   "new_vertical_pairs": 12,
+   "max_vertical": 1732.7,
+   "documented_sea_phase_skip": {
+    "pairs": 6,
+    "max": 3236.3,
+    "values": [
+     3236.3,
+     1322.7,
+     1138.7
+    ]
+   },
+   "worst_horizontal": [
+    [
+     584.2,
+     [
+      34,
+      20
+     ]
+    ],
+    [
+     584.2,
+     [
+      26,
+      20
+     ]
+    ],
+    [
+     403.7,
+     [
+      34,
+      19
+     ]
+    ],
+    [
+     403.7,
+     [
+      26,
+      19
+     ]
+    ],
+    [
+     305.3,
+     [
+      41,
+      12
+     ]
+    ]
+   ],
+   "worst_vertical": [
+    [
+     1732.7,
+     [
+      42,
+      11
+     ]
+    ],
+    [
+     1732.7,
+     [
+      34,
+      11
+     ]
+    ],
+    [
+     1732.7,
+     [
+      26,
+      11
+     ]
+    ],
+    [
+     852.0,
+     [
+      41,
+      11
+     ]
+    ],
+    [
+     852.0,
+     [
+      33,
+      11
+     ]
+    ]
+   ]
+  }
+ },
+ "free_obstacle_cells": {
+  "crique": 1247,
+  "anse": 1522
+ },
+ "native_runtime_tested": true,
+ "native_runtime": {
+  "status": "PASS",
+  "pmdo": "0.8.12.0",
+  "method": "DataManager.Instance:GetGround dans un hook Lua de démarrage du vrai binaire PMDO (-guide -quest), sans affichage",
+  "assets": {
+   "crique": "plage_cv2_crique",
+   "anse": "plage_cv2_anse"
+  },
+  "assertions": [
+   "Ground non nul",
+   "35 x 21 (crique) et 43 x 21 (anse) cellules",
+   "TexSize 3",
+   "1 calque",
+   "1 marqueur",
+   "2 GroundObjects",
+   "cellule de mer (10,18) : 15 frames, FrameLength 8, feuille PLAGE_CV2_BRINE",
+   "cellule de mur (0,0) et de sortie (dernière colonne, rangée 12) : 15 frames"
+  ],
+  "rows": [
+   "plage_cv2_crique\t35\t21\t3\t1\t15\tPASS",
+   "plage_cv2_anse\t43\t21\t3\t1\t15\tPASS"
+  ],
+  "return_code": 0,
+  "startup_restored": true,
+  "graphics_constant_initialized": {
+   "DungeonTexSize": 3
+  },
+  "editor_graphics_tested": false,
+  "gpu_assets_tested": false,
+  "gameplay_tested": false,
+  "engine": {
+   "zip": "pmdc-linux-x64.zip v0.8.12",
+   "sha256": "c64f72afd27b96d5a870f71e44d05ee1e952909e86b9a53d0479163763c61577",
+   "base_assets": "audinowho/DumpAsset@3e767571f9dd94270b848b3a73de9bec2553a2eb"
+  }
+ },
+ "editor_tested": false,
+ "gpu_render_tested": false,
+ "checks": [
+  {
+   "check": "reference EoSO__Brine_Cave_Entrance.rsground sha256",
+   "status": "PASS",
+   "detail": "a253bb1fd7983c4a"
+  },
+  {
+   "check": "reference EoSO__Brine_Cave_Entrance.rsground git blob",
+   "status": "PASS",
+   "detail": "8536cb3dfd96"
+  },
+  {
+   "check": "reference EoSO__Brine_Cave_Entrance.tile sha256",
+   "status": "PASS",
+   "detail": "a65c63677e4e63ed"
+  },
+  {
+   "check": "reference EoSO__Brine_Cave_Entrance.tile git blob",
+   "status": "PASS",
+   "detail": "9dfe2aed871a"
+  },
+  {
+   "check": "zip integrity",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_CV2_BRINE pack identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "sheet PLAGE_CV2_BRINE zip identical",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground plage_cv2_crique",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground plage_cv2_crique == pack",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground plage_cv2_anse",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "zip ground plage_cv2_anse == pack",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "unique tile/ground basenames",
+   "status": "PASS",
+   "detail": [
+    "PLAGE_CV2_BRINE.tile",
+    "plage_cv2_anse.rsground",
+    "plage_cv2_crique.rsground"
+   ]
+  },
+  {
+   "check": "zip has installer, Mod.xml, lua, index",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "grounds version 0.8.12.0",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "TexSize 3 (24 px)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "asset names",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "single layer each",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: dims 35 x 21",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: columns rectangular",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: pixel dims multiples of 24 and 8",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: dims 43 x 21",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: columns rectangular",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: pixel dims multiples of 24 and 8",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: every frame references a delivered cell",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "crique: every cell sequence exists in the source (byte-identical payloads)",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "crique: cell_mapping.json consistent",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "anse: every frame references a delivered cell",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "anse: every cell sequence exists in the source (byte-identical payloads)",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "anse: cell_mapping.json consistent",
+   "status": "PASS",
+   "detail": []
+  },
+  {
+   "check": "non-empty cell counts",
+   "status": "PASS",
+   "detail": {
+    "crique": 735,
+    "anse": 903
+   }
+  },
+  {
+   "check": "crique: all cells 15 frames, FrameLength 8",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: deep-sea cells really animated (no static water fill)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: 15 distinct composite frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: every sea row animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: all cells 15 frames, FrameLength 8",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: deep-sea cells really animated (no static water fill)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: 15 distinct composite frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: every sea row animated (frames differ)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: foam shore aligned on row 16",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: exit cut cell 0 == source (24,12)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: exit cut cell 1 == source (24,13)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: foam shore aligned on row 16",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: exit cut cell 0 == source (24,12)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: exit cut cell 1 == source (24,13)",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: new adjacencies no worse than source seams",
+   "status": "PASS",
+   "detail": {
+    "new_horizontal_pairs": 13,
+    "max_horizontal": 584.2,
+    "new_vertical_pairs": 8,
+    "max_vertical": 1732.7,
+    "documented_sea_phase_skip": {
+     "pairs": 3,
+     "max": 3236.3,
+     "values": [
+      3236.3,
+      1322.7,
+      1138.7
+     ]
+    },
+    "worst_horizontal": [
+     [
+      584.2,
+      [
+       26,
+       20
+      ]
+     ],
+     [
+      403.7,
+      [
+       26,
+       19
+      ]
+     ],
+     [
+      305.3,
+      [
+       33,
+       12
+      ]
+     ],
+     [
+      305.3,
+      [
+       32,
+       12
+      ]
+     ],
+     [
+      305.3,
+      [
+       25,
+       12
+      ]
+     ]
+    ],
+    "worst_vertical": [
+     [
+      1732.7,
+      [
+       34,
+       11
+      ]
+     ],
+     [
+      1732.7,
+      [
+       26,
+       11
+      ]
+     ],
+     [
+      852.0,
+      [
+       33,
+       11
+      ]
+     ],
+     [
+      852.0,
+      [
+       25,
+       11
+      ]
+     ],
+     [
+      166.0,
+      [
+       34,
+       13
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "check": "crique: documented sea phase-skip within measured bound",
+   "status": "PASS",
+   "detail": {
+    "pairs": 3,
+    "max": 3236.3,
+    "values": [
+     3236.3,
+     1322.7,
+     1138.7
+    ]
+   }
+  },
+  {
+   "check": "anse: new adjacencies no worse than source seams",
+   "status": "PASS",
+   "detail": {
+    "new_horizontal_pairs": 22,
+    "max_horizontal": 584.2,
+    "new_vertical_pairs": 12,
+    "max_vertical": 1732.7,
+    "documented_sea_phase_skip": {
+     "pairs": 6,
+     "max": 3236.3,
+     "values": [
+      3236.3,
+      1322.7,
+      1138.7
+     ]
+    },
+    "worst_horizontal": [
+     [
+      584.2,
+      [
+       34,
+       20
+      ]
+     ],
+     [
+      584.2,
+      [
+       26,
+       20
+      ]
+     ],
+     [
+      403.7,
+      [
+       34,
+       19
+      ]
+     ],
+     [
+      403.7,
+      [
+       26,
+       19
+      ]
+     ],
+     [
+      305.3,
+      [
+       41,
+       12
+      ]
+     ]
+    ],
+    "worst_vertical": [
+     [
+      1732.7,
+      [
+       42,
+       11
+      ]
+     ],
+     [
+      1732.7,
+      [
+       34,
+       11
+      ]
+     ],
+     [
+      1732.7,
+      [
+       26,
+       11
+      ]
+     ],
+     [
+      852.0,
+      [
+       41,
+       11
+      ]
+     ],
+     [
+      852.0,
+      [
+       33,
+       11
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "check": "anse: documented sea phase-skip within measured bound",
+   "status": "PASS",
+   "detail": {
+    "pairs": 6,
+    "max": 3236.3,
+    "values": [
+     3236.3,
+     1322.7,
+     1138.7
+    ]
+   }
+  },
+  {
+   "check": "crique: obstacle grid 105 x 63",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: obstacle bounds consistent",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: entities 1 marker + Exit + Beach_Cave_Entrance, no spawners",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: entrance marker on free ground inside map",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: cave trigger reachable from entrance",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: exit trigger reachable and touching the right edge",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: right edge free only on exit corridor rows [36, 37, 38, 39, 40, 41]",
+   "status": "PASS",
+   "detail": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ]
+  },
+  {
+   "check": "crique: sea fully blocked below the foam shore",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: free cell count grows with the map",
+   "status": "PASS",
+   "detail": 1247
+  },
+  {
+   "check": "anse: obstacle grid 129 x 63",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: obstacle bounds consistent",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: entities 1 marker + Exit + Beach_Cave_Entrance, no spawners",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: entrance marker on free ground inside map",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: cave trigger reachable from entrance",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: exit trigger reachable and touching the right edge",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: right edge free only on exit corridor rows [36, 37, 38, 39, 40, 41]",
+   "status": "PASS",
+   "detail": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ]
+  },
+  {
+   "check": "anse: sea fully blocked below the foam shore",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: free cell count grows with the map",
+   "status": "PASS",
+   "detail": 1522
+  },
+  {
+   "check": "index.idx == tile headers",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "Mod.xml namespace/version",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "installer copies grounds, sheet, scripts and merges index",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "installer idempotent on identical files",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: tiled map dims",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: tiled map dims",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "tiled tsx: animated tiles present",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "tiled tsx/png present",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: frame00.png == composite",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: layer png",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "crique: gif 15 frames",
+   "status": "PASS",
+   "detail": 15
+  },
+  {
+   "check": "crique: webp 15 frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: frame00.png == composite",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: layer png",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "anse: gif 15 frames",
+   "status": "PASS",
+   "detail": 15
+  },
+  {
+   "check": "anse: webp 15 frames",
+   "status": "PASS",
+   "detail": null
+  },
+  {
+   "check": "native PMDO 0.8.12 headless load (runtime_test.py)",
+   "status": "PASS",
+   "detail": [
+    "plage_cv2_crique\t35\t21\t3\t1\t15\tPASS",
+    "plage_cv2_anse\t43\t21\t3\t1\t15\tPASS"
+   ]
+  }
+ ],
+ "failed": 0
+}
