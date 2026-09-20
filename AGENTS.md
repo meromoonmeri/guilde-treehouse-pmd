@@ -1,6 +1,11 @@
 # Méthode de production approuvée — zones Métano
 
-## Plage falaises rouges V1 — méthode hybride choisie (20 septembre 2026)
+## Plage falaises rouges V2 — eau canonique EoSO demandée (20 septembre 2026)
+
+Après la V1 hybride, l'utilisateur a demandé que la mer et sa texture soient celles des maps *beach* de `Minemaker0430/ExplorersOfSkyOrigins`. **Pour les eaux/mers des prochaines maps, retrouver et décoder les ressources natives plutôt que proposer une animation générée.** Le dépôt EoSO (commit épinglé `bed944992c32e7e7927cc3480c72edb0b1782e26`) livre `Content/Tile/beach_animation.tile` : 17 frames de 792×168 à cadence native FrameLength=16 ticks (~266 ms), et `DuskBeach.tile` pour la déclinaison crépuscule. Copie + provenance dans `source/plage_rouge_v2/references/`.
+
+Lot : `source/plage_rouge_v2/`, `renders/plage_rouge_v2_eoso/`, ZIP, `apercu_plage_rouge_v2.html` + copie `renders/.../apercu.html`. Terrain = byte-identique V1 (testé). Eau = pixel-exact natif, adaptation par **row = hauteur−1 − distance au sable (EDT)** : bande écume/sable au seul contact du rivage, rangs d'eau contre les falaises (raccord observé EoSO), sans déformation pixel. 18 tests PASS. Attribution Minemaker0430/EoSO + © Nintendo/Chunsoft conservée. Limites inchangées : art non approuvé, mapping = adaptation documentée, runtime/collisions NON TESTÉS.
+
 
 L'utilisateur a relancé la production de maps en choisissant explicitement : map = `arenapmdskybeach.png` ; méthode = **hybride** (génération guidée par la référence canonique, puis quantification de chaque pixel opaque vers les **147 couleurs natives exactes de la référence** en CIEDE2000) ; livraison = **version sèche + version animée** ; format = **standard** (calques PNG + ORA + viewer hors-ligne + manifeste + tests).
 

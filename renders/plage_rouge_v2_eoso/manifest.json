@@ -1,0 +1,46 @@
+{
+  "lot": "plage_rouge_v2_eoso",
+  "demande": "mer + texture d eau comme les maps beach de Minemaker0430/ExplorersOfSkyOrigins",
+  "terrain": "byte-identique du lot plage_rouge_v1 (hybride, quantification palette)",
+  "eau": {
+    "source": "beach_animation.tile EoSO commit bed944992c32e7e7927cc3480c72edb0b1782e26",
+    "tile_sha256": "596a83cb7cfe7e35e17baf7163c33c04729ff513edcdc9f231c2b49f6bb2980a",
+    "frames": 17,
+    "cadence_ms": 266,
+    "frame_length_ticks_natif": 16,
+    "frames_sha256_png": [
+      "ba927fdeee90af0e3aecafa071b050c8472e81c92041531b21b6487eb9b5d29d",
+      "93722f15d3a1a4aeff7dee11cd03a9d557201f75c209199c4606ddd78d980dd7",
+      "34ec70d71501e1f0253933f1b92910923a31736e301ee572d6f70a972555fa4e",
+      "cf30dd974efbeb9392d09aa9e005df629716cc22221620ec07d894571d972649",
+      "a05cc7ff7ea02b9d2ad6b1c721698d2585ec8450f0bc1f2367e9bf29844b2c5a",
+      "6a94ece63a5aa4d239e0abe2593cb9ccde3aa87d55f67de72b4357268ff6bf49",
+      "5eb98d866b6980659ee78cbdbae6a17a69f042bbfb26a43464d5369606f6913e",
+      "86a42e3fd545f3816c99ccae3a70a978de39d9b016b70dc49744a2fe2c544ef8",
+      "84f98dc8fe0c900ff5f70c4784e11ab8ad7d10b06b8ee601f3b3775ac49da1f7",
+      "696dac31e94119da540cbb85f7b848dd70bad737ad24d61068d7a69eff0107d6",
+      "81a4efa2925897077bb51a44904806aaddb31c3d994a78c2a0dd257ce5fb8af5",
+      "4eaf3694a397980df285d96658b598d08c2a379cff0088a24bfa479861d7643c",
+      "bc8475b4dff43e76900c5404bb360b2843fc2085705730892da997a119c34b09",
+      "a29e3f7039d02e7a653513983d9f4686f47d57d2d7a772f9f37f812e59e93f32",
+      "b642951209ddbf9c32f9ba3dcf2aea43aa1ba437242234f6b8febc12ff4bf15c",
+      "cb2a767b1b61dc7b603277a2f106158b6084bd26c6c42a1f2c25334d39324163",
+      "23da197e6743a01675daa6376b5dcb15e8f23c768ed2978ab64d347b907005e7"
+    ],
+    "adaptation": "fenetre horizontale x+220 (zone sans rochers) ; row natif = FH-1 - distance au sable (EDT) : ecume/sable natif uniquement au contact de notre sable, rangs d eau contre les falaises ; aucune deformation pixel",
+    "fenetre": {
+      "x_offset": 220,
+      "largeur_native": 792,
+      "hauteur_native": 168
+    }
+  },
+  "silhouette_mer": "masque du lot V1 (geometrie approuvee), alpha natif conserve",
+  "trous_alpha_natif_px": 0,
+  "reconstruction_sanity": true,
+  "limites": [
+    "silhouette adaptee a notre crique (pas le layout de la map beach EoSO)",
+    "raccords ecume/rivage = mapping par colonnes, pas repaints",
+    "art non approuve",
+    "collisions/warps/runtime PMDO NON TESTES"
+  ]
+}
