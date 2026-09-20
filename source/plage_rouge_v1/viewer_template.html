@@ -17,10 +17,9 @@
   main { display:flex; flex-wrap:wrap; gap:14px; padding:14px; }
   #stage { position:relative; background:#101016; padding:10px; border:1px solid #333; border-radius:10px; overflow:auto; }
   #cv { image-rendering:pixelated; display:block; }
-  #grille { position:absolute; pointer-events:none; image-rendering:pixelated;
+  #grille { position:absolute; pointer-events:none; display:none;
             background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px),
-                             repeating-linear-gradient(90deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px);
-            background-size:auto; }
+                             repeating-linear-gradient(90deg, rgba(255,255,255,.16) 0 1px, transparent 1px 8px); }
   #calques { min-width:230px; max-width:300px; }
   fieldset { border:1px solid #333; border-radius:8px; margin-bottom:10px; }
   label { display:flex; gap:6px; align-items:center; padding:2px 0; font-size:13px; }
@@ -93,25 +92,22 @@ const laylist = document.getElementById('laylist');
 
 const fonds = ['void','blanc','magenta']; let fi = 0;
 const backCols = ['#272737', '#ffffff', '#ff00ff'];
+const TOUTES = [IM.fond, ...IM.mer, ...IM.calques.map(c => c.img)];
+Promise.all(TOUTES.map(im => (im.complete && im.naturalWidth) ? Promise.resolve()
+              : new Promise(res => { im.onload = res; im.onerror = res; }))).then(() => draw());
 function draw(){
   cv.style.background = backCols[fi];
+  ctx.imageSmoothingEnabled = false;
   ctx.clearRect(0,0,D.W,D.H);
-  let loaded = () => {
-    ctx.imageSmoothingEnabled = false;
-    ctx.clearRect(0,0,D.W,D.H);
-    if (state.fond) ctx.drawImage(IM.fond,0,0);
-    if (!state.dry) ctx.drawImage(IM.mer[state.frame],0,0);
-    for (const c of IM.calques) if (state.visible[c.nom]) ctx.drawImage(c.img,0,0);
-    const g = document.getElementById('grille');
-    g.style.display = state.grid ? 'block' : 'none';
-    g.style.width = D.W*state.zoom+'px'; g.style.height = D.H*state.zoom+'px';
-    g.style.backgroundSize = (8*state.zoom)+'px '+(8*state.zoom)+'px';
-    cv.style.width = D.W*state.zoom+'px'; cv.style.height = D.H*state.zoom+'px';
-  };
-  let n = 0, total = 2 + IM.mer.length + IM.calques.length;
-  const ok = () => { if (++n >= total) loaded(); };
-  for (const im of [IM.fond, ...IM.mer, ...IM.calques.map(c=>c.img)])
-    (im.complete && im.naturalWidth) ? ok() : (im.onload = ok, im.onerror = ok);
+  if (state.fond) ctx.drawImage(IM.fond,0,0);
+  if (!state.dry) ctx.drawImage(IM.mer[state.frame],0,0);
+  for (const c of IM.calques) if (state.visible[c.nom]) ctx.drawImage(c.img,0,0);
+  const g = document.getElementById('grille');
+  g.style.display = state.grid ? 'block' : 'none';
+  g.style.width = D.W*state.zoom+'px'; g.style.height = D.H*state.zoom+'px';
+  g.style.backgroundSize = (8*state.zoom)+'px '+(8*state.zoom)+'px';
+  g.style.left = cv.offsetLeft+'px'; g.style.top = cv.offsetTop+'px';
+  cv.style.width = D.W*state.zoom+'px'; cv.style.height = D.H*state.zoom+'px';
 }
 const NF = D.mer.length;
 function lab(){ document.getElementById('frame_lab').textContent = 'f'+String(state.frame).padStart(2,'0')+'/'+(NF-1); }

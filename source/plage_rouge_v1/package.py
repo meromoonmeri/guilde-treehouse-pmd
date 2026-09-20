@@ -10,6 +10,7 @@ ZIP = R / 'renders/plage_rouge_v1_pack.zip'
 INCLUS = [
     ('manifest.json', 'manifest.json'),
     ('README.md', 'README.md'),
+    ('apercu.html', 'apercu.html'),
 ]
 DOSSIERS = ['couches', 'scene', 'sprites_pack', 'review', 'ora', 'exports', 'bruts']
 

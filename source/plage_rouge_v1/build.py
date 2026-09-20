@@ -416,7 +416,9 @@ def construire():
                'calques': [{'nom': n, 'png': uri(a)} for n, a in ordre],
                'palette': uri(sw)}
     tpl = (R / 'source/plage_rouge_v1/viewer_template.html').read_text()
-    (R / 'apercu_plage_rouge_v1.html').write_text(tpl.replace('__DATA__', json.dumps(donnees)))
+    html = tpl.replace('__DATA__', json.dumps(donnees))
+    (R / 'apercu_plage_rouge_v1.html').write_text(html)
+    (O / 'apercu.html').write_text(html)               # copie dans le dossier renders (demande utilisateur)
 
     manifest = {
         'lot': 'plage_rouge_v1',

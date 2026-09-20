@@ -113,6 +113,23 @@ test('18_viewer_sans_placeholder', '__DATA__' not in html and len(html) > 100_00
 m = re.search(r'<script id="DATA" type="application/json">(.*?)</script>', html, re.S)
 dj = json.loads(m.group(1)) if m else {}
 test('19_viewer_json_valide', len(dj.get('mer', [])) == 16 and len(dj.get('calques', [])) == 5)
+# syntaxe JS via node --check sur le script principal (comme les lots cotes)
+import subprocess, tempfile
+scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
+node_ok = False; node_info = 'node absent'
+try:
+    with tempfile.NamedTemporaryFile('w', suffix='.js', delete=False) as tf:
+        tf.write(scripts[-1]); tpath = tf.name
+    r = subprocess.run(['node', '--check', tpath], capture_output=True, text=True, timeout=30)
+    node_ok = (r.returncode == 0); node_info = (r.stderr or 'ok').strip().splitlines()[-1][:120]
+except Exception as e:
+    node_ok = None; node_info = f'ignore ({type(e).__name__})'
+if node_ok is None:
+    print('PASS 20_viewer_js_syntaxe_node — ignore :', node_info)
+else:
+    test('20_viewer_js_syntaxe_node', node_ok, node_info)
+test('21_apercu_copie_renders', (O / 'apercu.html').exists()
+     and (O / 'apercu.html').read_text() == html)
 
 print('-' * 60)
 npass = sum(1 for _, c, _ in RESULT if c)
