@@ -1,0 +1,50 @@
+{
+  "halcyon": {
+    "grille_px": 8,
+    "eau_position": [
+      0,
+      408
+    ],
+    "position_multiple_de_8": true,
+    "frames_nommage_uniforme": "EauLumiereV1_00..09.png",
+    "frames_taille_uniforme": [
+      928,
+      256
+    ],
+    "duree_ms_uniforme": 140,
+    "boucle": "frame 10 = demi-pas de frame 1 (fondu 50 %)",
+    "ordre_des_calques": [
+      "fond_fixe",
+      "terrain_fixe",
+      "eau (10 frames)"
+    ],
+    "pas_de_wrap": true
+  },
+  "methode": "canonique : terrain genere plein cadre (bande magenta -> alpha par inondation) ; planche d eau generee -> 15 cases detectees -> 5 poses + 5 fondus 50 % = 10 frames ; trainees lumineuses restreintes au masque d eau profonde (composants >= 200 px)",
+  "bande_eau": {
+    "y": 408,
+    "couverture_eau_totale": 0.751,
+    "hors_bande": "crique haute (y~168-300) et petites poches basses : statiques en V1"
+  },
+  "bruts_sha256": {
+    "terrain": "6c44d601db07e9da2b3e681dcbeeb4deb393853db4e37db11450eb0be839b338",
+    "eau": "0c89177d6a1e12116a2540c75a7629189fc85bb8082e861eb8c1eef5b8092970"
+  },
+  "chemin_poses": [
+    1,
+    10,
+    13,
+    9,
+    3
+  ],
+  "sauts_entre_poses": [
+    0.044,
+    0.051,
+    0.043,
+    0.049,
+    0.044
+  ],
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes",
+  "cycle_officiel": "INCONNU : poses et cadence choisis"
+}

@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Reprise du lot — arène de plage aux critères Halcyon (V1)
+
+- **[Voir l'aperçu animé](apercu_plage_halcyon_v1.html)** : terrain généré plein cadre, fond + terrain + eau lumineuse en calques indépendants, 10 frames de scintillement des bassins.
+- [PNG, planches brutes et manifeste SHA](renders/plage_halcyon_v1/README.md) · [ZIP complet](renders/plage_halcyon_v1_pack.zip) · [résultats des contrôles](renders/plage_halcyon_v1/verification.json).
+- Méthode canonique V15/V16 conservée : bande magenta → alpha par inondation (zéro magenta cuit), grille 8 px, sans wrap ; eau = 5 poses réparties + 5 fondus 50 % = 10 frames, boucle fermée par construction, traînées restreintes au masque d'eau profonde (75,1 % de l'eau couverte à y=408).
+
+9 tests dédiés PASS, syntaxe JS vérifiée ; **navigateur interactif et rendu PMDO non testés**. Poses et cadence : nos choix, non validés en jeu. La zone sort de la liste d'attente ; 16 terrains/BG restent ouverts, dont les BG purs (nuit, aurore).
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

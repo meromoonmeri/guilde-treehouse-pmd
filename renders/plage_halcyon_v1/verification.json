@@ -1,0 +1,32 @@
+{
+  "dedicated_tests_passed": 9,
+  "zone": "arenapmdskybeach.png -> ar\u00e8ne de plage Halcyon V1 (terrain 928\u00d71152)",
+  "methode": "canonique : terrain g\u00e9n\u00e9r\u00e9 plein cadre (bande magenta 34 px -> alpha par inondation, z\u00e9ro magenta int\u00e9rieur), planche d'eau g\u00e9n\u00e9r\u00e9e (15 cases d\u00e9tect\u00e9es) -> 5 poses r\u00e9parties (k-centre) ordonn\u00e9es en min-max + 5 fondus 50 % = 10 frames",
+  "halcyon_criteria": {
+    "stacked_fixed_layers": true,
+    "layer_order": [
+      "fond_fixe",
+      "terrain_fixe",
+      "eau (10 frames)"
+    ],
+    "uniform_frame_size_928x256": true,
+    "uniform_frame_naming_EauLumiereV1_00..09": true,
+    "uniform_duration_ms": 140,
+    "position_on_8px_grid": true,
+    "eau_position": [
+      0,
+      408
+    ],
+    "no_wrap": true,
+    "loop": "frame 10 = demi-pas de frame 1 (fondu 50 %, construction)"
+  },
+  "eau": {
+    "couverture_bassins": 0.751,
+    "trainees_restreintes_au_masque_eau_profonde": true,
+    "hors_bande_statique": "crique haute et petites poches basses (statiques en V1)"
+  },
+  "JS_syntax": "PASS",
+  "interactive_browser": "NOT TESTED",
+  "PMDO_runtime": "NOT TESTED",
+  "cycle_officiel": "INCONNU : poses et cadence choisis"
+}
