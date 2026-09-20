@@ -41,6 +41,9 @@ def sheets(assets):
   rec={'id':'sheet_'+group,'title':'Tilesheet · '+title,'file':file,'size':list(out.size),'native':group in ['spinda','halcyon'],'objects':mapping,'grid':8};results.append(rec)
  (O/'tilesheets/index.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n');return results
 
+def zip_entry(z,name,data):
+ info=zipfile.ZipInfo(name,(2026,9,21,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;z.writestr(info,data,compresslevel=9)
+
 def package_full(m,base):
  portable=copy.deepcopy(m);portable['packed_layers']=False;files={}
  for room in portable['rooms']:
@@ -56,7 +59,7 @@ def package_full(m,base):
  files['index.html']=(S/'viewer.html').read_text().replace('__DATA__',json.dumps(portable,ensure_ascii=False)).replace('id="pack" href=','hidden id="pack" href=').replace('id="objects-pack" href=','hidden id="objects-pack" href=').encode()
  for name in ['README.md','audit/AUDIT.md','audit/native_sizes.json','audit/native_sizes.csv','tilesheets/index.json']:files[name]=(O/name).read_bytes()
  with zipfile.ZipFile(O/'SpindaV7_complet.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-  for name,data in sorted(files.items()):z.writestr(name,data)
+  for name,data in sorted(files.items()):zip_entry(z,name,data)
  with zipfile.ZipFile(O/'SpindaV7_complet.zip') as z:
   assert z.testzip() is None
   for room in portable['rooms']:
@@ -104,8 +107,8 @@ def build():
  (R/'apercu_cafe_spinda_revisite_v7.html').write_text('<!doctype html><html lang="fr"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=renders/cafe_spinda_revisite_v7/index.html"><a href="renders/cafe_spinda_revisite_v7/index.html">Atelier Spinda V7</a></html>\n')
  count=package_full(m,base)
  with zipfile.ZipFile(O/'SpindaV7_objets_tilesheets.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-  for a in m['assets']:z.write(O/a['file'],a['file'])
-  for name in ['audit/AUDIT.md','audit/native_sizes.json','audit/native_sizes.csv','audit/generated_provenance.json','tilesheets/index.json']:z.write(O/name,name)
+  for a in m['assets']:zip_entry(z,a['file'],(O/a['file']).read_bytes())
+  for name in ['audit/AUDIT.md','audit/native_sizes.json','audit/native_sizes.csv','audit/generated_provenance.json','tilesheets/index.json']:zip_entry(z,name,(O/name).read_bytes())
  with zipfile.ZipFile(O/'SpindaV7_objets_tilesheets.zip') as z:assert z.testzip() is None
  report={'pass':True,'native_objects':len(audit['objects']),'generated_furniture':len(generated),'tilesheets':4,'windows_canvas':[32,32],'window_visible':[28,28],'stairs':reports,'full_pack_entries':count,'full_pack_rgba_matches_viewer_layers':True,'native_assets_no_resampling_recolour_rotation':True,'PMDO':'NOT TESTED','artistic_approval':'Pending user review'}
  (O/'verification.json').write_text(json.dumps(report,indent=2)+'\n')

@@ -60,7 +60,7 @@ def make():
  result={'sources':sources,'objects':items,'scope':'Spinda Café EoSO; café Metano, auberge et réfectoire Halcyon. Not all objects in Halcyon.','native_transforms':'NONE; transparent padding to multiples of 8 only','windows_comparison':{'previous_generated_visible_diameter':64,'new_generated_visible_diameter':28,'new_canvas':[32,32],'native_spinda_table':[43,43],'halcyon_window_reference_only':[52,59],'guild_window_reused':False},'counter_ground_reference_sha256':h(native_scene.tobytes())}
  (O/'audit/native_sizes.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
  with (O/'audit/native_sizes.csv').open('w') as f:
-  w=csv.writer(f);w.writerow(['id','visible_w','visible_h','canvas_w','canvas_h','grid_w','grid_h','source'])
+  w=csv.writer(f,lineterminator="\n");w.writerow(['id','visible_w','visible_h','canvas_w','canvas_h','grid_w','grid_h','source'])
   for r in items:w.writerow([r['id'],*r['visible_size'],*r['size'],*r['grid_cells'],r['source']])
  return items,result
 if __name__=='__main__':make()
