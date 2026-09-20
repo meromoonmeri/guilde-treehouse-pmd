@@ -23,7 +23,10 @@ OPPOSITE={'N':'S','S':'N','E':'W','W':'E'};DELTAS={'N':(0,-1),'S':(0,1),'E':(1,0
 POINTS={'N':(256,8),'S':(256,504),'W':(8,256),'E':(504,256)}
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def load(p):return np.array(Image.open(p).convert('RGBA'))
+def load(p):
+ p=Path(p)
+ if not p.exists() and p.parent==BRUT:p=p.with_suffix('.webp')
+ return np.array(Image.open(p).convert('RGBA'))
 def save(a,p):
  p.parent.mkdir(parents=True,exist_ok=True)
  im=Image.fromarray(a)
@@ -165,10 +168,10 @@ def main():
  OUT.mkdir(parents=True,exist_ok=True)
  sky_meta=sky_assets();palette=Image.open(SRC).convert('P');height_guide=wave_guide()
  manifest={'size':[512,512],'port_width':96,'port_depth':48,'rooms':[],'sky':sky_meta,'period_ms':PERIOD,'runtime_PMDO':'NOT TESTED','generated_texture_not_native':True,
- 'source':{'file':'DSVFS.png','sha256':sha(SRC)},'method_reference':'renders/ledian_dojo_v1/README.md','sources':{str(p.relative_to(ROOT)):sha(p) for p in sorted(BRUT.glob('*.png'))},'initial_beach_source':'V1 files available in this restored checkout; no recovery of absent V2/V3 claimed.'}
+ 'source':{'file':'DSVFS.png','sha256':sha(SRC)},'method_reference':'renders/ledian_dojo_v1/README.md','sources':{str(p.relative_to(ROOT)):sha(p) for p in sorted(list(BRUT.glob('*.png'))+list(BRUT.glob('*.webp')))},'initial_beach_source':'V1 files available in this restored checkout; no recovery of absent V2/V3 claimed.'}
  bygrid={tuple(pos):slug for slug,_,_,pos,_ in SPECS};byid={slug:dirs for slug,_,dirs,_,_ in SPECS}
  for slug,title,dirs,position,raw in SPECS:
-  im=Image.open(BRUT/raw).convert('RGB');assert im.width==im.height
+  im=Image.fromarray(load(BRUT/raw)).convert('RGB');assert im.width==im.height;original_size=list(im.size)
   im=im.resize((512,512),Image.Resampling.NEAREST).quantize(palette=palette,dither=Image.Dither.NONE).convert('RGBA');a=np.array(im)
   defs,water,foam=classify(a)
   layers=[(i,l,part(a,m)) for i,l,m in defs]
@@ -181,7 +184,7 @@ def main():
   for k in range(N):
    w,f=render(2*k);daywater.append(w);dayfoam.append(contact(f,k,N))
   assert np.array_equal(compose([w if i=='06_eau' else f if i=='07_ecume' else layer for i,_,layer in layers for w,f in [(daywater[0],dayfoam[0])]],(512,512)),day)
-  rec={'id':slug,'title':title,'size':[512,512],'position':position,'raw':raw,'ports':[],'modes':{},'connectivity':checks,'original_generated_size':list(Image.open(BRUT/raw).size)}
+  rec={'id':slug,'title':title,'size':[512,512],'position':position,'raw':raw,'ports':[],'modes':{},'connectivity':checks,'original_generated_size':original_size}
   for d in dirs:
    dx,dy=DELTAS[d];target=bygrid.get((position[0]+dx,position[1]+dy));linked=target is not None and OPPOSITE[d] in byid[target]
    rec['ports'].append({'direction':d,'point':list(POINTS[d]),'width':96,'target':target if linked else None,'reserved_extension':not linked})

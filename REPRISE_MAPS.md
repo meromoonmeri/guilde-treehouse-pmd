@@ -1,8 +1,25 @@
 # Reprise des maps — 20 septembre 2026
 
+## Correction prioritaire — Spinda V4 généré, cinq pièces et trois niveaux
+
+L’utilisateur a corrigé explicitement la méthode : **génération avec références canoniques, bordures immersives, zones séparées, réseau à plusieurs étages, fenêtres circulaires à croisillons** ; puis « voilà regarde café spinda reprend ce design là ». Ne PAS reprendre les bandes Métano comme solution à cette demande. L’accueil `accueil_spinda_fidele` option1 a été choisi ; quatre déclinaisons séparées ont suivi. Café et salon haut ont été régénérés une seconde fois pour retirer façade avant et faux ovales muraux. Bruts retenus indiqués dans le manifeste ; douze bruts/études conservés losslessly avec empreintes. Les autres salles n’ont pas encore d’approbation artistique utilisateur.
+
+Livraison : `renders/cafe_spinda_reseau_v4/`, `apercu_cafe_spinda_reseau_v4.html`, scripts et workflow dans `source/cafe_spinda_reseau_v4/`. AccueilRDC ; casino+salonbas−1 ; café+salonhaut+1. Générations1200×896→600×448 NN, uniquement sur le généré. 25calques : sol, lumières statiques, parois, bordures, fenêtres si étage, escaliers de proposition optionnels/désactivés. Pas de meuble, feu ou NPC dans la scène. Terrain généré référencé ≠ natif. Petit avis mural de l’accueil retiré localement avec bois voisin et raccord adouci ; brut choisi intact.
+
+Vraie fenêtre HeroObjects64² crop176,56–240,120 ; deux au café, trois au salonhaut. Escalier spiralé SecondFloorObjects96×72 crop208,128–304,200. Banques Halcyon au pin da6c2130d641507447e6386a5e47a296e8cb4c71 ; pixels natifs sans resampling/recoloration. Feu = quatre vraies poses Ledian6ticks, pas une animation de la lumière du sol. Deux feuilles Spinda natives et kiosque arrière/avant, fourneau généré et support natif dans le catalogue, non placés.
+
+Quatre liens réciproques de conception ; **pas de warps/ground/collisions installés**. Portes E casino/café et W salonhaut versy232, porte W salonbas plus basse. Cartes distinctes, PAS seamless. Le relevé de passage vise le sol clair, pas la face verticale du mur au-dessus. `plan.json`/`guides512²` historiques, coordonnées finales dans le manifeste600×448. Escaliers sur calques facultatifs : suggestions de placement, pas jeu testé.
+
+Pixels, archives, recomposition et banques natives vérifiés ; DOM dépôt/ZIP et redirection racine vérifiés ; pas navigateur graphique ni PMDO. Dépôt : calques WebP lossless ; ZIP :25PNG exacts +catalogue +viewer. Noms d’import uniques, grille8px. Les guides ne sont pas imprimés dans les exports.
+
+Budget : les sept bruts terrain BeachNetwork ont été archivés WebP après comparaison RGBA exacte et traceSHA des PNG d’origine ; loader accepte les anciens cheminsPNG via l’archive vérifiée. Le viewer BeachV1 réutilise ses138PNG existants ; le packaging réembarque les données pour les futurs ZIP. **Rendus et ZIP Beach antérieurs inchangés.** Tests d’images ancienZIP/dépôt/futurviewer portable et DOM, ainsi que loader/provenance des neuf sources BeachNetwork. Voir les scripts dédiés, ne pas prétendre avoir refait une vérification graphique ou moteur.
+
+Préserver les anciens cafés, casino, plages, études et stashes. Session sur `arena/01a0bf18-guilde-treehouse-pmd` exclusivement. Voir WORKFLOW et README V4 avant toute reprise.
+
+
 ## Demande actuelle
 
-### Livraison active — café Halcyon agrandi
+### Historique — café Halcyon agrandi (remplacé par la direction Spinda)
 
 Utilisateur : reprendre directement le café d’Halcyon et l’agrandir pour PMDO. Livraison `renders/cafe_halcyon_agrandi_v1/`, viewer `apercu_cafe_halcyon_agrandi_v1.html`, scripts dans `source/cafe_halcyon_agrandi_v1/`.
 

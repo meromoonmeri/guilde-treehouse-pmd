@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "images": 138,
+  "checks": [
+    "repository paths match all 138 old archived embedded images RGBA-exactly",
+    "portable_viewer re-embeds all 138 PNGs without changing pixels",
+    "existing BeachV1 ZIP byte-identical; no replacement"
+  ],
+  "existing_zip_sha256": "b3bd6fa1c01a86a7a226d8b349d0e39ede2dc4a2c68a329d1b379c162337855d"
+}

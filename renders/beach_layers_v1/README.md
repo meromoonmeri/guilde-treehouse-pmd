@@ -79,3 +79,8 @@ Le test du viewer contrôle les interactions en DOM simulé, pas dans un vrai na
 ## Provenance et crédits
 
 Image principale fournie par l’utilisateur : `DSVFS.png`, empreinte dans le manifeste. Planche de référence Beach & Path to Beach : rip crédité **redblueyellow** sur la planche. Les ressources Pokémon Mystery Dungeon et leurs droits restent ceux de leurs auteurs/contributeurs et ayants droit, notamment Pokémon / Nintendo / Creatures / GAME FREAK / Chunsoft. Ce travail de séparation et d’animation ne confère pas de licence supplémentaire.
+
+
+### Viewer du dépôt : déduplication sans changement de pixels
+
+Les138images embarquées du viewer racine sont remplacées par leurs PNG existants, comparés pixel par pixel avant substitution (`source/beach_layers_v1/compact_viewer.py`). Le ZIP déjà livré reste byte-identique et autonome. Utiliser HTTP pour les exports canvas du viewer du dépôt ; le modefile:// affiche une aide en cas de blocage. Le packaging réembarque les images dans les futures archives. Aucune image, frame ou géométrie Beach modifiée.

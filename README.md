@@ -1,6 +1,18 @@
 # Guilde Treehouse — passages ouverts PMD
 
-## Grand Café Métano — Halcyon agrandi, mobilier à part
+## Café & Casino Spinda — génération séparée, cinq zones sur trois niveaux
+
+- **[Atelier : cinq salles, calques et catalogue indépendant](apercu_cafe_spinda_reseau_v4.html)**.
+- [Accueil choisi sur magenta](renders/cafe_spinda_reseau_v4/SpindaV4_accueil_magenta.webp) · [Café avec vrais croisillons](renders/cafe_spinda_reseau_v4/SpindaV4_cafe_croisillons_magenta.webp) · **[Pack PNG](renders/cafe_spinda_reseau_v4/SpindaV4_pack.zip)**.
+- [Sources, import8px et limites](renders/cafe_spinda_reseau_v4/README.md) · [workflow prioritaire](source/cafe_spinda_reseau_v4/WORKFLOW.md).
+
+**Direction actuelle après correction utilisateur : Spinda, pas un nouvel agrandissement par bandes.** Accueil choisi, puis quatre salles générées individuellement : casino + salon des jeux au−1, café + salon des croisillons au+1. Pièces600×448, boiseries intérieures, plancher doré à lumières statiques et bordures basses suivant les ouvertures. Terrain généré référencé, pas pixels natifs certifiés.
+
+**25calques séparés**, vraies fenêtres rondes à croisillons à1×, escaliers natifs sur calques optionnels désactivés. Mobilier, kiosques vides et quatre poses natives de feu restent à installer dans l’éditeur. Aucun Pokémon ni feu cuit dans les maps. Quatre liaisons réciproques documentées : transitions de salles, pas une mosaïque seamless.
+
+Recomposition, banques natives, PNG/ZIP et interactions en DOM simulé vérifiés. **Pas de warps, collisions ou validation PMDO.** Les quatre déclinaisons restent à valider artistiquement par l’utilisateur. Anciennes versions conservées ci-dessous.
+
+## Historique : Grand Café Métano — Halcyon agrandi, mobilier à part
 
 - **[Atelier du café : terrain, calques et catalogue indépendant](apercu_cafe_halcyon_agrandi_v1.html)**.
 - [PNG sur fond magenta](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_terrain_magenta.png) · [terrain transparent](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_terrain_transparent.png) · [pack autonome](renders/cafe_halcyon_agrandi_v1/CafeHalcyon_pack.zip).

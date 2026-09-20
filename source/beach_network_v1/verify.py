@@ -18,7 +18,8 @@ def restored(atlas,desc,k,size):
  x,y,w,h=desc['rect'];cols=desc['columns'];out=np.zeros((size[1],size[0],4),dtype=np.uint8)
  out[y:y+h,x:x+w]=atlas[(k//cols)*h:(k//cols+1)*h,(k%cols)*w:(k%cols+1)*w]
  return out
-ok('reference and all nine generation hashes',b.sha(b.SRC)==m['source']['sha256'] and all(b.sha(ROOT/p)==v for p,v in m['sources'].items()))
+from source.beach_network_v1.archive_raws import verify_record
+ok('reference and nine original/archived generation hashes + lossless pixel hashes',b.sha(b.SRC)==m['source']['sha256'] and all(verify_record(ROOT/p,v) for p,v in m['sources'].items()))
 byid={r['id']:r for r in m['rooms']};ports=[(r,p) for r in m['rooms'] for p in r['ports']]
 seen=set();pending=[m['rooms'][0]['id']]
 while pending:

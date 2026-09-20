@@ -204,12 +204,15 @@ def main():
        'import':{'native_size':[w,h],'padded_size':[pw,ph],'offset':[0,0],'tile_size':8,'padding':'Right and bottom transparent; no resampling','runtime':'NOT TESTED'},
        'limits':['Visible-surface partitions, not recovered native layers or complete movable objects.','Hidden water below foam is completed from nearest visible water samples.','Original fixed shoreline: water never invades sand or rocks.','New adapted motion, not an extracted official Sky cycle.','No collisions, Ground, warps or engine validation.']}
     (OUT/'manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
-    data={'width':w,'height':h,'ms':MS,'layers':[{'id':i,'name':n,'uri':uri(Image.fromarray(a))} for i,n,a in layers],
-          'surface':[uri(x) for x in surfaces],'foam':[uri(x) for x in froths],'reference':uri(Image.fromarray(reference))}
+    prefix='renders/beach_layers_v1/'
+    data={'width':w,'height':h,'ms':MS,'layers':[{'id':i,'name':n,'uri':prefix+'calques/BeachV1_'+i+'.png'} for i,n,a in layers],
+          'surface':[prefix+f'animation/mer/BeachV1_mer_{k:02d}.png' for k in range(N)],
+          'foam':[prefix+f'animation/ecume/BeachV1_ecume_{k:02d}.png' for k in range(N)],
+          'reference':prefix+'BeachV1_reference_recomposee.png'}
     template=(Path(__file__).parent/'viewer.html').read_text()
     page=template.replace('__BEACH_DATA__',json.dumps(data,ensure_ascii=False))
     (ROOT/'apercu_beach_calques_v1.html').write_text(page)
-    # Avoid storing the same 7 MB embedded viewer twice; the root viewer stays standalone.
+    # Repo viewer reuses PNGs; package.py embeds images in the portable viewer.
     (OUT/'index.html').write_text('<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=../../apercu_beach_calques_v1.html"><title>Beach · ouvrir l’atelier</title></head><body><p><a href="../../apercu_beach_calques_v1.html">Ouvrir l’atelier Beach V1</a></p></body></html>\n')
     print(f'Built {len(layers)} layers, {N} water + {N} foam frames, native {w}×{h}, import {pw}×{ph}.')
 

@@ -72,3 +72,8 @@ node source/beach_network_v1/test_viewer.cjs
 ```
 
 Le second packaging inclut le rapport DOM actualisé. Voir `verification.json`, `verification_viewer.json`, `verification_package.json`. Les tests de pixels/codec/topologie et la simulation DOM **ne remplacent ni un navigateur réel, ni l’approbation artistique, ni PMDO**.
+
+
+### Archive des bruts, sans modifier la livraison
+
+Les sept grands bruts PNG de génération ont été archivés en WebP lossless après comparaison de tous les pixels RGBA. `bruts/archive_lossless.json` garde les SHA des PNG originaux, des WebP et des pixels. Les anciens nomsPNG du manifeste restent des traces de provenance ; le chargeur retrouve leur WebP et la vérification contrôle archive et pixels. Le ciel et les nuages restent enPNG. Rendus, animations, exports et ZIP livrés inchangés.
