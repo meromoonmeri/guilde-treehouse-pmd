@@ -3,7 +3,7 @@
 ## Plage canonique EoSO — six layouts en calques, eau animée native
 
 - **[Aperçu animé](apercu_beach_canonique_v1.html)** — 17 frames d'eau natives de `beach_animation` (FrameLength 16), calques terrain/eau/falaises masquables, zoom et export PNG.
-- **[Pack `sprites/beach_canonique_v1/`](sprites/beach_canonique_v1/README.md)** : six layouts 1056 × 720 px en tuiles natives 24 px d'[ExplorersOfSkyOrigins](https://github.com/Minemaker0430/ExplorersOfSkyOrigins) (côte de la référence, crique aux palmiers, lagon rocheux, plage étroite, double rivage, anse rocheuse) ; `calques/` séparés, `carte.tmj` 3 calques animés, provenance et `verification.json` (chaque cellule = copie exacte d'une tuile native, cycles d'eau natifs recontrôlés).
+- **[Pack `sprites/beach_canonique_v1/`](sprites/beach_canonique_v1/README.md)** : six layouts 1056 × 720 px en tuiles natives 24 px d'[ExplorersOfSkyOrigins](https://github.com/Minemaker0430/ExplorersOfSkyOrigins) déclinés de ta référence de plage (`images.jfif`) : côte fidèle, marée haute, îlot au large, plage abritée, double rivage, lagon clair ; `calques/` séparés, `carte.tmj` 3 calques animés, provenance et `verification.json` (chaque cellule = copie exacte d'une tuile native, cycles d'eau natifs recontrôlés).
 - Outils : `python source/build_beach_canonique.py` / `python source/verify_beach_canonique.py`. Collisions/transitions PMDO à configurer.
 
 ## Plage PMD Sky — six propositions de layout à choisir

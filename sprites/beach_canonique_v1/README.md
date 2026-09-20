@@ -18,12 +18,12 @@ tuiles natives** de [ExplorersOfSkyOrigins](https://github.com/Minemaker0430/Exp
 
 | Dossier | Composition |
 |---|---|
-| `01_cote_reference/` | La côte de la référence TSR : mer nord, grande plage, falaises aux bords, palmiers, herbe |
-| `02_crique_palmiers/` | Rivage haut, trois bosquets de palmiers, falaises resserrées |
-| `03_lagon_rocheux/` | Grande mer, îlots rocheux natifs, plage basse |
-| `04_plage_etroite/` | Couloir de sable entre hautes falaises empilées |
-| `05_double_rivage/` | Mer au nord + chenal d'eau animée traversant le sable |
-| `06_anse_rocheuse/` | Îlot face à la plage, cadre de falaises et palmiers |
+| `01_cote_reference/` | Reprise fidèle de la référence utilisateur : mer nord, falaises cadrantes, pente de sable à gauche, palmiers au milieu, rochers épars, rangée falaises/herbe au sud |
+| `02_maree_haute/` | Même structure, mer plus présente et plage réduite |
+| `03_ilot_au_large/` | La référence élargie avec un îlot rocheux natif face à la plage |
+| `04_plage_abritee/` | Falaises empilées des deux côtés, crique fermée, palmiers centrés |
+| `05_double_rivage/` | Mer au nord + chenal d'eau animée au sud, palmiers entre les deux |
+| `06_lagon_clair/` | Mer haute piquetée de deux îlots, grande plage basse, double bosquet |
 
 ## Contenu par dossier
 

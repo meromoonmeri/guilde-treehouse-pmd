@@ -29,63 +29,7 @@
     {
       "id": "01_cote_reference",
       "name": "La côte de la référence",
-      "description": "Mer au nord, grande plage, falaises aux deux bords, palmiers et herbe au sud : la composition de la planche TSR, en tuiles natives animées.",
-      "shore": 8,
-      "blocks": [
-        [
-          "falaise_gauche",
-          0,
-          5
-        ],
-        [
-          "falaise_droite",
-          35,
-          5
-        ],
-        [
-          "palmiers_gauche",
-          6,
-          19
-        ],
-        [
-          "palmiers_milieu",
-          24,
-          21
-        ],
-        [
-          "rochers_petits",
-          18,
-          17
-        ],
-        [
-          "buisson",
-          32,
-          19
-        ],
-        [
-          "herbe_bas",
-          0,
-          28
-        ],
-        [
-          "herbe_bas",
-          33,
-          28
-        ]
-      ],
-      "cellules": [
-        44,
-        30
-      ],
-      "tile_px": 24,
-      "frames": 17,
-      "frame_ticks": 16,
-      "stride": 33
-    },
-    {
-      "id": "02_crique_palmiers",
-      "name": "La crique aux palmiers",
-      "description": "Rivage plus haut, trois bosquets de palmiers sur le sable et falaises resserrées.",
+      "description": "Reprise fidèle de la référence : mer au nord, falaises cadrantes, pente de sable à gauche, deux bosquets de palmiers au milieu de la plage, rochers épars, rangée de falaises sur l’herbe au sud.",
       "shore": 6,
       "blocks": [
         [
@@ -99,19 +43,49 @@
           3
         ],
         [
+          "pente_sable",
+          0,
+          11
+        ],
+        [
           "palmiers_gauche",
-          4,
-          17
+          10,
+          15
         ],
         [
           "palmiers_milieu",
-          16,
-          19
+          20,
+          16
+        ],
+        [
+          "rochers_petits",
+          17,
+          11
+        ],
+        [
+          "buisson",
+          24,
+          12
+        ],
+        [
+          "rochers_petits",
+          30,
+          14
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
         ],
         [
           "palmiers_milieu",
-          28,
-          17
+          15,
+          24
+        ],
+        [
+          "falaise_basse",
+          26,
+          24
         ],
         [
           "herbe_bas",
@@ -134,35 +108,60 @@
       "stride": 33
     },
     {
-      "id": "03_lagon_rocheux",
-      "name": "Le lagon rocheux",
-      "description": "Grande mer piquetée d’îlots rocheux natifs, plage basse ouverte.",
-      "shore": 12,
+      "id": "02_maree_haute",
+      "name": "La marée haute",
+      "description": "Même structure que la référence avec une mer plus présente, plage réduite et rivage plus haut.",
+      "shore": 4,
       "blocks": [
         [
-          "falaise_droite",
-          8,
+          "falaise_gauche",
+          0,
           1
         ],
         [
           "falaise_droite",
-          26,
-          4
+          35,
+          1
+        ],
+        [
+          "pente_sable",
+          0,
+          9
+        ],
+        [
+          "palmiers_gauche",
+          12,
+          14
         ],
         [
           "rochers_petits",
-          20,
-          21
+          22,
+          10
+        ],
+        [
+          "rochers_petits",
+          28,
+          12
         ],
         [
           "buisson",
-          34,
-          22
+          18,
+          12
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
         ],
         [
           "palmiers_milieu",
-          10,
-          22
+          15,
+          24
+        ],
+        [
+          "falaise_basse",
+          26,
+          24
         ],
         [
           "herbe_bas",
@@ -185,35 +184,146 @@
       "stride": 33
     },
     {
-      "id": "04_plage_etroite",
-      "name": "La plage étroite",
-      "description": "Couloir de sable encadré de hautes falaises empilées, comme un accès abrité.",
-      "shore": 10,
+      "id": "03_ilot_au_large",
+      "name": "L’îlot au large",
+      "description": "La référence élargie : un îlot rocheux natif face à la plage, palmiers et rochers comme dans la scène source.",
+      "shore": 8,
       "blocks": [
         [
-          "falaise_gauche",
-          0,
-          7
+          "falaise_droite",
+          14,
+          1
         ],
         [
           "falaise_gauche",
           0,
-          15
+          5
         ],
         [
           "falaise_droite",
           35,
-          7
+          5
         ],
         [
-          "falaise_basse",
-          34,
-          14
+          "pente_sable",
+          0,
+          13
         ],
         [
           "palmiers_gauche",
-          5,
-          23
+          12,
+          18
+        ],
+        [
+          "palmiers_milieu",
+          22,
+          19
+        ],
+        [
+          "rochers_petits",
+          18,
+          14
+        ],
+        [
+          "buisson",
+          28,
+          16
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
+        ],
+        [
+          "palmiers_milieu",
+          15,
+          24
+        ],
+        [
+          "falaise_basse",
+          26,
+          24
+        ],
+        [
+          "herbe_bas",
+          0,
+          28
+        ],
+        [
+          "herbe_bas",
+          33,
+          28
+        ]
+      ],
+      "cellules": [
+        44,
+        30
+      ],
+      "tile_px": 24,
+      "frames": 17,
+      "frame_ticks": 16,
+      "stride": 33
+    },
+    {
+      "id": "04_plage_abritee",
+      "name": "La plage abritée",
+      "description": "Falaises empilées des deux côtés pour une crique plus fermée, palmiers centrés.",
+      "shore": 6,
+      "blocks": [
+        [
+          "falaise_gauche",
+          0,
+          3
+        ],
+        [
+          "falaise_gauche",
+          0,
+          11
+        ],
+        [
+          "falaise_droite",
+          35,
+          3
+        ],
+        [
+          "falaise_basse",
+          35,
+          11
+        ],
+        [
+          "palmiers_milieu",
+          16,
+          18
+        ],
+        [
+          "buisson",
+          12,
+          16
+        ],
+        [
+          "buisson",
+          26,
+          16
+        ],
+        [
+          "rochers_petits",
+          22,
+          20
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
+        ],
+        [
+          "palmiers_gauche",
+          15,
+          24
+        ],
+        [
+          "falaise_basse",
+          26,
+          24
         ],
         [
           "herbe_bas",
@@ -238,29 +348,49 @@
     {
       "id": "05_double_rivage",
       "name": "Le double rivage",
-      "description": "Mer au nord et chenal d’eau animée traversant le sable, palmiers entre les deux.",
-      "shore": 6,
-      "channel": 20,
+      "description": "La référence coupée d’un chenal d’eau animée : mer au nord, chenal au sud, palmiers entre les deux.",
+      "shore": 5,
+      "channel": 17,
       "blocks": [
         [
           "falaise_gauche",
           0,
-          3
+          2
         ],
         [
           "falaise_droite",
           35,
-          3
+          2
         ],
         [
           "palmiers_milieu",
-          18,
-          14
+          16,
+          12
         ],
         [
           "buisson",
           12,
-          16
+          13
+        ],
+        [
+          "rochers_petits",
+          26,
+          13
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
+        ],
+        [
+          "palmiers_milieu",
+          15,
+          24
+        ],
+        [
+          "falaise_basse",
+          26,
+          24
         ],
         [
           "herbe_bas",
@@ -283,35 +413,60 @@
       "stride": 33
     },
     {
-      "id": "06_anse_rocheuse",
-      "name": "L’anse rocheuse",
-      "description": "Un îlot rocheux face à la plage, falaises et palmiers en cadre.",
-      "shore": 8,
+      "id": "06_lagon_clair",
+      "name": "Le lagon clair",
+      "description": "Mer haute piquetée de deux îlots, grande plage basse et double bosquet de palmiers.",
+      "shore": 10,
       "blocks": [
         [
           "falaise_droite",
-          16,
-          1
+          12,
+          2
+        ],
+        [
+          "falaise_droite",
+          26,
+          4
         ],
         [
           "falaise_gauche",
           0,
-          5
+          7
         ],
         [
           "falaise_droite",
           35,
-          5
+          7
+        ],
+        [
+          "palmiers_gauche",
+          14,
+          22
         ],
         [
           "palmiers_milieu",
-          20,
-          20
+          22,
+          22
         ],
         [
           "rochers_petits",
-          12,
+          20,
           18
+        ],
+        [
+          "buisson",
+          30,
+          20
+        ],
+        [
+          "falaise_basse",
+          6,
+          24
+        ],
+        [
+          "falaise_basse",
+          30,
+          24
         ],
         [
           "herbe_bas",
