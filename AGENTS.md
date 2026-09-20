@@ -442,3 +442,12 @@ Cinq générations : première07fermée par meràE, corrigée réellement via g�
 **Gestion budget** : duplication V1 framesPNG(768),ORA(12),compositions(12) exclue duGit, mais792exports originaux restent dansZIPV1 inchangé. `source/beach_network_v1/restore_exports.py` extrait cesfichiers byte-identiques s’ilsmanquent ; appeléparbuild/verifyV2 etverify/packageV1. Ne pas supprimer l’archiveV1 sans réintégrer cesexports. Testtemporaire de restaurationPASS. Budgetactuel~125Mo : éviter reduplications lourdes.
 
 ServeurV2 : `python source/beach_extension_v2/serve.py --port 8002` sert`renders/`etredirigeversindexV2 ; nécessaire pourlesréférences partagées `../beach_network_v1/`. Servir uniquement le sous-dossierV2 casserait lesanciensassets. LeZIPportable n’en dépendpas. LesPNGexportés facultatifs `renders/beach_extension_v2/export_png/` sont ignorés, régénérablesdepuislesatlas.
+
+
+## Casino Ledian — nouvelle portée : réseau avec décoration multicalque
+
+L’utilisateur a renvoyé visuellement la première salle choisie et demande maintenant un **réseau casino** sur terrainLedian, tapisrouges/estrades/rideaux et mobilier/kiosques indépendants, en prenant les objets Métano comme référence, particulièrement Murkrow. **Cette demande remplace le « sans déco » initial pour les overlays** ; conserver une basevide, nepas cuire les accessoires danslesol. Borduresrocheuses doivent suivrelesentrées réellementouvertes.
+
+Recherche Halcyon via `gh`, commit épinglé `da6c2130d641507447e6386a5e47a296e8cb4c71` (master consulté) : KrowBank confirmé par init.lua Bank_Owner=Murkrow et metano_town_ch_2.lua460–466. Toiture noire/becdoré dansObjects ; guichet/coffresdansObjects_Over. Deuxextraits natifs alignés104×96 et leurrecomposition dans `source/ledian_casino_v1/references/`, fenêtre976,928–1080,1024 ; toiturelimitéeaux48premièreslignes. Aucunresampling/recoloration. BanquesvérifiéesparGitblob. Script `inspect_krow_bank.py`, provenanceJSONetREADME de conception.
+
+Blocageimportant : imageattachée visible danschat, annoncée `/home/user/uploads/image-1.png`, maisfichier absent pourbash/read_file, recherches/home/user,/tmp,/mnt négatives. Ne pasaffirmer chargement/détourage/correctiondel’image choisie etnepas laremplacerparleguide512initial. Réseau4salles etcalquesaménagement décritscomme **plan de travail seulement** ; àcestade seulesl’étude etlesréférencesobjetssontproduites. Aucunevalidationmoteur.

@@ -2,6 +2,15 @@
 
 ## Demande actuelle
 
+### Dernière évolution — casino Ledian, étude des objets Métano
+
+L’utilisateur demande désormais **un réseaucasino avec tapisrouges, estrades, rideaux et structures/kiosques PMD sur leurs propres calques**, plus une baseLedianvide. Il a montré la première salle choisie. L’interdictiondedéco précédente est remplacée pour les overlays, pas pour la base.
+
+Étude réalisée : KrowBank=Murkrow confirmé dans les scripts Halcyon ; toitureObjects, guichet/coffresObjects_Over. Extraits104×96 sans resampling dans `source/ledian_casino_v1/references/`, identitéGit des troisbanques vérifiée au commitda6c2130. VoirREADME et `inspect_krow_bank.py`. Réseauproposé4salles : accueil/change, jeux, scène, salon — **pas encore produit**.
+
+La piècejointe est visible danschat mais le chemin annoncé`/home/user/uploads/image-1.png` est absent duworkspace desoutils. Impossible de corrigerfidèlement l’imagechoisie sansrécupérationfichier. Ne pasprétendre avoir livré les maps/tapis/estrades/rideaux. Dernier travailpoussé : étude et références, non réseaufinal.
+
+
 Dernières demandes : **régénérer le ciel de référence adapté à la plage, sans lune, nuages plus petits en wrap overlay et boucle parfaite**, puis **plusieurs carrefours/maps agglomératives comme Ledian souterrain**. Le lot Beach Network V1 est réalisé séparément, sans écraser la plage et les anciens lots.
 
 ### Livraison actuelle — extension sud V2
