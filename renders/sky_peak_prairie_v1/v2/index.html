@@ -1,0 +1,14 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sky Peak — prairie du sommet</title>
+<style>body{margin:0;background:#10202a;color:#e5f1eb;font:15px system-ui}main{max-width:1100px;margin:0 auto;padding:22px}h1{font-size:24px;margin:0 0 6px}p{color:#b0c6c6;line-height:1.6}label{margin-right:14px}canvas{width:100%;max-width:960px;image-rendering:pixelated;background:#000;border:1px solid #334b50;display:block}a{color:#9de2c9}</style>
+<main><h1>Sky Peak — prairie du sommet, nuit — V2 (fond Sky Peak, ciel généré)</h1><p>Plateau herbeux Sky Peak sur son sommet, mer de forêt en contrebas, chaîne de montagnes au loin ; lune et nuages natifs en overlay, nuages mobiles sur deux calques (−2 et −6 px/s, wrap 1440 px).</p>
+<div id="toggles"></div><canvas id="c" width="960" height="864"></canvas>
+<p><a href="SkyPeakPrairieV2_composition_nuit.png">Composition PNG</a> · <a href="SkyPeakPrairieV2_editable.ora">ORA</a> · <a href="SkyPeakPrairieV2_extrait_nuages_24s.webp">Extrait animé 24 s</a> · <a href="README.md">Notice</a></p>
+<p>Tout est généré (terrain, panorama façon Sky Peak, ciel, étoiles, lune, nuages), sur calques séparés ; aucun pixel natif certifié. Aucun test PMDO.</p></main>
+<script>
+const layers=['01_ciel_genere','02_etoiles_generees','03_lune_generee','04_nuages_lointains','05_panorama_skypeak_foret_montagnes','06_nuages_overlay','07_plateau_herbe','08_paroi_rocheuse'],img={},on={};
+const strip=new Image();strip.src='calques/SkyPeakPrairieV2_bande_nuages_lointains_1440.png';const near=new Image();near.src='calques/SkyPeakPrairieV2_bande_nuages_overlay_1440.png';
+for(const l of layers){img[l]=new Image();img[l].src=`calques/SkyPeakPrairieV2_${l}.png`;on[l]=true;const lab=document.createElement('label');lab.innerHTML=`<input type="checkbox" checked data-l="${l}"> ${l.slice(3).replace(/_/g,' ')}`;lab.querySelector('input').onchange=e=>on[l]=e.target.checked;toggles.append(lab);}
+const ctx=c.getContext('2d'),t0=performance.now();
+function clouds(speed,y,alpha,src,off=0){const t=(performance.now()-t0)/1000;let x=-((((-speed*t-off)%1440)+1440)%1440);ctx.globalAlpha=alpha;for(;x<960;x+=1440)ctx.drawImage(src,x,y);ctx.globalAlpha=1;}
+(function draw(){ctx.clearRect(0,0,960,864);for(const l of layers){if(!on[l])continue;if(l==='04_nuages_lointains')clouds(-2,30,.8,strip);else if(l==='06_nuages_overlay')clouds(-6,300,1,near,700);else if(img[l].complete)ctx.drawImage(img[l],0,0);}requestAnimationFrame(draw);})();
+</script></html>

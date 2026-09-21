@@ -1,0 +1,71 @@
+{
+  "size": [
+    960,
+    864
+  ],
+  "layers": [
+    "01_ciel_genere",
+    "02_etoiles_generees",
+    "03_lune_generee",
+    "04_nuages_lointains",
+    "05_panorama_skypeak_foret_montagnes",
+    "06_nuages_overlay",
+    "07_plateau_herbe",
+    "08_paroi_rocheuse"
+  ],
+  "terrain_offset": [
+    144,
+    412
+  ],
+  "panorama_offset": [
+    0,
+    355
+  ],
+  "moon_position": [
+    716,
+    48
+  ],
+  "moon_sprite_size": [
+    129,
+    129
+  ],
+  "clouds": {
+    "far": {
+      "y": 30,
+      "speed": -2,
+      "alpha": 80
+    },
+    "overlay": {
+      "y": 300,
+      "speed": -6,
+      "alpha": 100
+    },
+    "wrap_px": 1440,
+    "sprites": 6
+  },
+  "generated": {
+    "sky": "bruts/ciel_nuit_genere.png",
+    "stars_moon": "bruts/etoiles_lune_generees.png",
+    "clouds": "bruts/nuages_generes.png",
+    "panorama": "bruts/panorama_skypeak_v3.png",
+    "terrain": "bruts/terrain_prairie_v2.png",
+    "guides": [
+      "references/skypeak_horizon_native.png",
+      "references/skypeak_gif_frame0.png",
+      "references/reference_lune_nuages_utilisateur.png"
+    ],
+    "fit": "uniform nearest resizes only (sky→960 wide; panorama 1584→1200 then centred crop; terrain 1024→672); stars/moon/cloud sheets halved uniformly (generator drew at 2× pixel scale); magenta keyed; no recolor"
+  },
+  "bruts_sha256": {
+    "ciel_nuit_genere.png": "69d669200a9087a22530b509a1e8c4ecdc84f0a41e3010ab7ab1751b9a88e943",
+    "etoiles_lune_generees.png": "b5c27b4d316840925c2c41064bc5658a5e1ce3c930ac21b1347f76422e507b64",
+    "nuages_generes.png": "b96d406ba455daf8d5ee2f38c4d6c6eb86864f64ee520024a792782a84325bc5",
+    "panorama_foret_montagnes.png": "d37d7acfd492ac43bc51d26ee39641d1c27165df119b9c2d98ffefd769ec8c92",
+    "panorama_foret_montagnes_v2.png": "aa506493cbc722a8110bd66529d748b7704f71f81455002f3dc519401c926832",
+    "panorama_skypeak_v3.png": "206d34ec02f1be356d6966b1b773a76504b0e570254715238b98dc332e4fd2ec",
+    "terrain_prairie.png": "1512399472b6d094ba38ac3071efef10df0c18354cf0bc6e9ee017bad4bb0978",
+    "terrain_prairie_v2.png": "21418f62c90146f9cb828064e2a1a75f991fdacdab3e201bca00b7ba9de3a188"
+  },
+  "all_pixels_generated": true,
+  "runtime_validated": false
+}
