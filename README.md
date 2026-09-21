@@ -1,5 +1,9 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Plaines sauvages — entrée et finale
+
+[PNG : cinq calques](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/93914f687cc3e3e40ae0b57a38599e7281b71b22/renders/plaines_pmd_v1/WP1_duo.png). Code et PNG/ZIP : `source/plaines_pmd_v1/restore.py`.
+
 ## Jungle : entrée + finale
 
 [Cinq calques par carte — PNG](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/6f3bc30d993721e1e7831468a33511ad0a596470/renders/jungle_pmd_v1/JG1_duo.png) · [Détails et restauration](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/6f3bc30d993721e1e7831468a33511ad0a596470/source/jungle_pmd_v1/README.md). Eau adaptée13phases. 14/22cartes livrées ; quatre duos restants. Anciens exports intacts.
