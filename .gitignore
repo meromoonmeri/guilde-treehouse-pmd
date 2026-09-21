@@ -90,3 +90,9 @@ __pycache__/
 
 # Torch high-resolution originals retained losslessly in Git history.
 /source/spinda_torches_v1/raws/*.webp
+
+# Lossless historical originals preserved in Git; archive readers provide restoration.
+/source/spinda_decor_v1/raws/*.webp
+/renders/casino_network_v1/bruts/estrade.webp
+/renders/casino_network_v1/bruts/rideaux.webp
+/renders/casino_network_v1/bruts/terrain.webp

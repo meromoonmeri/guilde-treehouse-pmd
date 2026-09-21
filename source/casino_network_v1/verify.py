@@ -1,21 +1,22 @@
 """Pixel/source/topology validation. Not a PMDO runtime or artistic approval."""
 from pathlib import Path
-import sys,json,hashlib
+import sys,json,hashlib,io
 import numpy as np
 from PIL import Image
 from scipy import ndimage as nd
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
 from source.casino_network_v1.prepare import OUT,SRC,rgba,keyed,raw_path,tiles,straight
 from source.casino_network_v1.build import render
+from source.casino_network_v1.archive import data
 m=json.loads((OUT/'manifest.json').read_text());p=json.loads((OUT/'flammes_provenance.json').read_text());tests=[]
 def ok(name,condition=True):
  assert condition,name
  tests.append({'test':name,'pass':True});print('PASS',name)
-def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def sha(path):return hashlib.sha256(data(path)).hexdigest()
 for name,h in json.loads((SRC/'hashes.json').read_text()).items():assert sha(SRC/name)==h
 ok('all original Ledian map/bank SHA256 hashes unchanged')
 for r in json.loads((OUT/'bruts/provenance.json').read_text()):
- im=Image.open(OUT/'bruts'/r['file']).convert('RGBA');assert sha(OUT/'bruts'/r['file'])==r['webp_sha256'];assert hashlib.sha256(im.tobytes()).hexdigest()==r['rgba_sha256']
+ im=Image.open(io.BytesIO(data(OUT/'bruts'/r['file']))).convert('RGBA');assert sha(OUT/'bruts'/r['file'])==r['webp_sha256'];assert hashlib.sha256(im.tobytes()).hexdigest()==r['rgba_sha256']
 ok('seven generated raws archived losslessly with original pixel hashes')
 terrain=keyed(rgba(raw_path('terrain_corrige')));base=np.array(render(m,0,['terrain']));assert np.array_equal(base,terrain)
 terrain_layers=[l for l in m['layers'] if l['group']=='terrain'];masks=np.stack([rgba(OUT/l['file'])[:,:,3]>0 for l in terrain_layers]);assert np.all(masks.sum(0)<=1)

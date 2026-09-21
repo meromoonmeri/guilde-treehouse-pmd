@@ -1,6 +1,6 @@
 """Generated casino assets + exact reconstruction of the native Ledian fire cycle."""
 from pathlib import Path
-import sys,json,hashlib,math
+import sys,json,hashlib,math,io,importlib.util
 import numpy as np
 from scipy import ndimage as nd
 from PIL import Image
@@ -8,8 +8,9 @@ ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'renders/casino_network_v1';SR
 sys.path.insert(0,str(ROOT/'source/cote_v5_expeditions'))
 from audit_references import tiles,straight
 
-def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def rgba(p):return np.array(Image.open(p).convert('RGBA'))
+_spec=importlib.util.spec_from_file_location('casino_raw_archive',Path(__file__).parent/'archive.py');_arc=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_arc)
+def sha(p):return hashlib.sha256(_arc.data(p)).hexdigest()
+def rgba(p):return np.array(Image.open(io.BytesIO(_arc.data(p))).convert('RGBA'))
 def save(a,p):
  p.parent.mkdir(parents=True,exist_ok=True);im=Image.fromarray(a) if isinstance(a,np.ndarray) else a
  im.save(p,optimize=True)
@@ -19,7 +20,7 @@ def keyed(a):
 
 def raw_path(name):
  p=OUT/'bruts'/f'{name}.webp'
- return p if p.exists() else OUT/'bruts'/f'{name}.png'
+ return p if p.exists() or any(r['path']==str(p.relative_to(ROOT)) for r in _arc.entries()) else OUT/'bruts'/f'{name}.png'
 
 def archive_raws():
  p=OUT/'bruts';records=json.loads((p/'provenance.json').read_text()) if (p/'provenance.json').exists() else []

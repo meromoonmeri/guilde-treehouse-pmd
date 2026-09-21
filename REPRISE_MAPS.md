@@ -1,5 +1,13 @@
 # Reprise des maps — 20 septembre 2026
 
+## Banderoles, tapis rouges et estrade Spinda / Mime Jr — 21 septembre 2026
+
+**[PNG de la collection](renders/spinda_decor_v1/apercus/SpindaDecor_collection.png)** · [Mise en scène PNG](renders/spinda_decor_v1/apercus/SpindaDecor_cafe_demonstration.png) · [Pack de calques](renders/spinda_decor_v1/Spinda_banderoles_tapis_estrade.zip).
+
+Demande : push GitHub, banderoles canoniques réadaptées au layout sur leur calque, tapis rouges Spinda, estrade avec deux rideaux Spinda/Mime Jr. Livré :5calques muraux jour/nuit conformés aux pans, sans couvrir fenêtres/accès ;3tapis rouges indépendants ;estrade,rideau gauche,rideau droit en3calques alignés208×184. Canevas Ground8px, variantes nuit, référence SpindaCafe2 native inchangée. Les adaptations sont générées/non natives, pas des pixels canoniques prétendus inchangés.10sorties préservées dans Git,2frontales rejetées ;front redressé depuis la diagonale retenue. Fragment de salle intempestif retiré de l’image du rideau droit. Exports statiques PNG/WebP directement visibles, sans HTML ; placement de la scène/tapis uniquement pour démonstration. Autres meubles/fenêtres V8 encore en attente.
+
+Scripts `source/spinda_decor_v1/`, serveur8010 (racine = PNG direct), vérifications de pixels, calques, fenêtres/accès, ZIP et provenance. Pas de validation PMDO/approbation artistique. Trois anciens bruts Casino (estrade,rideaux,terrain initial supplanté) archivés à l’identique dans Git via `source/casino_network_v1/archive.json`, lecteurs/tests/serveurs adaptés ; leurs anciennes livraisons et Beach restent inchangés. Au démarrage de ce tour, le checkout restauré était revenu au commit de base : la même branche a été mise à jour en fast-forward depuis le push d73e6ac2 ; les anciens fichiers Beach locaux ont été conservés dans un stash, pas écrasés ni réappliqués sur les versions plus récentes.
+
 ## Torches murales animées — huit orientations (21 septembre 2026)
 
 **Affichage direct demandé : le HTML ne s’affiche pas chez l’utilisateur.** Livrer prioritairement le [WebP animé des8vues](renders/spinda_torches_v1/apercus_directs/Torches_8_angles_animees.webp) et le [PNG](renders/spinda_torches_v1/apercus_directs/Torches_8_angles.png),832×448,16frames100ms en boucle. Ces aperçus ne nécessitent aucun HTML. Fond et8bandes lumière précédents conservés à l’identique dans le ZIP ; serveur8009 maintient leurs URL.
