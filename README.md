@@ -1,5 +1,9 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Jungle : entrée + finale
+
+[Cinq calques par carte — PNG](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/6f3bc30d993721e1e7831468a33511ad0a596470/renders/jungle_pmd_v1/JG1_duo.png) · [Détails et restauration](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/6f3bc30d993721e1e7831468a33511ad0a596470/source/jungle_pmd_v1/README.md). Eau adaptée13phases. 14/22cartes livrées ; quatre duos restants. Anciens exports intacts.
+
 ## Suite — finale de la forêt et mobilier à taille d’import (21 septembre 2026)
 
 **[Duo entrée/finale PNG](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_duo.png)** · [Finale animée](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_finale_animee.webp) · **[Pack six calques](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_finale_calques.zip)**.

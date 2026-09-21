@@ -1,5 +1,7 @@
 # Méthode de production approuvée — zones Métano
 
+JG1 livré : jungle entrée+finale,5calques, eau adaptée13×6ticks. 14/22cartes. Code/archives épinglés via `source/jungle_pmd_v1/restore.py`.
+
 ## Mise à jour — finale LF1 et mobilier FC1
 
 Entrée LE1 approuvée par l’utilisateur, à préserver. Finale H07P03 livrée en proposition : six vrais groupes, trois plans identiques à LE1, rochers entiers déplacés, nouveau calque arbres/racines, lumière native réemployée inchangée. FC1 : quatre nouvelles propositions aux canevas48×48/24×24/40×48 ; ne pas prétendre que l’outil sort exactement ces pixels, ni modifier les natifs.13/36meubles proposés,23et fenêtres à poursuivre. Salles/graphe inchangés, placement1× seulement démonstratif. [Livraisons directes](README.md), [détails/scripts](source/suite_foret_cafe_v1/README.md). Archive livrables ba4f4304, bruts1850100d, restitution SHA par storage.py ; serveur8013. Tests ≠ validation artistique/PMDO. Anciennes sections ci-dessous historiques.
