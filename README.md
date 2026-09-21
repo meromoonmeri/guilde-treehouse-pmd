@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Précision en cours — une autre zone du même lieu, 4–6 calques
+
+Dernière consigne : les cartes doivent sembler appartenir **au même lieu que leur référence**, pas seulement au même biome. Garder textures, gamme de couleurs, formes caractéristiques et perspective ; ciel/arrière-plan seulement lorsqu’il existe dans la référence. Viser4–6groupes sémantiques (sol continu, reliefs/rochers, végétation/bordures, accès/architecture, fond/ciel éventuel, fluides/effets), avec vraies pistes d’animation séparées. Ne pas atteindre le quota par un simple découpage de surfaces visibles. Revoir les occlusions et la continuité du sol, pas seulement les noms de calques.
+
+**[Cadrage et revue des références](source/dungeon_biomes_v2/CONTINUITE.md).** Mont Discipline doit garder ses dalles claires et son cadre végétal, pas devenir une montagne brune ; forêt secrète : bleus/cyan et toiles ; plaines : horizon et ciel de la référence. Conserver aussi les vrais calques de cascades/colonnes de lave et les lumières/particules de forêt, avec leurs cadences natives. Les références de chaque lieu priment sur son nom.
+
+État après interruption :10compositions d’étude, **aucun lot2 livré/validé**, finales forêt secrète et plaines brûlées non générées (limite10atteinte). Les études montagne brune et entrée brûlée noire quadrillée sont écartées ; les autres à requalifier, pas approuvées. Bruts préservés losslessly au commitf1bde98c, index `source/dungeon_biomes_v2/drafts/archive.json`, lecteur `draft_archive.py`. Les versions déjà livrées et Beach restent intactes. La satisfaction générale exprimée par l’utilisateur ne valide pas ces nouvelles études. Reprendre avec ce cadrage avant de compléter les images manquantes ; portée22cartes par lots, aperçusPNG/WebP et push toujours requis.
+
 ## Donjons réinventés — lot 1 / cinq duos (21 septembre 2026)
 
 **[Planche PNG des dix cartes](renders/dungeon_biomes_v1/apercus/DB1_collection.png)** · **[Pack multicalque](renders/dungeon_biomes_v1/DB1_cinq_duos_multicalques.zip)** · [Méthode et limites](renders/dungeon_biomes_v1/README.md).
