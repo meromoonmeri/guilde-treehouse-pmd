@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Suite — finale de la forêt et mobilier à taille d’import (21 septembre 2026)
+
+**[Duo entrée/finale PNG](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_duo.png)** · [Finale animée](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_finale_animee.webp) · **[Pack six calques](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/LF1_finale_calques.zip)**.
+
+**[Quatre meubles](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/FC1_mobilier.png)** · **[Dans le café à1×](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/FC1_cafe_echelle1x.png)** · [PNG séparés et tilesheets jour/nuit](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/ba4f430403d0500f81be28c5ca12adfa90766fbf/renders/suite_foret_cafe_v1/FC1_mobilier_taille_import.zip).
+
+Entrée désormais approuvée, inchangée. Finale de la même forêt H07P03 : fond/sol/végétation réemployés, rochers entiers déplacés, arbres/racines régénérés ; lumière H07P04W séparée inchangée. Retour sud, limite nord, sol continu. Mobilier : tables48×48, coffre24×24, plante40×48 ; gabarits visés dès génération, normalisation proportionnelle des créations seulement (l’outil ne garantit pas la résolution brute). Aperçu de placement uniquement, salles intactes. Quatre propositions nouvelles :13/36 au total,23objets et fenêtres à poursuivre.
+
+[Méthode, limites et reproduction](source/suite_foret_cafe_v1/README.md). Scripts/lecteur SHA et index Git dans ce dossier, gros livrables archivés au commit`ba4f4304`, bruts au commit`1850100d`. Anciens rendus/Beach préservés. Tests techniques passés, pas de validation PMDO ou artistique. Les sections suivantes sont l’historique des livraisons.
+
+
 ## Entrée en lisière — six groupes et lumière PMD (21 septembre 2026)
 
 **[PNG de la carte](renders/lisiere_pmd_v1/LE1_lisiere.png)** · **[WebP animé direct](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_animee.webp)** · **[Pack PNG multicalque](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_calques_et_effets.zip)** · [Cascades de lave animées](renders/lisiere_pmd_v1/LE1_cascades_animees.webp).

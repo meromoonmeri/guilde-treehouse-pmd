@@ -55,3 +55,6 @@ La prochaine production doit appliquer ce cadrage avant de compléter les deux i
 ## Première application livrée : entrée en lisière
 
 La dernière demande a ciblé cette entrée seule. `source/lisiere_pmd_v1/` et `renders/lisiere_pmd_v1/` livrent cinq générations de plans distincts, dont un vrai sol continu, plus le groupe de lumière à deux pistes natives. Layout boisé inspiré de Mystifying Forest, identité H07P03 préservée ; lumière H07P04W réemployée explicitement. Les huit nouveaux bruts (deux guides, tentative d’arbres incorrecte, cinq plans retenus) sont conservés dans Git. Le guide de finale n’est pas une finale livrée. Ne pas reprendre les dix anciennes études comme si elles étaient approuvées. Le reste du programme22cartes et les reprises restent en attente.
+
+### Suite LF1
+Entrée LE1 approuvée ; finale LF1 désormais proposée avec sol/fond/végétation identiques, rochers déplacés, nouvelle bordure générée et lumière native inchangée. Six groupes sémantiques. Voir `../suite_foret_cafe_v1/README.md`. Les cinq autres duos restent à produire/reprendre.
