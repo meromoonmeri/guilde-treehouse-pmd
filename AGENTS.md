@@ -1,5 +1,17 @@
 # Méthode de production approuvée — zones Métano
 
+## Donjons réinventés — lot 1 / cinq duos (21 septembre 2026)
+
+**[Planche PNG des dix cartes](renders/dungeon_biomes_v1/apercus/DB1_collection.png)** · **[Pack multicalque](renders/dungeon_biomes_v1/DB1_cinq_duos_multicalques.zip)** · [Méthode et limites](renders/dungeon_biomes_v1/README.md).
+
+WebP animés directs : [forêt](renders/dungeon_biomes_v1/apercus/DB1_foret_duo.webp), [île](renders/dungeon_biomes_v1/apercus/DB1_ile_duo.webp), [volcan](renders/dungeon_biomes_v1/apercus/DB1_volcan_duo.webp), [désert](renders/dungeon_biomes_v1/apercus/DB1_desert_duo.webp), [courant marin](renders/dungeon_biomes_v1/apercus/DB1_marin_duo.webp). Deux cartes par fichier, extraits2,13s échantillonnés, lecture unique, pas de fausse boucle composite courte. Aperçus compressés ; PNG d’import sans perte.
+
+Périmètre confirmé : **11 duos entrée+fin =22cartes**, livrés par lots. Premier lot livré :10compositions complètes réellement générées,42calques PNG de surfaces visibles,616états d’animation/référence indépendants, canevas Ground8px/basenames uniques, aucun Pokémon. **Les surfaces cachées derrière arbres/parois ne sont pas reconstruites** : ces calques ne sont pas des objets mobiles complets. `assemble.py` dans le ZIP recompose les10PNG transparents et leurs démonstrations à un tick choisi, sans dupliquer les fichiers lourds.
+
+Audit des11références dans `source/dungeon_biomes_v1/audit.json`. Port épinglé cd07abc4, pret89c65d9c :207blobs H identiques. **Tout n’est pas BPA** : forêt H07P04W BPA+BPL ; île ciel H29P04 BPL ; volcan H26P01 BPL + particules W04 BPA ; désert W05 BPL+scroll et cycles terrain d’origine conservés en référence ; courant H02P02W BPL. Natifs1× distincts des créations. La lave est un nouvel arrangement de textures sources sans interpolation/recoloration/flip, avec provenance de chaque pixel. Cadences indépendantes conservées ; banque forêt448combinaisons BPA/BPL, pas448frames à lire dans l’ordre. Sources et preuves incluses ; aucune validation PMDO/GBA/PC-port exécuté ni approbation artistique revendiquée.
+
+Reste à produire : jungle, forêt envahie, mont de discipline, plaines sauvages, forêt secrète, plaines brûlées — six duos. Ce lot ne termine pas le mobilier/fenêtres V8. Beach, anciennes maps et anciens ZIP inchangés. Dix nouveaux bruts archivés losslessly au commit93ec3994 ; cinq anciens bruts Casino/étude Arcanin supplémentaires conservés à l’identique dans Git via le lecteur d’archive existant pour respecter le budget. Tests de provenance/recomposition, assembleur autonome et Casino passés. Serveur8011 : PNG direct, aucun HTML nécessaire ; serveur Spinda8010 conservé et rechargé pour les anciennes URL d’archives.
+
 ## Banderoles, tapis rouges et estrade Spinda / Mime Jr — 21 septembre 2026
 
 **[PNG de la collection](renders/spinda_decor_v1/apercus/SpindaDecor_collection.png)** · [Mise en scène PNG](renders/spinda_decor_v1/apercus/SpindaDecor_cafe_demonstration.png) · [Pack de calques](renders/spinda_decor_v1/Spinda_banderoles_tapis_estrade.zip).
