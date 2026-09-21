@@ -1,5 +1,7 @@
 # Méthode de production approuvée — zones Métano
 
+IB1 : Searing Crucible glacial livré, source Halcyon working-copy1522c7a8. Géométrie504×504/72cases conservée ; pics14/20cases,4tracés,2tours actifs/1pause. Viewport320×240, pas de resize. Source/pack : `source/ice_boss_v1/restore.py`. Boss Halcyon opt-in, Tile à enregistrer ; Lua simulé testé, PMDO non exécuté. Préserver les16cartes/variantes des plaines déjà converties par viewport_pmdo_v1.
+
 WP1 livré : plaines,5calques,18phases natives ;16cartes publiées. MD1 montré mais non poussé, absent du checkout restauré : à récupérer. Suite : forêt secrète, plaines brûlées. Lanceur source/plaines_pmd_v1/restore.py.
 
 ## Mise à jour — finale LF1 et mobilier FC1

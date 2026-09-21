@@ -1,5 +1,10 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Creuset glacial — boss Searing Crucible adapté
+
+[Carte et viewport](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_cadrage.png) · [Pics animés](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_pics_animes.webp) · [Pack PMDO](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_creuset_glacial_PMDO.zip). Géométrie504×504 conservée, caméra320×240 sans agrandissement ; quatre tracés source et contrôleur glacial. Installation boss Halcyon optionnelle, enregistrement du Tile requis, moteur non exécuté. Code et restauration : `source/ice_boss_v1/restore.py`.
+
+
 ## Plaines sauvages — entrée et finale
 
 [PNG : cinq calques](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/93914f687cc3e3e40ae0b57a38599e7281b71b22/renders/plaines_pmd_v1/WP1_duo.png). Code et PNG/ZIP : `source/plaines_pmd_v1/restore.py`.
