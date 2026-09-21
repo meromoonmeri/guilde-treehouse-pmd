@@ -1,0 +1,193 @@
+{
+  "size": [
+    960,
+    864
+  ],
+  "layers": [
+    "01_ciel_profond",
+    "02_etoiles_phase0",
+    "02b_etoiles_filantes_vide",
+    "03_lune_generee",
+    "04_nuages_lointains",
+    "05_panorama_skypeak_foret_montagnes",
+    "05b_brume_overlay",
+    "06_nuages_overlay",
+    "07_plateau_herbe",
+    "08_paroi_rocheuse"
+  ],
+  "sky": {
+    "kind": "authored gradient, no motifs",
+    "stops": [
+      [
+        0.0,
+        [
+          4,
+          6,
+          22
+        ]
+      ],
+      [
+        0.35,
+        [
+          9,
+          16,
+          48
+        ]
+      ],
+      [
+        0.62,
+        [
+          20,
+          40,
+          92
+        ]
+      ],
+      [
+        0.8,
+        [
+          38,
+          78,
+          138
+        ]
+      ],
+      [
+        1.0,
+        [
+          70,
+          120,
+          170
+        ]
+      ]
+    ],
+    "dither": "Bayer 4x4 ±0.5",
+    "moon_glow_centre": [
+      780,
+      112
+    ]
+  },
+  "stars": {
+    "count_twinkle": 210,
+    "count_static": 995,
+    "motifs": "PMD-like 3-phase: dot / 3px plus / 5px plus with faint diagonals",
+    "frames": 64,
+    "fps": 8,
+    "loop_s": 8.0,
+    "folder": "etoiles_frames"
+  },
+  "shooting_stars": {
+    "frames": 360,
+    "fps": 30,
+    "loop_s": 12.0,
+    "meteors": [
+      {
+        "t0": 1.2,
+        "dur": 0.6,
+        "x0": 150,
+        "y0": 40,
+        "dx": 420,
+        "dy": 150,
+        "color": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "t0": 5.4,
+        "dur": 0.45,
+        "x0": 620,
+        "y0": 20,
+        "dx": -260,
+        "dy": 120,
+        "color": [
+          230,
+          240,
+          255
+        ]
+      },
+      {
+        "t0": 7.0,
+        "dur": 0.35,
+        "x0": 380,
+        "y0": 70,
+        "dx": 180,
+        "dy": 60,
+        "color": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "t0": 9.1,
+        "dur": 0.75,
+        "x0": 40,
+        "y0": 120,
+        "dx": 560,
+        "dy": 90,
+        "color": [
+          255,
+          248,
+          220
+        ]
+      }
+    ],
+    "folder": "etoiles_filantes_frames"
+  },
+  "reused_from_v2": [
+    "03_lune_generee",
+    "04_nuages_lointains",
+    "05_panorama_skypeak_foret_montagnes",
+    "05b_brume_overlay",
+    "06_nuages_overlay",
+    "07_plateau_herbe",
+    "08_paroi_rocheuse"
+  ],
+  "clouds": {
+    "far": {
+      "y": 30,
+      "speed": -2,
+      "alpha": 80
+    },
+    "overlay": {
+      "y": 300,
+      "speed": -6,
+      "alpha": 100
+    },
+    "wrap_px": 1440,
+    "sprites": 6
+  },
+  "mist": {
+    "bands": [
+      {
+        "y": 505,
+        "speed_px_s": -4,
+        "breath_period_s": 9.0,
+        "phase": 0.0
+      },
+      {
+        "y": 625,
+        "speed_px_s": -7,
+        "breath_period_s": 7.0,
+        "phase": 2.0
+      },
+      {
+        "y": 755,
+        "speed_px_s": -11,
+        "breath_period_s": 5.5,
+        "phase": 4.0
+      }
+    ],
+    "wrap_px": 1440,
+    "alpha_range_pct": [
+      65,
+      100
+    ],
+    "source": "bruts/brume_generee.png (generated, halved uniformly)",
+    "png_frames": 80,
+    "frames_fps": 10
+  },
+  "night_abyss": "filter on all layers except sky, stars, shooting stars, moon",
+  "all_pixels_generated_or_authored": true,
+  "runtime_validated": false
+}

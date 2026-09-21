@@ -2,6 +2,8 @@
 
 ## Sky Peak — prairie du sommet au-dessus d’une mer de forêt (nuit)
 
+**V3 (ciel profond sans motif, étoiles PMD animées et étoiles filantes sur leurs calques)** : **[Composition V3](renders/sky_peak_prairie_v1/v3/SkyPeakPrairieV3_composition_nuit.png)** · **[Étoiles 8 s](renders/sky_peak_prairie_v1/v3/SkyPeakPrairieV3_etoiles_8s.webp)** · **[Filantes 12 s](renders/sky_peak_prairie_v1/v3/SkyPeakPrairieV3_etoiles_filantes_12s.webp)** · **[Galerie V3](renders/sky_peak_prairie_v1/v3/index.html)** · **[Notice V3](renders/sky_peak_prairie_v1/v3/README.md)** — 23 contrôles PASS.
+
 **V2 (correction : fond façon Sky Peak, ciel généré, étoiles/lune et nuages sur calques séparés)** : **[Composition V2](renders/sky_peak_prairie_v1/v2/SkyPeakPrairieV2_composition_nuit.png)** · **[Galerie V2](renders/sky_peak_prairie_v1/v2/index.html)** · **[Notice V2](renders/sky_peak_prairie_v1/v2/README.md)** — tout généré ; **brume animée en overlay** sur la forêt (3 bandes, dérive + respiration) et **mode Nuit Abyss** (`v2/nuit_abyss/`) ; 39 contrôles PASS.
 
 V1 conservée : **[Composition](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_composition_nuit.png)** · **[Extrait animé](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_extrait_nuages_24s.webp)** · **[Galerie](renders/sky_peak_prairie_v1/index.html)** · **[Notice et calques](renders/sky_peak_prairie_v1/README.md)**

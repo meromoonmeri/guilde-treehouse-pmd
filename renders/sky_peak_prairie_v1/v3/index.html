@@ -1,0 +1,31 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sky Peak — prairie du sommet V3 · ciel profond et étoiles animées</title>
+<style>body{margin:0;background:#080b1a;color:#e5f1eb;font:15px system-ui}main{max-width:1100px;margin:0 auto;padding:22px}h1{font-size:24px;margin:0 0 6px}p{color:#b0c6c6;line-height:1.6}label{margin-right:14px;white-space:nowrap}canvas{width:100%;max-width:960px;image-rendering:pixelated;background:#000;border:1px solid #334b50;display:block}a{color:#9de2c9}#toggles{margin:8px 0}</style>
+<main><h1>Sky Peak — prairie du sommet, nuit — V3</h1><p>Ciel profond sans motif, étoiles scintillantes façon PMD sur leur calque (8 i/s, boucle 8 s), étoiles filantes sur leur propre calque (30 i/s, boucle 12 s), lune, nuages et brume animés en overlay ; mode Nuit Abyss.</p>
+<p><label><input type="radio" name="mode" value="jour" checked> Nuit</label> <label><input type="radio" name="mode" value="nuit"> Nuit Abyss</label> <button id="pause">Pause</button></p><div id="toggles"></div><canvas id="c" width="960" height="864"></canvas>
+<p><a href="SkyPeakPrairieV3_composition_nuit.png">Composition PNG</a> · <a href="SkyPeakPrairieV3_editable.ora">ORA</a> · <a href="SkyPeakPrairieV3_etoiles_8s.webp">Étoiles seules (boucle 8 s)</a> · <a href="SkyPeakPrairieV3_etoiles_filantes_12s.webp">Étoiles filantes seules (12 s)</a> · <a href="SkyPeakPrairieV3_extrait_24s_nuit.webp">Extrait complet 24 s</a> · <a href="SkyPeakPrairieV3_extrait_24s_nuit_abyss.webp">Extrait Nuit Abyss</a> · <a href="README.md">Notice</a></p>
+<p>Tout est dessiné ou généré (aucun pixel natif certifié). Chaque calque animé garde sa propre horloge ; aucun test PMDO.</p></main>
+<script>
+const P='SkyPeakPrairieV3',statics=['03_lune_generee','04_nuages_lointains','05_panorama_skypeak_foret_montagnes','05b_brume_overlay','06_nuages_overlay','07_plateau_herbe','08_paroi_rocheuse'];
+const order=['01_ciel_profond','02_etoiles','02b_etoiles_filantes',...statics];const on={};for(const l of order)on[l]=true;let mode='jour',paused=false,pausedAt=0,t0=performance.now();
+const ld=s=>{const i=new Image();i.src=s;return i};const img={};for(const l of statics)img[l]=ld(`calques/${P}_${l}.png`);const sky=ld(`calques/${P}_01_ciel_profond.png`);
+const stars=Array.from({length:64},(_,i)=>ld(`etoiles_frames/${P}_etoiles_${String(i).padStart(2,'0')}.png`));const meteors=Array.from({length:360},(_,i)=>ld(`etoiles_filantes_frames/${P}_filante_${String(i).padStart(3,'0')}.png`));
+const far=ld(`calques/${P}_bande_nuages_lointains_1440.png`),near=ld(`calques/${P}_bande_nuages_overlay_1440.png`),mist=[0,1,2].map(k=>ld(`calques/${P}_bande_brume_${k}_1440.png`));
+const MIST=[{y:505,speed:-4,period:9,phase:0},{y:625,speed:-7,period:7,phase:2},{y:755,speed:-11,period:5.5,phase:4}];
+for(const l of order){const lab=document.createElement('label');lab.innerHTML=`<input type="checkbox" checked> ${l.replace(/^\d+b?_/,'').replace(/_/g,' ')}`;lab.querySelector('input').onchange=e=>on[l]=e.target.checked;toggles.append(lab);}
+document.querySelectorAll('input[name=mode]').forEach(r=>r.onchange=e=>mode=e.target.value);pause.onclick=()=>{paused=!paused;if(paused)pausedAt=now();else t0=performance.now()-pausedAt*1000;pause.textContent=paused?'Lecture':'Pause'};
+const now=()=>paused?pausedAt:(performance.now()-t0)/1000;const ctx=c.getContext('2d');const cache={};
+function nightify(im){const o=document.createElement('canvas');o.width=im.width;o.height=im.height;const x=o.getContext('2d');x.drawImage(im,0,0);const d=x.getImageData(0,0,o.width,o.height),p=d.data;for(let i=0;i<p.length;i+=4){if(!p[i+3])continue;const r=p[i],g=p[i+1],b=p[i+2],gr=.299*r+.587*g+.114*b,lum=gr/255,k=.2+.3*lum,s=.95;p[i]=Math.min(255,(r*s+gr*(1-s))*k*.52);p[i+1]=Math.min(255,(g*s+gr*(1-s))*k*.7);p[i+2]=Math.min(255,(b*s+gr*(1-s))*k*1.6+6*lum);}x.putImageData(d,0,0);return o;}
+function src(im,key){if(mode==='jour')return im;if(!cache[key]&&im.complete&&im.width)cache[key]=nightify(im);return cache[key]||im;}
+function wrap(im,key,off,y,alpha){if(!im.complete)return;ctx.globalAlpha=alpha;let x=-((((off)%1440)+1440)%1440);for(;x<960;x+=1440)ctx.drawImage(src(im,key),x,y);ctx.globalAlpha=1;}
+function frame(){const t=now();ctx.clearRect(0,0,960,864);
+ if(on['01_ciel_profond']&&sky.complete)ctx.drawImage(sky,0,0);
+ if(on['02_etoiles']){const f=stars[Math.floor(t*8)%64];if(f.complete)ctx.drawImage(f,0,0);}
+ if(on['02b_etoiles_filantes']){const f=meteors[Math.floor(t*30)%360];if(f.complete)ctx.drawImage(f,0,0);}
+ for(const l of statics){if(!on[l])continue;
+  if(l==='04_nuages_lointains')wrap(far,'far',2*t,30,.8);
+  else if(l==='06_nuages_overlay')wrap(near,'near',6*t-700,300,1);
+  else if(l==='05b_brume_overlay')MIST.forEach((b,k)=>wrap(mist[k],'m'+k,-b.speed*t,b.y,.65+.35*(.5+.5*Math.sin(2*Math.PI*t/b.period+b.phase))));
+  else if(img[l].complete)ctx.drawImage(l==='03_lune_generee'?img[l]:src(img[l],l),0,0);}
+ requestAnimationFrame(frame);}
+frame();
+</script></html>
