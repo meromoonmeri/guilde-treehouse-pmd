@@ -1,6 +1,16 @@
 # Méthode de production approuvée — zones Métano
 
-## État actif — Spinda V7 : petites fenêtres, montées occultées, mobilier audité
+## Spinda V8 — lot 1 partiel et nuit tamisée (21 septembre 2026)
+
+**[Atelier V8](apercu_cafe_spinda_revisite_v8.html)** · [Jour / nuit](renders/cafe_spinda_revisite_v8/SpindaV8_jour_nuit.jpg) · [Premier lot de mobilier](renders/cafe_spinda_revisite_v8/SpindaV8_mobilier_lot1.jpg) · [Pack autonome](renders/cafe_spinda_revisite_v8/SpindaV8_atelier_lot1.zip).
+
+Demande actuelle : repasser tout le mobilier Halcyon ciblé au générateur, tapis compris ; étendre aux intérieurs pertinents ; une collection commune miel/sauge/crème-rose. Rubans muraux et nouvelles petites fenêtres sur leurs propres calques, mode nuit doux. **Livraison non achevée : limite de10générations atteinte sur ce tour. 9objets retenus ; table vide rejetée (vue du dessous).** Plan36objets :23de V7 +12compléments +1applique nouvelle. **27objets à générer/reprendre, plus rubans et fenêtres.** Ne pas prétendre que les natifs ou recolorations remplacent les générations demandées.
+
+Mode nuit des cinq salles livré :57PNG jour+nuit dans le ZIP, architecture de jour RGBA identique à V7 ; teinte nocturne adaptée, motifs de sol atténués et calque indépendant de lumière diffuse statique. Ni mobilier ni fausses flammes préplacés. Fenêtres V7 héritées provisoirement, pas de nouveau ruban livré.9meubles réellement générés,2tilesheets jour/nuit d’une même collection, inventaire de progression. Pas de validation PMDO ou approbation artistique revendiquée.
+
+Sources : `source/cafe_spinda_revisite_v8/plan.json`, `expanded_sources.json`, `raws/archive.json` (10originaux générés et5banques Halcyon conservés sans perte dans commit7445f0f6). Build/verify/serve dans ce dossier ; serveur8008 lié à0.0.0.0. Les12originaux V4 sont désormais archivés dans Git, lecteurs/restauration vérifiés ; anciens rendus/ZIP et Beach inchangés. Garder l’historique Git complet. Lire [la méthode et les limites](renders/cafe_spinda_revisite_v8/README.md) avant de continuer.
+
+## Historique — Spinda V7 : petites fenêtres, montées occultées, mobilier audité
 
 Dernière demande : fenêtres beaucoup plus petites ; ne plus montrer le palier/étage au-delà des marches montantes ; corriger leurs bordures ; auditer les tailles EoSO/Halcyon ; fournir les vrais comptoirs Spinda/Qulbutoké et des créations Kirlia/Charmilly.
 

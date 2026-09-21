@@ -1,6 +1,6 @@
 """Five separately generated Spinda rooms; actual native windows and editor assets."""
 from pathlib import Path
-import json,hashlib,sys,shutil
+import json,hashlib,sys,shutil,io,importlib.util
 import numpy as np
 from PIL import Image,ImageDraw
 from scipy import ndimage as nd
@@ -13,7 +13,8 @@ SPECS=[
  ('salon_haut','Salon des croisillons',1,'salon_haut_spinda_corrige',[[176,56],[264,56],[352,56]],[(160,132),(440,132),(536,198),(536,280),(440,346),(160,346),(64,280),(64,254),(0,254),(0,222),(64,222),(64,198)]),
 ]
 
-def load(p):return Image.open(p).convert('RGBA')
+_arc_spec=importlib.util.spec_from_file_location('v4_study_archive',S/'archive_studies.py');_arc=importlib.util.module_from_spec(_arc_spec);_arc_spec.loader.exec_module(_arc)
+def load(p):return Image.open(io.BytesIO(_arc.read_bytes(p))).convert('RGBA')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(im,p):
  p.parent.mkdir(parents=True,exist_ok=True)
