@@ -2,6 +2,8 @@
 Only generated images are resized/quantized. Native raster data is sampled at 1x.
 Run with .venv/bin/python source/dungeon_biomes_v1/build.py.
 """
+from native_archive import native_source_archive
+
 from pathlib import Path
 import io,json,zipfile,math,hashlib,shutil
 from functools import lru_cache
@@ -194,7 +196,7 @@ def main():
  O.mkdir(parents=True,exist_ok=True);C.mkdir(exist_ok=True)
  if P.exists():shutil.rmtree(P)
  P.mkdir();(O/'apercus').mkdir(exist_ok=True)
- with zipfile.ZipFile(S/'native_sources.zip') as z:z.extractall(C/'native')
+ with zipfile.ZipFile(native_source_archive()) as z:z.extractall(C/'native')
  terrain={};maps=[]
  for b,(_,size,_) in BIOMES.items():
   for role in ['entree','fin']:
@@ -218,7 +220,7 @@ def main():
  d.text((18,y+8),'Créations non natives · Effets extraits à 1× · Intégration PMDO non testée',font=font(13),fill='#aebec4');overview.quantize(colors=224,method=Image.Quantize.MEDIANCUT).save(O/'apercus/DB1_collection.png',optimize=True)
  manifest={'version':1,'maps':maps,'animations':anim,'preview':{'ticks':ticks,'hz':60,'sample_stride_ticks':8,'duration_ms':sum(dur),'loop_count':1,'overview_tick':64,'presentation_only':True,'webp_lossless':False,'webp_quality':60,'overview_palette_colors':224,'import_PNG_lossless':True,'scope':'sampled excerpt, not the full combined native loop; reopen to replay'},'remaining':['jungle','overgrownforest','mtdiscipline','wildplains','secretiveforest','scorchedplains'],'native_sources':'native_sources.zip','limitations':['Visible-surface layer segmentation; hidden ground is not reconstructed.','Native source colours are not a GPU-screen capture. Additive compositing is required for light layers.','No collision, warp, character or PMDO runtime integration.','Generated layouts are not artistically approved.']}
  (P/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');(O/'manifest.json').write_text(json.dumps({k:v for k,v in manifest.items() if k!='animations'},indent=2)+'\n')
- shutil.copy2(S/'audit.json',P/'audit.json');shutil.copy2(S/'native_sources.zip',P/'native_sources.zip')
+ shutil.copy2(S/'audit.json',P/'audit.json');shutil.copy2(native_source_archive(),P/'native_sources.zip')
  if (S/'PACK_README.md').exists():
   shutil.copy2(S/'PACK_README.md',P/'README.md');shutil.copy2(S/'PACK_README.md',O/'README.md')
  shutil.copy2(S/'assemble.py',P/'assemble.py')

@@ -1,5 +1,15 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée en lisière — six groupes et lumière PMD (21 septembre 2026)
+
+**[PNG de la carte](renders/lisiere_pmd_v1/LE1_lisiere.png)** · **[WebP animé direct](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_animee.webp)** · **[Pack PNG multicalque](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_calques_et_effets.zip)** · [Cascades de lave animées](renders/lisiere_pmd_v1/LE1_cascades_animees.webp).
+
+Dernière demande ciblée exécutée : **une entrée dans une lisière**, identité Forêt envahie H07P03, disposition d’obstacles inspirée de Mystifying Forest lorsque cohérente. Cinq véritables plans générés séparément : fond forestier / sol continu / rochers / arbres-racines / végétation basse. Sixième groupe : lumière PMD, rayons et particules sur deux pistes natives indépendantes. Aucun fond/sol cuit dans le calque d’arbres retenu ; la première tentative incorrecte est archivée, pas utilisée. Le sol est rempli sous le décor. Passage central sud→nord64px libre, dégagement conservateur8px vérifié, pas une validation de collisions/warps moteur.
+
+Rayons H07P04W32×8ticks, particules14×7ticks, toutes448combinaisons recomposées exactement. Lumière native réemployée explicitement : ne pas prétendre qu’H07P03 possédait cette animation à l’origine. Six modules de cascades/colonnes H26P01,8×3ticks, pieds/halos conservés à1× ; livrés à part, pas placés en forêt. WebP forêt = extrait4,27s, lecture unique, pas boucle composite intégrale209s ; WebP cascades = boucle complète400ms. PNG d’import sans perte, WebP de présentation compressés. Six groupes sémantiques, pas six fichiers arbitraires.
+
+Une seule entrée livrée ici : la finale et les autres cartes restent à produire/reprendre. Ni validation PMDO ni accord artistique prétendu. Huit bruts archivés losslessly au commit100e6878. Gros ZIP et grand WebP conservés dans Git au commit7253a42e avec liens directs ci-dessus, SHA/index `source/lisiere_pmd_v1/release.json`, lecteur/restaurateur et serveur8012 ; ils ne sont pas supprimés. Native_sources.zip V1 dédupliqué avec son membre byte-identique déjà inclus dans l’ancien pack, lecteurs adaptés/testés. Anciens rendus/ZIP et Beach inchangés. Scripts `source/lisiere_pmd_v1/`, détails et limites dans `renders/lisiere_pmd_v1/README.md`.
+
 ## Précision en cours — une autre zone du même lieu, 4–6 calques
 
 Dernière consigne : les cartes doivent sembler appartenir **au même lieu que leur référence**, pas seulement au même biome. Garder textures, gamme de couleurs, formes caractéristiques et perspective ; ciel/arrière-plan seulement lorsqu’il existe dans la référence. Viser4–6groupes sémantiques (sol continu, reliefs/rochers, végétation/bordures, accès/architecture, fond/ciel éventuel, fluides/effets), avec vraies pistes d’animation séparées. Ne pas atteindre le quota par un simple découpage de surfaces visibles. Revoir les occlusions et la continuité du sol, pas seulement les noms de calques.

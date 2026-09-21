@@ -1,4 +1,6 @@
 """Asset/provenance tests, not artistic approval or an engine validation."""
+from native_archive import native_source_archive
+
 from pathlib import Path
 import io,json,zipfile,hashlib,subprocess,sys
 import numpy as np
@@ -32,7 +34,7 @@ def main():
     b=nz.read(rec['path']);assert sha(b)==rec['sha256'];assert hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()==rec['git_sha1']
     if rec['path'].startswith('data/map_bg/H'):assert rec['identical_to_pret']
   ok('eleven-reference audit and all pinned source SHA256/Git-blob hashes')
-  with zipfile.ZipFile(S/'native_sources.zip') as nz:nz.extractall(C/'native')
+  with zipfile.ZipFile(native_source_archive()) as nz:nz.extractall(C/'native')
   for b in range(14):
    idx=native('H07P04W',b*7)[2][0]
    for p in range(32):assert images[m['animations']['foret']['frames'][b*32+p]].tobytes()==colorize('H07P04W',idx,p*8).tobytes()

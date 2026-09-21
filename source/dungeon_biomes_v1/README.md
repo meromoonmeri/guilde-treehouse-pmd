@@ -19,3 +19,5 @@ Dépendances de build : Pillow, NumPy, SciPy ; police DejaVu Sans système. Le b
 - `serve.py` : racine PNG direct, WebP/ZIP directs, accès aux membres du pack sous `/dungeon-pack/…`, archives des générations et anciennes URL via les handlers existants.
 
 Pour rester dans le budget du dépôt sans supprimer les anciennes livraisons, cinq anciens bruts supplémentaires (quatre Casino et l’étude Arcanin) sont conservés bit à bit dans l’historique Git et lus par `source/casino_network_v1/archive.py`. Les indices SHA ont été étendus, lecteurs/serveur/tests vérifiés. Aucun ancien rendu/ZIP ni fichier Beach n’a été modifié. Les dix nouveaux bruts sont archivés de la même façon au commit93ec3994. Les aperçus seulement sont compressés/quantifiés ; les PNG d’import sont sans perte.
+
+Le doublon disque `source/dungeon_biomes_v1/native_sources.zip` est désormais dédupliqué : ses octets sont déjà inclus dans le ZIP du lot1, inchangé. `native_archive.py` les matérialise dans `.cache/` et vérifie le SHA-256 avant toute lecture. Build/verify/audit utilisent ce lecteur ; aucune source native n’est supprimée.
