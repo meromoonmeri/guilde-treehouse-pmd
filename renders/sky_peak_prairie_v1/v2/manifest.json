@@ -9,6 +9,7 @@
     "03_lune_generee",
     "04_nuages_lointains",
     "05_panorama_skypeak_foret_montagnes",
+    "05b_brume_overlay",
     "06_nuages_overlay",
     "07_plateau_herbe",
     "08_paroi_rocheuse"
@@ -54,9 +55,11 @@
       "references/skypeak_gif_frame0.png",
       "references/reference_lune_nuages_utilisateur.png"
     ],
-    "fit": "uniform nearest resizes only (sky→960 wide; panorama 1584→1200 then centred crop; terrain 1024→672); stars/moon/cloud sheets halved uniformly (generator drew at 2× pixel scale); magenta keyed; no recolor"
+    "fit": "uniform nearest resizes only (sky→960 wide; panorama 1584→1200 then centred crop; terrain 1024→672); stars/moon/cloud sheets halved uniformly (generator drew at 2× pixel scale); magenta keyed; no recolor",
+    "mist": "bruts/brume_generee.png"
   },
   "bruts_sha256": {
+    "brume_generee.png": "418b333c37fdf4d1cd46a31f8cf9b96ae116b383fc21c7a67a0870e6333b4213",
     "ciel_nuit_genere.png": "69d669200a9087a22530b509a1e8c4ecdc84f0a41e3010ab7ab1751b9a88e943",
     "etoiles_lune_generees.png": "b5c27b4d316840925c2c41064bc5658a5e1ce3c930ac21b1347f76422e507b64",
     "nuages_generes.png": "b96d406ba455daf8d5ee2f38c4d6c6eb86864f64ee520024a792782a84325bc5",
@@ -67,5 +70,39 @@
     "terrain_prairie_v2.png": "21418f62c90146f9cb828064e2a1a75f991fdacdab3e201bca00b7ba9de3a188"
   },
   "all_pixels_generated": true,
-  "runtime_validated": false
+  "runtime_validated": false,
+  "mist": {
+    "bands": [
+      {
+        "y": 505,
+        "speed_px_s": -4,
+        "breath_period_s": 9.0,
+        "phase": 0.0
+      },
+      {
+        "y": 625,
+        "speed_px_s": -7,
+        "breath_period_s": 7.0,
+        "phase": 2.0
+      },
+      {
+        "y": 755,
+        "speed_px_s": -11,
+        "breath_period_s": 5.5,
+        "phase": 4.0
+      }
+    ],
+    "wrap_px": 1440,
+    "alpha_range_pct": [
+      65,
+      100
+    ],
+    "source": "bruts/brume_generee.png (generated, halved uniformly)",
+    "png_frames": 80,
+    "frames_fps": 10
+  },
+  "night_abyss": {
+    "folder": "nuit_abyss",
+    "filter": "source/cote_v4_abyss/night.py (Abyss tile_night 438383f4) on panorama, mist, clouds, terrain; generated sky/stars/moon unchanged"
+  }
 }

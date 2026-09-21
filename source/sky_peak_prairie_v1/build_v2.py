@@ -88,3 +88,65 @@ enc.add(None,24000,True,80,100,0);(V/f'{P}_extrait_nuages_24s.webp').write_bytes
 meta=dict(size=[W,H],layers=[n for n,_ in layers],terrain_offset=[terr_x,terr_y],panorama_offset=[0,pan_y],moon_position=list(moon_pos),moon_sprite_size=list(moon_sprite.size),clouds=dict(far=FAR,overlay=NEAR,wrap_px=1440,sprites=len(sprites)),generated=dict(sky='bruts/ciel_nuit_genere.png',stars_moon='bruts/etoiles_lune_generees.png',clouds='bruts/nuages_generes.png',panorama='bruts/panorama_skypeak_v3.png',terrain='bruts/terrain_prairie_v2.png',guides=['references/skypeak_horizon_native.png','references/skypeak_gif_frame0.png','references/reference_lune_nuages_utilisateur.png'],fit='uniform nearest resizes only (sky→960 wide; panorama 1584→1200 then centred crop; terrain 1024→672); stars/moon/cloud sheets halved uniformly (generator drew at 2× pixel scale); magenta keyed; no recolor'),bruts_sha256={p.name:sha(p) for p in sorted((O/'bruts').glob('*.png'))},all_pixels_generated=True,runtime_validated=False)
 (V/'manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
 print('OK v2; panorama at',pan_y,'terrain at',(terr_x,terr_y),'moon',moon_pos,moon_sprite.size,'clouds',len(sprites))
+
+# ---- V2.1: animated mist overlay across the forest sea + Abyss night variant ----
+import sys as _sys;_sys.path.insert(0,str(R/'source/cote_v4_abyss'));from night import night
+mist_sheet=key(load(O/'bruts/brume_generee.png'));mist_sheet=mist_sheet.resize((mist_sheet.width//2,mist_sheet.height//2),N)
+ma=np.array(mist_sheet);ml,mn=ndimage.label(ndimage.binary_dilation(ma[:,:,3]>0,iterations=2));wisps=[]
+for i in range(1,mn+1):
+    ys,xs=np.where(ml==i)
+    if len(ys)<150:continue
+    w=Image.fromarray(np.where((ml==i)[:,:,None],ma,0).astype('uint8')).crop((xs.min(),ys.min(),xs.max()+1,ys.max()+1))
+    a=np.array(w);a[:,:,3]=(a[:,:,3].astype(int)*90//100).astype('uint8');wisps.append(Image.fromarray(a))  # translucent mist
+wisps.sort(key=lambda s:-s.width)
+# Three mist bands over the forest (between panorama and terrain), each its own wrap strip + speed + alpha breathing.
+MIST=[dict(y=pan_y+150,speed=-4,period=9.0,phase=0.0,slots=[(0,0),(700,4)]),dict(y=pan_y+270,speed=-7,period=7.0,phase=2.0,slots=[(250,0),(1050,6)]),dict(y=pan_y+400,speed=-11,period=5.5,phase=4.0,slots=[(120,0),(600,8),(1150,2)])]
+mist_strips=[]
+for k,b in enumerate(MIST):
+    st=Image.new('RGBA',(1440,56));
+    for j,(x,y) in enumerate(b['slots']):st.alpha_composite(wisps[(k*2+j)%len(wisps)],(x,y))
+    mist_strips.append(st);st.save(V/'calques'/f'{P}_bande_brume_{k}_1440.png')
+def mist_layer(t,mode='jour'):
+    im=Image.new('RGBA',(W,H))
+    for b,st in zip(MIST,mist_strips):
+        breath=0.65+0.35*(0.5+0.5*math.sin(2*math.pi*(t/b['period'])+b['phase']))  # alpha 55..100 %
+        layer=Image.new('RGBA',(W,H))
+        for x in range(-(int(-b['speed']*t)%1440),W,1440):layer.alpha_composite(st,(x,b['y']))
+        a=np.array(layer);a[:,:,3]=(a[:,:,3]*breath).astype('uint8');im.alpha_composite(Image.fromarray(a))
+    return night(im) if mode=='nuit' else im
+# Night (Abyss) variants of every static layer; sky/stars/moon kept as authored night sky.
+layers_v21=layers[:5]+[('05b_brume_overlay',mist_layer(0))]+layers[5:]
+for name,im in [('05b_brume_overlay',mist_layer(0))]:im.save(V/'calques'/f'{P}_{name}.png')
+NV=V/'nuit_abyss';(NV/'calques').mkdir(parents=True,exist_ok=True)
+night_layers=[]
+for name,im in layers_v21:
+    if name.startswith(('01_','02_','03_')):nim=im
+    else:nim=night(im)
+    night_layers.append((name,nim));nim.save(NV/'calques'/f'{P}_{name}.png')
+def compose2(t,mode):
+    src=layers_v21 if mode=='jour' else night_layers;out=src[0][1].copy()
+    for name,im in src[1:]:
+        if name=='04_nuages_lointains':im=cloud_layer(FAR['speed']*t,FAR['y'],FAR['alpha'])
+        if name=='06_nuages_overlay':im=cloud_layer(700+NEAR['speed']*t,NEAR['y'],NEAR['alpha'],near_strip)
+        if name in('04_nuages_lointains','06_nuages_overlay') and mode=='nuit':im=night(im)
+        if name=='05b_brume_overlay':im=mist_layer(t,mode)
+        out.alpha_composite(im)
+    return out
+for mode,dest in [('jour',V),('nuit',NV)]:
+    comp=compose2(0,mode);comp.save(dest/f'{P}_composition_{"nuit" if mode=="jour" else "nuit_abyss"}.png')
+    src=layers_v21 if mode=='jour' else night_layers
+    root=ET.Element('image',w=str(W),h=str(H),version='0.0.3');stack=ET.SubElement(root,'stack')
+    with zipfile.ZipFile(dest/f'{P}_editable.ora','w',zipfile.ZIP_DEFLATED) as z:
+        z.writestr('mimetype','image/openraster',compress_type=zipfile.ZIP_STORED)
+        for i,(name,im) in enumerate(reversed(src)):ET.SubElement(stack,'layer',name=name,src=f'data/{i}.png',x='0',y='0',opacity='1.0',visibility='visible');z.writestr(f'data/{i}.png',png(im))
+        z.writestr('stack.xml',ET.tostring(root));z.writestr('mergedimage.png',png(comp))
+    enc=_webp.WebPAnimEncoder((W,H),0,0,False,9,17,False,False)
+    for i in range(240):enc.add(compose2(i/10,mode).getim(),i*100,True,80,100,4)
+    enc.add(None,24000,True,80,100,0);(dest/f'{P}_extrait_brume_nuages_24s.webp').write_bytes(enc.assemble('','',''))
+# Mist frames for engines that need PNG sequences: 80 frames over 8 s at 10 fps of the day overlay (breathing periods differ; loop is an excerpt).
+MF=V/'brume_frames';MF.mkdir(exist_ok=True)
+for i in range(80):mist_layer(i/10).save(MF/f'{P}_brume_{i:03d}.png')
+meta=json.loads((V/'manifest.json').read_text());meta['layers']=[n for n,_ in layers_v21];meta['mist']=dict(bands=[dict(y=b['y'],speed_px_s=b['speed'],breath_period_s=b['period'],phase=b['phase']) for b in MIST],wrap_px=1440,alpha_range_pct=[65,100],source='bruts/brume_generee.png (generated, halved uniformly)',png_frames=80,frames_fps=10)
+meta['night_abyss']=dict(folder='nuit_abyss',filter='source/cote_v4_abyss/night.py (Abyss tile_night 438383f4) on panorama, mist, clouds, terrain; generated sky/stars/moon unchanged')
+meta['generated']['mist']='bruts/brume_generee.png';(V/'manifest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
+print('OK v2.1 mist bands',len(wisps),'wisps; night_abyss built')

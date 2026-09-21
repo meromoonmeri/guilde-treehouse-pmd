@@ -2,7 +2,7 @@
 
 ## Sky Peak — prairie du sommet au-dessus d’une mer de forêt (nuit)
 
-**V2 (correction : fond façon Sky Peak, ciel généré, étoiles/lune et nuages sur calques séparés)** : **[Composition V2](renders/sky_peak_prairie_v1/v2/SkyPeakPrairieV2_composition_nuit.png)** · **[Galerie V2](renders/sky_peak_prairie_v1/v2/index.html)** · **[Notice V2](renders/sky_peak_prairie_v1/v2/README.md)** — tout généré, 21 contrôles PASS.
+**V2 (correction : fond façon Sky Peak, ciel généré, étoiles/lune et nuages sur calques séparés)** : **[Composition V2](renders/sky_peak_prairie_v1/v2/SkyPeakPrairieV2_composition_nuit.png)** · **[Galerie V2](renders/sky_peak_prairie_v1/v2/index.html)** · **[Notice V2](renders/sky_peak_prairie_v1/v2/README.md)** — tout généré ; **brume animée en overlay** sur la forêt (3 bandes, dérive + respiration) et **mode Nuit Abyss** (`v2/nuit_abyss/`) ; 39 contrôles PASS.
 
 V1 conservée : **[Composition](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_composition_nuit.png)** · **[Extrait animé](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_extrait_nuages_24s.webp)** · **[Galerie](renders/sky_peak_prairie_v1/index.html)** · **[Notice et calques](renders/sky_peak_prairie_v1/README.md)**
 

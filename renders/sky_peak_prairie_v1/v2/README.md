@@ -4,7 +4,7 @@
 
 Correction demandée : **le fond (mer de forêt + chaîne de montagnes) est rendu dans le style Sky Peak** (montagnes pastel enneigées dans la brume, mer de nuages, canopées vertes rondes comme les buttes d’herbe du GIF), et **le ciel est généré**, avec **étoiles + lune** et **nuages** sur des calques séparés, dans l’esprit de la référence fournie. Le plateau du sommet est le même que V1. La V1 (ciel/lune/nuages natifs) est conservée dans le dossier parent.
 
-Galerie : `index.html` (servir par HTTP) — calques commutables, nuages mobiles. [Extrait animé 24 s](SkyPeakPrairieV2_extrait_nuages_24s.webp) · [ORA](SkyPeakPrairieV2_editable.ora).
+Galerie : `index.html` (servir par HTTP) — calques commutables, nuages mobiles. [Extrait animé 24 s, brume + nuages](SkyPeakPrairieV2_extrait_brume_nuages_24s.webp) · [Extrait Nuit Abyss](nuit_abyss/SkyPeakPrairieV2_extrait_brume_nuages_24s.webp) · [ORA](SkyPeakPrairieV2_editable.ora).
 
 ## Calques 960 × 864, tous en (0,0) — tout est généré
 | # | Calque | Note |
@@ -14,6 +14,7 @@ Galerie : `index.html` (servir par HTTP) — calques commutables, nuages mobiles
 | 03 | `03_lune_generee` | pleine lune 129 × 129 isolée, posée en (716,48) ; sprite seul `_lune_sprite.png` |
 | 04 | `04_nuages_lointains` | 3 grands nuages générés, bande wrap 1440 px, alpha 80 %, −2 px/s |
 | 05 | `05_panorama_skypeak_foret_montagnes` | panorama généré façon Sky Peak (1584→1200 puis recadrage 960), jusqu’au bord bas |
+| 05b | `05b_brume_overlay` | **brume animée** : 3 bandes wrap 1440 px (`_bande_brume_{0,1,2}_1440.png`) à y=505/625/755, −4/−7/−11 px/s, respiration d’opacité 65–100 % (périodes 9/7/5,5 s) ; 80 PNG dans `brume_frames/` (10 i/s) ; brut `bruts/brume_generee.png` |
 | 06 | `06_nuages_overlay` | 3 petits nuages, bande wrap 1440 px, 100 %, −6 px/s, devant le panorama |
 | 07 | `07_plateau_herbe` | partition herbe du plateau généré (comme V1) |
 | 08 | `08_paroi_rocheuse` | partition roche |
@@ -23,4 +24,9 @@ Bandes de nuages : `_bande_nuages_lointains_1440.png` et `_bande_nuages_overlay_
 ## Limites
 Aucun pixel de cette V2 n’est natif certifié : ciel, astres, nuages, panorama et terrain sont des dessins générés guidés par le GIF Sky Peak (`source/sky_peak_v1/gif_0.png`, extrait d’horizon `references/skypeak_horizon_native.png`) et la référence lune/nuages fournie. Réductions uniformes au plus proche voisin uniquement, détourage magenta, aucune recoloration. Herbe/roche = partition des pixels visibles. Pas de test PMDO. Le WebP est un extrait de 24 s (périodes de wrap 720 s / 240 s).
 
-`verify_v2.py` : 21 contrôles PASS (tailles, ciel opaque, étoiles/lune disjointes et lune à sa position déclarée, bandes de nuages, recomposition = composition = ORA, partition herbe/roche, aucun magenta résiduel, forêt verte jusqu’au bord bas, extrait 24 s).
+(Historique V2.0 : 21 contrôles) (tailles, ciel opaque, étoiles/lune disjointes et lune à sa position déclarée, bandes de nuages, recomposition = composition = ORA, partition herbe/roche, aucun magenta résiduel, forêt verte jusqu’au bord bas, extrait 24 s).
+
+## Mode nuit Abyss (`nuit_abyss/`)
+Mêmes calques passés par le filtre exact `tile_night` d’Abyss (`source/cote_v4_abyss/night.py`) : panorama, brume, nuages, plateau et paroi. Ciel/étoiles/lune générés inchangés (déjà de nuit). Composition, ORA, calques et extrait animé fournis ; la galerie bascule entre les deux modes et filtre les bandes de nuages/brume à la volée avec la même formule. Vérifié : chaque calque nocturne = filtre exact du calque de jour ; recomposition = ORA.
+
+`verify_v2.py` : **39 contrôles PASS** au total (dont brume translucide, frames animées, 3 bandes, calques nocturnes exacts, recompositions jour/nuit).
