@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Forêt givrée Native V2 — chemins en vrais modules Frosty Forest
+
+**[Les six cartes](renders/winter_forest_native_v2/WinterNativeV2_Board.png)** · **[Aperçu animé 05 (boréal)](renders/winter_forest_native_v2/05_corniche/WinterNativeV2_05_corniche_AnimatedPreview.webp)** · **[Galerie](renders/winter_forest_native_v2/index.html)** · **[Notice, calques et provenance](renders/winter_forest_native_v2/README.md)** · **[Archive du lot](winter_forest_native_v2_pack.zip)**
+
+Six cartes 504 × 552 reliées (deux itinéraires, un seuil vers l’arène V5 inchangée), construites **uniquement avec la neige et les arbres givrés canoniques de Frosty Forest** (RawAsset `03c80dad`), modules 24 px copiés sans agrandissement ni recoloration, adjacence officielle sur l’atlas continu. **2898 cellules vérifiées pixel-identiques, 111 contrôles PASS.** Ciels boréal/nuageux en panneaux séparés, poudre et flocons en effets à part. Compositions originales, pas des cartes du jeu ; pas de test PMDO ni de navigateur réel pour ce lot. La V1 générée n’a pas pu être publiée et n’est pas dans cette copie : elle sera réarchivée si son archive est fournie.
+
 ## Ciel nordique V5 — plus de hauteur, ondulation à 30 Hz, entrée raccordée
 
 **[Nouvelle boucle](renders/ice_arena_northern_sky_v5/composition_loop.webp)** · **[Entrée avant / après](renders/ice_arena_northern_sky_v5/review/entry_before_after.png)** · **[Atelier](renders/ice_arena_northern_sky_v5/index.html)** · **[PNG, calques et méthode](renders/ice_arena_northern_sky_v5/README.md)**

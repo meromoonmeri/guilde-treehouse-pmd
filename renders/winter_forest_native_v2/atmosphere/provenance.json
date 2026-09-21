@@ -1,0 +1,130 @@
+{
+  "native_terrain_unchanged": true,
+  "sky_panel_size": [
+    504,
+    288
+  ],
+  "sky_panel_not_a_native_horizon": true,
+  "clouds": {
+    "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+    "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+    "cloud_crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "cloud_destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "cloud_strip_size": [
+      1440,
+      208
+    ],
+    "cloud_speed_px_s": -4,
+    "cloud_loop_s": 360,
+    "sources": [
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+        "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+        "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+        "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+        "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+      }
+    ]
+  },
+  "boreal_source_commit": "ed8fe362e4c9ecb66caf9b9acdc8484897ed3bf5",
+  "boreal_note": "Existing approved V5: authored blue-black sky, native star motifs, generated/flow-assisted aurora. Cropped to 504×288 without resizing. Not a canonical aurora animation.",
+  "boreal_sources": [
+    {
+      "path": "renders/ice_arena_northern_sky_v5/layers/NorthernSkyV5_Sky.png",
+      "sha256": "8cc61c9d6ba5848a7324d3bc2e7fa2cca411fa768bdaba485a05809568e89ffd"
+    },
+    {
+      "path": "renders/ice_arena_northern_sky_v5/layers/NorthernSkyV5_Stars_phase0.png",
+      "sha256": "529d3ff8d63ad42ef2794b43d02b0ead8eb8312d77afe64f8c7f99068aeae9b5"
+    },
+    {
+      "path": "renders/ice_arena_northern_sky_v5/aurora_frames/NorthernSkyV5_Aurora_000.png",
+      "sha256": "32bd2963ac6060289a7ecc96a64175b0767023d69bb3c78bf49952604662a70e"
+    }
+  ],
+  "particles": {
+    "origin": "Newly authored procedural effect layers, not canonical PMD sprites",
+    "frames": 96,
+    "fps": 15,
+    "period_seconds": 6.4,
+    "powder": "Horizontal low streaks, independent from falling flakes",
+    "aurora_animated_here": true
+  },
+  "boreal_animation": {
+    "frames": 192,
+    "fps": 30,
+    "period_seconds": 6.4,
+    "method": "All existing V5 aurora poses retained, cropped without resampling or scrolling. V5 star phase advances every three frames. Cloudy sky is static; only its terrain weather moves."
+  }
+}

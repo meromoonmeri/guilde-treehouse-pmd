@@ -1,0 +1,355 @@
+{
+  "tile_px": 24,
+  "size": [
+    504,
+    552
+  ],
+  "grid_cells": [
+    21,
+    23
+  ],
+  "port_width_px": 72,
+  "scenes": [
+    {
+      "id": "01_lisiere",
+      "title": "La lisière",
+      "grid": [
+        0,
+        2
+      ],
+      "ports": "NSE",
+      "weather": "cloudy",
+      "paths": [
+        [
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            14
+          ],
+          [
+            10,
+            22
+          ]
+        ],
+        [
+          [
+            9,
+            11
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            20,
+            11
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_01_lisiere",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 160
+    },
+    {
+      "id": "02_lacets",
+      "title": "Les lacets",
+      "grid": [
+        1,
+        2
+      ],
+      "ports": "NW",
+      "weather": "cloudy",
+      "paths": [
+        [
+          [
+            0,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            6,
+            16
+          ],
+          [
+            13,
+            16
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            10,
+            0
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_02_lacets",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 163
+    },
+    {
+      "id": "03_sapiniere",
+      "title": "Le sentier des arbres givrés",
+      "grid": [
+        0,
+        1
+      ],
+      "ports": "NS",
+      "weather": "boreal",
+      "paths": [
+        [
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            13,
+            17
+          ],
+          [
+            10,
+            21
+          ],
+          [
+            10,
+            22
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_03_sapiniere",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 126
+    },
+    {
+      "id": "04_clairiere",
+      "title": "La clairière",
+      "grid": [
+        1,
+        1
+      ],
+      "ports": "NS",
+      "weather": "cloudy",
+      "paths": [
+        [
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            22
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_04_clairiere",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 210
+    },
+    {
+      "id": "05_corniche",
+      "title": "Le détour du bosquet",
+      "grid": [
+        0,
+        0
+      ],
+      "ports": "SE",
+      "weather": "boreal",
+      "paths": [
+        [
+          [
+            10,
+            22
+          ],
+          [
+            10,
+            19
+          ],
+          [
+            5,
+            15
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            17,
+            11
+          ],
+          [
+            20,
+            11
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_05_corniche",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 149
+    },
+    {
+      "id": "06_seuil",
+      "title": "Le seuil de l’arène",
+      "grid": [
+        1,
+        0
+      ],
+      "ports": "NSW",
+      "weather": "boreal",
+      "paths": [
+        [
+          [
+            10,
+            0
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            12,
+            16
+          ],
+          [
+            10,
+            19
+          ],
+          [
+            10,
+            22
+          ]
+        ],
+        [
+          [
+            0,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            13,
+            11
+          ]
+        ]
+      ],
+      "stem": "WinterNativeV2_06_seuil",
+      "size": [
+        504,
+        552
+      ],
+      "walkable_cells": 167
+    }
+  ],
+  "links": [
+    [
+      "01_lisiere",
+      "N",
+      "03_sapiniere",
+      "S"
+    ],
+    [
+      "01_lisiere",
+      "E",
+      "02_lacets",
+      "W"
+    ],
+    [
+      "02_lacets",
+      "N",
+      "04_clairiere",
+      "S"
+    ],
+    [
+      "03_sapiniere",
+      "N",
+      "05_corniche",
+      "S"
+    ],
+    [
+      "04_clairiere",
+      "N",
+      "06_seuil",
+      "S"
+    ],
+    [
+      "05_corniche",
+      "E",
+      "06_seuil",
+      "W"
+    ],
+    [
+      "06_seuil",
+      "N",
+      "arena_v5",
+      "S"
+    ]
+  ],
+  "external": [
+    "01_lisiere.S"
+  ],
+  "arena": "renders/ice_arena_northern_sky_v5",
+  "runtime_validated": false
+}
