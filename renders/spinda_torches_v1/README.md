@@ -28,3 +28,10 @@ Scripts : `.venv/bin/python source/spinda_torches_v1/build.py`, `verify.py`, `py
 Stockage : les128 PNG indexés sont conservés dans le ZIP autonome, sans doublon sur disque dans le dépôt. L’atelier lit les bandes RGBA équivalentes. Après extraction du ZIP, les PNG indexés sont directement accessibles dans `lumiere/`. Le fond de démonstration WebP est lossless.
 
 `Torche_N_animation.webp` : aperçu animé lossless d’une orientation,16frames à100ms en boucle. Image de consultation composite agrandie2× ; les vrais calques à1× se trouvent dans les sous-dossiers du pack.
+
+## Affichage direct sans HTML
+
+- [Les8orientations en WebP animé](apercus_directs/Torches_8_angles_animees.webp) :16frames lossless,100ms chacune, boucle1,6s.
+- [Les8orientations en PNG](apercus_directs/Torches_8_angles.png) : même planche, première frame,832×448.
+
+Ces vues sont agrandies2× nearest sur fond sombre pour consultation ; les calques d’import transparents restent dans le ZIP existant. Reconstruction : `direct_previews.py`. Les9ressources lourdes du précédent atelier (fond +8bandes lumière) sont désormais lues directement dans ce même ZIP, sans duplication dans le dépôt ; leurs octets sont conservés à l’identique et le serveur8009 maintient les anciennes URL. Le ZIP extrait reste autonome avec tous ses fichiers. Les nouvelles vues directes sont des fichiers séparés du pack, pas des pages HTML.

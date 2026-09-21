@@ -64,6 +64,7 @@ def build():
  save(background,'demo/Cafe_nuit_sans_halo_statique.webp')
  placements=[{'direction':'N','x':168,'y':112,'phase':0},{'direction':'N','x':432,'y':112,'phase':5},{'direction':'NW','x':98,'y':148,'phase':10},{'direction':'NE','x':504,'y':148,'phase':15}]
  m={'title':'Torches murales · huit orientations','objects':objects,'light_frames_in_zip_only':True,'frame_count':16,'frame_ms':100,'period_ms':1600,'flame':{'size':[32,40],'anchor':[16,40],'frames':fire,'strip':firestrip,'pose_count':4,'period_ms':400,'native_untransformed':True},'palette':{'file':'palette_cycles.json','index_fixed_across_frames':True,'cycle_rings':15,'ring_length':16,'max_alpha':30,'rgba_strips_available':True},'background':'demo/Cafe_nuit_sans_halo_statique.webp','demo_placements':placements,'demo_only':True,'layer_order':['lumiere','support','flamme'],'source_audit':source_audit,'runtime_PMDO':'NOT TESTED','old_V8_collection':'unchanged; pending furniture/windows/ribbons not completed by this torch set'}
+ m['zip_backed_assets']=[m['background']]+[o['light_strip'] for o in objects]
  (O/'manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n');(O/'palette_cycles.json').write_text(json.dumps({'transparent_index':0,'index_formula':'1 + (level-1)*16 + phase, level 1..15','animation':'Each 16-entry colour ring is cyclically rotated by one entry per frame. Alpha for each ring stays fixed. No bitmap scrolling or movement.','frame_ms':MS,'frame_count':16,'base_rgba_palette':[[*rgb,al] for rgb,al in zip(*palette(0))],'rings':[{'start':1+(level-1)*16,'length':16,'step_per_frame':1} for level in range(1,16)]},separators=(',',':'))+'\n')
  provenance=json.loads((R/'renders/cafe_spinda_reseau_v4/flammes_provenance.json').read_text());(O/'flammes_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
  (O/'index.html').write_text((S/'viewer.html').read_text().replace('__DATA__',json.dumps(m,ensure_ascii=False)))
@@ -78,13 +79,19 @@ def build():
  for n in range(16):
   frame=Image.new('RGBA',(96,96),'#211b23');frame.alpha_composite(light.crop((n*96,0,(n+1)*96,96)));frame.alpha_composite(body,(16,4));frame.alpha_composite(Image.open(O/fire[n%4]['file']).convert('RGBA'),(32,8));animated.append(frame.resize((192,192),Image.Resampling.NEAREST))
  animated[0].save(O/'Torche_N_animation.webp',save_all=True,append_images=animated[1:],lossless=True,duration=100,loop=0,minimize_size=True)
- files=[p for p in O.rglob('*') if p.is_file() and p.suffix not in ['.zip','.jpg'] and not p.name.startswith('verification')]
+ files=[p for p in O.rglob('*') if p.is_file() and 'apercus_directs' not in p.relative_to(O).parts and p.suffix not in ['.zip','.jpg'] and not p.name.startswith('verification')]
  with zipfile.ZipFile(O/'Spinda_torches_8angles_animees.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
   for p in sorted(files):
    info=zipfile.ZipInfo(str(p.relative_to(O)),(2026,9,21,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;raw=p.read_bytes()
    if p.name=='index.html':raw=raw.replace(b'class="button primary" href="Spinda_torches_8angles_animees.zip"',b'hidden class="button primary" href="Spinda_torches_8angles_animees.zip"')
    z.writestr(info,raw,compresslevel=9)
  for p in (O/'lumiere').rglob('*.png'):p.unlink()
+ for name in m['zip_backed_assets']:
+  p=O/name
+  with zipfile.ZipFile(O/'Spinda_torches_8angles_animees.zip') as z:assert z.read(name)==p.read_bytes()
+  p.unlink()
+ from direct_previews import build as previews
+ previews()
  print('Built 8 supports, 4 native poses, 128 indexed light frames, 10 RGBA strips; ZIP bytes:',(O/'Spinda_torches_8angles_animees.zip').stat().st_size)
  return m
 if __name__=='__main__':build()
