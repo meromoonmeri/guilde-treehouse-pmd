@@ -1,5 +1,11 @@
 # Méthode de production approuvée — zones Métano
 
+## Torches murales animées — huit orientations (21 septembre 2026)
+
+**[Atelier torches](apercu_spinda_torches.html)** · [Pack PNG autonome](renders/spinda_torches_v1/Spinda_torches_8angles_animees.zip) · [Planche des huit vues](renders/spinda_torches_v1/Torches_8_orientations.jpg).
+
+Dernière demande : torches murales sous tous les angles, lumière animée par palette cycling multiframe, calques séparés. Livraison additive :8supports générés (N/NE/E/SE/S/SO/O/NO),4vraies poses natives Halcyon/Ledian inchangées à1×,16frames de lumière par orientation (100ms, boucle1600ms). Cartes d’indices et alpha fixes ; vraies rotations des palettes,128PNG indexés dans le ZIP et8bandes RGBA. Trois calques séparés : support / flamme / lumière. Aperçu et exports600×448, placements de démonstration amovibles ; aucun objet cuit dans les maps. Atelier8009 ; scripts `source/spinda_torches_v1/`.9originaux générés conservés losslessly dans Git (première face N rejetée, remplacée). Les maps V8/V7 et Beach restent inchangées ; ce pack ne termine pas les meubles/rubans/fenêtres encore en attente. Pas de validation PMDO ou approbation artistique revendiquée.
+
 ## Spinda V8 — lot 1 partiel et nuit tamisée (21 septembre 2026)
 
 **[Atelier V8](apercu_cafe_spinda_revisite_v8.html)** · [Jour / nuit](renders/cafe_spinda_revisite_v8/SpindaV8_jour_nuit.jpg) · [Premier lot de mobilier](renders/cafe_spinda_revisite_v8/SpindaV8_mobilier_lot1.jpg) · [Pack autonome](renders/cafe_spinda_revisite_v8/SpindaV8_atelier_lot1.zip).

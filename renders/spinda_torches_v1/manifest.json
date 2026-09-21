@@ -1,0 +1,702 @@
+{
+  "title": "Torches murales · huit orientations",
+  "objects": [
+    {
+      "id": "N",
+      "label": "Nord · face",
+      "wall_direction": "N",
+      "inward_normal": [
+        0,
+        1
+      ],
+      "support": {
+        "jour": "supports/Torche_N_jour.png",
+        "nuit": "supports/Torche_N_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/N/Torche_N_cycle_00.png",
+        "lumiere/N/Torche_N_cycle_01.png",
+        "lumiere/N/Torche_N_cycle_02.png",
+        "lumiere/N/Torche_N_cycle_03.png",
+        "lumiere/N/Torche_N_cycle_04.png",
+        "lumiere/N/Torche_N_cycle_05.png",
+        "lumiere/N/Torche_N_cycle_06.png",
+        "lumiere/N/Torche_N_cycle_07.png",
+        "lumiere/N/Torche_N_cycle_08.png",
+        "lumiere/N/Torche_N_cycle_09.png",
+        "lumiere/N/Torche_N_cycle_10.png",
+        "lumiere/N/Torche_N_cycle_11.png",
+        "lumiere/N/Torche_N_cycle_12.png",
+        "lumiere/N/Torche_N_cycle_13.png",
+        "lumiere/N/Torche_N_cycle_14.png",
+        "lumiere/N/Torche_N_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_N_lumiere_16frames.png",
+      "indices": "indices/Torche_N_indices.png",
+      "native": false
+    },
+    {
+      "id": "NE",
+      "label": "Nord-est · trois-quarts",
+      "wall_direction": "NE",
+      "inward_normal": [
+        -0.707,
+        0.707
+      ],
+      "support": {
+        "jour": "supports/Torche_NE_jour.png",
+        "nuit": "supports/Torche_NE_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/NE/Torche_NE_cycle_00.png",
+        "lumiere/NE/Torche_NE_cycle_01.png",
+        "lumiere/NE/Torche_NE_cycle_02.png",
+        "lumiere/NE/Torche_NE_cycle_03.png",
+        "lumiere/NE/Torche_NE_cycle_04.png",
+        "lumiere/NE/Torche_NE_cycle_05.png",
+        "lumiere/NE/Torche_NE_cycle_06.png",
+        "lumiere/NE/Torche_NE_cycle_07.png",
+        "lumiere/NE/Torche_NE_cycle_08.png",
+        "lumiere/NE/Torche_NE_cycle_09.png",
+        "lumiere/NE/Torche_NE_cycle_10.png",
+        "lumiere/NE/Torche_NE_cycle_11.png",
+        "lumiere/NE/Torche_NE_cycle_12.png",
+        "lumiere/NE/Torche_NE_cycle_13.png",
+        "lumiere/NE/Torche_NE_cycle_14.png",
+        "lumiere/NE/Torche_NE_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_NE_lumiere_16frames.png",
+      "indices": "indices/Torche_NE_indices.png",
+      "native": false
+    },
+    {
+      "id": "E",
+      "label": "Est · profil",
+      "wall_direction": "E",
+      "inward_normal": [
+        -1,
+        0
+      ],
+      "support": {
+        "jour": "supports/Torche_E_jour.png",
+        "nuit": "supports/Torche_E_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/E/Torche_E_cycle_00.png",
+        "lumiere/E/Torche_E_cycle_01.png",
+        "lumiere/E/Torche_E_cycle_02.png",
+        "lumiere/E/Torche_E_cycle_03.png",
+        "lumiere/E/Torche_E_cycle_04.png",
+        "lumiere/E/Torche_E_cycle_05.png",
+        "lumiere/E/Torche_E_cycle_06.png",
+        "lumiere/E/Torche_E_cycle_07.png",
+        "lumiere/E/Torche_E_cycle_08.png",
+        "lumiere/E/Torche_E_cycle_09.png",
+        "lumiere/E/Torche_E_cycle_10.png",
+        "lumiere/E/Torche_E_cycle_11.png",
+        "lumiere/E/Torche_E_cycle_12.png",
+        "lumiere/E/Torche_E_cycle_13.png",
+        "lumiere/E/Torche_E_cycle_14.png",
+        "lumiere/E/Torche_E_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_E_lumiere_16frames.png",
+      "indices": "indices/Torche_E_indices.png",
+      "native": false
+    },
+    {
+      "id": "SE",
+      "label": "Sud-est · retour",
+      "wall_direction": "SE",
+      "inward_normal": [
+        -0.707,
+        -0.707
+      ],
+      "support": {
+        "jour": "supports/Torche_SE_jour.png",
+        "nuit": "supports/Torche_SE_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/SE/Torche_SE_cycle_00.png",
+        "lumiere/SE/Torche_SE_cycle_01.png",
+        "lumiere/SE/Torche_SE_cycle_02.png",
+        "lumiere/SE/Torche_SE_cycle_03.png",
+        "lumiere/SE/Torche_SE_cycle_04.png",
+        "lumiere/SE/Torche_SE_cycle_05.png",
+        "lumiere/SE/Torche_SE_cycle_06.png",
+        "lumiere/SE/Torche_SE_cycle_07.png",
+        "lumiere/SE/Torche_SE_cycle_08.png",
+        "lumiere/SE/Torche_SE_cycle_09.png",
+        "lumiere/SE/Torche_SE_cycle_10.png",
+        "lumiere/SE/Torche_SE_cycle_11.png",
+        "lumiere/SE/Torche_SE_cycle_12.png",
+        "lumiere/SE/Torche_SE_cycle_13.png",
+        "lumiere/SE/Torche_SE_cycle_14.png",
+        "lumiere/SE/Torche_SE_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_SE_lumiere_16frames.png",
+      "indices": "indices/Torche_SE_indices.png",
+      "native": false
+    },
+    {
+      "id": "S",
+      "label": "Sud · dos",
+      "wall_direction": "S",
+      "inward_normal": [
+        0,
+        -1
+      ],
+      "support": {
+        "jour": "supports/Torche_S_jour.png",
+        "nuit": "supports/Torche_S_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/S/Torche_S_cycle_00.png",
+        "lumiere/S/Torche_S_cycle_01.png",
+        "lumiere/S/Torche_S_cycle_02.png",
+        "lumiere/S/Torche_S_cycle_03.png",
+        "lumiere/S/Torche_S_cycle_04.png",
+        "lumiere/S/Torche_S_cycle_05.png",
+        "lumiere/S/Torche_S_cycle_06.png",
+        "lumiere/S/Torche_S_cycle_07.png",
+        "lumiere/S/Torche_S_cycle_08.png",
+        "lumiere/S/Torche_S_cycle_09.png",
+        "lumiere/S/Torche_S_cycle_10.png",
+        "lumiere/S/Torche_S_cycle_11.png",
+        "lumiere/S/Torche_S_cycle_12.png",
+        "lumiere/S/Torche_S_cycle_13.png",
+        "lumiere/S/Torche_S_cycle_14.png",
+        "lumiere/S/Torche_S_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_S_lumiere_16frames.png",
+      "indices": "indices/Torche_S_indices.png",
+      "native": false
+    },
+    {
+      "id": "SW",
+      "label": "Sud-ouest · retour",
+      "wall_direction": "SW",
+      "inward_normal": [
+        0.707,
+        -0.707
+      ],
+      "support": {
+        "jour": "supports/Torche_SW_jour.png",
+        "nuit": "supports/Torche_SW_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/SW/Torche_SW_cycle_00.png",
+        "lumiere/SW/Torche_SW_cycle_01.png",
+        "lumiere/SW/Torche_SW_cycle_02.png",
+        "lumiere/SW/Torche_SW_cycle_03.png",
+        "lumiere/SW/Torche_SW_cycle_04.png",
+        "lumiere/SW/Torche_SW_cycle_05.png",
+        "lumiere/SW/Torche_SW_cycle_06.png",
+        "lumiere/SW/Torche_SW_cycle_07.png",
+        "lumiere/SW/Torche_SW_cycle_08.png",
+        "lumiere/SW/Torche_SW_cycle_09.png",
+        "lumiere/SW/Torche_SW_cycle_10.png",
+        "lumiere/SW/Torche_SW_cycle_11.png",
+        "lumiere/SW/Torche_SW_cycle_12.png",
+        "lumiere/SW/Torche_SW_cycle_13.png",
+        "lumiere/SW/Torche_SW_cycle_14.png",
+        "lumiere/SW/Torche_SW_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_SW_lumiere_16frames.png",
+      "indices": "indices/Torche_SW_indices.png",
+      "native": false
+    },
+    {
+      "id": "W",
+      "label": "Ouest · profil",
+      "wall_direction": "W",
+      "inward_normal": [
+        1,
+        0
+      ],
+      "support": {
+        "jour": "supports/Torche_W_jour.png",
+        "nuit": "supports/Torche_W_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/W/Torche_W_cycle_00.png",
+        "lumiere/W/Torche_W_cycle_01.png",
+        "lumiere/W/Torche_W_cycle_02.png",
+        "lumiere/W/Torche_W_cycle_03.png",
+        "lumiere/W/Torche_W_cycle_04.png",
+        "lumiere/W/Torche_W_cycle_05.png",
+        "lumiere/W/Torche_W_cycle_06.png",
+        "lumiere/W/Torche_W_cycle_07.png",
+        "lumiere/W/Torche_W_cycle_08.png",
+        "lumiere/W/Torche_W_cycle_09.png",
+        "lumiere/W/Torche_W_cycle_10.png",
+        "lumiere/W/Torche_W_cycle_11.png",
+        "lumiere/W/Torche_W_cycle_12.png",
+        "lumiere/W/Torche_W_cycle_13.png",
+        "lumiere/W/Torche_W_cycle_14.png",
+        "lumiere/W/Torche_W_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_W_lumiere_16frames.png",
+      "indices": "indices/Torche_W_indices.png",
+      "native": false
+    },
+    {
+      "id": "NW",
+      "label": "Nord-ouest · trois-quarts",
+      "wall_direction": "NW",
+      "inward_normal": [
+        0.707,
+        0.707
+      ],
+      "support": {
+        "jour": "supports/Torche_NW_jour.png",
+        "nuit": "supports/Torche_NW_nuit.png"
+      },
+      "support_size": [
+        64,
+        88
+      ],
+      "support_anchor": [
+        32,
+        44
+      ],
+      "light_anchor": [
+        48,
+        48
+      ],
+      "light_size": [
+        96,
+        96
+      ],
+      "light_frames": [
+        "lumiere/NW/Torche_NW_cycle_00.png",
+        "lumiere/NW/Torche_NW_cycle_01.png",
+        "lumiere/NW/Torche_NW_cycle_02.png",
+        "lumiere/NW/Torche_NW_cycle_03.png",
+        "lumiere/NW/Torche_NW_cycle_04.png",
+        "lumiere/NW/Torche_NW_cycle_05.png",
+        "lumiere/NW/Torche_NW_cycle_06.png",
+        "lumiere/NW/Torche_NW_cycle_07.png",
+        "lumiere/NW/Torche_NW_cycle_08.png",
+        "lumiere/NW/Torche_NW_cycle_09.png",
+        "lumiere/NW/Torche_NW_cycle_10.png",
+        "lumiere/NW/Torche_NW_cycle_11.png",
+        "lumiere/NW/Torche_NW_cycle_12.png",
+        "lumiere/NW/Torche_NW_cycle_13.png",
+        "lumiere/NW/Torche_NW_cycle_14.png",
+        "lumiere/NW/Torche_NW_cycle_15.png"
+      ],
+      "light_strip": "tilesheets/Torche_NW_lumiere_16frames.png",
+      "indices": "indices/Torche_NW_indices.png",
+      "native": false
+    }
+  ],
+  "light_frames_in_zip_only": true,
+  "frame_count": 16,
+  "frame_ms": 100,
+  "period_ms": 1600,
+  "flame": {
+    "size": [
+      32,
+      40
+    ],
+    "anchor": [
+      16,
+      40
+    ],
+    "frames": [
+      {
+        "file": "flamme/Torche_flamme_native_00.png",
+        "sha256": "a233a98b7ab3160a49ee2d1be88fd187f8fe933988db75fff4cc4a5f7c035728",
+        "rgba_sha256": "50bd7140f7cba35674bed239f3e22bd2d0d274246b89de0d861a71da361ea863",
+        "source": "renders/cafe_spinda_reseau_v4/assets/SpindaV4_flamme_00.png"
+      },
+      {
+        "file": "flamme/Torche_flamme_native_01.png",
+        "sha256": "291f38056c46bf64d61589c1afe2796c75e3b3d39e99d26dff5dd05e4b9b43a9",
+        "rgba_sha256": "5fd173cd19b9e4d3097e41698687407b64a7be60c14bd08ba83e91b8bf0ff2ff",
+        "source": "renders/cafe_spinda_reseau_v4/assets/SpindaV4_flamme_01.png"
+      },
+      {
+        "file": "flamme/Torche_flamme_native_02.png",
+        "sha256": "788f40b248bdac621f08a8d9e7682f68b73d992f9225089e53114fec149da449",
+        "rgba_sha256": "54019ca6d8bb9ebde3ac830a21361eb671764a5addc0915d66a8336ad4d1a79d",
+        "source": "renders/cafe_spinda_reseau_v4/assets/SpindaV4_flamme_02.png"
+      },
+      {
+        "file": "flamme/Torche_flamme_native_03.png",
+        "sha256": "e6dd4e51c3af1c73ee05d919f19a42dcf7c8f1163be6df5873f6b8eb5dfecd33",
+        "rgba_sha256": "642785c3a659b2f513d1c80f3782c6bf4f2299bd033aebb62505c34f087c51dc",
+        "source": "renders/cafe_spinda_reseau_v4/assets/SpindaV4_flamme_03.png"
+      }
+    ],
+    "strip": "tilesheets/Torche_flamme_native_4poses.png",
+    "pose_count": 4,
+    "period_ms": 400,
+    "native_untransformed": true
+  },
+  "palette": {
+    "file": "palette_cycles.json",
+    "index_fixed_across_frames": true,
+    "cycle_rings": 15,
+    "ring_length": 16,
+    "max_alpha": 30,
+    "rgba_strips_available": true
+  },
+  "background": "demo/Cafe_nuit_sans_halo_statique.webp",
+  "demo_placements": [
+    {
+      "direction": "N",
+      "x": 168,
+      "y": 112,
+      "phase": 0
+    },
+    {
+      "direction": "N",
+      "x": 432,
+      "y": 112,
+      "phase": 5
+    },
+    {
+      "direction": "NW",
+      "x": 98,
+      "y": 148,
+      "phase": 10
+    },
+    {
+      "direction": "NE",
+      "x": 504,
+      "y": 148,
+      "phase": 15
+    }
+  ],
+  "demo_only": true,
+  "layer_order": [
+    "lumiere",
+    "support",
+    "flamme"
+  ],
+  "source_audit": [
+    {
+      "direction": "N",
+      "raw": "raws/N_front.webp",
+      "keyed_bbox": [
+        534,
+        135,
+        874,
+        638
+      ],
+      "visible_size": [
+        22,
+        32
+      ],
+      "placement": [
+        21,
+        40,
+        43,
+        72
+      ],
+      "cup_anchor_fraction": [
+        0.5,
+        0.13
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "NE",
+      "raw": "raws/NE.webp",
+      "keyed_bbox": [
+        365,
+        112,
+        1049,
+        632
+      ],
+      "visible_size": [
+        40,
+        30
+      ],
+      "placement": [
+        23,
+        34,
+        63,
+        64
+      ],
+      "cup_anchor_fraction": [
+        0.225,
+        0.35
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "E",
+      "raw": "raws/E.webp",
+      "keyed_bbox": [
+        470,
+        130,
+        938,
+        638
+      ],
+      "visible_size": [
+        29,
+        32
+      ],
+      "placement": [
+        24,
+        39,
+        53,
+        71
+      ],
+      "cup_anchor_fraction": [
+        0.28,
+        0.15
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "SE",
+      "raw": "raws/SE.webp",
+      "keyed_bbox": [
+        487,
+        106,
+        926,
+        674
+      ],
+      "visible_size": [
+        25,
+        32
+      ],
+      "placement": [
+        25,
+        40,
+        50,
+        72
+      ],
+      "cup_anchor_fraction": [
+        0.28,
+        0.14
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "S",
+      "raw": "raws/S.webp",
+      "keyed_bbox": [
+        494,
+        130,
+        914,
+        656
+      ],
+      "visible_size": [
+        26,
+        32
+      ],
+      "placement": [
+        19,
+        39,
+        45,
+        71
+      ],
+      "cup_anchor_fraction": [
+        0.5,
+        0.145
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "SW",
+      "raw": "raws/SW.webp",
+      "keyed_bbox": [
+        494,
+        130,
+        902,
+        662
+      ],
+      "visible_size": [
+        25,
+        32
+      ],
+      "placement": [
+        15,
+        40,
+        40,
+        72
+      ],
+      "cup_anchor_fraction": [
+        0.69,
+        0.13
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "W",
+      "raw": "raws/W.webp",
+      "keyed_bbox": [
+        505,
+        130,
+        902,
+        632
+      ],
+      "visible_size": [
+        25,
+        32
+      ],
+      "placement": [
+        16,
+        40,
+        41,
+        72
+      ],
+      "cup_anchor_fraction": [
+        0.66,
+        0.14
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    },
+    {
+      "direction": "NW",
+      "raw": "raws/NW.webp",
+      "keyed_bbox": [
+        494,
+        130,
+        903,
+        632
+      ],
+      "visible_size": [
+        26,
+        32
+      ],
+      "placement": [
+        15,
+        39,
+        41,
+        71
+      ],
+      "cup_anchor_fraction": [
+        0.66,
+        0.16
+      ],
+      "resample": "nearest; generated support only",
+      "mirrored_or_rotated": false
+    }
+  ],
+  "runtime_PMDO": "NOT TESTED",
+  "old_V8_collection": "unchanged; pending furniture/windows/ribbons not completed by this torch set"
+}
