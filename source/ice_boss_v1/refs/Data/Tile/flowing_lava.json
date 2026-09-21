@@ -1,0 +1,314 @@
+﻿{
+"Version": "0.8.9.0",
+"Object": {
+"$type": "RogueEssence.Data.TileData, RogueEssence",
+"Name": {
+"DefaultText": "Flowing Lava",
+"LocalTexts": {}
+},
+"Desc": {
+"DefaultText": "",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "Used for the 2nd boss fight's special effect.\r\n\r\nDoesn't affect fire types. Burns other types, and applies a typed 1/16 damage to them for standing on it. Gives 20% boost to power if a fire type stands on the tile and uses a fire move.",
+"Anim": {
+"AnimIndex": "",
+"FrameTime": 6,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"Offset": {
+"X": 0,
+"Y": 0
+},
+"Layer": 0,
+"BlockItem": false,
+"StepType": 0,
+"MinimapIcon": {
+"X": 2,
+"Y": 0
+},
+"MinimapColor": "255, 140, 0, 255",
+"LandedOnTiles": [
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.TriggerUnderfootEvent, PMDC"
+}
+}
+],
+"InteractWithTiles": [
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.WaitAnimsOverEvent, PMDC"
+}
+},
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.GiveStatusEvent, PMDC",
+"StatusID": "burn",
+"SilentCheck": false,
+"States": [
+{
+"$type": "PMDC.Dungeon.BadStatusState, PMDC"
+}
+],
+"TriggerMsg": {
+"Key": ""
+},
+"TriggerSound": "DUN_Flamethrower_3",
+"TriggerEmitter": {
+"$type": "RogueEssence.Content.StaticAreaEmitter, RogueEssence",
+"LocHeight": 0,
+"Anims": [
+{
+"$type": "RogueEssence.Content.StaticAnim, RogueEssence",
+"Anim": {
+"AnimIndex": "Burned",
+"FrameTime": 3,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"TotalTime": 0,
+"Cycles": 1,
+"FrameOffset": 0
+}
+],
+"Bursts": 1,
+"ParticlesPerBurst": 1,
+"BurstTime": 1,
+"Range": 0,
+"Layer": 2
+}
+}
+}
+],
+"OnEquips": [],
+"OnPickups": [],
+"BeforeStatusAdds": [],
+"BeforeStatusAddings": [],
+"OnStatusAdds": [],
+"OnStatusRemoves": [],
+"OnMapStatusAdds": [],
+"OnMapStatusRemoves": [],
+"OnMapStarts": [],
+"OnTurnStarts": [],
+"OnTurnEnds": [
+{
+"Key": {
+"str": [
+-1
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.WaitAnimsOverEvent, PMDC"
+}
+},
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.GiveStatusEvent, PMDC",
+"StatusID": "burn",
+"SilentCheck": false,
+"States": [
+{
+"$type": "PMDC.Dungeon.BadStatusState, PMDC"
+}
+],
+"TriggerMsg": {
+"Key": ""
+},
+"TriggerSound": "DUN_Flamethrower_3",
+"TriggerEmitter": {
+"$type": "RogueEssence.Content.StaticAreaEmitter, RogueEssence",
+"LocHeight": 0,
+"Anims": [
+{
+"$type": "RogueEssence.Content.StaticAnim, RogueEssence",
+"Anim": {
+"AnimIndex": "Burned",
+"FrameTime": 3,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"TotalTime": 0,
+"Cycles": 1,
+"FrameOffset": 0
+}
+],
+"Bursts": 1,
+"ParticlesPerBurst": 1,
+"BurstTime": 1,
+"Range": 0,
+"Layer": 2
+}
+}
+},
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.WaitAnimsOverEvent, PMDC"
+}
+},
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "RogueEssence.Dungeon.SingleCharScriptEvent, RogueEssence",
+"Script": "LavaChipDamage",
+"ArgTable": "{}"
+}
+}
+],
+"OnMapTurnEnds": [],
+"OnWalks": [],
+"OnDeaths": [],
+"OnRefresh": [],
+"BeforeTryActions": [],
+"BeforeActions": [],
+"OnActions": [
+{
+"Key": {
+"str": [
+0
+]
+},
+"Value": {
+"$type": "PMDC.Dungeon.ElementNeededEvent, PMDC",
+"BaseEvents": [
+{
+"$type": "PMDC.Dungeon.BattleLogBattleEvent, PMDC",
+"Message": {
+"Key": "MSG_SEARING_CRUCIBLE_FIRE_POWER_UP"
+},
+"Delay": false,
+"UseTarget": false
+},
+{
+"$type": "PMDC.Dungeon.MultiplyDamageEvent, PMDC",
+"Numerator": 6,
+"Denominator": 5,
+"Anims": []
+},
+{
+"$type": "PMDC.Dungeon.BattleAnimEvent, PMDC",
+"Emitter": {
+"$type": "RogueEssence.Content.SingleEmitter, RogueEssence",
+"LocHeight": -6,
+"finished": false,
+"Offset": 0,
+"Anim": {
+"$type": "RogueEssence.Content.StaticAnim, RogueEssence",
+"Anim": {
+"AnimIndex": "Stat_Red_Ring",
+"FrameTime": 3,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"TotalTime": 0,
+"Cycles": 1,
+"FrameOffset": 0
+},
+"Layer": 0,
+"UseDest": false
+},
+"Sound": "DUN_Attack_Up",
+"AffectTarget": false,
+"Delay": 0
+},
+{
+"$type": "PMDC.Dungeon.BattleAnimEvent, PMDC",
+"Emitter": {
+"$type": "RogueEssence.Content.SqueezedAreaEmitter, RogueEssence",
+"LocHeight": 0,
+"Anims": [
+{
+"$type": "RogueEssence.Content.EmittingAnim, RogueEssence",
+"ResultAnim": {
+"$type": "RogueEssence.Content.EmptyFiniteEmitter, RogueEssence",
+"LocHeight": 0
+},
+"Layer": 2,
+"Anim": {
+"AnimIndex": "Stat_Red_Line",
+"FrameTime": 2,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": 4,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"TotalTime": 0,
+"Cycles": 1,
+"FrameOffset": 0
+}
+],
+"Bursts": 3,
+"ParticlesPerBurst": 2,
+"BurstTime": 6,
+"Range": 24,
+"HeightSpeed": 6,
+"SpeedDiff": 0,
+"StartHeight": 0,
+"HeightDiff": 0,
+"Layer": 2
+},
+"Sound": "",
+"AffectTarget": false,
+"Delay": 0
+}
+],
+"NeededElement": "fire"
+}
+}
+],
+"BeforeHittings": [],
+"BeforeBeingHits": [],
+"AfterHittings": [],
+"AfterBeingHits": [],
+"OnHitTiles": [],
+"AfterActions": [],
+"UserElementEffects": [],
+"TargetElementEffects": [],
+"ModifyHPs": [],
+"RestoreHPs": []
+}
+}
