@@ -1,0 +1,153 @@
+{
+  "size": [
+    960,
+    864
+  ],
+  "layers": [
+    "01_ciel_natif",
+    "02_etoiles_natives",
+    "03_lune_native",
+    "04_nuages_lointains",
+    "05_panorama_montagnes_foret",
+    "06_nuages_overlay",
+    "07_plateau_herbe",
+    "08_paroi_rocheuse"
+  ],
+  "terrain_offset": [
+    144,
+    412
+  ],
+  "panorama_offset": [
+    0,
+    195
+  ],
+  "moon_box": [
+    812,
+    32,
+    836,
+    63
+  ],
+  "clouds": {
+    "far": {
+      "y": 24,
+      "speed_px_s": -2,
+      "alpha_pct": 70
+    },
+    "overlay": {
+      "y": 120,
+      "speed_px_s": -6,
+      "alpha_pct": 100
+    },
+    "wrap_px": 1440,
+    "strip": "calques/SkyPeakPrairieV1_bande_nuages_native_1440.png"
+  },
+  "climate": {
+    "reference_commit": "c16efe12d74361df5ba8625abb68260f5f8fc6dd",
+    "method": "Ciel : répétition réfléchie de la moitié gauche sans lune cuite, lignes terminales prolongées. Nuages : six blocs natifs déplacés entiers, sans resampling. Nuit nuages : formule Guilde/Sharpedo, pas Abyss.",
+    "cloud_crops": [
+      [
+        16,
+        24,
+        168,
+        72
+      ],
+      [
+        176,
+        8,
+        272,
+        72
+      ],
+      [
+        272,
+        16,
+        368,
+        64
+      ],
+      [
+        72,
+        80,
+        168,
+        128
+      ],
+      [
+        176,
+        72,
+        296,
+        128
+      ],
+      [
+        320,
+        64,
+        472,
+        128
+      ]
+    ],
+    "cloud_destinations": [
+      [
+        32,
+        40
+      ],
+      [
+        272,
+        16
+      ],
+      [
+        504,
+        72
+      ],
+      [
+        728,
+        32
+      ],
+      [
+        920,
+        80
+      ],
+      [
+        1160,
+        24
+      ]
+    ],
+    "cloud_strip_size": [
+      1440,
+      208
+    ],
+    "cloud_speed_px_s": -4,
+    "cloud_loop_s": 360,
+    "sources": [
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__astres_nuit_native.png",
+        "sha256": "60092414708b698edbe420d2d8969d9106a98385415f70ff4e7f5d150fbfec7e"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_jour_native.png",
+        "sha256": "2d9e93ed01548afaaace32c6adc0fb015618ff2e3a47458fa2c4d6d44b62a015"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__ciel_nuit_native.png",
+        "sha256": "b0d1493bb27324951343dd8ed22a64e2dcf70d2031e4dff11f2117a395e20b92"
+      },
+      {
+        "path": "source/cote_dix_zones/reference_autre_agent/source__falaise__nuages_native.png",
+        "sha256": "782b22ff7c3755b8e2ae2eeeac1243a1ee21bc8d6378ea9d192ba4eb89500a17"
+      }
+    ]
+  },
+  "generated": {
+    "terrain": "bruts/terrain_prairie_v2.png",
+    "terrain_rejected": "bruts/terrain_prairie.png",
+    "panorama": "bruts/panorama_foret_montagnes_v2.png",
+    "panorama_rejected": "bruts/panorama_foret_montagnes.png (ledge and stump in foreground)",
+    "guides": [
+      "source/sky_peak_prairie_v1/references/skypeak_gif_frame0.png",
+      "source/sky_peak_prairie_v1/references/reference_lune_nuages_utilisateur.png"
+    ],
+    "fit": "uniform nearest resize (terrain 1024→672 wide; panorama 1376→1200 wide then centred crop 960), no distortion, magenta keyed, no recolor"
+  },
+  "sources": {
+    "source/sky_peak_prairie_v1/references/reference_lune_nuages_utilisateur.png": "8a0ad73396eab71c0be78c26aef9ab19bdae984cf0acc3bd8b844144321ac46c",
+    "source/sky_peak_prairie_v1/references/skypeak_gif_frame0.png": "ce6e62b7fff27ca0203a68b80f2ebae7ed9d3ffc48989e67ed5c7dec8dc0f29c",
+    "source/sky_peak_prairie_v1/references/skypeak_terrain_crop.png": "4f7edbc24a364f75173172ca3a63608e54497b7d6322b805c2bc78a9cefff173"
+  },
+  "runtime_validated": false
+}

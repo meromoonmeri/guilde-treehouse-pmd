@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Sky Peak — prairie du sommet au-dessus d’une mer de forêt (nuit)
+
+**[Composition](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_composition_nuit.png)** · **[Extrait animé](renders/sky_peak_prairie_v1/SkyPeakPrairieV1_extrait_nuages_24s.webp)** · **[Galerie](renders/sky_peak_prairie_v1/index.html)** · **[Notice et calques](renders/sky_peak_prairie_v1/README.md)**
+
+Plateau d’herbe Sky Peak sur son sommet, mer de forêt en contrebas jusqu’à la chaîne de montagnes, lune et nuages natifs en overlay (deux vitesses). 960 × 864, huit calques PNG + ORA. Ciel/lune/nuages natifs non redimensionnés ; terrain et panorama générés d’après le GIF Sky Peak, non certifiés natifs. 19 contrôles PASS ; pas de test PMDO.
+
 ## Forêt givrée Native V2 — chemins en vrais modules Frosty Forest
 
 **[Les six cartes](renders/winter_forest_native_v2/WinterNativeV2_Board.png)** · **[Aperçu animé 05 (boréal)](renders/winter_forest_native_v2/05_corniche/WinterNativeV2_05_corniche_AnimatedPreview.webp)** · **[Galerie](renders/winter_forest_native_v2/index.html)** · **[Notice, calques et provenance](renders/winter_forest_native_v2/README.md)** · **[Archive du lot](winter_forest_native_v2_pack.zip)**
