@@ -24,3 +24,10 @@ Décodage de la référence (rendu statique + WebP animé) : `reference/`.
 - `planche_reference_vs_glace.png`, `creuset_glace_frame0.png`, `manifest.json` (provenance, palette, cellules).
 
 Reproduction : `.venv/bin/python source/searing_crucible_ice_v1/decode.py && build.py && verify.py` (15/15 PASS). Aucune validation moteur/collision.
+
+## Sprites (ajout `pack_sprites.py`)
+- `pmdo_object_dir/Ice_Peak_*.dir` — 4 objets PMDO prêts à déposer dans `Content/Object/` : même conteneur que les `.dir` natifs de lave (feuille PNG de même taille et même grille de colonnes, en-tête int32 `tileW,tileH,dirs,frames` identique octet pour octet, RGBA prémultiplié). Aller-retour décodé = bandes 63 images à l'identique.
+- `rsmap_decorations_glace.json` — les 8 décorations du rsmap avec `AnimIndex` renommé (MapLoc, FrameTime, miroirs inchangés), à recoller dans une copie de `searing_crucible.rsmap`.
+- `spritecollab/Ice_Peak_*.zip` (+ dossiers dépliés) — format SpriteCollab / PMDOWiki « PMD Sprite Format » : `AnimData.xml` + `Idle-Anim.png` / `Idle-Offsets.png` / `Idle-Shadow.png`, images de même taille, dimensions de frame paires (48×48 ou 48×24), 63 frames de gauche à droite sur une seule direction, `<Duration>4</Duration>` (1/60 s) par frame, pixel vert = centre du corps, pixel blanc = centre de l'ombre, `ShadowSize` 0.
+  Ce format est celui des Pokémon : pour des objets de décor, le moteur PMDO utilise les `.dir` ci-dessus ; les zips sont fournis pour la compatibilité outillage (Sprite Tool / SkyTemple), pas pour une soumission au dépôt SpriteCollab (réservé aux Pokémon).
+- `sprites_manifest.json` — en-têtes, tailles, SHA256. `verify.py` : 15/15 + 12/12 PASS. Aucune validation moteur.

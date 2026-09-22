@@ -1,0 +1,98 @@
+{
+ "objects": {
+  "Ice_Peak_Big_Frost_Stream": {
+   "source_dir": "Spring_Cave_Pit_Big_Lava_Stream",
+   "dir_header": {
+    "tile_w": 48,
+    "tile_h": 48,
+    "dirs": 5,
+    "frames": 63
+   },
+   "sheet": [
+    384,
+    384
+   ],
+   "columns": 8,
+   "frame_even_dims": true,
+   "spritecollab": {
+    "anim": "Idle-Anim.png (3024, 48)",
+    "durations_60ths": 4,
+    "directions": 1,
+    "frames": 63
+   },
+   "sha256_dir": "d3d522b46989364dfa2086325290962ae0a51c58000a568676dfca1b1a1bdfda"
+  },
+  "Ice_Peak_Small_Frost_Stream": {
+   "source_dir": "Spring_Cave_Pit_Small_Lava_Stream",
+   "dir_header": {
+    "tile_w": 48,
+    "tile_h": 48,
+    "dirs": 5,
+    "frames": 63
+   },
+   "sheet": [
+    384,
+    384
+   ],
+   "columns": 8,
+   "frame_even_dims": true,
+   "spritecollab": {
+    "anim": "Idle-Anim.png (3024, 48)",
+    "durations_60ths": 4,
+    "directions": 1,
+    "frames": 63
+   },
+   "sha256_dir": "8cc8eea19af65b8a59a3e81d2fb4a6ce55b0cf9871c6e5d6f096999e8503fff8"
+  },
+  "Ice_Peak_Frost_Pool_Connected": {
+   "source_dir": "Spring_Cave_Pit_Lava_Pool_Connected",
+   "dir_header": {
+    "tile_w": 48,
+    "tile_h": 24,
+    "dirs": 5,
+    "frames": 63
+   },
+   "sheet": [
+    288,
+    264
+   ],
+   "columns": 6,
+   "frame_even_dims": true,
+   "spritecollab": {
+    "anim": "Idle-Anim.png (3024, 24)",
+    "durations_60ths": 4,
+    "directions": 1,
+    "frames": 63
+   },
+   "sha256_dir": "87026b2a730455bff0b72317e6a32695883f12a7930af03f5cfe618fc2d9545c"
+  },
+  "Ice_Peak_Frost_Pool_Disconnected": {
+   "source_dir": "Spring_Cave_Pit_Lava_Pool_Disconnected",
+   "dir_header": {
+    "tile_w": 48,
+    "tile_h": 24,
+    "dirs": 5,
+    "frames": 63
+   },
+   "sheet": [
+    288,
+    264
+   ],
+   "columns": 6,
+   "frame_even_dims": true,
+   "spritecollab": {
+    "anim": "Idle-Anim.png (3024, 24)",
+    "durations_60ths": 4,
+    "directions": 1,
+    "frames": 63
+   },
+   "sha256_dir": "7e6b31b219422fa7dab76e662ab2850716db705ce4889cc303272bb3f7733370"
+  }
+ },
+ "rsmap_patch": "rsmap_decorations_glace.json",
+ "format_refs": [
+  "https://wiki.pmdo.pmdcollab.org/Tutorial:PMD_Sprite_Format",
+  "PMDO DirSheet: int64 png length + PNG + int32 tileW,tileH,dirs,frames (premultiplied RGBA)"
+ ],
+ "runtime_validated": false
+}
