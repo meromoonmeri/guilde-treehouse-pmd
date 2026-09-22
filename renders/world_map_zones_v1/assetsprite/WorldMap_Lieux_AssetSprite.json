@@ -1,0 +1,79 @@
+{
+  "format": "AssetSprite",
+  "frame_size": [
+    128,
+    128
+  ],
+  "entries": [
+    {
+      "id": "forêt",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "plage",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "volcan",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "désert",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "glace",
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "tour",
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "archipel",
+      "rect": [
+        768,
+        0,
+        128,
+        128
+      ],
+      "unlocked_by_default": false
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "canvas": [
+    2048,
+    1536
+  ],
+  "layers": 7,
+  "animation_frames": 8,
+  "sources": {
+    "canonical_water": "sprites/zones_guidees/01_cirque/eau_1.png",
+    "canonical_terrain": "sprites/zones_guidees/01_cirque/canonique_sec.png",
+    "canonical_floor": "sprites/zones_guidees/01_cirque/herbe.png"
+  },
+  "note": "Composition de grande carte; les textures natives servent de matériaux de référence/tuilage, les continents et emblèmes sont une nouvelle composition et non une carte native.",
+  "files": {
+    "WorldMap_Zones.png": {
+      "sha256": "f5deab1ce5e3815dd16ad1cbddeada9115294b138027ba2bb086e5ad98ac027a",
+      "bytes": 449491
+    },
+    "manifest.json": {
+      "sha256": "1c30277340b463ae1f167c0ce1fbb4a757c878b07cdfc088da8ec1d2c2218d42",
+      "bytes": 3612
+    },
+    "layers/00_fond_mer_texture_canonique.png": {
+      "sha256": "f12fd6cc065433dbcd96edc5f3c4cd360001ab1097ca38b327d943e57310cb79",
+      "bytes": 20764
+    },
+    "layers/01_continents_texture_canonique.png": {
+      "sha256": "25bf55a55f3519d510255b35a98b4f01a9a8026b13e0c449a55bad6896a7e8cd",
+      "bytes": 354235
+    },
+    "layers/02_bordure_parchemin.png": {
+      "sha256": "c1c4d1cfa58719bc6523f6f7d7aed9f204f02321b1ac19503dc004b8cd3fc19b",
+      "bytes": 20257
+    },
+    "layers/03_routes.png": {
+      "sha256": "07dca743cde27b5863a7581cfd64fc0a90d31ebc70fd3c184ea13e1aea60aa3a",
+      "bytes": 17767
+    },
+    "layers/04_emblemes_lieux.png": {
+      "sha256": "54892f96cc3a64848342159bd21b0199318fd36f7a34aad538c60befe47dbee8",
+      "bytes": 33656
+    },
+    "layers/05_etat_deblocage.png": {
+      "sha256": "a2b8dbddfd1af4f9c76c5ba2c7f4a4abd0bc37b708b7b12e1b528f1a2bf4dc24",
+      "bytes": 18197
+    },
+    "layers/06_atmosphere.png": {
+      "sha256": "f0343f457bf8477e102d0f8c51ddb6b1a417dd62371cb71f19fd9c3b803e14cd",
+      "bytes": 13495
+    },
+    "animations/WorldMap_discover_00.png": {
+      "sha256": "32246e65dc93c8fee4e013715368ebf3e71b66b677423231494cf895be178f50",
+      "bytes": 465350
+    },
+    "animations/WorldMap_discover_01.png": {
+      "sha256": "a9b38b03cf7e0b41edf41d5687099351da5a28aceaaf3c79964bf5f346e3146d",
+      "bytes": 465540
+    },
+    "animations/WorldMap_discover_02.png": {
+      "sha256": "6495e4e3d35760b06fcb334e6b279d89492b8297f2bcc77a06dc278a48708792",
+      "bytes": 465350
+    },
+    "animations/WorldMap_discover_03.png": {
+      "sha256": "a9b38b03cf7e0b41edf41d5687099351da5a28aceaaf3c79964bf5f346e3146d",
+      "bytes": 465540
+    },
+    "animations/WorldMap_discover_04.png": {
+      "sha256": "32246e65dc93c8fee4e013715368ebf3e71b66b677423231494cf895be178f50",
+      "bytes": 465350
+    },
+    "animations/WorldMap_discover_05.png": {
+      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
+      "bytes": 464914
+    },
+    "animations/WorldMap_discover_06.png": {
+      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
+      "bytes": 464914
+    },
+    "animations/WorldMap_discover_07.png": {
+      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
+      "bytes": 464914
+    },
+    "animations/WorldMap_discover.webp": {
+      "sha256": "c6f0b63c89da50447b72bd0b76a9664a66b0af1e64c41b7086506679c33b46bb",
+      "bytes": 354112
+    },
+    "assetsprite/WorldMap_Lieux_AssetSprite.png": {
+      "sha256": "2602f035ca88afba0dc6ce712368959249f79092c0486e9344a64af1b5b090d3",
+      "bytes": 8256
+    },
+    "assetsprite/WorldMap_Lieux_AssetSprite.json": {
+      "sha256": "cc66d9e79b530d67ff0c513f3ab8f4ed1d7fe85935f6326089c81ac675853aa5",
+      "bytes": 1090
+    }
+  }
+}
