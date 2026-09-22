@@ -1,0 +1,249 @@
+{
+  "zone": "Crooked Cavern verdoyante V1 — arrivée sud, bouche de grotte au nord",
+  "size": [
+    512,
+    640
+  ],
+  "prefix": "CrookedVerdoyantV1",
+  "workflow": "audit des références canoniques (AUDIT.md) → génération scène complète + sous-couche sol d’après références natives → normalisation 512×640 NEAREST → masques différence/couleur → calques alignés partitionnant exactement la scène → complément natif par translation → nuit filtre Abyss exact → ORA/galerie",
+  "terrain_origin": "PIXELS GÉNÉRÉS redessinés d’après références PMD (Crooked Cavern entrance, Vast Steppe entrance, Relic Forest Base). Ils ne sont PAS des pixels natifs certifiés.",
+  "native_pixels": "uniquement complement_natif/*.png (rochers Crooked Objects+Shadows, arbre Vast Steppe tronc+canopée), translation seule",
+  "references_canoniques": [
+    "banque_canonique/cartes_natives/Halcyon__crooked_cavern_entrance.png",
+    "banque_canonique/cartes_natives/vast_steppe_entrance.png",
+    "banque_canonique/atlas/Relic_Forest_Base.png"
+  ],
+  "bruts": {
+    "scene": {
+      "path": "renders/crooked_verdoyant_v1/bruts/scene_complete_brut.png",
+      "sha256": "cb599c088d7b0f0260c8860f945abdba0398bdaad9596ac8ab28431c3e3e5a46",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "sol": {
+      "path": "renders/crooked_verdoyant_v1/bruts/sol_complet_brut.png",
+      "sha256": "9c068da396f44944165ee223aa59ba27f0914346e9873d95b3566a56b3b7c6e1",
+      "size": [
+        928,
+        1152
+      ]
+    }
+  },
+  "layers_order_bottom_to_top": [
+    "01_sol_complet",
+    "02_herbe_visible",
+    "03_lisiere_foret",
+    "04_chemin_visible",
+    "05_parois_crooked",
+    "06_entree_grotte",
+    "07_rochers",
+    "08_vegetation_basse",
+    "09_arbres"
+  ],
+  "visible_layers_partition_scene": [
+    "02_herbe_visible",
+    "03_lisiere_foret",
+    "04_chemin_visible",
+    "05_parois_crooked",
+    "06_entree_grotte",
+    "07_rochers",
+    "08_vegetation_basse",
+    "09_arbres"
+  ],
+  "layer_pixels": {
+    "01_sol_complet": 327680,
+    "02_herbe_visible": 81632,
+    "03_lisiere_foret": 56144,
+    "04_chemin_visible": 23803,
+    "05_parois_crooked": 123804,
+    "06_entree_grotte": 7122,
+    "07_rochers": 6449,
+    "08_vegetation_basse": 6762,
+    "09_arbres": 21964
+  },
+  "mask_stats": {
+    "diff_threshold": 60,
+    "D_pixels": 175697,
+    "rock_pixels": 130763,
+    "cave_pixels": 7122,
+    "grass_palette_codes": 117,
+    "objects_components": 364
+  },
+  "native_modules": {
+    "rocher_groupe_ouest": {
+      "source": [
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Shadows.png",
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Objects.png"
+      ],
+      "box_xyxy": [
+        53,
+        165,
+        133,
+        226
+      ],
+      "transform": "translation seule (Shadows sous Objects, même repère natif)"
+    },
+    "rocher_groupe_est": {
+      "source": [
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Shadows.png",
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Objects.png"
+      ],
+      "box_xyxy": [
+        186,
+        157,
+        266,
+        240
+      ],
+      "transform": "translation seule (Shadows sous Objects, même repère natif)"
+    },
+    "petit_rocher_a": {
+      "source": [
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Shadows.png",
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Objects.png"
+      ],
+      "box_xyxy": [
+        26,
+        217,
+        62,
+        240
+      ],
+      "transform": "translation seule (Shadows sous Objects, même repère natif)"
+    },
+    "petit_rocher_b": {
+      "source": [
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Shadows.png",
+        "banque_canonique/atlas/Halcyon__Crooked_Cavern_Objects.png"
+      ],
+      "box_xyxy": [
+        269,
+        218,
+        292,
+        236
+      ],
+      "transform": "translation seule (Shadows sous Objects, même repère natif)"
+    },
+    "arbre_steppe": {
+      "source": [
+        "source/amp_plains_fleurie_v1/references/vast_steppe_layer_3.png (tronc, box 72,160,120,216 → +56,+64)",
+        "source/amp_plains_fleurie_v1/references/vast_steppe_layer_4.png (canopée, box 16,96,160,216)"
+      ],
+      "transform": "translation seule ; même assemblage tronc+canopée que source/zones_south_north_v3 (forêt)"
+    }
+  },
+  "native_placements": [
+    {
+      "module": "rocher_groupe_ouest",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        148,
+        230
+      ],
+      "size": [
+        80,
+        61
+      ]
+    },
+    {
+      "module": "rocher_groupe_est",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        284,
+        224
+      ],
+      "size": [
+        80,
+        83
+      ]
+    },
+    {
+      "module": "petit_rocher_a",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        285,
+        291
+      ],
+      "size": [
+        36,
+        23
+      ]
+    },
+    {
+      "module": "petit_rocher_b",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        112,
+        300
+      ],
+      "size": [
+        23,
+        18
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        33,
+        273
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        320,
+        280
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        333,
+        395
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        37,
+        426
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        299,
+        470
+      ],
+      "size": [
+        144,
+        120
+      ]
+    }
+  ],
+  "night": "source/cote_v4_abyss/night.py (filtre Abyss V4 exact) appliqué calque par calque ; composition_nuit == night(composition_jour)",
+  "arrival": "bord sud, chemin de terre centré",
+  "objective": "bouche de grotte au nord (calque 06_entree_grotte)",
+  "not_tested": "PMDO runtime, collisions, warps : NON TESTÉS"
+}

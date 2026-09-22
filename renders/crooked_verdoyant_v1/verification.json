@@ -1,0 +1,29 @@
+{
+  "bruts_sha256_ok": true,
+  "scene_512x640_matches_brut_nearest": true,
+  "all_layers_512x640": true,
+  "visible_layers_exact_partition": true,
+  "recomposition_equals_scene": true,
+  "composition_jour_file_equals_scene": true,
+  "underlay_opaque_and_equals_sol_brut": true,
+  "layer_pixels_identical_to_scene": true,
+  "masks_match_layers": true,
+  "night_layers_exact_abyss": true,
+  "composition_nuit_equals_night_of_jour": true,
+  "native_layers_rebuilt_identical": true,
+  "native_layers_only_translation": true,
+  "native_placements_count": 9,
+  "path_connects_south_edge_to_cave": true,
+  "path_min_width_px_below_tip": 44,
+  "path_top_y": 216,
+  "cave_bbox": [
+    209,
+    96,
+    303,
+    216
+  ],
+  "ora_ok": true,
+  "ora_merged_equals_scene": true,
+  "runtime_pmdo": "NOT TESTED",
+  "all_pass": true
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><title>Crooked Cavern verdoyante V1 — sud → nord</title>
+<style>
+body{background:#14201a;color:#e8eee9;font:15px system-ui;max-width:1200px;margin:28px auto;padding:0 20px}
+h1{font-size:30px;margin:0 0 6px}p{color:#bfcdc4;line-height:1.55}code{color:#ffd9a0}
+.wrap{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+canvas{background:#252333;image-rendering:pixelated;border:1px solid #2f4a3a}
+aside{min-width:300px;max-width:360px}
+label{display:block;padding:3px 0;cursor:pointer}
+button{margin:4px 6px 4px 0;padding:6px 10px;background:#2b4a3a;color:#fff;border:0;border-radius:6px;cursor:pointer}
+button.on{background:#e0a24a;color:#1a1208}
+.refs img{image-rendering:pixelated;border:1px solid #2f4a3a;margin:4px 8px 4px 0}
+.warn{background:#3a2c1a;border-left:4px solid #e0a24a;padding:8px 12px;margin:12px 0}
+</style>
+<h1>Crooked Cavern verdoyante V1 — arrivée sud, grotte au nord</h1>
+<p>512×640, 1 px = 1 px (bouton ×2 pour agrandir). Calques alignés à l'origine commune 0,0. Cochez / décochez pour inspecter ; « Nuit » applique le filtre Abyss exact calque par calque.</p>
+<div class="warn"><b>Provenance :</b> le terrain (sol, chemin, parois Crooked, entrée, arbres, rochers générés) est un <b>dessin généré d'après références PMD canoniques</b> — ce ne sont pas des pixels natifs certifiés. Seuls les deux calques « natifs » (rochers Crooked Objects+Shadows, arbres Vast Steppe) sont des pixels natifs posés par translation. PMDO / collisions / warps : NON TESTÉS.</div>
+<div class="wrap">
+ <canvas id="c" width="512" height="640"></canvas>
+ <aside>
+  <div><button id="mode">Nuit</button><button id="zoom">×2</button><button id="natif">Variante objets natifs</button></div>
+  <h3>Calques générés (bas → haut)</h3><div id="layers"></div>
+  <h3>Complément natif certifié</h3><div id="natifs"></div>
+  <h3>Références canoniques (audit)</h3><div class="refs" id="refs"></div>
+  <p>Sources : <code>renders/crooked_verdoyant_v1/</code>, audit <code>source/crooked_verdoyant_v1/AUDIT.md</code>.</p>
+ </aside>
+</div>
+<script>
+const DATA=__DATA__;
+const c=document.getElementById('c'),ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;
+let nuit=false,zoom=1;
+const imgs={};
+function load(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=src;});}
+const state={};
+(async()=>{
+ for(const l of DATA.layers){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=true;
+  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;cb.onchange=()=>{state[l.id]=cb.checked;draw();};lab.append(cb,' ',l.id);document.getElementById('layers').append(lab);}
+ for(const l of DATA.natifs){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=false;
+  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=false;cb.id='cb_'+l.id;cb.onchange=()=>{state[l.id]=cb.checked;draw();};lab.append(cb,' ',l.id+' (natif)');document.getElementById('natifs').append(lab);}
+ for(const r of DATA.refs){const i=document.createElement('img');i.src=r.uri;i.title=r.label;i.width=160;document.getElementById('refs').append(i);}
+ draw();
+})();
+function draw(){c.width=512*zoom;c.height=640*zoom;ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,c.width,c.height);
+ const order=[...DATA.layers.map(l=>l.id),...DATA.natifs.map(l=>l.id)];
+ for(const id of order){if(!state[id]||!imgs[id])continue;const im=nuit?imgs[id].n:imgs[id].j;
+  ctx.drawImage(im,0,0,c.width,c.height);}}
+document.getElementById('mode').onclick=e=>{nuit=!nuit;e.target.classList.toggle('on',nuit);e.target.textContent=nuit?'Jour':'Nuit';draw();};
+document.getElementById('zoom').onclick=e=>{zoom=zoom===1?2:1;e.target.textContent=zoom===1?'×2':'×1';draw();};
+document.getElementById('natif').onclick=e=>{const on=!e.target.classList.contains('on');e.target.classList.toggle('on',on);
+ for(const id of ['07_rochers','08_vegetation_basse','09_arbres','02_herbe_visible','03_lisiere_foret','04_chemin_visible']){state[id]=!on;}
+ for(const l of DATA.natifs){state[l.id]=on;document.getElementById('cb_'+l.id).checked=on;}
+ document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA.layers[i].id];});draw();};
+</script>
+</html>

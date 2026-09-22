@@ -449,3 +449,20 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   trous là où un objet la recouvre) ; (2) un `blit` avec `ty` erroné pose silencieusement une tuile vide → vérifier
   les colonnes de raccord au rendu ; (3) une route native posée au bord de carte doit garder son extrémité native
   au bord (ici `dy=+6` avec 6 rangées natives répétées au bord, signalé dans le README).
+
+## Crooked Cavern verdoyante v1 (22/09/2026) — rendu généré audité, sud → nord
+
+- Demande : une zone Crooked Cavern dans un biome verdoyant, chemin sud → nord, « génère les layouts avec des
+  textures référentes canoniques », audit d'abord. Audit : `source/crooked_verdoyant_v1/AUDIT.md` (Crooked = une
+  scène native unique 320×240, non modulaire ; verdure = Vast Steppe / Relic Forest). Les questions méthode/taille
+  ont été passées deux fois → décision : méthode « rendu généré » de `arene_glace_generee_v2`, 512×640.
+- Livré : `renders/crooked_verdoyant_v1/` (bruts, 9 calques alignés partitionnant exactement la scène, masques,
+  nuit Abyss exacte, ORA, manifeste, `verification.json` all_pass), galerie `apercu_crooked_verdoyant_v1.html`.
+- Règle rappelée : pixels générés = « redessinés d'après références PMD », jamais « natifs ». Seuls
+  `complement_natif/*` (rochers Crooked Objects+Shadows, arbres Vast Steppe) sont natifs, translation seule, vérifiés
+  par reconstruction depuis les feuilles.
+- Leçons de découpe : (1) séparer la paroi par balayage colonne depuis le nord jusqu'au premier sol (herbe/chemin),
+  pas par composantes de différence (les rochers/arbres proches fusionnent) ; (2) les zones où la sous-couche a été
+  régénérée diffèrent de la scène sans être des objets → test « palette d'herbe » 16 niveaux pour les rendre à
+  l'herbe visible ; (3) `scipy.ndimage.binary_closing` érode le bord d'image (border_value=0) : ne pas l'appliquer
+  à un masque de chemin avant un test de connexité au bord.
