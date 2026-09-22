@@ -96,3 +96,12 @@ __pycache__/
 /renders/casino_network_v1/bruts/estrade.webp
 /renders/casino_network_v1/bruts/rideaux.webp
 /renders/casino_network_v1/bruts/terrain.webp
+
+# CANON1: DTEF sheets, per-layer exports and the PMDO tree regenerate byte-exactly
+# from source/canon_dtef_v1/build.py and are preserved losslessly inside
+# Canonia_DTEF_v1.zip. Direct PNG/WebP previews, manifests and audits stay in Git.
+/renders/canon_dtef_v1/DTEF/
+/renders/canon_dtef_v1/cartes/
+/renders/canon_dtef_v1/PMDO/
+/renders/canon_dtef_v1/layouts/
+/renders/canon_dtef_v1/manifests/*/collisions.png

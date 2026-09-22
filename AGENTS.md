@@ -4,6 +4,10 @@ IB1 : Searing Crucible glacial livré, source Halcyon working-copy1522c7a8. Géo
 
 WP1 livré : plaines,5calques,18phases natives ;16cartes publiées. MD1 montré mais non poussé, absent du checkout restauré : à récupérer. Suite : forêt secrète, plaines brûlées. Lanceur source/plaines_pmd_v1/restore.py.
 
+## CANON1 — cartes en cellules natives DTEF (22 septembre 2026)
+
+Quatre maps (JC1/TC1 entrée+finale) composées uniquement de cellules 24 px prélevées dans les banques DTEF épinglées, placement par la sémantique `AutoTileAdjacent.cs` ; `source/canon_dtef_v1/` → `renders/canon_dtef_v1/`, 12 contrôles A–D + aperçus PASS, ZIP 7,1 Mo, serveur 8013. Ni props inventés (banque = Wall/Secondary/Floor seulement), ni rendu PMDO exécuté. Details : `source/canon_dtef_v1/README.md`.
+
 ## Mise à jour — finale LF1 et mobilier FC1
 
 LE1 approuvée, LF1/FC1 livrés : [bilan et limites](source/suite_foret_cafe_v1/README.md). Préserver entrée, natifs et salles. Mobilier13/36,23+fenêtres à poursuivre ; tailles visées au générateur puis normalisation des créations seulement. Tests≠validationPMDO/artistique.

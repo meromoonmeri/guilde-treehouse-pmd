@@ -1,0 +1,539 @@
+{
+  "method": "cellules natives DTEF uniquement - aucun pixel genere",
+  "tile_px": 24,
+  "ground_cell_px": 8,
+  "grid_cells": [
+    27,
+    21
+  ],
+  "size_px": [
+    648,
+    504
+  ],
+  "runtime_validated": false,
+  "night": "filtre Abyss source/cote_v4_abyss/night.py, une seule application par cellule",
+  "themes": {
+    "jungle": {
+      "source": "southern_jungle",
+      "bank_name": "SouthernJungle",
+      "bank_sha256": "bf90e6dc0ba48dbf37e4c1b494f7d01909459ffcc733a66e58337f62d7d0c9e5",
+      "bank_tiles": 905,
+      "animated_groups": {
+        "0": {
+          "frames": 16,
+          "duration_ticks": 19
+        }
+      },
+      "jour": {
+        "sheets": 19
+      },
+      "nuit": {
+        "sheets": 19
+      }
+    },
+    "foret": {
+      "source": "treeshroud_forest_1",
+      "bank_name": "TreeshroudForest1",
+      "bank_sha256": "b9d08bd6cf1aeab3c4822512cdd1d7ca3971aedfe4a41ee726bedae562f25bfa",
+      "bank_tiles": 1234,
+      "animated_groups": {
+        "0": {
+          "frames": 12,
+          "duration_ticks": 18
+        },
+        "1": {
+          "frames": 12,
+          "duration_ticks": 6
+        }
+      },
+      "jour": {
+        "sheets": 27
+      },
+      "nuit": {
+        "sheets": 27
+      }
+    }
+  },
+  "maps": {
+    "JC1_entree": {
+      "map": "JC1_entree",
+      "theme": "jungle",
+      "source": "southern_jungle",
+      "bank_sha256": "bf90e6dc0ba48dbf37e4c1b494f7d01909459ffcc733a66e58337f62d7d0c9e5",
+      "seed": 2008744258,
+      "geometry": {
+        "reachable_cells": 201,
+        "reachable_ratio": 1.0,
+        "total_walkable": 201,
+        "dead_end_cells": [],
+        "edge_openings": {
+          "north": 5,
+          "south": 7
+        },
+        "floor_cells": 265,
+        "wall_cells": 302,
+        "secondary_cells": 64,
+        "reserved_cells": 20,
+        "sealed_pockets": 0
+      },
+      "cells": 631,
+      "modes": {
+        "jour": {
+          "ground": {
+            "bank": "CANON1_JC1_ENTREE_JOUR_T",
+            "cells": 1737,
+            "unique_png": 716,
+            "native_tiles_registered": 193,
+            "asset": "canon1_JC1_entree_jour",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 631,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 460,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 240,
+                "Y": 408,
+                "Width": 168,
+                "Height": 72
+              }
+            ]
+          }
+        },
+        "nuit": {
+          "ground": {
+            "bank": "CANON1_JC1_ENTREE_NUIT_T",
+            "cells": 1737,
+            "unique_png": 716,
+            "native_tiles_registered": 193,
+            "asset": "canon1_JC1_entree_nuit",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 631,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 460,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 240,
+                "Y": 408,
+                "Width": 168,
+                "Height": 72
+              }
+            ]
+          }
+        }
+      },
+      "animation": {
+        "cycle_ticks": 304,
+        "cycle_ms": 5066.7,
+        "preview_samples": 32,
+        "groups": {
+          "0": {
+            "frames": 16,
+            "duration_ticks": 19
+          }
+        }
+      }
+    },
+    "JC1_finale": {
+      "map": "JC1_finale",
+      "theme": "jungle",
+      "source": "southern_jungle",
+      "bank_sha256": "bf90e6dc0ba48dbf37e4c1b494f7d01909459ffcc733a66e58337f62d7d0c9e5",
+      "seed": 3242943109,
+      "geometry": {
+        "reachable_cells": 167,
+        "reachable_ratio": 1.0,
+        "total_walkable": 167,
+        "dead_end_cells": [],
+        "edge_openings": {
+          "north": 3,
+          "south": 3
+        },
+        "floor_cells": 275,
+        "wall_cells": 292,
+        "secondary_cells": 108,
+        "reserved_cells": 15,
+        "sealed_pockets": 0
+      },
+      "cells": 675,
+      "modes": {
+        "jour": {
+          "ground": {
+            "bank": "CANON1_JC1_FINALE_JOUR_T",
+            "cells": 1719,
+            "unique_png": 728,
+            "native_tiles_registered": 191,
+            "asset": "canon1_JC1_finale_jour",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 675,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 484,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 264,
+                "Y": 216,
+                "Width": 120,
+                "Height": 72
+              }
+            ]
+          }
+        },
+        "nuit": {
+          "ground": {
+            "bank": "CANON1_JC1_FINALE_NUIT_T",
+            "cells": 1719,
+            "unique_png": 728,
+            "native_tiles_registered": 191,
+            "asset": "canon1_JC1_finale_nuit",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 675,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 484,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 264,
+                "Y": 216,
+                "Width": 120,
+                "Height": 72
+              }
+            ]
+          }
+        }
+      },
+      "animation": {
+        "cycle_ticks": 304,
+        "cycle_ms": 5066.7,
+        "preview_samples": 32,
+        "groups": {
+          "0": {
+            "frames": 16,
+            "duration_ticks": 19
+          }
+        }
+      }
+    },
+    "TC1_entree": {
+      "map": "TC1_entree",
+      "theme": "foret",
+      "source": "treeshroud_forest_1",
+      "bank_sha256": "b9d08bd6cf1aeab3c4822512cdd1d7ca3971aedfe4a41ee726bedae562f25bfa",
+      "seed": 1761077441,
+      "geometry": {
+        "reachable_cells": 193,
+        "reachable_ratio": 1.0,
+        "total_walkable": 193,
+        "dead_end_cells": [],
+        "edge_openings": {
+          "north": 5,
+          "south": 7
+        },
+        "floor_cells": 233,
+        "wall_cells": 334,
+        "secondary_cells": 40,
+        "reserved_cells": 14,
+        "sealed_pockets": 0
+      },
+      "cells": 607,
+      "modes": {
+        "jour": {
+          "ground": {
+            "bank": "CANON1_TC1_ENTREE_JOUR_T",
+            "cells": 3357,
+            "unique_png": 806,
+            "native_tiles_registered": 373,
+            "asset": "canon1_TC1_entree_jour",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 607,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 460,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 240,
+                "Y": 384,
+                "Width": 168,
+                "Height": 48
+              }
+            ]
+          }
+        },
+        "nuit": {
+          "ground": {
+            "bank": "CANON1_TC1_ENTREE_NUIT_T",
+            "cells": 3357,
+            "unique_png": 806,
+            "native_tiles_registered": 373,
+            "asset": "canon1_TC1_entree_nuit",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 607,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 460,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 240,
+                "Y": 384,
+                "Width": 168,
+                "Height": 48
+              }
+            ]
+          }
+        }
+      },
+      "animation": {
+        "cycle_ticks": 216,
+        "cycle_ms": 3600.0,
+        "preview_samples": 32,
+        "groups": {
+          "0": {
+            "frames": 12,
+            "duration_ticks": 18
+          },
+          "1": {
+            "frames": 12,
+            "duration_ticks": 6
+          }
+        }
+      }
+    },
+    "TC1_finale": {
+      "map": "TC1_finale",
+      "theme": "foret",
+      "source": "treeshroud_forest_1",
+      "bank_sha256": "b9d08bd6cf1aeab3c4822512cdd1d7ca3971aedfe4a41ee726bedae562f25bfa",
+      "seed": 3040918703,
+      "geometry": {
+        "reachable_cells": 219,
+        "reachable_ratio": 1.0,
+        "total_walkable": 219,
+        "dead_end_cells": [],
+        "edge_openings": {
+          "north": 3,
+          "south": 3
+        },
+        "floor_cells": 289,
+        "wall_cells": 278,
+        "secondary_cells": 70,
+        "reserved_cells": 35,
+        "sealed_pockets": 0
+      },
+      "cells": 637,
+      "modes": {
+        "jour": {
+          "ground": {
+            "bank": "CANON1_TC1_FINALE_JOUR_T",
+            "cells": 2331,
+            "unique_png": 707,
+            "native_tiles_registered": 259,
+            "asset": "canon1_TC1_finale_jour",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 637,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 484,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 264,
+                "Y": 168,
+                "Width": 120,
+                "Height": 168
+              }
+            ]
+          }
+        },
+        "nuit": {
+          "ground": {
+            "bank": "CANON1_TC1_FINALE_NUIT_T",
+            "cells": 2331,
+            "unique_png": 707,
+            "native_tiles_registered": 259,
+            "asset": "canon1_TC1_finale_nuit",
+            "grid": [
+              81,
+              63
+            ],
+            "size_px": [
+              648,
+              504
+            ],
+            "placed_cells": 637,
+            "markers": [
+              {
+                "name": "arrivee",
+                "X": 316,
+                "Y": 484,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "sortie",
+                "X": 316,
+                "Y": 4,
+                "Width": 16,
+                "Height": 16
+              },
+              {
+                "name": "zone_reservee_structures",
+                "X": 264,
+                "Y": 168,
+                "Width": 120,
+                "Height": 168
+              }
+            ]
+          }
+        }
+      },
+      "animation": {
+        "cycle_ticks": 216,
+        "cycle_ms": 3600.0,
+        "preview_samples": 32,
+        "groups": {
+          "0": {
+            "frames": 12,
+            "duration_ticks": 18
+          },
+          "1": {
+            "frames": 12,
+            "duration_ticks": 6
+          }
+        }
+      }
+    }
+  }
+}

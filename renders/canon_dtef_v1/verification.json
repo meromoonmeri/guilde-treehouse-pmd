@@ -1,0 +1,60 @@
+[
+  {
+    "test": "A1 SHA-256 des banques bancaires identiques a provenance.json (2 banques)",
+    "status": "PASS"
+  },
+  {
+    "test": "A2 47 masques canoniques = FieldDtefMapping du moteur, chaque cellule placee dans ce jeu",
+    "status": "PASS",
+    "cells": 2550
+  },
+  {
+    "test": "B1 chaque cellule exportee est octet pour octet la cellule native de la banque",
+    "status": "PASS",
+    "opaque_px": 3229152,
+    "maps": 4,
+    "modes": 2
+  },
+  {
+    "test": "B2 aucun RGBA du rendu de jour hors de la palette native utilisee",
+    "status": "PASS"
+  },
+  {
+    "test": "B3 sol continu sous tout, murs et secondaire limites a leurs cellules",
+    "status": "PASS",
+    "layer_checks": 32
+  },
+  {
+    "test": "B4 nuit = filtre Abyss une seule application, alpha intact, jamais cumule",
+    "status": "PASS"
+  },
+  {
+    "test": "B5 animation : compositions t et t+cycle identiques, frames natives completes, feuilles 432x192",
+    "status": "PASS"
+  },
+  {
+    "test": "B6 feuilles DTEF = extraction pure : toutes les cellules egales a la banque, difference avec le \u00ab bombing \u00bb V2 comptee",
+    "status": "PASS",
+    "pixels_where_v2_was_painted": 0
+  },
+  {
+    "test": "C1 Ground relu : chaque cellule 8px = octets natifs de la banque, frames animees = compte et duree natifs",
+    "status": "PASS",
+    "cells": 45900,
+    "anim_frames": 90576
+  },
+  {
+    "test": "C2 obstacles alignes sur la grille 8px et coherents avec collisions.json",
+    "status": "PASS"
+  },
+  {
+    "test": "D1 Mod.xml + index : projet autonome valide, banque etrangere preservee a la fusion",
+    "status": "PASS",
+    "banks": 8,
+    "entries": 18288
+  },
+  {
+    "test": "E1 aperus directs : 1x egal a la composition, zoom 3x = pixel natif repete x3, sans reechantillonage",
+    "status": "PASS"
+  }
+]

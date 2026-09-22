@@ -5,6 +5,10 @@
 [Carte et viewport](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_cadrage.png) · [Pics animés](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_pics_animes.webp) · [Pack PMDO](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_creuset_glacial_PMDO.zip). Géométrie504×504 conservée, caméra320×240 sans agrandissement ; quatre tracés source et contrôleur glacial. Installation boss Halcyon optionnelle, enregistrement du Tile requis, moteur non exécuté. Code et restauration : `source/ice_boss_v1/restore.py`.
 
 
+## CANON1 — jungle et forêt, cellules natives 24 px
+
+[Collection jour+nuit, 4 cartes](renders/canon_dtef_v1/apercus/CANON1_collection_1x.png) · [pack ZIP](renders/canon_dtef_v1/Canonia_DTEF_v1.zip) · [note d’import PMDO](renders/canon_dtef_v1/README_import.md). Chaque case est une cellule native des banques DTEF épinglées, placée par les règles autotile du moteur ; quatre groupes sémantiques, `.ora`, Ground 8 px et feuilles DTEF, nuit filtrée une seule fois. 12 contrôles de recalculation octet à octet (niveaux A–D + aperçus) ; moteur, rendu PMDO et jeu non exécutés. Code : `source/canon_dtef_v1/`.
+
 ## Plaines sauvages — entrée et finale
 
 [PNG : cinq calques](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/93914f687cc3e3e40ae0b57a38599e7281b71b22/renders/plaines_pmd_v1/WP1_duo.png). Code et PNG/ZIP : `source/plaines_pmd_v1/restore.py`.
