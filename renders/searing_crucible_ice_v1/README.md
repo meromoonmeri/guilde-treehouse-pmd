@@ -31,3 +31,7 @@ Reproduction : `.venv/bin/python source/searing_crucible_ice_v1/decode.py && bui
 - `spritecollab/Ice_Peak_*.zip` (+ dossiers dépliés) — format SpriteCollab / PMDOWiki « PMD Sprite Format » : `AnimData.xml` + `Idle-Anim.png` / `Idle-Offsets.png` / `Idle-Shadow.png`, images de même taille, dimensions de frame paires (48×48 ou 48×24), 63 frames de gauche à droite sur une seule direction, `<Duration>4</Duration>` (1/60 s) par frame, pixel vert = centre du corps, pixel blanc = centre de l'ombre, `ShadowSize` 0.
   Ce format est celui des Pokémon : pour des objets de décor, le moteur PMDO utilise les `.dir` ci-dessus ; les zips sont fournis pour la compatibilité outillage (Sprite Tool / SkyTemple), pas pour une soumission au dépôt SpriteCollab (réservé aux Pokémon).
 - `sprites_manifest.json` — en-têtes, tailles, SHA256. `verify.py` : 15/15 + 12/12 PASS. Aucune validation moteur.
+
+## Carte complète (ajout `build_rsmap.py`)
+- `Data/Map/frozen_crucible.rsmap` — copie du rsmap de référence où seuls changent : TileTex de chaque cellule (feuille `VastIceMountainPeak`, TexLoc issus de l'autotile canonique DumpAsset `vast_ice_mountain_peak_{wall,floor}.json`), `AnimIndex` des 8 décorations → `Ice_Peak_*`, couleur de la brume, nom. Rendu depuis le `VastIceMountainPeak.tile` de DumpAsset = calque 01 **pixel-identique** (`calques/01b_sol_rendu_depuis_rsmap.png`).
+- `Content/Object/` + `frozen_crucible_mod.zip` + `INSTALL.md` — paquet prêt à déposer dans un mod PMDO. Non testé en moteur.
