@@ -1,5 +1,9 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## FD1 — forêt secrète, Mont Discipline, plaines brûlées : 22/22 cartes (22 septembre 2026)
+
+[Forêt secrète duo](renders/final_duos_v1/FD1_secrete_duo.png) · [Mont Discipline duo](renders/final_duos_v1/FD1_discipline_duo.png) · [Plaines brûlées duo](renders/final_duos_v1/FD1_brulees_duo.png) · [Feux natifs animés](renders/final_duos_v1/FD1_brulees_duo_anime.webp) · packs calques `FD1_<lieu>_duo_calques.zip` et Ground PMDO `FD1_<lieu>_PMDO.zip` dans `renders/final_duos_v1/`. Méthode, provenance par matériau et limites : `source/final_duos_v1/README.md`. Six cartes, 4–6 groupes, sol continu, natifs 1× (souche, ciel/collines, feux BPA 10×3, flammèches 9×4), plans générés quantifiés dans la palette du lieu. Tests images + sérialisation Ground + installeur ; PMDO non exécuté, pas d'approbation artistique.
+
 ## Creuset glacial — boss Searing Crucible adapté
 
 [Carte et viewport](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_cadrage.png) · [Pics animés](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_pics_animes.webp) · [Pack PMDO](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/8d7ca1d782a7a761d08d117412000bdccd7b22be/renders/ice_boss_v1/IB1_creuset_glacial_PMDO.zip). Géométrie504×504 conservée, caméra320×240 sans agrandissement ; quatre tracés source et contrôleur glacial. Installation boss Halcyon optionnelle, enregistrement du Tile requis, moteur non exécuté. Code et restauration : `source/ice_boss_v1/restore.py`.
