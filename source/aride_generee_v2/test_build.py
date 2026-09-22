@@ -1,4 +1,4 @@
-"""Tests du lot aride generee V1 (textures generees, pas natives)."""
+"""Tests du lot aride generee V2 (textures generees, pas natives)."""
 import json
 import unittest
 from pathlib import Path
@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 R = Path(__file__).resolve().parents[2]
-OUT = R / 'renders/aride_generee_v1'
+OUT = R / 'renders/aride_generee_v2'
 MAG = np.array([255, 0, 255])
 
 
@@ -86,7 +86,7 @@ class TestAride(unittest.TestCase):
 
     def test_08_bruts_presents(self):
         for n in ['parois_grotte.png', 'sol_sable.png', 'props_arbres_blocs.png', 'fx_poussiere.png']:
-            self.assertTrue((R / 'source/aride_generee_v1/bruts' / n).exists(), n)
+            self.assertTrue((R / 'source/aride_generee_v2/bruts' / n).exists(), n)
 
 
 if __name__ == '__main__':

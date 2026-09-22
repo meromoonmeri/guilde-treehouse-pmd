@@ -1,4 +1,4 @@
-"""Packaging aride generee V1 : ORA, GIF/WebP, galerie, ZIP. Lance les tests d'abord."""
+"""Packaging aride generee V2 : ORA, GIF/WebP, galerie, ZIP. Lance les tests d'abord."""
 import base64
 import io
 import json
@@ -8,13 +8,13 @@ from pathlib import Path
 from PIL import Image
 
 R = Path(__file__).resolve().parents[2]
-SRC = R / 'source/aride_generee_v1'
-OUT = R / 'renders/aride_generee_v1'
+SRC = R / 'source/aride_generee_v2'
+OUT = R / 'renders/aride_generee_v2'
 PROPS = ['grandA', 'grandB', 'moyenA', 'moyenB', 'arbusteA', 'arbusteB', 'blocA', 'blocB']
 
 
 def run_tests():
-    r = subprocess.run(['.venv/bin/python', '-m', 'unittest', 'source.aride_generee_v1.test_build', '-v'],
+    r = subprocess.run(['.venv/bin/python', '-m', 'unittest', 'source.aride_generee_v2.test_build', '-v'],
                        cwd=R, capture_output=True, text=True)
     print(r.stdout[-1500:])
     if r.returncode != 0:
@@ -23,7 +23,7 @@ def run_tests():
 
 
 def make_ora():
-    ora = OUT / 'aride_generee_v1.ora'
+    ora = OUT / 'aride_generee_v2.ora'
     layers = [('00_plafond', 'couches/00_plafond.png'), ('00_sol', 'couches/00_sol.png'),
               ('01_parois', 'couches/01_parois.png')] + \
              [(f'02_prop_{n}', f'couches/02_prop_{n}.png') for n in PROPS] + \
@@ -67,7 +67,7 @@ def make_gallery():
         f'<img src="data:image/png;base64,{b64(p)}"></div>' for i, (n, p) in enumerate(layers))
     frames_js = json.dumps(anim)
     html = f"""<!doctype html><html lang="fr"><meta charset="utf-8">
-<title>Aride generee V1 — entree de donjon desertique</title>
+<title>Aride generee V2 — entree de donjon desertique</title>
 <style>body{{background:#1c130c;color:#efe3cc;font:15px system-ui;margin:0 auto;max-width:1180px;padding:22px}}
 h1{{font-size:22px}}p{{line-height:1.55;max-width:75ch}}.warn{{background:#3a2a12;border:1px solid #8a6a2a;
 border-radius:10px;padding:12px 16px}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}}
@@ -88,7 +88,7 @@ L'animation de poussiere (12 frames, boucle parfaite, derive + scintillement) es
 <button id="access">voir acces</button></div>
 <p><b>Bouche :</b> x{m['mouth']['x0']}-{m['mouth']['x1']}, y{m['mouth']['y0']}-{m['mouth']['y1']} ·
 <b>Arrivee sud → seuil :</b> {m['path'][-1]} → {m['path'][0]} ·
-<b>12 frames × 100&nbsp;ms</b> · ZIP : <code>renders/aride_generee_v1_pack.zip</code> ·
+<b>12 frames × 100&nbsp;ms</b> · ZIP : <code>renders/aride_generee_v2_pack.zip</code> ·
 ORA editable inclus.</p>
 <h2>Calques (cocher pour afficher/masquer)</h2><div class="grid">{imgs}</div>
 <script>const F={frames_js};let f=0,play=true,z=1,timer;
@@ -111,12 +111,12 @@ show();</script></html>"""
         "el.src=el.src.includes('access')?'data:image/png;base64,'+F[f]:'{b64('access_review.png')}'?'x':'x';",
         f"if(el.dataset.acc){{el.dataset.acc='';show();}}else{{el.dataset.acc='1';"
         f"el.src='data:image/png;base64,{acc}';}}")
-    (R / 'apercu_aride_generee_v1.html').write_text(html)
+    (R / 'apercu_aride_generee_v2.html').write_text(html)
     print('galerie ok', len(html) // 1024, 'Ko')
 
 
 def make_zip():
-    zp = R / 'renders/aride_generee_v1_pack.zip'
+    zp = R / 'renders/aride_generee_v2_pack.zip'
     if zp.exists():
         zp.unlink()
     with zipfile.ZipFile(zp, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -128,7 +128,7 @@ def make_zip():
 
 def make_readme():
     m = json.loads((OUT / 'manifest.json').read_text())
-    (OUT / 'README.md').write_text(f"""# Entree aride generee V1
+    (OUT / 'README.md').write_text(f"""# Entree aride generee V2
 
 Map finale 400x360 (grille 8 px) : parois canyon + bouche de grotte a l'ouest,
 sol sableux avec sentier, 8 props (4 arbres morts, 2 arbustes, 2 blocs),
@@ -145,7 +145,7 @@ entre le seuil de la paroi et le sol.
 - `couches/` : plafond, sol, parois, 8 props separes (pieds sur grille 8 px)
 - `fx/fx_00..11.png` : derive horizontale wrap (48/72/36 px par cycle) + scintillement alpha
 - `compos_anim/` : 12 composites, `scene_animee.gif` / `.webp`
-- `aride_generee_v1.ora` : calques editables
+- `aride_generee_v2.ora` : calques editables
 - `composite.png`, `access_review.png` (arrivee sud {m['path'][-1]} -> seuil {m['path'][0]})
 - `manifest.json` : bouche {m['mouth']}, sentier, pieds, parametres
 
@@ -154,8 +154,8 @@ Textures generees dans la DA PMD, pas des tuiles natives ; bouche/x et cadence
 choisies ; animation proposee, pas cycle officiel ; pas de test PMDO/GPU ;
 collisions et warp grotte a configurer moteur.
 
-Reproduction : `.venv/bin/python source/aride_generee_v1/build.py` puis
-`.venv/bin/python source/aride_generee_v1/package.py` (les tests tournent avant le ZIP).
+Reproduction : `.venv/bin/python source/aride_generee_v2/build.py` puis
+`.venv/bin/python source/aride_generee_v2/package.py` (les tests tournent avant le ZIP).
 """)
     print('readme ok')
 

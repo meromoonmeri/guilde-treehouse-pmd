@@ -1,4 +1,4 @@
-"""Aride generee V1 — terrain d'entree aride recompose au generateur.
+"""Aride generee V2 — terrain d'entree aride recompose au generateur.
 
 Reference canonique : entrancearidedungeonpmdsky.png (408x288).
 Methode rendus generes : 4 bruts generateur -> downscale /3 BOX -> detourage
@@ -13,8 +13,8 @@ from PIL import Image
 from scipy.ndimage import label, binary_opening
 
 R = Path(__file__).resolve().parents[2]
-SRC = R / 'source/aride_generee_v1/bruts'
-OUT = R / 'renders/aride_generee_v1'
+SRC = R / 'source/aride_generee_v2/bruts'
+OUT = R / 'renders/aride_generee_v2'
 CW, CH = 400, 360  # 50x45 cellules de 8 px
 NFRAMES, FRAMEMS = 12, 100
 NOCOLORS = 128  # quantification douce du grain genere (0 = off)

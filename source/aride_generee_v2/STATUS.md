@@ -1,4 +1,4 @@
-# Aride generee V1 — entree de donjon desertique (map finale)
+# Aride generee V2 — entree de donjon desertique (map finale)
 
 Demande : reprendre les textures ET les layers au generateur pour assembler
 une map finale, guidee par `entrancearidedungeonpmdsky.png`. Une seule map
@@ -28,11 +28,11 @@ le mapping `order` arbuste/bloc : le tri (rangee, x) donne deja le bon ordre.
 verifiee (decalages entiers + periode du sinus). Mouvement mesure : 8,5 % des
 pixels bougent entre f0 et f6.
 
-## Livrables (renders/aride_generee_v1/ + ZIP + galerie racine)
+## Livrables (renders/aride_generee_v2/ + ZIP + galerie racine)
 12 couches (plafond, sol, parois, 8 props pieds sur grille 8 px), 12 frames FX,
 12 composites, GIF + WebP, ORA editable, composite, access_review
 (arrivee [185,356] -> seuil [130,203], degagement 8 px teste), manifest.json.
-8 tests PASS. Galerie `apercu_aride_generee_v1.html` (calques, lecture, acces).
+8 tests PASS. Galerie `apercu_aride_generee_v2.html` (calques, lecture, acces).
 
 ## Limites
 Textures generees DA PMD, pas pixels natifs ; bouche/cadence choisies ;
