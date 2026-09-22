@@ -412,3 +412,24 @@ Utilisateur : « méthode canonique de création de map avec le générateur + a
 ## V16 — sol continu + boréales référence 10 frames
 
 Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les aurores boréales soit ceux de la référence régénère les même mais avec 10 frame de loop parfaite ». Terrain régénéré sans cratère (bord sombre 5471→226 px, test <600). Planche 2×5 style référence exact → 10 frames AuroreV16_00..09.png 768×256×130 ms, boucle frame10≈frame1 (12,6 %), IoU min 0,355 (seuil 0,30 : phase opposée normale). Extraction : inondation + seuil serré global d<40 pour le magenta cuit enfermé entre deux passages de vague ; fenêtre centroïde + fill_holes IMPOSSIBLE (recrée le voile V9). Halcyon inchangé (grille 8 px, (80,24), nommage uniforme). Sources `source/arene_halcyon_v16/`, rendus/ZIP, aperçu racine `apercu_arene_halcyon_v16.html`. 7 tests PASS.
+
+## Reprise maps — entrée aride générée V1 (22 septembre 2026)
+
+L'utilisateur demande de poursuivre les maps au générateur : reproduire les
+textures ET les layers au générateur depuis la référence canonique, puis
+assembler. Choix : entrée aride en premier, une seule map soignée, avec
+animation subtile proposée. Méthode rendus générés (pas bouts de map).
+
+Lot `source/aride_generee_v1/`, `renders/aride_generee_v1/`, pack
+`renders/aride_generee_v1_pack.zip`, galerie `apercu_aride_generee_v1.html`.
+5 bruts 1224×864 (terrain/sol/parois/props/FX) → /3 NEAREST → 408×288.
+4 calques (sol plein cadre, parois, bouche 187,46–224,89, 6 props replacés)
++ 12 frames FX poussière (3 voiles alpha 150 + 4 grains, sinus pér. 12,
+boucle testée), GIF/WebP/ORA/manifest. Chemin sud→bouche connecté (flood),
+corridor ≥ 24 px. 10 tests PASS, JS galerie contrôlé.
+
+Leçons : speckles magenta intérieurs + AA rose → inondation + despill ;
+smear du sol uniquement depuis sable vrai (G-B>15) ; bouche au seuil strict
+lum<150 ; RGB zéro sous alpha 0. Généré guidé, PAS natif ; FX proposés, pas
+cycle officiel ; pas de runtime PMDO. Registre mis à jour :
+entrancearidedungeonpmdsky = generated_candidate.
