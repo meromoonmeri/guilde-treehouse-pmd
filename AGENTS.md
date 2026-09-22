@@ -412,3 +412,20 @@ Utilisateur : « méthode canonique de création de map avec le générateur + a
 ## V16 — sol continu + boréales référence 10 frames
 
 Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les aurores boréales soit ceux de la référence régénère les même mais avec 10 frame de loop parfaite ». Terrain régénéré sans cratère (bord sombre 5471→226 px, test <600). Planche 2×5 style référence exact → 10 frames AuroreV16_00..09.png 768×256×130 ms, boucle frame10≈frame1 (12,6 %), IoU min 0,355 (seuil 0,30 : phase opposée normale). Extraction : inondation + seuil serré global d<40 pour le magenta cuit enfermé entre deux passages de vague ; fenêtre centroïde + fill_holes IMPOSSIBLE (recrée le voile V9). Halcyon inchangé (grille 8 px, (80,24), nommage uniforme). Sources `source/arene_halcyon_v16/`, rendus/ZIP, aperçu racine `apercu_arene_halcyon_v16.html`. 7 tests PASS.
+
+## Reprise maps — entree aride generee V1 (22 septembre 2026)
+
+L'utilisateur demande de poursuivre les maps en spriter pro, puis precise :
+**reprendre les textures ET les layers au generateur pour assembler la map
+finale** (pas de mosaique de pixels natifs). Choix : entree aride, une seule
+map soignee, animation proposee incluse.
+Livraison : `source/aride_generee_v1/` (build/package/tests/STATUS),
+`renders/aride_generee_v1/` + `renders/aride_generee_v1_pack.zip`,
+`apercu_aride_generee_v1.html`. 4 bruts (parois/bouche a gauche, sol+sentier,
+8 props isoles, 3 volutes), downscale /3, detourage magenta seuil global
+d<170 + pelage (le seuil serre V16 laissait la frange cuite d100-230),
+assemblage 400x360 grille 8 px, 12 couches, FX 12x100ms boucle parfaite,
+ORA/GIF/WebP, 8 tests PASS. Sentier sud->seuil avec degagement 8 px.
+Textures GENEREES guidees par la reference, PAS natives ; animation proposee,
+pas cycle officiel ; pas de test PMDO/GPU. Ne pas reintroduire le mapping
+order arbuste/bloc errone (le tri donne deja le bon ordre).
