@@ -1,0 +1,107 @@
+{
+  "canvas": [
+    408,
+    288
+  ],
+  "grille_px": 8,
+  "methode": "generateur sur fond magenta -> inondation + pelage 2px -> /3 NEAREST -> remap palette native 99 couleurs sans trame",
+  "bruts": {
+    "cliff_magenta": [
+      1224,
+      864
+    ],
+    "sol_magenta": [
+      1224,
+      864
+    ],
+    "chemin_magenta": [
+      1224,
+      864
+    ],
+    "props_magenta": [
+      1224,
+      864
+    ],
+    "ombre_magenta": [
+      1224,
+      864
+    ]
+  },
+  "rejetes": [
+    "parois_magenta (bol avec fond)",
+    "fx_magenta (non demande)",
+    "guide_compo_v2 (plein cadre, hors methode magenta)"
+  ],
+  "remap_dist_moy": {
+    "sol": 4.55068482689319,
+    "chemin": 5.7363332407268,
+    "cliff": 7.07784912318629,
+    "props": 10.58550867987694
+  },
+  "bouche_bbox": [
+    184,
+    40,
+    224,
+    91
+  ],
+  "placements": {
+    "arbre0": [
+      28,
+      160
+    ],
+    "arbre1": [
+      309,
+      164
+    ],
+    "arbre2": [
+      244,
+      168
+    ],
+    "arbre3": [
+      104,
+      175
+    ],
+    "bloc0": [
+      4,
+      224
+    ],
+    "bloc1": [
+      257,
+      241
+    ],
+    "caillou0": [
+      128,
+      228
+    ],
+    "caillou1": [
+      200,
+      236
+    ],
+    "caillou2": [
+      124,
+      252
+    ],
+    "caillou3": [
+      196,
+      260
+    ],
+    "caillou4": [
+      132,
+      272
+    ],
+    "caillou5": [
+      208,
+      276
+    ]
+  },
+  "ombres_alpha": 110,
+  "acces_sud_bouche": true,
+  "ordre": [
+    "L00_sol",
+    "L01_chemin",
+    "L02_cliff",
+    "L05_ombres",
+    "L03_roches",
+    "L04_arbres"
+  ]
+}

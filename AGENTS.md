@@ -451,3 +451,27 @@ smear du sol uniquement depuis sable vrai (G-B>15) ; bouche au seuil strict
 lum<150 ; RGB zéro sous alpha 0. Généré guidé, PAS natif ; FX proposés, pas
 cycle officiel ; pas de runtime PMDO. Registre mis à jour :
 entrancearidedungeonpmdsky = generated_candidate.
+
+## Aride finale V3 magenta → palette native (22 septembre 2026, 2e session)
+
+Version finale demandée : méthode fond magenta au générateur, seulement
+cliff/sol/chemin/roches/arbre/ombre (FX écartés sur consigne), grotte au nord,
+chemin sud→nord. Noms uniques `aride_finale_magenta_v3` (session parallèle
+active sur V1/V2 : ne pas écraser ses fichiers, réparé une fois via git).
+
+Lot `source/aride_finale_magenta_v3/`, `renders/aride_finale_magenta_v3/`,
+pack `renders/aride_finale_magenta_v3_pack.zip`, galerie
+`apercu_aride_finale_magenta_v3.html`. 5 bruts 1224×864 (cliff/sol/chemin/
+props/ombres) : inondation magenta d<170 + pelage 2px + kill global → /3
+NEAREST → **remap 100% palette native** (99 couleurs réf, testé 0 hors palette,
+0 magenta, RGB zéro sous alpha 0). 6 calques (sol plein cadre rebouché au sable
+vrai le plus proche, sentier en S arrêté au seuil bouche [184,40,224,91],
+cliff + bouche, 2 blocs avant-plan + 6 cailloux, 4 arbres pieds sur sable,
+ombres alpha 110 requantifiées après fusion), 17 sprites, ORA, manifest,
+access review (sud→seuil connecté, corridor ≥40px à y=150). 10 tests PASS,
+build déterministe (double-run md5).
+
+Leçons : over alpha des ombres via PIL (bug broadcast numpy manuel) ;
+JAMAIS edits+run du même fichier en parallèle (races constatées) ; budget
+10 générations du tour épuisé. Motifs générés, pixels 1×, palette native ;
+pas de test PMDO/GPU, pas de collisions/warps moteur.
