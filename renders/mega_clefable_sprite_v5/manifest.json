@@ -1,0 +1,295 @@
+{
+ "base_set": {
+  "raw_turnaround.png": "8f911168194e1a14d7df844e9710eeb34c848751c46789a349123c4d85332e19",
+  "raw_extra_poses.png": "ab63d376b644b1fda33fbb39a7248817028e9243f9be6b90ae0fc449d996061f"
+ },
+ "body_height_px": 30,
+ "padding": [
+  24,
+  8
+ ],
+ "anims": {
+  "Walk": {
+   "frame": [
+    80,
+    64
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "rows": 8,
+   "durations": [
+    "8",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Attack": {
+   "frame": [
+    120,
+    88
+   ],
+   "canonical_frame": [
+    72,
+    72
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Withdraw": {
+   "frame": [
+    80,
+    64
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 22,
+   "rows": 8,
+   "durations": [
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  "Dance": {
+   "frame": [
+    80,
+    56
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 6,
+   "rows": 8,
+   "durations": [
+    "6",
+    "4",
+    "6",
+    "4",
+    "6",
+    "4"
+   ]
+  },
+  "Sleep": {
+   "frame": [
+    80,
+    48
+   ],
+   "canonical_frame": [
+    32,
+    32
+   ],
+   "frames": 2,
+   "rows": 1,
+   "durations": [
+    "30",
+    "35"
+   ]
+  },
+  "Hurt": {
+   "frame": [
+    96,
+    72
+   ],
+   "canonical_frame": [
+    48,
+    56
+   ],
+   "frames": 2,
+   "rows": 8,
+   "durations": [
+    "2",
+    "8"
+   ]
+  },
+  "Idle": {
+   "frame": [
+    80,
+    64
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 6,
+   "rows": 8,
+   "durations": [
+    "30",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Swing": {
+   "frame": [
+    120,
+    96
+   ],
+   "canonical_frame": [
+    72,
+    80
+   ],
+   "frames": 9,
+   "rows": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "2",
+    "3",
+    "2",
+    "2",
+    "1",
+    "1"
+   ]
+  },
+  "Double": {
+   "frame": [
+    104,
+    80
+   ],
+   "canonical_frame": [
+    56,
+    64
+   ],
+   "frames": 16,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "3",
+    "3",
+    "3",
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Hop": {
+   "frame": [
+    80,
+    104
+   ],
+   "canonical_frame": [
+    32,
+    88
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "4",
+    "3",
+    "2",
+    "1",
+    "2"
+   ]
+  },
+  "Charge": {
+   "frame": [
+    80,
+    56
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Rotate": {
+   "frame": [
+    80,
+    56
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 9,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  }
+ },
+ "motion": "canonical CHUNSOFT green-marker trajectories",
+ "views_note": "up-right/up-left use the back view (no 3/4-back drawing)",
+ "generated": true,
+ "runtime_validated": false
+}
