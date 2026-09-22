@@ -431,3 +431,23 @@ a ete poussee par une session parallele (8f597163) et est conservee telle quelle
 Textures GENEREES guidees par la reference, PAS natives ; animation proposee,
 pas cycle officiel ; pas de test PMDO/GPU. Ne pas reintroduire le mapping
 order arbuste/bloc errone (le tri donne deja le bon ordre).
+## Reprise maps — entrée aride générée V1 (22 septembre 2026)
+
+L'utilisateur demande de poursuivre les maps au générateur : reproduire les
+textures ET les layers au générateur depuis la référence canonique, puis
+assembler. Choix : entrée aride en premier, une seule map soignée, avec
+animation subtile proposée. Méthode rendus générés (pas bouts de map).
+
+Lot `source/aride_generee_v1/`, `renders/aride_generee_v1/`, pack
+`renders/aride_generee_v1_pack.zip`, galerie `apercu_aride_generee_v1.html`.
+5 bruts 1224×864 (terrain/sol/parois/props/FX) → /3 NEAREST → 408×288.
+4 calques (sol plein cadre, parois, bouche 187,46–224,89, 6 props replacés)
++ 12 frames FX poussière (3 voiles alpha 150 + 4 grains, sinus pér. 12,
+boucle testée), GIF/WebP/ORA/manifest. Chemin sud→bouche connecté (flood),
+corridor ≥ 24 px. 10 tests PASS, JS galerie contrôlé.
+
+Leçons : speckles magenta intérieurs + AA rose → inondation + despill ;
+smear du sol uniquement depuis sable vrai (G-B>15) ; bouche au seuil strict
+lum<150 ; RGB zéro sous alpha 0. Généré guidé, PAS natif ; FX proposés, pas
+cycle officiel ; pas de runtime PMDO. Registre mis à jour :
+entrancearidedungeonpmdsky = generated_candidate.
