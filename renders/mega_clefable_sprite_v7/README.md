@@ -9,7 +9,7 @@
 - Design : image validée par l'utilisateur ; carte de design réutilisée pour toutes les bandes.
 
 ## Audit de détail (`source/mega_clefable_sprite_v7/audit_details.json`)
-Pour les 12 animations : toutes les cases d'une même feuille ont **la même taille** ; **yeux bleus visibles dans 100 % des cases où le visage est visible** (les yeux, perdus par le rééchantillonnage, sont re-tamponnés depuis les pixels bleus de la source) ; **ailes présentes dans 100 % des cases** ; **calotte blanche dans 100 % des cases** ; **0 tache sombre sur les mains** (contrôle des blobs sombres bas du corps). Hauteur du corps 34 px stable (34–35 sur les attaques ; 34–43 sur les cycles de vol = ailes repliées vers le haut, voulu). Les bandes ¾ dont l'audit avait révélé des défauts (yeux absents sur 3 frames, calotte perdue) ont été écartées : les directions ¾ utilisent la vue de face.
+Pour les 12 animations : toutes les cases d'une même feuille ont **la même taille** ; **yeux bleus visibles dans 100 % des cases où le visage est visible** (les yeux sont re-tamponnés en style canonique de la référence utilisateur : point bleu vif 2×2 (0,162,232), sans paupière sombre) ; **ailes présentes dans 100 % des cases** ; **calotte blanche dans 100 % des cases** ; **0 tache sombre sur les mains** (contrôle des blobs sombres bas du corps). Hauteur du corps 34 px stable (34–35 sur les attaques ; 34–43 sur les cycles de vol = ailes repliées vers le haut, voulu). Les bandes ¾ dont l'audit avait révélé des défauts (yeux absents sur 3 frames, calotte perdue) ont été écartées : les directions ¾ utilisent la vue de face.
 `verify.py` 64/64 PASS (format PMDOWiki, Offsets/Shadow canoniques après retrait du padding, ≤16 couleurs, alpha binaire…).
 
 ## Fichiers

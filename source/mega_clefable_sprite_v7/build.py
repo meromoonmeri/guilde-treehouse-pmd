@@ -13,7 +13,7 @@ from scipy import ndimage
 import xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[2];S=Path(__file__).resolve().parent;G=S/'gen';G6=R/'source/mega_clefable_sprite_v6/gen';REF=R/'source/mega_clefable_sprite_v1/references/spritecollab_0036'
 O=R/'renders/mega_clefable_sprite_v7';OUT=O/'sprite/0036/0001';OUT.mkdir(parents=True,exist_ok=True)
-PAL=np.array([[252,190,176],[246,150,148],[229,156,148],[220,106,108],[211,85,91],[187,51,104],[250,240,162],[236,196,90],[255,255,255],[226,226,236],[74,26,47],[156,96,94],[250,166,160],[70,120,230],[120,40,60],[0,0,0]])
+PAL=np.array([[252,190,176],[246,150,148],[229,156,148],[220,106,108],[211,85,91],[187,51,104],[250,240,162],[236,196,90],[255,255,255],[226,226,236],[74,26,47],[156,96,94],[250,166,160],[0,162,232],[120,40,60],[0,0,0]])
 BODY_H=34;PADX,PADY=24,10
 def keymask(a):
     bg=(a[...,1]<70)&(a[...,2]>190)&(a[...,0]>200)&(np.abs(a[...,0]-a[...,2])<45)
@@ -53,8 +53,8 @@ def sprite(a,m,box,scale,trim_border=False):
         ys,xs=np.nonzero(lab==i)
         if len(ys)<6:continue
         cy,cx=int(round(ys.mean()*scale)),int(round(xs.mean()*scale));eh=max(2,int(round((ys.max()-ys.min()+1)*scale)));ew=max(1,int(round((xs.max()-xs.min()+1)*scale)))
-        y0e,x0e=max(0,cy-eh//2),max(0,cx-ew//2);q[y0e:y0e+eh,x0e:x0e+ew]=PAL[13];al[y0e:y0e+eh,x0e:x0e+ew]=True
-        if eh>=3:q[y0e,x0e:x0e+ew]=PAL[10]
+        # canonical eye (user reference 64px): a plain 2x2 bright blue dot, no dark lid, no shine
+        eh=ew=2;y0e,x0e=max(0,cy-1),max(0,cx-1);q[y0e:y0e+eh,x0e:x0e+ew]=PAL[13];al[y0e:y0e+eh,x0e:x0e+ew]=True
     out=np.dstack([q,(al*255).astype('uint8')]);out[~al]=0
     if trim_border:
         lab,n=ndimage.label(al);bad=set(np.unique(np.concatenate([lab[0],lab[-1],lab[:,0],lab[:,-1]])))-{0}
