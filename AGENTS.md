@@ -1,5 +1,9 @@
 # Méthode de production approuvée — zones Métano
 
+## IA2 — arène de glace canonique + aurore boréale canonique verticale (22 septembre 2026)
+
+[Arène PNG](renders/arene_glace_boreale_v1/IA2_arene.png) · [Animée WebP](renders/arene_glace_boreale_v1/IA2_arene_animee.webp) · [Planche des calques](renders/arene_glace_boreale_v1/IA2_calques.png) · [12 frames d'aurore](renders/arene_glace_boreale_v1/IA2_aurore_12_frames.png) · packs `IA2_arene_glace_boreale_calques.zip` et Ground `IA2_arene_glace_boreale_PMDO.zip`. Glace `pmdskyicearena.png` 1× (arrière / sol continu / avant), rubans d'`aurorepmdsky.png` 1× en onde verticale 12×6 ticks boucle exacte sur calque propre, étoiles natives, ciel reconstitué. Cadence/onde = nos choix, cycle officiel non retrouvé. Détails : `source/arene_glace_boreale_v1/README.md`.
+
 ## FD1 — forêt secrète, Mont Discipline, plaines brûlées : 22/22 cartes (22 septembre 2026)
 
 [Forêt secrète duo](renders/final_duos_v1/FD1_secrete_duo.png) · [Mont Discipline duo](renders/final_duos_v1/FD1_discipline_duo.png) · [Plaines brûlées duo](renders/final_duos_v1/FD1_brulees_duo.png) · [Feux natifs animés](renders/final_duos_v1/FD1_brulees_duo_anime.webp) · packs calques `FD1_<lieu>_duo_calques.zip` et Ground PMDO `FD1_<lieu>_PMDO.zip` dans `renders/final_duos_v1/`. Méthode, provenance par matériau et limites : `source/final_duos_v1/README.md`. Six cartes, 4–6 groupes, sol continu, natifs 1× (souche, ciel/collines, feux BPA 10×3, flammèches 9×4), plans générés quantifiés dans la palette du lieu. Tests images + sérialisation Ground + installeur ; PMDO non exécuté, pas d'approbation artistique.
