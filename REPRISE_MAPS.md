@@ -1,8 +1,8 @@
 # Reprise des maps — 20 septembre 2026
 
-## IA3 — arène de glace, layout généré : bordure immersive, chemin sud, aurore canonique 1× à ondulation légère (12 frames), montagnes lointaines (22 septembre 2026)
+## IA3 — arène de glace, layout généré : bordure immersive, chemin sud, aurore générée design canonique 20 frames à la taille du ciel, montagnes lointaines (22 septembre 2026)
 
-[Arène PNG](renders/arene_glace_boreale_v3/IA3_arene.png) · [Animée WebP](renders/arene_glace_boreale_v3/IA3_arene_animee.webp) · [Planche des 7 calques](renders/arene_glace_boreale_v3/IA3_calques.png) · [12 frames d'aurore](renders/arene_glace_boreale_v3/IA3_aurore_12_frames.png) · packs `IA3_arene_glace_boreale_calques.zip` / `IA3_arene_glace_boreale_PMDO.zip`. Glace/montagnes/sol générés d'après la référence et quantifiés ; aurore et étoiles = pixels natifs 1×, ondulation ≤3 px choisie (planche générée 8 frames rejetée par l'utilisateur). Détails et limites : `source/arene_glace_boreale_v3/README.md`. IA2 (glace native) reste disponible.
+[Arène PNG](renders/arene_glace_boreale_v3/IA3_arene.png) · [Animée WebP](renders/arene_glace_boreale_v3/IA3_arene_animee.webp) · [Planche des 7 calques](renders/arene_glace_boreale_v3/IA3_calques.png) · [20 frames d'aurore](renders/arene_glace_boreale_v3/IA3_aurore_20_frames.png) · packs `IA3_arene_glace_boreale_calques.zip` / `IA3_arene_glace_boreale_PMDO.zip`. Glace/montagnes/sol générés d'après la référence et quantifiés ; aurore = 20 frames générées au design canonique (17 cellules continues + retour 3), étoiles natives 1×. Détails et limites : `source/arene_glace_boreale_v3/README.md`. IA2 (glace native) reste disponible.
 
 ## IA2 — arène de glace canonique + aurore boréale canonique verticale (22 septembre 2026)
 
