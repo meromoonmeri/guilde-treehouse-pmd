@@ -1,0 +1,111 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "test": "reference and all nine generation hashes",
+      "pass": true
+    },
+    {
+      "test": "six connected rooms, fifteen reciprocal/reserved ports, seven links",
+      "pass": true
+    },
+    {
+      "test": "all fifteen sand routes allow an 8 px clearance from obstacles",
+      "pass": true
+    },
+    {
+      "test": "opposing 96×16 sand bands exactly equal in both modes",
+      "pass": true
+    },
+    {
+      "test": "layer recompositions, binary alpha, 512×512 grids and twelve OpenRaster documents",
+      "pass": true
+    },
+    {
+      "test": "exact Abyss filter for all terrain layers and compositions",
+      "pass": true
+    },
+    {
+      "test": "768 full-size PNG frames match lossless atlases; water and foam really animate in every room",
+      "pass": true
+    },
+    {
+      "test": "animation phase zero exact; night frames exact; local foam run-up bounded at 3 px",
+      "pass": true
+    },
+    {
+      "test": "all PNG-to-Tileset layer/frame basenames unique",
+      "pass": true
+    },
+    {
+      "test": "reference terrain preserved; water/foam phase zero preserved; contact animation remains separate",
+      "pass": true
+    },
+    {
+      "test": "three small clouds; alpha margins; no magenta; continuous one-pixel wrap 511→0",
+      "pass": true
+    },
+    {
+      "test": "whole animated scene at 64 seconds exactly equals time zero in both modes",
+      "pass": true
+    },
+    {
+      "test": "generated sky separate from clouds and source identified",
+      "pass": true
+    }
+  ],
+  "animation_details": {
+    "01_anse_ouest": {
+      "jour/06_eau": 12,
+      "jour/07_ecume": 9,
+      "nuit/06_eau": 12,
+      "nuit/07_ecume": 9,
+      "run_up_outside_water_px": 326
+    },
+    "02_carrefour_t": {
+      "jour/06_eau": 16,
+      "jour/07_ecume": 18,
+      "nuit/06_eau": 16,
+      "nuit/07_ecume": 18,
+      "run_up_outside_water_px": 638
+    },
+    "03_anse_est": {
+      "jour/06_eau": 17,
+      "jour/07_ecume": 21,
+      "nuit/06_eau": 17,
+      "nuit/07_ecume": 21,
+      "run_up_outside_water_px": 791
+    },
+    "04_passage_ouest": {
+      "jour/06_eau": 26,
+      "jour/07_ecume": 26,
+      "nuit/06_eau": 26,
+      "nuit/07_ecume": 26,
+      "run_up_outside_water_px": 1162
+    },
+    "05_carrefour_croix": {
+      "jour/06_eau": 14,
+      "jour/07_ecume": 15,
+      "nuit/06_eau": 14,
+      "nuit/07_ecume": 15,
+      "run_up_outside_water_px": 533
+    },
+    "06_passage_est": {
+      "jour/06_eau": 27,
+      "jour/07_ecume": 27,
+      "nuit/06_eau": 27,
+      "nuit/07_ecume": 27,
+      "run_up_outside_water_px": 1382
+    }
+  },
+  "visual_review": "Moonless generated sky, extracted clouds, day ensemble and corrected reference beach inspected as images. Artistic approval remains with user.",
+  "browser": "NOT TESTED here; separate DOM simulation report",
+  "runtime_PMDO": "NOT TESTED",
+  "limits": [
+    "Generated PMD-referenced materials, not native pixel-identical tiles.",
+    "Common sand bands match; the entire rock perimeter is not certified seamless.",
+    "Connected sand masks are not PMDO collisions or warps.",
+    "Hidden surfaces under rocks/plants are not reconstructed.",
+    "Cloud animation is an explicit wrap translation on its own overlay, not cloud morphing."
+  ]
+}

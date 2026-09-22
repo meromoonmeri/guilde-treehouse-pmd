@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "checks": [
+    "Generated kiosk back/front exactly recompose the unchanged original",
+    "Native Krow Bank roof/counter exactly recompose the unchanged original",
+    "Synthetic merchant marker remains visible in window and is occluded by counter; no marker asset saved",
+    "terrain: exact opaque magenta background, visible pixels preserved",
+    "reseau: exact opaque magenta background, visible pixels preserved"
+  ],
+  "empty_npc_slots": 3,
+  "npc_entities_created": 0,
+  "existing_composition_sha256": "9895d65213493377b0998e894498f6a00c55ae6d94810f6a74eeb0f303b47fce",
+  "source_kiosk_sha256": "1af256eec077f5c63e7b4a34bc3f41bedf1edb53de0ff8e89f5e48c7f629ead9",
+  "runtime_PMDO": "NOT TESTED"
+}
