@@ -107,6 +107,23 @@ for i,(key,label,(x,y),box,unlocked) in enumerate(places):
 sheet.save(SPR/'WorldMap_Lieux_AssetSprite.png')
 (SPR/'WorldMap_Lieux_AssetSprite.json').write_text(json.dumps({'format':'AssetSprite','frame_size':[48,48],'entries':entries},ensure_ascii=False,indent=2))
 
+# Engine-facing state contract: the game can update this JSON without repainting any map layer.
+state_contract = {
+    'format': 'WorldMapUnlockState',
+    'map_size_px': [W, H],
+    'state_layer': 'layers/03_etat_deblocage.png',
+    'highlight_layer': 'layers/04_surlignage_debloque.png',
+    'zones': [
+        {'id': key, 'label': label, 'position_px': [x, y], 'unlocked_by_default': unlocked,
+         'sprite_id': key, 'asset_source_box': list(box)}
+        for key, label, (x, y), box, unlocked in places
+    ],
+    'connections': [['volcan','foret'], ['foret','plage'], ['plage','ruines'],
+                    ['ruines','tour'], ['tour','glace'], ['tour','desert']],
+    'update_rule': 'Le moteur remplace les calques et conserve le fond canonique; les frames discover restent une presentation separee.'
+}
+(OUT/'world_map_state.json').write_text(json.dumps(state_contract, ensure_ascii=False, indent=2))
+
 files={}
 for p in OUT.rglob('*'):
     if p.is_file(): files[str(p.relative_to(OUT))]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size}

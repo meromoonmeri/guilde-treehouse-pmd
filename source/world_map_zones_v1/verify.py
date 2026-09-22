@@ -9,6 +9,7 @@ for p in (OUT/'layers').glob('*.png'): assert Image.open(p).size==(504,336), p
 for i in range(12): assert Image.open(OUT/f'animations/WorldMap_discover_{i:02d}.png').size==(504,336)
 assert Image.open(OUT/'assetsprite/WorldMap_Lieux_AssetSprite.png').size==(336,48)
 data=json.loads((OUT/'assetsprite/WorldMap_Lieux_AssetSprite.json').read_text()); assert data['format']=='AssetSprite' and len(data['entries'])==7
+state=json.loads((OUT/'world_map_state.json').read_text()); assert state['format']=='WorldMapUnlockState' and len(state['zones'])==7
 manifest=json.loads((OUT/'manifest.json').read_text())
 for rel,info in manifest['files'].items():
  if rel == 'manifest.json': continue

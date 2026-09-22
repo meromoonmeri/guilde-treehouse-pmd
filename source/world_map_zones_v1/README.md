@@ -21,6 +21,7 @@ Aucun fond canonique n'est recoloré, redimensionné ou repeint. Les routes, mar
 - `animations/WorldMap_discover_00.png` à `11.png` : frames directes extraites de la planche fournie.
 - `animations/WorldMap_discover.webp` : boucle WebP directe.
 - `assetsprite/WorldMap_Lieux_AssetSprite.png` et `.json` : spritesheet et rectangles d'intégration.
+- `world_map_state.json` : contrat moteur avec identifiants, positions, connexions et états initiaux ; il permet de changer les zones ouvertes sans modifier le fond.
 - `manifest.json` : dimensions, SHA et provenance.
 
 État de démonstration : Volcan, Forêt et Plage ouverts ; Désert, Glace, Ruines et Tour verrouillés. Les coordonnées sont natives 504×336.
