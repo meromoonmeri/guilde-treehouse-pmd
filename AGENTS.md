@@ -466,3 +466,15 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   régénérée diffèrent de la scène sans être des objets → test « palette d'herbe » 16 niveaux pour les rendre à
   l'herbe visible ; (3) `scipy.ndimage.binary_closing` érode le bord d'image (border_value=0) : ne pas l'appliquer
   à un masque de chemin avant un test de connexité au bord.
+
+## Crooked Cavern verdoyante v2 — calques générés sur fond magenta (22/09/2026)
+
+- Demande : « commence les générations de layer via ton générateur fond magenta multicalque une fois audit fait ».
+  Livré `renders/crooked_verdoyant_v2_magenta/` + `apercu_crooked_verdoyant_v2_magenta.html` ; V1 conservée comme
+  maquette (image d'entrée des extractions) et comme livraison à part entière.
+- Leçons : (1) les extractions « garde seulement X, reste en magenta » réussissent pour les gros éléments (paroi,
+  arbres, rochers, chemin au 2e essai) mais échouent pour les petites plantes → passer par une **feuille de sprites
+  sur magenta** posée aux emplacements de la maquette ; (2) le détourage doit retirer une frange de 3 px où b>g
+  (mélange magenta) pour les calques sans rose légitime, et une frange douce seulement pour les fleurs ;
+  (3) conserver les essais rejetés dans `bruts/rejetes/` avec la raison dans le manifeste ; (4) IoU calque/maquette
+  n'est qu'informatif : le générateur déplace les objets de quelques pixels à quelques dizaines de pixels.

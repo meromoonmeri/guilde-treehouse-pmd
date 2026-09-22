@@ -1,0 +1,45 @@
+{
+  "bruts_sha256_ok": true,
+  "all_layers_512x640": true,
+  "underlay_opaque": true,
+  "residual_magenta_pixels": {
+    "01_sol_herbe": 0,
+    "02_chemin": 0,
+    "03_parois_crooked": 0,
+    "04_entree_grotte": 0,
+    "05_rochers": 0,
+    "06_vegetation_basse": 0,
+    "07_arbres": 0
+  },
+  "no_residual_magenta": true,
+  "alpha_is_binary": true,
+  "composition_equals_stack": true,
+  "composition_opaque": true,
+  "masks_match_layers": true,
+  "night_layers_exact_abyss": true,
+  "composition_nuit_equals_stack_of_night_layers": true,
+  "native_layers_rebuilt_identical": true,
+  "path_connects_south_edge_to_entrance": true,
+  "path_bottom_row_px": 61,
+  "path_top_y": 217,
+  "path_min_width_px_below_tip": 46,
+  "trees_pixels_over_path": 0,
+  "rocks_pixels_over_path": 34,
+  "entrance_bbox": [
+    208,
+    80,
+    297,
+    213
+  ],
+  "iou_vs_maquette_v1": {
+    "chemin": 0.732,
+    "parois": 0.994,
+    "entree": 0.807,
+    "rochers": 0.697,
+    "arbres": 0.597
+  },
+  "ora_ok": true,
+  "ora_merged_equals_composition": true,
+  "runtime_pmdo": "NOT TESTED",
+  "all_pass": true
+}

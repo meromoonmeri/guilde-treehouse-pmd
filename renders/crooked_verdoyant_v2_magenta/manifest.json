@@ -1,0 +1,532 @@
+{
+  "zone": "Crooked Cavern verdoyante V2 — calques générés séparément sur fond magenta (sud → nord)",
+  "size": [
+    512,
+    640
+  ],
+  "prefix": "CrookedMagentaV2",
+  "workflow": "audit (source/crooked_verdoyant_v1/AUDIT.md §5) → génération de chaque calque sur magenta #FF00FF (maquette V1 en entrée pour l’alignement) → détourage magenta + frange 1 px → normalisation 512×640 NEAREST → séparation ouverture/sol du débouché → végétation basse = sprites de la feuille magenta posés aux emplacements de la maquette → complément natif → nuit Abyss exacte → ORA/galerie",
+  "terrain_origin": "PIXELS GÉNÉRÉS (redessinés d’après références PMD : Crooked Cavern entrance, Vast Steppe entrance, Relic Forest Base). PAS des pixels natifs certifiés.",
+  "native_pixels": "uniquement complement_natif/*.png (translation seule)",
+  "key": {
+    "background": "(r>150)&(b>150)&(g<100)",
+    "fringe_forte_3px": "b>g+10 (chemin, parois, rochers, arbres : aucun pixel légitime n’a b>g)",
+    "fringe_douce_2px_feuille": "|r-b|<70 & g<0.6·min(r,b)",
+    "note": "roses du chemin (g≈b) et fleurs (g>0.6·min(r,b)) préservés"
+  },
+  "bruts": {
+    "sol_herbe": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/sol_herbe_brut.png",
+      "sha256": "a7a698a3cd718cf61f0ede659f74ec4ac77d110d271dee6b3838ad046b043992",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "chemin": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_chemin_brut_v2.png",
+      "sha256": "7344d6f7f4f32e37fc9cccaf6feb0de9dae5dc5e585b8a99be90827b34a88de0",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "parois_entree": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_parois_entree_brut.png",
+      "sha256": "e4f23773afbc2075a8bafccee1abafc91eab07422a18743857e5bc147939e86c",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "rochers": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_rochers_brut.png",
+      "sha256": "1531a6285a4b7a2c6725b3095450ed31747d84c9b9e5fb9861d91cdc0cd13c4d",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "arbres": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_arbres_brut.png",
+      "sha256": "03e0d8677f91298c538cd513adee958e83b0c532f035b5eaddf6eb89646c01b5",
+      "size": [
+        928,
+        1152
+      ]
+    },
+    "feuille_vegetation": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_feuille_vegetation_brut.png",
+      "sha256": "8aee293caaa8fe40d527533c10dc7942176bdbc83b68f53db8e97135b5fe52ee",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  },
+  "bruts_rejetes": {
+    "chemin_essai1": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/rejetes/magenta_chemin_brut.png",
+      "sha256": "04142b60e9187b0da5af04c3b234b674952cbb9c3639b4aa5617ef787393cab8",
+      "raison": "gardait la paroi et un ciel teinté"
+    },
+    "vegetation_essai1": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/rejetes/magenta_vegetation_brut.png",
+      "sha256": "29f0ac6d40584eb84cd413835228e40e2e8aa43224fe5b0224ffb4d55a9265ec",
+      "raison": "gardait paroi et lisières"
+    },
+    "vegetation_essai2": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/rejetes/magenta_vegetation_brut_v2.png",
+      "sha256": "2054353fb988c2ee7cead63a994f253d3536a46f76ac91812cff7ba2a280513d",
+      "raison": "gardait arbres, paroi partielle et herbe plate"
+    }
+  },
+  "maquette": "renders/crooked_verdoyant_v1/bruts/scene_complete_brut.png (image d’entrée des extractions) ; sol : renders/crooked_verdoyant_v1/bruts/sol_complet_brut.png",
+  "layers_order_bottom_to_top": [
+    "01_sol_herbe",
+    "02_chemin",
+    "03_parois_crooked",
+    "04_entree_grotte",
+    "05_rochers",
+    "06_vegetation_basse",
+    "07_arbres"
+  ],
+  "vegetation_placements": [
+    {
+      "sprite": "fougere",
+      "xy": [
+        157,
+        271
+      ],
+      "size": [
+        15,
+        14
+      ],
+      "v1_component_area": 136
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        354,
+        276
+      ],
+      "size": [
+        20,
+        18
+      ],
+      "v1_component_area": 87
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        200,
+        279
+      ],
+      "size": [
+        12,
+        11
+      ],
+      "v1_component_area": 70
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        443,
+        294
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "v1_component_area": 64
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        57,
+        294
+      ],
+      "size": [
+        31,
+        28
+      ],
+      "v1_component_area": 432
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        424,
+        293
+      ],
+      "size": [
+        17,
+        15
+      ],
+      "v1_component_area": 132
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        155,
+        307
+      ],
+      "size": [
+        12,
+        11
+      ],
+      "v1_component_area": 60
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        423,
+        308
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "v1_component_area": 47
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        442,
+        309
+      ],
+      "size": [
+        12,
+        11
+      ],
+      "v1_component_area": 70
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        57,
+        309
+      ],
+      "size": [
+        21,
+        19
+      ],
+      "v1_component_area": 145
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        429,
+        309
+      ],
+      "size": [
+        19,
+        18
+      ],
+      "v1_component_area": 113
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        177,
+        328
+      ],
+      "size": [
+        13,
+        13
+      ],
+      "v1_component_area": 89
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        337,
+        380
+      ],
+      "size": [
+        42,
+        38
+      ],
+      "v1_component_area": 660
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        58,
+        385
+      ],
+      "size": [
+        31,
+        27
+      ],
+      "v1_component_area": 300
+    },
+    {
+      "sprite": "fleur",
+      "xy": [
+        111,
+        388
+      ],
+      "size": [
+        20,
+        22
+      ],
+      "v1_component_area": 263
+    },
+    {
+      "sprite": "fleur",
+      "xy": [
+        388,
+        378
+      ],
+      "size": [
+        44,
+        45
+      ],
+      "v1_component_area": 622
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        57,
+        404
+      ],
+      "size": [
+        22,
+        20
+      ],
+      "v1_component_area": 188
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        343,
+        411
+      ],
+      "size": [
+        15,
+        13
+      ],
+      "v1_component_area": 62
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        354,
+        436
+      ],
+      "size": [
+        17,
+        16
+      ],
+      "v1_component_area": 167
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        72,
+        469
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "v1_component_area": 51
+    },
+    {
+      "sprite": "fleur",
+      "xy": [
+        131,
+        544
+      ],
+      "size": [
+        20,
+        22
+      ],
+      "v1_component_area": 308
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        149,
+        564
+      ],
+      "size": [
+        26,
+        23
+      ],
+      "v1_component_area": 311
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        349,
+        592
+      ],
+      "size": [
+        12,
+        11
+      ],
+      "v1_component_area": 96
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        170,
+        586
+      ],
+      "size": [
+        32,
+        33
+      ],
+      "v1_component_area": 514
+    },
+    {
+      "sprite": "fougere",
+      "xy": [
+        333,
+        598
+      ],
+      "size": [
+        25,
+        23
+      ],
+      "v1_component_area": 413
+    }
+  ],
+  "native_placements": [
+    {
+      "module": "rocher_groupe_ouest",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        147,
+        229
+      ],
+      "size": [
+        80,
+        61
+      ]
+    },
+    {
+      "module": "rocher_groupe_est",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        281,
+        231
+      ],
+      "size": [
+        80,
+        83
+      ]
+    },
+    {
+      "module": "petit_rocher_a",
+      "layer": "10_rochers_natifs_crooked",
+      "xy": [
+        107,
+        292
+      ],
+      "size": [
+        36,
+        23
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        34,
+        281
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        321,
+        286
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        280,
+        337
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        326,
+        409
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        35,
+        434
+      ],
+      "size": [
+        144,
+        120
+      ]
+    },
+    {
+      "module": "arbre_steppe",
+      "layer": "11_arbres_natifs_steppe",
+      "xy": [
+        310,
+        478
+      ],
+      "size": [
+        144,
+        120
+      ]
+    }
+  ],
+  "stats": {
+    "chemin_magenta_fraction_brut": 0.9224,
+    "parois_entree_magenta_fraction_brut": 0.6026,
+    "rochers_magenta_fraction_brut": 0.9845,
+    "arbres_magenta_fraction_brut": 0.9136,
+    "iou_vs_maquette_v1": {
+      "chemin": 0.732,
+      "parois": 0.994,
+      "entree": 0.807,
+      "rochers": 0.697,
+      "arbres": 0.597
+    },
+    "layer_pixels": {
+      "01_sol_herbe": 327680,
+      "02_chemin": 25373,
+      "03_parois_crooked": 122160,
+      "04_entree_grotte": 8035,
+      "05_rochers": 5055,
+      "06_vegetation_basse": 6729,
+      "07_arbres": 28285
+    }
+  },
+  "night": "source/cote_v4_abyss/night.py appliqué calque par calque",
+  "arrival": "bord sud, chemin centré",
+  "objective": "bouche de grotte au nord (04_entree_grotte)",
+  "not_tested": "PMDO runtime, collisions, warps : NON TESTÉS"
+}

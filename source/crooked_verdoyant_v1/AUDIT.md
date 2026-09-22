@@ -44,3 +44,21 @@ Les pixels générés sont **redessinés d'après références PMD** ; ils ne so
   natives exactement fournies au générateur comme références (le ×2 n'est qu'une aide de lecture pour le générateur ;
   aucune de ces images n'entre dans les calques livrés).
 - `audit/vue_arbre_natif_steppe.png`, `audit/vue_rochers_crooked_x3.png` — modules natifs retenus pour le complément.
+
+## 5. V2 « générateur fond magenta multicalque » (même audit, méthode par calque)
+
+Décision utilisateur : « commence les générations de layer via ton générateur fond magenta multicalque une fois audit
+fait ». L'audit ci-dessus reste la base ; la V1 devient la **maquette** (image d'entrée de chaque extraction).
+
+| Calque généré | Fond | Référence de style | Résultat |
+|---|---|---|---|
+| chemin | magenta | Relic Forest (terre beige-rosé) | essai 1 rejeté (paroi conservée) ; essai 2 retenu |
+| parois + entrée | magenta | Crooked Cavern entrance | retenu du premier coup |
+| rochers | magenta | Crooked Objects | retenu |
+| arbres | magenta | Vast Steppe (arbres ronds) | retenu (positions légèrement décalées vs maquette, IoU 0,60) |
+| végétation basse | magenta | Vast Steppe (fougères, fleurs) | 2 extractions directes rejetées → **feuille de 8 sprites** sur magenta, posés aux emplacements de la maquette |
+| sol herbe + lisière | plein (pas de magenta : calque de fond) | Vast Steppe / Relic Forest | retenu |
+
+Détourage : fond `(r>150)&(b>150)&(g<100)`, frange 3 px `b>g+10` (aucun pixel légitime de ces calques n'a b>g),
+frange douce sur la feuille de fleurs. Résultats et contrôles : `renders/crooked_verdoyant_v2_magenta/`
+(`README.md`, `manifest.json`, `verification.json`), galerie `apercu_crooked_verdoyant_v2_magenta.html`.
