@@ -6,6 +6,13 @@ R=Path(__file__).resolve().parents[2];B=R/'renders/cafe_multietage_v3/bruts';P=R
 def load(p):return Image.open(p).convert('RGBA')
 def key(im):
  a=np.array(im);m=(a[:,:,0]>50)&(a[:,:,2]>40)&(a[:,:,2]>a[:,:,1]*1.5)&(a[:,:,0]>a[:,:,1]*1.5);a[m]=0;return Image.fromarray(a)
+def clean_generated(im):
+ # Remove the magenta chroma-key spill left on generated source edges.
+ # This is intentionally applied only to generated cafe sources, never native sprites.
+ a=np.array(im).copy();r,g,b=a[:,:,0].astype(np.int16),a[:,:,1].astype(np.int16),a[:,:,2].astype(np.int16)
+ spill=(a[:,:,3]>0)&(r>150)&(b>130)&(g<125)&((r-g)>65)&((b-g)>65)
+ a[spill,3]=0
+ return Image.fromarray(a)
 base=load(B/'B_base_vide_sans_rubans.png');size=base.size;w,h=size
 # Correct native floor after generation; doorway and wall-contact edges stay protected.
 patch=load(P/'Metano_Town_Cafe_Base.png').crop((128,160,192,224)).resize((192,192),Image.Resampling.NEAREST);floor=Image.new('RGBA',size)
@@ -17,7 +24,7 @@ def layer(name,im,origin,**kw):
  assert im.size==size;layers[name]=im;meta.append({'name':name,'origin':origin,**kw})
 def masked(im,mask):
  a=np.array(im);a[:,:,3]=np.minimum(a[:,:,3],np.array(mask,dtype='uint8'));a[a[:,:,3]==0]=0;return Image.fromarray(a)
-damage=load(B/'B_mur_casse_corrige.png');holemask=Image.new('L',size);ImageDraw.Draw(holemask).rectangle((478,111,790,321),fill=255);holemask=holemask.filter(ImageFilter.GaussianBlur(2))
+damage=clean_generated(load(B/'B_mur_casse_corrige.png'));holemask=Image.new('L',size);ImageDraw.Draw(holemask).rectangle((478,111,790,321),fill=255);holemask=holemask.filter(ImageFilter.GaussianBlur(2))
 # Below wall base, keep only the broken silhouette, never a rectangular patch of regenerated floor.
 hm=np.array(holemask);da=np.array(damage);hm[246:][~((da[246:,:,0]<225)&(da[246:,:,1]<173))]=0;holemask=Image.fromarray(hm)
 # Replacement patch is opaque in its core: it replaces, not overlays a transparent hole on, the intact wall.
@@ -27,9 +34,9 @@ a=np.array(damage);yy,xx=np.mgrid[:h,:w];region=(xx>=492)&(xx<794)&(yy>=322)&(yy
 layer('02_ombre_debris',masked(damage,(shadow&~debris)*255),'Generated cast shadow extracted locally')
 layer('03_debris_bois',masked(damage,debris*255),'Generated splintered wood extracted locally')
 # Isolate ornaments rather than regenerating the whole underlying architecture.
-old=load(B/'A_accueil_interieur_bois_lumiere_corrige.png');a=np.array(old).astype(float);red=(a[:,:,0]>90)&(a[:,:,0]>a[:,:,1]*1.7)&(a[:,:,1]>20)&(yy>105)&(yy<432)
+old=clean_generated(load(B/'A_accueil_interieur_bois_lumiere_corrige.png'));a=np.array(old).astype(float);red=(a[:,:,0]>90)&(a[:,:,0]>a[:,:,1]*1.7)&(a[:,:,1]>20)&(yy>105)&(yy<432)
 layer('04_rubans',masked(old,red*255),'Generated canonical-guided ribbons, isolated; not native sprites')
-sp=load(B/'B_base_spirales.png');a=np.array(sp);sm=np.zeros((h,w),bool)
+sp=clean_generated(load(B/'B_base_spirales.png'));a=np.array(sp);sm=np.zeros((h,w),bool)
 wallboxes=[(488,152,557,202),(710,152,779,202),(289,197,347,265),(926,201,982,261),(132,294,189,377),(1087,300,1145,374)]
 floorboxes=[(609,255,685,313),(310,315,388,374),(900,315,980,374),(412,369,489,431),(593,369,672,431),(796,369,874,431),(136,493,217,568),(389,493,470,568),(611,493,689,568),(811,493,892,568),(1066,493,1147,568),(386,646,467,709),(596,646,677,709)]
 for boxes,cond in [(wallboxes,(a[:,:,0]>200)&(a[:,:,1]>150)&(a[:,:,2]>65)),(floorboxes,(a[:,:,0]>230)&(a[:,:,1]>212)&(a[:,:,2]>110))]:
@@ -37,10 +44,10 @@ for boxes,cond in [(wallboxes,(a[:,:,0]>200)&(a[:,:,1]>150)&(a[:,:,2]>65)),(floo
  for x0,y0,x1,y1 in boxes:mask[y0:y1,x0:x1]=True
  sm|=mask&cond
 layer('05_spirales_sol_murs',masked(sp,sm*255),'Generated Spinda-reference markings, isolated from unchanged base')
-# Native objects: exact source pixels, only nearest-neighbor x3 for this preview canvas.
+# Native objects: source pixels preserved; only residual magenta key spill is made transparent, then nearest-neighbor x3 is used for this preview canvas.
 obj=load(P/'spinda_cafe_layer_1.png');ref=load(P/'spinda_cafe_reference.png')
 def sprite(name,source,box,xy,mask=None):
- im=source.crop(box)
+ im=clean_generated(source.crop(box))
  if mask is not None:
   im=masked(im,mask)
   # Drop detached crop fragments from nearby garlands, not the canonical object itself.
@@ -77,6 +84,7 @@ def comp(names):
  return out
 states={'salle_vide':[],'salle_spirales':['05_spirales_sol_murs'],'salle_mur_casse':['01_mur_casse_remplacement','02_ombre_debris','03_debris_bois']}
 for name,names in states.items():comp(names).save(O/(name+'.png'))
+comp(['06_table_gauche','07_table_droite','08_table_avant','09_comptoir_gauche','10_comptoir_droit','11_decor_comptoir_spinda','12_decor_comptoir_bleu']).save(O/'apercu_meuble.png')
 broken=np.array(comp(states['salle_mur_casse']));orig=np.array(base);union=np.zeros((h,w),bool)
 for n in states['salle_mur_casse']:union|=np.array(layers[n])[:,:,3]>0
 assert np.array_equal(broken[~union],orig[~union])
