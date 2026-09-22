@@ -1,0 +1,297 @@
+{
+ "base_xml_offsets_shadows": "CHUNSOFT sprite/0036 @aae4cee2 (unchanged)",
+ "palette": [
+  [
+   255,
+   226,
+   208
+  ],
+  [
+   246,
+   196,
+   176
+  ],
+  [
+   214,
+   152,
+   138
+  ],
+  [
+   236,
+   110,
+   140
+  ],
+  [
+   204,
+   72,
+   110
+  ],
+  [
+   150,
+   44,
+   80
+  ],
+  [
+   250,
+   220,
+   110
+  ],
+  [
+   228,
+   180,
+   70
+  ],
+  [
+   255,
+   255,
+   255
+  ],
+  [
+   222,
+   222,
+   232
+  ],
+  [
+   40,
+   32,
+   40
+  ],
+  [
+   96,
+   84,
+   96
+  ],
+  [
+   250,
+   150,
+   170
+  ],
+  [
+   120,
+   40,
+   60
+  ],
+  [
+   214,
+   120,
+   130
+  ],
+  [
+   0,
+   0,
+   0
+  ]
+ ],
+ "anims": {
+  "Walk": {
+   "cells": 64,
+   "drawn_cells": 64,
+   "fallback_cells": 0,
+   "components_found": 64,
+   "frame": [
+    32,
+    48
+   ],
+   "durations": [
+    "8",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Attack": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 80,
+   "frame": [
+    72,
+    72
+   ],
+   "durations": [
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Dance": {
+   "cells": 48,
+   "drawn_cells": 42,
+   "fallback_cells": 6,
+   "components_found": 70,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "6",
+    "4",
+    "6",
+    "4",
+    "6",
+    "4"
+   ]
+  },
+  "Sleep": {
+   "cells": 2,
+   "drawn_cells": 2,
+   "fallback_cells": 0,
+   "components_found": 2,
+   "frame": [
+    32,
+    32
+   ],
+   "durations": [
+    "30",
+    "35"
+   ]
+  },
+  "Hurt": {
+   "cells": 16,
+   "drawn_cells": 16,
+   "fallback_cells": 0,
+   "components_found": 38,
+   "frame": [
+    48,
+    56
+   ],
+   "durations": [
+    "2",
+    "8"
+   ]
+  },
+  "Idle": {
+   "cells": 48,
+   "drawn_cells": 48,
+   "fallback_cells": 0,
+   "components_found": 48,
+   "frame": [
+    32,
+    48
+   ],
+   "durations": [
+    "30",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Swing": {
+   "cells": 72,
+   "drawn_cells": 72,
+   "fallback_cells": 0,
+   "components_found": 72,
+   "frame": [
+    72,
+    80
+   ],
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "2",
+    "3",
+    "2",
+    "2",
+    "1",
+    "1"
+   ]
+  },
+  "Hop": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 80,
+   "frame": [
+    32,
+    88
+   ],
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "4",
+    "3",
+    "2",
+    "1",
+    "2"
+   ]
+  },
+  "Charge": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 80,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Rotate": {
+   "cells": 72,
+   "drawn_cells": 72,
+   "fallback_cells": 0,
+   "components_found": 72,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  }
+ },
+ "missing_anims": [
+  "Withdraw",
+  "Double"
+ ],
+ "raw_sheets": {
+  "raw_Attack.png": "8784ad549b283ebc541a155a413ce94bb607a13cad1b5cecb051df93f421b833",
+  "raw_Charge.png": "d8ada134d6ba1bf8717c2367cbc2834232f1a4a8dfedc02dcc6b3e1c5cc6358d",
+  "raw_Dance.png": "709647b3ecf93e3aa4fa9a161ff2b0b7c44e644fff0a148c0c2cc564fb487ec4",
+  "raw_Hop.png": "4e67b4fa2538190ae95764af3d501b4927c01e0b35d4d8db9d46b12a9ac8c6b8",
+  "raw_Hurt.png": "1f4597c5e2918539c042a4c49ac76dc0d5bafdd81b90e4df21300d0f0377e332",
+  "raw_Idle.png": "2fb24e4fdb3c187764fc178d0e26048a2a5c7ede5252b3d914660952dc24c474",
+  "raw_Rotate.png": "d4a6d9a292019e3fc8113665d780077b79295151976a2bc6c363445da239d0ce",
+  "raw_Sleep.png": "bc041d134eba9e540a0e18dc9fc79f5929f45ccdd7ea9574bd18fbf4c8ab49bc",
+  "raw_Swing.png": "bc3f375098580a515a820416f0756dc552263edd6aa10e0962eba1cf2e992155",
+  "raw_Walk.png": "e8ab93427e10615d15e7c12ffb1f28b241c319c78314346348775de31f5403d8"
+ },
+ "generated": true,
+ "runtime_validated": false
+}
