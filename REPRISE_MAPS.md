@@ -1,5 +1,9 @@
 # Reprise des maps — 20 septembre 2026
 
+## IA3 — arène de glace, layout généré : bordure immersive, chemin sud, aurore 8 frames mouvement+couleurs, montagnes lointaines (22 septembre 2026)
+
+[Arène PNG](renders/arene_glace_boreale_v3/IA3_arene.png) · [Animée WebP](renders/arene_glace_boreale_v3/IA3_arene_animee.webp) · [Planche des 7 calques](renders/arene_glace_boreale_v3/IA3_calques.png) · [8 frames d'aurore](renders/arene_glace_boreale_v3/IA3_aurore_8_frames.png) · packs `IA3_arene_glace_boreale_calques.zip` / `IA3_arene_glace_boreale_PMDO.zip`. Plans générés d'après les références canoniques puis quantifiés dans leurs palettes ; étoiles natives 1×. Détails et limites : `source/arene_glace_boreale_v3/README.md`. IA2 (glace native) reste disponible.
+
 ## IA2 — arène de glace canonique + aurore boréale canonique verticale (22 septembre 2026)
 
 [Arène PNG](renders/arene_glace_boreale_v1/IA2_arene.png) · [Animée WebP](renders/arene_glace_boreale_v1/IA2_arene_animee.webp) · [Planche des calques](renders/arene_glace_boreale_v1/IA2_calques.png) · [12 frames d'aurore](renders/arene_glace_boreale_v1/IA2_aurore_12_frames.png) · packs `IA2_arene_glace_boreale_calques.zip` et Ground `IA2_arene_glace_boreale_PMDO.zip`. Glace `pmdskyicearena.png` 1× (arrière / sol continu / avant), rubans d'`aurorepmdsky.png` 1× en onde verticale 12×6 ticks boucle exacte sur calque propre, étoiles natives, ciel reconstitué. Cadence/onde = nos choix, cycle officiel non retrouvé. Détails : `source/arene_glace_boreale_v1/README.md`.
