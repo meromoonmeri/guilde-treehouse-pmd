@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "glace arriere/avant : pixels natifs 1x exacts, ciel de jour retire ; sol continu opaque = lignes natives 248-279 repetees",
+    "aurore : 12 frames distinctes, couleurs natives seulement, boucle exacte, deplacement horizontal par ligne <=7px vs base non cisaillee (max theorique 6), alpha total stable",
+    "etoiles presentes au-dessus de 144 ; bande de sol libre continue entre glaces arriere/avant"
+  ],
+  "runtime_PMDO": false
+}

@@ -1,0 +1,17 @@
+{
+  "maps": {
+    "secrete": [
+      "vp1_fd1_secrete_entree",
+      "vp1_fd1_secrete_fin"
+    ],
+    "discipline": [
+      "vp1_fd1_discipline_entree",
+      "vp1_fd1_discipline_fin"
+    ],
+    "brulees": [
+      "vp1_fd1_brulees_entree",
+      "vp1_fd1_brulees_fin"
+    ]
+  },
+  "checks": "serialisation re-read RGB<=1/alpha exact at ticks0,64,97; installer dry-run/install/reinstall; runtime_PMDO=false"
+}

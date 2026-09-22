@@ -1,5 +1,17 @@
 # Méthode de production approuvée — zones Métano
 
+## IA3 — arène de glace, layout généré : bordure immersive, chemin sud, aurore générée design canonique 20 frames à la taille du ciel, montagnes lointaines (22 septembre 2026)
+
+[Arène PNG](renders/arene_glace_boreale_v3/IA3_arene.png) · [Animée WebP](renders/arene_glace_boreale_v3/IA3_arene_animee.webp) · [Planche des 7 calques](renders/arene_glace_boreale_v3/IA3_calques.png) · [20 frames d'aurore](renders/arene_glace_boreale_v3/IA3_aurore_20_frames.png) · packs `IA3_arene_glace_boreale_calques.zip` / `IA3_arene_glace_boreale_PMDO.zip`. Glace/montagnes/sol générés d'après la référence et quantifiés ; aurore = 20 frames générées au design canonique (17 cellules continues + retour 3), étoiles natives 1×. Détails et limites : `source/arene_glace_boreale_v3/README.md`. IA2 (glace native) reste disponible.
+
+## IA2 — arène de glace canonique + aurore boréale canonique verticale (22 septembre 2026)
+
+[Arène PNG](renders/arene_glace_boreale_v1/IA2_arene.png) · [Animée WebP](renders/arene_glace_boreale_v1/IA2_arene_animee.webp) · [Planche des calques](renders/arene_glace_boreale_v1/IA2_calques.png) · [12 frames d'aurore](renders/arene_glace_boreale_v1/IA2_aurore_12_frames.png) · packs `IA2_arene_glace_boreale_calques.zip` et Ground `IA2_arene_glace_boreale_PMDO.zip`. Glace `pmdskyicearena.png` 1× (arrière / sol continu / avant), rubans d'`aurorepmdsky.png` 1× en onde verticale 12×6 ticks boucle exacte sur calque propre, étoiles natives, ciel reconstitué. Cadence/onde = nos choix, cycle officiel non retrouvé. Détails : `source/arene_glace_boreale_v1/README.md`.
+
+## FD1 — forêt secrète, Mont Discipline, plaines brûlées : 22/22 cartes (22 septembre 2026)
+
+[Forêt secrète duo](renders/final_duos_v1/FD1_secrete_duo.png) · [Mont Discipline duo](renders/final_duos_v1/FD1_discipline_duo.png) · [Plaines brûlées duo](renders/final_duos_v1/FD1_brulees_duo.png) · [Feux natifs animés](renders/final_duos_v1/FD1_brulees_duo_anime.webp) · packs calques `FD1_<lieu>_duo_calques.zip` et Ground PMDO `FD1_<lieu>_PMDO.zip` dans `renders/final_duos_v1/`. Méthode, provenance par matériau et limites : `source/final_duos_v1/README.md`. Six cartes, 4–6 groupes, sol continu, natifs 1× (souche, ciel/collines, feux BPA 10×3, flammèches 9×4), plans générés quantifiés dans la palette du lieu. Tests images + sérialisation Ground + installeur ; PMDO non exécuté, pas d'approbation artistique.
+
 IB1 : Searing Crucible glacial livré, source Halcyon working-copy1522c7a8. Géométrie504×504/72cases conservée ; pics14/20cases,4tracés,2tours actifs/1pause. Viewport320×240, pas de resize. Source/pack : `source/ice_boss_v1/restore.py`. Boss Halcyon opt-in, Tile à enregistrer ; Lua simulé testé, PMDO non exécuté. Préserver les16cartes/variantes des plaines déjà converties par viewport_pmdo_v1.
 
 WP1 livré : plaines,5calques,18phases natives ;16cartes publiées. MD1 montré mais non poussé, absent du checkout restauré : à récupérer. Suite : forêt secrète, plaines brûlées. Lanceur source/plaines_pmd_v1/restore.py.

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "bordure_stalactites",
+    "path": "source/arene_glace_boreale_v3/raws/bordure_stalactites.webp",
+    "sha256": "b5de1a94b014362ded0b5d89a087d37b63b490527e77fc99b2e5b247447984ac",
+    "rgba_sha256": "c4b9d3793c06cdf21ea621a952bf52c9b183f1a896cbf96daf7ff31fa132acbb",
+    "size": [
+      896,
+      1200
+    ],
+    "role": "plane",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "sol_chemin",
+    "path": "source/arene_glace_boreale_v3/raws/sol_chemin.webp",
+    "sha256": "282858c07c9906cfa4a6634631d5318e993008b4dcc013f0bb66a19a0be7b40d",
+    "rgba_sha256": "e9a61a378934e2e48d4ca87a1db4646a3e9c90e51101997bc5b280616b25af54",
+    "size": [
+      896,
+      1200
+    ],
+    "role": "plane",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "montagnes_lointaines",
+    "path": "source/arene_glace_boreale_v3/raws/montagnes_lointaines.webp",
+    "sha256": "56b1b373e940b7e3afe008fcda5ee384e0a06b9dfceace536c731d47118582e3",
+    "rgba_sha256": "1b6b8bd895da0262af58622cbf12ae17f62f0461a20efa75abb329aaab64b30c",
+    "size": [
+      1376,
+      768
+    ],
+    "role": "plane",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "aurorepmdsky.png"
+    ]
+  },
+  {
+    "id": "aurore_planche_B",
+    "path": "source/arene_glace_boreale_v3/raws/aurore_planche_B.webp",
+    "sha256": "42a18d96d6cdf3c3c21fe1b712d7c950118954ce66d4be3d144b7551ae80a146",
+    "rgba_sha256": "e3219408934747127c1657e840b58a77f60b7ef6b611850c03cfbafce1c5abaf",
+    "size": [
+      1376,
+      768
+    ],
+    "role": "sheet_8_frames",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "aurorepmdsky.png"
+    ]
+  },
+  {
+    "id": "aurore_planche_A",
+    "path": "source/arene_glace_boreale_v3/raws/aurore_planche_A.webp",
+    "sha256": "87da7c88aa372a5828b09692754fade886ed0499a5cfd61556d1ec26e3ee6872",
+    "rgba_sha256": "ec55b9629de45b4b1e49103a93feab57a0275ffca98b180eeeab0748bf073f9d",
+    "size": [
+      1134,
+      928
+    ],
+    "role": "sheet_8_frames",
+    "status": "rejected_flat_banners_not_reference_style",
+    "generated": "2026-09-22",
+    "references": [
+      "aurorepmdsky.png"
+    ]
+  },
+  {
+    "id": "sol_glace",
+    "path": "source/arene_glace_boreale_v3/raws/sol_glace.webp",
+    "sha256": "37af1a4af42bb1f39e150c2ae7953f36ff25c48dd52118caed6c25336cf87904",
+    "rgba_sha256": "dec5f55e88c94ba013d9f21e2ed9ece90bf69d0d1062980378656fc82dc00bba",
+    "size": [
+      1200,
+      896
+    ],
+    "role": "plane",
+    "status": "superseded_by_sol_chemin",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "glace_arriere",
+    "path": "source/arene_glace_boreale_v3/raws/glace_arriere.webp",
+    "sha256": "8aa472cd529d79537efd535f4edbe6a587afdfba43860d0caac561ae50a7ed4f",
+    "rgba_sha256": "52285eae805dd7cbc33aac8d88b86ad653fc9534e924163c13774f643ca4c13d",
+    "size": [
+      1200,
+      896
+    ],
+    "role": "plane",
+    "status": "superseded_by_bordure",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "glace_avant",
+    "path": "source/arene_glace_boreale_v3/raws/glace_avant.webp",
+    "sha256": "1f1990762ea9fff348036bf45974c373410c6cc72ca652d3b5fe200239fccdfc",
+    "rgba_sha256": "6fb3c16dee9000aa23256f4bc6242ca65995423b0fcc822ea50ddbdd1a8c13ad",
+    "size": [
+      1200,
+      896
+    ],
+    "role": "plane",
+    "status": "superseded_by_bordure",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "glace_laterale",
+    "path": "source/arene_glace_boreale_v3/raws/glace_laterale.webp",
+    "sha256": "31e93615e43e5c2913e149b8d6865c0290cad9a68d4dd4682f3f71c9f1e45090",
+    "rgba_sha256": "9e43b36cfb8013bf4847dfc56d355dd97ad8d262472b760dd63431243a939e6d",
+    "size": [
+      1200,
+      896
+    ],
+    "role": "plane",
+    "status": "superseded_by_bordure",
+    "generated": "2026-09-22",
+    "references": [
+      "pmdskyicearena.png"
+    ]
+  },
+  {
+    "id": "aurore20_planche_1",
+    "path": "source/arene_glace_boreale_v3/raws/aurore20_planche_1.webp",
+    "sha256": "9e839844efe442f2d51945a4a28a215eb7263f69462fc8175596dbd2b7c02d82",
+    "rgba_sha256": "83e51a722a942cc65bf4426f764d65c61df83915a53f14a34fab34914af38bee",
+    "size": [
+      1134,
+      928
+    ],
+    "role": "sheet_10_frames",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "aurorepmdsky.png"
+    ]
+  },
+  {
+    "id": "aurore20_planche_2",
+    "path": "source/arene_glace_boreale_v3/raws/aurore20_planche_2.webp",
+    "sha256": "3c07101976a3f7914e20173b8ad84ab94c8a4c5492cc90be25741a76257cb28b",
+    "rgba_sha256": "50db80786ceca77ad50dab857be6ffb1e1611114b479b2f2bdddd9c846f3f02f",
+    "size": [
+      1134,
+      928
+    ],
+    "role": "sheet_10_frames",
+    "status": "retained",
+    "generated": "2026-09-22",
+    "references": [
+      "aurorepmdsky.png"
+    ]
+  }
+]
