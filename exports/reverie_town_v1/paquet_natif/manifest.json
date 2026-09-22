@@ -31,7 +31,8 @@
    "custom_tiles": {
     "RVT_NE_JOUR_OBJETS": 29
    },
-   "blocked_tiles": 3648
+   "mirror_tiles": {},
+   "blocked_tiles": 3660
   },
   {
    "asset": "rvt_ne_nuit",
@@ -59,7 +60,8 @@
     "RVT_NE_NUIT_ANIM": 434,
     "RVT_NE_NUIT_OBJETS": 1339
    },
-   "blocked_tiles": 3648
+   "mirror_tiles": {},
+   "blocked_tiles": 3660
   },
   {
    "asset": "rvt_no_jour",
@@ -87,6 +89,7 @@
    "custom_tiles": {
     "RVT_NO_JOUR_OBJETS": 29
    },
+   "mirror_tiles": {},
    "blocked_tiles": 3389
   },
   {
@@ -115,7 +118,9 @@
     "RVT_NO_NUIT_ANIM": 434,
     "RVT_NO_NUIT_OBJETS": 1286
    },
+   "mirror_tiles": {},
    "blocked_tiles": 3389
   }
- ]
+ ],
+ "mirror_tile_sheets": {}
 }

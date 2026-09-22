@@ -72,3 +72,13 @@ chacune **en version jour et nuit**.
 .venv/bin/python source/reverie_town_v1/verify.py           # recomposition indépendante (16 rendus)
 .venv/bin/python source/reverie_town_v1/make_viewer.py      # exports/reverie_town_v1/index.html
 ```
+
+## Mise à jour (suite « comme CLIFF MIROR », voir `source/reverie_town_v2/README.md`)
+
+- Le kit contient désormais aussi une **feuille miroir** (`kit/RVT_Cliffs_Miroir[_Nuit].png`, miroir horizontal exact
+  de `Metano_Town_Cliffs[_Night]`) et 7 modules miroir (`modules_miroir` de `kit/modules.json`, contour rouge sur la
+  planche). Ils ne sont utilisés que par la carte v2 `RVT2_NO` (côté est du plateau) ; les cartes v1 restent 100 %
+  natives.
+- Correctifs régénérés dans les exports v1 (calques, composites, paquet natif re-vérifié) : fente d'herbe de 8 px
+  dans le mur de `RVT_NE` (colonne `tx 164` lue à la mauvaise rangée) ; tuiles de sol natives à trous transparents
+  (barre noire près du carrefour) ; tuiles de berge (eau) dans les composantes de sable.

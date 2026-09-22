@@ -433,3 +433,19 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   (identique ; nuit ±1 sur 8 pixels semi-transparents par arrondi alpha prémultiplié). Aucun test moteur PMDO.
 - Décisions prises sans réponse de l'utilisateur (questions passées) : deux cartes quadrants 123×99 tuiles comme ses
   tests, village complet natif, bords est évités nativement (pas de miroir).
+
+
+## Reverie Town v2 — option miroir « comme CLIFF MIROR » (22/09/2026)
+
+- Décision utilisateur : pour les bords de plateau orientés est (absents de la feuille native Métano), utiliser le
+  **miroir horizontal** des tuiles natives, comme sa feuille « CLIFF MIROR ». Aucune autre transformation. La règle
+  « ne pas retourner les tuiles natives » est donc levée **uniquement** pour cet usage, et chaque tuile miroir est
+  marquée (feuille `RVT_Cliffs_Miroir[_Nuit]`, `modules_miroir` du kit, `mirror_tiles` dans la provenance,
+  `.tile` miroir séparés dans le paquet natif).
+- Livré : `source/reverie_town_v2/` + `exports/reverie_town_v2/` (RVT2_NE natif, RVT2_NO côté est miroir, calques
+  8 px jour/nuit, paquet natif vérifié, aperçu HTML). Les exports v1 sont conservés et corrigés (fente col 98,
+  trous transparents du sol, tuiles de berge).
+- Leçons : (1) toujours contrôler l'opacité complète des tuiles de sol natives avant de les poser (la Base a des
+  trous là où un objet la recouvre) ; (2) un `blit` avec `ty` erroné pose silencieusement une tuile vide → vérifier
+  les colonnes de raccord au rendu ; (3) une route native posée au bord de carte doit garder son extrémité native
+  au bord (ici `dy=+6` avec 6 rangées natives répétées au bord, signalé dans le README).
