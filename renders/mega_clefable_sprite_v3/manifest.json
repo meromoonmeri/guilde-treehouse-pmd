@@ -293,5 +293,16 @@
   "raw_Walk.png": "e8ab93427e10615d15e7c12ffb1f28b241c319c78314346348775de31f5403d8"
  },
  "generated": true,
- "runtime_validated": false
+ "runtime_validated": false,
+ "user_references_commit_d26041c3": {
+  "megaclefablev2reference.png": {
+   "size": "256x256, 4 rows (down/side/side/up) x 4 frames 64px, pixel-art fan sprite",
+   "sha256": "a5a5905c8c5aec92edf9f6d87ed81f5ac518ac0bb6043ffbe181fce7a28751f5"
+  },
+  "dkriq38-...gif": {
+   "size": "480x480, 81 frames, idle animation",
+   "sha256": "59055fb75b02353d5830093845b2c1099690f4025a0d6e8d6cde8debfdbe5496"
+  },
+  "note": "received after V3 build; to be used as design lock for the next pass (Withdraw, Double, and consistency re-run)"
+ }
 }
