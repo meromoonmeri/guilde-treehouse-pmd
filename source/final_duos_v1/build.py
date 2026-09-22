@@ -42,12 +42,21 @@ def flames():
 def missing():
  result=[];rs=refs()
  # Discipline: continuous sand, generated paving/access, native forest and practice modules.
- size=(480,336);ref=rs['H16P01'];a=np.array(ref);green=(a[:,:,1].astype(int)>a[:,:,0].astype(int)+8)&(a[:,:,1].astype(int)>a[:,:,2].astype(int)+20);veget=a.copy();veget[~green]=0;veget=Image.fromarray(veget)
+ size=(480,336);ref=rs['H16P01'];a=np.array(ref)
+ N=C/'native/data/map_bg';N.mkdir(parents=True,exist_ok=True)
+ with zipfile.ZipFile(R/'renders/dungeon_biomes_v1/DB1_cinq_duos_multicalques.zip') as outer:
+  with zipfile.ZipFile(io.BytesIO(outer.read('native_sources.zip'))) as z:
+   for suffix in ['.bpl','c.bpc','m.bma']:(N/('H16P01'+suffix)).write_bytes(z.read('data/map_bg/H16P01'+suffix))
+ red=mod('d22_red',R/'source/dungeon_biomes_v1/red.py');idx=red.decode('H16P01',0,N)[2][0]
+ green=np.isin(idx//16,[3,6,7,8,9])&~((idx//16==9)&(idx%16==15));veget=a.copy();veget[~green]=0;veget=Image.fromarray(veget)
  props=[]
  for box in [(64,64,120,160),(360,64,416,160),(100,264,124,304),(140,280,164,320),(164,280,188,320),(292,280,316,320),(316,280,340,320),(356,264,380,304)]:
   crop=np.array(ref.crop(box));r,g,b=np.moveaxis(crop[:,:,:3].astype(int),2,0);mask=(r>g*.82)&(g>b*1.25)&(r<239);labels,_=ndimage.label(mask,np.ones((3,3)));counts=np.bincount(labels.ravel());counts[0]=0;keep=np.isin(labels,np.flatnonzero(counts>=100));keep=ndimage.binary_fill_holes(keep);crop[~keep]=0;props.append(Image.fromarray(crop))
  for mode in ['entree','fin']:
-  sand=Image.new('RGBA',size,tuple(a[200,100]));pav=key(raw('discipline_dalles_'+mode),size);pav=quant(pav,ref)
+  sand=Image.new('RGBA',size,tuple(a[200,100]));pav=key(raw('discipline_dalles_'+mode),size)
+  if mode=='fin':
+   part=fit(pav,(288,232));pav=blank(size);pav.alpha_composite(part,((480-part.width)//2,64));south=key(raw('discipline_dalles_entree'),size);south.paste((0,0,0,0),(0,0,480,280));pav.alpha_composite(south)
+  pav=quant(pav,ref)
   if mode=='entree':arch=blank(size);p=fit(key(raw('discipline_acces'),size),(176,88));arch.alpha_composite(p,(152,0))
   else:
    arch=blank(size);part=ref.crop((160,0,320,80));q=np.array(part);q[green[:80,160:320]]=0;arch.alpha_composite(Image.fromarray(q),(160,0))
