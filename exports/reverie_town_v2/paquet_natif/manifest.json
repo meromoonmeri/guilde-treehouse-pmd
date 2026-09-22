@@ -1,0 +1,136 @@
+{
+ "native_schema_version": "0.8.12.0",
+ "tex_size": 1,
+ "tile_px": 8,
+ "frame_length": 10,
+ "runtime_tested": false,
+ "mirror_note": "RVT2_NO : côté est du plateau en feuille miroir (option « comme CLIFF MIROR » de l'utilisateur) ; RVT2_NE : 100 % natif.",
+ "maps": [
+  {
+   "asset": "rvt2_ne_jour",
+   "file": "Data/Ground/rvt2_ne_jour.rsground",
+   "label": "Reverie Town v2 - Nord-Est (jour)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    61,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Animation_Tileset",
+    "Metano_Town_Base",
+    "Metano_Town_Cliffs",
+    "Metano_Town_Objects",
+    "RVT2_NE_JOUR_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT2_NE_JOUR_OBJETS": 46
+   },
+   "mirror_tiles": {},
+   "blocked_tiles": 3327
+  },
+  {
+   "asset": "rvt2_ne_nuit",
+   "file": "Data/Ground/rvt2_ne_nuit.rsground",
+   "label": "Reverie Town v2 - Nord-Est (nuit)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    61,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Base_Night",
+    "Metano_Town_Cliffs_Night",
+    "RVT2_NE_NUIT_ANIM",
+    "RVT2_NE_NUIT_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT2_NE_NUIT_ANIM": 434,
+    "RVT2_NE_NUIT_OBJETS": 1363
+   },
+   "mirror_tiles": {},
+   "blocked_tiles": 3327
+  },
+  {
+   "asset": "rvt2_no_jour",
+   "file": "Data/Ground/rvt2_no_jour.rsground",
+   "label": "Reverie Town v2 - Nord-Ouest (jour)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    55,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Animation_Tileset",
+    "Metano_Town_Base",
+    "Metano_Town_Cliffs",
+    "Metano_Town_Objects",
+    "RVT2_NO_JOUR_OBJETS",
+    "RVT_Cliffs_Miroir"
+   ],
+   "custom_tiles": {
+    "RVT2_NO_JOUR_OBJETS": 47
+   },
+   "mirror_tiles": {
+    "RVT_Cliffs_Miroir": 249
+   },
+   "blocked_tiles": 3131
+  },
+  {
+   "asset": "rvt2_no_nuit",
+   "file": "Data/Ground/rvt2_no_nuit.rsground",
+   "label": "Reverie Town v2 - Nord-Ouest (nuit)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    55,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Base_Night",
+    "Metano_Town_Cliffs_Night",
+    "RVT2_NO_NUIT_ANIM",
+    "RVT2_NO_NUIT_OBJETS",
+    "RVT_Cliffs_Miroir_Nuit"
+   ],
+   "custom_tiles": {
+    "RVT2_NO_NUIT_ANIM": 434,
+    "RVT2_NO_NUIT_OBJETS": 1359
+   },
+   "mirror_tiles": {
+    "RVT_Cliffs_Miroir_Nuit": 249
+   },
+   "blocked_tiles": 3131
+  }
+ ],
+ "mirror_tile_sheets": {
+  "RVT_Cliffs_Miroir": 222,
+  "RVT_Cliffs_Miroir_Nuit": 222
+ }
+}

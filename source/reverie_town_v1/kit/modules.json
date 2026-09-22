@@ -5,31 +5,238 @@
     "Un bloc de falaise = [bord_gauche 2 tuiles] + [n colonnes de face] + [bord_droit 2 tuiles]. Le bloc occupe les rangées R-1..R+11 où R est la rangée de couronne (ligne de couronne native à y = 8R+5).",
     "Hauteur native d'une face : 12 rangées (96 px) ; la texture est périodique verticalement sur 32 px avec la même phase partout (couronnes natives à y ≡ 5 mod 32).",
     "Les marches entre blocs voisins valent ±4 rangées (32 px) ou ±8 rangées (64 px), exactement comme sur la feuille native (terrasses T0..T7 et U1..U3).",
-    "Aucun pixel n'est recoloré, tourné, retourné ni agrandi : chaque tuile du kit est une tuile native déplacée telle quelle."
+    "Aucun pixel n'est recoloré, tourné, retourné ni agrandi : chaque tuile du kit est une tuile native déplacée telle quelle.",
+    "Feuille MIROIR (option 'comme CLIFF MIROR' demandée par l'utilisateur) : RVT_Cliffs_Miroir = miroir horizontal exact de Metano_Town_Cliffs (nuit : miroir de Metano_Town_Cliffs_Night). Tuile miroir (tx', ty) = tuile native (188 - tx', ty) retournée. Ces modules NE SONT PAS des pixels natifs tels quels : ils servent uniquement aux bords orientés est et aux contours en escalier vers l'ouest, qui n'existent pas dans la feuille native. Ils sont marqués miroir=true partout (kit, provenance, paquet natif : feuilles .tile RVT_Cliffs_Miroir[_Nuit])."
   ],
   "sheet_day": "Metano_Town_Cliffs",
   "sheet_night": "Metano_Town_Cliffs_Night",
   "modules": {
-    "bord_gauche":      {"tx": 86, "ty": 55, "w": 2, "h": 13, "crown_rel": 1, "src": "T7 (mur principal) bord arrondi clair, x 688-703, y 440-543"},
-    "bord_droit":       {"tx": 84, "ty": 47, "w": 2, "h": 13, "crown_rel": 1, "src": "T5 bord arrondi sombre avec fentes natives, x 672-687, y 376-479"},
-    "face_a":           {"tx": 88, "ty": 56, "w": 2, "h": 12, "crown_rel": 0, "src": "mur principal x 704-719"},
-    "face_b":           {"tx": 115, "ty": 56, "w": 9, "h": 12, "crown_rel": 0, "src": "mur principal x 920-991 (entre porte et cascade)"},
-    "face_c":           {"tx": 132, "ty": 56, "w": 19, "h": 12, "crown_rel": 0, "src": "mur principal x 1056-1207 (entre cascade et escalier)"},
-    "face_grosses_pierres_t1": {"tx": 64, "ty": 32, "w": 9, "h": 12, "crown_rel": 0, "src": "terrasse T1 x 512-583, y 256-351 (texture grosses pierres, usage optionnel)"},
-    "face_grosses_pierres_u2": {"tx": 173, "ty": 44, "w": 11, "h": 12, "crown_rel": 0, "src": "terrasse U2 x 1384-1471, y 352-447 (texture grosses pierres, usage optionnel)"},
-    "escalier":         {"tx": 151, "ty": 53, "w": 13, "h": 15, "crown_rel": 3, "src": "escalier de bois est x 1208-1311, y 424-543 (poteaux inclus, face plate de part et d'autre)"},
-    "porte":            {"tx": 105, "ty": 51, "w": 10, "h": 17, "crown_rel": 5, "src": "porte de grotte au visage sculpté x 840-919, y 408-543"},
-    "cascade_statique": {"tx": 124, "ty": 51, "w": 8, "h": 17, "crown_rel": 5, "src": "cascade dans le mur (image fixe) x 992-1055, y 408-543"},
-    "rim_ouest":        {"tx": 57, "ty": 12, "w": 1, "h": 15, "crown_rel": null, "src": "bord ouest du plateau (liseré rocheux), x 456-463, y 96-215"},
-    "rim_ouest_vers_bloc": {"tx": 56, "ty": 26, "w": 4, "h": 3, "crown_rel": null, "src": "raccord bord ouest -> haut du bord gauche de T0, x 448-479, y 208-231"},
-    "rim_ouest_crans":  {"tx": 56, "ty": 0, "w": 11, "h": 12, "crown_rel": null, "src": "bord ouest avec crans vers le nord-est, x 448-535, y 0-95 (macro optionnelle)"},
-    "herbe_plateau":    {"tx": 100, "ty": 48, "w": 12, "h": 7, "crown_rel": null, "src": "herbe pure du plateau au-dessus du mur, x 800-895, y 384-439"}
+    "bord_gauche": {
+      "tx": 86,
+      "ty": 55,
+      "w": 2,
+      "h": 13,
+      "crown_rel": 1,
+      "src": "T7 (mur principal) bord arrondi clair, x 688-703, y 440-543"
+    },
+    "bord_droit": {
+      "tx": 84,
+      "ty": 47,
+      "w": 2,
+      "h": 13,
+      "crown_rel": 1,
+      "src": "T5 bord arrondi sombre avec fentes natives, x 672-687, y 376-479"
+    },
+    "face_a": {
+      "tx": 88,
+      "ty": 56,
+      "w": 2,
+      "h": 12,
+      "crown_rel": 0,
+      "src": "mur principal x 704-719"
+    },
+    "face_b": {
+      "tx": 115,
+      "ty": 56,
+      "w": 9,
+      "h": 12,
+      "crown_rel": 0,
+      "src": "mur principal x 920-991 (entre porte et cascade)"
+    },
+    "face_c": {
+      "tx": 132,
+      "ty": 56,
+      "w": 19,
+      "h": 12,
+      "crown_rel": 0,
+      "src": "mur principal x 1056-1207 (entre cascade et escalier)"
+    },
+    "face_grosses_pierres_t1": {
+      "tx": 64,
+      "ty": 32,
+      "w": 9,
+      "h": 12,
+      "crown_rel": 0,
+      "src": "terrasse T1 x 512-583, y 256-351 (texture grosses pierres, usage optionnel)"
+    },
+    "face_grosses_pierres_u2": {
+      "tx": 173,
+      "ty": 44,
+      "w": 11,
+      "h": 12,
+      "crown_rel": 0,
+      "src": "terrasse U2 x 1384-1471, y 352-447 (texture grosses pierres, usage optionnel)"
+    },
+    "escalier": {
+      "tx": 151,
+      "ty": 53,
+      "w": 13,
+      "h": 15,
+      "crown_rel": 3,
+      "src": "escalier de bois est x 1208-1311, y 424-543 (poteaux inclus, face plate de part et d'autre)"
+    },
+    "porte": {
+      "tx": 105,
+      "ty": 51,
+      "w": 10,
+      "h": 17,
+      "crown_rel": 5,
+      "src": "porte de grotte au visage sculpté x 840-919, y 408-543"
+    },
+    "cascade_statique": {
+      "tx": 124,
+      "ty": 51,
+      "w": 8,
+      "h": 17,
+      "crown_rel": 5,
+      "src": "cascade dans le mur (image fixe) x 992-1055, y 408-543"
+    },
+    "rim_ouest": {
+      "tx": 57,
+      "ty": 12,
+      "w": 1,
+      "h": 15,
+      "crown_rel": null,
+      "src": "bord ouest du plateau (liseré rocheux), x 456-463, y 96-215"
+    },
+    "rim_ouest_vers_bloc": {
+      "tx": 56,
+      "ty": 26,
+      "w": 4,
+      "h": 3,
+      "crown_rel": null,
+      "src": "raccord bord ouest -> haut du bord gauche de T0, x 448-479, y 208-231"
+    },
+    "rim_ouest_crans": {
+      "tx": 56,
+      "ty": 0,
+      "w": 11,
+      "h": 12,
+      "crown_rel": null,
+      "src": "bord ouest avec crans vers le nord-est, x 448-535, y 0-95 (macro optionnelle)"
+    },
+    "herbe_plateau": {
+      "tx": 100,
+      "ty": 48,
+      "w": 12,
+      "h": 7,
+      "crown_rel": null,
+      "src": "herbe pure du plateau au-dessus du mur, x 800-895, y 384-439"
+    }
   },
   "macros": {
-    "terrasses_descendantes_A": {"tx": 56, "ty": 26, "w": 36, "h": 42, "src": "T0..T7 natifs verbatim, x 448-735, y 208-543"},
-    "terrasses_montantes_C":    {"tx": 165, "ty": 39, "w": 24, "h": 29, "src": "U1..U3 natifs verbatim, x 1320-1511, y 312-543"}
+    "terrasses_descendantes_A": {
+      "tx": 56,
+      "ty": 26,
+      "w": 36,
+      "h": 42,
+      "src": "T0..T7 natifs verbatim, x 448-735, y 208-543"
+    },
+    "terrasses_montantes_C": {
+      "tx": 165,
+      "ty": 39,
+      "w": 24,
+      "h": 29,
+      "src": "U1..U3 natifs verbatim, x 1320-1511, y 312-543"
+    }
   },
   "animation": {
-    "cascade_frames": {"sheet": "Metano_Town_Animation_Tileset", "frames_px": [[8, 496, 72, 616], [80, 496, 144, 616], [152, 496, 216, 616], [224, 496, 288, 616]], "note": "4 images 64x120 ; calées sur la cascade statique par l'assembleur"}
+    "cascade_frames": {
+      "sheet": "Metano_Town_Animation_Tileset",
+      "frames_px": [
+        [
+          8,
+          496,
+          72,
+          616
+        ],
+        [
+          80,
+          496,
+          144,
+          616
+        ],
+        [
+          152,
+          496,
+          216,
+          616
+        ],
+        [
+          224,
+          496,
+          288,
+          616
+        ]
+      ],
+      "note": "4 images 64x120 ; calées sur la cascade statique par l'assembleur"
+    }
+  },
+  "sheet_mirror_day": "RVT_Cliffs_Miroir",
+  "sheet_mirror_night": "RVT_Cliffs_Miroir_Nuit",
+  "modules_miroir": {
+    "rim_est": {
+      "tx": 131,
+      "ty": 12,
+      "w": 1,
+      "h": 15,
+      "crown_rel": null,
+      "miroir": true,
+      "src": "miroir de rim_ouest : liseré rocheux du bord EST d'un plateau (1 tuile de large)"
+    },
+    "rim_est_vers_bloc": {
+      "tx": 129,
+      "ty": 26,
+      "w": 4,
+      "h": 3,
+      "crown_rel": null,
+      "miroir": true,
+      "src": "miroir de rim_ouest_vers_bloc : raccord bord est -> haut du bord droit clair d'un bloc"
+    },
+    "rim_est_crans": {
+      "tx": 122,
+      "ty": 0,
+      "w": 11,
+      "h": 12,
+      "crown_rel": null,
+      "miroir": true,
+      "src": "miroir de rim_ouest_crans : bord est avec crans vers le nord-ouest (macro optionnelle)"
+    },
+    "bord_droit_clair_miroir": {
+      "tx": 101,
+      "ty": 55,
+      "w": 2,
+      "h": 13,
+      "crown_rel": 1,
+      "miroir": true,
+      "src": "miroir de bord_gauche : extrémité droite arrondie claire (éclairage inversé), pour fermer un bloc sous un rim_est"
+    },
+    "bord_gauche_sombre_miroir": {
+      "tx": 103,
+      "ty": 47,
+      "w": 2,
+      "h": 13,
+      "crown_rel": 1,
+      "miroir": true,
+      "src": "miroir de bord_droit : extrémité gauche sombre à fentes (éclairage inversé)"
+    },
+    "terrasses_descendantes_ouest_miroir": {
+      "tx": 97,
+      "ty": 26,
+      "w": 36,
+      "h": 42,
+      "crown_rel": null,
+      "miroir": true,
+      "src": "miroir de terrasses_descendantes_A : contour en escalier descendant vers l'OUEST (T7..T0 retournés)"
+    },
+    "terrasses_montantes_ouest_miroir": {
+      "tx": 0,
+      "ty": 39,
+      "w": 24,
+      "h": 29,
+      "crown_rel": null,
+      "miroir": true,
+      "src": "miroir de terrasses_montantes_C : contour en escalier montant vers l'OUEST (U3..U1 retournés)"
+    }
   }
 }

@@ -30,7 +30,7 @@ def build():
     col = s.module('porte', col, R)                # 65-74 porte de grotte
     col = s.face(col, R, 10, 'face_c', 9)          # 75-84
     col = s.module('escalier', col, R)             # 85-97 escalier de bois
-    s.blit('falaises', 'Metano_Town_Cliffs', 164, R, 1, 12, col, R); col += 1   # 98 face native tx164
+    s.blit('falaises', 'Metano_Town_Cliffs', 164, 56, 1, 12, col, R); col += 1   # 98 face native tx164 (ty 56 = couronne native ; correctif : ty=R laissait une fente de 8 px)
     # terrasses montantes natives U1..U3 (macro C), calées : tx165 -> col 99, ty39 -> rangée 9
     s.blit('falaises', 'Metano_Town_Cliffs', 165, 39, 24, 29, col, R - 17)
     assert col + 24 == W

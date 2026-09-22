@@ -22,8 +22,16 @@ from night import night as abyss_night  # noqa: E402
 T = 8
 NIGHT_SHEETS = {'Metano_Town_Base': 'Metano_Town_Base_Night',
                 'Metano_Town_Cliffs': 'Metano_Town_Cliffs_Night',
-                'Metano_Town_Fringe': 'Metano_Town_Fringe_Night'}
-KIT = json.loads((HERE / 'kit/modules.json').read_text())['modules']
+                'Metano_Town_Fringe': 'Metano_Town_Fringe_Night',
+                'RVT_Cliffs_Miroir': 'RVT_Cliffs_Miroir_Nuit'}
+_KIT_SPEC = json.loads((HERE / 'kit/modules.json').read_text())
+KIT = _KIT_SPEC['modules']
+KIT_MIROIR = _KIT_SPEC.get('modules_miroir', {})
+# Feuilles dérivées (non natives) : miroir horizontal exact de Metano_Town_Cliffs / _Night, produit par build_kit.py
+# (option « comme CLIFF MIROR » demandée par l'utilisateur pour les bords est). Elles vivent dans kit/, pas dans la banque.
+MIRROR_SHEETS = {_KIT_SPEC['sheet_mirror_day']: HERE / 'kit' / f"{_KIT_SPEC['sheet_mirror_day']}.png",
+                 _KIT_SPEC['sheet_mirror_night']: HERE / 'kit' / f"{_KIT_SPEC['sheet_mirror_night']}.png"}
+MIRROR_DAY = _KIT_SPEC['sheet_mirror_day']
 GRASS = json.loads((HERE / 'kit/herbe_cliffs.json').read_text())
 
 
@@ -33,7 +41,8 @@ class Sheets:
 
     def get(self, name):
         if name not in self.cache:
-            self.cache[name] = Image.open(ATLAS / f'{name}.png').convert('RGBA')
+            path = MIRROR_SHEETS.get(name, ATLAS / f'{name}.png')
+            self.cache[name] = Image.open(path).convert('RGBA')
         return self.cache[name]
 
 
@@ -102,11 +111,22 @@ class Scene:
                 L.refs[phase][(c, r)] = (sheet, tx + dx, ty + dy)
 
     def module(self, name, col, crown_row, layer='falaises'):
-        """Pose un module du kit : crown_row = rangée de couronne du bloc sur la carte."""
-        m = KIT[name]
+        """Pose un module du kit : crown_row = rangée de couronne du bloc sur la carte.
+        Les modules de kit/modules.json 'modules_miroir' viennent de la feuille miroir (marqués miroir=true)."""
+        if name in KIT:
+            m, sheet = KIT[name], 'Metano_Town_Cliffs'
+        else:
+            m, sheet = KIT_MIROIR[name], MIRROR_DAY
         top = crown_row - (m['crown_rel'] or 0)
-        self.blit(layer, 'Metano_Town_Cliffs', m['tx'], m['ty'], m['w'], m['h'], col, top)
+        self.blit(layer, sheet, m['tx'], m['ty'], m['w'], m['h'], col, top)
         return col + m['w']
+
+    def mirror_blit(self, tx0, tx1, ty0, ty1, col, row, layer='falaises'):
+        """Pose le MIROIR du rectangle natif de colonnes tx0..tx1 (inclus) et rangées ty0..ty1 (inclus) de
+        Metano_Town_Cliffs, en (col,row) : la colonne native tx1 arrive en col, tx0 en col+(tx1-tx0)."""
+        w = tx1 - tx0 + 1
+        self.blit(layer, MIRROR_DAY, 188 - tx1, ty0, w, ty1 - ty0 + 1, col, row)
+        return col + w
 
     def face(self, col, crown_row, n, source='face_c', start=0):
         """n colonnes de face plate (rangées crown_row..crown_row+11) prises dans un module de face."""
@@ -142,6 +162,19 @@ class Scene:
             self.blit('falaises', 'Metano_Town_Cliffs', 57, ty, 1, 1, col, row0 + i)
         return seq
 
+    def rim_east(self, col, row0, row1):
+        """Bord EST du plateau : miroir du liseré ouest natif (feuille miroir, colonne 188-57 = 131), mêmes
+        rangées que rim_west ; le bas (row1-1) est la rangée juste au-dessus de bord_droit_clair_miroir."""
+        tail = [24, 25, 26]
+        body = [15, 16, 17, 18, 19, 20, 21, 22, 23]
+        n = row1 - row0
+        rows = []
+        while len(rows) < n - len(tail):
+            rows = body + rows
+        rows = rows[len(rows) - (n - len(tail)):] + tail
+        for i, ty in enumerate(rows):
+            self.blit('falaises', MIRROR_DAY, 131, ty, 1, 1, col, row0 + i)
+
     # ---- exports -------------------------------------------------------------------------------------------
     def composite(self, mode='day', phase=0):
         out = Image.new('RGBA', (self.w * T, self.h * T), (0, 0, 0, 255))
@@ -172,7 +205,9 @@ class Scene:
             prov[name] = [{f'{c},{r}': list(v) for (c, r), v in refs.items()} for refs in L.refs]
         (outdir / f'{prefix}_provenance.json').write_text(json.dumps(
             {'slug': self.slug, 'tile_px': T, 'size_tiles': [self.w, self.h], 'layers': self.order,
-             'night_sheets': NIGHT_SHEETS, 'files': files, 'tiles': prov}))
+             'night_sheets': NIGHT_SHEETS, 'mirror_sheets': sorted(MIRROR_SHEETS),
+             'mirror_tiles': sum(1 for name in self.order for refs in self.layers[name].refs for v in refs.values() if v[0] in MIRROR_SHEETS),
+             'files': files, 'tiles': prov}))
         return files
 
     def verify(self):
@@ -212,8 +247,10 @@ def sand_tile_mask(x0, y0, x1, y1, keep_seed=None, dilate=1):
     a = np.array(SHEETS.get('Metano_Town_Base').crop((x0, y0, x1, y1))).astype(int)
     r, g, b, al = a[..., 0], a[..., 1], a[..., 2], a[..., 3]
     sand = (al > 0) & (r > 185) & (g > 140) & (b > 80) & (r - b > 45) & (g < r)
+    water = (al > 0) & (b > r + 30) & (b >= g)   # berges de la rivière native : exclues (pas de rivière ici)
     h, w = (y1 - y0) // T, (x1 - x0) // T
     tiles = sand.reshape(h, T, w, T).mean(axis=(1, 3)) > 0.05
+    tiles &= ~water.reshape(h, T, w, T).any(axis=(1, 3))
     if keep_seed is not None:
         lab, _ = ndimage.label(tiles)
         sc, sr = (keep_seed[0] - x0) // T, (keep_seed[1] - y0) // T
@@ -225,9 +262,20 @@ def sand_tile_mask(x0, y0, x1, y1, keep_seed=None, dilate=1):
     return tiles
 
 
-def blit_masked(scene, layer, sheet, x0, y0, mask, col, row):
-    """Pose les tuiles (feuille, pixels x0,y0) dont mask[dy,dx] est vrai, en (col,row)."""
+def opaque_tile_mask(sheet, x0, y0, x1, y1):
+    """Tuiles entièrement opaques de la fenêtre (les tuiles de sol natives à trous transparents — recouvertes par un
+    objet dans la ville native — laisseraient voir le fond noir de la carte)."""
+    a = np.array(SHEETS.get(sheet).crop((x0, y0, x1, y1)))[..., 3] == 255
+    h, w = (y1 - y0) // T, (x1 - x0) // T
+    return a.reshape(h, T, w, T).all(axis=(1, 3))
+
+
+def blit_masked(scene, layer, sheet, x0, y0, mask, col, row, require_opaque=True):
+    """Pose les tuiles (feuille, pixels x0,y0) dont mask[dy,dx] est vrai, en (col,row).
+    require_opaque : n'écrase le sol qu'avec des tuiles entièrement opaques (correctif : trous natifs de la Base)."""
     h, w = mask.shape
+    if require_opaque:
+        mask = mask & opaque_tile_mask(sheet, x0, y0, x0 + w * T, y0 + h * T)
     scene.blit(layer, sheet, x0 // T, y0 // T, w, h, col, row, only_mask=mask)
 
 

@@ -20,7 +20,7 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
-from assemble import T, NIGHT_SHEETS, SHEETS  # noqa: E402
+from assemble import T, NIGHT_SHEETS, SHEETS, MIRROR_SHEETS  # noqa: E402
 import importlib.util  # noqa: E402
 _spec = importlib.util.spec_from_file_location('pmdo_cote_build', ROOT / 'source/pmdo_cote/build.py')
 _pmdo = importlib.util.module_from_spec(_spec)
@@ -31,6 +31,7 @@ import carte_no  # noqa: E402
 
 OUT = ROOT / 'exports/reverie_town_v1/paquet_natif'
 FRAME_LENGTH = 10  # comme l'eau native de Métano (River_Animation, FrameLength 10)
+MIRROR_REFS = {}   # feuille miroir -> {(tx, ty)} référencées par les cartes du paquet (écrites en .tile à la fin)
 
 
 def rock_fraction(tile):
@@ -104,10 +105,12 @@ def build_map(scene, mode, label):
                     tile = img.crop((x * T, y * T, x * T + T, y * T + T))
                     native = (x, y) not in L.cut[p] and (mode == 'jour' or sheet in NIGHT_SHEETS)
                     if native:
-                        frames.append({'Sheet': NIGHT_SHEETS[sheet] if mode == 'nuit' else sheet,
-                                       'TexLoc': {'X': tx, 'Y': ty}})
+                        ref_sheet = NIGHT_SHEETS[sheet] if mode == 'nuit' else sheet
+                        frames.append({'Sheet': ref_sheet, 'TexLoc': {'X': tx, 'Y': ty}})
+                        if ref_sheet in MIRROR_SHEETS:   # feuille miroir (non native) : livrée en .tile à part
+                            MIRROR_REFS.setdefault(ref_sheet, set()).add((tx, ty))
                     else:
-                        frames.append(custom(f'RVT_{scene.slug[-2:]}_{mode}_{name}'.upper(), tile, x, y))
+                        frames.append(custom(f'{scene.slug}_{mode}_{name}'.upper(), tile, x, y))
                 frames = [f for f in frames if f is not None]
                 if not frames:
                     tiles[x][y] = auto()
@@ -159,7 +162,23 @@ def build_map(scene, mode, label):
     return {'asset': asset, 'file': f'Data/Ground/{asset}.rsground', 'label': label, 'grid': [scene.w, scene.h],
             'size_px': [scene.w * T, scene.h * T], 'entry_tile': list(entry), 'sheets': sheets,
             'custom_tiles': {b.name: len(b.data) for b in banks.values()},
+            'mirror_tiles': {sh: sum(1 for L in layers_json for col in L['Tiles'] for t in col for la in t['Layers']
+                                     for f in la['Frames'] if f['Sheet'] == sh) for sh in MIRROR_SHEETS if sh in sheets},
             'blocked_tiles': sum(t['Tags'] == 1 for col in obs for t in col)}
+
+
+def write_mirror_banks():
+    """Feuilles miroir (RVT_Cliffs_Miroir[_Nuit]) : .tile à disposition conservée (TexLoc = (tx, ty) de la feuille
+    miroir), ne contenant que les tuiles référencées par les cartes du paquet."""
+    out = {}
+    for sheet, locs in MIRROR_REFS.items():
+        bank = TileBank(sheet, preserve_layout=True)
+        src = SHEETS.get(sheet)
+        for tx, ty in sorted(locs):
+            bank.add(src.crop((tx * T, ty * T, tx * T + T, ty * T + T)), tx, ty)
+        bank.write(OUT / f'Content/Tile/{bank.name}.tile')
+        out[sheet] = len(bank.data)
+    return out
 
 
 def main():
@@ -173,6 +192,7 @@ def main():
             manifest['maps'].append(info)
             print(info['asset'], info['grid'], 'feuilles', len(info['sheets']), 'custom', info['custom_tiles'],
                   'bloquées', info['blocked_tiles'])
+    manifest['mirror_tile_sheets'] = write_mirror_banks()
     (OUT / 'manifest.json').write_text(json.dumps(manifest, indent=1, ensure_ascii=False))
 
 
