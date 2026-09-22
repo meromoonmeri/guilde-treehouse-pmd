@@ -1,0 +1,112 @@
+{
+  "map_size_tiles": [
+    21,
+    21
+  ],
+  "terrain_counts": {
+    "floor": 72,
+    "unbreakable": 369
+  },
+  "decorations": [
+    {
+      "name": "Spring_Cave_Pit_Lava_Pool_Disconnected",
+      "x": 240,
+      "y": 96,
+      "frame_time": 4,
+      "flip": 0,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Lava_Pool_Disconnected",
+      "x": 240,
+      "y": 408,
+      "frame_time": 4,
+      "flip": 1,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Lava_Pool_Connected",
+      "x": 360,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 0,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Lava_Pool_Connected",
+      "x": 120,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 1,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Small_Lava_Stream",
+      "x": 312,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 0,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Small_Lava_Stream",
+      "x": 168,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 1,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Big_Lava_Stream",
+      "x": 264,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 0,
+      "alpha": 255
+    },
+    {
+      "name": "Spring_Cave_Pit_Big_Lava_Stream",
+      "x": 216,
+      "y": 192,
+      "frame_time": 4,
+      "flip": 1,
+      "alpha": 255
+    }
+  ],
+  "anims": {
+    "Spring_Cave_Pit_Lava_Pool_Disconnected": {
+      "frames": 63,
+      "w": 48,
+      "h": 24
+    },
+    "Spring_Cave_Pit_Lava_Pool_Connected": {
+      "frames": 63,
+      "w": 48,
+      "h": 24
+    },
+    "Spring_Cave_Pit_Small_Lava_Stream": {
+      "frames": 63,
+      "w": 48,
+      "h": 48
+    },
+    "Spring_Cave_Pit_Big_Lava_Stream": {
+      "frames": 63,
+      "w": 48,
+      "h": 48
+    }
+  },
+  "status": [
+    "steam",
+    "mysterious_force"
+  ],
+  "music": "Boss Battle!.ogg",
+  "entry": [
+    {
+      "Loc": {
+        "X": 11,
+        "Y": 10
+      },
+      "Dir": 0
+    }
+  ]
+}
