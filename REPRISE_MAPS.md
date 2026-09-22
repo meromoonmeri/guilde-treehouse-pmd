@@ -1,5 +1,18 @@
 # Reprise des maps — 20 septembre 2026
 
+## GB1 — Grotte Brumeuse (Foggy Forest Cavern) : clairière moussue Sud-Nord & grotte Crooked Cavern (22 septembre 2026)
+
+[Carte finale 1× (Jour)](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_carte_jour.png) · [Carte finale Nuit](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_carte_nuit.png) · [Composition sur fond magenta](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_carte_magenta.png) · [Atelier interactif](apercu_grotte_brumeuse_v1.html) · [Planche technique des 6 calques](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_calques.png) · [Viewport caméra PMDO 320×240](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_viewport.png) · [Crop Viewport 1×](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_viewport_320x240.png) · [Transition Jour/Nuit WebP](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_ambiances.webp) · [Pack Calques ZIP](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_calques.zip) · [Pack PMDO ZIP](renders/grotte_brumeuse_v1/GB1_grotte_brumeuse_PMDO.zip).
+Nouvelle map multicalque PMDO 0.8.12 (480×336 px, 60×42 tuiles de 8 px) conçue selon la méthode canonique magenta et générée avec les textures et pixels natifs :
+- **Progression verticale Sud vers Nord** : arrivée au spawn sud `[240, 296]` menant par un chemin continu vers l'entrée de grotte naturelle au nord `[240, 72]`.
+- **Grotte naturelle style Crooked Cavern** : arche rocheuse et falaises stratifiées de Crooked Cavern tonally harmonisées à la palette moussue Foggy Forest (`[85, 104, 70]` RGB moyen).
+- **Lianes retombantes & verdure** : lianes canoniques `SpindaV7_liane` drapées sur l'arche de la grotte et les corniches de falaise, fougères et clairs de sous-bois.
+- **Arbres massifs & racines Foggy Forest** : troncs noueux et contreforts latéraux encadrant la clairière.
+- **Sol continu 100% opaque** : clairière moussue et chemin battu sans aucune lacune alpha, navigabilité validée par érosion binaire 17 px (60 160 px praticables).
+- **Voile de brume dorée & canopée haute** : ambiance lumineuse caractéristique d'Explorers of Sky.
+- **Variations Jour, Nuit (filtre Abyss exact) et Magenta (#FF00FF)** : calques transparents pour le moteur, calques sur fond magenta pour le packaging et l'inspection.
+- **Sérialisation PMDO 0.8.12** : `.rsground` RogueEssence Ground + banques de tuiles `.tile` 8 px validées par relecture et test d'installation moduelle. Code et tests : `source/grotte_brumeuse_v1/work.py`.
+
 ## FA1 — Friend Areas Rescue Team : Forêt Énergique & Forêt Champignon (22 septembre 2026)
 
 [Vue comparative duo](renders/friend_areas_pmd_v1/FA1_friend_areas_duo.png) · [Atelier interactif](apercu_friend_areas_pmd_v1.html) · Forêt Énergique : [Carte 1×](renders/friend_areas_pmd_v1/FA1_energetic_forest_carte_jour.png) · [Planche calques](renders/friend_areas_pmd_v1/FA1_energetic_forest_calques.png) · [Transition Jour/Nuit](renders/friend_areas_pmd_v1/FA1_energetic_forest_ambiances.webp) · [Pack Calques ZIP](renders/friend_areas_pmd_v1/FA1_energetic_forest_calques.zip) · [Pack PMDO](renders/friend_areas_pmd_v1/FA1_energetic_forest_PMDO.zip) · Forêt Champignon : [Carte 1×](renders/friend_areas_pmd_v1/FA1_mushroom_forest_carte_jour.png) · [Planche calques](renders/friend_areas_pmd_v1/FA1_mushroom_forest_calques.png) · [Transition Jour/Nuit](renders/friend_areas_pmd_v1/FA1_mushroom_forest_ambiances.webp) · [Pack Calques ZIP](renders/friend_areas_pmd_v1/FA1_mushroom_forest_calques.zip) · [Pack PMDO](renders/friend_areas_pmd_v1/FA1_mushroom_forest_PMDO.zip).

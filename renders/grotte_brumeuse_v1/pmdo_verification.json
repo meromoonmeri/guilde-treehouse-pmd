@@ -1,8 +1,141 @@
 {
-  "pmdo_maps": [
-    "vp1_gb1_grotte_brumeuse_jour",
-    "vp1_gb1_grotte_brumeuse_nuit"
+  "lot": "GB1",
+  "maps": [
+    {
+      "id": "gb1_grotte_brumeuse_jour",
+      "asset": "vp1_gb1_grotte_brumeuse_jour",
+      "size": [
+        480,
+        336
+      ],
+      "spawn": [
+        240,
+        296
+      ],
+      "offset": [
+        0,
+        -40
+      ],
+      "viewport_at_x1": [
+        80,
+        96,
+        320,
+        240
+      ],
+      "tile_size": 8,
+      "banks": [
+        "VP1_gb1_grotte_brumeuse_jour_00",
+        "VP1_gb1_grotte_brumeuse_jour_01",
+        "VP1_gb1_grotte_brumeuse_jour_02",
+        "VP1_gb1_grotte_brumeuse_jour_03",
+        "VP1_gb1_grotte_brumeuse_jour_04",
+        "VP1_gb1_grotte_brumeuse_jour_05"
+      ],
+      "notes": [
+        "GB1 Grotte Brumeuse (Foggy Forest Cavern) base editable 1x (jour); progression Sud-Nord vers grotte Crooked; sol continu; lianes."
+      ],
+      "background_variant": null,
+      "animation_tracks": [
+        {
+          "title": "01 - Sol clairière moussue et chemin sud-nord (100% opaque)",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "02 - Parois rocheuses et arche de grotte style Crooked Cavern",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "03 - Arbres massifs et racines anciennes Foggy Forest",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "04 - Lianes retombantes, fougères et verdure luxuriante",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "05 - Canopée haute et frondaisons d avant-plan",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "06 - Voile de brume et puits de lumière dorée",
+          "frames": 1,
+          "ticks": 60
+        }
+      ]
+    },
+    {
+      "id": "gb1_grotte_brumeuse_nuit",
+      "asset": "vp1_gb1_grotte_brumeuse_nuit",
+      "size": [
+        480,
+        336
+      ],
+      "spawn": [
+        240,
+        296
+      ],
+      "offset": [
+        0,
+        -40
+      ],
+      "viewport_at_x1": [
+        80,
+        96,
+        320,
+        240
+      ],
+      "tile_size": 8,
+      "banks": [
+        "VP1_gb1_grotte_brumeuse_nuit_00",
+        "VP1_gb1_grotte_brumeuse_nuit_01",
+        "VP1_gb1_grotte_brumeuse_nuit_02",
+        "VP1_gb1_grotte_brumeuse_nuit_03",
+        "VP1_gb1_grotte_brumeuse_nuit_04",
+        "VP1_gb1_grotte_brumeuse_nuit_05"
+      ],
+      "notes": [
+        "GB1 Grotte Brumeuse (Foggy Forest Cavern) base editable 1x (nuit); progression Sud-Nord vers grotte Crooked; sol continu; lianes."
+      ],
+      "background_variant": null,
+      "animation_tracks": [
+        {
+          "title": "01 - Sol clairière moussue et chemin sud-nord (100% opaque)",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "02 - Parois rocheuses et arche de grotte style Crooked Cavern",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "03 - Arbres massifs et racines anciennes Foggy Forest",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "04 - Lianes retombantes, fougères et verdure luxuriante",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "05 - Canopée haute et frondaisons d avant-plan",
+          "frames": 1,
+          "ticks": 60
+        },
+        {
+          "title": "06 - Voile de brume et puits de lumière dorée",
+          "frames": 1,
+          "ticks": 60
+        }
+      ]
+    }
   ],
-  "zip_size_bytes": 1721448,
-  "verified_deserialization": true
+  "pass_deserialization": true,
+  "pass_installer": true
 }
