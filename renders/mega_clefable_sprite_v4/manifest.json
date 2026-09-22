@@ -1,0 +1,357 @@
+{
+ "base_xml_offsets_shadows": "CHUNSOFT sprite/0036 @aae4cee2 (unchanged)",
+ "palette": [
+  [
+   255,
+   226,
+   208
+  ],
+  [
+   246,
+   196,
+   176
+  ],
+  [
+   214,
+   152,
+   138
+  ],
+  [
+   236,
+   110,
+   140
+  ],
+  [
+   204,
+   72,
+   110
+  ],
+  [
+   150,
+   44,
+   80
+  ],
+  [
+   250,
+   220,
+   110
+  ],
+  [
+   228,
+   180,
+   70
+  ],
+  [
+   255,
+   255,
+   255
+  ],
+  [
+   222,
+   222,
+   232
+  ],
+  [
+   40,
+   32,
+   40
+  ],
+  [
+   96,
+   84,
+   96
+  ],
+  [
+   250,
+   150,
+   170
+  ],
+  [
+   120,
+   40,
+   60
+  ],
+  [
+   214,
+   120,
+   130
+  ],
+  [
+   0,
+   0,
+   0
+  ]
+ ],
+ "anims": {
+  "Walk": {
+   "cells": 64,
+   "drawn_cells": 64,
+   "fallback_cells": 0,
+   "components_found": 64,
+   "frame": [
+    32,
+    48
+   ],
+   "durations": [
+    "8",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Attack": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 128,
+   "frame": [
+    72,
+    72
+   ],
+   "durations": [
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Withdraw": {
+   "cells": 176,
+   "drawn_cells": 176,
+   "fallback_cells": 0,
+   "components_found": 180,
+   "frame": [
+    32,
+    48
+   ],
+   "durations": [
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  "Dance": {
+   "cells": 48,
+   "drawn_cells": 48,
+   "fallback_cells": 0,
+   "components_found": 73,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "6",
+    "4",
+    "6",
+    "4",
+    "6",
+    "4"
+   ]
+  },
+  "Sleep": {
+   "cells": 2,
+   "drawn_cells": 2,
+   "fallback_cells": 0,
+   "components_found": 2,
+   "frame": [
+    32,
+    32
+   ],
+   "durations": [
+    "30",
+    "35"
+   ]
+  },
+  "Hurt": {
+   "cells": 16,
+   "drawn_cells": 16,
+   "fallback_cells": 0,
+   "components_found": 31,
+   "frame": [
+    48,
+    56
+   ],
+   "durations": [
+    "2",
+    "8"
+   ]
+  },
+  "Idle": {
+   "cells": 48,
+   "drawn_cells": 48,
+   "fallback_cells": 0,
+   "components_found": 48,
+   "frame": [
+    32,
+    48
+   ],
+   "durations": [
+    "30",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Swing": {
+   "cells": 72,
+   "drawn_cells": 72,
+   "fallback_cells": 0,
+   "components_found": 94,
+   "frame": [
+    72,
+    80
+   ],
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "2",
+    "3",
+    "2",
+    "2",
+    "1",
+    "1"
+   ]
+  },
+  "Double": {
+   "cells": 128,
+   "drawn_cells": 128,
+   "fallback_cells": 0,
+   "components_found": 128,
+   "frame": [
+    56,
+    64
+   ],
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "3",
+    "3",
+    "3",
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Hop": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 81,
+   "frame": [
+    32,
+    88
+   ],
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "4",
+    "3",
+    "2",
+    "1",
+    "2"
+   ]
+  },
+  "Charge": {
+   "cells": 80,
+   "drawn_cells": 80,
+   "fallback_cells": 0,
+   "components_found": 85,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Rotate": {
+   "cells": 72,
+   "drawn_cells": 72,
+   "fallback_cells": 0,
+   "components_found": 76,
+   "frame": [
+    32,
+    40
+   ],
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  }
+ },
+ "missing_anims": [],
+ "raw_sheets": {
+  "source/mega_clefable_sprite_v3/gen/raw_Walk.png": "e8ab93427e10615d15e7c12ffb1f28b241c319c78314346348775de31f5403d8",
+  "source/mega_clefable_sprite_v4/gen/raw_Double.png": "590c49bcc59edea99a284f2aa7e8fc06dcba12c48e7def82a7360c8928022c98",
+  "source/mega_clefable_sprite_v4/gen/raw_Withdraw.png": "c14de452558806265169bfcc9b65be3c525337425bc15643c42716c861a9ab7e",
+  "source/mega_clefable_sprite_v4/gen/raw_Dance.png": "91b44f19f37b612b5c5323e4390a30c5009ee23e872b2cbedbe46b29ef672ea8",
+  "source/mega_clefable_sprite_v4/gen/raw_Sleep.png": "adff964b06f5035bb45d0782244c574ca569423e446ebeb887004eb8d349de2b",
+  "source/mega_clefable_sprite_v4/gen/raw_Hurt.png": "f32bfd671ddd787e3718dbf995e6da6be55ad7ad7faa561423e0d5c69ab9b008",
+  "source/mega_clefable_sprite_v3/gen/raw_Idle.png": "2fb24e4fdb3c187764fc178d0e26048a2a5c7ede5252b3d914660952dc24c474",
+  "source/mega_clefable_sprite_v4/gen/raw_Swing.png": "2b546a028ef15db5f31da448acff6bca1f5b1e1375c804ee28837f91fff1819b",
+  "source/mega_clefable_sprite_v4/gen/raw_Hop.png": "4e26b2989186fc5ce007eab9ab6e09aada3608e50c3c67064e555fc376905a06",
+  "source/mega_clefable_sprite_v4/gen/raw_Charge.png": "677af2189f41819173e06387c85f6a82c8d88e7843377aa3ae9ad4da2d23588f",
+  "source/mega_clefable_sprite_v4/gen/raw_Rotate.png": "0be8722472d153d7a75030e41f901026a882b5a57cdab3b13db1d944aa2ef11a"
+ },
+ "generated": true,
+ "runtime_validated": false
+}
