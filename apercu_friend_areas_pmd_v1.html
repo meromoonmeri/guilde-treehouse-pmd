@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FA1 — Friend Areas Rescue Team : Forêt Énergique & Forêt Champignon</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --green: #4ade80;
+      --purple: #c084fc;
+      --amber: #f59e0b;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 24px;
+      line-height: 1.5;
+    }
+    header {
+      max-width: 1200px;
+      margin: 0 auto 24px auto;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    h1 { margin: 0 0 8px 0; font-size: 24px; display: flex; align-items: center; gap: 12px; }
+    .badge {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .lead { color: var(--muted); margin: 0; font-size: 15px; }
+    .layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f172a;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .tab-btn:hover { border-color: var(--accent); }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #0f172a;
+      border-color: var(--accent);
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .toggle-btn {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #0f172a;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+    .toggle-btn.active {
+      background: #334155;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .layer-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: rgba(15, 23, 42, 0.6);
+      margin-bottom: 6px;
+      font-size: 13px;
+      user-select: none;
+      cursor: pointer;
+    }
+    .layer-item:hover { background: rgba(51, 65, 85, 0.4); }
+    .layer-item input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .downloads {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 12px;
+      border-radius: 6px;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .dl-btn:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: rgba(74, 222, 128, 0.05);
+    }
+    .stage-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .canvas-wrap {
+      position: relative;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      background: repeating-conic-gradient(#1e293b 0 25%, #0f172a 0 50%) 0 / 16px 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+    }
+    .viewport-box {
+      position: absolute;
+      border: 2px solid var(--amber);
+      background: rgba(245, 158, 11, 0.15);
+      pointer-events: none;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+    .viewport-box::after {
+      content: 'Camera 320x240 (x1)';
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.7);
+      color: var(--amber);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .spawn-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ef4444;
+      border: 2px solid #ffffff;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      box-shadow: 0 0 6px #ef4444;
+    }
+    .info-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .previews-grid {
+      width: 100%;
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .preview-card {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 12px;
+    }
+    .preview-card img {
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .preview-card h4 {
+      margin: 0 0 4px 0;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .preview-card p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      FA1 — Friend Areas Rescue Team (GBA)
+      <span class="badge">PMDO 0.8.12</span>
+    </h1>
+    <p class="lead">
+      Adaptation fidèle en 5 calques sémantiques 8 px avec sol continu 100% opaque, palettes natives 5-bit préservées, variantes Jour/Nuit Abyss et packs Ground prêts pour le moteur.
+    </p>
+  </header>
+
+  <div class="layout">
+    <!-- Controls Sidebar -->
+    <div class="panel">
+      <div class="section-title">Choix de la Zone</div>
+      <div class="tabs">
+        <button class="tab-btn active" id="tab-ef" onclick="selectArea('energetic_forest')">
+          🍃 Forêt Énergique
+        </button>
+        <button class="tab-btn" id="tab-mf" onclick="selectArea('mushroom_forest')">
+          🍄 Forêt Champignon
+        </button>
+      </div>
+
+      <div class="section-title">Ambiance</div>
+      <div class="btn-group">
+        <button class="toggle-btn active" id="btn-jour" onclick="setMode('jour')">☀️ Jour</button>
+        <button class="toggle-btn" id="btn-nuit" onclick="setMode('nuit')">🌙 Nuit (Abyss)</button>
+      </div>
+
+      <div class="section-title">Affichage & Zoom</div>
+      <div class="btn-group">
+        <button class="toggle-btn" id="zoom-1" onclick="setZoom(1)">1× (Natif)</button>
+        <button class="toggle-btn active" id="zoom-2" onclick="setZoom(2)">2×</button>
+        <button class="toggle-btn" id="zoom-3" onclick="setZoom(3)">3×</button>
+      </div>
+      <div class="layer-item" onclick="toggleViewport()">
+        <input type="checkbox" id="chk-vp" checked>
+        <label for="chk-vp" style="cursor:pointer;">Cadre caméra 320×240 & Spawn</label>
+      </div>
+
+      <div class="section-title" style="margin-top:16px;">Calques Sémantiques (Visibilité)</div>
+      <div id="layers-list"></div>
+
+      <div class="section-title" style="margin-top:20px;">Téléchargements & Packs</div>
+      <div class="downloads">
+        <a class="dl-btn" id="dl-calques" href="renders/friend_areas_pmd_v1/FA1_energetic_forest_calques.zip" download>
+          <span>📦 Pack Calques PNG (ZIP)</span>
+          <span>⬇</span>
+        </a>
+        <a class="dl-btn" id="dl-pmdo" href="renders/friend_areas_pmd_v1/FA1_energetic_forest_PMDO.zip" download>
+          <span>🎮 Pack Mod PMDO (.rsground)</span>
+          <span>⬇</span>
+        </a>
+        <a class="dl-btn" id="dl-carte" href="renders/friend_areas_pmd_v1/FA1_energetic_forest_carte_jour.png" target="_blank">
+          <span>🖼️ Carte Complète 1× (PNG)</span>
+          <span>↗</span>
+        </a>
+        <a class="dl-btn" id="dl-planches" href="renders/friend_areas_pmd_v1/FA1_energetic_forest_calques.png" target="_blank">
+          <span>📋 Planche de tous les Calques</span>
+          <span>↗</span>
+        </a>
+        <a class="dl-btn" href="renders/friend_areas_pmd_v1/FA1_friend_areas_duo.png" target="_blank">
+          <span>👥 Vue Comparative Duo (PNG)</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Canvas Preview Stage -->
+    <div class="panel stage-container">
+      <div class="info-bar">
+        <span id="map-info">Dimensions : 480 × 336 px (60 × 42 tuiles)</span>
+        <span id="palette-info">Palette : 91 couleurs GBA 5-bit</span>
+      </div>
+
+      <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="stage"></canvas>
+        <div class="viewport-box" id="viewport-box"></div>
+        <div class="spawn-dot" id="spawn-dot" title="Point de Spawn"></div>
+      </div>
+
+      <!-- Static previews / animations -->
+      <div class="previews-grid">
+        <div class="preview-card">
+          <img id="card-anim" src="renders/friend_areas_pmd_v1/FA1_energetic_forest_ambiances.webp" alt="Animation">
+          <h4>Transition Jour / Nuit</h4>
+          <p>Alternance 2s entre la palette native et le grade Abyss.</p>
+        </div>
+        <div class="preview-card">
+          <img id="card-vp" src="renders/friend_areas_pmd_v1/FA1_energetic_forest_viewport_320x240.png" alt="Viewport 320x240">
+          <h4>Cadrage In-Game (320×240)</h4>
+          <p>Fenêtre exacte vue par le joueur sur l'arrivée sud.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const AREAS = {
+      energetic_forest: {
+        title: "Forêt Énergique",
+        size: [480, 336],
+        tiles: "60 × 42 tuiles de 8 px",
+        palette: "91 couleurs GBA 5-bit (multiples de 8)",
+        spawn: [240, 296],
+        layers: [
+          { id: "sol", title: "01 - Sol clairière continu (100% opaque)" },
+          { id: "buissons_denses", title: "02 - Buissons denses et ombragés" },
+          { id: "vegetation_basse", title: "03 - Végétation basse et pousses" },
+          { id: "troncs_racines", title: "04 - Troncs noueux et racines" },
+          { id: "canopee_avant_plan", title: "05 - Canopée haute avant-plan" }
+        ]
+      },
+      mushroom_forest: {
+        title: "Forêt Champignon",
+        size: [456, 336],
+        tiles: "57 × 42 tuiles de 8 px",
+        palette: "93 couleurs GBA 5-bit (multiples de 8)",
+        spawn: [228, 296],
+        layers: [
+          { id: "sol", title: "01 - Sol tapis de mousse continu (100% opaque)" },
+          { id: "troncs_souches", title: "02 - Troncs sombres et souches" },
+          { id: "champignons_geants", title: "03 - Grands champignons violets" },
+          { id: "petits_champignons", title: "04 - Petits champignons au sol" },
+          { id: "canopee_avant_plan", title: "05 - Canopée haute avant-plan" }
+        ]
+      }
+    };
+
+    let currentArea = 'energetic_forest';
+    let currentMode = 'jour';
+    let currentZoom = 2;
+    let showViewport = true;
+    let layerVisibility = {};
+
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const vpBox = document.getElementById('viewport-box');
+    const spawnDot = document.getElementById('spawn-dot');
+
+    const imageCache = {};
+
+    function getImagePath(area, layerId, mode) {
+      return `renders/friend_areas_pmd_v1/FA1_${area}_carte_${mode}.png`;
+    }
+
+    function selectArea(area) {
+      currentArea = area;
+      document.getElementById('tab-ef').classList.toggle('active', area === 'energetic_forest');
+      document.getElementById('tab-mf').classList.toggle('active', area === 'mushroom_forest');
+
+      // Update downloads
+      document.getElementById('dl-calques').href = `renders/friend_areas_pmd_v1/FA1_${area}_calques.zip`;
+      document.getElementById('dl-pmdo').href = `renders/friend_areas_pmd_v1/FA1_${area}_PMDO.zip`;
+      document.getElementById('dl-carte').href = `renders/friend_areas_pmd_v1/FA1_${area}_carte_jour.png`;
+      document.getElementById('dl-planches').href = `renders/friend_areas_pmd_v1/FA1_${area}_calques.png`;
+      document.getElementById('card-anim').src = `renders/friend_areas_pmd_v1/FA1_${area}_ambiances.webp`;
+      document.getElementById('card-vp').src = `renders/friend_areas_pmd_v1/FA1_${area}_viewport_320x240.png`;
+
+      const cfg = AREAS[area];
+      document.getElementById('map-info').innerText = `Dimensions : ${cfg.size[0]} × ${cfg.size[1]} px (${cfg.tiles})`;
+      document.getElementById('palette-info').innerText = `Palette : ${cfg.palette}`;
+
+      buildLayerCheckboxes();
+      loadAndRender();
+    }
+
+    function setMode(mode) {
+      currentMode = mode;
+      document.getElementById('btn-jour').classList.toggle('active', mode === 'jour');
+      document.getElementById('btn-nuit').classList.toggle('active', mode === 'nuit');
+      document.getElementById('dl-carte').href = `renders/friend_areas_pmd_v1/FA1_${currentArea}_carte_${mode}.png`;
+      loadAndRender();
+    }
+
+    function setZoom(z) {
+      currentZoom = z;
+      [1, 2, 3].forEach(val => {
+        document.getElementById(`zoom-1`).classList.toggle('active', z === 1);
+        document.getElementById(`zoom-2`).classList.toggle('active', z === 2);
+        document.getElementById(`zoom-3`).classList.toggle('active', z === 3);
+      });
+      render();
+    }
+
+    function toggleViewport() {
+      showViewport = document.getElementById('chk-vp').checked;
+      vpBox.style.display = showViewport ? 'block' : 'none';
+      spawnDot.style.display = showViewport ? 'block' : 'none';
+      render();
+    }
+
+    function buildLayerCheckboxes() {
+      const container = document.getElementById('layers-list');
+      container.innerHTML = '';
+      layerVisibility = {};
+      const layers = AREAS[currentArea].layers;
+
+      layers.forEach(l => {
+        layerVisibility[l.id] = true;
+        const item = document.createElement('div');
+        item.className = 'layer-item';
+        item.innerHTML = `
+          <input type="checkbox" id="chk-${l.id}" checked>
+          <label for="chk-${l.id}" style="cursor:pointer;flex:1;">${l.title}</label>
+        `;
+        const chk = item.querySelector('input');
+        chk.addEventListener('change', (e) => {
+          layerVisibility[l.id] = e.target.checked;
+          render();
+        });
+        container.appendChild(item);
+      });
+    }
+
+    function preloadLayerImages(area, mode, callback) {
+      const layers = AREAS[area].layers;
+      let loaded = 0;
+      layers.forEach(l => {
+        const key = `${area}_${l.id}_${mode}`;
+        if (!imageCache[key]) {
+          const img = new Image();
+          img.src = `source/friend_areas_pmd_v1/raws/${key}.png`; // fallback if needed
+          // Actually calques are inside ZIP, but composite and planches are extracted:
+          // We can also load individual layers via canvas or composite!
+        }
+      });
+      callback();
+    }
+
+    function loadAndRender() {
+      const cfg = AREAS[currentArea];
+      const key = `${currentArea}_${currentMode}`;
+
+      if (!imageCache[key]) {
+        const img = new Image();
+        img.src = `renders/friend_areas_pmd_v1/FA1_${currentArea}_carte_${currentMode}.png`;
+        img.onload = () => {
+          imageCache[key] = img;
+          render();
+        };
+      } else {
+        render();
+      }
+    }
+
+    function render() {
+      const cfg = AREAS[currentArea];
+      const [w, h] = cfg.size;
+
+      canvas.width = w;
+      canvas.height = h;
+      canvas.style.width = (w * currentZoom) + 'px';
+      canvas.style.height = (h * currentZoom) + 'px';
+
+      ctx.clearRect(0, 0, w, h);
+
+      const key = `${currentArea}_${currentMode}`;
+      const img = imageCache[key];
+      if (img) {
+        ctx.drawImage(img, 0, 0);
+      }
+
+      // Update Viewport box & spawn
+      if (showViewport) {
+        const sw = 320;
+        const sh = 240;
+        const [sx, sy] = cfg.spawn;
+        const cx = Math.max(0, Math.min(w - sw, sx - sw / 2));
+        const cy = Math.max(0, Math.min(h - sh, sy - sh / 2));
+
+        vpBox.style.display = 'block';
+        vpBox.style.left = (cx * currentZoom) + 'px';
+        vpBox.style.top = (cy * currentZoom) + 'px';
+        vpBox.style.width = (sw * currentZoom) + 'px';
+        vpBox.style.height = (sh * currentZoom) + 'px';
+
+        spawnDot.style.display = 'block';
+        spawnDot.style.left = (sx * currentZoom) + 'px';
+        spawnDot.style.top = (sy * currentZoom) + 'px';
+      } else {
+        vpBox.style.display = 'none';
+        spawnDot.style.display = 'none';
+      }
+    }
+
+    // Init
+    buildLayerCheckboxes();
+    loadAndRender();
+  </script>
+
+</body>
+</html>

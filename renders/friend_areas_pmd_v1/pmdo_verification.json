@@ -1,0 +1,13 @@
+{
+  "maps": {
+    "energetic_forest": [
+      "vp1_fa1_energetic_forest_jour",
+      "vp1_fa1_energetic_forest_nuit"
+    ],
+    "mushroom_forest": [
+      "vp1_fa1_mushroom_forest_jour",
+      "vp1_fa1_mushroom_forest_nuit"
+    ]
+  },
+  "checks": "serialisation re-read RGB<=1/alpha exact; installer dry-run/install/reinstall; runtime_PMDO=false"
+}

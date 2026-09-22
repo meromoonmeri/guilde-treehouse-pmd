@@ -1,5 +1,9 @@
 # Méthode de production approuvée — zones Métano
 
+## FA1 — Friend Areas Rescue Team : Forêt Énergique & Forêt Champignon (22 septembre 2026)
+
+[Vue comparative duo](renders/friend_areas_pmd_v1/FA1_friend_areas_duo.png) · [Atelier interactif](apercu_friend_areas_pmd_v1.html) · Forêt Énergique (480×336) & Forêt Champignon (456×336). 5 calques sémantiques 8 px par zone, sol 100% continu et opaque sous les obstacles, 100% des pixels obstacles dans la palette 5-bit GBA authentique, variantes Jour et Nuit (Abyss exact), point de spawn sud praticable (érosion 17 px), packs calques ZIP et Ground PMDO (.rsground + .tile 8 px). Code et validation : `source/friend_areas_pmd_v1/work.py`.
+
 ## IA3 — arène de glace, layout généré : bordure immersive, chemin sud, aurore générée design canonique 20 frames à la taille du ciel, montagnes lointaines (22 septembre 2026)
 
 [Arène PNG](renders/arene_glace_boreale_v3/IA3_arene.png) · [Animée WebP](renders/arene_glace_boreale_v3/IA3_arene_animee.webp) · [Planche des 7 calques](renders/arene_glace_boreale_v3/IA3_calques.png) · [20 frames d'aurore](renders/arene_glace_boreale_v3/IA3_aurore_20_frames.png) · packs `IA3_arene_glace_boreale_calques.zip` / `IA3_arene_glace_boreale_PMDO.zip`. Glace/montagnes/sol générés d'après la référence et quantifiés ; aurore = 20 frames générées au design canonique (17 cellules continues + retour 3), étoiles natives 1×. Détails et limites : `source/arene_glace_boreale_v3/README.md`. IA2 (glace native) reste disponible.
