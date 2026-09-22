@@ -55,12 +55,12 @@ def build():
              ('arbre_g', 0, 94), ('arbre_72', 20, 92), ('arbre_f', 2, 62)]
     for name, c, r in trees:
         place_object(s, 'objets', name, c, r, cutout=False)
-    houses = [('dojo', 70, 54), ('maison_shellder', 46, 70), ('maison_turtwig', 24, 64), ('maison_dome', 30, 80),
+    houses = [('dojo', 70, 51), ('maison_shellder', 46, 70), ('maison_turtwig', 24, 64), ('maison_dome', 30, 80),
               ('hutte_paille', 56, 82), ('etal_kecleon', 2, 72), ('maison_treecko', 90, 74),
               ('maison_chikorita', 100, 22)]
     for name, c, r in houses:
         place_object(s, 'objets', name, c, r)
-    details = [('buisson_a', 46, 50), ('buisson_baie_a', 56, 52), ('souche_a', 78, 50), ('panneau', 60, 56),
+    details = [('buisson_a', 46, 50), ('buisson_baie_a', 56, 52), ('souche_a', 110, 49), ('panneau', 60, 56),
                ('tonneau', 66, 72), ('barriere', 62, 72), ('table_ronde', 76, 84), ('table_tasses', 84, 88),
                ('foin_a', 60, 66), ('foin_b', 64, 70), ('souche_grande', 34, 92), ('boite_lettres', 62, 76),
                ('seaux', 88, 70), ('buisson_d', 104, 50), ('buisson_baie_c', 108, 66), ('buisson_e', 8, 46),
