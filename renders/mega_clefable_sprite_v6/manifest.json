@@ -1,0 +1,312 @@
+{
+ "design_reference": "user upload image-1.png (front view of V4 turnaround) -> references/",
+ "strips": {
+  "raw_Attack_back.png": "d9aefa86e774e39645ed2c27b33cb5418e931254a47e13b5b26a87c8570a72a4",
+  "raw_Attack_front.png": "93119f4e4b36823cf35346ebee1fc2551103dee686f6120534d5bf39cc9f517c",
+  "raw_Attack_profile.png": "18165d9a0d8cf65ab08530465130c99880d48f09b47dd92c6b36c19d2f7d4bd3",
+  "raw_Hurt_Sleep_Charge.png": "257de5d867e9b19859408fcf176d3c3405201fdbe8a8af75b5a834e8ddd31e99",
+  "raw_Idle_Walk_back_3q.png": "28ef238c2b37c23a118991fa47575d0cdc2eabd6547e74bcf97e61e6480592bb",
+  "raw_Idle_Walk_front_profile.png": "7e8a53efc516a98185ffa3479a57d353c6d308aff6d6abdb879be8945c7a044b",
+  "raw_Swing_front.png": "dfcc9887adf2c695fe2d572d99f969140c2e0648b6a084b14ed9a4cf907c17ed",
+  "raw_Swing_profile.png": "98aabea573b68f63c3dcc845302569085ffc486f5289e8813cea01ec9a11ff05"
+ },
+ "found_frames": {
+  "attack_front": 12,
+  "attack_profile": 10,
+  "attack_back": 15,
+  "swing_front": 12,
+  "swing_profile": 10,
+  "poses": 8,
+  "idle_front": 5,
+  "walk_profile": 6,
+  "walk_back": 6,
+  "walk_3q": 6
+ },
+ "body_height_px": 34,
+ "padding": [
+  24,
+  10
+ ],
+ "anims": {
+  "Walk": {
+   "frame": [
+    80,
+    68
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "rows": 8,
+   "durations": [
+    "8",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Attack": {
+   "frame": [
+    120,
+    92
+   ],
+   "canonical_frame": [
+    72,
+    72
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Withdraw": {
+   "frame": [
+    80,
+    68
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 22,
+   "rows": 8,
+   "durations": [
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  "Dance": {
+   "frame": [
+    80,
+    60
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 6,
+   "rows": 8,
+   "durations": [
+    "6",
+    "4",
+    "6",
+    "4",
+    "6",
+    "4"
+   ]
+  },
+  "Sleep": {
+   "frame": [
+    80,
+    52
+   ],
+   "canonical_frame": [
+    32,
+    32
+   ],
+   "frames": 2,
+   "rows": 1,
+   "durations": [
+    "30",
+    "35"
+   ]
+  },
+  "Hurt": {
+   "frame": [
+    96,
+    76
+   ],
+   "canonical_frame": [
+    48,
+    56
+   ],
+   "frames": 2,
+   "rows": 8,
+   "durations": [
+    "2",
+    "8"
+   ]
+  },
+  "Idle": {
+   "frame": [
+    80,
+    68
+   ],
+   "canonical_frame": [
+    32,
+    48
+   ],
+   "frames": 6,
+   "rows": 8,
+   "durations": [
+    "30",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  "Swing": {
+   "frame": [
+    120,
+    100
+   ],
+   "canonical_frame": [
+    72,
+    80
+   ],
+   "frames": 9,
+   "rows": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "2",
+    "3",
+    "2",
+    "2",
+    "1",
+    "1"
+   ]
+  },
+  "Double": {
+   "frame": [
+    104,
+    84
+   ],
+   "canonical_frame": [
+    56,
+    64
+   ],
+   "frames": 16,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "3",
+    "3",
+    "3",
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Hop": {
+   "frame": [
+    80,
+    108
+   ],
+   "canonical_frame": [
+    32,
+    88
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "4",
+    "3",
+    "2",
+    "1",
+    "2"
+   ]
+  },
+  "Charge": {
+   "frame": [
+    80,
+    60
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 10,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  "Rotate": {
+   "frame": [
+    80,
+    60
+   ],
+   "canonical_frame": [
+    32,
+    40
+   ],
+   "frames": 9,
+   "rows": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  }
+ },
+ "generated": true,
+ "runtime_validated": false
+}
