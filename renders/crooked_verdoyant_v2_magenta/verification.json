@@ -4,12 +4,14 @@
   "underlay_opaque": true,
   "residual_magenta_pixels": {
     "01_sol_herbe": 0,
-    "02_chemin": 0,
-    "03_parois_crooked": 0,
-    "04_entree_grotte": 0,
-    "05_rochers": 0,
-    "06_vegetation_basse": 0,
-    "07_arbres": 0
+    "02_lisiere_foret": 0,
+    "03_chemin": 0,
+    "04_parois_crooked": 0,
+    "05_entree_grotte": 0,
+    "06_rochers": 0,
+    "07_vegetation_basse": 0,
+    "08_troncs_ombres": 0,
+    "09_canopees": 0
   },
   "no_residual_magenta": true,
   "alpha_is_binary": true,
@@ -23,7 +25,8 @@
   "path_bottom_row_px": 61,
   "path_top_y": 217,
   "path_min_width_px_below_tip": 46,
-  "trees_pixels_over_path": 0,
+  "trunks_shadows_pixels_over_path": 0,
+  "canopies_pixels_over_path": 0,
   "rocks_pixels_over_path": 34,
   "entrance_bbox": [
     208,
@@ -32,12 +35,15 @@
     213
   ],
   "iou_vs_maquette_v1": {
+    "lisiere": 0.87,
     "chemin": 0.732,
     "parois": 0.994,
     "entree": 0.807,
     "rochers": 0.697,
     "arbres": 0.597
   },
+  "underlay_dark_forest_pixels": 0,
+  "underlay_is_pure_grass": true,
   "ora_ok": true,
   "ora_merged_equals_composition": true,
   "runtime_pmdo": "NOT TESTED",

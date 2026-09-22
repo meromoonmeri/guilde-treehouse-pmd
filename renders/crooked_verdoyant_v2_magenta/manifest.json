@@ -5,7 +5,8 @@
     640
   ],
   "prefix": "CrookedMagentaV2",
-  "workflow": "audit (source/crooked_verdoyant_v1/AUDIT.md §5) → génération de chaque calque sur magenta #FF00FF (maquette V1 en entrée pour l’alignement) → détourage magenta + frange 1 px → normalisation 512×640 NEAREST → séparation ouverture/sol du débouché → végétation basse = sprites de la feuille magenta posés aux emplacements de la maquette → complément natif → nuit Abyss exacte → ORA/galerie",
+  "workflow": "audit (source/crooked_verdoyant_v1/AUDIT.md §5) → génération de chaque calque sur magenta #FF00FF (maquette V1 en entrée pour l’alignement) → détourage magenta + frange → normalisation 512×640 NEAREST → séparation ouverture/sol du débouché, canopées/troncs+ombres → végétation basse = sprites de la feuille magenta posés aux emplacements de la maquette → herbe pure reconstruite par cellules 16 px du même brut (2 appels générateur sans image) → complément natif → nuit Abyss exacte → ORA/galerie",
+  "herbe_pure": "bruts/sol_herbe_brut.png a des lisières ; deux appels pour les effacer sont revenus sans image → cellules 16×16 touchant la lisière remplacées par des cellules d’herbe du même brut (aucune recoloration). Version avec lisières conservée : bruts/sol_herbe_lisiere_512x640.png",
   "terrain_origin": "PIXELS GÉNÉRÉS (redessinés d’après références PMD : Crooked Cavern entrance, Vast Steppe entrance, Relic Forest Base). PAS des pixels natifs certifiés.",
   "native_pixels": "uniquement complement_natif/*.png (translation seule)",
   "key": {
@@ -62,6 +63,14 @@
         1024,
         1024
       ]
+    },
+    "lisiere": {
+      "path": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_lisiere_brut.png",
+      "sha256": "4b985f1c392c93b6e7f5f48aee5d734ae1cddcac8b584907382e5bf37c59adc7",
+      "size": [
+        928,
+        1152
+      ]
     }
   },
   "bruts_rejetes": {
@@ -84,12 +93,14 @@
   "maquette": "renders/crooked_verdoyant_v1/bruts/scene_complete_brut.png (image d’entrée des extractions) ; sol : renders/crooked_verdoyant_v1/bruts/sol_complet_brut.png",
   "layers_order_bottom_to_top": [
     "01_sol_herbe",
-    "02_chemin",
-    "03_parois_crooked",
-    "04_entree_grotte",
-    "05_rochers",
-    "06_vegetation_basse",
-    "07_arbres"
+    "02_lisiere_foret",
+    "03_chemin",
+    "04_parois_crooked",
+    "05_entree_grotte",
+    "06_rochers",
+    "07_vegetation_basse",
+    "08_troncs_ombres",
+    "09_canopees"
   ],
   "vegetation_placements": [
     {
@@ -434,8 +445,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        34,
-        281
+        32,
+        271
       ],
       "size": [
         144,
@@ -446,8 +457,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        321,
-        286
+        318,
+        276
       ],
       "size": [
         144,
@@ -458,8 +469,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        280,
-        337
+        279,
+        336
       ],
       "size": [
         144,
@@ -470,8 +481,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        326,
-        409
+        318,
+        397
       ],
       "size": [
         144,
@@ -482,8 +493,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        35,
-        434
+        32,
+        423
       ],
       "size": [
         144,
@@ -494,8 +505,8 @@
       "module": "arbre_steppe",
       "layer": "11_arbres_natifs_steppe",
       "xy": [
-        310,
-        478
+        307,
+        468
       ],
       "size": [
         144,
@@ -508,7 +519,11 @@
     "parois_entree_magenta_fraction_brut": 0.6026,
     "rochers_magenta_fraction_brut": 0.9845,
     "arbres_magenta_fraction_brut": 0.9136,
+    "lisiere_magenta_fraction_brut": 0.7228,
+    "tronc_pixels": 1385,
+    "herbe_pure_cellules_reconstruites_16px": 439,
     "iou_vs_maquette_v1": {
+      "lisiere": 0.87,
       "chemin": 0.732,
       "parois": 0.994,
       "entree": 0.807,
@@ -517,12 +532,14 @@
     },
     "layer_pixels": {
       "01_sol_herbe": 327680,
-      "02_chemin": 25373,
-      "03_parois_crooked": 122160,
-      "04_entree_grotte": 8035,
-      "05_rochers": 5055,
-      "06_vegetation_basse": 6729,
-      "07_arbres": 28285
+      "02_lisiere_foret": 90759,
+      "03_chemin": 25373,
+      "04_parois_crooked": 122160,
+      "05_entree_grotte": 8035,
+      "06_rochers": 5055,
+      "07_vegetation_basse": 6729,
+      "08_troncs_ombres": 8495,
+      "09_canopees": 19790
     }
   },
   "night": "source/cote_v4_abyss/night.py appliqué calque par calque",

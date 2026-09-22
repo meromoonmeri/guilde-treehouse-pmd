@@ -477,4 +477,7 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   sur magenta** posée aux emplacements de la maquette ; (2) le détourage doit retirer une frange de 3 px où b>g
   (mélange magenta) pour les calques sans rose légitime, et une frange douce seulement pour les fleurs ;
   (3) conserver les essais rejetés dans `bruts/rejetes/` avec la raison dans le manifeste ; (4) IoU calque/maquette
-  n'est qu'informatif : le générateur déplace les objets de quelques pixels à quelques dizaines de pixels.
+  n'est qu'informatif : le générateur déplace les objets de quelques pixels à quelques dizaines de pixels ;
+  (5) quand le générateur revient sans image (ici 2× pour « effacer les lisières »), appliquer le précédent de
+  `layouts_magenta_v1` : reconstruction par échantillons du même brut, déclarée dans README + manifeste ;
+  (6) livrer les arbres en deux calques (troncs+ombres au sol / canopées au-dessus du joueur) comme les entrées V3.

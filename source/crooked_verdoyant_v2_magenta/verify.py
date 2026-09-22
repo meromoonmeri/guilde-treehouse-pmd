@@ -19,7 +19,7 @@ from night import night  # noqa: E402
 
 PFX = 'CrookedMagentaV2'
 W, H = 512, 640
-LAYERS = ['01_sol_herbe', '02_chemin', '03_parois_crooked', '04_entree_grotte', '05_rochers', '06_vegetation_basse', '07_arbres']
+LAYERS = ['01_sol_herbe', '02_lisiere_foret', '03_chemin', '04_parois_crooked', '05_entree_grotte', '06_rochers', '07_vegetation_basse', '08_troncs_ombres', '09_canopees']
 
 
 def arr(p):
@@ -67,8 +67,8 @@ def main():
         rebuilt[p['layer']].alpha_composite(im, tuple(p['xy']))
     res['native_layers_rebuilt_identical'] = all(bool(np.array_equal(np.array(rebuilt[k]), arr(O / 'complement_natif' / f'{PFX}_{k}.png'))) for k in rebuilt)
     # chemin
-    path = layers['02_chemin'][:, :, 3] > 0
-    ent = layers['04_entree_grotte'][:, :, 3] > 0
+    path = layers['03_chemin'][:, :, 3] > 0
+    ent = layers['05_entree_grotte'][:, :, 3] > 0
     walk = path | nd.binary_dilation(ent, iterations=12)
     lab, n = nd.label(walk)
     south = set(np.unique(lab[H - 1][lab[H - 1] > 0])); ent_l = set(np.unique(lab[ent]))
@@ -77,11 +77,15 @@ def main():
     top = int(np.nonzero(path.any(1))[0].min())
     res['path_top_y'] = top
     res['path_min_width_px_below_tip'] = int(min(int(path[y].sum()) for y in range(top + 24, H) if path[y].any()))
-    for n_, lab_ in (('07_arbres', 'trees'), ('05_rochers', 'rocks')):
+    for n_, lab_ in (('08_troncs_ombres', 'trunks_shadows'), ('09_canopees', 'canopies'), ('06_rochers', 'rocks')):
         res[f'{lab_}_pixels_over_path'] = int(((layers[n_][:, :, 3] > 0) & path).sum())
     ys, xs = np.nonzero(ent)
     res['entrance_bbox'] = [int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())]
     res['iou_vs_maquette_v1'] = m['stats']['iou_vs_maquette_v1']
+    # herbe pure : aucun pixel de lisière sombre ne doit subsister dans la sous-couche
+    s0 = layers['01_sol_herbe'][:, :, :3].astype(int)
+    res['underlay_dark_forest_pixels'] = int(((s0[:, :, 1] < 118) & (s0[:, :, 1] > s0[:, :, 0]) & (s0[:, :, 0] < 90)).sum())
+    res['underlay_is_pure_grass'] = res['underlay_dark_forest_pixels'] < 200
     with zipfile.ZipFile(O / f'{PFX}_editable.ora') as z:
         names = z.namelist()
         res['ora_ok'] = 'stack.xml' in names and 'mergedimage.png' in names and z.read('mimetype') == b'image/openraster'

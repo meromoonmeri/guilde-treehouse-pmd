@@ -39,6 +39,7 @@ BRUTS = {
     'rochers': O / 'bruts/magenta_rochers_brut.png',
     'arbres': O / 'bruts/magenta_arbres_brut.png',
     'feuille_vegetation': O / 'bruts/magenta_feuille_vegetation_brut.png',
+    'lisiere': O / 'bruts/magenta_lisiere_brut.png',
 }
 REJETES = {
     'chemin_essai1': O / 'bruts/rejetes/magenta_chemin_brut.png',
@@ -131,6 +132,46 @@ def sheet_sprites(sheet: Image.Image):
     return out
 
 
+def pure_grass(sol: Image.Image, forest: np.ndarray, seed: int = 7) -> Image.Image:
+    """Sous-couche « herbe pure » : deux appels du générateur pour effacer les lisières sont revenus SANS image
+    (précédent documenté dans source/layouts_magenta_v1/WORKFLOW.md pour le sable). Reconstruction déclarée :
+    les cellules 16×16 touchant la lisière sont remplacées par des cellules 16×16 d'herbe du MÊME brut, prélevées
+    au hasard dans la zone centrale sans lisière. Aucun pixel n'est recoloré."""
+    a = np.array(sol).copy()
+    rng = np.random.default_rng(seed)
+    C = 16
+    cells = [(y, x) for y in range(0, H, C) for x in range(0, W, C) if not forest[y:y + C, x:x + C].any()]
+    todo = [(y, x) for y in range(0, H, C) for x in range(0, W, C) if forest[y:y + C, x:x + C].any()]
+    for (y, x) in todo:
+        sy, sx = cells[rng.integers(len(cells))]
+        a[y:y + C, x:x + C] = a[sy:sy + C, sx:sx + C]
+    return Image.fromarray(a), len(todo)
+
+
+def split_trees(arbres: Image.Image):
+    """Canopées (au-dessus du joueur) / troncs + ombres au sol (niveau du sol).
+    canopée = pixels verts clairs et tout pixel à ≤ 4 px d'eux (contours sombres compris) ;
+    tronc = pixels bruns ; ombre = le reste (ellipse sombre au sol)."""
+    a = np.array(arbres)
+    al = a[:, :, 3] > 0
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    bright = al & (g > r + 8) & (g > b + 8) & (g > 128)
+    canopy = nd.binary_dilation(bright, iterations=4) & al
+    canopy = nd.binary_fill_holes(canopy) & al
+    ground = al & ~canopy
+    # miettes de contour sombre (< 40 px) collées à la canopée → canopée
+    glab, gcomps = components(ground)
+    for i, sl in gcomps:
+        cm = glab == i
+        if cm.sum() < 40 and (nd.binary_dilation(cm, iterations=1) & canopy).any():
+            canopy |= cm; ground &= ~cm
+    brown = al & (r > g + 6) & (g > b) & ~canopy
+    # les pixels bruns enclavés dans la canopée (tronc vu entre les feuilles) restent avec la canopée
+    can = a.copy(); can[~canopy] = 0
+    grd = a.copy(); grd[~ground] = 0
+    return Image.fromarray(grd), Image.fromarray(can), int(brown.sum())
+
+
 def ora(path: Path, layers: dict, name: str):
     root = ET.Element('image', w=str(W), h=str(H), name=name); stack = ET.SubElement(root, 'stack')
     comp = Image.new('RGBA', (W, H))
@@ -168,11 +209,20 @@ def build():
     sol = norm(Image.open(BRUTS['sol_herbe']).convert('RGBA'))
     assert np.array(sol)[:, :, 3].min() == 255
     keyed = {}
-    for k in ('chemin', 'parois_entree', 'rochers', 'arbres'):
+    for k in ('chemin', 'parois_entree', 'rochers', 'arbres', 'lisiere'):
         full = key(Image.open(BRUTS[k]))
         stats[f'{k}_magenta_fraction_brut'] = round(float((np.array(full)[:, :, 3] == 0).mean()), 4)
         keyed[k] = clean_alpha(norm(full), 6)
     parois, entree = split_entrance(keyed['parois_entree'])
+    troncs_ombres, canopees, n_brown = split_trees(keyed['arbres'])
+    stats['tronc_pixels'] = n_brown
+    forest_v1 = np.array(Image.open(V1 / 'masques/CrookedVerdoyantV1_masque_03_lisiere_foret.png')) > 0
+    forest_sol = np.array(sol)[:, :, :3].astype(int)
+    fr, fg, fb = forest_sol[:, :, 0], forest_sol[:, :, 1], forest_sol[:, :, 2]
+    dark = (fg < 118) & (fg > fr) & (fg > fb) & (fr < 90)
+    dark = nd.binary_dilation(nd.binary_fill_holes(nd.binary_closing(dark, iterations=3)), iterations=6) | nd.binary_dilation(forest_v1, iterations=6)
+    sol_pur, n_cells = pure_grass(sol, dark)
+    stats['herbe_pure_cellules_reconstruites_16px'] = n_cells
     # ---- végétation basse : sprites de la feuille magenta posés aux emplacements de la maquette V1 ----------
     sheet = key(Image.open(BRUTS['feuille_vegetation']), strong=False)
     sprites = sheet_sprites(sheet)
@@ -210,14 +260,17 @@ def build():
         veg.alpha_composite(sp2, (px, py))
         placements.append({'sprite': 'fleur' if pink >= 5 else 'fougere', 'xy': [px, py], 'size': [int(tw), int(th)], 'v1_component_area': area})
     layers = {
-        '01_sol_herbe': sol,
-        '02_chemin': keyed['chemin'],
-        '03_parois_crooked': parois,
-        '04_entree_grotte': entree,
-        '05_rochers': keyed['rochers'],
-        '06_vegetation_basse': veg,
-        '07_arbres': keyed['arbres'],
+        '01_sol_herbe': sol_pur,
+        '02_lisiere_foret': keyed['lisiere'],
+        '03_chemin': keyed['chemin'],
+        '04_parois_crooked': parois,
+        '05_entree_grotte': entree,
+        '06_rochers': keyed['rochers'],
+        '07_vegetation_basse': veg,
+        '08_troncs_ombres': troncs_ombres,
+        '09_canopees': canopees,
     }
+    sol.save(O / 'bruts' / 'sol_herbe_lisiere_512x640.png')  # sous-couche générée avec lisières (avant reconstruction)
     comp = Image.new('RGBA', (W, H))
     for n, im in layers.items():
         im.save(O / 'calques' / f'{PFX}_{n}.png')
@@ -228,21 +281,24 @@ def build():
     v1m = {n: np.array(Image.open(V1 / f'masques/CrookedVerdoyantV1_masque_{n}.png')) > 0 for n in
            ('04_chemin_visible', '05_parois_crooked', '06_entree_grotte', '07_rochers', '08_vegetation_basse', '09_arbres')}
     al = lambda n: np.array(layers[n])[:, :, 3] > 0
+    v1m['03_lisiere_foret'] = forest_v1
+    arbres_all = al('08_troncs_ombres') | al('09_canopees')
     stats['iou_vs_maquette_v1'] = {
-        'chemin': round(iou(al('02_chemin'), v1m['04_chemin_visible'] | v1m['06_entree_grotte']), 3),
-        'parois': round(iou(al('03_parois_crooked') | al('04_entree_grotte'), v1m['05_parois_crooked'] | v1m['06_entree_grotte']), 3),
-        'entree': round(iou(al('04_entree_grotte'), v1m['06_entree_grotte']), 3),
-        'rochers': round(iou(nd.binary_dilation(al('05_rochers'), iterations=2), nd.binary_dilation(v1m['07_rochers'], iterations=2)), 3),
-        'arbres': round(iou(al('07_arbres'), v1m['09_arbres']), 3),
+        'lisiere': round(iou(al('02_lisiere_foret') & ~(v1m['05_parois_crooked']), v1m['03_lisiere_foret']), 3),
+        'chemin': round(iou(al('03_chemin'), v1m['04_chemin_visible'] | v1m['06_entree_grotte']), 3),
+        'parois': round(iou(al('04_parois_crooked') | al('05_entree_grotte'), v1m['05_parois_crooked'] | v1m['06_entree_grotte']), 3),
+        'entree': round(iou(al('05_entree_grotte'), v1m['06_entree_grotte']), 3),
+        'rochers': round(iou(nd.binary_dilation(al('06_rochers'), iterations=2), nd.binary_dilation(v1m['07_rochers'], iterations=2)), 3),
+        'arbres': round(iou(arbres_all, v1m['09_arbres']), 3),
     }
     stats['layer_pixels'] = {n: int((np.array(im)[:, :, 3] > 0).sum()) for n, im in layers.items()}
     # ---- complément natif (mêmes modules que V1, positions relevées sur les calques V2) ------------------
     mods = load_v1_native()
     nat_rochers = Image.new('RGBA', (W, H)); nat_arbres = Image.new('RGBA', (W, H)); nat_pl = []
-    rlab, rcomps = components(nd.binary_dilation(al('05_rochers'), iterations=3))
+    rlab, rcomps = components(nd.binary_dilation(al('06_rochers'), iterations=3))
     groups = []
     for i, sl in rcomps:
-        cm = (rlab == i) & al('05_rochers')
+        cm = (rlab == i) & al('06_rochers')
         if cm.sum() < 250:
             continue
         ys, xs = np.nonzero(cm); groups.append((int(xs.mean()), int(ys.max()), int(cm.sum())))
@@ -252,7 +308,7 @@ def build():
         im = mods[n][0]; x = int(max(0, min(W - im.width, cx - im.width // 2))); y = int(max(0, min(H - im.height, by - im.height + 4)))
         nat_rochers.alpha_composite(im, (x, y)); nat_pl.append({'module': n, 'layer': '10_rochers_natifs_crooked', 'xy': [x, y], 'size': [im.width, im.height]})
     tree = mods['arbre_steppe'][0]
-    cores = nd.binary_erosion(al('07_arbres'), iterations=10)
+    cores = nd.binary_erosion(al('09_canopees'), iterations=10)
     clab, ccomps = components(cores); anchors = []
     for i, sl in ccomps:
         cm = clab == i
@@ -261,7 +317,7 @@ def build():
         ys, xs = np.nonzero(cm); cand = (int(xs.mean()), int(ys.mean()) + 44)
         if all(abs(cand[0] - ax) + abs(cand[1] - ay) > 40 for ax, ay in anchors):
             anchors.append(cand)
-    path_mask = nd.binary_dilation(al('02_chemin'), iterations=4)
+    path_mask = nd.binary_dilation(al('03_chemin'), iterations=4)
     for (cx, by) in sorted(anchors, key=lambda t: (t[1], t[0])):
         x, y = cx - 80, by - 112
         x = int(max(0, min(W - tree.width, x))); y = int(max(0, min(H - tree.height, y)))
@@ -272,8 +328,8 @@ def build():
         nat_arbres.alpha_composite(tree, (x, y)); nat_pl.append({'module': 'arbre_steppe', 'layer': '11_arbres_natifs_steppe', 'xy': [x, y], 'size': [tree.width, tree.height]})
     nat_rochers.save(O / 'complement_natif' / f'{PFX}_10_rochers_natifs_crooked.png')
     nat_arbres.save(O / 'complement_natif' / f'{PFX}_11_arbres_natifs_steppe.png')
-    comp_nat = sol.copy()
-    for n in ('02_chemin', '03_parois_crooked', '04_entree_grotte'):
+    comp_nat = sol_pur.copy()
+    for n in ('02_lisiere_foret', '03_chemin', '04_parois_crooked', '05_entree_grotte'):
         comp_nat.alpha_composite(layers[n])
     comp_nat.alpha_composite(nat_rochers); comp_nat.alpha_composite(nat_arbres)
     comp_nat.save(O / 'complement_natif' / 'composition_objets_natifs_jour.png')
@@ -297,15 +353,16 @@ def build():
     rv.save(O / 'review' / 'maquette_v1_vs_magenta_v2_vs_natifs_1x.png')
     rvn = Image.new('RGBA', (W * 2 + 24, H), (30, 30, 34, 255)); rvn.alpha_composite(comp_n, (0, 0)); rvn.alpha_composite(Image.open(O / 'complement_natif/composition_objets_natifs_nuit.png').convert('RGBA'), (W + 24, 0))
     rvn.save(O / 'review' / 'nuit_v2_vs_natifs_1x.png')
-    board = Image.new('RGBA', (4 * 512 + 24, 2 * 640 + 8), (255, 0, 255, 255))
+    board = Image.new('RGBA', (5 * 512 + 32, 2 * 640 + 8), (255, 0, 255, 255))
     for i, (n, im) in enumerate(layers.items()):
-        board.alpha_composite(im, ((i % 4) * 520, (i // 4) * 648))
+        board.alpha_composite(im, ((i % 5) * 520, (i // 5) * 648))
     board.resize((board.width // 2, board.height // 2), Image.NEAREST).save(O / 'review' / 'planche_calques_0.5x.png')
     # ---- manifeste ----------------------------------------------------------------------------------
     manifest = {
         'zone': 'Crooked Cavern verdoyante V2 — calques générés séparément sur fond magenta (sud → nord)',
         'size': [W, H], 'prefix': PFX,
-        'workflow': 'audit (source/crooked_verdoyant_v1/AUDIT.md §5) → génération de chaque calque sur magenta #FF00FF (maquette V1 en entrée pour l’alignement) → détourage magenta + frange 1 px → normalisation 512×640 NEAREST → séparation ouverture/sol du débouché → végétation basse = sprites de la feuille magenta posés aux emplacements de la maquette → complément natif → nuit Abyss exacte → ORA/galerie',
+        'workflow': 'audit (source/crooked_verdoyant_v1/AUDIT.md §5) → génération de chaque calque sur magenta #FF00FF (maquette V1 en entrée pour l’alignement) → détourage magenta + frange → normalisation 512×640 NEAREST → séparation ouverture/sol du débouché, canopées/troncs+ombres → végétation basse = sprites de la feuille magenta posés aux emplacements de la maquette → herbe pure reconstruite par cellules 16 px du même brut (2 appels générateur sans image) → complément natif → nuit Abyss exacte → ORA/galerie',
+        'herbe_pure': 'bruts/sol_herbe_brut.png a des lisières ; deux appels pour les effacer sont revenus sans image → cellules 16×16 touchant la lisière remplacées par des cellules d’herbe du même brut (aucune recoloration). Version avec lisières conservée : bruts/sol_herbe_lisiere_512x640.png',
         'terrain_origin': 'PIXELS GÉNÉRÉS (redessinés d’après références PMD : Crooked Cavern entrance, Vast Steppe entrance, Relic Forest Base). PAS des pixels natifs certifiés.',
         'native_pixels': 'uniquement complement_natif/*.png (translation seule)',
         'key': {'background': '(r>150)&(b>150)&(g<100)', 'fringe_forte_3px': 'b>g+10 (chemin, parois, rochers, arbres : aucun pixel légitime n’a b>g)', 'fringe_douce_2px_feuille': '|r-b|<70 & g<0.6·min(r,b)', 'note': 'roses du chemin (g≈b) et fleurs (g>0.6·min(r,b)) préservés'},
@@ -330,7 +387,7 @@ def build():
         'bruts': [{'label': k, 'uri': uri(p)} for k, p in BRUTS.items()],
         'refs': [{'label': 'Crooked Cavern entrance (natif)', 'uri': uri(R / 'banque_canonique/cartes_natives/Halcyon__crooked_cavern_entrance.png')},
                  {'label': 'Vast Steppe entrance (natif)', 'uri': uri(R / 'banque_canonique/cartes_natives/vast_steppe_entrance.png')}],
-        'generated_ids': ['02_chemin', '03_parois_crooked', '04_entree_grotte', '05_rochers', '06_vegetation_basse', '07_arbres'],
+        'generated_ids': list(layers.keys()),
     }
     page = (SRC / 'gallery_template.html').read_text().replace('__DATA__', json.dumps(data, ensure_ascii=False))
     (R / 'apercu_crooked_verdoyant_v2_magenta.html').write_text(page)

@@ -49,7 +49,7 @@ function draw(){c.width=512*zoom;c.height=640*zoom;ctx.imageSmoothingEnabled=fal
 document.getElementById('mode').onclick=e=>{nuit=!nuit;e.target.classList.toggle('on',nuit);e.target.textContent=nuit?'Jour':'Nuit';draw();};
 document.getElementById('zoom').onclick=e=>{zoom=zoom===1?2:1;e.target.textContent=zoom===1?'×2':'×1';draw();};
 document.getElementById('natif').onclick=e=>{const on=!e.target.classList.contains('on');e.target.classList.toggle('on',on);
- for(const id of ['05_rochers','06_vegetation_basse','07_arbres']){state[id]=!on;}
+ for(const id of ['06_rochers','07_vegetation_basse','08_troncs_ombres','09_canopees']){state[id]=!on;}
  for(const l of DATA.natifs){state[l.id]=on;document.getElementById('cb_'+l.id).checked=on;}
  document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA.layers[i].id];});draw();};
 </script>

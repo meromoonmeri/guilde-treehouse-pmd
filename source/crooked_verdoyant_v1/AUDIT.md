@@ -57,7 +57,10 @@ fait ». L'audit ci-dessus reste la base ; la V1 devient la **maquette** (image 
 | rochers | magenta | Crooked Objects | retenu |
 | arbres | magenta | Vast Steppe (arbres ronds) | retenu (positions légèrement décalées vs maquette, IoU 0,60) |
 | végétation basse | magenta | Vast Steppe (fougères, fleurs) | 2 extractions directes rejetées → **feuille de 8 sprites** sur magenta, posés aux emplacements de la maquette |
-| sol herbe + lisière | plein (pas de magenta : calque de fond) | Vast Steppe / Relic Forest | retenu |
+| sol herbe + lisière | plein (pas de magenta : calque de fond) | Vast Steppe / Relic Forest | retenu, puis lisière extraite à part (ci-dessous) |
+| lisière de forêt | magenta | Relic Forest (lisière sombre) | retenu (blocs superflus en haut, recouverts par la paroi) |
+| herbe pure (fond) | plein | même brut d'herbe | 2 appels « effacer les lisières » revenus sans image → reconstruction par cellules 16 px du même brut, déclarée |
+| troncs+ombres / canopées | (séparation du calque arbres) | — | séparation déterministe : canopée = vert clair + 4 px de contour |
 
 Détourage : fond `(r>150)&(b>150)&(g<100)`, frange 3 px `b>g+10` (aucun pixel légitime de ces calques n'a b>g),
 frange douce sur la feuille de fleurs. Résultats et contrôles : `renders/crooked_verdoyant_v2_magenta/`
