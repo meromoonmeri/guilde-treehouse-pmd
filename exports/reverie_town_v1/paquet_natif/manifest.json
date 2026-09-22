@@ -1,0 +1,121 @@
+{
+ "native_schema_version": "0.8.12.0",
+ "tex_size": 1,
+ "tile_px": 8,
+ "frame_length": 10,
+ "runtime_tested": false,
+ "maps": [
+  {
+   "asset": "rvt_ne_jour",
+   "file": "Data/Ground/rvt_ne_jour.rsground",
+   "label": "Reverie Town - Nord-Est (jour)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    58,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Animation_Tileset",
+    "Metano_Town_Base",
+    "Metano_Town_Cliffs",
+    "Metano_Town_Objects",
+    "RVT_NE_JOUR_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT_NE_JOUR_OBJETS": 29
+   },
+   "blocked_tiles": 3648
+  },
+  {
+   "asset": "rvt_ne_nuit",
+   "file": "Data/Ground/rvt_ne_nuit.rsground",
+   "label": "Reverie Town - Nord-Est (nuit)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    58,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Base_Night",
+    "Metano_Town_Cliffs_Night",
+    "RVT_NE_NUIT_ANIM",
+    "RVT_NE_NUIT_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT_NE_NUIT_ANIM": 434,
+    "RVT_NE_NUIT_OBJETS": 1339
+   },
+   "blocked_tiles": 3648
+  },
+  {
+   "asset": "rvt_no_jour",
+   "file": "Data/Ground/rvt_no_jour.rsground",
+   "label": "Reverie Town - Nord-Ouest (jour)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    55,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Animation_Tileset",
+    "Metano_Town_Base",
+    "Metano_Town_Cliffs",
+    "Metano_Town_Objects",
+    "RVT_NO_JOUR_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT_NO_JOUR_OBJETS": 29
+   },
+   "blocked_tiles": 3389
+  },
+  {
+   "asset": "rvt_no_nuit",
+   "file": "Data/Ground/rvt_no_nuit.rsground",
+   "label": "Reverie Town - Nord-Ouest (nuit)",
+   "grid": [
+    123,
+    99
+   ],
+   "size_px": [
+    984,
+    792
+   ],
+   "entry_tile": [
+    55,
+    95
+   ],
+   "sheets": [
+    "Metano_Town_Base_Night",
+    "Metano_Town_Cliffs_Night",
+    "RVT_NO_NUIT_ANIM",
+    "RVT_NO_NUIT_OBJETS"
+   ],
+   "custom_tiles": {
+    "RVT_NO_NUIT_ANIM": 434,
+    "RVT_NO_NUIT_OBJETS": 1286
+   },
+   "blocked_tiles": 3389
+  }
+ ]
+}

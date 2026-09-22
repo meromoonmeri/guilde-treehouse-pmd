@@ -418,3 +418,18 @@ Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les a
 L’utilisateur relance la création de maps et demande un travail de spriter professionnel avec **les textures canoniques** ; il demande d’abord de relire tous les README et outils. Fait : relecture complète, `ETAT_DES_LIEUX_MAPS.md` à la racine. Nouveaux outils : `tools/pmdo_tiles.py` (lecture `.tile` → atlas alpha droit, rendu `.rsground` toutes phases, TexSize 1 et 3, calques séparés, feuilles manquantes listées) et `tools/banque_canonique.py` → `banque_canonique/` (89 feuilles natives dédoublonnées en atlas 1:1, 9 cartes natives rendues avec chaque calque, 50 références PNG inventoriées, `index.html`, `INVENTAIRE.md`). `.venv` reconstruite (Pillow/NumPy/SciPy) ; moteur PMDO absent du bac à sable.
 
 Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffReverietownnordest » 984×792 et une carte nord-ouest 1104×784) : Métano Cliffs/Objects/Animation_Tileset + feuilles maison absentes du dépôt (`CLIFF MIROR-Photoroom`, `INVERSEPATHWAY`, `terrain (n)`, `Metano_Altere_Transition_Base`, `00_ciel`, `v2_promontoire_jour_03`…). Ne pas prétendre les reproduire à l’identique sans ces `.tile`. Direction de production (chantier, format, jour/nuit) à confirmer par l’utilisateur avant la première map ; aucune map nouvelle livrée dans cette étape.
+
+## Reverie Town v1 (22/09/2026) — kit falaises Métano natif + cartes NE/NO jour/nuit
+
+- Dossier : `source/reverie_town_v1/` (README détaillé), exports : `exports/reverie_town_v1/` (calques PNG 8 px
+  `RVT_NE_*`, `RVT_NO_*`, `index.html`, `paquet_natif/` avec 4 `.rsground` 0.8.12.0 + 6 `.tile` + `INSTALLER.py`).
+- Règles appliquées : une tuile posée = une tuile native entière (feuille, tx, ty conservés dans `*_provenance.json`) ;
+  nuit = feuilles `*_Night` natives (Base, Cliffs) sinon filtre Abyss exact une seule fois ; objets bâtiments
+  « découpés » (pixels étrangers retirés, jamais repeints) marqués `découpe`.
+- Anatomie native mesurée : bloc = bord gauche clair (2 tuiles) + face + bord droit sombre (2 tuiles) ; couronne à
+  y ≡ 5 mod 32 ; face 12 rangées ; marches ±4/±8 rangées ; aucun bord est natif → motifs terrasses A (descente vers
+  l'est) et C (montée vers l'est) ; liseré ouest tx 57.
+- Vérification : `verify.py` rend les 4 `.rsground` × 4 phases avec `tools/pmdo_tiles.py` et compare aux composites
+  (identique ; nuit ±1 sur 8 pixels semi-transparents par arrondi alpha prémultiplié). Aucun test moteur PMDO.
+- Décisions prises sans réponse de l'utilisateur (questions passées) : deux cartes quadrants 123×99 tuiles comme ses
+  tests, village complet natif, bords est évités nativement (pas de miroir).

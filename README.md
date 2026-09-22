@@ -264,3 +264,5 @@ Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **C
 ## Soleil animé et Luminous Spring
 
 [Nouveau pack PNG multicouche](renders/soleil_spring_v1/README.md) — [aperçu autonome](apercu_soleil_spring_v1.html). Soleil subtil 64 phases, grands nuages traversants, variante du Spring Halcyon avec cycles natifs 3/13 phases préservés.
+
+- **Reverie Town v1 (22/09/2026)** : kit de modules natifs « Falaises Métano » + deux cartes de village (NE/NO), calques PNG 8 px et paquet natif, jour et nuit → `source/reverie_town_v1/README.md`, `exports/reverie_town_v1/index.html`.
