@@ -1,0 +1,405 @@
+{
+ "slot": "0036/0001 Mega (empty in tracker @aae4cee2)",
+ "base": "PMDCollab/SpriteCollab@aae4cee282dc516de5e52e33634431d80ee6bf56 sprite/0036 (CHUNSOFT)",
+ "anims": [
+  {
+   "anim": "Walk",
+   "frame": [
+    32,
+    48
+   ],
+   "sheet": [
+    256,
+    384
+   ],
+   "frames": 8,
+   "directions": 8,
+   "durations": [
+    "8",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  {
+   "anim": "Attack",
+   "frame": [
+    72,
+    72
+   ],
+   "sheet": [
+    720,
+    576
+   ],
+   "frames": 10,
+   "directions": 8,
+   "durations": [
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  {
+   "anim": "Withdraw",
+   "frame": [
+    32,
+    48
+   ],
+   "sheet": [
+    704,
+    384
+   ],
+   "frames": 22,
+   "directions": 8,
+   "durations": [
+    "1",
+    "1",
+    "2",
+    "2",
+    "2",
+    "2",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "4",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "anim": "Dance",
+   "frame": [
+    32,
+    40
+   ],
+   "sheet": [
+    192,
+    320
+   ],
+   "frames": 6,
+   "directions": 8,
+   "durations": [
+    "6",
+    "4",
+    "6",
+    "4",
+    "6",
+    "4"
+   ]
+  },
+  {
+   "anim": "Sleep",
+   "frame": [
+    32,
+    32
+   ],
+   "sheet": [
+    64,
+    32
+   ],
+   "frames": 2,
+   "directions": 1,
+   "durations": [
+    "30",
+    "35"
+   ]
+  },
+  {
+   "anim": "Hurt",
+   "frame": [
+    48,
+    56
+   ],
+   "sheet": [
+    96,
+    448
+   ],
+   "frames": 2,
+   "directions": 8,
+   "durations": [
+    "2",
+    "8"
+   ]
+  },
+  {
+   "anim": "Idle",
+   "frame": [
+    32,
+    48
+   ],
+   "sheet": [
+    192,
+    384
+   ],
+   "frames": 6,
+   "directions": 8,
+   "durations": [
+    "30",
+    "6",
+    "6",
+    "6",
+    "6",
+    "6"
+   ]
+  },
+  {
+   "anim": "Swing",
+   "frame": [
+    72,
+    80
+   ],
+   "sheet": [
+    648,
+    640
+   ],
+   "frames": 9,
+   "directions": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "2",
+    "3",
+    "2",
+    "2",
+    "1",
+    "1"
+   ]
+  },
+  {
+   "anim": "Double",
+   "frame": [
+    56,
+    64
+   ],
+   "sheet": [
+    896,
+    512
+   ],
+   "frames": 16,
+   "directions": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "3",
+    "3",
+    "3",
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  {
+   "anim": "Hop",
+   "frame": [
+    32,
+    88
+   ],
+   "sheet": [
+    320,
+    704
+   ],
+   "frames": 10,
+   "directions": 8,
+   "durations": [
+    "2",
+    "1",
+    "2",
+    "3",
+    "4",
+    "4",
+    "3",
+    "2",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "anim": "Charge",
+   "frame": [
+    32,
+    40
+   ],
+   "sheet": [
+    320,
+    320
+   ],
+   "frames": 10,
+   "directions": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  },
+  {
+   "anim": "Rotate",
+   "frame": [
+    32,
+    40
+   ],
+   "sheet": [
+    288,
+    320
+   ],
+   "frames": 9,
+   "directions": 8,
+   "durations": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+   ]
+  }
+ ],
+ "palette": {
+  "(255, 199, 207)": [
+   255,
+   222,
+   206
+  ],
+  "(239, 151, 159)": [
+   243,
+   183,
+   168
+  ],
+  "(215, 63, 0)": [
+   233,
+   96,
+   128
+  ],
+  "(255, 135, 95)": [
+   248,
+   158,
+   178
+  ],
+  "(175, 95, 55)": [
+   204,
+   72,
+   108
+  ],
+  "(119, 63, 0)": [
+   142,
+   42,
+   74
+  ],
+  "(167, 95, 31)": [
+   220,
+   116,
+   140
+  ],
+  "(223, 119, 31)": [
+   246,
+   204,
+   120
+  ],
+  "(255, 255, 255)": [
+   255,
+   255,
+   255
+  ],
+  "(0, 0, 0)": [
+   0,
+   0,
+   0
+  ],
+  "(159, 0, 0)": [
+   159,
+   0,
+   0
+  ],
+  "(199, 215, 215)": [
+   199,
+   215,
+   215
+  ],
+  "(143, 223, 255)": [
+   143,
+   223,
+   255
+  ]
+ },
+ "references": {
+  "AnimData.xml": "c10459146271fb67aedbc602b60d427e3d01d964ae36d0e53c7ffeb39e7f2a5d",
+  "Attack-Anim.png": "69f296102e9cb32cfb730a66ffe5b8e080bcdedabdeb82f855e9f2e9810efff0",
+  "Attack-Offsets.png": "e79ba52452425b433223b173035236a9e59169efadfb1c7d390c44f94af04565",
+  "Attack-Shadow.png": "9eb05eacc9d0815972d2dd831da2a8a4184bc395b1c916bcd041b688e4babc85",
+  "Charge-Anim.png": "ec3b66d582cdf4758fd9ba88add7c718bb172ff12eb614c5668377008987bcea",
+  "Charge-Offsets.png": "3cba45ca090698e58c8ce112f8334818d284771d01356fff6009a35200beb31c",
+  "Charge-Shadow.png": "ba4479486af5d5a167d1bca9a422f2bcbca139e2801ea53ce05cc3c02adeb747",
+  "Dance-Anim.png": "a850d707e3b99ace8833f5ed373f50dfb189c67998423b74b7b33f34271c2303",
+  "Dance-Offsets.png": "9b3be02ad74c27f8e4bc51399aba10f602d0cd9ff224d7eab4030f83f91e54a1",
+  "Dance-Shadow.png": "d5beab8011ba1f0d5b7502d2e1acca4d7774de0faa2966494463c6fc81d0921e",
+  "Double-Anim.png": "6346a25f0135d3c52c7a7220ee33856ad51743ff48dc9c88126a0d892d0246f3",
+  "Double-Offsets.png": "3e2cec225e355b1ad83f4af183f1bcc81756be5af223f611b47ab24e7094d892",
+  "Double-Shadow.png": "92cc70998f4cb954b44c730295501d7a5b03d6e66de57f7894968d7930d57722",
+  "Hop-Anim.png": "07c2ef1526017b8f1167756d309b121acb4d98bfdec7ccf617c3e9a7a3fa760e",
+  "Hop-Offsets.png": "59d848fdf88286adefdb0f3ca8291f15b1814e1c41a87198a09ef219dde946a5",
+  "Hop-Shadow.png": "ec08187a3fa5ebc2ffa2e60fa9173d5ae2f5abbc3e1a860f6bbb1924957d5a25",
+  "Hurt-Anim.png": "557cc6403144c47f776eac8cc765543f8627cff0eef5b9047390359b3df76ad6",
+  "Hurt-Offsets.png": "7d73024756852a32b9b377de29ad799c1cf906b0b52e198da893b45a100314d1",
+  "Hurt-Shadow.png": "df7815c9541ff2a2416b89ee31260fb0bb23e9f9c037457468f59cf976f1d0bb",
+  "Idle-Anim.png": "be0561ff0bfa38f5711e30bb0060ec03dfc65f8941971a853a592cf4e5e6a74b",
+  "Idle-Offsets.png": "4410c5b912deeabec49450f0b26a91c4050f7d991c6134512ab43355cd2a976e",
+  "Idle-Shadow.png": "98b12e753f426562b6f50a2a0960b253155343cc1310bd22dbd560378051005f",
+  "Rotate-Anim.png": "877e97e3474a7e5a9ba3cf9d3a4030382293b2797bd18a9fd44f2f111aca4116",
+  "Rotate-Offsets.png": "1b0b245d675213aa250cddd1a7e1f72c0f1a7fba547d38dba3ce25d426bb2700",
+  "Rotate-Shadow.png": "269c21eac13bbd401c92d60d5b907d3e446000839828f93ef34d0312984342d5",
+  "Sleep-Anim.png": "0d1aa772c0553de72f798f3a4c95fb9665fc17188383615c75ba8407e63338df",
+  "Sleep-Offsets.png": "ff92f6124bc2e73d08f1461047075043b8f29484879b9239534faf0f7f60805c",
+  "Sleep-Shadow.png": "b2717e641b16bbe84e3e955b50d5aa6cbbdb4b8e5df997e84ffa25645632f63d",
+  "Swing-Anim.png": "9cd9ad6ca7ac7eca1b631ca7fd3cb8828d93365dc0b5d66b8f3dc3635fed5095",
+  "Swing-Offsets.png": "06d398149d223e24f70edfc464248a8d62220a5c51243439160d45502c11c582",
+  "Swing-Shadow.png": "400365e3572b313be7a9029b2281f3ac390e5b6169d49ec5ee98050086e6f2fc",
+  "Walk-Anim.png": "7e72c95984fc4eab6f8f016cc6ec446bba33e7c404569c800f4cef304ea38939",
+  "Walk-Offsets.png": "3b97ad7a91bcbbd673334e776e09df613544dc731e13ffa85113c509e8083a3b",
+  "Walk-Shadow.png": "97eb7083e7d9298767040ec4cad03b05637d70e68f79d7d7a0f95620c7b407a1",
+  "Withdraw-Anim.png": "eb5dd89cffd395c91427ffcea304d06036873636b30bd67ce15a61d996030694",
+  "Withdraw-Offsets.png": "bbc0781486c1c080c0d64fbcfd89f15b7028deb4f3b4a728adf86a2b3462dd1c",
+  "Withdraw-Shadow.png": "670ccf008bd6e689b5dd6a012d51378354be812415b0e909ebda8e77ee15fe35",
+  "credits.txt": "3a39d266ac77625435a74833cc10efc791b8ecf902677aeb9d12f7f2eb27ad64"
+ },
+ "generated": true,
+ "runtime_validated": false
+}
