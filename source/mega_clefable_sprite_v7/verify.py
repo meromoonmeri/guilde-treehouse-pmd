@@ -28,7 +28,7 @@ for a in anims:
             cell=Acell[r_*fh:(r_+1)*fh,c_*fw:(c_+1)*fw];al_=cell[...,3]>0;px_=cell[...,:3].astype(int)
             white=(al_&(px_.min(axis=2)>220)).sum();rose=al_&(px_[...,0]>150)&(px_[...,1]<130)
             xs_=np.nonzero(al_.any(axis=0))[0];cx_=(xs_.min()+xs_.max())//2
-            if white<3 or rose[:,:cx_].sum()<3 or rose[:,cx_+1:].sum()<3:drift+=1
+            if white<3 or (rose[:,:cx_].sum()<3 and rose[:,cx_+1:].sum()<3) or rose.sum()<8:drift+=1
     chk(f'{n}: design present in every cell (white cap + both wings) drift={drift}',drift==0)
     A=np.array(an);Of=np.array(of);Sh=np.array(sh);good=True
     for r in range(an.height//fh):

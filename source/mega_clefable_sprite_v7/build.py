@@ -81,7 +81,9 @@ FRONT,Q3,PROF,BACK=0,1,2,3
 DIRVIEW=[(FRONT,False),(Q3,False),(PROF,False),(BACK,False),(BACK,False),(BACK,False),(PROF,True),(Q3,True)]
 def cyc(l,i):return l[i%len(l)]
 def pick(name,d,f,n):
-    view,mir=DIRVIEW[d];fly={FRONT:FLY_F,Q3:FLY_Q,PROF:FLY_P,BACK:FLY_B}[view];spk={FRONT:SPK_F,Q3:SPK_Q,PROF:SPK_P,BACK:SPK_B}[view]
+    view,mir=DIRVIEW[d];fly={FRONT:FLY_F,Q3:FLY_F,PROF:FLY_P,BACK:FLY_B}[view]
+    # 3/4 strips: eyes missing on 3 fly frames / cap missing on sparkle frames -> front sets used (audit)
+    spk={FRONT:SPK_F,Q3:SPK_F,PROF:SPK_P,BACK:SPK_B}[view];spk={FRONT:SPK_F,Q3:SPK_F,PROF:SPK_P,BACK:SPK_B}[view]  # 3/4 sparkle strip lost the white cap -> front set
     if name in('Attack','Swing','Double','Charge'):
         k=len(spk);i=min(k-1,int(round(f*(k-1)/max(1,n-1))));s=spk[i]
     elif name=='Hurt':s=HURT[{FRONT:0,Q3:0,PROF:1,BACK:2}[view]]
@@ -122,10 +124,13 @@ with zipfile.ZipFile(O/'0036_0001_mega_clefable_v7_spritecollab.zip','w',zipfile
 ORDER=['Idle','Walk','Sleep','Hurt','Attack','Charge','Dance','Withdraw','Swing','Double','Rotate','Hop']
 def gif(frames,dd,path):
     fr=[f.convert('RGBA') for f in frames];bg=(84,84,84)
+    # one shared palette for every frame (per-frame adaptive palettes break GIF colours)
+    cols=[tuple(c) for c in PAL.tolist()]+[bg]
+    pimg=Image.new('P',(1,1));flat=[v for c in cols for v in c];pimg.putpalette(flat+[0]*(768-len(flat)))
     outf=[]
     for f in fr:
-        b=Image.new('RGBA',f.size,bg+(255,));b.alpha_composite(f);outf.append(b.convert('P',palette=Image.ADAPTIVE,colors=64))
-    outf[0].save(path,save_all=True,append_images=outf[1:],duration=dd,loop=0)
+        b=Image.new('RGBA',f.size,bg+(255,));b.alpha_composite(f);outf.append(b.convert('RGB').quantize(palette=pimg,dither=Image.Dither.NONE))
+    outf[0].save(path,save_all=True,append_images=outf[1:],duration=dd,loop=0,optimize=False)
 for name in ORDER:
     im=Image.open(OUT/f'{name}-Anim.png').convert('RGBA');b=Image.new('RGBA',im.size,(90,90,90,255));b.alpha_composite(im);sc=2 if im.width>700 else 3;b.resize((im.width*sc,im.height*sc),Image.NEAREST).save(O/f'planche_{name}_x{sc}.png')
     fw,fh=report[name]['frame'];durs=[int(e) for e in report[name]['durations']];n=report[name]['frames'];rows=report[name]['rows']
