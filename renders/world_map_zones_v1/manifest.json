@@ -1,96 +1,102 @@
 {
-  "canvas": [
-    2048,
-    1536
+  "canvas_px": [
+    504,
+    336
   ],
-  "layers": 7,
-  "animation_frames": 8,
-  "sources": {
-    "canonical_water": "sprites/zones_guidees/01_cirque/eau_1.png",
-    "canonical_terrain": "sprites/zones_guidees/01_cirque/canonique_sec.png",
-    "canonical_floor": "sprites/zones_guidees/01_cirque/herbe.png"
-  },
-  "note": "Composition de grande carte; les textures natives servent de matériaux de référence/tuilage, les continents et emblèmes sont une nouvelle composition et non une carte native.",
+  "native_background": "Explorers_of_Sky_-_World_Map.png",
+  "layers": 5,
+  "animation_frames": 12,
+  "animation_source": "animationmapdiscover.png",
+  "asset_source": "MapAssetsPMD2.webp",
   "files": {
     "WorldMap_Zones.png": {
-      "sha256": "f5deab1ce5e3815dd16ad1cbddeada9115294b138027ba2bb086e5ad98ac027a",
-      "bytes": 449491
+      "sha256": "bcd9e4f4b720929f158963c24dc7400745d4878f7afa64a4633c3423c35db277",
+      "bytes": 112392
     },
     "manifest.json": {
-      "sha256": "1c30277340b463ae1f167c0ce1fbb4a757c878b07cdfc088da8ec1d2c2218d42",
-      "bytes": 3612
+      "sha256": "43b78170403d7b10a2e7beafbd897a1f0496668b6ff445128ecd315963536fb9",
+      "bytes": 3834
     },
-    "layers/00_fond_mer_texture_canonique.png": {
-      "sha256": "f12fd6cc065433dbcd96edc5f3c4cd360001ab1097ca38b327d943e57310cb79",
-      "bytes": 20764
+    "layers/00_fond_canonique_1x.png": {
+      "sha256": "5c0953269a70fe0a65b06aeb24cbc2b270f440ed13ccc2907c25fcd7f984d1b7",
+      "bytes": 99668
     },
-    "layers/01_continents_texture_canonique.png": {
-      "sha256": "25bf55a55f3519d510255b35a98b4f01a9a8026b13e0c449a55bad6896a7e8cd",
-      "bytes": 354235
+    "layers/03_etat_deblocage.png": {
+      "sha256": "2cd4dd8e719e98d9522631d24fed0b0d23eae463c57505401f45732421c39d5a",
+      "bytes": 3833
     },
-    "layers/02_bordure_parchemin.png": {
-      "sha256": "c1c4d1cfa58719bc6523f6f7d7aed9f204f02321b1ac19503dc004b8cd3fc19b",
-      "bytes": 20257
+    "layers/02_emblemes_canoniques.png": {
+      "sha256": "79290d8adbe40cd1d1b14f7e124a4ae5445f21945618395995a65e88053f12a1",
+      "bytes": 5067
     },
-    "layers/03_routes.png": {
-      "sha256": "07dca743cde27b5863a7581cfd64fc0a90d31ebc70fd3c184ea13e1aea60aa3a",
-      "bytes": 17767
+    "layers/01_routes_zones.png": {
+      "sha256": "90c92a2772f5464027c3e3e29d1bfab1dba80c14036bc8978062c121d2adccef",
+      "bytes": 1596
     },
-    "layers/04_emblemes_lieux.png": {
-      "sha256": "54892f96cc3a64848342159bd21b0199318fd36f7a34aad538c60befe47dbee8",
-      "bytes": 33656
-    },
-    "layers/05_etat_deblocage.png": {
-      "sha256": "a2b8dbddfd1af4f9c76c5ba2c7f4a4abd0bc37b708b7b12e1b528f1a2bf4dc24",
-      "bytes": 18197
-    },
-    "layers/06_atmosphere.png": {
-      "sha256": "f0343f457bf8477e102d0f8c51ddb6b1a417dd62371cb71f19fd9c3b803e14cd",
-      "bytes": 13495
+    "layers/04_surlignage_debloque.png": {
+      "sha256": "fb2e9d760b9328132741d6aa8aeefc9005c106d5f55987e347fb86ed5d621940",
+      "bytes": 1254
     },
     "animations/WorldMap_discover_00.png": {
-      "sha256": "32246e65dc93c8fee4e013715368ebf3e71b66b677423231494cf895be178f50",
-      "bytes": 465350
+      "sha256": "94dcf9003f5c2f275f4eed4d1190554d6f4e1cef1587c01eca1e97dbc888829c",
+      "bytes": 58509
     },
     "animations/WorldMap_discover_01.png": {
-      "sha256": "a9b38b03cf7e0b41edf41d5687099351da5a28aceaaf3c79964bf5f346e3146d",
-      "bytes": 465540
+      "sha256": "337ca798224973f20eb62563b4df0cb9860e9e53b515d0236f767e36e3e14f8f",
+      "bytes": 72432
     },
     "animations/WorldMap_discover_02.png": {
-      "sha256": "6495e4e3d35760b06fcb334e6b279d89492b8297f2bcc77a06dc278a48708792",
-      "bytes": 465350
+      "sha256": "569e99de634b1fc557bf5b987adb849f8282223e298c1ce2b1b6ecbffd469631",
+      "bytes": 74262
     },
     "animations/WorldMap_discover_03.png": {
-      "sha256": "a9b38b03cf7e0b41edf41d5687099351da5a28aceaaf3c79964bf5f346e3146d",
-      "bytes": 465540
+      "sha256": "9674bd99614663c93d8558b579706200e41da70d6f36829d038b288a6b79bb7a",
+      "bytes": 80745
     },
     "animations/WorldMap_discover_04.png": {
-      "sha256": "32246e65dc93c8fee4e013715368ebf3e71b66b677423231494cf895be178f50",
-      "bytes": 465350
+      "sha256": "89ea85f505e70609f9872062f01506fa9346a245d68744fc8520191ac17066e0",
+      "bytes": 88648
     },
     "animations/WorldMap_discover_05.png": {
-      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
-      "bytes": 464914
+      "sha256": "70dbeff716dbb1db994fedb270e3ddf2d7e327901ad3954a4aa38260c7da2ff7",
+      "bytes": 92191
     },
     "animations/WorldMap_discover_06.png": {
-      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
-      "bytes": 464914
+      "sha256": "02cc2acb898308ec78d2e6b7b0624a22c9a63ecbe92b8a4de8b0376d0f67f949",
+      "bytes": 93989
     },
     "animations/WorldMap_discover_07.png": {
-      "sha256": "b0582dec760df5585d580d9d89994d78942976f7fc7989b5fae0d4ab10b016e9",
-      "bytes": 464914
+      "sha256": "4a2cc1f789543fa5673f3678d1a41bd84161a37746a8dc33080eb31e8eb575aa",
+      "bytes": 94978
+    },
+    "animations/WorldMap_discover_08.png": {
+      "sha256": "814ecfc56aefeb3d3cc3d1c160ad6e29e85c7c58b1cd1259aaf0fa350403c3b5",
+      "bytes": 97627
+    },
+    "animations/WorldMap_discover_09.png": {
+      "sha256": "395d5e2bafa9fe6930e8e0fd551469c5c6a102513bd90a819278273e3f3a92ff",
+      "bytes": 59103
+    },
+    "animations/WorldMap_discover_10.png": {
+      "sha256": "81ef9d582d0e447377d8c526ac8adbc0e0faa0d8599f7803e29ca90a64f77858",
+      "bytes": 59336
+    },
+    "animations/WorldMap_discover_11.png": {
+      "sha256": "5dc86ec94d1d69bd89c1dc77ae57afb0b2f18d472daad0c6c6ab47c9095e8ef5",
+      "bytes": 88503
     },
     "animations/WorldMap_discover.webp": {
-      "sha256": "c6f0b63c89da50447b72bd0b76a9664a66b0af1e64c41b7086506679c33b46bb",
-      "bytes": 354112
+      "sha256": "9c57672bc0d5b4f9b8cf97dd21c5e22f09dafd996ab4886533eea5cda60fa07c",
+      "bytes": 453592
     },
     "assetsprite/WorldMap_Lieux_AssetSprite.png": {
-      "sha256": "2602f035ca88afba0dc6ce712368959249f79092c0486e9344a64af1b5b090d3",
-      "bytes": 8256
+      "sha256": "555c899002180d70c1092934b9aa022606a44b2c1ad1392ce1bb8e57d6fcbe57",
+      "bytes": 4439
     },
     "assetsprite/WorldMap_Lieux_AssetSprite.json": {
-      "sha256": "cc66d9e79b530d67ff0c513f3ab8f4ed1d7fe85935f6326089c81ac675853aa5",
-      "bytes": 1090
+      "sha256": "8e3b34ca76eb91d80aa27af505c2c3617c95858a74094e87d9d8f7d23a3ed6c5",
+      "bytes": 1808
     }
-  }
+  },
+  "provenance": "Fond et frames repris directement des fichiers canoniques fournis dans le dernier commit; les routes, marqueurs d etat et surlignages sont des calques UI independants."
 }

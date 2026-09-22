@@ -1,28 +1,31 @@
-# Grande World Map — Zones à débloquer
+# Grande carte du monde — zones débloquées
 
-Recomposition large inspirée de la planche fournie : carte du monde sur fond parchemin, plusieurs continents/îles, routes, emblèmes et états de progression séparés.
+Cette version reprend la carte fournie dans le dernier commit, et non une nouvelle géométrie inventée.
+
+## Sources canoniques utilisées
+
+- `Explorers_of_Sky_-_World_Map.png` : fond natif 504×336, conservé à 1× dans `layers/00_fond_canonique_1x.png`.
+- `MapAssetsPMD2.webp` : atlas d'emblèmes/repères. Les repères sont prélevés par boîtes documentées dans `assetsprite/WorldMap_Lieux_AssetSprite.json`.
+- `animationmapdiscover.png` : planche de découverte 2×6. Les 12 images sont découpées en frames PNG 504×336, puis regroupées en WebP.
+
+Aucun fond canonique n'est recoloré, redimensionné ou repeint. Les routes, marqueurs d'état et surlignages sont des calques UI séparés qui peuvent être remplacés par l'état réel du jeu.
 
 ## Sorties
 
-- `renders/world_map_zones_v1/WorldMap_Zones.png` : composition 2048×1536.
-- `layers/` : mer, continents, bordure, routes, emblèmes, état de déblocage et atmosphère.
-- `animations/WorldMap_discover_00.png`…`07.png` : vraies images indépendantes.
+- `renders/world_map_zones_v1/WorldMap_Zones.png` : composition avec repères et routes.
+- `layers/00_fond_canonique_1x.png` : fond exact.
+- `layers/01_routes_zones.png` : tracé de progression indépendant.
+- `layers/02_emblemes_canoniques.png` : repères issus de l'atlas fourni.
+- `layers/03_etat_deblocage.png` : état ouvert/verrouillé indépendant.
+- `layers/04_surlignage_debloque.png` : halo des zones ouvertes indépendant.
+- `animations/WorldMap_discover_00.png` à `11.png` : frames directes extraites de la planche fournie.
 - `animations/WorldMap_discover.webp` : boucle WebP directe.
-- `assetsprite/WorldMap_Lieux_AssetSprite.png` et `.json` : spritesheet et rectangles d'emblèmes.
+- `assetsprite/WorldMap_Lieux_AssetSprite.png` et `.json` : spritesheet et rectangles d'intégration.
+- `manifest.json` : dimensions, SHA et provenance.
 
-Forêt, Plage et Volcan sont ouverts par défaut ; Désert, Glace, Tour et Archipel restent verrouillés. Le calque `05_etat_deblocage.png` peut être remplacé par l'état réel du jeu.
+État de démonstration : Volcan, Forêt et Plage ouverts ; Désert, Glace, Ruines et Tour verrouillés. Les coordonnées sont natives 504×336.
 
-## Provenance
-
-Les matériaux de terrain et de mer utilisent les ressources présentes dans le dernier commit :
-
-- `sprites/zones_guidees/01_cirque/canonique_sec.png` ;
-- `sprites/zones_guidees/01_cirque/herbe.png` ;
-- `sprites/zones_guidees/01_cirque/eau_1.png`.
-
-Ces textures natives servent de matériaux/tuilage sans modification des fichiers sources. Les continents, routes, marqueurs et fond parchemin sont une composition nouvelle ; ils ne sont pas prétendus comme pixels natifs de la carte World Map jointe.
-
-## Test
+## Vérification
 
 ```bash
 .venv/bin/python source/world_map_zones_v1/build.py

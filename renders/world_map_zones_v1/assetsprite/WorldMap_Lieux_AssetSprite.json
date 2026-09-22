@@ -1,79 +1,128 @@
 {
   "format": "AssetSprite",
   "frame_size": [
-    128,
-    128
+    48,
+    48
   ],
   "entries": [
     {
-      "id": "forêt",
+      "id": "volcan",
+      "label": "Volcan",
       "rect": [
         0,
         0,
-        128,
-        128
+        48,
+        48
       ],
-      "unlocked_by_default": true
+      "unlocked_by_default": true,
+      "source_box": [
+        30,
+        0,
+        116,
+        157
+      ]
+    },
+    {
+      "id": "foret",
+      "label": "Forêt",
+      "rect": [
+        48,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true,
+      "source_box": [
+        620,
+        0,
+        780,
+        145
+      ]
     },
     {
       "id": "plage",
+      "label": "Plage",
       "rect": [
-        128,
+        96,
         0,
-        128,
-        128
+        48,
+        48
       ],
-      "unlocked_by_default": true
+      "unlocked_by_default": true,
+      "source_box": [
+        365,
+        0,
+        480,
+        92
+      ]
     },
     {
-      "id": "volcan",
+      "id": "desert",
+      "label": "Désert",
       "rect": [
-        256,
+        144,
         0,
-        128,
-        128
+        48,
+        48
       ],
-      "unlocked_by_default": true
-    },
-    {
-      "id": "désert",
-      "rect": [
-        384,
-        0,
-        128,
-        128
-      ],
-      "unlocked_by_default": false
+      "unlocked_by_default": false,
+      "source_box": [
+        495,
+        190,
+        640,
+        315
+      ]
     },
     {
       "id": "glace",
+      "label": "Glace",
       "rect": [
-        512,
+        192,
         0,
-        128,
-        128
+        48,
+        48
       ],
-      "unlocked_by_default": false
+      "unlocked_by_default": false,
+      "source_box": [
+        1135,
+        315,
+        1320,
+        510
+      ]
+    },
+    {
+      "id": "ruines",
+      "label": "Ruines",
+      "rect": [
+        240,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false,
+      "source_box": [
+        680,
+        116,
+        860,
+        275
+      ]
     },
     {
       "id": "tour",
+      "label": "Tour",
       "rect": [
-        640,
+        288,
         0,
-        128,
-        128
+        48,
+        48
       ],
-      "unlocked_by_default": false
-    },
-    {
-      "id": "archipel",
-      "rect": [
-        768,
-        0,
-        128,
-        128
-      ],
-      "unlocked_by_default": false
+      "unlocked_by_default": false,
+      "source_box": [
+        970,
+        12,
+        1100,
+        170
+      ]
     }
   ]
 }
