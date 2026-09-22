@@ -229,3 +229,22 @@ Réserves relevées dans V16 :
 - L’alignement sur 8 px et le nommage Halcyon ne prouvent pas un import moteur.
 
 Les succès de chargement PMDO cités dans les anciens rapports restent historiques ; aucun lancement PMDO, rendu GPU ou test de gameplay n’a été effectué dans cette reprise.
+
+## GB1 — Grotte Brumeuse PMDO (Foggy Forest & Crooked Cavern harmonisée)
+
+Demande utilisateur : création d'une map multicalques PMDO 480 × 336 (60 × 42 tuiles de 8 px) dans le style Foggy Forest avec progression Sud vers Nord vers une grotte style Crooked Cavern, dont la texture rocheuse est harmonisée avec la végétation et les lianes. Tous les calques bruts sont générés sur fond magenta pur `#FF00FF` avant emballage final transparent pour PMDO.
+
+- **Fichiers sources et pipeline** : `source/grotte_brumeuse_v1/work.py` (`--build`, `--verify`, `--pmdo`), `build_viewer.py`.
+- **Rendus et packs** : `renders/grotte_brumeuse_v1/` :
+  - `bruts_magenta/` : 6 calques bruts sur fond magenta pur `#FF00FF`.
+  - `calques_jour/` et `calques_nuit/` : calques 32-bit transparents et sol 100% opaque.
+  - `GB1_grotte_brumeuse_carte_jour.png`, `GB1_grotte_brumeuse_carte_nuit.png`, `GB1_grotte_brumeuse_carte.png`.
+  - `GB1_grotte_brumeuse_planche_magenta.png` (planche des 6 calques sur fond magenta).
+  - `GB1_grotte_brumeuse_calques.png` (planche des 6 calques transparents et composition finale).
+  - `GB1_grotte_brumeuse_viewport.png` (simulation cadrage 320×240 et trajectoire Sud->Nord).
+  - `GB1_grotte_brumeuse_viewport_320x240.png` (crop 1x caméra spawn).
+  - `GB1_grotte_brumeuse_ambiances.webp` (animation WebP 2s jour/nuit continue).
+  - `GB1_grotte_brumeuse_calques.zip` (1.44 MB) et `GB1_grotte_brumeuse_PMDO.zip` (1.72 MB).
+- **Visualiseur interactif** : `apercu_grotte_brumeuse_v1.html` à la racine (toggles calques, jour/nuit, mode magenta live, navigation 17px et viewport caméra mobile 320×240).
+- **Vérifications** : Sol 100% opaque sans lacune alpha, navigabilité Sud->Nord certifiée via érosion 17px (43 217 px praticables), désérialisation PMDO exacte et installateur testé.
+

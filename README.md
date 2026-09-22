@@ -454,3 +454,14 @@ Voir [les références et limites](source/layouts_commit_3bc185b/README.md). **C
 ## Soleil animé et Luminous Spring
 
 [Nouveau pack PNG multicouche](renders/soleil_spring_v1/README.md) — [aperçu autonome](apercu_soleil_spring_v1.html). Soleil subtil 64 phases, grands nuages traversants, variante du Spring Halcyon avec cycles natifs 3/13 phases préservés.
+
+## Grotte Brumeuse PMDO (Foggy Forest & Crooked Cavern harmonisée)
+
+[Visualiseur interactif autonome](apercu_grotte_brumeuse_v1.html) — Map multicalques PMDO 480 × 336 (60 × 42 tuiles de 8 px) avec progression Sud vers Nord. Arrivée dans la clairière moussue au Sud `[240, 296]`, traversée du sentier naturel entre les arbres de lisière et accès à l'entrée rocheuse de Crooked Cavern au Nord `[240, 95]`.
+
+- Texture rocheuse Crooked Cavern harmonisée ton sur ton avec la clairière de Foggy Forest (quantification 5-bit GBA).
+- 6 calques sémantiques : sol continu 100% opaque, parois rocheuses continues et arche, arbres de lisière, lianes suspendues (`SpindaV7_liane`) et buissons moussus, canopée haute, voile de brume dorée.
+- Calques bruts générés sur fond magenta pur `#FF00FF` (`bruts_magenta/`) pour isolation pixel-perfect, puis emballés avec alpha propre pour PMDO (`calques_jour/` et `calques_nuit/`).
+- Ambiance nocturne Abyss complète. Navigabilité vérifiée par érosion 17px (43 217 px praticables).
+- Packs téléchargeables : `GB1_grotte_brumeuse_calques.zip` (1.44 MB) et `GB1_grotte_brumeuse_PMDO.zip` (1.72 MB).
+

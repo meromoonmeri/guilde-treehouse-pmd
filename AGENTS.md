@@ -626,3 +626,25 @@ Après la demande de biome bois et l’exemple de kiosque Arcanin, l’utilisate
 11tests assets PASS, banques réellement redécodées ; viewer normal et ZIP extrait testés en DOM simulé. Pas de navigateur graphique ou de PMDO validé, pas de `.rsground` produit, collisions/warps/interactions à configurer. Les couches de terrain sont des surfaces visibles, pas des murs mobiles complets. Ne pas écraser les anciens cafés multietages ni le casino.
 
 Étude bois précédente mise en attente : aucun terrain retenu/sauvé par le comparateur. Sources bois consultées et brut du kiosque Arcanin conservés dans `source/casino_bois_v1/` et `renders/casino_bois_v1/bruts/` ; ce kiosque est un prototype généré non natif/non approuvé, **pas inclus dans le pack café**. Référence miniature en ligne, original de pièce jointe absent du filesystem : ne pas prétendre une extraction pixel-exacte de l’upload. Au début de cette reprise le clone était à3d4ea6f0 ; état restauré conservé en stash avant ff vers954c705e, ne pas pop automatiquement.
+
+
+## GB1 — Grotte Brumeuse PMDO (Foggy Forest & Crooked Cavern)
+
+Demande utilisateur : **« froggyforest like avec sud vers nord et une grotte style crooked cavern en texture de roche qui match avec des lianne et verdure etc. Tu dois générer les calques sur fond majenta pour emballer la map final ensuite »**.
+
+- **Identité** : `GB1_grotte_brumeuse` (480 × 336 px, 60 × 42 tuiles de 8 px). Viewport PMDO baseline 320 × 240.
+- **Progression Sud -> Nord** : Spawn d'arrivée au Sud `[240, 296]`, sentier de terre et clairière moussue traversant les arbres de lisière vers le portail rocheux de Crooked Cavern au Nord `[240, 95]`.
+- **Harmonisation rocheuse Crooked Cavern** : Relief rocheux et arche centrale de Crooked Cavern harmonisés vers la palette pierre/mousse de Foggy Forest via quantification 5-bit GBA (multiples de 8) sans rupture de style.
+- **6 Groupes Sémantiques** :
+  1. `01_sol` : Sol continu 100% opaque sous les obstacles, sentier terreux et seuil sombre d'antre.
+  2. `02_parois_grotte_crooked` : Parois rocheuses continues 480 px avec arche voûtée centrale.
+  3. `03_arbres_lisiere_fond` : Arbres de lisière Foggy Forest aux cimes feuillues isolées.
+  4. `04_lianes_et_verdure` : Lianes suspendues tombantes (`SpindaV7_liane`) ancrées sur stalactites et corniches, buissons moussus canoniques.
+  5. `05_canopee_avant_plan` : Canopée haute de frondaisons avant-plan festonnée.
+  6. `06_brume_atmospherique` : Voile de brume dorée atmosphérique caractéristique de Foggy Forest.
+- **Conformité fond magenta** : Tous les calques non-sol générés sur fond magenta pur `#FF00FF` dans `bruts_magenta/`, avec planche comparative `GB1_grotte_brumeuse_planche_magenta.png`. Emballage final transparent 32-bit dans `calques_jour/` et `calques_nuit/`.
+- **Ambiance Nuit** : Filtre nocturne Abyss exact appliqué calque par calque avec sol 100% opaque forcé.
+- **Navigabilité** : Test d'érosion binaire 17×17 px PASS (43 217 px praticables continus de Sud `[240, 296]` à Nord `[240, 95]`).
+- **PMDO 0.8.12** : Sérialisation `.rsground` et banques `.tile` 8px validées (`vp1_gb1_grotte_brumeuse_jour`, `vp1_gb1_grotte_brumeuse_nuit`), désérialisation exacte, tests installateur dry-run et réinstallation PASS.
+- **Scripts et visualisation** : `source/grotte_brumeuse_v1/work.py --build --verify --pmdo`, `apercu_grotte_brumeuse_v1.html`. Packs livrés : `GB1_grotte_brumeuse_calques.zip` (1.44 MB) et `GB1_grotte_brumeuse_PMDO.zip` (1.72 MB).
+
