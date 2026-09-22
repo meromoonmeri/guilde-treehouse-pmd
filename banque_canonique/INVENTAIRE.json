@@ -1,0 +1,2421 @@
+{
+ "sheets": [
+  {
+   "sheet": "Metano_Town_Base",
+   "tile_size": 8,
+   "count": 35646,
+   "atlas_size": [
+    1512,
+    1512
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Metano_Town_Base.tile",
+   "sha256_tile": "305a732461d128707640c76d92f7539e4d2fd5359461f30c718c50a2d2ae4d64",
+   "copies": [
+    "source/cote_v4_abyss/natifs/Metano_Town_Base.tile"
+   ],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Base.png",
+   "planche": "planches/Metano_Town_Base.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_Objects",
+   "tile_size": 8,
+   "count": 16766,
+   "atlas_size": [
+    1512,
+    1512
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Metano_Town_Objects.tile",
+   "sha256_tile": "3ef3fb3e33df245f7ef483d8e219f2e3cbbf8878395552703644fc2019e4992a",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Objects.png",
+   "planche": "planches/Metano_Town_Objects.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Vast_Steppe_Base",
+   "tile_size": 8,
+   "count": 4096,
+   "atlas_size": [
+    512,
+    512
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Base.tile",
+   "sha256_tile": "6abdcf68c3ccf7b552d7bce520d9136056421c6ee449aab8fd4b01760df3a5a5",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Base.png",
+   "planche": "planches/Vast_Steppe_Base.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Vast_Steppe_Cliifs",
+   "tile_size": 8,
+   "count": 697,
+   "atlas_size": [
+    512,
+    280
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Cliifs.tile",
+   "sha256_tile": "d67c00eca8c1639e4d8d44497c1d1b1e4d68972dab6e86db46821dfeb05dfebb",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Cliifs.png",
+   "planche": "planches/Vast_Steppe_Cliifs.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Vast_Steppe_Flower_Animations",
+   "tile_size": 8,
+   "count": 27,
+   "atlas_size": [
+    72,
+    24
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Flower_Animations.tile",
+   "sha256_tile": "f425600afe751f86872d7327144bdec3466830030b4cf6fd8fe7b80f52506f88",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Flower_Animations.png",
+   "planche": "planches/Vast_Steppe_Flower_Animations.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Vast_Steppe_Fringe",
+   "tile_size": 8,
+   "count": 959,
+   "atlas_size": [
+    512,
+    512
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Fringe.tile",
+   "sha256_tile": "e93c033317ff432ed9c5bd117f7d8721ede3b3f00f459a60a944ab5bf5643bc3",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Fringe.png",
+   "planche": "planches/Vast_Steppe_Fringe.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Vast_Steppe_Objects",
+   "tile_size": 8,
+   "count": 689,
+   "atlas_size": [
+    512,
+    512
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Objects.tile",
+   "sha256_tile": "c754b27646b4845e39214a0753147a5ca49acf1bf0b868c965ee39bf38e1fca4",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Objects.png",
+   "planche": "planches/Vast_Steppe_Objects.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Vast_Steppe_Objects_Under",
+   "tile_size": 8,
+   "count": 135,
+   "atlas_size": [
+    504,
+    488
+   ],
+   "source_tile": "source/amp_plains_fleurie_v1/references/Vast_Steppe_Objects_Under.tile",
+   "sha256_tile": "73c134f2603e6153fb5209510fd53583c4478ea0c2f34d36024b4bbc598d3521",
+   "copies": [],
+   "family": "Vast Steppe (plaine, rampe herbeuse, fleurs animées)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Vast_Steppe_Objects_Under.png",
+   "planche": "planches/Vast_Steppe_Objects_Under.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Base",
+   "tile_size": 8,
+   "count": 11044,
+   "atlas_size": [
+    928,
+    768
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Base.tile",
+   "sha256_tile": "c78a5e1c6bc1c9ce60c54057e3a5399bed5667a6b834ce739cc6604cb6a17e90",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Base.png",
+   "planche": "planches/Altere_Pond_Base.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Cliffs",
+   "tile_size": 8,
+   "count": 1840,
+   "atlas_size": [
+    928,
+    456
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Cliffs.tile",
+   "sha256_tile": "bd4a34b1e9e7da9bc3420ec99ec8031bfa630b443185b3ad2710c4dfb0c1858c",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Cliffs.png",
+   "planche": "planches/Altere_Pond_Cliffs.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Fringe",
+   "tile_size": 8,
+   "count": 2075,
+   "atlas_size": [
+    928,
+    664
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Fringe.tile",
+   "sha256_tile": "cc5d97f20077bd3a6dabe7a12d50347ae60d8eede03e3d188f9ec5f8e4c286f2",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Fringe.png",
+   "planche": "planches/Altere_Pond_Fringe.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Objects",
+   "tile_size": 8,
+   "count": 4601,
+   "atlas_size": [
+    928,
+    768
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Objects.tile",
+   "sha256_tile": "0e59f85d809417d9c00fabb445fce76263578fa675c38e9484092982dd64db35",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Objects.png",
+   "planche": "planches/Altere_Pond_Objects.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Objects_Over",
+   "tile_size": 8,
+   "count": 144,
+   "atlas_size": [
+    592,
+    296
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Objects_Over.tile",
+   "sha256_tile": "7027f6fd57c3a0f988c94637f595a5ea6140c82d4c51013375036f5d40e44525",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Objects_Over.png",
+   "planche": "planches/Altere_Pond_Objects_Over.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Altere_Pond_Objects_Under",
+   "tile_size": 8,
+   "count": 841,
+   "atlas_size": [
+    928,
+    768
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Objects_Under.tile",
+   "sha256_tile": "36e26b0f87b7ada1866fa479a239442c0a73189fe414418cc1985092d37a161c",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Objects_Under.png",
+   "planche": "planches/Altere_Pond_Objects_Under.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_River",
+   "tile_size": 8,
+   "count": 1036,
+   "atlas_size": [
+    680,
+    480
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_River.tile",
+   "sha256_tile": "da5288f41077657c330072cce3d6034b792e204c7f436a98ba528cb2fb8e7cd9",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_River.png",
+   "planche": "planches/Altere_Pond_River.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_River_Animations",
+   "tile_size": 8,
+   "count": 4236,
+   "atlas_size": [
+    1368,
+    480
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_River_Animations.tile",
+   "sha256_tile": "1325be9449e1fa8de4af658b669c240cd2f7c7379bf468f49646af4ed26a841f",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_River_Animations.png",
+   "planche": "planches/Altere_Pond_River_Animations.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Altere_Pond_Shadows",
+   "tile_size": 8,
+   "count": 56,
+   "atlas_size": [
+    928,
+    656
+   ],
+   "source_tile": "source/antre_harmonie_v3/references/Altere_Pond_Shadows.tile",
+   "sha256_tile": "60a35a79b0ec8526ec47cebb75253f27140328d613147bef1367aae3b45b1a1e",
+   "copies": [],
+   "family": "Altere Pond (étang, falaises sable, cascade)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Altere_Pond_Shadows.png",
+   "planche": "planches/Altere_Pond_Shadows.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Metano_Town_Cafe_Base",
+   "tile_size": 8,
+   "count": 2280,
+   "atlas_size": [
+    456,
+    320
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Base.tile",
+   "sha256_tile": "3be280ba758aa7bed3816b6a1c943e9424cb2584fb539a8e9c8647923ac28f3e",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cafe_Base.png",
+   "planche": "planches/Metano_Town_Cafe_Base.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Cafe_Objects",
+   "tile_size": 8,
+   "count": 629,
+   "atlas_size": [
+    432,
+    320
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects.tile",
+   "sha256_tile": "4a564a314de2084f9427962864598c40ec206fdcc5a0a7bfbf5bf818dae4a4b2",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cafe_Objects.png",
+   "planche": "planches/Metano_Town_Cafe_Objects.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Cafe_Objects_Fringe",
+   "tile_size": 8,
+   "count": 7,
+   "atlas_size": [
+    424,
+    216
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Fringe.tile",
+   "sha256_tile": "125945eb0a05000311bb9e0b200785154543f8418bdfc30cf0747e0314450e7c",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cafe_Objects_Fringe.png",
+   "planche": "planches/Metano_Town_Cafe_Objects_Fringe.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Cafe_Objects_Over",
+   "tile_size": 8,
+   "count": 148,
+   "atlas_size": [
+    408,
+    296
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Over.tile",
+   "sha256_tile": "3d87d52f4e698c927c455fbdac6dbe03c14f6da18b36b719db13eb18ef0edb02",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cafe_Objects_Over.png",
+   "planche": "planches/Metano_Town_Cafe_Objects_Over.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Cafe_Objects_Under",
+   "tile_size": 8,
+   "count": 138,
+   "atlas_size": [
+    408,
+    296
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Under.tile",
+   "sha256_tile": "eba22ec4915680b03fb5db5a7e3c01738edc59dd58383865cc082bd57d63ed2d",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cafe_Objects_Under.png",
+   "planche": "planches/Metano_Town_Cafe_Objects_Under.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "SpindaCafe1",
+   "tile_size": 8,
+   "count": 4959,
+   "atlas_size": [
+    696,
+    456
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/SpindaCafe1.tile",
+   "sha256_tile": "a61c71ce467953f80bdb001c15bfc9f4399caaa342bb265d4792573b659b8825",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/SpindaCafe1.png",
+   "planche": "planches/SpindaCafe1.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "SpindaCafe2",
+   "tile_size": 8,
+   "count": 835,
+   "atlas_size": [
+    560,
+    320
+   ],
+   "source_tile": "source/cafe_multietage_v1/references/SpindaCafe2.tile",
+   "sha256_tile": "fb9681c97eaf9f35602fabf181da5d7240656fdaa96895dc88b65c58aa32a461",
+   "copies": [],
+   "family": "Métano Café (intérieur)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/SpindaCafe2.png",
+   "planche": "planches/SpindaCafe2.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Floor",
+   "tile_size": 8,
+   "count": 2464,
+   "atlas_size": [
+    640,
+    416
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Floor.tile",
+   "sha256_tile": "5a0da8a5f2a1b6ee9a974a389e5c5882d27c04172fff7dea1b30e86d0b44f16c",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Floor.png",
+   "planche": "planches/Guild_Second_Floor_Floor.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Fringe",
+   "tile_size": 8,
+   "count": 9,
+   "atlas_size": [
+    600,
+    280
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Fringe.tile",
+   "sha256_tile": "a0edd6f78631af69db94392f0cbb3fab856a00ba2fb93076824a981aa1d32261",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Fringe.png",
+   "planche": "planches/Guild_Second_Floor_Fringe.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Objects",
+   "tile_size": 8,
+   "count": 747,
+   "atlas_size": [
+    608,
+    392
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Objects.tile",
+   "sha256_tile": "d6943c969e7e4ba28ce1b5bfb395095f0f70777360a68b6623736f161d3cc5a5",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Objects.png",
+   "planche": "planches/Guild_Second_Floor_Objects.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Objects_Over",
+   "tile_size": 8,
+   "count": 30,
+   "atlas_size": [
+    600,
+    200
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Objects_Over.tile",
+   "sha256_tile": "cb92ed2edc3ffa20810ba3bdc0f5774536005a3b0a3c3d055a49b92af428dea3",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Objects_Over.png",
+   "planche": "planches/Guild_Second_Floor_Objects_Over.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Objects_Under",
+   "tile_size": 8,
+   "count": 18,
+   "atlas_size": [
+    600,
+    240
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Objects_Under.tile",
+   "sha256_tile": "011c8e968a459fb1f78467046e15e9ab04c4454ba22be6b3c5e9b86a5b8e1fd5",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Objects_Under.png",
+   "planche": "planches/Guild_Second_Floor_Objects_Under.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Shadows",
+   "tile_size": 8,
+   "count": 43,
+   "atlas_size": [
+    608,
+    400
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Shadows.tile",
+   "sha256_tile": "6f67e6ae09ba7ab2c7943b7eccd0b3d0ceb23c1dcb312f5582c3312217248a1b",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Shadows.png",
+   "planche": "planches/Guild_Second_Floor_Shadows.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Guild_Second_Floor_Supports",
+   "tile_size": 8,
+   "count": 2596,
+   "atlas_size": [
+    672,
+    448
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Supports.tile",
+   "sha256_tile": "72ee0b392bb2624a89cdf3689f7723142f9fba3afa58cc2b9fc8bf172e5d58c8",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Supports.png",
+   "planche": "planches/Guild_Second_Floor_Supports.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Guild_Second_Floor_Walls",
+   "tile_size": 8,
+   "count": 987,
+   "atlas_size": [
+    608,
+    256
+   ],
+   "source_tile": "source/cafe_multietage_v3/references/Guild_Second_Floor_Walls.tile",
+   "sha256_tile": "2469bcdcc9c936a3bf4df8f37bf490512218acf46c2997c8c0648f4f993f88b4",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Guild_Second_Floor_Walls.png",
+   "planche": "planches/Guild_Second_Floor_Walls.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Base_Night",
+   "tile_size": 8,
+   "count": 35646,
+   "atlas_size": [
+    1512,
+    1512
+   ],
+   "source_tile": "source/cote_v4_abyss/natifs/Metano_Town_Base_Night.tile",
+   "sha256_tile": "f247045ebae6b9c92eaa59aa944ffc9ce1df430935ddc08da8ecbd3d4d036af8",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Base_Night.png",
+   "planche": "planches/Metano_Town_Base_Night.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_Cliffs",
+   "tile_size": 8,
+   "count": 2169,
+   "atlas_size": [
+    1512,
+    544
+   ],
+   "source_tile": "source/cote_v4_abyss/natifs/Metano_Town_Cliffs.tile",
+   "sha256_tile": "ffbe51fdb7da066ca9c9bb0ff9fd13fe0bd60017b01278056aacdddeb69efd34",
+   "copies": [
+    "source/falaises_metano/natifs/Metano_Town_Cliffs.tile"
+   ],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cliffs.png",
+   "planche": "planches/Metano_Town_Cliffs.png",
+   "planche_reduction": 3
+  },
+  {
+   "sheet": "Metano_Town_Cliffs_Night",
+   "tile_size": 8,
+   "count": 2169,
+   "atlas_size": [
+    1512,
+    544
+   ],
+   "source_tile": "source/cote_v4_abyss/natifs/Metano_Town_Cliffs_Night.tile",
+   "sha256_tile": "4193ada9273494a91d93edeb74d2b2ec0e78be2de02d93441ae57c92fe9adcf1",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Cliffs_Night.png",
+   "planche": "planches/Metano_Town_Cliffs_Night.png",
+   "planche_reduction": 3
+  },
+  {
+   "sheet": "Metano_Town_Fringe",
+   "tile_size": 8,
+   "count": 135,
+   "atlas_size": [
+    1064,
+    1144
+   ],
+   "source_tile": "source/cote_v4_abyss/natifs/Metano_Town_Fringe.tile",
+   "sha256_tile": "3d44e2a5277c29a461e583c51e4e67eefaa871af434ce97452f4d6dd2e58178c",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Fringe.png",
+   "planche": "planches/Metano_Town_Fringe.png",
+   "planche_reduction": 3
+  },
+  {
+   "sheet": "Metano_Town_Fringe_Night",
+   "tile_size": 8,
+   "count": 135,
+   "atlas_size": [
+    1064,
+    1144
+   ],
+   "source_tile": "source/cote_v4_abyss/natifs/Metano_Town_Fringe_Night.tile",
+   "sha256_tile": "52460d993c193ffbf32f70f95fb4222d62c2e4b4eb0d7be7dce55eb3c80bd44b",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Fringe_Night.png",
+   "planche": "planches/Metano_Town_Fringe_Night.png",
+   "planche_reduction": 3
+  },
+  {
+   "sheet": "ExplorersOfSkyOrigins__Brine_Cave_Entrance",
+   "tile_size": 24,
+   "count": 8505,
+   "atlas_size": [
+    9720,
+    504
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/ExplorersOfSkyOrigins__Brine_Cave_Entrance.tile",
+   "sha256_tile": "a65c63677e4e63ed14c2754eff463db7bb9db7cae8feb7cb236e8cfc251a96ec",
+   "copies": [],
+   "family": "EoSO — Brine Cave / Drenched Bluff (entrées)",
+   "provenance": "Explorers of Sky Origins (EoSO)",
+   "atlas_png": "atlas/ExplorersOfSkyOrigins__Brine_Cave_Entrance.png",
+   "planche": "planches/ExplorersOfSkyOrigins__Brine_Cave_Entrance.png",
+   "planche_reduction": 14
+  },
+  {
+   "sheet": "ExplorersOfSkyOrigins__DrenchedBluffEntranceBackground",
+   "tile_size": 8,
+   "count": 3366,
+   "atlas_size": [
+    528,
+    408
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/ExplorersOfSkyOrigins__DrenchedBluffEntranceBackground.tile",
+   "sha256_tile": "598ed7492eb7fb2d8d7860d50b315dc2fc92dbc24e95d92dd5dd6d5f330a926a",
+   "copies": [],
+   "family": "EoSO — Brine Cave / Drenched Bluff (entrées)",
+   "provenance": "Explorers of Sky Origins (EoSO)",
+   "atlas_png": "atlas/ExplorersOfSkyOrigins__DrenchedBluffEntranceBackground.png",
+   "planche": "planches/ExplorersOfSkyOrigins__DrenchedBluffEntranceBackground.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "ExplorersOfSkyOrigins__DrenchedBluffEntranceDetails",
+   "tile_size": 8,
+   "count": 1674,
+   "atlas_size": [
+    528,
+    408
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/ExplorersOfSkyOrigins__DrenchedBluffEntranceDetails.tile",
+   "sha256_tile": "321ca0e0c2b6ad3289f3306515159b39294321bf0ef29dce43c4478ec048a953",
+   "copies": [],
+   "family": "EoSO — Brine Cave / Drenched Bluff (entrées)",
+   "provenance": "Explorers of Sky Origins (EoSO)",
+   "atlas_png": "atlas/ExplorersOfSkyOrigins__DrenchedBluffEntranceDetails.png",
+   "planche": "planches/ExplorersOfSkyOrigins__DrenchedBluffEntranceDetails.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Halcyon__Crooked_Cavern_Base",
+   "tile_size": 8,
+   "count": 1200,
+   "atlas_size": [
+    320,
+    240
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/Halcyon__Crooked_Cavern_Base.tile",
+   "sha256_tile": "8bcf5e417bee30432d3d52604ff9e9ed1e23863d2cd35a597f4e89e3dc45b2b4",
+   "copies": [],
+   "family": "Crooked Cavern (entrée de grotte)",
+   "provenance": "Halcyon da6c2130 (Palikadude/Halcyon)",
+   "atlas_png": "atlas/Halcyon__Crooked_Cavern_Base.png",
+   "planche": "planches/Halcyon__Crooked_Cavern_Base.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Halcyon__Crooked_Cavern_Objects",
+   "tile_size": 8,
+   "count": 116,
+   "atlas_size": [
+    288,
+    240
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/Halcyon__Crooked_Cavern_Objects.tile",
+   "sha256_tile": "947470836a5698083a525df326d1339d4e8ac02cc5d5fd56db0bd15b928b9e48",
+   "copies": [],
+   "family": "Crooked Cavern (entrée de grotte)",
+   "provenance": "Halcyon da6c2130 (Palikadude/Halcyon)",
+   "atlas_png": "atlas/Halcyon__Crooked_Cavern_Objects.png",
+   "planche": "planches/Halcyon__Crooked_Cavern_Objects.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Halcyon__Crooked_Cavern_Shadows",
+   "tile_size": 8,
+   "count": 83,
+   "atlas_size": [
+    296,
+    240
+   ],
+   "source_tile": "source/cote_v5_expeditions/references/Halcyon__Crooked_Cavern_Shadows.tile",
+   "sha256_tile": "d525e62b9b81c69b7f77e5725b21ed33d65db3b217770c3223c7376b865af639",
+   "copies": [],
+   "family": "Crooked Cavern (entrée de grotte)",
+   "provenance": "Halcyon da6c2130 (Palikadude/Halcyon)",
+   "atlas_png": "atlas/Halcyon__Crooked_Cavern_Shadows.png",
+   "planche": "planches/Halcyon__Crooked_Cavern_Shadows.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Illuminant_Riverbed_Base",
+   "tile_size": 8,
+   "count": 1002,
+   "atlas_size": [
+    320,
+    240
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/Content/Tile/Illuminant_Riverbed_Base.tile",
+   "sha256_tile": "54e35a0cb291028b6a2d1d9e8e4a575a945103e0f1a41dff07396e29a97ec15f",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Illuminant_Riverbed_Base.png",
+   "planche": "planches/Illuminant_Riverbed_Base.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Relic_Forest_Base",
+   "tile_size": 8,
+   "count": 5625,
+   "atlas_size": [
+    600,
+    600
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/Content/Tile/Relic_Forest_Base.tile",
+   "sha256_tile": "118de01d3d86288894a2ff5e1f4ba0fe46e70c038a1526b693a53d02ff3ffcee",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Relic_Forest_Base.png",
+   "planche": "planches/Relic_Forest_Base.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "CrystalCave1",
+   "tile_size": 24,
+   "count": 716,
+   "atlas_size": [
+    1200,
+    2496
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/CrystalCave1.tile",
+   "sha256_tile": "4574f1bbdb922bf1b4de264bd2163ded600a6a7b6951528b11c64d81979c8bc3",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/CrystalCave1.png",
+   "planche": "planches/CrystalCave1.png",
+   "planche_reduction": 6
+  },
+  {
+   "sheet": "DarkCrater",
+   "tile_size": 24,
+   "count": 3742,
+   "atlas_size": [
+    1200,
+    12264
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/DarkCrater.tile",
+   "sha256_tile": "167b633695dd222e2fd86de9a06cd63c6bd51bf8e419129356dec1ef9fda4924",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/DarkCrater.png",
+   "planche": "planches/DarkCrater.png",
+   "planche_reduction": 30
+  },
+  {
+   "sheet": "MurkyForest",
+   "tile_size": 24,
+   "count": 623,
+   "atlas_size": [
+    1200,
+    2112
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/MurkyForest.tile",
+   "sha256_tile": "152dbc967a5c82692353ccee1c351571eeeef19e1d37f1b7e78f5f29afa73266",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/MurkyForest.png",
+   "planche": "planches/MurkyForest.png",
+   "planche_reduction": 6
+  },
+  {
+   "sheet": "QuicksandCave",
+   "tile_size": 24,
+   "count": 2377,
+   "atlas_size": [
+    1200,
+    9408
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/QuicksandCave.tile",
+   "sha256_tile": "fa1e684001d34572b766dc241d4c358bd0ceb69f183f71d14cbacb9677fc0447",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/QuicksandCave.png",
+   "planche": "planches/QuicksandCave.png",
+   "planche_reduction": 23
+  },
+  {
+   "sheet": "SealedRuin",
+   "tile_size": 24,
+   "count": 153,
+   "atlas_size": [
+    1200,
+    192
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/SealedRuin.tile",
+   "sha256_tile": "baa10eb993e9536e0668d9a839dc0406734e1e576a17e42c594050c556585b11",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/SealedRuin.png",
+   "planche": "planches/SealedRuin.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "SkyPeak4thPass",
+   "tile_size": 24,
+   "count": 340,
+   "atlas_size": [
+    1200,
+    960
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/SkyPeak4thPass.tile",
+   "sha256_tile": "78dfcd004bfef0f6f420b19fc129f40d1405f0d586fe3f335ad11ce01e4cd28c",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/SkyPeak4thPass.png",
+   "planche": "planches/SkyPeak4thPass.png",
+   "planche_reduction": 3
+  },
+  {
+   "sheet": "SouthernCavern1",
+   "tile_size": 24,
+   "count": 1247,
+   "atlas_size": [
+    1200,
+    4800
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/SouthernCavern1.tile",
+   "sha256_tile": "ca475476e5a0c7679db57908d1f59940ed78fbb0d09be2084f3c578686d33df9",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/SouthernCavern1.png",
+   "planche": "planches/SouthernCavern1.png",
+   "planche_reduction": 12
+  },
+  {
+   "sheet": "SouthernJungle",
+   "tile_size": 24,
+   "count": 905,
+   "atlas_size": [
+    1200,
+    3264
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/SouthernJungle.tile",
+   "sha256_tile": "bf90e6dc0ba48dbf37e4c1b494f7d01909459ffcc733a66e58337f62d7d0c9e5",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/SouthernJungle.png",
+   "planche": "planches/SouthernJungle.png",
+   "planche_reduction": 8
+  },
+  {
+   "sheet": "SteamCave",
+   "tile_size": 24,
+   "count": 1189,
+   "atlas_size": [
+    1200,
+    4416
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/SteamCave.tile",
+   "sha256_tile": "7533cfcc0f2fd01b8d8504ba1e10d02729ed2c717efcb770259b7e76dde11cd8",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/SteamCave.png",
+   "planche": "planches/SteamCave.png",
+   "planche_reduction": 11
+  },
+  {
+   "sheet": "TreeshroudForest1",
+   "tile_size": 24,
+   "count": 1234,
+   "atlas_size": [
+    1200,
+    4800
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/TreeshroudForest1.tile",
+   "sha256_tile": "b9d08bd6cf1aeab3c4822512cdd1d7ca3971aedfe4a41ee726bedae562f25bfa",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/TreeshroudForest1.png",
+   "planche": "planches/TreeshroudForest1.png",
+   "planche_reduction": 12
+  },
+  {
+   "sheet": "VastIceMountain",
+   "tile_size": 24,
+   "count": 158,
+   "atlas_size": [
+    1200,
+    192
+   ],
+   "source_tile": "source/donjons_dtef_v2/references/DumpAsset/Content/Tile/VastIceMountain.tile",
+   "sha256_tile": "b03051c74b794482acd587615f14e46b44bfda1e06190fcfc1ff76c70c2ce5a1",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/VastIceMountain.png",
+   "planche": "planches/VastIceMountain.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "AppleWoods",
+   "tile_size": 24,
+   "count": 1233,
+   "atlas_size": [
+    1200,
+    4800
+   ],
+   "source_tile": "source/dungeon_autotiles_v1/references/assets/AppleWoods.tile",
+   "sha256_tile": "999d29dd67c6dfd92c0d4bdce6c4ad179b7a39264ae62e7db81f273c55dca900",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/AppleWoods.png",
+   "planche": "planches/AppleWoods.png",
+   "planche_reduction": 12
+  },
+  {
+   "sheet": "BeachCave",
+   "tile_size": 24,
+   "count": 1596,
+   "atlas_size": [
+    1200,
+    5952
+   ],
+   "source_tile": "source/dungeon_autotiles_v1/references/assets/BeachCave.tile",
+   "sha256_tile": "80abf68ed18d417e16594647c20ddd58a17b16a71fad7a4b0f90445f1e2d4f75",
+   "copies": [],
+   "family": "Donjons PMDO — autotiles 24 px (DTEF 47 cases)",
+   "provenance": "PMDO DumpAsset 3e767571 (audinowho/DumpAsset)",
+   "atlas_png": "atlas/BeachCave.png",
+   "planche": "planches/BeachCave.png",
+   "planche_reduction": 15
+  },
+  {
+   "sheet": "Metano_Town_Animation_Tileset",
+   "tile_size": 8,
+   "count": 4367,
+   "atlas_size": [
+    512,
+    1408
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_Animation_Tileset.tile",
+   "sha256_tile": "51ee6afbd9da3747e060bf9c1f3dd3d9305853fbcb7cbf582b51b6fbea81e8d0",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Animation_Tileset.png",
+   "planche": "planches/Metano_Town_Animation_Tileset.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_River_Animation_1",
+   "tile_size": 8,
+   "count": 3204,
+   "atlas_size": [
+    1136,
+    1512
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_River_Animation_1.tile",
+   "sha256_tile": "e1c284b767a2f1195dc291756f44994fe904ad315c92e6d40cefc3a7ab8f9d81",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_River_Animation_1.png",
+   "planche": "planches/Metano_Town_River_Animation_1.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_River_Animation_2",
+   "tile_size": 8,
+   "count": 3204,
+   "atlas_size": [
+    1136,
+    1512
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_River_Animation_2.tile",
+   "sha256_tile": "4ebf844d4e3ed7b21ff57dd8b29f715b9494090f5417e763a754981add10a230",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_River_Animation_2.png",
+   "planche": "planches/Metano_Town_River_Animation_2.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_River_Animation_3",
+   "tile_size": 8,
+   "count": 3204,
+   "atlas_size": [
+    1136,
+    1512
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_River_Animation_3.tile",
+   "sha256_tile": "f712122bcc59e589150b4f3fb8bf689ac595ea96464f54e455f45967d9500e22",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_River_Animation_3.png",
+   "planche": "planches/Metano_Town_River_Animation_3.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_River_Animation_4",
+   "tile_size": 8,
+   "count": 3204,
+   "atlas_size": [
+    1136,
+    1512
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_River_Animation_4.tile",
+   "sha256_tile": "e6d8ff874ea3d687fb2039927700547703e19821881491b52ca43918dbf3704d",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_River_Animation_4.png",
+   "planche": "planches/Metano_Town_River_Animation_4.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Metano_Town_River_Sparkles",
+   "tile_size": 8,
+   "count": 128,
+   "atlas_size": [
+    40,
+    224
+   ],
+   "source_tile": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+   "sha256_tile": "062ba6fbecf3e62a4018f0b2eed04f6f23479bb2568d6dc81d85585b21c9e063",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_River_Sparkles.png",
+   "planche": "planches/Metano_Town_River_Sparkles.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Town_Base",
+   "tile_size": 8,
+   "count": 35646,
+   "atlas_size": [
+    1512,
+    1512
+   ],
+   "source_tile": "source/falaises_metano/natifs/Metano_Town_Base.tile",
+   "sha256_tile": "ee17ebd268f05bd71e337e1ac5773426d8038b9df169c4cb4344fe656a9a6409",
+   "copies": [],
+   "family": "Métano Town (village côtier, falaises ocre, rivière)",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Metano_Town_Base.png",
+   "planche": "planches/Metano_Town_Base.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Ledian_Dojo_Animated",
+   "tile_size": 8,
+   "count": 114,
+   "atlas_size": [
+    184,
+    72
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Animated.tile",
+   "sha256_tile": "ed00b05c61930ea5809295ad7fe8ef3f73325948d60765a33ca88955f3e08c5b",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Animated.png",
+   "planche": "planches/Ledian_Dojo_Animated.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Ceiling",
+   "tile_size": 8,
+   "count": 1293,
+   "atlas_size": [
+    408,
+    312
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Ceiling.tile",
+   "sha256_tile": "14b740a334dead37cecc927cf5a765f3d789d994283aadf868fe5eb7a0b5c9e8",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Ceiling.png",
+   "planche": "planches/Ledian_Dojo_Ceiling.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Floor",
+   "tile_size": 8,
+   "count": 923,
+   "atlas_size": [
+    336,
+    312
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Floor.tile",
+   "sha256_tile": "c5531e254b96f8eeb48bd89fe7a70de4e6248d9fa7f4c649128b29c6a53d46b5",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Floor.png",
+   "planche": "planches/Ledian_Dojo_Floor.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Objects",
+   "tile_size": 8,
+   "count": 179,
+   "atlas_size": [
+    320,
+    312
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Objects.tile",
+   "sha256_tile": "dbb0ea79e2aa2a039da4cb326ee0e13766ea7889916a20505ffc6b180d4b4e78",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Objects.png",
+   "planche": "planches/Ledian_Dojo_Objects.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Objects_Over",
+   "tile_size": 8,
+   "count": 46,
+   "atlas_size": [
+    304,
+    200
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Objects_Over.tile",
+   "sha256_tile": "42352b210e66b5ed0a5a71ec0e485869658b2a49f271e350666f0371bf7bd12d",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Objects_Over.png",
+   "planche": "planches/Ledian_Dojo_Objects_Over.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Objects_Under",
+   "tile_size": 8,
+   "count": 64,
+   "atlas_size": [
+    296,
+    152
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Objects_Under.tile",
+   "sha256_tile": "beb3aa5b9e82d4847374cc756bc6cadac7dfb4df5ddfc7f86f1f262ec6f8f42b",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Objects_Under.png",
+   "planche": "planches/Ledian_Dojo_Objects_Under.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ledian_Dojo_Shadows",
+   "tile_size": 8,
+   "count": 105,
+   "atlas_size": [
+    296,
+    248
+   ],
+   "source_tile": "source/ledian_dojo_v1/references/Ledian_Dojo_Shadows.tile",
+   "sha256_tile": "d6fc5a15c91712e0d289d9e72d429b4e5526d5de2e4f9b3349e653ea6ef52ef2",
+   "copies": [],
+   "family": "Halcyon — décors Ground divers",
+   "provenance": "Halcyon 1522c7a8 (Palikadude/Halcyon, working-copy)",
+   "atlas_png": "atlas/Ledian_Dojo_Shadows.png",
+   "planche": "planches/Ledian_Dojo_Shadows.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Cascades_Metano_Exact",
+   "tile_size": 8,
+   "count": 544,
+   "atlas_size": [
+    256,
+    136
+   ],
+   "source_tile": "sprites/eau_metano/Cascades_Metano_Exact.tile",
+   "sha256_tile": "a2bdc7574e57932c29d7669d74a376ade50db2d88dbe0a3397f73e56719edf7e",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Cascades_Metano_Exact.png",
+   "planche": "planches/Cascades_Metano_Exact.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Riviere_Metano_Compacte",
+   "tile_size": 8,
+   "count": 3904,
+   "atlas_size": [
+    128,
+    1952
+   ],
+   "source_tile": "sprites/eau_metano/Riviere_Metano_Compacte.tile",
+   "sha256_tile": "564ef2b05792451d5e65a10f71faaed94b5fcf15a198038b7bafcae1ea8e7cc5",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Riviere_Metano_Compacte.png",
+   "planche": "planches/Riviere_Metano_Compacte.png",
+   "planche_reduction": 5
+  },
+  {
+   "sheet": "Extension_Metano",
+   "tile_size": 8,
+   "count": 4864,
+   "atlas_size": [
+    512,
+    608
+   ],
+   "source_tile": "sprites/falaises_metano/Extension_Metano.tile",
+   "sha256_tile": "640462203493d6b89310513a2318a9fa7aa2e188ab33b4d359d28e4eb3bb913d",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Extension_Metano.png",
+   "planche": "planches/Extension_Metano.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Falaises_Metano_Modules",
+   "tile_size": 8,
+   "count": 3000,
+   "atlas_size": [
+    400,
+    480
+   ],
+   "source_tile": "sprites/falaises_modulaires_v2/Falaises_Metano_Modules.tile",
+   "sha256_tile": "66863e95890570518c8b04bc8b67635e2b24e9d1a0e2f14313169ce0fb8908f2",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Falaises_Metano_Modules.png",
+   "planche": "planches/Falaises_Metano_Modules.png",
+   "planche_reduction": 2
+  },
+  {
+   "sheet": "Falaises_V2_Decor",
+   "tile_size": 8,
+   "count": 2368,
+   "atlas_size": [
+    512,
+    296
+   ],
+   "source_tile": "sprites/falaises_modulaires_v2/decor/Falaises_V2_Decor.tile",
+   "sha256_tile": "f1ed0a7bb001a14bffad3ed024485a58a67fe78338ed5fc1989d6088c23e14a4",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Falaises_V2_Decor.png",
+   "planche": "planches/Falaises_V2_Decor.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Maisons_Metano_jour",
+   "tile_size": 8,
+   "count": 2240,
+   "atlas_size": [
+    560,
+    256
+   ],
+   "source_tile": "sprites/maisons_metano/Maisons_Metano_jour.tile",
+   "sha256_tile": "b423a136c0dccaece8acbf10787c4e8874648986b0d942413d64ad646ee2a18a",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Maisons_Metano_jour.png",
+   "planche": "planches/Maisons_Metano_jour.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Maisons_Metano_nuit",
+   "tile_size": 8,
+   "count": 2240,
+   "atlas_size": [
+    560,
+    256
+   ],
+   "source_tile": "sprites/maisons_metano/Maisons_Metano_nuit.tile",
+   "sha256_tile": "1482a13d406aa94ab61762a717e871ddf58e367664c0a16ca7628881cedb63aa",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Maisons_Metano_nuit.png",
+   "planche": "planches/Maisons_Metano_nuit.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Maisons_Organiques_V2_jour",
+   "tile_size": 8,
+   "count": 2240,
+   "atlas_size": [
+    560,
+    256
+   ],
+   "source_tile": "sprites/maisons_organiques_v2/Maisons_Organiques_V2_jour.tile",
+   "sha256_tile": "2acf15f0d48122a0e3433d39a9606f0a48fe14a61898c4842753eede5d502c39",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Maisons_Organiques_V2_jour.png",
+   "planche": "planches/Maisons_Organiques_V2_jour.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Maisons_Organiques_V2_nuit",
+   "tile_size": 8,
+   "count": 2240,
+   "atlas_size": [
+    560,
+    256
+   ],
+   "source_tile": "sprites/maisons_organiques_v2/Maisons_Organiques_V2_nuit.tile",
+   "sha256_tile": "dca59c0933aaf98fdeb0cfdc9094cd4769f2d1888b9bc29d047bdd668c35d4c8",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Maisons_Organiques_V2_nuit.png",
+   "planche": "planches/Maisons_Organiques_V2_nuit.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Metano_Canonique_8px",
+   "tile_size": 8,
+   "count": 10624,
+   "atlas_size": [
+    512,
+    1328
+   ],
+   "source_tile": "sprites/metano_pixel_perfect/Metano_Canonique_8px.tile",
+   "sha256_tile": "9891a511c9001f6576a0273122edc90ba2b9721a603dc9c2f278e8db259d86a6",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Metano_Canonique_8px.png",
+   "planche": "planches/Metano_Canonique_8px.png",
+   "planche_reduction": 4
+  },
+  {
+   "sheet": "Ponts_Dores_jour_1",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_jour_1.tile",
+   "sha256_tile": "6e1991e9c5a15bbf437485be60f620635ad20ea5e0bff9814c016aed591a8f22",
+   "copies": [
+    "sprites/ponts_pmdo/Ponts_Dores_jour_3.tile"
+   ],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_jour_1.png",
+   "planche": "planches/Ponts_Dores_jour_1.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ponts_Dores_jour_2",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_jour_2.tile",
+   "sha256_tile": "347d07bc5e94af0485b17cd0ef78e0122983c242217d83f4f5e8a78a12b7fcb4",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_jour_2.png",
+   "planche": "planches/Ponts_Dores_jour_2.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ponts_Dores_jour_4",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_jour_4.tile",
+   "sha256_tile": "d8196300809baa4baf61e2acd949bbcd9e6e8884cd3a624431653af725063cd3",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_jour_4.png",
+   "planche": "planches/Ponts_Dores_jour_4.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ponts_Dores_nuit_1",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_nuit_1.tile",
+   "sha256_tile": "254490f03074ab222f665bb403ce3b664e7f25ca9794964b32463af71c4b7ad4",
+   "copies": [
+    "sprites/ponts_pmdo/Ponts_Dores_nuit_3.tile"
+   ],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_nuit_1.png",
+   "planche": "planches/Ponts_Dores_nuit_1.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ponts_Dores_nuit_2",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_nuit_2.tile",
+   "sha256_tile": "1cd9da9b7cd24f32a67a2f75b53d6c965f71ff5e91d233836ee272ad717f7314",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_nuit_2.png",
+   "planche": "planches/Ponts_Dores_nuit_2.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Ponts_Dores_nuit_4",
+   "tile_size": 8,
+   "count": 600,
+   "atlas_size": [
+    480,
+    80
+   ],
+   "source_tile": "sprites/ponts_pmdo/Ponts_Dores_nuit_4.tile",
+   "sha256_tile": "936b0043ff5a32be1c018e5086d9e9d5915ba7fdeb8b408ba31efed787500c35",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Ponts_Dores_nuit_4.png",
+   "planche": "planches/Ponts_Dores_nuit_4.png",
+   "planche_reduction": 1
+  },
+  {
+   "sheet": "Zones_Guidees_Canon_8px",
+   "tile_size": 8,
+   "count": 9792,
+   "atlas_size": [
+    512,
+    1224
+   ],
+   "source_tile": "sprites/zones_guidees/Zones_Guidees_Canon_8px.tile",
+   "sha256_tile": "1faf3e25aab7c017bd15358e3c172e285e28adb6544efe23a5e9a43314a85b32",
+   "copies": [],
+   "family": "Feuilles construites par ce dépôt (non natives, à ne pas confondre)",
+   "provenance": "Construit par ce dépôt (voir README du dossier source)",
+   "atlas_png": "atlas/Zones_Guidees_Canon_8px.png",
+   "planche": "planches/Zones_Guidees_Canon_8px.png",
+   "planche_reduction": 3
+  }
+ ],
+ "native_maps": [
+  {
+   "map": "source/amp_plains_fleurie_v1/references/vast_steppe_entrance.rsground",
+   "name": "Vast Steppe Entrance",
+   "tex_size": 1,
+   "cells": [
+    64,
+    64
+   ],
+   "pixels": [
+    512,
+    512
+   ],
+   "layers": [
+    "Base",
+    "Cliffs",
+    "Objects Under",
+    "Objects",
+    "Fringe"
+   ],
+   "sheets_used": {
+    "Vast_Steppe_Base": 4096,
+    "Vast_Steppe_Cliifs": 697,
+    "Vast_Steppe_Flower_Animations": 540,
+    "Vast_Steppe_Objects_Under": 108,
+    "Vast_Steppe_Objects": 581,
+    "Vast_Steppe_Fringe": 959
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/vast_steppe_entrance.png",
+   "layer_renders": [
+    "vast_steppe_entrance__L00_Base.png",
+    "vast_steppe_entrance__L01_Cliffs.png",
+    "vast_steppe_entrance__L02_Objects_Under.png",
+    "vast_steppe_entrance__L03_Objects.png",
+    "vast_steppe_entrance__L04_Fringe.png"
+   ],
+   "planche": "planches/carte__vast_steppe_entrance.png"
+  },
+  {
+   "map": "source/antre_harmonie_v3/references/altere_pond.rsground",
+   "name": "Altere Pond",
+   "tex_size": 1,
+   "cells": [
+    116,
+    96
+   ],
+   "pixels": [
+    928,
+    768
+   ],
+   "layers": [
+    "Base",
+    "River",
+    "Cliffs",
+    "Shadows",
+    "Objects Under",
+    "Objects",
+    "Objects Over",
+    "Fringe"
+   ],
+   "sheets_used": {
+    "Altere_Pond_Base": 10251,
+    "Altere_Pond_River_Animations": 4512,
+    "Altere_Pond_Cliffs": 1840,
+    "Altere_Pond_Shadows": 56,
+    "Altere_Pond_Objects_Under": 609,
+    "Metano_Town_Animation_Tileset": 3765,
+    "Altere_Pond_Objects": 4012,
+    "": 25,
+    "Altere_Pond_Objects_Over": 76,
+    "Altere_Pond_Fringe": 2075
+   },
+   "sheets_missing": {
+    "": 11
+   },
+   "render": "cartes_natives/altere_pond.png",
+   "layer_renders": [
+    "altere_pond__L00_Base.png",
+    "altere_pond__L01_River.png",
+    "altere_pond__L02_Cliffs.png",
+    "altere_pond__L03_Shadows.png",
+    "altere_pond__L04_Objects_Under.png",
+    "altere_pond__L05_Objects.png",
+    "altere_pond__L06_Objects_Over.png",
+    "altere_pond__L07_Fringe.png"
+   ],
+   "planche": "planches/carte__altere_pond.png"
+  },
+  {
+   "map": "source/cafe_multietage_v1/references/metano_cafe.rsground",
+   "name": "Metano Café",
+   "tex_size": 1,
+   "cells": [
+    57,
+    40
+   ],
+   "pixels": [
+    456,
+    320
+   ],
+   "layers": [
+    "Base",
+    "Objects Under",
+    "Objects",
+    "Objects Over",
+    "Fringe"
+   ],
+   "sheets_used": {
+    "Metano_Town_Cafe_Base": 2280,
+    "Metano_Town_Cafe_Objects_Under": 138,
+    "Metano_Town_Cafe_Objects": 629,
+    "Metano_Town_Cafe_Objects_Over": 148,
+    "Metano_Town_Cafe_Objects_Fringe": 7
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/metano_cafe.png",
+   "layer_renders": [
+    "metano_cafe__L00_Base.png",
+    "metano_cafe__L01_Objects_Under.png",
+    "metano_cafe__L02_Objects.png",
+    "metano_cafe__L03_Objects_Over.png",
+    "metano_cafe__L04_Fringe.png"
+   ],
+   "planche": "planches/carte__metano_cafe.png"
+  },
+  {
+   "map": "source/cafe_multietage_v1/references/spinda_cafe.rsground",
+   "name": "Spinda Cafe",
+   "tex_size": 1,
+   "cells": [
+    87,
+    57
+   ],
+   "pixels": [
+    696,
+    456
+   ],
+   "layers": [
+    "Background",
+    "Decorations"
+   ],
+   "sheets_used": {
+    "SpindaCafe1": 4959,
+    "SpindaCafe2": 835
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/spinda_cafe.png",
+   "layer_renders": [
+    "spinda_cafe__L00_Background.png",
+    "spinda_cafe__L01_Decorations.png"
+   ],
+   "planche": "planches/carte__spinda_cafe.png"
+  },
+  {
+   "map": "source/cafe_multietage_v3/references/guild_second_floor.rsground",
+   "name": "Guild Second Floor",
+   "tex_size": 1,
+   "cells": [
+    84,
+    56
+   ],
+   "pixels": [
+    672,
+    448
+   ],
+   "layers": [
+    "Floor",
+    "Walls",
+    "Objects Under",
+    "Objects",
+    "Objects Over",
+    "Shadows",
+    "Fringe",
+    "Supports"
+   ],
+   "sheets_used": {
+    "Guild_Second_Floor_Floor": 2464,
+    "Guild_Second_Floor_Walls": 987,
+    "Guild_Second_Floor_Objects_Under": 18,
+    "Guild_Second_Floor_Objects": 747,
+    "Guild_Second_Floor_Objects_Over": 30,
+    "Guild_Second_Floor_Shadows": 43,
+    "Guild_Second_Floor_Fringe": 9,
+    "Guild_Second_Floor_Supports": 2596
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/guild_second_floor.png",
+   "layer_renders": [
+    "guild_second_floor__L00_Floor.png",
+    "guild_second_floor__L01_Walls.png",
+    "guild_second_floor__L02_Objects_Under.png",
+    "guild_second_floor__L03_Objects.png",
+    "guild_second_floor__L04_Objects_Over.png",
+    "guild_second_floor__L05_Shadows.png",
+    "guild_second_floor__L06_Fringe.png",
+    "guild_second_floor__L07_Supports.png"
+   ],
+   "planche": "planches/carte__guild_second_floor.png"
+  },
+  {
+   "map": "source/cote_v5_expeditions/references/ExplorersOfSkyOrigins__Brine_Cave_Entrance.rsground",
+   "name": "",
+   "tex_size": 3,
+   "cells": [
+    27,
+    21
+   ],
+   "pixels": [
+    648,
+    504
+   ],
+   "layers": [
+    "New Layer"
+   ],
+   "sheets_used": {
+    "Brine Cave Entrance": 8505
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/ExplorersOfSkyOrigins__Brine_Cave_Entrance.png",
+   "layer_renders": [
+    "ExplorersOfSkyOrigins__Brine_Cave_Entrance__L00_New_Layer.png"
+   ],
+   "planche": "planches/carte__ExplorersOfSkyOrigins__Brine_Cave_Entrance.png"
+  },
+  {
+   "map": "source/cote_v5_expeditions/references/ExplorersOfSkyOrigins__drenched_bluff_entrance.rsground",
+   "name": "",
+   "tex_size": 1,
+   "cells": [
+    66,
+    51
+   ],
+   "pixels": [
+    528,
+    408
+   ],
+   "layers": [
+    "Background",
+    "Details"
+   ],
+   "sheets_used": {
+    "DrenchedBluffEntranceBackground": 3366,
+    "DrenchedBluffEntranceDetails": 1674
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/ExplorersOfSkyOrigins__drenched_bluff_entrance.png",
+   "layer_renders": [
+    "ExplorersOfSkyOrigins__drenched_bluff_entrance__L00_Background.png",
+    "ExplorersOfSkyOrigins__drenched_bluff_entrance__L01_Details.png"
+   ],
+   "planche": "planches/carte__ExplorersOfSkyOrigins__drenched_bluff_entrance.png"
+  },
+  {
+   "map": "source/cote_v5_expeditions/references/Halcyon__crooked_cavern_entrance.rsground",
+   "name": "Crooked Cavern Entrance",
+   "tex_size": 1,
+   "cells": [
+    40,
+    30
+   ],
+   "pixels": [
+    320,
+    240
+   ],
+   "layers": [
+    "Base",
+    "Objects",
+    "Shadows"
+   ],
+   "sheets_used": {
+    "Crooked_Cavern_Base": 1200,
+    "Crooked_Cavern_Objects": 116,
+    "Crooked_Cavern_Shadows": 83
+   },
+   "sheets_missing": {},
+   "render": "cartes_natives/Halcyon__crooked_cavern_entrance.png",
+   "layer_renders": [
+    "Halcyon__crooked_cavern_entrance__L00_Base.png",
+    "Halcyon__crooked_cavern_entrance__L01_Objects.png",
+    "Halcyon__crooked_cavern_entrance__L02_Shadows.png"
+   ],
+   "planche": "planches/carte__Halcyon__crooked_cavern_entrance.png"
+  },
+  {
+   "map": "source/ledian_dojo_v1/references/ledian_dojo.rsground",
+   "name": "Ledian Dojo",
+   "tex_size": 1,
+   "cells": [
+    51,
+    39
+   ],
+   "pixels": [
+    408,
+    312
+   ],
+   "layers": [
+    "Floor",
+    "Objects Under",
+    "Objects",
+    "Objects Over",
+    "Shadows",
+    "Ceiling"
+   ],
+   "sheets_used": {
+    "Ledian_Dojo_Floor": 923,
+    "Ledian_Dojo_Objects_Under": 8,
+    "": 12,
+    "Ledian_Dojo_Animated": 228,
+    "Ledian_Dojo_Objects": 179,
+    "Ledian_Dojo_Objects_Over": 46,
+    "Ledian_Dojo_Shadows": 105,
+    "Ledian_Dojo_Ceiling": 1293
+   },
+   "sheets_missing": {
+    "": 4
+   },
+   "render": "cartes_natives/ledian_dojo.png",
+   "layer_renders": [
+    "ledian_dojo__L00_Floor.png",
+    "ledian_dojo__L01_Objects_Under.png",
+    "ledian_dojo__L02_Objects.png",
+    "ledian_dojo__L03_Objects_Over.png",
+    "ledian_dojo__L04_Shadows.png",
+    "ledian_dojo__L05_Ceiling.png"
+   ],
+   "planche": "planches/carte__ledian_dojo.png"
+  },
+  {
+   "map": "cliffdaytest.rsground",
+   "name": "CliffReverietownnordest",
+   "tex_size": 1,
+   "cells": [
+    123,
+    99
+   ],
+   "pixels": [
+    984,
+    792
+   ],
+   "layers": [
+    "New Layer",
+    "Layer 2",
+    "Layer 2",
+    "Layer 4",
+    "Layer 3",
+    "Cloud/nuage"
+   ],
+   "sheets_used": {
+    "00_ciel": 10205,
+    "Altere_Pond_Cliffs": 1,
+    "CanyonCamp": 112,
+    "v2_promontoire_jour_03": 7503,
+    "13_avancee_basse_gauche_terrain": 347,
+    "Metano_Town_Cliffs": 2115,
+    "INVERSEPATHWAY": 1891,
+    "CLIFF MIROR-Photoroom": 1096,
+    "Metano_Town_Objects": 1404,
+    "P01P01A_layer1": 8,
+    "": 12,
+    "Metano_Town_Animation_Tileset": 2007,
+    "Metano_Town_Animated": 64,
+    "01_long_cap_jour_02": 600,
+    "Altere_Pond_Objects": 48,
+    "Altere_Pond_Objects_Under": 24,
+    "Metano_Town_Trimmed": 145,
+    "Metano_Inn_Objects": 69
+   },
+   "sheets_missing": {
+    "00_ciel": 10205,
+    "CanyonCamp": 112,
+    "v2_promontoire_jour_03": 7503,
+    "13_avancee_basse_gauche_terrain": 347,
+    "INVERSEPATHWAY": 1891,
+    "CLIFF MIROR-Photoroom": 1096,
+    "P01P01A_layer1": 8,
+    "": 4,
+    "Metano_Town_Animated": 64,
+    "01_long_cap_jour_02": 600,
+    "Metano_Town_Trimmed": 145,
+    "Metano_Inn_Objects": 69
+   },
+   "render": "cartes_natives/cliffdaytest.png",
+   "layer_renders": [
+    "cliffdaytest__L00_New_Layer.png",
+    "cliffdaytest__L01_Layer_2.png",
+    "cliffdaytest__L02_Layer_2.png",
+    "cliffdaytest__L03_Layer_4.png",
+    "cliffdaytest__L04_Layer_3.png",
+    "cliffdaytest__L05_Cloud_nuage.png"
+   ],
+   "planche": "planches/carte__cliffdaytest.png"
+  },
+  {
+   "map": "cliffnordouesttest1.rsground",
+   "name": "",
+   "tex_size": 1,
+   "cells": [
+    138,
+    98
+   ],
+   "pixels": [
+    1104,
+    784
+   ],
+   "layers": [
+    "Layer 2",
+    "Layer 1",
+    "New Layer",
+    "Layer 3"
+   ],
+   "sheets_used": {
+    "00_ciel": 8004,
+    "v2_promontoire_jour_03": 6209,
+    "Altere_Pond_Cliffs": 1,
+    "terrain": 992,
+    "Metano_Altere_Transition_Base": 3070,
+    "terrain (4)": 451,
+    "terrain (3)": 130,
+    "terrain (2)": 94,
+    "INVERSEPATHWAY": 1111,
+    "Metano_Town_Animation_Tileset": 80
+   },
+   "sheets_missing": {
+    "00_ciel": 8004,
+    "v2_promontoire_jour_03": 6209,
+    "terrain": 992,
+    "Metano_Altere_Transition_Base": 3070,
+    "terrain (4)": 451,
+    "terrain (3)": 130,
+    "terrain (2)": 94,
+    "INVERSEPATHWAY": 1111
+   },
+   "render": "cartes_natives/cliffnordouesttest1.png",
+   "layer_renders": [
+    "cliffnordouesttest1__L00_Layer_2.png",
+    "cliffnordouesttest1__L01_Layer_1.png",
+    "cliffnordouesttest1__L02_New_Layer.png",
+    "cliffnordouesttest1__L03_Layer_3.png"
+   ],
+   "planche": "planches/carte__cliffnordouesttest1.png"
+  }
+ ],
+ "reference_pngs": [
+  {
+   "file": "arenapmdskybeach.png",
+   "size": [
+    456,
+    480
+   ],
+   "planche": "references_png/arenapmdskybeach.png",
+   "sha256": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9"
+  },
+  {
+   "file": "aurorepmdsky.png",
+   "size": [
+    264,
+    216
+   ],
+   "planche": "references_png/aurorepmdsky.png",
+   "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+  },
+  {
+   "file": "bassinchauffantpmdsky.png",
+   "size": [
+    504,
+    408
+   ],
+   "planche": "references_png/bassinchauffantpmdsky.png",
+   "sha256": "fd0ef212c388e67c35ba9da413b94d570c9651af41c2903da8308102399ab628"
+  },
+  {
+   "file": "bgnightbackgroundpmdskyda.png",
+   "size": [
+    456,
+    240
+   ],
+   "planche": "references_png/bgnightbackgroundpmdskyda.png",
+   "sha256": "954e5b431aebef54b1eeb3a77b919bb3cfba13ca9ddb71fd45cca489c047f9c7"
+  },
+  {
+   "file": "entrancearidedungeonpmdsky.png",
+   "size": [
+    408,
+    288
+   ],
+   "planche": "references_png/entrancearidedungeonpmdsky.png",
+   "sha256": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a"
+  },
+  {
+   "file": "forêtglomypmdsky.png",
+   "size": [
+    600,
+    312
+   ],
+   "planche": "references_png/for_tglomypmdsky.png",
+   "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7"
+  },
+  {
+   "file": "iceroadpmdsky.png",
+   "size": [
+    504,
+    360
+   ],
+   "planche": "references_png/iceroadpmdsky.png",
+   "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+  },
+  {
+   "file": "interiorbedroompmdsky.png",
+   "size": [
+    504,
+    384
+   ],
+   "planche": "references_png/interiorbedroompmdsky.png",
+   "sha256": "62ced0f4770b8572b10aa4f1a477c8d8d830f715ffc89a75cd7716b0f6992ec5"
+  },
+  {
+   "file": "junglewaterfallzonepmdsky.png",
+   "size": [
+    744,
+    1032
+   ],
+   "planche": "references_png/junglewaterfallzonepmdsky.png",
+   "sha256": "6cd3c095e1da6075958fbdc5b793a3e0e44c7c9f6dd14d2dad37cd94a9be6193"
+  },
+  {
+   "file": "lakecrystalpmdsky.png",
+   "size": [
+    696,
+    600
+   ],
+   "planche": "references_png/lakecrystalpmdsky.png",
+   "sha256": "160aba8a222ae914d493385087795c1723c7dbf6f9fa2d6b460915b492a42c96"
+  },
+  {
+   "file": "large.P27P01A.png.c5ad9818930eb0d4f403f64607318c37.png",
+   "size": [
+    360,
+    312
+   ],
+   "planche": "references_png/large_P27P01A_png_c5ad9818930eb0d4f403f64607318c37.png",
+   "sha256": "dadf3a4afbfa3c3b97596c84c02a2b1ed8b2bb03f238874469c4ba760223f0c2"
+  },
+  {
+   "file": "large.S01P03A.png.84e22fb77c4061e77b0f546545fed2c7.png",
+   "size": [
+    456,
+    456
+   ],
+   "planche": "references_png/large_S01P03A_png_84e22fb77c4061e77b0f546545fed2c7.png",
+   "sha256": "e9145e2170d872d1329c5737a4d96d454546bdf888042dd4f0bfbfeda7a2e2a5"
+  },
+  {
+   "file": "large.S05P03A.png.301f7a1eadda348357be0801e81faa2a.png",
+   "size": [
+    312,
+    720
+   ],
+   "planche": "references_png/large_S05P03A_png_301f7a1eadda348357be0801e81faa2a.png",
+   "sha256": "a4b168b07ecd76b154a79a6ea434bc67b8d1d6f6ad7a82ff0711a79a5cedbd94"
+  },
+  {
+   "file": "oldcastlepmd.png",
+   "size": [
+    408,
+    408
+   ],
+   "planche": "references_png/oldcastlepmd.png",
+   "sha256": "809f27543260614c133b892cae9572d85dfedc0b2ed28deac5b689805bf20b88"
+  },
+  {
+   "file": "pmdskyicearena.png",
+   "size": [
+    504,
+    408
+   ],
+   "planche": "references_png/pmdskyicearena.png",
+   "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+  },
+  {
+   "file": "roadundergound.png",
+   "size": [
+    504,
+    408
+   ],
+   "planche": "references_png/roadundergound.png",
+   "sha256": "77cb97730bc05b3eca0c83b9e7119b9f4043633d9bc948103e1317fb281ec810"
+  },
+  {
+   "file": "rockgeyserlike.png",
+   "size": [
+    456,
+    528
+   ],
+   "planche": "references_png/rockgeyserlike.png",
+   "sha256": "74f5b0f070921f825db45acb1cecfdab494744e988c3a1b00f6e6d39c60f10f8"
+  },
+  {
+   "file": "rockroadpmd.png",
+   "size": [
+    624,
+    288
+   ],
+   "planche": "references_png/rockroadpmd.png",
+   "sha256": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4"
+  },
+  {
+   "file": "secretgarden.png",
+   "size": [
+    408,
+    408
+   ],
+   "planche": "references_png/secretgarden.png",
+   "sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f"
+  },
+  {
+   "file": "starcavepmdsky.png",
+   "size": [
+    1008,
+    504
+   ],
+   "planche": "references_png/starcavepmdsky.png",
+   "sha256": "4aa7edd76aa16bc7674fec693e565e468d2bf266e7be898e3c011eab36de5b45"
+  },
+  {
+   "file": "undergroundpmd.png",
+   "size": [
+    816,
+    408
+   ],
+   "planche": "references_png/undergroundpmd.png",
+   "sha256": "583c864ead20d75b43ce70daf2a4f261e44bcf028031d085507faade5b063f03"
+  },
+  {
+   "file": "energeticforest.png",
+   "size": [
+    480,
+    336
+   ],
+   "planche": "references_png/energeticforest.png",
+   "sha256": "c4f6802ec003546144c585092c767d24d672c93efbd8e2c23f6799c319e5c3bd"
+  },
+  {
+   "file": "finalisland.png",
+   "size": [
+    480,
+    312
+   ],
+   "planche": "references_png/finalisland.png",
+   "sha256": "dae533b0cb304a3fbf93f272aa433b0f51b203c4c95008d422a4d2bfe84c3f12"
+  },
+  {
+   "file": "witheringdesert.png",
+   "size": [
+    456,
+    336
+   ],
+   "planche": "references_png/witheringdesert.png",
+   "sha256": "4579a8dd877f90483372de7879fe4a6362af8b81218222e7cf2d153766854197"
+  },
+  {
+   "file": "DSVFS.png",
+   "size": [
+    702,
+    466
+   ],
+   "planche": "references_png/DSVFS.png",
+   "sha256": "583de9d7f04ab5001f9a0052c7160a1ef878b9540f3f9185ccb6535b327f21db"
+  },
+  {
+   "file": "Amp_Plains_entrance_TD.png",
+   "size": [
+    456,
+    408
+   ],
+   "planche": "references_png/Amp_Plains_entrance_TD.png",
+   "sha256": "327f9fb11a2b2a5314c36bf2b769e1452d719df344df68ccb7428c6acbb4c8e2"
+  },
+  {
+   "file": "Apple_Woods_entrance_TDS.png",
+   "size": [
+    552,
+    408
+   ],
+   "planche": "references_png/Apple_Woods_entrance_TDS.png",
+   "sha256": "cb37d8b5705cbc1fd169415c46a824a956f35acf5f994204ac95219b552d69fd"
+  },
+  {
+   "file": "Dark_Crater_Pit_TDS.png",
+   "size": [
+    552,
+    576
+   ],
+   "planche": "references_png/Dark_Crater_Pit_TDS.png",
+   "sha256": "3e4cc9b113789a1c63b21ba70b8f1a7e6095475b61c81c5b5e95557806a2e691"
+  },
+  {
+   "file": "Dark_Crater_entrance_TDS.png",
+   "size": [
+    360,
+    456
+   ],
+   "planche": "references_png/Dark_Crater_entrance_TDS.png",
+   "sha256": "b2b68ea8917e5285e91c4cc84b4cbbe47c38f4bad5e399dab48ecbd26b177630"
+  },
+  {
+   "file": "Foggy_Forest_Base_Camp_TDS.png",
+   "size": [
+    600,
+    792
+   ],
+   "planche": "references_png/Foggy_Forest_Base_Camp_TDS.png",
+   "sha256": "2d83b7f3fa48015a9e6eec5adeeadd284787ee266e5537ba3302bc9adc3e51d7"
+  },
+  {
+   "file": "Mt_Bristle_entrance_TD.png",
+   "size": [
+    552,
+    480
+   ],
+   "planche": "references_png/Mt_Bristle_entrance_TD.png",
+   "sha256": "6cf1c4b03e24a8131c0d89b282558e9a2483d947f6478dbaebe3de65039c5ece"
+  },
+  {
+   "file": "Mt_Horn_entrance_Sky.png",
+   "size": [
+    552,
+    360
+   ],
+   "planche": "references_png/Mt_Horn_entrance_Sky.png",
+   "sha256": "ceae26ab79d160e5f7106e93c817ac581ec7ab654db2eed0bdb1ee7fd7964a46"
+  },
+  {
+   "file": "Mystifying_Forest_entrance_TDS.png",
+   "size": [
+    600,
+    504
+   ],
+   "planche": "references_png/Mystifying_Forest_entrance_TDS.png",
+   "sha256": "9f45d140aebe5559d9d1ea8d5891825d4450e7a550ba30d6be97af1af9e3e941"
+  },
+  {
+   "file": "Sealed_Ruin_entrance_TDS.png",
+   "size": [
+    600,
+    384
+   ],
+   "planche": "references_png/Sealed_Ruin_entrance_TDS.png",
+   "sha256": "7860bf449986d6047494a3a3698deab5097c877aa90fdf7b16dbccb2ed6e0975"
+  },
+  {
+   "file": "Sealed_Ruin_pit_TDS.png",
+   "size": [
+    648,
+    528
+   ],
+   "planche": "references_png/Sealed_Ruin_pit_TDS.png",
+   "sha256": "0da58d8e12106125ff81a7f715f01354c6d734fbb79901be22f5d9472385e106"
+  },
+  {
+   "file": "Southern_Jungle_entrance_S.png",
+   "size": [
+    504,
+    432
+   ],
+   "planche": "references_png/Southern_Jungle_entrance_S.png",
+   "sha256": "c072590a2c07853be0185eab60e6f9f0023ce707548b3e4038f7993f28dc1e77"
+  },
+  {
+   "file": "Southern_Jungle_exit_2_S.png",
+   "size": [
+    600,
+    456
+   ],
+   "planche": "references_png/Southern_Jungle_exit_2_S.png",
+   "sha256": "4fe7c0ef41aac63b0a1b58f863c11743eb4b95a6a0f169388b491dfc10347564"
+  },
+  {
+   "file": "Southern_Jungle_exit_S.png",
+   "size": [
+    504,
+    456
+   ],
+   "planche": "references_png/Southern_Jungle_exit_S.png",
+   "sha256": "9e8590619fe9a5004af132583839f10e651b4f05f82ed767309c8cd4dec1ea7c"
+  },
+  {
+   "file": "Steam_Cave_Peak_TDS.png",
+   "size": [
+    648,
+    624
+   ],
+   "planche": "references_png/Steam_Cave_Peak_TDS.png",
+   "sha256": "248c4a04aa0fee132efec45ae4d6f13b595340a02b4fc0af7602cce02750841a"
+  },
+  {
+   "file": "Steam_Cave_entrance_TDS.png",
+   "size": [
+    504,
+    440
+   ],
+   "planche": "references_png/Steam_Cave_entrance_TDS.png",
+   "sha256": "cd93fc49a404785b3b8e3de3140010d8803b577c5bf3546ce2f0a192f564acd2"
+  },
+  {
+   "file": "Underground_Lake_shore_TDS.png",
+   "size": [
+    600,
+    600
+   ],
+   "planche": "references_png/Underground_Lake_shore_TDS.png",
+   "sha256": "ad1b59ab8960ef35bd75381aeb85af3a20c64ebc31369c0f65078ff1d77fd463"
+  },
+  {
+   "file": "Waterfall_Cave_gem_TDS.png",
+   "size": [
+    504,
+    432
+   ],
+   "planche": "references_png/Waterfall_Cave_gem_TDS.png",
+   "sha256": "7fb9a83c6b1dc920422eef1a9db59e269feb3d923fe2652309ca86576be498be"
+  },
+  {
+   "file": "Waterfall_Cave_ledge_TDS.png",
+   "size": [
+    408,
+    552
+   ],
+   "planche": "references_png/Waterfall_Cave_ledge_TDS.png",
+   "sha256": "c641e3470108bd0478f7c19598d5554dd8fc77053ca637766534691a03e7a711"
+  },
+  {
+   "file": "DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Sky - Maps - Murky Forest & Armaldo House.png",
+   "size": [
+    1162,
+    697
+   ],
+   "planche": "references_png/DS_DSi_Pokemon_Mystery_Dungeon_Explorers_of_Sky_Maps_Murky_F.png",
+   "sha256": "72d17b72012d545e7ed2699152d1c422afdec56c253485b3f0885076bb01c8d1"
+  },
+  {
+   "file": "DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Time _ Darkness - Backgrounds - Beach & Path to Beach.png",
+   "size": [
+    1650,
+    990
+   ],
+   "planche": "references_png/DS_DSi_Pokemon_Mystery_Dungeon_Explorers_of_Time_Darkness_Ba.png",
+   "sha256": "7e85d96d7c74e6ab52c46356d7600137115ddd023236a31f47a678eb5e40780c"
+  },
+  {
+   "file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Dungeon Boss Rooms - Mt. Thunder.png",
+   "size": [
+    432,
+    498
+   ],
+   "planche": "references_png/Game_Boy_Advance_Pokemon_Mystery_Dungeon_Red_Rescue_Team_Dun.png",
+   "sha256": "6f1dc6a9a907fff7e3e8f57ea3a97a3e0a5de36312ce7939d7834f6d407da416"
+  },
+  {
+   "file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Dungeon Boss Rooms - Northern Range.png",
+   "size": [
+    456,
+    432
+   ],
+   "planche": "references_png/Game_Boy_Advance_Pokemon_Mystery_Dungeon_Red_Rescue_Team_Dun.png",
+   "sha256": "9f48864a94bb0290e8b2b9b42cae9758bf75afe9885dfbd955be995851dd164f"
+  },
+  {
+   "file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Friend Areas - Energetic Forest.png",
+   "size": [
+    857,
+    372
+   ],
+   "planche": "references_png/Game_Boy_Advance_Pokemon_Mystery_Dungeon_Red_Rescue_Team_Fri.png",
+   "sha256": "255e2f597f927bb0cdded7f6d1550051593aa06a6c6871f50ccf37ace09b9b8d"
+  },
+  {
+   "file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Friend Areas - Mushroom Forest.png",
+   "size": [
+    456,
+    445
+   ],
+   "planche": "references_png/Game_Boy_Advance_Pokemon_Mystery_Dungeon_Red_Rescue_Team_Fri.png",
+   "sha256": "f4b5297ec81ab551d56aab7dca699ffb1845c1c690618f5d206a747510a5810d"
+  },
+  {
+   "file": "Game Boy Advance - Pokemon Mystery Dungeon_ Red Rescue Team - Friend Areas - Waterfall Lake.png",
+   "size": [
+    456,
+    312
+   ],
+   "planche": "references_png/Game_Boy_Advance_Pokemon_Mystery_Dungeon_Red_Rescue_Team_Fri.png",
+   "sha256": "086346effbfdf07a82a64f59b509f96d2a3d861f03bb46253585b37eb5df5406"
+  }
+ ],
+ "note": "Atlas 1:1 en alpha droit, décodés des .tile prémultipliés. Vignettes réduites uniquement pour la navigation."
+}
