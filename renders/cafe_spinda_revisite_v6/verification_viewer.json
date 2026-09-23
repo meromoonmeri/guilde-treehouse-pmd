@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "variants": [
+    "repository",
+    "root redirect target",
+    "extracted PNG ZIP"
+  ],
+  "checks": [
+    "5-room navigation",
+    "layer and café-window toggles",
+    "PNG export state without guides",
+    "magenta/transparency export state",
+    "all asset URLs resolve",
+    "4-pose catalog animation",
+    "asynchronous navigation race guard"
+  ],
+  "method": "Node vm with DOM/canvas mocks; no graphical rasterization or PMDO test"
+}
