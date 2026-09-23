@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Jungle générée V2 — strict magenta, arbres canoniques, échelle PMDO
+
+- **[Recomposition web : 5 calques, 18 phases, grille 8 px](apercu_jungle_generee_v2.html)**.
+- [GIF boucle exacte 1440 ms](renders/jungle_generee_v2/JungleG2_animation.gif) · [ORA](renders/jungle_generee_v2/JungleG2_5_calques.ora) · [pack ZIP](renders/jungle_generee_v2_pack.zip).
+- [Méthode magenta, partition et échelle PMDO](renders/jungle_generee_v2/README.md).
+
+Terrain strict 848×1264 (NEAREST ×0.5, jamais anisotrope), 6 chutes coupées en haut sur
+calque propre animé, 2 arbres jungle canoniques générés au premier plan, scène 512×640
+= 64×80 cases 8 px (TexSize=1, import sans rééchantillonnage). Zéro magenta résiduel,
+10 tests PASS. Art généré référencé (V1 native conservée) ; runtime non validé.
+
 ## Jungle aux cascades — 5 calques natifs, chutes animées, source cachée
 
 - **[Recomposition web : calques, 26 phases, grille 8 px, export PNG](apercu_jungle_cascades_v1.html)**.

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="JungleG2_01_sol" tilewidth="8" tileheight="8" columns="64" tilecount="5120"><image source="JungleG2_01_sol.png" width="512" height="640" /></tileset>

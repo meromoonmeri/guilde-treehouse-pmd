@@ -1,0 +1,159 @@
+{
+ "id": "jungle_generee_v2",
+ "title": "Jungle generee V2 \u2014 terrain strict magenta, 5 calques",
+ "methode": "generee_magenta",
+ "natif": false,
+ "size": [
+  512,
+  640
+ ],
+ "orientation": "SOUTH_TO_NORTH",
+ "pmdo_scale": {
+  "cases_8px": [
+   64,
+   80
+  ],
+  "texsize": 1,
+  "importe": "PNG to Tileset 8px, sans reechantillonnage",
+  "note": "proportions PMD Sky : arbre ~170px ; normalisation uniforme x0.5 NEAREST (terrain), x0.45 (arbres)"
+ },
+ "bruts": [
+  "source/jungle_generee_v2/bruts/terrain_strict.png",
+  "source/jungle_generee_v2/bruts/arbres_canoniques.png",
+  "source/suite_generee_v1/bruts/jungle_cascades_sol.png"
+ ],
+ "layers": [
+  {
+   "id": "01_sol",
+   "file": "JungleG2_01_sol.png"
+  },
+  {
+   "id": "02_paroi",
+   "file": "JungleG2_02_paroi.png"
+  },
+  {
+   "id": "03_cascades",
+   "file": "JungleG2_03_cascades.png"
+  },
+  {
+   "id": "04_bassins",
+   "file": "JungleG2_04_bassins.png"
+  },
+  {
+   "id": "05_vegetation",
+   "file": "JungleG2_05_vegetation.png"
+  }
+ ],
+ "partition": {
+  "bandes_chutes": [
+   [
+    123,
+    136
+   ],
+   [
+    163,
+    206
+   ],
+   [
+    229,
+    242
+   ],
+   [
+    269,
+    282
+   ],
+   [
+    306,
+    348
+   ],
+   [
+    375,
+    388
+   ]
+  ],
+  "pieds_y": 288,
+  "boites_bassins": [
+   [
+    115,
+    270,
+    245,
+    375
+   ],
+   [
+    265,
+    270,
+    395,
+    375
+   ]
+  ],
+  "bas_paroi_y": 290,
+  "arbres_annexes": [
+   {
+    "src": [
+     13,
+     38,
+     390,
+     438
+    ],
+    "echelle": 0.45,
+    "taille": [
+     169,
+     180
+    ],
+    "position": [
+     0,
+     460
+    ]
+   },
+   {
+    "src": [
+     798,
+     458,
+     1169,
+     883
+    ],
+    "echelle": 0.45,
+    "taille": [
+     166,
+     191
+    ],
+    "position": [
+     342,
+     449
+    ]
+   }
+  ]
+ },
+ "animation": {
+  "layer": "03_cascades",
+  "phases": 18,
+  "step_px": 16,
+  "frame_ms": 80,
+  "loop_ms": 1440,
+  "offsets": [
+   0,
+   48,
+   96,
+   32,
+   128,
+   80
+  ],
+  "method": "generated pixels vertical roll over full 288px height, 18x16 loop exact, NEW movement"
+ },
+ "operations": [
+  {
+   "op": "normalisation terrain x0.5 NEAREST a (44,0)",
+   "magenta": "inondation bords + seuil serre"
+  },
+  {
+   "op": "partition terrain en 4 masques + sol genere + 2 arbres x0.45"
+  }
+ ],
+ "runtime": "NOT TESTED",
+ "art_approved": false,
+ "notes": [
+  "Art GENERE refere PMD, pas natif : aucune revendication pixel-exact canonique.",
+  "Chutes coupees au bord haut, pieds en pleine ecume, calque propre anime.",
+  "Recomposition exacte par construction (partition sans recouvrement ni trou)."
+ ]
+}

@@ -438,3 +438,21 @@ suite_generee_v1 tranche (levres sources REJETEES, composition seule). 13 tests 
 viewer JS syntaxe OK, registre programme : jungle candidate (3/23, reste 17). Les 3 autres
 bruts du lot (aride/plage/jardin) sont conserves comme guides, non convertis. Ne pas
 appeler l'animation le cycle officiel. Art et runtime non valides.
+
+## Jungle generee V2 — strict magenta, arbres canoniques, echelle PMDO (23 septembre 2026)
+
+Correction utilisateur : utiliser le GENERATEUR sur fond magenta (pas l'assemblage
+natif V1), etre plus strict (arbres canoniques), echelle PMDO des maps. V1 native
+conservee en parallele, non ecrasee. `source/jungle_generee_v2/build.py`,
+`renders/jungle_generee_v2/`, viewer `apercu_jungle_generee_v2.html`, ZIP 36 fichiers.
+Bruts : terrain strict 848x1264 (6 chutes coupees haut, 2 bassins, palmiers cotes),
+planche 6 arbres jungle (2 utilises x0.45 + premier plan), sol reutilise.
+Normalisation uniforme : terrain NEAREST x0.5 a (44,0), scene 512x640 = 64x80 cases 8px
+TexSize=1, import PNG to Tileset 8px sans reechantillonnage. 5 calques par partition
+exacte : sol/paroi/cascades(18 phases x 16px = boucle 288 exacte, 80ms, calque propre)/
+bassins/vegetation. Alpha : inondation magenta + seuils serres + regle min(R,B)-G>25 +
+darkmag + decontamination + alpha binaire (halo LANCZOS tue, zero residu teste).
+Remontee chutes au bord haut (1px magenta). 10 tests PASS, viewer JS OK. Honnete :
+methode=generee_magenta, natif=False, runtime NOT TESTED. Sandbox reset en cours :
+.venv reconstruite, historique local retombe a d5c79863 (fichiers intacts, push distant
+3a7034d7 conserve) ; reprise par soft-reset sur la pointe distante avant push V2.

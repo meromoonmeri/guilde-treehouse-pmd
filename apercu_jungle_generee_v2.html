@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jungle generee V2 — terrain strict magenta, 5 calques, echelle PMDO</title>
+<style>
+  body{background:#1c2b1c;color:#e8f0e8;font-family:system-ui,sans-serif;margin:0;padding:16px}
+  h1{font-size:18px;margin:0 0 4px} p{font-size:13px;color:#b9c9b9;margin:4px 0 12px}
+  #wrap{display:flex;gap:16px;flex-wrap:wrap}
+  canvas{image-rendering:pixelated;background:#000;border:1px solid #456}
+  #panel{background:#243524;padding:12px;border-radius:8px;min-width:230px;font-size:14px}
+  #panel label{display:block;margin:6px 0;cursor:pointer}
+  #panel input{margin-right:8px}
+  button{margin:6px 4px 0 0;padding:6px 10px;cursor:pointer}
+  #status{font-size:12px;color:#9fb}
+</style>
+</head>
+<body>
+<h1>Jungle generee V2 — strict magenta, 64×80 cases 8 px (TexSize=1)</h1>
+<p>Terrain genere strict (chutes coupees en haut, source cachee) + 2 arbres canoniques generes ·
+18 phases × 80 ms, boucle exacte 1440 ms · art genere refere PMD, pas natif ·
+recomposition exacte canvas = somme des calques.</p>
+<div id="wrap">
+  <canvas id="cv" width="512" height="640"></canvas>
+  <div id="panel">
+    <strong>Calques</strong>
+    <label><input type="checkbox" data-l="0" checked> 01_sol — sol genere plein cadre</label>
+    <label><input type="checkbox" data-l="1" checked> 02_paroi — falaise</label>
+    <label><input type="checkbox" data-l="2" checked> 03_cascades — 6 chutes animees</label>
+    <label><input type="checkbox" data-l="3" checked> 04_bassins — eau + ecume</label>
+    <label><input type="checkbox" data-l="4" checked> 05_vegetation — palmiers + 2 arbres</label>
+    <label><input type="checkbox" id="grid"> grille 8 px (cases PMDO)</label>
+    <label><input type="checkbox" id="anim" checked> animation chutes</label>
+    <div>
+      <button id="play">pause</button>
+      <button id="prev">phase −</button>
+      <button id="next">phase +</button>
+      <button id="z1">zoom 1×</button>
+      <button id="z2">zoom 2×</button>
+    </div>
+    <div><button id="exp">exporter PNG (phase courante)</button></div>
+    <p id="status">chargement…</p>
+  </div>
+</div>
+<script>
+const D='renders/jungle_generee_v2/';
+const FILES=['JungleG2_01_sol.png','JungleG2_02_paroi.png',null,'JungleG2_04_bassins.png','JungleG2_05_vegetation.png'];
+const PH=18;
+let layers=[null,null,null,null,null], phases=[], phase=0, playing=true, timer=null;
+const cv=document.getElementById('cv'), cx=cv.getContext('2d');
+cx.imageSmoothingEnabled=false;
+function load(src){return new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src;});}
+async function init(){
+  for(let l=0;l<5;l++){ if(FILES[l]) layers[l]=await load(D+FILES[l]); }
+  for(let p=0;p<PH;p++){ phases[p]=await load(D+'cascades_phases/JungleG2_03_cascades_phase_'+String(p).padStart(2,'0')+'.png'); }
+  layers[2]=phases[0];
+  draw(); loop();
+}
+function draw(){
+  cx.clearRect(0,0,512,640);
+  const boxes=[...document.querySelectorAll('#panel input[data-l]')];
+  layers[2]=phases[phase];
+  for(let l=0;l<5;l++){ if(boxes[l].checked&&layers[l]) cx.drawImage(layers[l],0,0); }
+  if(document.getElementById('grid').checked){
+    cx.strokeStyle='rgba(0,255,255,.25)';cx.lineWidth=1;cx.beginPath();
+    for(let x=0;x<=512;x+=8){cx.moveTo(x+.5,0);cx.lineTo(x+.5,640);}
+    for(let y=0;y<=640;y+=8){cx.moveTo(0,y+.5);cx.lineTo(512,y+.5);}
+    cx.stroke();
+  }
+  document.getElementById('status').textContent='phase '+phase+' / '+(PH-1)+' · '+document.querySelectorAll('#panel input[data-l]:checked').length+' calques visibles';
+}
+function loop(){
+  clearInterval(timer);
+  timer=setInterval(()=>{ if(playing&&document.getElementById('anim').checked){phase=(phase+1)%PH;draw();} },80);
+}
+document.querySelectorAll('#panel input').forEach(el=>el.addEventListener('change',draw));
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'pause':'lecture';};
+document.getElementById('prev').onclick=()=>{phase=(phase+PH-1)%PH;draw();};
+document.getElementById('next').onclick=()=>{phase=(phase+1)%PH;draw();};
+document.getElementById('z1').onclick=()=>{cv.style.width='512px';cv.style.height='640px';};
+document.getElementById('z2').onclick=()=>{cv.style.width='1024px';cv.style.height='1280px';};
+document.getElementById('exp').onclick=()=>{const a=document.createElement('a');a.download='jungle_G2_phase_'+phase+'.png';a.href=cv.toDataURL('image/png');a.click();};
+init();
+</script>
+</body>
+</html>
