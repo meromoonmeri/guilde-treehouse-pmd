@@ -1,0 +1,132 @@
+{
+  "size": [
+    960,
+    864
+  ],
+  "version": "v4",
+  "base_layout": "V3 conserved (stars, meteors, moon, panorama, mist bands 0-2, plateau grass, wall tops)",
+  "corrections": {
+    "paroi": "élargie jusqu'aux coins du cadre (L(x)=haut de paroi au centre, 824 sur les flancs), remplissage par continuation des strates natives, liseré sombre",
+    "ciel": "dégradé plus riche (6 paliers) issu du brut généré, lueur lunaire renforcée",
+    "nuages": "6 formes variées générées sur fond magenta : bande lointaine (6 blocs) + overlay (5 blocs) + 3 accents fixes (04b)",
+    "brume": "3 bandes V3 conservées + brume avant (08b, y=770) sur le pied de la paroi"
+  },
+  "sky": {
+    "kind": "authored gradient richer",
+    "stops": [
+      [
+        0.0,
+        [
+          12,
+          5,
+          52
+        ]
+      ],
+      [
+        0.28,
+        [
+          17,
+          9,
+          64
+        ]
+      ],
+      [
+        0.52,
+        [
+          56,
+          84,
+          166
+        ]
+      ],
+      [
+        0.74,
+        [
+          118,
+          168,
+          204
+        ]
+      ],
+      [
+        0.9,
+        [
+          168,
+          214,
+          224
+        ]
+      ],
+      [
+        1.0,
+        [
+          196,
+          228,
+          232
+        ]
+      ]
+    ],
+    "dither": "Bayer 4x4 ±0.5",
+    "moon_glow_centre": [
+      780,
+      112
+    ]
+  },
+  "clouds": {
+    "far": {
+      "y": 30,
+      "speed": -2,
+      "alpha": 0.8
+    },
+    "overlay": {
+      "y": 300,
+      "speed": -6,
+      "alpha": 1.0
+    },
+    "wrap_px": 1440,
+    "cutouts": [
+      "raw_nuages_varies.png"
+    ],
+    "static_accents": "04b_nuages_accents"
+  },
+  "mist": {
+    "bands": [
+      {
+        "y": 505,
+        "speed_px_s": -4,
+        "breath_period_s": 9.0,
+        "phase": 0.0
+      },
+      {
+        "y": 625,
+        "speed_px_s": -7,
+        "breath_period_s": 7.0,
+        "phase": 2.0
+      },
+      {
+        "y": 755,
+        "speed_px_s": -11,
+        "breath_period_s": 5.5,
+        "phase": 4.0
+      }
+    ],
+    "fog": {
+      "y": 770,
+      "speed_px_s": -3,
+      "breath_period_s": 8.0,
+      "phase": 1.0
+    }
+  },
+  "reused_from_v3": [
+    "etoiles_frames",
+    "etoiles_filantes_frames",
+    "03_lune_generee",
+    "05_panorama_skypeak_foret_montagnes",
+    "05b_brume_overlay(bands 0-2)",
+    "07_plateau_herbe"
+  ],
+  "wall_fill": {
+    "delta_px": 81370,
+    "method": "vertical continuation of native strata",
+    "edge_outline": true
+  },
+  "all_pixels_generated_or_authored": true,
+  "runtime_validated": false
+}
