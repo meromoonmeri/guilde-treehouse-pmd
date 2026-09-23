@@ -1,0 +1,59 @@
+{
+  "id": "A_clairiere_grotte_nord",
+  "title": "Clairière — grotte dans la lisière nord",
+  "size": [
+    928,
+    1152
+  ],
+  "grid": 8,
+  "layers_order_bottom_to_top": [
+    "01_sol_herbe",
+    "02_lisiere_foret",
+    "03_chemin",
+    "04_parois_roche",
+    "05_entree_grotte",
+    "06_rochers",
+    "07_vegetation_basse",
+    "08_troncs_ombres",
+    "09_canopees"
+  ],
+  "terrain_origin": "PIXELS GÉNÉRÉS d’après références PMD (Relic Forest, Vast Steppe, Crooked Cavern). PAS natifs.",
+  "arrival": "sud",
+  "objective": "entrée grotte nord (lisière)",
+  "scene_sha256": "aab39a2bc060c003bd8f61fc6502af586eb1ccb0c7d69ab6b5e9a8b28bb8d35b",
+  "multicalques": {
+    "jour": {
+      "files": {
+        "01_sol_herbe": "01_sol_herbe.png",
+        "02_lisiere_foret": "02_lisiere_foret.png",
+        "03_chemin": "03_chemin.png",
+        "04_parois_roche": "04_parois_roche.png",
+        "05_entree_grotte": "05_entree_grotte.png",
+        "06_rochers": "06_rochers.png",
+        "07_vegetation_basse": "07_vegetation_basse.png",
+        "08_troncs_ombres": "08_troncs_ombres.png",
+        "09_canopees": "09_canopees.png"
+      },
+      "atlas_tiles": 53751,
+      "aseprite": "A_clairiere_grotte_nord_jour.aseprite",
+      "tiled": "A_clairiere_grotte_nord_jour.tmj"
+    },
+    "nuit": {
+      "files": {
+        "01_sol_herbe": "01_sol_herbe_nuit.png",
+        "02_lisiere_foret": "02_lisiere_foret_nuit.png",
+        "03_chemin": "03_chemin_nuit.png",
+        "04_parois_roche": "04_parois_roche_nuit.png",
+        "05_entree_grotte": "05_entree_grotte_nuit.png",
+        "06_rochers": "06_rochers_nuit.png",
+        "07_vegetation_basse": "07_vegetation_basse_nuit.png",
+        "08_troncs_ombres": "08_troncs_ombres_nuit.png",
+        "09_canopees": "09_canopees_nuit.png"
+      },
+      "atlas_tiles": 53496,
+      "aseprite": "A_clairiere_grotte_nord_nuit.aseprite",
+      "tiled": "A_clairiere_grotte_nord_nuit.tmj"
+    }
+  },
+  "not_tested": "PMDO, Aseprite/Tiled apps"
+}

@@ -489,3 +489,4 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
 
 - **Crooked V3 échelle 928×1152** : ne pas redescendre les bruts magenta en 512×640 (bandes noires au clamp + arbres trop petits vs sprite Pokémon / arbre Vast Steppe 144×120). Détourage 1:1, modules natifs sans scale. V1/V2 conservées.
 - Fleurs animées Crooked V3 : mêmes sprites/cadences Halcyon Vast Steppe que amp_plains_fleurie_v1 (atlas 24×24, poses 0,1,0,2, 8/10/14 gf). Pas de scale. Compositions PNG + WebP assemblées. Canopées fleuries = adaptation (pétales natifs).
+- Forêts lisière v1 : 4 maps générées 928×1152, entrée en lisière (nord / ouest), fond de forêt, caverne verdoyante ; multicalques PNG+Aseprite+Tiled ; pixels générés ≠ natifs.

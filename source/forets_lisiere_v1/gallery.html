@@ -1,0 +1,44 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Forêts lisière v1 — 4 cartes multicalques</title>
+<style>
+body{background:#132018;color:#e8eee9;font:15px system-ui;margin:24px}
+h1{margin:0 0 8px} .warn{border-left:4px solid #e0a24a;padding:8px 12px;background:#3a2c1a;max-width:900px}
+select,button{margin:4px 6px 4px 0;padding:6px 10px;background:#2b4a3a;color:#fff;border:0;border-radius:6px}
+canvas{image-rendering:pixelated;background:#1a2420;border:1px solid #2f4a3a}
+.wrap{display:flex;gap:24px;flex-wrap:wrap} aside{min-width:280px} label{display:block}
+</style>
+<h1>Forêts — entrée en lisière, fond de forêt, caverne verdoyante</h1>
+<p>4 cartes 928×1152, 9 calques, jour/nuit, exports PNG + Aseprite + Tiled 8 px. Pixels <b>générés</b> d’après PMD (pas natifs). PMDO non testé.</p>
+<div class="warn">A clairière grotte nord · B forêt entrée ouest · C caverne verdoyante · D fond de forêt. Arrivée sud.</div>
+<p><select id="map"></select><button id="mode">Nuit</button><button id="zoom">×1</button><button id="tous">Tout</button></p>
+<div class="wrap"><canvas id="c" width="464" height="576"></canvas><aside id="layers"></aside></div>
+<script>
+const DATA=__DATA__;
+const MW=928,MH=1152; let nuit=false,zoom=0.5,cur=0; const state={}, imgs={};
+const c=document.getElementById('c'),ctx=c.getContext('2d'); ctx.imageSmoothingEnabled=false;
+function load(s){return new Promise(r=>{const i=new Image(); i.onload=()=>r(i); i.src=s;});}
+async function boot(){
+ DATA.forEach((m,i)=>map.add(new Option(m.title,i)));
+ await sel(0);
+ map.onchange=()=>sel(+map.value);
+}
+async function sel(i){
+ cur=i; const m=DATA[i]; document.getElementById('layers').innerHTML='';
+ for(const l of m.layers){
+  imgs[l.id]={j:await load(l.jour), n:await load(l.nuit)}; state[l.id]=true;
+  const lab=document.createElement('label'); const cb=document.createElement('input');
+  cb.type='checkbox'; cb.checked=true; cb.onchange=()=>{state[l.id]=cb.checked; draw();};
+  const seul=document.createElement('button'); seul.textContent='Seul'; seul.onclick=()=>{m.layers.forEach(x=>state[x.id]=(x.id===l.id)); sync(); draw();};
+  lab.append(cb,' ',l.id,' ',seul); document.getElementById('layers').append(lab);
+ }
+ draw();
+}
+function sync(){document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA[cur].layers[i].id];});}
+function draw(){
+ c.width=MW*zoom; c.height=MH*zoom; ctx.imageSmoothingEnabled=false; ctx.clearRect(0,0,c.width,c.height);
+ for(const l of DATA[cur].layers){ if(!state[l.id]||!imgs[l.id]) continue; ctx.drawImage(nuit?imgs[l.id].n:imgs[l.id].j,0,0,c.width,c.height); }
+}
+document.getElementById('mode').onclick=e=>{nuit=!nuit; e.target.textContent=nuit?'Jour':'Nuit'; draw();};
+document.getElementById('zoom').onclick=e=>{zoom=zoom===0.5?1:0.5; e.target.textContent=zoom===0.5?'×1':'×0.5'; draw();};
+document.getElementById('tous').onclick=()=>{DATA[cur].layers.forEach(l=>state[l.id]=true); sync(); draw();};
+boot();
+</script></html>
