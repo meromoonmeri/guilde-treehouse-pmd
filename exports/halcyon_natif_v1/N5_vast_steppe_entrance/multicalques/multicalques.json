@@ -1,0 +1,53 @@
+{
+  "zone": "Vast Steppe entrance — calques Halcyon natifs 512×512",
+  "dimensions": [
+    512,
+    512
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "L00_Base",
+      "name": "L00_Base"
+    },
+    {
+      "id": "L01_Cliffs",
+      "name": "L01_Cliffs"
+    },
+    {
+      "id": "L02_Objects_Under",
+      "name": "L02_Objects_Under"
+    },
+    {
+      "id": "L03_Objects",
+      "name": "L03_Objects"
+    },
+    {
+      "id": "L04_Fringe",
+      "name": "L04_Fringe"
+    }
+  ],
+  "provenance": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "variants": {
+    "jour": {
+      "atlas_tiles": 739,
+      "files": {
+        "L00_Base": "L00_Base.png",
+        "L01_Cliffs": "L01_Cliffs.png",
+        "L02_Objects_Under": "L02_Objects_Under.png",
+        "L03_Objects": "L03_Objects.png",
+        "L04_Fringe": "L04_Fringe.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 739,
+      "files": {
+        "L00_Base": "L00_Base_nuit.png",
+        "L01_Cliffs": "L01_Cliffs_nuit.png",
+        "L02_Objects_Under": "L02_Objects_Under_nuit.png",
+        "L03_Objects": "L03_Objects_nuit.png",
+        "L04_Fringe": "L04_Fringe_nuit.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "zone": "Altere Pond — calques Halcyon natifs 928×768",
+  "dimensions": [
+    928,
+    768
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "L00_Base",
+      "name": "L00_Base"
+    },
+    {
+      "id": "L01_River",
+      "name": "L01_River"
+    },
+    {
+      "id": "L02_Cliffs",
+      "name": "L02_Cliffs"
+    },
+    {
+      "id": "L03_Shadows",
+      "name": "L03_Shadows"
+    },
+    {
+      "id": "L04_Objects_Under",
+      "name": "L04_Objects_Under"
+    },
+    {
+      "id": "L05_Objects",
+      "name": "L05_Objects"
+    },
+    {
+      "id": "L06_Objects_Over",
+      "name": "L06_Objects_Over"
+    },
+    {
+      "id": "L07_Fringe",
+      "name": "L07_Fringe"
+    }
+  ],
+  "provenance": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "variants": {
+    "jour": {
+      "atlas_tiles": 4342,
+      "files": {
+        "L00_Base": "L00_Base.png",
+        "L01_River": "L01_River.png",
+        "L02_Cliffs": "L02_Cliffs.png",
+        "L03_Shadows": "L03_Shadows.png",
+        "L04_Objects_Under": "L04_Objects_Under.png",
+        "L05_Objects": "L05_Objects.png",
+        "L06_Objects_Over": "L06_Objects_Over.png",
+        "L07_Fringe": "L07_Fringe.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 4339,
+      "files": {
+        "L00_Base": "L00_Base_nuit.png",
+        "L01_River": "L01_River_nuit.png",
+        "L02_Cliffs": "L02_Cliffs_nuit.png",
+        "L03_Shadows": "L03_Shadows_nuit.png",
+        "L04_Objects_Under": "L04_Objects_Under_nuit.png",
+        "L05_Objects": "L05_Objects_nuit.png",
+        "L06_Objects_Over": "L06_Objects_Over_nuit.png",
+        "L07_Fringe": "L07_Fringe_nuit.png"
+      }
+    }
+  }
+}

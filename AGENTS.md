@@ -491,3 +491,4 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
 - Fleurs animées Crooked V3 : mêmes sprites/cadences Halcyon Vast Steppe que amp_plains_fleurie_v1 (atlas 24×24, poses 0,1,0,2, 8/10/14 gf). Pas de scale. Compositions PNG + WebP assemblées. Canopées fleuries = adaptation (pétales natifs).
 - Forêts lisière v1 : 4 maps générées 928×1152, entrée en lisière (nord / ouest), fond de forêt, caverne verdoyante ; multicalques PNG+Aseprite+Tiled ; pixels générés ≠ natifs.
 - Forêts lisière v2 : ne pas écraser v1 (A–D). Nouvelles maps E–H, même pipeline 928×1152 / 9 calques / multicalques.
+- Halcyon natif v1 : modules complets uniquement (herbe 48×48 Steppe, arbre 144×120, grotte 320×240, bandes Relic, scènes Altere/Relic/Steppe). Pas de mosaïque 8 px.

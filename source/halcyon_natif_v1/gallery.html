@@ -1,0 +1,38 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>Halcyon natif v1</title>
+<style>
+body{background:#132018;color:#e8eee9;font:15px system-ui;margin:24px}
+.warn{border-left:4px solid #7ecf8a;padding:8px 12px;background:#1a3024;max-width:920px}
+select,button{margin:4px;padding:6px 10px;background:#2b4a3a;color:#fff;border:0;border-radius:6px}
+canvas{image-rendering:pixelated;background:#1a2420;border:1px solid #2f4a3a}
+.wrap{display:flex;gap:24px;flex-wrap:wrap} label{display:block}
+</style>
+<h1>Cartes Halcyon — textures canoniques</h1>
+<p>Modules natifs complets (Vast Steppe, Relic Forest, Crooked Cavern, Altere Pond). Translation seule. N1–N2 = layouts assemblés ; N3–N5 = scènes natives. Nuit Abyss. PMDO non testé.</p>
+<div class="warn">Pas de pixels générés sur ces cartes. Pas de mosaïque 8 px, pas de scale/miroir/recolor des modules.</div>
+<p><select id="map"></select><button id="mode">Nuit</button><button id="zoom">×1</button><button id="tous">Tout</button></p>
+<div class="wrap"><canvas id="c"></canvas><aside id="layers"></aside></div>
+<script>
+const DATA=__DATA__; let nuit=false,zoom=0.5,cur=0; const state={},imgs={};
+const c=document.getElementById('c'),ctx=c.getContext('2d');
+function load(s){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s;});}
+DATA.forEach((m,i)=>map.add(new Option(m.title,i)));
+async function sel(i){
+ cur=i; const m=DATA[i]; document.getElementById('layers').innerHTML='';
+ for(const l of m.layers){
+  imgs[l.id]={j:await load(l.jour),n:await load(l.nuit)}; state[l.id]=true;
+  const lab=document.createElement('label'); const cb=document.createElement('input');
+  cb.type='checkbox'; cb.checked=true; cb.onchange=()=>{state[l.id]=cb.checked;draw();};
+  lab.append(cb,' ',l.id); document.getElementById('layers').append(lab);
+ }
+ draw();
+}
+function draw(){
+ const m=DATA[cur]; c.width=m.w*zoom; c.height=m.h*zoom; ctx.imageSmoothingEnabled=false; ctx.clearRect(0,0,c.width,c.height);
+ for(const l of m.layers){ if(state[l.id]&&imgs[l.id]) ctx.drawImage(nuit?imgs[l.id].n:imgs[l.id].j,0,0,c.width,c.height); }
+}
+map.onchange=()=>sel(+map.value);
+document.getElementById('mode').onclick=e=>{nuit=!nuit;e.target.textContent=nuit?'Jour':'Nuit';draw();};
+document.getElementById('zoom').onclick=e=>{zoom=zoom===0.5?1:0.5;e.target.textContent=zoom===0.5?'×1':'×0.5';draw();};
+document.getElementById('tous').onclick=()=>{DATA[cur].layers.forEach(l=>state[l.id]=true);document.querySelectorAll('#layers input').forEach(cb=>cb.checked=true);draw();};
+sel(0);
+</script></html>

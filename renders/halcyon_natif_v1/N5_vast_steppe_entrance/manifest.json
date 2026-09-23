@@ -1,0 +1,43 @@
+{
+  "id": "N5_vast_steppe_entrance",
+  "title": "Vast Steppe entrance — calques Halcyon natifs 512×512",
+  "size": [
+    512,
+    512
+  ],
+  "terrain_origin": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "layers_order_bottom_to_top": [
+    "L00_Base",
+    "L01_Cliffs",
+    "L02_Objects_Under",
+    "L03_Objects",
+    "L04_Fringe"
+  ],
+  "placements": [],
+  "provenance": {
+    "scene": "banque_canonique/cartes_natives/vast_steppe_entrance__L*.png"
+  },
+  "multicalques": {
+    "jour": {
+      "atlas_tiles": 739,
+      "files": {
+        "L00_Base": "L00_Base.png",
+        "L01_Cliffs": "L01_Cliffs.png",
+        "L02_Objects_Under": "L02_Objects_Under.png",
+        "L03_Objects": "L03_Objects.png",
+        "L04_Fringe": "L04_Fringe.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 739,
+      "files": {
+        "L00_Base": "L00_Base_nuit.png",
+        "L01_Cliffs": "L01_Cliffs_nuit.png",
+        "L02_Objects_Under": "L02_Objects_Under_nuit.png",
+        "L03_Objects": "L03_Objects_nuit.png",
+        "L04_Fringe": "L04_Fringe_nuit.png"
+      }
+    }
+  },
+  "not_tested": "PMDO runtime, Aseprite/Tiled apps"
+}

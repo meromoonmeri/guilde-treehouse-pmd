@@ -1,0 +1,93 @@
+{
+ "compressionlevel": -1,
+ "height": 64,
+ "width": 64,
+ "infinite": false,
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "tiledversion": "1.10.2",
+ "tileheight": 8,
+ "tilewidth": 8,
+ "type": "map",
+ "version": "1.10",
+ "nextobjectid": 1,
+ "nextlayerid": 6,
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "source": "N5_vast_steppe_entrance_nuit_8px.tsj"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "L00_Base",
+   "type": "tilelayer",
+   "width": 64,
+   "height": 64,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "eNrt08kRg0AQBMFdAeI+/LeWNoOIyUc9yoDsrbVfGtKYerGf0j/NaSn4a9rSno6Cf6Yr3ekp+J1//vnnn3/++eeff/75559//vnnn3/++eeff/75559//vnnn3/++eeff/75559//vnnn3/++eeff/75559//vnnn3/++eeff/75/8y/+l+IAQ=="
+  },
+  {
+   "id": 2,
+   "name": "L01_Cliffs",
+   "type": "tilelayer",
+   "width": 64,
+   "height": 64,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "eNrt1gOMJEEYhuHts23t2bZt27aNPdu2bdu2bdu28U66Nql0buaub2cu6U59uSf9J7tT6a+2p/q8vP5PwiLcXwrvZb9EMNE/og37RzLRP7IN+0cx0T+qDftHM9E/us26x0BME/1jwdsm3WMjDuIiHuILCaQ5oWFOhMRIYoP+SZEMyZECKQV5TmWYUyMN0trkGUiH9MiAjII8ZzLMmZHFZmdAVmRDdkGecxjmnDY8/3MhN/II8pzXMOezYf/8KICCgjwXMsyFbdi/CIqimCDPxQ1zCRv2L4lSKC3IcxnDXNaG/cuhPCoI8lzRMFeyUe/KqIKqqIbqQg1prinNtVAbdVDX4t3roT4aoCEaobEgz00Mc1M0Q3O0sHD/lmiF1miDtmgnyHN7w9wBHdEJPhbu3xld0BXdTHyuO3qgJ3pZuH9v9EFf9DPxuf4YgIEYZOH+gzEEQzHMxOeGYwRGYpQFe4/GGIzFOIzHBBOfn4hJmIwpmIppFurvOPOnYwZmYtY/rDEbczAX88S7wAqZL878BViIRVj8D+sswVIsw3LxLlhhoTN/JVZhtR/WWoO1WGehd4Hvmb8eG9yw3kZs8uC7YDO2YKs0b/PDetvFmb8DO91wf7uwW7wL9vhhnb3Yh/04IM0HcQiHcQRHcQzHcQInpX05hdM4I+azOIfzuICLuCTO/Mu44ob+V3FNvAuu4wZu4hZu4w7u4h7ui9m32wM8xCM8xhM8xTM8xwu8xCu8xhu8xTu8xwd8FHv0CZ/xBV/xDd/xAz8dN6rxD/40/cz3r7nvGQ2g6e+CgFwDITCCICiCIThCICRCIbSmdwvDNSzCITwiICIiITKiICqiITpiICZiwRuxEUdzvkfyvsTl9+IhPhJo7v+eJmTNREiMJIaezrolRTIkRwqkRCqkRhqkRTqkRwZkRCZkRhZkRTYXe+S7L9mZcyAnciG3G/vnYa28yIf8KICCKCT1dNatMIqgKIqhOEqgJEqhNMpo+t+zLNdymv73dJwF5ZkroKKLPXLsSyVURhVURTVUd2P/GqxVE7VQG3VQF/VQX/R01q0BGqKRpn/nHc9LYzQRz0tTNENztEBLtEJrtEFbtHOxR+2ZO6AjOmmeeZ/6uLjHzujioltXdEN39PjN89ITvdAbfdAX/dAfAzAQgzD4N8/8EOahGIbhGKF57v8Uzu5xJEa56DYaYzAW46Tvhe/zMh4TMBGTMBlTMFXTz+9pmr7/0zHDca5jFmZr+pnsI65zMNeD/f90j47rPMzHAizEIun+Azj5uX8P3rOKioqKioqKioqKioqKioqKioqKioqKioqKiorK/84vt8kUsA=="
+  },
+  {
+   "id": 3,
+   "name": "L02_Objects_Under",
+   "type": "tilelayer",
+   "width": 64,
+   "height": 64,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "eNrtm1duhTAQAPH9T5Lee28vvffee3KHzOdT9KSQIAKYGWkkJIN31x9ojUyS1IO2kCTt2IGdId9YXczfjT3YG8pRfx959OMADuac0xDzD+MIjhZQ/xgxx3GiKfYk11M4jTM4m1Nec8w7jwu4iEsF1N8g5jKuNMVe5XoN13EDN3/Ia4vxbdz5Zf673L+H+3iAh6Ga74sj8j7Gk4rmLyIiIiLpOaXnO8PzUM/cLpj7Eq9KWH+Zc6szf90vxkLe+0XX1/24iIiIiIiIiEgarkOS3OBtxu8odzx/jw8l+R6T9szVI2NP+ByyrccL97/iW0nqT3vm6p2xD/wMrdejimQ5c/V9PapILGeuREREYuhJ/7uPL1tPmicx9K1ZiKFvFRERKZJW/wvWiVb/C4pI/HwBy3ht3Q=="
+  },
+  {
+   "id": 4,
+   "name": "L03_Objects",
+   "type": "tilelayer",
+   "width": 64,
+   "height": 64,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "eNrtmwWP3DAQRmOX8coMV2b+1WW64pXxyszMfGXGt1JPTaP1Js7aySSbT3rq7lWaeFb2zHjsBMH/uqOC4C7cU4FYdXsc2yNsP4YnAv1/zZjewFt4B+89jPEFNl/CK0H+f2AsH+ETfIYv8BW+wXf4AT8Fz9dm9euv3zV+1/zUQaBA639/76XL639vfOsDfaEf9IcBMBAGwWAYossVh+ppKD62wTAYDiNgpC5nHEqirHOVtDiUda7KKw6txe46WA8bVLpcZVqrNvM3aRxyPS+3YGcrbIPtyu1aNc3flfy7ClbDGmUXh1zOy/3YOAAH4RAcjtjcwfed0KnSrVXT/N3I502wGTos/XBZQ53Dxnm4ABfhUsTmEb4fhS6Vbq2a8ugu/n837IG9sC/H+irNekq6Vk159BjPOg4n4CScCj37NJ/PwFklP877qBkuM44rcDUynvt8fwAPHf8uPvcknQ5tPsXWM3heoL1IV4n3TVFlvW6lybRuKxVfNnvRNPm0W+icSbMXDefTuN9Cyl7X5V40nE9NtYX0npurvaiptpDec/PdE0tq/xq/w3W4obLr0YRtJqlv48bYTP18E5u34LbKrkdjazNujD7lo3aXeEZRya1MfZ1WkamvU6lSpXKrCHcwfEryHQzpNZOvHmxRVMQebFn6SmWS1L6Pb1V3raq7VhLvWmWtRn2fvOqztH2sZmN49P5NXvWZbR/LVQyP3r+R3n9yGcPj7t+UPYbH3b/xrTRn1mWK4c2cWWd1X7aIvcqeMbtQEXuVPWOuaRRzYrT2tx4lawx+j4VxMF77XY8SVcsFE/B7IkyCyTAFpkJ7C9S50/BxOsyAmaH8OIvPs1vA/zn4OBfmwXxYAAthkbart6X0bG1r/cX4uQSWwjJYDiu0fb2dd882736NaU/gO19I79f4zhet0K9pFFtsav0szgZ8PCMaW+q9m5Kk1s/ibKDZZ9TbS0RjS5J3U4p6hphkL5Hk3RRX+Uji+Uejd1Pi8lFUfwDIGLxF"
+  },
+  {
+   "id": 5,
+   "name": "L04_Fringe",
+   "type": "tilelayer",
+   "width": 64,
+   "height": 64,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "eNrt2vdPFEEUwPHN/U2KvSvYe0PFhoLYwd4VuwL2giIW7L2jIgJW7IoNFRT0H/Fr4k+G5G6Xmbs3e+8ln5C7vcwym5nZeW/X8/xFm4jntUUK2qE9OqAjOkU8o9GZ9rqgK7qhO3qgJ3qhN/ogFWnoi37ob/j/+BsDaHMgBmEwhmAohmE4RmAkRhk892jaGoOxSMc4jP/X/gT+ZmAiJmEypmCqz/NnxvD7afxmOrKQjRnIwUzMwmzMwVzMw3zkIs/QtVhAOwux6L/2FvN5CZZiGZa3cL4VfLcSqyIt9zXa+F3Nd2uwFuuQj/XYgI3YhM3Ygq3Yhu0oQKGFcWh6rkYbv0V83oGd2IXd2IO92If9OICDKMYhHEYJjiSo/37maizjV9I6ZHquxjJ+47EOmYggc9XP+G3NOhSPCDJXpY3feO8ZJI3fROwZJI1fkxHrXNXQcDmi7W+lt297fyu5fam5aCJyXVv7W7+5aKJzXdP7Wz+5qPRc13Yu6kKuazsXlZ7r2s5FXcl1beei0nNdDQ0NDQ0NDQ2N5Kn7uF5XkhqS6z6u15Ukh8vvOLhQV3JhDXfpHQcba7grdR/ba7jLdZ8ga3hYIugaHpYIuoaHKYKs4WGKIGt4KY7iGI6H5Hr4WcNPoAwncQqncSaJ8r2z9PUczuMCLuISLifJNbhCP6/iGq7jBm7iFm6jHHdCfC3u0rd7qMB9VOIBqlCNGjx0oP9B6zWP+O1jPMFTPEMtnuMFXuKV8P63pl7zmuNv8Bbv8B51+ICP+ITPQvtvol7zhWP1+Ipv+I4GNOIHfgrtu616TRPHm/ELv4X2Xes14azX2N7ru/pOv6m9vp96jSvPP2zUa/T5hz7/0Ocfej/V+2n476d/ADuFo/s="
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+  "zone": "Relic Forest — scène Halcyon native 600×600",
+  "dimensions": [
+    600,
+    600
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "01_relic_forest_base",
+      "name": "Relic Forest Base"
+    }
+  ],
+  "provenance": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "variants": {
+    "jour": {
+      "atlas_tiles": 970,
+      "files": {
+        "01_relic_forest_base": "01_relic_forest_base.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 970,
+      "files": {
+        "01_relic_forest_base": "01_relic_forest_base_nuit.png"
+      }
+    }
+  }
+}

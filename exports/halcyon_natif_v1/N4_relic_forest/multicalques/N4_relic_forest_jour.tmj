@@ -1,0 +1,37 @@
+{
+ "compressionlevel": -1,
+ "height": 75,
+ "width": 75,
+ "infinite": false,
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "tiledversion": "1.10.2",
+ "tileheight": 8,
+ "tilewidth": 8,
+ "type": "map",
+ "version": "1.10",
+ "nextobjectid": 1,
+ "nextlayerid": 2,
+ "tilesets": [
+  {
+   "firstgid": 1,
+   "source": "N4_relic_forest_jour_8px.tsj"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "Relic Forest Base",
+   "type": "tilelayer",
+   "width": 75,
+   "height": 75,
+   "x": 0,
+   "y": 0,
+   "opacity": 1,
+   "visible": true,
+   "encoding": "base64",
+   "compression": "zlib",
+   "data": "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"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "N3_altere_pond",
+  "title": "Altere Pond — calques Halcyon natifs 928×768",
+  "size": [
+    928,
+    768
+  ],
+  "terrain_origin": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "layers_order_bottom_to_top": [
+    "L00_Base",
+    "L01_River",
+    "L02_Cliffs",
+    "L03_Shadows",
+    "L04_Objects_Under",
+    "L05_Objects",
+    "L06_Objects_Over",
+    "L07_Fringe"
+  ],
+  "placements": [],
+  "provenance": {
+    "scene": "banque_canonique/cartes_natives/altere_pond__L*.png"
+  },
+  "multicalques": {
+    "jour": {
+      "atlas_tiles": 4342,
+      "files": {
+        "L00_Base": "L00_Base.png",
+        "L01_River": "L01_River.png",
+        "L02_Cliffs": "L02_Cliffs.png",
+        "L03_Shadows": "L03_Shadows.png",
+        "L04_Objects_Under": "L04_Objects_Under.png",
+        "L05_Objects": "L05_Objects.png",
+        "L06_Objects_Over": "L06_Objects_Over.png",
+        "L07_Fringe": "L07_Fringe.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 4339,
+      "files": {
+        "L00_Base": "L00_Base_nuit.png",
+        "L01_River": "L01_River_nuit.png",
+        "L02_Cliffs": "L02_Cliffs_nuit.png",
+        "L03_Shadows": "L03_Shadows_nuit.png",
+        "L04_Objects_Under": "L04_Objects_Under_nuit.png",
+        "L05_Objects": "L05_Objects_nuit.png",
+        "L06_Objects_Over": "L06_Objects_Over_nuit.png",
+        "L07_Fringe": "L07_Fringe_nuit.png"
+      }
+    }
+  },
+  "not_tested": "PMDO runtime, Aseprite/Tiled apps"
+}

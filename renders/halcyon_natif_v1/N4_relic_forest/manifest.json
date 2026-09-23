@@ -1,0 +1,31 @@
+{
+  "id": "N4_relic_forest",
+  "title": "Relic Forest — scène Halcyon native 600×600",
+  "size": [
+    600,
+    600
+  ],
+  "terrain_origin": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "layers_order_bottom_to_top": [
+    "01_relic_forest_base"
+  ],
+  "placements": [],
+  "provenance": {
+    "scene": "banque_canonique/atlas/Relic_Forest_Base.png"
+  },
+  "multicalques": {
+    "jour": {
+      "atlas_tiles": 970,
+      "files": {
+        "01_relic_forest_base": "01_relic_forest_base.png"
+      }
+    },
+    "nuit": {
+      "atlas_tiles": 970,
+      "files": {
+        "01_relic_forest_base": "01_relic_forest_base_nuit.png"
+      }
+    }
+  },
+  "not_tested": "PMDO runtime, Aseprite/Tiled apps"
+}
