@@ -1,12 +1,24 @@
 from pathlib import Path
 import hashlib,json,shutil
 import numpy as np
-from PIL import Image
+from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'renders/world_map_9_continents_v1';LAY=OUT/'layers';FOND=ROOT/'source/user_committed_map_background.png';RAW=ROOT/'source/world_map_9_continents_v1/raws/continents_9_sur_fond.png'
 if OUT.exists():shutil.rmtree(OUT)
 LAY.mkdir(parents=True,exist_ok=True)
 source_background=Image.open(FOND);base=source_background.convert('RGBA');raw=Image.open(RAW).convert('RGBA').resize(base.size,Image.Resampling.NEAREST)
 a=np.array(raw);sample=a[4,4,:3].astype(int);dist=np.sqrt(((a[:,:,:3].astype(int)-sample)**2).sum(axis=2));a[:,:,3]=np.where(dist<26,0,a[:,:,3]);fg=Image.fromarray(a)
+# Correct the composition: the ninth landmass is a compact separate continent,
+# not a giant floating island. Replace the oversized top-center asset with a much
+# smaller isolated landmass, leaving open sea around all nine continents.
+top=fg.crop((248,0,386,88)).resize((58,37),Image.Resampling.NEAREST)
+clear=Image.new('RGBA',(138,88),(0,0,0,0)); fg.paste(clear,(248,0))
+fg.alpha_composite(top,(292,16))
+# Add two tiny cloud islands as accents; they are clearly islands, not continents.
+d=ImageDraw.Draw(fg)
+for x,y in [(180,35),(420,42)]:
+    d.ellipse((x-8,y-3,x+8,y+3),fill=(242,238,211,235),outline=(117,104,75,220))
+    d.polygon([(x-5,y+2),(x+6,y+2),(x+3,y+7),(x-3,y+7)],fill=(103,77,55,255))
+    d.rectangle((x-2,y+7,x+2,y+9),fill=(70,59,48,255))
 # Enrich the open sea with small pixel-art islands, reefs, boats and navigation marks.
 # These are maritime islets, not additional continents; the nine main landmasses remain unchanged.
 from PIL import ImageDraw
