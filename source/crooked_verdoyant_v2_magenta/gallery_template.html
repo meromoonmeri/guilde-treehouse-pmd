@@ -18,7 +18,8 @@ button.on{background:#e0a24a;color:#1a1208}
 <div class="wrap">
  <canvas id="c" width="512" height="640"></canvas>
  <aside>
-  <div><button id="mode">Nuit</button><button id="zoom">×2</button><button id="natif">Variante objets natifs</button></div>
+  <div><button id="mode">Nuit</button><button id="zoom">×2</button><button id="grille">Grille 8 px</button><button id="tous">Tout afficher</button><button id="export">Exporter PNG visible</button><button id="natif">Variante objets natifs</button></div>
+  <p style="margin:6px 0 0;font-size:13px">Exports multicalques (PNG + Aseprite + Tiled) : <code>exports/crooked_verdoyant_v2_magenta/multicalques/</code></p>
   <h3>Calques (bas → haut)</h3><div id="layers"></div>
   <h3>Bruts magenta (avant détourage)</h3><div class="refs" id="bruts"></div>
   <h3>Complément natif certifié</h3><div id="natifs"></div>
@@ -35,17 +36,25 @@ function load(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);
 const state={};
 (async()=>{
  for(const l of DATA.layers){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=true;
-  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;cb.onchange=()=>{state[l.id]=cb.checked;draw();};lab.append(cb,' ',l.id);document.getElementById('layers').append(lab);}
+  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;cb.onchange=()=>{state[l.id]=cb.checked;draw();};
+  const seul=document.createElement('button');seul.textContent='Seul';seul.style.cssText='margin-left:8px;padding:1px 6px;font-size:12px';seul.onclick=()=>{for(const k of DATA.layers)state[k.id]=(k.id===l.id);for(const k of DATA.natifs)state[k.id]=false;sync();draw();};
+  lab.append(cb,' ',l.id,seul);document.getElementById('layers').append(lab);}
  for(const l of DATA.natifs){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=false;
   const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=false;cb.id='cb_'+l.id;cb.onchange=()=>{state[l.id]=cb.checked;draw();};lab.append(cb,' ',l.id+' (natif)');document.getElementById('natifs').append(lab);}
  for(const r of DATA.refs){const i=document.createElement('img');i.src=r.uri;i.title=r.label;i.width=160;document.getElementById('refs').append(i);}
  for(const r of DATA.bruts){const i=document.createElement('img');i.src=r.uri;i.title=r.label;i.width=104;document.getElementById('bruts').append(i);}
  draw();
 })();
+let grille=false;
+function sync(){document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA.layers[i].id];});for(const l of DATA.natifs){const e=document.getElementById('cb_'+l.id);if(e)e.checked=!!state[l.id];}}
 function draw(){c.width=512*zoom;c.height=640*zoom;ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,c.width,c.height);
  const order=[...DATA.layers.map(l=>l.id),...DATA.natifs.map(l=>l.id)];
  for(const id of order){if(!state[id]||!imgs[id])continue;const im=nuit?imgs[id].n:imgs[id].j;
-  ctx.drawImage(im,0,0,c.width,c.height);}}
+  ctx.drawImage(im,0,0,c.width,c.height);}
+ if(grille){ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=1;for(let x=0;x<=512;x+=8){ctx.beginPath();ctx.moveTo(x*zoom+.5,0);ctx.lineTo(x*zoom+.5,c.height);ctx.stroke();}for(let y=0;y<=640;y+=8){ctx.beginPath();ctx.moveTo(0,y*zoom+.5);ctx.lineTo(c.width,y*zoom+.5);ctx.stroke();}}}
+document.getElementById('grille').onclick=e=>{grille=!grille;e.target.classList.toggle('on',grille);draw();};
+document.getElementById('tous').onclick=()=>{for(const k of DATA.layers)state[k.id]=true;sync();draw();};
+document.getElementById('export').onclick=()=>{const g=grille;grille=false;const z=zoom;zoom=1;draw();const a=document.createElement('a');a.download='CrookedMagentaV2_visible'+(nuit?'_nuit':'_jour')+'.png';a.href=c.toDataURL('image/png');a.click();grille=g;zoom=z;draw();};
 document.getElementById('mode').onclick=e=>{nuit=!nuit;e.target.classList.toggle('on',nuit);e.target.textContent=nuit?'Jour':'Nuit';draw();};
 document.getElementById('zoom').onclick=e=>{zoom=zoom===1?2:1;e.target.textContent=zoom===1?'×2':'×1';draw();};
 document.getElementById('natif').onclick=e=>{const on=!e.target.classList.contains('on');e.target.classList.toggle('on',on);

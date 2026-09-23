@@ -43,9 +43,16 @@ Le générateur ne restitue pas les objets à la position exacte : arbres IoU 0,
 parois 0,994 (voir `review/maquette_v1_vs_magenta_v2_vs_natifs_1x.png`). C'est inhérent à la génération par calque ;
 les calques restent cohérents entre eux (arbres et rochers hors du chemin, à 36 px de cailloux près).
 
+## Exports multicalques (Aseprite + Tiled + atlas 8 px)
+
+`exports/crooked_verdoyant_v2_magenta/multicalques/` (README dédié) : les 9 calques jour et nuit en PNG alignés,
+`CrookedMagentaV2_{jour,nuit}.aseprite`, `CrookedMagentaV2_{jour,nuit}.tmj` + atlas `*_8px.{png,tsj}` dérivé de ces calques,
+`verification_multicalques.json` (relecture indépendante, 0 différence de pixel).
+
 ## Reproduction
 
 ```
 .venv/bin/python source/crooked_verdoyant_v2_magenta/build.py
 .venv/bin/python source/crooked_verdoyant_v2_magenta/verify.py
+.venv/bin/python source/crooked_verdoyant_v2_magenta/multicalques.py && .venv/bin/python source/crooked_verdoyant_v2_magenta/verify_multicalques.py
 ```

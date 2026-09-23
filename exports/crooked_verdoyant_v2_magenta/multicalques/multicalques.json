@@ -1,0 +1,117 @@
+{
+  "zone": "Crooked Cavern verdoyante V2 — calques générés sur fond magenta",
+  "dimensions": [
+    512,
+    640
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "01_sol_herbe",
+      "name": "Sol : herbe pure (généré)"
+    },
+    {
+      "id": "02_lisiere_foret",
+      "name": "Lisière de forêt (généré, magenta)"
+    },
+    {
+      "id": "03_chemin",
+      "name": "Chemin de terre (généré, magenta)"
+    },
+    {
+      "id": "04_parois_crooked",
+      "name": "Parois Crooked (généré, magenta)"
+    },
+    {
+      "id": "05_entree_grotte",
+      "name": "Entrée : ouverture + sol du débouché (généré)"
+    },
+    {
+      "id": "06_rochers",
+      "name": "Rochers et cailloux (généré, magenta)"
+    },
+    {
+      "id": "07_vegetation_basse",
+      "name": "Végétation basse (feuille magenta)"
+    },
+    {
+      "id": "08_troncs_ombres",
+      "name": "Troncs + ombres au sol (généré, magenta)"
+    },
+    {
+      "id": "09_canopees",
+      "name": "Canopées, au-dessus du joueur (généré, magenta)"
+    }
+  ],
+  "convention": "sprites/zones_guidees/README_multicalques.md (PNG alignés + Aseprite + Tiled + recomposition)",
+  "provenance": "pixels GÉNÉRÉS d’après références PMD (audit source/crooked_verdoyant_v1/AUDIT.md) ; non natifs ; atlas 8 px dérivé de ces calques",
+  "night": "filtre Abyss exact (source/cote_v4_abyss/night.py) appliqué calque par calque",
+  "variants": {
+    "jour": {
+      "files": {
+        "01_sol_herbe": "CrookedMagentaV2_01_sol_herbe.png",
+        "02_lisiere_foret": "CrookedMagentaV2_02_lisiere_foret.png",
+        "03_chemin": "CrookedMagentaV2_03_chemin.png",
+        "04_parois_crooked": "CrookedMagentaV2_04_parois_crooked.png",
+        "05_entree_grotte": "CrookedMagentaV2_05_entree_grotte.png",
+        "06_rochers": "CrookedMagentaV2_06_rochers.png",
+        "07_vegetation_basse": "CrookedMagentaV2_07_vegetation_basse.png",
+        "08_troncs_ombres": "CrookedMagentaV2_08_troncs_ombres.png",
+        "09_canopees": "CrookedMagentaV2_09_canopees.png"
+      },
+      "aseprite": "CrookedMagentaV2_jour.aseprite",
+      "tiled": "CrookedMagentaV2_jour.tmj",
+      "atlas": [
+        "CrookedMagentaV2_jour_8px.png",
+        "CrookedMagentaV2_jour_8px.tsj"
+      ],
+      "atlas_tiles": 8559,
+      "composition": "CrookedMagentaV2_composition_jour.png",
+      "sha256": {
+        "CrookedMagentaV2_01_sol_herbe.png": "ce1c3f11db21ae3b1861108e1c802463dcee9964542dd0459053164b1df4b38d",
+        "CrookedMagentaV2_02_lisiere_foret.png": "5db4334fc59a6cbd555da2da6de535cf582eec21c1baa377ee6cddfe6d111a39",
+        "CrookedMagentaV2_03_chemin.png": "2257dc54176ff73fac9b198729835ec16cb55e305d0b7238c5419da16e4c748d",
+        "CrookedMagentaV2_04_parois_crooked.png": "ecbe19cc1798876508f173f4de7beb2f6b5d9ff1b3f86dd0f858da1554c8d9ab",
+        "CrookedMagentaV2_05_entree_grotte.png": "019c8eceda84bf3d18900970f29e4b1892b55989e1dcd74d8a55fd180b9689e2",
+        "CrookedMagentaV2_06_rochers.png": "88dd40d34e8cef7a8a694dc6936ac8a7a22e2f96c5f7a66fb42f5a02387c2d28",
+        "CrookedMagentaV2_07_vegetation_basse.png": "aafc41ebec19a9748762219a7962a60bf243e6fb1175c7bfcf1e5f3a7c83e5c1",
+        "CrookedMagentaV2_08_troncs_ombres.png": "656572f5c6a3481098ed0e2f4261db16ecf5bf9d38591a9dbe7599530bc5541e",
+        "CrookedMagentaV2_09_canopees.png": "bef3291336da008915cfe35838681747901e658863fc202fd82ba2d4a26bd731",
+        "CrookedMagentaV2_composition_jour.png": "e5ea8c2e0798512e7471891326d5ba61bd86f2b2d0d202310b1821ff91c41832"
+      }
+    },
+    "nuit": {
+      "files": {
+        "01_sol_herbe": "CrookedMagentaV2_01_sol_herbe_nuit.png",
+        "02_lisiere_foret": "CrookedMagentaV2_02_lisiere_foret_nuit.png",
+        "03_chemin": "CrookedMagentaV2_03_chemin_nuit.png",
+        "04_parois_crooked": "CrookedMagentaV2_04_parois_crooked_nuit.png",
+        "05_entree_grotte": "CrookedMagentaV2_05_entree_grotte_nuit.png",
+        "06_rochers": "CrookedMagentaV2_06_rochers_nuit.png",
+        "07_vegetation_basse": "CrookedMagentaV2_07_vegetation_basse_nuit.png",
+        "08_troncs_ombres": "CrookedMagentaV2_08_troncs_ombres_nuit.png",
+        "09_canopees": "CrookedMagentaV2_09_canopees_nuit.png"
+      },
+      "aseprite": "CrookedMagentaV2_nuit.aseprite",
+      "tiled": "CrookedMagentaV2_nuit.tmj",
+      "atlas": [
+        "CrookedMagentaV2_nuit_8px.png",
+        "CrookedMagentaV2_nuit_8px.tsj"
+      ],
+      "atlas_tiles": 8559,
+      "composition": "CrookedMagentaV2_composition_nuit.png",
+      "sha256": {
+        "CrookedMagentaV2_01_sol_herbe_nuit.png": "498780aee52391af224acf03dbae5f2cd365faa0403d4699fbb79ad1c442400e",
+        "CrookedMagentaV2_02_lisiere_foret_nuit.png": "85d24a13a0819cc901b44a54d2c4b27b4ac08b0865d1d44f196faa8c6d2c1928",
+        "CrookedMagentaV2_03_chemin_nuit.png": "965d505b91901b14551fdeb247050eb60eba86b85aad7273c521698f2fe491e7",
+        "CrookedMagentaV2_04_parois_crooked_nuit.png": "27d13c56f711b7a15fe84afbdc05b822f668c717d151842ce84727d587d115d2",
+        "CrookedMagentaV2_05_entree_grotte_nuit.png": "4fab391036ca10ad9de0636df027becfcc13da2400e7d2e88ae77d40654daa93",
+        "CrookedMagentaV2_06_rochers_nuit.png": "66a55c5213c313d4a6430985b9d25cac8d7b39ea7d4c7d0419cc251599e223a6",
+        "CrookedMagentaV2_07_vegetation_basse_nuit.png": "3e28a0fd68189e744a75881f5621e3c9e7395e1d8a4a45b48eb1dd48523f7199",
+        "CrookedMagentaV2_08_troncs_ombres_nuit.png": "26ecd26c85e21e8c0166e2dc912791534e77624c1b1cee5a78a0535da3b670bc",
+        "CrookedMagentaV2_09_canopees_nuit.png": "6f61f813b7a1649277c2da585b9d818a3b40a3374e39016e0f483a4ea6d57c16",
+        "CrookedMagentaV2_composition_nuit.png": "4720fdb128375534181df5ee2dcdf981340668baf4c767d2bb87f0b6264915f9"
+      }
+    }
+  }
+}

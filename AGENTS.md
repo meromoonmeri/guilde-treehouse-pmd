@@ -481,3 +481,9 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   (5) quand le générateur revient sans image (ici 2× pour « effacer les lisières »), appliquer le précédent de
   `layouts_magenta_v1` : reconstruction par échantillons du même brut, déclarée dans README + manifeste ;
   (6) livrer les arbres en deux calques (troncs+ombres au sol / canopées au-dessus du joueur) comme les entrées V3.
+- Suite (même demande répétée) : exports **multicalques comme la guilde** ajoutés (`exports/crooked_verdoyant_v2_magenta/
+  multicalques/` : PNG + Aseprite 1 frame + Tiled .tmj avec atlas 8 px dérivé des calques générés, jour/nuit,
+  `verify_multicalques.py` relit Aseprite/Tiled indépendamment, 0 différence). Les 6 calques orphelins de la première
+  passe à 7 calques (`02_chemin`, `07_arbres`…) ont été supprimés de `renders/.../{calques,masques,nuit}` : ne garder que
+  les fichiers listés dans `manifest.json → layers_order_bottom_to_top`.
+
