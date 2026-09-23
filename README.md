@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Beach — référence conservée, neuf calques et eau animée
+
+- **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.
+- [Animation WebP](renders/beach_layers_v1/BeachV1_plage_animee.webp) · [GIF](renders/beach_layers_v1/BeachV1_plage_animee.gif) · [document OpenRaster](renders/beach_layers_v1/BeachV1_calques.ora) · [pack ZIP](renders/beach_layers_v1/BeachV1_pack.zip).
+- [Méthode, provenance et import 8 px](renders/beach_layers_v1/README.md).
+
+`DSVFS.png` conservée en 702×466 ; neuf partitions visibles, deux pistes mer/écume de 64 phases (3,2 s). Phase 0 exacte, décor et contacts fixes. Mouvement nouveau guidé par la planche Beach, **pas un cycle officiel récupéré**. Option d’import 704×472 par transparence ajoutée, sans étirement. Dix tests d’assets PASS, viewer contrôlé en DOM simulé ; PMDO non testé. Les anciens lots restent inchangés.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
