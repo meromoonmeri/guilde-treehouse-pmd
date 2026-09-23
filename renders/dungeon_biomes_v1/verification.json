@@ -1,0 +1,23 @@
+{
+  "pass": true,
+  "checks": [
+    "ZIP CRC, unique PNG basenames, all PNG canvases Ground8-aligned",
+    "42 nonempty transparent surface layers exactly reconstruct ten generated terrains, no magenta or overlap",
+    "ten lossless generated originals retrievable from pinned Git history",
+    "eleven-reference audit and all pinned source SHA256/Git-blob hashes",
+    "all 448 forest BPA/BPL joint states equal the decoded 1x source pixels",
+    "all sky/current/veil/ash states equal their native 1x source windows",
+    "all21original desert palette-channel states match the source; no placement on new terrain",
+    "every lava pixel in all31frames maps to unchanged native source pixels, no interpolation/flip/scale",
+    "each exported animation bank contains genuinely different visible states",
+    "independent source-cycle periods close exactly; excerpt is not claimed as their combined loop",
+    "five WebP files decode as changing animations with the documented 2134ms duration and single playback",
+    "standalone ZIP assembler reproduces all ten transparent terrains and source-rendered demonstrations",
+    "Beach source and deliverables untouched since previous release"
+  ],
+  "png_count": 670,
+  "layer_count": 42,
+  "animation_state_count": 616,
+  "zip_sha256": "1487394376d762379e8c9032c56f499183f04ec6417e63a0480274c6a21320cf",
+  "validation": "No PMDO/GBA/PC-port runtime or artistic approval claimed."
+}

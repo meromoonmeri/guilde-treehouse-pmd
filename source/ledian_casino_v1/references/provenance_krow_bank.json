@@ -1,0 +1,92 @@
+{
+  "repository": "https://github.com/Palikadude/Halcyon",
+  "commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "identified_as": "Krow Bank, Bank_Owner = Murkrow",
+  "identity_evidence": [
+    {
+      "path": "Data/Script/ground/metano_town/init.lua",
+      "lines": [
+        2837,
+        2849
+      ]
+    },
+    {
+      "path": "Data/Script/ground/metano_town/metano_town_ch_2.lua",
+      "lines": [
+        460,
+        466
+      ]
+    }
+  ],
+  "sources": {
+    "Metano_Town_Objects": {
+      "local": "source/amp_plains_fleurie_v1/references/Metano_Town_Objects.tile",
+      "remote": "Content/Tile/Metano_Town_Objects.tile",
+      "git_blob": "d22a4a57c2bae103f3adcf139c271239fee5f403",
+      "sha256": "3ef3fb3e33df245f7ef483d8e219f2e3cbbf8878395552703644fc2019e4992a",
+      "cell_px": 8
+    },
+    "Metano_Town_Objects_Over": {
+      "local": "source/ledian_casino_v1/references/Metano_Town_Objects_Over.tile",
+      "remote": "Content/Tile/Metano_Town_Objects_Over.tile",
+      "git_blob": "606f9fd1137535b1f3326446fb8339e5027874d9",
+      "sha256": "a7cb25978a034b0c1b71a3a574667c2557108fc6801f14d8def88f6c3a1cc1b1",
+      "cell_px": 8
+    },
+    "Metano_Town_Objects_Under": {
+      "local": "source/ledian_casino_v1/references/Metano_Town_Objects_Under.tile",
+      "remote": "Content/Tile/Metano_Town_Objects_Under.tile",
+      "git_blob": "17f754510fea70a1fd9380731afe2d25046cdfcc",
+      "sha256": "d0d28814d7face4f48f289964fe06fe5354aca2379404eb76cd27c444f2b9382",
+      "cell_px": 8
+    }
+  },
+  "exports": {
+    "toiture": {
+      "file": "KrowBank_toiture_native.png",
+      "sheet": "Metano_Town_Objects",
+      "source_rect": [
+        976,
+        928,
+        1080,
+        1024
+      ],
+      "kept_rows": [
+        0,
+        48
+      ],
+      "size": [
+        104,
+        96
+      ],
+      "sha256": "575d77d18858c25b643c3e914ac4569a84beffbb8e72f2be6d6488d9b3014ec5"
+    },
+    "guichet": {
+      "file": "KrowBank_guichet_native.png",
+      "sheet": "Metano_Town_Objects_Over",
+      "source_rect": [
+        976,
+        928,
+        1080,
+        1024
+      ],
+      "kept_rows": [
+        0,
+        96
+      ],
+      "size": [
+        104,
+        96
+      ],
+      "sha256": "eaa39748faeb43f749ddfaadd500ac1061bb3228013aaa47c059b3dc764cb936"
+    }
+  },
+  "scope": "Native reference study and extracted object layers, NOT a finished casino map.",
+  "checks": [
+    "Git blob identity against pinned Halcyon tree",
+    "native 8 px grid",
+    "no resize, recolour, mirroring or generated redraw in these extracts",
+    "roof and front furnishing on separate aligned canvases"
+  ],
+  "runtime_PMDO": "NOT TESTED"
+}

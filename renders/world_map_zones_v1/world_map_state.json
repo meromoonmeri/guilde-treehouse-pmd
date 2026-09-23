@@ -1,0 +1,150 @@
+{
+  "format": "WorldMapUnlockState",
+  "map_size_px": [
+    504,
+    336
+  ],
+  "state_layer": "layers/03_etat_deblocage.png",
+  "highlight_layer": "layers/04_surlignage_debloque.png",
+  "zones": [
+    {
+      "id": "volcan",
+      "label": "Volcan",
+      "position_px": [
+        62,
+        47
+      ],
+      "unlocked_by_default": true,
+      "sprite_id": "volcan",
+      "asset_source_box": [
+        30,
+        0,
+        116,
+        157
+      ]
+    },
+    {
+      "id": "foret",
+      "label": "Forêt",
+      "position_px": [
+        342,
+        57
+      ],
+      "unlocked_by_default": true,
+      "sprite_id": "foret",
+      "asset_source_box": [
+        620,
+        0,
+        780,
+        145
+      ]
+    },
+    {
+      "id": "plage",
+      "label": "Plage",
+      "position_px": [
+        165,
+        220
+      ],
+      "unlocked_by_default": true,
+      "sprite_id": "plage",
+      "asset_source_box": [
+        365,
+        0,
+        480,
+        92
+      ]
+    },
+    {
+      "id": "desert",
+      "label": "Désert",
+      "position_px": [
+        414,
+        101
+      ],
+      "unlocked_by_default": false,
+      "sprite_id": "desert",
+      "asset_source_box": [
+        495,
+        190,
+        640,
+        315
+      ]
+    },
+    {
+      "id": "glace",
+      "label": "Glace",
+      "position_px": [
+        99,
+        284
+      ],
+      "unlocked_by_default": false,
+      "sprite_id": "glace",
+      "asset_source_box": [
+        1135,
+        315,
+        1320,
+        510
+      ]
+    },
+    {
+      "id": "ruines",
+      "label": "Ruines",
+      "position_px": [
+        233,
+        145
+      ],
+      "unlocked_by_default": false,
+      "sprite_id": "ruines",
+      "asset_source_box": [
+        680,
+        116,
+        860,
+        275
+      ]
+    },
+    {
+      "id": "tour",
+      "label": "Tour",
+      "position_px": [
+        286,
+        188
+      ],
+      "unlocked_by_default": false,
+      "sprite_id": "tour",
+      "asset_source_box": [
+        970,
+        12,
+        1100,
+        170
+      ]
+    }
+  ],
+  "connections": [
+    [
+      "volcan",
+      "foret"
+    ],
+    [
+      "foret",
+      "plage"
+    ],
+    [
+      "plage",
+      "ruines"
+    ],
+    [
+      "ruines",
+      "tour"
+    ],
+    [
+      "tour",
+      "glace"
+    ],
+    [
+      "tour",
+      "desert"
+    ]
+  ],
+  "update_rule": "Le moteur remplace les calques et conserve le fond canonique; les frames discover restent une presentation separee."
+}

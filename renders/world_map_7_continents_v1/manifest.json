@@ -1,0 +1,94 @@
+{
+  "canvas_px": [
+    1008,
+    672
+  ],
+  "native_reference": "Explorers_of_Sky_-_World_Map.png",
+  "scale": "nearest 2x preview; native source preserved",
+  "continents": 7,
+  "animation_frames": 8,
+  "asset_source": "MapAssetsPMD2.webp",
+  "files": {
+    "WorldMap_7_Continents.png": {
+      "sha256": "8a87d147c663860dc0837ac4488d77614926a0025f5626b75a34595639373e5c",
+      "bytes": 225107
+    },
+    "world_map_7_continents_state.json": {
+      "sha256": "614100ea56eb849c67f0b0f55063df95e2b6490b6b824bae77c2a4d901ab88e4",
+      "bytes": 1501
+    },
+    "layers/00_fond_canonique_2x.png": {
+      "sha256": "47761dc0cd770e1d63b02df1c6c1e83702213c611a3cfabe342c4a4bfa9d0fca",
+      "bytes": 141081
+    },
+    "layers/04_routes.png": {
+      "sha256": "8fe023d8ca87bfe16dd8497a4659b87b3532a281c132dd8bde91274e5c142479",
+      "bytes": 5468
+    },
+    "layers/01_continents_7_silhouettes.png": {
+      "sha256": "750bcd0942642e7eabec9746932237ef98624e967a91b0affee8ef0f4eef9765",
+      "bytes": 33938
+    },
+    "layers/02_cotes_et_reliefs.png": {
+      "sha256": "fb25ac8a9b9f7f7ae7b61850c9ed02fedd11c911d9eb41cb79f53323f1d8970a",
+      "bytes": 10670
+    },
+    "layers/03_repères_continents.png": {
+      "sha256": "a04d5d7a8d06505b8fbbd375053f01a65972ad28c7682203be17f682e79d716a",
+      "bytes": 7371
+    },
+    "layers/05_etat_deblocage.png": {
+      "sha256": "3999a3517ca362d19368646377b7a5855549ffd7fc9914435d9ff63f4c11e78e",
+      "bytes": 9591
+    },
+    "layers/06_labels.png": {
+      "sha256": "c5a95bde128ede4b6a92b37e520d85359e7aedaef03a9e9ec34f0ec6e55779fe",
+      "bytes": 7077
+    },
+    "animations/WorldMap_7continents_discover_00.png": {
+      "sha256": "47761dc0cd770e1d63b02df1c6c1e83702213c611a3cfabe342c4a4bfa9d0fca",
+      "bytes": 141081
+    },
+    "animations/WorldMap_7continents_discover_01.png": {
+      "sha256": "181e13b74e2e7ea9b77f5311d11ed25d371ebc4ff67c4ed3ae90acbcd4af8b75",
+      "bytes": 212208
+    },
+    "animations/WorldMap_7continents_discover_02.png": {
+      "sha256": "c9e8c7dec231ba99c3f2798057ec8f017e879a64f6e4edf73c1df75966f2ca0b",
+      "bytes": 212802
+    },
+    "animations/WorldMap_7continents_discover_03.png": {
+      "sha256": "e06ac9747fd23d023ad56acdd0474e757c0723d6794f021c18b8fee1058e1e34",
+      "bytes": 213564
+    },
+    "animations/WorldMap_7continents_discover_04.png": {
+      "sha256": "df0a42e87b0da48e1f2e85e343b51b8c22ab873c46a0cb8890b97b041c50d15b",
+      "bytes": 214298
+    },
+    "animations/WorldMap_7continents_discover_05.png": {
+      "sha256": "a2cb320ccd0947c561a4158dc358043c6130d4d73abc1e1ad402dac493365b35",
+      "bytes": 215325
+    },
+    "animations/WorldMap_7continents_discover_06.png": {
+      "sha256": "a2c3b1fea7bb6d291ff55109daf91307a081068a2f6cfa4ff6166b5f09a3f242",
+      "bytes": 215836
+    },
+    "animations/WorldMap_7continents_discover_07.png": {
+      "sha256": "b44c5a7960e635dada6f4b00897a0ef91b8616a8aa6ec9da7babffd6ed8b6507",
+      "bytes": 216518
+    },
+    "animations/WorldMap_7continents_discover.webp": {
+      "sha256": "e3e6906aa5253217fcdab3d677c66de318a9cd080af12a25156a29108cf0a466",
+      "bytes": 116610
+    },
+    "assetsprite/WorldMap_7Continents_AssetSprite.png": {
+      "sha256": "65087e5242acf55564643f2cab0c5b102e6058f53e965d232223ab411f82a73a",
+      "bytes": 2691
+    },
+    "assetsprite/WorldMap_7Continents_AssetSprite.json": {
+      "sha256": "ae9ff8c95a7eef1a45515e50f6c15ddafbcb53405cd1005f7a0541a1c53263dd",
+      "bytes": 1268
+    }
+  },
+  "provenance": "Fond canonique fourni; continents, routes, reliefs et etat sont des calques de composition separes. Les textures atlas sont prelevees et normalisees nearest-neighbor, pas declarees pixels natifs de la carte."
+}

@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "variants": [
+    "repository ZIP-backed",
+    "root redirect",
+    "extracted PNG ZIP"
+  ],
+  "checks": [
+    "10 room/mode states",
+    "light toggle",
+    "native/generated reference URLs",
+    "guide-free PNG export state",
+    "transparent/magenta export",
+    "single layer export",
+    "navigation race guard"
+  ],
+  "method": "Node vm with DOM/canvas mocks, not graphical browser or PMDO"
+}

@@ -1,0 +1,76 @@
+{
+  "format": "AssetSprite",
+  "sheet": "ZoneEmblemes_AssetSprite.png",
+  "frame_size": [
+    144,
+    144
+  ],
+  "entries": [
+    {
+      "id": "foret",
+      "label": "Forêt",
+      "rect": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "plage",
+      "label": "Plage",
+      "rect": [
+        144,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "volcan",
+      "label": "Volcan",
+      "rect": [
+        288,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "desert",
+      "label": "Désert",
+      "rect": [
+        432,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "glace",
+      "label": "Glace",
+      "rect": [
+        576,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "tour",
+      "label": "Tour",
+      "rect": [
+        720,
+        0,
+        144,
+        144
+      ],
+      "unlocked_by_default": false
+    }
+  ]
+}

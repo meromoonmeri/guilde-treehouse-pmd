@@ -1,0 +1,141 @@
+{
+  "status": "Audited placement design, not installed PMDO warps",
+  "size": [
+    600,
+    448
+  ],
+  "grid": 8,
+  "levels": {
+    "accueil": 0,
+    "casino": -1,
+    "salon_bas": -1,
+    "cafe": 1,
+    "salon_haut": 1
+  },
+  "stairs": {
+    "accueil": {
+      "N": {
+        "direction": "N",
+        "action": "montee",
+        "target": "cafe",
+        "target_port": "S",
+        "trigger": [
+          304,
+          64
+        ],
+        "arrival_spawn": [
+          304,
+          160
+        ],
+        "arrival_facing": "S"
+      },
+      "S": {
+        "direction": "S",
+        "action": "descente",
+        "target": "casino",
+        "target_port": "N",
+        "trigger": [
+          304,
+          376
+        ],
+        "arrival_spawn": [
+          304,
+          304
+        ],
+        "arrival_facing": "N"
+      }
+    },
+    "casino": {
+      "N": {
+        "direction": "N",
+        "action": "montee",
+        "target": "accueil",
+        "target_port": "S",
+        "trigger": [
+          304,
+          64
+        ],
+        "arrival_spawn": [
+          304,
+          160
+        ],
+        "arrival_facing": "S"
+      }
+    },
+    "cafe": {
+      "S": {
+        "direction": "S",
+        "action": "descente",
+        "target": "accueil",
+        "target_port": "N",
+        "trigger": [
+          304,
+          384
+        ],
+        "arrival_spawn": [
+          304,
+          312
+        ],
+        "arrival_facing": "N"
+      }
+    }
+  },
+  "stair_links": [
+    [
+      "accueil",
+      "N",
+      "cafe",
+      "S"
+    ],
+    [
+      "accueil",
+      "S",
+      "casino",
+      "N"
+    ]
+  ],
+  "same_level_links": [
+    [
+      "casino",
+      "E",
+      "salon_bas",
+      "W"
+    ],
+    [
+      "cafe",
+      "E",
+      "salon_haut",
+      "W"
+    ]
+  ],
+  "external_access": "UNDEFINED: these two reception exits are inter-floor links, not an exterior entrance. Do not add a third exit without agreement.",
+  "reference": {
+    "map": "renders/cafe_spinda_reseau_v4/bruts/accueil_spinda_fidele.webp",
+    "kind": "chosen generated entrance, NOT a certified native sprite",
+    "scene_scale": "existing V4 600x448",
+    "crop": [
+      232,
+      316,
+      368,
+      396
+    ],
+    "actual_treads": [
+      268,
+      338,
+      336,
+      392
+    ],
+    "north_position": [
+      232,
+      56
+    ],
+    "cafe_south_position": [
+      232,
+      324
+    ],
+    "rotation": 0,
+    "extra_resampling": false
+  },
+  "proposed_spawns": "16px opaque raster footprint only; collision/actor size must be tested in engine",
+  "decoration": "omitted to inspect architecture; other V5 furnishing work remains pending"
+}

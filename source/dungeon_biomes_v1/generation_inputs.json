@@ -1,0 +1,192 @@
+[
+  {
+    "id": "foret_entree",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "energeticforest.png",
+      "sha256": "c4f6802ec003546144c585092c767d24d672c93efbd8e2c23f6799c319e5c3bd",
+      "rgba_sha256": "cde23a1b3f65c63ff3098d99fe33e7223130ddbd5d3ba251a78d74d6cb40c12f",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "clairière en poire, trajet sud vers tronc creux nord, petit îlot de fougères",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "foret_fin",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "energeticforest.png",
+      "sha256": "c4f6802ec003546144c585092c767d24d672c93efbd8e2c23f6799c319e5c3bd",
+      "rgba_sha256": "cde23a1b3f65c63ff3098d99fe33e7223130ddbd5d3ba251a78d74d6cb40c12f",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "grande clairière continue, racines et pousses latérales, petite terrasse nord, retour sud",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "ile_entree",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "finalisland.png",
+      "sha256": "dae533b0cb304a3fbf93f272aa433b0f51b203c4c95008d422a4d2bfe84c3f12",
+      "rgba_sha256": "1b630c6be3ce9967d58d86a8b676d67fe00f806d92da03fe0eae5c3a5a05c9f1",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "île flottante asymétrique, petit palier sud et pont, grotte nord",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "ile_fin",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "finalisland.png",
+      "sha256": "dae533b0cb304a3fbf93f272aa433b0f51b203c4c95008d422a4d2bfe84c3f12",
+      "rgba_sha256": "1b630c6be3ce9967d58d86a8b676d67fe00f806d92da03fe0eae5c3a5a05c9f1",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "grande arène gazonnée continue, terrasse nord, pont de retour sud",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "volcan_entree",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "volcanicpit (1).png",
+      "sha256": "bff7da8e2a9738436cd27d709d3709c2edd4c20d01321576b42b803a134a2f94",
+      "rgba_sha256": "f4329b7e337bf7ead113bcde1227251ab13a1e426e21c3299377b66626529097",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "chaussée basaltique sinueuse vers grotte nord, chenaux vides réservés à la lave",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "volcan_fin",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "volcanicpit (1).png",
+      "sha256": "bff7da8e2a9738436cd27d709d3709c2edd4c20d01321576b42b803a134a2f94",
+      "rgba_sha256": "f4329b7e337bf7ead113bcde1227251ab13a1e426e21c3299377b66626529097",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "grande arène basaltique continue, terrasse nord et retour sud, éperons latéraux",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "desert_entree",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "witheringdesert.png",
+      "sha256": "4579a8dd877f90483372de7879fe4a6362af8b81218222e7cf2d153766854197",
+      "rgba_sha256": "3fb2ade35a0524f0c64be56b4f0fd628d912ef5ae3368c3014b4dcbb41c5f86d",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "approche sablée sud, butte latérale et arche rocheuse nord",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "desert_fin",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": "witheringdesert.png",
+      "sha256": "4579a8dd877f90483372de7879fe4a6362af8b81218222e7cf2d153766854197",
+      "rgba_sha256": "3fb2ade35a0524f0c64be56b4f0fd628d912ef5ae3368c3014b4dcbb41c5f86d",
+      "origin": "user reference file"
+    },
+    "prompt_summary_not_verbatim": "bassin de sable continu, gradins de grès, escaliers bas de retour sud",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "marin_entree",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": ".cache/redport_audit/decoded/H02P02.png",
+      "sha256": "3eb12aaf73e6438524341bdba9c45d0ab25fa1f9ee56ed3cd518a18c61ec3658",
+      "rgba_sha256": "31d88ae09084e5bee3a3415f276353c113529e962e674393e646644d6e4f55d5",
+      "origin": "source-decoded native H02P02, tick0; not a claim to possess the missing named upload file"
+    },
+    "prompt_summary_not_verbatim": "chemin cobalt entre côtes rocheuses, grotte sous-marine nord",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  },
+  {
+    "id": "marin_fin",
+    "tool": "generate_image",
+    "reference": {
+      "path_at_generation": ".cache/redport_audit/decoded/H02P02.png",
+      "sha256": "3eb12aaf73e6438524341bdba9c45d0ab25fa1f9ee56ed3cd518a18c61ec3658",
+      "rgba_sha256": "31d88ae09084e5bee3a3415f276353c113529e962e674393e646644d6e4f55d5",
+      "origin": "source-decoded native H02P02, tick0; not a claim to possess the missing named upload file"
+    },
+    "prompt_summary_not_verbatim": "arène bleue, anneau de basalte ouvert au sud, terrasse fermée au nord",
+    "shared_prompt_constraints": [
+      "one complete overhead PMD-inspired map, not a collage",
+      "pure magenta exterior; no characters or UI",
+      "no baked animated beams, particles, clouds or lava",
+      "north entrance for entry maps; closed north for finales; south arrival/return"
+    ],
+    "status": "generated/non-native, not artistically approved",
+    "raw_archive_index": "raws/archive.json"
+  }
+]

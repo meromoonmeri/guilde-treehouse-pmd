@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "scope": "Ran the exporter from the extracted standalone archive, with no V1 dependency.",
+  "composition_pngs": 8,
+  "animation_pngs": 512,
+  "native_size": [
+    512,
+    512
+  ],
+  "checks": [
+    "all compositions equal full repository masters",
+    "all 512 frames equal atlas source pixels",
+    "no resizing"
+  ],
+  "runtime_PMDO": "NOT TESTED"
+}

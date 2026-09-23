@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "requests": 49,
+  "checks": [
+    "HTTP 200 on viewer, docs, all room layers, all catalog sprites/animation frames and ZIP",
+    "all HTTP bytes match workspace files",
+    "custom preview Host accepted"
+  ],
+  "graphical_browser": "NOT TESTED",
+  "runtime_PMDO": "NOT TESTED"
+}
