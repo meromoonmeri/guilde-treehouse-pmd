@@ -1,5 +1,129 @@
 # Méthode de production approuvée — zones Métano
 
+IB1 : Searing Crucible glacial livré, source Halcyon working-copy1522c7a8. Géométrie504×504/72cases conservée ; pics14/20cases,4tracés,2tours actifs/1pause. Viewport320×240, pas de resize. Source/pack : `source/ice_boss_v1/restore.py`. Boss Halcyon opt-in, Tile à enregistrer ; Lua simulé testé, PMDO non exécuté. Préserver les16cartes/variantes des plaines déjà converties par viewport_pmdo_v1.
+
+WP1 livré : plaines,5calques,18phases natives ;16cartes publiées. MD1 montré mais non poussé, absent du checkout restauré : à récupérer. Suite : forêt secrète, plaines brûlées. Lanceur source/plaines_pmd_v1/restore.py.
+
+## Mise à jour — finale LF1 et mobilier FC1
+
+LE1 approuvée, LF1/FC1 livrés : [bilan et limites](source/suite_foret_cafe_v1/README.md). Préserver entrée, natifs et salles. Mobilier13/36,23+fenêtres à poursuivre ; tailles visées au générateur puis normalisation des créations seulement. Tests≠validationPMDO/artistique.
+
+
+## Entrée en lisière — six groupes et lumière PMD (21 septembre 2026)
+
+**[PNG de la carte](renders/lisiere_pmd_v1/LE1_lisiere.png)** · **[WebP animé direct](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_animee.webp)** · **[Pack PNG multicalque](https://raw.githubusercontent.com/meromoonmeri/guilde-treehouse-pmd/7253a42e93d8cc24358e4477e6e9c2056d118845/renders/lisiere_pmd_v1/LE1_lisiere_calques_et_effets.zip)** · [Cascades de lave animées](renders/lisiere_pmd_v1/LE1_cascades_animees.webp).
+
+Dernière demande ciblée exécutée : **une entrée dans une lisière**, identité Forêt envahie H07P03, disposition d’obstacles inspirée de Mystifying Forest lorsque cohérente. Cinq véritables plans générés séparément : fond forestier / sol continu / rochers / arbres-racines / végétation basse. Sixième groupe : lumière PMD, rayons et particules sur deux pistes natives indépendantes. Aucun fond/sol cuit dans le calque d’arbres retenu ; la première tentative incorrecte est archivée, pas utilisée. Le sol est rempli sous le décor. Passage central sud→nord64px libre, dégagement conservateur8px vérifié, pas une validation de collisions/warps moteur.
+
+Rayons H07P04W32×8ticks, particules14×7ticks, toutes448combinaisons recomposées exactement. Lumière native réemployée explicitement : ne pas prétendre qu’H07P03 possédait cette animation à l’origine. Six modules de cascades/colonnes H26P01,8×3ticks, pieds/halos conservés à1× ; livrés à part, pas placés en forêt. WebP forêt = extrait4,27s, lecture unique, pas boucle composite intégrale209s ; WebP cascades = boucle complète400ms. PNG d’import sans perte, WebP de présentation compressés. Six groupes sémantiques, pas six fichiers arbitraires.
+
+Une seule entrée livrée ici : la finale et les autres cartes restent à produire/reprendre. Ni validation PMDO ni accord artistique prétendu. Huit bruts archivés losslessly au commit100e6878. Gros ZIP et grand WebP conservés dans Git au commit7253a42e avec liens directs ci-dessus, SHA/index `source/lisiere_pmd_v1/release.json`, lecteur/restaurateur et serveur8012 ; ils ne sont pas supprimés. Native_sources.zip V1 dédupliqué avec son membre byte-identique déjà inclus dans l’ancien pack, lecteurs adaptés/testés. Anciens rendus/ZIP et Beach inchangés. Scripts `source/lisiere_pmd_v1/`, détails et limites dans `renders/lisiere_pmd_v1/README.md`.
+
+## Précision en cours — une autre zone du même lieu, 4–6 calques
+
+Dernière consigne : les cartes doivent sembler appartenir **au même lieu que leur référence**, pas seulement au même biome. Garder textures, gamme de couleurs, formes caractéristiques et perspective ; ciel/arrière-plan seulement lorsqu’il existe dans la référence. Viser4–6groupes sémantiques (sol continu, reliefs/rochers, végétation/bordures, accès/architecture, fond/ciel éventuel, fluides/effets), avec vraies pistes d’animation séparées. Ne pas atteindre le quota par un simple découpage de surfaces visibles. Revoir les occlusions et la continuité du sol, pas seulement les noms de calques.
+
+**[Cadrage et revue des références](source/dungeon_biomes_v2/CONTINUITE.md).** Mont Discipline doit garder ses dalles claires et son cadre végétal, pas devenir une montagne brune ; forêt secrète : bleus/cyan et toiles ; plaines : horizon et ciel de la référence. Conserver aussi les vrais calques de cascades/colonnes de lave et les lumières/particules de forêt, avec leurs cadences natives. Les références de chaque lieu priment sur son nom.
+
+État après interruption :10compositions d’étude, **aucun lot2 livré/validé**, finales forêt secrète et plaines brûlées non générées (limite10atteinte). Les études montagne brune et entrée brûlée noire quadrillée sont écartées ; les autres à requalifier, pas approuvées. Bruts préservés losslessly au commitf1bde98c, index `source/dungeon_biomes_v2/drafts/archive.json`, lecteur `draft_archive.py`. Les versions déjà livrées et Beach restent intactes. La satisfaction générale exprimée par l’utilisateur ne valide pas ces nouvelles études. Reprendre avec ce cadrage avant de compléter les images manquantes ; portée22cartes par lots, aperçusPNG/WebP et push toujours requis.
+
+## Donjons réinventés — lot 1 / cinq duos (21 septembre 2026)
+
+**[Planche PNG des dix cartes](renders/dungeon_biomes_v1/apercus/DB1_collection.png)** · **[Pack multicalque](renders/dungeon_biomes_v1/DB1_cinq_duos_multicalques.zip)** · [Méthode et limites](renders/dungeon_biomes_v1/README.md).
+
+WebP animés directs : [forêt](renders/dungeon_biomes_v1/apercus/DB1_foret_duo.webp), [île](renders/dungeon_biomes_v1/apercus/DB1_ile_duo.webp), [volcan](renders/dungeon_biomes_v1/apercus/DB1_volcan_duo.webp), [désert](renders/dungeon_biomes_v1/apercus/DB1_desert_duo.webp), [courant marin](renders/dungeon_biomes_v1/apercus/DB1_marin_duo.webp). Deux cartes par fichier, extraits2,13s échantillonnés, lecture unique, pas de fausse boucle composite courte. Aperçus compressés ; PNG d’import sans perte.
+
+Périmètre confirmé : **11 duos entrée+fin =22cartes**, livrés par lots. Premier lot livré :10compositions complètes réellement générées,42calques PNG de surfaces visibles,616états d’animation/référence indépendants, canevas Ground8px/basenames uniques, aucun Pokémon. **Les surfaces cachées derrière arbres/parois ne sont pas reconstruites** : ces calques ne sont pas des objets mobiles complets. `assemble.py` dans le ZIP recompose les10PNG transparents et leurs démonstrations à un tick choisi, sans dupliquer les fichiers lourds.
+
+Audit des11références dans `source/dungeon_biomes_v1/audit.json`. Port épinglé cd07abc4, pret89c65d9c :207blobs H identiques. **Tout n’est pas BPA** : forêt H07P04W BPA+BPL ; île ciel H29P04 BPL ; volcan H26P01 BPL + particules W04 BPA ; désert W05 BPL+scroll et cycles terrain d’origine conservés en référence ; courant H02P02W BPL. Natifs1× distincts des créations. La lave est un nouvel arrangement de textures sources sans interpolation/recoloration/flip, avec provenance de chaque pixel. Cadences indépendantes conservées ; banque forêt448combinaisons BPA/BPL, pas448frames à lire dans l’ordre. Sources et preuves incluses ; aucune validation PMDO/GBA/PC-port exécuté ni approbation artistique revendiquée.
+
+Reste à produire : jungle, forêt envahie, mont de discipline, plaines sauvages, forêt secrète, plaines brûlées — six duos. Ce lot ne termine pas le mobilier/fenêtres V8. Beach, anciennes maps et anciens ZIP inchangés. Dix nouveaux bruts archivés losslessly au commit93ec3994 ; cinq anciens bruts Casino/étude Arcanin supplémentaires conservés à l’identique dans Git via le lecteur d’archive existant pour respecter le budget. Tests de provenance/recomposition, assembleur autonome et Casino passés. Serveur8011 : PNG direct, aucun HTML nécessaire ; serveur Spinda8010 conservé et rechargé pour les anciennes URL d’archives.
+
+## Banderoles, tapis rouges et estrade Spinda / Mime Jr — 21 septembre 2026
+
+**[PNG de la collection](renders/spinda_decor_v1/apercus/SpindaDecor_collection.png)** · [Mise en scène PNG](renders/spinda_decor_v1/apercus/SpindaDecor_cafe_demonstration.png) · [Pack de calques](renders/spinda_decor_v1/Spinda_banderoles_tapis_estrade.zip).
+
+Demande : push GitHub, banderoles canoniques réadaptées au layout sur leur calque, tapis rouges Spinda, estrade avec deux rideaux Spinda/Mime Jr. Livré :5calques muraux jour/nuit conformés aux pans, sans couvrir fenêtres/accès ;3tapis rouges indépendants ;estrade,rideau gauche,rideau droit en3calques alignés208×184. Canevas Ground8px, variantes nuit, référence SpindaCafe2 native inchangée. Les adaptations sont générées/non natives, pas des pixels canoniques prétendus inchangés.10sorties préservées dans Git,2frontales rejetées ;front redressé depuis la diagonale retenue. Fragment de salle intempestif retiré de l’image du rideau droit. Exports statiques PNG/WebP directement visibles, sans HTML ; placement de la scène/tapis uniquement pour démonstration. Autres meubles/fenêtres V8 encore en attente.
+
+Scripts `source/spinda_decor_v1/`, serveur8010 (racine = PNG direct), vérifications de pixels, calques, fenêtres/accès, ZIP et provenance. Pas de validation PMDO/approbation artistique. Trois anciens bruts Casino (estrade,rideaux,terrain initial supplanté) archivés à l’identique dans Git via `source/casino_network_v1/archive.json`, lecteurs/tests/serveurs adaptés ; leurs anciennes livraisons et Beach restent inchangés. Au démarrage de ce tour, le checkout restauré était revenu au commit de base : la même branche a été mise à jour en fast-forward depuis le push d73e6ac2 ; les anciens fichiers Beach locaux ont été conservés dans un stash, pas écrasés ni réappliqués sur les versions plus récentes.
+
+## Torches murales animées — huit orientations (21 septembre 2026)
+
+**Affichage direct demandé : le HTML ne s’affiche pas chez l’utilisateur.** Livrer prioritairement le [WebP animé des8vues](renders/spinda_torches_v1/apercus_directs/Torches_8_angles_animees.webp) et le [PNG](renders/spinda_torches_v1/apercus_directs/Torches_8_angles.png),832×448,16frames100ms en boucle. Ces aperçus ne nécessitent aucun HTML. Fond et8bandes lumière précédents conservés à l’identique dans le ZIP ; serveur8009 maintient leurs URL.
+
+**[Atelier torches](apercu_spinda_torches.html)** · [Pack PNG autonome](renders/spinda_torches_v1/Spinda_torches_8angles_animees.zip) · [Planche des huit vues](renders/spinda_torches_v1/Torches_8_orientations.jpg).
+
+Dernière demande : torches murales sous tous les angles, lumière animée par palette cycling multiframe, calques séparés. Livraison additive :8supports générés (N/NE/E/SE/S/SO/O/NO),4vraies poses natives Halcyon/Ledian inchangées à1×,16frames de lumière par orientation (100ms, boucle1600ms). Cartes d’indices et alpha fixes ; vraies rotations des palettes,128PNG indexés dans le ZIP et8bandes RGBA. Trois calques séparés : support / flamme / lumière. Aperçu et exports600×448, placements de démonstration amovibles ; aucun objet cuit dans les maps. Atelier8009 ; scripts `source/spinda_torches_v1/`.9originaux générés conservés losslessly dans Git (première face N rejetée, remplacée). Les maps V8/V7 et Beach restent inchangées ; ce pack ne termine pas les meubles/rubans/fenêtres encore en attente. Pas de validation PMDO ou approbation artistique revendiquée.
+
+## Spinda V8 — lot 1 partiel et nuit tamisée (21 septembre 2026)
+
+**[Atelier V8](apercu_cafe_spinda_revisite_v8.html)** · [Jour / nuit](renders/cafe_spinda_revisite_v8/SpindaV8_jour_nuit.jpg) · [Premier lot de mobilier](renders/cafe_spinda_revisite_v8/SpindaV8_mobilier_lot1.jpg) · [Pack autonome](renders/cafe_spinda_revisite_v8/SpindaV8_atelier_lot1.zip).
+
+Demande actuelle : repasser tout le mobilier Halcyon ciblé au générateur, tapis compris ; étendre aux intérieurs pertinents ; une collection commune miel/sauge/crème-rose. Rubans muraux et nouvelles petites fenêtres sur leurs propres calques, mode nuit doux. **Livraison non achevée : limite de10générations atteinte sur ce tour. 9objets retenus ; table vide rejetée (vue du dessous).** Plan36objets :23de V7 +12compléments +1applique nouvelle. **27objets à générer/reprendre, plus rubans et fenêtres.** Ne pas prétendre que les natifs ou recolorations remplacent les générations demandées.
+
+Mode nuit des cinq salles livré :57PNG jour+nuit dans le ZIP, architecture de jour RGBA identique à V7 ; teinte nocturne adaptée, motifs de sol atténués et calque indépendant de lumière diffuse statique. Ni mobilier ni fausses flammes préplacés. Fenêtres V7 héritées provisoirement, pas de nouveau ruban livré.9meubles réellement générés,2tilesheets jour/nuit d’une même collection, inventaire de progression. Pas de validation PMDO ou approbation artistique revendiquée.
+
+Sources : `source/cafe_spinda_revisite_v8/plan.json`, `expanded_sources.json`, `raws/archive.json` (10originaux générés et5banques Halcyon conservés sans perte dans commit7445f0f6). Build/verify/serve dans ce dossier ; serveur8008 lié à0.0.0.0. Les12originaux V4 sont désormais archivés dans Git, lecteurs/restauration vérifiés ; anciens rendus/ZIP et Beach inchangés. Garder l’historique Git complet. Lire [la méthode et les limites](renders/cafe_spinda_revisite_v8/README.md) avant de continuer.
+
+## Historique — Spinda V7 : petites fenêtres, montées occultées, mobilier audité
+
+Dernière demande : fenêtres beaucoup plus petites ; ne plus montrer le palier/étage au-delà des marches montantes ; corriger leurs bordures ; auditer les tailles EoSO/Halcyon ; fournir les vrais comptoirs Spinda/Qulbutoké et des créations Kirlia/Charmilly.
+
+Livraison `renders/cafe_spinda_revisite_v7/`, atelier `apercu_cafe_spinda_revisite_v7.html`. Fenêtre propre au café en32×32, diamètre28 au lieu de64 ; centres préservés. Rectangles N accueil/casino[200,0,400,184] corrigés par génération référencée : marches dans l’ombre sous le mur, joues basses sans volutes, aucun étage supérieur visible. Architecture hors rectangle bit-identique, S/E/O et graphe conservés. Module de raccord contient aussi mur/sol ; pas un escalier natif autonome.
+
+Audit de8banques : EoSO SpindaCafe1/2, Halcyon objets/Over Café Metano, auberge, réfectoire. **30 objets/modules natifs**, **4 créations** (comptoirs frontaux Kirlia/Charmilly, banquette, desserte), **4 tilesheets** : PNG séparés +index de rectangles8px. Tables Spinda43×43 (canevas48×48), comptoirs natifs120×96 de canevas (120×88 visibles). Comptoirs = détourage manuel du Ground ; pixels RGBA visibles identiques à la référence, pas de reconstruction IA des parties cachées par les rubans. Natifs jamais redimensionnés/recolorés/retournés. Les créations sont explicitement non natives, normalisées avec aspect conservé. Aucune fenêtre Guilde réutilisée. Rien de ce mobilier n’est préposé sur les maps.
+
+Deux ZIP : objets/tilesheets et pack complet autonome avec26PNG de salles +catalogue +atelier. Le dépôt lit les calques V6 avec deltas explicites ; le ZIP matérialise tous les calques. Tests d’images/pixels, archives, atlas et DOM simulé. Pas de navigateur graphique/PMDO, aucune approbation artistique des nouvelles images revendiquée.
+
+Sources complètes préservées sans perte dans Git : **les4bruts V6 et7générations V7** (y compris2premières perspectives de comptoir non retenues), index `source/cafe_spinda_revisite_v7/raws/archive.json`, lecteur/restaurateur `archive.py`. Les ZIP/rendus V6 restent bit-identiques ; ancien build adapté au lecteur d’archive et testé. Le serveur sert aussi les anciennes URL de bruts depuis Git. Serveur V7 : `python source/cafe_spinda_revisite_v7/serve.py --port 8007`, 0.0.0.0. Préserver l’historique complet pour reconstruire les sources archivées. Beach trois ambiances inchangé.
+
+Les rubans natifs sont des modules de bibliothèque, pas un ajustement automatique sur les nouveaux murs. Pas de nouvelle collection de tapis rouges annoncée. Collisions, warps et validation moteur restent à faire.
+
+## Historique — générations N/S V6 et ciels Beach trois ambiances
+
+Après approbation de l’audit (« Parfait, passe à la génération »), trois nouvelles salles sont livrées dans `renders/cafe_spinda_revisite_v6/` : accueil N↑/S↓, casino N↑/E plat, café S↓/E plat. Deux salons V4 conservés. Atelier `apercu_cafe_spinda_revisite_v6.html`, 26 calques PNG contenus dans le ZIP et lus directement par l’atelier (pas de doublons). Quatre bruts complets archivés WebP lossless : 3 salles + nouvel oculus café. **Escaliers redessinés par le générateur d’après la référence : pas identité pixel de l’audit V5.** Repères recalés N[304,88]/arrivée[304,200], S[304,384]/arrivée[304,280] ; graphe réciproque testé, aucune installation moteur.
+
+Fenêtre café générée avec cadre miel et vitrage doux, 72×72 séparée, sans utiliser le sprite Guild_Heros_Room_Objects. Deux instances café, trois salon haut. Le plan N/S est approuvé, **ces nouvelles images ne sont pas encore approuvées artistiquement**. Pas de nouvelle sortie extérieure. Mobilier/rubans/tapis assortis encore à produire ; le catalogue et les flammes sont hérités de V4, pas de nouveaux meubles revendiqués.
+
+Portée ciel confirmée par l’utilisateur : **réseau Beach dix cartes + plage de référence uniquement**. `renders/beach_sky_gradient_v3/`, atelier `apercu_plages_ciels_v3.html`. Jour/nuit : lignes natives 8px issues des banques EoSO, sans changement de couleur/échelle ; nuit comparée au GIF fourni (70 lignes identiques). Crépuscule violet-corail reconstitué d’après `IMG_4888.jpeg` : **pas un sprite natif certifié**. Sans lune, étoiles fixes et petits nuages séparés ; wrap64s. Terrains et animations antérieurs inchangés (réseau32×100ms, référence64×50ms). Au crépuscule, terrain de jour conservé sans filtre. 39 sélections/modes/layouts testés en DOM simulé. Aucun navigateur graphique testé : téléchargement Chromium refusé par TLS. Aucun runtime PMDO.
+
+Pour la limite de stockage, sept études V4 supplantées sont conservées bit-identiques dans l’historique Git via `bruts/archived_studies.json` ; cinq bruts actifs, anciens calques/rendus et ZIP inchangés. Vérificateur adapté, restauration `python source/cafe_spinda_reseau_v4/archive_studies.py --restore`. Ne pas supprimer d’autres livraisons arbitrairement. Scripts de build/tests dans les deux nouveaux dossiers source ; serveur commun `python source/cafe_spinda_revisite_v6/serve.py`, port8006, lié à0.0.0.0.
+
+## Historique approuvé — audit des quatre escaliers N/S
+
+Dernière correction utilisateur : conserver l’escalier de référence et le placer au NORD ou au SUD selon l’étage, pas le redessiner en version latérale. Le choix initial E/O est remplacé. **Accueil0 : N monte vers café+1, S descend vers casino−1. Casino−1 : N monte vers accueil0. Café+1 : S descend vers accueil0.** Retours opposés N↔S ; passages E/O entre salons sans changement de niveau.
+
+Audit livré dans `renders/cafe_spinda_revisite_v5/audit/` : image annotée, `AUDIT.md`, `plan_escaliers.json`, `verification.json`. Script `source/cafe_spinda_revisite_v5/audit_escaliers.py`. Bases générées V4 conservées, marches de l’entrée choisie réutilisées exactement à l’échelle V4, sans rotation/étirement. Nord : module232,56 +palier/cheeks ; café sud :232,324 ; accueil sud intact. Ancien trou sous les marches nord corrigé (coupe jusqu’à128, pas136). Quatre accès/2liens réciproques, pixels source exacts, contacts au sol et bandes40px opaques, empreintes16px, deux contre-tests PASS. **PAS une validation collision, warp ou runtime PMDO.**
+
+Prototypes latéraux et anciens guides explicitement obsolètes, conservés comme historiques. Les nouvelles générations N/S d’essai ne sont pas utilisées : retouches locales sur la V4 pour garder le vrai dessin choisi. PNG d’audit régénérables dans `audit/exports/`, ignorés pour éviter les doublons. Les deux sorties de l’accueil sont internes : accès extérieur non défini, ne pas ajouter une troisième sortie sans accord. Mobilier/rubans/tapis V5 restent à produire ; l’audit n’est pas une livraison de tout le kit.
+
+
+## Historique — premier prototype Spinda V5, avant la correction N/S
+
+L’utilisateur demande désormais des fenêtres, escaliers et meubles **générés pour correspondre aux maps**, les références natives servant de modèles ; rubans ajustés aux murs, tapis rouges modulaires et décorations séparées. Il choisit deux sorties LATÉRALES à l’accueil (montée + descente), supprimant la sortie sud ; retour montant en sous-sol, descendant à l’étage.
+
+Il insiste ensuite, image à l’appui, pour reprendre **le petit escalier de l’ancienne entrée sud de l’accueil** : marches gris-brun peu profondes, rebords rocheux recourbés, lumière dorée qui décroît vers l’extérieur. Pas de bois massif, rampe blanche, spirale, porte massive ou hautes marches latérales ressemblant à une barrière. Voir `source/cafe_spinda_revisite_v5/WORKFLOW.md` avant de continuer.
+
+V5 est EN COURS, pas livré : un prototype généré de descente vers l’ouest128×72 et une fenêtre générée56×64 dans `renders/cafe_spinda_revisite_v5/prototypes/`, non approuvés/non placés. Les six essais de salles ne sont pas retenus. Intermédiaires de recherche V5 en.cache, non livrés ; empreintes enregistrées. Référence du seuil conservée, ainsi que les PNG normalisés. Aucun mobilier/ruban/tapis V5 encore produit, aucun pack ou atelier V5 terminé. V4 et toutes les anciennes livraisons restent intactes. Branche de session inchangée.
+
+
+## Correction prioritaire — Spinda V4 généré, cinq pièces et trois niveaux
+
+L’utilisateur a corrigé explicitement la méthode : **génération avec références canoniques, bordures immersives, zones séparées, réseau à plusieurs étages, fenêtres circulaires à croisillons** ; puis « voilà regarde café spinda reprend ce design là ». Ne PAS reprendre les bandes Métano comme solution à cette demande. L’accueil `accueil_spinda_fidele` option1 a été choisi ; quatre déclinaisons séparées ont suivi. Café et salon haut ont été régénérés une seconde fois pour retirer façade avant et faux ovales muraux. Bruts retenus indiqués dans le manifeste ; douze bruts/études conservés losslessly avec empreintes. Les autres salles n’ont pas encore d’approbation artistique utilisateur.
+
+Livraison : `renders/cafe_spinda_reseau_v4/`, `apercu_cafe_spinda_reseau_v4.html`, scripts et workflow dans `source/cafe_spinda_reseau_v4/`. AccueilRDC ; casino+salonbas−1 ; café+salonhaut+1. Générations1200×896→600×448 NN, uniquement sur le généré. 25calques : sol, lumières statiques, parois, bordures, fenêtres si étage, escaliers de proposition optionnels/désactivés. Pas de meuble, feu ou NPC dans la scène. Terrain généré référencé ≠ natif. Petit avis mural de l’accueil retiré localement avec bois voisin et raccord adouci ; brut choisi intact.
+
+Vraie fenêtre HeroObjects64² crop176,56–240,120 ; deux au café, trois au salonhaut. Escalier spiralé SecondFloorObjects96×72 crop208,128–304,200. Banques Halcyon au pin da6c2130d641507447e6386a5e47a296e8cb4c71 ; pixels natifs sans resampling/recoloration. Feu = quatre vraies poses Ledian6ticks, pas une animation de la lumière du sol. Deux feuilles Spinda natives et kiosque arrière/avant, fourneau généré et support natif dans le catalogue, non placés.
+
+Quatre liens réciproques de conception ; **pas de warps/ground/collisions installés**. Portes E casino/café et W salonhaut versy232, porte W salonbas plus basse. Cartes distinctes, PAS seamless. Le relevé de passage vise le sol clair, pas la face verticale du mur au-dessus. `plan.json`/`guides512²` historiques, coordonnées finales dans le manifeste600×448. Escaliers sur calques facultatifs : suggestions de placement, pas jeu testé.
+
+Pixels, archives, recomposition et banques natives vérifiés ; DOM dépôt/ZIP et redirection racine vérifiés ; pas navigateur graphique ni PMDO. Dépôt : calques WebP lossless ; ZIP :25PNG exacts +catalogue +viewer. Noms d’import uniques, grille8px. Les guides ne sont pas imprimés dans les exports.
+
+Budget : les sept bruts terrain BeachNetwork ont été archivés WebP après comparaison RGBA exacte et traceSHA des PNG d’origine ; loader accepte les anciens cheminsPNG via l’archive vérifiée. Le viewer BeachV1 réutilise ses138PNG existants ; le packaging réembarque les données pour les futurs ZIP. **Rendus et ZIP Beach antérieurs inchangés.** Tests d’images ancienZIP/dépôt/futurviewer portable et DOM, ainsi que loader/provenance des neuf sources BeachNetwork. Voir les scripts dédiés, ne pas prétendre avoir refait une vérification graphique ou moteur.
+
+Préserver les anciens cafés, casino, plages, études et stashes. Session sur `arena/01a0bf18-guilde-treehouse-pmd` exclusivement. Voir WORKFLOW et README V4 avant toute reprise.
+
+
 ## Correction utilisateur du 13 septembre 2026 — nouvelles entrées indépendantes
 
 Pour les nouvelles entrées de donjon indépendantes, l’utilisateur autorise expressément des **textures inventées dans la DA PMD**, via le générateur, avec de nombreux layouts et biomes. La contrainte des falaises/structures Métano exactes ne s’applique que lorsqu’il demande d’étendre Métano. Ne pas réimposer cette contrainte aux nouvelles entrées. Consulter les Ground PMD Sky comme références et publier des PNG visibles avec leurs chemins GitHub.
@@ -412,3 +536,77 @@ Utilisateur : « méthode canonique de création de map avec le générateur + a
 ## V16 — sol continu + boréales référence 10 frames
 
 Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les aurores boréales soit ceux de la référence régénère les même mais avec 10 frame de loop parfaite ». Terrain régénéré sans cratère (bord sombre 5471→226 px, test <600). Planche 2×5 style référence exact → 10 frames AuroreV16_00..09.png 768×256×130 ms, boucle frame10≈frame1 (12,6 %), IoU min 0,355 (seuil 0,30 : phase opposée normale). Extraction : inondation + seuil serré global d<40 pour le magenta cuit enfermé entre deux passages de vague ; fenêtre centroïde + fill_holes IMPOSSIBLE (recrée le voile V9). Halcyon inchangé (grille 8 px, (80,24), nommage uniforme). Sources `source/arene_halcyon_v16/`, rendus/ZIP, aperçu racine `apercu_arene_halcyon_v16.html`. 7 tests PASS.
+
+## Reprise du 20 septembre — Beach DSVFS, séparation fidèle et eau animée
+
+Demande : plusieurs calques de l’image `DSVFS.png` et animation de l’eau Beach PMD Sky. Fichier fourni retrouvé à la racine (pas dans le chemin uploads annoncé). Lot non destructif `source/beach_layers_v1/`, `renders/beach_layers_v1/`, viewer `apercu_beach_calques_v1.html`. Aucun générateur utilisé : préserver exactement cette composition. Neuf partitions visibles 702×466, ORA ; sols/faces cachés non reconstruits. Animation mer + écume, 64 phases de 50ms (3,2s), couleurs source seulement, phase0 exacte, décor sec invariant. Progression des hauteurs de crête extraite des17poses de la planche Beach & Path to Beach (rip redblueyellow) pour guider un mouvement nouveau ; PAS les frames/cadence officielles Sky récupérées. Mer sous écume complétée par pixels bleus voisins, puis remapping entier. Contacts ancrés sur5px et amplitude croissante sur18px pour éviter les traînées de contours aux rochers ; pas d’avance sur le sable. Frames adjacentes parfois identiques : GIF/WebP fusionnent les poses, durée totale contrôlée3200ms.
+
+Copies d’import PNG to Tileset8px : 704×472, ajout transparent droite2/bas6, aucune mise à l’échelle. Remplacer les calques fixes03/04 par les frames de même index, ne pas garder l’ancienne écume par-dessus. Dix tests assetsPASS, interactions viewer en DOM simuléPASS, ZIP CRC/identitéPASS. Chromium téléchargementTLS échoué, pas de navigateur interactif validé ; pas de runtimePMDO. Les anciennes maps et le PNG source restent intacts. Sources et référence de vagues incluses dans le ZIP pour reconstruction ; viewer embarqué autonome.
+
+
+## Beach Network V1 — ciel corrigé et réseau Ledian adapté à la plage
+
+Correction utilisateur prioritaire : **régénérer le ciel de référence adapté à la plage SANS LUNE**, nuages PLUS PETITS en **wrap overlay loop parfait** ; puis plusieurs carrefours/maps « aglomératives » comme Ledian. Ne pas réutiliser le crop lunaire rejeté. Nouveau chantier `source/beach_network_v1/`, `renders/beach_network_v1/`, `apercu_reseau_plage_v1.html`. Anciennes V2/V3 absentes de ce checkout ; ne pas annoncer leur restauration.
+
+Six générations terrain512² normalisées depuis1024², deux carrefours T/croix, 15ports96px et septliens en3×2. SourcesDSVFS+guides,03corrigée retenue ; pas pixels natifs certifiés. Patch de sable source296,168–392,216, profondeur48, noyau16px opaque identique sous toutes orientations, rotations/transpositions assumées hors méthode Métano stricte. Connexité centre→quinze accès validée avec distance≥8. Contours rocheux complets aux jointures et collisions moteur NON certifiés.
+
+Ciel généré sans lune/halo ; nuages3groupes centraux complets,≤96×28, strip512×112 transparent, marges24 ;8px/s,512pas×125ms=64s. Ciel partagé, pas répété entre modules. Eau/écume32×100ms ; correctif important : helper V1 seul laissait l’écume01statique. `contact_foam` ajoute un liseré périodique≤3px reprenant les couleurs côtières, exclut feuillage et laisse rochers immobiles. Toutes les pistes ont désormais plusieurs frames distinctes. Plage de référence : terrain V1inchangé,64×50ms+nouveau liseré, ciel remplacé. Ne pas confondre cette réalisation avec la récupération deV2/V3.
+
+13tests assets PASS, DOM simulé PASS, packCRC/identité PASS ; aucun navigateur graphique ni PMDO validé. Jour/nuitAbyss exact pour terrain/frames ; ciel/nuages nocturnes déjà colorés, pas doublefiltre. ZIP autonome exports/viewer, sans bruts ni sources de rebuild ; sesliens selfZIP supprimés pour ne pas pointer vers une archive absente. Sources/build complet au dépôt. Budget cumulatif~125,6Mo proche128Mo : remesurer avant d’ajouter des animations ou copies lourdes.
+
+
+## Beach Extension V2 — quatre modules supplémentaires, réseau de dix
+
+À la nouvelle demande de continuer les carrefours/plages agglomératives comme Ledian : **ajouter**, ne pas remplacer les sixV1. `source/beach_extension_v2/`, `renders/beach_extension_v2/`, `apercu_extension_plage_v2.html`. 07T(NES),08T(WES),09croix(NESW),10baie(NW) ; positions(1,2),(2,2),(1,3),(2,3). Nouvelle liaison05S↔07N ; ensemble10cartes/12liens/27ports, troisextensions08E/09W/09S. Seul le manifestecombiné change la destination05S ; fichiersV1, ciel/nuages et ZIPV1 inchangés par hashes.
+
+Cinq générations : première07fermée par meràE, corrigée réellement via générateur, correction retenue. Bruts archivés enWebPlossless, égalitéRGBA avecPNGsource vérifiée avant substitution ; provenance/hashes dansbruts/provenance.json. Pas derégénération de ciel. 80PNGcalques512² +16atlaslossless(512frames), Abyss exact, écumecontact≤3px héritée du nouveau helperV1. ZIPV2 autonomequatrepièces, sansV1/bruts/compositesredondants ; exporteurportable reconstruit8compositions+512framesPNG, testéexact. Previewréseau768×1024 à50% explicitement ; assetsnatifs512².
+
+13tests assetsPASS, DOMsimulé viewerscombiné/ZIP PASS (ycompris ports externes/réservés, zonesvides, messagespersistants, erreurs exportfile-origin), CRC/identitéZIP PASS ; HTTP263URLsPASS. Aucun navigateurgraphique niPMDO validé. Raccords96×16 testés sur27accès ; contoursrocheux complets noncertifiés et collisions/warps àfaire.
+
+**Gestion budget** : duplication V1 framesPNG(768),ORA(12),compositions(12) exclue duGit, mais792exports originaux restent dansZIPV1 inchangé. `source/beach_network_v1/restore_exports.py` extrait cesfichiers byte-identiques s’ilsmanquent ; appeléparbuild/verifyV2 etverify/packageV1. Ne pas supprimer l’archiveV1 sans réintégrer cesexports. Testtemporaire de restaurationPASS. Budgetactuel~125Mo : éviter reduplications lourdes.
+
+ServeurV2 : `python source/beach_extension_v2/serve.py --port 8002` sert`renders/`etredirigeversindexV2 ; nécessaire pourlesréférences partagées `../beach_network_v1/`. Servir uniquement le sous-dossierV2 casserait lesanciensassets. LeZIPportable n’en dépendpas. LesPNGexportés facultatifs `renders/beach_extension_v2/export_png/` sont ignorés, régénérablesdepuislesatlas.
+
+
+## Casino Ledian — nouvelle portée : réseau avec décoration multicalque
+
+L’utilisateur a renvoyé visuellement la première salle choisie et demande maintenant un **réseau casino** sur terrainLedian, tapisrouges/estrades/rideaux et mobilier/kiosques indépendants, en prenant les objets Métano comme référence, particulièrement Murkrow. **Cette demande remplace le « sans déco » initial pour les overlays** ; conserver une basevide, nepas cuire les accessoires danslesol. Borduresrocheuses doivent suivrelesentrées réellementouvertes.
+
+Recherche Halcyon via `gh`, commit épinglé `da6c2130d641507447e6386a5e47a296e8cb4c71` (master consulté) : KrowBank confirmé par init.lua Bank_Owner=Murkrow et metano_town_ch_2.lua460–466. Toiture noire/becdoré dansObjects ; guichet/coffresdansObjects_Over. Deuxextraits natifs alignés104×96 et leurrecomposition dans `source/ledian_casino_v1/references/`, fenêtre976,928–1080,1024 ; toiturelimitéeaux48premièreslignes. Aucunresampling/recoloration. BanquesvérifiéesparGitblob. Script `inspect_krow_bank.py`, provenanceJSONetREADME de conception.
+
+Blocageimportant : imageattachée visible danschat, annoncée `/home/user/uploads/image-1.png`, maisfichier absent pourbash/read_file, recherches/home/user,/tmp,/mnt négatives. Ne pasaffirmer chargement/détourage/correctiondel’image choisie etnepas laremplacerparleguide512initial. Réseau4salles etcalquesaménagement décritscomme **plan de travail seulement** ; àcestade seulesl’étude etlesréférencesobjetssontproduites. Aucunevalidationmoteur.
+
+
+## Casino Network V1 — génération indépendante autorisée, décor et vraies flammes
+
+Dernière demande : générer directement un réseau indépendant de l’image choisie, mêmes matièresLedian mais réaménagementcasino ; décor assorti, torches/fourneaux avec framescanoniques Halcyon. **Ne plus bloquer sur l’upload absent.** Réalisation `source/casino_network_v1/`, `renders/casino_network_v1/`, `apercu_casino_reseau_v1.html`. Une composition terrain1024² continue (4secteurs512²), pas4copiesdepièce. Terraininitialpanoramique écarté ; correctioncarrée retenue. Cinqnouveauxobjetsgénérés : estrade,rideaux,kiosque,table,fourneau ; seul lecorpscentral complet des3fourneaux dessinés parlemodèle estutilisé. SeptbrutsWebPlossless conservés.
+
+38instances :5terrain,4tapis,estrade+rideaux,3kiosques(dontKrowBanknatif),4tables,2corpsfourneau,8supportsbrasero,10flammes. Motifdetapisnatif LedianObjects crop176,136–232,176 répété enpatches8px ; masqueuniquetexturé avantpartitionsectorielle, pasdoublebordureauxjonctions. Pasderecoloration/étirementdetapisnatif. Terrain etmeublesgénérés ≠ assetsnatifs ; basesolintactsousmobilier.
+
+**Feucanonique réellement extrait** : GroundLedian, layer1ObjectsUnder, instancecellules14,11–18,19 ; banqueLedian_Dojo_Animated.tile,4poses,FrameLength6ticks.32×64chaquebrasero ; rows0:40flamme32×40,rows40:64supportinvariant. PNGbytes exactspourles4poses, aucunresampling/recoloration. Viewer100ms/pose(60Hz),400ms. Corpsdesfourneauxgénérésnoncanoniques, flammeLedian inchangée ajoutée séparément ; hôtemasqué→feumasqué, déplacementhôte→feusuiveur.
+
+13testsassetsPASS, DOMsimulénormal/ZIP PASS,154PNGalignés(ensemble+4secteurs) pixelsvérifiés. Cheminprincipaldes tapisconnectéavec8pxdégagement après empreintesmeublespardéfaut ; **pas collisionsnatives/warps/hauteurs testées enmoteur**. AperçuWebPanimé exact enalphaetRGBvisibles ; RGBsousalpha0 peuventdifférerduPNG. Cadencevérifiéedanssourcepasinventée. AucunruntimePMDO/navigateurgraphiquevalidé.
+
+Préserverbudget : seulescopiesintermédiaires terrain_vide.webp etexport_png sontignorées/reconstructibles. Ancienrenders/beach_layers_v1/index.html(duplication7Mo) redirigemaintenantvers../../apercu_beach_calques_v1.html, dontlecontenuautonomeestinchangé ; imagesetZIPBeachV1inchangés, testDOMV1repassé. Cloneavaitété réinitialiséau3d4ea6f0 : reprise parfetch+mergeff-onlyvers a91c3bd6 surlamêmebranche ; ancienétatlocalpréservédansstash«Preserve restored workspace…», nepaslepopautomatiquementsurlanouvellelivraison.
+
+
+## Consigne permanente — fond magenta et places de PNJ libres
+
+Dernier rappel utilisateur : **toutes les zones générées doivent être sur fond magenta**, et pensées pour des **kiosques vides où des Pokémon pourront être placés ensuite dans l’éditeur**. Fond de génération/référence `#FF00FF` ; les calques PNG d’import restent transparents. Ne pas intégrer de PNJ ou de silhouette-placeholder dans les images, ne pas cuire les structures dans le sol ; préserver un poste libre derrière le comptoir et l’accès client.
+
+Casino : `source/casino_network_v1/editor_setup.py` produit deux plans arrière/avant par type de kiosque et `renders/casino_network_v1/editeur/placements_pnj.json` avec3emplacements liés aux hôtes existants. Recomposition exacte des anciens sprites, aucun Pokémon ajouté. Ordre d’intégration : fond → PNJ ajouté dans l’éditeur → devant/comptoir. Le viewer actuel conserve ses38instances fusionnées ; remplacer le kiosque fusionné par les deux plans lors de l’intégration, ne pas les superposer au sprite complet. Repères visuels et collisions suggérées uniquement, pas d’entités ou de Ground PMDO créés. Repères à ajuster au gabarit/pivot du Pokémon.
+
+`Casino_terrain_magenta.webp` et `Casino_reseau_magenta.webp` sont des exports opaques surmagenta pur, distincts des calques transparents. `export_png.py --magenta` exporte aussi la composition du secteur choisi surmagenta, sans modifier l’alpha des calques. Le kit PNJ est inclus dans le ZIP ; grosses vuesmagenta conservées dans le dépôt, régénérables par script.
+
+
+## Historique — café Halcyon agrandi (avant la correction Spinda)
+
+Après la demande de biome bois et l’exemple de kiosque Arcanin, l’utilisateur demande explicitement : **« J’aimerais une zone café pour notre PMDO, reprends celui de Halcyon et agrandis-le »**. Cette étape est conservée, mais remplacée pour la demande actuelle par Spinda V4. Conserver sa consigne de mobilier/structures/flammes sur feuilles distinctes : il place ses décorations et Pokémon dans l’éditeur. Le magenta reste obligatoire pour la référence, l’alpha pour l’import.
+
+`source/cafe_halcyon_agrandi_v1/`, `renders/cafe_halcyon_agrandi_v1/`, `apercu_cafe_halcyon_agrandi_v1.html` : véritable Base de `metano_cafe.rsground`, sources Halcyon déjà épinglées dans `source/cafe_multietage_v1/references/`.456×320 →840×576, pas de génération de matière et pas de resampling. Bandes natives64px répétées, coins intacts, portail natif complet repositionné ; ancien portail recouvert d’une bordure native et lacune alpha du seuil comblée par une tuile de plancher adjacente. **Entrée =56px de sol (60avec encadrement), x456:512, centre484 ; pas24px.** Petites poussières extérieures déconnectées retirées après détourage du fond brun.
+
+5calques transparents alignés ; toutes les couleurs visibles correspondent aux vrais pixels source. Les rubans architecturaux intégrés à la Base sont conservés : ne pas prétendre qu’ils sont détachables ou que les murs derrière eux sont reconstruits. Quatre feuilles d’objets originales séparées, support natif et corps de fourneau généré/non natif facultatif, quatre poses réelles Ledian sous forme de8PNG et2atlas. Zéro meuble, feu ou NPC placé sur le terrain ; guides de service et salle facultatifs, non imprimés dans les exports.
+
+11tests assets PASS, banques réellement redécodées ; viewer normal et ZIP extrait testés en DOM simulé. Pas de navigateur graphique ou de PMDO validé, pas de `.rsground` produit, collisions/warps/interactions à configurer. Les couches de terrain sont des surfaces visibles, pas des murs mobiles complets. Ne pas écraser les anciens cafés multietages ni le casino.
+
+Étude bois précédente mise en attente : aucun terrain retenu/sauvé par le comparateur. Sources bois consultées et brut du kiosque Arcanin conservés dans `source/casino_bois_v1/` et `renders/casino_bois_v1/bruts/` ; ce kiosque est un prototype généré non natif/non approuvé, **pas inclus dans le pack café**. Référence miniature en ligne, original de pièce jointe absent du filesystem : ne pas prétendre une extraction pixel-exacte de l’upload. Au début de cette reprise le clone était à3d4ea6f0 ; état restauré conservé en stash avant ff vers954c705e, ne pas pop automatiquement.

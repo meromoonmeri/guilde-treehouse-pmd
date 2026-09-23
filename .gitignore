@@ -23,3 +23,76 @@ __pycache__/
 /sprites/cote_v5_expeditions/*/TERRAIN.png
 /sprites/cote_v5_expeditions/*/jour_*.png
 /sprites/cote_v5_expeditions/*/nuit_*.png
+
+# Beach V1: these duplicate exports remain byte-exact inside BeachNetwork_pack.zip.
+# restore_exports.py extracts them on demand before verify/package. The viewer
+# uses the preserved PNG layers and lossless WebP atlases, not these copies.
+/renders/beach_network_v1/*/jour/animation/**/*.png
+/renders/beach_network_v1/*/nuit/animation/**/*.png
+/renders/beach_network_v1/*/jour/*.ora
+/renders/beach_network_v1/*/nuit/*.ora
+# Flat V1 composition copies are likewise preserved in the same archive.
+/renders/beach_network_v1/*/jour/composition.png
+/renders/beach_network_v1/*/nuit/composition.png
+# Optional full-size PNG decoding; atlases remain the authoritative saved data.
+/renders/beach_extension_v2/export_png/
+
+# Casino: bare terrain is regenerated losslessly from the retained corrected raw.
+/renders/casino_network_v1/terrain_vide.webp
+/renders/casino_network_v1/export_png/
+
+# V5 placement audit: exact PNG exports regenerate from retained V4 reference.
+/renders/cafe_spinda_revisite_v5/audit/exports/
+
+# Superseded V4 studies: exact bytes retained at the recorded historical Git commit.
+/renders/cafe_spinda_reseau_v4/bruts/accueil.webp
+/renders/cafe_spinda_reseau_v4/bruts/cafe.webp
+/renders/cafe_spinda_reseau_v4/bruts/cafe_spinda_fidele.webp
+/renders/cafe_spinda_reseau_v4/bruts/casino.webp
+/renders/cafe_spinda_reseau_v4/bruts/salon_bas.webp
+/renders/cafe_spinda_reseau_v4/bruts/salon_haut.webp
+/renders/cafe_spinda_reseau_v4/bruts/salon_haut_spinda_fidele.webp
+
+# Full-resolution originals archived bit-exactly in reachable Git history.
+/source/cafe_spinda_revisite_v7/raws/north_corrected.webp
+/source/cafe_spinda_revisite_v7/raws/kirlia_counter.webp
+/source/cafe_spinda_revisite_v7/raws/alcremie_counter.webp
+/source/cafe_spinda_revisite_v7/raws/kirlia_bench.webp
+/source/cafe_spinda_revisite_v7/raws/alcremie_trolley.webp
+/renders/cafe_spinda_revisite_v6/bruts/fenetre_cafe.webp
+/source/cafe_spinda_revisite_v7/raws/kirlia_counter_front.webp
+/source/cafe_spinda_revisite_v7/raws/alcremie_counter_front.webp
+/renders/cafe_spinda_revisite_v6/bruts/accueil.webp
+/renders/cafe_spinda_revisite_v6/bruts/casino.webp
+/renders/cafe_spinda_revisite_v6/bruts/cafe.webp
+
+# V8 full originals and historical V4 masters: exact archived originals, no data loss.
+/source/cafe_spinda_revisite_v8/raws/plante_cafe.webp
+/source/cafe_spinda_revisite_v8/raws/caisses.webp
+/source/cafe_spinda_revisite_v8/raws/tapis_vert.webp
+/source/cafe_spinda_revisite_v8/raws/table_halcyon_tasses.webp
+/source/cafe_spinda_revisite_v8/raws/table_halcyon_vide.webp
+/source/cafe_spinda_revisite_v8/raws/etagere.webp
+/source/cafe_spinda_revisite_v8/raws/menu.webp
+/source/cafe_spinda_revisite_v8/raws/tonneaux.webp
+/source/cafe_spinda_revisite_v8/raws/tabouret.webp
+/source/cafe_spinda_revisite_v8/raws/bar_jus.webp
+/source/cafe_spinda_revisite_v8/raws/Guild_Storage_Room_Objects.tile
+/source/cafe_spinda_revisite_v8/raws/Guild_Storage_Room_Objects_Over.tile
+/source/cafe_spinda_revisite_v8/raws/Guild_Guildmasters_Room_Objects.tile
+/source/cafe_spinda_revisite_v8/raws/Guild_Guildmasters_Room_Objects_Over.tile
+/source/cafe_spinda_revisite_v8/raws/Guild_Bottom_Left_Bedroom_Objects.tile
+/renders/cafe_spinda_reseau_v4/bruts/accueil_spinda_fidele.webp
+/renders/cafe_spinda_reseau_v4/bruts/cafe_spinda_corrige.webp
+/renders/cafe_spinda_reseau_v4/bruts/casino_spinda_fidele.webp
+/renders/cafe_spinda_reseau_v4/bruts/salon_bas_spinda_fidele.webp
+/renders/cafe_spinda_reseau_v4/bruts/salon_haut_spinda_corrige.webp
+
+# Torch high-resolution originals retained losslessly in Git history.
+/source/spinda_torches_v1/raws/*.webp
+
+# Lossless historical originals preserved in Git; archive readers provide restoration.
+/source/spinda_decor_v1/raws/*.webp
+/renders/casino_network_v1/bruts/estrade.webp
+/renders/casino_network_v1/bruts/rideaux.webp
+/renders/casino_network_v1/bruts/terrain.webp

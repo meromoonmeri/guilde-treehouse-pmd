@@ -1,0 +1,604 @@
+{
+  "title": "Spinda · génération N/S, oculus café",
+  "rooms": [
+    {
+      "id": "accueil",
+      "title": "Accueil de Spinda",
+      "level": 0,
+      "size": [
+        600,
+        448
+      ],
+      "raw": "bruts/accueil.webp",
+      "layers": [
+        {
+          "id": "sol",
+          "title": "Parquet · sous les lumières",
+          "file": "calques/accueil/SpindaV6_accueil_sol.png",
+          "png": "calques/accueil/SpindaV6_accueil_sol.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "lumieres",
+          "title": "Motifs lumineux statiques",
+          "file": "calques/accueil/SpindaV6_accueil_lumieres.png",
+          "png": "calques/accueil/SpindaV6_accueil_lumieres.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "parois",
+          "title": "Boiseries et bordure arrière",
+          "file": "calques/accueil/SpindaV6_accueil_parois.png",
+          "png": "calques/accueil/SpindaV6_accueil_parois.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "bordures",
+          "title": "Bordure basse et passages latéraux",
+          "file": "calques/accueil/SpindaV6_accueil_bordures.png",
+          "png": "calques/accueil/SpindaV6_accueil_bordures.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "acces_N",
+          "title": "Accès N · marches, joues et raccord",
+          "file": "calques/accueil/SpindaV6_accueil_acces_N.png",
+          "png": "calques/accueil/SpindaV6_accueil_acces_N.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "acces_S",
+          "title": "Accès S · marches, joues et raccord",
+          "file": "calques/accueil/SpindaV6_accueil_acces_S.png",
+          "png": "calques/accueil/SpindaV6_accueil_acces_S.png",
+          "role": "generated_visible_surface",
+          "default": true
+        }
+      ],
+      "ports": {
+        "N": {
+          "point": [
+            304,
+            88
+          ],
+          "arrival_spawn": [
+            304,
+            200
+          ],
+          "arrival_facing": "S",
+          "kind": "stairs_up",
+          "action": "montee",
+          "target": "cafe",
+          "target_port": "S"
+        },
+        "S": {
+          "point": [
+            304,
+            384
+          ],
+          "arrival_spawn": [
+            304,
+            280
+          ],
+          "arrival_facing": "N",
+          "kind": "stairs_down",
+          "action": "descente",
+          "target": "casino",
+          "target_port": "N"
+        }
+      },
+      "windows": [],
+      "furniture_instances": [],
+      "fire_instances": [],
+      "npc_instances": []
+    },
+    {
+      "id": "casino",
+      "title": "Casino souterrain",
+      "level": -1,
+      "size": [
+        600,
+        448
+      ],
+      "raw": "bruts/casino.webp",
+      "layers": [
+        {
+          "id": "sol",
+          "title": "Parquet · sous les lumières",
+          "file": "calques/casino/SpindaV6_casino_sol.png",
+          "png": "calques/casino/SpindaV6_casino_sol.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "lumieres",
+          "title": "Motifs lumineux statiques",
+          "file": "calques/casino/SpindaV6_casino_lumieres.png",
+          "png": "calques/casino/SpindaV6_casino_lumieres.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "parois",
+          "title": "Boiseries et bordure arrière",
+          "file": "calques/casino/SpindaV6_casino_parois.png",
+          "png": "calques/casino/SpindaV6_casino_parois.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "bordures",
+          "title": "Bordure basse et passages latéraux",
+          "file": "calques/casino/SpindaV6_casino_bordures.png",
+          "png": "calques/casino/SpindaV6_casino_bordures.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "acces_N",
+          "title": "Accès N · marches, joues et raccord",
+          "file": "calques/casino/SpindaV6_casino_acces_N.png",
+          "png": "calques/casino/SpindaV6_casino_acces_N.png",
+          "role": "generated_visible_surface",
+          "default": true
+        }
+      ],
+      "ports": {
+        "N": {
+          "point": [
+            304,
+            88
+          ],
+          "arrival_spawn": [
+            304,
+            200
+          ],
+          "arrival_facing": "S",
+          "kind": "stairs_up",
+          "action": "montee",
+          "target": "accueil",
+          "target_port": "S"
+        },
+        "E": {
+          "point": [
+            584,
+            176
+          ],
+          "arrival_spawn": [
+            528,
+            176
+          ],
+          "kind": "level_door",
+          "edge_interval": [
+            161,
+            200
+          ],
+          "target": "salon_bas",
+          "target_port": "W"
+        }
+      },
+      "windows": [],
+      "furniture_instances": [],
+      "fire_instances": [],
+      "npc_instances": []
+    },
+    {
+      "id": "salon_bas",
+      "title": "Salon des jeux",
+      "level": -1,
+      "size": [
+        600,
+        448
+      ],
+      "raw": "../cafe_spinda_reseau_v4/bruts/salon_bas_spinda_fidele.webp",
+      "layers": [
+        {
+          "id": "sol",
+          "title": "Plancher (sous les lumières)",
+          "file": "calques/salon_bas/SpindaV6_salon_bas_sol.png",
+          "png": "calques/salon_bas/SpindaV6_salon_bas_sol.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "lumieres",
+          "title": "Spirales et lumières statiques",
+          "file": "calques/salon_bas/SpindaV6_salon_bas_lumieres.png",
+          "png": "calques/salon_bas/SpindaV6_salon_bas_lumieres.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "parois",
+          "title": "Boiseries et bordure arrière",
+          "file": "calques/salon_bas/SpindaV6_salon_bas_parois.png",
+          "png": "calques/salon_bas/SpindaV6_salon_bas_parois.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "bordures",
+          "title": "Bordures latérales / avant et seuil",
+          "file": "calques/salon_bas/SpindaV6_salon_bas_bordures.png",
+          "png": "calques/salon_bas/SpindaV6_salon_bas_bordures.png",
+          "role": "generated_visible_surface",
+          "default": true
+        }
+      ],
+      "ports": {
+        "W": {
+          "point": [
+            16,
+            392
+          ],
+          "kind": "door",
+          "edge_interval": [
+            372,
+            409
+          ],
+          "target": "casino",
+          "target_port": "E"
+        }
+      },
+      "windows": [],
+      "furniture_instances": [],
+      "fire_instances": [],
+      "npc_instances": []
+    },
+    {
+      "id": "cafe",
+      "title": "Café à l’étage",
+      "level": 1,
+      "size": [
+        600,
+        448
+      ],
+      "raw": "bruts/cafe.webp",
+      "layers": [
+        {
+          "id": "sol",
+          "title": "Parquet · sous les lumières",
+          "file": "calques/cafe/SpindaV6_cafe_sol.png",
+          "png": "calques/cafe/SpindaV6_cafe_sol.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "lumieres",
+          "title": "Motifs lumineux statiques",
+          "file": "calques/cafe/SpindaV6_cafe_lumieres.png",
+          "png": "calques/cafe/SpindaV6_cafe_lumieres.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "parois",
+          "title": "Boiseries et bordure arrière",
+          "file": "calques/cafe/SpindaV6_cafe_parois.png",
+          "png": "calques/cafe/SpindaV6_cafe_parois.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "bordures",
+          "title": "Bordure basse et passages latéraux",
+          "file": "calques/cafe/SpindaV6_cafe_bordures.png",
+          "png": "calques/cafe/SpindaV6_cafe_bordures.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "acces_S",
+          "title": "Accès S · marches, joues et raccord",
+          "file": "calques/cafe/SpindaV6_cafe_acces_S.png",
+          "png": "calques/cafe/SpindaV6_cafe_acces_S.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "fenetres",
+          "title": "Oculus café · dessin nouveau",
+          "file": "calques/cafe/SpindaV6_cafe_fenetres.png",
+          "png": "calques/cafe/SpindaV6_cafe_fenetres.png",
+          "role": "generated_cafe_windows",
+          "default": true
+        }
+      ],
+      "ports": {
+        "S": {
+          "point": [
+            304,
+            384
+          ],
+          "arrival_spawn": [
+            304,
+            280
+          ],
+          "arrival_facing": "N",
+          "kind": "stairs_down",
+          "action": "descente",
+          "target": "accueil",
+          "target_port": "N"
+        },
+        "E": {
+          "point": [
+            584,
+            184
+          ],
+          "arrival_spawn": [
+            528,
+            184
+          ],
+          "kind": "level_door",
+          "edge_interval": [
+            161,
+            201
+          ],
+          "target": "salon_haut",
+          "target_port": "W"
+        }
+      },
+      "windows": [
+        [
+          192,
+          56
+        ],
+        [
+          344,
+          56
+        ]
+      ],
+      "furniture_instances": [],
+      "fire_instances": [],
+      "npc_instances": []
+    },
+    {
+      "id": "salon_haut",
+      "title": "Salon des croisillons",
+      "level": 1,
+      "size": [
+        600,
+        448
+      ],
+      "raw": "../cafe_spinda_reseau_v4/bruts/salon_haut_spinda_corrige.webp",
+      "layers": [
+        {
+          "id": "sol",
+          "title": "Plancher (sous les lumières)",
+          "file": "calques/salon_haut/SpindaV6_salon_haut_sol.png",
+          "png": "calques/salon_haut/SpindaV6_salon_haut_sol.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "lumieres",
+          "title": "Spirales et lumières statiques",
+          "file": "calques/salon_haut/SpindaV6_salon_haut_lumieres.png",
+          "png": "calques/salon_haut/SpindaV6_salon_haut_lumieres.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "parois",
+          "title": "Boiseries et bordure arrière",
+          "file": "calques/salon_haut/SpindaV6_salon_haut_parois.png",
+          "png": "calques/salon_haut/SpindaV6_salon_haut_parois.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "bordures",
+          "title": "Bordures latérales / avant et seuil",
+          "file": "calques/salon_haut/SpindaV6_salon_haut_bordures.png",
+          "png": "calques/salon_haut/SpindaV6_salon_haut_bordures.png",
+          "role": "generated_visible_surface",
+          "default": true
+        },
+        {
+          "id": "fenetres",
+          "title": "Oculus café · dessin nouveau",
+          "file": "calques/salon_haut/SpindaV6_salon_haut_fenetres.png",
+          "png": "calques/salon_haut/SpindaV6_salon_haut_fenetres.png",
+          "role": "generated_cafe_windows",
+          "default": true
+        }
+      ],
+      "ports": {
+        "W": {
+          "point": [
+            16,
+            232
+          ],
+          "kind": "door",
+          "edge_interval": [
+            219,
+            244
+          ],
+          "target": "cafe",
+          "target_port": "E"
+        }
+      },
+      "windows": [
+        [
+          176,
+          56
+        ],
+        [
+          264,
+          56
+        ],
+        [
+          352,
+          56
+        ]
+      ],
+      "furniture_instances": [],
+      "fire_instances": [],
+      "npc_instances": []
+    }
+  ],
+  "links": [
+    [
+      "accueil",
+      "N",
+      "cafe",
+      "S"
+    ],
+    [
+      "accueil",
+      "S",
+      "casino",
+      "N"
+    ],
+    [
+      "casino",
+      "E",
+      "salon_bas",
+      "W"
+    ],
+    [
+      "cafe",
+      "E",
+      "salon_haut",
+      "W"
+    ]
+  ],
+  "assets": [
+    {
+      "id": "window",
+      "title": "Oculus du café · bois miel, vitrage doux, croisillon",
+      "file": "assets/SpindaV6_oculus_cafe.png",
+      "native": false,
+      "size": [
+        72,
+        72
+      ],
+      "placement": "Independent overlay; two in café, three in upper lounge"
+    },
+    {
+      "id": "decor_spinda",
+      "title": "Hérité V4 · Mobilier, comptoirs et rubans Spinda",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_decor_spinda.png",
+      "size": [
+        560,
+        320
+      ],
+      "native": true,
+      "source": "source/cafe_multietage_v1/references/SpindaCafe2.png",
+      "source_rgba_sha256": "a9e9275ca1b3eab04d49cc569e7c63d2f2f67bd7a0efe9cd59a1e8f3b9cb6678",
+      "placement": null
+    },
+    {
+      "id": "materiaux_spinda",
+      "title": "Hérité V4 · Planche native : matières et façades de comptoir",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_materiaux_spinda.png",
+      "size": [
+        696,
+        456
+      ],
+      "native": true,
+      "source": "source/cafe_multietage_v1/references/SpindaCafe1.png",
+      "source_rgba_sha256": "79c963dd68db9bea3586142f2e231929705c32f481b460d058891199f441298d",
+      "placement": null
+    },
+    {
+      "id": "kiosque_arriere",
+      "title": "Hérité V4 · Kiosque vide · arrière (généré)",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_kiosque_arriere.png",
+      "size": [
+        112,
+        128
+      ],
+      "native": false,
+      "source": "renders/casino_network_v1/editeur/Casino_kiosque_arriere.png",
+      "source_rgba_sha256": "ff364c3925add52a6f119133c4aa3e4ef3a917ab4ce2bac194f48646f2b5a86d",
+      "placement": null
+    },
+    {
+      "id": "kiosque_avant",
+      "title": "Hérité V4 · Kiosque vide · comptoir avant (généré)",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_kiosque_avant.png",
+      "size": [
+        112,
+        128
+      ],
+      "native": false,
+      "source": "renders/casino_network_v1/editeur/Casino_kiosque_avant.png",
+      "source_rgba_sha256": "43609ab73bfa81d01917661ecc4333edba95eec4e77cd1f4c6f205167723406d",
+      "placement": null
+    },
+    {
+      "id": "fourneau",
+      "title": "Hérité V4 · Fourneau sans feu (généré)",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_fourneau.png",
+      "size": [
+        104,
+        120
+      ],
+      "native": false,
+      "source": "renders/casino_network_v1/objets/fourneau.png",
+      "source_rgba_sha256": "a372e1c40c71b7e3c4017e0c3479acd1f4807dd9b9ca960fefd9e231457f87b8",
+      "placement": null
+    },
+    {
+      "id": "support",
+      "title": "Hérité V4 · Support sans flamme · natif",
+      "file": "../cafe_spinda_reseau_v4/assets/SpindaV4_support.png",
+      "size": [
+        32,
+        64
+      ],
+      "native": true,
+      "source": "renders/casino_network_v1/objets/brasero_support.png",
+      "source_rgba_sha256": "794bd4aaceed363f81ed334d055d1c468d55b0264c8deba3a0f367d8ab5a6fbd",
+      "placement": null
+    }
+  ],
+  "animations": {
+    "flamme": {
+      "frames": [
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_flamme_00.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_flamme_01.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_flamme_02.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_flamme_03.png"
+      ],
+      "sheet": "../cafe_spinda_reseau_v4/assets/SpindaV4_flamme_4poses.png",
+      "frame_ms": 100,
+      "source_ticks": 6,
+      "size": [
+        32,
+        40
+      ],
+      "placement": null
+    },
+    "brasero": {
+      "frames": [
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_brasero_00.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_brasero_01.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_brasero_02.png",
+        "../cafe_spinda_reseau_v4/assets/SpindaV4_brasero_03.png"
+      ],
+      "sheet": "../cafe_spinda_reseau_v4/assets/SpindaV4_brasero_4poses.png",
+      "frame_ms": 100,
+      "source_ticks": 6,
+      "size": [
+        32,
+        64
+      ],
+      "placement": null
+    }
+  },
+  "grid": 8,
+  "pack": "SpindaV6_pack.zip",
+  "packed_layers": true,
+  "external_access": "Not defined; no third exit added",
+  "native_stairs": false,
+  "window": "New generated café design; not copied from Guild_Heros_Room_Objects",
+  "runtime_PMDO": "NOT TESTED",
+  "layer_limits": "Visible surface partitions and full access modules, not reconstructed wall volumes or collision masks; light beneath thresholds stays attached to access module."
+}

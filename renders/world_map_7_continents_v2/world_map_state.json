@@ -1,0 +1,81 @@
+{
+  "format": "WorldMap7ContinentsGenerated",
+  "canvas_px": [
+    2464,
+    1696
+  ],
+  "continents": [
+    {
+      "id": "cendre",
+      "label": "Cendre",
+      "center_px": [
+        516,
+        425
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "sylve",
+      "label": "Sylve",
+      "center_px": [
+        1219,
+        294
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "aurore",
+      "label": "Aurore",
+      "center_px": [
+        2092,
+        401
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "verdance",
+      "label": "Verdance",
+      "center_px": [
+        1297,
+        944
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "sylvesud",
+      "label": "SylveSud",
+      "center_px": [
+        541,
+        1327
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "lacs",
+      "label": "Lacs",
+      "center_px": [
+        1343,
+        1517
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "cime",
+      "label": "Cime",
+      "center_px": [
+        2108,
+        1301
+      ],
+      "unlocked_by_default": false
+    }
+  ],
+  "layers": [
+    "00_fond_parchemin",
+    "01_continents_texture",
+    "02_cotes_et_motifs",
+    "03_routes",
+    "04_emblemes_continents",
+    "05_etat_deblocage"
+  ],
+  "raw_generated_source": "source/world_map_7_continents_v2/raws/world_map_7_continents_generated.png"
+}

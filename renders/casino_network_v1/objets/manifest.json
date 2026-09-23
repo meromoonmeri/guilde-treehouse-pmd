@@ -1,0 +1,127 @@
+{
+  "estrade": {
+    "file": "objets/estrade.png",
+    "generated": true,
+    "raw": "estrade.webp",
+    "crop": [
+      94,
+      118,
+      1314,
+      691
+    ],
+    "uniform_scale": 0.17049180327868851,
+    "content_size": [
+      208,
+      98
+    ],
+    "size": [
+      208,
+      104
+    ]
+  },
+  "rideaux": {
+    "file": "objets/rideaux.png",
+    "generated": true,
+    "raw": "rideaux.webp",
+    "crop": [
+      82,
+      190,
+      974,
+      786
+    ],
+    "uniform_scale": 0.23318385650224216,
+    "content_size": [
+      208,
+      139
+    ],
+    "size": [
+      208,
+      144
+    ]
+  },
+  "kiosque": {
+    "file": "objets/kiosque.png",
+    "generated": true,
+    "raw": "kiosque.webp",
+    "crop": [
+      174,
+      122,
+      882,
+      888
+    ],
+    "uniform_scale": 0.15819209039548024,
+    "content_size": [
+      112,
+      121
+    ],
+    "size": [
+      112,
+      128
+    ]
+  },
+  "table_jeu": {
+    "file": "objets/table_jeu.png",
+    "generated": true,
+    "raw": "table_jeu.webp",
+    "crop": [
+      87,
+      108,
+      1145,
+      753
+    ],
+    "uniform_scale": 0.10586011342155009,
+    "content_size": [
+      112,
+      68
+    ],
+    "size": [
+      112,
+      72
+    ]
+  },
+  "fourneau": {
+    "file": "objets/fourneau.png",
+    "generated": true,
+    "raw": "fourneau.webp",
+    "crop": [
+      592,
+      103,
+      1057,
+      614
+    ],
+    "uniform_scale": 0.22365591397849463,
+    "content_size": [
+      104,
+      114
+    ],
+    "size": [
+      104,
+      120
+    ]
+  },
+  "krow_bank_natif": {
+    "file": "objets/krow_bank_natif.png",
+    "generated": false,
+    "source": "source/ledian_casino_v1/references/KrowBank_structure_native.png",
+    "sha256": "ebafd63ae0e8119f172a9e130ea09f8f7ba9e7cc39dc02ccb3981ffa3a0c3fcd",
+    "size": [
+      104,
+      96
+    ]
+  },
+  "tapis_source": {
+    "file": "objets/tapis_source_natif.png",
+    "source": "source/ledian_dojo_v1/references/Ledian_Dojo_Objects.png",
+    "crop": [
+      176,
+      136,
+      232,
+      176
+    ],
+    "size": [
+      56,
+      40
+    ],
+    "usage": "Native 8px patches repeated in a nine-slice rug; never stretched."
+  }
+}
