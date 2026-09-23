@@ -1,0 +1,1314 @@
+{
+  "status": "PARTIAL — image tool cap of 10 per turn reached",
+  "planned_furniture": 36,
+  "generated_attempts": 10,
+  "accepted": 9,
+  "rejected": [
+    "table_halcyon_vide"
+  ],
+  "pending": 27,
+  "items": [
+    {
+      "id": "tonneaux",
+      "title": "Paire de tonneaux",
+      "file": "assets/SpindaV7_tonneaux.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        44,
+        36
+      ],
+      "source_rect": [
+        174,
+        67,
+        216,
+        112
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "2be52bbcd46bebd565ca88f0117c9ac8132db320c688edef99eecfe613fa38c2",
+      "grid_cells": [
+        6,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tonneaux.png",
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_tonneaux_jour.png",
+        "nuit": "assets/SpindaV8_tonneaux_nuit.png"
+      },
+      "raw_rgba_sha256": "2853499e65c1935dda48136f5536f4f711c479bf5ecd4e065f6959b222afa977",
+      "raw_crop": [
+        80,
+        0,
+        1125,
+        851
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "plante_cafe",
+      "title": "Plante haute du café",
+      "file": "assets/SpindaV7_plante_cafe.png",
+      "size": [
+        40,
+        56
+      ],
+      "visible_size": [
+        36,
+        46
+      ],
+      "source_rect": [
+        369,
+        82,
+        409,
+        136
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "8549f6af709504b675114019327fafa80e4b059f133677569187135a0b7df566",
+      "grid_cells": [
+        5,
+        7
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_plante_cafe.png",
+      "target_size": [
+        40,
+        56
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_plante_cafe_jour.png",
+        "nuit": "assets/SpindaV8_plante_cafe_nuit.png"
+      },
+      "raw_rgba_sha256": "33a2382d0bd7719ea7bdda33df459295b6a43333f27507480bebdc6bdf7b47b3",
+      "raw_crop": [
+        340,
+        148,
+        855,
+        803
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "menu",
+      "title": "Chevalet de menu",
+      "file": "assets/SpindaV7_menu.png",
+      "size": [
+        40,
+        48
+      ],
+      "visible_size": [
+        36,
+        44
+      ],
+      "source_rect": [
+        45,
+        107,
+        80,
+        152
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "ef43e9099d9b98618a4b819a971bb9df0af0c399b5c6250aa00d232a903abf19",
+      "grid_cells": [
+        5,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_menu.png",
+      "target_size": [
+        40,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_menu_jour.png",
+        "nuit": "assets/SpindaV8_menu_nuit.png"
+      },
+      "raw_rgba_sha256": "6a2715a4b1da178a8abe09c1c20f72b340c52f7e1a6bef2750a678d0a098756e",
+      "raw_crop": [
+        373,
+        8,
+        986,
+        759
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "tapis_vert",
+      "title": "Tapis vert",
+      "file": "assets/SpindaV7_tapis_vert.png",
+      "size": [
+        96,
+        40
+      ],
+      "visible_size": [
+        55,
+        36
+      ],
+      "source_rect": [
+        96,
+        138,
+        192,
+        178
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "554530d26068d80d12f71f0da78749e8a66379291434006abd69bc2bd37bf540",
+      "grid_cells": [
+        12,
+        5
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tapis_vert.png",
+      "target_size": [
+        96,
+        40
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_tapis_vert_jour.png",
+        "nuit": "assets/SpindaV8_tapis_vert_nuit.png"
+      },
+      "raw_rgba_sha256": "bb4ad0f5923236bf25fe96dfccc17c73233717aa1424625f94217b41377d638e",
+      "raw_crop": [
+        60,
+        94,
+        1140,
+        802
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "table_halcyon_tasses",
+      "title": "Table Halcyon · tasses",
+      "file": "assets/SpindaV7_table_halcyon_tasses.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        44,
+        37
+      ],
+      "source_rect": [
+        337,
+        155,
+        383,
+        199
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "a100a4ea1d1d1f0d3e5e358a81da9970f11e084744af930d9e45d9656f60fc92",
+      "grid_cells": [
+        6,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_table_halcyon_tasses.png",
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_table_halcyon_tasses_jour.png",
+        "nuit": "assets/SpindaV8_table_halcyon_tasses_nuit.png"
+      },
+      "raw_rgba_sha256": "3efa96fad37361b764a846995626a61db472c1709055394eb12db37f41eeede5",
+      "raw_crop": [
+        61,
+        0,
+        1139,
+        896
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "table_halcyon_vide",
+      "title": "Table Halcyon · vide",
+      "file": "assets/SpindaV7_table_halcyon_vide.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        46,
+        44
+      ],
+      "source_rect": [
+        57,
+        180,
+        103,
+        224
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "936ffb72493d9f24253341b54975252465f3dd53ce76b106ddf21870834afe3d",
+      "grid_cells": [
+        6,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_table_halcyon_vide.png",
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "rejected_camera",
+      "native_output": false,
+      "reference_native": true,
+      "status": "rejected_camera",
+      "reason": "Generated from underneath rather than the PMD overhead view; not included in production sheets."
+    },
+    {
+      "id": "caisses",
+      "title": "Caisses empilées",
+      "file": "assets/SpindaV7_caisses.png",
+      "size": [
+        56,
+        56
+      ],
+      "visible_size": [
+        48,
+        52
+      ],
+      "source_rect": [
+        376,
+        216,
+        426,
+        272
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "3890eb2ea329cae7d032112a233ccda839e0565556cc2932faf8d2742503401d",
+      "grid_cells": [
+        7,
+        7
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_caisses.png",
+      "target_size": [
+        56,
+        56
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_caisses_jour.png",
+        "nuit": "assets/SpindaV8_caisses_nuit.png"
+      },
+      "raw_rgba_sha256": "020794137a63f80a16b57f4bba6dc93ad2cbb1a1e3fb3164ed7ccd8125fb651e",
+      "raw_crop": [
+        230,
+        45,
+        956,
+        837
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "etagere",
+      "title": "Étagère bois",
+      "file": "assets/SpindaV7_etagere.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        43,
+        44
+      ],
+      "source_rect": [
+        120,
+        48,
+        168,
+        96
+      ],
+      "source": "Metano_Town_Cafe_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "99c7aac573938745c0bf0811ba044de74636cf25f34a55561f90161ce7727d3c",
+      "grid_cells": [
+        6,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_etagere.png",
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_etagere_jour.png",
+        "nuit": "assets/SpindaV8_etagere_nuit.png"
+      },
+      "raw_rgba_sha256": "04c55200f0b581885972f4eeafd985fbe51aed2b1d3024e5c8cff5375e9631b3",
+      "raw_crop": [
+        234,
+        94,
+        966,
+        838
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "bar_jus",
+      "title": "Bar à jus complet · Halcyon",
+      "file": "assets/SpindaV7_bar_jus.png",
+      "size": [
+        128,
+        40
+      ],
+      "visible_size": [
+        90,
+        36
+      ],
+      "source_rect": [
+        83,
+        100,
+        204,
+        137
+      ],
+      "source": "Metano_Town_Cafe_Objects_Over",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "4ad7bd53f0dedb3c109ce44340c98f8749d7dbe145583661157f55fe8a9ab3b6",
+      "grid_cells": [
+        16,
+        5
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_bar_jus.png",
+      "target_size": [
+        128,
+        40
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_bar_jus_jour.png",
+        "nuit": "assets/SpindaV8_bar_jus_nuit.png"
+      },
+      "raw_rgba_sha256": "be9aa9fd472f724f234887b2269639b333e1c70003078e58e638d22ece5edb1e",
+      "raw_crop": [
+        126,
+        286,
+        1074,
+        664
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "plante_auberge",
+      "title": "Plante de l’auberge",
+      "file": "assets/SpindaV7_plante_auberge.png",
+      "size": [
+        40,
+        48
+      ],
+      "visible_size": [
+        40,
+        44
+      ],
+      "source_rect": [
+        124,
+        50,
+        164,
+        94
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "831e2842bd1b8607ce81ac75ad0dc581dfd789ddb0e78e2f51b2c4197587ea73",
+      "grid_cells": [
+        5,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_plante_auberge.png",
+      "target_size": [
+        40,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tonneau_auberge",
+      "title": "Tonneau",
+      "file": "assets/SpindaV7_tonneau_auberge.png",
+      "size": [
+        24,
+        32
+      ],
+      "visible_size": [
+        24,
+        29
+      ],
+      "source_rect": [
+        280,
+        66,
+        304,
+        95
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "81e06a8585b692cc2d62d372248e2c47ba64768686825fdc660dcc3bc782c10e",
+      "grid_cells": [
+        3,
+        4
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tonneau_auberge.png",
+      "target_size": [
+        24,
+        32
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tabouret",
+      "title": "Petit tabouret",
+      "file": "assets/SpindaV7_tabouret.png",
+      "size": [
+        16,
+        16
+      ],
+      "visible_size": [
+        12,
+        11
+      ],
+      "source_rect": [
+        305,
+        72,
+        319,
+        88
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "4659b2773b80288f46f06492da373da82723c53a0f46848791c74ac40184cf62",
+      "grid_cells": [
+        2,
+        2
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tabouret.png",
+      "target_size": [
+        16,
+        16
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "generated_ready_for_review",
+      "native_output": false,
+      "reference_native": true,
+      "status": "generated_ready_for_review",
+      "files": {
+        "jour": "assets/SpindaV8_tabouret_jour.png",
+        "nuit": "assets/SpindaV8_tabouret_nuit.png"
+      },
+      "raw_rgba_sha256": "0b5dd4bb3426586de1b9f93bca3270da869b5a5d048df92daee5c286222b55e2",
+      "raw_crop": [
+        197,
+        111,
+        1003,
+        860
+      ],
+      "processing": "Magenta key + aspect-preserving nearest normalization; generated art only."
+    },
+    {
+      "id": "coffre",
+      "title": "Coffre",
+      "file": "assets/SpindaV7_coffre.png",
+      "size": [
+        24,
+        24
+      ],
+      "visible_size": [
+        21,
+        23
+      ],
+      "source_rect": [
+        99,
+        83,
+        120,
+        106
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "e63e10b77651f28f3c99d3158cd79f780700163f2459a459398162423dca3f5d",
+      "grid_cells": [
+        3,
+        3
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_coffre.png",
+      "target_size": [
+        24,
+        24
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "lit_paille",
+      "title": "Grand couchage de paille",
+      "file": "assets/SpindaV7_lit_paille.png",
+      "size": [
+        112,
+        56
+      ],
+      "visible_size": [
+        107,
+        54
+      ],
+      "source_rect": [
+        227,
+        97,
+        334,
+        151
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "34b2c290d5785e5aff866919cbabf53bd0a9ee1fd8e8a3075fef28ff6ace851e",
+      "grid_cells": [
+        14,
+        7
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_lit_paille.png",
+      "target_size": [
+        112,
+        56
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "coussin_paille",
+      "title": "Coussin de paille",
+      "file": "assets/SpindaV7_coussin_paille.png",
+      "size": [
+        40,
+        32
+      ],
+      "visible_size": [
+        39,
+        28
+      ],
+      "source_rect": [
+        104,
+        112,
+        143,
+        140
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "cfca98b5f53e63c430e6c20073c7dd4b55118d6412d34af3a4369a34e6473c29",
+      "grid_cells": [
+        5,
+        4
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_coussin_paille.png",
+      "target_size": [
+        40,
+        32
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "table_auberge",
+      "title": "Table de souche",
+      "file": "assets/SpindaV7_table_auberge.png",
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        48,
+        44
+      ],
+      "source_rect": [
+        288,
+        234,
+        336,
+        278
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "ce1d9dd7ddcb2e29f7e805f8d84b562e4c4e4ad6a82fe15bbf554605c05cc723",
+      "grid_cells": [
+        6,
+        6
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_table_auberge.png",
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "caisse_pommes",
+      "title": "Caisse et pommes",
+      "file": "assets/SpindaV7_caisse_pommes.png",
+      "size": [
+        48,
+        40
+      ],
+      "visible_size": [
+        44,
+        36
+      ],
+      "source_rect": [
+        200,
+        160,
+        244,
+        196
+      ],
+      "source": "Metano_Inn_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "6cccdb9e1cd00f5c4b3e293003f3206a785a055368a9fede9b5982a33f6ddbde",
+      "grid_cells": [
+        6,
+        5
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_caisse_pommes.png",
+      "target_size": [
+        48,
+        40
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "bouquet",
+      "title": "Bouquet de l’auberge",
+      "file": "assets/SpindaV7_bouquet.png",
+      "size": [
+        24,
+        32
+      ],
+      "visible_size": [
+        24,
+        28
+      ],
+      "source_rect": [
+        232,
+        184,
+        256,
+        212
+      ],
+      "source": "Metano_Inn_Objects_Over",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "c28bdea7c3679c3c639eb7f230a270f1c1ca297a392802dd3db7051067a85f1a",
+      "grid_cells": [
+        3,
+        4
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_bouquet.png",
+      "target_size": [
+        24,
+        32
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "banniere",
+      "title": "Bannière de réfectoire",
+      "file": "assets/SpindaV7_banniere.png",
+      "size": [
+        32,
+        96
+      ],
+      "visible_size": [
+        28,
+        89
+      ],
+      "source_rect": [
+        194,
+        32,
+        222,
+        121
+      ],
+      "source": "Guild_Dining_Room_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "d407fed915c87178ebff2eba136532321b5507e2771c0cafc6c6426ca2d21ad5",
+      "grid_cells": [
+        4,
+        12
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_banniere.png",
+      "target_size": [
+        32,
+        96
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "liane",
+      "title": "Liane murale",
+      "file": "assets/SpindaV7_liane.png",
+      "size": [
+        32,
+        56
+      ],
+      "visible_size": [
+        29,
+        56
+      ],
+      "source_rect": [
+        65,
+        64,
+        94,
+        120
+      ],
+      "source": "Guild_Dining_Room_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "03b5ba820a50b65c42e03899271707bbc5df394338231e905e9e428c697e736c",
+      "grid_cells": [
+        4,
+        7
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_liane.png",
+      "target_size": [
+        32,
+        56
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "fleurs_bleues",
+      "title": "Petit vase bleu",
+      "file": "assets/SpindaV7_fleurs_bleues.png",
+      "size": [
+        24,
+        24
+      ],
+      "visible_size": [
+        18,
+        19
+      ],
+      "source_rect": [
+        62,
+        157,
+        80,
+        176
+      ],
+      "source": "Guild_Dining_Room_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "de8fbeba82079aada55a998653c96086b311e02a09300767e4966234a8cb9fca",
+      "grid_cells": [
+        3,
+        3
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_fleurs_bleues.png",
+      "target_size": [
+        24,
+        24
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tapis_dore",
+      "title": "Tapis doré",
+      "file": "assets/SpindaV7_tapis_dore.png",
+      "size": [
+        184,
+        64
+      ],
+      "visible_size": [
+        177,
+        57
+      ],
+      "source_rect": [
+        119,
+        151,
+        296,
+        208
+      ],
+      "source": "Guild_Dining_Room_Objects",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "70334bcb64e3379aa552cc42386e929c00ed9b36e2f709cf1e630ad9ed3cbad8",
+      "grid_cells": [
+        23,
+        8
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tapis_dore.png",
+      "target_size": [
+        184,
+        64
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "banquet",
+      "title": "Table de banquet garnie",
+      "file": "assets/SpindaV7_banquet.png",
+      "size": [
+        168,
+        56
+      ],
+      "visible_size": [
+        167,
+        51
+      ],
+      "source_rect": [
+        124,
+        153,
+        291,
+        204
+      ],
+      "source": "Guild_Dining_Room_Objects_Over",
+      "group": "halcyon",
+      "scale": 1,
+      "rotation": 0,
+      "recolour": false,
+      "rgba_sha256": "e31a582b76e0b3441cd6d026ecc68e6b7b3b4fec384850eba2323c86c585e4d1",
+      "grid_cells": [
+        21,
+        7
+      ],
+      "collision": "not audited; visual bounds only",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_banquet.png",
+      "target_size": [
+        168,
+        56
+      ],
+      "scope": "V7 Halcyon: complete",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "coffre_reserve",
+      "title": "Coffre de réserve",
+      "reference": "source/cafe_spinda_revisite_v8/references/coffre_reserve.png",
+      "source_bank": "Guild_Storage_Room_Objects",
+      "source_rect": [
+        216,
+        113,
+        248,
+        144
+      ],
+      "target_size": [
+        32,
+        32
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "coffre_chambre",
+      "title": "Coffret de chambre",
+      "reference": "source/cafe_spinda_revisite_v8/references/coffre_chambre.png",
+      "source_bank": "Guild_Bottom_Left_Bedroom_Objects",
+      "source_rect": [
+        132,
+        153,
+        156,
+        175
+      ],
+      "target_size": [
+        24,
+        24
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "coffre_ouvert",
+      "title": "Coffre à trésors ouvert",
+      "reference": "source/cafe_spinda_revisite_v8/references/coffre_ouvert.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        38,
+        120,
+        80,
+        168
+      ],
+      "target_size": [
+        48,
+        48
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tapis_salon",
+      "title": "Petit tapis de salon",
+      "reference": "source/cafe_spinda_revisite_v8/references/tapis_salon.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        164,
+        104,
+        220,
+        144
+      ],
+      "target_size": [
+        56,
+        40
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tapis_spirale",
+      "title": "Grand tapis central",
+      "reference": "source/cafe_spinda_revisite_v8/references/tapis_spirale.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        140,
+        168,
+        244,
+        263
+      ],
+      "target_size": [
+        104,
+        96
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tapis_couloir",
+      "title": "Tapis de couloir",
+      "reference": "source/cafe_spinda_revisite_v8/references/tapis_couloir.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        263,
+        190,
+        303,
+        246
+      ],
+      "target_size": [
+        40,
+        56
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "tapis_chambre",
+      "title": "Tapis de chambre",
+      "reference": "source/cafe_spinda_revisite_v8/references/tapis_chambre.png",
+      "source_bank": "Guild_Bottom_Left_Bedroom_Objects",
+      "source_rect": [
+        144,
+        192,
+        216,
+        248
+      ],
+      "target_size": [
+        72,
+        56
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "console",
+      "title": "Console / table étroite",
+      "reference": "source/cafe_spinda_revisite_v8/references/console.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        304,
+        177,
+        350,
+        254
+      ],
+      "target_size": [
+        48,
+        80
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "livre_ouvert",
+      "title": "Livre ouvert",
+      "reference": "source/cafe_spinda_revisite_v8/references/livre_ouvert.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects_Over",
+      "source_rect": [
+        320,
+        181,
+        336,
+        192
+      ],
+      "target_size": [
+        16,
+        16
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "livres_empiles",
+      "title": "Livres et papiers",
+      "reference": "source/cafe_spinda_revisite_v8/references/livres_empiles.png",
+      "source_bank": "Guild_Guildmasters_Room_Objects",
+      "source_rect": [
+        296,
+        261,
+        328,
+        285
+      ],
+      "target_size": [
+        32,
+        24
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "vase_creme",
+      "title": "Vase crème décoratif",
+      "reference": "source/cafe_spinda_revisite_v8/references/vase_creme.png",
+      "source_bank": "Guild_Storage_Room_Objects_Over",
+      "source_rect": [
+        104,
+        136,
+        126,
+        160
+      ],
+      "target_size": [
+        24,
+        24
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "plante_ronde",
+      "title": "Petite plante ronde",
+      "reference": "source/cafe_spinda_revisite_v8/references/plante_ronde.png",
+      "source_bank": "Guild_Bottom_Left_Bedroom_Objects",
+      "source_rect": [
+        104,
+        167,
+        128,
+        192
+      ],
+      "target_size": [
+        24,
+        32
+      ],
+      "scope": "Expanded Halcyon interior",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    },
+    {
+      "id": "applique",
+      "title": "Applique à verre dépoli",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_bouquet.png",
+      "target_size": [
+        24,
+        32
+      ],
+      "scope": "New lighting fixture, not an original Halcyon object",
+      "generation_status": "pending_generation",
+      "native_output": false,
+      "reference_native": true,
+      "status": "pending_generation"
+    }
+  ],
+  "decor_pending": {
+    "wall_ribbons": "Not generated. No empty layer presented as delivered ribbons.",
+    "wall_windows": "V7 32px windows retained temporarily; in-context generator revision pending.",
+    "appliques": "Not generated; current night uses soft indirect ambient light, not depicted fixtures or fire."
+  },
+  "scope": "All 23 V7 Halcyon objects plus 12 distinct additions from reserve, guildmaster salon, bedroom; repeated props consolidated by function. Not every object of the full Halcyon repository.",
+  "style": "one coherent honey wood / Spinda spirals / sage leaves / cream and dusty rose collection"
+}

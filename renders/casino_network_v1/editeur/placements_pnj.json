@@ -1,0 +1,135 @@
+{
+  "status": "EDITOR GUIDES ONLY — no NPC entities, native Ground collisions or warps created",
+  "generation_background": "#FF00FF",
+  "import_layers": "transparent PNG",
+  "render_order": [
+    "terrain",
+    "kiosk background",
+    "NPC placed separately in editor",
+    "kiosk foreground"
+  ],
+  "assets": {
+    "kiosque": {
+      "size": [
+        112,
+        128
+      ],
+      "background": "editeur/Casino_kiosque_arriere.png",
+      "foreground": "editeur/Casino_kiosque_avant.png",
+      "npc_feet_local_px": [
+        56,
+        80
+      ],
+      "visible_window_local_px": [
+        32,
+        40,
+        48,
+        32
+      ],
+      "customer_marker_local_px": [
+        56,
+        136
+      ],
+      "customer_faces": "N",
+      "counter_collision_suggestion_local_px": [
+        0,
+        88,
+        112,
+        40
+      ]
+    },
+    "krow_bank_natif": {
+      "size": [
+        104,
+        96
+      ],
+      "background": "editeur/Casino_KrowBank_arriere.png",
+      "foreground": "editeur/Casino_KrowBank_avant.png",
+      "npc_feet_local_px": [
+        52,
+        88
+      ],
+      "visible_window_local_px": [
+        32,
+        48,
+        40,
+        32
+      ],
+      "customer_marker_local_px": [
+        52,
+        104
+      ],
+      "customer_faces": "N",
+      "counter_collision_suggestion_local_px": [
+        0,
+        88,
+        104,
+        8
+      ]
+    }
+  },
+  "instances": [
+    {
+      "host": "kiosque_accueil",
+      "asset": "kiosque",
+      "initial_host_position_px": [
+        80,
+        696
+      ],
+      "initial_npc_feet_world_px": [
+        136,
+        776
+      ],
+      "initial_customer_world_px": [
+        136,
+        832
+      ],
+      "npc_species": null,
+      "npc_entity_created": false
+    },
+    {
+      "host": "kiosque_salon",
+      "asset": "kiosque",
+      "initial_host_position_px": [
+        608,
+        112
+      ],
+      "initial_npc_feet_world_px": [
+        664,
+        192
+      ],
+      "initial_customer_world_px": [
+        664,
+        248
+      ],
+      "npc_species": null,
+      "npc_entity_created": false
+    },
+    {
+      "host": "krow_bank",
+      "asset": "krow_bank_natif",
+      "initial_host_position_px": [
+        328,
+        832
+      ],
+      "initial_npc_feet_world_px": [
+        380,
+        920
+      ],
+      "initial_customer_world_px": [
+        380,
+        936
+      ],
+      "npc_species": null,
+      "npc_entity_created": false
+    }
+  ],
+  "notes": [
+    "Do not stack the original fused kiosk over these split planes. Replace it with background + foreground.",
+    "Feet anchors are visual pixel guides, not serialized PMDO entity positions. Adjust for the chosen Pokemon sprite pivot/size.",
+    "Recompute world markers from host position plus local markers when moving a kiosk.",
+    "Reserve an empty merchant station behind the counter and keep customer access clear.",
+    "Collision rectangles are authoring suggestions only and must be configured and tested in PMDO.",
+    "Krow Banks bird-shaped roof is architecture, not a baked merchant Pokemon."
+  ]
+}

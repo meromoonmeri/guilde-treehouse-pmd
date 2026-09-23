@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "file": "BeachExtension_4modules.zip",
+  "files": 104,
+  "bytes": 3217901,
+  "sha256": "11a416c9e0fe79a31d9d68e0ee3f45dd2d02ce0680602cf0f86a25ebc5ad7131",
+  "scope": "Only four new modules; standalone local viewer; no V1 assets required",
+  "checks": [
+    "all CRCs",
+    "all payload bytes identical",
+    "every visible image dependency inside archive",
+    "external V1 port remains an explicit external connection"
+  ],
+  "runtime_PMDO": "NOT TESTED"
+}
