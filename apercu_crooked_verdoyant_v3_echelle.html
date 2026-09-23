@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><title>Crooked Cavern verdoyante V3 — 928×1152 échelle 1:1</title>
+<style>
+body{background:#14201a;color:#e8eee9;font:15px system-ui;max-width:1200px;margin:28px auto;padding:0 20px}
+h1{font-size:30px;margin:0 0 6px}p{color:#bfcdc4;line-height:1.55}code{color:#ffd9a0}
+.wrap{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+canvas{background:#252333;image-rendering:pixelated;border:1px solid #2f4a3a}
+aside{min-width:300px;max-width:360px}
+label{display:block;padding:3px 0;cursor:pointer}
+button{margin:4px 6px 4px 0;padding:6px 10px;background:#2b4a3a;color:#fff;border:0;border-radius:6px;cursor:pointer}
+button.on{background:#e0a24a;color:#1a1208}
+.refs img{image-rendering:pixelated;border:1px solid #2f4a3a;margin:4px 8px 4px 0}
+.warn{background:#3a2c1a;border-left:4px solid #e0a24a;padding:8px 12px;margin:12px 0}
+</style>
+<h1>Crooked Cavern verdoyante V3 — 928×1152 (échelle 1:1)</h1>
+<p>Canevas <b>928×1152</b> (116×144 tuiles de 8 px) = taille des bruts magenta, <b>sans</b> downscale 512×640. Arbre Vast Steppe 144×120, arbres générés ~180×145, chemin 74–117 px, sprite Pokémon ~24–40 px. Carte plus large que 640×360 et 848×480 → pas de bande noire au clamp. Affichage 0,5× par défaut (pixelated).</p>
+<div class="warn"><b>Provenance :</b> tous les calques générés sont des <b>dessins générés d'après références PMD canoniques</b> (audit `source/crooked_verdoyant_v1/AUDIT.md`) — ce ne sont pas des pixels natifs certifiés. Seuls les deux calques « natifs » (rochers Crooked Objects+Shadows, arbres Vast Steppe) sont des pixels natifs posés par translation. PMDO / collisions / warps : NON TESTÉS.</div>
+<div class="wrap">
+ <canvas id="c" width="464" height="576"></canvas>
+ <aside>
+  <div><button id="mode">Nuit</button><button id="zoom">×2</button><button id="grille">Grille 8 px</button><button id="tous">Tout afficher</button><button id="export">Exporter PNG visible</button><button id="natif">Variante objets natifs</button></div>
+  <p style="margin:6px 0 0;font-size:13px">Exports : <code>exports/crooked_verdoyant_v3_echelle/multicalques/</code></p>
+  <h3>Calques (bas → haut)</h3><div id="layers"></div>
+  <h3>Bruts magenta (avant détourage)</h3><div class="refs" id="bruts"></div>
+  <h3>Complément natif certifié</h3><div id="natifs"></div>
+  <h3>Références canoniques (audit)</h3><div class="refs" id="refs"></div>
+  <p>Sources : <code>renders/crooked_verdoyant_v3_echelle/</code> (bruts V2, maquette V1). V1/V2 conservées.</p>
+ </aside>
+</div>
+<script>
+const DATA={"layers": [{"id": "01_sol_herbe", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_01_sol_herbe.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_01_sol_herbe_nuit.png"}, {"id": "02_lisiere_foret", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_02_lisiere_foret.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_02_lisiere_foret_nuit.png"}, {"id": "03_chemin", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_03_chemin.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_03_chemin_nuit.png"}, {"id": "04_parois_crooked", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_04_parois_crooked.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_04_parois_crooked_nuit.png"}, {"id": "05_entree_grotte", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_05_entree_grotte.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_05_entree_grotte_nuit.png"}, {"id": "06_rochers", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_06_rochers.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_06_rochers_nuit.png"}, {"id": "07_vegetation_basse", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_07_vegetation_basse.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_07_vegetation_basse_nuit.png"}, {"id": "08_troncs_ombres", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_08_troncs_ombres.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_08_troncs_ombres_nuit.png"}, {"id": "09_canopees", "uri": "renders/crooked_verdoyant_v3_echelle/calques/CrookedEchelleV3_09_canopees.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_09_canopees_nuit.png"}], "natifs": [{"id": "10_rochers_natifs_crooked", "uri": "renders/crooked_verdoyant_v3_echelle/complement_natif/CrookedEchelleV3_10_rochers_natifs_crooked.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_10_rochers_natifs_crooked_nuit.png"}, {"id": "11_arbres_natifs_steppe", "uri": "renders/crooked_verdoyant_v3_echelle/complement_natif/CrookedEchelleV3_11_arbres_natifs_steppe.png", "nuit": "renders/crooked_verdoyant_v3_echelle/nuit/CrookedEchelleV3_11_arbres_natifs_steppe_nuit.png"}], "bruts": [{"label": "sol_herbe", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/sol_herbe_brut.png"}, {"label": "chemin", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_chemin_brut_v2.png"}, {"label": "parois_entree", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_parois_entree_brut.png"}, {"label": "rochers", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_rochers_brut.png"}, {"label": "arbres", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_arbres_brut.png"}, {"label": "feuille_vegetation", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_feuille_vegetation_brut.png"}, {"label": "lisiere", "uri": "renders/crooked_verdoyant_v2_magenta/bruts/magenta_lisiere_brut.png"}], "refs": [{"label": "Crooked Cavern entrance (natif)", "uri": "banque_canonique/cartes_natives/Halcyon__crooked_cavern_entrance.png"}, {"label": "Vast Steppe entrance (natif)", "uri": "banque_canonique/cartes_natives/vast_steppe_entrance.png"}, {"label": "arbre Vast Steppe 144×120", "uri": "source/zones_south_north_v3/references/native_tree_complete.png"}], "generated_ids": ["01_sol_herbe", "02_lisiere_foret", "03_chemin", "04_parois_crooked", "05_entree_grotte", "06_rochers", "07_vegetation_basse", "08_troncs_ombres", "09_canopees"]};
+const c=document.getElementById('c'),ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;
+const MW=928,MH=1152;let nuit=false,zoom=0.5;
+const imgs={};
+function load(src){return new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=src;});}
+const state={};
+(async()=>{
+ for(const l of DATA.layers){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=true;
+  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;cb.onchange=()=>{state[l.id]=cb.checked;draw();};
+  const seul=document.createElement('button');seul.textContent='Seul';seul.style.cssText='margin-left:8px;padding:1px 6px;font-size:12px';seul.onclick=()=>{for(const k of DATA.layers)state[k.id]=(k.id===l.id);for(const k of DATA.natifs)state[k.id]=false;sync();draw();};
+  lab.append(cb,' ',l.id,seul);document.getElementById('layers').append(lab);}
+ for(const l of DATA.natifs){imgs[l.id]={j:await load(l.uri),n:await load(l.nuit)};state[l.id]=false;
+  const lab=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.checked=false;cb.id='cb_'+l.id;cb.onchange=()=>{state[l.id]=cb.checked;draw();};lab.append(cb,' ',l.id+' (natif)');document.getElementById('natifs').append(lab);}
+ for(const r of DATA.refs){const i=document.createElement('img');i.src=r.uri;i.title=r.label;i.width=160;document.getElementById('refs').append(i);}
+ for(const r of DATA.bruts){const i=document.createElement('img');i.src=r.uri;i.title=r.label;i.width=104;document.getElementById('bruts').append(i);}
+ draw();
+})();
+let grille=false;
+function sync(){document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA.layers[i].id];});for(const l of DATA.natifs){const e=document.getElementById('cb_'+l.id);if(e)e.checked=!!state[l.id];}}
+function draw(){c.width=MW*zoom;c.height=MH*zoom;ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,c.width,c.height);
+ const order=[...DATA.layers.map(l=>l.id),...DATA.natifs.map(l=>l.id)];
+ for(const id of order){if(!state[id]||!imgs[id])continue;const im=nuit?imgs[id].n:imgs[id].j;
+  ctx.drawImage(im,0,0,c.width,c.height);}
+ if(grille){ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=1;for(let x=0;x<=MW;x+=8){ctx.beginPath();ctx.moveTo(x*zoom+.5,0);ctx.lineTo(x*zoom+.5,c.height);ctx.stroke();}for(let y=0;y<=MH;y+=8){ctx.beginPath();ctx.moveTo(0,y*zoom+.5);ctx.lineTo(c.width,y*zoom+.5);ctx.stroke();}}}
+document.getElementById('grille').onclick=e=>{grille=!grille;e.target.classList.toggle('on',grille);draw();};
+document.getElementById('tous').onclick=()=>{for(const k of DATA.layers)state[k.id]=true;sync();draw();};
+document.getElementById('export').onclick=()=>{const g=grille;grille=false;const z=zoom;zoom=1;draw();const a=document.createElement('a');a.download='CrookedMagentaV2_visible'+(nuit?'_nuit':'_jour')+'.png';a.href=c.toDataURL('image/png');a.click();grille=g;zoom=z;draw();};
+document.getElementById('mode').onclick=e=>{nuit=!nuit;e.target.classList.toggle('on',nuit);e.target.textContent=nuit?'Jour':'Nuit';draw();};
+document.getElementById('zoom').onclick=e=>{zoom=zoom===1?2:1;e.target.textContent=zoom===1?'×2':'×1';draw();};
+document.getElementById('natif').onclick=e=>{const on=!e.target.classList.contains('on');e.target.classList.toggle('on',on);
+ for(const id of ['06_rochers','07_vegetation_basse','08_troncs_ombres','09_canopees']){state[id]=!on;}
+ for(const l of DATA.natifs){state[l.id]=on;document.getElementById('cb_'+l.id).checked=on;}
+ document.querySelectorAll('#layers input').forEach((cb,i)=>{cb.checked=state[DATA.layers[i].id];});draw();};
+</script>
+</html>

@@ -487,3 +487,4 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
   passe à 7 calques (`02_chemin`, `07_arbres`…) ont été supprimés de `renders/.../{calques,masques,nuit}` : ne garder que
   les fichiers listés dans `manifest.json → layers_order_bottom_to_top`.
 
+- **Crooked V3 échelle 928×1152** : ne pas redescendre les bruts magenta en 512×640 (bandes noires au clamp + arbres trop petits vs sprite Pokémon / arbre Vast Steppe 144×120). Détourage 1:1, modules natifs sans scale. V1/V2 conservées.

@@ -1,0 +1,32 @@
+{
+  "variants": {
+    "jour": {
+      "sha256_ok": true,
+      "png_equal_render_layers": true,
+      "composition_equal_render": true,
+      "composition_file_equal": true,
+      "aseprite_layer_names_ok": true,
+      "aseprite_pixels_equal": true,
+      "tiled_layer_names_ok": true,
+      "tiled_pixels_equal": true,
+      "atlas_tiles": 27394
+    },
+    "nuit": {
+      "sha256_ok": true,
+      "png_equal_render_layers": true,
+      "composition_equal_render": true,
+      "composition_file_equal": true,
+      "aseprite_layer_names_ok": true,
+      "aseprite_pixels_equal": true,
+      "tiled_layer_names_ok": true,
+      "tiled_pixels_equal": true,
+      "atlas_tiles": 27394
+    }
+  },
+  "limits": [
+    "Pas de validation interactive Aseprite/Tiled",
+    "Pas de test PMDO, collisions ni warps",
+    "Atlas 8 px dérivé de pixels générés (non canonique)"
+  ],
+  "all_pass": true
+}

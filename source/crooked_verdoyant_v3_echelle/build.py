@@ -1,0 +1,434 @@
+"""Crooked Cavern verdoyante V3 — même calques magenta que V2, canevas 928×1152 (échelle 1:1, SANS downscale).
+
+Les bruts V2 sont déjà 928×1152 (standard guilde / Altere Pond en largeur). V2 les réduisait en NEAREST à 512×640 :
+arbres ~100 px (trop petits vs sprite Pokémon ~24–40 px et arbre Vast Steppe 144×120), carte plus étroite que la
+caméra PMDO typique (640×360 / 848×480) → bandes noires au clamp.
+
+V3 : détourage à la résolution native des bruts. Arbre généré ~175–199×143–152, chemin ~74–117 px, carte 928×1152.
+
+Reproduction : .venv/bin/python source/crooked_verdoyant_v3_echelle/build.py
+"""
+from __future__ import annotations
+import base64, hashlib, importlib.util, io, json, sys, zipfile
+import xml.etree.ElementTree as ET
+from pathlib import Path
+import numpy as np
+import scipy.ndimage as nd
+from PIL import Image
+
+R = Path(__file__).resolve().parents[2]
+SRC = R / 'source/crooked_verdoyant_v3_echelle'
+O = R / 'renders/crooked_verdoyant_v3_echelle'
+V1 = R / 'renders/crooked_verdoyant_v1'
+V2 = R / 'renders/crooked_verdoyant_v2_magenta'
+sys.path.insert(0, str(R / 'source/cote_v4_abyss'))
+from night import night  # noqa: E402  (filtre Abyss V4 exact)
+
+W, H = 928, 1152  # plein cadre des bruts magenta ; 116×144 tuiles de 8 px
+PFX = 'CrookedEchelleV3'
+BRUTS = {
+    'sol_herbe': V2 / 'bruts/sol_herbe_brut.png',
+    'chemin': V2 / 'bruts/magenta_chemin_brut_v2.png',
+    'parois_entree': V2 / 'bruts/magenta_parois_entree_brut.png',
+    'rochers': V2 / 'bruts/magenta_rochers_brut.png',
+    'arbres': V2 / 'bruts/magenta_arbres_brut.png',
+    'feuille_vegetation': V2 / 'bruts/magenta_feuille_vegetation_brut.png',
+    'lisiere': V2 / 'bruts/magenta_lisiere_brut.png',
+}
+REJETES = {
+    'chemin_essai1': V2 / 'bruts/rejetes/magenta_chemin_brut.png',
+    'vegetation_essai1': V2 / 'bruts/rejetes/magenta_vegetation_brut.png',
+    'vegetation_essai2': V2 / 'bruts/rejetes/magenta_vegetation_brut_v2.png',
+}
+
+
+def sha(p: Path) -> str:
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def key(im: Image.Image, strong: bool = True) -> Image.Image:
+    """Détourage magenta (pleine résolution) : fond (r,b hauts, g bas) → alpha 0, puis frange.
+    strong=True (chemin, parois, rochers, arbres : aucun rose légitime) : 3 px de frange où le bleu dépasse le vert
+    (mélange magenta) sont retirés. strong=False (feuille de fleurs roses) : seule la frange nettement magenta
+    (|r-b|<70 et g<0.6·min(r,b)) est retirée, pour ne pas manger les pétales."""
+    a = np.array(im.convert('RGBA'))
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    bg = (r > 150) & (b > 150) & (g < 100)
+    if strong:
+        fringe = nd.binary_dilation(bg, iterations=3) & ~bg & (b > g + 10)
+    else:
+        fringe = nd.binary_dilation(bg, iterations=2) & ~bg & (np.abs(r - b) < 70) & (g < 0.6 * np.minimum(r, b))
+    a[bg | fringe] = 0
+    return Image.fromarray(a)
+
+
+def norm(im: Image.Image) -> Image.Image:
+    im = im.convert('RGBA')
+    if im.size == (W, H):
+        return im
+    if im.size[0] >= W and im.size[1] >= H:
+        return im.crop((0, 0, W, H))
+    canvas = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    canvas.paste(im, (0, 0))
+    return canvas
+
+
+def v1_mask(name: str) -> np.ndarray:
+    return np.array(Image.open(V1 / f'masques/CrookedVerdoyantV1_masque_{name}.png').resize((W, H), Image.NEAREST)) > 0
+
+
+def clean_alpha(im: Image.Image, min_px: int) -> Image.Image:
+    a = np.array(im)
+    m = a[:, :, 3] > 0
+    lab, n = nd.label(m, structure=np.ones((3, 3)))
+    if n:
+        counts = np.bincount(lab.ravel()); keep = counts >= min_px; keep[0] = False
+        a[~keep[lab]] = 0
+    return Image.fromarray(a)
+
+
+def components(m: np.ndarray):
+    lab, n = nd.label(m, structure=np.ones((3, 3)))
+    return lab, [(i, sl) for i, sl in enumerate(nd.find_objects(lab), 1) if sl is not None]
+
+
+def split_entrance(parois: Image.Image):
+    """Sépare l'ouverture sombre + sol du débouché (entrée) du reste de la paroi (même règle que V1)."""
+    a = np.array(parois)
+    rock = a[:, :, 3] > 0
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    mx = np.maximum(np.maximum(r, g), b)
+    dark = nd.binary_closing((mx < 78) & rock, iterations=2)
+    dlab, dcomps = components(dark)
+    best = max(dcomps, key=lambda c: (dlab == c[0]).sum())[0]
+    cave = nd.binary_fill_holes(dlab == best)
+    ys_c = np.nonzero(cave.any(1))[0]
+    low = cave.copy(); low[: ys_c.min() + int((ys_c.max() - ys_c.min()) * 0.7)] = False
+    xs = np.nonzero(low.any(0))[0]
+    cols = np.zeros((H, W), bool); cols[:, max(0, xs.min() - 2): min(W, xs.max() + 3)] = True
+    cols[: (ys_c.min() + ys_c.max()) // 2] = False
+    dirt = rock & cols & ~cave & (mx < 175)
+    floor = cave.copy()
+    for _ in range(60):
+        grown = nd.binary_dilation(floor, iterations=1) & (dirt | cave)
+        if np.array_equal(grown, floor):
+            break
+        floor = grown
+    cave = nd.binary_fill_holes(floor) & rock
+    ent = a.copy(); ent[~cave] = 0
+    par = a.copy(); par[cave] = 0
+    return Image.fromarray(par), Image.fromarray(ent)
+
+
+def sheet_sprites(sheet: Image.Image):
+    """Découpe la feuille de végétation détourée en sprites (composantes), triés rangée/colonne."""
+    a = np.array(sheet); m = a[:, :, 3] > 0
+    lab, comps = components(nd.binary_closing(m, iterations=3))
+    out = []
+    for i, sl in comps:
+        cm = (lab == i) & m
+        if cm.sum() < 200:
+            continue
+        ys, xs = np.nonzero(cm)
+        box = (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1)
+        sp = a[box[1]:box[3], box[0]:box[2]].copy(); sp[~cm[box[1]:box[3], box[0]:box[2]]] = 0
+        out.append((box, Image.fromarray(sp)))
+    out.sort(key=lambda t: (t[0][1] // 300, t[0][0]))
+    return out
+
+
+def pure_grass(sol: Image.Image, forest: np.ndarray, seed: int = 7) -> Image.Image:
+    """Sous-couche « herbe pure » : deux appels du générateur pour effacer les lisières sont revenus SANS image
+    (précédent documenté dans source/layouts_magenta_v1/WORKFLOW.md pour le sable). Reconstruction déclarée :
+    les cellules 16×16 touchant la lisière sont remplacées par des cellules 16×16 d'herbe du MÊME brut, prélevées
+    au hasard dans la zone centrale sans lisière. Aucun pixel n'est recoloré."""
+    a = np.array(sol).copy()
+    rng = np.random.default_rng(seed)
+    C = 16
+    cells = [(y, x) for y in range(0, H, C) for x in range(0, W, C) if not forest[y:y + C, x:x + C].any()]
+    todo = [(y, x) for y in range(0, H, C) for x in range(0, W, C) if forest[y:y + C, x:x + C].any()]
+    for (y, x) in todo:
+        sy, sx = cells[rng.integers(len(cells))]
+        a[y:y + C, x:x + C] = a[sy:sy + C, sx:sx + C]
+    return Image.fromarray(a), len(todo)
+
+
+def split_trees(arbres: Image.Image):
+    """Canopées (au-dessus du joueur) / troncs + ombres au sol (niveau du sol).
+    canopée = pixels verts clairs et tout pixel à ≤ 4 px d'eux (contours sombres compris) ;
+    tronc = pixels bruns ; ombre = le reste (ellipse sombre au sol)."""
+    a = np.array(arbres)
+    al = a[:, :, 3] > 0
+    r, g, b = a[:, :, 0].astype(int), a[:, :, 1].astype(int), a[:, :, 2].astype(int)
+    bright = al & (g > r + 8) & (g > b + 8) & (g > 128)
+    canopy = nd.binary_dilation(bright, iterations=4) & al
+    canopy = nd.binary_fill_holes(canopy) & al
+    ground = al & ~canopy
+    # miettes de contour sombre (< 40 px) collées à la canopée → canopée
+    glab, gcomps = components(ground)
+    for i, sl in gcomps:
+        cm = glab == i
+        if cm.sum() < 40 and (nd.binary_dilation(cm, iterations=1) & canopy).any():
+            canopy |= cm; ground &= ~cm
+    brown = al & (r > g + 6) & (g > b) & ~canopy
+    # les pixels bruns enclavés dans la canopée (tronc vu entre les feuilles) restent avec la canopée
+    can = a.copy(); can[~canopy] = 0
+    grd = a.copy(); grd[~ground] = 0
+    return Image.fromarray(grd), Image.fromarray(can), int(brown.sum())
+
+
+def ora(path: Path, layers: dict, name: str):
+    root = ET.Element('image', w=str(W), h=str(H), name=name); stack = ET.SubElement(root, 'stack')
+    comp = Image.new('RGBA', (W, H))
+    with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED) as z:
+        z.writestr('mimetype', 'image/openraster', compress_type=zipfile.ZIP_STORED)
+        items = list(layers.items())
+        for i, (lname, (im, visible)) in reversed(list(enumerate(items))):
+            fn = f'data/layer{i:02}.png'
+            ET.SubElement(stack, 'layer', name=lname, src=fn, x='0', y='0', opacity='1.0', visibility='visible' if visible else 'hidden', **{'composite-op': 'svg:src-over'})
+            bio = io.BytesIO(); im.save(bio, format='PNG'); z.writestr(fn, bio.getvalue())
+        for im, visible in layers.values():
+            if visible:
+                comp.alpha_composite(im)
+        bio = io.BytesIO(); comp.save(bio, format='PNG'); z.writestr('mergedimage.png', bio.getvalue())
+        th = comp.copy(); th.thumbnail((256, 256)); bio = io.BytesIO(); th.save(bio, format='PNG'); z.writestr('Thumbnails/thumbnail.png', bio.getvalue())
+        z.writestr('stack.xml', ET.tostring(root, encoding='utf-8', xml_declaration=True))
+
+
+def iou(a: np.ndarray, b: np.ndarray) -> float:
+    u = (a | b).sum()
+    return float((a & b).sum() / u) if u else 1.0
+
+
+def load_v1_native():
+    spec = importlib.util.spec_from_file_location('crooked_v1_build', R / 'source/crooked_verdoyant_v1/build.py')
+    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+    return mod.native_modules()
+
+
+def build():
+    for d in ('calques', 'masques', 'nuit', 'complement_natif', 'review'):
+        (O / d).mkdir(parents=True, exist_ok=True)
+    stats = {}
+    # ---- détourage + normalisation ---------------------------------------------------------
+    sol = norm(Image.open(BRUTS['sol_herbe']).convert('RGBA'))
+    assert np.array(sol)[:, :, 3].min() == 255
+    keyed = {}
+    for k in ('chemin', 'parois_entree', 'rochers', 'arbres', 'lisiere'):
+        full = key(Image.open(BRUTS[k]))
+        stats[f'{k}_magenta_fraction_brut'] = round(float((np.array(full)[:, :, 3] == 0).mean()), 4)
+        keyed[k] = clean_alpha(norm(full), 6)
+    parois, entree = split_entrance(keyed['parois_entree'])
+    troncs_ombres, canopees, n_brown = split_trees(keyed['arbres'])
+    stats['tronc_pixels'] = n_brown
+    forest_v1 = v1_mask('03_lisiere_foret')
+    forest_sol = np.array(sol)[:, :, :3].astype(int)
+    fr, fg, fb = forest_sol[:, :, 0], forest_sol[:, :, 1], forest_sol[:, :, 2]
+    dark = (fg < 118) & (fg > fr) & (fg > fb) & (fr < 90)
+    dark = nd.binary_dilation(nd.binary_fill_holes(nd.binary_closing(dark, iterations=3)), iterations=6) | nd.binary_dilation(forest_v1, iterations=6)
+    sol_pur, n_cells = pure_grass(sol, dark)
+    stats['herbe_pure_cellules_reconstruites_16px'] = n_cells
+    # ---- végétation basse : sprites de la feuille magenta posés aux emplacements de la maquette V1 ----------
+    sheet = key(Image.open(BRUTS['feuille_vegetation']), strong=False)
+    sprites = sheet_sprites(sheet)
+    assert len(sprites) >= 6, len(sprites)
+    ferns = [s for (box, s) in sprites[:4]]
+    flowers = [s for (box, s) in sprites[4:6]]
+    v1_veg = v1_mask('08_vegetation_basse')
+    v1_scene = np.array(Image.open(V1 / 'bruts/scene_complete_512x640.png').convert('RGB').resize((W, H), Image.NEAREST)).astype(int)
+    v1_rock = v1_mask('05_parois_crooked')
+    veg = Image.new('RGBA', (W, H))
+    placements = []
+    lab, comps = components(v1_veg)
+    fi = 0
+    for i, sl in comps:
+        cm = lab == i
+        area = int(cm.sum())
+        if area < 120:
+            continue
+        ys, xs = np.nonzero(cm)
+        x0, x1, y0, y1 = xs.min(), xs.max() + 1, ys.min(), ys.max() + 1
+        if nd.binary_dilation(v1_rock, iterations=3)[y0:y1, x0:x1].any():
+            continue  # cailloux du pied de paroi : déjà dans le calque rochers
+        pr, pg, pb = v1_scene[cm][:, 0], v1_scene[cm][:, 1], v1_scene[cm][:, 2]
+        pink = int(((pr > 180) & (pb > 150) & (pr > pg + 30)).sum())
+        if pink >= 5:
+            sp = flowers[fi % 2]
+        else:
+            sp = ferns[fi % 4]
+        fi += 1
+        # taille = bbox maquette déjà agrandie 928×1152 (plantes ~20–80 px, pas la feuille 1024)
+        tw = max(16, min(80, x1 - x0))
+        th = max(14, min(80, round(sp.height * tw / sp.width)))
+        sp2 = sp.resize((tw, th), Image.NEAREST)
+        px, py = int((x0 + x1) // 2 - tw // 2), int(y1 - th)
+        px = int(max(0, min(W - tw, px))); py = int(max(0, min(H - th, py)))
+        veg.alpha_composite(sp2, (px, py))
+        placements.append({'sprite': 'fleur' if pink >= 5 else 'fougere', 'xy': [px, py], 'size': [int(tw), int(th)], 'v1_component_area': area})
+    layers = {
+        '01_sol_herbe': sol_pur,
+        '02_lisiere_foret': keyed['lisiere'],
+        '03_chemin': keyed['chemin'],
+        '04_parois_crooked': parois,
+        '05_entree_grotte': entree,
+        '06_rochers': keyed['rochers'],
+        '07_vegetation_basse': veg,
+        '08_troncs_ombres': troncs_ombres,
+        '09_canopees': canopees,
+    }
+    (O / 'bruts').mkdir(parents=True, exist_ok=True)
+    sol.save(O / 'bruts' / 'sol_herbe_lisiere_928x1152.png')
+    comp = Image.new('RGBA', (W, H))
+    for n, im in layers.items():
+        im.save(O / 'calques' / f'{PFX}_{n}.png')
+        Image.fromarray(((np.array(im)[:, :, 3] > 0) * 255).astype('uint8')).save(O / 'masques' / f'{PFX}_masque_{n}.png')
+        comp.alpha_composite(im)
+    comp.save(O / 'composition_jour.png')
+    # ---- contrôle d'alignement avec la maquette V1 (information, pas une exigence d'identité) ----------
+    v1m = {n: v1_mask(n) for n in
+           ('04_chemin_visible', '05_parois_crooked', '06_entree_grotte', '07_rochers', '08_vegetation_basse', '09_arbres')}
+    al = lambda n: np.array(layers[n])[:, :, 3] > 0
+    v1m['03_lisiere_foret'] = forest_v1
+    arbres_all = al('08_troncs_ombres') | al('09_canopees')
+    stats['iou_vs_maquette_v1'] = {
+        'lisiere': round(iou(al('02_lisiere_foret') & ~(v1m['05_parois_crooked']), v1m['03_lisiere_foret']), 3),
+        'chemin': round(iou(al('03_chemin'), v1m['04_chemin_visible'] | v1m['06_entree_grotte']), 3),
+        'parois': round(iou(al('04_parois_crooked') | al('05_entree_grotte'), v1m['05_parois_crooked'] | v1m['06_entree_grotte']), 3),
+        'entree': round(iou(al('05_entree_grotte'), v1m['06_entree_grotte']), 3),
+        'rochers': round(iou(nd.binary_dilation(al('06_rochers'), iterations=2), nd.binary_dilation(v1m['07_rochers'], iterations=2)), 3),
+        'arbres': round(iou(arbres_all, v1m['09_arbres']), 3),
+    }
+    stats['layer_pixels'] = {n: int((np.array(im)[:, :, 3] > 0).sum()) for n, im in layers.items()}
+    # ---- complément natif (mêmes modules que V1, positions relevées sur les calques V2) ------------------
+    mods = load_v1_native()
+    nat_rochers = Image.new('RGBA', (W, H)); nat_arbres = Image.new('RGBA', (W, H)); nat_pl = []
+    rlab, rcomps = components(nd.binary_dilation(al('06_rochers'), iterations=3))
+    groups = []
+    for i, sl in rcomps:
+        cm = (rlab == i) & al('06_rochers')
+        if cm.sum() < 250:
+            continue
+        ys, xs = np.nonzero(cm); groups.append((int(xs.mean()), int(ys.max()), int(cm.sum())))
+    groups.sort(key=lambda t: -t[2])
+    big = sorted(groups[:2], key=lambda t: t[0]); small = groups[2:4]
+    for (cx, by, _), n in list(zip(big, ['rocher_groupe_ouest', 'rocher_groupe_est'])) + list(zip(small, ['petit_rocher_a', 'petit_rocher_b'])):
+        im = mods[n][0]; x = int(max(0, min(W - im.width, cx - im.width // 2))); y = int(max(0, min(H - im.height, by - im.height + 4)))
+        nat_rochers.alpha_composite(im, (x, y)); nat_pl.append({'module': n, 'layer': '10_rochers_natifs_crooked', 'xy': [x, y], 'size': [im.width, im.height]})
+    tree = mods['arbre_steppe'][0]
+    cores = nd.binary_erosion(al('09_canopees'), iterations=10)
+    clab, ccomps = components(cores); anchors = []
+    for i, sl in ccomps:
+        cm = clab == i
+        if cm.sum() < 150:
+            continue
+        ys, xs = np.nonzero(cm); cand = (int(xs.mean()), int(ys.mean()) + 44)
+        if all(abs(cand[0] - ax) + abs(cand[1] - ay) > 40 for ax, ay in anchors):
+            anchors.append(cand)
+    path_mask = nd.binary_dilation(al('03_chemin'), iterations=4)
+    for (cx, by) in sorted(anchors, key=lambda t: (t[1], t[0])):
+        x, y = cx - 80, by - 112
+        x = int(max(0, min(W - tree.width, x))); y = int(max(0, min(H - tree.height, y)))
+        for _ in range(12):
+            if path_mask[y + 16:y + 112, x + 8:x + 134].sum() == 0:
+                break
+            x += -8 if cx < W // 2 else 8; x = max(0, min(W - tree.width, x))
+        nat_arbres.alpha_composite(tree, (x, y)); nat_pl.append({'module': 'arbre_steppe', 'layer': '11_arbres_natifs_steppe', 'xy': [x, y], 'size': [tree.width, tree.height]})
+    nat_rochers.save(O / 'complement_natif' / f'{PFX}_10_rochers_natifs_crooked.png')
+    nat_arbres.save(O / 'complement_natif' / f'{PFX}_11_arbres_natifs_steppe.png')
+    comp_nat = sol_pur.copy()
+    for n in ('02_lisiere_foret', '03_chemin', '04_parois_crooked', '05_entree_grotte'):
+        comp_nat.alpha_composite(layers[n])
+    comp_nat.alpha_composite(nat_rochers); comp_nat.alpha_composite(nat_arbres)
+    comp_nat.save(O / 'complement_natif' / 'composition_objets_natifs_jour.png')
+    # ---- nuit -------------------------------------------------------------------------------------
+    for n, im in layers.items():
+        night(im).save(O / 'nuit' / f'{PFX}_{n}_nuit.png')
+    for n, im in (('10_rochers_natifs_crooked', nat_rochers), ('11_arbres_natifs_steppe', nat_arbres)):
+        night(im).save(O / 'nuit' / f'{PFX}_{n}_nuit.png')
+    comp_n = Image.new('RGBA', (W, H))
+    for n in layers:
+        comp_n.alpha_composite(Image.open(O / 'nuit' / f'{PFX}_{n}_nuit.png'))
+    comp_n.save(O / 'composition_nuit.png')
+    night(comp_nat).save(O / 'complement_natif' / 'composition_objets_natifs_nuit.png')
+    # ---- ORA + review ------------------------------------------------------------------------------
+    ora_layers = {n: (im, True) for n, im in layers.items()}
+    ora_layers['10_rochers_natifs_crooked (natif, masqué par défaut)'] = (nat_rochers, False)
+    ora_layers['11_arbres_natifs_steppe (natif, masqué par défaut)'] = (nat_arbres, False)
+    ora(O / f'{PFX}_editable.ora', ora_layers, 'Crooked Cavern verdoyante V3 — échelle 928×1152')
+    # planche d'échelle : arbre natif 144×120, sprite 40×40, fenêtre caméra 640×360 / 848×480
+    tree = mods['arbre_steppe'][0]
+    scale = Image.new('RGBA', (W, 220), (20, 22, 28, 255))
+    from PIL import ImageDraw, ImageFont
+    dr = ImageDraw.Draw(scale)
+    dr.rectangle((16, 40, 16 + 40, 40 + 40), fill=(240, 200, 80, 255))
+    dr.text((16, 16), 'sprite ~40 px', fill=(230, 230, 220))
+    scale.alpha_composite(tree, (80, 40))
+    dr.text((80, 16), 'arbre Vast Steppe 144x120 (1:1)', fill=(230, 230, 220))
+    dr.rectangle((250, 40, 250 + 96, 40 + 8), fill=(180, 150, 110, 255))
+    dr.text((250, 16), 'chemin V3 ~74-117 px', fill=(230, 230, 220))
+    dr.rectangle((16, 170, 16 + 640 // 4, 170 + 360 // 4), outline=(120, 180, 255, 255))
+    dr.text((16, 150), 'cam 640x360 (1/4)', fill=(160, 190, 255))
+    dr.rectangle((200, 170, 200 + 848 // 4, 170 + 480 // 4), outline=(255, 160, 120, 255))
+    dr.text((200, 150), 'cam 848x480 (1/4)  carte 928x1152 > les deux', fill=(255, 180, 140))
+    scale.save(O / 'review' / 'echelle_arbre_sprite_camera.png')
+    rv = Image.new('RGBA', (512 + W + 36, max(640, H)), (30, 30, 34, 255))
+    rv.alpha_composite(Image.open(V1 / 'composition_jour.png').convert('RGBA'), (0, 0))
+    rv.alpha_composite(comp, (512 + 24, 0))
+    rv.resize((rv.width // 2, rv.height // 2), Image.NEAREST).save(O / 'review' / 'v1_512_vs_v3_928_0.5x.png')
+    rvn = Image.new('RGBA', (W * 2 + 24, H), (30, 30, 34, 255)); rvn.alpha_composite(comp_n, (0, 0)); rvn.alpha_composite(Image.open(O / 'complement_natif/composition_objets_natifs_nuit.png').convert('RGBA'), (W + 24, 0))
+    rvn.resize((rvn.width // 2, rvn.height // 2), Image.NEAREST).save(O / 'review' / 'nuit_v3_vs_natifs_0.5x.png')
+    board = Image.new('RGBA', (5 * W + 32, 2 * H + 8), (255, 0, 255, 255))
+    for i, (n, im) in enumerate(layers.items()):
+        board.alpha_composite(im, ((i % 5) * (W + 8), (i // 5) * (H + 8)))
+    board.resize((board.width // 4, board.height // 4), Image.NEAREST).save(O / 'review' / 'planche_calques_0.25x.png')
+    # ---- manifeste ----------------------------------------------------------------------------------
+    manifest = {
+        'zone': 'Crooked Cavern verdoyante V3 — échelle 1:1 928×1152 (bruts magenta V2 sans downscale)',
+        'size': [W, H], 'prefix': PFX, 'grid': 8, 'tiles': [W // 8, H // 8],
+        'scale': {
+            'why': 'V2 512×640 < caméra PMDO (bandes noires au clamp) et arbres ~100 px trop petits vs sprite Pokémon et arbre canonique Vast Steppe 144×120',
+            'approach': 'conserver les pixels des bruts 928×1152 (aucun NEAREST downscale, aucun upscale des modules natifs)',
+            'arbre_natif_vast_steppe_px': [144, 120],
+            'arbre_genere_brut_px': '175–199 × 143–152',
+            'chemin_largeur_px': '74–117 (≈ 9–15 tuiles de 8 px)',
+            'sprite_pokemon_walk_px': '24–40',
+            'camera_ref_px': [[640, 360], [848, 480]],
+            'carte_px': [928, 1152],
+            'note_clamp': '928≥848 et 1152≥480 : le clamp caméra reste dans le terrain (sous-couche opaque), pas de bande noire',
+        },
+        'workflow': 'mêmes bruts magenta que V2, détourage à 928×1152 (pas de normalisation 512×640) → séparation entrée/canopées → plantes 1:1 → herbe 16 px → natifs translation → nuit Abyss → ORA/galerie',
+        'herbe_pure': 'cellules 16×16 du brut 928×1152 ; version avec lisières : bruts/sol_herbe_lisiere_928x1152.png',
+        'terrain_origin': 'PIXELS GÉNÉRÉS (redessinés d’après références PMD : Crooked Cavern entrance, Vast Steppe entrance, Relic Forest Base). PAS des pixels natifs certifiés.',
+        'native_pixels': 'uniquement complement_natif/*.png (translation seule)',
+        'key': {'background': '(r>150)&(b>150)&(g<100)', 'fringe_forte_3px': 'b>g+10 (chemin, parois, rochers, arbres : aucun pixel légitime n’a b>g)', 'fringe_douce_2px_feuille': '|r-b|<70 & g<0.6·min(r,b)', 'note': 'roses du chemin (g≈b) et fleurs (g>0.6·min(r,b)) préservés'},
+        'bruts': {k: {'path': str(p.relative_to(R)), 'sha256': sha(p), 'size': list(Image.open(p).size)} for k, p in BRUTS.items()},
+        'bruts_rejetes': {k: {'path': str(p.relative_to(R)), 'sha256': sha(p), 'raison': {'chemin_essai1': 'gardait la paroi et un ciel teinté', 'vegetation_essai1': 'gardait paroi et lisières', 'vegetation_essai2': 'gardait arbres, paroi partielle et herbe plate'}[k]} for k, p in REJETES.items() if p.exists()},
+        'maquette': 'renders/crooked_verdoyant_v1/bruts/scene_complete_brut.png (image d’entrée des extractions) ; sol : renders/crooked_verdoyant_v1/bruts/sol_complet_brut.png',
+        'layers_order_bottom_to_top': list(layers.keys()),
+        'vegetation_placements': placements,
+        'native_placements': nat_pl,
+        'stats': stats,
+        'night': 'source/cote_v4_abyss/night.py appliqué calque par calque',
+        'arrival': 'bord sud, chemin centré', 'objective': 'bouche de grotte au nord (04_entree_grotte)',
+        'not_tested': 'PMDO runtime, collisions, warps : NON TESTÉS',
+    }
+    (O / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
+    # ---- galerie ------------------------------------------------------------------------------------
+    def uri(p: Path):
+        return p.relative_to(R).as_posix()
+    data = {
+        'layers': [{'id': n, 'uri': uri(O / 'calques' / f'{PFX}_{n}.png'), 'nuit': uri(O / 'nuit' / f'{PFX}_{n}_nuit.png')} for n in layers],
+        'natifs': [{'id': n, 'uri': uri(O / 'complement_natif' / f'{PFX}_{n}.png'), 'nuit': uri(O / 'nuit' / f'{PFX}_{n}_nuit.png')} for n in ('10_rochers_natifs_crooked', '11_arbres_natifs_steppe')],
+        'bruts': [{'label': k, 'uri': uri(p)} for k, p in BRUTS.items()],
+        'refs': [{'label': 'Crooked Cavern entrance (natif)', 'uri': uri(R / 'banque_canonique/cartes_natives/Halcyon__crooked_cavern_entrance.png')},
+                 {'label': 'Vast Steppe entrance (natif)', 'uri': uri(R / 'banque_canonique/cartes_natives/vast_steppe_entrance.png')},
+                 {'label': 'arbre Vast Steppe 144×120', 'uri': uri(R / 'source/zones_south_north_v3/references/native_tree_complete.png')}],
+        'generated_ids': list(layers.keys()),
+    }
+    page = (SRC / 'gallery_template.html').read_text().replace('__DATA__', json.dumps(data, ensure_ascii=False))
+    (R / 'apercu_crooked_verdoyant_v3_echelle.html').write_text(page)
+    print('OK', json.dumps(stats, ensure_ascii=False), len(placements), 'plantes,', len(nat_pl), 'modules natifs')
+
+
+if __name__ == '__main__':
+    build()

@@ -1,0 +1,51 @@
+{
+  "bruts_sha256_ok": true,
+  "all_layers_928x1152": true,
+  "underlay_opaque": true,
+  "residual_magenta_pixels": {
+    "01_sol_herbe": 0,
+    "02_lisiere_foret": 0,
+    "03_chemin": 0,
+    "04_parois_crooked": 0,
+    "05_entree_grotte": 0,
+    "06_rochers": 0,
+    "07_vegetation_basse": 0,
+    "08_troncs_ombres": 0,
+    "09_canopees": 0
+  },
+  "no_residual_magenta": true,
+  "alpha_is_binary": true,
+  "composition_equals_stack": true,
+  "composition_opaque": true,
+  "masks_match_layers": true,
+  "night_layers_exact_abyss": true,
+  "composition_nuit_equals_stack_of_night_layers": true,
+  "native_layers_rebuilt_identical": true,
+  "path_connects_south_edge_to_entrance": true,
+  "path_bottom_row_px": 111,
+  "path_top_y": 391,
+  "path_min_width_px_below_tip": 84,
+  "trunks_shadows_pixels_over_path": 0,
+  "canopies_pixels_over_path": 0,
+  "rocks_pixels_over_path": 108,
+  "entrance_bbox": [
+    377,
+    144,
+    552,
+    383
+  ],
+  "iou_vs_maquette_v1": {
+    "lisiere": 0.873,
+    "chemin": 0.731,
+    "parois": 0.994,
+    "entree": 0.783,
+    "rochers": 0.699,
+    "arbres": 0.596
+  },
+  "underlay_dark_forest_pixels": 0,
+  "underlay_is_pure_grass": true,
+  "ora_ok": true,
+  "ora_merged_equals_composition": true,
+  "runtime_pmdo": "NOT TESTED",
+  "all_pass": true
+}

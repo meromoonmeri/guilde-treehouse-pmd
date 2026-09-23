@@ -65,3 +65,7 @@ fait ». L'audit ci-dessus reste la base ; la V1 devient la **maquette** (image 
 Détourage : fond `(r>150)&(b>150)&(g<100)`, frange 3 px `b>g+10` (aucun pixel légitime de ces calques n'a b>g),
 frange douce sur la feuille de fleurs. Résultats et contrôles : `renders/crooked_verdoyant_v2_magenta/`
 (`README.md`, `manifest.json`, `verification.json`), galerie `apercu_crooked_verdoyant_v2_magenta.html`.
+
+## 6. V3 échelle 928×1152 (23/09/2026)
+Les bruts magenta de la V2 mesurent déjà 928×1152. La normalisation NEAREST 512×640 de la V2 est la cause des bandes noires au clamp et du décalage d’échelle vs sprite Pokémon. V3 : même pipeline sans downscale. Arbre natif 144×120, chemin ≥ 84 px, carte ≥ caméras 640×360 / 848×480. Voir `renders/crooked_verdoyant_v3_echelle/README.md`.
+
