@@ -456,3 +456,14 @@ Remontee chutes au bord haut (1px magenta). 10 tests PASS, viewer JS OK. Honnete
 methode=generee_magenta, natif=False, runtime NOT TESTED. Sandbox reset en cours :
 .venv reconstruite, historique local retombe a d5c79863 (fichiers intacts, push distant
 3a7034d7 conserve) ; reprise par soft-reset sur la pointe distante avant push V2.
+
+## Reference sampler — generateur configure sur echantillons (23 septembre 2026)
+
+Correction : utiliser les OUTILS pour configurer le generateur sur les echantillons
+de la reference. `source/reference_sampler/sample.py` : palette MEDIANCUT + patchs
+(extraits originaux, plus gros composant par couleur) + mesures + `prompt.txt` strict.
+Packs `aride/plage/jardin` prets ; appel contraint = images[reference, patch_board] +
+prompt compact. Lecon : 16 hex + 2 refs = MAX_TOKENS, compacter a ≤10 hex.
+Preuve `proof/aride_strict_v1.png` : 95,4% pixels a Δ≤30 de la palette verrouillee,
+99,2% a Δ≤60 (mesure outil, pas impression). 3 tests PASS. Remap optionnel vers la
+palette au build si strict absolu exige. Prochaine etape : lots aride/plage/jardin.
