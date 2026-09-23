@@ -1,0 +1,70 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "test": "all original Ledian map/bank SHA256 hashes unchanged",
+      "pass": true
+    },
+    {
+      "test": "seven generated raws archived losslessly with original pixel hashes",
+      "pass": true
+    },
+    {
+      "test": "five terrain partitions exactly recompose the generated empty map; no geometry resampling",
+      "pass": true
+    },
+    {
+      "test": "38 independent layer instances, 8px-aligned sizes/positions, binary alpha, no opaque magenta",
+      "pass": true
+    },
+    {
+      "test": "four connected sectors, four internal links, one south entrance",
+      "pass": true
+    },
+    {
+      "test": "main carpet route stays connected with 8px clearance after default furnishing footprints; not engine collisions",
+      "pass": true
+    },
+    {
+      "test": "rug uses only unchanged native source pixels; no stretch or recolour",
+      "pass": true
+    },
+    {
+      "test": "four fire poses and order exactly reconstructed from native Ledian Ground tracks",
+      "pass": true
+    },
+    {
+      "test": "native support + flame split exactly recomposes every 32×64 brazier, unscaled",
+      "pass": true
+    },
+    {
+      "test": "source cadence is 6 ticks; viewer uses 100ms/pose, 400ms/loop",
+      "pass": true
+    },
+    {
+      "test": "native Krow Bank object unchanged",
+      "pass": true
+    },
+    {
+      "test": "eight native braziers, two generated unlit furnace bodies, ten independent native flame instances",
+      "pass": true
+    },
+    {
+      "test": "still pixels exact; animated visible pixels/alpha exact, four poses total 400ms and wrap",
+      "pass": true
+    }
+  ],
+  "layers": 38,
+  "unique_layer_images": 20,
+  "clearance_scope": "Default authoring footprints on carpet route, not native collisions or vertical geometry.",
+  "browser": "NOT TESTED here; separate DOM simulation",
+  "runtime_PMDO": "NOT TESTED",
+  "visual_review": "Generated objects, corrected square terrain, native fire frames, and furnished network inspected. Approval remains with user.",
+  "limits": [
+    "Terrain is generated, not certified native tile art.",
+    "Terrain depth partitions are visible-surface masks, not movable complete rock volumes.",
+    "Room boundaries share a continuous image; arbitrary rearrangements are not certified seamless.",
+    "Object footprints are authoring hints, not implemented collisions.",
+    "Passages and decor arrangement require artistic and PMDO review."
+  ]
+}

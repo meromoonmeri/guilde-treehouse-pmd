@@ -1,0 +1,1513 @@
+{
+  "port_repo": "https://github.com/Lyraedan/PMD-Red-PC-Port",
+  "port_commit": "cd07abc4307e67373a522941308a935bd15241b0",
+  "pret_repo": "https://github.com/pret/pmd-red",
+  "pret_commit": "89c65d9c152b9aab37abe660c14e4505e9bd941a",
+  "references": [
+    {
+      "reference": "energeticforest",
+      "map": "H07P04",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_ENERGETIC_FOREST",
+      "weather_id": 5,
+      "weather_map": "H07P04W",
+      "batch": 1,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "finalisland",
+      "map": "H29P04",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_FINAL_ISLAND",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 1,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "volcanicpit",
+      "map": "H26P01",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_VOLCANIC_PIT",
+      "weather_id": 13,
+      "weather_map": "W04",
+      "batch": 1,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "witheringdesert",
+      "map": "H20P01",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_FURNACE_DESERT",
+      "weather_id": 14,
+      "weather_map": "W05",
+      "batch": 1,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "deepseacurrent",
+      "map": "H02P02",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_DEEP_SEA_CURRENT",
+      "weather_id": 3,
+      "weather_map": "H02P02W",
+      "batch": 1,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "jungle",
+      "map": "H14P01",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_JUNGLE",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "overgrownforest",
+      "map": "H07P03",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_OVERGROWN_FOREST",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "mtdiscipline",
+      "map": "H16P01",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_MT_DISCIPLINE",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "wildplains",
+      "map": "H06P01",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_WILD_PLAINS",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "secretiveforest",
+      "map": "H07P08",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_SECRETIVE_FOREST",
+      "weather_id": -1,
+      "weather_map": null,
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    },
+    {
+      "reference": "scorchedplains",
+      "map": "H06P05",
+      "enum": "MAP_FILE_ID_FRIEND_AREA_SCORCHED_PLAINS",
+      "weather_id": 13,
+      "weather_map": "W04",
+      "batch": 2,
+      "new_maps": "entry + finale; generated, not native"
+    }
+  ],
+  "metadata": {
+    "H07P04": {
+      "size": [
+        480,
+        336
+      ],
+      "chunks": [
+        20,
+        14
+      ],
+      "layers": 1,
+      "consumed": 407,
+      "header": [
+        60,
+        42,
+        3,
+        3,
+        20,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H07P04",
+      "bpc_header": [
+        3,
+        3,
+        717,
+        0,
+        0,
+        0,
+        0,
+        229
+      ],
+      "bpa": [],
+      "palette_spec": [],
+      "palette_count": 9
+    },
+    "H07P04W": {
+      "size": [
+        480,
+        336
+      ],
+      "chunks": [
+        20,
+        14
+      ],
+      "layers": 1,
+      "consumed": 307,
+      "header": [
+        60,
+        42,
+        3,
+        3,
+        20,
+        14,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "H07P04W",
+      "bpc_header": [
+        3,
+        3,
+        36,
+        12,
+        0,
+        0,
+        0,
+        25
+      ],
+      "bpa": [
+        {
+          "slot": 0,
+          "tiles": 12,
+          "frames": 14,
+          "stored_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "display_ticks": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        }
+      ],
+      "palette_spec": [
+        [
+          8,
+          32
+        ]
+      ],
+      "palette_count": 1
+    },
+    "H29P04": {
+      "size": [
+        480,
+        312
+      ],
+      "chunks": [
+        20,
+        13
+      ],
+      "layers": 2,
+      "consumed": 605,
+      "header": [
+        60,
+        39,
+        3,
+        3,
+        20,
+        13,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H29P04",
+      "bpc_header": [
+        3,
+        3,
+        640,
+        0,
+        0,
+        0,
+        0,
+        227
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          6,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          18
+        ]
+      ],
+      "palette_count": 6
+    },
+    "H26P01": {
+      "size": [
+        480,
+        312
+      ],
+      "chunks": [
+        20,
+        13
+      ],
+      "layers": 1,
+      "consumed": 338,
+      "header": [
+        60,
+        39,
+        3,
+        3,
+        20,
+        13,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H26P01",
+      "bpc_header": [
+        3,
+        3,
+        797,
+        0,
+        0,
+        0,
+        0,
+        256
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          8,
+          15
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "palette_count": 10
+    },
+    "W04": {
+      "size": [
+        1440,
+        960
+      ],
+      "chunks": [
+        60,
+        40
+      ],
+      "layers": 1,
+      "consumed": 430,
+      "header": [
+        180,
+        120,
+        3,
+        3,
+        60,
+        40,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "W04",
+      "bpc_header": [
+        3,
+        3,
+        3,
+        6,
+        0,
+        0,
+        0,
+        13
+      ],
+      "bpa": [
+        {
+          "slot": 0,
+          "tiles": 6,
+          "frames": 16,
+          "stored_ticks": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "display_ticks": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        }
+      ],
+      "palette_spec": [],
+      "palette_count": 1
+    },
+    "H20P01": {
+      "size": [
+        456,
+        336
+      ],
+      "chunks": [
+        19,
+        14
+      ],
+      "layers": 1,
+      "consumed": 433,
+      "header": [
+        57,
+        42,
+        3,
+        3,
+        19,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H20P01",
+      "bpc_header": [
+        3,
+        3,
+        804,
+        0,
+        0,
+        0,
+        0,
+        244
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "palette_count": 10
+    },
+    "W05": {
+      "size": [
+        480,
+        264
+      ],
+      "chunks": [
+        20,
+        11
+      ],
+      "layers": 1,
+      "consumed": 178,
+      "header": [
+        60,
+        33,
+        3,
+        3,
+        20,
+        11,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "W05",
+      "bpc_header": [
+        3,
+        3,
+        79,
+        0,
+        0,
+        0,
+        0,
+        63
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          8,
+          32
+        ]
+      ],
+      "palette_count": 1
+    },
+    "H02P02": {
+      "size": [
+        456,
+        312
+      ],
+      "chunks": [
+        19,
+        13
+      ],
+      "layers": 1,
+      "consumed": 414,
+      "header": [
+        57,
+        39,
+        3,
+        3,
+        19,
+        13,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H02P02",
+      "bpc_header": [
+        3,
+        3,
+        591,
+        0,
+        0,
+        0,
+        0,
+        203
+      ],
+      "bpa": [],
+      "palette_spec": [],
+      "palette_count": 6
+    },
+    "H02P02W": {
+      "size": [
+        456,
+        312
+      ],
+      "chunks": [
+        19,
+        13
+      ],
+      "layers": 1,
+      "consumed": 223,
+      "header": [
+        57,
+        39,
+        3,
+        3,
+        19,
+        13,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "H02P02W",
+      "bpc_header": [
+        3,
+        3,
+        94,
+        0,
+        0,
+        0,
+        0,
+        44
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          8,
+          32
+        ]
+      ],
+      "palette_count": 1
+    },
+    "H14P01": {
+      "size": [
+        456,
+        336
+      ],
+      "chunks": [
+        19,
+        14
+      ],
+      "layers": 1,
+      "consumed": 446,
+      "header": [
+        57,
+        42,
+        3,
+        3,
+        19,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H14P01",
+      "bpc_header": [
+        3,
+        3,
+        870,
+        0,
+        0,
+        0,
+        0,
+        256
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          13
+        ]
+      ],
+      "palette_count": 9
+    },
+    "H07P03": {
+      "size": [
+        480,
+        312
+      ],
+      "chunks": [
+        20,
+        13
+      ],
+      "layers": 1,
+      "consumed": 415,
+      "header": [
+        60,
+        39,
+        3,
+        3,
+        20,
+        13,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H07P03",
+      "bpc_header": [
+        3,
+        3,
+        833,
+        0,
+        0,
+        0,
+        0,
+        255
+      ],
+      "bpa": [],
+      "palette_spec": [],
+      "palette_count": 8
+    },
+    "H16P01": {
+      "size": [
+        480,
+        336
+      ],
+      "chunks": [
+        20,
+        14
+      ],
+      "layers": 1,
+      "consumed": 401,
+      "header": [
+        60,
+        42,
+        3,
+        3,
+        20,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H16P01",
+      "bpc_header": [
+        3,
+        3,
+        860,
+        0,
+        0,
+        0,
+        0,
+        274
+      ],
+      "bpa": [],
+      "palette_spec": [],
+      "palette_count": 10
+    },
+    "H06P01": {
+      "size": [
+        456,
+        336
+      ],
+      "chunks": [
+        19,
+        14
+      ],
+      "layers": 1,
+      "consumed": 431,
+      "header": [
+        57,
+        42,
+        3,
+        3,
+        19,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H06P01",
+      "bpc_header": [
+        3,
+        3,
+        777,
+        0,
+        0,
+        0,
+        0,
+        247
+      ],
+      "bpa": [],
+      "palette_spec": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          18
+        ]
+      ],
+      "palette_count": 8
+    },
+    "H07P08": {
+      "size": [
+        456,
+        312
+      ],
+      "chunks": [
+        19,
+        13
+      ],
+      "layers": 1,
+      "consumed": 406,
+      "header": [
+        57,
+        39,
+        3,
+        3,
+        19,
+        13,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H07P08",
+      "bpc_header": [
+        3,
+        3,
+        882,
+        0,
+        0,
+        0,
+        0,
+        245
+      ],
+      "bpa": [],
+      "palette_spec": [],
+      "palette_count": 8
+    },
+    "H06P05": {
+      "size": [
+        456,
+        336
+      ],
+      "chunks": [
+        19,
+        14
+      ],
+      "layers": 1,
+      "consumed": 439,
+      "header": [
+        57,
+        42,
+        3,
+        3,
+        19,
+        14,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "name": "H06P05",
+      "bpc_header": [
+        3,
+        3,
+        770,
+        45,
+        0,
+        0,
+        0,
+        259
+      ],
+      "bpa": [
+        {
+          "slot": 0,
+          "tiles": 45,
+          "frames": 10,
+          "stored_ticks": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "display_ticks": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ],
+      "palette_spec": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "palette_count": 8
+    }
+  },
+  "files": [
+    {
+      "path": "data/data_8115F5C_3_.s",
+      "bytes": 14538,
+      "git_sha1": "0a3942f840861821bfe87fba8d17bd04e851c9f9",
+      "sha256": "762e271fdc700d94dd8fca9b5bfa52eeeed6e4a0122f06164efe77dc4385f86c",
+      "pret_git_sha1": "0a3942f840861821bfe87fba8d17bd04e851c9f9",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02.bpl",
+      "bytes": 364,
+      "git_sha1": "12ae9fc939fbddc5ef71d98c56f99aae84838c57",
+      "sha256": "402e5b67779221bae4c3784b66cc1ca7d332bda25ec3a871dec860609f26d236",
+      "pret_git_sha1": "12ae9fc939fbddc5ef71d98c56f99aae84838c57",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02W.bpl",
+      "bytes": 1988,
+      "git_sha1": "eec01b4198c45ec780b6a4d9a703953cd381cb23",
+      "sha256": "cc278c680d424e0112d8c175a840bc7ef04f19e0e6079edf74850573a602b51c",
+      "pret_git_sha1": "eec01b4198c45ec780b6a4d9a703953cd381cb23",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02Wc.bpc",
+      "bytes": 3768,
+      "git_sha1": "72d95323826b3b122c7b1268f1ba207b2d470745",
+      "sha256": "911654dc9acf8207c2b8a3288a723399a3739e37927a2b7185d6d320530c0575",
+      "pret_git_sha1": "72d95323826b3b122c7b1268f1ba207b2d470745",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02Wm.bma",
+      "bytes": 224,
+      "git_sha1": "f1d58f2f480b489b37dc1a9dd9a86d71a706a75f",
+      "sha256": "e029db34be6ae997b7bcc090f5d1f0407690e4783cb11b597bf73c44d3be6cf3",
+      "pret_git_sha1": "f1d58f2f480b489b37dc1a9dd9a86d71a706a75f",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02c.bpc",
+      "bytes": 22532,
+      "git_sha1": "a0a1b4839ae9c7bc8a6e213be185539b3eb92525",
+      "sha256": "b7292d1485a7eb377487fd8f3de8bc3a10026f2240e7b04c670919274540ca31",
+      "pret_git_sha1": "a0a1b4839ae9c7bc8a6e213be185539b3eb92525",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H02P02m.bma",
+      "bytes": 524,
+      "git_sha1": "c466c108e1ef8c9770f5cd7f9e9b39a6c5ed90be",
+      "sha256": "e95e7839b8e0bee1a708bc6b57672d7609eb20ca158c2f1d5a25c1ed9bc67c7c",
+      "pret_git_sha1": "c466c108e1ef8c9770f5cd7f9e9b39a6c5ed90be",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P01.bpl",
+      "bytes": 3276,
+      "git_sha1": "c33b5254279e3dfd3ece5a1df083d69ccd8e9695",
+      "sha256": "7eac13e452cbd267bb112f17a02645fcc84714637e8b2fa5901c130e54a31784",
+      "pret_git_sha1": "c33b5254279e3dfd3ece5a1df083d69ccd8e9695",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P01c.bpc",
+      "bytes": 29276,
+      "git_sha1": "db28390e58017faf82d4c13e170a9b4fc339e5ee",
+      "sha256": "217b42c2f54aff2a204c2ee945d8da2f31b238dd39543161bb1dc4d8176dca80",
+      "pret_git_sha1": "db28390e58017faf82d4c13e170a9b4fc339e5ee",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P01m.bma",
+      "bytes": 544,
+      "git_sha1": "6168affbe281e77e55461fa49f7969ae7556fea2",
+      "sha256": "1902080940e1f8bac0402cef107db8a8f5359d3b11845647d34ff6780de5dce1",
+      "pret_git_sha1": "6168affbe281e77e55461fa49f7969ae7556fea2",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P05.bpl",
+      "bytes": 1596,
+      "git_sha1": "3265c42edca3bd180bd1e3048bc97666e2f6db5a",
+      "sha256": "7d1c6ab3af3349c17c1b0818d2789253e5e69f12b4c9185b00764ffd2b015320",
+      "pret_git_sha1": "3265c42edca3bd180bd1e3048bc97666e2f6db5a",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P051.bpa",
+      "bytes": 14444,
+      "git_sha1": "c46edab889679946974b667105dd89cb76467f90",
+      "sha256": "08df0e56f2d8924b659c758288178fe43610e931d7e132fb6101121cd4a98f3e",
+      "pret_git_sha1": "c46edab889679946974b667105dd89cb76467f90",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P05c.bpc",
+      "bytes": 29268,
+      "git_sha1": "9001c103823aeddc31412ba8df3f669b78a7818c",
+      "sha256": "b1ccb1c92cdd683c3655ca8e8d174bc8b24abd889e43f8153a22dc36dfea90dd",
+      "pret_git_sha1": "9001c103823aeddc31412ba8df3f669b78a7818c",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H06P05m.bma",
+      "bytes": 568,
+      "git_sha1": "e84f314536b6b6e487113a6fc537c586268f768f",
+      "sha256": "0546b3202f550f0a37a173fbc470fc33f67c8f509b000110747e08414fcd7856",
+      "pret_git_sha1": "e84f314536b6b6e487113a6fc537c586268f768f",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P03.bpl",
+      "bytes": 484,
+      "git_sha1": "6f106df3ffb3cfade130303165cf8bfbdaa428b2",
+      "sha256": "953943eca68881ea79e536699c4d19d32c6a20c150b8b16a3917e8e53bf24573",
+      "pret_git_sha1": "6f106df3ffb3cfade130303165cf8bfbdaa428b2",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P03c.bpc",
+      "bytes": 31212,
+      "git_sha1": "21ab2ec9813c9de2c022e3d951cda6584de70316",
+      "sha256": "6a399be14b68bdf03b365c056aa5cee967804a142a6db46e0454761110ebc1bb",
+      "pret_git_sha1": "21ab2ec9813c9de2c022e3d951cda6584de70316",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P03m.bma",
+      "bytes": 528,
+      "git_sha1": "2d96c7290628e3c9f350ea481fff3d320706b133",
+      "sha256": "06e413db44b965c2fd9317e575a7a7970220dbb7eb83e83a21f5828462c80669",
+      "pret_git_sha1": "2d96c7290628e3c9f350ea481fff3d320706b133",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04.bpl",
+      "bytes": 544,
+      "git_sha1": "9654be24f0d3ccce3324babdb985395438bd1aa6",
+      "sha256": "6587ba134b136a8984151fa33ec80f27282843cf8257ad72f26a60048f4572e0",
+      "pret_git_sha1": "9654be24f0d3ccce3324babdb985395438bd1aa6",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04W.bpl",
+      "bytes": 1988,
+      "git_sha1": "dbddb67cf2edf5b4734bf844ab5f28957c08e0d7",
+      "sha256": "0085758175a3ef8d034c1a22305c965bf74a577b7d7cb129238bc07780707760",
+      "pret_git_sha1": "dbddb67cf2edf5b4734bf844ab5f28957c08e0d7",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04W1.bpa",
+      "bytes": 5436,
+      "git_sha1": "aafd0dbda399888a78b5b115de2dcf552e293e55",
+      "sha256": "b14180dacaa5a3cfa6cbfa9f861cab84f494492bf4a6278f18cd9d98c0dace36",
+      "pret_git_sha1": "aafd0dbda399888a78b5b115de2dcf552e293e55",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04Wc.bpc",
+      "bytes": 1568,
+      "git_sha1": "2530bf45c764bd1080d668bfb51671c415be3695",
+      "sha256": "87c0bffedc3e5c4288c9076f8e01b0a36c3e4348db000d9a2c15bd0499396f3f",
+      "pret_git_sha1": "2530bf45c764bd1080d668bfb51671c415be3695",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04Wm.bma",
+      "bytes": 308,
+      "git_sha1": "0f27eaff272a0a6910d7fcd68435851b09a0d004",
+      "sha256": "fef266f861ce5a7d48b261120f7fc43a4c89b7c723cc715a216f43a5dcd5c2c2",
+      "pret_git_sha1": "0f27eaff272a0a6910d7fcd68435851b09a0d004",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04c.bpc",
+      "bytes": 27032,
+      "git_sha1": "9a88b4297a05f2ba71cb2608e101d49854e3403c",
+      "sha256": "70645c2bec0fa1c28d84586dc70ec5cbd66784790d3092c3ddc98022ceaf0349",
+      "pret_git_sha1": "9a88b4297a05f2ba71cb2608e101d49854e3403c",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P04m.bma",
+      "bytes": 524,
+      "git_sha1": "e1743a0130d97a0e3799ff4ca194eb425e2c6300",
+      "sha256": "06d98c70444fa2bb157824cd104c9280737596d5039f7176dafe4746cdcd7fd5",
+      "pret_git_sha1": "e1743a0130d97a0e3799ff4ca194eb425e2c6300",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P08.bpl",
+      "bytes": 484,
+      "git_sha1": "864e543fa1d05b0f7e63ad6da3f1c7f3bfb9eddb",
+      "sha256": "16e2ce389beca67c34628a10a7d86da0b9a4ae9455a5988ecd217adef834092f",
+      "pret_git_sha1": "864e543fa1d05b0f7e63ad6da3f1c7f3bfb9eddb",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P08c.bpc",
+      "bytes": 32600,
+      "git_sha1": "59f7d590e95c3387c246a4f1741bda9eb40d1edf",
+      "sha256": "a60c9e405ce8f9d3f03b73494be9b8cb8653362028e1ab44af7d45fa6d65f798",
+      "pret_git_sha1": "59f7d590e95c3387c246a4f1741bda9eb40d1edf",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H07P08m.bma",
+      "bytes": 540,
+      "git_sha1": "3785b291a8041cd254b8d64f807549e303ce2727",
+      "sha256": "c5230b408aa36d51a177cc3425904c08634112f008ff406dc3df5cdbd412f311",
+      "pret_git_sha1": "3785b291a8041cd254b8d64f807549e303ce2727",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H14P01.bpl",
+      "bytes": 2920,
+      "git_sha1": "732dbb04a410b1771249ab6921260be6e3200014",
+      "sha256": "c99688532460059c99a53c646b6ccf4f3dd88cc629531c9f2c37435f25f82ee3",
+      "pret_git_sha1": "732dbb04a410b1771249ab6921260be6e3200014",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H14P01c.bpc",
+      "bytes": 32416,
+      "git_sha1": "d19db7e2451b0e8b35306585a63ffdb807dcaabd",
+      "sha256": "1a4705544b451bf6d8cf8c053a5c879b1dc5899c8b5cc7c7f744df7fb5d4d22e",
+      "pret_git_sha1": "d19db7e2451b0e8b35306585a63ffdb807dcaabd",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H14P01m.bma",
+      "bytes": 668,
+      "git_sha1": "9a9789d735a08cdcb5ff6348280ed7ae83dd7a09",
+      "sha256": "742872b345c6305f2ee4bf45381811102be4644dd684576bab41a333870da475",
+      "pret_git_sha1": "9a9789d735a08cdcb5ff6348280ed7ae83dd7a09",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H16P01.bpl",
+      "bytes": 604,
+      "git_sha1": "6553034352fed91fcfc847e8aab57422effa1238",
+      "sha256": "54c28470094ae6e76b5969f123f6aaa30964d3def9be6cd886e5173acbd61186",
+      "pret_git_sha1": "6553034352fed91fcfc847e8aab57422effa1238",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H16P01c.bpc",
+      "bytes": 32420,
+      "git_sha1": "170f9c271cf54c1511055ad6caff13a216db650b",
+      "sha256": "4a3a2aec1191ef39c743b8fab429b98fee3546dae8fe8319e00878322f9f24f5",
+      "pret_git_sha1": "170f9c271cf54c1511055ad6caff13a216db650b",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H16P01m.bma",
+      "bytes": 556,
+      "git_sha1": "73d411f6b04d6efb85b347f2ff6b83db839900f9",
+      "sha256": "65ced3bf5a4edd542d2d221127c37f309ae59af789944325b030f8acd77d7b5a",
+      "pret_git_sha1": "73d411f6b04d6efb85b347f2ff6b83db839900f9",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H20P01.bpl",
+      "bytes": 1904,
+      "git_sha1": "d61fd3028d8a0ee1aa53382350b7f2f5aa1520c3",
+      "sha256": "796b4ebf40533226c13f47677ff760742695230f7939a6afb6afe18048a198f4",
+      "pret_git_sha1": "d61fd3028d8a0ee1aa53382350b7f2f5aa1520c3",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H20P01c.bpc",
+      "bytes": 30088,
+      "git_sha1": "28d3c807c03a49c2f871f54c4374674290950c53",
+      "sha256": "fa3d0f25100873443a9db1662df04e67489ee3888232c90cb028b801218d74c2",
+      "pret_git_sha1": "28d3c807c03a49c2f871f54c4374674290950c53",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H20P01m.bma",
+      "bytes": 632,
+      "git_sha1": "0278f99e254a38c1aa41197d2ab1fa8020ea0bba",
+      "sha256": "f166b8c04bddee04318035e2ca585c926183cec74b02d202d76fcad1244a0600",
+      "pret_git_sha1": "0278f99e254a38c1aa41197d2ab1fa8020ea0bba",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H26P01.bpl",
+      "bytes": 9704,
+      "git_sha1": "70cb6284220a49dcd8ebb4829278efdd66b909d7",
+      "sha256": "9b24e8eecd87badce0b0187195c88ae93c426087e1081d3ada9b440316df6695",
+      "pret_git_sha1": "70cb6284220a49dcd8ebb4829278efdd66b909d7",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H26P01c.bpc",
+      "bytes": 30080,
+      "git_sha1": "bee14dae827dab7354e462b65f2c635c2ede5ffa",
+      "sha256": "d829d2ab947244ef091a19e9d7b975637a401b51a25ba248d7e103a1be057c9c",
+      "pret_git_sha1": "bee14dae827dab7354e462b65f2c635c2ede5ffa",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H26P01m.bma",
+      "bytes": 416,
+      "git_sha1": "2ea5f89edf6c0b91ebfeafb0e0aac162be48c42e",
+      "sha256": "e242bc5ad5ffaf4b80ca2876bb0338e9ef3d5c48585e0ca0e91a5f9f620fb253",
+      "pret_git_sha1": "2ea5f89edf6c0b91ebfeafb0e0aac162be48c42e",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H29P04.bpl",
+      "bytes": 1708,
+      "git_sha1": "2d46b975be921a9ae39ce70878240b67707d299c",
+      "sha256": "65150cac8ef7d7a87f1e5af8039562d96da058ef34d1da32a4fe3e22e36e03a9",
+      "pret_git_sha1": "2d46b975be921a9ae39ce70878240b67707d299c",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H29P04c.bpc",
+      "bytes": 24532,
+      "git_sha1": "eef9689deebb57015dab8b6eaa79729518b06973",
+      "sha256": "8352c3346bbf98323f50267dec1a0b25931d6e916a8c8105f76a4c6533c23146",
+      "pret_git_sha1": "eef9689deebb57015dab8b6eaa79729518b06973",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/H29P04m.bma",
+      "bytes": 700,
+      "git_sha1": "77bbced63bbf3d203208e2a80471a1d0d08f8d58",
+      "sha256": "4940025f287234958863cfa783562fe7670ada07a75d49e38c07bbe3b3088d9a",
+      "pret_git_sha1": "77bbced63bbf3d203208e2a80471a1d0d08f8d58",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W04.bpl",
+      "bytes": 64,
+      "git_sha1": "0a555968bbfba0e831699a0967b5474578f80273",
+      "sha256": "4958868025cb9cbe534891e89d22204569e5313833cf6259ff8baff0632dbe08",
+      "pret_git_sha1": "0a555968bbfba0e831699a0967b5474578f80273",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W041.bpa",
+      "bytes": 3140,
+      "git_sha1": "dd9d1a13db18ff93857134f607f68b31fe19628c",
+      "sha256": "4f13450523bbbd390914d5aa75a0f1e7eb798440db1036d9cde1c89433168ee3",
+      "pret_git_sha1": "dd9d1a13db18ff93857134f607f68b31fe19628c",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W04c.bpc",
+      "bytes": 296,
+      "git_sha1": "edc3e4384b291e77d8af0111a0a43a97f5614365",
+      "sha256": "9153b8a0cbdfe643a826b18943d3df9c52131e2d04a067d9a9e3d0494e1577c6",
+      "pret_git_sha1": "edc3e4384b291e77d8af0111a0a43a97f5614365",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W04m.bma",
+      "bytes": 432,
+      "git_sha1": "6ee8606cd713a7ec5d8055e8e4b53befb71a8da3",
+      "sha256": "b06b5759d16101e083449e68e05a347c488a37ba980f22737a3664d934a63c7d",
+      "pret_git_sha1": "6ee8606cd713a7ec5d8055e8e4b53befb71a8da3",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W05.bpl",
+      "bytes": 1988,
+      "git_sha1": "eec01b4198c45ec780b6a4d9a703953cd381cb23",
+      "sha256": "cc278c680d424e0112d8c175a840bc7ef04f19e0e6079edf74850573a602b51c",
+      "pret_git_sha1": "eec01b4198c45ec780b6a4d9a703953cd381cb23",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W05c.bpc",
+      "bytes": 3628,
+      "git_sha1": "f1fc8a6bc22fd6f7dc9285095443e9c0befd3eb8",
+      "sha256": "7b25cf550500c95b04f85c0dd17784f2cd175b8d145506b1bad5dc6454960001",
+      "pret_git_sha1": "f1fc8a6bc22fd6f7dc9285095443e9c0befd3eb8",
+      "identical_to_pret": true
+    },
+    {
+      "path": "data/map_bg/W05m.bma",
+      "bytes": 180,
+      "git_sha1": "ee558445ac2d7551ceadac14a74a42e5eb577767",
+      "sha256": "bca2d2ec9122859512243bc6677d56f4b6d8296b68c91c73e891ae7c7570a6ba",
+      "pret_git_sha1": "ee558445ac2d7551ceadac14a74a42e5eb577767",
+      "identical_to_pret": true
+    },
+    {
+      "path": "include/map_files_table.h",
+      "bytes": 10133,
+      "git_sha1": "8cae8269d43fa9da812e6a87a8dae2ca21d503c7",
+      "sha256": "c54ded1584d1862d01bd5ea130ba661e7fe4d6828b0b5a5cafef7887c1e37201",
+      "pret_git_sha1": "8cae8269d43fa9da812e6a87a8dae2ca21d503c7",
+      "identical_to_pret": true
+    },
+    {
+      "path": "include/structs/str_ground_bg.h",
+      "bytes": 4736,
+      "git_sha1": "150943fd7a78600980c78a994300d22499c96c4f",
+      "sha256": "56410dacae8b8286392a6eecc2e85cb3d6804fa3b3c5ee1253d80a9e21e3e53c",
+      "pret_git_sha1": "150943fd7a78600980c78a994300d22499c96c4f",
+      "identical_to_pret": true
+    },
+    {
+      "path": "platform/pc/video_pc.c",
+      "bytes": 29375,
+      "git_sha1": "50c9f533397fcf8470f841ab43744d5feb5b4ebc",
+      "sha256": "a02fa099d3655bda1a91c4ac1af47afb24afea4c957e3d35919b64d34ab54c55",
+      "pret_git_sha1": null,
+      "identical_to_pret": false
+    },
+    {
+      "path": "src/ground_bg.c",
+      "bytes": 49427,
+      "git_sha1": "77fb22c996b12b5129da61bfe241a0aa3a8f4d0d",
+      "sha256": "c2651051ec4a348345c1bd61b8c72b4a3dc5bb12ecd4df71b36ba570849e4ccd",
+      "pret_git_sha1": "069cfc943ec5d28204762dc70f3ca7aa56ffc9bf",
+      "identical_to_pret": false
+    },
+    {
+      "path": "src/ground_map.c",
+      "bytes": 50962,
+      "git_sha1": "ed59776114a879024bc3ce5ec78c5842e11fd594",
+      "sha256": "427bd302cca26c0a8389c0ddfb9c62e26f4eb9c0f2056011dd5a315145415a6e",
+      "pret_git_sha1": "ddf7d16bf885031f09a542cc18ccba4fff472faf",
+      "identical_to_pret": false
+    },
+    {
+      "path": "src/ground_map_conversion_table.c",
+      "bytes": 57542,
+      "git_sha1": "e586daf7d905ba5ce14221525f903a9f8db4291e",
+      "sha256": "8937d6f65b62d5eb04584f6df431e40c5f57e16b0b2873106580c2c36720d7c4",
+      "pret_git_sha1": "e586daf7d905ba5ce14221525f903a9f8db4291e",
+      "identical_to_pret": true
+    },
+    {
+      "path": "src/ground_weather.c",
+      "bytes": 6123,
+      "git_sha1": "c8f1ed181bb70576d20c36014de10acbca995d66",
+      "sha256": "3aa19679c2f25fcf781d97a75f27c8e4b21acff30eac18c09171d20cd7023901",
+      "pret_git_sha1": "c8f1ed181bb70576d20c36014de10acbca995d66",
+      "identical_to_pret": true
+    },
+    {
+      "path": "src/map_files_table.c",
+      "bytes": 50583,
+      "git_sha1": "24aad72155f091013b5e843bee4ce13df7aa4be7",
+      "sha256": "0c72185a8e8db316b97dd7267318a0240d447826d26a869f18c27e63f2e51964",
+      "pret_git_sha1": "24aad72155f091013b5e843bee4ce13df7aa4be7",
+      "identical_to_pret": true
+    }
+  ],
+  "H_bank_comparison": {
+    "count": 207,
+    "identical": 207
+  },
+  "timing": {
+    "BPA": "stored duration + 1 update ticks (postdecrement)",
+    "BPL": "duration update ticks (predecrement)",
+    "preview_hz": 60,
+    "phase": "steady-state phase convention, not an emulator startup capture"
+  },
+  "validation": "Source-level extraction. No PC-port/GBA/PMDO runtime comparison. BPL RGB retained in native PNGs, not a GPU screenshot. Palette bits on fully transparent tiles ignored; out-of-bank visible pixels are fatal."
+}
