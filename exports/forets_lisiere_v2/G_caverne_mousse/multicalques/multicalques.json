@@ -1,0 +1,81 @@
+{
+  "zone": "Caverne moussue — ouverture sud vers la forêt",
+  "dimensions": [
+    928,
+    1152
+  ],
+  "grid": 8,
+  "layers": [
+    {
+      "id": "01_sol_herbe",
+      "name": "Sol : herbe (généré)"
+    },
+    {
+      "id": "02_lisiere_foret",
+      "name": "Lisière de forêt (généré)"
+    },
+    {
+      "id": "03_chemin",
+      "name": "Chemin de terre (généré)"
+    },
+    {
+      "id": "04_parois_roche",
+      "name": "Parois roche / Crooked (généré)"
+    },
+    {
+      "id": "05_entree_grotte",
+      "name": "Entrée grotte (généré)"
+    },
+    {
+      "id": "06_rochers",
+      "name": "Rochers (généré)"
+    },
+    {
+      "id": "07_vegetation_basse",
+      "name": "Végétation basse (généré)"
+    },
+    {
+      "id": "08_troncs_ombres",
+      "name": "Troncs + ombres (généré)"
+    },
+    {
+      "id": "09_canopees",
+      "name": "Canopées (généré)"
+    }
+  ],
+  "provenance": "PIXELS GÉNÉRÉS d’après références PMD (Relic Forest, Vast Steppe, Crooked Cavern). PAS natifs.",
+  "variants": {
+    "jour": {
+      "files": {
+        "01_sol_herbe": "01_sol_herbe.png",
+        "02_lisiere_foret": "02_lisiere_foret.png",
+        "03_chemin": "03_chemin.png",
+        "04_parois_roche": "04_parois_roche.png",
+        "05_entree_grotte": "05_entree_grotte.png",
+        "06_rochers": "06_rochers.png",
+        "07_vegetation_basse": "07_vegetation_basse.png",
+        "08_troncs_ombres": "08_troncs_ombres.png",
+        "09_canopees": "09_canopees.png"
+      },
+      "atlas_tiles": 49416,
+      "aseprite": "G_caverne_mousse_jour.aseprite",
+      "tiled": "G_caverne_mousse_jour.tmj"
+    },
+    "nuit": {
+      "files": {
+        "01_sol_herbe": "01_sol_herbe_nuit.png",
+        "02_lisiere_foret": "02_lisiere_foret_nuit.png",
+        "03_chemin": "03_chemin_nuit.png",
+        "04_parois_roche": "04_parois_roche_nuit.png",
+        "05_entree_grotte": "05_entree_grotte_nuit.png",
+        "06_rochers": "06_rochers_nuit.png",
+        "07_vegetation_basse": "07_vegetation_basse_nuit.png",
+        "08_troncs_ombres": "08_troncs_ombres_nuit.png",
+        "09_canopees": "09_canopees_nuit.png"
+      },
+      "atlas_tiles": 48823,
+      "aseprite": "G_caverne_mousse_nuit.aseprite",
+      "tiled": "G_caverne_mousse_nuit.tmj"
+    }
+  }
+}
