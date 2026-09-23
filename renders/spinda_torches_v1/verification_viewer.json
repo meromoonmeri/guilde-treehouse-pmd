@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "variants": [
+    "repository",
+    "redirect",
+    "standalone extracted ZIP"
+  ],
+  "checks": [
+    "16 animation steps + wrap",
+    "pause and frame slider",
+    "8 angle cards",
+    "RGBA strip cropping",
+    "3 transparent PNG exports",
+    "light alpha bound to room",
+    "placement grid + undo + reset",
+    "position JSON"
+  ],
+  "method": "Node DOM/canvas mocks, not graphical browser or PMDO"
+}

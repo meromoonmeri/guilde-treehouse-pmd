@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": [
+    "All 12 generated originals/intermediates archived losslessly with recorded original PNG and RGBA hashes",
+    "Five separate generated rooms, three levels; selected accueil retained as direction, no strip-based enlargement",
+    "Round crossbar window and spiral staircase decoded from native tile banks, unscaled/unrecoloured",
+    "25 aligned layers: exact terrain recomposition, static lights isolated, native windows separate, optional native stairs, no furniture/fire/NPC baked into scene",
+    "All five rooms connected by four reciprocal design links; stair levels and doorway markers consistent; no engine warp claimed",
+    "Independent editor assets and four genuine native flame poses unchanged; cadence and frame strips exact",
+    "Pure magenta outside selected accueil, all scene pixels preserved in preview"
+  ],
+  "rooms": 5,
+  "levels": 3,
+  "links": 4,
+  "layer_exports": 25,
+  "art_status": "Accueil generation selected by user. Other room variations require user review. Terrain generated, native windows/fire verified separately.",
+  "runtime_PMDO": "NOT TESTED",
+  "graphical_browser": "NOT TESTED"
+}

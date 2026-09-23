@@ -1,0 +1,633 @@
+{
+  "version": "Spinda décors V1",
+  "assets": [
+    {
+      "id": "tapis_rectangle",
+      "files": {
+        "jour": "objets/SpindaDecor_tapis_rectangle_jour.png",
+        "nuit": "objets/SpindaDecor_tapis_rectangle_nuit.png"
+      },
+      "size": [
+        144,
+        56
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        2,
+        3,
+        142,
+        54
+      ]
+    },
+    {
+      "id": "tapis_ovale",
+      "files": {
+        "jour": "objets/SpindaDecor_tapis_ovale_jour.png",
+        "nuit": "objets/SpindaDecor_tapis_ovale_nuit.png"
+      },
+      "size": [
+        128,
+        88
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        3,
+        2,
+        124,
+        86
+      ]
+    },
+    {
+      "id": "tapis_couloir",
+      "files": {
+        "jour": "objets/SpindaDecor_tapis_couloir_jour.png",
+        "nuit": "objets/SpindaDecor_tapis_couloir_nuit.png"
+      },
+      "size": [
+        56,
+        136
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        5,
+        2,
+        51,
+        134
+      ]
+    },
+    {
+      "id": "estrade",
+      "files": {
+        "jour": "objets/SpindaDecor_estrade_jour.png",
+        "nuit": "objets/SpindaDecor_estrade_nuit.png"
+      },
+      "size": [
+        192,
+        80
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        2,
+        10,
+        190,
+        78
+      ]
+    },
+    {
+      "id": "rideau_gauche",
+      "files": {
+        "jour": "objets/SpindaDecor_rideau_gauche_jour.png",
+        "nuit": "objets/SpindaDecor_rideau_gauche_nuit.png"
+      },
+      "size": [
+        184,
+        128
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        2,
+        4,
+        184,
+        124
+      ]
+    },
+    {
+      "id": "rideau_droite",
+      "files": {
+        "jour": "objets/SpindaDecor_rideau_droite_jour.png",
+        "nuit": "objets/SpindaDecor_rideau_droite_nuit.png"
+      },
+      "size": [
+        88,
+        128
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        2,
+        4,
+        72,
+        124
+      ]
+    },
+    {
+      "id": "banderole_nord",
+      "files": {
+        "jour": "objets/SpindaDecor_banderole_nord_jour.png",
+        "nuit": "objets/SpindaDecor_banderole_nord_nuit.png"
+      },
+      "size": [
+        128,
+        32
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        0,
+        0,
+        128,
+        32
+      ]
+    },
+    {
+      "id": "banderole_gauche",
+      "files": {
+        "jour": "objets/SpindaDecor_banderole_gauche_jour.png",
+        "nuit": "objets/SpindaDecor_banderole_gauche_nuit.png"
+      },
+      "size": [
+        104,
+        88
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        4,
+        7,
+        100,
+        78
+      ]
+    },
+    {
+      "id": "banderole_droite",
+      "files": {
+        "jour": "objets/SpindaDecor_banderole_droite_jour.png",
+        "nuit": "objets/SpindaDecor_banderole_droite_nuit.png"
+      },
+      "size": [
+        104,
+        88
+      ],
+      "native": false,
+      "generated": true,
+      "bbox": [
+        4,
+        12,
+        100,
+        76
+      ]
+    }
+  ],
+  "room_layers": [
+    {
+      "id": "accueil",
+      "files": {
+        "jour": "banderoles/SpindaDecor_accueil_banderoles_jour.png",
+        "nuit": "banderoles/SpindaDecor_accueil_banderoles_nuit.png"
+      },
+      "paths": [
+        {
+          "source": "gauche",
+          "start": [
+            80,
+            158
+          ],
+          "end": [
+            168,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            432,
+            104
+          ],
+          "end": [
+            520,
+            158
+          ]
+        },
+        {
+          "source": "gauche",
+          "start": [
+            168,
+            104
+          ],
+          "end": [
+            232,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            368,
+            104
+          ],
+          "end": [
+            432,
+            104
+          ]
+        }
+      ],
+      "windows_untouched": true,
+      "ports_clear": true
+    },
+    {
+      "id": "casino",
+      "files": {
+        "jour": "banderoles/SpindaDecor_casino_banderoles_jour.png",
+        "nuit": "banderoles/SpindaDecor_casino_banderoles_nuit.png"
+      },
+      "paths": [
+        {
+          "source": "gauche",
+          "start": [
+            80,
+            158
+          ],
+          "end": [
+            168,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            432,
+            104
+          ],
+          "end": [
+            520,
+            158
+          ]
+        },
+        {
+          "source": "gauche",
+          "start": [
+            168,
+            104
+          ],
+          "end": [
+            232,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            368,
+            104
+          ],
+          "end": [
+            432,
+            104
+          ]
+        }
+      ],
+      "windows_untouched": true,
+      "ports_clear": true
+    },
+    {
+      "id": "salon_bas",
+      "files": {
+        "jour": "banderoles/SpindaDecor_salon_bas_banderoles_jour.png",
+        "nuit": "banderoles/SpindaDecor_salon_bas_banderoles_nuit.png"
+      },
+      "paths": [
+        {
+          "source": "gauche",
+          "start": [
+            80,
+            158
+          ],
+          "end": [
+            168,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            432,
+            104
+          ],
+          "end": [
+            520,
+            158
+          ]
+        },
+        {
+          "source": "gauche",
+          "start": [
+            168,
+            104
+          ],
+          "end": [
+            300,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            300,
+            104
+          ],
+          "end": [
+            432,
+            104
+          ]
+        }
+      ],
+      "windows_untouched": true,
+      "ports_clear": true
+    },
+    {
+      "id": "cafe",
+      "files": {
+        "jour": "banderoles/SpindaDecor_cafe_banderoles_jour.png",
+        "nuit": "banderoles/SpindaDecor_cafe_banderoles_nuit.png"
+      },
+      "paths": [
+        {
+          "source": "gauche",
+          "start": [
+            80,
+            158
+          ],
+          "end": [
+            168,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            432,
+            104
+          ],
+          "end": [
+            520,
+            158
+          ]
+        },
+        {
+          "source": "gauche",
+          "start": [
+            168,
+            104
+          ],
+          "end": [
+            300,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            300,
+            104
+          ],
+          "end": [
+            432,
+            104
+          ]
+        }
+      ],
+      "windows_untouched": true,
+      "ports_clear": true
+    },
+    {
+      "id": "salon_haut",
+      "files": {
+        "jour": "banderoles/SpindaDecor_salon_haut_banderoles_jour.png",
+        "nuit": "banderoles/SpindaDecor_salon_haut_banderoles_nuit.png"
+      },
+      "paths": [
+        {
+          "source": "gauche",
+          "start": [
+            80,
+            158
+          ],
+          "end": [
+            168,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            432,
+            104
+          ],
+          "end": [
+            520,
+            158
+          ]
+        },
+        {
+          "source": "gauche",
+          "start": [
+            168,
+            104
+          ],
+          "end": [
+            300,
+            104
+          ]
+        },
+        {
+          "source": "droite",
+          "start": [
+            300,
+            104
+          ],
+          "end": [
+            432,
+            104
+          ]
+        }
+      ],
+      "windows_untouched": true,
+      "ports_clear": true
+    }
+  ],
+  "stage": {
+    "canvas": [
+      208,
+      184
+    ],
+    "layers": [
+      {
+        "id": "estrade",
+        "files": {
+          "jour": "estrade/SpindaDecor_estrade_aligne_jour.png",
+          "nuit": "estrade/SpindaDecor_estrade_aligne_nuit.png"
+        },
+        "position": [
+          8,
+          104
+        ]
+      },
+      {
+        "id": "rideau_gauche",
+        "files": {
+          "jour": "estrade/SpindaDecor_rideau_gauche_aligne_jour.png",
+          "nuit": "estrade/SpindaDecor_rideau_gauche_aligne_nuit.png"
+        },
+        "position": [
+          8,
+          0
+        ]
+      },
+      {
+        "id": "rideau_droite",
+        "files": {
+          "jour": "estrade/SpindaDecor_rideau_droite_aligne_jour.png",
+          "nuit": "estrade/SpindaDecor_rideau_droite_aligne_nuit.png"
+        },
+        "position": [
+          112,
+          0
+        ]
+      }
+    ],
+    "independent_left_and_right": true
+  },
+  "tilesheet": {
+    "file": "tilesheets/SpindaDecor_objets_tilesheet.png",
+    "grid": 8,
+    "rects": [
+      {
+        "id": "tapis_rectangle",
+        "rect": [
+          8,
+          8,
+          144,
+          56
+        ]
+      },
+      {
+        "id": "tapis_ovale",
+        "rect": [
+          160,
+          8,
+          128,
+          88
+        ]
+      },
+      {
+        "id": "tapis_couloir",
+        "rect": [
+          296,
+          8,
+          56,
+          136
+        ]
+      },
+      {
+        "id": "estrade",
+        "rect": [
+          8,
+          152,
+          192,
+          80
+        ]
+      },
+      {
+        "id": "rideau_gauche",
+        "rect": [
+          208,
+          152,
+          184,
+          128
+        ]
+      },
+      {
+        "id": "rideau_droite",
+        "rect": [
+          400,
+          152,
+          88,
+          128
+        ]
+      },
+      {
+        "id": "banderole_nord",
+        "rect": [
+          8,
+          288,
+          128,
+          32
+        ]
+      },
+      {
+        "id": "banderole_gauche",
+        "rect": [
+          144,
+          288,
+          104,
+          88
+        ]
+      },
+      {
+        "id": "banderole_droite",
+        "rect": [
+          256,
+          288,
+          104,
+          88
+        ]
+      }
+    ]
+  },
+  "reference": {
+    "file": "references/ruban_spinda_natif.png",
+    "sha256": "f54ec2730413ccc84aef11fd9444ade302e62ea21bfec3183b303bd7ab1f7faf",
+    "source": {
+      "file": "source/cafe_multietage_v1/references/SpindaCafe2.tile",
+      "grid": 8,
+      "atlas_size": [
+        560,
+        320
+      ],
+      "sha256": "fb9681c97eaf9f35602fabf181da5d7240656fdaa96895dc88b65c58aa32a461",
+      "git_blob": "208d7b79f472fc14e1aeb80bac08ee92483fdfa6",
+      "rgba_sha256": "a9e9275ca1b3eab04d49cc569e7c63d2f2f67bd7a0efe9cd59a1e8f3b9cb6678",
+      "repo": "Minemaker0430/ExplorersOfSkyOrigins",
+      "commit": "4e7422acc263886198113a8256677766e4244228"
+    },
+    "crop": [
+      240,
+      56,
+      304,
+      96
+    ],
+    "native_reference_unchanged": true,
+    "adapted_outputs_are_native": false
+  },
+  "adaptation": {
+    "gauche": {
+      "slope_removed": -0.521070803476596,
+      "method": "Column shear on generated art to follow wall attachment lines; never applied to native reference."
+    },
+    "droite": {
+      "slope_removed": 0.47568856257204145,
+      "method": "Column shear on generated art to follow wall attachment lines; never applied to native reference."
+    }
+  },
+  "generation_attempts": 10,
+  "rejected": [
+    "banderole_nord",
+    "banderole_nord_v2"
+  ],
+  "accepted_generated_images": 8,
+  "cleanup": {
+    "rideau_droite": "Crop unwanted room fragment at x < 76.7% of raw width. No room pixels retained.",
+    "front_garland": "Derived from retained generated diagonal, rectified, then conformed to wall paths. Both clipped front attempts excluded."
+  },
+  "demo_only": [
+    "stage and red rug placement in café preview"
+  ],
+  "native_layouts_modified": false,
+  "runtime_PMDO": "NOT TESTED",
+  "previous_pending": "Other V8 furniture and regenerated windows remain pending."
+}
