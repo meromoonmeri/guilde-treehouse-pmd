@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "maps": [
+    {
+      "id": "foret_entree",
+      "size": [
+        480,
+        336
+      ],
+      "layers": [
+        "cartes/foret_entree/DB1_foret_entree_01_sol_visible.png",
+        "cartes/foret_entree/DB1_foret_entree_02_bordures_visibles.png",
+        "cartes/foret_entree/DB1_foret_entree_03_arbres_visibles.png",
+        "cartes/foret_entree/DB1_foret_entree_04_entree_visible.png",
+        "cartes/foret_entree/DB1_foret_entree_05_decor_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": true
+    },
+    {
+      "id": "foret_fin",
+      "size": [
+        480,
+        336
+      ],
+      "layers": [
+        "cartes/foret_fin/DB1_foret_fin_01_sol_visible.png",
+        "cartes/foret_fin/DB1_foret_fin_02_bordures_visibles.png",
+        "cartes/foret_fin/DB1_foret_fin_03_arbres_visibles.png",
+        "cartes/foret_fin/DB1_foret_fin_04_terrasse_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": false
+    },
+    {
+      "id": "ile_entree",
+      "size": [
+        480,
+        312
+      ],
+      "layers": [
+        "cartes/ile_entree/DB1_ile_entree_01_sol_visible.png",
+        "cartes/ile_entree/DB1_ile_entree_02_bordures_visibles.png",
+        "cartes/ile_entree/DB1_ile_entree_03_parois_visibles.png",
+        "cartes/ile_entree/DB1_ile_entree_04_entree_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": true
+    },
+    {
+      "id": "ile_fin",
+      "size": [
+        480,
+        312
+      ],
+      "layers": [
+        "cartes/ile_fin/DB1_ile_fin_01_sol_visible.png",
+        "cartes/ile_fin/DB1_ile_fin_02_bordures_visibles.png",
+        "cartes/ile_fin/DB1_ile_fin_03_parois_visibles.png",
+        "cartes/ile_fin/DB1_ile_fin_04_terrasse_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": false
+    },
+    {
+      "id": "volcan_entree",
+      "size": [
+        480,
+        312
+      ],
+      "layers": [
+        "cartes/volcan_entree/DB1_volcan_entree_01_sol_visible.png",
+        "cartes/volcan_entree/DB1_volcan_entree_02_bordures_visibles.png",
+        "cartes/volcan_entree/DB1_volcan_entree_03_parois_visibles.png",
+        "cartes/volcan_entree/DB1_volcan_entree_04_entree_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": true
+    },
+    {
+      "id": "volcan_fin",
+      "size": [
+        480,
+        312
+      ],
+      "layers": [
+        "cartes/volcan_fin/DB1_volcan_fin_01_sol_visible.png",
+        "cartes/volcan_fin/DB1_volcan_fin_02_bordures_visibles.png",
+        "cartes/volcan_fin/DB1_volcan_fin_03_parois_visibles.png",
+        "cartes/volcan_fin/DB1_volcan_fin_04_terrasse_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": false
+    },
+    {
+      "id": "desert_entree",
+      "size": [
+        456,
+        336
+      ],
+      "layers": [
+        "cartes/desert_entree/DB1_desert_entree_01_sol_visible.png",
+        "cartes/desert_entree/DB1_desert_entree_02_bordures_visibles.png",
+        "cartes/desert_entree/DB1_desert_entree_03_parois_visibles.png",
+        "cartes/desert_entree/DB1_desert_entree_04_entree_visible.png",
+        "cartes/desert_entree/DB1_desert_entree_05_decor_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": true
+    },
+    {
+      "id": "desert_fin",
+      "size": [
+        456,
+        336
+      ],
+      "layers": [
+        "cartes/desert_fin/DB1_desert_fin_01_sol_visible.png",
+        "cartes/desert_fin/DB1_desert_fin_02_bordures_visibles.png",
+        "cartes/desert_fin/DB1_desert_fin_03_parois_visibles.png",
+        "cartes/desert_fin/DB1_desert_fin_04_terrasse_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": false
+    },
+    {
+      "id": "marin_entree",
+      "size": [
+        456,
+        312
+      ],
+      "layers": [
+        "cartes/marin_entree/DB1_marin_entree_01_sol_visible.png",
+        "cartes/marin_entree/DB1_marin_entree_02_bordures_visibles.png",
+        "cartes/marin_entree/DB1_marin_entree_03_parois_visibles.png",
+        "cartes/marin_entree/DB1_marin_entree_04_entree_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": true
+    },
+    {
+      "id": "marin_fin",
+      "size": [
+        456,
+        312
+      ],
+      "layers": [
+        "cartes/marin_fin/DB1_marin_fin_01_sol_visible.png",
+        "cartes/marin_fin/DB1_marin_fin_02_bordures_visibles.png",
+        "cartes/marin_fin/DB1_marin_fin_03_parois_visibles.png",
+        "cartes/marin_fin/DB1_marin_fin_04_terrasse_visible.png"
+      ],
+      "source": "generated, resized nearest-neighbour and palette-quantized; not native",
+      "layer_scope": "visible surfaces only; no hidden ground reconstructed",
+      "south_return": true,
+      "north_entrance": false
+    }
+  ],
+  "preview": {
+    "ticks": [
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152
+    ],
+    "hz": 60,
+    "sample_stride_ticks": 8,
+    "duration_ms": 2134,
+    "loop_count": 1,
+    "overview_tick": 64,
+    "presentation_only": true,
+    "webp_lossless": false,
+    "webp_quality": 60,
+    "overview_palette_colors": 224,
+    "import_PNG_lossless": true,
+    "scope": "sampled excerpt, not the full combined native loop; reopen to replay"
+  },
+  "remaining": [
+    "jungle",
+    "overgrownforest",
+    "mtdiscipline",
+    "wildplains",
+    "secretiveforest",
+    "scorchedplains"
+  ],
+  "native_sources": "native_sources.zip",
+  "limitations": [
+    "Visible-surface layer segmentation; hidden ground is not reconstructed.",
+    "Native source colours are not a GPU-screen capture. Additive compositing is required for light layers.",
+    "No collision, warp, character or PMDO runtime integration.",
+    "Generated layouts are not artistically approved."
+  ]
+}

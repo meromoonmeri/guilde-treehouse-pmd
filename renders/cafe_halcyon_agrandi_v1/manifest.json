@@ -1,0 +1,378 @@
+{
+  "title": "Grand Café Métano",
+  "size": [
+    840,
+    576
+  ],
+  "source_size": [
+    456,
+    320
+  ],
+  "grid_px": 8,
+  "native_scale": 1,
+  "canvas_area_ratio": 3.3158,
+  "source_repo": "Palikadude/Halcyon",
+  "source_commit": "da6c2130d641507447e6386a5e47a296e8cb4c71",
+  "sources": [
+    {
+      "file": "source/cafe_multietage_v1/references/metano_cafe.rsground",
+      "sha256": "495fac3e8b198620295654b399731954e93568410a4a74b5bed4c4131c0f5cdb"
+    },
+    {
+      "file": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Base.tile",
+      "sha256": "3be280ba758aa7bed3816b6a1c943e9424cb2584fb539a8e9c8647923ac28f3e"
+    },
+    {
+      "file": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects.tile",
+      "sha256": "4a564a314de2084f9427962864598c40ec206fdcc5a0a7bfbf5bf818dae4a4b2"
+    },
+    {
+      "file": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Under.tile",
+      "sha256": "eba22ec4915680b03fb5db5a7e3c01738edc59dd58383865cc082bd57d63ed2d"
+    },
+    {
+      "file": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Over.tile",
+      "sha256": "3d87d52f4e698c927c455fbdac6dbe03c14f6da18b36b719db13eb18ef0edb02"
+    },
+    {
+      "file": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Fringe.tile",
+      "sha256": "125945eb0a05000311bb9e0b200785154543f8418bdfc30cf0747e0314450e7c"
+    }
+  ],
+  "recipe": {
+    "horizontal_insert": {
+      "at": 224,
+      "source_band": [
+        160,
+        224
+      ],
+      "repeats": 6
+    },
+    "vertical_insert": {
+      "at": 224,
+      "source_band": [
+        160,
+        224
+      ],
+      "repeats": 4
+    },
+    "threshold_gap_repair": "Source alpha gaps inside door x264:320,y296:304 filled with unchanged adjacent native 8px floor tile x264,y296",
+    "door_repairs": [
+      {
+        "destination": [
+          640,
+          544
+        ],
+        "source_rect": [
+          160,
+          288,
+          232,
+          320
+        ]
+      },
+      {
+        "destination": [
+          448,
+          544
+        ],
+        "source_rect": [
+          256,
+          288,
+          328,
+          320
+        ]
+      }
+    ]
+  },
+  "layers": [
+    {
+      "id": "sol",
+      "title": "Plancher et seuil",
+      "file": "calques/CafeHalcyon_sol.png",
+      "size": [
+        840,
+        576
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "role": "terrain",
+      "source": "Metano_Town_Cafe_Base.tile"
+    },
+    {
+      "id": "mur_fond",
+      "title": "Boiseries arrière · Halcyon",
+      "file": "calques/CafeHalcyon_mur_fond.png",
+      "size": [
+        840,
+        576
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "role": "terrain",
+      "source": "Metano_Town_Cafe_Base.tile"
+    },
+    {
+      "id": "mur_gauche",
+      "title": "Retour gauche",
+      "file": "calques/CafeHalcyon_mur_gauche.png",
+      "size": [
+        840,
+        576
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "role": "terrain",
+      "source": "Metano_Town_Cafe_Base.tile"
+    },
+    {
+      "id": "mur_droit",
+      "title": "Retour droit",
+      "file": "calques/CafeHalcyon_mur_droit.png",
+      "size": [
+        840,
+        576
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "role": "terrain",
+      "source": "Metano_Town_Cafe_Base.tile"
+    },
+    {
+      "id": "bord_avant",
+      "title": "Bordure avant et entrée",
+      "file": "calques/CafeHalcyon_bord_avant.png",
+      "size": [
+        840,
+        576
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "role": "terrain",
+      "source": "Metano_Town_Cafe_Base.tile"
+    }
+  ],
+  "furniture": [
+    {
+      "id": "Objects_Under",
+      "title": "Ombres et éléments bas",
+      "file": "mobilier/CafeHalcyon_Objects_Under.png",
+      "size": [
+        408,
+        296
+      ],
+      "source": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Under.png",
+      "source_rgba_sha256": "81cff257c81d029ba1098deff3040b133d581cffc96e30ef87ce03a8eaf2ca83",
+      "native": true,
+      "placement": null
+    },
+    {
+      "id": "Objects",
+      "title": "Mobilier du café",
+      "file": "mobilier/CafeHalcyon_Objects.png",
+      "size": [
+        432,
+        320
+      ],
+      "source": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects.png",
+      "source_rgba_sha256": "bfe9e3780579dcf9898dffc5db5d51cb883d5e7db59424c8b2fe811c64a1e1c8",
+      "native": true,
+      "placement": null
+    },
+    {
+      "id": "Objects_Over",
+      "title": "Éléments supérieurs",
+      "file": "mobilier/CafeHalcyon_Objects_Over.png",
+      "size": [
+        408,
+        296
+      ],
+      "source": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Over.png",
+      "source_rgba_sha256": "0893f91b0e0e152f5b0f6c4d6c2468ea0b848b138de439af6b7359d9f8ed470a",
+      "native": true,
+      "placement": null
+    },
+    {
+      "id": "Objects_Fringe",
+      "title": "Premier plan",
+      "file": "mobilier/CafeHalcyon_Objects_Fringe.png",
+      "size": [
+        424,
+        216
+      ],
+      "source": "source/cafe_multietage_v1/references/Metano_Town_Cafe_Objects_Fringe.png",
+      "source_rgba_sha256": "89e036dd4446fcaaa38463c245b7d5c365a23831f15a83f756b25332e2ab9746",
+      "native": true,
+      "placement": null
+    },
+    {
+      "id": "support",
+      "title": "Support de brasero sans feu",
+      "file": "mobilier/CafeHalcyon_support_brasero.png",
+      "size": [
+        32,
+        64
+      ],
+      "native": true,
+      "placement": null
+    },
+    {
+      "id": "fourneau",
+      "title": "Corps de fourneau · généré, non natif",
+      "file": "mobilier/CafeHalcyon_fourneau_sans_feu.png",
+      "size": [
+        104,
+        120
+      ],
+      "native": false,
+      "source": "renders/casino_network_v1/objets/fourneau.png",
+      "flame_offset": [
+        32,
+        32
+      ],
+      "placement": null
+    }
+  ],
+  "animations": {
+    "flamme": {
+      "frames": [
+        "animations/CafeHalcyon_flamme_00.png",
+        "animations/CafeHalcyon_flamme_01.png",
+        "animations/CafeHalcyon_flamme_02.png",
+        "animations/CafeHalcyon_flamme_03.png"
+      ],
+      "sheet": "animations/CafeHalcyon_flamme_4poses.png",
+      "frame_size": [
+        32,
+        40
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          32,
+          40
+        ],
+        [
+          32,
+          0,
+          32,
+          40
+        ],
+        [
+          64,
+          0,
+          32,
+          40
+        ],
+        [
+          96,
+          0,
+          32,
+          40
+        ]
+      ],
+      "frame_ms": 100,
+      "source_ticks": 6,
+      "loop_ms": 400,
+      "placement": null
+    },
+    "brasero": {
+      "frames": [
+        "animations/CafeHalcyon_brasero_00.png",
+        "animations/CafeHalcyon_brasero_01.png",
+        "animations/CafeHalcyon_brasero_02.png",
+        "animations/CafeHalcyon_brasero_03.png"
+      ],
+      "sheet": "animations/CafeHalcyon_brasero_4poses.png",
+      "frame_size": [
+        32,
+        64
+      ],
+      "frame_rects": [
+        [
+          0,
+          0,
+          32,
+          64
+        ],
+        [
+          32,
+          0,
+          32,
+          64
+        ],
+        [
+          64,
+          0,
+          32,
+          64
+        ],
+        [
+          96,
+          0,
+          32,
+          64
+        ]
+      ],
+      "frame_ms": 100,
+      "source_ticks": 6,
+      "loop_ms": 400,
+      "placement": null
+    }
+  },
+  "placed_furniture": [],
+  "placed_fire": [],
+  "npc_entities": [],
+  "south_entrance": {
+    "point": [
+      484,
+      568
+    ],
+    "width": 56,
+    "direction": "S",
+    "warp_created": false
+  },
+  "reserved_zones": [
+    {
+      "id": "service",
+      "title": "Comptoir / kiosques libres",
+      "rect": [
+        136,
+        112,
+        576,
+        128
+      ]
+    },
+    {
+      "id": "salle",
+      "title": "Salle à aménager",
+      "rect": [
+        80,
+        256,
+        672,
+        232
+      ]
+    }
+  ],
+  "guides_only": true,
+  "fixed_ornaments": "The original ribbons are integrated in the native Base wall artwork and are retained. No movable decoration has been placed.",
+  "runtime_PMDO": "NOT TESTED",
+  "visible_native_pixels": true,
+  "limits": [
+    "New native-pixel arrangement, not a shipped Halcyon Ground.",
+    "The terrain PNG is an import/export asset, not a configured PMDO Ground.",
+    "Surface and reserved zones are authoring guides, not collision or NPC placements.",
+    "Back/side/front layers partition visible wall surfaces; they are not complete movable wall volumes.",
+    "Original fixed wall ribbons retained; all furniture, characters and fire remain separate."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "format": "AssetSprite",
+  "frame_size": [
+    48,
+    48
+  ],
+  "entries": [
+    {
+      "id": "volcan",
+      "label": "Volcan",
+      "rect": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true,
+      "source_box": [
+        30,
+        0,
+        116,
+        157
+      ]
+    },
+    {
+      "id": "foret",
+      "label": "Forêt",
+      "rect": [
+        48,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true,
+      "source_box": [
+        620,
+        0,
+        780,
+        145
+      ]
+    },
+    {
+      "id": "plage",
+      "label": "Plage",
+      "rect": [
+        96,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true,
+      "source_box": [
+        365,
+        0,
+        480,
+        92
+      ]
+    },
+    {
+      "id": "desert",
+      "label": "Désert",
+      "rect": [
+        144,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false,
+      "source_box": [
+        495,
+        190,
+        640,
+        315
+      ]
+    },
+    {
+      "id": "glace",
+      "label": "Glace",
+      "rect": [
+        192,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false,
+      "source_box": [
+        1135,
+        315,
+        1320,
+        510
+      ]
+    },
+    {
+      "id": "ruines",
+      "label": "Ruines",
+      "rect": [
+        240,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false,
+      "source_box": [
+        680,
+        116,
+        860,
+        275
+      ]
+    },
+    {
+      "id": "tour",
+      "label": "Tour",
+      "rect": [
+        288,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false,
+      "source_box": [
+        970,
+        12,
+        1100,
+        170
+      ]
+    }
+  ]
+}

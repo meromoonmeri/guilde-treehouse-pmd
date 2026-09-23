@@ -1,0 +1,360 @@
+[
+  {
+    "id": "sheet_spinda",
+    "title": "Tilesheet · Spinda / Qulbutoké · natifs 1×",
+    "file": "tilesheets/SpindaV7_spinda.png",
+    "size": [
+      512,
+      160
+    ],
+    "native": true,
+    "objects": [
+      {
+        "id": "comptoir_spinda",
+        "rect": [
+          8,
+          8,
+          120,
+          96
+        ]
+      },
+      {
+        "id": "comptoir_qulbutoke",
+        "rect": [
+          136,
+          8,
+          120,
+          96
+        ]
+      },
+      {
+        "id": "table_spinda_tasses",
+        "rect": [
+          264,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "table_spinda_vide",
+        "rect": [
+          320,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "plante_spinda",
+        "rect": [
+          376,
+          8,
+          40,
+          48
+        ]
+      },
+      {
+        "id": "petite_plante_spinda",
+        "rect": [
+          424,
+          8,
+          32,
+          32
+        ]
+      },
+      {
+        "id": "ruban_spinda",
+        "rect": [
+          8,
+          112,
+          64,
+          40
+        ]
+      }
+    ],
+    "grid": 8
+  },
+  {
+    "id": "sheet_halcyon",
+    "title": "Tilesheet · Halcyon · mobilier natif 1×",
+    "file": "tilesheets/SpindaV7_halcyon.png",
+    "size": [
+      512,
+      304
+    ],
+    "native": true,
+    "objects": [
+      {
+        "id": "tonneaux",
+        "rect": [
+          8,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "plante_cafe",
+        "rect": [
+          64,
+          8,
+          40,
+          56
+        ]
+      },
+      {
+        "id": "menu",
+        "rect": [
+          112,
+          8,
+          40,
+          48
+        ]
+      },
+      {
+        "id": "tapis_vert",
+        "rect": [
+          160,
+          8,
+          96,
+          40
+        ]
+      },
+      {
+        "id": "table_halcyon_tasses",
+        "rect": [
+          264,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "table_halcyon_vide",
+        "rect": [
+          320,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "caisses",
+        "rect": [
+          376,
+          8,
+          56,
+          56
+        ]
+      },
+      {
+        "id": "etagere",
+        "rect": [
+          440,
+          8,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "bar_jus",
+        "rect": [
+          8,
+          72,
+          128,
+          40
+        ]
+      },
+      {
+        "id": "plante_auberge",
+        "rect": [
+          144,
+          72,
+          40,
+          48
+        ]
+      },
+      {
+        "id": "tonneau_auberge",
+        "rect": [
+          192,
+          72,
+          24,
+          32
+        ]
+      },
+      {
+        "id": "tabouret",
+        "rect": [
+          224,
+          72,
+          16,
+          16
+        ]
+      },
+      {
+        "id": "coffre",
+        "rect": [
+          248,
+          72,
+          24,
+          24
+        ]
+      },
+      {
+        "id": "lit_paille",
+        "rect": [
+          280,
+          72,
+          112,
+          56
+        ]
+      },
+      {
+        "id": "coussin_paille",
+        "rect": [
+          400,
+          72,
+          40,
+          32
+        ]
+      },
+      {
+        "id": "table_auberge",
+        "rect": [
+          448,
+          72,
+          48,
+          48
+        ]
+      },
+      {
+        "id": "caisse_pommes",
+        "rect": [
+          8,
+          136,
+          48,
+          40
+        ]
+      },
+      {
+        "id": "bouquet",
+        "rect": [
+          64,
+          136,
+          24,
+          32
+        ]
+      },
+      {
+        "id": "banniere",
+        "rect": [
+          96,
+          136,
+          32,
+          96
+        ]
+      },
+      {
+        "id": "liane",
+        "rect": [
+          136,
+          136,
+          32,
+          56
+        ]
+      },
+      {
+        "id": "fleurs_bleues",
+        "rect": [
+          176,
+          136,
+          24,
+          24
+        ]
+      },
+      {
+        "id": "tapis_dore",
+        "rect": [
+          208,
+          136,
+          184,
+          64
+        ]
+      },
+      {
+        "id": "banquet",
+        "rect": [
+          8,
+          240,
+          168,
+          56
+        ]
+      }
+    ],
+    "grid": 8
+  },
+  {
+    "id": "sheet_kirlia",
+    "title": "Tilesheet · Kirlia · créations",
+    "file": "tilesheets/SpindaV7_kirlia.png",
+    "size": [
+      512,
+      120
+    ],
+    "native": false,
+    "objects": [
+      {
+        "id": "kirlia_counter_front",
+        "rect": [
+          8,
+          8,
+          104,
+          104
+        ]
+      },
+      {
+        "id": "kirlia_bench",
+        "rect": [
+          120,
+          8,
+          56,
+          48
+        ]
+      }
+    ],
+    "grid": 8
+  },
+  {
+    "id": "sheet_alcremie",
+    "title": "Tilesheet · Charmilly · créations",
+    "file": "tilesheets/SpindaV7_alcremie.png",
+    "size": [
+      512,
+      120
+    ],
+    "native": false,
+    "objects": [
+      {
+        "id": "alcremie_counter_front",
+        "rect": [
+          8,
+          8,
+          104,
+          104
+        ]
+      },
+      {
+        "id": "alcremie_trolley",
+        "rect": [
+          120,
+          8,
+          48,
+          56
+        ]
+      }
+    ],
+    "grid": 8
+  }
+]

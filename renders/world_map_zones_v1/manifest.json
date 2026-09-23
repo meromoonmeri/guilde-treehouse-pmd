@@ -1,0 +1,106 @@
+{
+  "canvas_px": [
+    504,
+    336
+  ],
+  "native_background": "Explorers_of_Sky_-_World_Map.png",
+  "layers": 5,
+  "animation_frames": 12,
+  "animation_source": "animationmapdiscover.png",
+  "asset_source": "MapAssetsPMD2.webp",
+  "files": {
+    "WorldMap_Zones.png": {
+      "sha256": "bcd9e4f4b720929f158963c24dc7400745d4878f7afa64a4633c3423c35db277",
+      "bytes": 112392
+    },
+    "manifest.json": {
+      "sha256": "ebc574cbc99b155da7ddee04c4a2bd6605ec2ff7afdb4bd6f4240cf5fe19e3e6",
+      "bytes": 3834
+    },
+    "world_map_state.json": {
+      "sha256": "336cc5ef6a2a4e8896c960f6bf200b5eed86a871952f137812ffd04bc83d71ad",
+      "bytes": 2471
+    },
+    "layers/00_fond_canonique_1x.png": {
+      "sha256": "5c0953269a70fe0a65b06aeb24cbc2b270f440ed13ccc2907c25fcd7f984d1b7",
+      "bytes": 99668
+    },
+    "layers/03_etat_deblocage.png": {
+      "sha256": "2cd4dd8e719e98d9522631d24fed0b0d23eae463c57505401f45732421c39d5a",
+      "bytes": 3833
+    },
+    "layers/02_emblemes_canoniques.png": {
+      "sha256": "79290d8adbe40cd1d1b14f7e124a4ae5445f21945618395995a65e88053f12a1",
+      "bytes": 5067
+    },
+    "layers/01_routes_zones.png": {
+      "sha256": "90c92a2772f5464027c3e3e29d1bfab1dba80c14036bc8978062c121d2adccef",
+      "bytes": 1596
+    },
+    "layers/04_surlignage_debloque.png": {
+      "sha256": "fb2e9d760b9328132741d6aa8aeefc9005c106d5f55987e347fb86ed5d621940",
+      "bytes": 1254
+    },
+    "animations/WorldMap_discover_00.png": {
+      "sha256": "94dcf9003f5c2f275f4eed4d1190554d6f4e1cef1587c01eca1e97dbc888829c",
+      "bytes": 58509
+    },
+    "animations/WorldMap_discover_01.png": {
+      "sha256": "337ca798224973f20eb62563b4df0cb9860e9e53b515d0236f767e36e3e14f8f",
+      "bytes": 72432
+    },
+    "animations/WorldMap_discover_02.png": {
+      "sha256": "569e99de634b1fc557bf5b987adb849f8282223e298c1ce2b1b6ecbffd469631",
+      "bytes": 74262
+    },
+    "animations/WorldMap_discover_03.png": {
+      "sha256": "9674bd99614663c93d8558b579706200e41da70d6f36829d038b288a6b79bb7a",
+      "bytes": 80745
+    },
+    "animations/WorldMap_discover_04.png": {
+      "sha256": "89ea85f505e70609f9872062f01506fa9346a245d68744fc8520191ac17066e0",
+      "bytes": 88648
+    },
+    "animations/WorldMap_discover_05.png": {
+      "sha256": "70dbeff716dbb1db994fedb270e3ddf2d7e327901ad3954a4aa38260c7da2ff7",
+      "bytes": 92191
+    },
+    "animations/WorldMap_discover_06.png": {
+      "sha256": "02cc2acb898308ec78d2e6b7b0624a22c9a63ecbe92b8a4de8b0376d0f67f949",
+      "bytes": 93989
+    },
+    "animations/WorldMap_discover_07.png": {
+      "sha256": "4a2cc1f789543fa5673f3678d1a41bd84161a37746a8dc33080eb31e8eb575aa",
+      "bytes": 94978
+    },
+    "animations/WorldMap_discover_08.png": {
+      "sha256": "814ecfc56aefeb3d3cc3d1c160ad6e29e85c7c58b1cd1259aaf0fa350403c3b5",
+      "bytes": 97627
+    },
+    "animations/WorldMap_discover_09.png": {
+      "sha256": "395d5e2bafa9fe6930e8e0fd551469c5c6a102513bd90a819278273e3f3a92ff",
+      "bytes": 59103
+    },
+    "animations/WorldMap_discover_10.png": {
+      "sha256": "81ef9d582d0e447377d8c526ac8adbc0e0faa0d8599f7803e29ca90a64f77858",
+      "bytes": 59336
+    },
+    "animations/WorldMap_discover_11.png": {
+      "sha256": "5dc86ec94d1d69bd89c1dc77ae57afb0b2f18d472daad0c6c6ab47c9095e8ef5",
+      "bytes": 88503
+    },
+    "animations/WorldMap_discover.webp": {
+      "sha256": "9c57672bc0d5b4f9b8cf97dd21c5e22f09dafd996ab4886533eea5cda60fa07c",
+      "bytes": 453592
+    },
+    "assetsprite/WorldMap_Lieux_AssetSprite.png": {
+      "sha256": "555c899002180d70c1092934b9aa022606a44b2c1ad1392ce1bb8e57d6fcbe57",
+      "bytes": 4439
+    },
+    "assetsprite/WorldMap_Lieux_AssetSprite.json": {
+      "sha256": "8e3b34ca76eb91d80aa27af505c2c3617c95858a74094e87d9d8f7d23a3ed6c5",
+      "bytes": 1808
+    }
+  },
+  "provenance": "Fond et frames repris directement des fichiers canoniques fournis dans le dernier commit; les routes, marqueurs d etat et surlignages sont des calques UI independants."
+}
