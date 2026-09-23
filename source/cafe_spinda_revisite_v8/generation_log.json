@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-21",
+  "method": "Image generator with individual native prop reference and Spinda room context; isolated object on magenta. This is a workflow summary, not an exact prompt transcript.",
+  "style": "one coherent honey wood / Spinda spirals / sage leaves / cream and dusty rose collection",
+  "successful_outputs": [
+    {
+      "id": "plante_cafe",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_plante_cafe.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/plante_cafe.webp",
+      "original_png_sha256": "2835091043dcebcffe9a8f8ffbb610c29362f18cf95fee23d3a56177078bb74e",
+      "rgba_sha256": "33a2382d0bd7719ea7bdda33df459295b6a43333f27507480bebdc6bdf7b47b3",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "caisses",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_caisses.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/caisses.webp",
+      "original_png_sha256": "6b49e22992db2e7ecef35a30e3434e34bc9a995559ff090e7fd8ba3c456d6a23",
+      "rgba_sha256": "020794137a63f80a16b57f4bba6dc93ad2cbb1a1e3fb3164ed7ccd8125fb651e",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "tapis_vert",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tapis_vert.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/tapis_vert.webp",
+      "original_png_sha256": "68fa0ab53f882a423c49617824a0f26b7d874a28b9a592067eb2b540c0ed3067",
+      "rgba_sha256": "bb4ad0f5923236bf25fe96dfccc17c73233717aa1424625f94217b41377d638e",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "table_halcyon_tasses",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_table_halcyon_tasses.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/table_halcyon_tasses.webp",
+      "original_png_sha256": "2ed999a46874b1946aa138c394de0bc5587ab5e89ff6a31d3a385515870015ba",
+      "rgba_sha256": "3efa96fad37361b764a846995626a61db472c1709055394eb12db37f41eeede5",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "table_halcyon_vide",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_table_halcyon_vide.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "rejected_camera",
+      "raw": "source/cafe_spinda_revisite_v8/raws/table_halcyon_vide.webp",
+      "original_png_sha256": "16ce439d9551ceb4927b292f2cedca90ffa9ebf75d7de8af3a52af014944a9f3",
+      "rgba_sha256": "a8fc51338048408f05275f1a0ebc4a06572c85e0c152cadce9ad907e8713c270",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "etagere",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_etagere.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/etagere.webp",
+      "original_png_sha256": "bcda7ea5b41eaf0b7cead67d7d1f6b08cb9c2399cd3910273fe8e3e493675e76",
+      "rgba_sha256": "04c55200f0b581885972f4eeafd985fbe51aed2b1d3024e5c8cff5375e9631b3",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "menu",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_menu.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/menu.webp",
+      "original_png_sha256": "2286e7933a0cb36a3ce33d43407ed5d873cc8a7e417ccf3e582c87ead5914ab0",
+      "rgba_sha256": "6a2715a4b1da178a8abe09c1c20f72b340c52f7e1a6bef2750a678d0a098756e",
+      "size": [
+        1376,
+        768
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "tonneaux",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tonneaux.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/tonneaux.webp",
+      "original_png_sha256": "0d2fa84fcafed5d892edeb0da163ddfc8e0deb1ac2c6d2a0c94ef12e20542616",
+      "rgba_sha256": "2853499e65c1935dda48136f5536f4f711c479bf5ecd4e065f6959b222afa977",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "tabouret",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_tabouret.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/tabouret.webp",
+      "original_png_sha256": "dda02d5c9c6fad72f74ab19f5d14dba8e3e963955c19fe1df8859e8446f1190a",
+      "rgba_sha256": "0b5dd4bb3426586de1b9f93bca3270da869b5a5d048df92daee5c286222b55e2",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    },
+    {
+      "id": "bar_jus",
+      "reference": "renders/cafe_spinda_revisite_v7/assets/SpindaV7_bar_jus.png",
+      "context_reference": "V7 café without windows (prepare_guides.py)",
+      "status": "generated_ready_for_review",
+      "raw": "source/cafe_spinda_revisite_v8/raws/bar_jus.webp",
+      "original_png_sha256": "09ef0198f21ca6654c5269d47bd5001f1af0ea05832a09c6841cd183f2d9b0d8",
+      "rgba_sha256": "be9aa9fd472f724f234887b2269639b333e1c70003078e58e638d22ece5edb1e",
+      "size": [
+        1200,
+        896
+      ],
+      "lossless_RGBA_roundtrip_verified": true
+    }
+  ],
+  "tool_limit": 10,
+  "failed_limit_attempts": [
+    "plante_auberge",
+    "tonneau_auberge",
+    "coffre",
+    "lit_paille",
+    "coussin_paille",
+    "table_auberge"
+  ],
+  "windows_and_ribbons": "Not generated"
+}

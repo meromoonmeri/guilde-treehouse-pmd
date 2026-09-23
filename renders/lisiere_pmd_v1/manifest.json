@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "map": "lisiere_foret_envahie_entree",
+  "size": [
+    480,
+    336
+  ],
+  "groups": [
+    "calques/LE1_01_fond_forestier.png",
+    "calques/LE1_02_sol_continu.png",
+    "calques/LE1_03_rochers.png",
+    "calques/LE1_04_arbres_racines.png",
+    "calques/LE1_05_vegetation_basse.png",
+    {
+      "id": "06_lumiere",
+      "tracks": [
+        "rayons",
+        "particules"
+      ]
+    }
+  ],
+  "static_layers": [
+    "calques/LE1_01_fond_forestier.png",
+    "calques/LE1_02_sol_continu.png",
+    "calques/LE1_03_rochers.png",
+    "calques/LE1_04_arbres_racines.png",
+    "calques/LE1_05_vegetation_basse.png"
+  ],
+  "generated_palette_reference": "H07P03, 76 visible native colours; only generated art palette-aligned",
+  "rock_placements": [
+    {
+      "source_region": [
+        0,
+        0,
+        240,
+        168
+      ],
+      "tight_bbox": [
+        99,
+        59,
+        169,
+        117
+      ],
+      "size": [
+        40,
+        32
+      ],
+      "position": [
+        128,
+        192
+      ],
+      "scope": "complete generated rock group, not native pixels"
+    },
+    {
+      "source_region": [
+        240,
+        0,
+        480,
+        168
+      ],
+      "tight_bbox": [
+        73,
+        59,
+        141,
+        117
+      ],
+      "size": [
+        40,
+        32
+      ],
+      "position": [
+        312,
+        192
+      ],
+      "scope": "complete generated rock group, not native pixels"
+    },
+    {
+      "source_region": [
+        0,
+        168,
+        240,
+        336
+      ],
+      "tight_bbox": [
+        50,
+        6,
+        126,
+        114
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "position": [
+        64,
+        224
+      ],
+      "scope": "complete generated rock group, not native pixels"
+    },
+    {
+      "source_region": [
+        240,
+        168,
+        480,
+        336
+      ],
+      "tight_bbox": [
+        115,
+        6,
+        190,
+        114
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "position": [
+        384,
+        224
+      ],
+      "scope": "complete generated rock group, not native pixels"
+    }
+  ],
+  "walkability_guides": {
+    "arrival_south": [
+      240,
+      312
+    ],
+    "forest_entrance_north": [
+      240,
+      144
+    ],
+    "status": "pixel-space suggestions only, no engine warp/collision entities"
+  },
+  "light_reuse": "Native H07P04W light re-used as an explicit design choice; H07P03 is not claimed to possess this animation originally.",
+  "native_changes": "None after source decoding except selecting transparent masks and cropping each complete visible cascade window; intrinsic BPC flips belong to the original map.",
+  "preview": {
+    "ticks": [
+      0,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248
+    ],
+    "duration_ms": 4267,
+    "loop": 1,
+    "scope": "sampled excerpt, not the complete209s combined forest cycle",
+    "compression": "presentation WebP lossy; all import PNG pixels lossless"
+  },
+  "limitations": [
+    "Not a PMDO/PC-port runtime validation or artistic approval.",
+    "Generated border trees are canvas-anchored scenery, not complete offscreen tree sprites.",
+    "Native lava columns have a source foot/halo; no invented upper connection."
+  ],
+  "prior_work_preserved": true
+}

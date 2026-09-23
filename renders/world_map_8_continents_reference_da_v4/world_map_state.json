@@ -1,0 +1,30 @@
+{
+  "format": "WorldMapUserFondTwoLayer",
+  "canvas_px": [
+    556,
+    366
+  ],
+  "sources": [
+    "source/world_map_8_continents_reference.png",
+    "source/reverie_town_reference.png",
+    "source/world_map_8_continents_reference_da_v4/raws/foreground_magenta.png"
+  ],
+  "layers": [
+    "layers/00_fond_utilisateur_original.png",
+    "layers/01_8_continents_biomes_varies_reverie.png"
+  ],
+  "continents": 8,
+  "reverie_town": "separate tree island",
+  "mushroom_continent": false,
+  "art_direction": "reference files palette, texture and pixel treatment",
+  "biomes": [
+    "volcano with ash/hot springs",
+    "desert with oasis/canyon/dry scrub",
+    "mountain with foothills/pine/alpine lake",
+    "forest with dry woodland/river/waterfalls",
+    "marsh with mangrove/reeds/pools",
+    "lake country with rivers/grasslands",
+    "tropical-sakura with palms/bamboo/shrine",
+    "ancient ruins with dry grass/olive grove/river"
+  ]
+}

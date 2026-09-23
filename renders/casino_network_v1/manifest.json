@@ -1,0 +1,906 @@
+{
+  "title": "Casino des braises",
+  "size": [
+    1024,
+    1024
+  ],
+  "module_size": [
+    512,
+    512
+  ],
+  "rooms": [
+    {
+      "id": "scene",
+      "title": "Scène des braises",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "ports": {
+        "E": [
+          512,
+          256
+        ],
+        "S": [
+          256,
+          512
+        ]
+      }
+    },
+    {
+      "id": "salon",
+      "title": "Salon des mises",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "ports": {
+        "W": [
+          512,
+          256
+        ],
+        "S": [
+          768,
+          512
+        ]
+      }
+    },
+    {
+      "id": "accueil",
+      "title": "Accueil & change",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "ports": {
+        "N": [
+          256,
+          512
+        ],
+        "E": [
+          512,
+          768
+        ],
+        "S": [
+          256,
+          1024
+        ]
+      }
+    },
+    {
+      "id": "jeux",
+      "title": "Salle des tables",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "ports": {
+        "N": [
+          768,
+          512
+        ],
+        "W": [
+          512,
+          768
+        ]
+      }
+    }
+  ],
+  "edges": [
+    [
+      "scene",
+      "E",
+      "salon",
+      "W"
+    ],
+    [
+      "scene",
+      "S",
+      "accueil",
+      "N"
+    ],
+    [
+      "salon",
+      "S",
+      "jeux",
+      "N"
+    ],
+    [
+      "accueil",
+      "E",
+      "jeux",
+      "W"
+    ]
+  ],
+  "entrance": {
+    "room": "accueil",
+    "direction": "S",
+    "point": [
+      256,
+      1023
+    ]
+  },
+  "layers": [
+    {
+      "id": "sol",
+      "label": "Sol et passages",
+      "group": "terrain",
+      "file": "calques/Casino_terrain_sol.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "fond",
+      "label": "Parois arrière",
+      "group": "terrain",
+      "file": "calques/Casino_terrain_fond.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "gauche",
+      "label": "Bordures rocheuses · gauche",
+      "group": "terrain",
+      "file": "calques/Casino_terrain_gauche.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "droite",
+      "label": "Bordures rocheuses · droite",
+      "group": "terrain",
+      "file": "calques/Casino_terrain_droite.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "avant",
+      "label": "Roches de premier plan",
+      "group": "terrain",
+      "file": "calques/Casino_terrain_avant.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "tapis_scene",
+      "label": "Tapis · scene",
+      "group": "tapis",
+      "file": "calques/Casino_tapis_scene.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "tapis_salon",
+      "label": "Tapis · salon",
+      "group": "tapis",
+      "file": "calques/Casino_tapis_salon.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "tapis_accueil",
+      "label": "Tapis · accueil",
+      "group": "tapis",
+      "file": "calques/Casino_tapis_accueil.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "tapis_jeux",
+      "label": "Tapis · jeux",
+      "group": "tapis",
+      "file": "calques/Casino_tapis_jeux.png",
+      "position": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "estrade",
+      "label": "Estrade",
+      "group": "scene",
+      "file": "objets/estrade.png",
+      "position": [
+        152,
+        128
+      ],
+      "size": [
+        208,
+        104
+      ],
+      "asset": "estrade",
+      "footprint": [
+        152,
+        160,
+        208,
+        72
+      ]
+    },
+    {
+      "id": "rideaux",
+      "label": "Rideaux de scène",
+      "group": "scene",
+      "file": "objets/rideaux.png",
+      "position": [
+        152,
+        56
+      ],
+      "size": [
+        208,
+        144
+      ],
+      "asset": "rideaux",
+      "footprint": [
+        152,
+        168,
+        24,
+        32
+      ]
+    },
+    {
+      "id": "kiosque_accueil",
+      "label": "Kiosque de change",
+      "group": "kiosques",
+      "file": "objets/kiosque.png",
+      "position": [
+        80,
+        696
+      ],
+      "size": [
+        112,
+        128
+      ],
+      "asset": "kiosque",
+      "footprint": [
+        80,
+        768,
+        112,
+        56
+      ]
+    },
+    {
+      "id": "kiosque_salon",
+      "label": "Guichet du salon",
+      "group": "kiosques",
+      "file": "objets/kiosque.png",
+      "position": [
+        608,
+        112
+      ],
+      "size": [
+        112,
+        128
+      ],
+      "asset": "kiosque",
+      "footprint": [
+        608,
+        184,
+        112,
+        56
+      ]
+    },
+    {
+      "id": "krow_bank",
+      "label": "Krow Bank · objet natif",
+      "group": "kiosques",
+      "file": "objets/krow_bank_natif.png",
+      "position": [
+        328,
+        832
+      ],
+      "size": [
+        104,
+        96
+      ],
+      "asset": "krow_bank_natif",
+      "footprint": [
+        328,
+        880,
+        104,
+        48
+      ]
+    },
+    {
+      "id": "table_salon",
+      "label": "Table · salon",
+      "group": "mobilier",
+      "file": "objets/table_jeu.png",
+      "position": [
+        712,
+        328
+      ],
+      "size": [
+        112,
+        72
+      ],
+      "asset": "table_jeu",
+      "footprint": [
+        712,
+        352,
+        112,
+        48
+      ]
+    },
+    {
+      "id": "table_ouest",
+      "label": "Table · ouest",
+      "group": "mobilier",
+      "file": "objets/table_jeu.png",
+      "position": [
+        584,
+        664
+      ],
+      "size": [
+        112,
+        72
+      ],
+      "asset": "table_jeu",
+      "footprint": [
+        584,
+        688,
+        112,
+        48
+      ]
+    },
+    {
+      "id": "table_est",
+      "label": "Table · est",
+      "group": "mobilier",
+      "file": "objets/table_jeu.png",
+      "position": [
+        824,
+        664
+      ],
+      "size": [
+        112,
+        72
+      ],
+      "asset": "table_jeu",
+      "footprint": [
+        824,
+        688,
+        112,
+        48
+      ]
+    },
+    {
+      "id": "table_centre",
+      "label": "Table · centre",
+      "group": "mobilier",
+      "file": "objets/table_jeu.png",
+      "position": [
+        680,
+        856
+      ],
+      "size": [
+        112,
+        72
+      ],
+      "asset": "table_jeu",
+      "footprint": [
+        680,
+        880,
+        112,
+        48
+      ]
+    },
+    {
+      "id": "fourneau_salon",
+      "label": "Fourneau · salon",
+      "group": "fourneaux",
+      "file": "objets/fourneau.png",
+      "position": [
+        872,
+        112
+      ],
+      "size": [
+        104,
+        120
+      ],
+      "asset": "fourneau",
+      "footprint": [
+        872,
+        176,
+        104,
+        56
+      ]
+    },
+    {
+      "id": "fourneau_jeux",
+      "label": "Fourneau · jeux",
+      "group": "fourneaux",
+      "file": "objets/fourneau.png",
+      "position": [
+        864,
+        824
+      ],
+      "size": [
+        104,
+        120
+      ],
+      "asset": "fourneau",
+      "footprint": [
+        864,
+        888,
+        104,
+        56
+      ]
+    },
+    {
+      "id": "support_scene_g",
+      "label": "Brasero · scene_g",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        96,
+        224
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        96,
+        264,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_scene_d",
+      "label": "Brasero · scene_d",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        392,
+        160
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        392,
+        200,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_salon_g",
+      "label": "Brasero · salon_g",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        584,
+        288
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        584,
+        328,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_salon_d",
+      "label": "Brasero · salon_d",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        928,
+        288
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        928,
+        328,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_accueil_g",
+      "label": "Brasero · accueil_g",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        144,
+        848
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        144,
+        888,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_accueil_d",
+      "label": "Brasero · accueil_d",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        408,
+        672
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        408,
+        712,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_jeux_g",
+      "label": "Brasero · jeux_g",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        592,
+        856
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        592,
+        896,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "support_jeux_d",
+      "label": "Brasero · jeux_d",
+      "group": "braseros",
+      "file": "objets/brasero_support.png",
+      "position": [
+        936,
+        728
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "asset": "brasero_support",
+      "footprint": [
+        936,
+        768,
+        32,
+        24
+      ]
+    },
+    {
+      "id": "flamme_scene_g",
+      "label": "Flamme native · scene_g",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        96,
+        224
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_scene_g",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_scene_d",
+      "label": "Flamme native · scene_d",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        392,
+        160
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_scene_d",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_salon_g",
+      "label": "Flamme native · salon_g",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        584,
+        288
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_salon_g",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_salon_d",
+      "label": "Flamme native · salon_d",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        928,
+        288
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_salon_d",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_accueil_g",
+      "label": "Flamme native · accueil_g",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        144,
+        848
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_accueil_g",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_accueil_d",
+      "label": "Flamme native · accueil_d",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        408,
+        672
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_accueil_d",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_jeux_g",
+      "label": "Flamme native · jeux_g",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        592,
+        856
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_jeux_g",
+      "native_unscaled": true
+    },
+    {
+      "id": "flamme_jeux_d",
+      "label": "Flamme native · jeux_d",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        936,
+        728
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "support_jeux_d",
+      "native_unscaled": true
+    },
+    {
+      "id": "feu_fourneau_salon",
+      "label": "Feu natif du fourneau · salon",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        904,
+        144
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "fourneau_salon",
+      "native_unscaled": true
+    },
+    {
+      "id": "feu_fourneau_jeux",
+      "label": "Feu natif du fourneau · jeux",
+      "group": "flammes",
+      "frames": [
+        "animations/Casino_flamme_native_00.png",
+        "animations/Casino_flamme_native_01.png",
+        "animations/Casino_flamme_native_02.png",
+        "animations/Casino_flamme_native_03.png"
+      ],
+      "position": [
+        896,
+        856
+      ],
+      "size": [
+        32,
+        40
+      ],
+      "frame_ms": 100,
+      "count": 4,
+      "host": "fourneau_jeux",
+      "native_unscaled": true
+    }
+  ],
+  "animation": {
+    "frames": 4,
+    "frame_ms": 100,
+    "period_ms": 400,
+    "native_ticks": 6
+  },
+  "terrain_origin": "Independently generated continuous network using Ledian materials as visual reference. Not the previously attached room.",
+  "geometry": "One continuous 1024-square composition, divided into four 512-square sectors; not four rotated/recoloured copies.",
+  "native_fire": "flammes_provenance.json",
+  "objects": "objets/manifest.json",
+  "runtime_PMDO": "NOT TESTED",
+  "limits": [
+    "Terrain is generated, not certified native tile art.",
+    "Terrain depth partitions are visible-surface masks, not movable complete rock volumes.",
+    "Room boundaries share a continuous image; arbitrary rearrangements are not certified seamless.",
+    "Object footprints are authoring hints, not implemented collisions.",
+    "Passages and decor arrangement require artistic and PMDO review."
+  ]
+}

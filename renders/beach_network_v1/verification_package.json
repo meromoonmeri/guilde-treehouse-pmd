@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "file": "BeachNetwork_pack.zip",
+  "files": 971,
+  "bytes": 28652023,
+  "sha256": "911bb5f07ace894556b3ad5330e269f9f016830486cce382f2c078d46c045f5d",
+  "checks": [
+    "CRC all files",
+    "payload identity for all files",
+    "local viewer included; self-ZIP link removed in archived copy"
+  ],
+  "excludes": [
+    "bruts",
+    "rebuild sources/dependencies",
+    "the archive itself",
+    "this outer report"
+  ],
+  "runtime_PMDO": "NOT TESTED"
+}

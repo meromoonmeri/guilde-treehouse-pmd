@@ -1,0 +1,56 @@
+{
+  "generations": [
+    {
+      "original_png_sha256": "6a4a062b6bd5c65064e0f0656f06ef4b61d5b6b14c91ab2e4ab4fea0738db1a9",
+      "file": "bruts/accueil.webp",
+      "size": [
+        1200,
+        896
+      ],
+      "rgba_sha256": "dd572ffc91db4852e4cd2adc7c31d7204678db0c29e506494cec549f2dad776c",
+      "webp_sha256": "d96306b17ab55d73b9fd7a78e3ee1837adbeb84f78b508e32d66dbf4be71d8f7",
+      "native": false
+    },
+    {
+      "original_png_sha256": "28f86c7664fd9480453fa625edaaab74a8af10db9b56e1a173ea9d58ef786c16",
+      "file": "bruts/casino.webp",
+      "size": [
+        1200,
+        896
+      ],
+      "rgba_sha256": "46c2410ec0963071ad2355194d735ac7c41d07438aa2db54e174c029cca56986",
+      "webp_sha256": "0671a97a0f984cf95298c0ccd747317febcaac27243ad7d03b68f6b933e379f2",
+      "native": false
+    },
+    {
+      "original_png_sha256": "e915fb05f342ae5c7c5364a758f381c0dd974ee051871ce45e486a8563453704",
+      "file": "bruts/cafe.webp",
+      "size": [
+        1200,
+        896
+      ],
+      "rgba_sha256": "d22644c2060bebd2617a96a5c84fa5257ea6281a1bc6cdacca35fa9af5aeae4e",
+      "webp_sha256": "47941acca0198811e72f3c44d7297dd0dee88a58513e9f15045c19424f600263",
+      "native": false
+    },
+    {
+      "original_png_sha256": "03304d6cbf3d1cd97746d1c5ec565ed63d93961634a6ef79b2d39b26cfad8b17",
+      "file": "bruts/fenetre_cafe.webp",
+      "size": [
+        1153,
+        912
+      ],
+      "rgba_sha256": "709aa4ae807b4d9f9e7e1fa5c957b9ef5d08644c5a65096ce849574e5fb769e0",
+      "webp_sha256": "e8d74262066b38bf3c44b3d38c30fea0d500e55309983595685eb51aa05259c0",
+      "native": false
+    }
+  ],
+  "references": [
+    "renders/cafe_spinda_revisite_v5/audit/exports/SpindaV5_audit_*_magenta.png",
+    "source/cafe_spinda_revisite_v5/references/escalier_entree_accueil.png",
+    "source/cafe_spinda_reseau_v4/references/spinda_design_reference.png"
+  ],
+  "window_reference": "Spinda design and V4 caf\u00e9 architecture only; Guild_Heros_Room_Objects not used",
+  "stairs": "Generated interpretation of the approved reference, NOT pixel-identical native stairs",
+  "artistic_approval": "Awaiting user review of these new generations"
+}
