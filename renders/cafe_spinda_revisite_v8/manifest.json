@@ -1,0 +1,762 @@
+{
+  "version": "Spinda V8 · lot 1 / nuit",
+  "status": "PARTIAL — image tool cap of 10 per turn reached",
+  "rooms": [
+    {
+      "id": "accueil",
+      "title": "Accueil de Spinda",
+      "level": 0,
+      "size": [
+        600,
+        448
+      ],
+      "ports": {
+        "N": {
+          "point": [
+            304,
+            88
+          ],
+          "arrival_spawn": [
+            304,
+            200
+          ],
+          "arrival_facing": "S",
+          "kind": "stairs_up",
+          "action": "montee",
+          "target": "cafe",
+          "target_port": "S"
+        },
+        "S": {
+          "point": [
+            304,
+            384
+          ],
+          "arrival_spawn": [
+            304,
+            280
+          ],
+          "arrival_facing": "N",
+          "kind": "stairs_down",
+          "action": "descente",
+          "target": "casino",
+          "target_port": "N"
+        }
+      },
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_accueil_jour_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs lumineux statiques",
+              "file": "calques/SpindaV8_accueil_jour_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_accueil_jour_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_accueil_jour_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_N",
+              "title": "Montée N · mur occultant, bordure corrigée",
+              "file": "calques/SpindaV8_accueil_jour_acces_N.png",
+              "default": true
+            },
+            {
+              "id": "acces_S",
+              "title": "Accès S · marches, joues et raccord",
+              "file": "calques/SpindaV8_accueil_jour_acces_S.png",
+              "default": true
+            }
+          ]
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_accueil_nuit_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs du parquet · très atténués",
+              "file": "calques/SpindaV8_accueil_nuit_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_accueil_nuit_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_accueil_nuit_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_N",
+              "title": "Montée N · mur occultant, bordure corrigée",
+              "file": "calques/SpindaV8_accueil_nuit_acces_N.png",
+              "default": true
+            },
+            {
+              "id": "acces_S",
+              "title": "Accès S · marches, joues et raccord",
+              "file": "calques/SpindaV8_accueil_nuit_acces_S.png",
+              "default": true
+            },
+            {
+              "id": "lumiere_tamisee",
+              "title": "Lumière chaude diffuse · indépendante",
+              "file": "calques/SpindaV8_accueil_nuit_lumiere_tamisee.png",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "casino",
+      "title": "Casino souterrain",
+      "level": -1,
+      "size": [
+        600,
+        448
+      ],
+      "ports": {
+        "N": {
+          "point": [
+            304,
+            88
+          ],
+          "arrival_spawn": [
+            304,
+            200
+          ],
+          "arrival_facing": "S",
+          "kind": "stairs_up",
+          "action": "montee",
+          "target": "accueil",
+          "target_port": "S"
+        },
+        "E": {
+          "point": [
+            584,
+            176
+          ],
+          "arrival_spawn": [
+            528,
+            176
+          ],
+          "kind": "level_door",
+          "edge_interval": [
+            161,
+            200
+          ],
+          "target": "salon_bas",
+          "target_port": "W"
+        }
+      },
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_casino_jour_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs lumineux statiques",
+              "file": "calques/SpindaV8_casino_jour_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_casino_jour_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_casino_jour_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_N",
+              "title": "Montée N · mur occultant, bordure corrigée",
+              "file": "calques/SpindaV8_casino_jour_acces_N.png",
+              "default": true
+            }
+          ]
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_casino_nuit_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs du parquet · très atténués",
+              "file": "calques/SpindaV8_casino_nuit_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_casino_nuit_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_casino_nuit_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_N",
+              "title": "Montée N · mur occultant, bordure corrigée",
+              "file": "calques/SpindaV8_casino_nuit_acces_N.png",
+              "default": true
+            },
+            {
+              "id": "lumiere_tamisee",
+              "title": "Lumière chaude diffuse · indépendante",
+              "file": "calques/SpindaV8_casino_nuit_lumiere_tamisee.png",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "salon_bas",
+      "title": "Salon des jeux",
+      "level": -1,
+      "size": [
+        600,
+        448
+      ],
+      "ports": {
+        "W": {
+          "point": [
+            16,
+            392
+          ],
+          "kind": "door",
+          "edge_interval": [
+            372,
+            409
+          ],
+          "target": "casino",
+          "target_port": "E"
+        }
+      },
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Plancher (sous les lumières)",
+              "file": "calques/SpindaV8_salon_bas_jour_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Spirales et lumières statiques",
+              "file": "calques/SpindaV8_salon_bas_jour_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_salon_bas_jour_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordures latérales / avant et seuil",
+              "file": "calques/SpindaV8_salon_bas_jour_bordures.png",
+              "default": true
+            }
+          ]
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Plancher (sous les lumières)",
+              "file": "calques/SpindaV8_salon_bas_nuit_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs du parquet · très atténués",
+              "file": "calques/SpindaV8_salon_bas_nuit_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_salon_bas_nuit_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordures latérales / avant et seuil",
+              "file": "calques/SpindaV8_salon_bas_nuit_bordures.png",
+              "default": true
+            },
+            {
+              "id": "lumiere_tamisee",
+              "title": "Lumière chaude diffuse · indépendante",
+              "file": "calques/SpindaV8_salon_bas_nuit_lumiere_tamisee.png",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cafe",
+      "title": "Café à l’étage",
+      "level": 1,
+      "size": [
+        600,
+        448
+      ],
+      "ports": {
+        "S": {
+          "point": [
+            304,
+            384
+          ],
+          "arrival_spawn": [
+            304,
+            280
+          ],
+          "arrival_facing": "N",
+          "kind": "stairs_down",
+          "action": "descente",
+          "target": "accueil",
+          "target_port": "N"
+        },
+        "E": {
+          "point": [
+            584,
+            184
+          ],
+          "arrival_spawn": [
+            528,
+            184
+          ],
+          "kind": "level_door",
+          "edge_interval": [
+            161,
+            201
+          ],
+          "target": "salon_haut",
+          "target_port": "W"
+        }
+      },
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_cafe_jour_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs lumineux statiques",
+              "file": "calques/SpindaV8_cafe_jour_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_cafe_jour_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_cafe_jour_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_S",
+              "title": "Accès S · marches, joues et raccord",
+              "file": "calques/SpindaV8_cafe_jour_acces_S.png",
+              "default": true
+            },
+            {
+              "id": "fenetres",
+              "title": "Fenêtres V7 · nouvelle génération en attente",
+              "file": "calques/SpindaV8_cafe_jour_fenetres.png",
+              "default": true
+            }
+          ]
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Parquet · sous les lumières",
+              "file": "calques/SpindaV8_cafe_nuit_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs du parquet · très atténués",
+              "file": "calques/SpindaV8_cafe_nuit_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_cafe_nuit_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordure basse et passages latéraux",
+              "file": "calques/SpindaV8_cafe_nuit_bordures.png",
+              "default": true
+            },
+            {
+              "id": "acces_S",
+              "title": "Accès S · marches, joues et raccord",
+              "file": "calques/SpindaV8_cafe_nuit_acces_S.png",
+              "default": true
+            },
+            {
+              "id": "fenetres",
+              "title": "Fenêtres V7 · nouvelle génération en attente",
+              "file": "calques/SpindaV8_cafe_nuit_fenetres.png",
+              "default": true
+            },
+            {
+              "id": "lumiere_tamisee",
+              "title": "Lumière chaude diffuse · indépendante",
+              "file": "calques/SpindaV8_cafe_nuit_lumiere_tamisee.png",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "salon_haut",
+      "title": "Salon des croisillons",
+      "level": 1,
+      "size": [
+        600,
+        448
+      ],
+      "ports": {
+        "W": {
+          "point": [
+            16,
+            232
+          ],
+          "kind": "door",
+          "edge_interval": [
+            219,
+            244
+          ],
+          "target": "cafe",
+          "target_port": "E"
+        }
+      },
+      "modes": {
+        "jour": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Plancher (sous les lumières)",
+              "file": "calques/SpindaV8_salon_haut_jour_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Spirales et lumières statiques",
+              "file": "calques/SpindaV8_salon_haut_jour_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_salon_haut_jour_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordures latérales / avant et seuil",
+              "file": "calques/SpindaV8_salon_haut_jour_bordures.png",
+              "default": true
+            },
+            {
+              "id": "fenetres",
+              "title": "Fenêtres V7 · nouvelle génération en attente",
+              "file": "calques/SpindaV8_salon_haut_jour_fenetres.png",
+              "default": true
+            }
+          ]
+        },
+        "nuit": {
+          "layers": [
+            {
+              "id": "sol",
+              "title": "Plancher (sous les lumières)",
+              "file": "calques/SpindaV8_salon_haut_nuit_sol.png",
+              "default": true
+            },
+            {
+              "id": "lumieres",
+              "title": "Motifs du parquet · très atténués",
+              "file": "calques/SpindaV8_salon_haut_nuit_lumieres.png",
+              "default": true
+            },
+            {
+              "id": "parois",
+              "title": "Boiseries et bordure arrière",
+              "file": "calques/SpindaV8_salon_haut_nuit_parois.png",
+              "default": true
+            },
+            {
+              "id": "bordures",
+              "title": "Bordures latérales / avant et seuil",
+              "file": "calques/SpindaV8_salon_haut_nuit_bordures.png",
+              "default": true
+            },
+            {
+              "id": "fenetres",
+              "title": "Fenêtres V7 · nouvelle génération en attente",
+              "file": "calques/SpindaV8_salon_haut_nuit_fenetres.png",
+              "default": true
+            },
+            {
+              "id": "lumiere_tamisee",
+              "title": "Lumière chaude diffuse · indépendante",
+              "file": "calques/SpindaV8_salon_haut_nuit_lumiere_tamisee.png",
+              "default": true
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "tonneaux",
+      "title": "Paire de tonneaux",
+      "files": {
+        "jour": "assets/SpindaV8_tonneaux_jour.png",
+        "nuit": "assets/SpindaV8_tonneaux_nuit.png"
+      },
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        44,
+        36
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_tonneaux.png",
+      "native": false
+    },
+    {
+      "id": "plante_cafe",
+      "title": "Plante haute du café",
+      "files": {
+        "jour": "assets/SpindaV8_plante_cafe_jour.png",
+        "nuit": "assets/SpindaV8_plante_cafe_nuit.png"
+      },
+      "size": [
+        40,
+        56
+      ],
+      "visible_size": [
+        36,
+        46
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_plante_cafe.png",
+      "native": false
+    },
+    {
+      "id": "menu",
+      "title": "Chevalet de menu",
+      "files": {
+        "jour": "assets/SpindaV8_menu_jour.png",
+        "nuit": "assets/SpindaV8_menu_nuit.png"
+      },
+      "size": [
+        40,
+        48
+      ],
+      "visible_size": [
+        36,
+        44
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_menu.png",
+      "native": false
+    },
+    {
+      "id": "tapis_vert",
+      "title": "Tapis vert",
+      "files": {
+        "jour": "assets/SpindaV8_tapis_vert_jour.png",
+        "nuit": "assets/SpindaV8_tapis_vert_nuit.png"
+      },
+      "size": [
+        96,
+        40
+      ],
+      "visible_size": [
+        55,
+        36
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_tapis_vert.png",
+      "native": false
+    },
+    {
+      "id": "table_halcyon_tasses",
+      "title": "Table Halcyon · tasses",
+      "files": {
+        "jour": "assets/SpindaV8_table_halcyon_tasses_jour.png",
+        "nuit": "assets/SpindaV8_table_halcyon_tasses_nuit.png"
+      },
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        44,
+        37
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_table_halcyon_tasses.png",
+      "native": false
+    },
+    {
+      "id": "caisses",
+      "title": "Caisses empilées",
+      "files": {
+        "jour": "assets/SpindaV8_caisses_jour.png",
+        "nuit": "assets/SpindaV8_caisses_nuit.png"
+      },
+      "size": [
+        56,
+        56
+      ],
+      "visible_size": [
+        48,
+        52
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_caisses.png",
+      "native": false
+    },
+    {
+      "id": "etagere",
+      "title": "Étagère bois",
+      "files": {
+        "jour": "assets/SpindaV8_etagere_jour.png",
+        "nuit": "assets/SpindaV8_etagere_nuit.png"
+      },
+      "size": [
+        48,
+        48
+      ],
+      "visible_size": [
+        43,
+        44
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_etagere.png",
+      "native": false
+    },
+    {
+      "id": "bar_jus",
+      "title": "Bar à jus complet · Halcyon",
+      "files": {
+        "jour": "assets/SpindaV8_bar_jus_jour.png",
+        "nuit": "assets/SpindaV8_bar_jus_nuit.png"
+      },
+      "size": [
+        128,
+        40
+      ],
+      "visible_size": [
+        90,
+        36
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_bar_jus.png",
+      "native": false
+    },
+    {
+      "id": "tabouret",
+      "title": "Petit tabouret",
+      "files": {
+        "jour": "assets/SpindaV8_tabouret_jour.png",
+        "nuit": "assets/SpindaV8_tabouret_nuit.png"
+      },
+      "size": [
+        16,
+        16
+      ],
+      "visible_size": [
+        12,
+        11
+      ],
+      "reference": "../cafe_spinda_revisite_v7/assets/SpindaV7_tabouret.png",
+      "native": false
+    }
+  ],
+  "sheets": {
+    "jour": "assets/SpindaV8_collection_lot1_jour.png",
+    "nuit": "assets/SpindaV8_collection_lot1_nuit.png"
+  },
+  "coverage": "audit/coverage.json",
+  "pending": {
+    "wall_ribbons": "Not generated. No empty layer presented as delivered ribbons.",
+    "wall_windows": "V7 32px windows retained temporarily; in-context generator revision pending.",
+    "appliques": "Not generated; current night uses soft indirect ambient light, not depicted fixtures or fire."
+  },
+  "planned": 36,
+  "accepted": 9,
+  "attempts": 10,
+  "pack": "SpindaV8_atelier_lot1.zip",
+  "packed_layers": true,
+  "night": {
+    "rgb_factors": [
+      0.42,
+      0.35,
+      0.4
+    ],
+    "floor_motifs_alpha_factor": 0.18,
+    "light": "Static subtle indirect warmth, separate RGBA layer; no flame or animation claimed."
+  },
+  "runtime_PMDO": "NOT TESTED"
+}

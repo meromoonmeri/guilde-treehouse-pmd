@@ -1,0 +1,18 @@
+{
+  "format": "WorldMapUserFondTwoLayer",
+  "canvas_px": [
+    556,
+    366
+  ],
+  "sources": [
+    "source/generator_v3/ref8.jpeg",
+    "source/generator_v3/foreground_magenta_corrected.png"
+  ],
+  "layers": [
+    "layers/00_fond_utilisateur_original.png",
+    "layers/01_8_continents_reverie_town_generated.png"
+  ],
+  "continents": 8,
+  "landmark": "generated Reverie Town tree isolated on its own small island",
+  "art_direction": "PMD-inspired pixel-art/parchment generator correction"
+}

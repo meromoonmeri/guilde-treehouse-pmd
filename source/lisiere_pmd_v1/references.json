@@ -1,0 +1,21 @@
+{
+  "habitat": {
+    "map": "H07P03",
+    "entry": "references/DB1_native_H07P03.png",
+    "container": "renders/dungeon_biomes_v1/DB1_cinq_duos_multicalques.zip",
+    "sha256": "ece2a9c2d2b893f52d7c80db7c6bd2c8866f2ddd6c7cf4384911d979704c5183",
+    "rgba_sha256": "0b07774dc942c75498da81b1dfa1651c1b4af5d525c124a5d65ac1d14289410b",
+    "port_commit": "cd07abc4307e67373a522941308a935bd15241b0"
+  },
+  "tree_layout": {
+    "path": "Mystifying_Forest_entrance_TDS.png",
+    "sha256": "9f45d140aebe5559d9d1ea8d5891825d4450e7a550ba30d6be97af1af9e3e941",
+    "size": [
+      600,
+      504
+    ],
+    "role": "User-authorized inspiration for staggered tree obstacles; not copied native Red assets."
+  },
+  "generation_method": "Complete entrance composition guide, then five separately generated semantic layers. First trees generation had baked background and was replaced. Final-entry guide is deferred. All raw pixels preserved in raws/archive.json.",
+  "normalization": "Generated layers resized nearest-neighbour to480x336 and palette-aligned to76H07P03colours. Ground northern extension clipped at y96; four complete generated rock groups repositioned/scaled. Native effects never resized/recoloured/mirrored."
+}
