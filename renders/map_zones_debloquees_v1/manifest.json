@@ -1,0 +1,94 @@
+{
+  "name": "Map Zones Débloquées — Café",
+  "canvas_px": [
+    1600,
+    1000
+  ],
+  "semantic_layers": [
+    "00_fond_hub_cafe.png",
+    "01_carte_parchemin.png",
+    "02_chemins_zones.png",
+    "03_emblemes_lieux.png",
+    "04_etat_zones_debloquees.png"
+  ],
+  "animated_frames": 8,
+  "animation": "animations/MapZones_unlock.webp",
+  "asset_sprite": "ZoneEmblemes_AssetSprite.png",
+  "sources": {
+    "generated_last_commit_layers": "renders/cafe_multietage_v3/calques_alignés/00_salle_vide.png and aligned layers",
+    "canonical_floor_reference": "source/cafe_multietage_v3/references/Guild_Second_Floor_Floor.tile",
+    "canonical_wall_reference": "source/cafe_multietage_v3/references/Guild_Second_Floor_Walls.tile",
+    "canonical_render_reference": "source/cafe_multietage_v3/references/guild_second_floor_reference.png"
+  },
+  "notes": "Les six emblemes sont de nouveaux marqueurs de carte, non des sprites Pokémon. L'etat deblocage et l'animation restent sur des calques independants. Le sol et les murs reprennent le langage cafe du dernier commit; les fichiers natifs restent inchanges.",
+  "files": {
+    "ZoneEmblemes_AssetSprite.png": {
+      "sha256": "3659ac1bf0b8a99c7a0e934006696b38dbd9183dce3ed74fbf313273acf62b0b",
+      "bytes": 12122
+    },
+    "MapZones_debloquees.png": {
+      "sha256": "e77d86b05412d76070e0fdffc0fb7546ee355080d21996397020b3196c5b1d19",
+      "bytes": 371336
+    },
+    "layers/00_fond_hub_cafe.png": {
+      "sha256": "262f0e758c698bf383692ff01c33525829e22b635d4a1e456dde8fce5535d778",
+      "bytes": 328277
+    },
+    "layers/02_chemins_zones.png": {
+      "sha256": "41b82cdf88380fa0d201d258ee90b290713647306b59ee6080bf604347210518",
+      "bytes": 10688
+    },
+    "layers/01_carte_parchemin.png": {
+      "sha256": "1fb0000a5081d57989c08a387285a8ea7ae9eb427298389dd17da255bca893e5",
+      "bytes": 8773
+    },
+    "layers/03_emblemes_lieux.png": {
+      "sha256": "cc0024219569cb4f55b7bdbacb6d6e4784d1775c032e40a9d48edd1eea6ca6aa",
+      "bytes": 25200
+    },
+    "layers/04_etat_zones_debloquees.png": {
+      "sha256": "211ea36e47e12fb516b87284a66b6b6c0c39750d9d4d65a6eac0ef543abb5569",
+      "bytes": 16386
+    },
+    "animations/MapZones_unlock_00.png": {
+      "sha256": "16546c3cf51634cb3477d86b3284b8e072dc395072390ba3c988950d87340093",
+      "bytes": 378477
+    },
+    "animations/MapZones_unlock_01.png": {
+      "sha256": "ecca8e2797c6d87b891871c0f0fd7bb6e726414384afd1090f4a3d0a4876b711",
+      "bytes": 378638
+    },
+    "animations/MapZones_unlock_02.png": {
+      "sha256": "b153ea9f6944d114f789b12ac48fe754dd33d9d5a01079b0bccd174955fbae58",
+      "bytes": 378608
+    },
+    "animations/MapZones_unlock_03.png": {
+      "sha256": "ecca8e2797c6d87b891871c0f0fd7bb6e726414384afd1090f4a3d0a4876b711",
+      "bytes": 378638
+    },
+    "animations/MapZones_unlock_04.png": {
+      "sha256": "16546c3cf51634cb3477d86b3284b8e072dc395072390ba3c988950d87340093",
+      "bytes": 378477
+    },
+    "animations/MapZones_unlock_05.png": {
+      "sha256": "f498333a1dad129dc6c3d2716e528a4b184236338ac2793304cea4a8f36f502a",
+      "bytes": 378518
+    },
+    "animations/MapZones_unlock_06.png": {
+      "sha256": "f498333a1dad129dc6c3d2716e528a4b184236338ac2793304cea4a8f36f502a",
+      "bytes": 378518
+    },
+    "animations/MapZones_unlock_07.png": {
+      "sha256": "f498333a1dad129dc6c3d2716e528a4b184236338ac2793304cea4a8f36f502a",
+      "bytes": 378518
+    },
+    "animations/MapZones_unlock.webp": {
+      "sha256": "7c9d5805b866877251a1d244498f82eaaa92f800a96b557aff6de9910e978253",
+      "bytes": 432158
+    },
+    "assetsprite.json": {
+      "sha256": "c84fdd9580932d6ca51fc1ad820d556fc70fb0585f254cbc5f46ffef035221f4",
+      "bytes": 1132
+    }
+  }
+}

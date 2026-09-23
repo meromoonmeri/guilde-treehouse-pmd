@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "source_entries": 9,
+  "archived_originals": 7,
+  "checks": [
+    "original PNG hashes in manifest match archive provenance",
+    "live WebP bytes and decoded RGBA hashes verified",
+    "old PNG paths decode identically through the loader",
+    "wrong expected hashes rejected",
+    "reference image hash unchanged",
+    "all six terrain build input images resolve as identical RGB"
+  ],
+  "scope": "Archive/provenance/loader regression only; existing rendered maps, full animation exports and ZIP not rebuilt."
+}

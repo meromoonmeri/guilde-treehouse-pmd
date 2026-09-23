@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "selections": 39,
+  "modes": 3,
+  "checks": [
+    "all ten maps and reference beach",
+    "both group layouts",
+    "new header on individual maps",
+    "sky/stars/cloud layer toggles",
+    "64 s canvas-operation equality",
+    "PNG export controls",
+    "dusk mode button",
+    "asynchronous load races",
+    "all resource and download URLs"
+  ],
+  "method": "Node VM DOM/canvas mocks; graphical browser unavailable (Chromium download failed TLS); not PMDO"
+}
