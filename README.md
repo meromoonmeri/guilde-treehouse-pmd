@@ -1,5 +1,16 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Jungle aux cascades — 5 calques natifs, chutes animées, source cachée
+
+- **[Recomposition web : calques, 26 phases, grille 8 px, export PNG](apercu_jungle_cascades_v1.html)**.
+- [GIF boucle exacte 2080 ms](exports/jungle_cascades_v1/JungleV1_animation.gif) · [ORA 5 calques](exports/jungle_cascades_v1/JungleV1_5_calques.ora) · [pack ZIP](exports/jungle_cascades_v1_pack.zip).
+- [Méthode, provenance NPZ et limites](exports/jungle_cascades_v1/README.md).
+
+512×640 sud → nord, zéro pixel généré : 6 chutes longues coupées au bord haut sur leur
+propre calque animé (26 phases × 80 ms, boucle = hauteur complète, offsets par chute),
+pieds en pleine écume, 2 arbres Southern Jungle canoniques. 13 tests PASS ; art et
+runtime non validés. Registre : 3/23 refs candidates, 17 layouts restants.
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.

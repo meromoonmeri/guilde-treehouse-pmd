@@ -418,3 +418,23 @@ Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les a
 Demande : plusieurs calques de l’image `DSVFS.png` et animation de l’eau Beach PMD Sky. Fichier fourni retrouvé à la racine (pas dans le chemin uploads annoncé). Lot non destructif `source/beach_layers_v1/`, `renders/beach_layers_v1/`, viewer `apercu_beach_calques_v1.html`. Aucun générateur utilisé : préserver exactement cette composition. Neuf partitions visibles 702×466, ORA ; sols/faces cachés non reconstruits. Animation mer + écume, 64 phases de 50ms (3,2s), couleurs source seulement, phase0 exacte, décor sec invariant. Progression des hauteurs de crête extraite des17poses de la planche Beach & Path to Beach (rip redblueyellow) pour guider un mouvement nouveau ; PAS les frames/cadence officielles Sky récupérées. Mer sous écume complétée par pixels bleus voisins, puis remapping entier. Contacts ancrés sur5px et amplitude croissante sur18px pour éviter les traînées de contours aux rochers ; pas d’avance sur le sable. Frames adjacentes parfois identiques : GIF/WebP fusionnent les poses, durée totale contrôlée3200ms.
 
 Copies d’import PNG to Tileset8px : 704×472, ajout transparent droite2/bas6, aucune mise à l’échelle. Remplacer les calques fixes03/04 par les frames de même index, ne pas garder l’ancienne écume par-dessus. Dix tests assetsPASS, interactions viewer en DOM simuléPASS, ZIP CRC/identitéPASS. Chromium téléchargementTLS échoué, pas de navigateur interactif validé ; pas de runtimePMDO. Les anciennes maps et le PNG source restent intacts. Sources et référence de vagues incluses dans le ZIP pour reconstruction ; viewer embarqué autonome.
+
+## Jungle aux cascades V1 — 5 calques natifs, chutes animees (23 septembre 2026)
+
+Reprise maps : l'utilisateur choisit suite du programme 23 refs, orientation sud-nord,
+sortie layers PNG+ORA. Priorite donnee a la jungle : 5 calques exacts, cascades animees
+sur leur propre layer, source des chutes longues CACHEE (coupees au bord haut), textures
+natives, recomposition web + PNG. `source/jungle_cascades_v1/build.py`,
+`exports/jungle_cascades_v1/`, viewer `apercu_jungle_cascades_v1.html`, ZIP 75 fichiers.
+512x640 : 01_sol (herbe+chemin quilt natif), 02_paroi (mur y0-368, modules entiers),
+03_cascades (6 chutes, 26 phases x 16px = boucle 416px exacte, 80ms, offsets par chute),
+04_bassins (2 bassins + ecume + 2 mares, colonnes masquees jusqu'en pleine ecume pour
+cacher la jonction anime/statique), 05_vegetation (2 arbres Southern Jungle canoniques
++ franges, murs de buissons, rochers, galet). Sources : junglewaterfallzonepmdsky.png et
+Southern_Jungle_exit_2_S.png, NPZ source par pixel, zero rotation/miroir/echelle.
+Texture de chute exactement 96-periodique (verifie) ; boucle = hauteur complete, pas de
+pop en haut (piege roll % 96 != identite sur 416px : corrige en 26x16). Guide genere
+suite_generee_v1 tranche (levres sources REJETEES, composition seule). 13 tests PASS,
+viewer JS syntaxe OK, registre programme : jungle candidate (3/23, reste 17). Les 3 autres
+bruts du lot (aride/plage/jardin) sont conserves comme guides, non convertis. Ne pas
+appeler l'animation le cycle officiel. Art et runtime non valides.

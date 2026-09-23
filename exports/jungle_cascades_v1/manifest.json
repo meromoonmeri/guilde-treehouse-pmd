@@ -1,0 +1,521 @@
+{
+ "id": "jungle_cascades_v1",
+ "title": "Jungle aux cascades \u2014 5 calques natifs, sud vers nord",
+ "size": [
+  512,
+  640
+ ],
+ "orientation": "SOUTH_TO_NORTH",
+ "sources": [
+  {
+   "file": "junglewaterfallzonepmdsky.png",
+   "sha256": "6cd3c095e1da6075958fbdc5b793a3e0e44c7c9f6dd14d2dad37cd94a9be6193"
+  },
+  {
+   "file": "Southern_Jungle_exit_2_S.png",
+   "sha256": "4fe7c0ef41aac63b0a1b58f863c11743eb4b95a6a0f169388b491dfc10347564"
+  }
+ ],
+ "layers": [
+  {
+   "id": "01_sol",
+   "file": "JungleV1_01_sol.png",
+   "provenance": "05_vegetation_source.npz"
+  },
+  {
+   "id": "02_paroi",
+   "file": "JungleV1_02_paroi.png",
+   "provenance": "05_vegetation_source.npz"
+  },
+  {
+   "id": "03_cascades",
+   "file": "JungleV1_03_cascades.png",
+   "provenance": "05_vegetation_source.npz"
+  },
+  {
+   "id": "04_bassins",
+   "file": "JungleV1_04_bassins.png",
+   "provenance": "05_vegetation_source.npz"
+  },
+  {
+   "id": "05_vegetation",
+   "file": "JungleV1_05_vegetation.png",
+   "provenance": "05_vegetation_source.npz"
+  }
+ ],
+ "animation": {
+  "layer": "03_cascades",
+  "phases": 26,
+  "step_px": 16,
+  "period_px": 96,
+  "frame_ms": 80,
+  "loop_ms": 2080,
+  "offsets": [
+   0,
+   32,
+   64,
+   16,
+   80,
+   48
+  ],
+  "method": "native pixels vertical roll over full 416px height, 26x16 loop exact, NEW movement"
+ },
+ "operations": [
+  {
+   "layer": "01_sol",
+   "source": "junglewaterfallzonepmdsky.png",
+   "method": "native ground patch overlap, no blending",
+   "patches": 32,
+   "seed": 21
+  },
+  {
+   "layer": "01_sol",
+   "source": "junglewaterfallzonepmdsky.png",
+   "method": "native ground patch overlap, no blending",
+   "patches": 16,
+   "seed": 22
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    8,
+    484,
+    128
+   ],
+   "position": [
+    0,
+    0
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    150,
+    484,
+    270
+   ],
+   "position": [
+    224,
+    0
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    360,
+    100,
+    424,
+    220
+   ],
+   "position": [
+    448,
+    0
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    200,
+    484,
+    320
+   ],
+   "position": [
+    0,
+    120
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    300,
+    484,
+    420
+   ],
+   "position": [
+    224,
+    120
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    360,
+    250,
+    424,
+    370
+   ],
+   "position": [
+    448,
+    120
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    320,
+    484,
+    448
+   ],
+   "position": [
+    0,
+    240
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    260,
+    60,
+    484,
+    188
+   ],
+   "position": [
+    224,
+    240
+   ]
+  },
+  {
+   "layer": "02_paroi",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    360,
+    20,
+    424,
+    148
+   ],
+   "position": [
+    448,
+    240
+   ]
+  },
+  {
+   "layer": "03_cascades",
+   "source": "junglewaterfallzonepmdsky.png",
+   "method": "native 96-periodic vertical roll, 12 phases x 8px",
+   "falls": [
+    {
+     "dst": [
+      42,
+      0,
+      86,
+      416
+     ],
+     "src": [
+      74,
+      0,
+      118,
+      416
+     ],
+     "offset": 0
+    },
+    {
+     "dst": [
+      121,
+      0,
+      135,
+      416
+     ],
+     "src": [
+      153,
+      0,
+      167,
+      416
+     ],
+     "offset": 32
+    },
+    {
+     "dst": [
+      171,
+      0,
+      227,
+      416
+     ],
+     "src": [
+      203,
+      0,
+      259,
+      416
+     ],
+     "offset": 64
+    },
+    {
+     "dst": [
+      285,
+      0,
+      341,
+      416
+     ],
+     "src": [
+      485,
+      0,
+      541,
+      416
+     ],
+     "offset": 16
+    },
+    {
+     "dst": [
+      377,
+      0,
+      391,
+      416
+     ],
+     "src": [
+      577,
+      0,
+      591,
+      416
+     ],
+     "offset": 80
+    },
+    {
+     "dst": [
+      426,
+      0,
+      470,
+      416
+     ],
+     "src": [
+      626,
+      0,
+      670,
+      416
+     ],
+     "offset": 48
+    }
+   ],
+   "note": "NEW movement on native pixels, not an official cycle"
+  },
+  {
+   "layer": "04_bassins",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    40,
+    520,
+    312,
+    700
+   ],
+   "position": [
+    8,
+    352
+   ]
+  },
+  {
+   "layer": "04_bassins",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    432,
+    520,
+    704,
+    700
+   ],
+   "position": [
+    232,
+    352
+   ]
+  },
+  {
+   "layer": "04_bassins",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    190,
+    710,
+    270,
+    790
+   ],
+   "position": [
+    140,
+    560
+   ]
+  },
+  {
+   "layer": "04_bassins",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    480,
+    710,
+    560,
+    790
+   ],
+   "position": [
+    292,
+    560
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "Southern_Jungle_exit_2_S.png",
+   "rect": [
+    160,
+    60,
+    300,
+    160
+   ],
+   "position": [
+    0,
+    520
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "Southern_Jungle_exit_2_S.png",
+   "rect": [
+    340,
+    60,
+    480,
+    160
+   ],
+   "position": [
+    372,
+    520
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    274,
+    900,
+    334,
+    940
+   ],
+   "position": [
+    45,
+    500
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    466,
+    900,
+    526,
+    940
+   ],
+   "position": [
+    407,
+    500
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    272,
+    760,
+    320,
+    970
+   ],
+   "position": [
+    0,
+    430
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    480,
+    760,
+    528,
+    970
+   ],
+   "position": [
+    464,
+    430
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    270,
+    800,
+    330,
+    860
+   ],
+   "position": [
+    140,
+    500
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    470,
+    800,
+    530,
+    860
+   ],
+   "position": [
+    310,
+    505
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    285,
+    635,
+    320,
+    670
+   ],
+   "position": [
+    185,
+    590
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    425,
+    635,
+    460,
+    670
+   ],
+   "position": [
+    300,
+    595
+   ]
+  },
+  {
+   "layer": "05_vegetation",
+   "source": "junglewaterfallzonepmdsky.png",
+   "rect": [
+    384,
+    752,
+    400,
+    768
+   ],
+   "position": [
+    248,
+    590
+   ]
+  }
+ ],
+ "runtime": "NOT TESTED",
+ "art_approved": false,
+ "notes": [
+  "Guide genere utilise pour la composition uniquement ; ses pixels ne sont dans aucun export.",
+  "Rebord source du guide rejete : chutes coupees au bord haut.",
+  "Pieds des chutes en pleine ecume (jonction anime/statique dans la turbulence blanche) ; colonnes masquees dans 04_bassins jusqu'a dst y416.",
+  "Aucune rotation/miroir/echelle/recoloration. Coutures sol sans fondu."
+ ]
+}
