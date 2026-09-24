@@ -39,3 +39,13 @@ parasites (blobs ew, trou U t) -> A REPRENDRE en bande/tige HERBE comme ns
 (log V4 : chemin = herbe, pas dirt) ; fleurs = herbe+bouquets (copie ref) ->
 salvage prévu par partition couleurs V3 au build (pas de reprise).
 Reste : reprises chemin ew+t + traversee/laterale/clairiere (12) = 14 générations.
+
+## V4 — traversee + laterale + reprises chemin (24 septembre 2026, 10/10)
+Reprises chemin ew (bande herbe) + t (T herbe) OK. Sols v1 traversee/laterale
+avec ARBRES (murs d'arbres) -> repris SANS arbres (rims buissonnants) : OK
+(note : 2 moignons troncs haut sol traversee, caches par bordure V3).
+fleurs traversee/laterale SANS ref (texte seul) : bouquets isoles magenta OK.
+Echec : chemins traversee/laterale = COPIES du sol (ref trop suivie) ->
+A REPRENDRE texte seul (bande N-S / L W+S positionnes). Rochers
+traversee/laterale reportes. Fleurs ew/t : salvage partition couleurs V3.
+Reste : clairiere(4) + rochers trav/lat(2) + chemins trav/lat(2) = 8 generations.
