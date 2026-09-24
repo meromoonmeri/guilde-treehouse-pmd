@@ -49,3 +49,22 @@ Echec : chemins traversee/laterale = COPIES du sol (ref trop suivie) ->
 A REPRENDRE texte seul (bande N-S / L W+S positionnes). Rochers
 traversee/laterale reportes. Fleurs ew/t : salvage partition couleurs V3.
 Reste : clairiere(4) + rochers trav/lat(2) + chemins trav/lat(2) = 8 generations.
+
+## V4 — 7/7 : clairiere + integrations (24 septembre 2026, 10/10)
+Clairiere : sol 4-voies (N/S/E/W + rond central) OK ; chemin CROIX texte seul
+OK ; fleurs texte seul (~90% magenta, ~16 bouquets) OK ; rochers = copie sol.
+Chemin traversee retry texte seul : bande N-S OK. Chemin laterale : 3 retries
+texte seul ; coords pixel ignorees (#1=#2 : L haut-droit, tige rate encoche S)
+-> #3 ancre semantique « centre » (barre OK, tige ~40px droite) + SHIFT
+scripté (-40,0) 8px dans build_v4 (repositionnement rigide, classe V1 gravity).
+Rochers salles/clairiere = copies -> partition gris scriptée (cores neutres +
+outlines adjacents, trous bouchés, >60px gris). Fleurs ew/t -> partition V3
+pétales + feuillage sombre voisin (V4-bouquet). Rock-rules salles neuves
+uniquement (précédent ns/carrefour figé, hash vérifié) : composantes
+60..15000px + jamais sur chemin dilaté 4px (pistes lisibles). Effets : sol
+cobble traversee éjecté (05 vide), murs ew éjectés (05 vide), pile centrale t
+dégagée. couloir_t : 04 vide (sol couvre toute V3) -> TRANSPLANT scripté de 6
+buissons ns (<=64px) aux coins (ancres 8px fixes, hors-sol vérifié).
+V5 régénéré (nappes vides gérées) + verify OK 7/7 + galerie V5 + 8 zips
+workspace (7 SALLE + COMMUN, non committés : redondants avec renders/ suivis).
+Budget falaises+jardin du tour épuisé (10/10).

@@ -120,18 +120,18 @@
         "08_acces_W"
       ],
       "optional": [],
-      "flower_px": 1741,
+      "flower_px": 5523,
       "chemin_px": 62130,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition",
+      "source": "v4_layouts",
       "v5": {
         "nue": true,
-        "rochers_sprites": 9,
-        "rochers_px_kept_pct": 96.9,
-        "buissons_sprites": 20,
+        "rochers_sprites": 0,
+        "rochers_px_kept_pct": 0.0,
+        "buissons_sprites": 13,
         "veg_frames": 4,
         "veg_cadence_ms": 200
       }
@@ -178,23 +178,23 @@
         "05_rochers",
         "06_fleurs",
         "07_bordure_jungle",
-        "08_acces_N",
         "08_acces_E",
+        "08_acces_N",
         "08_acces_W"
       ],
       "optional": [],
-      "flower_px": 1112,
+      "flower_px": 3229,
       "chemin_px": 83506,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition",
+      "source": "v4_layouts",
       "v5": {
         "nue": true,
-        "rochers_sprites": 6,
-        "rochers_px_kept_pct": 89.3,
-        "buissons_sprites": 2,
+        "rochers_sprites": 37,
+        "rochers_px_kept_pct": 100.0,
+        "buissons_sprites": 5,
         "veg_frames": 4,
         "veg_cadence_ms": 200
       }
@@ -236,18 +236,18 @@
         "08_acces_S"
       ],
       "optional": [],
-      "flower_px": 2242,
+      "flower_px": 14891,
       "chemin_px": 76202,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition",
+      "source": "v4_layouts",
       "v5": {
         "nue": true,
-        "rochers_sprites": 11,
-        "rochers_px_kept_pct": 89.9,
-        "buissons_sprites": 21,
+        "rochers_sprites": 0,
+        "rochers_px_kept_pct": 0.0,
+        "buissons_sprites": 16,
         "veg_frames": 4,
         "veg_cadence_ms": 200
       }
@@ -285,22 +285,22 @@
         "05_rochers",
         "06_fleurs",
         "07_bordure_jungle",
-        "08_acces_W",
-        "08_acces_S"
+        "08_acces_S",
+        "08_acces_W"
       ],
       "optional": [],
-      "flower_px": 2576,
+      "flower_px": 16232,
       "chemin_px": 76888,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition",
+      "source": "v4_layouts",
       "v5": {
         "nue": true,
-        "rochers_sprites": 12,
-        "rochers_px_kept_pct": 94.6,
-        "buissons_sprites": 34,
+        "rochers_sprites": 18,
+        "rochers_px_kept_pct": 100.0,
+        "buissons_sprites": 18,
         "veg_frames": 4,
         "veg_cadence_ms": 200
       }
@@ -429,24 +429,24 @@
         "05_rochers",
         "06_fleurs",
         "07_bordure_jungle",
+        "08_acces_E",
         "08_acces_N",
         "08_acces_S",
-        "08_acces_E",
         "08_acces_W"
       ],
       "optional": [],
-      "flower_px": 2425,
+      "flower_px": 21948,
       "chemin_px": 80206,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition",
+      "source": "v4_layouts",
       "v5": {
         "nue": true,
-        "rochers_sprites": 14,
-        "rochers_px_kept_pct": 92.1,
-        "buissons_sprites": 16,
+        "rochers_sprites": 5,
+        "rochers_px_kept_pct": 100.0,
+        "buissons_sprites": 10,
         "veg_frames": 4,
         "veg_cadence_ms": 200
       }

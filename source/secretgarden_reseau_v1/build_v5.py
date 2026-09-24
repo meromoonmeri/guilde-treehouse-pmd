@@ -110,7 +110,10 @@ for e in m['rooms']:
         cell = rarr[y0:y1, x0:x1].copy()
         cell[rock_lab[y0:y1, x0:x1] != c['id']] = 0
         rcells.append(Image.fromarray(cell))
-    rp, rrects, rcell = sheet(rcells)
+    if rcells:
+        rp, rrects, rcell = sheet(rcells)
+    else:  # room without rocks (ew/traversee): empty sheet stays consistent
+        rp, rrects, rcell = Image.new('RGBA', (1, 1), (0, 0, 0, 0)), [], (0, 0)
     save(rp, d / 'rochers_tilesheet.png')
     (d / 'rochers_manifest.json').write_text(json.dumps(
         {'cell': list(rcell), 'cols': COLS, 'sprites': [

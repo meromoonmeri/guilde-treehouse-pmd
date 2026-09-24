@@ -18,7 +18,7 @@ Galerie autonome : **`apercu_jardin_secret_reseau_v1.html`** à la racine (fleur
 
 Référence `secretgarden.png` (408×408, SHA-256 dans `manifest.json`) → générations guidées sur magenta (7 terrains + 7 bordures jungle) → inspection des ouvertures → détourage → partitions matière et calques → vérification. Bordures guidées aussi par `Southern_Jungle_entrance_S.png` (SHA-256 dans le manifeste).
 
-Les terrains et bordures sont des **images générées guidées par les références**, pas des cartes natives pixel-identiques. Bruts conservés dans `bruts/` et `bordures_jungle/` (anciennes bordures jardin en `bordures/`, archives). Journal : `source/secretgarden_reseau_v1/GENERATION_LOG.md`.
+Les 7 salles sont en **V4 layouts séparés** : sol/chemin/fleurs/rochers générés chacun sur magenta (texte seul quand la ref copiait trop), assemblés par règles scriptées (`build_v4.py` : partitions salvage, rock-rules, shift L latérale, transplant buissons du T ; précédent ns/carrefour figé). Terrains et bordures restent des **images générées guidées par les références**, pas des cartes natives pixel-identiques. Bruts conservés dans `bruts/` et `bordures_jungle/` (anciennes bordures jardin en `bordures/`, archives). Journal : `source/secretgarden_reseau_v1/GENERATION_LOG.md`.
 
 ## Calques (par zone, au choix)
 
@@ -33,7 +33,7 @@ Chaque dossier de pièce contient :
 7. `07_bordure_jungle.png` — végétation bordure feuillue style jungle PMD (lianes, grosses feuilles), fenêtres dégagées aux accès
 8. Un `08_acces_N/S/E/W.png` **par accès**, indépendant.
 
-Puis `composition.png`, `composition_animee.gif`, `terrain_detoure.png`, `schema.png` et le projet OpenRaster `<piece>.ora`. **68 calques alignés**, tous en 512×512 placés en (0,0).
+Puis `composition.png`, `composition_animee.gif`, `terrain_detoure.png`, `schema.png` et le projet OpenRaster `<piece>.ora`. Sémantique V4 : chemin ⊆ sol, végétation hors-sol, rochers/fleurs sur sol|végétation ; couloir_ew et salle_traversee sans rochers (générations éjectées par les règles), couloir_t sans arbres (buissons transplantés). **68 calques alignés**, tous en 512×512 placés en (0,0).
 
 Les couches 01 à 06 sont des partitions disjointes des surfaces visibles : leur recomposition redonne exactement le terrain détouré (seuils dans `build_v3.py`). Elles ne reconstruisent pas le dessous de la végétation. La bordure jungle est un avant-plan généré à part ; ses fenêtres (104×88) sont dégagées par script à chaque accès. La V2 (fond/cimes/premier plan/troncs séparés) reste dans l'historique git.
 
@@ -67,3 +67,7 @@ Par zone, sans nouvelle génération (pixels existants uniquement) :
 - `rochers_tilesheet.png` + `rochers_manifest.json` : sprites de rochers individuels (composantes ≥60px, cases uniformes, 8 colonnes). Total réseau : 88 sprites + planche `rochers_TOUTES_ZONES.png`.
 - `vegetation/veg_f0..3.png` : arbres+buissons fusionnés, balancement ±1px et pulsation (200ms, synchronisés avec les fleurs) ; `vegetation_frames.png` (bande 4 phases) ; `buissons_spritesheet.png` + manifeste (lignes = buissons isolés ≤128px, colonnes = 4 phases ; 127 sprites ; les nappes connectées restent dans les phases).
 - La galerie propose la végétation animée (remplace 03+04 quand activée), le bouton « vue nue » et les liens de téléchargement par zone.
+
+## Packs (non suivis, reproductibles)
+
+8 zips en workspace : `jardin_secret_SALLE_<piece>_v5.zip` (×7) + `jardin_secret_COMMUN_v5.zip` (galerie + manifeste + planche + matériaux + nappes globales + `layouts/` sources). Contenu byte-exact des fichiers suivis ; rebuild : `zip -qr jardin_secret_SALLE_<slug>_v5.zip renders/secretgarden_reseau_v1/<slug>`.
