@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "scenes": 7,
   "aligned_layers": 68,
   "ports": 19,
@@ -8,7 +8,7 @@
   "checks": [
     "Reference SHA256 identical since build",
     "7 compositions identical to full static stack",
-    "Terrain partitions 01..06 exact on all rooms",
+    "V3 rooms: terrain partitions 01..06 exact; V4 rooms: zone constraints (chemin, veg, rochers, fleurs)",
     "All layers 512x512; border port windows clear",
     "Flower f0==static, 4 distinct frames, loop closed",
     "7 GIFs 4x200ms; 7 ORAs readable with full stacks",

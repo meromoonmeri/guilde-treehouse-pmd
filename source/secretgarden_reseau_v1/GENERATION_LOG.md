@@ -12,3 +12,14 @@ Terrains inchangés. Nouveau schéma : 01_sol (rives), 02_chemin (bande centrale
 géométrique, érosion 15px), 03_arbres (cimes claires + troncs, toutes profondeurs),
 04_buissons (verts sombres), 05_rochers, 06_fleurs (+4 phases), 07_bordure_jungle,
 08_acces. V2 (fond/cimes/premier plan/troncs séparés) dans l'historique git.
+
+## V4 — layouts séparés sol/chemin/fleurs/rochers (24 septembre 2026, 2 zones)
+Passage progressif : chaque élément généré seul sur magenta (mêmes noms de couches).
+Ce tour (10/10) : couloir_ns + salle_carrefour (4+4), +reprise chemin carrefour
+(était beige dirt -> herbe), +reprise fleurs carrefour (guirlandes denses ->
+bouquets clairsemés). Assemblage : chemin⊆sol, végétation V3 rognée hors nouveau
+sol, rochers/fleurs⊆(sol|végétation). Bordure jungle + accès V3 inchangés.
+Restent : ew, t, traversee, laterale, clairiere (20 générations).
+Note sandbox : 5e réinitialisation vue sur le projet ; historique réintégré
+(fetch + reset --hard sur origin ce22a6eb), stash redondant jeté, layouts
+sauvegardés/restaurés depuis /tmp, .venv reconstruite.

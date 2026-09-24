@@ -1,6 +1,6 @@
 {
   "reference": "secretgarden.png (user commit)",
-  "version": 3,
+  "version": 4,
   "reference_sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f",
   "jungle_reference": "Southern_Jungle_entrance_S.png",
   "jungle_reference_sha256": "c072590a2c07853be0185eab60e6f9f0023ce707548b3e4038f7993f28dc1e77",
@@ -67,12 +67,13 @@
         "08_acces_S"
       ],
       "optional": [],
-      "flower_px": 1563,
+      "flower_px": 5439,
       "chemin_px": 90931,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v4_layouts"
     },
     {
       "id": "couloir_ew",
@@ -116,7 +117,8 @@
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v3_partition"
     },
     {
       "id": "couloir_t",
@@ -170,7 +172,8 @@
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v3_partition"
     },
     {
       "id": "salle_traversee",
@@ -214,7 +217,8 @@
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v3_partition"
     },
     {
       "id": "salle_laterale",
@@ -258,7 +262,8 @@
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v3_partition"
     },
     {
       "id": "salle_carrefour",
@@ -311,18 +316,19 @@
         "05_rochers",
         "06_fleurs",
         "07_bordure_jungle",
+        "08_acces_E",
         "08_acces_N",
         "08_acces_S",
-        "08_acces_E",
         "08_acces_W"
       ],
       "optional": [],
-      "flower_px": 1539,
+      "flower_px": 1143,
       "chemin_px": 87057,
       "checks": {
-        "partitions_exact": true,
+        "zone_constraints": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v4_layouts"
     },
     {
       "id": "carrefour_clairiere",
@@ -386,7 +392,9 @@
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
-      }
+      },
+      "source": "v3_partition"
     }
-  ]
+  ],
+  "v4_note": "separate generated layouts sol/chemin/fleurs/rochers; vegetation clipped outside new ground; nothing floats in void"
 }

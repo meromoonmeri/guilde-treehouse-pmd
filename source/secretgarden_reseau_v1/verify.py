@@ -6,7 +6,7 @@ from PIL import Image
 R = Path(__file__).resolve().parents[2]
 O = R / 'renders/secretgarden_reseau_v1'
 m = json.loads((O / 'manifest.json').read_text())
-assert m.get('version') == 3
+assert m.get('version') == 4
 count = 0
 
 ref = R / 'secretgarden.png'
@@ -30,11 +30,20 @@ for e in m['rooms']:
         if name not in e['optional']:
             im.alpha_composite(layer)
     assert np.array_equal(np.array(im), np.array(load(d / 'composition.png'))), e['id']
-    # terrain partition 01..08 exact
-    t = Image.new('RGBA', (512, 512))
-    for name in ['01_sol', '02_chemin', '03_arbres', '04_buissons', '05_rochers', '06_fleurs']:
-        t.alpha_composite(load(d / (name + '.png')))
-    assert np.array_equal(np.array(t), np.array(load(d / 'terrain_detoure.png'))), (e['id'], 'partition')
+    if e.get('source', 'v3_partition') == 'v3_partition':
+        t = Image.new('RGBA', (512, 512))
+        for name in ['01_sol', '02_chemin', '03_arbres', '04_buissons', '05_rochers', '06_fleurs']:
+            t.alpha_composite(load(d / (name + '.png')))
+        assert np.array_equal(np.array(t), np.array(load(d / 'terrain_detoure.png'))), (e['id'], 'partition')
+    else:
+        lay = {n: np.array(load(d / (n + '.png')))[:, :, 3] > 0 for n in
+               ['01_sol', '02_chemin', '03_arbres', '04_buissons', '05_rochers', '06_fleurs']}
+        ground = lay['01_sol'] | lay['02_chemin']
+        veg = lay['03_arbres'] | lay['04_buissons']
+        assert (lay['02_chemin'] & ~ground).sum() == 0, (e['id'], 'chemin')
+        assert (veg & ground).sum() == 0, (e['id'], 'veg')
+        assert (lay['05_rochers'] & ~(ground | veg)).sum() == 0, (e['id'], 'rochers')
+        assert (lay['06_fleurs'] & ~(ground | veg)).sum() == 0, (e['id'], 'fleurs')
     # ports opaque in final composition
     comp = np.array(load(d / 'composition.png'))
     for p in e['ports']:
@@ -67,12 +76,12 @@ box = tuple(m['patch_box'])
 assert np.array_equal(np.array(load(O / 'materiaux/sol_raccord_natif.png')),
                      np.array(load(ref).crop(box))), 'native patch'
 
-report = {'version': 3, 'scenes': len(m['rooms']), 'aligned_layers': count,
+report = {'version': 4, 'scenes': len(m['rooms']), 'aligned_layers': count,
           'ports': sum(len(e['ports']) for e in m['rooms']),
           'flower_frames_per_room': 4, 'flower_cadence_ms': 200,
           'checks': ['Reference SHA256 identical since build',
                      '7 compositions identical to full static stack',
-                     'Terrain partitions 01..06 exact on all rooms',
+                     'V3 rooms: terrain partitions 01..06 exact; V4 rooms: zone constraints (chemin, veg, rochers, fleurs)',
                      'All layers 512x512; border port windows clear',
                      'Flower f0==static, 4 distinct frames, loop closed',
                      '7 GIFs 4x200ms; 7 ORAs readable with full stacks',

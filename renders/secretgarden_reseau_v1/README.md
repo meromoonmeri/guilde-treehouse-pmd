@@ -1,4 +1,4 @@
-# Jardin secret — réseau connectable style Ledian (V3)
+# Jardin secret — réseau connectable style Ledian (V4)
 
 Galerie autonome : **`apercu_jardin_secret_reseau_v1.html`** à la racine (fleurs animées, pause, pas à pas). [Planche des sept pièces](PLANCHE.png).
 
@@ -54,3 +54,7 @@ Leur bande de raccord utilise l'extrait natif `secretgarden.png` (190,240)-(222,
 `verification.json` : références inchangées, 7 compositions recomposées, partitions exactes, 68 calques 512×512, fenêtres de bordure, 4 phases distinctes en boucle, 7 GIF 4×200ms, 7 ORA relus, patch natif identique, 19 bandes opaques. Scripts : `source/secretgarden_reseau_v1/{build_v3,gallery,verify}.py` (Pillow, numpy, scipy).
 
 **Rendus statiques hors fleurs, pas de validation PMDO.** Aucun nouveau `.rsground` livré.
+
+## V4 — layouts séparés (en cours : 2/7 zones)
+
+`couloir_ns` et `salle_carrefour` sont reconstruits depuis **4 layouts générés séparément** (`layouts/<zone>/{sol,chemin,fleurs,rochers}.png`) au lieu d'une partition d'un seul terrain. Règles d'assemblage : chemin strictement sur sol, végétation V3 rognée hors nouveau sol, rochers/fleurs uniquement sur sol ou végétation (rien dans le vide). Bordure jungle et accès inchangés. Les 5 autres zones gardent leurs couches V3 (mêmes noms de fichiers) en attendant leurs layouts.
