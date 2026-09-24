@@ -1,0 +1,205 @@
+[
+ {
+  "zone": "renders/foret_mystere_magenta_v1",
+  "layers": {
+   "ForetMystereMagentaV1_01_sol.png": [
+    [
+     "grille_8px",
+     true,
+     "440x592"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "260480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "94 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.01 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "ForetMystereMagentaV1_02_herbes_hautes.png": [
+    [
+     "grille_8px",
+     true,
+     "440x592"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "28672 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "6 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "ForetMystereMagentaV1_03_rochers.png": [
+    [
+     "grille_8px",
+     true,
+     "440x592"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "4129 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "33 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "ForetMystereMagentaV1_04_troncs_racines.png": [
+    [
+     "grille_8px",
+     true,
+     "440x592"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "16246 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "84 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "ForetMystereMagentaV1_05_canopees_devant_joueur.png": [
+    [
+     "grille_8px",
+     true,
+     "440x592"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "66112 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "84 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(592, 440)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "111 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": true
+ }
+]

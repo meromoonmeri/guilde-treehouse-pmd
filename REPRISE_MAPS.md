@@ -74,3 +74,19 @@ Les succès de chargement PMDO cités dans les anciens rapports restent historiq
 Choix : nouvelle entrée de donjon sud→nord, forêt/plaine Vast Steppe (Halcyon), composition proposée par le générateur puis reconstruction en tuiles natives, PNG en calques 8 px pour PNG to Tileset. Guide de layout : `source/entree_steppe_v1/guide/` (pixels non utilisables). Relic Forest est écarté pour le sol : son herbe est incompatible avec Vast Steppe.
 
 Audit demandé par l'utilisateur : `audits/multicalques_v1/RAPPORT.md`. Contrôle bloquant `source/controle_qualite_pixel/gate.py` : 3/3 canon PASS, 0/51 multicalques générés PASS.
+
+### Forêt Mystère magenta V1 (24 septembre, suite)
+
+Corrections utilisateur :
+- pas de conversion en tuiles natives ;
+- pas de greffe de cartes existantes ;
+- pas de carte maîtresse décomposée : chaque calque est généré depuis la référence, puis composé.
+
+Chaîne : `source/foret_mystere_magenta_v1/` (`bruts/` → `process.py` → `pixels/` → `compose.py`) → `renders/foret_mystere_magenta_v1/`.
+
+Pièges notés :
+- un guide en aplats donné au générateur est recopié tel quel ;
+- donner le sol en entrée pour un calque d'objets inverse le détourage ;
+- les teintes sarcelle hors palette s'écrasent au plus proche voisin, d'où la rampe de luminance.
+
+`gate.py` accepte désormais les calques préfixés `Prefixe_NN_nom.png`. Le composite doit contenir « composite » dans son nom ; masques et revues sont ignorés. Audit inchangé : canon PASS, 0/51 générés.

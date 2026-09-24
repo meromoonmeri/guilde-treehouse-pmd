@@ -1,0 +1,490 @@
+{
+ "titre": "Forêt Mystère — entrée de donjon sud → nord (calques générés sur magenta)",
+ "taille": [
+  440,
+  592
+ ],
+ "grille_px": 8,
+ "import_pmdo": "PNG to Tileset, tuiles de 8 px",
+ "reference": {
+  "fichier": "Mystifying_Forest_entrance_TDS.png",
+  "sha256": "9f45d140aebe5559d9d1ea8d5891825d4450e7a550ba30d6be97af1af9e3e941"
+ },
+ "methode": [
+  "4 générations indépendantes depuis la référence : sol plein cadre, arbres, rochers, herbes hautes sur magenta.",
+  "Clé magenta explicite (teinte + frange), alpha binaire.",
+  "Faux pixels 2 px du générateur -> grille 1:1 par vote majoritaire (phase détectée), sans LANCZOS/BILINEAR.",
+  "Herbes hautes : modelé du brut conservé par rampe de luminance sur 6 verts exacts de la référence.",
+  "Toutes les couleurs ramenées à la palette exacte de la référence (118 couleurs, plus proche voisin Lab).",
+  "Couleurs vues sur < 4 px d'un calque de sprites fusionnées vers la couleur fréquente la plus proche du calque.",
+  "Composition manuelle des sprites ; arbres séparés en canopée (devant) et bois (derrière) par couleur."
+ ],
+ "pixels": "Dessin GÉNÉRÉ dans la palette canonique : ce ne sont pas des tuiles natives extraites.",
+ "bruts_sha256": {
+  "01_sol.png": "ed0cfb4ad2f55051be1e03e84c83d378835a7efd5bd8db79a9421cef55057db0",
+  "02_arbres_magenta.png": "0be3fb694c3c6ed34912c9b813751ec646b12c1507c8f71d3c8692cd0f1eb3d5",
+  "03_rochers_magenta.png": "9fabb8ec2a3c40a03ab9c1c1ffe9475bbb9c9e41da29265ce7c774c4f9d9c61c",
+  "04_herbes_hautes_magenta.png": "bbb908b7c473ec21d87b947896f0aa6a43b45c3a91f5be717e66392df703bc63"
+ },
+ "calques": [
+  "ForetMystereMagentaV1_01_sol.png",
+  "ForetMystereMagentaV1_02_herbes_hautes.png",
+  "ForetMystereMagentaV1_03_rochers.png",
+  "ForetMystereMagentaV1_04_troncs_racines.png",
+  "ForetMystereMagentaV1_05_canopees_devant_joueur.png"
+ ],
+ "ordre_empilement": [
+  "ForetMystereMagentaV1_01_sol.png",
+  "ForetMystereMagentaV1_02_herbes_hautes.png",
+  "ForetMystereMagentaV1_03_rochers.png",
+  "ForetMystereMagentaV1_04_troncs_racines.png",
+  "ForetMystereMagentaV1_05_canopees_devant_joueur.png"
+ ],
+ "entree_nord_approx": [
+  304,
+  20
+ ],
+ "arrivee_sud_approx": [
+  222,
+  584
+ ],
+ "generations": {
+  "sol": {
+   "source": "01_sol.png",
+   "grid_phase": [
+    1,
+    1
+   ],
+   "factor": 2,
+   "size_1x": [
+    447,
+    599
+   ],
+   "palette_colors": 118,
+   "mapping": "plus proche voisin Lab"
+  },
+  "arbres": {
+   "source": "02_arbres_magenta.png",
+   "grid_phase": [
+    1,
+    1
+   ],
+   "factor": 2,
+   "size_1x": [
+    447,
+    599
+   ],
+   "palette_colors": 118,
+   "mapping": "plus proche voisin Lab"
+  },
+  "rochers": {
+   "source": "03_rochers_magenta.png",
+   "grid_phase": [
+    1,
+    0
+   ],
+   "factor": 2,
+   "size_1x": [
+    561,
+    472
+   ],
+   "palette_colors": 118,
+   "mapping": "plus proche voisin Lab"
+  },
+  "herbes": {
+   "source": "04_herbes_hautes_magenta.png",
+   "grid_phase": [
+    1,
+    1
+   ],
+   "factor": 2,
+   "size_1x": [
+    561,
+    471
+   ],
+   "palette_colors": 118,
+   "mapping": "rampe de luminance"
+  }
+ },
+ "placements": [
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 13,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    144,
+    362,
+    283,
+    455
+   ],
+   "position": [
+    -10,
+    508
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 11,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    414,
+    254,
+    545,
+    347
+   ],
+   "position": [
+    322,
+    502
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 16,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    357,
+    398,
+    398,
+    434
+   ],
+   "position": [
+    104,
+    244
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 12,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    317,
+    273,
+    370,
+    339
+   ],
+   "position": [
+    352,
+    262
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 15,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    478,
+    380,
+    532,
+    445
+   ],
+   "position": [
+    62,
+    372
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 6,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    201,
+    139,
+    255,
+    204
+   ],
+   "position": [
+    262,
+    498
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 8,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    475,
+    151,
+    528,
+    218
+   ],
+   "position": [
+    146,
+    520
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 3,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    33,
+    29,
+    72,
+    80
+   ],
+   "position": [
+    238,
+    20
+   ]
+  },
+  {
+   "calque": "02_herbes_hautes",
+   "sprite": 10,
+   "source": "04_herbes_hautes_magenta.png",
+   "boite_source_1x": [
+    213,
+    254,
+    267,
+    320
+   ],
+   "position": [
+    16,
+    60
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 20,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    197,
+    398,
+    233,
+    441
+   ],
+   "position": [
+    236,
+    66
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 9,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    368,
+    171,
+    403,
+    195
+   ],
+   "position": [
+    332,
+    104
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 4,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    307,
+    106,
+    320,
+    118
+   ],
+   "position": [
+    262,
+    118
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 5,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    143,
+    119,
+    161,
+    131
+   ],
+   "position": [
+    206,
+    150
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 14,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    189,
+    333,
+    221,
+    357
+   ],
+   "position": [
+    132,
+    186
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 16,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    401,
+    348,
+    418,
+    360
+   ],
+   "position": [
+    300,
+    222
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 21,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    461,
+    401,
+    478,
+    412
+   ],
+   "position": [
+    252,
+    296
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 17,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    143,
+    349,
+    160,
+    360
+   ],
+   "position": [
+    176,
+    318
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 19,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    46,
+    387,
+    82,
+    412
+   ],
+   "position": [
+    86,
+    470
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 15,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    341,
+    333,
+    372,
+    357
+   ],
+   "position": [
+    318,
+    492
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 22,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    113,
+    408,
+    130,
+    420
+   ],
+   "position": [
+    118,
+    552
+   ]
+  },
+  {
+   "calque": "03_rochers",
+   "sprite": 8,
+   "source": "03_rochers_magenta.png",
+   "boite_source_1x": [
+    241,
+    159,
+    253,
+    171
+   ],
+   "position": [
+    240,
+    560
+   ]
+  },
+  {
+   "calque": "04+05",
+   "sprite": 5,
+   "source": "02_arbres_magenta.png",
+   "boite_source_1x": [
+    0,
+    149,
+    134,
+    585
+   ],
+   "position": [
+    -44,
+    72
+   ]
+  },
+  {
+   "calque": "04+05",
+   "sprite": 1,
+   "source": "02_arbres_magenta.png",
+   "boite_source_1x": [
+    0,
+    0,
+    201,
+    159
+   ],
+   "position": [
+    44,
+    -6
+   ]
+  },
+  {
+   "calque": "04+05",
+   "sprite": 6,
+   "source": "02_arbres_magenta.png",
+   "boite_source_1x": [
+    313,
+    163,
+    443,
+    573
+   ],
+   "position": [
+    334,
+    128
+   ]
+  },
+  {
+   "calque": "04+05",
+   "sprite": 2,
+   "source": "02_arbres_magenta.png",
+   "boite_source_1x": [
+    246,
+    0,
+    447,
+    159
+   ],
+   "position": [
+    326,
+    -8
+   ]
+  }
+ ],
+ "limites": [
+  "Collisions, warps et occlusion à configurer dans PMDO ; non testés.",
+  "Art non encore validé par l'utilisateur."
+ ]
+}

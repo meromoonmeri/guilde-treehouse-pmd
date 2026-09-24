@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Forêt Mystère — entrée de donjon sud → nord, calques générés sur magenta
+
+- **[Aperçu avec calques activables](renders/foret_mystere_magenta_v1/apercu_calques.html)** · [composite](renders/foret_mystere_magenta_v1/composite.png) · [méthode et provenance](renders/foret_mystere_magenta_v1/README.md).
+
+Cinq calques 440×592 (grille 8 px) : sol, herbes hautes, rochers, troncs/racines, canopées. Chaque calque est **généré** depuis la référence Mystifying Forest, ramené en vrais pixels 1:1 dans sa palette exacte (118 couleurs), puis composé par l'agent. Ce ne sont pas des tuiles natives. `gate.py` PASS et 6 tests PASS ; PMDO non testé.
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.

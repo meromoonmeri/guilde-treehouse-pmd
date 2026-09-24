@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -58,10 +59,16 @@ def layer_checks(p: Path, a: np.ndarray) -> list[tuple[str, bool, str]]:
     return res
 
 
+LAYER_RE = re.compile(r"(?:^|_)(\d{2})_")
+
+
 def zone_checks(zone: Path) -> dict:
     pngs = sorted(zone.glob("*.png"))
-    layers = [p for p in pngs if p.name[:2].isdigit()]
-    others = [p for p in pngs if not p.name[:2].isdigit()]
+    # calque = « NN_nom.png » ou « Prefixe_NN_nom.png » (préfixe unique exigé par l'import PMDO)
+    num = {p: LAYER_RE.search(p.name) for p in pngs}
+    layers = sorted((p for p in pngs if num[p]), key=lambda p: (int(num[p].group(1)), p.name))
+    # composite = PNG non numéroté dont le nom contient « composite » (masques/revues ignorés)
+    others = [p for p in pngs if not num[p] and "composite" in p.name.lower()]
     report = {"zone": str(zone), "layers": {}, "zone_checks": [], "pass": True}
     if not layers:
         report["zone_checks"].append(("calques_numerotes_presents", False, "aucun calque NN_*.png"))
