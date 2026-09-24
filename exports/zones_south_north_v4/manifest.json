@@ -1,0 +1,755 @@
+{
+  "maps": [
+    {
+      "id": "arid_cave_entrance",
+      "title": "Entree aride — sud vers la bouche de grotte au nord",
+      "size": [
+        480,
+        384
+      ],
+      "orientation": "SOUTH_TO_NORTH",
+      "entrance": [
+        240,
+        104
+      ],
+      "entrance_trigger_candidate": [
+        224,
+        96,
+        32,
+        16
+      ],
+      "south_access": [
+        208,
+        376,
+        64,
+        8
+      ],
+      "exits": [
+        [
+          240,
+          104
+        ]
+      ],
+      "layers": [
+        {
+          "id": "01_sand_ground",
+          "file": "SouthNorthV4_arid_cave_entrance_01_sand_ground.png",
+          "provenance": "01_sand_ground_source.npz"
+        },
+        {
+          "id": "02_sand_path",
+          "file": "SouthNorthV4_arid_cave_entrance_02_sand_path.png",
+          "provenance": "02_sand_path_source.npz"
+        },
+        {
+          "id": "03_north_wall",
+          "file": "SouthNorthV4_arid_cave_entrance_03_north_wall.png",
+          "provenance": "03_north_wall_source.npz"
+        },
+        {
+          "id": "04_wall_feet",
+          "file": "SouthNorthV4_arid_cave_entrance_04_wall_feet.png",
+          "provenance": "04_wall_feet_source.npz"
+        },
+        {
+          "id": "05_cave_entrance",
+          "file": "SouthNorthV4_arid_cave_entrance_05_cave_entrance.png",
+          "provenance": "05_cave_entrance_source.npz"
+        },
+        {
+          "id": "06_dead_trees",
+          "file": "SouthNorthV4_arid_cave_entrance_06_dead_trees.png",
+          "provenance": "06_dead_trees_source.npz"
+        },
+        {
+          "id": "07_rocks",
+          "file": "SouthNorthV4_arid_cave_entrance_07_rocks.png",
+          "provenance": "07_rocks_source.npz"
+        },
+        {
+          "id": "08_pebbles",
+          "file": "SouthNorthV4_arid_cave_entrance_08_pebbles.png",
+          "provenance": "08_pebbles_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_sand_ground",
+          "source": 0,
+          "method": "native ground patch overlap, no blending",
+          "patches": 15949,
+          "seed": 12
+        },
+        {
+          "layer": "02_sand_path",
+          "source": 0,
+          "method": "native ground patch overlap, no blending",
+          "patches": 2304,
+          "seed": 19
+        },
+        {
+          "layer": "03_north_wall",
+          "source": 0,
+          "rect": [
+            0,
+            0,
+            166,
+            112
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "layer": "03_north_wall",
+          "source": 0,
+          "rect": [
+            246,
+            0,
+            408,
+            112
+          ],
+          "position": [
+            166,
+            0
+          ]
+        },
+        {
+          "layer": "03_north_wall",
+          "source": 0,
+          "rect": [
+            246,
+            0,
+            408,
+            112
+          ],
+          "position": [
+            318,
+            0
+          ]
+        },
+        {
+          "layer": "04_wall_feet",
+          "source": 0,
+          "rect": [
+            0,
+            88,
+            166,
+            196
+          ],
+          "position": [
+            0,
+            88
+          ]
+        },
+        {
+          "layer": "04_wall_feet",
+          "source": 0,
+          "rect": [
+            246,
+            88,
+            408,
+            196
+          ],
+          "position": [
+            166,
+            88
+          ]
+        },
+        {
+          "layer": "04_wall_feet",
+          "source": 0,
+          "rect": [
+            246,
+            88,
+            408,
+            196
+          ],
+          "position": [
+            318,
+            88
+          ]
+        },
+        {
+          "layer": "05_cave_entrance",
+          "source": 0,
+          "rect": [
+            166,
+            18,
+            246,
+            100
+          ],
+          "position": [
+            200,
+            8
+          ]
+        },
+        {
+          "layer": "06_dead_trees",
+          "source": 0,
+          "rect": [
+            0,
+            140,
+            110,
+            224
+          ],
+          "position": [
+            0,
+            140
+          ]
+        },
+        {
+          "layer": "06_dead_trees",
+          "source": 0,
+          "rect": [
+            318,
+            140,
+            408,
+            224
+          ],
+          "position": [
+            318,
+            140
+          ]
+        },
+        {
+          "layer": "06_dead_trees",
+          "source": 0,
+          "rect": [
+            124,
+            116,
+            172,
+            172
+          ],
+          "position": [
+            124,
+            118
+          ]
+        },
+        {
+          "layer": "06_dead_trees",
+          "source": 0,
+          "rect": [
+            266,
+            124,
+            312,
+            176
+          ],
+          "position": [
+            266,
+            126
+          ]
+        },
+        {
+          "layer": "07_rocks",
+          "source": 0,
+          "rect": [
+            48,
+            158,
+            112,
+            212
+          ],
+          "position": [
+            48,
+            158
+          ]
+        },
+        {
+          "layer": "07_rocks",
+          "source": 0,
+          "rect": [
+            344,
+            160,
+            406,
+            216
+          ],
+          "position": [
+            344,
+            160
+          ]
+        },
+        {
+          "layer": "07_rocks",
+          "source": 0,
+          "rect": [
+            70,
+            204,
+            100,
+            224
+          ],
+          "position": [
+            360,
+            240
+          ]
+        },
+        {
+          "layer": "08_pebbles",
+          "source": 0,
+          "rect": [
+            41,
+            266,
+            47,
+            270
+          ],
+          "position": [
+            64,
+            224
+          ]
+        },
+        {
+          "layer": "08_pebbles",
+          "source": 0,
+          "rect": [
+            185,
+            226,
+            191,
+            230
+          ],
+          "position": [
+            160,
+            286
+          ]
+        },
+        {
+          "layer": "08_pebbles",
+          "source": 0,
+          "rect": [
+            297,
+            242,
+            303,
+            246
+          ],
+          "position": [
+            336,
+            258
+          ]
+        },
+        {
+          "layer": "08_pebbles",
+          "source": 0,
+          "rect": [
+            133,
+            265,
+            140,
+            271
+          ],
+          "position": [
+            232,
+            318
+          ]
+        },
+        {
+          "layer": "08_pebbles",
+          "source": 0,
+          "rect": [
+            324,
+            233,
+            332,
+            239
+          ],
+          "position": [
+            384,
+            300
+          ]
+        }
+      ],
+      "notes": "Sol, chemin, falaise et pied de falaise de la reference, bouche de grotte native deplacee au centre (source166,18,246,112). Arbres morts, rochers et cailloux translates sans miroir; les deux gros rochers quittent leur emplace d origine (trous combles par le sol natif) et sont reposes de part et d autre du chemin. Aucun pixel genere ni recolore.",
+      "runtime": "NOT TESTED",
+      "art_approved": false,
+      "connectivity": "Pixel path mask continuity only, not engine collision or warp validation."
+    },
+    {
+      "id": "purple_two_exit_cave",
+      "title": "Grotte violette — deux issues reimplantees au nord, arrivee au sud",
+      "size": [
+        424,
+        360
+      ],
+      "orientation": "SOUTH_TO_NORTH",
+      "entrance": [
+        212,
+        110
+      ],
+      "entrance_trigger_candidate": [
+        196,
+        102,
+        32,
+        16
+      ],
+      "south_access": [
+        180,
+        352,
+        64,
+        8
+      ],
+      "exits": [
+        [
+          92,
+          60
+        ],
+        [
+          332,
+          60
+        ]
+      ],
+      "layers": [
+        {
+          "id": "00_dark_backdrop",
+          "file": "SouthNorthV4_purple_two_exit_cave_00_dark_backdrop.png",
+          "provenance": "00_dark_backdrop_source.npz"
+        },
+        {
+          "id": "01_cave_floor",
+          "file": "SouthNorthV4_purple_two_exit_cave_01_cave_floor.png",
+          "provenance": "01_cave_floor_source.npz"
+        },
+        {
+          "id": "02_west_boulders",
+          "file": "SouthNorthV4_purple_two_exit_cave_02_west_boulders.png",
+          "provenance": "02_west_boulders_source.npz"
+        },
+        {
+          "id": "03_east_boulders",
+          "file": "SouthNorthV4_purple_two_exit_cave_03_east_boulders.png",
+          "provenance": "03_east_boulders_source.npz"
+        },
+        {
+          "id": "04_north_boulders",
+          "file": "SouthNorthV4_purple_two_exit_cave_04_north_boulders.png",
+          "provenance": "04_north_boulders_source.npz"
+        },
+        {
+          "id": "05_exit_west",
+          "file": "SouthNorthV4_purple_two_exit_cave_05_exit_west.png",
+          "provenance": "05_exit_west_source.npz"
+        },
+        {
+          "id": "06_exit_east",
+          "file": "SouthNorthV4_purple_two_exit_cave_06_exit_east.png",
+          "provenance": "06_exit_east_source.npz"
+        },
+        {
+          "id": "07_crystal_stars",
+          "file": "SouthNorthV4_purple_two_exit_cave_07_crystal_stars.png",
+          "provenance": "07_crystal_stars_source.npz"
+        }
+      ],
+      "operations": [
+        {
+          "layer": "01_cave_floor",
+          "source": 1,
+          "rect": [
+            40,
+            96,
+            464,
+            404
+          ],
+          "position": [
+            0,
+            52
+          ]
+        },
+        {
+          "layer": "02_west_boulders",
+          "source": 1,
+          "rect": [
+            40,
+            96,
+            464,
+            404
+          ],
+          "position": [
+            0,
+            52
+          ]
+        },
+        {
+          "layer": "03_east_boulders",
+          "source": 1,
+          "rect": [
+            40,
+            96,
+            464,
+            404
+          ],
+          "position": [
+            0,
+            52
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            204,
+            44,
+            296,
+            96
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            204,
+            44,
+            296,
+            96
+          ],
+          "position": [
+            92,
+            0
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            204,
+            44,
+            296,
+            96
+          ],
+          "position": [
+            184,
+            0
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            204,
+            44,
+            296,
+            96
+          ],
+          "position": [
+            276,
+            0
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            204,
+            44,
+            260,
+            96
+          ],
+          "position": [
+            368,
+            0
+          ]
+        },
+        {
+          "layer": "04_north_boulders",
+          "source": 1,
+          "rect": [
+            180,
+            96,
+            330,
+            170
+          ],
+          "position": [
+            180,
+            52
+          ]
+        },
+        {
+          "layer": "05_exit_west",
+          "source": 1,
+          "rect": [
+            96,
+            44,
+            208,
+            168
+          ],
+          "position": [
+            36,
+            0
+          ]
+        },
+        {
+          "layer": "06_exit_east",
+          "source": 1,
+          "rect": [
+            296,
+            44,
+            408,
+            168
+          ],
+          "position": [
+            276,
+            0
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            238,
+            170,
+            258,
+            189
+          ],
+          "position": [
+            95,
+            140
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            223,
+            174,
+            239,
+            188
+          ],
+          "position": [
+            129,
+            153
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            238,
+            181,
+            244,
+            187
+          ],
+          "position": [
+            163,
+            149
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            183,
+            195,
+            193,
+            204
+          ],
+          "position": [
+            197,
+            145
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            217,
+            197,
+            239,
+            212
+          ],
+          "position": [
+            231,
+            141
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            179,
+            198,
+            185,
+            203
+          ],
+          "position": [
+            95,
+            242
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            179,
+            202,
+            189,
+            210
+          ],
+          "position": [
+            129,
+            238
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            188,
+            204,
+            199,
+            212
+          ],
+          "position": [
+            163,
+            234
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            252,
+            219,
+            261,
+            225
+          ],
+          "position": [
+            197,
+            230
+          ]
+        },
+        {
+          "layer": "07_crystal_stars",
+          "source": 1,
+          "rect": [
+            287,
+            219,
+            297,
+            228
+          ],
+          "position": [
+            231,
+            243
+          ]
+        }
+      ],
+      "notes": "Chambre du panneau natif droit de la reference, translatee telle quelle (materiaux violets, sol mouchetee, gros cristal du bas gauche conserve sur place). Bande nord reassembledes blocs de roche natifs (aucun miroir) ; les deux bouches sombres et leurs seuils de pierres sont deplaces de source(96..208) a canvas36 et de source(296..408) a canvas276. Grappes de cristaux sombres reimplantees en dix poses. Seuil de marche entre les issues signale, sans pretendre a une collision moteur.",
+      "runtime": "NOT TESTED",
+      "art_approved": false,
+      "connectivity": "Pixel path mask continuity only, not engine collision or warp validation."
+    }
+  ],
+  "sources": [
+    {
+      "id": 0,
+      "file": "entrancearidedungeonpmdsky.png",
+      "sha256": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a"
+    },
+    {
+      "id": 1,
+      "file": "roadundergound.png",
+      "sha256": "77cb97730bc05b3eca0c83b9e7119b9f4043633d9bc948103e1317fb281ec810"
+    }
+  ],
+  "grid": 8,
+  "baseline_commit": "3d4ea6f0",
+  "status": "Lot 04 du programme sud-nord: deux nouvelles entrees aux pixels natifs (entree aride, grotte violette a deux issues). Les lots V1/V2/V3 restent historiques; aucune de leurs cartes n est modifiee."
+}

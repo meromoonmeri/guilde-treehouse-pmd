@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV4_arid_cave_entrance_01_sand_ground" tilewidth="8" tileheight="8" columns="60" tilecount="2880"><image source="SouthNorthV4_arid_cave_entrance_01_sand_ground.png" width="480" height="384" /></tileset>

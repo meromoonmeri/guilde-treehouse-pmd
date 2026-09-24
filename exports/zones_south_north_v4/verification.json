@@ -1,0 +1,17 @@
+{
+  "batch_tests": 12,
+  "checks": [
+    "Every visible RGBA matches its native source coordinate",
+    "All input source bytes match3d4ea6f0",
+    "Ordered layer recomposition",
+    "Native modules translated only, no mirror or rotation",
+    "Continuous path from south edge to northern entrance",
+    "8px-radius path-mask clearance",
+    "Ground/walls/entrance independently exported",
+    "Dark mouths present and separated (two-exit cave)",
+    "8pxTSX dimensions and references"
+  ],
+  "runtime": "NOT TESTED",
+  "limits": "Path-mask connectivity is not a collision/warp/occlusion test and pixel equality is not artistic approval.",
+  "all_work_complete": false
+}

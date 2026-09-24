@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV4_purple_two_exit_cave_02_west_boulders" tilewidth="8" tileheight="8" columns="53" tilecount="2385"><image source="SouthNorthV4_purple_two_exit_cave_02_west_boulders.png" width="424" height="360" /></tileset>

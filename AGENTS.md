@@ -1,5 +1,14 @@
 # Méthode de production approuvée — zones Métano
 
+## Lot 04 — entrées aride et grotte violette, sud → nord (reprise du programme de maps)
+
+Reprise de projet : continuation du programme de relayouts aux pixels natifs (après V3). Deux nouvelles références produites dans `source/zones_south_north_v4/`, `exports/zones_south_north_v4/`, galerie `apercu_entrees_sud_nord_v4.html` :
+- **Entree aride** (`entrancearidedungeonpmdsky.png`) → `arid_cave_entrance` 480×384, 8 calques (sable, chemin, falaise nord reassemblée sans miroir, pied de falaise, bouche native déplacée au centre, arbres morts, rochers à leur emplacement natif en calque indépendant, cailloux).
+- **Grotte violette** (`roadundergound.png`) → `purple_two_exit_cave` 424×360, 8 calques (fond, sol moucheté du panneau natif traduit tel quel, blocaux ouest/est, bande nord reassemblée, **deux bouches sombres + seuils de pierres déplacés** (source96..208→canvas36, source296..408→canvas276), 10 grappes de cristaux reimplantées ; gros cristal bas-gauche conservé sur place).
+
+Méthode inchangée depuis V3 : NPZ `source_sxy` par calque, aucun pixel généré/recolore/miroir/rotation/échelle, sols par chevauchement de patches natifs, modules traduits, masque de chemin sud→nord + dégagement 8 px (hors moteur). 12 tests dédiés PASS via `package.py` (registre, verification.json, ZIP `exports/zones_south_north_v4_pack.zip`). **Art à examiner ; PMDO/collisions/warps NOT TESTED.**
+Note baseline : l'historique du dépôt a été linearisé sur cette branche — le contrôle de sources compare à **3d4ea6f0** (base de la branche) au lieu de 438b9288 ; fichiers source byte-identiques. `.venv` (numpy/pillow/scipy) à reconstruire si absent. Registre : 4 candidats sud–nord produits, 16 références encore en attente (dont iceroad, secretgarden, couloir violet S05, bassinchauffant, jungle cascades, lac cristal, caverne P27, panneau étoilé, souterrain dallé, château, chambre), 1 arène générée V16 à examiner, 1 BG, 1 doublon, 1 UI.
+
 ## Correction utilisateur du 13 septembre 2026 — nouvelles entrées indépendantes
 
 Pour les nouvelles entrées de donjon indépendantes, l’utilisateur autorise expressément des **textures inventées dans la DA PMD**, via le générateur, avec de nombreux layouts et biomes. La contrainte des falaises/structures Métano exactes ne s’applique que lorsqu’il demande d’étendre Métano. Ne pas réimposer cette contrainte aux nouvelles entrées. Consulter les Ground PMD Sky comme références et publier des PNG visibles avec leurs chemins GitHub.
