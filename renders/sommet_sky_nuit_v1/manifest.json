@@ -1,0 +1,651 @@
+{
+  "titre": "Sommet Sky Peak de nuit — vista multicouche",
+  "taille": [
+    960,
+    600
+  ],
+  "grille_px": 8,
+  "prairie_canonique": {
+    "source": "source/sky_peak_v1/gif_0..3.png (504x504)",
+    "bande_native": [
+      0,
+      328,
+      504,
+      504
+    ],
+    "miroir": "cols [227..0]+[0..503]+[503..276] -> 960, coutures a x=228/732",
+    "fleurs_retirees": 15319,
+    "vert_complement_median": [
+      135,
+      247,
+      119
+    ],
+    "nuit": "filtre Abyss source/cote_v4_abyss/night.py (pipeline canonique v1)"
+  },
+  "fleurs": {
+    "sprites_natifs": 10,
+    "sites": 34,
+    "groupes": {
+      "loin": 15,
+      "proche": 19
+    },
+    "phases": 4,
+    "phase_ms": 200,
+    "boucle_ms": 800,
+    "variantes": [
+      "native",
+      "nuit"
+    ],
+    "sprites": [
+      {
+        "bbox": [
+          97,
+          144,
+          120,
+          166
+        ]
+      },
+      {
+        "bbox": [
+          192,
+          177,
+          216,
+          191
+        ]
+      },
+      {
+        "bbox": [
+          480,
+          216,
+          503,
+          238
+        ]
+      },
+      {
+        "bbox": [
+          216,
+          240,
+          239,
+          262
+        ]
+      },
+      {
+        "bbox": [
+          168,
+          277,
+          181,
+          286
+        ]
+      },
+      {
+        "bbox": [
+          144,
+          312,
+          167,
+          334
+        ]
+      },
+      {
+        "bbox": [
+          248,
+          338,
+          261,
+          347
+        ]
+      },
+      {
+        "bbox": [
+          480,
+          360,
+          503,
+          382
+        ]
+      },
+      {
+        "bbox": [
+          384,
+          393,
+          408,
+          407
+        ]
+      },
+      {
+        "bbox": [
+          265,
+          439,
+          277,
+          448
+        ]
+      }
+    ],
+    "sites_detail": [
+      {
+        "center": [
+          347,
+          531
+        ],
+        "origin": [
+          336,
+          509
+        ],
+        "sprite": 0,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          871,
+          584
+        ],
+        "origin": [
+          859,
+          570
+        ],
+        "sprite": 1,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          256,
+          485
+        ],
+        "origin": [
+          245,
+          463
+        ],
+        "sprite": 2,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          217,
+          484
+        ],
+        "origin": [
+          206,
+          462
+        ],
+        "sprite": 3,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          304,
+          476
+        ],
+        "origin": [
+          298,
+          467
+        ],
+        "sprite": 4,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          628,
+          516
+        ],
+        "origin": [
+          617,
+          494
+        ],
+        "sprite": 5,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          76,
+          590
+        ],
+        "origin": [
+          70,
+          581
+        ],
+        "sprite": 6,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          154,
+          571
+        ],
+        "origin": [
+          143,
+          549
+        ],
+        "sprite": 7,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          930,
+          496
+        ],
+        "origin": [
+          918,
+          482
+        ],
+        "sprite": 8,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          44,
+          586
+        ],
+        "origin": [
+          38,
+          577
+        ],
+        "sprite": 9,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          372,
+          465
+        ],
+        "origin": [
+          361,
+          443
+        ],
+        "sprite": 0,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          898,
+          515
+        ],
+        "origin": [
+          886,
+          501
+        ],
+        "sprite": 1,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          783,
+          562
+        ],
+        "origin": [
+          772,
+          540
+        ],
+        "sprite": 2,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          121,
+          454
+        ],
+        "origin": [
+          110,
+          432
+        ],
+        "sprite": 3,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          696,
+          440
+        ],
+        "origin": [
+          690,
+          431
+        ],
+        "sprite": 4,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          790,
+          482
+        ],
+        "origin": [
+          779,
+          460
+        ],
+        "sprite": 5,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          41,
+          456
+        ],
+        "origin": [
+          35,
+          447
+        ],
+        "sprite": 6,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          463,
+          521
+        ],
+        "origin": [
+          452,
+          499
+        ],
+        "sprite": 7,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          543,
+          490
+        ],
+        "origin": [
+          531,
+          476
+        ],
+        "sprite": 8,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          502,
+          547
+        ],
+        "origin": [
+          496,
+          538
+        ],
+        "sprite": 9,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          430,
+          555
+        ],
+        "origin": [
+          419,
+          533
+        ],
+        "sprite": 0,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          532,
+          560
+        ],
+        "origin": [
+          520,
+          546
+        ],
+        "sprite": 1,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          183,
+          581
+        ],
+        "origin": [
+          172,
+          559
+        ],
+        "sprite": 2,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          620,
+          563
+        ],
+        "origin": [
+          609,
+          541
+        ],
+        "sprite": 3,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          846,
+          562
+        ],
+        "origin": [
+          840,
+          553
+        ],
+        "sprite": 4,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          781,
+          455
+        ],
+        "origin": [
+          770,
+          433
+        ],
+        "sprite": 5,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          582,
+          576
+        ],
+        "origin": [
+          576,
+          567
+        ],
+        "sprite": 6,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          377,
+          503
+        ],
+        "origin": [
+          366,
+          481
+        ],
+        "sprite": 7,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          507,
+          582
+        ],
+        "origin": [
+          495,
+          568
+        ],
+        "sprite": 8,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          432,
+          472
+        ],
+        "origin": [
+          426,
+          463
+        ],
+        "sprite": 9,
+        "phase_offset": 1
+      },
+      {
+        "center": [
+          102,
+          543
+        ],
+        "origin": [
+          91,
+          521
+        ],
+        "sprite": 0,
+        "phase_offset": 2
+      },
+      {
+        "center": [
+          325,
+          506
+        ],
+        "origin": [
+          313,
+          492
+        ],
+        "sprite": 1,
+        "phase_offset": 3
+      },
+      {
+        "center": [
+          488,
+          482
+        ],
+        "origin": [
+          477,
+          460
+        ],
+        "sprite": 2,
+        "phase_offset": 0
+      },
+      {
+        "center": [
+          920,
+          533
+        ],
+        "origin": [
+          909,
+          511
+        ],
+        "sprite": 3,
+        "phase_offset": 1
+      }
+    ]
+  },
+  "etoiles": {
+    "source": "renders/references_calques_v2/etoiles (64 phases)",
+    "phase_ms": 80,
+    "boucle_ms": 5120,
+    "hashes": [
+      "705bd3d7b18d0035330017d59be0c4e237c7602b9c6fb7ae6ed49e2521260e0e",
+      "0c206b9646b60aced9e09511bc7bf21d6981d0988b0bd07592e9ee7de3fb9105",
+      "411f96e324632363c440c1799a853e43540b8221d1e122e74467e16328239eb2",
+      "a6a148b3913d086de9d995edc8c464b351f4d10aa45487f365e7f040d93bd58e",
+      "6a3a153551781b97e477dfc344deb31636954732b63f5c0d9eb43a005fe73e2e",
+      "4c0ef1040f62b27c62b3c18b87974ba84abc8c30521eb69049864d1e2997f7f1",
+      "f224f96c6952ff9ab8521ad8e7038849388465945b6b718ba441e5c0217fb204",
+      "44930262dd284bcf6e4eb90fa5f47f25ba0d139664e3ce478effa53bb5af190e",
+      "9c30a2bfa4d916a4db4d165bdfa2ab6122c18444ef605f44fb172c68f704dda5",
+      "7c3b18c61b6057f86b2553aa5570018b4b45d0e4e9024d0e8fb3b588fc5bc627",
+      "5623896761eb4fc10d445462733fab4c0162513df3d020be8c28dd2e73b4315e",
+      "d935cfcd4dfc9f58a407fe556ebfd89fe9e142f17da113ddaca831483be0f8ed",
+      "2e656ac9002dfd9ce0dbd1e9ea76f6fd52e1afbb070f62b12d04cd7a24b65a11",
+      "11d13dca34ec2159c854efd7997513e17ff19753e3cd2ea60bf2b4866761f7c6",
+      "7465f3b1b7646c9896c460e898489ccee98b4b26b0bbe050174521d22cd9958f",
+      "aec09ad28cc4a89d532cd6788fdd5e7ba896e298c03b39d7c44b867dd7d88408",
+      "74ce78f1ad60191f8c246ee9da65d1cdcd2d14523ce7fc88a0be0a5ca9e00699",
+      "4b38a7ecf754fa5dd5decaece71bd7bcd6339968e1fe5bf0c0c576ee917b019b",
+      "024d53334bfd03e89831861d61c37647f25b2abff0ea77ff1ef44de989af30b9",
+      "9e15f6920d896ca0ce9a7d2e1d3f990c802865a1a1b37d0cbe74ae315882d59f",
+      "f95749c95fbedca26f9545d700c8fd0b82caa6ce0486209c8ab34ae7f4545e67",
+      "000de156e76939a0b771aecb7d673e66e4396cf65bc1184a1da7d7adf884749b",
+      "bc505c60c37e7fe9fd5eac82c2673cd469ab756c5f10eda89e6c22e11791d05a",
+      "5230e05a38b916e70d48865d8993aa10d55545bedaa38eb97c10f548a32b8e2f",
+      "aa46a024dbbe206db526832c5ffaac2d1e85dab5285ee92e6230aa89b86345b3",
+      "00024c023572be00d492d27976bce0d2533c9fd118ad04f2f92912b504ded75e",
+      "262f19beab952433c1ba84773868905bef4ba3d0691f368dc3ff452a590ae0fe",
+      "9530a5fcec5f4ac4761259f4e7fad70d5e47702ec76e01f8f6760e3b96c935e8",
+      "2a683db5f141928f01c805b237c80bfb6e53febaa41dc1eb99996abedc3ca6b0",
+      "fe210a218314be8196b020ae5d336f03f3948adb3b8e3cbf353109df118c958e",
+      "d2db5acdf72d227bf7558c5072f42bb42205cdacab786cc4b0caf4ce370b82de",
+      "baa59e057aaca2274b49ce947996ffc989b2883fd196d51c3da69edde339a088",
+      "64e8b2e51f6b63bfc8b039ba7ac2b3b2b0fbe93319db8b2967bc733c4ebdc686",
+      "522ef8851fe26a48e698e66ebb5d6ed00b8b31ee12f31fc4f972d55f2da42e82",
+      "2f7272d4270c05fb4a1b07e5a7194d13b8e0ffdf041a8fd23a2c9af72a4eb24e",
+      "4f88429c54a3f40fa9027ed9aa95bde7d5f4998889137e9d5137e5f4320ddd90",
+      "b32049d90a0003c5713e74608f1d65946b073d38d4fc713bb15771908506cdad",
+      "418bc02f6effa8f9e7e265bb89916c1d4890a7d482feb14745aeb728e845b56f",
+      "63b993aabd700909c07624dcfe88bd71e1f1d212970d3adf5390ef221ad59f59",
+      "c7897e0a77dd2b65c7de4b3e9f4151ff49a60842f8468cf69a5b49114b15605f",
+      "fd980765ed8a066b412f86e6ae7962105a7ca6710c3750c738d777e2a77aabbb",
+      "b59f0c3a9460eb10a6c7becd27d429e6f361bab7c935f9c51d8bf46361339c69",
+      "85077a00fccfe1a53d978d4bffc5991058b33fdf7be06185c0e527f3de8a5813",
+      "4c8bdc67749dfb425809f74f5b1bb24123d18e700d4baeabd3ea23ea8acb0313",
+      "9bb089f75397f1ff86b74bef3124062149b4d8acf54e1cc17484f40374293d93",
+      "e84f5e5d02d70a881c8949910ac1d320a20aa7ed9d24602dc0c8f4d053e50e4f",
+      "ff76e53b5918b2100073c1e48c6aef70d6f624891dcbd0246f1e313effa484bb",
+      "0ebc7de066d870bd22073365aca326b90289e1c3802534fc98979affe0b7404d",
+      "385cf28e0961f5a8962014347aafdcc63854c0ebea6f449db72e3095f4d6ceba",
+      "73b7266999fa0a838dd5a43916bc42bb1362a13e7f230c41a7468528c994b693",
+      "c787ea6356ec09df25ea12c9fbf49ab8e5b20bd17b81a4dc264c8610f3c03a39",
+      "6ad0e66a654a99377dab6866ca66854a7adf58b2dfd30fbed56c926c0670d752",
+      "7f13d77748bea99c842aacb56ee9ea8f58aebc163c9d2d0f2ef27d95a6eedbe1",
+      "4829dda056b359e934cbd8c1eaaab0d5428dedf10bd87d00e5c1d88f108654dc",
+      "71999e2d6099d125c702b61036d6a436c72bc478e76007638a41d48152e3aba6",
+      "79673af0443db2abd45e2c8e065428a273f0c1868639650a5386e2fafd547537",
+      "be372f62a1227747f90dcc12471decc6d73242e5588456bb5f59491e17ef75d8",
+      "03daa6db4b37e8e8394e48883930bad1ec00e566594606fbe6b374cf45ecd241",
+      "0b63fc5298417e2be69c6bcd832b78c611609758434c57360bf9421edf0234db",
+      "13d06e95dd2ba5bf352d6959de0ce1ae940e4a4b6d3a99439bcecd3ca2e1d57f",
+      "9e04b57e8b77c40c6cbf70f9369da01a5f11e11723ce2f3a3f105db38a903768",
+      "0458ec84d22e65905e15437a56a972ffa7cf834cf47ad50baae099b1bc26b9f6",
+      "66d73060bcd2ad64c1969713074352c452459b201bbb0391211947dee715af74",
+      "1dde4886a6485fc8de7221f75d1513c0ea29a1eb4b43d78187d2548fde00e2ab"
+    ]
+  },
+  "ciel": {
+    "haut": [
+      8,
+      17,
+      49
+    ],
+    "bas": [
+      54,
+      74,
+      122
+    ],
+    "source_couleurs": "renders/sky_peak_canonique_v1/nuit/01_ciel.png"
+  },
+  "panorama_genere": {
+    "brut": "bruts/panorama.png (1584x672, zero entite)",
+    "placement_y": 63,
+    "hauteur_redim": 407,
+    "split": "treeline par colonne, mediane glissante 25, borne [300,400]*nh/672"
+  },
+  "wraps": {
+    "far": {
+      "phases": 32,
+      "pas_px": 30,
+      "phase_ms": 100,
+      "vitesse_pmdo_px_s": -4
+    },
+    "near": {
+      "phases": 24,
+      "pas_px": 40,
+      "phase_ms": 100,
+      "vitesse_pmdo_px_s": -8
+    },
+    "brume": {
+      "phases": 16,
+      "pas_px": 60,
+      "phase_ms": 150,
+      "vitesse_pmdo_px_s": -3
+    },
+    "marges_transparentes_px": 32,
+    "periode_px": 960,
+    "mode_pmdo": "2 copies a x et x+960, x=-floor(t*v) mod 960"
+  },
+  "limites": [
+    "Panorama et nuages generes (DA Sky), pas des tuiles natives",
+    "Prairie/fleurs natives + filtre nuit Abyss (pipeline canonique v1)",
+    "WebP = fleurs+etoiles echantillonnees, nuages fixes ; galerie anime tout en continu",
+    "Pas de test PMDO/GPU, collisions, transitions"
+  ]
+}

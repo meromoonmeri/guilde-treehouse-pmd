@@ -1,0 +1,28 @@
+{
+  "verifications": {
+    "dimensions_960x600_grille8": true,
+    "prairie_jour_native_exacte": true,
+    "prairie_nuit_abyss_split": true,
+    "fleurs_sprites_natifs": 10,
+    "fleurs_groupes_recomposes": true,
+    "etoiles_64_octets": true,
+    "ciel_echantillonne": true,
+    "pano_split_exact": true,
+    "wraps_seamless": true,
+    "brume_miroir": true,
+    "ora_13_recompose": true,
+    "webp_8f": true
+  },
+  "taille": [
+    960,
+    600
+  ],
+  "resultat": "PASS",
+  "limites": [
+    "Panorama et nuages generes (DA Sky), pas des tuiles natives",
+    "Prairie/fleurs natives + filtre nuit Abyss (pipeline canonique v1)",
+    "WebP = fleurs+etoiles echantillonnees, nuages fixes ; galerie anime tout en continu",
+    "Pas de test PMDO/GPU, collisions, transitions",
+    "Decor verifie zero-entite par inspection visuelle (bruts archives)"
+  ]
+}

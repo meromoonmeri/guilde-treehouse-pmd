@@ -158,3 +158,19 @@ Lecons : rangees cascade 15-16 transparentes en source (chute mappee sur
 abandonnes au profit de faces plein cadre ; bouche obligatoire sous peine de
 barre verte (notch) ou brune (pied) sur l'eau. Repetition des faces assumee,
 a varier en V2 apres validation en jeu. Nuit Abyss non incluse.
+
+## Sommet Sky Peak de nuit — vista 960x600 (septembre 2026)
+Demande : layout Sky Peak via generateur, textures canoniques, vue depuis le
+sommet, fleurs sur calque propre (traitement canonique), foret + montagnes,
+nuit, etoiles scintillantes, nuages wrap seamless, calques separes PMDO.
+Correction utilisateur : prairie en textures CANONIQUES, ZERO entite.
+Livraison `renders/sommet_sky_nuit_v1/` : prairie/reliefs natifs du GIF Sky
+(bande y328..504, miroir 504->960 coutures x228/732, fleurs retirees puis
+reanimees), nuit Abyss (pipeline canonique v1), 10 sprites floraux natifs
+(4 phases @200ms, 34 sites, 2 groupes, variantes native+nuit), etoiles ref_v2
+64 phases reutilisees a l'octet, ciel degrade echantillonne, panorama et
+nuages generes SANS entites (brut entites jete et regenere), split
+montagnes/foret par treeline, 2 wraps a marges >=32px + brume miroir.
+Galerie `apercu_sommet_sky_nuit_v1.html` (tout anime live), ORA 13 calques,
+WebP 8f, ZIP. Verify PASS. Brut `sommet.png` genere non utilise (remplace
+par prairie native). Prochaine etape possible : variantes aube/jour.

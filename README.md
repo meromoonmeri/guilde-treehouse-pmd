@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Vista nocturne — Sommet Sky Peak, prairie et fleurs canoniques
+
+- **[Galerie live : 11 calques, fleurs, etoiles, wraps](apercu_sommet_sky_nuit_v1.html)**.
+- [PNG, ORA, phases wrap et ZIP](renders/sommet_sky_nuit_v1/README.md) · [planche](renders/sommet_sky_nuit_v1/PLANCHE_VISTA_NE_PAS_IMPORTER.png).
+- 960×600 : prairie/fleurs natives + nuit Abyss, foret et montagnes generees zero-entite, etoiles 64 phases, 3 wraps seamless. Pas de test moteur.
+
 ## Nouvelle map 100% canonique — Cap face mer, eau native animée
 
 - **[Galerie : 6 calques, 4 phases, grille 8px](apercu_falaise_mer_canonique_v1.html)**.
