@@ -1,0 +1,26 @@
+{
+  "pass": true,
+  "checks": [
+    "Pinned native cafe Ground and five tile banks retain their source hashes",
+    "All five decoded cafe PNG sheets exactly match the native tile payloads",
+    "Every visible terrain RGBA pixel matches its recorded native source coordinate; no recolour/resampling",
+    "Original north corners preserved intact; expansion inserts complete 64px bands",
+    "Five aligned, non-overlapping alpha layers exactly recompose the terrain",
+    "Opaque #FF00FF exterior, no magenta alteration of any visible native pixel",
+    "Exactly one 56px south floor exit; room and service areas connected with 8px clearance (guide, not engine collisions)",
+    "Reserved rectangles lie on free floor; no furniture, fire or NPC instance in the terrain",
+    "Four separate cafe furniture sheets retain exact source pixels; no placement coordinates applied",
+    "Four real Ledian poses decoded from source tracks; strips, separate flames and support recompose exactly; 6 ticks per pose",
+    "Import sheets use unique basenames, native pixel scale and 8px-compatible dimensions"
+  ],
+  "native_visible_pixels": 434474,
+  "terrain_size": [
+    840,
+    576
+  ],
+  "native_pixel_scale": 1,
+  "movable_decor_placed": 0,
+  "npc_entities": 0,
+  "runtime_PMDO": "NOT TESTED",
+  "artistic_review": "Original and enlarged native compositions inspected as still images; no engine approval implied."
+}

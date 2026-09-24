@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "scope": "Four architectural stair placements, graph and raster continuity; NOT an engine collision or art approval test.",
+  "checks": [
+    "N always increases level by one; S always decreases it",
+    "both stair links reciprocal: accueil N ↔ café S, accueil S ↔ casino N",
+    "all four tread regions RGBA-identical to the reference; no rotation or stretching",
+    "reference accueil south entrance entirely unchanged",
+    "north landings and cheeks reach the edge; the final tread joins the original floor without a magenta seam",
+    "40px central strips continuously opaque and 16px trigger/spawn footprints on opaque surfaces",
+    "no changes outside the three entrance edit boxes; existing east/west corridors unaffected",
+    "inverted ascent and a deliberately inserted alpha seam correctly rejected"
+  ],
+  "map_rgba_sha256": {
+    "accueil": "4aee96ab4e7c8f0fc1a073c191882d82296f1a28043890c6374dd48f7607d0e8",
+    "casino": "5057dbbe1e4db3bb383819d1be8d45b77316423363cfc07c29bfae376754fdcd",
+    "cafe": "744fca6d82c74a5c373559a31dd09a459bdb1ce3cadc093353b5aa707e692362"
+  },
+  "limits": [
+    "No PMDO runtime, collision, warp or NPC test",
+    "No graphical browser test",
+    "Exterior access not defined",
+    "Full furnishing/decorative V5 delivery still pending"
+  ]
+}

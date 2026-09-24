@@ -1,0 +1,86 @@
+{
+  "format": "AssetSprite",
+  "frame_size": [
+    48,
+    48
+  ],
+  "entries": [
+    {
+      "id": "volcan",
+      "continent": "Cendre",
+      "rect": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "foret",
+      "continent": "Sylve",
+      "rect": [
+        48,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "glace",
+      "continent": "Aurore",
+      "rect": [
+        96,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "desert",
+      "continent": "Dunes",
+      "rect": [
+        144,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "plage",
+      "continent": "Archipel",
+      "rect": [
+        192,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "ruines",
+      "continent": "Marais",
+      "rect": [
+        240,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "tour",
+      "continent": "Cime",
+      "rect": [
+        288,
+        0,
+        48,
+        48
+      ],
+      "unlocked_by_default": false
+    }
+  ]
+}

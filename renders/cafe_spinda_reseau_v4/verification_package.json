@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "file": "SpindaV4_pack.zip",
+  "files": 50,
+  "bytes": 1723192,
+  "sha256": "3a250ebdb6a104c7f1815e93cd08e091e6a2e57f568317868fc8884642feda29",
+  "checks": [
+    "all CRCs",
+    "PNG decoding identical to repo WebP RGBA",
+    "all file payloads exact",
+    "all portable viewer terrain dependencies present"
+  ],
+  "runtime_PMDO": "NOT TESTED"
+}
