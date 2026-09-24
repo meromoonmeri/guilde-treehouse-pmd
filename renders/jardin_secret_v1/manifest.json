@@ -1,0 +1,764 @@
+{
+ "id": "jardin_secret_v1",
+ "taille_px": [
+  816,
+  1152
+ ],
+ "grille_px": 8,
+ "cellules": [
+  102,
+  144
+ ],
+ "reference": {
+  "fichier": "secretgarden.png",
+  "taille": [
+   408,
+   408
+  ],
+  "sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f"
+ },
+ "methode": "Synthèse guidée par patchs (image quilting + texture transfer) depuis la seule référence : chaque pixel est copié d'un pixel source (provenance_src_yx.npz, coordonnées y,x dans secretgarden.png) ; coupes minimales, aucun mélange, aucune couleur créée. Objets détourés puis translatés. Module rayon/souche/prairie reposé à l'identique (décalage +204,0).",
+ "ordre_calques_bas_vers_haut": [
+  "JSEC_V1_01_sol",
+  "JSEC_V1_02_fleurs",
+  "JSEC_V1_03_rochers",
+  "JSEC_V1_04_souche",
+  "JSEC_V1_05_arbres_troncs",
+  "JSEC_V1_06_arbres_cimes",
+  "JSEC_V1_07_rayon",
+  "JSEC_V1_08_feuillage_avant"
+ ],
+ "calques": {
+  "01_sol": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_01_sol.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_01_sol_nuit.png",
+   "sha256_jour": "a613410179bcc368eb1e29ac006bfce8c0ea9c5ca2440ff9bac8b93c4cfc85ed",
+   "sha256_nuit": "edab27b5f8dceb2b101eb982739b78c4d05dae0ff0a4000ce2c4afceebb5d338",
+   "role": "Sol : sous-bois, frange de feuilles, pelouse, haies, tapis 4 bandes (synthèse de la référence)",
+   "pixels_opaques": 940032
+  },
+  "02_fleurs": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_02_fleurs.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_02_fleurs_nuit.png",
+   "sha256_jour": "0a56f04d6cdcfcf25887d08902fb4facfdc1e49cd0fc2ff12df19d92cb27caca",
+   "sha256_nuit": "cd2ab5e6829bc87a478008c46827485b8b28a25cc44e133335a645a80de85410",
+   "role": "Fleurs (sprites de la référence, sous le joueur)",
+   "pixels_opaques": 4114
+  },
+  "03_rochers": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_03_rochers.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_03_rochers_nuit.png",
+   "sha256_jour": "62ab03b61ba555a7166223d6a340194dda214d5daaa454682818235806479c84",
+   "sha256_nuit": "746a9e92e47cf988a8b2a1ea7009d8da8ae279b5c41840aff19dbca43a7c5d8c",
+   "role": "Rochers (sprites de la référence, ombres portées incluses)",
+   "pixels_opaques": 11302
+  },
+  "04_souche": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_04_souche.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_04_souche_nuit.png",
+   "sha256_jour": "99d697ac48c90f3fbf3dbedb8749f74651229b6231da5f9234292d129b5144ea",
+   "sha256_nuit": "03847915373af75db5873a26d212c2b6a414afca8e799b3c410dd582537b9f2e",
+   "role": "Souche-sanctuaire à escalier (position d'origine)",
+   "pixels_opaques": 5308
+  },
+  "05_arbres_troncs": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_05_arbres_troncs.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_05_arbres_troncs_nuit.png",
+   "sha256_jour": "f43749e78c016f063d26b1e05e0c94719b3b9a52ce32f88f8364ae4f5bb89a85",
+   "sha256_nuit": "038630db989620ca4701134f894d07e2706b7e75b3c9b59e66ade7d56c7a2656",
+   "role": "Arbres : troncs et ombres au sol (sous le joueur)",
+   "pixels_opaques": 12776
+  },
+  "06_arbres_cimes": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_06_arbres_cimes.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_06_arbres_cimes_nuit.png",
+   "sha256_jour": "06d14122c8b9402c514609edc70eeda1b317513c419968b14c6c762ca480b383",
+   "sha256_nuit": "c5445aab0cc4f259f1cd3b1887ccd8ed94ea9901e5d848c1aced203fe31cbfef",
+   "role": "Arbres : cimes (au-dessus du joueur)",
+   "pixels_opaques": 29144
+  },
+  "07_rayon": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_07_rayon.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_07_rayon_nuit.png",
+   "sha256_jour": "879d3e4020ea65ada4fa7c93f25e909fddcc7e352e46b2f94bcae1dafd9724e1",
+   "sha256_nuit": "063a1f0224ca992e0bc6bb74ce4ba6d40a236d85b423e394e5ed503193f944bf",
+   "role": "Rayon de lumière (position d'origine, au-dessus du joueur)",
+   "pixels_opaques": 13225
+  },
+  "08_feuillage_avant": {
+   "jour": "renders/jardin_secret_v1/calques/JSEC_V1_08_feuillage_avant.png",
+   "nuit": "renders/jardin_secret_v1/nuit/JSEC_V1_08_feuillage_avant_nuit.png",
+   "sha256_jour": "3ed59e4d3fac78db8895f4b486e60107277809c6924cd61f93db81596cc7d738",
+   "sha256_nuit": "984d7af17acad4d869d45b8a1dd2415e68a5256ba5b9f8a6c4cfdc0cc7fffb0a",
+   "role": "Feuillage immersif d'avant-plan (frange sombre de la référence)",
+   "pixels_opaques": 245911
+  }
+ },
+ "placements": [
+  {
+   "sprite": "rayon",
+   "x": 340,
+   "y": 1,
+   "module": true,
+   "calque": "07_rayon"
+  },
+  {
+   "sprite": "souche",
+   "x": 356,
+   "y": 104,
+   "module": true,
+   "calque": "04_souche"
+  },
+  {
+   "sprite": "rocher_double",
+   "x": 324,
+   "y": 72,
+   "module": true,
+   "calque": "03_rochers"
+  },
+  {
+   "sprite": "arbre_ouest",
+   "x": 253,
+   "y": 121,
+   "module": true
+  },
+  {
+   "sprite": "arbre_est",
+   "x": 474,
+   "y": 73,
+   "module": true
+  },
+  {
+   "sprite": "fleur_00",
+   "x": 334,
+   "y": 98,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_01",
+   "x": 335,
+   "y": 109,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_02",
+   "x": 433,
+   "y": 110,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_03",
+   "x": 455,
+   "y": 120,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_04",
+   "x": 359,
+   "y": 124,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 337,
+   "y": 128,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_06",
+   "x": 445,
+   "y": 128,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_07",
+   "x": 469,
+   "y": 128,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_08",
+   "x": 484,
+   "y": 132,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_09",
+   "x": 324,
+   "y": 133,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 348,
+   "y": 136,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_11",
+   "x": 460,
+   "y": 136,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_12",
+   "x": 373,
+   "y": 143,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_13",
+   "x": 440,
+   "y": 143,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_14",
+   "x": 329,
+   "y": 144,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_15",
+   "x": 479,
+   "y": 144,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_16",
+   "x": 366,
+   "y": 146,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_17",
+   "x": 518,
+   "y": 150,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 337,
+   "y": 152,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_19",
+   "x": 469,
+   "y": 152,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_20",
+   "x": 484,
+   "y": 157,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_21",
+   "x": 332,
+   "y": 168,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_22",
+   "x": 351,
+   "y": 168,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_23",
+   "x": 455,
+   "y": 168,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_24",
+   "x": 479,
+   "y": 168,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_25",
+   "x": 337,
+   "y": 176,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_26",
+   "x": 469,
+   "y": 176,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_27",
+   "x": 493,
+   "y": 176,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_28",
+   "x": 323,
+   "y": 180,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_29",
+   "x": 484,
+   "y": 181,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_30",
+   "x": 508,
+   "y": 181,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "fleur_31",
+   "x": 503,
+   "y": 192,
+   "module": true,
+   "calque": "02_fleurs"
+  },
+  {
+   "sprite": "arbre_est",
+   "x": 112,
+   "y": 341,
+   "pied": [
+    156,
+    434
+   ]
+  },
+  {
+   "sprite": "arbre_ouest",
+   "x": 606,
+   "y": 399,
+   "pied": [
+    652,
+    492
+   ]
+  },
+  {
+   "sprite": "arbre_est",
+   "x": 212,
+   "y": 457,
+   "pied": [
+    256,
+    550
+   ]
+  },
+  {
+   "sprite": "arbre_ouest",
+   "x": 384,
+   "y": 591,
+   "pied": [
+    430,
+    684
+   ]
+  },
+  {
+   "sprite": "arbre_est",
+   "x": 52,
+   "y": 607,
+   "pied": [
+    96,
+    700
+   ]
+  },
+  {
+   "sprite": "arbre_ouest",
+   "x": 686,
+   "y": 857,
+   "pied": [
+    732,
+    950
+   ]
+  },
+  {
+   "sprite": "arbre_est",
+   "x": 76,
+   "y": 967,
+   "pied": [
+    120,
+    1060
+   ]
+  },
+  {
+   "sprite": "rocher_s1",
+   "x": 253,
+   "y": 413,
+   "pied": [
+    262,
+    430
+   ]
+  },
+  {
+   "sprite": "rocher_haut",
+   "x": 603,
+   "y": 421,
+   "pied": [
+    628,
+    470
+   ]
+  },
+  {
+   "sprite": "rocher_s2",
+   "x": 568,
+   "y": 472,
+   "pied": [
+    580,
+    488
+   ]
+  },
+  {
+   "sprite": "rocher_s4",
+   "x": 118,
+   "y": 619,
+   "pied": [
+    128,
+    640
+   ]
+  },
+  {
+   "sprite": "rocher_s3",
+   "x": 235,
+   "y": 669,
+   "pied": [
+    248,
+    690
+   ]
+  },
+  {
+   "sprite": "rocher_paire",
+   "x": 164,
+   "y": 674,
+   "pied": [
+    190,
+    718
+   ]
+  },
+  {
+   "sprite": "rocher_s1",
+   "x": 479,
+   "y": 787,
+   "pied": [
+    488,
+    804
+   ]
+  },
+  {
+   "sprite": "rocher_s3",
+   "x": 315,
+   "y": 823,
+   "pied": [
+    328,
+    844
+   ]
+  },
+  {
+   "sprite": "rocher_haut",
+   "x": 637,
+   "y": 881,
+   "pied": [
+    662,
+    930
+   ]
+  },
+  {
+   "sprite": "rocher_s1",
+   "x": 591,
+   "y": 935,
+   "pied": [
+    600,
+    952
+   ]
+  },
+  {
+   "sprite": "rocher_paire",
+   "x": 534,
+   "y": 956,
+   "pied": [
+    560,
+    1000
+   ]
+  },
+  {
+   "sprite": "rocher_s2",
+   "x": 226,
+   "y": 1024,
+   "pied": [
+    238,
+    1040
+   ]
+  },
+  {
+   "sprite": "rocher_s4",
+   "x": 510,
+   "y": 1107,
+   "pied": [
+    520,
+    1128
+   ]
+  },
+  {
+   "sprite": "fleur_19",
+   "x": 195,
+   "y": 350
+  },
+  {
+   "sprite": "fleur_31",
+   "x": 208,
+   "y": 356
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 233,
+   "y": 369
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 627,
+   "y": 389
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 202,
+   "y": 394
+  },
+  {
+   "sprite": "fleur_24",
+   "x": 603,
+   "y": 404
+  },
+  {
+   "sprite": "fleur_06",
+   "x": 222,
+   "y": 405
+  },
+  {
+   "sprite": "fleur_14",
+   "x": 594,
+   "y": 415
+  },
+  {
+   "sprite": "fleur_23",
+   "x": 578,
+   "y": 429
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 240,
+   "y": 576
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 230,
+   "y": 586
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 141,
+   "y": 596
+  },
+  {
+   "sprite": "fleur_06",
+   "x": 217,
+   "y": 598
+  },
+  {
+   "sprite": "fleur_30",
+   "x": 246,
+   "y": 602
+  },
+  {
+   "sprite": "fleur_27",
+   "x": 205,
+   "y": 610
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 141,
+   "y": 612
+  },
+  {
+   "sprite": "fleur_04",
+   "x": 224,
+   "y": 616
+  },
+  {
+   "sprite": "fleur_28",
+   "x": 172,
+   "y": 622
+  },
+  {
+   "sprite": "fleur_15",
+   "x": 213,
+   "y": 628
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 143,
+   "y": 629
+  },
+  {
+   "sprite": "fleur_15",
+   "x": 170,
+   "y": 647
+  },
+  {
+   "sprite": "fleur_22",
+   "x": 144,
+   "y": 650
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 162,
+   "y": 663
+  },
+  {
+   "sprite": "fleur_04",
+   "x": 139,
+   "y": 663
+  },
+  {
+   "sprite": "fleur_27",
+   "x": 629,
+   "y": 833
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 674,
+   "y": 852
+  },
+  {
+   "sprite": "fleur_24",
+   "x": 652,
+   "y": 858
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 617,
+   "y": 859
+  },
+  {
+   "sprite": "fleur_24",
+   "x": 634,
+   "y": 862
+  },
+  {
+   "sprite": "fleur_03",
+   "x": 683,
+   "y": 865
+  },
+  {
+   "sprite": "fleur_26",
+   "x": 588,
+   "y": 876
+  },
+  {
+   "sprite": "fleur_07",
+   "x": 604,
+   "y": 877
+  },
+  {
+   "sprite": "fleur_18",
+   "x": 598,
+   "y": 894
+  },
+  {
+   "sprite": "fleur_19",
+   "x": 628,
+   "y": 894
+  },
+  {
+   "sprite": "fleur_19",
+   "x": 674,
+   "y": 940
+  },
+  {
+   "sprite": "fleur_31",
+   "x": 697,
+   "y": 945
+  },
+  {
+   "sprite": "fleur_24",
+   "x": 672,
+   "y": 956
+  },
+  {
+   "sprite": "fleur_05",
+   "x": 193,
+   "y": 969
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 177,
+   "y": 970
+  },
+  {
+   "sprite": "fleur_15",
+   "x": 163,
+   "y": 979
+  },
+  {
+   "sprite": "fleur_30",
+   "x": 210,
+   "y": 993
+  },
+  {
+   "sprite": "fleur_22",
+   "x": 194,
+   "y": 1001
+  },
+  {
+   "sprite": "fleur_15",
+   "x": 207,
+   "y": 1017
+  },
+  {
+   "sprite": "fleur_10",
+   "x": 188,
+   "y": 1018
+  }
+ ],
+ "nuit": "filtre Abyss exact (source/cote_v4_abyss/night.py), une seule fois, par calque",
+ "import_pmdo": "PNG to Tileset, taille de tuile 8 px ; collisions et warps à dessiner dans l'éditeur",
+ "limites": [
+  "Pixels = référence PMD Sky ; la géométrie du jardin est nouvelle (pas un décor officiel).",
+  "Les bords de pelouse orientés sud n'existent pas dans la référence : ils sont placés sous le feuillage d'avant-plan.",
+  "Aucun test dans PMDO (ni rendu moteur, ni collisions).",
+  "Rayon statique comme la référence (pas d'animation inventée)."
+ ]
+}

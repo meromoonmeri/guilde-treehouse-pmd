@@ -56,3 +56,7 @@ Lecture : un village de falaises « Reverie Town » (versants nord-est / nord-ou
 ## 6. Prochaine étape proposée
 
 Choisir le chantier (Reverie Town / entrées sud→nord / zones Halcyon / donjons), le format (PNG calques 8 px pour l’importeur, pack natif `.rsground`+`.tile`, ou les deux) et jour seul ou jour+nuit. Chaque map suivra : plan de layout sur grille 8 px → assemblage avec modules natifs complets → calques séparés + composition → contrôles (provenance, recomposition, contacts, chemin sud→nord) → aperçu HTML + PNG + pack.
+
+## 7. Mise à jour du 24 septembre 2026 — Jardin secret v1
+
+Premier layout agrandi construit avec les **textures de sa propre référence** (`secretgarden.png`) : `renders/jardin_secret_v1/` (816×1152, 8 calques jour/nuit), galerie `apercu_jardin_secret_v1.html`. Le moteur `source/jardin_secret_v1/quilt.py` peut servir aux 17 autres références PMD Sky du programme (`FULL_PROGRAMME_STATUS.json`), en adaptant la segmentation et les caractéristiques de guidage à chacune.

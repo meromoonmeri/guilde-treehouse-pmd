@@ -1,0 +1,30 @@
+{
+ "dimensions_816x1152_grille_8px": true,
+ "alpha_binaire": true,
+ "sol_entierement_opaque": true,
+ "chaque_pixel_opaque_egal_a_son_pixel_source": {
+  "01_sol": true,
+  "02_fleurs": true,
+  "03_rochers": true,
+  "04_souche": true,
+  "05_arbres_troncs": true,
+  "06_arbres_cimes": true,
+  "07_rayon": true,
+  "08_feuillage_avant": true
+ },
+ "aucune_couleur_hors_reference_jour": true,
+ "recomposition_exacte": true,
+ "nuit_egale_filtre_abyss_des_calques": true,
+ "noms_de_fichiers_uniques": true,
+ "parcours_sud_vers_sanctuaire": {
+  "entree_sud_px": 252,
+  "but": [
+   408,
+   189
+  ],
+  "atteint": true,
+  "zone_praticable_px": 313809
+ },
+ "placements_sur_pelouse": true,
+ "all_pass": true
+}
