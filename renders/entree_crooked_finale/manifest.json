@@ -1,0 +1,55 @@
+{
+ "canevas": [
+  848,
+  1264
+ ],
+ "brut": "FINALE_map.png",
+ "sha256": "73411ca21709ed15506cf57aa91f8314efdcac5b4391cd836251f47182e866f3",
+ "bouche_bbox": [
+  264,
+  354,
+  585,
+  655
+ ],
+ "arbres": [
+  [
+   0,
+   836,
+   234,
+   1052
+  ],
+  [
+   612,
+   876,
+   848,
+   1092
+  ],
+  [
+   28,
+   976,
+   274,
+   1192
+  ],
+  [
+   588,
+   1017,
+   834,
+   1232
+  ]
+ ],
+ "nb_fleurs": 65,
+ "ordre": [
+  "01_sol_herbe",
+  "02_chemin_sable",
+  "03_paroi",
+  "04_bouche",
+  "05_rochers",
+  "06_fleurs",
+  "07_troncs",
+  "08_canopees"
+ ],
+ "sol_complet": "prairie echantillonnee 16px du meme brut sous objets (declare)",
+ "nuit": "Abyss exact",
+ "runtime": "NOT TESTED",
+ "art_approved": false
+}
