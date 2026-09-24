@@ -3,8 +3,8 @@
   "target": "PMDO 0.8.12",
   "workflow": "final generated composition on magenta -> chroma cleanup -> five aligned layers",
   "composition_source": {
-    "file": "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png",
-    "sha256": "09c127c3789a1741c65f8940e5ff8268c9606e2defbebc9bca251f4e648a1acd",
+    "file": "source/forest_cave_render_v1/generation/forest_cave_final_generated.png",
+    "sha256": "5d8d42d82b4828c801755f10bf4c0a73b90a15f968a90f4406e3f5a3e0228a13",
     "normalized_size": [
       512,
       640
@@ -21,31 +21,31 @@
     {
       "id": "01_sol_chemin",
       "file": "ForestRenderV1_01_sol_chemin.png",
-      "pixels": 65988,
+      "pixels": 86984,
       "generated_from_final_composition": true
     },
     {
       "id": "02_vegetation",
       "file": "ForestRenderV1_02_vegetation.png",
-      "pixels": 71048,
+      "pixels": 63275,
       "generated_from_final_composition": true
     },
     {
       "id": "03_cliff_grotte",
       "file": "ForestRenderV1_03_cliff_grotte.png",
-      "pixels": 32989,
+      "pixels": 37264,
       "generated_from_final_composition": true
     },
     {
       "id": "04_arbres",
       "file": "ForestRenderV1_04_arbres.png",
-      "pixels": 61944,
+      "pixels": 79537,
       "generated_from_final_composition": true
     },
     {
       "id": "05_premier_plan",
       "file": "ForestRenderV1_05_premier_plan.png",
-      "pixels": 19555,
+      "pixels": 19715,
       "generated_from_final_composition": true
     }
   ],
@@ -59,7 +59,7 @@
       64,
       80
     ],
-    "free_collision_cells": 226,
+    "free_collision_cells": 230,
     "total_collision_cells": 5120,
     "tilesets": [
       "FCRV1_FOREST_00",

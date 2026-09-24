@@ -23,7 +23,9 @@ from scipy import ndimage as nd
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
-COMPOSITION_SOURCE = ROOT / "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png"
+# The current final composition is produced by the image generator.  Keep the
+# earlier magenta/canonical source lot untouched as a separate archive.
+COMPOSITION_SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated.png"
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 ASSET = "forest_cave_render_v1"

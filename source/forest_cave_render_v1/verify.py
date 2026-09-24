@@ -15,7 +15,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
-SOURCE = ROOT / "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png"
+SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated.png"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT))
