@@ -53,3 +53,33 @@ Nuit Abyss exacte. Tout pixel généré est documenté « redessiné d'après re
   prompt ; (2) éventail linéaire = diagonale visible → smoothstep + oscillation ;
   (3) l'ombre portée de la gorge coupe le chemin (bande 85–175) → règle d'entonnoir
   documentée + priorité bouche ; (4) espacer les sites de fleurs (pas de chevauchement).
+
+## 5. V2 : les 8 calques générés (24/09/2026)
+
+Maquette = `renders/entree_crooked_v1/composite_jour.png` ; style = refs canoniques
+Crooked/Halcyon/Sky Peak (renvoi visuel, pixels régénérés — rien n'est revendiqué natif).
+
+- Bruts (6, 0 rejet) : G_sol (848×1264, prairie opaque, 0 % magenta) ; G_chemin
+  (848×1264, éventail + S, 69,9 %) ; G_paroi (848×1264, paroi + bouche, 39,2 %) ;
+  G_rochers (896×1200, 2 blocs + galets + éclat, 93,8 %) ; G_fleurs (896×1200,
+  ~30 touffes côtés, 86,8 %) ; G_arbres (768×1376, 4 arbres, 83,8 %). Tailles
+  hétérogènes → recentrage par translation 1:1 (÷8), jamais de resampling.
+  Magenta cuit (ex. (252,9,254)) → masque (r>150)&(b>150)&(g<100).
+- Détourage : purge GLOBALE du magenta (l'inondation depuis les bords seule laisse
+  les trous intérieurs : points magenta vus dans les canopées) + frange b>g+10
+  (1 px fleurs avec chair rose r>b+20 protégée, 3 px ailleurs).
+- Alignement : bouche = référence (centroïde (417,496), bbox rectifié
+  [307,346,527,646], lum<110 dans rect 220×300) ; chemin recentré dessus
+  (couloir → bouche, dx=+40 snap8) ; rochers placés par composante (C1 (−72,+432)
+  au pied gauche, C2 (+40,+392) au pied droit, galets sur place au seuil —
+  l'entrée (417,657) passe entre eux, éclat suit C1) ; split arbres par règle
+  vert (g≥r, g≥b−10, dilatation 4 px) ; fleurs : 59 touffes → 26 gardées
+  (15 minuscules + 18 hors-prairie supprimées).
+- IoU vs v1 (informatif, le générateur déplace les objets) : sol 1.0, paroi 0.965,
+  bouche 0.895, chemin 0.19, canopées 0.057, fleurs 0.017, rochers 0.033, troncs 0.0.
+- Fleurs v2 statiques (1 phase générée) : perte d'animation acceptée, pack v1 natif
+  4 phases conservé et documenté.
+- Leçons : (1) ne JAMAIS paralléliser deux edits du même fichier (patch bbox perdu,
+  ré-appliqué) ; (2) variables de sortie dédiées (`ys` réutilisé → entrée fausse
+  [417,349], corrigée [417,657]) ; (3) réutiliser `build.detour` depuis verify
+  (import module) plutôt que dupliquer la règle.

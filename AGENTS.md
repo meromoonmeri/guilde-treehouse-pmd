@@ -507,3 +507,10 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
 - Livré : `source/entree_crooked_v1/` (AUDIT.md, plan_zones.png, build/verify/make_gallery), `renders/entree_crooked_v1/` (8 calques jour/nuit, fleurs 4 phases @200ms, ORA, manifeste, 47 PASS), galerie `apercu_entree_crooked_v1.html`. Canevas 848×1264 (format du générateur, 1:1, ÷8).
 - G1 rejetée (double paroi) ; G1b retenue (0 px magenta → partition par masques matière, pas de détourage). Généré : paroi/bouche/chemin. Natifs : herbe Sky Peak quiltée (GIF sommet), rochers Crooked (modules V1), arbres Steppe (couple V3), fleurs Sky Peak (sprites applewoods). Étiquetage strict généré/natif partout.
 - Leçons : bannir « second cliff » du prompt ; éventail smoothstep + oscillation (diagonale sinon) ; entonnoir lum>85 + priorité bouche (l'ombre de gorge coupe le chemin) ; sites de fleurs sans chevauchement. PMDO non testé.
+
+## Entrée Crooked v2 (24/09/2026) — 8 calques générés recalés 1:1
+
+- Demande : chaque calque passé au générateur, ajusté à l'ensemble, textures canoniques en refs.
+- Livré : `source/entree_crooked_v2/` (build/verify/make_gallery, 6 bruts), `renders/entree_crooked_v2/` (8 calques jour/nuit, ORA, manifeste, 48 PASS), galerie `apercu_entree_crooked_v2.html`. Canevas 848×1264.
+- Méthode : maquette = composite v1 ; purge globale du magenta cuit + frange b>g (chair rose protégée) ; bouche = réf (lum<110), chemin snap8 dessus ; rochers placés par composante au pied de paroi ; split troncs/canopées par règle vert ; fleurs filtrées sur prairie (26 gardées/59). Bruts hétérogènes → recentrage, jamais de resampling.
+- Leçons : (1) confirmer l'interdit des edits parallèles même fichier (patch perdu, ré-appliqué) ; (2) le générateur déplace les objets entre passes → IoU vs v1 informatif seulement, placement par composante + repères visuels ; (3) purger le magenta en global (trous intérieurs) pas seulement par inondation ; (4) figer les variables de sortie (`ys` réutilisé → entrée fausse). Fleurs v2 statiques, v1 native 4 phases conservée. PMDO non testé.

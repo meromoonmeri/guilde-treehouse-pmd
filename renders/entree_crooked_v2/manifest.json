@@ -1,0 +1,202 @@
+{
+ "canevas": [
+  848,
+  1264
+ ],
+ "orientation": "SOUTH_TO_NORTH",
+ "maquette": "renders/entree_crooked_v1/composite_jour.png",
+ "style": "refs canoniques Crooked/Halcyon/Sky Peak (renvoi visuel, pixels regeneres)",
+ "bruts": {
+  "G_sol.png": "8316a46051cb682499a2e1dbd0bde29f7c164e65fe734d151c4faaa807d57dcd",
+  "G_chemin.png": "20c8449c55ec1fd9faf7286b49aa9c5ed847158fc97d538aca1d7801a35ac1a4",
+  "G_paroi.png": "c0b5b1d346d62be2c7971d8db6277a3e1d72a156c85695e5207c3382b6034b84",
+  "G_rochers.png": "2ef521437397eeec2c615a4a1ee2f01e143657a554d4fac014bdcf0d650d4cc9",
+  "G_fleurs.png": "d2d0e10dba6fb1abb351ba9523d1d63ea29df1f5d9fb7216b2a68e74c7c3dba4",
+  "G_arbres.png": "c0b1288f0acdee5d39d0df33fbb5da5af83c8a9f00f00b677288e83f95888c80"
+ },
+ "couches": {
+  "01_sol_herbe": "GENERE (traduit, jamais resample)",
+  "02_chemin_sable": "GENERE (traduit, jamais resample)",
+  "05_rochers": "GENERE (traduit, jamais resample)",
+  "06_fleurs": "GENERE (traduit, jamais resample)",
+  "03_paroi": "GENERE (traduit, jamais resample)",
+  "04_bouche": "GENERE (traduit, jamais resample)",
+  "07_troncs": "GENERE (traduit, jamais resample)",
+  "08_canopees": "GENERE (traduit, jamais resample)"
+ },
+ "details": {
+  "01_sol_herbe": {
+   "brut": "G_sol.png",
+   "translation": [
+    0,
+    0
+   ]
+  },
+  "bouche_ref": {
+   "centroid": [
+    417,
+    496
+   ],
+   "bbox": [
+    35,
+    0,
+    799,
+    861
+   ],
+   "bbox_rectifie": [
+    307,
+    346,
+    527,
+    646
+   ],
+   "entree": [
+    417,
+    657
+   ]
+  },
+  "03_paroi": {
+   "brut": "G_paroi.png",
+   "translation": [
+    0,
+    0
+   ],
+   "regle": "detoure moins bouche"
+  },
+  "04_bouche": {
+   "brut": "G_paroi.png",
+   "translation": [
+    0,
+    0
+   ],
+   "regle": "lum<110, plus grande composante du rect bouche"
+  },
+  "02_chemin_sable": {
+   "brut": "G_chemin.png",
+   "translation": [
+    40,
+    0
+   ],
+   "bouche_x": 417,
+   "couloir_x_avant": 379
+  },
+  "05_rochers": {
+   "brut": "G_rochers.png",
+   "recentrage": [
+    -24,
+    32
+   ],
+   "placements": [
+    [
+     29849,
+     [
+      133,
+      183
+     ],
+     [
+      61,
+      615
+     ]
+    ],
+    [
+     29361,
+     [
+      539,
+      227
+     ],
+     [
+      579,
+      619
+     ]
+    ],
+    [
+     2030,
+     [
+      359,
+      573
+     ],
+     [
+      359,
+      573
+     ]
+    ],
+    [
+     1826,
+     [
+      433,
+      578
+     ],
+     [
+      433,
+      578
+     ]
+    ],
+    [
+     1197,
+     [
+      110,
+      330
+     ],
+     [
+      38,
+      762
+     ]
+    ]
+   ]
+  },
+  "06_fleurs": {
+   "brut": "G_fleurs.png",
+   "translation": [
+    -24,
+    32
+   ],
+   "touffes_total": 59,
+   "touffes_supprimees": 33,
+   "dont_minuscules": 15,
+   "dont_hors_prairie": 18
+  },
+  "07_troncs": {
+   "brut": "G_arbres.png",
+   "translation": [
+    40,
+    -56
+   ],
+   "regle": "non-vert"
+  },
+  "08_canopees": {
+   "brut": "G_arbres.png",
+   "translation": [
+    40,
+    -56
+   ],
+   "regle": "vert + contour 4px"
+  }
+ },
+ "ordre": [
+  "01_sol_herbe",
+  "02_chemin_sable",
+  "05_rochers",
+  "06_fleurs",
+  "03_paroi",
+  "04_bouche",
+  "07_troncs",
+  "08_canopees"
+ ],
+ "iou_vs_v1_informatif": {
+  "01_sol_herbe": 1.0,
+  "02_chemin_sable": 0.19,
+  "05_rochers": 0.033,
+  "06_fleurs": 0.017,
+  "03_paroi": 0.965,
+  "04_bouche": 0.895,
+  "07_troncs": 0.0,
+  "08_canopees": 0.057
+ },
+ "entree": [
+  417,
+  657
+ ],
+ "fleurs": "statiques en v2 (v1 native animee conservee)",
+ "nuit": "Abyss exact, une fois par calque",
+ "runtime": "NOT TESTED",
+ "art_approved": false
+}
