@@ -1,0 +1,257 @@
+{
+ "canevas": [
+  848,
+  1264
+ ],
+ "orientation": "SOUTH_TO_NORTH",
+ "entree": [
+  424,
+  610
+ ],
+ "plan": "source/entree_crooked_v1/plan_zones.png (guide, aucun pixel final)",
+ "bruts": {
+  "G1b_paroi_bouche.png": {
+   "sha256": "1befd731ec2af8f2e3dd9d33c977187bf5a357aa42c8266e1d3a6b474822aad4",
+   "statut": "retenu (GENERE, style Crooked)",
+   "usage": "03_paroi + 04_bouche + 02_chemin par masques matiere, translation nulle"
+  },
+  "rejetes/G1_paroi_double_rejetee.png": "double paroi barrant le chemin"
+ },
+ "couches": {
+  "01_sol_herbe": "NATIF (translation)",
+  "02_chemin_sable": "GENERE (G1b, masque)",
+  "05_rochers": "NATIF (translation)",
+  "06_fleurs": "NATIF (translation)",
+  "03_paroi": "GENERE (G1b, masque)",
+  "04_bouche": "GENERE (G1b, masque)",
+  "07_troncs": "NATIF (translation)",
+  "08_canopees": "NATIF (translation)"
+ },
+ "masques": {
+  "04_bouche": "lum<110, plus grande composante du rect (310,340,540,640)",
+  "sable": "lum>175, plus grande composante + fond de gueule (330,400,520,620)",
+  "entonnoir": "lum>85 dans (360,600,490,700) = sol ombrage de la gorge",
+  "02_chemin_sable": "sable dans eventail (full->48px, smoothstep + oscillation), hors bouche",
+  "03_paroi": "complement (ni sable ni bouche)"
+ },
+ "ordre": [
+  "01_sol_herbe",
+  "02_chemin_sable",
+  "05_rochers",
+  "06_fleurs",
+  "03_paroi",
+  "04_bouche",
+  "07_troncs",
+  "08_canopees"
+ ],
+ "fleurs": {
+  "sites": [
+   {
+    "x": 479,
+    "y": 1176,
+    "sprite": 0,
+    "off": 3
+   },
+   {
+    "x": 536,
+    "y": 894,
+    "sprite": 1,
+    "off": 1
+   },
+   {
+    "x": 540,
+    "y": 1187,
+    "sprite": 2,
+    "off": 1
+   },
+   {
+    "x": 112,
+    "y": 1157,
+    "sprite": 3,
+    "off": 2
+   },
+   {
+    "x": 210,
+    "y": 947,
+    "sprite": 4,
+    "off": 0
+   },
+   {
+    "x": 491,
+    "y": 1034,
+    "sprite": 5,
+    "off": 3
+   },
+   {
+    "x": 621,
+    "y": 900,
+    "sprite": 6,
+    "off": 1
+   },
+   {
+    "x": 338,
+    "y": 935,
+    "sprite": 7,
+    "off": 2
+   },
+   {
+    "x": 313,
+    "y": 1095,
+    "sprite": 8,
+    "off": 0
+   },
+   {
+    "x": 234,
+    "y": 914,
+    "sprite": 9,
+    "off": 0
+   },
+   {
+    "x": 497,
+    "y": 1084,
+    "sprite": 0,
+    "off": 3
+   },
+   {
+    "x": 334,
+    "y": 1040,
+    "sprite": 1,
+    "off": 0
+   },
+   {
+    "x": 197,
+    "y": 892,
+    "sprite": 2,
+    "off": 3
+   },
+   {
+    "x": 622,
+    "y": 1011,
+    "sprite": 3,
+    "off": 0
+   },
+   {
+    "x": 234,
+    "y": 1152,
+    "sprite": 4,
+    "off": 2
+   },
+   {
+    "x": 25,
+    "y": 1036,
+    "sprite": 5,
+    "off": 2
+   },
+   {
+    "x": 31,
+    "y": 1077,
+    "sprite": 6,
+    "off": 2
+   },
+   {
+    "x": 146,
+    "y": 1195,
+    "sprite": 7,
+    "off": 1
+   },
+   {
+    "x": 658,
+    "y": 857,
+    "sprite": 8,
+    "off": 2
+   },
+   {
+    "x": 249,
+    "y": 955,
+    "sprite": 9,
+    "off": 1
+   },
+   {
+    "x": 260,
+    "y": 1101,
+    "sprite": 0,
+    "off": 2
+   },
+   {
+    "x": 302,
+    "y": 917,
+    "sprite": 1,
+    "off": 1
+   }
+  ],
+  "phases": 4,
+  "ms": 200,
+  "natif": "applewoods fleur_sky_*"
+ },
+ "arbres": [
+  [
+   40,
+   880
+  ],
+  [
+   664,
+   920
+  ],
+  [
+   80,
+   1020
+  ],
+  [
+   640,
+   1060
+  ]
+ ],
+ "rochers": {
+  "rocher_groupe_ouest": {
+   "box": [
+    53,
+    165,
+    133,
+    226
+   ],
+   "pos": [
+    216,
+    648
+   ]
+  },
+  "rocher_groupe_est": {
+   "box": [
+    186,
+    157,
+    266,
+    240
+   ],
+   "pos": [
+    560,
+    640
+   ]
+  },
+  "petit_rocher_a": {
+   "box": [
+    26,
+    217,
+    62,
+    240
+   ],
+   "pos": [
+    320,
+    720
+   ]
+  },
+  "petit_rocher_b": {
+   "box": [
+    269,
+    218,
+    292,
+    236
+   ],
+   "pos": [
+    512,
+    800
+   ]
+  }
+ },
+ "nuit": "Abyss exact, une fois par calque",
+ "runtime": "NOT TESTED",
+ "art_approved": false
+}
