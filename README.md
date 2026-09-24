@@ -230,6 +230,31 @@ Des calques vides permettent d'ajouter sols, structures, avant-plans et objets.
 - Validation indépendante des ressources et des pixels ; **pas de test dans PMDO**.
 - Collisions libres à dessiner avant utilisation comme niveau jouable.
 
+## Archive V3 — Entrées sud → nord / Ground PMDO canonique
+
+Une passe historique conservée séparément fournit un **projet PMDO 0.8.12** avec deux Ground : forêt/grotte `512 × 640` et roches/entrée souterraine `512 × 408`, tous deux sur grille de `8 px`. L’arrivée est au sud et le seuil au nord ; les calques sol, chemin, parois, ouverture, arbres/masses rocheuses restent indépendants. La livraison finale actuelle est la forêt render décrite ci-dessous.
+
+- [Voir les compositions V3 et le chemin contrôlé](apercu_entrees_sud_nord_v3.html).
+- [README PMDO, installation et provenance](source/zones_south_north_v3/README_PMDO.md).
+- [Projet PMDO éditable](exports/zones_south_north_v3_pmdo/) · [archive ZIP](exports/zones_south_north_v3_pmdo_pack.zip).
+- Reproduire : `.venv/bin/python source/zones_south_north_v3/pmdo_package.py`.
+
+Les pixels finaux viennent des sources documentées PMD Sky/Halcyon et sont sérialisés dans de nouvelles banques `.tile` 8 px ; ce n’est pas une affirmation de récupération byte-identique des banques upstream. Le contrôle local reconstruit chaque layer avec **0 différence de pixel**, vérifie l’index complet et l’installateur. Le Ground ne configure aucun warp : collisions moteur, éditeur graphique, GPU et gameplay restent à tester dans PMDO.
+
+### Archive précédente — une map canonique en cinq calques
+
+Le premier essai `exports/forest_cave_magenta_v1_pmdo/` est conservé comme calibration canonique : son guide magenta était utilisé comme référence, puis ses cinq layers étaient reconstruits depuis les sources V3. Il ne correspond pas à la méthode de render généré finale demandée ensuite.
+
+### Méthode render finale — une map à la fois
+
+La passe actuelle utilise la **composition finale générée sur fond magenta**, puis découpe ses pixels en cinq calques alignés. Les références canoniques servent à conserver la DA et à donner l’impression d’un autre lieu du même monde ; elles ne remplacent pas l’image générée.
+
+- [Viewer : composition finale et 5 layers](apercu_forest_cave_render_v1.html).
+- [Projet PMDO render forêt](exports/forest_cave_render_v1_pmdo/) · [archive](exports/forest_cave_render_v1_pmdo_pack.zip).
+- [Méthode, provenance et reproduction](source/forest_cave_render_v1/README.md).
+
+Les cinq calques sont `sol/chemin`, `vegetation`, `cliff/grotte`, `arbres` et `premier plan`. Leur recomposition est exacte à **0 différence** avec la composition générée nettoyée. La map rocheuse viendra dans une passe séparée après validation de cette forêt.
+
 ## Zones guidées par le générateur → tuiles canoniques
 
 Deux nouvelles compositions (cirque et terrasses), illustrées par le générateur puis reconstruites avec de vraies tuiles Métano de 8 px : **2048 × 1536 px**, versions sèches sans chemin et quatre phases d’eau natives.

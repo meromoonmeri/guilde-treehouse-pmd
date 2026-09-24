@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "project": "zones_south_north_v3_pmdo",
+  "checks": [
+    "all .tile records are 8x8 PNGs with premultiplied alpha",
+    "complete index resolves every delivered tile bank",
+    "Ground references reconstruct every source layer with zero pixel differences",
+    "8px grid, separate layers, markers and conservative path collision scaffold",
+    "installer dry-run, index merge, idempotence and edited-map conflict refusal"
+  ],
+  "zones": [
+    {
+      "asset": "sn_v3_forest_cave",
+      "size_px": [
+        512,
+        640
+      ],
+      "layers": 9,
+      "tilesets": 9,
+      "free_collision_cells": 271,
+      "pixel_differences": 0
+    },
+    {
+      "asset": "sn_v3_blue_rock_cave",
+      "size_px": [
+        512,
+        408
+      ],
+      "layers": 8,
+      "tilesets": 8,
+      "free_collision_cells": 83,
+      "pixel_differences": 0
+    }
+  ],
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false
+}

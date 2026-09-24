@@ -1,0 +1,162 @@
+{
+  "project": "forest_cave_magenta_v1_pmdo",
+  "target": "PMDO 0.8.12",
+  "workflow": "magenta composition guide -> chroma cleanup -> final composition -> 5 canonical layers -> Ground",
+  "guide": {
+    "source": "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png",
+    "source_sha256": "09c127c3789a1741c65f8940e5ff8268c9606e2defbebc9bca251f4e648a1acd",
+    "normalized_size": [
+      512,
+      640
+    ],
+    "normalization": "nearest-neighbor guide normalization only",
+    "key_rgb": [
+      255,
+      0,
+      255
+    ],
+    "magenta_pixels": 76156,
+    "final_layers_use_guide_pixels": false
+  },
+  "canonical_final_pixels": true,
+  "generated_guide_pixels_in_final": false,
+  "map": {
+    "asset": "forest_magenta_v1",
+    "title": "Forêt — arrivée sud, grotte au nord",
+    "size_px": [
+      512,
+      640
+    ],
+    "grid": [
+      64,
+      80
+    ],
+    "layer_count": 5,
+    "layers": [
+      {
+        "id": "01_sol_chemin",
+        "file": "ForestMagentaV1_01_sol_chemin.png",
+        "role": "soil and continuous canonical earth path",
+        "source_layers": [
+          "01_soil",
+          "02_path"
+        ],
+        "source_files": [
+          "SouthNorthV3_forest_cave_01_soil.png",
+          "SouthNorthV3_forest_cave_02_continuous_earth_path.png"
+        ],
+        "source_hashes": {
+          "01_soil": "27540843696dba075166b48894119391cb3280c58837bb5b32cee0f8ed206f79",
+          "02_path": "f18e367b8bc0def9a0369d1b93ff41130b69c0f360aa5231ddd7cc5367085c4f"
+        },
+        "generated_pixels_used": false
+      },
+      {
+        "id": "02_vegetation_arriere",
+        "file": "ForestMagentaV1_02_vegetation_arriere.png",
+        "role": "canonical north/back canopy",
+        "source_layers": [
+          "03_north_canopy"
+        ],
+        "source_files": [
+          "SouthNorthV3_forest_cave_03_north_canopy.png"
+        ],
+        "source_hashes": {
+          "03_north_canopy": "0c6bf320767984ee990bbcb5bb48b70717d1b530b61d1f32f42efc4ed3e778b0"
+        },
+        "generated_pixels_used": false
+      },
+      {
+        "id": "03_cliff_grotte",
+        "file": "ForestMagentaV1_03_cliff_grotte.png",
+        "role": "canonical white cliff and separate cave opening",
+        "source_layers": [
+          "04_cliff",
+          "05_cave"
+        ],
+        "source_files": [
+          "SouthNorthV3_forest_cave_04_white_cliff.png",
+          "SouthNorthV3_forest_cave_05_cave_opening.png"
+        ],
+        "source_hashes": {
+          "04_cliff": "946cea03a03622aa1b722cf70b141039fbac40f431883b4770c21d165118c648",
+          "05_cave": "af5526dc2419886f31a85211c432b6b3cc0892bda007feb67dfbad7b8244b7d3"
+        },
+        "generated_pixels_used": false
+      },
+      {
+        "id": "04_arbres",
+        "file": "ForestMagentaV1_04_arbres.png",
+        "role": "complete native tree trunks and canopies",
+        "source_layers": [
+          "06_trunks",
+          "07_canopies"
+        ],
+        "source_files": [
+          "SouthNorthV3_forest_cave_06_tree_trunks.png",
+          "SouthNorthV3_forest_cave_07_tree_canopies.png"
+        ],
+        "source_hashes": {
+          "06_trunks": "553bda89946a249a44aa73b208ee1e8266d31e19342595cf30b4f160a4c40a19",
+          "07_canopies": "d48a16f7c2501de5f0e2503bb3aec1f06d55ed41391c0bdcd69e095570d131d1"
+        },
+        "generated_pixels_used": false
+      },
+      {
+        "id": "05_premier_plan",
+        "file": "ForestMagentaV1_05_premier_plan.png",
+        "role": "canonical stones and foreground cliff-foot vegetation",
+        "source_layers": [
+          "08_stones",
+          "09_bushes"
+        ],
+        "source_files": [
+          "SouthNorthV3_forest_cave_08_stones.png",
+          "SouthNorthV3_forest_cave_09_cliff_foot_bushes.png"
+        ],
+        "source_hashes": {
+          "08_stones": "494b634b7c00737be8de9d8b169e90da760387fa4c0befdc5c8eba4e1df9dbb8",
+          "09_bushes": "c24f0d7c590f66a4c3c03d05950091c4737ff1056efa1fd66982836600a61bad"
+        },
+        "generated_pixels_used": false
+      }
+    ],
+    "tilesets": [
+      "FMV1_FOREST_00",
+      "FMV1_FOREST_01",
+      "FMV1_FOREST_02",
+      "FMV1_FOREST_03",
+      "FMV1_FOREST_04"
+    ],
+    "free_collision_cells": 271,
+    "total_collision_cells": 5120,
+    "path_pixels": 31858,
+    "markers": [
+      {
+        "name": "entrance",
+        "rect": [
+          224,
+          632,
+          64,
+          8
+        ],
+        "role": "south_arrival"
+      },
+      {
+        "name": "donjon_seuil",
+        "rect": [
+          240,
+          136,
+          32,
+          16
+        ],
+        "role": "north_threshold"
+      }
+    ],
+    "runtime": "NOT TESTED"
+  },
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false,
+  "warp_destinations": "NOT CONFIGURED"
+}

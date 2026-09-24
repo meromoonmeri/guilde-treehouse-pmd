@@ -1,0 +1,281 @@
+{
+  "project": "zones_south_north_v3_pmdo",
+  "target": "PMDO 0.8.12",
+  "serialization_version": "0.8.12.0",
+  "grid_px": 8,
+  "canonical_claim": "exact documented source RGBA pixels serialized into new 8px PMDO banks; not a claim that the original upstream tile bank was recovered",
+  "source_records": [
+    {
+      "id": 0,
+      "file": "forêtglomypmdsky.png",
+      "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7",
+      "sha256_at_build": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7"
+    },
+    {
+      "id": 1,
+      "file": "rockroadpmd.png",
+      "sha256": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4",
+      "sha256_at_build": "3a426f16cfa9149f8d6a61dd81faef39d26b2083156c3fc1676e31fb2e4bbee4"
+    },
+    {
+      "id": 2,
+      "file": "undergroundpmd.png",
+      "sha256": "583c864ead20d75b43ce70daf2a4f261e44bcf028031d085507faade5b063f03",
+      "sha256_at_build": "583c864ead20d75b43ce70daf2a4f261e44bcf028031d085507faade5b063f03"
+    },
+    {
+      "id": 3,
+      "file": "source/amp_plains_fleurie_v1/references/vast_steppe_layer_3.png",
+      "sha256": "92cfa8a90f34bb88e012b07ded070f57bea040e752a6f3a367474c47fb0e452f",
+      "sha256_at_build": "92cfa8a90f34bb88e012b07ded070f57bea040e752a6f3a367474c47fb0e452f"
+    },
+    {
+      "id": 4,
+      "file": "source/amp_plains_fleurie_v1/references/vast_steppe_layer_4.png",
+      "sha256": "f78e8bb8cd206391c3c86237597e245f73c7dc15e3604e6dbc11411124515f4b",
+      "sha256_at_build": "f78e8bb8cd206391c3c86237597e245f73c7dc15e3604e6dbc11411124515f4b"
+    }
+  ],
+  "maps": [
+    {
+      "id": "forest_cave",
+      "asset": "sn_v3_forest_cave",
+      "title": "Forêt — arrivée sud, grotte au nord",
+      "size_px": [
+        512,
+        640
+      ],
+      "grid": [
+        64,
+        80
+      ],
+      "orientation": "SOUTH_TO_NORTH",
+      "source_layers": [
+        {
+          "id": "01_soil",
+          "file": "SouthNorthV3_forest_cave_01_soil.png",
+          "bank": "SNV3P_FOREST_CAVE_00",
+          "source_provenance": "01_soil_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "02_continuous_earth_path",
+          "file": "SouthNorthV3_forest_cave_02_continuous_earth_path.png",
+          "bank": "SNV3P_FOREST_CAVE_01",
+          "source_provenance": "02_continuous_earth_path_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "03_north_canopy",
+          "file": "SouthNorthV3_forest_cave_03_north_canopy.png",
+          "bank": "SNV3P_FOREST_CAVE_02",
+          "source_provenance": "03_north_canopy_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "04_white_cliff",
+          "file": "SouthNorthV3_forest_cave_04_white_cliff.png",
+          "bank": "SNV3P_FOREST_CAVE_03",
+          "source_provenance": "04_white_cliff_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "05_cave_opening",
+          "file": "SouthNorthV3_forest_cave_05_cave_opening.png",
+          "bank": "SNV3P_FOREST_CAVE_04",
+          "source_provenance": "05_cave_opening_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "06_tree_trunks",
+          "file": "SouthNorthV3_forest_cave_06_tree_trunks.png",
+          "bank": "SNV3P_FOREST_CAVE_05",
+          "source_provenance": "06_tree_trunks_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "07_tree_canopies",
+          "file": "SouthNorthV3_forest_cave_07_tree_canopies.png",
+          "bank": "SNV3P_FOREST_CAVE_06",
+          "source_provenance": "07_tree_canopies_source.npz",
+          "draw_layer": 4
+        },
+        {
+          "id": "08_stones",
+          "file": "SouthNorthV3_forest_cave_08_stones.png",
+          "bank": "SNV3P_FOREST_CAVE_07",
+          "source_provenance": "08_stones_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "09_cliff_foot_bushes",
+          "file": "SouthNorthV3_forest_cave_09_cliff_foot_bushes.png",
+          "bank": "SNV3P_FOREST_CAVE_08",
+          "source_provenance": "09_cliff_foot_bushes_source.npz",
+          "draw_layer": 4
+        }
+      ],
+      "tilesets": [
+        "SNV3P_FOREST_CAVE_00",
+        "SNV3P_FOREST_CAVE_01",
+        "SNV3P_FOREST_CAVE_02",
+        "SNV3P_FOREST_CAVE_03",
+        "SNV3P_FOREST_CAVE_04",
+        "SNV3P_FOREST_CAVE_05",
+        "SNV3P_FOREST_CAVE_06",
+        "SNV3P_FOREST_CAVE_07",
+        "SNV3P_FOREST_CAVE_08"
+      ],
+      "markers": [
+        {
+          "name": "entrance",
+          "rect": [
+            224,
+            632,
+            64,
+            8
+          ],
+          "role": "south_arrival"
+        },
+        {
+          "name": "donjon_seuil",
+          "rect": [
+            240,
+            136,
+            32,
+            16
+          ],
+          "role": "north_threshold"
+        }
+      ],
+      "collision": {
+        "policy": "free cells are the 8px-cleared reviewed south-to-north path; all other cells blocked scaffold",
+        "free_cells": 271,
+        "total_cells": 5120,
+        "path_pixels": 31858,
+        "runtime_validated": false
+      },
+      "canonical_materials": "Sol, chemin et falaise de la référence forêt conservés. Pour disposer de vrais arbres entiers latéraux sans miroir, complément natif Vast Steppe (tronc et canopée séparés), explicitement distinct de la canopée de la référence. Aucun pixel généré ni recoloration. Le pied de falaise demeure couvert comme dans la source.",
+      "runtime": "NOT TESTED",
+      "art_approved": false
+    },
+    {
+      "id": "blue_rock_cave",
+      "asset": "sn_v3_blue_rock_cave",
+      "title": "Roches bleues — sud vers entrée souterraine nord",
+      "size_px": [
+        512,
+        408
+      ],
+      "grid": [
+        64,
+        51
+      ],
+      "orientation": "SOUTH_TO_NORTH",
+      "source_layers": [
+        {
+          "id": "00_dark_backdrop",
+          "file": "SouthNorthV3_blue_rock_cave_00_dark_backdrop.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_00",
+          "source_provenance": "00_dark_backdrop_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "01_native_cave_soil",
+          "file": "SouthNorthV3_blue_rock_cave_01_native_cave_soil.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_01",
+          "source_provenance": "01_native_cave_soil_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "02_rockroad_path",
+          "file": "SouthNorthV3_blue_rock_cave_02_rockroad_path.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_02",
+          "source_provenance": "02_rockroad_path_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "03_west_native_wall",
+          "file": "SouthNorthV3_blue_rock_cave_03_west_native_wall.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_03",
+          "source_provenance": "03_west_native_wall_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "04_east_native_wall",
+          "file": "SouthNorthV3_blue_rock_cave_04_east_native_wall.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_04",
+          "source_provenance": "04_east_native_wall_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "05_gateway_frame",
+          "file": "SouthNorthV3_blue_rock_cave_05_gateway_frame.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_05",
+          "source_provenance": "05_gateway_frame_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "06_open_cave",
+          "file": "SouthNorthV3_blue_rock_cave_06_open_cave.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_06",
+          "source_provenance": "06_open_cave_source.npz",
+          "draw_layer": 0
+        },
+        {
+          "id": "07_rockroad_north_masses",
+          "file": "SouthNorthV3_blue_rock_cave_07_rockroad_north_masses.png",
+          "bank": "SNV3P_BLUE_ROCK_CAVE_07",
+          "source_provenance": "07_rockroad_north_masses_source.npz",
+          "draw_layer": 4
+        }
+      ],
+      "tilesets": [
+        "SNV3P_BLUE_ROCK_CAVE_00",
+        "SNV3P_BLUE_ROCK_CAVE_01",
+        "SNV3P_BLUE_ROCK_CAVE_02",
+        "SNV3P_BLUE_ROCK_CAVE_03",
+        "SNV3P_BLUE_ROCK_CAVE_04",
+        "SNV3P_BLUE_ROCK_CAVE_05",
+        "SNV3P_BLUE_ROCK_CAVE_06",
+        "SNV3P_BLUE_ROCK_CAVE_07"
+      ],
+      "markers": [
+        {
+          "name": "entrance",
+          "rect": [
+            224,
+            400,
+            64,
+            8
+          ],
+          "role": "south_arrival"
+        },
+        {
+          "name": "donjon_seuil",
+          "rect": [
+            240,
+            168,
+            32,
+            16
+          ],
+          "role": "north_threshold"
+        }
+      ],
+      "collision": {
+        "policy": "free cells are the 8px-cleared reviewed south-to-north path; all other cells blocked scaffold",
+        "free_cells": 83,
+        "total_cells": 3264,
+        "path_pixels": 11280,
+        "runtime_validated": false
+      },
+      "canonical_materials": "Le passage horizontal seul ne contient ni grotte ni retours verticaux. Composition complémentaire depuis le panneau ouvert canonique undergroundpmd : sol, retours gauche/droite et portail intacts à leur échelle. Chemin clair et masses nord viennent de rockroadpmd. Aucune forme miroir ni grotte noire inventée ; portail maçonné natif explicitement signalé.",
+      "runtime": "NOT TESTED",
+      "art_approved": false
+    }
+  ],
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false,
+  "warp_destinations": "NOT CONFIGURED"
+}

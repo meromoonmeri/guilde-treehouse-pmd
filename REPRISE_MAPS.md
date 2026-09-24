@@ -2,7 +2,7 @@
 
 ## Demande actuelle
 
-Reprendre la création de maps avec textures canoniques. Aucun nouveau biome, layout ou fichier cible n’est encore choisi dans cette reprise. Les anciens travaux sont conservés ; aucune map n’a été régénérée ou remplacée pendant ce repérage.
+Produire la forêt `forest_cave` comme une seule map PMDO finale : composition générée sur fond magenta, nettoyage alpha, puis cinq calques alignés découpés depuis cette même image. L’arrivée reste au sud, le chemin doit conduire au seuil/grotte nord et `blue_rock_cave` attend la validation de cette forêt. Les essais canoniques/V3 précédents sont conservés séparément.
 
 ## Repérage effectué
 
@@ -68,3 +68,30 @@ Réserves relevées dans V16 :
 - L’alignement sur 8 px et le nommage Halcyon ne prouvent pas un import moteur.
 
 Les succès de chargement PMDO cités dans les anciens rapports restent historiques ; aucun lancement PMDO, rendu GPU ou test de gameplay n’a été effectué dans cette reprise.
+
+## Première livraison de la reprise — sud → nord / PMDO Ground
+
+Le choix de l’utilisateur a été appliqué sans régénérer les images V3 : `source/zones_south_north_v3/pmdo_build.py` sérialise les deux compositions existantes dans un projet PMDO autonome, avec `Mod.xml`, namespace unique, 17 banques `.tile`, `index.idx`, deux `.rsground`, scripts vides, provenance et installateur de fusion.
+
+- Forêt/grotte : `sn_v3_forest_cave`, 512×640, 9 calques, 271 cellules libres de trajet conservateur.
+- Roches/entrée souterraine : `sn_v3_blue_rock_cave`, 512×408, 8 calques, 83 cellules libres de trajet conservateur.
+- Contrôle : `.venv/bin/python source/zones_south_north_v3/pmdo_verify.py` → PASS ; recomposition des calques et des pixels : 0 différence ; installateur dry-run/fusion/idempotence/conflit : PASS.
+- Archive : `exports/zones_south_north_v3_pmdo_pack.zip`.
+
+Les banques livrées sont une nouvelle sérialisation 8×8 des pixels sources documentés, pas une revendication de banque upstream retrouvée byte à byte. Les destinations de donjon, warps, GPU, éditeur, déplacement et gameplay restent **NON TESTÉS**. Le prochain contrôle réel doit ouvrir les deux Ground dans PMDO 0.8.12 et reprendre les collisions si l’espace jouable doit dépasser le corridor conservateur.
+
+## Correction finale de méthode — render forêt une map à la fois
+
+L’utilisateur a précisé que la composition générée sur fond magenta est **la map finale**, comme dans les renders de zones qui donnent l’impression d’un autre lieu du même monde. Les textures canoniques restent des références de DA, mais le résultat final ne doit plus être reconstruit pixel-perfect depuis V3.
+
+La livraison actuelle est `exports/forest_cave_render_v1_pmdo/` : une seule forêt, composition finale magenta nettoyée, puis cinq masques alignés découpés depuis cette même image :
+
+- `01_sol_chemin`
+- `02_vegetation`
+- `03_cliff_grotte`
+- `04_arbres`
+- `05_premier_plan`
+
+Le contrôle vérifie que les cinq layers recomposent la composition générée avec **0 différence de pixel**, que les banques `.tile` et le Ground sont lisibles, et que l’installateur refuse les conflits. La calibration canonique précédente `exports/forest_cave_magenta_v1_pmdo/` est conservée séparément et ne doit pas être confondue avec ce render final.
+
+Contrôle : `.venv/bin/python source/forest_cave_render_v1/verify.py` → PASS, 1 Ground, 5 banques `.tile`, 226 cellules de trajet conservateur. PMDO graphique, GPU, collisions en mouvement et warp restent non testés. La map rocheuse sera produite dans une passe séparée après validation de la forêt.

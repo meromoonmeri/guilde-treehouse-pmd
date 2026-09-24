@@ -1,0 +1,86 @@
+{
+  "project": "forest_cave_render_v1_pmdo",
+  "target": "PMDO 0.8.12",
+  "workflow": "final generated composition on magenta -> chroma cleanup -> five aligned layers",
+  "composition_source": {
+    "file": "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png",
+    "sha256": "09c127c3789a1741c65f8940e5ff8268c9606e2defbebc9bca251f4e648a1acd",
+    "normalized_size": [
+      512,
+      640
+    ]
+  },
+  "canonical_references": [
+    "forêtglomypmdsky.png",
+    "source/zones_south_north_v3/references/native_tree_complete.png"
+  ],
+  "canonical_references_are_style_guides": true,
+  "final_pixels_are_generated": true,
+  "layer_count": 5,
+  "layers": [
+    {
+      "id": "01_sol_chemin",
+      "file": "ForestRenderV1_01_sol_chemin.png",
+      "pixels": 65988,
+      "generated_from_final_composition": true
+    },
+    {
+      "id": "02_vegetation",
+      "file": "ForestRenderV1_02_vegetation.png",
+      "pixels": 71048,
+      "generated_from_final_composition": true
+    },
+    {
+      "id": "03_cliff_grotte",
+      "file": "ForestRenderV1_03_cliff_grotte.png",
+      "pixels": 32989,
+      "generated_from_final_composition": true
+    },
+    {
+      "id": "04_arbres",
+      "file": "ForestRenderV1_04_arbres.png",
+      "pixels": 61944,
+      "generated_from_final_composition": true
+    },
+    {
+      "id": "05_premier_plan",
+      "file": "ForestRenderV1_05_premier_plan.png",
+      "pixels": 19555,
+      "generated_from_final_composition": true
+    }
+  ],
+  "map": {
+    "asset": "forest_cave_render_v1",
+    "size_px": [
+      512,
+      640
+    ],
+    "grid": [
+      64,
+      80
+    ],
+    "free_collision_cells": 226,
+    "total_collision_cells": 5120,
+    "tilesets": [
+      "FCRV1_FOREST_00",
+      "FCRV1_FOREST_01",
+      "FCRV1_FOREST_02",
+      "FCRV1_FOREST_03",
+      "FCRV1_FOREST_04"
+    ],
+    "markers": [
+      {
+        "name": "entrance",
+        "role": "south_arrival"
+      },
+      {
+        "name": "donjon_seuil",
+        "role": "north_threshold"
+      }
+    ]
+  },
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false,
+  "warp_destinations": "NOT CONFIGURED"
+}
