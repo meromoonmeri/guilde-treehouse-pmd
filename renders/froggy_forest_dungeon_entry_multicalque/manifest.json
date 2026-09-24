@@ -1,0 +1,23 @@
+{
+  "canvas_px": [
+    1024,
+    1024
+  ],
+  "method": "six independently generated image-generator layers, chroma-keyed then recomposed",
+  "references": [
+    "Foggy_Forest_Base_Camp_TDS.png",
+    "entrancecascade.png",
+    "Mystifying_Forest_entrance_TDS.png",
+    "Waterfall_Cave_ledge_TDS.png"
+  ],
+  "layers": [
+    "01_sol_foret.png",
+    "02_falaises_rochers.png",
+    "03_cascades_eau.png",
+    "04_chemin_entree.png",
+    "05_vegetation.png",
+    "06_entree_donjon.png"
+  ],
+  "water_only_where_generated": "03_cascades_eau.png",
+  "no_house_v2": true
+}
