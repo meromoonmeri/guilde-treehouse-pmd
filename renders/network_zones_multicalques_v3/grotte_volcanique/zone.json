@@ -1,0 +1,48 @@
+{
+  "zone": "grotte_volcanique",
+  "biome": "volcanic cave",
+  "shape": "oval",
+  "source_reference": "IMG_4996.jpeg",
+  "generated_layers": [
+    "00_fond_biome_genere.png",
+    "01_sol_terrain_genere.png",
+    "02_entree_angle_reference.png",
+    "03_decors_lieux_genere.png",
+    "04_cadre_layout_genere.png"
+  ],
+  "duo_style_export": {
+    "canvas_px": [
+      480,
+      360
+    ],
+    "layers": [
+      {
+        "id": "00_fond",
+        "file": "00_fond_biome_genere.png",
+        "animated": false
+      },
+      {
+        "id": "01_sol",
+        "file": "01_sol_terrain_genere.png",
+        "animated": false
+      },
+      {
+        "id": "02_entree",
+        "file": "02_entree_angle_reference.png",
+        "animated": false
+      },
+      {
+        "id": "03_decors",
+        "file": "03_decors_lieux_genere.png",
+        "animated": false
+      },
+      {
+        "id": "04_layout",
+        "file": "04_cadre_layout_genere.png",
+        "animated": false
+      }
+    ],
+    "dry_composite": "composite.png",
+    "water_policy": "disable 05_eau for dry map; animate it for wet map"
+  }
+}

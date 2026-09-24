@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "native_objects": 30,
+  "generated_furniture": 4,
+  "tilesheets": 4,
+  "windows_canvas": [
+    32,
+    32
+  ],
+  "window_visible": [
+    28,
+    28
+  ],
+  "stairs": [
+    {
+      "room": "accueil",
+      "edit_rect": [
+        200,
+        0,
+        400,
+        184
+      ],
+      "outside_rgba_identical": true,
+      "upper_opening_mean_rgb": 23.035069444444446,
+      "bright_upper_landing_pixels": 0
+    },
+    {
+      "room": "casino",
+      "edit_rect": [
+        200,
+        0,
+        400,
+        184
+      ],
+      "outside_rgba_identical": true,
+      "upper_opening_mean_rgb": 23.035069444444446,
+      "bright_upper_landing_pixels": 0
+    }
+  ],
+  "full_pack_entries": 82,
+  "full_pack_rgba_matches_viewer_layers": true,
+  "native_assets_no_resampling_recolour_rotation": true,
+  "PMDO": "NOT TESTED",
+  "artistic_approval": "Pending user review"
+}

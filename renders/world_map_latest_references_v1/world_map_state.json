@@ -1,0 +1,20 @@
+{
+  "format": "WorldMapUserFondTwoLayer",
+  "canvas_px": [
+    556,
+    366
+  ],
+  "source_background": "source/user_committed_map_background.png",
+  "references": [
+    "source/latest_references/IMG_4984.jpeg",
+    "source/latest_references/IMG_4985.jpeg",
+    "source/latest_references/IMG_4986.jpeg"
+  ],
+  "layers": [
+    "layers/00_fond_utilisateur_original.png",
+    "layers/01_references_9_continents_10_iles.png"
+  ],
+  "continents": 9,
+  "small_islands": 10,
+  "art_direction": "latest committed pixel-art references; IMG_4984 separated continents, IMG_4985 cloud language, IMG_4986 composition language"
+}
