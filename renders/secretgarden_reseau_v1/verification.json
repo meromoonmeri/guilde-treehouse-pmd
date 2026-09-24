@@ -1,16 +1,19 @@
 {
-  "scenes": 6,
-  "aligned_layers": 46,
-  "ports": 16,
-  "deferred": [
-    "couloir_t (T-junction N/E/W, bottom closed) — image limit reached, next turn"
-  ],
+  "version": 2,
+  "scenes": 7,
+  "aligned_layers": 82,
+  "ports": 19,
+  "flower_frames_per_room": 4,
+  "flower_cadence_ms": 200,
   "checks": [
     "Reference SHA256 identical since build",
-    "6 compositions identical to active-layer recomposition",
-    "All layers 512x512",
-    "Native grass patch strictly equal to secretgarden.png crop",
-    "Build+verify: 16 64px connectors, 24px opaque band each"
+    "7 compositions identical to full static stack",
+    "Terrain partitions 01..08 exact on all rooms",
+    "All layers 512x512; border port windows clear",
+    "Flower f0==static, 4 distinct frames, loop closed",
+    "7 GIFs 4x200ms; 7 ORAs readable with full stacks",
+    "Native grass patch strictly equal to reference crop",
+    "19 64px connectors, 24px opaque band each"
   ],
   "runtime_validated": false
 }

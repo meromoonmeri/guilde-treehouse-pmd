@@ -1,5 +1,6 @@
 {
   "reference": "secretgarden.png (user commit)",
+  "version": 2,
   "reference_sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f",
   "patch_box": [
     190,
@@ -14,15 +15,20 @@
   "port_width": 64,
   "opaque_depth": 24,
   "strip_depth": 32,
-  "deferred": [
-    "couloir_t (T-junction N/E/W, bottom closed) — image limit reached, next turn"
-  ],
+  "flowers": {
+    "frames": 4,
+    "frame_ms": 200,
+    "loop_ms": 800,
+    "motion": "sway dx=[0,+1,0,-1]px, brightness=[1.00,1.06,1.00,0.94]",
+    "note": "new animation in Sky Peak cadence, not a recovered native cycle"
+  },
   "runtime_validated": false,
   "rooms": [
     {
       "id": "couloir_ns",
       "title": "Couloir nord-sud fleuri",
       "raw": "couloir_ns.png",
+      "border": "brut_ns.png",
       "ports": [
         {
           "direction": "N",
@@ -31,7 +37,7 @@
             8
           ],
           "width": 64,
-          "layer": "06_acces_N.png"
+          "layer": "10_acces_N.png"
         },
         {
           "direction": "S",
@@ -40,19 +46,24 @@
             504
           ],
           "width": 64,
-          "layer": "06_acces_S.png"
+          "layer": "10_acces_S.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_N",
-        "06_acces_S"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_N",
+        "10_acces_S"
       ],
       "optional": [],
+      "flower_px": 1563,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
@@ -62,6 +73,7 @@
       "id": "couloir_ew",
       "title": "Couloir est-ouest fleuri",
       "raw": "couloir_ew.png",
+      "border": "brut_ew.png",
       "ports": [
         {
           "direction": "E",
@@ -70,7 +82,7 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_E.png"
+          "layer": "10_acces_E.png"
         },
         {
           "direction": "W",
@@ -79,19 +91,79 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_W.png"
+          "layer": "10_acces_W.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_E",
-        "06_acces_W"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_E",
+        "10_acces_W"
       ],
       "optional": [],
+      "flower_px": 1741,
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "couloir_t",
+      "title": "Jonction en T",
+      "raw": "couloir_t.png",
+      "border": "brut_t.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "10_acces_N.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "10_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "10_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
+        "05_vegetation_premier_plan",
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_N",
+        "10_acces_E",
+        "10_acces_W"
+      ],
+      "optional": [],
+      "flower_px": 1112,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
@@ -101,6 +173,7 @@
       "id": "salle_traversee",
       "title": "Salle traversante",
       "raw": "salle_traversee.png",
+      "border": "brut_traversee.png",
       "ports": [
         {
           "direction": "N",
@@ -109,7 +182,7 @@
             8
           ],
           "width": 64,
-          "layer": "06_acces_N.png"
+          "layer": "10_acces_N.png"
         },
         {
           "direction": "S",
@@ -118,19 +191,24 @@
             504
           ],
           "width": 64,
-          "layer": "06_acces_S.png"
+          "layer": "10_acces_S.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_N",
-        "06_acces_S"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_N",
+        "10_acces_S"
       ],
       "optional": [],
+      "flower_px": 2242,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
@@ -140,6 +218,7 @@
       "id": "salle_laterale",
       "title": "Salle laterale",
       "raw": "salle_laterale.png",
+      "border": "brut_laterale.png",
       "ports": [
         {
           "direction": "W",
@@ -148,7 +227,7 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_W.png"
+          "layer": "10_acces_W.png"
         },
         {
           "direction": "S",
@@ -157,19 +236,24 @@
             504
           ],
           "width": 64,
-          "layer": "06_acces_S.png"
+          "layer": "10_acces_S.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_W",
-        "06_acces_S"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_W",
+        "10_acces_S"
       ],
       "optional": [],
+      "flower_px": 2576,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
@@ -179,6 +263,7 @@
       "id": "salle_carrefour",
       "title": "Salle carrefour",
       "raw": "salle_carrefour.png",
+      "border": "brut_carrefour.png",
       "ports": [
         {
           "direction": "N",
@@ -187,7 +272,7 @@
             8
           ],
           "width": 64,
-          "layer": "06_acces_N.png"
+          "layer": "10_acces_N.png"
         },
         {
           "direction": "S",
@@ -196,7 +281,7 @@
             504
           ],
           "width": 64,
-          "layer": "06_acces_S.png"
+          "layer": "10_acces_S.png"
         },
         {
           "direction": "E",
@@ -205,7 +290,7 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_E.png"
+          "layer": "10_acces_E.png"
         },
         {
           "direction": "W",
@@ -214,21 +299,26 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_W.png"
+          "layer": "10_acces_W.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_N",
-        "06_acces_S",
-        "06_acces_E",
-        "06_acces_W"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_N",
+        "10_acces_S",
+        "10_acces_E",
+        "10_acces_W"
       ],
       "optional": [],
+      "flower_px": 1539,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
@@ -238,6 +328,7 @@
       "id": "carrefour_clairiere",
       "title": "Carrefour de la clairiere",
       "raw": "carrefour_clairiere.png",
+      "border": "brut_clairiere.png",
       "ports": [
         {
           "direction": "N",
@@ -246,7 +337,7 @@
             8
           ],
           "width": 64,
-          "layer": "06_acces_N.png"
+          "layer": "10_acces_N.png"
         },
         {
           "direction": "S",
@@ -255,7 +346,7 @@
             504
           ],
           "width": 64,
-          "layer": "06_acces_S.png"
+          "layer": "10_acces_S.png"
         },
         {
           "direction": "E",
@@ -264,7 +355,7 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_E.png"
+          "layer": "10_acces_E.png"
         },
         {
           "direction": "W",
@@ -273,21 +364,26 @@
             256
           ],
           "width": 64,
-          "layer": "06_acces_W.png"
+          "layer": "10_acces_W.png"
         }
       ],
       "layers": [
         "01_sol_chemin",
         "02_vegetation_fond",
-        "03_massif_gauche",
-        "04_massif_droit",
+        "03_cimees_arbres",
+        "04_buissons_sous_bois",
         "05_vegetation_premier_plan",
-        "06_acces_N",
-        "06_acces_S",
-        "06_acces_E",
-        "06_acces_W"
+        "06_troncs",
+        "07_rochers",
+        "08_fleurs",
+        "09_bordure_feuillue",
+        "10_acces_N",
+        "10_acces_S",
+        "10_acces_E",
+        "10_acces_W"
       ],
       "optional": [],
+      "flower_px": 2425,
       "checks": {
         "partitions_exact": true,
         "ports_opaque_band": true
