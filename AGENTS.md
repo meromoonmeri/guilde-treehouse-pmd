@@ -183,3 +183,10 @@ GIF natives (442 motifs, 4096 cellules, 0 difference), 8 touffes natives,
 rejete (entites), sommet genere non utilise (remplace natif), guide_prairie
 REFUSE en texture (vert lime (128,229,38) vs (135,247,119), rochers gris vs
 bleu-ardoise, plaques marron intruses, traits trop gros). Verify PASS.
+
+## Paroi + prairie Sky layer unique 1008x176 (septembre 2026)
+Demande : paroi rocheuse + prairie en layer unique, texture canonique.
+`renders/paroi_prairie_sky_v1/` : bande GIF y328..504 carrelee [F][M(F)],
+fleurs retirees (infill 4 frames), joint unique x504 continu, jour + nuit
+Abyss. Premier essai [A][M(A)][B][M(B)] rejete : joint central non continu
+(blocs differents). Verify PASS 0 difference.

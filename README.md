@@ -1,5 +1,10 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Paroi + prairie Sky — layer unique natif 1008×176
+
+- [Bande falaise + prairie jour/nuit, joint miroir continu](renders/paroi_prairie_sky_v1/README.md) · [planche](renders/paroi_prairie_sky_v1/PLANCHE_PAROI_NE_PAS_IMPORTER.png).
+- 100% pixels GIF natifs, fleurs retirées (couche séparée), 0 différence vérifiée.
+
 ## Texture native — Prairie Sky Peak 512 jour/nuit + audit des bruts
 
 - [Surface quiltée 100% tuiles GIF, touffes natives](renders/texture_prairie_sky_v1/README.md) · [planche](renders/texture_prairie_sky_v1/PLANCHE_TEXTURE_NE_PAS_IMPORTER.png) · [autopsie de mes générations](renders/texture_prairie_sky_v1/AUDIT_MES_GENERATIONS.md).
