@@ -1,0 +1,257 @@
+{
+  "source": {
+    "file": "DSVFS.png",
+    "sha256": "583de9d7f04ab5001f9a0052c7160a1ef878b9540f3f9185ccb6535b327f21db",
+    "size": [
+      702,
+      466
+    ]
+  },
+  "wave_reference": {
+    "file": "DS _ DSi - Pokemon Mystery Dungeon_ Explorers of Time _ Darkness - Backgrounds - Beach & Path to Beach.png",
+    "sha256": "7e85d96d7c74e6ab52c46356d7600137115ddd023236a31f47a678eb5e40780c",
+    "credit": "Beach & Path to Beach, rip redblueyellow; PMD / Nintendo / Creatures / GAME FREAK / Chunsoft",
+    "sample_rectangles": [
+      [
+        865,
+        8,
+        1180,
+        55
+      ],
+      [
+        865,
+        63,
+        1180,
+        110
+      ],
+      [
+        865,
+        117,
+        1180,
+        164
+      ],
+      [
+        865,
+        171,
+        1180,
+        218
+      ],
+      [
+        865,
+        225,
+        1180,
+        272
+      ],
+      [
+        865,
+        279,
+        1180,
+        326
+      ],
+      [
+        865,
+        334,
+        1180,
+        381
+      ],
+      [
+        865,
+        390,
+        1180,
+        437
+      ],
+      [
+        865,
+        444,
+        1180,
+        491
+      ],
+      [
+        865,
+        500,
+        1180,
+        547
+      ],
+      [
+        865,
+        558,
+        1180,
+        605
+      ],
+      [
+        865,
+        612,
+        1180,
+        659
+      ],
+      [
+        865,
+        665,
+        1180,
+        712
+      ],
+      [
+        865,
+        719,
+        1180,
+        766
+      ],
+      [
+        865,
+        772,
+        1180,
+        819
+      ],
+      [
+        865,
+        823,
+        1180,
+        870
+      ],
+      [
+        865,
+        877,
+        1180,
+        924
+      ]
+    ],
+    "crest_height_px": [
+      31.825347758887172,
+      31.83049535603715,
+      27.564349112426036,
+      23.460251046025103,
+      19.999111111111112,
+      16.85972850678733,
+      16.85972850678733,
+      16.861834654586637,
+      18.612549800796813,
+      20.44396551724138,
+      21.970313825275657,
+      25.674990245805695,
+      29.648638426626324,
+      29.670938560120618,
+      31.846212700841622,
+      31.825347758887172,
+      31.846212700841622
+    ],
+    "usage": "Crest-height progression guides a new integer-coordinate displacement. No sheet pixels substituted into the supplied map; official cadence unknown."
+  },
+  "layers": [
+    {
+      "id": "01_ciel",
+      "name": "Ciel visible",
+      "file": "calques/BeachV1_01_ciel.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "02_sable",
+      "name": "Sable et accès",
+      "file": "calques/BeachV1_02_sable.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "03_mer",
+      "name": "Mer · surface",
+      "file": "calques/BeachV1_03_mer.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "04_ecume",
+      "name": "Écume et liserés",
+      "file": "calques/BeachV1_04_ecume.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "05_falaises_fond",
+      "name": "Falaises du fond",
+      "file": "calques/BeachV1_05_falaises_fond.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "06_vegetation_fond",
+      "name": "Palmiers et plantes du fond",
+      "file": "calques/BeachV1_06_vegetation_fond.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "07_vegetation_proche",
+      "name": "Palmiers et plantes proches",
+      "file": "calques/BeachV1_07_vegetation_proche.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "08_rochers_rivage",
+      "name": "Rochers du rivage",
+      "file": "calques/BeachV1_08_rochers_rivage.png",
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "09_ilots",
+      "name": "Îlots rocheux",
+      "file": "calques/BeachV1_09_ilots.png",
+      "origin": [
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "frames": 64,
+    "duration_ms": 50,
+    "cycle_ms": 3200,
+    "ticks_at_60hz": 3,
+    "water": "animation/mer/BeachV1_mer_{frame:02d}.png",
+    "foam": "animation/ecume/BeachV1_ecume_{frame:02d}.png",
+    "phase_zero_exact": true,
+    "official_cycle": false,
+    "method": "Beach-reference-guided surf oscillation; local swell; integer nearest-neighbour remapping of input colours; fixed water footprint."
+  },
+  "import": {
+    "native_size": [
+      702,
+      466
+    ],
+    "padded_size": [
+      704,
+      472
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "tile_size": 8,
+    "padding": "Right and bottom transparent; no resampling",
+    "runtime": "NOT TESTED"
+  },
+  "limits": [
+    "Visible-surface partitions, not recovered native layers or complete movable objects.",
+    "Hidden water below foam is completed from nearest visible water samples.",
+    "Original fixed shoreline: water never invades sand or rocks.",
+    "New adapted motion, not an extracted official Sky cycle.",
+    "No collisions, Ground, warps or engine validation."
+  ]
+}
