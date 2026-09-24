@@ -241,6 +241,16 @@ La reprise choisie produit maintenant un **projet PMDO 0.8.12 séparé** avec de
 
 Les pixels finaux viennent des sources documentées PMD Sky/Halcyon et sont sérialisés dans de nouvelles banques `.tile` 8 px ; ce n’est pas une affirmation de récupération byte-identique des banques upstream. Le contrôle local reconstruit chaque layer avec **0 différence de pixel**, vérifie l’index complet et l’installateur. Le Ground ne configure aucun warp : collisions moteur, éditeur graphique, GPU et gameplay restent à tester dans PMDO.
 
+### Reprise corrigée — une map à la fois, méthode magenta
+
+La première passe de production appliquant la méthode demandée est maintenant la forêt seule : guide de composition généré sur fond `#FF00FF`, nettoyage alpha, puis reconstruction finale avec les textures canoniques. Elle possède exactement cinq calques : **sol/chemin, végétation arrière, cliff/grotte, arbres, premier plan**.
+
+- [Viewer 5 calques : guide magenta et composition finale](apercu_forest_cave_magenta_v1.html).
+- [Projet PMDO forêt](exports/forest_cave_magenta_v1_pmdo/) · [archive](exports/forest_cave_magenta_v1_pmdo_pack.zip).
+- [Méthode, provenance et reproduction](source/zones_south_north_magenta_v1/README.md).
+
+Le guide généré est conservé pour la composition mais **aucun de ses pixels n’est utilisé dans le terrain final** : la recomposition finale est identique au témoin canonique forestier, 0 différence. La map rocheuse viendra dans une passe séparée après validation de cette première map.
+
 ## Zones guidées par le générateur → tuiles canoniques
 
 Deux nouvelles compositions (cirque et terrasses), illustrées par le générateur puis reconstruites avec de vraies tuiles Métano de 8 px : **2048 × 1536 px**, versions sèches sans chemin et quatre phases d’eau natives.

@@ -79,3 +79,17 @@ Le choix de l’utilisateur a été appliqué sans régénérer les images V3 : 
 - Archive : `exports/zones_south_north_v3_pmdo_pack.zip`.
 
 Les banques livrées sont une nouvelle sérialisation 8×8 des pixels sources documentés, pas une revendication de banque upstream retrouvée byte à byte. Les destinations de donjon, warps, GPU, éditeur, déplacement et gameplay restent **NON TESTÉS**. Le prochain contrôle réel doit ouvrir les deux Ground dans PMDO 0.8.12 et reprendre les collisions si l’espace jouable doit dépasser le corridor conservateur.
+
+## Correction de méthode — forêt seule en cinq calques
+
+L’utilisateur a précisé qu’il faut produire les maps une par une avec la méthode de composition sur fond magenta, puis utiliser les textures canoniques pour le résultat final. La livraison de référence de cette correction est `exports/forest_cave_magenta_v1_pmdo/` : une seule forêt, guide `#FF00FF`, alpha nettoyé, composition finale et Ground à cinq calques.
+
+- `01_sol_chemin`
+- `02_vegetation_arriere`
+- `03_cliff_grotte`
+- `04_arbres`
+- `05_premier_plan`
+
+Le guide magenta est conservé dans `provenance/guide/`, mais le contrôle compare chaque layer final aux sources V3 canoniques : **0 différence de pixel**. Le guide généré n’est jamais importé comme texture finale. La carte rocheuse n’est pas traitée dans cette passe ; elle attend la validation de la forêt.
+
+Contrôle : `.venv/bin/python source/zones_south_north_magenta_v1/verify.py` → PASS, 1 Ground, 5 banques `.tile`, 271 cellules de trajet conservateur. PMDO graphique, GPU, collisions en mouvement et warp restent non testés.
