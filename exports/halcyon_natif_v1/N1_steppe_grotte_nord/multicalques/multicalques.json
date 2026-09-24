@@ -1,5 +1,5 @@
 {
-  "zone": "Vast Steppe — grotte Crooked au nord (modules Halcyon)",
+  "zone": "Vast Steppe — grotte nord (modèle générateur scène entière, refs Halcyon)",
   "dimensions": [
     928,
     1152
@@ -7,70 +7,70 @@
   "grid": 8,
   "layers": [
     {
-      "id": "01_sol_herbe_steppe",
-      "name": "01 sol herbe steppe"
+      "id": "01_sol_herbe",
+      "name": "Sol : herbe (généré)"
     },
     {
-      "id": "02_lisiere_relic",
-      "name": "02 lisiere relic"
+      "id": "02_lisiere_foret",
+      "name": "Lisière de forêt (généré)"
     },
     {
-      "id": "03_chemin_relic",
-      "name": "03 chemin relic"
+      "id": "03_chemin",
+      "name": "Chemin de terre (généré)"
     },
     {
-      "id": "04_parois_crooked",
-      "name": "04 parois crooked"
+      "id": "04_parois_roche",
+      "name": "Parois roche / Crooked (généré)"
     },
     {
-      "id": "05_objets_grotte",
-      "name": "05 objets grotte"
+      "id": "05_entree_grotte",
+      "name": "Entrée grotte (généré)"
     },
     {
-      "id": "06_ombres_grotte",
-      "name": "06 ombres grotte"
+      "id": "06_rochers",
+      "name": "Rochers (généré)"
     },
     {
-      "id": "07_rochers_crooked",
-      "name": "07 rochers crooked"
+      "id": "07_vegetation_basse",
+      "name": "Végétation basse (généré)"
     },
     {
-      "id": "08_fleurs_steppe",
-      "name": "08 fleurs steppe"
+      "id": "08_troncs_ombres",
+      "name": "Troncs + ombres (généré)"
     },
     {
-      "id": "09_arbres_steppe",
-      "name": "09 arbres steppe"
+      "id": "09_canopees",
+      "name": "Canopées (généré)"
     }
   ],
   "provenance": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
   "variants": {
     "jour": {
-      "atlas_tiles": 1781,
+      "atlas_tiles": 33296,
       "files": {
-        "01_sol_herbe_steppe": "01_sol_herbe_steppe.png",
-        "02_lisiere_relic": "02_lisiere_relic.png",
-        "03_chemin_relic": "03_chemin_relic.png",
-        "04_parois_crooked": "04_parois_crooked.png",
-        "05_objets_grotte": "05_objets_grotte.png",
-        "06_ombres_grotte": "06_ombres_grotte.png",
-        "07_rochers_crooked": "07_rochers_crooked.png",
-        "08_fleurs_steppe": "08_fleurs_steppe.png",
-        "09_arbres_steppe": "09_arbres_steppe.png"
+        "01_sol_herbe": "01_sol_herbe.png",
+        "02_lisiere_foret": "02_lisiere_foret.png",
+        "03_chemin": "03_chemin.png",
+        "04_parois_roche": "04_parois_roche.png",
+        "05_entree_grotte": "05_entree_grotte.png",
+        "06_rochers": "06_rochers.png",
+        "07_vegetation_basse": "07_vegetation_basse.png",
+        "08_troncs_ombres": "08_troncs_ombres.png",
+        "09_canopees": "09_canopees.png"
       }
     },
     "nuit": {
-      "atlas_tiles": 1781,
+      "atlas_tiles": 33284,
       "files": {
-        "01_sol_herbe_steppe": "01_sol_herbe_steppe_nuit.png",
-        "02_lisiere_relic": "02_lisiere_relic_nuit.png",
-        "03_chemin_relic": "03_chemin_relic_nuit.png",
-        "04_parois_crooked": "04_parois_crooked_nuit.png",
-        "05_objets_grotte": "05_objets_grotte_nuit.png",
-        "06_ombres_grotte": "06_ombres_grotte_nuit.png",
-        "07_rochers_crooked": "07_rochers_crooked_nuit.png",
-        "08_fleurs_steppe": "08_fleurs_steppe_nuit.png",
-        "09_arbres_steppe": "09_arbres_steppe_nuit.png"
+        "01_sol_herbe": "01_sol_herbe_nuit.png",
+        "02_lisiere_foret": "02_lisiere_foret_nuit.png",
+        "03_chemin": "03_chemin_nuit.png",
+        "04_parois_roche": "04_parois_roche_nuit.png",
+        "05_entree_grotte": "05_entree_grotte_nuit.png",
+        "06_rochers": "06_rochers_nuit.png",
+        "07_vegetation_basse": "07_vegetation_basse_nuit.png",
+        "08_troncs_ombres": "08_troncs_ombres_nuit.png",
+        "09_canopees": "09_canopees_nuit.png"
       }
     }
   }

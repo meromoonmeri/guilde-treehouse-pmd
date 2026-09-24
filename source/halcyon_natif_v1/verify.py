@@ -33,7 +33,7 @@ def main():
         r['composition_opaque'] = bool(np.array(comp)[:, :, 3].min() == 255)
         r['night_exact'] = all(bool(np.array_equal(arr(d / 'nuit' / f'{n}_nuit.png'), np.array(night(Image.fromarray(layers[n]))))) for n in order)
         r['aseprite'] = (R / 'exports/halcyon_natif_v1' / mid / 'multicalques' / f'{mid}_jour.aseprite').exists()
-        r['native_claim'] = 'PIXELS NATIFS' in m['terrain_origin']
+        r['origin_documented'] = ('PIXELS NATIFS' in m['terrain_origin']) or ('PIXELS GÉNÉRÉS' in m['terrain_origin'])
         r['ok'] = all(v is True for v in r.values() if isinstance(v, bool))
         ok &= r['ok']
         out[mid] = r

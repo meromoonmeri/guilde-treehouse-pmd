@@ -1,518 +1,57 @@
 {
   "id": "N1_steppe_grotte_nord",
-  "title": "Vast Steppe — grotte Crooked au nord (modules Halcyon)",
+  "title": "Vast Steppe — grotte nord (modèle générateur scène entière, refs Halcyon)",
   "size": [
     928,
     1152
   ],
-  "terrain_origin": "PIXELS NATIFS Halcyon — translation de modules complets (pas de mosaïque 8 px, pas de recolor/miroir/scale).",
+  "terrain_origin": "PIXELS GÉNÉRÉS d’après références Halcyon (modèle scène entière → calques), pas mosaïque de modules.",
   "layers_order_bottom_to_top": [
-    "01_sol_herbe_steppe",
-    "02_lisiere_relic",
-    "03_chemin_relic",
-    "04_parois_crooked",
-    "05_objets_grotte",
-    "06_ombres_grotte",
-    "07_rochers_crooked",
-    "08_fleurs_steppe",
-    "09_arbres_steppe"
+    "01_sol_herbe",
+    "02_lisiere_foret",
+    "03_chemin",
+    "04_parois_roche",
+    "05_entree_grotte",
+    "06_rochers",
+    "07_vegetation_basse",
+    "08_troncs_ombres",
+    "09_canopees"
   ],
-  "placements": [
-    {
-      "module": "lisiere_relic_n",
-      "layer": "02_lisiere",
-      "xy": [
-        0,
-        0
-      ],
-      "size": [
-        600,
-        96
-      ]
-    },
-    {
-      "module": "lisiere_relic_n",
-      "layer": "02_lisiere",
-      "xy": [
-        600,
-        0
-      ],
-      "size": [
-        600,
-        96
-      ]
-    },
-    {
-      "module": "lisiere_relic_w",
-      "layer": "02_lisiere",
-      "xy": [
-        0,
-        96
-      ],
-      "size": [
-        64,
-        600
-      ]
-    },
-    {
-      "module": "lisiere_relic_e",
-      "layer": "02_lisiere",
-      "xy": [
-        864,
-        96
-      ],
-      "size": [
-        64,
-        600
-      ]
-    },
-    {
-      "module": "lisiere_relic_w",
-      "layer": "02_lisiere",
-      "xy": [
-        0,
-        696
-      ],
-      "size": [
-        64,
-        600
-      ]
-    },
-    {
-      "module": "lisiere_relic_e",
-      "layer": "02_lisiere",
-      "xy": [
-        864,
-        696
-      ],
-      "size": [
-        64,
-        600
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        220
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        320
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        420
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        520
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        620
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        720
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        820
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        920
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        1020
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "chemin_relic_56x100",
-      "layer": "03_chemin",
-      "xy": [
-        436,
-        1052
-      ],
-      "size": [
-        56,
-        100
-      ]
-    },
-    {
-      "module": "crooked_L00_Base",
-      "layer": "04_parois",
-      "xy": [
-        304,
-        24
-      ],
-      "size": [
-        320,
-        240
-      ]
-    },
-    {
-      "module": "crooked_L01_Objects",
-      "layer": "05_entree",
-      "xy": [
-        304,
-        24
-      ],
-      "size": [
-        320,
-        240
-      ]
-    },
-    {
-      "module": "crooked_L02_Shadows",
-      "layer": "06_ombres_grotte",
-      "xy": [
-        304,
-        24
-      ],
-      "size": [
-        320,
-        240
-      ]
-    },
-    {
-      "module": "rocher_ouest",
-      "layer": "07_rochers",
-      "xy": [
-        300,
-        300
-      ],
-      "size": [
-        80,
-        61
-      ]
-    },
-    {
-      "module": "rocher_est",
-      "layer": "07_rochers",
-      "xy": [
-        540,
-        310
-      ],
-      "size": [
-        80,
-        83
-      ]
-    },
-    {
-      "module": "petit_rocher_a",
-      "layer": "07_rochers",
-      "xy": [
-        250,
-        500
-      ],
-      "size": [
-        36,
-        23
-      ]
-    },
-    {
-      "module": "petit_rocher_b",
-      "layer": "07_rochers",
-      "xy": [
-        620,
-        720
-      ],
-      "size": [
-        23,
-        18
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        200,
-        800
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        240,
-        840
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        680,
-        820
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        360,
-        900
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        560,
-        940
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        400,
-        700
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "fleur_vast_pose0",
-      "layer": "08_fleurs",
-      "xy": [
-        500,
-        760
-      ],
-      "size": [
-        24,
-        24
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        80,
-        380
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        80,
-        620
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        80,
-        860
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        704,
-        400
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        704,
-        640
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        704,
-        880
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        200,
-        980
-      ],
-      "size": [
-        144,
-        120
-      ]
-    },
-    {
-      "module": "arbre_steppe_144x120",
-      "layer": "09_arbres",
-      "xy": [
-        580,
-        980
-      ],
-      "size": [
-        144,
-        120
-      ]
-    }
-  ],
+  "placements": [],
   "provenance": {
-    "herbe": "Vast_Steppe_Base.png crop 240,264,288,312 (48×48) — même pastille que amp_plains_fleurie_v1",
-    "arbre": "native_tree_complete.png 144×120 (Vast Steppe Objects+Fringe)",
-    "fleur": "Vast_Steppe_Flower_Animations.png pose 0, 24×24",
-    "rochers": "Halcyon Crooked Objects+Shadows, bboxes v1",
-    "grotte": "Halcyon__crooked_cavern_entrance calques L00/L01/L02 320×240 complets",
-    "chemin": "Relic_Forest_Base crop 272,500,328,600 (bande 56×100 complète, répétée par translation)",
-    "lisiere": "Relic_Forest_Base bandes N 600×96, O/E 64×600"
+    "modele": "ancien générateur : scène entière puis calques (comme crooked/forets_lisiere)",
+    "terrain_origin": "PIXELS GÉNÉRÉS d’après références Halcyon (Vast Steppe, Relic, Crooked). PAS une mosaïque de modules."
   },
   "multicalques": {
     "jour": {
-      "atlas_tiles": 1781,
+      "atlas_tiles": 33296,
       "files": {
-        "01_sol_herbe_steppe": "01_sol_herbe_steppe.png",
-        "02_lisiere_relic": "02_lisiere_relic.png",
-        "03_chemin_relic": "03_chemin_relic.png",
-        "04_parois_crooked": "04_parois_crooked.png",
-        "05_objets_grotte": "05_objets_grotte.png",
-        "06_ombres_grotte": "06_ombres_grotte.png",
-        "07_rochers_crooked": "07_rochers_crooked.png",
-        "08_fleurs_steppe": "08_fleurs_steppe.png",
-        "09_arbres_steppe": "09_arbres_steppe.png"
+        "01_sol_herbe": "01_sol_herbe.png",
+        "02_lisiere_foret": "02_lisiere_foret.png",
+        "03_chemin": "03_chemin.png",
+        "04_parois_roche": "04_parois_roche.png",
+        "05_entree_grotte": "05_entree_grotte.png",
+        "06_rochers": "06_rochers.png",
+        "07_vegetation_basse": "07_vegetation_basse.png",
+        "08_troncs_ombres": "08_troncs_ombres.png",
+        "09_canopees": "09_canopees.png"
       }
     },
     "nuit": {
-      "atlas_tiles": 1781,
+      "atlas_tiles": 33284,
       "files": {
-        "01_sol_herbe_steppe": "01_sol_herbe_steppe_nuit.png",
-        "02_lisiere_relic": "02_lisiere_relic_nuit.png",
-        "03_chemin_relic": "03_chemin_relic_nuit.png",
-        "04_parois_crooked": "04_parois_crooked_nuit.png",
-        "05_objets_grotte": "05_objets_grotte_nuit.png",
-        "06_ombres_grotte": "06_ombres_grotte_nuit.png",
-        "07_rochers_crooked": "07_rochers_crooked_nuit.png",
-        "08_fleurs_steppe": "08_fleurs_steppe_nuit.png",
-        "09_arbres_steppe": "09_arbres_steppe_nuit.png"
+        "01_sol_herbe": "01_sol_herbe_nuit.png",
+        "02_lisiere_foret": "02_lisiere_foret_nuit.png",
+        "03_chemin": "03_chemin_nuit.png",
+        "04_parois_roche": "04_parois_roche_nuit.png",
+        "05_entree_grotte": "05_entree_grotte_nuit.png",
+        "06_rochers": "06_rochers_nuit.png",
+        "07_vegetation_basse": "07_vegetation_basse_nuit.png",
+        "08_troncs_ombres": "08_troncs_ombres_nuit.png",
+        "09_canopees": "09_canopees_nuit.png"
       }
     }
   },
-  "not_tested": "PMDO runtime, Aseprite/Tiled apps"
+  "not_tested": "PMDO runtime, Aseprite/Tiled apps",
+  "modele": "ancien générateur magenta / scène peinte (crooked + forets_lisiere)"
 }
