@@ -1,0 +1,20 @@
+{
+  "canvas_px": [
+    320,
+    240
+  ],
+  "fps": 12.5,
+  "frames": 48,
+  "frame_duration_ms": 80,
+  "animation_scope": "waterfall stream, foam and pool ripples only",
+  "static_base": "Crooked Cavern v2 layout 01",
+  "layers": [
+    "static composition from crooked_statique_v2/01/composition.png",
+    "animation/water/00.png…47.png"
+  ],
+  "outputs": [
+    "Crooked_Cavern_Entree_Cascade.png",
+    "Crooked_Cavern_Entree_Cascade.webp"
+  ],
+  "format_note": "PMD-native style pixel animation; WebP preview/export, PNG is frame 00 composition"
+}
