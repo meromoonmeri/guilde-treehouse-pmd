@@ -1,0 +1,170 @@
+{
+  "checks": [
+    {
+      "name": "mer 128 phases indices figes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mer = crop ocean V2 exact (indices+palette+alpha)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mer nuit == night(mer jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nuages jour == COTEV2 source",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nuages wrap L==R 8px",
+      "ok": true,
+      "detail": "2200px @12px/s y=8"
+    },
+    {
+      "name": "nuages nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ciels == V1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche alpha == masque V1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche 00_HERBE_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche 01_FACES_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche 02_RETOURS_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche 03_COURONNES_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche 04_PIEDS_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche calques == rejeu placements (145)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche pixels 100% natifs (rejeu strict)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche cellules mono-source (info)",
+      "ok": true,
+      "detail": "4982/4982"
+    },
+    {
+      "name": "cap_gauche couronne 0 vert",
+      "ok": true,
+      "detail": "0px"
+    },
+    {
+      "name": "cap_gauche composition_jour == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche composition_nuit == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite alpha == masque V1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite 00_HERBE_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite 01_FACES_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite 02_RETOURS_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite 03_COURONNES_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite 04_PIEDS_NATIVE.png nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite calques == rejeu placements (212)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite pixels 100% natifs (rejeu strict)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite cellules mono-source (info)",
+      "ok": true,
+      "detail": "5837/5851"
+    },
+    {
+      "name": "terrasse_droite couronne 0 vert",
+      "ok": true,
+      "detail": "0px"
+    },
+    {
+      "name": "terrasse_droite composition_jour == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite composition_nuit == re-assemblage",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "result": "PASS"
+}

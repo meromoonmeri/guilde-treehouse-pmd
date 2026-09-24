@@ -1,0 +1,99 @@
+{
+  "scene": [
+    768,
+    512
+  ],
+  "sea_y": 300,
+  "sea_crop": [
+    272,
+    370,
+    1040,
+    582
+  ],
+  "sea_source": "renders/caps_terrasses_v3/ocean (64+64 phases P reutilisees)",
+  "cloud_source": "sprites/cote_v2/COTEV2_NUAGES_WRAP.png",
+  "cloud_period": 2200,
+  "cloud_y": 8,
+  "cloud_speed_px_s": 12,
+  "cloud_offset_compo": 1289,
+  "sky_source": "falaises_proches_metano_v1/commun (01/02 recopies)",
+  "mask_source": "falaises_proches_metano_v1/{variante}/07_falaise.png (alpha exacte)",
+  "grass_rule": "g>=r-8 et g-b>60 ; îlots roche detaches <2000px reclasses herbe",
+  "modules": {
+    "herbe": {
+      "bank": "Base",
+      "rect": [
+        0,
+        640,
+        128,
+        768
+      ]
+    },
+    "face": {
+      "bank": "Cliffs",
+      "rect": [
+        912,
+        464,
+        976,
+        512
+      ]
+    },
+    "retour": {
+      "bank": "Cliffs",
+      "rect": [
+        680,
+        464,
+        744,
+        512
+      ]
+    },
+    "couronne": {
+      "bank": "Cliffs",
+      "rect": [
+        912,
+        448,
+        976,
+        464
+      ]
+    },
+    "pied": {
+      "bank": "Cliffs",
+      "rect": [
+        912,
+        528,
+        976,
+        544
+      ]
+    }
+  },
+  "night": "Abyss exact filter (cote_v4_abyss/night.py), single pass",
+  "runtime_validated": false,
+  "variants": [
+    {
+      "id": "cap_gauche",
+      "title": "Cap gauche",
+      "mask_sha256": "f58e89cee14c8adda5da07aad700b5f831ce3428ac4f7f8a36522e61783bbb8e",
+      "placements": {
+        "herbe": 9,
+        "face": 83,
+        "retour": 19,
+        "couronne": 25,
+        "pied": 9
+      },
+      "terrain_sha256": "b7abe48125d6fcf04f4f57e6f10e7f6d510d4839b010dea0fd58a5f3d0457efe"
+    },
+    {
+      "id": "terrasse_droite",
+      "title": "Terrasse droite",
+      "mask_sha256": "3816288007b77945f7204dd7d2240043fc59dcf1264c4e0383a2036931365f9b",
+      "placements": {
+        "herbe": 13,
+        "face": 109,
+        "retour": 20,
+        "couronne": 46,
+        "pied": 24
+      },
+      "terrain_sha256": "4d76d392d0c42e3b68650af9ea8cf729c1c317825585958f808cfad71c588e20"
+    }
+  ]
+}
