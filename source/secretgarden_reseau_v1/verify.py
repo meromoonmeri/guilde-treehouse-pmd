@@ -6,7 +6,7 @@ from PIL import Image
 R = Path(__file__).resolve().parents[2]
 O = R / 'renders/secretgarden_reseau_v1'
 m = json.loads((O / 'manifest.json').read_text())
-assert m.get('version') == 4
+assert m.get('version') == 5
 count = 0
 
 ref = R / 'secretgarden.png'
@@ -64,6 +64,31 @@ for e in m['rooms']:
     # GIF: 4 frames @200ms
     g = Image.open(d / 'composition_animee.gif')
     assert g.n_frames == 4 and g.info.get('duration') == 200, (e['id'], 'gif')
+    # V5: bare version == sol+chemin+fleurs+acces ; nue + full GIFs
+    nue = Image.new('RGBA', (512, 512))
+    for name in ['01_sol', '02_chemin', '06_fleurs']:
+        nue.alpha_composite(load(d / (name + '.png')))
+    for name in e['layers']:
+        if name.startswith('08_acces'):
+            nue.alpha_composite(load(d / (name + '.png')))
+    assert np.array_equal(np.array(nue), np.array(load(d / 'composition_nue.png'))), (e['id'], 'nue')
+    for gif in ['composition_nue_animee.gif', 'composition_full_animee.gif']:
+        gg = Image.open(d / gif)
+        assert gg.n_frames == 4 and gg.info.get('duration') == 200, (e['id'], gif)
+    # V5: veg f0 == merge(03,04); frames loop; sheets consistent
+    vg = Image.new('RGBA', (512, 512))
+    vg.alpha_composite(load(d / '03_arbres.png'))
+    vg.alpha_composite(load(d / '04_buissons.png'))
+    vf = [np.array(load(d / 'vegetation' / f'veg_f{i}.png')) for i in range(4)]
+    assert np.array_equal(vf[0], np.array(vg)), (e['id'], 'veg_f0')
+    for i in range(4):
+        assert not np.array_equal(vf[i], vf[(i + 1) % 4]), (e['id'], f'veg{i}')
+    rm = json.loads((d / 'rochers_manifest.json').read_text())
+    assert len(rm['sprites']) == e['v5']['rochers_sprites'], (e['id'], 'rocks')
+    sheetpx = (np.array(load(d / 'rochers_tilesheet.png'))[:, :, 3] > 0).sum()
+    assert sheetpx == sum(sp['area'] for sp in rm['sprites']), (e['id'], 'rockpx')
+    bm = json.loads((d / 'vegetation' / 'buissons_manifest.json').read_text())
+    assert len(bm['sprites']) == e['v5']['buissons_sprites'], (e['id'], 'bush')
     # ORA readable, stack matches files
     ora = zipfile.ZipFile(d / (e['id'] + '.ora'))
     assert ora.read('mimetype') == b'image/openraster'
@@ -76,7 +101,7 @@ box = tuple(m['patch_box'])
 assert np.array_equal(np.array(load(O / 'materiaux/sol_raccord_natif.png')),
                      np.array(load(ref).crop(box))), 'native patch'
 
-report = {'version': 4, 'scenes': len(m['rooms']), 'aligned_layers': count,
+report = {'version': 5, 'scenes': len(m['rooms']), 'aligned_layers': count,
           'ports': sum(len(e['ports']) for e in m['rooms']),
           'flower_frames_per_room': 4, 'flower_cadence_ms': 200,
           'checks': ['Reference SHA256 identical since build',
@@ -84,7 +109,8 @@ report = {'version': 4, 'scenes': len(m['rooms']), 'aligned_layers': count,
                      'V3 rooms: terrain partitions 01..06 exact; V4 rooms: zone constraints (chemin, veg, rochers, fleurs)',
                      'All layers 512x512; border port windows clear',
                      'Flower f0==static, 4 distinct frames, loop closed',
-                     '7 GIFs 4x200ms; 7 ORAs readable with full stacks',
+                     '7 GIFs 4x200ms + 7 nue GIFs + 7 full GIFs; 7 ORAs readable',
+                     'Bare versions exact; veg f0==merge, 4 distinct frames; rock/bush sheets consistent',
                      'Native grass patch strictly equal to reference crop',
                      'Jungle reference SHA256 identical since build',
                      '19 64px connectors, 24px opaque band each'],

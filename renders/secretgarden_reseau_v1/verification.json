@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "scenes": 7,
   "aligned_layers": 68,
   "ports": 19,
@@ -11,7 +11,8 @@
     "V3 rooms: terrain partitions 01..06 exact; V4 rooms: zone constraints (chemin, veg, rochers, fleurs)",
     "All layers 512x512; border port windows clear",
     "Flower f0==static, 4 distinct frames, loop closed",
-    "7 GIFs 4x200ms; 7 ORAs readable with full stacks",
+    "7 GIFs 4x200ms + 7 nue GIFs + 7 full GIFs; 7 ORAs readable",
+    "Bare versions exact; veg f0==merge, 4 distinct frames; rock/bush sheets consistent",
     "Native grass patch strictly equal to reference crop",
     "Jungle reference SHA256 identical since build",
     "19 64px connectors, 24px opaque band each"

@@ -23,3 +23,9 @@ Restent : ew, t, traversee, laterale, clairiere (20 générations).
 Note sandbox : 5e réinitialisation vue sur le projet ; historique réintégré
 (fetch + reset --hard sur origin ce22a6eb), stash redondant jeté, layouts
 sauvegardés/restaurés depuis /tmp, .venv reconstruite.
+
+## V5 — nues, tilesheets, végétation animée (24 septembre 2026)
+Aucune génération : versions nues (sol+chemin+fleurs+accès), tilesheets rochers
+(88 sprites ≥60px, masqués par composante) + buissons (127 sprites ≤128px, 4 phases),
+végétation balancée 4×200ms, GIF full. Ordre d'empilement unifié (fleurs <
+bordure < accès). Sandbox réinitialisée 6e fois : même réintégration, sans perte.

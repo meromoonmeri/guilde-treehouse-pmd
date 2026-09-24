@@ -1,6 +1,6 @@
 {
   "reference": "secretgarden.png (user commit)",
-  "version": 4,
+  "version": 5,
   "reference_sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f",
   "jungle_reference": "Southern_Jungle_entrance_S.png",
   "jungle_reference_sha256": "c072590a2c07853be0185eab60e6f9f0023ce707548b3e4038f7993f28dc1e77",
@@ -73,7 +73,15 @@
         "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v4_layouts"
+      "source": "v4_layouts",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 8,
+        "rochers_px_kept_pct": 98.9,
+        "buissons_sprites": 20,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "couloir_ew",
@@ -118,7 +126,15 @@
         "partitions_exact": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition"
+      "source": "v3_partition",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 9,
+        "rochers_px_kept_pct": 96.9,
+        "buissons_sprites": 20,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "couloir_t",
@@ -173,7 +189,15 @@
         "partitions_exact": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition"
+      "source": "v3_partition",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 6,
+        "rochers_px_kept_pct": 89.3,
+        "buissons_sprites": 2,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "salle_traversee",
@@ -218,7 +242,15 @@
         "partitions_exact": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition"
+      "source": "v3_partition",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 11,
+        "rochers_px_kept_pct": 89.9,
+        "buissons_sprites": 21,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "salle_laterale",
@@ -263,7 +295,15 @@
         "partitions_exact": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition"
+      "source": "v3_partition",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 12,
+        "rochers_px_kept_pct": 94.6,
+        "buissons_sprites": 34,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "salle_carrefour",
@@ -328,7 +368,15 @@
         "zone_constraints": true,
         "ports_opaque_band": true
       },
-      "source": "v4_layouts"
+      "source": "v4_layouts",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 28,
+        "rochers_px_kept_pct": 93.6,
+        "buissons_sprites": 14,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     },
     {
       "id": "carrefour_clairiere",
@@ -393,8 +441,17 @@
         "partitions_exact": true,
         "ports_opaque_band": true
       },
-      "source": "v3_partition"
+      "source": "v3_partition",
+      "v5": {
+        "nue": true,
+        "rochers_sprites": 14,
+        "rochers_px_kept_pct": 92.1,
+        "buissons_sprites": 16,
+        "veg_frames": 4,
+        "veg_cadence_ms": 200
+      }
     }
   ],
-  "v4_note": "separate generated layouts sol/chemin/fleurs/rochers; vegetation clipped outside new ground; nothing floats in void"
+  "v4_note": "separate generated layouts sol/chemin/fleurs/rochers; vegetation clipped outside new ground; nothing floats in void",
+  "v5_note": "bare versions (sol+chemin+fleurs+acces), rocks tilesheets, animated vegetation 4x200ms"
 }

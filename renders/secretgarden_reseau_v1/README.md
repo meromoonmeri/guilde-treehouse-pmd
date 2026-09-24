@@ -1,4 +1,4 @@
-# Jardin secret — réseau connectable style Ledian (V4)
+# Jardin secret — réseau connectable style Ledian (V5)
 
 Galerie autonome : **`apercu_jardin_secret_reseau_v1.html`** à la racine (fleurs animées, pause, pas à pas). [Planche des sept pièces](PLANCHE.png).
 
@@ -58,3 +58,12 @@ Leur bande de raccord utilise l'extrait natif `secretgarden.png` (190,240)-(222,
 ## V4 — layouts séparés (en cours : 2/7 zones)
 
 `couloir_ns` et `salle_carrefour` sont reconstruits depuis **4 layouts générés séparément** (`layouts/<zone>/{sol,chemin,fleurs,rochers}.png`) au lieu d'une partition d'un seul terrain. Règles d'assemblage : chemin strictement sur sol, végétation V3 rognée hors nouveau sol, rochers/fleurs uniquement sur sol ou végétation (rien dans le vide). Bordure jungle et accès inchangés. Les 5 autres zones gardent leurs couches V3 (mêmes noms de fichiers) en attendant leurs layouts.
+
+## V5 — versions nues, tilesheets, végétation animée
+
+Par zone, sans nouvelle génération (pixels existants uniquement) :
+- `composition_nue.png` + `composition_nue_animee.gif` : **sol + chemin + fleurs + accès**, sans arbres, buissons, rochers ni bordure.
+- `composition_full_animee.gif` : fleurs + végétation animées (4×200ms).
+- `rochers_tilesheet.png` + `rochers_manifest.json` : sprites de rochers individuels (composantes ≥60px, cases uniformes, 8 colonnes). Total réseau : 88 sprites + planche `rochers_TOUTES_ZONES.png`.
+- `vegetation/veg_f0..3.png` : arbres+buissons fusionnés, balancement ±1px et pulsation (200ms, synchronisés avec les fleurs) ; `vegetation_frames.png` (bande 4 phases) ; `buissons_spritesheet.png` + manifeste (lignes = buissons isolés ≤128px, colonnes = 4 phases ; 127 sprites ; les nappes connectées restent dans les phases).
+- La galerie propose la végétation animée (remplace 03+04 quand activée), le bouton « vue nue » et les liens de téléchargement par zone.
