@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Nouvelle map 100% canonique — Cap face mer, eau native animée
+
+- **[Galerie : 6 calques, 4 phases, grille 8px](apercu_falaise_mer_canonique_v1.html)**.
+- [PNG, ORA, WebP, manifeste et ZIP](renders/falaise_mer_canonique_v1/README.md) · [coupes 2x](renders/falaise_mer_canonique_v1/PLANCHE_COUPES_2X_NE_PAS_IMPORTER.png).
+- 1024×512 natif, dalles Métano complètes, canal + cascade en vraies tuiles Halcyon, **0 différence de pixel**, aucun pixel généré. Ciel/mer non peints, nuit et tests moteur non inclus.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

@@ -143,3 +143,18 @@ L’utilisateur demande des fissures de magma dans la roche avec leur propre cal
 L’utilisateur a salué V5 (« bon travail »), puis demandé deux travaux. Il a choisi **la forêt en premier** : layout légèrement différent de `Apple_Woods_entrance_TDS.png` (référence46e93da), herbe style Sky Peak, chemin assorti, arbres indépendants et entrée dans un gros tronc. `renders/applewoods_skygrass_v1/` : sol/chemin générés séparément,20pommiers sur20calques, grand arbre en profondeur/tronc/canopée, ombres et bases feuillues séparées ;26placements floraux issus des4phases natives Sky Peak200ms, pixels conservés et décalages de phase.552×408,30calques, PNG/ORA/ZIP. Galerie `apercu_applewoods_skygrass_v1.html`. La scène est une nouvelle proposition, pas une entrée déjà approuvée ; le contrôle de corridor ne valide pas l’entrée/collision en jeu.
 Le deuxième travail est également livré : `renders/siphons_ecoulement_v3/`, nouvelle matière d’eau générée, **neuf** centres de siphons (y compris le petit voisin du principal), chaussée conservée. Champ2D stationnaire par volumes finis/projection de pression, rotation et absorptions, frontières ouvertes, rochers/chaussée imperméables ; conservation de débit et flux solide nul contrôlés. Rendu par advection arrière à deux phases et traceurs, nouvelles ombres de cuvettes, pas les anciennes6poses de sable. Rives bleutées discrètes, opacité des reflets≤28/255.128phases50ms,9calques, PNG/ORA/ZIP. Galerie `apercu_siphons_ecoulement_v3.html` avec animation complète et curseur32échantillons ;128PNG dans le pack. Ce n’est pas une simulation3D de surface libre ni une validation PMDO/GPU. Intérieurs secs et alpha des rochers inchangés.
 Aperçu commun : `apercu_pommier_et_siphons.html`. Scripts de reconstruction/vérification dans les deux dossiers source, `package_both.py` pour les ZIP et l’aperçu commun. Les anciennes ressources, variantes et entrées approuvées restent intactes.
+
+## Cap canonique face mer v1 — nouvelle map 100% strict (septembre 2026)
+Reprise projet en mode spriter pro : l'utilisateur demande des maps avec les
+textures canoniques. Livraison `renders/falaise_mer_canonique_v1/` :
+1024×512 (128×64, 8px), paroi Metano plein cadre en dalles 64×48 completes,
+bouche d'eau dans couronne/pied, canal + cascade 64px en eau native 4 phases
+(FrameLength=10). 6 calques PNG + ORA + WebP + galerie
+`apercu_falaise_mer_canonique_v1.html` + ZIP. Scripts
+`source/falaise_mer_canonique_v1/{build,verify,gallery,package}.py`, PASS
+(0 difference, 1760 cellules eau comparees). Aucun pixel genere.
+Lecons : rangees cascade 15-16 transparentes en source (chute mappee sur
+0..14) ; retours arrondis en bord de cadre rendus comme des arches
+abandonnes au profit de faces plein cadre ; bouche obligatoire sous peine de
+barre verte (notch) ou brune (pied) sur l'eau. Repetition des faces assumee,
+a varier en V2 apres validation en jeu. Nuit Abyss non incluse.

@@ -1,0 +1,24 @@
+{
+  "verifications": {
+    "sources_hashes": 7,
+    "grille_8px": true,
+    "recomposition_sec": true,
+    "recomposition_humide_4phases": true,
+    "phases_distinctes": true,
+    "tuiles_statiques_0_difference": true,
+    "cellules_eau_verifiees": 1760,
+    "ora_exact": true,
+    "sec_opaque": true
+  },
+  "taille_px": [
+    1024,
+    512
+  ],
+  "grille_px": 8,
+  "resultat": "PASS — 0 difference de pixel avec les tuiles canoniques",
+  "limites": [
+    "Ciel et mer non peints (hors-champ transparent: seul le terrain est strict)",
+    "Raccords canal/chute approximatifs aux deux bouches, a apprecier a 1x",
+    "Pas de test PMDO/GPU, collisions ou transitions"
+  ]
+}
