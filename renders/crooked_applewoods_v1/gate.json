@@ -1,0 +1,237 @@
+[
+ {
+  "zone": "renders/crooked_applewoods_v1",
+  "layers": {
+   "CrookedAppleV1_01_sol.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "200448 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "132 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.01 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "CrookedAppleV1_02_falaise_grotte.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "82575 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "128 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "CrookedAppleV1_03_vegetation_basse.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "11059 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "96 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "CrookedAppleV1_04_rochers.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "5718 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "51 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "CrookedAppleV1_05_troncs_racines.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1991 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "23 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "CrookedAppleV1_06_canopees_devant_joueur.png": [
+    [
+     "grille_8px",
+     true,
+     "464x432"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "35771 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "75 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(432, 464)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "230 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": true
+ }
+]

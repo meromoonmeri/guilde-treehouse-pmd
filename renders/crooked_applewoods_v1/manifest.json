@@ -1,0 +1,553 @@
+{
+ "titre": "Entrée de Crooked Cavern dans la forêt d'Apple Woods — arrivée sud, grotte au nord",
+ "taille": [
+  464,
+  432
+ ],
+ "grille_px": 8,
+ "import_pmdo": "PNG to Tileset, tuiles de 8 px",
+ "references": {
+  "reference_apple_woods.png": "cb37d8b5705cbc1fd169415c46a824a956f35acf5f994204ac95219b552d69fd",
+  "reference_crooked_cavern.png": "de4c9a5219294e3e72d2e63389831b140b73b49aa8df7cdd329cff701cc91cc0"
+ },
+ "references_origine": {
+  "reference_apple_woods.png": "Apple_Woods_entrance_TDS.png (racine du dépôt)",
+  "reference_crooked_cavern.png": "source/cote_v5_expeditions/audit/Halcyon__crooked_cavern_entrance_composition.png"
+ },
+ "methode": [
+  "5 générations indépendantes depuis les références : sol plein cadre (Apple Woods), falaise + grotte (Crooked Cavern, mousse et lierre), pommiers/buissons, rochers moussus, petite végétation — objets sur magenta.",
+  "Clé magenta explicite (teinte + frange, vert < 100/130 pour épargner les pétales roses), alpha binaire.",
+  "Grille des faux pixels estimée par axe (pas 2, 3 ou fractionnaire 2,867 / 5,733) ; chaque cellule prend la couleur majoritaire : inversion de l'agrandissement du générateur, sans LANCZOS/BILINEAR/NEAREST.",
+  "Couleurs ramenées aux palettes exactes : Apple Woods (145) pour sol, arbres, végétation ; Crooked Cavern (453) + verts Apple Woods pour falaise et rochers moussus. Plus proche voisin Lab.",
+  "Couleurs vues sur < 4 px d'un calque de sprites fusionnées vers la couleur fréquente la plus proche.",
+  "Composition manuelle par l'agent ; arbres séparés en canopée (devant) et bois (derrière) par couleur."
+ ],
+ "pixels": "Dessin GÉNÉRÉ dans les palettes canoniques : ce ne sont pas des tuiles natives extraites.",
+ "bruts_sha256": {
+  "01_sol.png": "089518b0848c07d40df42257937959bf114293d334256a6a6dee6a0313837688",
+  "02_falaise_magenta.png": "24218966122ab852f34442998eca24b26914903c00c788b770cd1c499bdbadfb",
+  "03_arbres_magenta.png": "c626181ad83fc39ae3729260bca8c6f6e1e194216581dc07bf785d981410226f",
+  "04_rochers_magenta.png": "1ef3ac5615c97e366544658b5a9366ef19ac43da4b378691613c966d0823ac3e",
+  "05_vegetation_magenta.png": "61d7f35fb9227027c298c3746dd56b59982ea677f809d12362e84b29bbd7f3ae"
+ },
+ "conversion": {
+  "01_sol.png": {
+   "source": "01_sol.png",
+   "pas_x": 2.0,
+   "pas_y": 2.0,
+   "phase": [
+    0.5,
+    0.5
+   ],
+   "taille_1x": [
+    595,
+    439
+   ],
+   "couleurs_palette": 145,
+   "conversion": "plus proche voisin Lab"
+  },
+  "02_falaise.png": {
+   "source": "02_falaise_magenta.png",
+   "pas_x": 2.867,
+   "pas_y": 2.866,
+   "phase": [
+    0.15,
+    2.8
+   ],
+   "taille_1x": [
+    479,
+    266
+   ],
+   "couleurs_palette": 545,
+   "conversion": "plus proche voisin Lab"
+  },
+  "03_arbres.png": {
+   "source": "03_arbres_magenta.png",
+   "pas_x": 2.0,
+   "pas_y": 2.0,
+   "phase": [
+    0.5,
+    0.5
+   ],
+   "taille_1x": [
+    595,
+    439
+   ],
+   "couleurs_palette": 145,
+   "conversion": "plus proche voisin Lab"
+  },
+  "04_rochers.png": {
+   "source": "04_rochers_magenta.png",
+   "pas_x": 5.733,
+   "pas_y": 5.734,
+   "phase": [
+    0.1,
+    2.7
+   ],
+   "taille_1x": [
+    239,
+    133
+   ],
+   "couleurs_palette": 545,
+   "conversion": "plus proche voisin Lab"
+  },
+  "05_vegetation.png": {
+   "source": "05_vegetation_magenta.png",
+   "pas_x": 3.0,
+   "pas_y": 3.0,
+   "phase": [
+    0.0,
+    0.5
+   ],
+   "taille_1x": [
+    396,
+    293
+   ],
+   "couleurs_palette": 145,
+   "conversion": "plus proche voisin Lab"
+  }
+ },
+ "calques": [
+  "CrookedAppleV1_01_sol.png",
+  "CrookedAppleV1_02_falaise_grotte.png",
+  "CrookedAppleV1_03_vegetation_basse.png",
+  "CrookedAppleV1_04_rochers.png",
+  "CrookedAppleV1_05_troncs_racines.png",
+  "CrookedAppleV1_06_canopees_devant_joueur.png"
+ ],
+ "ordre_empilement": [
+  "CrookedAppleV1_01_sol.png",
+  "CrookedAppleV1_02_falaise_grotte.png",
+  "CrookedAppleV1_03_vegetation_basse.png",
+  "CrookedAppleV1_04_rochers.png",
+  "CrookedAppleV1_05_troncs_racines.png",
+  "CrookedAppleV1_06_canopees_devant_joueur.png"
+ ],
+ "entree_grotte_approx": [
+  297,
+  118
+ ],
+ "arrivee_sud_approx": [
+  297,
+  424
+ ],
+ "placements": [
+  {
+   "calque": "02_falaise_grotte",
+   "source": "02_falaise_magenta.png",
+   "position": [
+    -10,
+    0
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 19,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    281,
+    168,
+    318,
+    200
+   ],
+   "position": [
+    172,
+    206
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 2,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    76,
+    16,
+    125,
+    54
+   ],
+   "position": [
+    8,
+    232
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 4,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    149,
+    22,
+    186,
+    52
+   ],
+   "position": [
+    226,
+    252
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 6,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    349,
+    22,
+    386,
+    52
+   ],
+   "position": [
+    338,
+    262
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 22,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    74,
+    236,
+    127,
+    278
+   ],
+   "position": [
+    150,
+    300
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 9,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    10,
+    85,
+    58,
+    130
+   ],
+   "position": [
+    362,
+    300
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 12,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    215,
+    93,
+    252,
+    126
+   ],
+   "position": [
+    214,
+    330
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 13,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    351,
+    95,
+    385,
+    125
+   ],
+   "position": [
+    352,
+    350
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 3,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    276,
+    16,
+    325,
+    55
+   ],
+   "position": [
+    186,
+    350
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 16,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    344,
+    164,
+    390,
+    204
+   ],
+   "position": [
+    168,
+    396
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 14,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    148,
+    96,
+    186,
+    126
+   ],
+   "position": [
+    204,
+    410
+   ]
+  },
+  {
+   "calque": "03_vegetation_basse",
+   "sprite": 5,
+   "source": "05_vegetation_magenta.png",
+   "boite_source_1x": [
+    214,
+    22,
+    251,
+    52
+   ],
+   "position": [
+    360,
+    410
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 1,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    14,
+    7,
+    72,
+    59
+   ],
+   "position": [
+    204,
+    112
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 18,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    191,
+    122,
+    196,
+    127
+   ],
+   "position": [
+    226,
+    178
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 3,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    173,
+    7,
+    229,
+    60
+   ],
+   "position": [
+    334,
+    150
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 10,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    104,
+    100,
+    120,
+    115
+   ],
+   "position": [
+    250,
+    190
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 14,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    132,
+    101,
+    147,
+    115
+   ],
+   "position": [
+    300,
+    212
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 13,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    59,
+    101,
+    88,
+    128
+   ],
+   "position": [
+    364,
+    252
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 5,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    57,
+    63,
+    90,
+    94
+   ],
+   "position": [
+    180,
+    262
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 17,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    163,
+    121,
+    172,
+    129
+   ],
+   "position": [
+    282,
+    330
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 21,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    136,
+    123,
+    143,
+    129
+   ],
+   "position": [
+    330,
+    372
+   ]
+  },
+  {
+   "calque": "04_rochers",
+   "sprite": 20,
+   "source": "04_rochers_magenta.png",
+   "boite_source_1x": [
+    109,
+    123,
+    116,
+    129
+   ],
+   "position": [
+    250,
+    404
+   ]
+  },
+  {
+   "calque": "05+06",
+   "sprite": 5,
+   "source": "03_arbres_magenta.png",
+   "boite_source_1x": [
+    112,
+    236,
+    210,
+    335
+   ],
+   "position": [
+    92,
+    146
+   ]
+  },
+  {
+   "calque": "05+06",
+   "sprite": 1,
+   "source": "03_arbres_magenta.png",
+   "boite_source_1x": [
+    3,
+    42,
+    142,
+    178
+   ],
+   "position": [
+    -52,
+    222
+   ]
+  },
+  {
+   "calque": "05+06",
+   "sprite": 3,
+   "source": "03_arbres_magenta.png",
+   "boite_source_1x": [
+    305,
+    42,
+    445,
+    178
+   ],
+   "position": [
+    382,
+    226
+   ]
+  },
+  {
+   "calque": "05+06",
+   "sprite": 6,
+   "source": "03_arbres_magenta.png",
+   "boite_source_1x": [
+    386,
+    236,
+    484,
+    335
+   ],
+   "position": [
+    388,
+    342
+   ]
+  },
+  {
+   "calque": "05+06",
+   "sprite": 2,
+   "source": "03_arbres_magenta.png",
+   "boite_source_1x": [
+    154,
+    42,
+    294,
+    178
+   ],
+   "position": [
+    28,
+    318
+   ]
+  }
+ ],
+ "limites": [
+  "Collisions, warps et occlusion à configurer dans PMDO ; non testés.",
+  "Art non encore validé par l'utilisateur."
+ ]
+}

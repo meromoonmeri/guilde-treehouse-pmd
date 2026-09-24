@@ -90,3 +90,13 @@ Pièges notés :
 - les teintes sarcelle hors palette s'écrasent au plus proche voisin, d'où la rampe de luminance.
 
 `gate.py` accepte désormais les calques préfixés `Prefixe_NN_nom.png`. Le composite doit contenir « composite » dans son nom ; masques et revues sont ignorés. Audit inchangé : canon PASS, 0/51 générés.
+
+### Crooked Cavern × Apple Woods V1 (24 septembre)
+
+Demande : entrée de Crooked Cavern dans un nouveau layout, texture verdoyante, forêt Apple Woods autour. Choix utilisateur : une seule map, grès beige avec mousse et lierre.
+
+Chaîne : `source/crooked_applewoods_v1/` (`bruts/` → `convert.py` + `pixels_lib.py` → `pixels/` → `compose.py`) → `renders/crooked_applewoods_v1/`.
+
+Nouveauté : `pixels_lib.py` estime le pas des faux pixels par axe, y compris fractionnaire. Le générateur a donné 2,867 pour la falaise et 5,733 pour les rochers. Le module fait aussi un vote majoritaire par cellule et prend une palette par calque.
+
+Piège : la clé magenta mangeait les pétales roses. Correction : le fond exige un vert < 100, la frange un vert < 130.

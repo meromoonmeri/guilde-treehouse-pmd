@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8">
+<title>Crooked Cavern × Apple Woods — calques</title>
+<style>body{background:#1b1f1d;color:#ddd;font:14px sans-serif;display:flex;gap:20px;padding:16px}
+#m{position:relative;width:928px;height:864px;flex:none}
+#m img{position:absolute;left:0;top:0;width:928px;height:864px;image-rendering:pixelated}
+#g{position:absolute;inset:0;z-index:99;display:none;background-size:16px 16px;
+background-image:linear-gradient(#fff3 1px,transparent 1px),linear-gradient(90deg,#fff3 1px,transparent 1px)}
+label{display:block;margin:6px 0}p{max-width:340px;color:#aaa}</style>
+<div id="m"><img src="CrookedAppleV1_01_sol.png" id="l0" style="z-index:0">
+<img src="CrookedAppleV1_02_falaise_grotte.png" id="l1" style="z-index:1">
+<img src="CrookedAppleV1_03_vegetation_basse.png" id="l2" style="z-index:2">
+<img src="CrookedAppleV1_04_rochers.png" id="l3" style="z-index:3">
+<img src="CrookedAppleV1_05_troncs_racines.png" id="l4" style="z-index:4">
+<img src="CrookedAppleV1_06_canopees_devant_joueur.png" id="l5" style="z-index:5"><div id="g"></div></div>
+<div><h3>Calques (ordre d'empilement)</h3><label><input type="checkbox" checked data-i="0"> 01_sol</label>
+<label><input type="checkbox" checked data-i="1"> 02_falaise_grotte</label>
+<label><input type="checkbox" checked data-i="2"> 03_vegetation_basse</label>
+<label><input type="checkbox" checked data-i="3"> 04_rochers</label>
+<label><input type="checkbox" checked data-i="4"> 05_troncs_racines</label>
+<label><input type="checkbox" checked data-i="5"> 06_canopees_devant_joueur</label>
+<label><input type="checkbox" id="gc"> grille 8 px</label>
+<p>Zoom ×2. Arrivée au sud, entrée de Crooked Cavern au nord. Pixels GÉNÉRÉS depuis les références
+Crooked Cavern et Apple Woods, ramenés à leurs palettes exactes ; composés par l'agent. Voir manifest.json.</p></div>
+<script>document.querySelectorAll('[data-i]').forEach(c=>c.onchange=()=>
+document.getElementById('l'+c.dataset.i).style.display=c.checked?'':'none');
+gc.onchange=()=>g.style.display=gc.checked?'block':'none';</script>

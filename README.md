@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Crooked Cavern × Apple Woods — entrée de grotte en forêt
+
+- **[Aperçu avec calques activables](renders/crooked_applewoods_v1/apercu_calques.html)** · [composite](renders/crooked_applewoods_v1/composite.png) · [méthode et provenance](renders/crooked_applewoods_v1/README.md).
+
+Six calques de 464×432 (grille 8 px) : sol, falaise et grotte, végétation basse, rochers, troncs, canopées. Au nord, la falaise en grès Crooked Cavern, couverte de mousse et de lierre, abrite la bouche de la grotte. Au sud, on arrive par un chemin sableux bordé de pommiers Apple Woods. Les pixels sont **générés** depuis les deux références et ramenés à leurs palettes exactes ; ce ne sont pas des tuiles natives. `gate.py` PASS et 7 tests PASS ; PMDO non testé.
+
 ## Forêt Mystère — entrée de donjon sud → nord, calques générés sur magenta
 
 - **[Aperçu avec calques activables](renders/foret_mystere_magenta_v1/apercu_calques.html)** · [composite](renders/foret_mystere_magenta_v1/composite.png) · [méthode et provenance](renders/foret_mystere_magenta_v1/README.md).
