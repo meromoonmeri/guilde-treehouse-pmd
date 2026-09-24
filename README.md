@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée aride V1 — rendu généré, six calques statiques
+
+- **[Atelier : calques, grille 8 px et zoom](apercu_entree_aride_v1.html)**.
+- [Six couches, scène, ORA et manifeste](renders/entree_aride_generee_v1/README.md) · [pack ZIP](renders/entree_aride_generee_v1_pack.zip).
+
+Référence `entrancearidedungeonpmdsky.png` conservée ; deux bruts générés (relief sur magenta + sol sableux), détourage sans magenta résiduel, grotte au nord (190,49–223,85), corridor sud de 32 px. **Dessins générés référencés PMD, pas des pixels natifs.** Dix tests PASS, PMDO non testé.
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.

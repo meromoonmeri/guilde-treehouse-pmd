@@ -418,3 +418,17 @@ Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les a
 Demande : plusieurs calques de l’image `DSVFS.png` et animation de l’eau Beach PMD Sky. Fichier fourni retrouvé à la racine (pas dans le chemin uploads annoncé). Lot non destructif `source/beach_layers_v1/`, `renders/beach_layers_v1/`, viewer `apercu_beach_calques_v1.html`. Aucun générateur utilisé : préserver exactement cette composition. Neuf partitions visibles 702×466, ORA ; sols/faces cachés non reconstruits. Animation mer + écume, 64 phases de 50ms (3,2s), couleurs source seulement, phase0 exacte, décor sec invariant. Progression des hauteurs de crête extraite des17poses de la planche Beach & Path to Beach (rip redblueyellow) pour guider un mouvement nouveau ; PAS les frames/cadence officielles Sky récupérées. Mer sous écume complétée par pixels bleus voisins, puis remapping entier. Contacts ancrés sur5px et amplitude croissante sur18px pour éviter les traînées de contours aux rochers ; pas d’avance sur le sable. Frames adjacentes parfois identiques : GIF/WebP fusionnent les poses, durée totale contrôlée3200ms.
 
 Copies d’import PNG to Tileset8px : 704×472, ajout transparent droite2/bas6, aucune mise à l’échelle. Remplacer les calques fixes03/04 par les frames de même index, ne pas garder l’ancienne écume par-dessus. Dix tests assetsPASS, interactions viewer en DOM simuléPASS, ZIP CRC/identitéPASS. Chromium téléchargementTLS échoué, pas de navigateur interactif validé ; pas de runtimePMDO. Les anciennes maps et le PNG source restent intacts. Sources et référence de vagues incluses dans le ZIP pour reconstruction ; viewer embarqué autonome.
+
+## Reprise 24 septembre 2026 — entrée aride générée V1 (statique, 6 calques)
+
+Choix utilisateur : map entrée aride, méthode **rendu généré référencé PMD**,
+statique, sorties PNG + ORA. `source/entree_aride_generee_v1/`,
+`renders/entree_aride_generee_v1/`, viewer `apercu_entree_aride_v1.html`,
+ZIP `renders/entree_aride_generee_v1_pack.zip`.
+2 bruts (relief sur magenta + sol sableux, 1224×864 = ×3 de la cible),
+normalisation uniforme /3, alpha par inondation + seuil serré d<40, zéro
+magenta résiduel. 6 calques 408×288 (sol, falaise, grotte 190,49–223,85,
+arbres morts, 13 cailloux, ombres), partition stricte grotte > arbres >
+cailloux > ombres, recomposition exacte, ORA, corridor 32 px sud→seuil.
+10 tests PASS ; dessins GÉNÉRÉS (pas natifs), PMDO NON TESTÉ, art non approuvé.
+Registre natif sud–nord laissé inchangé. Prochaine map à choisir.

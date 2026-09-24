@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrée aride V1 — 6 calques (rendu généré référencé PMD)</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#14141c;color:#eee;margin:0;padding:16px}
+h1{font-size:20px;margin:0 0 4px} p{margin:4px 0 12px;color:#bbb;font-size:13px}
+#bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
+label{background:#23232e;border:1px solid #444;border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer}
+select,button{background:#23232e;color:#eee;border:1px solid #444;border-radius:6px;padding:4px 8px;font-size:13px}
+#stage{position:relative;display:inline-block;border:1px solid #555;background:repeating-conic-gradient(#666 0 25%,#999 0 50%) 0 0/16px 16px}
+#stage img.layer{position:absolute;left:0;top:0;width:100%;height:100%;image-rendering:pixelated}
+#stage.magenta{background:#f0f}
+#grille{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none;
+background-image:linear-gradient(#0ff3 1px,transparent 1px),linear-gradient(90deg,#0ff3 1px,transparent 1px)}
+.warn{color:#ffb35c}
+</style>
+</head>
+<body>
+<h1>Entrée aride V1 — 408×288, 6 calques</h1>
+<p>Rendu <b>généré</b> référencé PMD (relief sur magenta + sol complet), détouré et découpé.
+Grotte au nord, arrivée sud. <span class="warn">Dessins générés, pas des pixels natifs ; PMDO non testé.</span></p>
+<div id="bar">
+<span id="cases"></span>
+<label>Zoom <select id="zoom"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option><option value="4">4×</option></select></label>
+<label><input type="checkbox" id="grille_on"> Grille 8px</label>
+<label><input type="checkbox" id="magenta_on"> Fond magenta</label>
+<button id="tout">Tout afficher</button>
+<button id="rien">Tout masquer</button>
+</div>
+<div id="bar2" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px"></div>
+<div id="stage"><div id="grille"></div></div>
+<script>
+const D=__DATA__;
+const stage=document.getElementById('stage'), bar2=document.getElementById('bar2');
+const imgs=[];
+D.calques.forEach((c,i)=>{
+  const l=document.createElement('label');
+  l.innerHTML=`<input type="checkbox" checked> ${c.id} — ${c.label}`;
+  const box=l.firstChild;
+  const im=document.createElement('img');
+  im.className='layer'; im.src=c.uri; im.alt=c.id;
+  stage.appendChild(im); imgs.push(im);
+  box.onchange=()=>im.style.display=box.checked?'block':'none';
+  l._box=box; bar2.appendChild(l);
+});
+function zoom(){
+  const z=+document.getElementById('zoom').value;
+  stage.style.width=D.largeur*z+'px'; stage.style.height=D.hauteur*z+'px';
+  const g=document.getElementById('grille');
+  g.style.backgroundSize=`${8*z}px ${8*z}px`;
+}
+document.getElementById('zoom').onchange=zoom;
+document.getElementById('grille_on').onchange=e=>document.getElementById('grille').style.display=e.target.checked?'block':'none';
+document.getElementById('magenta_on').onchange=e=>stage.classList.toggle('magenta',e.target.checked);
+document.getElementById('tout').onclick=()=>{bar2.querySelectorAll('input').forEach(b=>{b.checked=true});imgs.forEach(i=>i.style.display='block')};
+document.getElementById('rien').onclick=()=>{bar2.querySelectorAll('input').forEach(b=>{b.checked=false});imgs.forEach(i=>i.style.display='none')};
+document.getElementById('cases').textContent=`${D.largeur}×${D.hauteur} · ${D.largeur/8|0}×${D.hauteur/8|0} cases de 8px`;
+zoom();
+</script>
+</body>
+</html>

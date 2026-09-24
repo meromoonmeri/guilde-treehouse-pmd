@@ -1,0 +1,75 @@
+{
+  "id": "entree_aride_generee_v1",
+  "reference": "entrancearidedungeonpmdsky.png (408x288, conservee intacte)",
+  "taille": [
+    408,
+    288
+  ],
+  "grille_px": 8,
+  "cases": [
+    51,
+    36
+  ],
+  "methode": "rendu genere reference PMD sur magenta -> detourage -> 6 calques ; PAS des pixels natifs, PAS une mosaique de bouts de maps",
+  "calques": [
+    {
+      "id": "01_sol",
+      "label": "Sol sableux complet",
+      "fichier": "couches/EntreeArideV1_01_sol.png",
+      "pixels": 117504
+    },
+    {
+      "id": "02_falaise",
+      "label": "Falaise ocre",
+      "fichier": "couches/EntreeArideV1_02_falaise.png",
+      "pixels": 60672
+    },
+    {
+      "id": "03_bouche_grotte",
+      "label": "Bouche de grotte",
+      "fichier": "couches/EntreeArideV1_03_bouche_grotte.png",
+      "pixels": 825
+    },
+    {
+      "id": "04_arbres_morts",
+      "label": "Arbres morts",
+      "fichier": "couches/EntreeArideV1_04_arbres_morts.png",
+      "pixels": 1020
+    },
+    {
+      "id": "05_cailloux",
+      "label": "Cailloux isoles",
+      "fichier": "couches/EntreeArideV1_05_cailloux.png",
+      "pixels": 262
+    },
+    {
+      "id": "06_ombres",
+      "label": "Ombres et speckles",
+      "fichier": "couches/EntreeArideV1_06_ombres.png",
+      "pixels": 129
+    }
+  ],
+  "grotte_bbox": [
+    190,
+    49,
+    223,
+    85
+  ],
+  "cailloux_isoles": 13,
+  "corridor_sud_nord": {
+    "x0": 190,
+    "x1": 221,
+    "largeur": 32,
+    "y_haut": 97,
+    "y_bas": 288,
+    "note": "degage jusqu'au seuil ; la bouche (vide sombre) est l'entree"
+  },
+  "orientation": "arrivee SUD, grotte au NORD ; corridor indicatif, pas une collision moteur",
+  "sha256": {
+    "brut_relief_magenta.png": "2e2f0cc606b9e94fafecc38e468d4bccbc7fad54b0c503767786fa68d0d9438f",
+    "brut_sol.png": "e8b2d09e47e3650a610e43a5823472d559fdbe3a17f574d9e7c51bae03cf845b",
+    "reference_originale.png": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a"
+  },
+  "runtime_PMDO": "NON TESTE",
+  "art_approuve": false
+}
