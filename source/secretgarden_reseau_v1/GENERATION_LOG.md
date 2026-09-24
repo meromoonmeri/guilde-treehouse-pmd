@@ -29,3 +29,13 @@ Aucune génération : versions nues (sol+chemin+fleurs+accès), tilesheets roche
 (88 sprites ≥60px, masqués par composante) + buissons (127 sprites ≤128px, 4 phases),
 végétation balancée 4×200ms, GIF full. Ordre d'empilement unifié (fleurs <
 bordure < accès). Sandbox réinitialisée 6e fois : même réintégration, sans perte.
+
+## V4 — suite layouts ew + t (24 septembre 2026, 8/10 ce tour + 2 falaises V3)
+couloir_ew : sol (corridor E-W, encoches haut)/chemin/fleurs/rochers ; couloir_t :
+vrai T (N/E/W, bas fermé)/chemin/fleurs/rochers. Guidage par ref : sol depuis
+terrain V3 + sol ns ; dépendants depuis nouveau sol.
+Constats : sols + rochers (isolés magenta) OK ; chemins BEIGE + formes
+parasites (blobs ew, trou U t) -> A REPRENDRE en bande/tige HERBE comme ns
+(log V4 : chemin = herbe, pas dirt) ; fleurs = herbe+bouquets (copie ref) ->
+salvage prévu par partition couleurs V3 au build (pas de reprise).
+Reste : reprises chemin ew+t + traversee/laterale/clairiere (12) = 14 générations.

@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "name": "commun 01_ciel_jour == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun 02_ciel_nuit == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun 03_mer_jour == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun 04_mer_nuit == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun 05_nuages_wrap_jour == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun 06_nuages_wrap_nuit == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun ocean 128ph == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commun palettes == V2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "layout falaise_cap_gauche",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "layout falaise_terrasse_droite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche audit == manifest",
+      "ok": true,
+      "detail": "{'pct_le30': 99.9, 'pct_exact': 0.71}"
+    },
+    {
+      "name": "cap_gauche 0 magenta",
+      "ok": true,
+      "detail": "opaque=0.804"
+    },
+    {
+      "name": "cap_gauche nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche composition_jour == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cap_gauche composition_nuit == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite audit == manifest",
+      "ok": true,
+      "detail": "{'pct_le30': 99.9, 'pct_exact': 0.07}"
+    },
+    {
+      "name": "terrasse_droite 0 magenta",
+      "ok": true,
+      "detail": "opaque=0.833"
+    },
+    {
+      "name": "terrasse_droite nuit == night(jour)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite composition_jour == re-assemblage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terrasse_droite composition_nuit == re-assemblage",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "result": "PASS"
+}

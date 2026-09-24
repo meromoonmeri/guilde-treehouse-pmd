@@ -1,0 +1,40 @@
+{
+  "scene": [
+    768,
+    512
+  ],
+  "sea_y": 300,
+  "cloud_period": 2200,
+  "cloud_y": 8,
+  "cloud_offset_compo": 1289,
+  "cloud_speed_px_s": 12,
+  "commun_source": "falaises_proches_metano_v2/commun (copies octet)",
+  "layout_sha256": {
+    "falaise_cap_gauche": "ed607fb9891a7afbd7bdada6b6ad208d3623d2ad3d69e199072d1a185a2f1e40",
+    "falaise_terrasse_droite": "2a5e3bb72eb8bd94fc75402b40853bc3212cd26a94c59343f576b5cbb901202b"
+  },
+  "night": "Abyss exact filter (cote_v4_abyss/night.py), single pass",
+  "runtime_validated": false,
+  "variants": [
+    {
+      "id": "cap_gauche",
+      "title": "Cap gauche",
+      "raw": "falaise_cap_gauche.png",
+      "gravity": "left",
+      "audit_texture": {
+        "pct_le30": 99.9,
+        "pct_exact": 0.71
+      }
+    },
+    {
+      "id": "terrasse_droite",
+      "title": "Terrasse droite",
+      "raw": "falaise_terrasse_droite.png",
+      "gravity": "right",
+      "audit_texture": {
+        "pct_le30": 99.9,
+        "pct_exact": 0.07
+      }
+    }
+  ]
+}
