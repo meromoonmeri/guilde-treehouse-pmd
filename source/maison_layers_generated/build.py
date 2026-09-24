@@ -11,7 +11,7 @@ for n,f in files:
 # explicit empty-room base is the generated floor layer; decoration/architecture remain independent.
 full=Image.new('RGBA',ims[0].size,(38,25,20,255))
 # compositing order follows the generated layer semantics: floor, walls, architecture, objects, entrance
-for index in [1,0,2,3,4]: full.alpha_composite(ims[index])
+for index in [1,0,3,4]: full.alpha_composite(ims[index])
 full.save(O/'Maison_Interieure_Ovale_Multicalque.png')
 manifest={'method':'each layer generated independently with image generator, then chroma-keyed and packed','canvas_px':list(full.size),'layers':[n+'.png' for n,_ in files],'water_layer':None,'objects_own_layer':'03_objets_decoration.png','source_reference':'d5c79863 IMG_5001.png'}
 (O/'manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False));h={}
