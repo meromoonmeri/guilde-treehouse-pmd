@@ -1,0 +1,25 @@
+{
+  "scenes": 2,
+  "wrap_period": 630,
+  "wrap_edge_meandiff": 0.22,
+  "metano_audit": {
+    "cap_gauche": {
+      "exact_pct": 0.0,
+      "within30_pct": 80.6
+    },
+    "terrasse_droite": {
+      "exact_pct": 0.0,
+      "within30_pct": 85.9
+    }
+  },
+  "checks": [
+    "Layouts SHA256 unchanged",
+    "Dims 768x512, strip h=300",
+    "Night == single Abyss pass on sea/clouds/cliffs",
+    "Wrap edge continuous by construction, tiling recomposed exactly",
+    "Day/night compositions == exact layer stacks",
+    "No magenta residue",
+    "Cliff colors audited vs canonical Metano reference"
+  ],
+  "runtime_validated": false
+}

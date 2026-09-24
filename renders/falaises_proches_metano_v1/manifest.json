@@ -1,0 +1,34 @@
+{
+  "scene": [
+    768,
+    512
+  ],
+  "sea_y": 300,
+  "cloud_period": 630,
+  "cloud_speed_px_s": 30,
+  "reference_sha256": "2afa395eb6492133e80af899b7d2a53c3c56b1434702d87d54aa947f278d18c7",
+  "layout_sha256": {
+    "falaise_cap_gauche": "0dd9f89a544e22f807db0c015f6d83b0a2d3695a753412c377101ffbb38864cb",
+    "falaise_terrasse_droite": "3ca48af674fd215eb95df2ae1448a97be6c10d093e937fd5e7a6fdaf29e28eec",
+    "mer": "4d6a8fb06a044ec426ee704b7c426b98473785feea4c12a410a30d916ff839c7",
+    "ciel_jour": "72ead0725034fe231f36bb84516830e1fe12e7bda711957f70c3274ee55ece8f",
+    "ciel_nuit": "e47757cfd6f98ace1644813e99ecd4c02907f66626fb6445f7c59d545dedcf70",
+    "nuages_wrap": "104626194040858b0e0b45327abaa3735dd909c5f488a87c81a1cde3ef8d7c50"
+  },
+  "night": "Abyss exact filter (cote_v4_abyss/night.py), single pass",
+  "runtime_validated": false,
+  "variants": [
+    {
+      "id": "cap_gauche",
+      "title": "Cap gauche",
+      "raw": "falaise_cap_gauche.png",
+      "gravity": "left"
+    },
+    {
+      "id": "terrasse_droite",
+      "title": "Terrasse droite",
+      "raw": "falaise_terrasse_droite.png",
+      "gravity": "right"
+    }
+  ]
+}
