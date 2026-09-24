@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "workflow": "magenta final composition -> chroma cleanup -> generated five layers -> PMDO Ground",
+  "layer_count": 5,
+  "generated_pixels_preserved_outside_key": true,
+  "magenta_residual_pixels": 0,
+  "tile_banks": 5,
+  "free_collision_cells": 204,
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false,
+  "warp_destinations": "NOT CONFIGURED"
+}

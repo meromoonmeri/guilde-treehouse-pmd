@@ -1,0 +1,88 @@
+{
+  "project": "forest_cave_render_v1_pmdo",
+  "target": "PMDO 0.8.12",
+  "workflow": "generated final composition on magenta -> chroma cleanup -> five final render layers",
+  "material_status": "generated final render, canonical PMD references used for style/layout continuity",
+  "guide": {
+    "guide_source_sha256": "09c127c3789a1741c65f8940e5ff8268c9606e2defbebc9bca251f4e648a1acd",
+    "guide_source": "source/zones_south_north_magenta_v1/generation/forest_cave_magenta_v2.png",
+    "normalized_size": [
+      512,
+      640
+    ],
+    "key_rgb": [
+      255,
+      0,
+      255
+    ],
+    "key_pixels": 77683,
+    "generated_final": true,
+    "canonical_pixels_in_final": false,
+    "references_are_style_layout_only": true
+  },
+  "layers": [
+    {
+      "id": "01_sol_chemin",
+      "file": "01_sol_chemin.png",
+      "generated_final": true,
+      "canonical_pixels": false
+    },
+    {
+      "id": "02_vegetation",
+      "file": "02_vegetation.png",
+      "generated_final": true,
+      "canonical_pixels": false
+    },
+    {
+      "id": "03_arbres",
+      "file": "03_arbres.png",
+      "generated_final": true,
+      "canonical_pixels": false
+    },
+    {
+      "id": "04_cliff_grotte",
+      "file": "04_cliff_grotte.png",
+      "generated_final": true,
+      "canonical_pixels": false
+    },
+    {
+      "id": "05_premier_plan",
+      "file": "05_premier_plan.png",
+      "generated_final": true,
+      "canonical_pixels": false
+    }
+  ],
+  "ground": {
+    "free_collision_cells": 204,
+    "total_collision_cells": 5120,
+    "path_pixels": 24523,
+    "tilesets": [
+      "FRV1_FOREST_00",
+      "FRV1_FOREST_01",
+      "FRV1_FOREST_02",
+      "FRV1_FOREST_03",
+      "FRV1_FOREST_04"
+    ]
+  },
+  "reference_hashes": [
+    {
+      "id": "forest_reference",
+      "file": "forêtglomypmdsky.png",
+      "sha256": "0e26ff258fc4f0add45397eb58b8c8f2403af0ede99623108b1cba1cb1127ab7"
+    },
+    {
+      "id": "forest_guide_reference",
+      "file": "forest_guide.png",
+      "sha256": "0b10e516dff06ff6339d725c78a767254df129da80a2041824e8c51c5f9e4cb2"
+    },
+    {
+      "id": "native_tree_reference",
+      "file": "native_tree_complete.png",
+      "sha256": "21e748adedfde19ba3a9f5be9be3cbbd4055df9417390b711870b75521c1c708"
+    }
+  ],
+  "runtime_pmdo_tested": false,
+  "render_gpu_tested": false,
+  "gameplay_tested": false,
+  "warp_destinations": "NOT CONFIGURED"
+}
