@@ -11,7 +11,7 @@ Il contient deux propositions dans la direction demandée :
 | `sn_v3_forest_cave` | 512 × 640 px, 64 × 80 cellules | bord sud | grotte de la forêt |
 | `sn_v3_blue_rock_cave` | 512 × 408 px, 64 × 51 cellules | bord sud | entrée souterraine ouverte |
 
-Le chemin contrôlé va du sud vers le seuil au nord. Les deux Ground ont des calques séparés pour le sol, le chemin, les parois, l’ouverture, les arbres ou les masses rocheuses. Les fichiers `.rsground`, `.tile`, `.dir` et `index.idx` sont des ressources natives sérialisées ; il ne faut pas réimporter les compositions PNG pour utiliser ce pack.
+Le chemin contrôlé va du sud vers le seuil au nord. Les deux Ground ont des calques séparés pour le sol, le chemin, les parois, l’ouverture, les arbres ou les masses rocheuses. Les fichiers `.rsground`, `.tile` et `index.idx` sont des ressources natives sérialisées ; il ne faut pas réimporter les compositions PNG pour utiliser ce pack. Ces scènes sont opaques et n’ajoutent pas de fond `.dir` séparé.
 
 ## Textures canoniques et provenance
 
