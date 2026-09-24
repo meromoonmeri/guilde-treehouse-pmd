@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="Foret928_forest_cave_928_10_foreground_bushes" tilewidth="8" tileheight="8" columns="116" tilecount="16704"><image source="Foret928_forest_cave_928_10_foreground_bushes.png" width="928" height="1152" /></tileset>
