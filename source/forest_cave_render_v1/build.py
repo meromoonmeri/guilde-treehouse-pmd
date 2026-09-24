@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 # The current final composition is produced by the image generator.  Keep the
 # earlier magenta/canonical source lot untouched as a separate archive.
-COMPOSITION_SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v2.png"
+COMPOSITION_SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v3.png"
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 ASSET = "forest_cave_render_v1"

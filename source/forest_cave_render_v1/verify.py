@@ -16,7 +16,7 @@ from scipy import ndimage as nd
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
-SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v2.png"
+SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v3.png"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT))
