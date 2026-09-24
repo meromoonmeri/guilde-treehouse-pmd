@@ -1,0 +1,309 @@
+{
+ "arbre_00_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   21,
+   39,
+   347,
+   393
+  ],
+  "echelle": 0.4065,
+  "taille": [
+   133,
+   144
+  ]
+ },
+ "arbre_01_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   354,
+   104,
+   675,
+   393
+  ],
+  "echelle": 0.3962,
+  "taille": [
+   127,
+   115
+  ]
+ },
+ "arbre_02_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   718,
+   41,
+   988,
+   393
+  ],
+  "echelle": 0.4755,
+  "taille": [
+   128,
+   167
+  ]
+ },
+ "arbre_03_cime_seule": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   21,
+   434,
+   320,
+   608
+  ],
+  "echelle": 0.4228,
+  "taille": [
+   126,
+   74
+  ]
+ },
+ "arbre_04_cime_seule": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   364,
+   434,
+   663,
+   608
+  ],
+  "echelle": 0.4228,
+  "taille": [
+   126,
+   74
+  ]
+ },
+ "arbre_05_cime_seule": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   706,
+   434,
+   1004,
+   608
+  ],
+  "echelle": 0.4228,
+  "taille": [
+   126,
+   74
+  ]
+ },
+ "arbre_06_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   32,
+   667,
+   337,
+   1003
+  ],
+  "echelle": 0.4345,
+  "taille": [
+   133,
+   146
+  ]
+ },
+ "arbre_07_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   349,
+   676,
+   677,
+   1003
+  ],
+  "echelle": 0.3853,
+  "taille": [
+   126,
+   126
+  ]
+ },
+ "arbre_08_arbre": {
+  "brut": "v2_magenta_arbres_brut.png",
+  "boite_brut": [
+   692,
+   608,
+   989,
+   1003
+  ],
+  "echelle": 0.4242,
+  "taille": [
+   126,
+   168
+  ]
+ },
+ "fleurs": {
+  "brut": "v2_magenta_fleurs_anim_brut.png",
+  "cellule": "24x24",
+  "poses": 3,
+  "sequence": [
+   0,
+   1,
+   0,
+   2
+  ],
+  "cadences_frames_jeu": [
+   8,
+   10,
+   14
+  ],
+  "ancrage": "lignes 14-23 = pose 0",
+  "palette": 20
+ },
+ "souche_temple": {
+  "brut": "v2_magenta_souche_temple_brut.png",
+  "echelle": 0.1235,
+  "taille": [
+   101,
+   101
+  ],
+  "palette": 28
+ },
+ "rochers": [
+  {
+   "nom": "rocher_00",
+   "taille": [
+    57,
+    48
+   ],
+   "pixels": 1944
+  },
+  {
+   "nom": "rocher_01",
+   "taille": [
+    116,
+    97
+   ],
+   "pixels": 8065
+  },
+  {
+   "nom": "rocher_02",
+   "taille": [
+    105,
+    116
+   ],
+   "pixels": 9374
+  },
+  {
+   "nom": "rocher_03",
+   "taille": [
+    20,
+    19
+   ],
+   "pixels": 252
+  },
+  {
+   "nom": "rocher_04",
+   "taille": [
+    50,
+    53
+   ],
+   "pixels": 2009
+  },
+  {
+   "nom": "rocher_05",
+   "taille": [
+    25,
+    17
+   ],
+   "pixels": 318
+  },
+  {
+   "nom": "rocher_06",
+   "taille": [
+    48,
+    36
+   ],
+   "pixels": 1307
+  },
+  {
+   "nom": "rocher_07",
+   "taille": [
+    73,
+    114
+   ],
+   "pixels": 5788
+  },
+  {
+   "nom": "rocher_08",
+   "taille": [
+    22,
+    22
+   ],
+   "pixels": 362
+  },
+  {
+   "nom": "rocher_09",
+   "taille": [
+    27,
+    21
+   ],
+   "pixels": 382
+  },
+  {
+   "nom": "rocher_10",
+   "taille": [
+    18,
+    17
+   ],
+   "pixels": 238
+  },
+  {
+   "nom": "rocher_11",
+   "taille": [
+    25,
+    21
+   ],
+   "pixels": 360
+  },
+  {
+   "nom": "rocher_12",
+   "taille": [
+    50,
+    52
+   ],
+   "pixels": 1949
+  },
+  {
+   "nom": "rocher_13",
+   "taille": [
+    19,
+    18
+   ],
+   "pixels": 238
+  },
+  {
+   "nom": "rocher_14",
+   "taille": [
+    53,
+    44
+   ],
+   "pixels": 1585
+  },
+  {
+   "nom": "rocher_15",
+   "taille": [
+    111,
+    120
+   ],
+   "pixels": 10178
+  },
+  {
+   "nom": "rocher_16",
+   "taille": [
+    24,
+    17
+   ],
+   "pixels": 339
+  },
+  {
+   "nom": "rocher_17",
+   "taille": [
+    87,
+    72
+   ],
+   "pixels": 4274
+  },
+  {
+   "nom": "rocher_18",
+   "taille": [
+    22,
+    22
+   ],
+   "pixels": 379
+  }
+ ]
+}

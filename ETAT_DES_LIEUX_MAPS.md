@@ -60,3 +60,7 @@ Choisir le chantier (Reverie Town / entrées sud→nord / zones Halcyon / donjon
 ## 7. Mise à jour du 24 septembre 2026 — Jardin secret v1
 
 Premier layout agrandi construit avec les **textures de sa propre référence** (`secretgarden.png`) : `renders/jardin_secret_v1/` (816×1152, 8 calques jour/nuit), galerie `apercu_jardin_secret_v1.html`. Le moteur `source/jardin_secret_v1/quilt.py` peut servir aux 17 autres références PMD Sky du programme (`FULL_PROGRAMME_STATUS.json`), en adaptant la segmentation et les caractéristiques de guidage à chacune.
+
+## 8. Mise à jour du 24 septembre 2026 — Jardin secret v2 (méthode spriter magenta)
+
+`renders/jardin_secret_v2/` + `apercu_jardin_secret_v2.html` : chemin droit, feuillage immersif, arbres à l'échelle Halcyon, fleurs animées sur calques propres, hokora de Celebi sur la souche. Calques générés sur magenta et assemblés (rayon natif). all_pass, PMDO non testé.

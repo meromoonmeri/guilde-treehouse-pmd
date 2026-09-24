@@ -1,0 +1,486 @@
+{
+ "lot": "jardin_secret_v2",
+ "taille": [
+  816,
+  1152
+ ],
+ "cellules_8px": [
+  102,
+  144
+ ],
+ "origine": [
+  0,
+  0
+ ],
+ "methode": "générateur d'images sur fond magenta #FF00FF, un calque/planche par appel, détourage, échelle canonique, palette, assemblage multicalque, corrections aux outils",
+ "provenance": {
+  "natif": [
+   "07_rayon (secretgarden.png, translation seule)"
+  ],
+  "genere": [
+   "01_sol",
+   "02_fleurs",
+   "03_rochers",
+   "04_souche_temple",
+   "05_arbres_troncs",
+   "06_arbres_cimes",
+   "08_feuillage_avant"
+  ],
+  "bruts": [
+   "magenta_arbres_brut.png",
+   "magenta_fleurs_brut.png",
+   "magenta_rochers_souche_brut.png",
+   "v2_magenta_arbres_brut.png",
+   "v2_magenta_feuillage_brut.png",
+   "v2_magenta_fleurs_anim_brut.png",
+   "v2_magenta_souche_temple_brut.png",
+   "v2_sol_brut.png"
+  ],
+  "rejetes": [
+   "magenta_feuillage_brut.png",
+   "sol_brut.png"
+  ]
+ },
+ "echelles": {
+  "arbres": "largeur de cime 126 px = cime de l'arbre Halcyon Vast Steppe 144×120 (native_tree_complete.png)",
+  "fleurs": "24×24 = Vast_Steppe_Flower_Animations.png (Halcyon)",
+  "souche": "100 px de large = souche de secretgarden.png"
+ },
+ "palette": "sol, feuillage, arbres, rochers : ramenés aux 139 couleurs de secretgarden.png ; temple (28) et fleurs (20) : palette limitée propre (rouge/jaune absents de la référence)",
+ "corrections_outils": [
+  "sol : îlots clairs isolés dans le sous-bois effacés (couleur voisine)",
+  "feuillage : recoupé sur le masque de la maquette +10 px, bord festonné (demi-disques 7-11 px), contour sombre 1 px + ombre intérieure",
+  "fleurs : lignes 14-23 des poses 1 et 2 = pose 0 (base fixe, seuls tiges/pétales bougent)",
+  "arbres : séparés troncs+ombre / cime"
+ ],
+ "animation_fleurs": {
+  "fichiers": "fleurs_anim/JSEC2_02_fleurs_cXX_pY.png (XX = horloge, Y = pose)",
+  "sequence": [
+   0,
+   1,
+   0,
+   2
+  ],
+  "horloges_frames_jeu": [
+   8,
+   10,
+   14
+  ],
+  "pmdo": "un calque animé par horloge, images p0,p1,p0,p2, durée XX frames de jeu par image",
+  "touffes": [
+   {
+    "x": 311,
+    "y": 754,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 374,
+    "y": 315,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 504,
+    "y": 379,
+    "couleur": "rose",
+    "horloge": 14
+   },
+   {
+    "x": 447,
+    "y": 338,
+    "couleur": "jaune",
+    "horloge": 8
+   },
+   {
+    "x": 333,
+    "y": 225,
+    "couleur": "jaune",
+    "horloge": 10
+   },
+   {
+    "x": 419,
+    "y": 371,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 509,
+    "y": 283,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 216,
+    "y": 306,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 362,
+    "y": 256,
+    "couleur": "blanche",
+    "horloge": 14
+   },
+   {
+    "x": 566,
+    "y": 352,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 512,
+    "y": 342,
+    "couleur": "jaune",
+    "horloge": 10
+   },
+   {
+    "x": 347,
+    "y": 359,
+    "couleur": "blanche",
+    "horloge": 14
+   },
+   {
+    "x": 408,
+    "y": 260,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 450,
+    "y": 258,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 345,
+    "y": 284,
+    "couleur": "blanche",
+    "horloge": 14
+   },
+   {
+    "x": 391,
+    "y": 343,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 313,
+    "y": 456,
+    "couleur": "jaune",
+    "horloge": 10
+   },
+   {
+    "x": 302,
+    "y": 142,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 511,
+    "y": 859,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 473,
+    "y": 373,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 332,
+    "y": 157,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 519,
+    "y": 938,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 474,
+    "y": 227,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 277,
+    "y": 372,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 502,
+    "y": 833,
+    "couleur": "jaune",
+    "horloge": 8
+   },
+   {
+    "x": 315,
+    "y": 430,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 545,
+    "y": 905,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 585,
+    "y": 319,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 387,
+    "y": 371,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 289,
+    "y": 338,
+    "couleur": "rose",
+    "horloge": 14
+   },
+   {
+    "x": 458,
+    "y": 289,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 540,
+    "y": 309,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 478,
+    "y": 180,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 493,
+    "y": 154,
+    "couleur": "jaune",
+    "horloge": 8
+   }
+  ]
+ },
+ "calques": [
+  {
+   "id": "01_sol",
+   "fichier": "JSEC2_01_sol.png",
+   "description": "Sol : sous-bois, lisière festonnée, pelouse, haies, chemin de tapis droit (généré, opaque)"
+  },
+  {
+   "id": "02_fleurs",
+   "fichier": "fleurs_anim/",
+   "description": "Fleurs animées 24×24 : 3 horloges × 3 poses (fichiers fleurs_anim/)"
+  },
+  {
+   "id": "03_rochers",
+   "fichier": "JSEC2_03_rochers.png",
+   "description": "Rochers (générés, sous le joueur)"
+  },
+  {
+   "id": "04_souche_temple",
+   "fichier": "JSEC2_04_souche_temple.png",
+   "description": "Souche-sanctuaire + hokora miniature de Celebi (généré, sous le joueur)"
+  },
+  {
+   "id": "05_arbres_troncs",
+   "fichier": "JSEC2_05_arbres_troncs.png",
+   "description": "Arbres : troncs + ombres au sol (sous le joueur)"
+  },
+  {
+   "id": "06_arbres_cimes",
+   "fichier": "JSEC2_06_arbres_cimes.png",
+   "description": "Arbres : cimes, dont cimes seules de lisière façon Halcyon (au-dessus du joueur)"
+  },
+  {
+   "id": "07_rayon",
+   "fichier": "JSEC2_07_rayon.png",
+   "description": "Rayon de lumière : sprite natif de secretgarden.png (au-dessus du joueur)"
+  },
+  {
+   "id": "08_feuillage_avant",
+   "fichier": "JSEC2_08_feuillage_avant.png",
+   "description": "Feuillage immersif d'avant-plan (généré, recoupé et festonné aux outils)"
+  }
+ ],
+ "placements": [
+  {
+   "sprite": "souche_temple",
+   "xy": [
+    358,
+    112
+   ]
+  },
+  {
+   "sprite": "rayon_natif_secretgarden",
+   "xy": [
+    340,
+    0
+   ]
+  },
+  {
+   "sprite": "rocher_05",
+   "xy": [
+    610,
+    260
+   ]
+  },
+  {
+   "sprite": "rocher_14",
+   "xy": [
+    206,
+    336
+   ]
+  },
+  {
+   "sprite": "rocher_08",
+   "xy": [
+    222,
+    690
+   ]
+  },
+  {
+   "sprite": "rocher_04",
+   "xy": [
+    630,
+    930
+   ]
+  },
+  {
+   "sprite": "rocher_12",
+   "xy": [
+    300,
+    820
+   ]
+  },
+  {
+   "sprite": "rocher_16",
+   "xy": [
+    480,
+    1010
+   ]
+  },
+  {
+   "sprite": "arbre_00_arbre",
+   "xy": [
+    190,
+    140
+   ]
+  },
+  {
+   "sprite": "arbre_06_arbre",
+   "xy": [
+    500,
+    128
+   ]
+  },
+  {
+   "sprite": "arbre_02_arbre",
+   "xy": [
+    150,
+    548
+   ]
+  },
+  {
+   "sprite": "arbre_07_arbre",
+   "xy": [
+    548,
+    800
+   ]
+  },
+  {
+   "sprite": "arbre_01_arbre",
+   "xy": [
+    442,
+    420
+   ]
+  },
+  {
+   "sprite": "arbre_08_arbre",
+   "xy": [
+    250,
+    872
+   ]
+  },
+  {
+   "sprite": "arbre_03_cime_seule_lisiere",
+   "xy": [
+    200,
+    400
+   ]
+  },
+  {
+   "sprite": "arbre_04_cime_seule_lisiere",
+   "xy": [
+    520,
+    640
+   ]
+  },
+  {
+   "sprite": "arbre_05_cime_seule_lisiere",
+   "xy": [
+    196,
+    780
+   ]
+  },
+  {
+   "sprite": "arbre_03_cime_seule_lisiere",
+   "xy": [
+    540,
+    1000
+   ]
+  }
+ ],
+ "limites": [
+  "pixels générés d'après références (pas natifs certifiés), sauf le rayon",
+  "aucun test PMDO (moteur absent)",
+  "collisions/warps à dessiner dans l'éditeur"
+ ],
+ "fichiers_sha256": {
+  "calques/JSEC2_01_sol.png": "17040a92172c60c8e824c949f493cc925a2bbef5d820ba99a97a55f38f24c409",
+  "calques/JSEC2_03_rochers.png": "60c58627d863fd16246c46955d35426ffb9074d1b0b78f4d70256bd456b2caca",
+  "calques/JSEC2_04_souche_temple.png": "1aa46a59e6ed6807adf592e6ed991663f83098391428d6588cc3ea7206fe3df6",
+  "calques/JSEC2_05_arbres_troncs.png": "ba89c3d460ccd9078e53cdbe22df080d23f796f95282af45506dcf7d44f0b3f7",
+  "calques/JSEC2_06_arbres_cimes.png": "c7653c8d1c20ce3e3f3a53742763f5b30ef3f65484f6678f075e592d66f2974e",
+  "calques/JSEC2_07_rayon.png": "be131b61d0157e2db0d59245c044219a2a46ebeb849846125322c12bc11e29db",
+  "calques/JSEC2_08_feuillage_avant.png": "e15cd18b5c9ecaef371ae43296ed3fd4301c7365c9f4d92c75dd0d5d3135d7b1",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p0.png": "519fb553edc581efdd11186cac431fe3c5979b1f20d085fe5f81e6e1d1dd6696",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p1.png": "dbe45a89cf76cb88fbff68b00bb572d7ae2760f0f47f8e05ff8e929e8193cb85",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p2.png": "25f1611a983689db73ef1d4f2d9eb84f2323748980439c5441263e2b5771dde5",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p0.png": "a14eccfb7b61845cb91d67797abd172e7b6db1264f60b82955dd19095959d59e",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p1.png": "01772fcfa7b93d92bbc30fc52ce2824569d8680cf5ed3e9407cc373f2cb6500e",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p2.png": "10a968cf44013180fbfc1a74d4d47275aa53cc0ac1ff4d9b80e1e0258e58ab0c",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p0.png": "84f5455fe8f8518cd807dddd39ef02c8600ea9629fac4a8e0bbeac98016c655f",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p1.png": "0b1e068a1704ee02e0f4101690f18edace030ee3803ef8d7fb86a431526ba7b5",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p2.png": "caf5104d7a352786f99d9cede2fd7b6ada2422b13950bb46af7e07219361b99b",
+  "nuit/JSEC2_01_sol_nuit.png": "8ff65e8678f0626a177bdc423862d1c329813ef7be8225575353b61dfb1819f8",
+  "nuit/JSEC2_03_rochers_nuit.png": "277aa9d8d19b0c99bb734d50d07cbf840399b87deaf94705c4a0be63fa2db0fa",
+  "nuit/JSEC2_04_souche_temple_nuit.png": "ed30e7e13c6db1ad72d589f5b89c881b37ff62221a509a21146cad9f6272f2e6",
+  "nuit/JSEC2_05_arbres_troncs_nuit.png": "c95b0c36f60ea359d38fa601c43f94d38c43d884a2eaaf95165bb1546c2cc32a",
+  "nuit/JSEC2_06_arbres_cimes_nuit.png": "a1778e0d48a8feefdd02c03923b0f1eb0973a5f890c0d08ab34b4a25ff75302d",
+  "nuit/JSEC2_07_rayon_nuit.png": "6e71d6c19fd50f28672f3ed960536a5b30481f81330496de2d0af1f5102dbdb9",
+  "nuit/JSEC2_08_feuillage_avant_nuit.png": "89a7765db3677e68826bd37e12af760b10637cf90bced83ab2d0cd923459dcaf",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p0_nuit.png": "fb2a2fbcdc5c58518ccb840956acb10df010fdb89f29eb6402a462e1b686a1d0",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p1_nuit.png": "724b7d04cfc5305a55c0709dd1250820d612c737bb149bdde7b80f8e3310fe88",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p2_nuit.png": "16865fa2ee13297f83ec3feb0d81be8c1b3343b69e639ab30637456dfb1ed442",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p0_nuit.png": "4be1e39fdaf6922081d0e08be1d448a62dd1ece5bbf6e217b202ece2e40d4368",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p1_nuit.png": "1d6e09797fdb6d786738fdf93db6c770a23ee14d79b996ae2a9cefc3c2f895c7",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p2_nuit.png": "6f02b1f3c4db40bc084e36ee68f588f113559b88dfba5871275c231717b3a3e4",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p0_nuit.png": "1778356b8c1b34d158d7fdd7728f4f1416c1f9c9d76433e621133b8ddfdc8e93",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p1_nuit.png": "8f785966929a33bfcce37d98915024dd4b80ac044ab8105b34d784e6d098c6c5",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p2_nuit.png": "9b6d7dbc1d7ee0d1eb47aa6991daf5558bd37a7047064bb48c32db249394a513"
+ }
+}
