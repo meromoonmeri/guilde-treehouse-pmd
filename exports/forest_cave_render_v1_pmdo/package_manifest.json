@@ -1,0 +1,22 @@
+{
+  "archive": "forest_cave_render_v1_pmdo_pack.zip",
+  "archive_sha256": "36e30d2079bee94ae2911c1447d764cc75999b3e27809f0e43b5d23ed35eaa45",
+  "root": "forest_cave_render_v1_pmdo",
+  "preview": "apercu_forest_cave_render_v1.html",
+  "file_count": 35,
+  "generated_final_render": true,
+  "canonical_pixels_replace_generated_render": false,
+  "verification": {
+    "result": "PASS",
+    "workflow": "magenta final composition -> chroma cleanup -> generated five layers -> PMDO Ground",
+    "layer_count": 5,
+    "generated_pixels_preserved_outside_key": true,
+    "magenta_residual_pixels": 0,
+    "tile_banks": 5,
+    "free_collision_cells": 204,
+    "runtime_pmdo_tested": false,
+    "render_gpu_tested": false,
+    "gameplay_tested": false,
+    "warp_destinations": "NOT CONFIGURED"
+  }
+}
