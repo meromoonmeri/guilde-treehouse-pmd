@@ -110,6 +110,9 @@ def main():
         brown = a & (rr > gg) & (rr > bb + 15)
         lx0, _, lx1, _ = bbox(leaf)
         s = 126 / (lx1 - lx0)
+        if brown.sum() > 200:
+            # arbre complet : doit tenir dans le cadre canonique Halcyon 144×120 (native_tree_complete.png)
+            s = min(s, 144 / sub.shape[1], 120 / sub.shape[0])
         size = (max(1, round(sub.shape[1] * s)), max(1, round(sub.shape[0] * s)))
         rgb2, a2 = downscale(sub, a, size)
         rgb2 = snap_to(rgb2, PAL_REF)
@@ -156,7 +159,7 @@ def main():
     rows = np.nonzero(a.any(1))[0]
     low = a[int(len(a) * 0.55):]
     sx0, _, sx1, _ = bbox(low)
-    s = 100 / (sx1 - sx0)
+    s = 128 / (sx1 - sx0)   # souche 128 px (≈ largeur d'un arbre) pour que le hokora reste lisible
     size = (round(sub.shape[1] * s), round(sub.shape[0] * s))
     rgb2, a2 = downscale(sub, a, size)
     temple = to_rgba(rgb2, a2)

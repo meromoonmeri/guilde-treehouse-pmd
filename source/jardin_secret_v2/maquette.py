@@ -37,3 +37,5 @@ Image.fromarray(m).save('guides/v2_guide_feuillage_magenta.png')
 comp=img.copy(); comp[fol]=m[fol]; Image.fromarray(comp).save('guides/v2_maquette.png')
 np.savez_compressed('travail/v2_masques.npz',lawn=lawn,carpet=carpet,fol=fol)
 print('pelouse',lawn.sum(),'chemin',carpet.sum())
+# NB v2b : le masque final du feuillage (travail/v2b_region_feuillage.npy, guides/v2b_guide_feuillage_magenta.png)
+# est recalculé depuis le sol généré par region_feuillage_v2b.py.

@@ -154,7 +154,8 @@ def main():
     wk = ndi.binary_erosion(walk, structure=np.ones((24, 24)), border_value=1)
     lab, n = ndi.label(wk)
     south = set(np.unique(lab[H - 1][lab[H - 1] > 0]))
-    tx, ty = C.TEMPLE_XY[0] + 50, C.TEMPLE_XY[1] + 101 + 16
+    th, tw = C.spr('souche_temple').shape[:2]
+    tx, ty = C.TEMPLE_XY[0] + tw // 2, C.TEMPLE_XY[1] + th + 16   # pied des marches
     goal = set(np.unique(lab[ty - 8:ty + 8, tx - 20:tx + 20])) - {0}
     V['parcours_sud_vers_temple'] = bool(south & goal)
     V['largeur_chemin_px'] = int(carpet[H - 200].sum())

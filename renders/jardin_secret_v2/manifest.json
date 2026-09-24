@@ -34,11 +34,13 @@
    "v2_magenta_feuillage_brut.png",
    "v2_magenta_fleurs_anim_brut.png",
    "v2_magenta_souche_temple_brut.png",
-   "v2_sol_brut.png"
+   "v2_sol_brut.png",
+   "v2b_magenta_feuillage_brut.png"
   ],
   "rejetes": [
    "magenta_feuillage_brut.png",
-   "sol_brut.png"
+   "sol_brut.png",
+   "v2b_magenta_feuillage_brut_rejet_format.png"
   ]
  },
  "echelles": {
@@ -69,207 +71,207 @@
   "pmdo": "un calque animé par horloge, images p0,p1,p0,p2, durée XX frames de jeu par image",
   "touffes": [
    {
-    "x": 311,
-    "y": 754,
-    "couleur": "blanche",
-    "horloge": 8
-   },
-   {
-    "x": 374,
-    "y": 315,
-    "couleur": "blanche",
-    "horloge": 10
-   },
-   {
-    "x": 504,
-    "y": 379,
-    "couleur": "rose",
-    "horloge": 14
-   },
-   {
-    "x": 447,
-    "y": 338,
-    "couleur": "jaune",
-    "horloge": 8
-   },
-   {
-    "x": 333,
-    "y": 225,
-    "couleur": "jaune",
-    "horloge": 10
-   },
-   {
-    "x": 419,
-    "y": 371,
-    "couleur": "jaune",
-    "horloge": 14
-   },
-   {
-    "x": 509,
-    "y": 283,
-    "couleur": "rose",
-    "horloge": 8
-   },
-   {
-    "x": 216,
-    "y": 306,
-    "couleur": "rose",
-    "horloge": 10
-   },
-   {
-    "x": 362,
-    "y": 256,
-    "couleur": "blanche",
-    "horloge": 14
-   },
-   {
-    "x": 566,
-    "y": 352,
-    "couleur": "rose",
-    "horloge": 8
-   },
-   {
-    "x": 512,
-    "y": 342,
-    "couleur": "jaune",
-    "horloge": 10
-   },
-   {
-    "x": 347,
-    "y": 359,
-    "couleur": "blanche",
-    "horloge": 14
-   },
-   {
-    "x": 408,
-    "y": 260,
-    "couleur": "rose",
-    "horloge": 8
-   },
-   {
     "x": 450,
-    "y": 258,
+    "y": 286,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 317,
+    "y": 226,
     "couleur": "rose",
     "horloge": 10
    },
    {
-    "x": 345,
-    "y": 284,
+    "x": 502,
+    "y": 844,
+    "couleur": "rose",
+    "horloge": 14
+   },
+   {
+    "x": 387,
+    "y": 372,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 532,
+    "y": 365,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 515,
+    "y": 262,
+    "couleur": "rose",
+    "horloge": 14
+   },
+   {
+    "x": 299,
+    "y": 340,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 429,
+    "y": 342,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 543,
+    "y": 906,
+    "couleur": "rose",
+    "horloge": 14
+   },
+   {
+    "x": 463,
+    "y": 314,
+    "couleur": "jaune",
+    "horloge": 8
+   },
+   {
+    "x": 505,
+    "y": 928,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 317,
+    "y": 260,
     "couleur": "blanche",
     "horloge": 14
    },
    {
-    "x": 391,
-    "y": 343,
+    "x": 295,
+    "y": 738,
     "couleur": "rose",
     "horloge": 8
+   },
+   {
+    "x": 418,
+    "y": 288,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 588,
+    "y": 337,
+    "couleur": "jaune",
+    "horloge": 14
+   },
+   {
+    "x": 529,
+    "y": 336,
+    "couleur": "jaune",
+    "horloge": 8
+   },
+   {
+    "x": 254,
+    "y": 294,
+    "couleur": "blanche",
+    "horloge": 10
+   },
+   {
+    "x": 499,
+    "y": 346,
+    "couleur": "blanche",
+    "horloge": 14
+   },
+   {
+    "x": 196,
+    "y": 720,
+    "couleur": "rose",
+    "horloge": 8
+   },
+   {
+    "x": 383,
+    "y": 315,
+    "couleur": "rose",
+    "horloge": 10
+   },
+   {
+    "x": 305,
+    "y": 308,
+    "couleur": "blanche",
+    "horloge": 14
+   },
+   {
+    "x": 411,
+    "y": 261,
+    "couleur": "blanche",
+    "horloge": 8
+   },
+   {
+    "x": 323,
+    "y": 685,
+    "couleur": "rose",
+    "horloge": 10
    },
    {
     "x": 313,
-    "y": 456,
-    "couleur": "jaune",
-    "horloge": 10
-   },
-   {
-    "x": 302,
-    "y": 142,
+    "y": 417,
     "couleur": "jaune",
     "horloge": 14
    },
    {
-    "x": 511,
-    "y": 859,
+    "x": 345,
+    "y": 124,
     "couleur": "rose",
     "horloge": 8
    },
    {
-    "x": 473,
-    "y": 373,
-    "couleur": "rose",
+    "x": 349,
+    "y": 358,
+    "couleur": "blanche",
     "horloge": 10
    },
    {
-    "x": 332,
+    "x": 321,
     "y": 157,
     "couleur": "jaune",
     "horloge": 14
    },
    {
-    "x": 519,
-    "y": 938,
-    "couleur": "blanche",
+    "x": 531,
+    "y": 295,
+    "couleur": "jaune",
     "horloge": 8
    },
    {
-    "x": 474,
-    "y": 227,
+    "x": 298,
+    "y": 391,
     "couleur": "rose",
     "horloge": 10
    },
    {
-    "x": 277,
-    "y": 372,
-    "couleur": "jaune",
+    "x": 570,
+    "y": 298,
+    "couleur": "rose",
     "horloge": 14
-   },
-   {
-    "x": 502,
-    "y": 833,
-    "couleur": "jaune",
-    "horloge": 8
-   },
-   {
-    "x": 315,
-    "y": 430,
-    "couleur": "rose",
-    "horloge": 10
-   },
-   {
-    "x": 545,
-    "y": 905,
-    "couleur": "jaune",
-    "horloge": 14
-   },
-   {
-    "x": 585,
-    "y": 319,
-    "couleur": "rose",
-    "horloge": 8
-   },
-   {
-    "x": 387,
-    "y": 371,
-    "couleur": "blanche",
-    "horloge": 10
    },
    {
     "x": 289,
-    "y": 338,
-    "couleur": "rose",
-    "horloge": 14
-   },
-   {
-    "x": 458,
-    "y": 289,
+    "y": 136,
     "couleur": "blanche",
     "horloge": 8
    },
    {
-    "x": 540,
-    "y": 309,
-    "couleur": "blanche",
+    "x": 477,
+    "y": 179,
+    "couleur": "jaune",
     "horloge": 10
    },
    {
-    "x": 478,
-    "y": 180,
+    "x": 506,
+    "y": 393,
     "couleur": "jaune",
     "horloge": 14
    },
    {
-    "x": 493,
-    "y": 154,
-    "couleur": "jaune",
+    "x": 554,
+    "y": 939,
+    "couleur": "blanche",
     "horloge": 8
    }
   ]
@@ -320,8 +322,8 @@
   {
    "sprite": "souche_temple",
    "xy": [
-    358,
-    112
+    344,
+    108
    ]
   },
   {
@@ -390,8 +392,8 @@
   {
    "sprite": "arbre_02_arbre",
    "xy": [
-    150,
-    548
+    196,
+    588
    ]
   },
   {
@@ -407,41 +409,6 @@
     442,
     420
    ]
-  },
-  {
-   "sprite": "arbre_08_arbre",
-   "xy": [
-    250,
-    872
-   ]
-  },
-  {
-   "sprite": "arbre_03_cime_seule_lisiere",
-   "xy": [
-    200,
-    400
-   ]
-  },
-  {
-   "sprite": "arbre_04_cime_seule_lisiere",
-   "xy": [
-    520,
-    640
-   ]
-  },
-  {
-   "sprite": "arbre_05_cime_seule_lisiere",
-   "xy": [
-    196,
-    780
-   ]
-  },
-  {
-   "sprite": "arbre_03_cime_seule_lisiere",
-   "xy": [
-    540,
-    1000
-   ]
   }
  ],
  "limites": [
@@ -452,35 +419,35 @@
  "fichiers_sha256": {
   "calques/JSEC2_01_sol.png": "17040a92172c60c8e824c949f493cc925a2bbef5d820ba99a97a55f38f24c409",
   "calques/JSEC2_03_rochers.png": "60c58627d863fd16246c46955d35426ffb9074d1b0b78f4d70256bd456b2caca",
-  "calques/JSEC2_04_souche_temple.png": "1aa46a59e6ed6807adf592e6ed991663f83098391428d6588cc3ea7206fe3df6",
-  "calques/JSEC2_05_arbres_troncs.png": "ba89c3d460ccd9078e53cdbe22df080d23f796f95282af45506dcf7d44f0b3f7",
-  "calques/JSEC2_06_arbres_cimes.png": "c7653c8d1c20ce3e3f3a53742763f5b30ef3f65484f6678f075e592d66f2974e",
+  "calques/JSEC2_04_souche_temple.png": "c064ea1d67fcb868ff277dd6659efcda1c7a71f59018048d0382440a96c61372",
+  "calques/JSEC2_05_arbres_troncs.png": "63bb04be955ee81b33d4f8553889c900fd231f9a30f2b2da0bb8f3cd866843aa",
+  "calques/JSEC2_06_arbres_cimes.png": "289f56972516e2d750b7d6fca14fec85085e2da91b8084bdebcb55a596dff551",
   "calques/JSEC2_07_rayon.png": "be131b61d0157e2db0d59245c044219a2a46ebeb849846125322c12bc11e29db",
-  "calques/JSEC2_08_feuillage_avant.png": "e15cd18b5c9ecaef371ae43296ed3fd4301c7365c9f4d92c75dd0d5d3135d7b1",
-  "fleurs_anim/JSEC2_02_fleurs_c08_p0.png": "519fb553edc581efdd11186cac431fe3c5979b1f20d085fe5f81e6e1d1dd6696",
-  "fleurs_anim/JSEC2_02_fleurs_c08_p1.png": "dbe45a89cf76cb88fbff68b00bb572d7ae2760f0f47f8e05ff8e929e8193cb85",
-  "fleurs_anim/JSEC2_02_fleurs_c08_p2.png": "25f1611a983689db73ef1d4f2d9eb84f2323748980439c5441263e2b5771dde5",
-  "fleurs_anim/JSEC2_02_fleurs_c10_p0.png": "a14eccfb7b61845cb91d67797abd172e7b6db1264f60b82955dd19095959d59e",
-  "fleurs_anim/JSEC2_02_fleurs_c10_p1.png": "01772fcfa7b93d92bbc30fc52ce2824569d8680cf5ed3e9407cc373f2cb6500e",
-  "fleurs_anim/JSEC2_02_fleurs_c10_p2.png": "10a968cf44013180fbfc1a74d4d47275aa53cc0ac1ff4d9b80e1e0258e58ab0c",
-  "fleurs_anim/JSEC2_02_fleurs_c14_p0.png": "84f5455fe8f8518cd807dddd39ef02c8600ea9629fac4a8e0bbeac98016c655f",
-  "fleurs_anim/JSEC2_02_fleurs_c14_p1.png": "0b1e068a1704ee02e0f4101690f18edace030ee3803ef8d7fb86a431526ba7b5",
-  "fleurs_anim/JSEC2_02_fleurs_c14_p2.png": "caf5104d7a352786f99d9cede2fd7b6ada2422b13950bb46af7e07219361b99b",
+  "calques/JSEC2_08_feuillage_avant.png": "72b9bf80034ec4da1b2420036361ca286a3b0e68e5322c3b996fea16f4a19e79",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p0.png": "106d553e63fff76971ab0b388a11d89870fedddff2020095e6dd504b8eb24931",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p1.png": "c1223a7233e44826b822b011a37b3d89132b037bc94d402522613292cc85d2d8",
+  "fleurs_anim/JSEC2_02_fleurs_c08_p2.png": "e15652659adf3b9308e43611e4d07c907118aa5f71f5437143dc83c6b741ece8",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p0.png": "9ecfe7920d2688026fcad1345a5510e2a262fd2ca76b2e970f562bb76dd43b33",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p1.png": "02d4507ef5122f7ad420602e1a85c0cb3b44c109f11d25aea127a0d5eecd7a52",
+  "fleurs_anim/JSEC2_02_fleurs_c10_p2.png": "aa2ffe4bf23e98dfd786fad990b1100c70b1e103630e2d836d90dad9f153bf0a",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p0.png": "fc623fea1390d0982b6198f455cf2ca0522b07a0b9af3b3011fa5b8afbbf0c0c",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p1.png": "83cbae3747beea1bfbdd639b3bd54adbf81d315a680d26fd97e649b3a8a08406",
+  "fleurs_anim/JSEC2_02_fleurs_c14_p2.png": "62f8418ae50343440ee9f658ea1c87f28df7606f22a4241081ecb544f0998141",
   "nuit/JSEC2_01_sol_nuit.png": "8ff65e8678f0626a177bdc423862d1c329813ef7be8225575353b61dfb1819f8",
   "nuit/JSEC2_03_rochers_nuit.png": "277aa9d8d19b0c99bb734d50d07cbf840399b87deaf94705c4a0be63fa2db0fa",
-  "nuit/JSEC2_04_souche_temple_nuit.png": "ed30e7e13c6db1ad72d589f5b89c881b37ff62221a509a21146cad9f6272f2e6",
-  "nuit/JSEC2_05_arbres_troncs_nuit.png": "c95b0c36f60ea359d38fa601c43f94d38c43d884a2eaaf95165bb1546c2cc32a",
-  "nuit/JSEC2_06_arbres_cimes_nuit.png": "a1778e0d48a8feefdd02c03923b0f1eb0973a5f890c0d08ab34b4a25ff75302d",
+  "nuit/JSEC2_04_souche_temple_nuit.png": "9b4aa7264972689d658bfdf1450b32b48b57411962b8256885fbf84ae2909bf7",
+  "nuit/JSEC2_05_arbres_troncs_nuit.png": "10f7e27c2cf0606a32f0ce5b0eda55332407a2bd11826290235c407d75c6cb74",
+  "nuit/JSEC2_06_arbres_cimes_nuit.png": "a405e8ed631d2000ff3eb528143b479e47efeda15e52b213c0816a990074bedf",
   "nuit/JSEC2_07_rayon_nuit.png": "6e71d6c19fd50f28672f3ed960536a5b30481f81330496de2d0af1f5102dbdb9",
-  "nuit/JSEC2_08_feuillage_avant_nuit.png": "89a7765db3677e68826bd37e12af760b10637cf90bced83ab2d0cd923459dcaf",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p0_nuit.png": "fb2a2fbcdc5c58518ccb840956acb10df010fdb89f29eb6402a462e1b686a1d0",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p1_nuit.png": "724b7d04cfc5305a55c0709dd1250820d612c737bb149bdde7b80f8e3310fe88",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p2_nuit.png": "16865fa2ee13297f83ec3feb0d81be8c1b3343b69e639ab30637456dfb1ed442",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p0_nuit.png": "4be1e39fdaf6922081d0e08be1d448a62dd1ece5bbf6e217b202ece2e40d4368",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p1_nuit.png": "1d6e09797fdb6d786738fdf93db6c770a23ee14d79b996ae2a9cefc3c2f895c7",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p2_nuit.png": "6f02b1f3c4db40bc084e36ee68f588f113559b88dfba5871275c231717b3a3e4",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p0_nuit.png": "1778356b8c1b34d158d7fdd7728f4f1416c1f9c9d76433e621133b8ddfdc8e93",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p1_nuit.png": "8f785966929a33bfcce37d98915024dd4b80ac044ab8105b34d784e6d098c6c5",
-  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p2_nuit.png": "9b6d7dbc1d7ee0d1eb47aa6991daf5558bd37a7047064bb48c32db249394a513"
+  "nuit/JSEC2_08_feuillage_avant_nuit.png": "2ca464577876c25e8b4ed0f179c7b2efce5743b92b7c17affa2cc9486f8d23eb",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p0_nuit.png": "8411dcb25c87d34cd6a96cc327819220989881284fb2b69a3fd24fdfa53e6000",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p1_nuit.png": "6bf4f31151434748d06261431b8c77876a90ea8195066dcb495d37e146a85c08",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c08_p2_nuit.png": "8b431cb3979ffed8ec64cceced742bf18d441aaabc77d97a9525635118227b36",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p0_nuit.png": "ab4ffc8204989bb6c6c43bc097c6c9ca47f78f494da47fe16f0925a5334d6245",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p1_nuit.png": "58f98407e132067a9aafd3cbf9bec2a33981b10d0d64beb4c0bb444615d372d6",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c10_p2_nuit.png": "0ba63732c5e9d91cd237f09c2ccc2dbf5c1a865a1f99cfe8cfe28fd76fb4727a",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p0_nuit.png": "575d06f0537fb28aa44d2baba6b2d5a052288f818053e1333802bd61a1bc8f6f",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p1_nuit.png": "d26b1d3397f70d4cab564b839e694b74b4cfe231d10b1fd7bf7996632839f0e0",
+  "fleurs_anim/nuit/JSEC2_02_fleurs_c14_p2_nuit.png": "f9bbe041cc95df58b6b21e92956435ce21c73615e6c2f4d9ed224d660987d440"
  }
 }

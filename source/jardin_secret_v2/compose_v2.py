@@ -60,16 +60,19 @@ def ground():
     return g, lawn, carpet, void
 
 
-def foliage():
-    f = np.array(Image.open('bruts/v2_magenta_feuillage_brut.png').convert('RGB'))
+def foliage(lawn=None, carpet=None):
+    f = np.array(Image.open('bruts/v2b_magenta_feuillage_brut.png').convert('RGB'))
     a = key_magenta(f, fringe=3)
     a = ndi.binary_fill_holes(a) & a | a
     rgb = np.array(Image.fromarray(f).resize((W, H), Image.NEAREST))
     al = np.array(Image.fromarray((a * 255).astype(np.uint8)).resize((W, H), Image.NEAREST)) > 127
     rgb = snap_to(rgb, PAL_REF)
     # correction : le générateur a débordé de la maquette -> recoupe sur le masque de la maquette + 18 px
-    fol = np.load('travail/v2_masques.npz')['fol']
-    base = ndi.binary_dilation(fol, iterations=10)
+    # v2b : brut régénéré sur le masque exact du sous-bois (guides/v2b_guide_feuillage_magenta.png)
+    if lawn is None:
+        _, lawn, carpet, _ = ground()
+    region = np.load('travail/v2b_region_feuillage.npy')
+    base = ndi.binary_dilation(region, iterations=8)
     # bord festonné : demi-disques (r 7..11 px) posés tous les ~14 px le long du bord -> silhouette de grappes
     rng = np.random.default_rng(5)
     ring = base & ~ndi.binary_erosion(base, iterations=1, border_value=1)
@@ -85,6 +88,7 @@ def foliage():
         d = (yy ** 2 + xx ** 2 <= r * r)[y0 - y + 12:y1 - y + 12, x0 - x + 12:x1 - x + 12]
         keep[y0:y1, x0:x1] |= d
         taken[max(0, y - 9):y + 10, max(0, x - 9):x + 10] = True
+    keep &= ~ndi.binary_dilation(carpet, iterations=2)     # jamais sur le chemin
     cut = al & ~keep
     al &= keep
     al = ndi.binary_opening(al, iterations=1) & al
@@ -102,22 +106,16 @@ def foliage():
 
 
 # ---------------- placements ----------------
-TEMPLE_XY = (358, 112)                     # souche + hokora, sommet de la clairière
+TEMPLE_XY = (344, 108)                     # souche + hokora, sommet de la clairière
 BEAM = ('../jardin_secret_v1/segmentation/rayon.png')
 TREES = [  # (sprite, x, y)  — pieds sur la pelouse, cimes pouvant passer sous le feuillage
     ('arbre_00_arbre', 190, 140),
     ('arbre_06_arbre', 500, 128),
-    ('arbre_02_arbre', 150, 548),
+    ('arbre_02_arbre', 196, 588),
     ('arbre_07_arbre', 548, 800),
     ('arbre_01_arbre', 442, 420),
-    ('arbre_08_arbre', 250, 872),
 ]
-CROWNS = [  # cimes seules façon Halcyon, en lisière (au-dessus du joueur)
-    ('arbre_03_cime_seule', 200, 400),
-    ('arbre_04_cime_seule', 520, 640),
-    ('arbre_05_cime_seule', 196, 780),
-    ('arbre_03_cime_seule', 540, 1000),
-]
+CROWNS = []   # v2b : le feuillage remplit désormais le sous-bois, les cimes seules y seraient cachées
 ROCKS = [('rocher_05', 610, 260), ('rocher_14', 206, 336), ('rocher_08', 222, 690),
          ('rocher_04', 630, 930), ('rocher_12', 300, 820), ('rocher_16', 480, 1010)]
 CLOCKS = [8, 10, 14]
@@ -180,7 +178,8 @@ def compose():
 
     # fleurs : touffes 24×24 sur la pelouse libre (pas sur le tapis), espacées, 3 horloges
     rng = np.random.default_rng(24)
-    free = lawn & ~ndi.binary_dilation(occ | carpet, iterations=10)
+    fol_a = foliage(lawn, carpet)[..., 3] > 0
+    free = lawn & ~ndi.binary_dilation(occ | carpet | fol_a, iterations=10)
     free = ndi.binary_erosion(free, iterations=12, border_value=0)
     cand = np.argwhere(free)
     rng.shuffle(cand)

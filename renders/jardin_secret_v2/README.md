@@ -8,12 +8,12 @@
 1. **Maquette** (`source/jardin_secret_v2/maquette.py`) : chemin **droit** sud → clairière, pelouse à bords organiques, deux baies décalées, cadre de feuillage.
 2. **Générateur** : un appel par calque/planche, **sur fond magenta #FF00FF** (sauf le sol, plein cadre), avec la maquette comme guide de placement et `secretgarden.png` comme référence de style. Bruts dans `source/jardin_secret_v2/bruts/` (essais rejetés dans `bruts/rejetes/`).
 3. **Détourage + échelle canonique** (`extract_v2.py`) : clé magenta + frange rosée 3 px ; réduction « pixel artist » (moyenne des seuls pixels opaques, alpha ≥ 50 %).
-   - **Arbres à la taille Halcyon** : cime ramenée à **126 px**, soit la cime de l'arbre Vast Steppe 144×120 (`native_tree_complete.png`). Les 3 cimes seules font 126×74, contre 126×72 pour l'arbre natif.
+   - **Arbres à la taille Halcyon** : chaque arbre complet tient dans le **cadre canonique 144×120** de l'arbre Vast Steppe (`native_tree_complete.png`) ; les arbres placés font 92 à 120 px de large et 120 px de haut.
    - **Fleurs 24×24**, format de `Vast_Steppe_Flower_Animations.png`.
-   - **Souche** : 100 px de large, comme dans secretgarden.png. Le hokora mesure environ 30 px (miniature).
+   - **Souche** : 128 px de large, à peu près la largeur d'un arbre, pour que le hokora reste lisible (environ 40 px).
 4. **Palette** : sol, feuillage, arbres et rochers sont ramenés aux **139 couleurs de secretgarden.png**. Le temple (28 couleurs) et les fleurs (20 couleurs) ont une palette limitée propre, car le rouge et le jaune n'existent pas dans la référence.
 5. **Assemblage multicalque** (`compose_v2.py`, translation seule) et **corrections aux outils** :
-   - feuillage : le générateur débordait sur les baies et l'entrée. Il est recoupé sur la maquette, avec un bord festonné (demi-disques de 7 à 11 px), un contour sombre de 1 px et une ombre intérieure ;
+   - feuillage (v2b) : **régénéré** sur un masque magenta exact de tout le sous-bois (`region_feuillage_v2b.py`), donc sans bande sombre vide. Il est dégagé autour des arbres et laisse une trouée pour le rayon. Seul ce qui dépasse le masque de plus de 8 px est recoupé, avec un bord festonné ;
    - sol : les îlots clairs perdus dans le sous-bois sont effacés ;
    - fleurs : la base de feuilles est fixée sur la pose neutre ;
    - arbres : séparation troncs/cimes.
@@ -26,7 +26,7 @@
 | `calques/JSEC2_03_rochers.png` | rochers | sous |
 | `calques/JSEC2_04_souche_temple.png` | souche + **hokora miniature de Celebi** (petit torii, shimenawa, miroir) | sous |
 | `calques/JSEC2_05_arbres_troncs.png` | troncs + ombres | sous |
-| `calques/JSEC2_06_arbres_cimes.png` | cimes, dont cimes de lisière façon Halcyon | au-dessus |
+| `calques/JSEC2_06_arbres_cimes.png` | cimes des arbres | au-dessus |
 | `calques/JSEC2_07_rayon.png` | rayon de lumière (**natif**, secretgarden.png) | au-dessus |
 | `calques/JSEC2_08_feuillage_avant.png` | feuillage immersif | au-dessus |
 
@@ -47,5 +47,10 @@ Grille de 8 px ; alpha binaire ; sol opaque ; **0 pixel magenta résiduel** ; re
 ```
 .venv/bin/python source/jardin_secret_v2/maquette.py
 .venv/bin/python source/jardin_secret_v2/extract_v2.py
+.venv/bin/python source/jardin_secret_v2/region_feuillage_v2b.py   # guide du feuillage (déjà généré : bruts/v2b_magenta_feuillage_brut.png)
 .venv/bin/python source/jardin_secret_v2/export_v2.py
 ```
+
+## Historique
+- v2 (commit e123eff0) : premier rendu. Défauts : bandes sombres vides entre la pelouse et le feuillage, arbres plus hauts que le cadre Halcyon, hokora trop petit.
+- **v2b (ce rendu)** : feuillage régénéré sur le masque exact du sous-bois, arbres dans le cadre 144×120, souche à 128 px. Le brut au mauvais format est dans `bruts/rejetes/`.
