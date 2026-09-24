@@ -1,0 +1,13 @@
+{
+  "zone": "maison_interieure",
+  "biome": "interior house",
+  "source_reference": "IMG_5001.png",
+  "policy": "reference pixels only; layout/crops changed, no new water or invented landmarks",
+  "layers": [
+    "00_fond_murs_parois.png",
+    "01_sol_terrain_existant.png",
+    "02_salle_vide_layout.png",
+    "03_decor_existant.png",
+    "04_cadre_layout.png"
+  ]
+}

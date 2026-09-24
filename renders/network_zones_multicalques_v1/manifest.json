@@ -1,0 +1,25 @@
+{
+  "source_commit": "d5c79863a63abfb39f68f80adf85ae4c061ed3bd",
+  "canvas_px": [
+    480,
+    360
+  ],
+  "zones": [
+    "foret_verdoyante",
+    "grotte_volcanique",
+    "grotte_glacee",
+    "maison_ronde",
+    "ruines_blanches",
+    "foret_sinistre",
+    "lisiere_automne",
+    "clairiere_riviere"
+  ],
+  "multilayer_per_zone": 4,
+  "indoor_shape": "rounded oval/round instead of square",
+  "black_white_assignments": {
+    "IMG_5002.png": "grotte_glacee_or_sinister_forest",
+    "IMG_5003.png": "ruines_blanches",
+    "IMG_5005.png": "foret_sinistre"
+  },
+  "note": "Reference pixels are preserved; layers separate entrance, biome terrain and layout frame for further game integration."
+}

@@ -1,0 +1,92 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "test": "V1 source, six maps, reference scene, sky, clouds and delivery archive unchanged",
+      "pass": true
+    },
+    {
+      "test": "five original generations archived with exact decoded pixels, including corrected 07",
+      "pass": true
+    },
+    {
+      "test": "10 connected maps, 12 reciprocal links, 27 ports, exactly 3 free extensions",
+      "pass": true
+    },
+    {
+      "test": "05 south now connects to 07 north only in the combined manifest",
+      "pass": true
+    },
+    {
+      "test": "all 27 declared accesses connect to their centre with 8 px obstacle clearance",
+      "pass": true
+    },
+    {
+      "test": "all 96×16 port cores are pixel-identical, including the old/new seam, day and night",
+      "pass": true
+    },
+    {
+      "test": "80 new aligned PNG layers, binary alpha, exact recompositions, unique import names",
+      "pass": true
+    },
+    {
+      "test": "exact Abyss grading on every new terrain layer",
+      "pass": true
+    },
+    {
+      "test": "512 new atlas frames equal expected animation pixels; every water and foam track changes",
+      "pass": true
+    },
+    {
+      "test": "phase zero exact, 3.2-second cycle closed, 64-second common cycle closed",
+      "pass": true
+    },
+    {
+      "test": "new independent foam deposits on rock contacts without moving rock layers",
+      "pass": true
+    },
+    {
+      "test": "both assembled layouts preserve all module pixels; two empty grid slots stay transparent",
+      "pass": true
+    },
+    {
+      "test": "792 redundant V1 frame/ORA/composition files recover byte-exactly from preserved archive",
+      "pass": true
+    }
+  ],
+  "new_animation_detail": {
+    "07_carrefour_dunes": {
+      "06_eau": 24,
+      "07_ecume": 11,
+      "rock_contact_pixels_at_peak": 21
+    },
+    "08_carrefour_lagon": {
+      "06_eau": 14,
+      "07_ecume": 11,
+      "rock_contact_pixels_at_peak": 188
+    },
+    "09_place_palmes": {
+      "06_eau": 24,
+      "07_ecume": 24,
+      "rock_contact_pixels_at_peak": 10
+    },
+    "10_baie_abritee": {
+      "06_eau": 27,
+      "07_ecume": 27,
+      "rock_contact_pixels_at_peak": 110
+    }
+  },
+  "new_modules": 4,
+  "new_crossroads": 3,
+  "total_modules": 10,
+  "browser": "NOT TESTED here; separate DOM simulation",
+  "runtime_PMDO": "NOT TESTED",
+  "visual_review": "Four raw generations, corrected east exit of 07 and assembled network inspected. Not user approval.",
+  "limits": [
+    "Generated PMD-referenced maps, not certified native tiles.",
+    "Common sand bands match exactly, but complete rock outlines are not certified seamless.",
+    "Visible-surface partitions, not complete movable objects or rebuilt hidden ground.",
+    "Sand checks are not collision or warp implementation.",
+    "Empty grid slots are not maps; reserved exits have no target."
+  ]
+}

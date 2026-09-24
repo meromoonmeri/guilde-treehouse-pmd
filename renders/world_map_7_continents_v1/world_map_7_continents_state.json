@@ -1,0 +1,92 @@
+{
+  "format": "WorldMap7Continents",
+  "canvas_px": [
+    1008,
+    672
+  ],
+  "native_reference_px": [
+    504,
+    336
+  ],
+  "continents": [
+    {
+      "id": "volcan",
+      "name": "Cendre",
+      "index": 1,
+      "center_px": [
+        104,
+        106
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "foret",
+      "name": "Sylve",
+      "index": 2,
+      "center_px": [
+        336,
+        90
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "glace",
+      "name": "Aurore",
+      "index": 3,
+      "center_px": [
+        592,
+        82
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "desert",
+      "name": "Dunes",
+      "index": 4,
+      "center_px": [
+        846,
+        148
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "plage",
+      "name": "Archipel",
+      "index": 5,
+      "center_px": [
+        146,
+        314
+      ],
+      "unlocked_by_default": true
+    },
+    {
+      "id": "ruines",
+      "name": "Marais",
+      "index": 6,
+      "center_px": [
+        360,
+        370
+      ],
+      "unlocked_by_default": false
+    },
+    {
+      "id": "tour",
+      "name": "Cime",
+      "index": 7,
+      "center_px": [
+        620,
+        458
+      ],
+      "unlocked_by_default": false
+    }
+  ],
+  "layers": [
+    "00_fond_canonique_2x",
+    "01_continents_7_silhouettes",
+    "02_cotes_et_reliefs",
+    "03_repères_continents",
+    "04_routes",
+    "05_etat_deblocage",
+    "06_labels"
+  ]
+}

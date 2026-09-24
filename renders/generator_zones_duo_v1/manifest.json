@@ -1,0 +1,20 @@
+{
+  "method": "generator image -> duo-style separated layers; generated zone layouts, separate water/palette-cycling layer",
+  "zones": [
+    "maison_interieure_ovale",
+    "clairiere_riviere",
+    "grotte_sinistre"
+  ],
+  "layer_order": [
+    "00_fond",
+    "01_terrain",
+    "02_entree_decors",
+    "03_layout_ovale",
+    "04_eau_palette_cycling"
+  ],
+  "generator_sources": [
+    "maison_interieure_ovale.png",
+    "clairiere_riviere_multicalque.png",
+    "grotte_sinistre_multicalque.png"
+  ]
+}
