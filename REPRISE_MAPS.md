@@ -2,7 +2,7 @@
 
 ## Demande actuelle
 
-Reprendre la création de maps avec textures canoniques. Aucun nouveau biome, layout ou fichier cible n’est encore choisi dans cette reprise. Les anciens travaux sont conservés ; aucune map n’a été régénérée ou remplacée pendant ce repérage.
+Reprendre la création de maps avec textures canoniques. La première cible est maintenant choisie : **entrées sud → nord**, livrées comme projet PMDO Ground séparé dans `exports/zones_south_north_v3_pmdo/`. Les anciens travaux sont conservés ; le pack V3 original n’est pas remplacé.
 
 ## Repérage effectué
 
@@ -68,3 +68,14 @@ Réserves relevées dans V16 :
 - L’alignement sur 8 px et le nommage Halcyon ne prouvent pas un import moteur.
 
 Les succès de chargement PMDO cités dans les anciens rapports restent historiques ; aucun lancement PMDO, rendu GPU ou test de gameplay n’a été effectué dans cette reprise.
+
+## Première livraison de la reprise — sud → nord / PMDO Ground
+
+Le choix de l’utilisateur a été appliqué sans régénérer les images V3 : `source/zones_south_north_v3/pmdo_build.py` sérialise les deux compositions existantes dans un projet PMDO autonome, avec `Mod.xml`, namespace unique, 17 banques `.tile`, `index.idx`, deux `.rsground`, scripts vides, provenance et installateur de fusion.
+
+- Forêt/grotte : `sn_v3_forest_cave`, 512×640, 9 calques, 271 cellules libres de trajet conservateur.
+- Roches/entrée souterraine : `sn_v3_blue_rock_cave`, 512×408, 8 calques, 83 cellules libres de trajet conservateur.
+- Contrôle : `.venv/bin/python source/zones_south_north_v3/pmdo_verify.py` → PASS ; recomposition des calques et des pixels : 0 différence ; installateur dry-run/fusion/idempotence/conflit : PASS.
+- Archive : `exports/zones_south_north_v3_pmdo_pack.zip`.
+
+Les banques livrées sont une nouvelle sérialisation 8×8 des pixels sources documentés, pas une revendication de banque upstream retrouvée byte à byte. Les destinations de donjon, warps, GPU, éditeur, déplacement et gameplay restent **NON TESTÉS**. Le prochain contrôle réel doit ouvrir les deux Ground dans PMDO 0.8.12 et reprendre les collisions si l’espace jouable doit dépasser le corridor conservateur.
