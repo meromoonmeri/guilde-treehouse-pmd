@@ -12,10 +12,11 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+from scipy import ndimage as nd
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
-SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated.png"
+SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v2.png"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT))
@@ -69,7 +70,14 @@ def verify():
 
     guide = np.array(Image.open(OUT / "provenance/generation/forest_cave_final_composition_magenta.png").convert("RGBA"))
     assert guide.shape[:2] == (HEIGHT, WIDTH)
-    key = (guide[:, :, 0] >= 220) & (guide[:, :, 1] <= 80) & (guide[:, :, 2] >= 200)
+    r, g, b = (guide[:, :, i].astype(int) for i in range(3))
+    candidate = (r >= 200) & (g <= 120) & (b >= 180) & (r - g >= 100) & (b - g >= 90)
+    edge = np.zeros(candidate.shape, dtype=bool)
+    edge[0, :] = candidate[0, :]
+    edge[-1, :] = candidate[-1, :]
+    edge[:, 0] |= candidate[:, 0]
+    edge[:, -1] |= candidate[:, -1]
+    key = nd.binary_propagation(edge, mask=candidate, structure=np.ones((3, 3), dtype=bool))
     assert key[0, 0] and key[0, -1] and key[-1, 0] and key[-1, -1]
     transparent = np.array(Image.open(OUT / "review/composition_final_transparent.png").convert("RGBA"))
     assert np.all(transparent[key, 3] == 0)

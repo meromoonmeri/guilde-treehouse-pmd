@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 # The current final composition is produced by the image generator.  Keep the
 # earlier magenta/canonical source lot untouched as a separate archive.
-COMPOSITION_SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated.png"
+COMPOSITION_SOURCE = ROOT / "source/forest_cave_render_v1/generation/forest_cave_final_generated_v2.png"
 OUT = ROOT / "exports/forest_cave_render_v1_pmdo"
 WIDTH, HEIGHT, GRID = 512, 640, 8
 ASSET = "forest_cave_render_v1"
@@ -50,9 +50,17 @@ def sha256(path: Path) -> str:
 
 def key_magenta(image: Image.Image) -> tuple[np.ndarray, np.ndarray]:
     rgba = np.array(image.convert("RGBA"))
-    # The generated file keeps hot magenta at the outside; the small tolerance
-    # absorbs the model's edge compression without keying natural green/rock.
-    key = (rgba[:, :, 0] >= 220) & (rgba[:, :, 1] <= 80) & (rgba[:, :, 2] >= 200)
+    # The image generator slightly antialiases the hot-magenta border.  Key
+    # only magenta-like pixels connected to the image edge, so isolated pink
+    # details inside the map are never removed as background.
+    r, g, b = (rgba[:, :, i].astype(int) for i in range(3))
+    candidate = (r >= 200) & (g <= 120) & (b >= 180) & (r - g >= 100) & (b - g >= 90)
+    edge = np.zeros(candidate.shape, dtype=bool)
+    edge[0, :] = candidate[0, :]
+    edge[-1, :] = candidate[-1, :]
+    edge[:, 0] |= candidate[:, 0]
+    edge[:, -1] |= candidate[:, -1]
+    key = nd.binary_propagation(edge, mask=candidate, structure=np.ones((3, 3), dtype=bool))
     return rgba, key
 
 
