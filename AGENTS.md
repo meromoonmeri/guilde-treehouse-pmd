@@ -174,3 +174,12 @@ montagnes/foret par treeline, 2 wraps a marges >=32px + brume miroir.
 Galerie `apercu_sommet_sky_nuit_v1.html` (tout anime live), ORA 13 calques,
 WebP 8f, ZIP. Verify PASS. Brut `sommet.png` genere non utilise (remplace
 par prairie native). Prochaine etape possible : variantes aube/jour.
+
+## Texture prairie Sky 512 + audit de mes generations (septembre 2026)
+Demande : auditer mes propres bruts, livrer une surface texture prairie.
+`renders/texture_prairie_sky_v1/` : surface 512 jour/nuit quiltee 100% tuiles
+GIF natives (442 motifs, 4096 cellules, 0 difference), 8 touffes natives,
+0 galet (aucun isole dans le GIF). `AUDIT_MES_GENERATIONS.md` : pano v1
+rejete (entites), sommet genere non utilise (remplace natif), guide_prairie
+REFUSE en texture (vert lime (128,229,38) vs (135,247,119), rochers gris vs
+bleu-ardoise, plaques marron intruses, traits trop gros). Verify PASS.

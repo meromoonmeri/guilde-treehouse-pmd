@@ -1,0 +1,14 @@
+{
+  "verifications": {
+    "vocabulaire": 442,
+    "fond_4096_cellules_natives": true,
+    "details_natifs": 8,
+    "surface_recomposee": true,
+    "nuit_abyss_exacte": true
+  },
+  "resultat": "PASS — 0 difference avec le GIF",
+  "limites": [
+    "Surface de texture, pas une scene ; raccords quilting a apprecier a 1x",
+    "Pas de test PMDO/GPU"
+  ]
+}

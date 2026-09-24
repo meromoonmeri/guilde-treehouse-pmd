@@ -1,5 +1,10 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Texture native — Prairie Sky Peak 512 jour/nuit + audit des bruts
+
+- [Surface quiltée 100% tuiles GIF, touffes natives](renders/texture_prairie_sky_v1/README.md) · [planche](renders/texture_prairie_sky_v1/PLANCHE_TEXTURE_NE_PAS_IMPORTER.png) · [autopsie de mes générations](renders/texture_prairie_sky_v1/AUDIT_MES_GENERATIONS.md).
+- Guide prairie généré refusé en texture (colorimétrie et vocabulaire non conformes) : composition uniquement.
+
 ## Vista nocturne — Sommet Sky Peak, prairie et fleurs canoniques
 
 - **[Galerie live : 11 calques, fleurs, etoiles, wraps](apercu_sommet_sky_nuit_v1.html)**.
