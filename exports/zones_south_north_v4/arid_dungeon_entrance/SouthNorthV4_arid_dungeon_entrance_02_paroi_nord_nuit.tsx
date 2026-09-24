@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV4_arid_dungeon_entrance_02_paroi_nord_nuit" tilewidth="8" tileheight="8" columns="51" tilecount="3570"><image source="SouthNorthV4_arid_dungeon_entrance_02_paroi_nord_nuit.png" width="408" height="560" /></tileset>

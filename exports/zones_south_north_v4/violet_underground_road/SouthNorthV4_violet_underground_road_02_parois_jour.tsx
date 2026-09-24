@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="SouthNorthV4_violet_underground_road_02_parois_jour" tilewidth="8" tileheight="8" columns="63" tilecount="3843"><image source="SouthNorthV4_violet_underground_road_02_parois_jour.png" width="504" height="488" /></tileset>

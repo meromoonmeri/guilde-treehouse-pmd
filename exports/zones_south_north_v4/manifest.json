@@ -1,0 +1,398 @@
+{
+ "lot": "zones_south_north_v4",
+ "sources": [
+  "entrancearidedungeonpmdsky.png",
+  "roadundergound.png"
+ ],
+ "sha256": {
+  "entrancearidedungeonpmdsky.png": "4c367839d307011d670078d473cfff75d60ee6970496e95621b162d81d2b6b6a",
+  "roadundergound.png": "77cb97730bc05b3eca0c83b9e7119b9f4043633d9bc948103e1317fb281ec810"
+ },
+ "maps": [
+  {
+   "id": "arid_dungeon_entrance",
+   "title": "Entree aride — arrivee sud, grotte au nord",
+   "size": [
+    408,
+    560
+   ],
+   "orientation": "SOUTH_TO_NORTH",
+   "entrances": [
+    [
+     206,
+     90
+    ]
+   ],
+   "layers": [
+    {
+     "id": "01_sol",
+     "file_jour": "SouthNorthV4_arid_dungeon_entrance_01_sol_jour.png",
+     "file_nuit": "SouthNorthV4_arid_dungeon_entrance_01_sol_nuit.png",
+     "provenance": "01_sol_source.npz"
+    },
+    {
+     "id": "02_paroi_nord",
+     "file_jour": "SouthNorthV4_arid_dungeon_entrance_02_paroi_nord_jour.png",
+     "file_nuit": "SouthNorthV4_arid_dungeon_entrance_02_paroi_nord_nuit.png",
+     "provenance": "02_paroi_nord_source.npz"
+    },
+    {
+     "id": "03_bouche",
+     "file_jour": "SouthNorthV4_arid_dungeon_entrance_03_bouche_jour.png",
+     "file_nuit": "SouthNorthV4_arid_dungeon_entrance_03_bouche_nuit.png",
+     "provenance": "03_bouche_source.npz"
+    }
+   ],
+   "operations": [
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "native ground patch overlap, no blending",
+     "patch_count": 48,
+     "patch_size": [
+      24,
+      16
+     ],
+     "seed": 21
+    },
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      16,
+      144,
+      56,
+      208
+     ],
+     "position": [
+      16,
+      328
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      344,
+      152,
+      376,
+      208
+     ],
+     "position": [
+      336,
+      400
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      296,
+      232,
+      328,
+      256
+     ],
+     "position": [
+      112,
+      440
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      128,
+      248,
+      160,
+      272
+     ],
+     "position": [
+      264,
+      296
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "entrancearidedungeonpmdsky.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      184,
+      224,
+      216,
+      248
+     ],
+     "position": [
+      240,
+      512
+     ]
+    },
+    {
+     "layer": "02_paroi_nord",
+     "source": "entrancearidedungeonpmdsky.png",
+     "rect": [
+      0,
+      0,
+      408,
+      208
+     ],
+     "position": [
+      0,
+      0
+     ],
+     "punch": [
+      [
+       176,
+       32,
+       240,
+       112
+      ]
+     ]
+    },
+    {
+     "layer": "03_bouche",
+     "source": "entrancearidedungeonpmdsky.png",
+     "rect": [
+      176,
+      32,
+      240,
+      112
+     ],
+     "position": [
+      176,
+      32
+     ],
+     "punch": []
+    }
+   ],
+   "notes": "Couronne nord 408x208 translatée (arbres hauts aplatis), bouche percée sur calque dédié, couloir sable quilté + 5 tampons natifs (2 arbres, 3 semis de cailloux).",
+   "runtime": "NOT TESTED",
+   "art_approved": false,
+   "night": "Abyss exact, applied once per layer",
+   "connectivity": "Pixel path mask continuity only, not engine collision or warp."
+  },
+  {
+   "id": "violet_underground_road",
+   "title": "Couloir violet — arrivee sud, deux bouches au nord (principale gauche)",
+   "size": [
+    504,
+    488
+   ],
+   "orientation": "SOUTH_TO_NORTH",
+   "entrances": [
+    [
+     148,
+     140
+    ],
+    [
+     355,
+     140
+    ]
+   ],
+   "layers": [
+    {
+     "id": "01_sol",
+     "file_jour": "SouthNorthV4_violet_underground_road_01_sol_jour.png",
+     "file_nuit": "SouthNorthV4_violet_underground_road_01_sol_nuit.png",
+     "provenance": "01_sol_source.npz"
+    },
+    {
+     "id": "02_parois",
+     "file_jour": "SouthNorthV4_violet_underground_road_02_parois_jour.png",
+     "file_nuit": "SouthNorthV4_violet_underground_road_02_parois_nuit.png",
+     "provenance": "02_parois_source.npz"
+    },
+    {
+     "id": "03_bouches",
+     "file_jour": "SouthNorthV4_violet_underground_road_03_bouches_jour.png",
+     "file_nuit": "SouthNorthV4_violet_underground_road_03_bouches_nuit.png",
+     "provenance": "03_bouches_source.npz"
+    }
+   ],
+   "operations": [
+    {
+     "layer": "01_sol",
+     "source": "roadundergound.png",
+     "method": "native ground patch overlap, no blending",
+     "patch_count": 48,
+     "patch_size": [
+      24,
+      16
+     ],
+     "seed": 22
+    },
+    {
+     "layer": "01_sol",
+     "source": "roadundergound.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      200,
+      200,
+      280,
+      264
+     ],
+     "position": [
+      216,
+      240
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "roadundergound.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      232,
+      296,
+      312,
+      360
+     ],
+     "position": [
+      200,
+      400
+     ]
+    },
+    {
+     "layer": "01_sol",
+     "source": "roadundergound.png",
+     "method": "controlled stamp, 4-side seam",
+     "rect": [
+      168,
+      160,
+      232,
+      208
+     ],
+     "position": [
+      280,
+      160
+     ]
+    },
+    {
+     "layer": "02_parois",
+     "source": "roadundergound.png",
+     "rect": [
+      0,
+      0,
+      504,
+      152
+     ],
+     "position": [
+      0,
+      0
+     ],
+     "punch": [
+      [
+       104,
+       72,
+       192,
+       152
+      ],
+      [
+       312,
+       72,
+       400,
+       152
+      ]
+     ]
+    },
+    {
+     "layer": "02_parois",
+     "source": "roadundergound.png",
+     "rect": [
+      0,
+      152,
+      136,
+      408
+     ],
+     "position": [
+      0,
+      152
+     ],
+     "punch": []
+    },
+    {
+     "layer": "02_parois",
+     "source": "roadundergound.png",
+     "rect": [
+      368,
+      152,
+      504,
+      408
+     ],
+     "position": [
+      368,
+      152
+     ],
+     "punch": []
+    },
+    {
+     "layer": "02_parois",
+     "source": "roadundergound.png",
+     "rect": [
+      0,
+      272,
+      136,
+      352
+     ],
+     "position": [
+      0,
+      408
+     ],
+     "punch": []
+    },
+    {
+     "layer": "02_parois",
+     "source": "roadundergound.png",
+     "rect": [
+      368,
+      272,
+      504,
+      352
+     ],
+     "position": [
+      368,
+      408
+     ],
+     "punch": []
+    },
+    {
+     "layer": "03_bouches",
+     "source": "roadundergound.png",
+     "rect": [
+      104,
+      72,
+      192,
+      152
+     ],
+     "position": [
+      104,
+      72
+     ],
+     "punch": []
+    },
+    {
+     "layer": "03_bouches",
+     "source": "roadundergound.png",
+     "rect": [
+      312,
+      72,
+      400,
+      152
+     ],
+     "position": [
+      312,
+      72
+     ],
+     "punch": []
+    }
+   ],
+   "notes": "Couronne + colonnes de parois translatées (coupes x=136/368), bouches percées, sol du couloir re-quilté + 3 tampons d'éboulis. Bouche gauche = principale (documenté, pas de warp configuré).",
+   "runtime": "NOT TESTED",
+   "art_approved": false,
+   "night": "Abyss exact, applied once per layer",
+   "connectivity": "Pixel path mask continuity only, not engine collision or warp."
+  }
+ ]
+}

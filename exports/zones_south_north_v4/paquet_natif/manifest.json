@@ -1,0 +1,94 @@
+{
+ "native_schema_version": "0.8.12.0",
+ "tex_size": 1,
+ "tile_px": 8,
+ "runtime_tested": false,
+ "collision_note": "Premiere passe automatique : parois/bouches opaques >= 50 %, pieds de troncs arides. A affiner dans l editeur.",
+ "warp_note": "Marqueur donjon_seuil fourni sans destination : raccorder dans l editeur.",
+ "maps": [
+  {
+   "asset": "sn4_arid_dungeon_entrance_jour",
+   "file": "Data/Ground/sn4_arid_dungeon_entrance_jour.rsground",
+   "grid": [
+    51,
+    70
+   ],
+   "size_px": [
+    408,
+    560
+   ],
+   "entry_tile": [
+    25,
+    66
+   ],
+   "sheets": [
+    "SN4_ARID_DUNGEON_ENTRANCE_JOUR"
+   ],
+   "custom_tiles": 1265,
+   "blocked_tiles": 1349
+  },
+  {
+   "asset": "sn4_arid_dungeon_entrance_nuit",
+   "file": "Data/Ground/sn4_arid_dungeon_entrance_nuit.rsground",
+   "grid": [
+    51,
+    70
+   ],
+   "size_px": [
+    408,
+    560
+   ],
+   "entry_tile": [
+    25,
+    66
+   ],
+   "sheets": [
+    "SN4_ARID_DUNGEON_ENTRANCE_NUIT"
+   ],
+   "custom_tiles": 1265,
+   "blocked_tiles": 1349
+  },
+  {
+   "asset": "sn4_violet_underground_road_jour",
+   "file": "Data/Ground/sn4_violet_underground_road_jour.rsground",
+   "grid": [
+    63,
+    61
+   ],
+   "size_px": [
+    504,
+    488
+   ],
+   "entry_tile": [
+    31,
+    57
+   ],
+   "sheets": [
+    "SN4_VIOLET_UNDERGROUND_ROAD_JOUR"
+   ],
+   "custom_tiles": 2278,
+   "blocked_tiles": 2625
+  },
+  {
+   "asset": "sn4_violet_underground_road_nuit",
+   "file": "Data/Ground/sn4_violet_underground_road_nuit.rsground",
+   "grid": [
+    63,
+    61
+   ],
+   "size_px": [
+    504,
+    488
+   ],
+   "entry_tile": [
+    31,
+    57
+   ],
+   "sheets": [
+    "SN4_VIOLET_UNDERGROUND_ROAD_NUIT"
+   ],
+   "custom_tiles": 2278,
+   "blocked_tiles": 2625
+  }
+ ]
+}

@@ -492,3 +492,11 @@ Les deux `.rsground` de la racine sont les cartes de l’utilisateur (« CliffRe
 - Forêts lisière v1 : 4 maps générées 928×1152, entrée en lisière (nord / ouest), fond de forêt, caverne verdoyante ; multicalques PNG+Aseprite+Tiled ; pixels générés ≠ natifs.
 - Forêts lisière v2 : ne pas écraser v1 (A–D). Nouvelles maps E–H, même pipeline 928×1152 / 9 calques / multicalques.
 - Halcyon natif v1 : modules complets uniquement (herbe 48×48 Steppe, arbre 144×120, grotte 320×240, bandes Relic, scènes Altere/Relic/Steppe). Pas de mosaïque 8 px.
+
+## Sud–nord V4 (24/09/2026) — entrée aride + couloir violet, PNG + natif
+
+- Demande : reprise création de maps, textures canoniques, programme des 23 références, format PNG + natif, jour + nuit.
+- Livré : `source/zones_south_north_v4/` (build/verify/build_native/make_gallery/package), `exports/zones_south_north_v4/` (3 calques × jour/nuit par carte, NPZ, TSX, composites, paquet natif 4 `.rsground` + 4 `.tile` + INSTALLER), ZIP, galerie racine `apercu_entrees_sud_nord_v4.html`, `FULL_PROGRAMME_STATUS.json` (4 candidats sud–nord, 16 layouts restants).
+- Méthode : couronnes/colonnes/bouches par translation de modules complets 8 px (bouches percées, pas dupliquées) ; sols quiltés (patches natifs, coutures sans fondu) + tampons contrôlés à couture 4 côtés ; arbres morts aplatis au sol hors passage (pieds bloqués en collision, pas d'occlusion) ; nuit Abyss exacte × 1.
+- Vérifié : 66 contrôles PASS (provenance complète, recomposition exacte, nuit, chemin sud→nord connecté) + 4 rendus natifs indépendants pixel-identiques (diff 0). PMDO non testé, art non approuvé, warps non liés.
+- Leçons : (1) ne pas paralléliser deux edits du même fichier (écrasement) ; (2) `pmdo_tiles render --sheets` attend un DOSSIER (glob `*.tile`), pas un fichier ; (3) élargir le pool de patches vers le sable chiné avant de tamponner des modules à fond chiné, sinon rectangles visibles ; (4) resserrer les tampons d'arbres (colonnes de roc incluses sinon) ; remplacer les pastilles de pied de paroi par des semis de cailloux du sol propre ; (5) les deux bouches violettes sont pixel-identiques dans la référence (n=1546) — gauche déclarée principale.

@@ -1,0 +1,256 @@
+{
+  "scope": "ALL23references from9ec9a081 plus retained guild programme. Listing a task is not doing it.",
+  "latest_user_correction": "Not horizontal widening: south-to-north playable approaches, cave at north, canonical materials, ground/path/trees/walls/entrance in independent layers.",
+  "references": [
+    {
+      "file": "arenapmdskybeach.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Sable, falaises rouges, mer, écume, rochers isolés.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "aurorepmdsky.png",
+      "kind": "BG",
+      "state": "layers_only_layout_pending",
+      "deliverable": "exports/zones_relayout_v2/aurora",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Ciel, étoiles, aurores, frise de glace.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "bassinchauffantpmdsky.png",
+      "kind": "mixed",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Ciel, canopée lointaine, sol, pierres du bassin, arbres devant.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "bgnightbackgroundpmdskyda.png",
+      "kind": "BG",
+      "state": "BG_layout_candidate",
+      "deliverable": "exports/zones_relayout_v2/night_sea",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Ciel, étoiles, lune, nuages, mer, reflet lunaire, falaise.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "entrancearidedungeonpmdsky.png",
+      "kind": "terrain",
+      "state": "south_north_candidate",
+      "deliverable": "exports/zones_south_north_v4/arid_dungeon_entrance",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Sol sableux, falaise, bouche de grotte, arbres morts, petits cailloux.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "forêtglomypmdsky.png",
+      "kind": "terrain",
+      "state": "south_north_candidate",
+      "deliverable": "exports/zones_south_north_v3/forest_cave",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Sol clair, canopée arrière, falaise blanche, grotte, pierres, canopée avant.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "iceroadpmdsky.png",
+      "kind": "mixed",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Ciel, montagnes, falaise arrière, neige praticable, rochers et glace avant.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "interiorbedroompmdsky.png",
+      "kind": "interior",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Vide extérieur, sol, murs arrière, murs avant, mobilier, tapis, cheminée.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "junglewaterfallzonepmdsky.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Paroi, eau verticale, bassin/eau au sol, écume, herbe, chemin, végétation.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "lakecrystalpmdsky.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Eau, plateforme cristalline, cristaux, piliers, lumières/reflets.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "large.P21P02A.png.80cbca09111bb7b67cff974d76c186cb.png",
+      "kind": "duplicate",
+      "state": "duplicate_of_forest",
+      "deliverable": "exports/zones_south_north_v3/forest_cave",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Réutiliser la même source, pas un deuxième biome.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "large.P27P01A.png.c5ad9818930eb0d4f403f64607318c37.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Fond sombre, paroi, sol, blocs et végétation rare.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "large.S01P03A.png.84e22fb77c4061e77b0f546545fed2c7.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Herbe, chemin, arbres, fleurs, rive, eau, ponton, panneau.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "large.S05P03A.png.301f7a1eadda348357be0801e81faa2a.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Vide, parois arrière, sol du couloir, parois avant, blocs.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "oldcastlepmd.png",
+      "kind": "interior",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Dallage, motif central, colonnes, coffres, ombres.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "pmdskyicearena.png",
+      "kind": "mixed",
+      "state": "orientation_review_required",
+      "deliverable": "exports/zones_relayout_v2/ice_arena",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Ciel, glace arrière, neige/sol, glace avant.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "roadundergound.png",
+      "kind": "terrain",
+      "state": "south_north_candidate",
+      "deliverable": "exports/zones_south_north_v4/violet_underground_road",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Vide, paroi violette, sol, deux bouches, pierres.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "rockgeyserlike.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Sol ocre, blocs, évents/creux clairs, ombres.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "rockroadpmd.png",
+      "kind": "terrain",
+      "state": "south_north_candidate",
+      "deliverable": "exports/zones_south_north_v3/blue_rock_cave",
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Fond, paroi arrière, sol du passage, paroi avant, cailloux.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "secretgarden.png",
+      "kind": "terrain",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Vide, sol herbeux, chemin, arbres, fleurs, rochers, puits, faisceau.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "starcavepmdsky.png",
+      "kind": "multi_panel",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Fond sombre, sol bleu, parois, cristaux ; séparer les panneaux avant extraction.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "undergroundpmd.png",
+      "kind": "multi_panel",
+      "state": "layout_pending",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Vide, paroi, dallage, passage ; panneaux distincts.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    },
+    {
+      "file": "wantedpokemontemplate.png",
+      "kind": "UI",
+      "state": "not_a_map",
+      "deliverable": null,
+      "art_approved": false,
+      "runtime": "NOT TESTED",
+      "planned_layers": "Papier / cadre UI ; portrait à traiter séparément si demandé.",
+      "orientation_requirement": "South access toward northern cave/objective for playable terrain; backgrounds themselves are not traversable."
+    }
+  ],
+  "superseded_for_this_request": [
+    "exports/zones_relayout_v1/forest_clearing",
+    "exports/zones_relayout_v1/blue_rock_passage"
+  ],
+  "counts": {
+    "south_north_candidates": 4,
+    "BG_layout_candidates": 1,
+    "references_without_new_layout_meeting_current_direction": 16,
+    "duplicates": 1,
+    "not_a_map": 1
+  },
+  "guild_programme": {
+    "structures": "5 first-lot exterior candidates exist; remaining retained proposals and integration not completed.",
+    "vegetation": "First8-plant animated kit exists; scene integration not tested.",
+    "Eat": "9members have Eat; other actions remain open.",
+    "remaining_full32_actions_without_cycle": 124
+  },
+  "all_user_work_finished": false,
+  "runtime_approvals": 0,
+  "latest_v4": "Arid 408x560 + violet 504x488, PNG layers jour/nuit + paquet natif .rsground/.tile pixel-identique. 16 layouts restants."
+}
