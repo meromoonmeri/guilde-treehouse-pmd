@@ -4,6 +4,12 @@
 
 Reprendre la création de maps avec textures canoniques. Aucun nouveau biome, layout ou fichier cible n’est encore choisi dans cette reprise. Les anciens travaux sont conservés ; aucune map n’a été régénérée ou remplacée pendant ce repérage.
 
+**Mise à jour du 24 septembre 2026.** L'utilisateur a choisi, une map à la fois et avec validation avant la suivante :
+- **Entrée de forêt dense sud → nord (D24P11A / D24P31A)** ;
+- **méthode hybride** : sol, chemin et parois en vrais pixels des références ; arbres, rochers et entrée générés sur magenta puis retouchés 1:1 dans la palette exacte.
+
+Livré : `renders/foret_dense_sn_v1/` et `apercu_foret_dense_sn_v1.html`, **en attente de validation**. Les 12 références `layout_pending` du programme restent à faire après validation.
+
 ## Repérage effectué
 
 - 141 fichiers README recensés ; parcours de leurs présentations et statuts, lecture approfondie des méthodes et lots pertinents pour les maps.
@@ -37,6 +43,8 @@ Dans les deux cas : conserver la DA, l’échelle, les raccords, les volumes et 
 | Dernière arène générée | `source/arene_halcyon_v16/`, `renders/arene_halcyon_v16/` |
 | Export Ground, ressources, index | `source/pmdo_cote/`, `source/cote_v5_expeditions/`, manuel PMDO |
 | Procédure de restauration du runtime | `source/pmdo_runtime/README.md` |
+| Map hybride canonique + retouche 1:1 (FDENSE V1) | `source/foret_dense_sn_v1/README.md` : parois périodiques exactes, chemin par segments, `pixelize.py` |
+| Contrôle bloquant des calques | `source/controle_qualite_pixel/gate.py` (copié de la branche 01a0d30e) |
 
 Attention : certains anciens builders écrivent leurs exports dès l’import Python. Lire le code avant de les importer ou de les relancer.
 

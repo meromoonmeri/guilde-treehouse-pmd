@@ -1,0 +1,456 @@
+{
+ "nom": "FDENSE_V1 — entrée de forêt dense sud → nord",
+ "taille": [
+  512,
+  672
+ ],
+ "grille": 8,
+ "prefixe_import": "FDENSE_V1_",
+ "references": {
+  "0": "D24P11A (large.D24P11A.gif…) → source/foret_dense_sn_v1/refs/D24P11A.png",
+  "1": "D24P31A (large.D24P31A.gif…) → source/foret_dense_sn_v1/refs/D24P31A.png"
+ },
+ "provenance_ids": {
+  "0": "D24P11A (y, x)",
+  "1": "D24P31A (y, x)",
+  "100": "généré retouché : arbre_est (y, x dans le sprite retouché)",
+  "101": "généré retouché : arbre_ouest (y, x dans le sprite retouché)",
+  "102": "généré retouché : entree (y, x dans le sprite retouché)",
+  "103": "généré retouché : rocher_0 (y, x dans le sprite retouché)",
+  "104": "généré retouché : rocher_2 (y, x dans le sprite retouché)",
+  "105": "généré retouché : rocher_3 (y, x dans le sprite retouché)"
+ },
+ "calques": [
+  {
+   "fichier": "FDENSE_V1_01_sol.png",
+   "role": "Herbe au soleil — quilting de D24P11A (pixels exacts)",
+   "pixels_visibles": 344064,
+   "couleurs": 13,
+   "px_D24P11A": 344064,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 0
+  },
+  {
+   "fichier": "FDENSE_V1_02_ombres.png",
+   "role": "Antichambre sombre — herbe d'ombre de D24P31A, liseré guidé par distance (pixels exacts, opaques)",
+   "pixels_visibles": 70458,
+   "couleurs": 14,
+   "px_D24P11A": 0,
+   "px_D24P31A": 70458,
+   "px_generes_retouches": 0
+  },
+  {
+   "fichier": "FDENSE_V1_03_chemin.png",
+   "role": "Chemin de terre — segments rigides de D24P11A, coupes minimales (pixels exacts)",
+   "pixels_visibles": 33276,
+   "couleurs": 41,
+   "px_D24P11A": 33276,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 0
+  },
+  {
+   "fichier": "FDENSE_V1_04_vegetation_basse.png",
+   "role": "Fleurs D24P11A + petits buissons D24P31A (sprites canoniques exacts)",
+   "pixels_visibles": 4457,
+   "couleurs": 43,
+   "px_D24P11A": 3020,
+   "px_D24P31A": 1437,
+   "px_generes_retouches": 0
+  },
+  {
+   "fichier": "FDENSE_V1_05_rochers.png",
+   "role": "Rochers — générés sur magenta puis retouchés 1:1 palette des références",
+   "pixels_visibles": 1795,
+   "couleurs": 7,
+   "px_D24P11A": 0,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 1795
+  },
+  {
+   "fichier": "FDENSE_V1_06_parois_foret.png",
+   "role": "Parois d'arbres — bande périodique exacte de D24P31A (192 lignes, raccord canonique)",
+   "pixels_visibles": 202594,
+   "couleurs": 82,
+   "px_D24P11A": 0,
+   "px_D24P31A": 202594,
+   "px_generes_retouches": 0
+  },
+  {
+   "fichier": "FDENSE_V1_07_troncs_racines.png",
+   "role": "Troncs, racines et touffes des arbres géants — générés puis retouchés 1:1",
+   "pixels_visibles": 10372,
+   "couleurs": 96,
+   "px_D24P11A": 0,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 10372
+  },
+  {
+   "fichier": "FDENSE_V1_08_entree.png",
+   "role": "Entrée du donjon (troncs, tunnel, pierres, fleurs) — générée puis retouchée 1:1",
+   "pixels_visibles": 18370,
+   "couleurs": 97,
+   "px_D24P11A": 0,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 18370
+  },
+  {
+   "fichier": "FDENSE_V1_09_canopees.png",
+   "role": "Canopées des arbres géants et de l'entrée (au-dessus du joueur) — générées puis retouchées 1:1",
+   "pixels_visibles": 48672,
+   "couleurs": 93,
+   "px_D24P11A": 0,
+   "px_D24P31A": 0,
+   "px_generes_retouches": 48672
+  }
+ ],
+ "composite": "FDENSE_V1_composite.png",
+ "couleurs_composite": 175,
+ "couleurs_hors_palette_references": 0,
+ "parois": {
+  "bandes": {
+   "ouest": {
+    "colonnes_source": [
+     0,
+     200
+    ],
+    "ligne_depart": 170,
+    "periode": 192
+   },
+   "est": {
+    "colonnes_source": [
+     320,
+     504
+    ],
+    "ligne_depart": 208,
+    "periode": 192
+   }
+  },
+  "decalage_phase": {
+   "ouest": [
+    -20,
+    0
+   ],
+   "est": [
+    20,
+    96
+   ]
+  }
+ },
+ "chemin_segments": [
+  {
+   "y_cible": 150,
+   "y_source": 136,
+   "dx": -1
+  },
+  {
+   "y_cible": 170,
+   "y_source": 357,
+   "dx": -9
+  },
+  {
+   "y_cible": 190,
+   "y_source": 283,
+   "dx": -22
+  },
+  {
+   "y_cible": 210,
+   "y_source": 240,
+   "dx": -26
+  },
+  {
+   "y_cible": 230,
+   "y_source": 269,
+   "dx": -31
+  },
+  {
+   "y_cible": 250,
+   "y_source": 242,
+   "dx": -33
+  },
+  {
+   "y_cible": 270,
+   "y_source": 271,
+   "dx": -36
+  },
+  {
+   "y_cible": 290,
+   "y_source": 233,
+   "dx": -35
+  },
+  {
+   "y_cible": 310,
+   "y_source": 252,
+   "dx": -31
+  },
+  {
+   "y_cible": 330,
+   "y_source": 276,
+   "dx": -28
+  },
+  {
+   "y_cible": 350,
+   "y_source": 230,
+   "dx": -22
+  },
+  {
+   "y_cible": 370,
+   "y_source": 229,
+   "dx": -15
+  },
+  {
+   "y_cible": 390,
+   "y_source": 278,
+   "dx": -10
+  },
+  {
+   "y_cible": 410,
+   "y_source": 251,
+   "dx": -5
+  },
+  {
+   "y_cible": 430,
+   "y_source": 159,
+   "dx": 19
+  },
+  {
+   "y_cible": 450,
+   "y_source": 279,
+   "dx": -1
+  },
+  {
+   "y_cible": 470,
+   "y_source": 158,
+   "dx": 20
+  },
+  {
+   "y_cible": 490,
+   "y_source": 159,
+   "dx": 16
+  },
+  {
+   "y_cible": 510,
+   "y_source": 289,
+   "dx": -9
+  },
+  {
+   "y_cible": 530,
+   "y_source": 294,
+   "dx": -12
+  },
+  {
+   "y_cible": 550,
+   "y_source": 159,
+   "dx": 1
+  },
+  {
+   "y_cible": 570,
+   "y_source": 359,
+   "dx": -13
+  },
+  {
+   "y_cible": 590,
+   "y_source": 139,
+   "dx": -9
+  },
+  {
+   "y_cible": 610,
+   "y_source": 360,
+   "dx": -20
+  },
+  {
+   "y_cible": 630,
+   "y_source": 131,
+   "dx": -15
+  },
+  {
+   "y_cible": 650,
+   "y_source": 367,
+   "dx": -23
+  }
+ ],
+ "generes": {
+  "arbre_ouest": {
+   "brut": "bruts/gen_arbre_ouest.png",
+   "id": 101,
+   "taille_retouchee": [
+    129,
+    186
+   ],
+   "origine": "généré (gen_arbre_ouest.png) puis retouché 1:1 : pas 5.77, vote majoritaire, palette D24P11A/D24P31A"
+  },
+  "arbre_est": {
+   "brut": "bruts/gen_arbre_est.png",
+   "id": 100,
+   "taille_retouchee": [
+    119,
+    216
+   ],
+   "origine": "généré (gen_arbre_est.png) puis retouché 1:1 : pas 6.3, vote majoritaire, palette D24P11A/D24P31A"
+  },
+  "entree": {
+   "brut": "bruts/gen_entree.png",
+   "id": 102,
+   "taille_retouchee": [
+    206,
+    256
+   ],
+   "origine": "généré (gen_entree.png) puis retouché 1:1 : pas 4.5, vote majoritaire, palette D24P11A/D24P31A"
+  },
+  "rocher_0": {
+   "brut": "bruts/gen_rochers.png",
+   "id": 103,
+   "taille_retouchee": [
+    36,
+    38
+   ],
+   "origine": "généré (gen_rochers.png) puis retouché 1:1 : pas 15.0, vote majoritaire, palette D24P11A/D24P31A"
+  },
+  "rocher_2": {
+   "brut": "bruts/gen_rochers.png",
+   "id": 104,
+   "taille_retouchee": [
+    24,
+    22
+   ],
+   "origine": "généré (gen_rochers.png) puis retouché 1:1 : pas 15.0, vote majoritaire, palette D24P11A/D24P31A"
+  },
+  "rocher_3": {
+   "brut": "bruts/gen_rochers.png",
+   "id": 105,
+   "taille_retouchee": [
+    15,
+    27
+   ],
+   "origine": "généré (gen_rochers.png) puis retouché 1:1 : pas 15.0, vote majoritaire, palette D24P11A/D24P31A"
+  }
+ },
+ "placements": {
+  "arbres": {
+   "arbre_ouest": [
+    36,
+    356
+   ],
+   "arbre_est": [
+    300,
+    548
+   ]
+  },
+  "entree": [
+   128,
+   0
+  ],
+  "rochers_bas_centre": {
+   "rocher_0": [
+    324,
+    342
+   ],
+   "rocher_2": [
+    166,
+    574
+   ],
+   "rocher_3": [
+    318,
+    432
+   ]
+  },
+  "fleurs": [
+   [
+    196,
+    300,
+    0
+   ],
+   [
+    340,
+    262,
+    4
+   ],
+   [
+    180,
+    500,
+    4
+   ],
+   [
+    338,
+    560,
+    2
+   ],
+   [
+    206,
+    612,
+    2
+   ],
+   [
+    362,
+    396,
+    0
+   ],
+   [
+    166,
+    236,
+    2
+   ],
+   [
+    300,
+    232,
+    0
+   ],
+   [
+    190,
+    404,
+    0
+   ],
+   [
+    346,
+    468,
+    4
+   ],
+   [
+    292,
+    640,
+    2
+   ],
+   [
+    214,
+    548,
+    4
+   ]
+  ],
+  "buissons": [
+   [
+    212,
+    380,
+    0
+   ],
+   [
+    316,
+    516,
+    1
+   ],
+   [
+    226,
+    652,
+    1
+   ],
+   [
+    330,
+    206,
+    1
+   ],
+   [
+    180,
+    280,
+    0
+   ],
+   [
+    358,
+    610,
+    0
+   ]
+  ]
+ },
+ "non_fait": [
+  "test en jeu PMDO",
+  "collisions / warps / gameplay",
+  "animation"
+ ]
+}

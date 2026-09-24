@@ -418,3 +418,17 @@ Utilisateur : « La zone au centre devrait pas avoir de trou régénère + les a
 Demande : plusieurs calques de l’image `DSVFS.png` et animation de l’eau Beach PMD Sky. Fichier fourni retrouvé à la racine (pas dans le chemin uploads annoncé). Lot non destructif `source/beach_layers_v1/`, `renders/beach_layers_v1/`, viewer `apercu_beach_calques_v1.html`. Aucun générateur utilisé : préserver exactement cette composition. Neuf partitions visibles 702×466, ORA ; sols/faces cachés non reconstruits. Animation mer + écume, 64 phases de 50ms (3,2s), couleurs source seulement, phase0 exacte, décor sec invariant. Progression des hauteurs de crête extraite des17poses de la planche Beach & Path to Beach (rip redblueyellow) pour guider un mouvement nouveau ; PAS les frames/cadence officielles Sky récupérées. Mer sous écume complétée par pixels bleus voisins, puis remapping entier. Contacts ancrés sur5px et amplitude croissante sur18px pour éviter les traînées de contours aux rochers ; pas d’avance sur le sable. Frames adjacentes parfois identiques : GIF/WebP fusionnent les poses, durée totale contrôlée3200ms.
 
 Copies d’import PNG to Tileset8px : 704×472, ajout transparent droite2/bas6, aucune mise à l’échelle. Remplacer les calques fixes03/04 par les frames de même index, ne pas garder l’ancienne écume par-dessus. Dix tests assetsPASS, interactions viewer en DOM simuléPASS, ZIP CRC/identitéPASS. Chromium téléchargementTLS échoué, pas de navigateur interactif validé ; pas de runtimePMDO. Les anciennes maps et le PNG source restent intacts. Sources et référence de vagues incluses dans le ZIP pour reconstruction ; viewer embarqué autonome.
+
+## Reprise du 24 septembre — FDENSE V1, entrée de forêt dense sud → nord (hybride)
+
+Choix de l'utilisateur, via ask_user : D24P11A / D24P31A, méthode **hybride**, une map à la fois avec validation avant la suivante. Sources dans `source/foret_dense_sn_v1/`, livrable dans `renders/foret_dense_sn_v1/`, galerie `apercu_foret_dense_sn_v1.html`.
+
+Leçons :
+1. Le quilting à patchs carrés hache les objets structurés (parois d'arbres, pavés) : le réserver à l'herbe et à l'herbe d'ombre.
+2. D24P31A est bâti sur un bloc vertical de 192 lignes. Empiler `B[170:362]` (ouest) ou `B[208:400]` (est) à partir d'une ligne où `B[y] == B[y+192]` donne des parois exactes, sans raccord inventé.
+3. Chemin : segments rigides pleine largeur le long de l'axe, coupes minimales ; pas d'étirement ni de cisaillement.
+4. Ombre : forme à liseré canonique (distance signée au bord du cercle sombre de B), pas de pénombre en dégradé le long des parois (bandes).
+5. Retouche des générations (`pixelize.py`) : exclure la frange magenta des votes ; noir du tunnel projeté sur les verts les plus sombres ; sous-palettes de matière tirées des étiquettes.
+6. `gate.py` (copié de 01a0d30e) refuse les petits calques de sprites à couleurs rares : réutiliser peu de modèles canoniques.
+
+État : 7 tests et gate PASS ; aucun test PMDO, collisions et warps non définis. Les éléments générés sont déclarés comme tels dans la provenance (id ≥ 100).

@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Forêt dense sud → nord — FDENSE V1 (en attente de validation)
+
+- **[Galerie : calques, solo, zoom, grille 8 px, carte de provenance](apercu_foret_dense_sn_v1.html)**.
+- [Composite 512×672](renders/foret_dense_sn_v1/FDENSE_V1_composite.png) · [OpenRaster](renders/foret_dense_sn_v1/FDENSE_V1_calques.ora) · [pack ZIP](renders/foret_dense_sn_v1/FDENSE_V1_pack.zip) · [méthode et provenance](renders/foret_dense_sn_v1/README.md).
+
+Références D24P11A / D24P31A, méthode hybride. **Pixels exacts des références** pour le sol, l'antichambre sombre, le chemin (segments rigides), les parois (bande périodique exacte de 192 lignes de D24P31A), les fleurs et les buissons. **Arbres géants, entrée et rochers générés sur magenta puis retouchés 1:1** dans la palette des références : ce ne sont pas des pixels natifs. 9 calques préfixés `FDENSE_V1_`, 175 couleurs, 0 hors palette, provenance au pixel. 7 tests PASS, `gate.py` PASS ; PMDO non testé, collisions et warps non définis.
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.
