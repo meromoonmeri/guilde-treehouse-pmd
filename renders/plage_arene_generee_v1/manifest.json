@@ -1,0 +1,67 @@
+{
+  "id": "plage_arene_generee_v1",
+  "reference": "arenapmdskybeach.png (456x480, conservee intacte)",
+  "taille": [
+    456,
+    480
+  ],
+  "grille_px": 8,
+  "cases": [
+    57,
+    60
+  ],
+  "methode": "composition generee reference PMD pleine page -> ouverture sud sculptee (clonage sable du brut) -> 6 calques ; PAS des pixels natifs",
+  "calques": [
+    {
+      "id": "01_mer",
+      "label": "Mer",
+      "fichier": "couches/PlageAreneV1_01_mer.png",
+      "pixels": 22888
+    },
+    {
+      "id": "02_sable",
+      "label": "Sable de l'arene",
+      "fichier": "couches/PlageAreneV1_02_sable.png",
+      "pixels": 31792
+    },
+    {
+      "id": "03_falaises",
+      "label": "Falaises rouges et mousse",
+      "fichier": "couches/PlageAreneV1_03_falaises.png",
+      "pixels": 127358
+    },
+    {
+      "id": "04_ecume",
+      "label": "Ecume et eclats blancs",
+      "fichier": "couches/PlageAreneV1_04_ecume.png",
+      "pixels": 7648
+    },
+    {
+      "id": "05_rochers",
+      "label": "Rochers isoles",
+      "fichier": "couches/PlageAreneV1_05_rochers.png",
+      "pixels": 3478
+    },
+    {
+      "id": "06_vide",
+      "label": "Vide hors terrain",
+      "fichier": "couches/PlageAreneV1_06_vide.png",
+      "pixels": 25716
+    }
+  ],
+  "ouverture_sud": {
+    "x0": 204,
+    "x1": 252,
+    "pixels_retouches": 3860,
+    "methode": "ouverture du monticule sud : pavage cyclique du sable strict du brut, entonnoir 16/20/24 px depuis y395/405/415",
+    "colonnes_sans_falaise_420_480": 48
+  },
+  "rochers_isoles": 8,
+  "orientation": "arrivee SUD (ouverture sculptee), perspective mer au NORD ; indicatif, pas une collision moteur",
+  "sha256": {
+    "brut_scene.png": "ec272e3cc74d5c4eb4eb50044a192fd4a7ae16af1639c2236bd7007f6b85bbfe",
+    "reference_originale.png": "538b3ad90cb3008499e3e72ce0eb1994004a66b3cbb58de4b46a28b1ebde82f9"
+  },
+  "runtime_PMDO": "NON TESTE",
+  "art_approuve": false
+}

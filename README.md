@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Plage / arène côtière V1 — rendu généré, six calques statiques
+
+- **[Atelier : calques, grille 8 px et zoom](apercu_plage_arene_v1.html)**.
+- [Six couches, scène, ORA et manifeste](renders/plage_arene_generee_v1/README.md) · [pack ZIP](renders/plage_arene_generee_v1_pack.zip).
+
+Référence `arenapmdskybeach.png` conservée ; composition générée 456×480, ouverture sud sculptée en entonnoir (3860 px de sable du brut), 8 rochers déplaçables, corridor 48/48. **Dessins générés référencés PMD, pas des pixels natifs.** Dix tests PASS, PMDO non testé.
+
 ## Entrée aride V1 — rendu généré, six calques statiques
 
 - **[Atelier : calques, grille 8 px et zoom](apercu_entree_aride_v1.html)**.

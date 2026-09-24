@@ -432,3 +432,14 @@ arbres morts, 13 cailloux, ombres), partition stricte grotte > arbres >
 cailloux > ombres, recomposition exacte, ORA, corridor 32 px sud→seuil.
 10 tests PASS ; dessins GÉNÉRÉS (pas natifs), PMDO NON TESTÉ, art non approuvé.
 Registre natif sud–nord laissé inchangé. Prochaine map à choisir.
+
+## Plage / arene cotiere V1 — 24 septembre 2026 (statique, 6 calques)
+
+« Go la plage », meme methode que l'entree aride. `source/plage_arene_generee_v1/`,
+`renders/plage_arene_generee_v1/`, viewer `apercu_plage_arene_v1.html`,
+ZIP `renders/plage_arene_generee_v1_pack.zip`. Composition generee 456x480,
+ouverture sud sculptee en entonnoir dans le monticule du brut (3860 px de sable
+strict paves, 100 % sable teste), 6 calques (mer, sable, falaises, ecume,
+8 rochers/monticules, vide), murs par propagation, recomposition exacte, ORA.
+10 tests PASS ; dessins GENERES (pas natifs), PMDO NON TESTE, art non approuve.
+Registre natif inchange. Prochaine map a choisir.
