@@ -1,0 +1,13 @@
+{
+  "version": "v4_conservative_layout_layers",
+  "source_commit": "d5c79863a63abfb39f68f80adf85ae4c061ed3bd",
+  "rule": "no invented water, no invented landmarks, no new biome elements; only layout extension/crop/masking of existing reference content",
+  "zones": 12,
+  "layers_per_zone": 5,
+  "interior_policy": "walls, floor, empty room and existing decor separated; oval mask only for interior layout",
+  "water_policy": "animate only source zones that already visibly contain water",
+  "water_animation_layers": {
+    "riviere_jungle": "05_eau_source_palette_cycling.gif",
+    "clairiere_fleurs": "05_eau_source_palette_cycling.gif"
+  }
+}
