@@ -1,0 +1,5064 @@
+{
+ "baselines": [
+  {
+   "file": "source/amp_plains_fleurie_v1/references/vast_steppe_composition.png",
+   "size": [
+    512,
+    512
+   ],
+   "grid8": true,
+   "visible_pct": 100.0,
+   "semi_alpha_pct": 0.0,
+   "magenta_px": 1040,
+   "pink_fringe_px": 1376,
+   "opaque_colors": 82,
+   "flat_neighbour_pct": 31.5,
+   "alpha_specks": 0
+  },
+  {
+   "file": "source/antre_harmonie_v3/references/altere_composition.png",
+   "size": [
+    928,
+    768
+   ],
+   "grid8": true,
+   "visible_pct": 100.0,
+   "semi_alpha_pct": 0.0,
+   "magenta_px": 0,
+   "pink_fringe_px": 0,
+   "opaque_colors": 1397,
+   "flat_neighbour_pct": 44.6,
+   "alpha_specks": 0
+  }
+ ],
+ "targets": [
+  {
+   "zone": "renders/froggy_forest_dungeon_entry_multicalque",
+   "layers": [
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/01_sol_foret.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 69.7,
+     "semi_alpha_pct": 0.54,
+     "magenta_px": 7569,
+     "pink_fringe_px": 9623,
+     "opaque_colors": 76719,
+     "flat_neighbour_pct": 0.7,
+     "alpha_specks": 2
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/02_falaises_rochers.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 63.5,
+     "semi_alpha_pct": 0.78,
+     "magenta_px": 9522,
+     "pink_fringe_px": 10588,
+     "opaque_colors": 85590,
+     "flat_neighbour_pct": 2.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/03_cascades_eau.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 62.6,
+     "semi_alpha_pct": 0.32,
+     "magenta_px": 5231,
+     "pink_fringe_px": 8893,
+     "opaque_colors": 115162,
+     "flat_neighbour_pct": 10.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/04_chemin_entree.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 24.3,
+     "semi_alpha_pct": 0.96,
+     "magenta_px": 4724,
+     "pink_fringe_px": 6076,
+     "opaque_colors": 40687,
+     "flat_neighbour_pct": 8.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/05_vegetation.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 45.8,
+     "semi_alpha_pct": 14.17,
+     "magenta_px": 370516,
+     "pink_fringe_px": 376397,
+     "opaque_colors": 52970,
+     "flat_neighbour_pct": 25.1,
+     "alpha_specks": 3219
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/06_entree_donjon.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 13.8,
+     "semi_alpha_pct": 0.63,
+     "magenta_px": 1082,
+     "pink_fringe_px": 2219,
+     "opaque_colors": 32832,
+     "flat_neighbour_pct": 12.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/froggy_forest_dungeon_entry_multicalque/Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png",
+     "size": [
+      1024,
+      1024
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 239946,
+     "pink_fringe_px": 250115,
+     "opaque_colors": 245674,
+     "flat_neighbour_pct": 17.7,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 82.3
+  },
+  {
+   "zone": "renders/crooked_cavern_waterfall_v2",
+   "layers": [
+    {
+     "file": "renders/crooked_cavern_waterfall_v2/Crooked_Cavern_Entree_Cascade.png",
+     "size": [
+      320,
+      240
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 40,
+     "pink_fringe_px": 122,
+     "opaque_colors": 4378,
+     "flat_neighbour_pct": 27.1,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": null
+  },
+  {
+   "zone": "renders/crooked_cavern_waterfall_v2/animation/water",
+   "layers": [
+    {
+     "file": "renders/crooked_cavern_waterfall_v2/animation/water/00.png",
+     "size": [
+      320,
+      240
+     ],
+     "grid8": true,
+     "visible_pct": 5.6,
+     "semi_alpha_pct": 1.37,
+     "magenta_px": 74,
+     "pink_fringe_px": 98,
+     "opaque_colors": 2139,
+     "flat_neighbour_pct": 3.1,
+     "alpha_specks": 11
+    }
+   ],
+   "layer_overlap_pct": null
+  },
+  {
+   "zone": "renders/generator_multicalque_v2/maison_interieure",
+   "layers": [
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/00_murs.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 104214,
+     "flat_neighbour_pct": 51.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/01_sol.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 129340,
+     "flat_neighbour_pct": 20.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/02_salle_vide.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 18.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/03_decor_existant.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 144239,
+     "flat_neighbour_pct": 18.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/04_entree.png",
+     "size": [
+      400,
+      250
+     ],
+     "grid8": false,
+     "visible_pct": 98.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 27272,
+     "flat_neighbour_pct": 15.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v2/maison_interieure/source_generated.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 144239,
+     "flat_neighbour_pct": 18.7,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": null
+  },
+  {
+   "zone": "renders/generator_multicalque_v3/maison_interieure",
+   "layers": [
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/00_murs_parois.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1605,
+     "flat_neighbour_pct": 22.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/01_sol_existant.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 55.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 143820,
+     "flat_neighbour_pct": 4.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/02_salle_vide.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 55.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 91923,
+     "flat_neighbour_pct": 22.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/03_architecture_existante.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 5.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 2.6,
+     "alpha_specks": 601
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/04_objets_decoration.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 5.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 45804,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 649
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/05_entree.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 10.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 406,
+     "flat_neighbour_pct": 30.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_v3/maison_interieure/composite.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 118235,
+     "flat_neighbour_pct": 46.2,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 55.8
+  },
+  {
+   "zone": "renders/generator_multicalque_final/maison_interieure",
+   "layers": [
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/00_murs_parois.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 26.2,
+     "semi_alpha_pct": 0.82,
+     "magenta_px": 3713,
+     "pink_fringe_px": 6037,
+     "opaque_colors": 76654,
+     "flat_neighbour_pct": 3.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/01_sol.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 41.3,
+     "semi_alpha_pct": 0.25,
+     "magenta_px": 1447,
+     "pink_fringe_px": 2625,
+     "opaque_colors": 45507,
+     "flat_neighbour_pct": 8.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/02_salle_vide.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 58.0,
+     "semi_alpha_pct": 0.2,
+     "magenta_px": 1858,
+     "pink_fringe_px": 2554,
+     "opaque_colors": 23938,
+     "flat_neighbour_pct": 12.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/03_objets_decoration.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 6.9,
+     "semi_alpha_pct": 5.68,
+     "magenta_px": 0,
+     "pink_fringe_px": 1113,
+     "opaque_colors": 42207,
+     "flat_neighbour_pct": 4.3,
+     "alpha_specks": 11
+    },
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/04_entree.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 0.78,
+     "magenta_px": 0,
+     "pink_fringe_px": 64,
+     "opaque_colors": 15079,
+     "flat_neighbour_pct": 2.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_multicalque_final/maison_interieure/Maison_Interieure_Ovale_Multicalque.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 1810,
+     "pink_fringe_px": 4422,
+     "opaque_colors": 150483,
+     "flat_neighbour_pct": 55.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 46.2
+  },
+  {
+   "zone": "renders/generator_zones_duo_v1/clairiere_riviere",
+   "layers": [
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/00_fond.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18593,
+     "flat_neighbour_pct": 49.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/01_terrain.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 51401,
+     "flat_neighbour_pct": 14.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/02_entree_decors.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 89.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 48125,
+     "flat_neighbour_pct": 12.2,
+     "alpha_specks": 560
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/03_layout_ovale.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/04_eau_palette_cycling.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 10.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14503,
+     "flat_neighbour_pct": 13.4,
+     "alpha_specks": 559
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/04_eau_palette_cycling_phase_1.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 10.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14503,
+     "flat_neighbour_pct": 13.4,
+     "alpha_specks": 559
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/04_eau_palette_cycling_phase_2.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 10.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16719,
+     "flat_neighbour_pct": 12.8,
+     "alpha_specks": 559
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/04_eau_palette_cycling_phase_3.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 10.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 17576,
+     "flat_neighbour_pct": 12.8,
+     "alpha_specks": 559
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/04_eau_palette_cycling_phase_4.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 10.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18003,
+     "flat_neighbour_pct": 12.8,
+     "alpha_specks": 559
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/clairiere_riviere/composite.png",
+     "size": [
+      1108,
+      960
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 60020,
+     "flat_neighbour_pct": 12.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 100.0
+  },
+  {
+   "zone": "renders/generator_zones_duo_v1/grotte_sinistre",
+   "layers": [
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/00_fond.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 40220,
+     "flat_neighbour_pct": 44.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/01_terrain.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 117624,
+     "flat_neighbour_pct": 14.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/02_entree_decors.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 68.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 51581,
+     "flat_neighbour_pct": 17.6,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/03_layout_ovale.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/04_eau_palette_cycling.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 31.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 90901,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/04_eau_palette_cycling_phase_1.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 31.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 90901,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/04_eau_palette_cycling_phase_2.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 31.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 102941,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/04_eau_palette_cycling_phase_3.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 31.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 105263,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/04_eau_palette_cycling_phase_4.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 31.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 105160,
+     "flat_neighbour_pct": 2.1,
+     "alpha_specks": 1260
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/grotte_sinistre/composite.png",
+     "size": [
+      1121,
+      944
+     ],
+     "grid8": false,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 128379,
+     "flat_neighbour_pct": 13.2,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 100.0
+  },
+  {
+   "zone": "renders/generator_zones_duo_v1/maison_interieure_ovale",
+   "layers": [
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/00_fond.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 75455,
+     "flat_neighbour_pct": 58.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/01_terrain.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 130874,
+     "flat_neighbour_pct": 24.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/02_entree_decors.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 98.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 143717,
+     "flat_neighbour_pct": 22.2,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/03_layout_ovale.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/04_eau_palette_cycling.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 1.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6527,
+     "flat_neighbour_pct": 12.6,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/04_eau_palette_cycling_phase_1.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 1.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6527,
+     "flat_neighbour_pct": 12.6,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/04_eau_palette_cycling_phase_2.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 1.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6852,
+     "flat_neighbour_pct": 20.1,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/04_eau_palette_cycling_phase_3.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 1.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 7368,
+     "flat_neighbour_pct": 19.3,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/04_eau_palette_cycling_phase_4.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 1.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 7760,
+     "flat_neighbour_pct": 17.6,
+     "alpha_specks": 54
+    },
+    {
+     "file": "renders/generator_zones_duo_v1/maison_interieure_ovale/composite.png",
+     "size": [
+      1176,
+      896
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 150213,
+     "flat_neighbour_pct": 22.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 100.0
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/clairiere_riviere",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/clairiere_riviere/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 39,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/clairiere_riviere/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/clairiere_riviere/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 27248,
+     "flat_neighbour_pct": 18.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/clairiere_riviere/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/clairiere_riviere/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 71.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 27390,
+     "flat_neighbour_pct": 22.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 66.0
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/foret_sinistre",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_sinistre/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 32787,
+     "flat_neighbour_pct": 38.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_sinistre/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 38.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_sinistre/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14677,
+     "flat_neighbour_pct": 33.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_sinistre/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_sinistre/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 80.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 17159,
+     "flat_neighbour_pct": 37.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 75.7
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/foret_verdoyante",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_verdoyante/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14594,
+     "flat_neighbour_pct": 32.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_verdoyante/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 32.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_verdoyante/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15628,
+     "flat_neighbour_pct": 52.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_verdoyante/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/foret_verdoyante/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 77.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19374,
+     "flat_neighbour_pct": 51.9,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 70.4
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/grotte_glacee",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_glacee/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6737,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_glacee/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_glacee/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14677,
+     "flat_neighbour_pct": 33.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_glacee/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_glacee/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14765,
+     "flat_neighbour_pct": 33.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 43.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/grotte_volcanique",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_volcanique/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_volcanique/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_volcanique/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16,
+     "flat_neighbour_pct": 92.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_volcanique/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/grotte_volcanique/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 17,
+     "flat_neighbour_pct": 92.2,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 31.2
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/lisiere_automne",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/lisiere_automne/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16372,
+     "flat_neighbour_pct": 56.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/lisiere_automne/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 56.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/lisiere_automne/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 27248,
+     "flat_neighbour_pct": 18.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/lisiere_automne/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/lisiere_automne/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 80.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 29485,
+     "flat_neighbour_pct": 30.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 75.7
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/maison_ronde",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/maison_ronde/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 98.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 21424,
+     "flat_neighbour_pct": 65.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/maison_ronde/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 98.3,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 65.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/maison_ronde/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 27248,
+     "flat_neighbour_pct": 18.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/maison_ronde/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/maison_ronde/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 98.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 23,
+     "pink_fringe_px": 57,
+     "opaque_colors": 27352,
+     "flat_neighbour_pct": 45.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 98.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v1/ruines_blanches",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v1/ruines_blanches/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 25452,
+     "flat_neighbour_pct": 18.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/ruines_blanches/01_terrain.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 75.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 18.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/ruines_blanches/02_entree_forme_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 40,
+     "flat_neighbour_pct": 72.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/ruines_blanches/03_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v1/ruines_blanches/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 80.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 4257,
+     "flat_neighbour_pct": 63.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 75.7
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_01_cave_verte",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16,
+     "flat_neighbour_pct": 95.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16,
+     "flat_neighbour_pct": 94.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_01_cave_verte/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 26,
+     "flat_neighbour_pct": 94.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 3271,
+     "flat_neighbour_pct": 78.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14299,
+     "flat_neighbour_pct": 69.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14309,
+     "flat_neighbour_pct": 74.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_03_portail_glace",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1664,
+     "flat_neighbour_pct": 80.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6738,
+     "flat_neighbour_pct": 72.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_03_portail_glace/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6762,
+     "flat_neighbour_pct": 77.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1711,
+     "flat_neighbour_pct": 65.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13084,
+     "flat_neighbour_pct": 49.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13409,
+     "flat_neighbour_pct": 58.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1276,
+     "flat_neighbour_pct": 82.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13058,
+     "flat_neighbour_pct": 70.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13067,
+     "flat_neighbour_pct": 78.5,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 68.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_06_maison_interieure",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 4060,
+     "flat_neighbour_pct": 75.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18845,
+     "flat_neighbour_pct": 57.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_06_maison_interieure/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18857,
+     "flat_neighbour_pct": 70.2,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 68.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1237,
+     "flat_neighbour_pct": 66.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13090,
+     "flat_neighbour_pct": 52.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13316,
+     "flat_neighbour_pct": 60.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 3631,
+     "flat_neighbour_pct": 57.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 21830,
+     "flat_neighbour_pct": 29.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 22182,
+     "flat_neighbour_pct": 50.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 68.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_09_route_ruines",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 1428,
+     "flat_neighbour_pct": 76.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14357,
+     "flat_neighbour_pct": 66.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_09_route_ruines/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14417,
+     "flat_neighbour_pct": 71.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_10_marais_noir",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 3788,
+     "flat_neighbour_pct": 66.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 28773,
+     "flat_neighbour_pct": 52.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_10_marais_noir/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 29000,
+     "flat_neighbour_pct": 61.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 40,
+     "flat_neighbour_pct": 79.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 40,
+     "flat_neighbour_pct": 74.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 104,
+     "flat_neighbour_pct": 78.3,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/00_fond_biome.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 5981,
+     "flat_neighbour_pct": 53.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/01_sol_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2,
+     "flat_neighbour_pct": 99.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/02_entree_fond_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 18,
+     "pink_fringe_px": 46,
+     "opaque_colors": 25492,
+     "flat_neighbour_pct": 34.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/03_nouveau_layout_ovale.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 4.4,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 83.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/04_repere_entree.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 96.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 100.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 18,
+     "pink_fringe_px": 46,
+     "opaque_colors": 25861,
+     "flat_neighbour_pct": 46.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.8
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/camp_souterrain",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.7,
+     "semi_alpha_pct": 5.07,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6009,
+     "flat_neighbour_pct": 68.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.6,
+     "semi_alpha_pct": 1.02,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 9841,
+     "flat_neighbour_pct": 69.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13521,
+     "flat_neighbour_pct": 69.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 11.2,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 4.3,
+     "alpha_specks": 1511
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/camp_souterrain/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.6,
+     "semi_alpha_pct": 3.29,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13523,
+     "flat_neighbour_pct": 68.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 67.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/clairiere_fleurs",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.2,
+     "semi_alpha_pct": 19.4,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19928,
+     "flat_neighbour_pct": 16.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.5,
+     "semi_alpha_pct": 3.52,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 21517,
+     "flat_neighbour_pct": 10.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 13,
+     "pink_fringe_px": 47,
+     "opaque_colors": 26419,
+     "flat_neighbour_pct": 12.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 37.8,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 13,
+     "pink_fringe_px": 47,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 2.9,
+     "alpha_specks": 4214
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/clairiere_fleurs/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.1,
+     "semi_alpha_pct": 9.64,
+     "magenta_px": 13,
+     "pink_fringe_px": 47,
+     "opaque_colors": 26730,
+     "flat_neighbour_pct": 13.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 62.4
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/foret_verdoyante",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 68.0,
+     "semi_alpha_pct": 24.23,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 11137,
+     "flat_neighbour_pct": 44.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.0,
+     "semi_alpha_pct": 6.19,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 11409,
+     "flat_neighbour_pct": 33.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 61.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14779,
+     "flat_neighbour_pct": 31.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 23.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 13.1,
+     "alpha_specks": 2724
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/foret_verdoyante/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 70.1,
+     "semi_alpha_pct": 12.45,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15195,
+     "flat_neighbour_pct": 38.3,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 61.5
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/grotte_glacee",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 50.0,
+     "semi_alpha_pct": 31.08,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6276,
+     "flat_neighbour_pct": 37.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 44.1,
+     "semi_alpha_pct": 8.53,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 9305,
+     "flat_neighbour_pct": 46.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6737,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 15.9,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 16.1,
+     "alpha_specks": 902
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_glacee/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 52.4,
+     "semi_alpha_pct": 19.44,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6738,
+     "flat_neighbour_pct": 48.3,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 42.2
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/grotte_sinistre",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 77.9,
+     "semi_alpha_pct": 16.3,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 8000,
+     "flat_neighbour_pct": 40.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 74.6,
+     "semi_alpha_pct": 2.74,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 11422,
+     "flat_neighbour_pct": 44.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 73.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13978,
+     "flat_neighbour_pct": 45.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 20.8,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.2,
+     "alpha_specks": 2895
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_sinistre/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.1,
+     "semi_alpha_pct": 6.98,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14162,
+     "flat_neighbour_pct": 43.1,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 73.6
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/grotte_volcanique",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 36.2,
+     "semi_alpha_pct": 37.04,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 9056,
+     "flat_neighbour_pct": 23.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 30.7,
+     "semi_alpha_pct": 10.13,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 17889,
+     "flat_neighbour_pct": 18.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 17.8,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 10.8,
+     "alpha_specks": 1238
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/grotte_volcanique/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 39.8,
+     "semi_alpha_pct": 26.84,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 28.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 29.1
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/lisiere_foret",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.2,
+     "semi_alpha_pct": 19.4,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 10615,
+     "flat_neighbour_pct": 37.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.5,
+     "semi_alpha_pct": 3.52,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 11654,
+     "flat_neighbour_pct": 51.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15012,
+     "flat_neighbour_pct": 54.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 25.2,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 6.4,
+     "alpha_specks": 1894
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/lisiere_foret/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.1,
+     "semi_alpha_pct": 9.64,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15065,
+     "flat_neighbour_pct": 51.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 62.4
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/maison_interieure",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.7,
+     "semi_alpha_pct": 5.72,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 21711,
+     "flat_neighbour_pct": 49.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.6,
+     "semi_alpha_pct": 1.25,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 17910,
+     "flat_neighbour_pct": 54.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.3,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19854,
+     "flat_neighbour_pct": 56.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 23.1,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 8.6,
+     "alpha_specks": 1641
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/maison_interieure/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.6,
+     "semi_alpha_pct": 3.31,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19856,
+     "flat_neighbour_pct": 55.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 67.3
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/marais_noir",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.2,
+     "semi_alpha_pct": 19.4,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 27040,
+     "flat_neighbour_pct": 25.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.5,
+     "semi_alpha_pct": 3.52,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 26704,
+     "flat_neighbour_pct": 34.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 29870,
+     "flat_neighbour_pct": 36.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.8,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 2.7,
+     "alpha_specks": 3226
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/marais_noir/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.1,
+     "semi_alpha_pct": 9.64,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 30078,
+     "flat_neighbour_pct": 34.7,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 62.4
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/riviere_jungle",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 72.2,
+     "semi_alpha_pct": 23.46,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 2755,
+     "flat_neighbour_pct": 32.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.3,
+     "semi_alpha_pct": 6.88,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 4045,
+     "flat_neighbour_pct": 41.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 39,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 16.6,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 17.8,
+     "alpha_specks": 2150
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/riviere_jungle/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 73.9,
+     "semi_alpha_pct": 12.01,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 70,
+     "flat_neighbour_pct": 65.3,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 64.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/route_ruines",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 67.2,
+     "semi_alpha_pct": 19.4,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 10615,
+     "flat_neighbour_pct": 37.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.5,
+     "semi_alpha_pct": 3.52,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 11654,
+     "flat_neighbour_pct": 51.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.4,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15012,
+     "flat_neighbour_pct": 54.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 25.2,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 6.4,
+     "alpha_specks": 1894
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/route_ruines/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 69.1,
+     "semi_alpha_pct": 9.64,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15065,
+     "flat_neighbour_pct": 51.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 62.4
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v3/ruines_blanches",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/00_fond_biome_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 61.6,
+     "semi_alpha_pct": 15.03,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 9570,
+     "flat_neighbour_pct": 30.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/01_sol_terrain_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 59.2,
+     "semi_alpha_pct": 3.74,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16403,
+     "flat_neighbour_pct": 16.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/02_entree_angle_reference.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 58.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 22555,
+     "flat_neighbour_pct": 16.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/03_decors_lieux_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 34.9,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 5.1,
+     "alpha_specks": 2848
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/04_cadre_layout_genere.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 3.7,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 79.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v3/ruines_blanches/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 64.0,
+     "semi_alpha_pct": 9.14,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 22814,
+     "flat_neighbour_pct": 18.1,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 58.1
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/camp_souterrain",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 89.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13677,
+     "flat_neighbour_pct": 75.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 57.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13459,
+     "flat_neighbour_pct": 64.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13643,
+     "flat_neighbour_pct": 66.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13606,
+     "flat_neighbour_pct": 66.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/camp_souterrain/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 89.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13607,
+     "flat_neighbour_pct": 74.9,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 67.0
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/clairiere_fleurs",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 27.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 15,
+     "pink_fringe_px": 45,
+     "opaque_colors": 14075,
+     "flat_neighbour_pct": 2.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 15,
+     "pink_fringe_px": 45,
+     "opaque_colors": 27545,
+     "flat_neighbour_pct": 13.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 15,
+     "pink_fringe_px": 45,
+     "opaque_colors": 27545,
+     "flat_neighbour_pct": 13.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/clairiere_fleurs/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 15,
+     "pink_fringe_px": 45,
+     "opaque_colors": 27545,
+     "flat_neighbour_pct": 13.0,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 66.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/foret_verdoyante",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 24.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 5377,
+     "flat_neighbour_pct": 24.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13866,
+     "flat_neighbour_pct": 31.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13866,
+     "flat_neighbour_pct": 31.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/foret_verdoyante/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 63.6,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13866,
+     "flat_neighbour_pct": 31.5,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 63.6
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/grotte_glacee",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 16.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 5226,
+     "flat_neighbour_pct": 58.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6737,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6737,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_glacee/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 42.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6737,
+     "flat_neighbour_pct": 49.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 42.2
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/grotte_sinistre",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 32.7,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 7573,
+     "flat_neighbour_pct": 56.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14320,
+     "flat_neighbour_pct": 46.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14320,
+     "flat_neighbour_pct": 46.8,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_sinistre/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 79.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14320,
+     "flat_neighbour_pct": 46.8,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 79.5
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/grotte_volcanique",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 10.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 6803,
+     "flat_neighbour_pct": 10.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/grotte_volcanique/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 29.1,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14298,
+     "flat_neighbour_pct": 18.5,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 29.1
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/lisiere_foret",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 27.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 8332,
+     "flat_neighbour_pct": 47.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/lisiere_foret/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 66.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/maison_interieure",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 87.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 20340,
+     "flat_neighbour_pct": 64.7,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 57.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19768,
+     "flat_neighbour_pct": 51.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 19957,
+     "flat_neighbour_pct": 54.2,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18920,
+     "flat_neighbour_pct": 61.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/maison_interieure/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 87.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 18921,
+     "flat_neighbour_pct": 70.9,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 67.0
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/marais_noir",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 27.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13310,
+     "flat_neighbour_pct": 40.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 28966,
+     "flat_neighbour_pct": 37.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 28966,
+     "flat_neighbour_pct": 37.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/marais_noir/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 28966,
+     "flat_neighbour_pct": 37.4,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 66.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/riviere_jungle",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 26.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 28,
+     "flat_neighbour_pct": 66.4,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 39,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 39,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/riviere_jungle/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 65.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 39,
+     "flat_neighbour_pct": 69.1,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 65.0
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/route_ruines",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 27.5,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 8332,
+     "flat_neighbour_pct": 47.1,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 0.0,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 0.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/route_ruines/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15317,
+     "flat_neighbour_pct": 55.6,
+     "alpha_specks": 0
+    }
+   ],
+   "layer_overlap_pct": 66.9
+  },
+  {
+   "zone": "renders/network_zones_multicalques_v4/ruines_blanches",
+   "layers": [
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/00_fond_murs_parois.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 66.9,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 16863,
+     "flat_neighbour_pct": 18.9,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/01_sol_terrain_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 49.2,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 15928,
+     "flat_neighbour_pct": 8.3,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/02_salle_vide_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14978,
+     "flat_neighbour_pct": 42.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/03_decor_existant.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 62.8,
+     "semi_alpha_pct": 0.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 13088,
+     "flat_neighbour_pct": 56.6,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/04_cadre_layout.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 2.0,
+     "semi_alpha_pct": 100.0,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 0,
+     "flat_neighbour_pct": 81.0,
+     "alpha_specks": 0
+    },
+    {
+     "file": "renders/network_zones_multicalques_v4/ruines_blanches/composite.png",
+     "size": [
+      480,
+      360
+     ],
+     "grid8": true,
+     "visible_pct": 74.2,
+     "semi_alpha_pct": 1.01,
+     "magenta_px": 0,
+     "pink_fringe_px": 0,
+     "opaque_colors": 14828,
+     "flat_neighbour_pct": 52.8,
+     "alpha_specks": 4
+    }
+   ],
+   "layer_overlap_pct": 63.8
+  }
+ ]
+}

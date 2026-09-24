@@ -1,0 +1,9622 @@
+[
+ {
+  "zone": "renders/froggy_forest_dungeon_entry_multicalque",
+  "layers": {
+   "01_sol_foret.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "731380 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3917 px semi-transparents (0.54 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "2811 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "76719 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.35 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_falaises_rochers.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "665342 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "5199 px semi-transparents (0.78 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "4058 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "85590 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.45 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cascades_eau.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "656797 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "2132 px semi-transparents (0.32 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "1357 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "115162 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "19.71 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_chemin_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "254646 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "2448 px semi-transparents (0.96 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "1855 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "40687 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.98 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "05_vegetation.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "480701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "68135 px semi-transparents (14.17 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "361945 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "52970 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.53 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "06_entree_donjon.png": [
+    [
+     "grille_8px",
+     true,
+     "1024x1024"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "144560 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "907 px semi-transparents (0.63 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "806 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "32832 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.09 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(1024, 1024)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png",
+    false,
+    "82881 px différents de l'empilement"
+   ],
+   [
+    "Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:zero_magenta_residuel",
+    false,
+    "226677 px proches du magenta de détourage"
+   ],
+   [
+    "Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:palette_pixel_art",
+    false,
+    "245674 couleurs (max 2048)"
+   ],
+   [
+    "Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "26.31 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_multicalque_v2/maison_interieure",
+  "layers": {
+   "00_murs.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "104214 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.65 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "129340 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "12.98 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1053696 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "144239 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.55 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_entree.png": [
+    [
+     "grille_8px",
+     false,
+     "400x250"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "98400 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27272 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "32.96 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    false,
+    "[(250, 400), (896, 1176)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_multicalque_v3/maison_interieure",
+  "layers": {
+   "00_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "46085 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1605 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "2.87 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "579796 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "143820 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.40 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "579796 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "91923 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.99 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_architecture_existante.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "60121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "60121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_objets_decoration.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "59315 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "45804 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "89.21 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "05_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111720 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "406 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.23 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(896, 1176)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "327177 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "118235 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "12.26 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_multicalque_final/maison_interieure",
+  "layers": {
+   "00_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "276004 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "2254 px semi-transparents (0.82 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "623 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "76654 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "30.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "435297 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1078 px semi-transparents (0.25 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "181 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "45507 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.37 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "611448 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1223 px semi-transparents (0.20 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     false,
+     "353 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "23938 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "3.48 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_objets_decoration.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72806 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "4132 px semi-transparents (5.68 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "42207 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "69.83 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "45931 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "356 px semi-transparents (0.78 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15079 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "35.74 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(896, 1176)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_Maison_Interieure_Ovale_Multicalque.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_Maison_Interieure_Ovale_Multicalque.png",
+    false,
+    "938540 px différents de l'empilement"
+   ],
+   [
+    "Maison_Interieure_Ovale_Multicalque.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "Maison_Interieure_Ovale_Multicalque.png:palette_pixel_art",
+    false,
+    "150483 couleurs (max 2048)"
+   ],
+   [
+    "Maison_Interieure_Ovale_Multicalque.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "15.67 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_zones_duo_v1/clairiere_riviere",
+  "layers": {
+   "00_fond.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1063680 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "18593 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "1.13 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1063680 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "51401 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "4.21 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_decors.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "948407 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "48125 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "4.42 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_layout_ovale.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_eau_palette_cycling.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115273 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14503 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.21 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_1.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115273 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14503 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.21 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_2.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115273 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "16719 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.46 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_3.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115273 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "17576 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.18 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_4.png": [
+    [
+     "grille_8px",
+     false,
+     "1108x960"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115273 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "18003 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.72 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(960, 1108)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "115273 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "60020 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "5.04 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_zones_duo_v1/grotte_sinistre",
+  "layers": {
+   "00_fond.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1058224 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "40220 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "2.55 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1058224 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "117624 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.77 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_decors.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "722583 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "51581 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "6.19 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_layout_ovale.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_eau_palette_cycling.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "335641 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "90901 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.76 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_1.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "335641 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "90901 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.76 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_2.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "335641 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "102941 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "34.63 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_3.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "335641 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "105263 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "35.60 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_4.png": [
+    [
+     "grille_8px",
+     false,
+     "1121x944"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "335641 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "105160 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "35.42 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(944, 1121)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "335634 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "128379 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "11.87 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/generator_zones_duo_v1/maison_interieure_ovale",
+  "layers": {
+   "00_fond.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "75455 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "7.45 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1053696 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "130874 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.74 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_decors.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1039138 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "143717 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.40 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_eau_palette_cycling.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "14558 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6527 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "48.41 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_1.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "14558 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6527 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "48.41 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_2.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "14558 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6852 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "50.02 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_3.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "14558 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "7368 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "53.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_eau_palette_cycling_phase_4.png": [
+    [
+     "grille_8px",
+     true,
+     "1176x896"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "14558 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "7760 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "56.40 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(896, 1176)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "13709 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "150213 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "15.86 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/clairiere_riviere",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112320 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "39 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112320 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "112320 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27248 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "27.52 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "27390 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "25.08 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/foret_sinistre",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "32787 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.19 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "129600 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14677 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.97 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "17159 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/foret_verdoyante",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "120000 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14594 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "120000 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "120000 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15628 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "17.01 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "19374 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "17.17 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/grotte_glacee",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72960 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6737 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.24 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72960 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "72960 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14677 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.97 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14765 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.90 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/grotte_volcanique",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "50369 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14298 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "32.32 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "50369 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "50369 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "16 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "17 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/lisiere_automne",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "16372 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.26 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "129600 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27248 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "27.52 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "29485 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "24.01 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/maison_ronde",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "169920 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "21424 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.05 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "169920 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "169920 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27248 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "27.52 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "27352 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "18.16 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v1/ruines_blanches",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "25452 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "22.73 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_terrain.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "129600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "129600 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "02_entree_forme_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "111517 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "40 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3480 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "4257 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "3.84 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_01_cave_verte",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "16 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "16 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "26 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_02_cave_volcanique",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "3271 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "1.62 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14299 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.82 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14309 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "9.42 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_03_portail_glace",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1664 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.90 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6738 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "4.90 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "6762 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "3.91 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_04_lisiere_foret",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1711 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.73 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13084 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.41 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13409 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "8.53 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_05_camp_souterrain",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1276 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.54 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13058 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.81 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13067 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "9.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_06_maison_interieure",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "4060 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "2.38 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "18845 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "20.26 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "18857 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.21 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_07_grotte_sombre",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1237 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.47 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13090 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13316 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "8.32 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "3631 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "1.92 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112701 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "21830 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "22.88 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "22182 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "15.16 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_09_route_ruines",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "1428 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.50 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14357 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "12.78 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14417 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "10.19 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_10_marais_noir",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "3788 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "1.71 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "28773 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "24.10 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "29000 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "19.36 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_11_riviere_jungle",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "40 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "40 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "104 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.01 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs",
+  "layers": {
+   "00_fond_biome.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "172800 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "5981 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "3.65 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "2 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_fond_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137697 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "25492 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "20.76 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_nouveau_layout_ovale.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "7616 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "7616 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_repere_entree.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "1121 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1121 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "25861 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "16.80 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/camp_souterrain",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116961 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "5925 px semi-transparents (5.07 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6009 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "5.32 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116838 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1191 px semi-transparents (1.02 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "9841 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.73 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116354 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13521 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.89 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "19374 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "19374 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "42505 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13523 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.89 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/clairiere_fleurs",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116172 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "22536 px semi-transparents (19.40 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "19928 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "23.38 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109806 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3866 px semi-transparents (3.52 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "21517 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "22.08 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "107878 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "26419 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "27.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "65354 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "65354 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "10557 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "26730 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "27.66 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/foret_verdoyante",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "117503 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "28469 px semi-transparents (24.23 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "11137 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "12.81 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108855 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6733 px semi-transparents (6.19 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "11409 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.73 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "106026 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14779 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.72 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "39777 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "39777 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "6540 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "15195 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "15.21 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/grotte_glacee",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "86326 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "26834 px semi-transparents (31.08 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6276 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.28 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "76236 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6504 px semi-transparents (8.53 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "9305 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.17 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72960 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6737 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.24 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "27399 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "27399 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "444 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "6738 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "9.24 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/grotte_sinistre",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "134532 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "21924 px semi-transparents (16.30 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "8000 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "7.19 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "128928 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3530 px semi-transparents (2.74 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "11422 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.02 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "127176 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13978 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.63 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "35871 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "35871 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "12440 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14162 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "11.80 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/grotte_volcanique",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "62493 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "23148 px semi-transparents (37.04 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "9056 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.36 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "53081 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "5376 px semi-transparents (10.13 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "17889 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "44.02 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "50369 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14298 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "32.32 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "30687 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "30687 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14298 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "32.32 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/lisiere_foret",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116172 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "22536 px semi-transparents (19.40 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "10615 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.87 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109806 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3866 px semi-transparents (3.52 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "11654 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.50 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "107878 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15012 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.74 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "43582 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "43582 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "9809 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "15065 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "16.80 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/maison_interieure",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116961 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6690 px semi-transparents (5.72 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "21711 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "22.79 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116838 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "1455 px semi-transparents (1.25 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "17910 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "17.53 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116331 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "19854 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "20.55 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "39897 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "39897 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "40001 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "19856 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "20.55 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/marais_noir",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116172 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "22536 px semi-transparents (19.40 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27040 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "33.59 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109806 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3866 px semi-transparents (3.52 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "26704 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.69 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "107878 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "29870 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "31.96 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "51410 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "51410 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "10616 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "30078 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "32.19 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/riviere_jungle",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "124798 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "29274 px semi-transparents (23.46 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "2755 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "2.38 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116332 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "8008 px semi-transparents (6.88 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "4045 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "3.03 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112320 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "39 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "28726 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "28726 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "3564 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "70 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.01 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/route_ruines",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "116172 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "22536 px semi-transparents (19.40 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "10615 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.87 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109806 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3866 px semi-transparents (3.52 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "11654 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.50 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "107878 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15012 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.74 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "43582 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "43582 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "9809 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "15065 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "16.80 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v3/ruines_blanches",
+  "layers": {
+   "00_fond_biome_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "106480 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "16007 px semi-transparents (15.03 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "9570 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.59 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "102257 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3820 px semi-transparents (3.74 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "16403 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "17.49 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_entree_angle_reference.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "100465 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "22555 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.41 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decors_lieux_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "60386 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "60386 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "04_cadre_layout_genere.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "6356 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "6356 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    false,
+    "19653 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "22814 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "26.82 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/camp_souterrain",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "154020 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13677 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "10.50 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "100000 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13459 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.01 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13643 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.95 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13606 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.86 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3468 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3468 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13607 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "10.46 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/clairiere_fleurs",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "47600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14075 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "34.30 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27545 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.58 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "27545 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "26.58 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "27545 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "26.58 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/foret_verdoyante",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "41400 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "5377 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.46 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109940 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13866 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.70 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "109940 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13866 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "13.70 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "13866 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.70 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/grotte_glacee",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "29280 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "5226 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "20.26 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72960 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6737 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.24 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "72960 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6737 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "9.24 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "6737 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "9.24 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/grotte_sinistre",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "56560 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "7573 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137360 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14320 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.03 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "137360 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14320 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "11.03 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14320 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "11.03 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/grotte_volcanique",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "18075 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "6803 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "43.60 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "50369 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14298 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "32.32 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "50369 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14298 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "32.32 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14298 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "32.32 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/lisiere_foret",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "47600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "8332 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "21.54 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15317 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.06 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15317 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.06 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "15317 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "16.06 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/maison_interieure",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "151640 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "20340 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.23 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "100000 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "19768 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "23.98 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "19957 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "22.33 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "18920 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "21.29 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3468 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3468 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "18921 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "15.23 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/marais_noir",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "47600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13310 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "31.31 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "28966 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.72 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "28966 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "29.72 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "28966 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "29.72 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/riviere_jungle",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "45360 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "28 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.01 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112320 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "39 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "112320 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "39 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    true,
+    "39 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.00 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/route_ruines",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "47600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "8332 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "21.54 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15317 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.06 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15317 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "16.06 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     false,
+     "0 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    false,
+    "[['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    false,
+    "identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "15317 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "16.06 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ },
+ {
+  "zone": "renders/network_zones_multicalques_v4/ruines_blanches",
+  "layers": {
+   "00_fond_murs_parois.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "115600 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "16863 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.17 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "01_sol_terrain_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "85000 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "15928 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "20.19 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "02_salle_vide_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "14978 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "15.64 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "03_decor_existant.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "108437 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     false,
+     "13088 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "False",
+     "14.62 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "04_cadre_layout.png": [
+    [
+     "grille_8px",
+     true,
+     "480x360"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "3468 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     false,
+     "3468 px semi-transparents (100.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(360, 480)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "composite.png:palette_pixel_art",
+    false,
+    "14828 couleurs (max 2048)"
+   ],
+   [
+    "composite.png:pas_de_flou_ni_anticrenelage",
+    "False",
+    "13.54 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": false
+ }
+]

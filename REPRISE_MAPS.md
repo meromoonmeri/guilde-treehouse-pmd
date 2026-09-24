@@ -68,3 +68,9 @@ Réserves relevées dans V16 :
 - L’alignement sur 8 px et le nommage Halcyon ne prouvent pas un import moteur.
 
 Les succès de chargement PMDO cités dans les anciens rapports restent historiques ; aucun lancement PMDO, rendu GPU ou test de gameplay n’a été effectué dans cette reprise.
+
+## 24 septembre 2026 — choix utilisateur et audit qualité
+
+Choix : nouvelle entrée de donjon sud→nord, forêt/plaine Vast Steppe (Halcyon), composition proposée par le générateur puis reconstruction en tuiles natives, PNG en calques 8 px pour PNG to Tileset. Guide de layout : `source/entree_steppe_v1/guide/` (pixels non utilisables). Relic Forest est écarté pour le sol : son herbe est incompatible avec Vast Steppe.
+
+Audit demandé par l'utilisateur : `audits/multicalques_v1/RAPPORT.md`. Contrôle bloquant `source/controle_qualite_pixel/gate.py` : 3/3 canon PASS, 0/51 multicalques générés PASS.

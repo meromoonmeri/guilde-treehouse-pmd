@@ -1,0 +1,413 @@
+FAIL renders/froggy_forest_dungeon_entry_multicalque
+   01_sol_foret.png: alpha_binaire: 3917 px semi-transparents (0.54 %, max 0.2) | zero_magenta_residuel: 2811 px proches du magenta de détourage | palette_pixel_art: 76719 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.35 % de couleurs rares (max 1.0)
+   02_falaises_rochers.png: alpha_binaire: 5199 px semi-transparents (0.78 %, max 0.2) | zero_magenta_residuel: 4058 px proches du magenta de détourage | palette_pixel_art: 85590 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.45 % de couleurs rares (max 1.0)
+   03_cascades_eau.png: alpha_binaire: 2132 px semi-transparents (0.32 %, max 0.2) | zero_magenta_residuel: 1357 px proches du magenta de détourage | palette_pixel_art: 115162 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 19.71 % de couleurs rares (max 1.0)
+   04_chemin_entree.png: alpha_binaire: 2448 px semi-transparents (0.96 %, max 0.2) | zero_magenta_residuel: 1855 px proches du magenta de détourage | palette_pixel_art: 40687 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.98 % de couleurs rares (max 1.0)
+   05_vegetation.png: alpha_binaire: 68135 px semi-transparents (14.17 %, max 0.2) | zero_magenta_residuel: 361945 px proches du magenta de détourage | palette_pixel_art: 52970 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.53 % de couleurs rares (max 1.0)
+   06_entree_donjon.png: alpha_binaire: 907 px semi-transparents (0.63 %, max 0.2) | zero_magenta_residuel: 806 px proches du magenta de détourage | palette_pixel_art: 32832 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.09 % de couleurs rares (max 1.0)
+   [zone] recomposition_Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png: 82881 px différents de l'empilement
+   [zone] Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:zero_magenta_residuel: 226677 px proches du magenta de détourage
+   [zone] Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:palette_pixel_art: 245674 couleurs (max 2048)
+   [zone] Froggy_Forest_Entree_Donjon_Cascades_Multicalque.png:pas_de_flou_ni_anticrenelage: 26.31 % de couleurs rares (max 1.0)
+FAIL renders/generator_multicalque_v2/maison_interieure
+   00_murs.png: palette_pixel_art: 104214 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.65 % de couleurs rares (max 1.0)
+   01_sol.png: palette_pixel_art: 129340 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 12.98 % de couleurs rares (max 1.0)
+   02_salle_vide.png: alpha_binaire: 1053696 px semi-transparents (100.00 %, max 0.2)
+   03_decor_existant.png: palette_pixel_art: 144239 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.55 % de couleurs rares (max 1.0)
+   04_entree.png: grille_8px: 400x250 | palette_pixel_art: 27272 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 32.96 % de couleurs rares (max 1.0)
+   [zone] calques_meme_taille: [(250, 400), (896, 1176)]
+FAIL renders/generator_multicalque_v3/maison_interieure
+   00_murs_parois.png: pas_de_flou_ni_anticrenelage: 2.87 % de couleurs rares (max 1.0)
+   01_sol_existant.png: palette_pixel_art: 143820 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.40 % de couleurs rares (max 1.0)
+   02_salle_vide.png: palette_pixel_art: 91923 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.99 % de couleurs rares (max 1.0)
+   03_architecture_existante.png: alpha_binaire: 60121 px semi-transparents (100.00 %, max 0.2)
+   04_objets_decoration.png: palette_pixel_art: 45804 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 89.21 % de couleurs rares (max 1.0)
+   [zone] recomposition_composite.png: 327177 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 118235 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 12.26 % de couleurs rares (max 1.0)
+FAIL renders/generator_multicalque_final/maison_interieure
+   00_murs_parois.png: alpha_binaire: 2254 px semi-transparents (0.82 %, max 0.2) | zero_magenta_residuel: 623 px proches du magenta de détourage | palette_pixel_art: 76654 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 30.23 % de couleurs rares (max 1.0)
+   01_sol.png: alpha_binaire: 1078 px semi-transparents (0.25 %, max 0.2) | zero_magenta_residuel: 181 px proches du magenta de détourage | palette_pixel_art: 45507 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.37 % de couleurs rares (max 1.0)
+   02_salle_vide.png: alpha_binaire: 1223 px semi-transparents (0.20 %, max 0.2) | zero_magenta_residuel: 353 px proches du magenta de détourage | palette_pixel_art: 23938 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 3.48 % de couleurs rares (max 1.0)
+   03_objets_decoration.png: alpha_binaire: 4132 px semi-transparents (5.68 %, max 0.2) | palette_pixel_art: 42207 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 69.83 % de couleurs rares (max 1.0)
+   04_entree.png: alpha_binaire: 356 px semi-transparents (0.78 %, max 0.2) | palette_pixel_art: 15079 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 35.74 % de couleurs rares (max 1.0)
+   [zone] recomposition_Maison_Interieure_Ovale_Multicalque.png: 938540 px différents de l'empilement
+   [zone] Maison_Interieure_Ovale_Multicalque.png:palette_pixel_art: 150483 couleurs (max 2048)
+   [zone] Maison_Interieure_Ovale_Multicalque.png:pas_de_flou_ni_anticrenelage: 15.67 % de couleurs rares (max 1.0)
+FAIL renders/generator_zones_duo_v1/clairiere_riviere
+   00_fond.png: grille_8px: 1108x960 | palette_pixel_art: 18593 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 1.13 % de couleurs rares (max 1.0)
+   01_terrain.png: grille_8px: 1108x960 | palette_pixel_art: 51401 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 4.21 % de couleurs rares (max 1.0)
+   02_entree_decors.png: grille_8px: 1108x960 | palette_pixel_art: 48125 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 4.42 % de couleurs rares (max 1.0)
+   03_layout_ovale.png: grille_8px: 1108x960 | calque_non_vide: 0 px visibles
+   04_eau_palette_cycling.png: grille_8px: 1108x960 | palette_pixel_art: 14503 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.21 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_1.png: grille_8px: 1108x960 | palette_pixel_art: 14503 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.21 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_2.png: grille_8px: 1108x960 | palette_pixel_art: 16719 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.46 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_3.png: grille_8px: 1108x960 | palette_pixel_art: 17576 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.18 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_4.png: grille_8px: 1108x960 | palette_pixel_art: 18003 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.72 % de couleurs rares (max 1.0)
+   [zone] aucun_calque_duplique: [['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]
+   [zone] recomposition_composite.png: 115273 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 60020 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 5.04 % de couleurs rares (max 1.0)
+FAIL renders/generator_zones_duo_v1/grotte_sinistre
+   00_fond.png: grille_8px: 1121x944 | palette_pixel_art: 40220 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 2.55 % de couleurs rares (max 1.0)
+   01_terrain.png: grille_8px: 1121x944 | palette_pixel_art: 117624 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.77 % de couleurs rares (max 1.0)
+   02_entree_decors.png: grille_8px: 1121x944 | palette_pixel_art: 51581 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 6.19 % de couleurs rares (max 1.0)
+   03_layout_ovale.png: grille_8px: 1121x944 | calque_non_vide: 0 px visibles
+   04_eau_palette_cycling.png: grille_8px: 1121x944 | palette_pixel_art: 90901 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.76 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_1.png: grille_8px: 1121x944 | palette_pixel_art: 90901 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.76 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_2.png: grille_8px: 1121x944 | palette_pixel_art: 102941 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 34.63 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_3.png: grille_8px: 1121x944 | palette_pixel_art: 105263 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 35.60 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_4.png: grille_8px: 1121x944 | palette_pixel_art: 105160 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 35.42 % de couleurs rares (max 1.0)
+   [zone] aucun_calque_duplique: [['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]
+   [zone] recomposition_composite.png: 335634 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 128379 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 11.87 % de couleurs rares (max 1.0)
+FAIL renders/generator_zones_duo_v1/maison_interieure_ovale
+   00_fond.png: palette_pixel_art: 75455 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 7.45 % de couleurs rares (max 1.0)
+   01_terrain.png: palette_pixel_art: 130874 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.74 % de couleurs rares (max 1.0)
+   02_entree_decors.png: palette_pixel_art: 143717 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.40 % de couleurs rares (max 1.0)
+   03_layout_ovale.png: calque_non_vide: 0 px visibles
+   04_eau_palette_cycling.png: palette_pixel_art: 6527 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 48.41 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_1.png: palette_pixel_art: 6527 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 48.41 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_2.png: palette_pixel_art: 6852 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 50.02 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_3.png: palette_pixel_art: 7368 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 53.23 % de couleurs rares (max 1.0)
+   04_eau_palette_cycling_phase_4.png: palette_pixel_art: 7760 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 56.40 % de couleurs rares (max 1.0)
+   [zone] aucun_calque_duplique: [['04_eau_palette_cycling.png', '04_eau_palette_cycling_phase_1.png']]
+   [zone] recomposition_composite.png: 13709 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 150213 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 15.86 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/clairiere_riviere
+   01_terrain.png: alpha_binaire: 112320 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 27248 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 27.52 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 27390 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 25.08 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/foret_sinistre
+   00_fond_biome.png: palette_pixel_art: 32787 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.19 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 129600 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 14677 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.97 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 17159 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.00 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/foret_verdoyante
+   00_fond_biome.png: palette_pixel_art: 14594 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.23 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 120000 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 15628 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 17.01 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 19374 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 17.17 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/grotte_glacee
+   00_fond_biome.png: palette_pixel_art: 6737 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 72960 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 14677 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.97 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 14765 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.90 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/grotte_volcanique
+   00_fond_biome.png: palette_pixel_art: 14298 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 50369 px semi-transparents (100.00 %, max 0.2)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+FAIL renders/network_zones_multicalques_v1/lisiere_automne
+   00_fond_biome.png: palette_pixel_art: 16372 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.26 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 129600 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 27248 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 27.52 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 29485 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 24.01 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/maison_ronde
+   00_fond_biome.png: palette_pixel_art: 21424 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.05 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 169920 px semi-transparents (100.00 %, max 0.2)
+   02_entree_forme_ovale.png: palette_pixel_art: 27248 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 27.52 % de couleurs rares (max 1.0)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 27352 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 18.16 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v1/ruines_blanches
+   00_fond_biome.png: palette_pixel_art: 25452 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 22.73 % de couleurs rares (max 1.0)
+   01_terrain.png: alpha_binaire: 129600 px semi-transparents (100.00 %, max 0.2)
+   03_cadre_layout.png: alpha_binaire: 3480 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 4257 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 3.84 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_01_cave_verte
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+FAIL renders/network_zones_multicalques_v2/zone_02_cave_volcanique
+   00_fond_biome.png: palette_pixel_art: 3271 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 1.62 % de couleurs rares (max 1.0)
+   02_entree_fond_reference.png: palette_pixel_art: 14299 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.82 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 14309 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 9.42 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_03_portail_glace
+   02_entree_fond_reference.png: palette_pixel_art: 6738 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 4.90 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 6762 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 3.91 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_04_lisiere_foret
+   02_entree_fond_reference.png: palette_pixel_art: 13084 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.41 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 13409 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 8.53 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_05_camp_souterrain
+   02_entree_fond_reference.png: palette_pixel_art: 13058 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.81 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 13067 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 9.00 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_06_maison_interieure
+   00_fond_biome.png: palette_pixel_art: 4060 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 2.38 % de couleurs rares (max 1.0)
+   02_entree_fond_reference.png: palette_pixel_art: 18845 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 20.26 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 18857 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.21 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_07_grotte_sombre
+   02_entree_fond_reference.png: palette_pixel_art: 13090 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.23 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 13316 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 8.32 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_08_sanctuaire_blanc
+   00_fond_biome.png: palette_pixel_art: 3631 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 1.92 % de couleurs rares (max 1.0)
+   02_entree_fond_reference.png: palette_pixel_art: 21830 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 22.88 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 22182 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 15.16 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_09_route_ruines
+   02_entree_fond_reference.png: palette_pixel_art: 14357 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 12.78 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 14417 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 10.19 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_10_marais_noir
+   00_fond_biome.png: palette_pixel_art: 3788 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 1.71 % de couleurs rares (max 1.0)
+   02_entree_fond_reference.png: palette_pixel_art: 28773 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 24.10 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 29000 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 19.36 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v2/zone_11_riviere_jungle
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+FAIL renders/network_zones_multicalques_v2/zone_12_clairiere_fleurs
+   00_fond_biome.png: palette_pixel_art: 5981 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 3.65 % de couleurs rares (max 1.0)
+   02_entree_fond_reference.png: palette_pixel_art: 25492 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 20.76 % de couleurs rares (max 1.0)
+   03_nouveau_layout_ovale.png: alpha_binaire: 7616 px semi-transparents (100.00 %, max 0.2)
+   04_repere_entree.png: alpha_binaire: 1121 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 25861 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 16.80 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/camp_souterrain
+   00_fond_biome_genere.png: alpha_binaire: 5925 px semi-transparents (5.07 %, max 0.2) | palette_pixel_art: 6009 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 5.32 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 1191 px semi-transparents (1.02 %, max 0.2) | palette_pixel_art: 9841 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.73 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 13521 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.89 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 19374 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 42505 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 13523 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.89 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/clairiere_fleurs
+   00_fond_biome_genere.png: alpha_binaire: 22536 px semi-transparents (19.40 %, max 0.2) | palette_pixel_art: 19928 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 23.38 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3866 px semi-transparents (3.52 %, max 0.2) | palette_pixel_art: 21517 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 22.08 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 26419 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 27.23 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 65354 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 10557 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 26730 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 27.66 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/foret_verdoyante
+   00_fond_biome_genere.png: alpha_binaire: 28469 px semi-transparents (24.23 %, max 0.2) | palette_pixel_art: 11137 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 12.81 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 6733 px semi-transparents (6.19 %, max 0.2) | palette_pixel_art: 11409 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.73 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 14779 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.72 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 39777 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 6540 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 15195 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 15.21 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/grotte_glacee
+   00_fond_biome_genere.png: alpha_binaire: 26834 px semi-transparents (31.08 %, max 0.2) | palette_pixel_art: 6276 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.28 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 6504 px semi-transparents (8.53 %, max 0.2) | palette_pixel_art: 9305 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.17 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 6737 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 27399 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 444 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 6738 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/grotte_sinistre
+   00_fond_biome_genere.png: alpha_binaire: 21924 px semi-transparents (16.30 %, max 0.2) | palette_pixel_art: 8000 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 7.19 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3530 px semi-transparents (2.74 %, max 0.2) | palette_pixel_art: 11422 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.02 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 13978 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.63 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 35871 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 12440 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 14162 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 11.80 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/grotte_volcanique
+   00_fond_biome_genere.png: alpha_binaire: 23148 px semi-transparents (37.04 %, max 0.2) | palette_pixel_art: 9056 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.36 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 5376 px semi-transparents (10.13 %, max 0.2) | palette_pixel_art: 17889 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 44.02 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 14298 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 30687 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 14298 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/lisiere_foret
+   00_fond_biome_genere.png: alpha_binaire: 22536 px semi-transparents (19.40 %, max 0.2) | palette_pixel_art: 10615 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.87 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3866 px semi-transparents (3.52 %, max 0.2) | palette_pixel_art: 11654 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.50 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 15012 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.74 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 43582 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 9809 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 15065 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 16.80 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/maison_interieure
+   00_fond_biome_genere.png: alpha_binaire: 6690 px semi-transparents (5.72 %, max 0.2) | palette_pixel_art: 21711 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 22.79 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 1455 px semi-transparents (1.25 %, max 0.2) | palette_pixel_art: 17910 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 17.53 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 19854 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 20.55 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 39897 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 40001 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 19856 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 20.55 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/marais_noir
+   00_fond_biome_genere.png: alpha_binaire: 22536 px semi-transparents (19.40 %, max 0.2) | palette_pixel_art: 27040 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 33.59 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3866 px semi-transparents (3.52 %, max 0.2) | palette_pixel_art: 26704 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.69 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 29870 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 31.96 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 51410 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 10616 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 30078 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 32.19 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/riviere_jungle
+   00_fond_biome_genere.png: alpha_binaire: 29274 px semi-transparents (23.46 %, max 0.2) | palette_pixel_art: 2755 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 2.38 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 8008 px semi-transparents (6.88 %, max 0.2) | palette_pixel_art: 4045 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 3.03 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 28726 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 3564 px différents de l'empilement
+FAIL renders/network_zones_multicalques_v3/route_ruines
+   00_fond_biome_genere.png: alpha_binaire: 22536 px semi-transparents (19.40 %, max 0.2) | palette_pixel_art: 10615 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.87 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3866 px semi-transparents (3.52 %, max 0.2) | palette_pixel_art: 11654 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.50 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 15012 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.74 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 43582 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 9809 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 15065 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 16.80 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v3/ruines_blanches
+   00_fond_biome_genere.png: alpha_binaire: 16007 px semi-transparents (15.03 %, max 0.2) | palette_pixel_art: 9570 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.59 % de couleurs rares (max 1.0)
+   01_sol_terrain_genere.png: alpha_binaire: 3820 px semi-transparents (3.74 %, max 0.2) | palette_pixel_art: 16403 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 17.49 % de couleurs rares (max 1.0)
+   02_entree_angle_reference.png: palette_pixel_art: 22555 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.41 % de couleurs rares (max 1.0)
+   03_decors_lieux_genere.png: alpha_binaire: 60386 px semi-transparents (100.00 %, max 0.2)
+   04_cadre_layout_genere.png: alpha_binaire: 6356 px semi-transparents (100.00 %, max 0.2)
+   [zone] recomposition_composite.png: 19653 px différents de l'empilement
+   [zone] composite.png:palette_pixel_art: 22814 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 26.82 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/camp_souterrain
+   00_fond_murs_parois.png: palette_pixel_art: 13677 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 10.50 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 13459 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.01 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: palette_pixel_art: 13643 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.95 % de couleurs rares (max 1.0)
+   03_decor_existant.png: palette_pixel_art: 13606 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.86 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: alpha_binaire: 3468 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 13607 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 10.46 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/clairiere_fleurs
+   00_fond_murs_parois.png: palette_pixel_art: 14075 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 34.30 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 27545 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.58 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 27545 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 26.58 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 27545 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 26.58 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/foret_verdoyante
+   00_fond_murs_parois.png: palette_pixel_art: 5377 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.46 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 13866 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.70 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 13866 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 13.70 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 13866 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.70 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/grotte_glacee
+   00_fond_murs_parois.png: palette_pixel_art: 5226 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 20.26 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 6737 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 6737 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 6737 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 9.24 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/grotte_sinistre
+   00_fond_murs_parois.png: palette_pixel_art: 7573 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.00 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 14320 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.03 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 14320 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 11.03 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 14320 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 11.03 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/grotte_volcanique
+   00_fond_murs_parois.png: palette_pixel_art: 6803 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 43.60 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 14298 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 14298 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 14298 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 32.32 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/lisiere_foret
+   00_fond_murs_parois.png: palette_pixel_art: 8332 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 21.54 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 15317 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 15317 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 15317 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/maison_interieure
+   00_fond_murs_parois.png: palette_pixel_art: 20340 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.23 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 19768 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 23.98 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: palette_pixel_art: 19957 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 22.33 % de couleurs rares (max 1.0)
+   03_decor_existant.png: palette_pixel_art: 18920 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 21.29 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: alpha_binaire: 3468 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 18921 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 15.23 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/marais_noir
+   00_fond_murs_parois.png: palette_pixel_art: 13310 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 31.31 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 28966 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.72 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 28966 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 29.72 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 28966 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 29.72 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/riviere_jungle
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+FAIL renders/network_zones_multicalques_v4/route_ruines
+   00_fond_murs_parois.png: palette_pixel_art: 8332 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 21.54 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 15317 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: calque_non_vide: 0 px visibles
+   03_decor_existant.png: palette_pixel_art: 15317 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: calque_non_vide: 0 px visibles
+   [zone] aucun_calque_duplique: [['01_sol_terrain_existant.png', '03_decor_existant.png'], ['02_salle_vide_layout.png', '04_cadre_layout.png']]
+   [zone] composite_composite.png_distinct_des_calques: identique à ['01_sol_terrain_existant.png', '03_decor_existant.png']
+   [zone] composite.png:palette_pixel_art: 15317 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 16.06 % de couleurs rares (max 1.0)
+FAIL renders/network_zones_multicalques_v4/ruines_blanches
+   00_fond_murs_parois.png: palette_pixel_art: 16863 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.17 % de couleurs rares (max 1.0)
+   01_sol_terrain_existant.png: palette_pixel_art: 15928 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 20.19 % de couleurs rares (max 1.0)
+   02_salle_vide_layout.png: palette_pixel_art: 14978 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 15.64 % de couleurs rares (max 1.0)
+   03_decor_existant.png: palette_pixel_art: 13088 couleurs (max 2048) | pas_de_flou_ni_anticrenelage: 14.62 % de couleurs rares (max 1.0)
+   04_cadre_layout.png: alpha_binaire: 3468 px semi-transparents (100.00 %, max 0.2)
+   [zone] composite.png:palette_pixel_art: 14828 couleurs (max 2048)
+   [zone] composite.png:pas_de_flou_ni_anticrenelage: 13.54 % de couleurs rares (max 1.0)
