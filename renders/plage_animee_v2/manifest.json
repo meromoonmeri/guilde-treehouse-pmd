@@ -1,0 +1,19 @@
+{
+  "id": "plage_animee_v2",
+  "methode": "3 textures generees (mer/sable/roche) sur masques V1 + eau indexee 2x8 + ecume 4 niveaux, 8 LUTs ; PAS des frames officielles",
+  "taille": [
+    456,
+    480
+  ],
+  "grille_px": 8,
+  "frames": 16,
+  "duree_ms": 60,
+  "cycle_ms_total": 960,
+  "sha256": {
+    "brut_mer.png": "1334d26b3d67af5ff19e0928e42a844f3336a29305be08440144c6775acff8bf",
+    "brut_sable.png": "caccbe994340941cde466c7c2909aac8f79e353335e566855255fa674efd3ddc",
+    "brut_roche.png": "a80488fe5aa04e373c7864ea73d38bc2608d9908a4f41df69912cca402149cee"
+  },
+  "runtime_PMDO": "NON TESTE",
+  "art_approuve": false
+}

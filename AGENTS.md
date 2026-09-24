@@ -443,3 +443,16 @@ strict paves, 100 % sable teste), 6 calques (mer, sable, falaises, ecume,
 8 rochers/monticules, vide), murs par propagation, recomposition exacte, ORA.
 10 tests PASS ; dessins GENERES (pas natifs), PMDO NON TESTE, art non approuve.
 Registre natif inchange. Prochaine map a choisir.
+
+## Plage animee V2 — 24 septembre 2026 (textures/couche + eau palette cycling)
+
+Demande : generateur = plusieurs calques (eau animee cycling canonique, sable,
+roche). `source/plage_animee_v2/`, `renders/plage_animee_v2/`, viewer
+`apercu_plage_animee_v2.html`, ZIP 70 fichiers. 3 textures generees sur masques
+V1 byte-exacts ; eau indexee rampe 16 + 16 LUTs rotation +1 (60 ms, 0,96 s),
+derive vers rives, boucle exacte, transitions ~13 ; ecume 4 niveaux + 16 LUTs
+sinus ; ORA 36 calques. 10 tests PASS. Corrections : index en L (P reapplati
+par Pillow), rampe unique 16 (2x8 plate), 16 phases (8 ne bouclaient pas),
+degrades p2-p98 (medianes effondrees). Sandbox reset 5e fois : reintegre
+ff-only, venv reconstruite. Cycling NOUVEAU inspire canon, dessins generes,
+PMDO NON TESTE. V1 intacte, registre natif inchange.

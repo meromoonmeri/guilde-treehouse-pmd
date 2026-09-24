@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Plage animée V2 — textures par couche, eau en palette cycling
+
+- **[Atelier animé : lecture, phases, calques](apercu_plage_animee_v2.html)**.
+- [Couches, 16 phases, ORA et LUTs](renders/plage_animee_v2/README.md) · [pack ZIP](renders/plage_animee_v2_pack.zip).
+
+3 textures générées (mer, sable, roche) sur le layout V1 ; eau indexée 16 couleurs + 16 tables en rotation (16×60 ms, boucle exacte, dérive vers les rives), écume scintillante. **Cycling nouveau inspiré du canon, dessins générés.** Dix tests PASS, PMDO non testé.
+
 ## Plage / arène côtière V1 — rendu généré, six calques statiques
 
 - **[Atelier : calques, grille 8 px et zoom](apercu_plage_arene_v1.html)**.

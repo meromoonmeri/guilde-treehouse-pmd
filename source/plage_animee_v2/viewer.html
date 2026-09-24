@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plage animée V2 — palette cycling (8 phases)</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#14141c;color:#eee;margin:0;padding:16px}
+h1{font-size:20px;margin:0 0 4px} p{margin:4px 0 12px;color:#bbb;font-size:13px}
+#bar,#bar2{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
+label{background:#23232e;border:1px solid #444;border-radius:6px;padding:4px 8px;font-size:13px;cursor:pointer}
+select,button{background:#23232e;color:#eee;border:1px solid #444;border-radius:6px;padding:4px 8px;font-size:13px}
+#stage{position:relative;display:inline-block;border:1px solid #555;background:repeating-conic-gradient(#666 0 25%,#999 0 50%) 0 0/16px 16px}
+#stage img.layer{position:absolute;left:0;top:0;width:100%;height:100%;image-rendering:pixelated;display:none}
+#stage.magenta{background:#f0f}
+#grille{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:none;
+background-image:linear-gradient(#0ff3 1px,transparent 1px),linear-gradient(90deg,#0ff3 1px,transparent 1px)}
+.warn{color:#ffb35c}
+</style>
+</head>
+<body>
+<h1>Plage animée V2 — 456×480, eau en palette cycling (16 × 60 ms)</h1>
+<p>Textures <b>générées par couche</b> (mer, sable, roche) sur le layout V1.
+Eau : 1 image indexée 16 couleurs + 16 tables en rotation (+1/phase), silhouette
+fixe, boucle exacte. <span class="warn">Cycling nouveau inspiré du canon, pas des frames officielles ; PMDO non testé.</span></p>
+<div id="bar">
+<span id="cases"></span>
+<label>Zoom <select id="zoom"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select></label>
+<label><input type="checkbox" id="grille_on"> Grille 8px</label>
+<label><input type="checkbox" id="magenta_on"> Fond magenta</label>
+<button id="play">⏸ Pause</button>
+<label>Phase <input type="range" id="phase" min="0" max="15" value="0" style="width:120px"></label>
+<span id="phasetxt">f0</span>
+</div>
+<div id="bar2"></div>
+<div id="stage"><div id="grille"></div></div>
+<script>
+const D=__DATA__;
+const stage=document.getElementById('stage'), bar2=document.getElementById('bar2');
+const NOMS={vide:'06_vide — Vide','sable':'02_sable','falaises':'03_falaises','rochers':'05_rochers',mer:'01_mer (8f)',ecume:'04_ecume (8f)'};
+const groups={};
+function mkimg(uri){const im=document.createElement('img');im.className='layer';im.src=uri;stage.appendChild(im);return im;}
+D.statiques.forEach((c,i)=>{groups[['vide','sable','falaises','rochers'][i]]={ims:[mkimg(c.uri)],on:true};});
+groups.mer={ims:D.mer.map(mkimg),on:true};
+groups.ecume={ims:D.ecume.map(mkimg),on:true};
+Object.keys(groups).forEach(k=>{
+  const l=document.createElement('label');
+  l.innerHTML=`<input type="checkbox" checked> ${NOMS[k]}`;
+  l.firstChild.onchange=e=>{groups[k].on=e.target.checked;show();};
+  bar2.appendChild(l);
+});
+let f=0, joue=true;
+function show(){
+  Object.values(groups).forEach(g=>g.ims.forEach(im=>im.style.display='none'));
+  Object.values(groups).forEach(g=>{if(!g.on)return;const im=g.ims.length===1?g.ims[0]:g.ims[f];im.style.display='block';});
+  document.getElementById('phasetxt').textContent='f'+f;
+  document.getElementById('phase').value=f;
+}
+setInterval(()=>{if(joue){f=(f+1)%D.frames;show();}},D.ms);
+document.getElementById('play').onclick=e=>{joue=!joue;e.target.textContent=joue?'⏸ Pause':'▶ Lecture';};
+document.getElementById('phase').oninput=e=>{f=+e.target.value;show();};
+function zoom(){
+  const z=+document.getElementById('zoom').value;
+  stage.style.width=D.largeur*z+'px'; stage.style.height=D.hauteur*z+'px';
+  document.getElementById('grille').style.backgroundSize=`${8*z}px ${8*z}px`;
+}
+document.getElementById('zoom').onchange=zoom;
+document.getElementById('grille_on').onchange=e=>document.getElementById('grille').style.display=e.target.checked?'block':'none';
+document.getElementById('magenta_on').onchange=e=>stage.classList.toggle('magenta',e.target.checked);
+document.getElementById('cases').textContent=`${D.largeur}×${D.hauteur} · ${D.frames} phases × ${D.ms} ms`;
+zoom();show();
+</script>
+</body>
+</html>
