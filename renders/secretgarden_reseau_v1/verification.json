@@ -1,0 +1,16 @@
+{
+  "scenes": 6,
+  "aligned_layers": 46,
+  "ports": 16,
+  "deferred": [
+    "couloir_t (T-junction N/E/W, bottom closed) — image limit reached, next turn"
+  ],
+  "checks": [
+    "Reference SHA256 identical since build",
+    "6 compositions identical to active-layer recomposition",
+    "All layers 512x512",
+    "Native grass patch strictly equal to secretgarden.png crop",
+    "Build+verify: 16 64px connectors, 24px opaque band each"
+  ],
+  "runtime_validated": false
+}

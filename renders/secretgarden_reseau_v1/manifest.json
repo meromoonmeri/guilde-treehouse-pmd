@@ -1,0 +1,297 @@
+{
+  "reference": "secretgarden.png (user commit)",
+  "reference_sha256": "e5a41562745c6fbfd3bb9edceed054810bbb07adf2f1b2a74e7ece8e19a2164f",
+  "patch_box": [
+    190,
+    240,
+    222,
+    272
+  ],
+  "size": [
+    512,
+    512
+  ],
+  "port_width": 64,
+  "opaque_depth": 24,
+  "strip_depth": 32,
+  "deferred": [
+    "couloir_t (T-junction N/E/W, bottom closed) — image limit reached, next turn"
+  ],
+  "runtime_validated": false,
+  "rooms": [
+    {
+      "id": "couloir_ns",
+      "title": "Couloir nord-sud fleuri",
+      "raw": "couloir_ns.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_N",
+        "06_acces_S"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "couloir_ew",
+      "title": "Couloir est-ouest fleuri",
+      "raw": "couloir_ew.png",
+      "ports": [
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "salle_traversee",
+      "title": "Salle traversante",
+      "raw": "salle_traversee.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_N",
+        "06_acces_S"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "salle_laterale",
+      "title": "Salle laterale",
+      "raw": "salle_laterale.png",
+      "ports": [
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_W",
+        "06_acces_S"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "salle_carrefour",
+      "title": "Salle carrefour",
+      "raw": "salle_carrefour.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_N",
+        "06_acces_S",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    },
+    {
+      "id": "carrefour_clairiere",
+      "title": "Carrefour de la clairiere",
+      "raw": "carrefour_clairiere.png",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "06_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "06_acces_S.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "06_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "02_vegetation_fond",
+        "03_massif_gauche",
+        "04_massif_droit",
+        "05_vegetation_premier_plan",
+        "06_acces_N",
+        "06_acces_S",
+        "06_acces_E",
+        "06_acces_W"
+      ],
+      "optional": [],
+      "checks": {
+        "partitions_exact": true,
+        "ports_opaque_band": true
+      }
+    }
+  ]
+}
