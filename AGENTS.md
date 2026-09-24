@@ -457,13 +457,14 @@ methode=generee_magenta, natif=False, runtime NOT TESTED. Sandbox reset en cours
 .venv reconstruite, historique local retombe a d5c79863 (fichiers intacts, push distant
 3a7034d7 conserve) ; reprise par soft-reset sur la pointe distante avant push V2.
 
-## Reference sampler — generateur configure sur echantillons (23 septembre 2026)
+## Echantillonneur magenta — generateur configure sur les references (23 septembre 2026)
 
-Correction : utiliser les OUTILS pour configurer le generateur sur les echantillons
-de la reference. `source/reference_sampler/sample.py` : palette MEDIANCUT + patchs
-(extraits originaux, plus gros composant par couleur) + mesures + `prompt.txt` strict.
-Packs `aride/plage/jardin` prets ; appel contraint = images[reference, patch_board] +
-prompt compact. Lecon : 16 hex + 2 refs = MAX_TOKENS, compacter a ≤10 hex.
-Preuve `proof/aride_strict_v1.png` : 95,4% pixels a Δ≤30 de la palette verrouillee,
-99,2% a Δ≤60 (mesure outil, pas impression). 3 tests PASS. Remap optionnel vers la
-palette au build si strict absolu exige. Prochaine etape : lots aride/plage/jardin.
+Demande : configurer le generateur sur les echantillons de la reference.
+`source/magenta_sampler/sample.py` (garde __main__, zero effet import) : regles calibrees
+sur sondages, configs JSON + planches palettes + contraintes TXT (hex) + audits bruts.
+Resultats : Southern = ZERO marron (troncs verts sombres ; ecart DA des troncs V2
+documente, contrainte pour la suite) ; terrain V2 : eau 77 / falaise 47 / herbe 46 de
+distance mediane, chutes trop pales. Boucle fermee sur un sol regenere aux hex
+echantillonnes : herbe 26.1 vs 8.6 pour l'ancien -> NOUVEAU BRUT REJETE sur audit,
+conserve dans bruts/, sol V2 inchange. Le sampler arbitre chiffre les remplacements.
+README dans le dossier. Sandbox re-resettee (.venv reconstruite a chaque reprise).
