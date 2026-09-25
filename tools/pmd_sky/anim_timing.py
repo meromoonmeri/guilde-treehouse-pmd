@@ -14,7 +14,7 @@ for code in sys.argv[2:]:
     if bpl.has_palette_animation:
         for i, s in enumerate(bpl.animation_specs):
             if s.number_of_frames:
-                r["palette"].append({"ligne_palette": 10 + i, "frames": s.number_of_frames, "duree_frames_60fps": s.duration_per_frame,
+                r["palette"].append({"spec_animation": i, "frames": s.number_of_frames, "duree_frames_60fps": s.duration_per_frame,
                                      "ms": round(s.duration_per_frame * 1000 / 60, 1), "cycle_ms": round(s.number_of_frames * s.duration_per_frame * 1000 / 60)})
     for p in sorted(glob.glob(f"{base}/{code}[0-9].bpa")):
         b = FileType.BPA.deserialize(open(p, "rb").read())

@@ -466,3 +466,7 @@ Sommet uniforme (chemin remappé au gris du sommet), brouillard roche en palette
 ## Audit PMD Sky (galerie Project Pokémon + PMD-SKY-PMDO-PORT)
 
 Voir `MANUEL_PMD_SKY_ANIMATION_PMDO.md`. Règle : durées réelles BPL/BPA copiées en FrameLength (60 fps), un calque par horloge, couche haute BMA en premier plan. Outils `tools/pmd_sky/`, données `audits/pmd_sky_port/`.
+
+## Zone D06P11 V1 (textures ROM)
+
+Première zone qui réutilise les textures PMD Sky : `source/zone_d06p11_v1/`, aperçu `apercu_zone_d06p11_v1.html`. Timings ROM respectés, calque par horloge.
