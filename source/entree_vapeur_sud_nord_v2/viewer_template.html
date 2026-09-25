@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrée Vapeur · sud → nord · V2 · eau façon Métano + bulles</title>
+<style>
+body{background:#14201d;color:#e4ece6;font:15px/1.55 system-ui,sans-serif;margin:0;padding:24px}
+main{max-width:1180px;margin:auto}
+h1{font-size:30px;margin:0 0 6px}
+p{color:#b9cbc2;max-width:78ch}
+.wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.stage{position:relative;background:#0b1211;overflow:auto;max-height:86vh;border:1px solid #2c3e38}
+canvas{display:block;image-rendering:pixelated}
+aside{flex:1;min-width:280px;max-width:420px}
+fieldset{border:1px solid #2c3e38;border-radius:8px;margin:0 0 14px;padding:10px 14px}
+legend{color:#d8c98c;padding:0 6px}
+label{display:block;padding:3px 0;cursor:pointer}
+button{background:#cfe6da;color:#12302a;border:0;border-radius:6px;padding:8px 14px;margin:2px 4px 2px 0;cursor:pointer;font-weight:600}
+button.on{background:#d8c98c}
+.note{border-left:3px solid #d8c98c;padding-left:12px;font-size:14px}
+code{color:#cfe6da}
+</style>
+<main>
+<h1>Entrée Vapeur V2 — eau façon rivière de Métano, bulles de marais</h1>
+<p>Même terrain que la V1. L'eau reprend la <strong>structure et la cadence de la rivière de Métano</strong> : aplat, bande sombre de berge, frange dentelée et lèvre claire qui ondulent sur 4 phases de 10 ticks. Les scintillements utilisent les pixels Métano recolorés. Les <strong>bulles générées</strong> montent, gonflent, éclatent et laissent une ride : 24 phases de 5 ticks, 9 émetteurs décalés. La scène boucle en 120 ticks (2 s).</p>
+<div class="wrap">
+  <div class="stage" id="stage"><canvas id="c"></canvas></div>
+  <aside>
+    <fieldset><legend>Lecture</legend>
+      <button id="play">Pause</button><button id="step">+5 ticks</button>
+      <div id="phase"></div>
+    </fieldset>
+    <fieldset><legend>Affichage</legend>
+      <button data-zoom="1">1×</button><button data-zoom="2" class="on">2×</button><button data-zoom="3">3×</button>
+      <label><input type="checkbox" id="grid"> Grille 8 px</label>
+      <label><input type="checkbox" id="coll"> Collisions et marqueurs</label>
+      <label><input type="checkbox" id="view"> Cadre viewport PMDO ×1 (320×240) à l'arrivée</label>
+    </fieldset>
+    <fieldset><legend>Calques (bas → haut)</legend><div id="layers"></div>
+      <button id="solo">Tout afficher</button>
+    </fieldset>
+    <fieldset><legend>Poses des bulles (×4)</legend><div id="poses" style="display:flex;flex-wrap:wrap;gap:6px"></div></fieldset>
+    <fieldset><legend>Export</legend>
+      <button id="png">PNG de la vue actuelle (1×)</button>
+    </fieldset>
+    <p class="note">Le mouvement de l'eau est <strong>inspiré</strong> de Métano : bandes recalculées sur nos bassins, couleurs choisies selon les rôles Métano. Ce ne sont pas des tuiles natives. Les bulles sont un dessin généré, avec une chronologie créée par nous : ce n'est pas une animation officielle. Marqueurs : jaune = <code>entrance</code>, cyan = <code>donjon_seuil</code>. Aucun test PMDO en jeu.</p>
+  </aside>
+</div>
+</main>
+<script>
+const D=__DATA__;const [W,H]=D.size;const c=document.getElementById('c'),x=c.getContext('2d');
+function img(u){const i=new Image();i.src=u;return i}
+const water=D.water.map(img),spark=D.sparks.map(img),bub=D.bubbles.map(img),layers=D.layers.map(l=>({id:l.id,im:img(l.uri)})),coll=img(D.collisions);
+const box=document.getElementById('layers'),checks={};
+[{id:'00_eau_metano'},{id:'01_scintillements'},{id:'02_bulles'},...layers].forEach(l=>{const lab=document.createElement('label'),ch=document.createElement('input');ch.type='checkbox';ch.checked=true;ch.onchange=draw;checks[l.id]=ch;lab.append(ch,' '+l.id);box.append(lab)});
+D.poses.forEach(p=>{const i=img(p.uri);i.width=96;i.height=96;i.title=p.id;i.style.cssText='image-rendering:pixelated;background:'+D.surface;document.getElementById('poses').append(i)});
+let zoom=2,tick=0,playing=true,last=performance.now();const STEP=D.bubbleTicks,MS=STEP*1000/60;
+function render(ctx){ctx.clearRect(0,0,W,H);const wp=Math.floor(tick/D.waterTicks)%water.length,bp=Math.floor(tick/D.bubbleTicks)%bub.length;
+ if(checks['00_eau_metano'].checked)ctx.drawImage(water[wp],0,0);
+ if(checks['01_scintillements'].checked)ctx.drawImage(spark[wp],0,0);
+ if(checks['02_bulles'].checked)ctx.drawImage(bub[bp],0,0);
+ layers.forEach(l=>{if(checks[l.id].checked)ctx.drawImage(l.im,0,0)});
+ if(document.getElementById('coll').checked)ctx.drawImage(coll,0,0);}
+function draw(){c.width=W*zoom;c.height=H*zoom;x.imageSmoothingEnabled=false;x.save();x.scale(zoom,zoom);render(x);x.restore();
+ if(document.getElementById('grid').checked){x.strokeStyle='rgba(255,255,255,.18)';x.lineWidth=1;x.beginPath();
+  for(let i=0;i<=W;i+=8){x.moveTo(i*zoom+.5,0);x.lineTo(i*zoom+.5,H*zoom)}for(let j=0;j<=H;j+=8){x.moveTo(0,j*zoom+.5);x.lineTo(W*zoom,j*zoom+.5)}x.stroke()}
+ if(document.getElementById('view').checked){const cx=Math.min(Math.max(D.entry[0]+8-160,0),W-320),cy=Math.min(Math.max(D.entry[1]+8-120,0),H-240);
+  x.strokeStyle='#ffe066';x.lineWidth=2;x.strokeRect(cx*zoom,cy*zoom,320*zoom,240*zoom)}
+ document.getElementById('phase').textContent='tick '+tick+' / '+D.loop+' · eau '+(Math.floor(tick/D.waterTicks)%water.length)+'/4 · bulles '+(Math.floor(tick/D.bubbleTicks)%bub.length)+'/24';}
+function adv(){tick=(tick+STEP)%D.loop;draw()}
+function loop(t){if(playing&&t-last>=MS){last=t;adv()}requestAnimationFrame(loop)}
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Lecture'};
+document.getElementById('step').onclick=adv;
+document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{zoom=+b.dataset.zoom;document.querySelectorAll('[data-zoom]').forEach(o=>o.classList.toggle('on',o===b));draw()});
+['grid','coll','view'].forEach(id=>document.getElementById(id).onchange=draw);
+document.getElementById('solo').onclick=()=>{Object.values(checks).forEach(ch=>ch.checked=true);draw()};
+document.getElementById('png').onclick=()=>{const o=document.createElement('canvas');o.width=W;o.height=H;render(o.getContext('2d'));const a=document.createElement('a');a.download='ESN2_vue_tick'+String(tick).padStart(3,'0')+'.png';a.href=o.toDataURL('image/png');a.click()};
+Promise.all([...water,...spark,...bub,...layers.map(l=>l.im),coll].map(i=>i.decode())).then(()=>{draw();requestAnimationFrame(loop)});
+</script>
+</html>

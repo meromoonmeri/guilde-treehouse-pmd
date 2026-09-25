@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Vapeur V2 — eau façon rivière de Métano + bulles de marais (25 septembre 2026)
+
+- Aperçu : `apercu_entree_vapeur_sud_nord_v2.html`.
+- Lot : `renders/entree_vapeur_sud_nord_v2/` (`ESN2_projet_pmdo_0812.zip`, `ESN2_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_vapeur_sud_nord_v2/`.
+
+Le terrain V1 est inchangé. L'eau reprend la structure et la cadence de la rivière Métano (4 phases × 10 ticks) : bande de berge ondulante, lèvre claire, aplat. Les scintillements utilisent les pixels Métano recolorés. Les 9 bulles générées sont décalées : elles montent, gonflent et éclatent, sur 24 phases de 5 ticks. 9 tests PASS. L'eau est inspirée de Métano, pas faite de tuiles natives ; les bulles sont générées. Pas de test PMDO en jeu.
+
 ## Entrée Vapeur — arrivée au sud, grotte au nord (rendu généré, 25 septembre 2026)
 
 - **[Aperçu interactif : calques, eau animée, grille, collisions et viewport](apercu_entree_vapeur_sud_nord_v1.html)**.

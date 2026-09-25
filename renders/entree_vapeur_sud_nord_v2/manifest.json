@@ -1,0 +1,338 @@
+{
+  "lot": "entree_vapeur_sud_nord_v2",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "terrain": "V1 inchange (7 calques relus depuis renders/entree_vapeur_sud_nord_v1/calques) ; calque V1 ombres retire.",
+  "layer_order_bottom_to_top": [
+    "animation/eau/ESN2_00_eau_metano_fX.png",
+    "animation/scintillements/ESN2_01_scintillements_fX.png",
+    "animation/bulles/ESN2_02_bulles_fXX.png",
+    "calques/ESN2_03_sol_complet.png",
+    "calques/ESN2_04_herbe.png",
+    "calques/ESN2_05_chemin_terre.png",
+    "calques/ESN2_06_buissons.png",
+    "calques/ESN2_07_falaises.png",
+    "calques/ESN2_08_piliers_entree.png",
+    "calques/ESN2_09_bouche_grotte.png"
+  ],
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "loop_s": 0.6666666666666666,
+    "modele": "riviere Metano Town (Halcyon da6c2130), FrameLength 10 et 4 phases verifies dans source/eau_metano/animations_carte.json",
+    "structure": "aplat + bande sombre ~4 px + 1 px intermediaire + frange dentelee ~3 px + levre claire, recalcules sur nos bassins",
+    "profil_metano_non_surface_par_distance_1_a_10px": [
+      [
+        0.767,
+        0.866,
+        0.857,
+        0.824,
+        0.71,
+        0.552,
+        0.375,
+        0.231,
+        0.093,
+        0.035
+      ],
+      [
+        0.806,
+        0.863,
+        0.843,
+        0.827,
+        0.74,
+        0.573,
+        0.397,
+        0.209,
+        0.079,
+        0.043
+      ],
+      [
+        0.798,
+        0.869,
+        0.845,
+        0.825,
+        0.753,
+        0.588,
+        0.387,
+        0.173,
+        0.071,
+        0.04
+      ],
+      [
+        0.812,
+        0.878,
+        0.843,
+        0.825,
+        0.757,
+        0.611,
+        0.427,
+        0.228,
+        0.095,
+        0.035
+      ]
+    ],
+    "couleurs": {
+      "surface": [
+        43,
+        115,
+        112
+      ],
+      "bande": [
+        20,
+        62,
+        84
+      ],
+      "contour": [
+        14,
+        50,
+        74
+      ],
+      "inter": [
+        30,
+        92,
+        100
+      ],
+      "accent": [
+        36,
+        104,
+        108
+      ],
+      "clair": [
+        84,
+        158,
+        146
+      ],
+      "reflet": [
+        190,
+        226,
+        214
+      ]
+    },
+    "transposition": "palette a la main, roles et ordre de luminance Metano (surface/bande/contour/inter/accent/clair/reflet) ; couleurs hors roles des scintillements : HSV teinte -10 deg, sat x1.45, valeur x0.5",
+    "origine": "Structure et cadence Metano ; pixels et couleurs recalcules. PAS des tuiles Metano natives."
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "sha256": "062ba6fbecf3e62a4018f0b2eed04f6f23479bb2568d6dc81d85585b21c9e063",
+    "familles": {
+      "A_16x24": "colonnes 0-1, rangees 0-2, pas 3",
+      "B_24x16": "colonnes 2-4, rangees 0-1, pas 2",
+      "C_16x32": "colonnes 0-1, rangees 12-15, pas 4"
+    },
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          296,
+          520
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          264,
+          344
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          48,
+          536
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          392,
+          592
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          328,
+          488
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          136,
+          336
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          288,
+          352
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          72,
+          528
+        ]
+      }
+    ],
+    "origine": "pixels Metano reels, couleurs transposees, positions nouvelles, phases synchrones comme Metano"
+  },
+  "bubbles": {
+    "brut": "source/entree_vapeur_sud_nord_v2/bruts/bulles_8_poses.png",
+    "sha256": "3643e86790266a300d43e39dd11737ef88aca3b5d36021fc3ca3fa51d1bac784",
+    "brut_recu": "2 rangees x 6 cases (demande : 1 x 8), doublons ; disque sombre (rangee 2, case 3) ecarte",
+    "poses": [
+      "point",
+      "petite",
+      "ronde",
+      "dome",
+      "tension",
+      "eclatement",
+      "anneaux",
+      "anneau_final"
+    ],
+    "derivee": "tension = dome + gouttelettes de la pose tension ; anneaux recolores clair ; anneau_final = anneau exterieur seul, teinte accent",
+    "reduction": "fenetre 240 px -> 24 px, facteur 0.1 identique pour toutes les poses ; couleurs = palette eau V2 par rang de luminance",
+    "timeline_phases": [
+      "point",
+      "point",
+      "petite",
+      "petite",
+      "ronde",
+      "ronde",
+      "dome",
+      "dome",
+      "dome",
+      "tension",
+      "tension",
+      "eclatement",
+      "eclatement",
+      "anneaux",
+      "anneaux",
+      "anneau_final",
+      "anneau_final"
+    ],
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "loop_s": 2.0,
+    "emetteurs": [
+      {
+        "xy": [
+          8,
+          536
+        ],
+        "decalage": 0
+      },
+      {
+        "xy": [
+          8,
+          584
+        ],
+        "decalage": 7
+      },
+      {
+        "xy": [
+          280,
+          440
+        ],
+        "decalage": 14
+      },
+      {
+        "xy": [
+          368,
+          528
+        ],
+        "decalage": 21
+      },
+      {
+        "xy": [
+          320,
+          520
+        ],
+        "decalage": 4
+      },
+      {
+        "xy": [
+          112,
+          488
+        ],
+        "decalage": 11
+      },
+      {
+        "xy": [
+          112,
+          392
+        ],
+        "decalage": 18
+      },
+      {
+        "xy": [
+          304,
+          320
+        ],
+        "decalage": 1
+      },
+      {
+        "xy": [
+          360,
+          488
+        ],
+        "decalage": 8
+      }
+    ],
+    "origine": "dessin GENERE + chronologie creee par nous ; pas une animation officielle"
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      200,
+      616
+    ],
+    "threshold_px": [
+      208,
+      224
+    ],
+    "path_found_16x16": true,
+    "blocked_cells": 3402
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "esn2_entree_vapeur_jour",
+    "namespace": "entree_vapeur_sud_nord_v2",
+    "tiles_per_bank": {
+      "ESN2_00_EAU": 2567,
+      "ESN2_01_SCINTILLEMENTS": 36,
+      "ESN2_02_BULLES": 52,
+      "ESN2_03_SOL_COMPLET": 3624,
+      "ESN2_04_HERBE": 1251,
+      "ESN2_05_CHEMIN_TERRE": 94,
+      "ESN2_06_BUISSONS": 1133,
+      "ESN2_07_FALAISES": 1706,
+      "ESN2_08_PILIERS_ENTREE": 125,
+      "ESN2_09_BOUCHE_GROTTE": 22
+    },
+    "banks": [
+      "ESN2_00_EAU",
+      "ESN2_01_SCINTILLEMENTS",
+      "ESN2_02_BULLES",
+      "ESN2_03_SOL_COMPLET",
+      "ESN2_04_HERBE",
+      "ESN2_05_CHEMIN_TERRE",
+      "ESN2_06_BUISSONS",
+      "ESN2_07_FALAISES",
+      "ESN2_08_PILIERS_ENTREE",
+      "ESN2_09_BOUCHE_GROTTE"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
