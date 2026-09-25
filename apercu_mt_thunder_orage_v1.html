@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>Mt. Thunder orage V1 — multicalque</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:864px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Mt. Thunder — arène orageuse V1 (multicalque)</h1>
+<p>Aperçu non certifié : ne valide ni collisions ni rendu moteur. Calques animés : nuages (défilement RepeatX) et éclairs (30 frames).</p>
+<div id="t"></div><canvas id="c" width="432" height="352"></canvas>
+<p><img src="renders/mt_thunder_orage_v1/apercu/reference_vs_v1.png" style="image-rendering:pixelated"></p>
+<script>
+const B='renders/mt_thunder_orage_v1/';
+const L=[['00_ciel',0],['01_nuages_arriere',-8],['02_eclairs',null],['03_plateau',0],['04_details',0],['05_nuages_avant',-16]];
+const on={},img={};let man;
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{man=m;
+ const ecl=m.eclairs.frames.map(f=>{const i=new Image();i.src=B+'eclairs/'+f.file;return i});img['02_eclairs']=ecl;
+ L.forEach(([n])=>{on[n]=true;if(n!='02_eclairs'){img[n]=new Image();img[n].src=B+'calques/'+n+'.png'}
+  const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+ const cyc=m.eclairs.frames.reduce((a,f)=>a+f.ms,0),x=c.getContext('2d'),t0=performance.now();
+ (function draw(now){const t=now-t0;x.clearRect(0,0,432,352);
+  for(const [n,s] of L){if(!on[n])continue;
+   if(n=='02_eclairs'){let r=t%cyc,k=0;while(r>=m.eclairs.frames[k].ms){r-=m.eclairs.frames[k].ms;k++}x.drawImage(ecl[k],0,0)}
+   else if(s){const w=864,o=((Math.round(-s*t/1000))%w);x.drawImage(img[n],-o,0);x.drawImage(img[n],w-o,0)}
+   else x.drawImage(img[n],0,0)}
+  requestAnimationFrame(draw)})(t0)});
+</script>
