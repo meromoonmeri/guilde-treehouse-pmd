@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Furnace Desert V2 — massif spacieux, bassin et siphon
+
+- [Composition finale, comparaison et contrôles](renders/furnace_desert_water_siphon_v2/README.md).
+- Format 768×480 sur grille 8 px ; sable remplacé par l’eau et tourbillon remplacé par un siphon compact.
+- Le massif est prolongé latéralement, tandis que 89 858 pixels de la roche, de la grotte et des éléments centraux de la référence restent protégés sans différence.
+
+Le rendu artistique est proposé pour validation ; aucun runtime PMDO ni collision n’est annoncé.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.

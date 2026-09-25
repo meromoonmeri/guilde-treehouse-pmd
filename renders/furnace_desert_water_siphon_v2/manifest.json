@@ -1,0 +1,20 @@
+{
+  "project": "furnace_desert_water_siphon_v2",
+  "reference": "source/furnace_desert_water_siphon_v1/references/furnace_desert_reference.png",
+  "reference_sha256": "b2f0aaa871e3861d5422ff982cf0d913392f3ded43924bb838d98f97faedec0c",
+  "composition_sha256": "9d4335c59bc147d30650ae82e8846e0fbe66c17dadfb899a56166bb4f5aa4e22",
+  "size_px": [
+    768,
+    480
+  ],
+  "method": [
+    "reference centered on larger magenta canvas",
+    "sand region removed",
+    "rock/cave reference pixels protected",
+    "side mountain outpaint in matching texture",
+    "water basin and compact siphon generated"
+  ],
+  "rejected": "source/furnace_desert_water_siphon_v1/rejected_texture_v1/composition_eau_siphon_v1.png",
+  "runtime_pmdo": "NOT TESTED",
+  "art_approved": false
+}
