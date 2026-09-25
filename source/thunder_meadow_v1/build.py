@@ -1,0 +1,220 @@
+"""Thunder Meadow (PMD Rouge, Friend Area) -> layout multicalque V1.
+
+Référence : 5394.png (rip Toastypk, spriters-resource asset 5394) : carte sans
+éclairs + « Cloud flash colors » (6 niveaux Dark->Light) + frames d'éclairs.
+Pixels et couleurs 100 % issus de la planche ; aucun générateur.
+"""
+import json, hashlib, pathlib, zipfile
+import numpy as np
+from PIL import Image
+from scipy import ndimage as nd
+
+HERE = pathlib.Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+REF = ROOT / "5394.png"
+OUT = ROOT / "renders" / "thunder_meadow_v1"
+PFX = "THUNDERMEADOW_V1_"
+sheet = np.array(Image.open(REF).convert("RGB")).astype(np.int16)
+W, H0 = 456, 335
+H = 336  # multiple de 8 : dernière ligne native dupliquée
+scene = np.concatenate([sheet[:H0, :W], sheet[H0 - 1:H0, :W]], axis=0)
+eq = lambda img, c: np.all(img == np.array(c), axis=-1)
+
+# ---------- palette de flash des nuages (8 couleurs x 6 niveaux) ----------
+FLASH = [[tuple(int(v) for v in sheet[57 + 9 * r + 3, 519 + 9 * c + 3]) for c in range(8)] for r in range(6)]
+cloud_idx = np.full((H, W), -1, np.int8)
+for i, c in enumerate(FLASH[0]):
+    cloud_idx[eq(scene, c)] = i
+clouds = cloud_idx >= 0
+
+# ---------- objets : arbre, rochers ----------
+TREE = [(96, 80, 56), (208, 160, 104), (56, 48, 32), (176, 136, 88), (144, 120, 72), (176, 160, 80), (104, 88, 56), (128, 104, 72), (152, 112, 80), (72, 72, 40)]
+R, G, B = scene[..., 0], scene[..., 1], scene[..., 2]
+yy, xx = np.mgrid[:H, :W]
+tree = np.zeros((H, W), bool)
+for c in TREE:
+    tree |= eq(scene, c)
+tree &= (xx >= 192) & (xx < 262) & (yy >= 190) & (yy < 274)
+tree = nd.binary_closing(tree, iterations=1) & ((yy >= 190) & (xx >= 192) & (xx < 262) & (yy < 274))
+tree = nd.binary_fill_holes(tree)
+rock = ((B > R + 8) & ~clouds) | eq(scene, (168, 160, 32)) | eq(scene, (128, 128, 72))
+rock &= (yy > 118) & (yy < 222)
+rl, rn = nd.label(nd.binary_closing(rock, iterations=2))
+objs = []
+for i, sl in enumerate(nd.find_objects(rl)):
+    m = rl[sl] == i + 1
+    if m.sum() > 40:
+        objs.append(("rocher", sl, nd.binary_fill_holes(m)))
+tl, _ = nd.label(tree)
+sl = nd.find_objects(tl)[int(np.argmax(nd.sum(tree, tl, range(1, tl.max() + 1))))]
+objs.append(("arbre", sl, nd.binary_fill_holes(tl[sl] > 0)))
+
+GROUND = [(200, 184, 48), (248, 240, 112), (232, 216, 88), (200, 224, 88), (232, 224, 96), (128, 120, 40), (160, 152, 72)]
+ground = np.zeros((H, W), bool)
+for c in GROUND:
+    ground |= eq(scene, c)
+
+terrain = scene.copy()
+objmask = np.zeros((H, W), bool)
+for name, sl, m in objs:
+    objmask[sl] |= m
+fillmask = objmask.copy()
+fillmask[190:280, 186:268] |= nd.binary_dilation(objmask, iterations=8)[190:280, 186:268]  # halo/ombre de l'arbre
+# comblement : sol natif au point symétrique, sinon décalé de ±64 px
+for y, x in zip(*np.where(fillmask)):
+    order = (x + 72, x - 72, x + 96) if 186 <= x < 268 and y >= 190 else (W - 1 - x, x - 64, x + 64)
+    for sx in order:
+        if 0 <= sx < W and ground[y, sx] and not fillmask[y, sx]:
+            terrain[y, x] = scene[y, sx]; break
+# arbre : copie en bloc du sol natif 80 px à gauche (texture continue), ellipse douce
+SHIFT = 88
+by0, by1, bx0, bx1 = 186, 282, 184, 270
+blk = np.zeros((H, W), bool); blk[by0:by1, bx0:bx1] = True
+ell = ((xx - 227) / 44.0) ** 2 + ((yy - 230) / 46.0) ** 2 <= 1
+treec = np.zeros((H, W), bool)
+for c in TREE:
+    treec |= eq(scene, c)
+sel = blk & ell & (ground | fillmask | treec)
+terrain[sel] = scene[np.where(sel)[0], np.where(sel)[1] + SHIFT]
+stray = blk & ~ell & (treec | objmask)
+for y, x in zip(*np.where(stray)):  # pointes de branches/racines hors ellipse
+    d = 1 if x >= 227 else -1
+    for k in range(1, 20):
+        if ground[y, x + d * k] and not stray[y, x + d * k]:
+            terrain[y, x] = scene[y, x + d * k]; break
+ground_new = ground | fillmask
+
+# ---------- nouveau placement (layout légèrement différent) ----------
+def place_ok(m, y0, x0):
+    h, w = m.shape
+    if y0 < 0 or x0 < 0 or y0 + h > H or x0 + w > W: return False
+    return bool(ground_new[y0:y0 + h, x0:x0 + w][m].all())
+MOVES = {"arbre": [(8, -72), (0, -72), (8, -64), (16, -56)]}
+details = np.zeros((H, W, 4), np.uint8)
+placed = []
+rocks_sorted = sorted([o for o in objs if o[0] == "rocher"], key=lambda o: (o[1][1].start))
+for k, (name, sl, m) in enumerate(objs):
+    y0, x0 = sl[0].start, sl[1].start
+    if name == "arbre":
+        cands = MOVES["arbre"]
+    else:
+        big = m.sum() > 400
+        left = x0 < W // 2
+        # gros rochers : remontés et rentrés ; petits : échangent de côté par symétrie de position
+        cands = ([(-16, 28 if left else -28), (-8, 24 if left else -24), (0, 16 if left else -16)] if big
+                 else [(0, (W - 2 * x0 - m.shape[1]))])
+    dy, dx = next(((a, b) for a, b in cands if place_ok(m, y0 + a, x0 + b)), (0, 0))
+    ny, nx = y0 + dy, x0 + dx
+    rgba = np.zeros(m.shape + (4,), np.uint8); rgba[..., :3] = scene[sl]; rgba[..., 3] = m * 255
+    details[ny:ny + m.shape[0], nx:nx + m.shape[1]][m] = rgba[m]
+    placed.append({"objet": name, "de": [int(x0), int(y0)], "vers": [int(nx), int(ny)], "taille": [m.shape[1], m.shape[0]]})
+
+# fissure du chemin : conservée (chemin d'accès vers le haut)
+terrain_rgba = np.zeros((H, W, 4), np.uint8); terrain_rgba[..., :3] = terrain; terrain_rgba[..., 3] = (~clouds) * 255
+def clouds_level(lv):
+    a = np.zeros((H, W, 4), np.uint8)
+    for i, c in enumerate(FLASH[lv]):
+        a[cloud_idx == i] = c + (255,)
+    return a
+CLOUDS = [clouds_level(i) for i in range(6)]
+
+# ---------- éclairs ----------
+def crop(y0, y1, x0, x1):
+    s = sheet[y0:y1, x0:x1]; m = s.sum(2) > 0
+    a = np.zeros(s.shape[:2] + (4,), np.uint8); a[..., :3] = s; a[..., 3] = m * 255
+    return a
+ROWS = {
+    "A": ((129, 140), [(471, 492), (495, 516), (518, 539), (541, 562), (564, 584), (588, 608)], (131, 173), [(614, 619), (624, 629), (633, 643), (648, 659), (664, 675), (679, 690)]),
+    "B": ((175, 186), [(474, 495), (495, 516), (518, 539), (544, 565), (565, 585), (589, 609)], (177, 219), [(617, 622), (624, 629), (634, 644), (648, 659), (666, 677), (686, 697)]),
+    "C": ((225, 235), [(475, 491), (495, 511), (515, 531), (533, 551)], (227, 254), [(555, 559), (562, 568), (570, 579), (584, 590)]),
+    "D": ((265, 275), [(476, 492), (495, 511), (516, 532), (534, 552)], (267, 294), [(555, 559), (563, 569), (572, 581), (584, 590)]),
+    "E": ((350, 360), [(476, 492), (496, 512), (517, 533), (536, 554)], None, []),
+    "F": ((372, 382), [(476, 492), (496, 512), (516, 532), (537, 555)], None, []),
+}
+FLASHLV = {6: [1, 3, 5, 5, 3, 1], 4: [1, 3, 4, 2]}
+def strike(row, cx, cy, mirror=False):
+    (cy0, cy1), cs, by, bs = ROWS[row]
+    cracks = [crop(cy0, cy1, a, b) for a, b in cs]
+    bolts = [crop(by[0], by[1], a, b) for a, b in bs] if by else []
+    if mirror:
+        cracks = [c[:, ::-1] for c in cracks]; bolts = [b[:, ::-1] for b in bolts]
+    last = cracks[-1][..., 3] > 0
+    ly = int(np.where(last.any(1))[0].max()); lx = int(np.where(last[ly])[0].mean())
+    frames = []
+    for i, c in enumerate(cracks):
+        f = np.zeros((H, W, 4), np.uint8)
+        x0 = cx - c.shape[1] // 2; f[cy:cy + c.shape[0], x0:x0 + c.shape[1]][c[..., 3] > 0] = c[c[..., 3] > 0]
+        if bolts:
+            b = bolts[i]; bm = b[..., 3] > 0
+            tx = int(np.where(bm[np.where(bm.any(1))[0].min()])[0].mean())
+            bx, byy = x0 + lx - tx, cy + ly
+            f[byy:byy + b.shape[0], bx:bx + b.shape[1]][bm] = b[bm]
+        frames.append(f)
+    lv = FLASHLV.get(len(frames), [1, 2, 2, 1]) if bolts else [1, 2, 2, 1]
+    return frames, lv
+EMPTY = np.zeros((H, W, 4), np.uint8)
+TL = []  # (image éclair, niveau nuage, ms)
+PLAN = [("A", 70, 66, False), ("E", 160, 78, False), ("B", W - 70, 66, True), ("C", 205, 72, False),
+        ("F", W - 160, 78, True), ("D", W - 205, 72, True)]
+for row, cx, cy, mir in PLAN:
+    TL.append((EMPTY, 0, 900))
+    fr, lv = strike(row, cx, cy, mir)
+    for f, l in zip(fr, lv):
+        TL.append((f, l, 67))
+    TL.append((EMPTY, 1, 67))
+
+# ---------- collisions 8 px ----------
+walk = nd.binary_erosion(ground_new, iterations=3) & ~(details[..., 3] > 0)
+grid = walk.reshape(H // 8, 8, W // 8, 8).all(axis=(1, 3))
+
+# ---------- sorties ----------
+for d in ["calques", "nuages_flash", "eclairs", "import_png_8px", "apercu"]:
+    (OUT / d).mkdir(parents=True, exist_ok=True)
+def save(a, p):
+    a = a.copy(); a[a[..., 3] == 0, :3] = 0
+    Image.fromarray(a.astype(np.uint8), "RGBA").save(p, optimize=True)
+LAYERS = [("00_nuages", CLOUDS[0]), ("01_eclairs", None), ("02_terrain", terrain_rgba), ("03_details", details)]
+for n, a in LAYERS:
+    if a is not None:
+        save(a, OUT / "calques" / f"{n}.png"); save(a, OUT / "import_png_8px" / f"{PFX}{n}.png")
+for i, a in enumerate(CLOUDS):
+    save(a, OUT / "nuages_flash" / f"{PFX}00_nuages_flash{i}.png")
+timeline = []
+for i, (a, lv, ms) in enumerate(TL):
+    fn = f"{PFX}01_eclairs_f{i:02d}.png"; save(a, OUT / "eclairs" / fn)
+    timeline.append({"eclair": fn, "nuages_niveau": lv, "ms": ms})
+def compose(e, lv):
+    img = np.zeros((H, W, 3), float)
+    for a in (CLOUDS[lv], e, terrain_rgba, details):
+        m = a[..., 3:4] / 255.0; img = img * (1 - m) + a[..., :3] * m
+    return Image.fromarray(img.astype(np.uint8))
+frames = [compose(e, lv) for e, lv, _ in TL]
+frames[0].save(OUT / "apercu" / "animation.gif", save_all=True, append_images=frames[1:], duration=[ms for *_, ms in TL], loop=0)
+frames[0].save(OUT / "apercu" / "scene_statique.png")
+peak = max(range(len(TL)), key=lambda i: (TL[i][1], (TL[i][0][..., 3] > 0).sum()))
+cmp_ = Image.new("RGB", (W * 2 + 8, H)); cmp_.paste(Image.fromarray(scene.astype(np.uint8)), (0, 0)); cmp_.paste(frames[peak], (W + 8, 0))
+cmp_.save(OUT / "apercu" / "reference_vs_v1.png")
+ov = np.array(frames[0]).astype(int); blk = np.kron(~grid, np.ones((8, 8), bool))
+ov[blk] = ov[blk] // 2 + [100, 0, 0]
+Image.fromarray(ov.astype(np.uint8)).save(OUT / "apercu" / "collisions.png")
+
+refc = set(map(tuple, sheet.reshape(-1, 3).tolist()))
+def cols(a): return set(map(tuple, a[a[..., 3] > 0][:, :3].astype(int).tolist()))
+checks = {n: {"taille": [a.shape[1], a.shape[0]], "div8": a.shape[0] % 8 == 0 and a.shape[1] % 8 == 0,
+              "alpha_binaire": bool(np.isin(a[..., 3], [0, 255]).all()), "couleurs_hors_planche": len(cols(a) - refc)}
+          for n, a in LAYERS if a is not None}
+ec = set().union(*[cols(a) for a, _, _ in TL])
+checks["01_eclairs"] = {"frames": len(TL), "cycle_ms": sum(m for *_, m in TL), "couleurs": sorted(ec), "couleurs_hors_planche": len(ec - refc)}
+checks["nuages_flash"] = {"niveaux": 6, "couleurs_hors_planche": len(set().union(*[cols(a) for a in CLOUDS]) - refc)}
+checks["layout_pixels_modifies_pct"] = round(float((np.array(frames[0]) != scene.astype(np.uint8)).any(2).mean() * 100), 1)
+manifest = {"reference": {"file": REF.name, "sha256": hashlib.sha256(REF.read_bytes()).hexdigest(),
+                          "source": "https://www.spriters-resource.com/game_boy_advance/pokemonmysterydungeonredrescueteam/asset/5394/", "ripper": "Toastypk"},
+            "canvas": [W, H], "grille": 8, "prefixe_import": PFX, "ordre_calques": [n for n, _ in LAYERS],
+            "nuages": {"methode": "palette flash (Cloud flash colors, 6 niveaux Dark->Light), 8 couleurs remplacées index par index", "palette": FLASH},
+            "timeline": timeline, "layout": {"objets": placed}, "collisions_8px": grid.astype(int).tolist(), "controles": checks}
+(OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1, default=int))
+with zipfile.ZipFile(OUT.parent / "thunder_meadow_v1_pack.zip", "w", zipfile.ZIP_DEFLATED) as z:
+    for p in sorted(OUT.rglob("*")):
+        if p.is_file(): z.write(p, p.relative_to(OUT.parent))
+    z.write(__file__, "thunder_meadow_v1/source/build.py")
+print(json.dumps({"controles": checks, "objets": placed}, ensure_ascii=False, default=int))
