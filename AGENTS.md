@@ -430,3 +430,7 @@ La demande « layout légèrement différent de la référence » visait `5394.p
 ## Thunder Meadow V2 — arène du boss générée
 
 Demande : nouveau layout généré, animations canoniques, chaîne de montagnes au loin, falaise sud→nord au 1er plan (arène du boss), chemin d'arrivée, bordures immersives. Guide généré avec ciel magenta, réduit en BOX, puis ramené sur la palette 5394 (hors couleurs de nuages). Piège : la distance de couleur en int16 déborde → passer en int32. Les nuages et éclairs canoniques sont repris de V1 ; les éclairs sont placés derrière les montagnes. Sources `source/thunder_meadow_v2/`, aperçu `apercu_thunder_meadow_v2.html`. Non validé en jeu.
+
+## Thunder Meadow V3 — entrée : grotte nord et orage en contrebas
+
+Premier guide rejeté (grotte beige Crooked non uniforme) ; guide b retenu (grotte creusée dans la falaise brune). Même pipeline que V2. Les nuages en contrebas sont la bande canonique 0-112 répétée, avec la palette flash. Éclairs placés par recherche automatique de visibilité dans le vide : les positions fixées à la main étaient cachées par le terrain (0 px visible). Piège : borner cy à H−62 (bolt 42 px). Sources `source/thunder_meadow_v3_entree/`, aperçu `apercu_thunder_meadow_v3_entree.html`. Non validé en jeu.
