@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Jungle — format 4:3 vaste, réf. Southern Jungle (26 septembre 2026)
+
+- Aperçu : `apercu_entree_jungle_sud_nord_v1.html`.
+- Lot : `renders/entree_jungle_sud_nord_v1/` (`EJN1_projet_pmdo_0812.zip`, `EJN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_jungle_sud_nord_v1/`.
+
+**Nouveau format demandé : 4:3, plus vaste.** La map fait 768 × 576 px, soit 96 × 72 cases : 65 % de cases en plus, environ 2,4 écrans PMDO dans chaque sens. Grande clairière de jungle, sentier en S du sud jusqu'à l'entrée sombre au nord, rivière et mare à l'ouest, deux îlots d'arbres. L'eau est façon Métano (4 × 10 ticks) avec des scintillements Métano natifs, et 6 papillons générés volent en boucles en huit (48 × 5 ticks). La normalisation est uniforme ×0,643, en moyenne pondérée par classe. 9 tests PASS. Biome choisi par l'agent. Pas de test PMDO en jeu.
+
 ## Entrée Bristle — sud → nord, rendu généré réf. Mt. Bristle (26 septembre 2026)
 
 - Aperçu : `apercu_entree_bristle_sud_nord_v1.html`.
