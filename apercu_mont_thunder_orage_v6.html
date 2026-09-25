@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>Mont Thunder orage V6</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:912px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Mont Thunder — sommet orageux V6</h1><p>Aperçu non certifié. Nuages : défilement RepeatX −6 px/s + flash. Éclairs bleus : calque propre.</p>
+<div id="t"></div><canvas id="c" width="304" height="336"></canvas><p><label><input type="checkbox" id="col"> collisions</label></p>
+<p><img src="renders/mont_thunder_orage_v6/apercu/v5_vs_v6.png" style="image-rendering:pixelated"></p>
+<script>
+const B='renders/mont_thunder_orage_v6/',P='MTTHUNDER_V6_',ld=s=>{const i=new Image();i.src=s;return i},on={};
+const sky=ld(B+'calques/00_ciel.png'),ter=ld(B+'calques/03_terrain.png');
+['00_ciel','01_nuages','02_eclairs','03_terrain'].forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const nb=[...Array(m.nuages.flash_niveaux).keys()].map(k=>ld(B+'nuages/'+P+'01_nuages_bande_flash'+k+'.png'));
+ const tl=m.timeline,ec=tl.map(f=>ld(B+'eclairs/'+f.eclair)),cyc=tl.reduce((a,f)=>a+f.ms,0),x=c.getContext('2d'),t0=performance.now(),CW=608;
+ (function d(now){const t=now-t0;let r=t%cyc,k=0;while(r>=tl[k].ms){r-=tl[k].ms;k++}const lv=tl[k].nuages_flash;
+  x.clearRect(0,0,304,336);
+  if(on['00_ciel'])x.drawImage(sky,0,0);
+  if(on['01_nuages']){const o=Math.round(6*t/1000)%CW;x.drawImage(nb[lv],-o,m.nuages.y);x.drawImage(nb[lv],CW-o,m.nuages.y)}
+  if(on['02_eclairs'])x.drawImage(ec[k],0,0);
+  if(on['03_terrain'])x.drawImage(ter,0,0);
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(!v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>
