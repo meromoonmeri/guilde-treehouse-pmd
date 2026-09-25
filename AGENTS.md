@@ -426,3 +426,7 @@ Demande : layout multicalque légèrement différent de la référence Mt. Thund
 ## Thunder Meadow V1 — référence du commit f1923699
 
 La demande « layout légèrement différent de la référence » visait `5394.png` + `Rescue_Team_Friend_Area_-_Thunder_Meadow.png`, poussés par l'utilisateur. Le lot Mt. Thunder V1, fait avant de voir ce commit, est conservé mais ne répond pas à cette demande. Utiliser la carte de `5394.png` : sa palette ×8 correspond exactement aux « Cloud flash colors ». Le PNG isolé est en ×8,25 et contient des éclairs. Nuages = palette flash sur 6 niveaux ; éclairs = frames de la planche sur leur propre calque ; timeline commune. Arbre déplacé : combler l'ancien emplacement en copiant le sol +88 px en bloc dans une ellipse. Le remplissage pixel par pixel ou à −80 px laisse des taches claires ou sombres. Sources dans `source/thunder_meadow_v1/`, aperçu dans `apercu_thunder_meadow_v1.html`. Non validé en jeu.
+
+## Thunder Meadow V2 — arène du boss générée
+
+Demande : nouveau layout généré, animations canoniques, chaîne de montagnes au loin, falaise sud→nord au 1er plan (arène du boss), chemin d'arrivée, bordures immersives. Guide généré avec ciel magenta, réduit en BOX, puis ramené sur la palette 5394 (hors couleurs de nuages). Piège : la distance de couleur en int16 déborde → passer en int32. Les nuages et éclairs canoniques sont repris de V1 ; les éclairs sont placés derrière les montagnes. Sources `source/thunder_meadow_v2/`, aperçu `apercu_thunder_meadow_v2.html`. Non validé en jeu.
