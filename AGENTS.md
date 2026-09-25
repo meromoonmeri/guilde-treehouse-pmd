@@ -478,3 +478,7 @@ Promontoire, chemin central, horizon infini, nuages en wrap parfait. `apercu_zon
 ## Zone D06P11 V3
 
 Terrain régénéré au générateur, palette ROM, fond V2. `apercu_zone_d06p11_v3.html`.
+
+## Zone D06P11 V4
+
+Entrée majestueuse, nuages générés en boucle parfaite, modes jour/crépuscule/nuit. `apercu_zone_d06p11_v4.html`.
