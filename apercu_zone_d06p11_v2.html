@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><title>Zone D06P11 V2</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas,img{image-rendering:pixelated;border:1px solid #444}canvas{width:768px}label{margin-right:12px}</style>
+<h1>Zone D06P11 V2 — textures ROM d06p11a, promontoire, chemin central, horizon et nuages en wrap</h1><p>Timings ROM : mer BPA 10 f × 166,7 ms, scintillement palette 7 f × 83,3 ms. Non testé en jeu.</p>
+<div id="t"></div><canvas id="c" width="384" height="448"></canvas><p><label><input type="checkbox" id="col"> collisions</label></p>
+<script>
+const B='renders/zone_d06p11_v2/',ld=s=>{const i=new Image();i.src=s;return i},on={};
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const L={};['00_ciel','02_mer_bpa','03_mer_palette','04_terrain'].forEach(n=>L[n]=ld(B+'calques/'+n+'.png'));const A=m.animations,
+ nu=ld(B+m.nuages.bande),mer=A['02_mer_bpa'].frames.map(f=>ld(B+f)),pal=A['03_mer_palette'].frames.map(f=>ld(B+f)),x=c.getContext('2d'),t0=performance.now();
+ m.ordre_calques.forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+ (function d(now){const t=now-t0;x.clearRect(0,0,384,448);
+  if(on['00_ciel'])x.drawImage(L['00_ciel'],0,0);
+  if(on['01_nuages']&&nu.complete){const w=nu.width,o=Math.round(-m.nuages.vitesse_px_s*t/1000)%w;x.drawImage(nu,-o,0);x.drawImage(nu,w-o,0)}
+  if(on['02_mer_bpa'])x.drawImage(mer[Math.floor(t/A['02_mer_bpa'].ms)%mer.length],0,0);
+  if(on['03_mer_palette'])x.drawImage(pal[Math.floor(t/A['03_mer_palette'].ms)%pal.length],0,0);
+  if(on['04_terrain'])x.drawImage(L['04_terrain'],0,0);
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>

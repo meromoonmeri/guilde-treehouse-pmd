@@ -470,3 +470,7 @@ Voir `MANUEL_PMD_SKY_ANIMATION_PMDO.md`. Règle : durées réelles BPL/BPA copi�
 ## Zone D06P11 V1 (textures ROM)
 
 Première zone qui réutilise les textures PMD Sky : `source/zone_d06p11_v1/`, aperçu `apercu_zone_d06p11_v1.html`. Timings ROM respectés, calque par horloge.
+
+## Zone D06P11 V2
+
+Promontoire, chemin central, horizon infini, nuages en wrap parfait. `apercu_zone_d06p11_v2.html`.
