@@ -1,0 +1,582 @@
+{
+  "reference": "IMG_5004.png 408x408",
+  "sha256": "e822e3a9671e7a5dd0593321835fb94ce6c58cf6ff1975406d84ca4f3204be46",
+  "size": [
+    512,
+    512
+  ],
+  "port_width": 64,
+  "method": "sampling strict - quilting 8px, no recolor/rotate, DA/perspective preserved",
+  "rooms": [
+    {
+      "id": "couloir_ns",
+      "title": "Couloir nord–sud élargi",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "07_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "07_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "06_piliers_autel",
+        "07_acces_N",
+        "07_acces_S"
+      ],
+      "polygon": [
+        [
+          221,
+          0
+        ],
+        [
+          288,
+          0
+        ],
+        [
+          288,
+          106
+        ],
+        [
+          407,
+          121
+        ],
+        [
+          406,
+          425
+        ],
+        [
+          325,
+          452
+        ],
+        [
+          325,
+          512
+        ],
+        [
+          191,
+          512
+        ],
+        [
+          191,
+          449
+        ],
+        [
+          93,
+          425
+        ],
+        [
+          93,
+          124
+        ],
+        [
+          221,
+          106
+        ]
+      ]
+    },
+    {
+      "id": "couloir_ew",
+      "title": "Couloir est–ouest",
+      "ports": [
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "07_acces_E",
+        "07_acces_W"
+      ],
+      "polygon": [
+        [
+          0,
+          216
+        ],
+        [
+          73,
+          192
+        ],
+        [
+          439,
+          192
+        ],
+        [
+          512,
+          216
+        ],
+        [
+          512,
+          332
+        ],
+        [
+          433,
+          370
+        ],
+        [
+          80,
+          370
+        ],
+        [
+          0,
+          332
+        ]
+      ]
+    },
+    {
+      "id": "couloir_t",
+      "title": "Jonction en T",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "07_acces_N.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "06_piliers_autel",
+        "07_acces_N",
+        "07_acces_E",
+        "07_acces_W"
+      ],
+      "polygon": [
+        [
+          221,
+          0
+        ],
+        [
+          288,
+          0
+        ],
+        [
+          288,
+          122
+        ],
+        [
+          359,
+          170
+        ],
+        [
+          413,
+          239
+        ],
+        [
+          512,
+          239
+        ],
+        [
+          512,
+          332
+        ],
+        [
+          389,
+          332
+        ],
+        [
+          321,
+          436
+        ],
+        [
+          219,
+          436
+        ],
+        [
+          120,
+          332
+        ],
+        [
+          0,
+          332
+        ],
+        [
+          0,
+          239
+        ],
+        [
+          135,
+          239
+        ],
+        [
+          171,
+          170
+        ],
+        [
+          221,
+          122
+        ]
+      ]
+    },
+    {
+      "id": "salle_traversee",
+      "title": "Salle traversante",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "07_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "07_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "06_piliers_autel",
+        "07_acces_N",
+        "07_acces_S"
+      ],
+      "polygon": [
+        [
+          224,
+          0
+        ],
+        [
+          288,
+          0
+        ],
+        [
+          288,
+          149
+        ],
+        [
+          381,
+          174
+        ],
+        [
+          435,
+          262
+        ],
+        [
+          428,
+          355
+        ],
+        [
+          324,
+          445
+        ],
+        [
+          324,
+          512
+        ],
+        [
+          192,
+          512
+        ],
+        [
+          192,
+          445
+        ],
+        [
+          90,
+          355
+        ],
+        [
+          81,
+          262
+        ],
+        [
+          129,
+          174
+        ],
+        [
+          224,
+          149
+        ]
+      ]
+    },
+    {
+      "id": "salle_laterale",
+      "title": "Salle latérale",
+      "ports": [
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_W.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "07_acces_S.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "07_acces_W",
+        "07_acces_S"
+      ],
+      "polygon": [
+        [
+          103,
+          184
+        ],
+        [
+          381,
+          184
+        ],
+        [
+          454,
+          263
+        ],
+        [
+          446,
+          351
+        ],
+        [
+          324,
+          449
+        ],
+        [
+          324,
+          512
+        ],
+        [
+          192,
+          512
+        ],
+        [
+          192,
+          445
+        ],
+        [
+          75,
+          355
+        ],
+        [
+          0,
+          312
+        ],
+        [
+          0,
+          236
+        ],
+        [
+          75,
+          236
+        ]
+      ]
+    },
+    {
+      "id": "salle_carrefour",
+      "title": "Salle carrefour",
+      "ports": [
+        {
+          "direction": "N",
+          "xy": [
+            256,
+            8
+          ],
+          "width": 64,
+          "layer": "07_acces_N.png"
+        },
+        {
+          "direction": "S",
+          "xy": [
+            256,
+            504
+          ],
+          "width": 64,
+          "layer": "07_acces_S.png"
+        },
+        {
+          "direction": "E",
+          "xy": [
+            504,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_E.png"
+        },
+        {
+          "direction": "W",
+          "xy": [
+            8,
+            256
+          ],
+          "width": 64,
+          "layer": "07_acces_W.png"
+        }
+      ],
+      "layers": [
+        "01_sol_chemin",
+        "01b_dirt_chemin",
+        "02_murs_fond",
+        "03_roche_gauche",
+        "04_roche_droite",
+        "06_piliers_autel",
+        "07_acces_N",
+        "07_acces_S",
+        "07_acces_E",
+        "07_acces_W"
+      ],
+      "polygon": [
+        [
+          224,
+          0
+        ],
+        [
+          288,
+          0
+        ],
+        [
+          288,
+          135
+        ],
+        [
+          381,
+          168
+        ],
+        [
+          423,
+          230
+        ],
+        [
+          512,
+          230
+        ],
+        [
+          512,
+          298
+        ],
+        [
+          423,
+          298
+        ],
+        [
+          388,
+          361
+        ],
+        [
+          322,
+          444
+        ],
+        [
+          322,
+          512
+        ],
+        [
+          190,
+          512
+        ],
+        [
+          190,
+          444
+        ],
+        [
+          121,
+          361
+        ],
+        [
+          82,
+          298
+        ],
+        [
+          0,
+          298
+        ],
+        [
+          0,
+          230
+        ],
+        [
+          82,
+          230
+        ],
+        [
+          130,
+          168
+        ],
+        [
+          224,
+          135
+        ]
+      ]
+    }
+  ]
+}
