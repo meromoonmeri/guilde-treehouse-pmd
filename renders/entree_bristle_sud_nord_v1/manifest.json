@@ -1,0 +1,287 @@
+{
+  "lot": "entree_bristle_sud_nord_v1",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "method": "rendu genere : decor complet sur magenta (torrent = magenta) + sol de sable complet genere separement",
+  "reference_da": "Mt_Bristle_entrance_TD.png",
+  "raw_inputs": [
+    {
+      "file": "source/entree_bristle_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "414ecefc4af7dc59d450caa9c9232a348b5a2a9cb20b052ed1a0a1ca0ce6c698",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_bristle_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "2876fb515e0165a0becd12becb35eb146da376ae41c41271a8d336211390cdb5",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_bristle_sud_nord_v1/bruts/touffes_vent_poses.png",
+      "sha256": "42c6b81d8ab2c50c7007954f0d59c81c132cdd32709b69c19eb6b4297adc8742",
+      "size": [
+        1104,
+        960
+      ]
+    }
+  ],
+  "normalization": "x0.5 exact (848x1264 -> 424x632), moyenne 2x2 par classe, palette commune 96 couleurs",
+  "segmentation": "torrent = magenta dilate 2 px ; roche = fraction grise (sat<40) > 0.5 sur 7 px ; gorge = lum<85 dans la fente nord ; berge = texture (ecart lum > 14) a < 26 px du torrent ; rochers = orange sature sombre ; touffes = vert ; sable = composante reliee au bord sud, replats enclaves rattaches aux falaises",
+  "layer_order_bottom_to_top": [
+    "animation/eau/EBN1_00_eau_metano_fX.png",
+    "animation/scintillements/EBN1_01_scintillements_fX.png",
+    "calques/EBN1_02_sol_complet.png",
+    "calques/EBN1_03_sable.png",
+    "calques/EBN1_04_berge_galets.png",
+    "calques/EBN1_05_rochers.png",
+    "animation/touffes/EBN1_06_touffes_fXX.png",
+    "calques/EBN1_07_falaises.png",
+    "calques/EBN1_08_gorge.png"
+  ],
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "surface": [
+        131,
+        218,
+        230
+      ],
+      "bande": [
+        87,
+        135,
+        191
+      ],
+      "inter": [
+        95,
+        183,
+        207
+      ],
+      "accent": [
+        111,
+        207,
+        231
+      ],
+      "clair": [
+        148,
+        230,
+        238
+      ]
+    },
+    "modele": "structure et cadence riviere Metano, couleurs Metano exactes, onde orientee vers le sud (courant)",
+    "origine": "couleurs natives Metano, pixels recalcules sur notre torrent (pas de tuiles natives)"
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "sha256": "062ba6fbecf3e62a4018f0b2eed04f6f23479bb2568d6dc81d85585b21c9e063",
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          344,
+          488
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          392,
+          336
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          352,
+          432
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          264,
+          552
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          368,
+          392
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          280,
+          600
+        ]
+      }
+    ],
+    "origine": "pixels et couleurs Metano NATIFS inchanges, positions nouvelles"
+  },
+  "tufts": {
+    "brut": "source/entree_bristle_sud_nord_v1/bruts/touffes_vent_poses.png",
+    "poses_detectees": 24,
+    "inclinaisons_mesurees": [
+      -0.198,
+      -0.194,
+      -0.19,
+      -0.19,
+      -0.183,
+      -0.052,
+      -0.042,
+      -0.036,
+      -0.034,
+      -0.029,
+      -0.028,
+      0.002,
+      0.004,
+      0.005,
+      0.009,
+      0.01,
+      0.179,
+      0.187,
+      0.189,
+      0.197,
+      0.197,
+      0.201,
+      0.201,
+      0.205
+    ],
+    "cycle_indices_par_phase": [
+      11,
+      16,
+      16,
+      23,
+      16,
+      16,
+      12,
+      5,
+      4,
+      0,
+      4,
+      5
+    ],
+    "phases": 12,
+    "frame_length_ticks": 10,
+    "cellule_px": 16,
+    "reduction": "fenetre 80 px -> 16 px (x0.2) identique, ancrage base, palette 7 couleurs des touffes du decor",
+    "placements": [
+      {
+        "base_xy": [
+          296,
+          353
+        ],
+        "decalage": 7
+      },
+      {
+        "base_xy": [
+          271,
+          342
+        ],
+        "decalage": 6
+      },
+      {
+        "base_xy": [
+          50,
+          363
+        ],
+        "decalage": 1
+      },
+      {
+        "base_xy": [
+          120,
+          433
+        ],
+        "decalage": 3
+      },
+      {
+        "base_xy": [
+          167,
+          441
+        ],
+        "decalage": 4
+      },
+      {
+        "base_xy": [
+          102,
+          512
+        ],
+        "decalage": 2
+      },
+      {
+        "base_xy": [
+          176,
+          534
+        ],
+        "decalage": 4
+      },
+      {
+        "base_xy": [
+          17,
+          556
+        ],
+        "decalage": 0
+      }
+    ],
+    "origine": "dessin GENERE, ordre par inclinaison mesuree (la planche ne suivait pas l ordre demande), cycle cree ; pas une animation officielle"
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      168,
+      616
+    ],
+    "threshold_px": [
+      200,
+      120
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 1296,
+    "blocked_cells": 2607,
+    "total_cells": 4187,
+    "rule": "case bloquee si > 25 % non praticable (torrent, berge, rochers, falaises, gorge)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ebn1_entree_bristle",
+    "namespace": "entree_bristle_sud_nord",
+    "tiles_per_bank": {
+      "EBN1_00_EAU": 659,
+      "EBN1_01_SCINTILLEMENTS": 52,
+      "EBN1_02_SOL": 3952,
+      "EBN1_03_SABLE": 1767,
+      "EBN1_04_BERGE": 159,
+      "EBN1_05_ROCHERS": 106,
+      "EBN1_06_TOUFFES": 349,
+      "EBN1_07_FALAISES": 2201,
+      "EBN1_08_GORGE": 80
+    },
+    "banks": [
+      "EBN1_00_EAU",
+      "EBN1_01_SCINTILLEMENTS",
+      "EBN1_02_SOL",
+      "EBN1_03_SABLE",
+      "EBN1_04_BERGE",
+      "EBN1_05_ROCHERS",
+      "EBN1_06_TOUFFES",
+      "EBN1_07_FALAISES",
+      "EBN1_08_GORGE"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

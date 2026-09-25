@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Bristle — sud → nord, rendu généré réf. Mt. Bristle (26 septembre 2026)
+
+- Aperçu : `apercu_entree_bristle_sud_nord_v1.html`.
+- Lot : `renders/entree_bristle_sud_nord_v1/` (`EBN1_projet_pmdo_0812.zip`, `EBN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_bristle_sud_nord_v1/`.
+
+Cinquième map de la série : canyon de sable entre des falaises grises en aiguilles, gorge au nord, torrent sur le flanc est. Le torrent reprend la structure de la rivière de Métano **avec ses couleurs exactes** (biome de jour), sur 4 × 10 ticks, avec des scintillements Métano **natifs** non recolorés. Les 8 touffes d'herbe générées se balancent en rafale d'ouest en est (12 × 10 ticks) ; leurs poses sont triées par inclinaison mesurée. 9 tests PASS. Biome choisi par l'agent (à confirmer). Pas de test PMDO en jeu.
+
 ## Entrée Givre — sud → nord, rendu généré réf. Frosty Forest (25 septembre 2026)
 
 - Aperçu : `apercu_entree_givre_sud_nord_v1.html`.
