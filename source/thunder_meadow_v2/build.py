@@ -125,9 +125,13 @@ for row, cx, cy, mir in PLAN:
 
 # ---------- collisions : sol jaune de l'arène + chemin ----------
 walkc = terr_rgba[..., :3].astype(int)
-yel = (walkc[..., 0] >= 190) & (walkc[..., 1] >= 180) & (walkc[..., 2] <= 130) & (terr_rgba[..., 3] > 0)
-yl, _ = nd.label(yel); cent = yl[H - 20, W // 2] or yl[200, W // 2]
-walk = nd.binary_erosion(nd.binary_closing(yl == cent, iterations=2), iterations=2)
+# sol marchable : herbe jaune + chemin clair (pas les falaises brunes ni la paroi)
+yel = (terr_rgba[..., 3] > 0) & ((walkc[..., 0] + walkc[..., 1]) / 2 >= 150) & (walkc[..., 1] >= walkc[..., 0] * 0.8) & (walkc[..., 2] <= walkc[..., 0] * 0.62) & ~mount
+beige = (terr_rgba[..., 3] > 0) & (walkc[..., 0] >= 176) & (walkc[..., 1] >= 136) & (walkc[..., 2] >= 88) & (walkc[..., 2] <= 160) & ~mount
+yel |= beige  # chemin de terre
+yl, yn = nd.label(nd.binary_closing(yel, iterations=2))
+sizes = nd.sum(yel, yl, range(1, yn + 1))
+walk = nd.binary_erosion(yl == (np.argmax(sizes) + 1), iterations=2)
 grid = walk.reshape(H // 8, 8, W // 8, 8).mean(axis=(1, 3)) > 0.8
 
 # ---------- sorties ----------
