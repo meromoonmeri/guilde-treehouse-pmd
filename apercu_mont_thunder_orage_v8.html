@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>Mont Thunder V8</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:608px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Mont Thunder V8 — chemin sans bordure, brume physique au rebord</h1><p>Aperçu non certifié.</p>
+<div id="t"></div><canvas id="c" width="304" height="456"></canvas><p><label><input type="checkbox" id="col"> collisions</label></p>
+<script>
+const B='renders/mont_thunder_orage_v8/',ld=s=>{const i=new Image();i.src=s;return i},on={};
+const L=['00_ciel','01_nuages','02_brume','03_brume_etincelles','04_eclairs','05_terrain','06_brume_rebord'];
+const sky=ld(B+'calques/00_ciel.png'),nu=ld('renders/mont_thunder_orage_v6/nuages/MTTHUNDER_V6_01_nuages_bande_608.png'),ter=ld(B+'calques/05_terrain.png');
+L.forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const reb=m.brume_rebord.frames.map(f=>ld(B+f)),br=ld(B+m.brume.bande),sp=m.etincelles.frames.map(f=>ld(B+f)),tl=m.timeline,ec=tl.map(f=>ld(B+'eclairs/'+f.eclair)),cyc=tl.reduce((a,f)=>a+f.ms,0),x=c.getContext('2d'),t0=performance.now();
+ function band(img,t){const bw=img.width,bh=img.height,o=Math.round(4*t/1000)%bw;for(let y=m.brume.y;y<456;y+=bh){x.drawImage(img,-o,y);x.drawImage(img,bw-o,y)}}
+ (function d(now){const t=now-t0;let r=t%cyc,k=0;while(r>=tl[k].ms){r-=tl[k].ms;k++}
+  x.clearRect(0,0,304,456);
+  if(on['00_ciel'])x.drawImage(sky,0,0);
+  if(on['01_nuages']){const o=Math.round(6*t/1000)%608;x.drawImage(nu,-o,m.nuages.y);x.drawImage(nu,608-o,m.nuages.y)}
+  if(on['02_brume']&&br.complete)band(br,t);
+  if(on['03_brume_etincelles']){const s=sp[Math.floor(t/m.etincelles.ms)%sp.length];if(s.complete)band(s,t)}
+  if(on['04_eclairs'])x.drawImage(ec[k],0,0);
+  if(on['05_terrain'])x.drawImage(ter,0,0);if(on['06_brume_rebord']){const f=reb[Math.floor(t/m.brume_rebord.ms)%reb.length];if(f.complete)x.drawImage(f,0,0)}
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(!v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>

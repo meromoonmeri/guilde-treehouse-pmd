@@ -450,3 +450,7 @@ Pas de nouveau commit trouvé ; l'utilisateur a précisé : ciel/nuages/éclairs
 ## Mont Thunder V7 — falaise générée et brume électrostatique
 
 Falaise gris-noir générée (chemin droit, bordures, vide magenta) ; brume opaque générée, dont les traits cyan sont extraits pour former un calque d'étincelles clignotantes sur 4 groupes. La brume est une bande répétée en X et Y (−4 px/s). Les éclairs V6 sont replacés dans la brume par recherche de visibilité. Aperçu `apercu_mont_thunder_orage_v7.html`. Non validé en jeu.
+
+## Mont Thunder V8 — chemin sans bordure, ressac de brume
+
+Le guide V7 est édité pour retirer les pierres de bordure du chemin. Nouveau calque devant le terrain : la vapeur lèche le pied des parois (distance au vide < hauteur de deux ondes progressives), bord tramé Bayer, uniquement sur les faces sombres non praticables, 24 frames en boucle. Aperçu `apercu_mont_thunder_orage_v8.html`. Non validé en jeu.
