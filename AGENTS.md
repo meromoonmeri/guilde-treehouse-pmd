@@ -486,3 +486,7 @@ Entrée majestueuse, nuages générés en boucle parfaite, modes jour/crépuscul
 ## Zone D06P11 V5
 
 Astres visibles au bord du viewport PMDO, halo animé, étoiles scintillantes. `apercu_zone_d06p11_v5.html`.
+
+## Zone D06P11 V6
+
+Carte 544×640, chemin/terrasses plus vastes, mer visible, soleil animé généré. `apercu_zone_d06p11_v6.html`.
