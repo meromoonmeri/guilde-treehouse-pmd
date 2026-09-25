@@ -446,3 +446,7 @@ V3c : le guide sans rochers est édité au générateur pour avoir un chemin dro
 ## Mont Thunder V6 — sommet orageux (ciel généré, roche grise, éclairs bleus)
 
 Pas de nouveau commit trouvé ; l'utilisateur a précisé : ciel/nuages/éclairs générés dans la DA de référence, falaise en roche gris/noir, éclairs bleus. Terrain V5 recoloré par palette selon la luminosité (la texture ne change pas), terrain descendu de 40 px pour agrandir le ciel. Ciel et nuages générés (magenta), nuages en RepeatX avec flash. Éclairs : formes canoniques 5394 recolorées en bleu (plus fiable que des frames générées). Sources `source/mont_thunder_orage_v6/`, aperçu `apercu_mont_thunder_orage_v6.html`. Non validé en jeu.
+
+## Mont Thunder V7 — falaise générée et brume électrostatique
+
+Falaise gris-noir générée (chemin droit, bordures, vide magenta) ; brume opaque générée, dont les traits cyan sont extraits pour former un calque d'étincelles clignotantes sur 4 groupes. La brume est une bande répétée en X et Y (−4 px/s). Les éclairs V6 sont replacés dans la brume par recherche de visibilité. Aperçu `apercu_mont_thunder_orage_v7.html`. Non validé en jeu.
