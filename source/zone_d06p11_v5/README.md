@@ -1,0 +1,2 @@
+# Zone D06P11 V5
+Dérivé V4. Astres placés dans les trouées de ciel, visibles dans le viewport PMDO 320×240 quand la caméra est au bord (soleil jour/crépuscule à gauche, lune à droite). Halo tramé pulsé + cœur qui brille : 8 frames × 8 f (133 ms). Étoiles (crépuscule 66, nuit 77) : 8 frames, phase par étoile. L’astre passe derrière la mer à l’horizon. Liseré opaque du bord du terrain V4 corrigé. Non testé en jeu.
