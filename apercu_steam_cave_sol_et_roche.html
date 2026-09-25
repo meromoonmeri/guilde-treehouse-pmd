@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steam Cave — Sol Adapté au Layout Rocheux sur Fond Magenta</title>
+  <style>
+    body {
+      background: #141110;
+      color: #ede2db;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #ff9e47;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      color: #cf9b7b;
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .panel {
+      background: #1f1a18;
+      border: 1px solid #47362e;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    button, select {
+      background: #382b24;
+      color: #fce8db;
+      border: 1px solid #785340;
+      padding: 7px 14px;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover, select:hover {
+      background: #4a382f;
+    }
+    button.active {
+      background: #e65c00;
+      border-color: #ff8533;
+      color: #fff;
+    }
+    .layers-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: #181311;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #332620;
+      margin-bottom: 14px;
+    }
+    .layers-container label {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .canvas-box {
+      display: inline-block;
+      border: 2px solid #574135;
+      background: repeating-conic-gradient(#291f1b 0 25%, #1c1512 0 50%) 0/16px 16px;
+      border-radius: 4px;
+      overflow: auto;
+      max-width: 100%;
+      margin-top: 6px;
+    }
+    canvas {
+      image-rendering: pixelated;
+      display: block;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      background: #1c1614;
+      border: 1px solid #3d2c23;
+      padding: 12px;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 14px;
+      color: #f7a060;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+      border: 1px solid #4a372c;
+      background: #110d0c;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      font-size: 11px;
+      border-radius: 3px;
+      background: #b30086;
+      color: #fff;
+      margin-left: 6px;
+    }
+    .badge-ok {
+      background: #1a5930;
+      color: #9ee6b5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Steam Cave — Sol Adapté au Layout Rocheux</h1>
+  <p class="subtitle">Génération multicalques sur fond magenta · Textures de sol authentiques de Steam Cave (herbe de pente, terre volcanique, sentier) adaptées au relief rocheux</p>
+
+  <div class="panel">
+    <div class="controls">
+      <button id="btn-mode-jour" class="active" onclick="setMode('jour')">☀️ Mode Jour (Natif Steam)</button>
+      <button id="btn-mode-nuit" onclick="setMode('nuit')">🌙 Mode Nuit (Filtre Abyss)</button>
+
+      <span style="margin-left: auto;"></span>
+      <select id="zoom-select" onchange="setZoom(this.value)">
+        <option value="0.5">Zoom 50%</option>
+        <option value="0.75">Zoom 75%</option>
+        <option value="1" selected>Zoom 100% (1100×960)</option>
+        <option value="1.5">Zoom 150%</option>
+      </select>
+    </div>
+
+    <div class="layers-container">
+      <label><input type="checkbox" id="chk-base-plate" checked onchange="draw()"> 00. Plaque continue de sol Steam</label>
+      <label><input type="checkbox" id="chk-ground-adapted" checked onchange="draw()"> 01. Sol Steam Cave adapté (lisières, herbe, sentier)</label>
+      <label><input type="checkbox" id="chk-rocks" checked onchange="draw()"> 02. Falaises & parois rocheuses (détourées)</label>
+      <label><input type="checkbox" id="chk-raw-magenta" onchange="draw()"> 👁️ Voir le brut rocheux sur fond magenta</label>
+    </div>
+
+    <div class="canvas-box">
+      <canvas id="view" width="1100" height="960"></canvas>
+    </div>
+  </div>
+
+  <h2>Planches de Décomposition Multicalques</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <h3>1. Layout Rocheux Brut <span class="badge">#FF00FF</span></h3>
+      <p style="font-size: 12px; color: #b89f92;">La première génération retenue : falaises volcaniques et parois sur fond magenta pur.</p>
+      <img src="renders/steam_cave_multicalques_magenta/bruts_magenta/01_falaises_rocheuses_magenta.png" alt="Roche magenta">
+    </div>
+
+    <div class="card">
+      <h3>2. Sol Steam Cave Adapté <span class="badge">#FF00FF</span></h3>
+      <p style="font-size: 12px; color: #b89f92;">Le sol de Steam Cave (herbe de pente, terre, sentier) généré pour s'adapter exactement aux contours des rochers.</p>
+      <img src="renders/steam_cave_multicalques_magenta/bruts_magenta/02_sol_steam_adapte_magenta.png" alt="Sol adapté magenta">
+    </div>
+
+    <div class="card">
+      <h3>3. Plaque de Sol Continue <span class="badge badge-ok">Fond intégral</span></h3>
+      <p style="font-size: 12px; color: #b89f92;">Plaque de sol intégrale sous-jacente garantissant l'absence de vide sous les falaises.</p>
+      <img src="renders/steam_cave_multicalques_magenta/bruts_magenta/02_sol_steam_plaque_pleine.png" alt="Plaque continue">
+    </div>
+
+    <div class="card">
+      <h3>4. Référence Canonique NDS <span class="badge badge-ok">Source Steam Cave</span></h3>
+      <p style="font-size: 12px; color: #b89f92;">La carte originale NDS de Steam Cave fournissant la palette et les textures du sol.</p>
+      <img src="Steam_Cave_entrance_TDS.png" alt="Référence NDS">
+    </div>
+  </div>
+
+  <script>
+    const W = 1100, H = 960;
+    const canvas = document.getElementById('view');
+    const ctx = canvas.getContext('2d');
+    let mode = 'jour';
+    let zoom = 1;
+
+    const cache = {};
+    function loadImage(url) {
+      if (cache[url]) return Promise.resolve(cache[url]);
+      return new Promise((res) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => { cache[url] = img; res(img); };
+      });
+    }
+
+    async function draw() {
+      ctx.clearRect(0, 0, W, H);
+      const isNight = mode === 'nuit';
+      const subDir = isNight ? 'calques_nuit/' : 'calques_detoures/';
+      const suffix = isNight ? '_nuit.png' : '.png';
+
+      const showRaw = document.getElementById('chk-raw-magenta').checked;
+      if (showRaw) {
+        const rawImg = await loadImage('renders/steam_cave_multicalques_magenta/bruts_magenta/01_falaises_rocheuses_magenta.png');
+        ctx.drawImage(rawImg, 0, 0);
+        return;
+      }
+
+      // 1. Plaque de sol de fond
+      if (document.getElementById('chk-base-plate').checked) {
+        const plateImg = await loadImage(`renders/steam_cave_multicalques_magenta/${subDir}00_sol_steam_plaque_pleine${suffix}`);
+        ctx.drawImage(plateImg, 0, 0);
+      }
+
+      // 2. Sol adapté
+      if (document.getElementById('chk-ground-adapted').checked) {
+        const groundImg = await loadImage(`renders/steam_cave_multicalques_magenta/${subDir}02_sol_steam_adapte${suffix}`);
+        ctx.drawImage(groundImg, 0, 0);
+      }
+
+      // 3. Falaises rocheuses
+      if (document.getElementById('chk-rocks').checked) {
+        const rockImg = await loadImage(`renders/steam_cave_multicalques_magenta/${subDir}01_falaises_rocheuses${suffix}`);
+        ctx.drawImage(rockImg, 0, 0);
+      }
+    }
+
+    function setMode(m) {
+      mode = m;
+      document.getElementById('btn-mode-jour').classList.toggle('active', m === 'jour');
+      document.getElementById('btn-mode-nuit').classList.toggle('active', m === 'nuit');
+      draw();
+    }
+
+    function setZoom(z) {
+      zoom = +z;
+      canvas.style.width = (W * zoom) + 'px';
+      canvas.style.height = (H * zoom) + 'px';
+    }
+
+    setZoom(1);
+    draw();
+  </script>
+</body>
+</html>
