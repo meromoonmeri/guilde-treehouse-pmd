@@ -1,0 +1,32 @@
+{
+  "reference": "Steam_Cave_entrance_TDS.png",
+  "dimensions": [
+    504,
+    440
+  ],
+  "grid_8px": [
+    63,
+    55
+  ],
+  "grid_24px": [
+    21,
+    18
+  ],
+  "frames": 6,
+  "frame_ms": 167,
+  "layers": {
+    "01_sol": "01_sol_sentier_natif.png",
+    "01_fond_integral": "01_sol_fond_integral.png",
+    "02_parois": "02_parois_falaises.png",
+    "03_porche": "03_porche_grotte.png",
+    "04_vapeur": [
+      "04_vapeur_animee_phase_01.png",
+      "04_vapeur_animee_phase_02.png",
+      "04_vapeur_animee_phase_03.png",
+      "04_vapeur_animee_phase_04.png",
+      "04_vapeur_animee_phase_05.png",
+      "04_vapeur_animee_phase_06.png"
+    ]
+  },
+  "recomposition_error": 0
+}

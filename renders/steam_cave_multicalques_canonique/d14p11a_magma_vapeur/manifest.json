@@ -1,0 +1,39 @@
+{
+  "reference": "large.D14P11A.gif (Steam Cave)",
+  "dimensions": [
+    456,
+    384
+  ],
+  "grid_8px": [
+    57,
+    48
+  ],
+  "grid_24px": [
+    19,
+    16
+  ],
+  "frames": 6,
+  "frame_ms": 167,
+  "cycle_ms": 1000,
+  "layers": {
+    "01_sol": "01_sol_basalte_integral.png",
+    "02_parois": "02_parois_caverne.png",
+    "03_magma": [
+      "03_magma_anime_phase_01.png",
+      "03_magma_anime_phase_02.png",
+      "03_magma_anime_phase_03.png",
+      "03_magma_anime_phase_04.png",
+      "03_magma_anime_phase_05.png",
+      "03_magma_anime_phase_06.png"
+    ],
+    "04_vapeur": [
+      "04_vapeur_animee_phase_01.png",
+      "04_vapeur_animee_phase_02.png",
+      "04_vapeur_animee_phase_03.png",
+      "04_vapeur_animee_phase_04.png",
+      "04_vapeur_animee_phase_05.png",
+      "04_vapeur_animee_phase_06.png"
+    ]
+  },
+  "recomposition_error": 0
+}
