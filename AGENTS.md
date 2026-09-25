@@ -462,3 +462,7 @@ Demande : régénérer ciel et brume, brume statique, seules quelques volutes bo
 ## Mont Thunder V10
 
 Sommet uniforme (chemin remappé au gris du sommet), brouillard roche en palette cycling, nuages fins en wrap parfait. Aperçu `apercu_mont_thunder_orage_v10.html`. Non validé en jeu.
+
+## Audit PMD Sky (galerie Project Pokémon + PMD-SKY-PMDO-PORT)
+
+Voir `MANUEL_PMD_SKY_ANIMATION_PMDO.md`. Règle : durées réelles BPL/BPA copiées en FrameLength (60 fps), un calque par horloge, couche haute BMA en premier plan. Outils `tools/pmd_sky/`, données `audits/pmd_sky_port/`.
