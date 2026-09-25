@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="GLACE_V17_bg_aurore_01_ciel_nuages" tilewidth="8" tileheight="8" columns="33" tilecount="891"><image source="GLACE_V17_bg_aurore_01_ciel_nuages.png" width="264" height="216" /></tileset>

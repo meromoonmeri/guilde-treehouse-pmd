@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="GLACE_V17_route_glacee_03_parois_nord" tilewidth="8" tileheight="8" columns="63" tilecount="2835"><image source="GLACE_V17_route_glacee_03_parois_nord.png" width="504" height="360" /></tileset>

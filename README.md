@@ -1,5 +1,12 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## V17 — Glace & Aurore canoniques, sud-nord, PNG to Tileset 8 px
+
+- **[Atelier interactif : 3 maps, calques et animations](apercu_glace_aurore_canonique_v1.html)**.
+- [Pack complet](renders/glace_aurore_canonique_v1_pack.zip) · [pack plat PNG 8 px](GLACE_V17_png_import_8px.zip) · [méthode et limites](renders/glace_aurore_canonique_v1/README.md).
+
+Relayouts aux pixels natifs exacts depuis `aurorepmdsky`, `pmdskyicearena` et `iceroadpmdsky` : BG ciel boréal (ciel, étoiles, aurore 10f en onde verticale pure, frise), arène sud→paroi nord, route du lac gelé sud→défilé nord. Coupes organiques suivant les crevasses, sols pavés natifs sans fondu, provenance par pixel (NPZ), TSX 8 px. Animations nouvelles documentées (onde, scintillement, reflets ±5 %), pas des cycles officiels. 13 tests PASS, JS contrôlé ; pas de test navigateur interactif ni runtime PMDO.
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.

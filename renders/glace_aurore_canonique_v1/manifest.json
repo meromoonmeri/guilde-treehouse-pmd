@@ -1,0 +1,417 @@
+{
+  "lot": "glace_aurore_canonique_v1 (V17)",
+  "grille_px": 8,
+  "methode": "mixte : composition guidee par layout_guide sud-nord existant ; 100% pixels natifs sur couches fixes ; coupes organiques calculees ; animations nouvelles (onde/sci/reflets), pas de cycles officiels.",
+  "sources": [
+    {
+      "id": 0,
+      "file": "aurorepmdsky.png",
+      "sha256": "1d9a9bf93ad59a91285058ddc182114c7b7695dfa8c6694676c85844a3502430"
+    },
+    {
+      "id": 1,
+      "file": "pmdskyicearena.png",
+      "sha256": "07bad945dfbcf14a9a935a8d98c0ec1d86d4caca31c26eccef79573f8bb2bdef"
+    },
+    {
+      "id": 2,
+      "file": "iceroadpmdsky.png",
+      "sha256": "cdb02304be6481bc802399b6ced2b4c012c4a1a2eb3ddc23498da0216b5a6bf6"
+    }
+  ],
+  "bg": {
+    "id": "bg_aurore",
+    "title": "BG ciel boreal — ciel, etoiles, aurore 10f, frise",
+    "size": [
+      264,
+      216
+    ],
+    "layers": [
+      "GLACE_V17_bg_aurore_01_ciel_nuages.png",
+      "GLACE_V17_bg_aurore_02_etoiles.png",
+      "GLACE_V17_bg_aurore_04_frise_glace.png"
+    ],
+    "aurore_frames": [
+      "GLACE_V17_bg_aurore_03_aurore_f00.png",
+      "GLACE_V17_bg_aurore_03_aurore_f01.png",
+      "GLACE_V17_bg_aurore_03_aurore_f02.png",
+      "GLACE_V17_bg_aurore_03_aurore_f03.png",
+      "GLACE_V17_bg_aurore_03_aurore_f04.png",
+      "GLACE_V17_bg_aurore_03_aurore_f05.png",
+      "GLACE_V17_bg_aurore_03_aurore_f06.png",
+      "GLACE_V17_bg_aurore_03_aurore_f07.png",
+      "GLACE_V17_bg_aurore_03_aurore_f08.png",
+      "GLACE_V17_bg_aurore_03_aurore_f09.png"
+    ],
+    "aurore_ms": 160,
+    "star_frames": 4,
+    "star_ms": 200,
+    "n_ruban": 13406,
+    "n_etoiles": 7,
+    "n_frise": 2868,
+    "recompose_diff_px": 10540,
+    "operations": [
+      {
+        "layer": "01_ciel_nuages",
+        "source": 0,
+        "method": "trous rubans/etoiles combles par plus proche voisin natif (distance_transform), frise transparente"
+      }
+    ],
+    "runtime": "NOT TESTED",
+    "art_approved": false,
+    "notes": "Aurore : texture canonique extraite (V10 a 1x), onde transversale verticale pure, boucle exacte. Etoiles : RGB natifs, seul alpha module. Ciel : trous combles par voisins natifs."
+  },
+  "arene": {
+    "layers": {
+      "01_sol_neige": "GLACE_V17_arene_glace_01_sol_neige.png",
+      "02_mur_nord": "GLACE_V17_arene_glace_02_mur_nord.png",
+      "03_blocs_cotes": "GLACE_V17_arene_glace_03_blocs_cotes.png",
+      "04_crete_sud": "GLACE_V17_arene_glace_04_crete_sud.png",
+      "05_fissures": "GLACE_V17_arene_glace_05_fissures.png"
+    },
+    "reflets": [
+      "GLACE_V17_arene_glace_06_reflets_f0.png",
+      "GLACE_V17_arene_glace_06_reflets_f1.png",
+      "GLACE_V17_arene_glace_06_reflets_f2.png",
+      "GLACE_V17_arene_glace_06_reflets_f3.png"
+    ],
+    "n_reflets": 114421,
+    "chemin_bloque_px": 0,
+    "operations": [
+      {
+        "layer": "01_sol_neige",
+        "source": 1,
+        "method": "native patch overlap, no blending",
+        "patches": [
+          [
+            48,
+            224,
+            112,
+            256
+          ],
+          [
+            208,
+            224,
+            272,
+            256
+          ],
+          [
+            304,
+            232,
+            368,
+            264
+          ],
+          [
+            120,
+            248,
+            184,
+            280
+          ],
+          [
+            368,
+            224,
+            432,
+            256
+          ],
+          [
+            160,
+            208,
+            224,
+            240
+          ],
+          [
+            240,
+            184,
+            304,
+            216
+          ],
+          [
+            40,
+            184,
+            104,
+            216
+          ]
+        ],
+        "seed": 21
+      },
+      {
+        "layer": "02_mur_nord",
+        "source": 1,
+        "rect": [
+          0,
+          36,
+          504,
+          196
+        ],
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "layer": "03_blocs_cotes",
+        "source": 1,
+        "rect": [
+          312,
+          176,
+          472,
+          216
+        ],
+        "position": [
+          16,
+          208
+        ]
+      },
+      {
+        "layer": "03_blocs_cotes",
+        "source": 1,
+        "rect": [
+          40,
+          176,
+          200,
+          216
+        ],
+        "position": [
+          344,
+          232
+        ]
+      },
+      {
+        "layer": "04_crete_sud",
+        "source": 1,
+        "rect": [
+          0,
+          304,
+          248,
+          408
+        ],
+        "position": [
+          0,
+          304
+        ]
+      },
+      {
+        "layer": "04_crete_sud",
+        "source": 1,
+        "rect": [
+          288,
+          304,
+          504,
+          408
+        ],
+        "position": [
+          288,
+          304
+        ]
+      },
+      {
+        "layer": "05_fissures",
+        "source": 1,
+        "rect": [
+          80,
+          200,
+          200,
+          240
+        ],
+        "position": [
+          120,
+          248
+        ]
+      },
+      {
+        "layer": "05_fissures",
+        "source": 1,
+        "rect": [
+          280,
+          200,
+          400,
+          240
+        ],
+        "position": [
+          272,
+          280
+        ]
+      }
+    ],
+    "runtime": "NOT TESTED",
+    "art_approved": false
+  },
+  "route": {
+    "layers": {
+      "01_fond_montagnes": "GLACE_V17_route_glacee_01_fond_montagnes.png",
+      "02_lac_gele": "GLACE_V17_route_glacee_02_lac_gele.png",
+      "03_parois_nord": "GLACE_V17_route_glacee_03_parois_nord.png",
+      "04_blocs_sud": "GLACE_V17_route_glacee_04_blocs_sud.png",
+      "05_fissures": "GLACE_V17_route_glacee_05_fissures.png"
+    },
+    "reflets": [
+      "GLACE_V17_route_glacee_06_reflets_f0.png",
+      "GLACE_V17_route_glacee_06_reflets_f1.png",
+      "GLACE_V17_route_glacee_06_reflets_f2.png",
+      "GLACE_V17_route_glacee_06_reflets_f3.png"
+    ],
+    "n_reflets": 85153,
+    "chemin_bloque_px": 0,
+    "operations": [
+      {
+        "layer": "01_fond_montagnes",
+        "source": 2,
+        "rect": [
+          0,
+          0,
+          504,
+          96
+        ],
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "layer": "02_lac_gele",
+        "source": 2,
+        "method": "native patch overlap, no blending",
+        "patches": [
+          [
+            150,
+            155,
+            214,
+            187
+          ],
+          [
+            250,
+            155,
+            314,
+            187
+          ],
+          [
+            180,
+            170,
+            244,
+            202
+          ],
+          [
+            300,
+            170,
+            364,
+            202
+          ],
+          [
+            120,
+            185,
+            184,
+            217
+          ],
+          [
+            330,
+            150,
+            394,
+            182
+          ],
+          [
+            200,
+            150,
+            264,
+            182
+          ],
+          [
+            90,
+            165,
+            154,
+            197
+          ]
+        ],
+        "seed": 33
+      },
+      {
+        "layer": "03_parois_nord",
+        "source": 2,
+        "rect": [
+          0,
+          88,
+          224,
+          184
+        ],
+        "position": [
+          0,
+          88
+        ]
+      },
+      {
+        "layer": "03_parois_nord",
+        "source": 2,
+        "rect": [
+          280,
+          88,
+          504,
+          184
+        ],
+        "position": [
+          280,
+          88
+        ]
+      },
+      {
+        "layer": "04_blocs_sud",
+        "source": 2,
+        "rect": [
+          0,
+          264,
+          240,
+          360
+        ],
+        "position": [
+          0,
+          264
+        ]
+      },
+      {
+        "layer": "04_blocs_sud",
+        "source": 2,
+        "rect": [
+          264,
+          264,
+          504,
+          360
+        ],
+        "position": [
+          264,
+          264
+        ]
+      },
+      {
+        "layer": "05_fissures",
+        "source": 2,
+        "rect": [
+          140,
+          150,
+          260,
+          190
+        ],
+        "position": [
+          150,
+          200
+        ]
+      },
+      {
+        "layer": "05_fissures",
+        "source": 2,
+        "rect": [
+          260,
+          150,
+          380,
+          190
+        ],
+        "position": [
+          290,
+          220
+        ]
+      }
+    ],
+    "runtime": "NOT TESTED",
+    "art_approved": false
+  },
+  "import_png_to_tileset": "8 px, noms GLACE_V17_* uniques ; poser les couches dans l ordre, frames animees en overlay au-dessus.",
+  "runtime_PMDO": "NON TESTE",
+  "autres_zones": "ouvertes"
+}

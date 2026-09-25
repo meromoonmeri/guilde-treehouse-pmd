@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tileset version="1.10" name="GLACE_V17_arene_glace_03_blocs_cotes" tilewidth="8" tileheight="8" columns="63" tilecount="3213"><image source="GLACE_V17_arene_glace_03_blocs_cotes.png" width="504" height="408" /></tileset>
