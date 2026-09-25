@@ -1,0 +1,310 @@
+{
+  "lot": "entree_ruine_sud_nord_v1",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "method": "rendu genere : decor complet sur magenta (sables mouvants = magenta) + sol complet genere separement",
+  "reference_da": "Sealed_Ruin_entrance_TDS.png",
+  "raw_inputs": [
+    {
+      "file": "source/entree_ruine_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "e43c61eab28480e7839391b96ce4c7b12ae55f7bd85d947faab9ba7320a34513",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_ruine_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "32886d9848d7f22c2d2c4041d9e7f966e62d2b697a9345677a6962d51ad50b86",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_ruine_sud_nord_v1/bruts/bulles_sable_poses.png",
+      "sha256": "a4d686402450780a90276a394619f67c8805cbd381f2e48b499d319cf77e6586",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "source/entree_ruine_sud_nord_v1/bruts/tourbillon_8_poses.png",
+      "sha256": "986464d2286f32a0f2235b6950242e30f78629852fb379cdc8b968eae9af594a",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "normalization": "x0.5 exact (848x1264 -> 424x632), moyenne 2x2 par classe, palette commune 96 couleurs (arbres morts : palette propre 24 couleurs)",
+  "segmentation": "fosses = magenta dilate 1 px ; sable = distance RVB a (229,206,153) < 45 sur 60 % d une fenetre 7 px ; arbres = coeur gris ferme + contours peu satures ; falaises = non-sable relie au bord ; rebords = non-sable a < 24 px d une fosse ; rochers = reste > 300 px ; bouche = pixels < 25 dans la cavite",
+  "layer_order_bottom_to_top": [
+    "animation/sables/ERN1_00_sables_mouvants_fX.png",
+    "animation/bulles/ERN1_01_bulles_sable_fXX.png",
+    "calques/ERN1_02_sol_complet.png",
+    "calques/ERN1_03_sable.png",
+    "calques/ERN1_04_rebords_fosses.png",
+    "calques/ERN1_05_rochers.png",
+    "calques/ERN1_06_falaises.png",
+    "calques/ERN1_07_bouche_ruine.png",
+    "animation/tourbillons/ERN1_08_tourbillons_fX.png",
+    "calques/ERN1_09_arbres_morts.png"
+  ],
+  "layer_ticks": [
+    10,
+    5,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    5,
+    60
+  ],
+  "quicksand": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "lip": [
+        112,
+        72,
+        36
+      ],
+      "bande": [
+        146,
+        100,
+        54
+      ],
+      "inter": [
+        172,
+        128,
+        74
+      ],
+      "accent": [
+        190,
+        148,
+        92
+      ],
+      "surface": [
+        206,
+        166,
+        108
+      ],
+      "clair": [
+        224,
+        192,
+        136
+      ],
+      "pale": [
+        238,
+        216,
+        166
+      ],
+      "contour": [
+        86,
+        52,
+        26
+      ]
+    },
+    "modele": "structure et cadence riviere Metano (comme ESN2/ECN1), recalculees sur nos fosses",
+    "origine": "pixels recalcules"
+  },
+  "bubbles": {
+    "brut": "source/entree_ruine_sud_nord_v1/bruts/bulles_sable_poses.png",
+    "poses": [
+      "creux",
+      "bosse",
+      "ronde",
+      "dome",
+      "fissure",
+      "eclatement",
+      "retombee",
+      "cratere",
+      "anneau",
+      "anneau_pale",
+      "poussiere",
+      "poussiere_fin"
+    ],
+    "bases_rangees_px": [
+      298,
+      632
+    ],
+    "reduction": "fenetre 264 px -> 24 px (x1/11), base commune par rangee",
+    "derivees": [],
+    "timeline_phases": [
+      "creux",
+      "creux",
+      "bosse",
+      "bosse",
+      "ronde",
+      "ronde",
+      "dome",
+      "dome",
+      "fissure",
+      "fissure",
+      "eclatement",
+      "retombee",
+      "cratere",
+      "cratere",
+      "anneau",
+      "anneau",
+      "anneau_pale",
+      "poussiere",
+      "poussiere_fin"
+    ],
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "emetteurs": [
+      {
+        "xy": [
+          56,
+          472
+        ],
+        "decalage": 0
+      },
+      {
+        "xy": [
+          88,
+          456
+        ],
+        "decalage": 7
+      },
+      {
+        "xy": [
+          368,
+          400
+        ],
+        "decalage": 14
+      },
+      {
+        "xy": [
+          304,
+          344
+        ],
+        "decalage": 21
+      },
+      {
+        "xy": [
+          336,
+          400
+        ],
+        "decalage": 4
+      },
+      {
+        "xy": [
+          344,
+          344
+        ],
+        "decalage": 11
+      },
+      {
+        "xy": [
+          64,
+          392
+        ],
+        "decalage": 18
+      },
+      {
+        "xy": [
+          96,
+          376
+        ],
+        "decalage": 1
+      }
+    ],
+    "origine": "dessin GENERE, chronologie creee ; pas une animation officielle"
+  },
+  "dust_devils": {
+    "brut": "source/entree_ruine_sud_nord_v1/bruts/tourbillon_8_poses.png",
+    "poses": [
+      "tourbillon_0",
+      "tourbillon_1",
+      "tourbillon_2",
+      "tourbillon_3",
+      "tourbillon_4",
+      "tourbillon_5",
+      "tourbillon_6",
+      "tourbillon_7"
+    ],
+    "bases_rangees_px": [
+      435,
+      848
+    ],
+    "reduction": "fenetre 360 px -> 40 px (x1/9), couleurs remappees par rang de luminance sur la rampe sable",
+    "phases": 8,
+    "frame_length_ticks": 5,
+    "positions": [
+      [
+        208,
+        304
+      ],
+      [
+        216,
+        384
+      ]
+    ],
+    "decalages": [
+      0,
+      3
+    ],
+    "collision": "aucune (decoratif)",
+    "origine": "dessin GENERE, boucle de 8 poses demandee au generateur"
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      200,
+      616
+    ],
+    "threshold_px": [
+      224,
+      248
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 831,
+    "blocked_cells": 3009,
+    "total_cells": 4187,
+    "rule": "case bloquee si > 25 % hors sable visible (fosses, rebords, rochers, falaises, bouche, arbres)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ern1_entree_ruine",
+    "namespace": "entree_ruine_sud_nord",
+    "tiles_per_bank": {
+      "ERN1_00_SABLES": 558,
+      "ERN1_01_BULLES": 98,
+      "ERN1_02_SOL_COMPLET": 3991,
+      "ERN1_03_SABLE": 1406,
+      "ERN1_04_REBORDS_FOSSES": 135,
+      "ERN1_05_ROCHERS": 73,
+      "ERN1_06_FALAISES": 2664,
+      "ERN1_07_BOUCHE_RUINE": 23,
+      "ERN1_08_TOURBILLONS": 153,
+      "ERN1_09_ARBRES_MORTS": 265
+    },
+    "banks": [
+      "ERN1_00_SABLES",
+      "ERN1_01_BULLES",
+      "ERN1_02_SOL_COMPLET",
+      "ERN1_03_SABLE",
+      "ERN1_04_REBORDS_FOSSES",
+      "ERN1_05_ROCHERS",
+      "ERN1_06_FALAISES",
+      "ERN1_07_BOUCHE_RUINE",
+      "ERN1_08_TOURBILLONS",
+      "ERN1_09_ARBRES_MORTS"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

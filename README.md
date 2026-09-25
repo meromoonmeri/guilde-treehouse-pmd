@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Ruine — sud → nord, rendu généré réf. Sealed Ruin (25 septembre 2026)
+
+- Aperçu : `apercu_entree_ruine_sud_nord_v1.html`.
+- Lot : `renders/entree_ruine_sud_nord_v1/` (`ERN1_projet_pmdo_0812.zip`, `ERN1_calques_png_8px.zip`, ORA, WebP).
+- Source : `source/entree_ruine_sud_nord_v1/`.
+
+Canyon de grès ocre, arbres morts gris, grotte au nord. Animations : sables mouvants « façon Métano » dans 5 fosses (4 × 10 ticks), 8 bulles de sable générées qui éclatent (24 × 5 ticks) et 2 tourbillons de poussière générés (8 × 5 ticks, non bloquants). 12 tests PASS. Biome choisi par l'agent (à confirmer). Pas de test PMDO en jeu.
+
 ## Entrée Cratère — sud → nord, rendu généré réf. Dark Crater (25 septembre 2026)
 
 - Aperçu : `apercu_entree_cratere_sud_nord_v1.html`.
