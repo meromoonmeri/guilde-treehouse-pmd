@@ -1,18 +1,18 @@
 <!doctype html><meta charset="utf-8"><title>Zone D06P11 V8</title>
 <style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:1088px;border:1px solid #444}button{margin-right:6px}</style>
-<h1>Zone D06P11 V8 — sommet sans pic, grotte naturelle, lune animée d'après la ROM</h1><p>Mer : timings ROM. Nuages générés, boucle parfaite. Non testé en jeu.</p>
+<h1>Zone D06P11 V8 — fragment retiré, marches marchables, écume animée générée</h1><p>Mer : timings ROM. Nuages générés, boucle parfaite. Non testé en jeu.</p>
 <p><button data-m="jour">Jour</button><button data-m="crepuscule">Crépuscule</button><button data-m="nuit">Nuit</button> <label><input type="checkbox" id="col"> collisions</label></p>
 <canvas id="c" width="544" height="640"></canvas><p>Cadre jaune = viewport PMDO 320×240 collé au bord de l’astre.</p>
 <script>
 const B='renders/zone_d06p11_v8/',ld=s=>{const i=new Image();i.src=B+s;return i};let M,S={};
 fetch(B+'manifest.json').then(r=>r.json()).then(m=>{M=m;
  for(const k in m.modes){const d=m.modes[k];S[k]={ciel:ld(d.calques['00_ciel']),ter:ld(d.calques['05_terrain']),et:d.etoiles.frames.map(ld),as:d.astre.frames.map(ld),nu:ld(d.nuages.bande),
-  mer:d.mer_bpa.frames.map(ld),pal:d.mer_palette.frames.map(ld),d}}
+  mer:d.mer_bpa.frames.map(ld),pal:d.mer_palette.frames.map(ld),ec:d.ecume.frames.map(ld),d}}
  let mode='jour';document.querySelectorAll('button').forEach(b=>b.onclick=()=>mode=b.dataset.m);
  const x=c.getContext('2d'),t0=performance.now();
  (function f(now){const t=now-t0,s=S[mode],d=s.d;x.clearRect(0,0,544,640);x.drawImage(s.ciel,0,0);x.drawImage(s.et[Math.floor(t/d.etoiles.ms)%s.et.length],0,0);x.drawImage(s.as[Math.floor(t/d.astre.ms)%s.as.length],0,0);
   if(s.nu.complete){const w=s.nu.width,o=Math.round(-d.nuages.vitesse_px_s*t/1000)%w;for(let X=-o;X<544;X+=w)x.drawImage(s.nu,X,d.nuages.y)}
-  x.drawImage(s.mer[Math.floor(t/d.mer_bpa.ms)%s.mer.length],0,0);x.drawImage(s.pal[Math.floor(t/d.mer_palette.ms)%s.pal.length],0,0);x.drawImage(s.ter,0,0);
+  x.drawImage(s.mer[Math.floor(t/d.mer_bpa.ms)%s.mer.length],0,0);x.drawImage(s.pal[Math.floor(t/d.mer_palette.ms)%s.pal.length],0,0);x.drawImage(s.ec[Math.floor(t/d.ecume.ms)%s.ec.length],0,0);x.drawImage(s.ter,0,0);
   x.strokeStyle='#ff0';x.strokeRect((d.astre.centre[0]<272?0:224)+.5,.5,319,239);
   if(col.checked){x.fillStyle='rgba(255,0,0,.35)';M.collisions_8px.forEach((r,j)=>r.forEach((v,i)=>{if(v)x.fillRect(i*8,j*8,8,8)}))}
   requestAnimationFrame(f)})(t0)});
