@@ -320,9 +320,9 @@ def ground_project(tracks, static, blocked, entry_px, threshold_px, gfx, tools):
     return [l['Name'] if 'Name' in l else None for l in layers], {b.name: len(b.data) for b in banks}
 
 
-def write_ora(path, layers):
+def write_ora(path, layers, title='Entree Cratere sud-nord V1'):
     import xml.etree.ElementTree as ET
-    root = ET.Element('image', w=str(W), h=str(H), name='Entree Cratere sud-nord V1')
+    root = ET.Element('image', w=str(W), h=str(H), name=title)
     stack = ET.SubElement(root, 'stack'); comp = Image.new('RGBA', (W, H))
     with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED) as z:
         z.writestr('mimetype', 'image/openraster', compress_type=zipfile.ZIP_STORED)

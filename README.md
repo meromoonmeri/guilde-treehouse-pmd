@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Givre — sud → nord, rendu généré réf. Frosty Forest (25 septembre 2026)
+
+- Aperçu : `apercu_entree_givre_sud_nord_v1.html`.
+- Lot : `renders/entree_givre_sud_nord_v1/` (`EGN1_projet_pmdo_0812.zip`, `EGN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_givre_sud_nord_v1/`.
+
+Quatrième map de la série : forêt de sapins enneigés, sentier de pierre et grotte de glace au nord. Eau glacée façon rivière de Métano (4 × 10 ticks), scintillements Métano recolorés, 40 flocons générés qui tombent en tournoyant puis se posent (48 × 5 ticks, boucle de 4 s). Le ruisseau généré coupait le sentier : un gué gelé est **dessiné par script**, et les congères à moins de 6 px du sentier sont praticables (collision seulement). 11 tests PASS. Biome choisi par l'agent, à confirmer. Pas de test PMDO en jeu.
+
 ## Entrée Ruine — sud → nord, rendu généré réf. Sealed Ruin (25 septembre 2026)
 
 - Aperçu : `apercu_entree_ruine_sud_nord_v1.html`.

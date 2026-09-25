@@ -1,0 +1,628 @@
+{
+  "lot": "entree_givre_sud_nord_v1",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "method": "rendu genere : decor complet sur magenta (eau = magenta) + sol complet genere separement",
+  "reference_da": {
+    "file": "source/entree_givre_sud_nord_v1/reference/Frosty_Forest_Entrance_RT_mysterydungeonwiki.png",
+    "sha256": "20de3b20d904570306c1581cfe2eeaf0f1edbe4ee760299039bbb3d9f4a98c99",
+    "origine": "mysterydungeonwiki.com, Rescue Team : Frosty Forest (recherche d images)"
+  },
+  "raw_inputs": [
+    {
+      "file": "source/entree_givre_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "39a0aee795ce198e831bca498ca3848a518854a3e53dd26948e98cf1dc2cd652",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_givre_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "e66d215333136c16f57a6969fdec8e5f5d69f01c448bfdf77b55664bbeb0eb04",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_givre_sud_nord_v1/bruts/flocons_poses.png",
+      "sha256": "f1c816309f9219a3b257636ca2a1ce186840b5b5b87aaded25dfb91d1c0eebc7",
+      "size": [
+        1717,
+        916
+      ]
+    }
+  ],
+  "normalization": "x0.5 exact (848x1264 -> 424x632), moyenne 2x2 par classe, palette commune 96 couleurs",
+  "segmentation": "eau = magenta dilate 1 px ; glacons = trous remplis de l eau ; falaise = b-r > 40 en bande nord puis tout au-dessus par colonne ; sentier = lum 120-200 et b-r 18-48 lisse 9 px ; sapins/congeres = densite de contours > 0.16 sur 25 px",
+  "layer_order_bottom_to_top": [
+    "animation/eau/EGN1_00_eau_glacee_fX.png",
+    "animation/scintillements/EGN1_01_scintillements_fX.png",
+    "calques/EGN1_02_sol_complet.png",
+    "calques/EGN1_03_neige.png",
+    "calques/EGN1_04_sentier.png",
+    "calques/EGN1_05_gue_gele.png",
+    "calques/EGN1_06_glacons.png",
+    "calques/EGN1_07_souche.png",
+    "calques/EGN1_08_sapins_congeres.png",
+    "calques/EGN1_09_falaises_glace.png",
+    "calques/EGN1_10_bouche_glace.png",
+    "animation/flocons/EGN1_11_flocons_fXX.png"
+  ],
+  "gue_gele": {
+    "centre_full_px": [
+      436,
+      976
+    ],
+    "pixels": 1765,
+    "couleurs": {
+      "base": [
+        206,
+        232,
+        246
+      ],
+      "ombre": [
+        184,
+        214,
+        238
+      ],
+      "fissure": [
+        150,
+        186,
+        222
+      ],
+      "bord": [
+        120,
+        160,
+        210
+      ],
+      "reflet": [
+        244,
+        250,
+        255
+      ]
+    },
+    "origine": "DESSINE par le script (plaque, fissures, reflets) : le ruisseau genere coupait le sentier. Une edition generative du croisement a ete rejetee (elle modifiait tout le ruisseau)."
+  },
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "lip": [
+        170,
+        212,
+        244
+      ],
+      "bande": [
+        58,
+        92,
+        168
+      ],
+      "inter": [
+        84,
+        136,
+        204
+      ],
+      "accent": [
+        100,
+        158,
+        218
+      ],
+      "surface": [
+        112,
+        172,
+        226
+      ],
+      "clair": [
+        170,
+        212,
+        244
+      ],
+      "reflet": [
+        240,
+        248,
+        255
+      ]
+    },
+    "modele": "structure et cadence de la riviere Metano (comme ESN2) recalculees sur nos berges ; palette froide a la main",
+    "origine": "pixels recalcules, pas de tuiles natives"
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          96,
+          544
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          104,
+          512
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          104,
+          576
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          296,
+          376
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          240,
+          456
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          376,
+          296
+        ]
+      }
+    ],
+    "origine": "pixels Metano reels recolores blanc bleute"
+  },
+  "flakes": {
+    "brut": "source/entree_givre_sud_nord_v1/bruts/flocons_poses.png",
+    "poses": [
+      "flocon_0",
+      "flocon_1",
+      "flocon_2",
+      "flocon_3",
+      "flocon_4",
+      "flocon_5",
+      "boule_0",
+      "boule_1",
+      "boule_2",
+      "boule_3",
+      "boule_4",
+      "boule_5",
+      "pose"
+    ],
+    "reduction": "fenetre 208 px centree -> 8 px (x1/26), palette 4 couleurs froides",
+    "derivee": "pose = flocon pose 2x2 dessine",
+    "phases": 48,
+    "frame_length_ticks": 5,
+    "chute_px": 64,
+    "chute_phases": 40,
+    "pose_phases": 2,
+    "rotation": "une pose toutes les 2 phases, 6 poses",
+    "ondulation": "sinus periode 24 phases",
+    "emetteurs": [
+      {
+        "type": "flocon",
+        "depart_xy": [
+          253,
+          139
+        ],
+        "decalage": 0,
+        "amplitude_px": 2.38
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          85,
+          100
+        ],
+        "decalage": 11,
+        "amplitude_px": 2.46
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          392,
+          374
+        ],
+        "decalage": 22,
+        "amplitude_px": 3.79
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          132,
+          478
+        ],
+        "decalage": 33,
+        "amplitude_px": 3.08
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          194,
+          59
+        ],
+        "decalage": 44,
+        "amplitude_px": 2.83
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          125,
+          253
+        ],
+        "decalage": 7,
+        "amplitude_px": 3.86
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          93,
+          144
+        ],
+        "decalage": 18,
+        "amplitude_px": 3.34
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          280,
+          528
+        ],
+        "decalage": 29,
+        "amplitude_px": 3.76
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          127,
+          35
+        ],
+        "decalage": 40,
+        "amplitude_px": 3.3
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          72,
+          486
+        ],
+        "decalage": 3,
+        "amplitude_px": 2.44
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          399,
+          442
+        ],
+        "decalage": 14,
+        "amplitude_px": 3.56
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          294,
+          112
+        ],
+        "decalage": 25,
+        "amplitude_px": 3.53
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          320,
+          11
+        ],
+        "decalage": 36,
+        "amplitude_px": 2.27
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          143,
+          334
+        ],
+        "decalage": 47,
+        "amplitude_px": 2.65
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          261,
+          94
+        ],
+        "decalage": 10,
+        "amplitude_px": 3.83
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          38,
+          406
+        ],
+        "decalage": 21,
+        "amplitude_px": 3.42
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          299,
+          299
+        ],
+        "decalage": 32,
+        "amplitude_px": 3.81
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          336,
+          157
+        ],
+        "decalage": 43,
+        "amplitude_px": 3.89
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          400,
+          526
+        ],
+        "decalage": 6,
+        "amplitude_px": 3.6
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          339,
+          414
+        ],
+        "decalage": 17,
+        "amplitude_px": 2.16
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          398,
+          501
+        ],
+        "decalage": 28,
+        "amplitude_px": 2.9
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          392,
+          383
+        ],
+        "decalage": 39,
+        "amplitude_px": 2.87
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          255,
+          162
+        ],
+        "decalage": 2,
+        "amplitude_px": 3.64
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          194,
+          57
+        ],
+        "decalage": 13,
+        "amplitude_px": 3.53
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          153,
+          490
+        ],
+        "decalage": 24,
+        "amplitude_px": 2.48
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          398,
+          497
+        ],
+        "decalage": 35,
+        "amplitude_px": 2.14
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          332,
+          117
+        ],
+        "decalage": 46,
+        "amplitude_px": 2.15
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          170,
+          383
+        ],
+        "decalage": 9,
+        "amplitude_px": 3.38
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          306,
+          45
+        ],
+        "decalage": 20,
+        "amplitude_px": 3.39
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          107,
+          436
+        ],
+        "decalage": 31,
+        "amplitude_px": 2.92
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          302,
+          107
+        ],
+        "decalage": 42,
+        "amplitude_px": 2.29
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          235,
+          290
+        ],
+        "decalage": 5,
+        "amplitude_px": 2.22
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          251,
+          388
+        ],
+        "decalage": 16,
+        "amplitude_px": 2.92
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          379,
+          443
+        ],
+        "decalage": 27,
+        "amplitude_px": 3.07
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          114,
+          432
+        ],
+        "decalage": 38,
+        "amplitude_px": 2.3
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          51,
+          105
+        ],
+        "decalage": 1,
+        "amplitude_px": 2.14
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          278,
+          419
+        ],
+        "decalage": 12,
+        "amplitude_px": 2.11
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          59,
+          402
+        ],
+        "decalage": 23,
+        "amplitude_px": 3.36
+      },
+      {
+        "type": "flocon",
+        "depart_xy": [
+          407,
+          278
+        ],
+        "decalage": 34,
+        "amplitude_px": 3.39
+      },
+      {
+        "type": "boule",
+        "depart_xy": [
+          210,
+          136
+        ],
+        "decalage": 45,
+        "amplitude_px": 2.38
+      }
+    ],
+    "origine": "dessin GENERE, trajectoires creees ; pas la meteo officielle PMD"
+  },
+  "scene_loop_ticks": 240,
+  "access": {
+    "entry_px": [
+      200,
+      616
+    ],
+    "threshold_px": [
+      208,
+      176
+    ],
+    "path_found_16x16": true,
+    "blocked_cells": 2500,
+    "total_cells": 4187,
+    "rule": "case bloquee si > 25 % hors neige visible, sentier et gue gele",
+    "approche_gue_px": 6387,
+    "approche_gue": "boules de neige dans l ellipse x1.35 du gue et congeres a moins de 6 px du sentier/gue rendues praticables (collision seulement, dessin inchange)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "egn1_entree_givre",
+    "namespace": "entree_givre_sud_nord",
+    "tiles_per_bank": {
+      "EGN1_00_EAU": 953,
+      "EGN1_01_SCINTILLEMENTS": 37,
+      "EGN1_02_SOL_COMPLET": 3428,
+      "EGN1_03_NEIGE": 1655,
+      "EGN1_04_SENTIER": 602,
+      "EGN1_05_GUE_GELE": 40,
+      "EGN1_06_GLACONS": 57,
+      "EGN1_07_SOUCHE": 41,
+      "EGN1_08_SAPINS_CONGERES": 1666,
+      "EGN1_09_FALAISES_GLACE": 932,
+      "EGN1_10_BOUCHE_GLACE": 188,
+      "EGN1_11_FLOCONS": 1457
+    },
+    "banks": [
+      "EGN1_00_EAU",
+      "EGN1_01_SCINTILLEMENTS",
+      "EGN1_02_SOL_COMPLET",
+      "EGN1_03_NEIGE",
+      "EGN1_04_SENTIER",
+      "EGN1_05_GUE_GELE",
+      "EGN1_06_GLACONS",
+      "EGN1_07_SOUCHE",
+      "EGN1_08_SAPINS_CONGERES",
+      "EGN1_09_FALAISES_GLACE",
+      "EGN1_10_BOUCHE_GLACE",
+      "EGN1_11_FLOCONS"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
