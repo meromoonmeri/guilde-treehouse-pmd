@@ -1,0 +1,68 @@
+[
+  {
+    "id": "foret_mystique",
+    "title": "Forêt Mystique — entrée sud → grotte nord",
+    "source": "Mystifying_Forest_entrance_TDS.png",
+    "source_sha256": "9f45d140aebe5559d9d1ea8d5891825d4450e7a550ba30d6be97af1af9e3e941",
+    "size": [
+      600,
+      504
+    ],
+    "frames": 1,
+    "durations_ms": [
+      1000
+    ],
+    "protected_pixels": 0,
+    "biome": "foret",
+    "duo": "canopée lointaine + parois mousses",
+    "layout_note": "Léger décalage du chemin, entrée légèrement élargie, masses latérales rééquilibrées"
+  },
+  {
+    "id": "volcan_cratere",
+    "title": "Cratère Obscur — entrée volcanique",
+    "source": "Dark_Crater_entrance_TDS.png",
+    "source_sha256": "b2b68ea8917e5285e91c4cc84b4cbbe47c38f4bad5e399dab48ecbd26b177630",
+    "size": [
+      360,
+      456
+    ],
+    "frames": 6,
+    "durations_ms": [
+      120,
+      120,
+      120,
+      120,
+      120,
+      120
+    ],
+    "protected_pixels": 0,
+    "biome": "volcan",
+    "duo": "paroi externe + champ de lave",
+    "layout_note": "Terrasses légèrement redessinées, seuil avancé, duo fond : roche externe + lave animée"
+  },
+  {
+    "id": "grotte_vapeur",
+    "title": "Grotte Vapeur — corniche et seuils",
+    "source": "Steam_Cave_entrance_TDS.png",
+    "source_sha256": "cd93fc49a404785b3b8e3de3140010d8803b577c5bf3546ce2f0a192f564acd2",
+    "size": [
+      504,
+      440
+    ],
+    "frames": 8,
+    "durations_ms": [
+      130,
+      130,
+      130,
+      130,
+      130,
+      130,
+      130,
+      130
+    ],
+    "protected_pixels": 0,
+    "biome": "vapeur",
+    "duo": "fond brumeux + parois suintantes",
+    "layout_note": "Passage latéral légèrement ouvert, vapeur sur calque propre, duo : ciel brumeux + falaise"
+  }
+]
