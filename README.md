@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Cratère — sud → nord, rendu généré réf. Dark Crater (25 septembre 2026)
+
+- Aperçu : `apercu_entree_cratere_sud_nord_v1.html`.
+- Lot : `renders/entree_cratere_sud_nord_v1/` (`ECN1_projet_pmdo_0812.zip`, `ECN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_cratere_sud_nord_v1/`.
+
+Il s'agit de la map suivante demandée après l'Entrée Vapeur V2. Le décor complet a été généré sur magenta (lave = magenta) et le sol de cendre complet séparément, puis le tout est réduit ×0,5 (424×632). Les animations sont chacune sur leur calque : lave « façon Métano » (4 × 10 ticks), éclats Métano recolorés, 6 bulles de lave générées qui éclatent (24 × 5 ticks) et braises pulsantes (6 × 10 ticks). Collisions déduites, `entrance` au sud, `donjon_seuil` au nord, sans warp. 11 tests PASS. Le biome a été choisi par l'agent (à confirmer). Pas de test PMDO en jeu.
+
 ## Entrée Vapeur V2 — eau façon rivière de Métano + bulles de marais (25 septembre 2026)
 
 - Aperçu : `apercu_entree_vapeur_sud_nord_v2.html`.

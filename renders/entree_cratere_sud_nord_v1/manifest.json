@@ -1,0 +1,284 @@
+{
+  "lot": "entree_cratere_sud_nord_v1",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "method": "rendu genere : decor complet sur magenta (lave = magenta) + sol complet genere separement",
+  "reference_da": "Dark_Crater_entrance_TDS.png",
+  "raw_inputs": [
+    {
+      "file": "source/entree_cratere_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "ea2ec669f4a129fe37077b30f893d5f1490ca27e6e87b05cf42300ad0a070230",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_cratere_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "8cb050c441109368c3fb652f020780724dbd43ccf4b40bddca3d5acc061e2b5c",
+      "size": [
+        848,
+        1264
+      ]
+    },
+    {
+      "file": "source/entree_cratere_sud_nord_v1/bruts/lave_matiere.png",
+      "sha256": "d9c08c9d77b8c831450d23982de9e79d943fd5dff6ee32b027c30cd086f2d726",
+      "size": [
+        912,
+        1155
+      ]
+    },
+    {
+      "file": "source/entree_cratere_sud_nord_v1/bruts/bulles_lave_poses.png",
+      "sha256": "a7ecc0522161607f2195f12df439590861fb57ec332f96f89603159291b1b693",
+      "size": [
+        1774,
+        887
+      ]
+    }
+  ],
+  "normalization": "x0.5 exact (848x1264 -> 424x632), moyenne 2x2 par classe, palette commune 96 couleurs",
+  "segmentation": "lave = magenta plein dilate 1 px ; roche = saturation lissee > 16 ou ecart de luminance > 17 (fenetre 11 px) ; bouche = pixels < 30 dans la cavite ; rebords = roche a < 22 px de la lave dans la moitie sud ; braises = orange sur roche",
+  "layer_order_bottom_to_top": [
+    "animation/lave/ECN1_00_lave_fX.png",
+    "animation/eclats/ECN1_01_eclats_fX.png",
+    "calques/ECN1_02_sol_complet.png",
+    "animation/bulles/ECN1_03_bulles_fXX.png",
+    "calques/ECN1_04_cendre.png",
+    "calques/ECN1_05_rebords_mares.png",
+    "calques/ECN1_06_falaises.png",
+    "calques/ECN1_07_bouche_cratere.png",
+    "animation/braises/ECN1_08_braises_fX.png"
+  ],
+  "lava": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "lip": [
+        70,
+        20,
+        26
+      ],
+      "bande": [
+        120,
+        26,
+        22
+      ],
+      "inter": [
+        194,
+        40,
+        8
+      ],
+      "accent": [
+        232,
+        72,
+        6
+      ],
+      "surface": [
+        246,
+        108,
+        10
+      ],
+      "chaud": [
+        252,
+        150,
+        12
+      ],
+      "jaune": [
+        253,
+        184,
+        30
+      ],
+      "clair": [
+        253,
+        227,
+        121
+      ]
+    },
+    "modele": "structure et cadence de la riviere Metano (comme ESN2), recalculees sur nos mares ; palette de la matiere generee",
+    "origine": "pixels recalcules, pas de tuiles natives"
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          120,
+          400
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          24,
+          352
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          80,
+          360
+        ]
+      }
+    ],
+    "origine": "pixels Metano reels recolores en tons de lave par luminance"
+  },
+  "bubbles": {
+    "brut": "source/entree_cratere_sud_nord_v1/bruts/bulles_lave_poses.png",
+    "poses": [
+      "point",
+      "petite",
+      "ronde",
+      "dome",
+      "fissure",
+      "eclatement",
+      "couronne",
+      "croute",
+      "anneau",
+      "anneau_pale",
+      "etincelles",
+      "etincelles_fin"
+    ],
+    "reduction": "fenetre 288 px -> 24 px (x1/12) identique, base commune par rangee, palette de lave",
+    "timeline_phases": [
+      "point",
+      "point",
+      "petite",
+      "petite",
+      "ronde",
+      "ronde",
+      "dome",
+      "dome",
+      "fissure",
+      "fissure",
+      "eclatement",
+      "couronne",
+      "croute",
+      "croute",
+      "anneau",
+      "anneau",
+      "anneau_pale",
+      "etincelles",
+      "etincelles_fin"
+    ],
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "emetteurs": [
+      {
+        "xy": [
+          72,
+          328
+        ],
+        "decalage": 0
+      },
+      {
+        "xy": [
+          336,
+          392
+        ],
+        "decalage": 7
+      },
+      {
+        "xy": [
+          48,
+          360
+        ],
+        "decalage": 14
+      },
+      {
+        "xy": [
+          112,
+          456
+        ],
+        "decalage": 21
+      },
+      {
+        "xy": [
+          40,
+          320
+        ],
+        "decalage": 4
+      },
+      {
+        "xy": [
+          320,
+          544
+        ],
+        "decalage": 11
+      }
+    ],
+    "derivees": [
+      "anneau_pale = anneau recolore accent (brut mele au magenta)"
+    ],
+    "origine": "dessin GENERE (12 poses recues comme demande), chronologie creee ; pas une animation officielle"
+  },
+  "embers": {
+    "phases": 6,
+    "frame_length_ticks": 10,
+    "pulse_offsets": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "pixels": 168,
+    "origine": "pixels orange du decor genere ; pulsation creee"
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      200,
+      616
+    ],
+    "threshold_px": [
+      200,
+      176
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 1341,
+    "blocked_cells": 2477,
+    "total_cells": 4187,
+    "rule": "case bloquee si > 25 % hors cendre visible (lave, roche, rebords, bouche)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ecn1_entree_cratere",
+    "namespace": "entree_cratere_sud_nord",
+    "tiles_per_bank": {
+      "ECN1_00_LAVE": 697,
+      "ECN1_01_ECLATS": 33,
+      "ECN1_02_SOL_COMPLET": 4111,
+      "ECN1_03_BULLES": 119,
+      "ECN1_04_CENDRE": 2075,
+      "ECN1_05_REBORDS_MARES": 269,
+      "ECN1_06_FALAISES": 2290,
+      "ECN1_07_BOUCHE_CRATERE": 71,
+      "ECN1_08_BRAISES": 61
+    },
+    "banks": [
+      "ECN1_00_LAVE",
+      "ECN1_01_ECLATS",
+      "ECN1_02_SOL_COMPLET",
+      "ECN1_03_BULLES",
+      "ECN1_04_CENDRE",
+      "ECN1_05_REBORDS_MARES",
+      "ECN1_06_FALAISES",
+      "ECN1_07_BOUCHE_CRATERE",
+      "ECN1_08_BRAISES"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
