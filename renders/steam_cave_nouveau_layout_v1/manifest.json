@@ -1,0 +1,57 @@
+{
+  "zone": "steam_cave_entree_v1",
+  "title": "Steam Cave — Nouveau layout d'entrée asymétrique & fumerolles",
+  "dimensions": {
+    "width": 504,
+    "height": 432,
+    "tiles_8px": [
+      63,
+      54
+    ],
+    "chunks_24px": [
+      21,
+      18
+    ]
+  },
+  "animation": {
+    "frames": 6,
+    "frame_ms": 167,
+    "cycle_ms": 1000,
+    "pmdo_framelength": 10
+  },
+  "references": {
+    "primary": "Steam_Cave_entrance_TDS.png (504x440)",
+    "animation_source": "large.D14P11A.gif (456x384, 6 frames)",
+    "color_filter_night": "tools/tile_night.py (Abyss New Era blob 438383f4)"
+  },
+  "layers": {
+    "static": [
+      "01_falaises_arriere_plan",
+      "02_sol_terrasses_volcaniques",
+      "03_parois_falaises",
+      "04_porche_grotte",
+      "05_chemins_et_dalles",
+      "06_bassin_fumerolles"
+    ],
+    "animated": [
+      "07_vapeur_phase_01",
+      "07_vapeur_phase_02",
+      "07_vapeur_phase_03",
+      "07_vapeur_phase_04",
+      "07_vapeur_phase_05",
+      "07_vapeur_phase_06"
+    ]
+  },
+  "circulation": {
+    "entry_point": [
+      136,
+      432
+    ],
+    "cave_mouth": [
+      324,
+      110
+    ],
+    "corridor_width_px": 32,
+    "corridor_tiles": 4
+  }
+}
