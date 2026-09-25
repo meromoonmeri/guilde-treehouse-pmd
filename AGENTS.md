@@ -490,3 +490,7 @@ Astres visibles au bord du viewport PMDO, halo animé, étoiles scintillantes. `
 ## Zone D06P11 V6
 
 Carte 544×640, chemin/terrasses plus vastes, mer visible, soleil animé généré. `apercu_zone_d06p11_v6.html`.
+
+## Zone D06P11 V7
+
+Couronne de la grotte retirée, sommet sans pic, lune animée générée d'après la lune ROM v02p06a (9 frames). `apercu_zone_d06p11_v7.html`.
