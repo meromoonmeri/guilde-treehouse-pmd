@@ -1,0 +1,159 @@
+{
+ "zone": "Furnace Desert (PMD Rescue Team) — biome eau V1",
+ "prefixe": "FDE_V1",
+ "taille": [
+  456,
+  336
+ ],
+ "grille": "8 px (PNG to Tileset)",
+ "ordre_empilement": [
+  "01_ciel",
+  "02_eau",
+  "03_ombres_contact",
+  "04_siphon",
+  "05_cascades",
+  "06_roches",
+  "07_premier_plan"
+ ],
+ "calques": [
+  {
+   "num": "01",
+   "nom": "ciel",
+   "fichier": "calques/FDE_V1_01_ciel.png",
+   "description": "Ciel source exact (rayons de soleil présents dans cette version source)",
+   "phases": []
+  },
+  {
+   "num": "02",
+   "nom": "eau",
+   "fichier": "calques/FDE_V1_02_eau.png",
+   "description": "Eau : mer native D25P11A, 15 phases x 130 ms, remplace tout le sable",
+   "phases": [
+    "phases/eau/FDE_V1_eau_p00.png",
+    "phases/eau/FDE_V1_eau_p01.png",
+    "phases/eau/FDE_V1_eau_p02.png",
+    "phases/eau/FDE_V1_eau_p03.png",
+    "phases/eau/FDE_V1_eau_p04.png",
+    "phases/eau/FDE_V1_eau_p05.png",
+    "phases/eau/FDE_V1_eau_p06.png",
+    "phases/eau/FDE_V1_eau_p07.png",
+    "phases/eau/FDE_V1_eau_p08.png",
+    "phases/eau/FDE_V1_eau_p09.png",
+    "phases/eau/FDE_V1_eau_p10.png",
+    "phases/eau/FDE_V1_eau_p11.png",
+    "phases/eau/FDE_V1_eau_p12.png",
+    "phases/eau/FDE_V1_eau_p13.png",
+    "phases/eau/FDE_V1_eau_p14.png"
+   ]
+  },
+  {
+   "num": "03",
+   "nom": "ombres_contact",
+   "fichier": "calques/FDE_V1_03_ombres_contact.png",
+   "description": "Ombres de contact semi-transparentes au pied des roches",
+   "phases": []
+  },
+  {
+   "num": "04",
+   "nom": "siphon",
+   "fichier": "calques/FDE_V1_04_siphon.png",
+   "description": "Siphon en tourbillon : cycle de palette natif D14P11A, 6 phases",
+   "phases": [
+    "phases/siphon/FDE_V1_siphon_p00.png",
+    "phases/siphon/FDE_V1_siphon_p01.png",
+    "phases/siphon/FDE_V1_siphon_p02.png",
+    "phases/siphon/FDE_V1_siphon_p03.png",
+    "phases/siphon/FDE_V1_siphon_p04.png",
+    "phases/siphon/FDE_V1_siphon_p05.png"
+   ]
+  },
+  {
+   "num": "05",
+   "nom": "cascades",
+   "fichier": "calques/FDE_V1_05_cascades.png",
+   "description": "Chutes d’eau (anciennes chutes de sable), défilement 6 phases",
+   "phases": [
+    "phases/cascades/FDE_V1_cascades_p00.png",
+    "phases/cascades/FDE_V1_cascades_p01.png",
+    "phases/cascades/FDE_V1_cascades_p02.png",
+    "phases/cascades/FDE_V1_cascades_p03.png",
+    "phases/cascades/FDE_V1_cascades_p04.png",
+    "phases/cascades/FDE_V1_cascades_p05.png"
+   ]
+  },
+  {
+   "num": "06",
+   "nom": "roches",
+   "fichier": "calques/FDE_V1_06_roches.png",
+   "description": "Roches et mesas source exactes",
+   "phases": []
+  },
+  {
+   "num": "07",
+   "nom": "premier_plan",
+   "fichier": "calques/FDE_V1_07_premier_plan.png",
+   "description": "Roches et piliers du premier plan, source exacts",
+   "phases": []
+  }
+ ],
+ "animation": {
+  "tick_ms": 130,
+  "images": 30,
+  "boucle_ms": 3900,
+  "eau": {
+   "phases": 15,
+   "ms": 130,
+   "source": "mer native D25P11A (GIF 30 x 130 ms, cycle réel de 15 phases)"
+  },
+  "siphon": {
+   "phases": 6,
+   "ms": 130,
+   "source": "mécanique du cycle de palette natif D14P11A (6 phases, 60 ms natif) ralentie à 130 ms"
+  },
+  "cascades": {
+   "phases": 6,
+   "ms": 130,
+   "defilement_px_par_phase": 16,
+   "boucle_px": 96
+  },
+  "pmdo_framelength_suggere": 8
+ },
+ "sources": {
+  "scene": {
+   "fichier": "source/furnace_desert_eau_v1/references/furnace_desert_rt_original_456x336.png",
+   "sha256": "4579a8dd877f90483372de7879fe4a6362af8b81218222e7cf2d153766854197",
+   "origine": "pamtre-berry.neocities.org/images/friend-areas/og/witheringdesert.png (« Furnace Desert, original version »), récupérée via recherche d’images",
+   "note": "La pièce jointe utilisateur (version mysterydungeonwiki.com, sans grands rayons) n’est pas arrivée dans le bac à sable ; seule sa miniature 300x220 est conservée pour comparaison."
+  },
+  "miniature_wiki": {
+   "fichier": "source/furnace_desert_eau_v1/references/furnace_desert_wiki_miniature_300x220.png",
+   "sha256": "ecf6f56fc28c2a2de1d5c3a241fb8dc41da73263d5c0d37d8e0bba5c28a2e19e"
+  },
+  "mer": {
+   "fichier": "large.D25P11A.gif.1859d89ca99571b9d779dbb182a1b681.gif",
+   "sha256": "7175b0db1e730451ecb02f45a797d7dff610125a52557cc65294ead60737bbf5",
+   "region_haute_mer": [
+    0,
+    330,
+    200,
+    504
+   ],
+   "reseau": "périodes (48,48) et (144,72), domaine 48x72"
+  },
+  "siphon_rythme": {
+   "fichier": "large.D14P11A.gif.de6fb5fd180b164fe8a67715f1d7ee5c.gif",
+   "sha256": "af89e0b55222b83ea39669b4da60a4fd3de2ae3f8dc9367f052bc50ef7fa44ef",
+   "siphon_analyse": [
+    370,
+    168,
+    60,
+    48
+   ]
+  }
+ },
+ "limites": [
+  "Biome swap demandé : le sable est remplacé, le siphon et les chutes sont recolorés avec des bleus de la palette native de la mer D25 ; ce ne sont pas des éléments officiels de Furnace Desert en eau.",
+  "Les rayons de soleil incrustés dans cette version source restent sur le ciel et les roches, pas sur l’eau.",
+  "Pas de pack .rsground ni de test PMDO/GPU pour ce lot."
+ ]
+}

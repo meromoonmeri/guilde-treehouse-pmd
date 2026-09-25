@@ -1,0 +1,330 @@
+{
+ "role": "guide de composition uniquement ; aucun pixel généré livré",
+ "references": [
+  "refs/01_reference_native_vast_steppe_x2.png",
+  "refs/02_planche_modules_x3.png",
+  "refs/03_palette_materiaux.png"
+ ],
+ "palette_echantillonnee": {
+  "herbe_prairie": [
+   {
+    "hex": "#87cf67",
+    "part": 0.1387
+   },
+   {
+    "hex": "#7fc75f",
+    "part": 0.1104
+   },
+   {
+    "hex": "#7fbf5f",
+    "part": 0.0947
+   },
+   {
+    "hex": "#77b757",
+    "part": 0.0898
+   },
+   {
+    "hex": "#87d75f",
+    "part": 0.084
+   },
+   {
+    "hex": "#67a74f",
+    "part": 0.0732
+   },
+   {
+    "hex": "#77bf5f",
+    "part": 0.0713
+   },
+   {
+    "hex": "#7fc767",
+    "part": 0.0635
+   }
+  ],
+  "canopee_foret": [
+   {
+    "hex": "#1f4717",
+    "part": 0.1657
+   },
+   {
+    "hex": "#275727",
+    "part": 0.1578
+   },
+   {
+    "hex": "#2f672f",
+    "part": 0.1317
+   },
+   {
+    "hex": "#378f37",
+    "part": 0.1247
+   },
+   {
+    "hex": "#47a73f",
+    "part": 0.1221
+   },
+   {
+    "hex": "#57c747",
+    "part": 0.112
+   },
+   {
+    "hex": "#377737",
+    "part": 0.1113
+   },
+   {
+    "hex": "#67df4f",
+    "part": 0.0425
+   }
+  ],
+  "tronc_et_ombre_herbe": [
+   {
+    "hex": "#678757",
+    "part": 0.5263
+   },
+   {
+    "hex": "#4f4f2f",
+    "part": 0.0949
+   },
+   {
+    "hex": "#4f471f",
+    "part": 0.076
+   },
+   {
+    "hex": "#675f2f",
+    "part": 0.0645
+   },
+   {
+    "hex": "#6fa757",
+    "part": 0.0438
+   },
+   {
+    "hex": "#6f9757",
+    "part": 0.0392
+   },
+   {
+    "hex": "#8f772f",
+    "part": 0.0313
+   },
+   {
+    "hex": "#776f2f",
+    "part": 0.0309
+   }
+  ],
+  "corniche_roche": [
+   {
+    "hex": "#7f6747",
+    "part": 0.0836
+   },
+   {
+    "hex": "#876f47",
+    "part": 0.0824
+   },
+   {
+    "hex": "#d7af67",
+    "part": 0.0815
+   },
+   {
+    "hex": "#97774f",
+    "part": 0.0803
+   },
+   {
+    "hex": "#9f7f4f",
+    "part": 0.0688
+   },
+   {
+    "hex": "#b7975f",
+    "part": 0.0674
+   },
+   {
+    "hex": "#c79f5f",
+    "part": 0.0624
+   },
+   {
+    "hex": "#a78757",
+    "part": 0.0581
+   }
+  ],
+  "sortie_lumineuse": [
+   {
+    "hex": "#d7e797",
+    "part": 0.647
+   },
+   {
+    "hex": "#c7df87",
+    "part": 0.1855
+   },
+   {
+    "hex": "#afd777",
+    "part": 0.0983
+   },
+   {
+    "hex": "#97cf67",
+    "part": 0.0433
+   },
+   {
+    "hex": "#87c75f",
+    "part": 0.0144
+   },
+   {
+    "hex": "#7fb75f",
+    "part": 0.0102
+   },
+   {
+    "hex": "#6fa757",
+    "part": 0.0013
+   }
+  ],
+  "fleurs": [
+   {
+    "hex": "#4a5a31",
+    "part": 0.2353
+   },
+   {
+    "hex": "#638452",
+    "part": 0.1362
+   },
+   {
+    "hex": "#e76bef",
+    "part": 0.0893
+   },
+   {
+    "hex": "#526b39",
+    "part": 0.0803
+   },
+   {
+    "hex": "#7b9c4a",
+    "part": 0.0694
+   },
+   {
+    "hex": "#b54ac6",
+    "part": 0.0595
+   },
+   {
+    "hex": "#de94f7",
+    "part": 0.0568
+   },
+   {
+    "hex": "#f7b573",
+    "part": 0.0523
+   }
+  ],
+  "rochers_galets": [
+   {
+    "hex": "#c79f5f",
+    "part": 0.222
+   },
+   {
+    "hex": "#67573f",
+    "part": 0.1093
+   },
+   {
+    "hex": "#678f57",
+    "part": 0.1067
+   },
+   {
+    "hex": "#dfbf6f",
+    "part": 0.0803
+   },
+   {
+    "hex": "#97774f",
+    "part": 0.0717
+   },
+   {
+    "hex": "#7f6747",
+    "part": 0.0692
+   },
+   {
+    "hex": "#5f472f",
+    "part": 0.0675
+   },
+   {
+    "hex": "#775f3f",
+    "part": 0.0564
+   }
+  ],
+  "touffes": [
+   {
+    "hex": "#394a29",
+    "part": 0.3045
+   },
+   {
+    "hex": "#4a5a31",
+    "part": 0.1938
+   },
+   {
+    "hex": "#638452",
+    "part": 0.1938
+   },
+   {
+    "hex": "#7b9c4a",
+    "part": 0.1211
+   },
+   {
+    "hex": "#637b42",
+    "part": 0.1038
+   },
+   {
+    "hex": "#526b39",
+    "part": 0.083
+   }
+  ]
+ },
+ "schema_colors": {
+  "foret": [
+   34,
+   92,
+   40
+  ],
+  "prairie": [
+   127,
+   199,
+   95
+  ],
+  "corniche": [
+   150,
+   110,
+   60
+  ],
+  "sortie": [
+   222,
+   230,
+   150
+  ],
+  "fleurs": [
+   236,
+   120,
+   220
+  ],
+  "arrivee": [
+   250,
+   250,
+   250
+  ]
+ },
+ "variants": {
+  "legere": {
+   "size": [
+    768,
+    896
+   ],
+   "description": "Variante légère : proche de l’esprit de l’entrée native (corniche + couloir au nord), mais lisière ouest continue et ondulante, anse fleurie, bosquet est, arrivée au sud.",
+   "ledge_y": 208,
+   "passage_x": 312,
+   "passage_w": 144,
+   "arrival_x": 456,
+   "schema": "refs/04_schema_legere.png",
+   "prompt": "Top-down 3/4 view game map in the exact pixel-art style of Pokemon Mystery Dungeon Explorers of Sky ground maps, same art as the Halcyon \"Vast Steppe\" reference image. Follow the colour-block layout sketch EXACTLY for geometry: dark green = dense forest of round bushy trees (each tree = the reference canopy with its brown trunk and dark grass shade), light green = open grass meadow, brown band = rocky ledge crossing the whole width with ONE gap, pale yellow = bright exit glow at the top edge reached by a rocky corridor, pink ellipses = drifts of small pink flower clumps, white triangle = arrival from the bottom edge. Use ONLY these materials and colours: herbe prairie #87cf67 #7fc75f #7fbf5f #77b757, canopee foret #1f4717 #275727 #2f672f #378f37, tronc et ombre herbe #678757 #4f4f2f #4f471f #675f2f, corniche roche #7f6747 #876f47 #d7af67 #97774f, sortie lumineuse #d7e797 #c7df87 #afd777 #97cf67, fleurs #4a5a31 #638452 #e76bef #526b39, rochers galets #c79f5f #67573f #678f57 #dfbf6f, touffes #394a29 #4a5a31 #638452 #7b9c4a. No path, no water, no buildings, no characters, no text, no UI, no border frame. Crisp pixels, flat readable shapes, trees may overlap into a continuous forest edge. Variante légère : proche de l’esprit de l’entrée native (corniche + couloir au nord), mais lisière ouest continue et ondulante, anse fleurie, bosquet est, arrivée au sud."
+  },
+  "spacieuse": {
+   "size": [
+    816,
+    1152
+   ],
+   "description": "Variante spacieuse : prairie beaucoup plus ouverte, lisière ouest plus mince et échancrée, quelques arbres isolés, grands massifs de fleurs, corniche au nord.",
+   "ledge_y": 208,
+   "passage_x": 312,
+   "passage_w": 144,
+   "arrival_x": 470,
+   "schema": "refs/04_schema_spacieuse.png",
+   "prompt": "Top-down 3/4 view game map in the exact pixel-art style of Pokemon Mystery Dungeon Explorers of Sky ground maps, same art as the Halcyon \"Vast Steppe\" reference image. Follow the colour-block layout sketch EXACTLY for geometry: dark green = dense forest of round bushy trees (each tree = the reference canopy with its brown trunk and dark grass shade), light green = open grass meadow, brown band = rocky ledge crossing the whole width with ONE gap, pale yellow = bright exit glow at the top edge reached by a rocky corridor, pink ellipses = drifts of small pink flower clumps, white triangle = arrival from the bottom edge. Use ONLY these materials and colours: herbe prairie #87cf67 #7fc75f #7fbf5f #77b757, canopee foret #1f4717 #275727 #2f672f #378f37, tronc et ombre herbe #678757 #4f4f2f #4f471f #675f2f, corniche roche #7f6747 #876f47 #d7af67 #97774f, sortie lumineuse #d7e797 #c7df87 #afd777 #97cf67, fleurs #4a5a31 #638452 #e76bef #526b39, rochers galets #c79f5f #67573f #678f57 #dfbf6f, touffes #394a29 #4a5a31 #638452 #7b9c4a. No path, no water, no buildings, no characters, no text, no UI, no border frame. Crisp pixels, flat readable shapes, trees may overlap into a continuous forest edge. Variante spacieuse : prairie beaucoup plus ouverte, lisière ouest plus mince et échancrée, quelques arbres isolés, grands massifs de fleurs, corniche au nord."
+  }
+ }
+}

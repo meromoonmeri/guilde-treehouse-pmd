@@ -1,0 +1,63 @@
+{
+ "gate": {
+  "exit_code": 0,
+  "stdout": "PASS /home/user/guilde-treehouse-pmd/renders/furnace_desert_eau_v1/calques"
+ },
+ "dimensions": {
+  "size": [
+   456,
+   336
+  ],
+  "grid_8px": true
+ },
+ "opaque_composites": true,
+ "source_pixels_exact": {
+  "ciel": {
+   "pixels": 19170,
+   "diff_vs_source": 0
+  },
+  "roches": {
+   "pixels": 42236,
+   "diff_vs_source": 1077,
+   "pixels_fondus_des_rayons_nettoyes": 1077
+  },
+  "avant": {
+   "pixels": 16948,
+   "diff_vs_source": 0
+  }
+ },
+ "palette": {
+  "eau_couleurs_de_la_phase_native": true,
+  "siphon_couleurs_natives_D25": true,
+  "cascades_couleurs_natives_D25": true,
+  "palette_mer_D25": [
+   "#005797",
+   "#005fa7",
+   "#0067af",
+   "#006fbf",
+   "#006fc3",
+   "#006fc7",
+   "#3797d7",
+   "#57a7e7",
+   "#6fb7ef",
+   "#a7d7ff"
+  ]
+ },
+ "animation": {
+  "eau_phases_distinctes": 15,
+  "siphon_phases_distinctes": 6,
+  "cascades_phases_distinctes": 6,
+  "boucle_commune_ms": 3900
+ },
+ "webp_relu_exact": {
+  "images": 30,
+  "pixels_differents_max": 0
+ },
+ "ora_merged_egal_composite": true,
+ "sea_tile": {
+  "consensus_agreement_min": 0.9460817441894631,
+  "consensus_agreement_mean": 0.9587870596186057,
+  "samples": 34033
+ },
+ "pass": true
+}

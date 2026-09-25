@@ -1,0 +1,259 @@
+[
+ {
+  "zone": "/home/user/guilde-treehouse-pmd/renders/furnace_desert_eau_v1/calques",
+  "layers": {
+   "FDE_V1_01_ciel.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "19170 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "226 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.68 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "FDE_V1_02_eau.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "66816 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "10 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "FDE_V1_03_ombres_contact.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "5395 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "calque d'ombre : 5395 px semi-alpha tolérés"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ]
+   ],
+   "FDE_V1_04_siphon.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "4750 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "7 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "FDE_V1_05_cascades.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "8046 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "3 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "FDE_V1_06_roches.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "42236 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "555 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.04 % de couleurs rares (max 1.0)"
+    ]
+   ],
+   "FDE_V1_07_premier_plan.png": [
+    [
+     "grille_8px",
+     true,
+     "456x336"
+    ],
+    [
+     "calque_non_vide",
+     true,
+     "16948 px visibles"
+    ],
+    [
+     "alpha_binaire",
+     true,
+     "0 px semi-transparents (0.00 %, max 0.2)"
+    ],
+    [
+     "zero_magenta_residuel",
+     true,
+     "0 px proches du magenta de détourage"
+    ],
+    [
+     "palette_pixel_art",
+     true,
+     "13 couleurs (max 2048)"
+    ],
+    [
+     "pas_de_flou_ni_anticrenelage",
+     "True",
+     "0.00 % de couleurs rares (max 1.0)"
+    ]
+   ]
+  },
+  "zone_checks": [
+   [
+    "calques_meme_taille",
+    true,
+    "[(336, 456)]"
+   ],
+   [
+    "aucun_calque_duplique",
+    true,
+    "ok"
+   ],
+   [
+    "composite_FDE_V1_composite.png_distinct_des_calques",
+    true,
+    "ok"
+   ],
+   [
+    "recomposition_FDE_V1_composite.png",
+    true,
+    "0 px différents de l'empilement"
+   ],
+   [
+    "FDE_V1_composite.png:zero_magenta_residuel",
+    true,
+    "0 px proches du magenta de détourage"
+   ],
+   [
+    "FDE_V1_composite.png:palette_pixel_art",
+    true,
+    "1013 couleurs (max 2048)"
+   ],
+   [
+    "FDE_V1_composite.png:pas_de_flou_ni_anticrenelage",
+    "True",
+    "0.22 % de couleurs rares (max 1.0)"
+   ]
+  ],
+  "pass": true
+ }
+]

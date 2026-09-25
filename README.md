@@ -1,5 +1,11 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Furnace Desert en biome eau — calques PNG animés (V1)
+
+- **[Aperçu animé avec calques activables](apercu_furnace_desert_eau_v1.html)** · [PNG, phases, WebP, ORA, ZIP et vérifications](renders/furnace_desert_eau_v1/README.md).
+- Friend Area *Furnace Desert* (PMD Rescue Team, 456×336, grille 8 px) : **tout le sable devient la mer native animée** de `D25P11A` (15 phases × 130 ms) sur son propre calque, **siphon en tourbillon** (cycle de palette façon siphons natifs `D14P11A`, 6 phases), chutes de sable → **chutes d’eau** défilantes (6 phases). 7 calques : ciel, eau, ombres de contact, siphon, cascades, roches, premier plan. `gate.py` : PASS.
+- Scène : la pièce jointe n’a pas été reçue ; version pleine taille « original version » utilisée (rayons de soleil incrustés). Relance automatique possible sur le fichier exact. Pas de test PMDO.
+
 ## Dix créations supplémentaires — contrôle Métano renforcé
 
 - **[Aperçu des dix propositions et statuts d’audit](apercu_caps_terrasses_v4.html)**.
