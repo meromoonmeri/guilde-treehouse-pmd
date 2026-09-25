@@ -474,3 +474,7 @@ Première zone qui réutilise les textures PMD Sky : `source/zone_d06p11_v1/`, a
 ## Zone D06P11 V2
 
 Promontoire, chemin central, horizon infini, nuages en wrap parfait. `apercu_zone_d06p11_v2.html`.
+
+## Zone D06P11 V3
+
+Terrain régénéré au générateur, palette ROM, fond V2. `apercu_zone_d06p11_v3.html`.
