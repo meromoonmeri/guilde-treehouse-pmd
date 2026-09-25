@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>Thunder Meadow V3b entrée — multicalque</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:912px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Thunder Meadow — V3b — entrée sans rochers (multicalque)</h1>
+<p>Aperçu non certifié (ni collisions ni moteur). Nuages : palette flash 6 niveaux de la planche. Éclairs : calque propre, frames de la planche.</p>
+<div id="t"></div><canvas id="c" width="456" height="336"></canvas>
+<p><label><input type="checkbox" id="col"> collisions</label></p>
+<p><img src="renders/thunder_meadow_v3b_entree/apercu/guide_vs_v3.png" style="image-rendering:pixelated"></p>
+<script>
+const B='renders/thunder_meadow_v3b_entree/',P='THUNDERMEADOW_V3B_';
+const L=['00_nuages','01_eclairs','02_montagne_grotte','03_terrain','04_details'],on={};
+const ld=s=>{const i=new Image();i.src=s;return i};
+const nu=[0,1,2,3,4,5].map(k=>ld(B+'nuages_flash/'+P+'00_nuages_flash'+k+'.png'));
+const mon=ld(B+'calques/02_montagne_grotte.png'),ter=ld(B+'calques/03_terrain.png'),det=ld(B+'calques/04_details.png');
+L.forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const tl=m.timeline,ec=tl.map(f=>ld(B+'eclairs/'+f.eclair)),cyc=tl.reduce((a,f)=>a+f.ms,0),x=c.getContext('2d'),t0=performance.now();
+ (function d(now){let r=(now-t0)%cyc,k=0;while(r>=tl[k].ms){r-=tl[k].ms;k++}
+  x.clearRect(0,0,456,336);
+  if(on['00_nuages'])x.drawImage(nu[tl[k].nuages_niveau],0,0);
+  if(on['01_eclairs'])x.drawImage(ec[k],0,0);
+  if(on['02_montagne_grotte'])x.drawImage(mon,0,0);if(on['03_terrain'])x.drawImage(ter,0,0);
+  if(on['04_details'])x.drawImage(det,0,0);
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(!v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>

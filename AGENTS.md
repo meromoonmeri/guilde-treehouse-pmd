@@ -434,3 +434,7 @@ Demande : nouveau layout généré, animations canoniques, chaîne de montagnes 
 ## Thunder Meadow V3 — entrée : grotte nord et orage en contrebas
 
 Premier guide rejeté (grotte beige Crooked non uniforme) ; guide b retenu (grotte creusée dans la falaise brune). Même pipeline que V2. Les nuages en contrebas sont la bande canonique 0-112 répétée, avec la palette flash. Éclairs placés par recherche automatique de visibilité dans le vide : les positions fixées à la main étaient cachées par le terrain (0 px visible). Piège : borner cy à H−62 (bolt 42 px). Sources `source/thunder_meadow_v3_entree/`, aperçu `apercu_thunder_meadow_v3_entree.html`. Non validé en jeu.
+
+## V3b entrée sans rochers + V4 sommet en spirale
+
+V3b : le guide V3 est édité au générateur pour retirer tous les rochers, puis passé dans le même pipeline (V3 conservée). V4 sommet : terrain 100 % canonique, V1 sans l'arbre, chemin qui suit la bande claire puis la fissure vers le nord. La spirale d'orage est la bande de nuages (indices) en projection polaire tordue, par blocs 2×2, 48 frames, flash commun. Pièges : utiliser np.floor et non astype(int) pour les angles négatifs, sinon la boucle n'est pas exacte ; au pas de 1 px, la spirale devient du bruit (d'où les blocs 2×2 et la torsion 0,9). Aperçus `apercu_thunder_meadow_v3b_entree.html` et `apercu_thunder_meadow_v4_sommet.html`. Non validés en jeu.

@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><title>Thunder Meadow V4 — sommet</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:912px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Thunder Meadow V4 — sommet (texture canonique, orage en spirale)</h1>
+<p>Aperçu non certifié. Spirale : 48 frames × 83 ms, recolorée au niveau de flash courant (palette canonique).</p>
+<div id="t"></div><canvas id="c" width="456" height="336"></canvas>
+<p><label><input type="checkbox" id="col"> collisions</label></p>
+<script>
+const B='renders/thunder_meadow_v4_sommet/',P='THUNDERMEADOW_V4_',L=['00_nuages','01_spirale','02_eclairs','03_terrain','04_details'],on={};
+const ld=s=>{const i=new Image();i.src=s;return i};
+const nu=[0,1,2,3,4,5].map(k=>ld(B+'nuages_flash/'+P+'00_nuages_flash'+k+'.png'));
+const sp=[...Array(48).keys()].map(k=>ld(B+'spirale/'+P+'01_spirale_f'+String(k).padStart(2,'0')+'.png'));
+const ter=ld(B+'calques/03_terrain.png'),det=ld(B+'calques/04_details.png');
+L.forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+const cache={};
+function spiral(k,lv,pal){const key=k+'_'+lv;if(cache[key])return cache[key];if(!sp[k].complete)return null;
+ const cv=document.createElement('canvas');cv.width=456;cv.height=336;const g=cv.getContext('2d');g.drawImage(sp[k],0,0);
+ const d=g.getImageData(0,0,456,336),a=d.data,src=pal[0].map(c=>c.join()),dst=pal[lv];
+ for(let i=0;i<a.length;i+=4){if(!a[i+3])continue;const j=src.indexOf(a[i]+','+a[i+1]+','+a[i+2]);if(j>=0){a[i]=dst[j][0];a[i+1]=dst[j][1];a[i+2]=dst[j][2]}}
+ g.putImageData(d,0,0);return cache[key]=cv}
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const tl=m.timeline,ec=tl.map(f=>ld(B+'eclairs/'+f.eclair)),cyc=tl.reduce((a,f)=>a+f.ms,0),pal=m.nuages.palette,x=c.getContext('2d'),t0=performance.now();
+ (function d(now){const t=now-t0;let r=t%cyc,k=0;while(r>=tl[k].ms){r-=tl[k].ms;k++}const lv=tl[k].nuages_niveau;
+  x.clearRect(0,0,456,336);
+  if(on['00_nuages'])x.drawImage(nu[lv],0,0);
+  if(on['01_spirale']){const s=spiral(Math.floor(t/83)%48,lv,pal);if(s)x.drawImage(s,0,0)}
+  if(on['02_eclairs'])x.drawImage(ec[k],0,0);
+  if(on['03_terrain'])x.drawImage(ter,0,0);
+  if(on['04_details'])x.drawImage(det,0,0);
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(!v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>
