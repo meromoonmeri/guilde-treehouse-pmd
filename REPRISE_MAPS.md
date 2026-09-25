@@ -2,7 +2,9 @@
 
 ## Demande actuelle
 
-Reprendre la création de maps avec textures canoniques. Aucun nouveau biome, layout ou fichier cible n’est encore choisi dans cette reprise. Les anciens travaux sont conservés ; aucune map n’a été régénérée ou remplacée pendant ce repérage.
+Reprendre la création de maps avec textures canoniques. **Mise à jour du 25 septembre** : l'utilisateur a choisi une entrée de donjon sud → nord, la méthode rendu généré et les deux livrables (PNG 8 px + Ground). Premier lot : `renders/entree_vapeur_sud_nord_v1/`, biome Steam Cave choisi par l'agent et à confirmer. Les anciens travaux sont conservés.
+
+Reprise du 25 septembre : `.venv` absente du checkout puis recréée (Pillow 12.3, NumPy 2.4, SciPy 1.17). Les tests V16 + sud–nord V3 donnent de nouveau 18/19, avec la même erreur liée à l'objet historique `438b9288`.
 
 ## Repérage effectué
 

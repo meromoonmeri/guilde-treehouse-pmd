@@ -1,0 +1,116 @@
+{
+  "lot": "entree_vapeur_sud_nord_v1",
+  "size_px": [
+    424,
+    632
+  ],
+  "grid_8px": [
+    53,
+    79
+  ],
+  "method": "Rendu genere (source/layouts_magenta_v1/WORKFLOW.md) : decor complet sur magenta, sol complet genere, matiere d eau generee, normalisation uniforme x0.5, segmentation en calques alignes.",
+  "reference_da": {
+    "file": "Steam_Cave_entrance_TDS.png",
+    "sha256": "cd93fc49a404785b3b8e3de3140010d8803b577c5bf3546ce2f0a192f564acd2",
+    "role": "reference de style et de composition donnee au generateur, aucun pixel copie"
+  },
+  "terrain_origin": "DESSIN GENERE reference PMD Sky. PAS pixels natifs certifies. PAS collage de maps.",
+  "raw_inputs": [
+    {
+      "file": "source/entree_sud_nord_generee_v1/bruts/eau_matiere.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "0560f876df5e3a7324b37729f0d48bb7e18f6816dbe8bf1d6ef592725a0ffa74"
+    },
+    {
+      "file": "source/entree_sud_nord_generee_v1/bruts/sol_complet.png",
+      "size": [
+        848,
+        1264
+      ],
+      "sha256": "f9e414fcd62c89465f5356cb62753b878e05ea54591e73ace85195cb8707aeea"
+    },
+    {
+      "file": "source/entree_sud_nord_generee_v1/bruts/terrain_magenta.png",
+      "size": [
+        848,
+        1264
+      ],
+      "sha256": "f045903ad206fcbe8ebd663c1682e9447de8d6a9be7fa0bb5eb7b72be890e478"
+    }
+  ],
+  "normalization": "848x1264 -> 424x632, facteur 0.5 identique en X et Y ; moyenne 2x2 par classe (pas de melange magenta) ; palette commune 96 couleurs sans tramage.",
+  "layer_order_bottom_to_top": [
+    "animation/eau/ESN1_00_eau_fXX.png",
+    "calques/ESN1_01_ombres.png",
+    "calques/ESN1_02_sol_complet.png",
+    "calques/ESN1_03_herbe.png",
+    "calques/ESN1_04_chemin_terre.png",
+    "calques/ESN1_05_buissons.png",
+    "calques/ESN1_06_falaises.png",
+    "calques/ESN1_07_piliers_entree.png",
+    "calques/ESN1_08_bouche_grotte.png"
+  ],
+  "water": {
+    "frames": 12,
+    "engine_frame_length_ticks": 10,
+    "ms_per_frame": 166.67,
+    "loop_s": 2.0,
+    "type": "palette cycling a indices fixes (6 niveaux x 12 bandes = 72 indices), front qui descend vers le sud",
+    "origin": "matiere d eau generee + mouvement cree par nous ; PAS un cycle officiel recupere"
+  },
+  "layers_limits": "Partitions d une composition unique. Sol complet genere sous buissons/falaises. Faces cachees des falaises et buissons non reconstruites.",
+  "holes_px": 0,
+  "access": {
+    "entry_px": [
+      200,
+      616
+    ],
+    "threshold_px": [
+      208,
+      224
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 636,
+    "blocked_cells": 3402,
+    "total_cells": 4187,
+    "rule": "case bloquee si >25% non praticable (eau, buissons, roche, piliers, bouche)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "serialization": "0.8.12.0",
+    "asset": "esn1_entree_vapeur_jour",
+    "namespace": "entree_vapeur_sud_nord",
+    "tex_size": 1,
+    "tile_px": 8,
+    "banks": [
+      "ESN1_00_EAU_ANIMEE",
+      "ESN1_01_OMBRES",
+      "ESN1_02_SOL_COMPLET",
+      "ESN1_03_HERBE",
+      "ESN1_04_CHEMIN_TERRE",
+      "ESN1_05_BUISSONS",
+      "ESN1_06_FALAISES",
+      "ESN1_07_PILIERS_ENTREE",
+      "ESN1_08_BOUCHE_GROTTE"
+    ],
+    "tiles_per_bank": {
+      "ESN1_00_EAU_ANIMEE": 5506,
+      "ESN1_01_OMBRES": 553,
+      "ESN1_02_SOL_COMPLET": 3624,
+      "ESN1_03_HERBE": 1251,
+      "ESN1_04_CHEMIN_TERRE": 94,
+      "ESN1_05_BUISSONS": 1133,
+      "ESN1_06_FALAISES": 1706,
+      "ESN1_07_PILIERS_ENTREE": 125,
+      "ESN1_08_BOUCHE_GROTTE": 22
+    },
+    "template": "mod_metano_expeditions_pmdo_0812.zip v50812_01_crete_sillage_jour (charge par PMDO 0.8.12 reel en sept.)",
+    "runtime_tested": false,
+    "warp": "aucun : donjon_seuil a raccorder"
+  },
+  "import_png_to_tileset": "Chaque PNG de calques/ et animation/eau/ : 424x632, importer en 8 px. Noms ESN1_* uniques.",
+  "art_approved": false
+}

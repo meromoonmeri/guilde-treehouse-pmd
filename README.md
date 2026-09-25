@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Vapeur — arrivée au sud, grotte au nord (rendu généré, 25 septembre 2026)
+
+- **[Aperçu interactif : calques, eau animée, grille, collisions et viewport](apercu_entree_vapeur_sud_nord_v1.html)**.
+- [Calques PNG pour l'import 8 px](renders/entree_vapeur_sud_nord_v1/ESN1_calques_png_8px.zip) · [projet Ground PMDO 0.8.12](renders/entree_vapeur_sud_nord_v1/ESN1_projet_pmdo_0812.zip) · [ORA](renders/entree_vapeur_sud_nord_v1/ESN1_entree_vapeur_calques.ora).
+- [Méthode, contrôles et limites](renders/entree_vapeur_sud_nord_v1/README.md).
+
+424×632 px (53×79 cases de 8 px), 9 calques et un avant-plan Top vide. Eau en palette cycling à indices fixes : 12 phases × 10 ticks, soit 2 s. Référence de style : Steam Cave (PMD Sky). **Terrain généré, pas de pixels natifs certifiés.** Le mouvement de l'eau est une création. Collisions de base, marqueurs `entrance` et `donjon_seuil`, chemin 16×16 vérifié sur la grille. Aucun warp configuré. Dix tests PASS, dont l'aller-retour `.rsground`/`.tile`. **PMDO non testé.**
+
 ## Beach — référence conservée, neuf calques et eau animée
 
 - **[Atelier interactif : calques, animation et exports PNG](apercu_beach_calques_v1.html)**.
