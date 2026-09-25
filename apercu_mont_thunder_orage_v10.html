@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>Mont Thunder V10</title>
+<style>body{background:#111;color:#ddd;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;width:608px;border:1px solid #444}label{margin-right:12px}</style>
+<h1>Mont Thunder V10 — sommet uniforme, brouillard palette cycling, nuages en wrap</h1><p>Aperçu non certifié. Palette commune à tous les calques.</p>
+<div id="t"></div><canvas id="c" width="304" height="488"></canvas><p><label><input type="checkbox" id="col"> collisions</label></p>
+<script>
+const B='renders/mont_thunder_orage_v10/',ld=s=>{const i=new Image();i.src=s;return i},on={};
+const L=['00_ciel','01_nuages_fins','02_brouillard_cycling','04_eclairs','05_terrain'];
+const sky=ld(B+'calques/00_ciel.png'),ter=ld(B+'calques/05_terrain.png');
+L.forEach(n=>{on[n]=true;const l=document.createElement('label');l.innerHTML=`<input type=checkbox checked> ${n}`;l.firstChild.onchange=e=>on[n]=e.target.checked;t.appendChild(l)});
+fetch(B+'manifest.json').then(r=>r.json()).then(m=>{
+ const nu=ld(B+m.nuages_fins.bande),fo=m.brouillard.frames.map(f=>ld(B+f)),tl=m.timeline,ec=tl.map(f=>ld(B+'eclairs/'+f.eclair)),cyc=tl.reduce((a,f)=>a+f.ms,0),x=c.getContext('2d'),t0=performance.now();
+ (function d(now){const t=now-t0;let r=t%cyc,k=0;while(r>=tl[k].ms){r-=tl[k].ms;k++}
+  x.clearRect(0,0,304,488);
+  if(on['00_ciel'])x.drawImage(sky,0,0);
+  if(on['01_nuages_fins']&&nu.complete){const w=nu.width,o=Math.round(4*t/1000)%w;x.drawImage(nu,-o,0);x.drawImage(nu,w-o,0)}
+  if(on['02_brouillard_cycling'])x.drawImage(fo[Math.floor(t/m.brouillard.ms)%fo.length],0,0);
+  if(on['04_eclairs'])x.drawImage(ec[k],0,0);
+  if(on['05_terrain'])x.drawImage(ter,0,0);
+  if(col.checked){x.fillStyle='rgba(255,0,0,.35)';m.collisions_8px.forEach((row,j)=>row.forEach((v,i)=>{if(!v)x.fillRect(i*8,j*8,8,8)}))}
+  requestAnimationFrame(d)})(t0)});
+</script>

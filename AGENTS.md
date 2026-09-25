@@ -458,3 +458,7 @@ Le guide V7 est édité pour retirer les pierres de bordure du chemin. Nouveau c
 ## Mont Thunder V9 — ciel, nuages fins, brume statique, volutes
 
 Demande : régénérer ciel et brume, brume statique, seules quelques volutes bougent avec les éclairs, nuages plus petits et fins, calques bien mariés. Palette commune (terrain + 16 teintes générées communes). Les nuages fins sont extraits par écart à la bande du ciel, puis rapprochés verticalement. Le ciel est agrandi de 32 px, sinon les nuages sont invisibles (0 px visible mesuré). Aperçu `apercu_mont_thunder_orage_v9.html`. Non validé en jeu.
+
+## Mont Thunder V10
+
+Sommet uniforme (chemin remappé au gris du sommet), brouillard roche en palette cycling, nuages fins en wrap parfait. Aperçu `apercu_mont_thunder_orage_v10.html`. Non validé en jeu.
