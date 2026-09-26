@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Horn — format 4:3 vaste, réf. Mt Horn (26 septembre 2026)
+
+- Aperçu : `apercu_entree_horn_sud_nord_v1.html`.
+- Lot : `renders/entree_horn_sud_nord_v1/` (`EHN1_projet_pmdo_0812.zip`, `EHN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_horn_sud_nord_v1/`.
+
+Troisième map 4:3 (768 × 576 px, 96 × 72 cases). Exigence « même endroit, autre lieu » : bruts décor/sol générés **avec la ref canonique en guide**, sable mesuré à 34,8 de la ref (test dédié, seuil 40). Cour de sable, sentier en S vers une grotte au nord, 6 buissons détectés par micro-relief dense, 6 éboulis (8 poses ×2 + 8 repos) et 6 poussières (10 poses ×2 + 4 repos) en 24 × 5 ticks. 9 tests PASS. Biome choisi par l'agent. Pas de test PMDO en jeu.
+
 ## Entrée Amp — format 4:3 vaste, réf. Amp Plains (26 septembre 2026)
 
 - Aperçu : `apercu_entree_amp_sud_nord_v1.html`.

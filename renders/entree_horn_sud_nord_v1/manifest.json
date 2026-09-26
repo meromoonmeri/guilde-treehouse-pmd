@@ -1,0 +1,370 @@
+{
+  "lot": "entree_horn_sud_nord_v1",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "method": "rendu genere 4:3 guide par la ref canonique : decor complet + sol genere separement",
+  "reference_da": "Mt_Horn_entrance_Sky.png",
+  "raw_inputs": [
+    {
+      "file": "source/entree_horn_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "4aeda67b329177d741b9e6880a9bf809a6395c767c0f2847ad25a8f82f866ae8",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_horn_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "ac7c9be9827b01505f4be4066a286be04f067747bec8cc863131caff6570e988",
+      "size": [
+        1276,
+        832
+      ]
+    },
+    {
+      "file": "source/entree_horn_sud_nord_v1/bruts/eboulis_poses.png",
+      "sha256": "d84970190c74ef5e27e4168d1e95f87ee2a281996e354d5b3c5b7547f9522c7c",
+      "size": [
+        1408,
+        768
+      ]
+    },
+    {
+      "file": "source/entree_horn_sud_nord_v1/bruts/poussieres_poses.png",
+      "sha256": "ad9ae721925bd475087a9cd9f9f74e8fc8566f1ba66f84f1b99ba2657421a6bd",
+      "size": [
+        1584,
+        672
+      ]
+    }
+  ],
+  "normalization": {
+    "scale": 0.6428571428571429,
+    "scaled": [
+      771,
+      576
+    ],
+    "crop_x": [
+      1,
+      2
+    ],
+    "methode": "moyenne ponderee par classe (BOX), attribution exclusive par poids maximal, palette commune 96 couleurs",
+    "sol": {
+      "facteur_cover": 1.0769230769230769,
+      "recadrage_xy": [
+        87,
+        0
+      ],
+      "taille_source": [
+        1276,
+        832
+      ]
+    }
+  },
+  "segmentation": "roche = germes lum<125 & r-b<105 + croissance bornee 8 px (lum<170 & r-b<130) ; grotte = compo sombre de la boite nord-centre (430-770, <230) ; parois = roche au bord ; blocs = compos >= 400 px ; sentier = lisse (std11<9) et clair touchant le bas ; buissons = densite std3>12 en 31 px > 0,40 (compos >= 800 px, 6 attendus), exclus de la roche ; cour = reste",
+  "layer_order_bottom_to_top": [
+    "calques/EHN1_00_sol_complet.png",
+    "calques/EHN1_01_cour.png",
+    "calques/EHN1_02_sentier.png",
+    "calques/EHN1_03_parois.png",
+    "calques/EHN1_04_blocs.png",
+    "calques/EHN1_05_buissons.png",
+    "calques/EHN1_06_grotte.png",
+    "animation/eboulis/EHN1_07_eboulis_fXX.png",
+    "animation/poussieres/EHN1_08_poussieres_fXX.png"
+  ],
+  "eboulis": {
+    "poses": 8,
+    "phases_actives": 16,
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "couleurs_distinctes": 12,
+    "palette_12": [
+      [
+        228,
+        223,
+        219
+      ],
+      [
+        223,
+        216,
+        211
+      ],
+      [
+        210,
+        201,
+        196
+      ],
+      [
+        194,
+        180,
+        175
+      ],
+      [
+        195,
+        163,
+        129
+      ],
+      [
+        201,
+        144,
+        77
+      ],
+      [
+        157,
+        140,
+        126
+      ],
+      [
+        150,
+        112,
+        80
+      ],
+      [
+        138,
+        96,
+        64
+      ],
+      [
+        113,
+        92,
+        82
+      ],
+      [
+        93,
+        67,
+        57
+      ],
+      [
+        59,
+        34,
+        35
+      ]
+    ],
+    "emetteurs": [
+      {
+        "xy": [
+          536,
+          352
+        ],
+        "decalage": 0
+      },
+      {
+        "xy": [
+          504,
+          312
+        ],
+        "decalage": 4
+      },
+      {
+        "xy": [
+          424,
+          168
+        ],
+        "decalage": 8
+      },
+      {
+        "xy": [
+          136,
+          456
+        ],
+        "decalage": 12
+      },
+      {
+        "xy": [
+          600,
+          272
+        ],
+        "decalage": 16
+      },
+      {
+        "xy": [
+          624,
+          192
+        ],
+        "decalage": 20
+      }
+    ],
+    "origine": "dessin GENERE (planche 1x8), chronologie creee (8 poses x2 + 8 repos) ; pas une animation officielle"
+  },
+  "poussieres": {
+    "poses": 10,
+    "phases_actives": 20,
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "couleurs_distinctes": 12,
+    "palette_12": [
+      [
+        241,
+        219,
+        179
+      ],
+      [
+        240,
+        218,
+        179
+      ],
+      [
+        239,
+        219,
+        179
+      ],
+      [
+        240,
+        217,
+        177
+      ],
+      [
+        236,
+        212,
+        170
+      ],
+      [
+        226,
+        196,
+        151
+      ],
+      [
+        215,
+        182,
+        135
+      ],
+      [
+        212,
+        176,
+        128
+      ],
+      [
+        209,
+        175,
+        129
+      ],
+      [
+        203,
+        167,
+        122
+      ],
+      [
+        177,
+        142,
+        103
+      ],
+      [
+        114,
+        83,
+        59
+      ]
+    ],
+    "emetteurs": [
+      {
+        "xy": [
+          472,
+          240
+        ],
+        "decalage": 2
+      },
+      {
+        "xy": [
+          680,
+          424
+        ],
+        "decalage": 6
+      },
+      {
+        "xy": [
+          464,
+          456
+        ],
+        "decalage": 10
+      },
+      {
+        "xy": [
+          184,
+          448
+        ],
+        "decalage": 14
+      },
+      {
+        "xy": [
+          648,
+          288
+        ],
+        "decalage": 18
+      },
+      {
+        "xy": [
+          672,
+          152
+        ],
+        "decalage": 22
+      }
+    ],
+    "origine": "dessin GENERE (planche 2x5 lue en ligne), chronologie creee (10 poses x2 + 4 repos) ; pas une animation officielle"
+  },
+  "canonique": {
+    "ref_sable_moyenne": [
+      189.2,
+      145.6,
+      80.4
+    ],
+    "decor_sable_moyenne": [
+      217.3,
+      162.2,
+      92.5
+    ],
+    "distance": 34.80775775599458
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      384,
+      560
+    ],
+    "threshold_px": [
+      376,
+      160
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 1612,
+    "blocked_cells": 3913,
+    "total_cells": 6912,
+    "rule": "case bloquee si > 25 % hors cour/sentier"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ehn1_entree_horn",
+    "namespace": "entree_horn_sud_nord",
+    "tiles_per_bank": {
+      "EHN1_00_SOL": 6913,
+      "EHN1_01_COUR": 4198,
+      "EHN1_02_SENTIER": 1536,
+      "EHN1_03_PAROIS": 3567,
+      "EHN1_04_BLOCS": 687,
+      "EHN1_05_BUISSONS": 215,
+      "EHN1_06_GROTTE": 110,
+      "EHN1_07_EBOULIS": 64,
+      "EHN1_08_POUSSIERES": 144
+    },
+    "banks": [
+      "EHN1_00_SOL",
+      "EHN1_01_COUR",
+      "EHN1_02_SENTIER",
+      "EHN1_03_PAROIS",
+      "EHN1_04_BLOCS",
+      "EHN1_05_BUISSONS",
+      "EHN1_06_GROTTE",
+      "EHN1_07_EBOULIS",
+      "EHN1_08_POUSSIERES"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
