@@ -1,0 +1,467 @@
+{
+  "lot": "entree_southern_jungle_sud_nord_v1",
+  "prefix": "ESJ1",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "base": "branche de session (EFF1 pour les utilitaires)",
+  "biome": "Southern Jungle (sortie), reference choisie par l agent (« passe a la suite »)",
+  "method": "textures canoniques = rendu genere REFERENCE : rip passe au generateur ; decor complet sur magenta (mare = magenta), herbe complete editee depuis le decor, planche de papillons sur magenta",
+  "reference_da": {
+    "file": "Southern_Jungle_exit_S.png",
+    "sha256": "9e8590619fe9a5004af132583839f10e651b4f05f82ed767309c8cd4dec1ea7c",
+    "titre": "Sortie de Southern Jungle (PMD Explorers)"
+  },
+  "generation": [
+    {
+      "file": "decor_magenta.png",
+      "images": [
+        "Southern_Jungle_exit_S.png"
+      ],
+      "prompt": "Use EXACTLY the same textures, palette and pixel-art style as the reference image (Pokemon Mystery Dungeon Explorers of Sky, Southern Jungle): pale yellow-beige sandy dirt with pebbles, bright green grass patches with ragged edges, dense dark jungle foliage, fan palms and ferns, brown trunks, small grey rocks. NEW larger top-down map, WIDE 4:3, vast. Player arrives at the SOUTH on the sandy path; path goes NORTH through a wide sandy clearing bordered by grass up to a dark tunnel opening in foliage and big trunks at the top center (dungeon entrance). Dense jungle on sides and top. Small calm pond on the left, away from the path and not in front of the entrance, filled with flat pure magenta #FF00FF. No characters, text, UI, border.",
+      "note": "premier rendu trop sature (herbe fluo) : recolore une fois, prompt suivant"
+    },
+    {
+      "file": "decor_magenta.png",
+      "images": [
+        "source/entree_southern_jungle_sud_nord_v1/bruts/decor_magenta.png",
+        "Southern_Jungle_exit_S.png"
+      ],
+      "prompt": "Recolor and restyle this map to match EXACTLY the colors, textures and shading of the second reference image: muted olive-khaki sandy ground with darker speckles, medium grass green patches not neon, deep dark teal-green jungle foliage, fan palms and ferns, dark shadows at the edges, brown trunks. Keep the same layout and the magenta pond.",
+      "note": "brut retenu (1079 x 976) ; le chemin sinueux a fusionne avec la clairiere"
+    },
+    {
+      "file": "sol_complet.png",
+      "images": [
+        "source/entree_southern_jungle_sud_nord_v1/bruts/decor_magenta.png"
+      ],
+      "prompt": "Same image, same size and pixel-art style, but showing only the plain medium-green short jungle grass ground everywhere (everything else removed and replaced by that same grass texture)."
+    },
+    {
+      "file": "papillons_poses.png",
+      "images": [
+        "Southern_Jungle_exit_S.png"
+      ],
+      "prompt": "Pixel-art sprite sheet on flat pure magenta #FF00FF, PMD Explorers of Sky style. 2 rows of 4 sprites: row 1 = small yellow-orange jungle butterfly from above in 4 wing-flap poses (open, half, closed, half); row 2 = cyan-blue butterfly, same 4 poses. Dark outline, wide magenta spacing, no text."
+    }
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/entree_southern_jungle_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "29c0ea925f8439a6e9b09fff9732d8cd38eed3d0bf281c76be11f74d21392b69",
+      "size": [
+        1079,
+        976
+      ]
+    },
+    {
+      "file": "source/entree_southern_jungle_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "61916f335c2223939e980e73194e16fa2f1ef406d6e9af32501a29057ac6e5ba",
+      "size": [
+        1079,
+        976
+      ]
+    },
+    {
+      "file": "source/entree_southern_jungle_sud_nord_v1/bruts/papillons_poses.png",
+      "sha256": "cfbff6a2680059333b53072c3cf359a35e5b14d42b68c39f10d48f5ca16d2c9d",
+      "size": [
+        1079,
+        976
+      ]
+    }
+  ],
+  "fidelite_rip": {
+    "methode": "moyenne RGB par matiere, meme classifieur pixel sur le rip et sur le brut ; distance euclidienne",
+    "brut": {
+      "sable": {
+        "rip_rgb": [
+          157.1,
+          163.9,
+          92.4
+        ],
+        "decor_rgb": [
+          165.1,
+          166.8,
+          94.0
+        ],
+        "distance": 8.7
+      },
+      "herbe": {
+        "rip_rgb": [
+          59.5,
+          152.8,
+          80.1
+        ],
+        "decor_rgb": [
+          68.6,
+          149.8,
+          73.9
+        ],
+        "distance": 11.4
+      },
+      "feuillage": {
+        "rip_rgb": [
+          8.0,
+          50.0,
+          30.8
+        ],
+        "decor_rgb": [
+          20.2,
+          62.9,
+          46.5
+        ],
+        "distance": 23.7
+      }
+    },
+    "calques_finaux": {
+      "sable": {
+        "calque": "sable",
+        "rgb": [
+          165.4,
+          166.9,
+          93.9
+        ],
+        "distance_rip": 8.9
+      },
+      "herbe": {
+        "calque": "herbe",
+        "rgb": [
+          67.5,
+          152.0,
+          73.5
+        ],
+        "distance_rip": 10.4
+      },
+      "feuillage": {
+        "calque": "jungle",
+        "rgb": [
+          19.8,
+          62.8,
+          46.2
+        ],
+        "distance_rip": 23.3
+      }
+    }
+  },
+  "normalization": {
+    "crop_src": [
+      0,
+      30,
+      1079,
+      839
+    ],
+    "scale": 0.7118,
+    "methode": "poids BOX par classe, attribution exclusive par poids maximal",
+    "palettes": {
+      "terrain": {
+        "calques": [
+          "sol_complet",
+          "sable",
+          "herbe"
+        ],
+        "couleurs": 64
+      },
+      "jungle": {
+        "calques": [
+          "jungle"
+        ],
+        "couleurs": 64
+      },
+      "rochers": {
+        "calques": [
+          "rochers"
+        ],
+        "couleurs": 16
+      },
+      "grotte": {
+        "calques": [
+          "grotte"
+        ],
+        "couleurs": 16
+      }
+    }
+  },
+  "layers": [
+    {
+      "file": "animation/eau/ESJ1_00_eau_fNN.png",
+      "phases": 4,
+      "ticks": 10
+    },
+    {
+      "file": "animation/scintillements/ESJ1_01_scintillements_fNN.png",
+      "phases": 4,
+      "ticks": 10
+    },
+    {
+      "file": "calques/ESJ1_02_sol_complet.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ESJ1_03_herbe.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ESJ1_04_sable.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ESJ1_05_rochers.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ESJ1_06_jungle.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ESJ1_07_grotte.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "animation/papillons/ESJ1_08_papillons_fNN.png",
+      "phases": 48,
+      "ticks": 5
+    }
+  ],
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "modele": "riviere Metano, couleurs Metano EXACTES, sans liseré de rive (water_phases d EWC2)",
+    "origine": "pixels recalcules, pas de tuiles natives"
+  },
+  "sparkles": {
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          176,
+          240
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          232,
+          256
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          192,
+          272
+        ]
+      }
+    ],
+    "origine": "pixels Metano NATIFS inchanges"
+  },
+  "papillons": {
+    "poses": 8,
+    "tailles_px": [
+      [
+        16,
+        20
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        17,
+        5
+      ],
+      [
+        16,
+        12
+      ],
+      [
+        17,
+        20
+      ],
+      [
+        17,
+        14
+      ],
+      [
+        18,
+        8
+      ],
+      [
+        17,
+        13
+      ]
+    ],
+    "palette": [
+      [
+        254,
+        200,
+        3
+      ],
+      [
+        239,
+        145,
+        9
+      ],
+      [
+        7,
+        241,
+        248
+      ],
+      [
+        1,
+        242,
+        248
+      ],
+      [
+        15,
+        184,
+        216
+      ],
+      [
+        230,
+        113,
+        4
+      ],
+      [
+        51,
+        33,
+        45
+      ],
+      [
+        7,
+        35,
+        60
+      ],
+      [
+        0,
+        66,
+        112
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "vols": [
+      [
+        250,
+        250,
+        50,
+        22,
+        2,
+        0.0,
+        1
+      ],
+      [
+        330,
+        400,
+        60,
+        30,
+        3,
+        1.1,
+        0
+      ],
+      [
+        470,
+        330,
+        70,
+        26,
+        2,
+        2.3,
+        0
+      ],
+      [
+        560,
+        220,
+        40,
+        30,
+        3,
+        3.6,
+        1
+      ],
+      [
+        420,
+        470,
+        55,
+        20,
+        2,
+        4.4,
+        1
+      ],
+      [
+        160,
+        330,
+        35,
+        40,
+        1,
+        5.2,
+        0
+      ]
+    ],
+    "battement": "ouvert, mi, ferme, mi (1 pose par phase)",
+    "trajectoire": "Lissajous fermee sur 48 phases",
+    "phases": 48,
+    "frame_length_ticks": 5,
+    "origine": "dessin GENERE ; vols et boucle crees par nous (pas une animation officielle)"
+  },
+  "scene_loop_ticks": 240,
+  "access": {
+    "entry_px": [
+      392,
+      560
+    ],
+    "threshold_px": [
+      376,
+      136
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 2291,
+    "blocked_cells": 3963,
+    "walkable_cells": 2949,
+    "rule": "case bloquee si > 25 % hors sable et herbe",
+    "seuil": "devant le tunnel, au nord"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "esj1_entree_southern_jungle",
+    "namespace": "entree_southern_jungle_sud_nord",
+    "tiles_per_bank": {
+      "ESJ1_00_EAU": 237,
+      "ESJ1_01_SCINTILLEMENTS": 52,
+      "ESJ1_02_SOL": 6286,
+      "ESJ1_03_HERBE": 1249,
+      "ESJ1_04_SABLE": 1984,
+      "ESJ1_05_ROCHERS": 66,
+      "ESJ1_06_JUNGLE": 3658,
+      "ESJ1_07_GROTTE": 290,
+      "ESJ1_08_PAPILLONS": 1302
+    },
+    "banks": [
+      "ESJ1_00_EAU",
+      "ESJ1_01_SCINTILLEMENTS",
+      "ESJ1_02_SOL",
+      "ESJ1_03_HERBE",
+      "ESJ1_04_SABLE",
+      "ESJ1_05_ROCHERS",
+      "ESJ1_06_JUNGLE",
+      "ESJ1_07_GROTTE",
+      "ESJ1_08_PAPILLONS"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
