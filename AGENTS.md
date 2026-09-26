@@ -476,7 +476,7 @@ Papillons : planche 2 × 6 (2 couleurs × 6 poses), extraction centrée ×1/11 �
 
 La consigne de méthode la plus récente a été donnée dans la session sœur `arena/01a0dc9b` (commit `f6647b7c`, **non fusionné ici**) : « tu dois utiliser ton générateur d'image tu as mal audité l'ancienne méthode ». Dans la série des entrées sud → nord, **« textures canoniques » = rendu généré RÉFÉRENCÉ** : le rip canonique du biome est passé au générateur en image de référence (`images=[rip]`), et le décor reproduit ses textures, sa palette et son style de pixel sur un layout nouveau (« même endroit, autre lieu »). Ensuite, la chaîne habituelle : décor sur magenta et sol séparé, segmentation, réduction par classe, calques, animations sur leurs propres calques, PNG 8 px et Ground. Ce n'est PAS un relayout de pixels natifs (`zones_south_north_v3`, Cascade V1), réservé au cas où l'utilisateur le nomme explicitement. Mesurer la fidélité de la matière principale contre le rip (tests `test_canonical_*` de la branche `arena/01a0dc8e`), ne jamais présenter les pixels générés comme des tuiles natives, et demander avant le build si le sens de « canonique », la référence ou la portée est ambigu (consigne `arena/01a0db11`).
 
-**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
 
 ### Entrée Waterfall Cave V1 (EWC1) — génération fond magenta multicalque (26 septembre)
 
@@ -505,3 +505,28 @@ Pièges corrigés :
 - **HEAD revenu à la base entre deux tours** (encore) : le HEAD local était à `0eaa002c` alors que le distant portait `deec1b5c` ; l'arbre de travail, lui, était à jour. Correctif : `git fetch --depth=10 origin <branche>` puis `git reset --mixed FETCH_HEAD`, et vérifier que le diff ne contient que le travail du tour.
 
 Pas de calque d'ombres : aucune ombre portée séparable dans le rendu, et aucune n'a été inventée. 13 tests PASS, build reproductible (104 fichiers identiques d'un build à l'autre). Pas de runtime.
+
+### Entrée Waterfall Cave V2 (EWC2) — retours sur EWC1 (26 septembre)
+
+Retours de l'utilisateur : « il y a des petits traits blancs au bord des rives, fais une version sans ça, et faut pas d'eau devant l'entrée de la grotte, et faut que la cascade soit en deux temps : la cascade qui prend tout et après une animation où la cascade se fend pour ouvrir la grotte que tu as créée (sinon dans l'ensemble c'est un super travail) ». Il a demandé ensuite de passer à la map suivante.
+
+- Lot `source/entree_waterfall_cave_sud_nord_v2/`, préfixe `EWC2`, namespace `entree_waterfall_cave_v2`, aperçu `apercu_entree_waterfall_cave_sud_nord_v2.html`.
+- `build.py` charge le build EWC1 (`V1 = loadmod(...)`) et réutilise son classifieur, ses poses, ses palettes et sa fidélité. Les bruts EWC1 sont repris tels quels (hashes testés), sans nouvelle génération.
+
+Règles tirées de ces retours :
+
+- **Pas de liseré clair contre les rives.** Les « petits traits blancs » venaient de `water_phases` (lot Bristle, repris par Jungle et EWC1), qui pose `a[(d <= 1) & tirets] = PAL['clair']`. Pour toute nouvelle eau façon Métano, utiliser la version sans cette ligne (`water_phases` d'EWC2), où la bande sombre touche la rive. Un test vérifie que chaque pixel d'eau qui touche la terre est `bande`.
+- **Pas d'eau devant une entrée** où l'on doit marcher. Le chemin va jusqu'à la bouche, et l'eau reste sur les côtés.
+- **Porte d'eau en deux temps** : calques d'**état** (`etat` = `fermee` / `ouverture` / `ouverte` dans le manifest).
+  - Les trois états utilisent la même texture périodique, avec des masques différents. La phase 0 de l'ouverture est identique à la phase 0 de l'état fermé, et la phase 23 est identique à la phase 11 de l'état ouvert.
+  - L'ouverture dure un multiple de 12 phases, donc le défilement reste continu. Il faut la lancer sur un tick multiple de 48.
+  - Dans PMDO, les calques non actifs sont `Visible=false`, et un script bascule les états (non testé).
+
+Pièges rencontrés :
+
+- **Éclats de rebord** : des éclats de roche entre le rideau et la bouche (classe falaises ou berge) flottaient sur le rideau fermé. La « porte » est donc la bouche plus tout ce qui, dans sa boîte ± 8 px, n'est ni rideau, ni arbre, ni eau, ni écume, ni sable, ni couloir.
+- **Berge le long de l'écume** : une berge assombrie posée le long de l'écume faisait des traits bruns entre les bouillons. La berge de raccord se limite à l'eau. Côté écume, une lisière irrégulière suffit : les blancs de l'écume dessinée restent de l'écume à 5 px au plus du bord.
+- **Coût** : le build prend environ 60 s, contre 22 s pour EWC1, à cause des 24 phases d'ouverture et des banques plus grosses.
+
+15 tests PASS. Mutations vérifiées : un pixel `clair` sur la rive fait échouer le test de l'eau, et une phase d'ouverture dupliquée fait échouer le test des états. Les 13 tests EWC1 passent toujours ; seul l'ORA EWC1, réécrit par le rebuild, a été restauré. Pas de runtime.
+

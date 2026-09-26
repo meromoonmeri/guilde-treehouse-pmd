@@ -1,5 +1,23 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Waterfall Cave V2 — cascade en deux temps, sans liseré de rive ni eau devant la grotte (26 septembre 2026)
+
+- Aperçu : `apercu_entree_waterfall_cave_sud_nord_v2.html`, avec les boutons « Ouvrir la cascade » et « Refermer » et une démo automatique.
+- Lot : `renders/entree_waterfall_cave_sud_nord_v2/` (`EWC2_projet_pmdo_0812.zip`, `EWC2_calques_png_8px.zip`, ORA, WebP animé, planche de l'ouverture).
+- Source : `source/entree_waterfall_cave_sud_nord_v2/`.
+
+**Retours de l'utilisateur sur EWC1** : « il y a des petits traits blancs au bord des rives, fais une version sans ça, et faut pas d'eau devant l'entrée de la grotte, et faut que la cascade soit en deux temps : la cascade qui prend tout et après une animation où la cascade se fend pour ouvrir la grotte ». La V2 repart des **mêmes bruts générés** qu'EWC1, sans nouvelle génération, et EWC1 reste intact.
+
+- **Rives** : le liseré clair en tirets (couleur Métano `clair`) est retiré de l'eau ; la bande sombre touche la rive.
+- **Couloir** : un couloir de sable (pixels du sol complet généré) remplace la partie centrale de la vasque et mène à la bouche. Il reste deux bassins latéraux.
+- **Cascade en deux temps**, avec des calques d'état :
+  - fermée : le rideau recouvre toute la grotte (12 × 4 ticks) ;
+  - ouverture : la fente naît en haut, descend et s'écarte jusqu'au contour de la grotte, avec des gerbes aux lèvres (24 × 4 ticks, jouée une fois) ;
+  - ouverte : le rideau contourne la grotte (12 × 4 ticks).
+- **PMDO** : les calques des états ouverture et ouverte sont `Visible=false`. `init.lua` fournit `ouvrir_cascade()`, **non testée dans PMDO**.
+
+15 tests PASS, dont les raccords fermée → ouverture → ouverte et la fente qui ne fait que s'agrandir. Pas de test PMDO en jeu.
+
 ## Entrée Waterfall Cave — 4:3, génération fond magenta multicalque, réf. entrancecascade (26 septembre 2026)
 
 - Aperçu : `apercu_entree_waterfall_cave_sud_nord_v1.html`.

@@ -1,0 +1,800 @@
+{
+  "lot": "entree_waterfall_cave_sud_nord_v2",
+  "prefix": "EWC2",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "base": "EWC1 (meme branche) ; memes bruts generes, aucune nouvelle generation",
+  "demande": "petits traits blancs au bord des rives -> version sans ; pas d eau devant l entree de la grotte ; cascade en deux temps : la cascade qui prend tout puis une animation ou elle se fend pour ouvrir la grotte",
+  "method": "textures canoniques = rendu genere REFERENCE (bruts EWC1 : decor sur magenta, sol complet, planche d ecume)",
+  "reference_da": {
+    "file": "entrancecascade.png",
+    "sha256": "712471d25dfb4d309ef068b0478bd7f47d968429e79c62b13eb299a801c5dbd4",
+    "titre": "Entree cascade (Waterfall Cave, PMD Explorers)"
+  },
+  "generation": [
+    {
+      "file": "decor_magenta.png",
+      "images": [
+        "entrancecascade.png"
+      ],
+      "prompt": "Use EXACTLY the same textures, palette and pixel-art style as the reference image (Pokemon Mystery Dungeon Explorers of Sky, Waterfall Cave entrance): same tan layered rock cliffs, same bonsai trees with bright green foliage and brown twisted trunks, same warm sand ground with tiny green tufts and pebbles, same blue waterfall with white streaks and white foam. Make a NEW, larger top-down map. WIDE LANDSCAPE 4:3, zoomed out so the area feels vast. Layout: the player arrives at the SOUTH (bottom edge) on a wide sandy beach; a long sandy path goes NORTH through the middle between two pools, up to a huge waterfall at the top center. At the foot of the waterfall, where the path ends, a dark cave opening is visible behind the falling water. Tall rock cliffs with bonsai trees fill the left and right sides and the top corners, round tan boulders along the pools. IMPORTANT: every flat water surface (pools, lake, streams) is filled with flat pure magenta #FF00FF, no ripples and no foam on it. The waterfall and its white foam at the base stay drawn normally. No characters, no text, no UI, no border."
+    },
+    {
+      "file": "sol_complet.png",
+      "images": [
+        "source/entree_waterfall_cave_sud_nord_v1/bruts/decor_magenta.png"
+      ],
+      "prompt": "Edit this image: keep the exact same framing, size and pixel-art style, but remove EVERYTHING except the ground: no cliffs, no trees, no waterfall, no cave, no water, no magenta, no boulders. The whole image becomes the same warm tan sand ground as the sandy path (faint grain, a few tiny pebbles), flat top-down, seamless, uniform lighting."
+    },
+    {
+      "file": "ecume_poses.png",
+      "images": [
+        "entrancecascade.png"
+      ],
+      "prompt": "Sprite sheet on a flat pure magenta #FF00FF background, in EXACTLY the pixel-art style and colors of the white water foam at the foot of the waterfall in the reference image. 2 rows x 6 columns of separate foam splash puffs (white, very light blue, light cyan). Row 1: a foam puff bubbling up then fading, 6 poses (small, medium, large, bursting, breaking apart, small remnants). Row 2: a spray of droplets, 6 poses. Each pose isolated and centered in its cell, wide magenta spacing, no overlap, no text, no grid lines."
+    }
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/entree_waterfall_cave_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "57ac2a5d237d19f5817c9a036d8f234805a5e9897700779decb38bfb3d8b25e7",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_waterfall_cave_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "c3db82231ba9b113aaea894efeda0e111a3c576b503bbc89bf8a11e761a93977",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_waterfall_cave_sud_nord_v1/bruts/ecume_poses.png",
+      "sha256": "bb613a402310785b70c818c2340a8a24aba286983a6d20d210950ebfb9ad2936",
+      "size": [
+        1079,
+        976
+      ]
+    }
+  ],
+  "changements_v2": {
+    "liseré_de_rive": {
+      "retire": "clair",
+      "rgb": [
+        148,
+        230,
+        238
+      ],
+      "avant": "water_phases posait des tirets de 1 px couleur clair contre chaque rive",
+      "apres": "bande sombre directement contre la rive ; couleurs restantes surface, inter, accent, bande"
+    },
+    "couloir": {
+      "rapport_berge_sable": [
+        0.633,
+        0.623,
+        0.714
+      ],
+      "pixels_couloir": 11166,
+      "lisiere_ecume_px": 91,
+      "eau_retiree_px": 6710,
+      "ecume_retiree_px": 204,
+      "bords_pleine_res": {
+        "y": [
+          277,
+          300,
+          330,
+          360,
+          392
+        ],
+        "gauche": [
+          560,
+          563,
+          557,
+          548,
+          518
+        ],
+        "droite": [
+          640,
+          637,
+          644,
+          652,
+          684
+        ]
+      },
+      "pixels": "sol complet GENERE ; berge de raccord = ce sable assombri au rapport mesure berge/sable (<= 3 px de l eau) ; lisiere : blancs de l ecume dessinee gardes a <= 5 px du bord"
+    },
+    "cascade_deux_temps": {
+      "fermee": "rideau sur la porte = bouche entiere + eclats de rebord enclaves (meme texture periodique prolongee) + bouillons au pied",
+      "ouverture": "24 phases x 4 ticks = 96 ticks, jouee une fois ; temps d ouverture = 0.7 x ecart au centre + 0.3 x profondeur, lissage smoothstep ; levres de la fente = blanc du rideau (1 px) + eclairci (1 px), dans la bouche seulement ; gerbes generees aux levres basses",
+      "ouverte": "rideau qui contourne la bouche (masque EWC1)",
+      "origine": "pixels GENERES du rideau et de l ecume ; masques, fente et chronologie crees par nous, pas une animation officielle"
+    }
+  },
+  "fidelite_rip": {
+    "methode": "moyenne RGB par matiere, meme classifieur sur le rip et sur le brut (rideau : boite x 150-355, y 0-180 du rip contre rideau segmente) ; distance euclidienne",
+    "brut": {
+      "sable": {
+        "rip_rgb": [
+          225.9,
+          179.0,
+          107.0
+        ],
+        "decor_rgb": [
+          225.1,
+          177.1,
+          104.3
+        ],
+        "distance": 3.4
+      },
+      "roche": {
+        "rip_rgb": [
+          172.6,
+          139.4,
+          97.2
+        ],
+        "decor_rgb": [
+          166.5,
+          134.5,
+          94.8
+        ],
+        "distance": 8.2
+      },
+      "feuillage": {
+        "rip_rgb": [
+          77.6,
+          128.1,
+          42.7
+        ],
+        "decor_rgb": [
+          80.5,
+          128.3,
+          43.0
+        ],
+        "distance": 2.9
+      },
+      "rideau": {
+        "rip_rgb": [
+          101.9,
+          175.0,
+          204.4
+        ],
+        "decor_rgb": [
+          112.5,
+          175.4,
+          201.5
+        ],
+        "distance": 11.0
+      }
+    },
+    "calques_finaux": {
+      "sable": {
+        "calque": "sable",
+        "rgb": [
+          223.8,
+          174.6,
+          101.9
+        ],
+        "distance_rip": 7.1
+      },
+      "roche": {
+        "calque": "falaises",
+        "rgb": [
+          169.1,
+          136.7,
+          94.7
+        ],
+        "distance_rip": 5.1
+      },
+      "feuillage": {
+        "calque": "arbres",
+        "rgb": [
+          78.0,
+          126.1,
+          41.7
+        ],
+        "distance_rip": 2.3
+      },
+      "rideau": {
+        "calque": "cascade_ouverte",
+        "rgb": [
+          109.6,
+          174.0,
+          200.6
+        ],
+        "distance_rip": 8.6
+      }
+    }
+  },
+  "normalization": {
+    "scale": 0.6428571428571429,
+    "scaled": [
+      771,
+      576
+    ],
+    "crop_x": [
+      1,
+      2
+    ],
+    "methode": "moyenne ponderee par classe (BOX), attribution exclusive par poids maximal",
+    "palettes": {
+      "terrain": {
+        "calques": [
+          "sol_complet",
+          "sable",
+          "cailloux",
+          "touffes",
+          "plateaux",
+          "berge",
+          "falaises"
+        ],
+        "couleurs": 96
+      },
+      "arbres": {
+        "calques": [
+          "arbres"
+        ],
+        "couleurs": 24
+      },
+      "eau_dessinee": {
+        "calques": [
+          "cascade",
+          "ecume_pied"
+        ],
+        "couleurs": 24
+      },
+      "bouche": {
+        "calques": [
+          "entree_sombre"
+        ],
+        "couleurs": 12
+      }
+    }
+  },
+  "layers": [
+    {
+      "file": "animation/eau/EWC2_00_eau_fNN.png",
+      "phases": 4,
+      "ticks": 10,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "animation/scintillements/EWC2_01_scintillements_fNN.png",
+      "phases": 4,
+      "ticks": 10,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_02_sol_complet.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_03_sable.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_04_cailloux.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_05_touffes.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_06_plateaux.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_07_berge.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_08_falaises.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_09_arbres.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_10_entree_sombre.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "animation/cascade_fermee/EWC2_11_cascade_fermee_fNN.png",
+      "phases": 12,
+      "ticks": 4,
+      "etat": "fermee",
+      "boucle": true
+    },
+    {
+      "file": "animation/cascade_ouverture/EWC2_12_cascade_ouverture_fNN.png",
+      "phases": 24,
+      "ticks": 4,
+      "etat": "ouverture",
+      "boucle": false
+    },
+    {
+      "file": "animation/cascade_ouverte/EWC2_13_cascade_ouverte_fNN.png",
+      "phases": 12,
+      "ticks": 4,
+      "etat": "ouverte",
+      "boucle": true
+    },
+    {
+      "file": "calques/EWC2_14_ecume_pied.png",
+      "phases": 1,
+      "ticks": 60,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "animation/ecume/EWC2_15_ecume_fNN.png",
+      "phases": 12,
+      "ticks": 4,
+      "etat": null,
+      "boucle": true
+    },
+    {
+      "file": "animation/ecume_porte_fermee/EWC2_16_ecume_porte_fermee_fNN.png",
+      "phases": 12,
+      "ticks": 4,
+      "etat": "fermee",
+      "boucle": true
+    },
+    {
+      "file": "animation/ecume_porte_ouverture/EWC2_17_ecume_porte_ouverture_fNN.png",
+      "phases": 24,
+      "ticks": 4,
+      "etat": "ouverture",
+      "boucle": false
+    },
+    {
+      "file": "animation/embruns/EWC2_18_embruns_fNN.png",
+      "phases": 12,
+      "ticks": 4,
+      "etat": null,
+      "boucle": true
+    }
+  ],
+  "etats": {
+    "defaut": "fermee",
+    "sequence": [
+      "fermee",
+      "ouverture",
+      "ouverte"
+    ],
+    "ouverture_ticks": 96,
+    "calage": "lancer l ouverture sur un tick multiple de 48 (phase 0 du rideau) pour un defilement continu",
+    "pmdo_calques": {
+      "fermee": [
+        11,
+        16
+      ],
+      "ouverture": [
+        12,
+        17
+      ],
+      "ouverte": [
+        13
+      ]
+    }
+  },
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "surface": [
+        131,
+        218,
+        230
+      ],
+      "bande": [
+        87,
+        135,
+        191
+      ],
+      "inter": [
+        95,
+        183,
+        207
+      ],
+      "accent": [
+        111,
+        207,
+        231
+      ]
+    },
+    "modele": "structure et cadence riviere Metano, couleurs Metano EXACTES, sans liseré de rive",
+    "origine": "pixels recalcules, pas de tuiles natives"
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          504,
+          472
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          608,
+          360
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          200,
+          472
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          560,
+          384
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          232,
+          264
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          512,
+          344
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          280,
+          440
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          584,
+          336
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          208,
+          312
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          256,
+          448
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          568,
+          288
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          312,
+          368
+        ]
+      }
+    ],
+    "origine": "pixels et couleurs Metano NATIFS inchanges (aplat de surface retire)"
+  },
+  "cascade": {
+    "x_range": [
+      307,
+      460
+    ],
+    "bandes_source": {
+      "4": 80,
+      "76": 61
+    },
+    "colonnes_sans_bande": 12,
+    "pixels_bouches": 1351,
+    "palette_colors": 24,
+    "phases": 12,
+    "frame_length_ticks": 4,
+    "period_px": 72,
+    "blend_px": 24,
+    "step_px": 6,
+    "ouverture_phases": 24,
+    "origine": "pixels GENERES du rideau du decor, rendus periodiques par fondu puis ramenes a la palette du rideau ; defilement cree par nous, pas une animation officielle"
+  },
+  "foam": {
+    "brut": "source/entree_waterfall_cave_sud_nord_v1/bruts/ecume_poses.png",
+    "grille_rendue": [
+      4,
+      4
+    ],
+    "bouillon": {
+      "cases": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "emetteurs": [
+        [
+          319,
+          185,
+          0
+        ],
+        [
+          332,
+          185,
+          5
+        ],
+        [
+          345,
+          185,
+          10
+        ],
+        [
+          423,
+          185,
+          4
+        ],
+        [
+          436,
+          185,
+          9
+        ]
+      ]
+    },
+    "embruns": {
+      "cases": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "emetteurs": [
+        [
+          312,
+          203,
+          0
+        ],
+        [
+          339,
+          203,
+          3
+        ],
+        [
+          428,
+          203,
+          6
+        ],
+        [
+          455,
+          203,
+          9
+        ]
+      ]
+    },
+    "porte": {
+      "emetteurs_bouillons": [
+        [
+          363,
+          178,
+          2
+        ],
+        [
+          377,
+          178,
+          7
+        ],
+        [
+          390,
+          178,
+          0
+        ],
+        [
+          404,
+          178,
+          5
+        ]
+      ],
+      "clip_y_max": 194,
+      "porte_px": 2207,
+      "eclats_rebord_px": 101
+    },
+    "reduction": "fenetre 160 px -> 32 px (x1/5) centree, palette = couleurs de l ecume du pied",
+    "phases": 12,
+    "frame_length_ticks": 4,
+    "origine": "dessin GENERE, emetteurs et chronologie crees ; pas une animation officielle"
+  },
+  "shadows": "aucun calque d ombres : le rendu genere ne contient pas d ombre portee separable",
+  "scene_loop_ticks": 240,
+  "access": {
+    "entry_px": [
+      392,
+      560
+    ],
+    "threshold_px": [
+      376,
+      184
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 608,
+    "blocked_cells": 6152,
+    "total_cells": 6912,
+    "walkable_cells": 760,
+    "rule": "case bloquee si > 25 % hors sable praticable/cailloux/touffes enclavees",
+    "seuil": "haut du couloir de sable, au pied de la bouche (visible une fois la cascade ouverte)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ewc2_entree_waterfall_cave",
+    "namespace": "entree_waterfall_cave_v2",
+    "tiles_per_bank": {
+      "EWC2_00_EAU": 1453,
+      "EWC2_01_SCINTILLEMENTS": 52,
+      "EWC2_02_SOL": 5535,
+      "EWC2_03_SABLE": 952,
+      "EWC2_04_CAILLOUX": 110,
+      "EWC2_05_TOUFFES": 114,
+      "EWC2_06_PLATEAUX": 717,
+      "EWC2_07_BERGE": 218,
+      "EWC2_08_FALAISES": 3611,
+      "EWC2_09_ARBRES": 1529,
+      "EWC2_10_ENTREE": 45,
+      "EWC2_11_CASCADE": 1570,
+      "EWC2_12_CASCADE": 1891,
+      "EWC2_13_CASCADE": 1643,
+      "EWC2_14_ECUME": 63,
+      "EWC2_15_ECUME": 387,
+      "EWC2_16_ECUME": 384,
+      "EWC2_17_ECUME": 647,
+      "EWC2_18_EMBRUNS": 308
+    },
+    "banks": [
+      "EWC2_00_EAU",
+      "EWC2_01_SCINTILLEMENTS",
+      "EWC2_02_SOL",
+      "EWC2_03_SABLE",
+      "EWC2_04_CAILLOUX",
+      "EWC2_05_TOUFFES",
+      "EWC2_06_PLATEAUX",
+      "EWC2_07_BERGE",
+      "EWC2_08_FALAISES",
+      "EWC2_09_ARBRES",
+      "EWC2_10_ENTREE",
+      "EWC2_11_CASCADE",
+      "EWC2_12_CASCADE",
+      "EWC2_13_CASCADE",
+      "EWC2_14_ECUME",
+      "EWC2_15_ECUME",
+      "EWC2_16_ECUME",
+      "EWC2_17_ECUME",
+      "EWC2_18_EMBRUNS"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun",
+    "script": "init.lua : ouvrir_cascade(), NON TESTE"
+  },
+  "art_approved": false
+}
