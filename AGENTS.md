@@ -476,7 +476,7 @@ Papillons : planche 2 × 6 (2 couleurs × 6 poses), extraction centrée ×1/11 �
 
 La consigne de méthode la plus récente a été donnée dans la session sœur `arena/01a0dc9b` (commit `f6647b7c`, **non fusionné ici**) : « tu dois utiliser ton générateur d'image tu as mal audité l'ancienne méthode ». Dans la série des entrées sud → nord, **« textures canoniques » = rendu généré RÉFÉRENCÉ** : le rip canonique du biome est passé au générateur en image de référence (`images=[rip]`), et le décor reproduit ses textures, sa palette et son style de pixel sur un layout nouveau (« même endroit, autre lieu »). Ensuite, la chaîne habituelle : décor sur magenta et sol séparé, segmentation, réduction par classe, calques, animations sur leurs propres calques, PNG 8 px et Ground. Ce n'est PAS un relayout de pixels natifs (`zones_south_north_v3`, Cascade V1), réservé au cas où l'utilisateur le nomme explicitement. Mesurer la fidélité de la matière principale contre le rip (tests `test_canonical_*` de la branche `arena/01a0dc8e`), ne jamais présenter les pixels générés comme des tuiles natives, et demander avant le build si le sens de « canonique », la référence ou la portée est ambigu (consigne `arena/01a0db11`).
 
-**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2, EMF1, EWC3 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2, EMF1, EWC3, EUL1 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
 
 ### Entrée Waterfall Cave V1 (EWC1) — génération fond magenta multicalque (26 septembre)
 
@@ -589,4 +589,30 @@ Règles et recettes :
 - **Fidélité du rideau ouvert** : elle monte à 18,1, parce que les deux chutes restantes sont les côtés du dessin, déjà bordés de blanc. Mesurer le rideau sur l'état fermé (9,2), et l'état ouvert sans ses 2 px de bord (14,7).
 
 17 tests PASS. 6 mutations vérifiées : phase ouverte dupliquée, fente découpée au lieu d'écartée, trou dans la paroi, eau sur la grotte, fissure qui monte, couleur nouvelle dans la paroi. Build d'environ 70 s. Pas de runtime.
+
+### Entrée Underground Lake (EUL1) — carte suivante, biome choisi par l'agent sur demande (26 septembre)
+
+Demande : « go carte suivante choisis ! ». L'utilisateur n'a pas tranché entre EWC2 et EWC3 ; les deux restent disponibles. Avant le choix, on a vérifié :
+
+- la branche de session distante, à `7167a3d9` ;
+- les branches sœurs, inchangées : `01a0db11`, `01a0dc8e` et `01a0dc9b` n'ont aucun Underground Lake.
+
+Référence : `Underground_Lake_shore_TDS.png` (69 couleurs). Lot `source/entree_underground_lake_sud_nord_v1/`, préfixe `EUL1`, namespace `entree_underground_lake_sud_nord`, aperçu `apercu_entree_underground_lake_sud_nord_v1.html`. 3 bruts générés sur 5 appels ; deux appels ont rendu une réponse sans image, et un prompt plus court a suffi.
+
+Règles et recettes :
+
+- **Eau d'un biome aux couleurs non Métano** : garder la structure Métano (bande, frange dentelée, accent, aplat, onde voyageuse, 4 × 10), mais avec les **couleurs exactes du rip** attribuées aux rôles.
+  - Ici : aplat (39,39,95), bande = intermédiaire (55,55,111), accent (63,63,119).
+  - Le filet clair du rip contre le sable, (119,127,175) et (167,167,223), n'est **pas** repris : l'utilisateur a demandé « pas de petits traits blancs au bord des rives ».
+  - Un test vérifie que les couleurs de l'eau sont un sous-ensemble du rip et que la rive n'a que la bande.
+- **Scintillements Métano natifs sur eau sombre** : leurs pixels quasi blancs, (246,250,255) et (156,234,246), font de petits traits blancs très visibles sur le bleu nuit. On les pose donc sur une zone claire (ici le cœur de la lueur, commun à toutes les phases), pas sur l'eau sombre.
+- **Sol complet qui garde des éléments** : le générateur a gardé les parois, recalées (0, 0). Le brut est gardé tel quel, parce que les parois restent sous le calque parois. Il sert aussi de **témoin** : la roche du décor qui diffère du sol complet (écart lissé sur 5 px > 20, contre 4 sur les parois) forme les piliers et les stalagmites, y compris le haut des piliers dessiné devant les parois. Il faut exclure les abords de la bouche, qui diffèrent aussi.
+- **Ombres séparables** : ici le sable s'assombrit au pied des parois (lum 159 au contact, 196 au-delà de 15 px). Le calque ombres sépare ces pixels du rendu, sans rien inventer. Il faut mesurer le profil de luminance selon la distance à la roche avant de décider s'il y a un calque d'ombres.
+- **Lueur en anneaux** (couleurs du rip, cœur puis 8 anneaux) :
+  - les anneaux sont calculés par distance au cœur (`distance_transform_edt`), pour avoir une largeur constante en pixels (4 px), ce que ne donne pas un rayon normalisé d'ellipse ;
+  - respiration de ± 4 % et ondulation à 5 lobes, périodiques sur 12 phases ;
+  - avec une respiration sinusoïdale, les pas sont lents aux extrêmes (écart de 1 à 3 entre pas) : le test compare donc le pas 11 → 0 aux autres pas, pas le max au min.
+- **Planche de poses** : 4 rangées rendues au lieu de 2, donc les poses sont choisies par fenêtre (cy, cx, côté multiple de 8). La réduction est uniforme (×1/8) avec une couverture de 0,3 : à 0,12 ou 0,2, les ronds fins passaient à 2 px et le petit rond était bouché.
+
+15 tests PASS, dont : pas d'eau sous la bouche, lueur et gouttes recalculées depuis le manifeste avec les phases 12 = 0 et 24 = 0, et scintillements sur la lueur. 6 mutations vérifiées : liseré clair sur la rive, phase de lueur remplacée, scintillements sur l'eau sombre, phase de gouttes dupliquée, eau devant l'entrée, ombres aussi claires que le sable. Build reproductible (74 fichiers identiques hors ORA), en 25 s environ. Pas de runtime.
 

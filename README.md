@@ -1,5 +1,26 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Underground Lake — 4:3, lac souterrain lumineux et chaussée jusqu'à la grotte, réf. Underground Lake (26 septembre 2026)
+
+- Aperçu : `apercu_entree_underground_lake_sud_nord_v1.html`.
+- Lot : `renders/entree_underground_lake_sud_nord_v1/` (`EUL1_projet_pmdo_0812.zip`, `EUL1_calques_png_8px.zip`, ORA, WebP animé, planche des poses).
+- Source : `source/entree_underground_lake_sud_nord_v1/`.
+
+**Demande de l'utilisateur** : « go carte suivante choisis ! ». L'agent a choisi le biome **Underground Lake**, comme demandé ; la capture `Underground_Lake_shore_TDS.png` n'avait encore jamais servi de référence principale. Méthode des textures canoniques = **rendu généré référencé**. La capture est passée au générateur, qui produit trois bruts :
+
+- le décor complet en 4:3, avec le lac en magenta ;
+- un sol complet édité depuis le décor : parois gardées au pixel près, qui servent aussi de témoin pour isoler les piliers ;
+- une planche de gouttes et de ronds sur magenta.
+
+L'arrivée est au sud, par un chemin de sable entre des parois en bosses. Le chemin débouche sur une large plage. Au nord, une chaussée sèche traverse le lac, qui a deux bassins avec des piliers et des stalagmites, jusqu'à l'entrée sombre ; il n'y a pas d'eau devant la bouche. La map compte 11 calques : sol complet, sable, ombres au pied des parois, berge, parois, piliers et profondeur. Elle a quatre animations :
+
+- le lac façon Métano, avec les **couleurs exactes de la capture** et **sans liseré clair** (4 × 10 ticks) ;
+- la lueur turquoise du lac, dont les 9 couleurs de la capture respirent (12 × 10 ticks) ;
+- des scintillements Métano natifs, posés sur la lueur ;
+- des gouttes qui tombent du plafond et font des ronds dans l'eau (24 × 5 ticks).
+
+Toutes les boucles sont fermées (testé). Fidélité au rip mesurée par test : sable 3,9, parois 5,6, piliers 15,2. 15 tests PASS ; 6 mutations vérifiées. Pas de test PMDO en jeu.
+
 ## Entrée Waterfall Cave V3 — la cascade se fend en deux et s'écarte devant la paroi (26 septembre 2026)
 
 - Aperçu : `apercu_entree_waterfall_cave_sud_nord_v3.html`, avec les boutons « Ouvrir la cascade » et « Refermer » et une démo automatique.
