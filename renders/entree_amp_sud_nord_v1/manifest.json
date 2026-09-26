@@ -1,0 +1,403 @@
+{
+  "lot": "entree_amp_sud_nord_v1",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "method": "rendu genere 4:3 guide par la ref canonique : decor complet + sol genere separement",
+  "reference_da": "Amp_Plains_entrance_TD.png",
+  "raw_inputs": [
+    {
+      "file": "source/entree_amp_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "262f4ea5305a688f17697a4fb33525b75f009a4da6c90887063074eda5884cb3",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_amp_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "e7b4d4e10c6d5483f3f16ee01458cd592e42f100be38863e303176f893bd9f1b",
+      "size": [
+        1091,
+        976
+      ]
+    },
+    {
+      "file": "source/entree_amp_sud_nord_v1/bruts/touffes_vent_poses.png",
+      "sha256": "b6b1da9e6ee5a88c12990ee677ff102155f7ee815394de90647fd4fe30b4634f",
+      "size": [
+        1091,
+        976
+      ]
+    },
+    {
+      "file": "source/entree_amp_sud_nord_v1/bruts/etincelles_poses.png",
+      "sha256": "d296d2ca786820befd9428fda2c0491266ad93d0f4998883d5d5e77d2f25563c",
+      "size": [
+        1376,
+        768
+      ]
+    }
+  ],
+  "normalization": {
+    "scale": 0.6428571428571429,
+    "scaled": [
+      771,
+      576
+    ],
+    "crop_x": [
+      1,
+      2
+    ],
+    "methode": "moyenne ponderee par classe (BOX), attribution exclusive par poids maximal, palette commune 96 couleurs",
+    "sol": {
+      "facteur_cover": 1.0999083409715857,
+      "recadrage_xy": [
+        0,
+        89
+      ],
+      "taille_source": [
+        1091,
+        976
+      ]
+    }
+  },
+  "segmentation": "sentier = germes lum>175 & r-b>38 + croissance bornee 6 px (lum>145 & r-b>30), compo touchant le bas ; roche = r-b<0 & lum<175 ; grotte = compo sombre de la boite nord-centre (430-770, <230) ; parois = roche au bord ; blocs = compos >= 250 px ; arbres = lum<125 & r-b<8 hors sentier et hors rochers dilates 12 px, compos >= 150 px ; plaine = reste",
+  "layer_order_bottom_to_top": [
+    "calques/EAN1_00_sol_complet.png",
+    "calques/EAN1_01_plaine.png",
+    "calques/EAN1_02_sentier.png",
+    "calques/EAN1_03_parois.png",
+    "calques/EAN1_04_blocs.png",
+    "calques/EAN1_05_arbres_morts.png",
+    "calques/EAN1_06_grotte.png",
+    "animation/touffes/EAN1_07_touffes_fXX.png",
+    "animation/etincelles/EAN1_08_etincelles_fXX.png"
+  ],
+  "touffes": {
+    "poses": 8,
+    "phases": 12,
+    "frame_length_ticks": 10,
+    "inclinaisons_mesurees": [
+      0.02452092655031771,
+      0.060214975138929545,
+      0.13821031433324582,
+      0.2161606321372518,
+      0.30775541256485034,
+      0.3090835505844751,
+      0.32320796372170724,
+      0.3375107580271439
+    ],
+    "cycle": [
+      3,
+      3,
+      6,
+      7,
+      6,
+      3,
+      3,
+      2,
+      1,
+      0,
+      1,
+      2
+    ],
+    "fenetre_reduction": 8,
+    "palette_7": [
+      [
+        152,
+        148,
+        98
+      ],
+      [
+        139,
+        135,
+        91
+      ],
+      [
+        129,
+        124,
+        85
+      ],
+      [
+        121,
+        116,
+        80
+      ],
+      [
+        110,
+        104,
+        77
+      ],
+      [
+        91,
+        81,
+        70
+      ],
+      [
+        74,
+        47,
+        67
+      ]
+    ],
+    "emetteurs": [
+      {
+        "xy": [
+          232,
+          400
+        ],
+        "decalage": 5
+      },
+      {
+        "xy": [
+          224,
+          232
+        ],
+        "decalage": 5
+      },
+      {
+        "xy": [
+          432,
+          136
+        ],
+        "decalage": 10
+      },
+      {
+        "xy": [
+          592,
+          552
+        ],
+        "decalage": 2
+      },
+      {
+        "xy": [
+          360,
+          184
+        ],
+        "decalage": 9
+      },
+      {
+        "xy": [
+          536,
+          168
+        ],
+        "decalage": 1
+      },
+      {
+        "xy": [
+          136,
+          272
+        ],
+        "decalage": 3
+      },
+      {
+        "xy": [
+          632,
+          288
+        ],
+        "decalage": 3
+      },
+      {
+        "xy": [
+          448,
+          360
+        ],
+        "decalage": 11
+      },
+      {
+        "xy": [
+          408,
+          344
+        ],
+        "decalage": 10
+      }
+    ],
+    "origine": "dessin GENERE guide par la ref, palette propre olive ; cycle sinusoidal sur mesures, pas une animation officielle"
+  },
+  "etincelles": {
+    "poses": 8,
+    "phases_actives": 16,
+    "phases": 24,
+    "frame_length_ticks": 5,
+    "couleurs_distinctes": 12,
+    "palette_12": [
+      [
+        255,
+        255,
+        235
+      ],
+      [
+        251,
+        253,
+        210
+      ],
+      [
+        253,
+        251,
+        128
+      ],
+      [
+        253,
+        249,
+        83
+      ],
+      [
+        254,
+        250,
+        44
+      ],
+      [
+        254,
+        251,
+        25
+      ],
+      [
+        254,
+        245,
+        35
+      ],
+      [
+        254,
+        239,
+        56
+      ],
+      [
+        255,
+        230,
+        73
+      ],
+      [
+        162,
+        206,
+        139
+      ],
+      [
+        243,
+        137,
+        45
+      ],
+      [
+        244,
+        76,
+        20
+      ]
+    ],
+    "emetteurs": [
+      {
+        "xy": [
+          160,
+          144
+        ],
+        "decalage": 0
+      },
+      {
+        "xy": [
+          512,
+          272
+        ],
+        "decalage": 3
+      },
+      {
+        "xy": [
+          176,
+          192
+        ],
+        "decalage": 6
+      },
+      {
+        "xy": [
+          208,
+          440
+        ],
+        "decalage": 9
+      },
+      {
+        "xy": [
+          360,
+          440
+        ],
+        "decalage": 12
+      },
+      {
+        "xy": [
+          592,
+          312
+        ],
+        "decalage": 15
+      },
+      {
+        "xy": [
+          192,
+          288
+        ],
+        "decalage": 18
+      }
+    ],
+    "origine": "dessin GENERE, chronologie creee (8 poses x2 + 8 repos) ; pas une animation officielle"
+  },
+  "canonique": {
+    "ref_herbe_moyenne": [
+      138.5,
+      145.6,
+      110.8
+    ],
+    "decor_herbe_moyenne": [
+      133.5,
+      138.6,
+      107.1
+    ],
+    "distance": 9.364293886887577
+  },
+  "scene_loop_ticks": 120,
+  "access": {
+    "entry_px": [
+      360,
+      560
+    ],
+    "threshold_px": [
+      376,
+      128
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 2275,
+    "blocked_cells": 3534,
+    "total_cells": 6912,
+    "rule": "case bloquee si > 25 % hors plaine/sentier"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ean1_entree_amp",
+    "namespace": "entree_amp_sud_nord",
+    "tiles_per_bank": {
+      "EAN1_00_SOL": 6913,
+      "EAN1_01_PLAINE": 3473,
+      "EAN1_02_SENTIER": 660,
+      "EAN1_03_PAROIS": 2840,
+      "EAN1_04_BLOCS": 780,
+      "EAN1_05_ARBRES": 32,
+      "EAN1_06_GROTTE": 43,
+      "EAN1_07_TOUFFES": 24,
+      "EAN1_08_ETINCELLES": 63
+    },
+    "banks": [
+      "EAN1_00_SOL",
+      "EAN1_01_PLAINE",
+      "EAN1_02_SENTIER",
+      "EAN1_03_PAROIS",
+      "EAN1_04_BLOCS",
+      "EAN1_05_ARBRES",
+      "EAN1_06_GROTTE",
+      "EAN1_07_TOUFFES",
+      "EAN1_08_ETINCELLES"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

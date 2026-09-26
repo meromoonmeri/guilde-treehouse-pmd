@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Amp — format 4:3 vaste, réf. Amp Plains (26 septembre 2026)
+
+- Aperçu : `apercu_entree_amp_sud_nord_v1.html`.
+- Lot : `renders/entree_amp_sud_nord_v1/` (`EAN1_projet_pmdo_0812.zip`, `EAN1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_amp_sud_nord_v1/`.
+
+Deuxième map 4:3 (768 × 576 px, 96 × 72 cases). Exigence « même endroit, autre lieu » : les bruts décor/sol/touffes sont générés **avec la ref canonique en guide** (une version trop saturée a été écartée après comparaison), et l'herbe du décor est mesurée à 9,6 de celle de la ref (test dédié). Plaine olive, sentier en S vers une grotte au nord, 10 touffes en rafale (12 × 10 ticks, cycle sur inclinaisons mesurées) et 7 étincelles près des rochers (24 × 5 ticks, toujours une active). 9 tests PASS. Biome choisi par l'agent. Pas de test PMDO en jeu.
+
 ## Entrée Jungle — format 4:3 vaste, réf. Southern Jungle (26 septembre 2026)
 
 - Aperçu : `apercu_entree_jungle_sud_nord_v1.html`.

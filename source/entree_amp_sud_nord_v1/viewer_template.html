@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrée Amp · sud → nord · 4:3</title>
+<style>
+body{background:#101c14;color:#e4ece6;font:15px/1.55 system-ui,sans-serif;margin:0;padding:24px}
+main{max-width:1180px;margin:auto}
+h1{font-size:30px;margin:0 0 6px}
+p{color:#b6cbb9;max-width:78ch}
+.wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.stage{position:relative;background:#0b1211;overflow:auto;max-height:86vh;border:1px solid #2c3e30}
+canvas{display:block;image-rendering:pixelated}
+aside{flex:1;min-width:280px;max-width:420px}
+fieldset{border:1px solid #2c3e30;border-radius:8px;margin:0 0 14px;padding:10px 14px}
+legend{color:#d8c98c;padding:0 6px}
+label{display:block;padding:3px 0;cursor:pointer}
+button{background:#cfe6da;color:#12302a;border:0;border-radius:6px;padding:8px 14px;margin:2px 4px 2px 0;cursor:pointer;font-weight:600}
+button.on{background:#d8c98c}
+.note{border-left:3px solid #d8c98c;padding-left:12px;font-size:14px}
+code{color:#cfe6da}
+</style>
+<main>
+<h1>Entrée Amp — format 4:3 vaste (768×576)</h1>
+<p>Deuxième map au <strong>format 4:3 vaste</strong> : 96×72 cases, environ 2,4 écrans PMDO dans chaque sens. Rendu généré d'après <em>Amp Plains</em>, <strong>avec la ref canonique en guide</strong> (« même endroit, autre lieu » : herbe olive et roche bleu-gris mesurées proches de la ref) : le décor complet et le sol de plaine ont été générés séparément, puis normalisés uniformément ×0,643 avec une moyenne par classe. Dix <strong>touffes générées</strong> se balancent en rafale d'ouest en est (12 phases de 10 ticks) et sept <strong>étincelles générées</strong> crépitent près des rochers (24 phases de 5 ticks, 2 s). Coche « Cadre viewport » pour voir la taille d'un écran.</p>
+<div class="wrap">
+  <div class="stage" id="stage"><canvas id="c"></canvas></div>
+  <aside>
+    <fieldset><legend>Lecture</legend><button id="play">Pause</button><button id="step">+5 ticks</button><div id="phase"></div></fieldset>
+    <fieldset><legend>Affichage</legend>
+      <button data-zoom="1" class="on">1×</button><button data-zoom="2">2×</button><button data-zoom="3">3×</button>
+      <label><input type="checkbox" id="grid"> Grille 8 px</label>
+      <label><input type="checkbox" id="coll"> Collisions et marqueurs</label>
+      <label><input type="checkbox" id="view"> Cadre viewport PMDO ×1 (320×240) à l'arrivée</label>
+    </fieldset>
+    <fieldset><legend>Calques (bas → haut)</legend><div id="layers"></div><button id="solo">Tout afficher</button></fieldset>
+    <fieldset><legend>Poses des touffes et étincelles (×4)</legend><div id="poses" style="display:flex;flex-wrap:wrap;gap:6px"></div></fieldset>
+    <fieldset><legend>Export</legend><button id="png">PNG de la vue actuelle (1×)</button></fieldset>
+    <p class="note">Le terrain, les touffes et les étincelles sont générés ; les cycles et la chronologie sont créés par nous. Marqueurs : jaune = <code>entrance</code>, cyan = <code>donjon_seuil</code>. Aucun test PMDO en jeu.</p>
+  </aside>
+</div>
+</main>
+<script>
+const D=__DATA__;const [W,H]=D.size;const c=document.getElementById('c'),x=c.getContext('2d');
+function img(u){const i=new Image();i.src=u;return i}
+const L=D.stack.map(l=>({id:l.id,ticks:l.ticks,frames:l.frames.map(img)})),coll=img(D.collisions);
+const box=document.getElementById('layers'),checks={};
+L.forEach(l=>{const lab=document.createElement('label'),ch=document.createElement('input');ch.type='checkbox';ch.checked=true;ch.onchange=draw;checks[l.id]=ch;lab.append(ch,' '+l.id+(l.frames.length>1?' ('+l.frames.length+'×'+l.ticks+' ticks)':''));box.append(lab)});
+D.poses.forEach(p=>{const i=img(p.uri);i.width=64;i.height=64;i.title=p.id;i.style.cssText='image-rendering:pixelated;background:'+D.surface;document.getElementById('poses').append(i)});
+let zoom=1,tick=0,playing=true,last=performance.now();const STEP=5,MS=STEP*1000/60;
+function render(ctx){ctx.clearRect(0,0,W,H);L.forEach(l=>{if(checks[l.id].checked)ctx.drawImage(l.frames[Math.floor(tick/l.ticks)%l.frames.length],0,0)});
+ if(document.getElementById('coll').checked)ctx.drawImage(coll,0,0);}
+function draw(){c.width=W*zoom;c.height=H*zoom;x.imageSmoothingEnabled=false;x.save();x.scale(zoom,zoom);render(x);x.restore();
+ if(document.getElementById('grid').checked){x.strokeStyle='rgba(255,255,255,.18)';x.lineWidth=1;x.beginPath();
+  for(let i=0;i<=W;i+=8){x.moveTo(i*zoom+.5,0);x.lineTo(i*zoom+.5,H*zoom)}for(let j=0;j<=H;j+=8){x.moveTo(0,j*zoom+.5);x.lineTo(W*zoom,j*zoom+.5)}x.stroke()}
+ if(document.getElementById('view').checked){const cx=Math.min(Math.max(D.entry[0]+8-160,0),W-320),cy=Math.min(Math.max(D.entry[1]+8-120,0),H-240);
+  x.strokeStyle='#ffe066';x.lineWidth=2;x.strokeRect(cx*zoom,cy*zoom,320*zoom,240*zoom)}
+ document.getElementById('phase').textContent='tick '+tick+' / '+D.loop;}
+function adv(){tick=(tick+STEP)%D.loop;draw()}
+function loop(t){if(playing&&t-last>=MS){last=t;adv()}requestAnimationFrame(loop)}
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Lecture'};
+document.getElementById('step').onclick=adv;
+document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{zoom=+b.dataset.zoom;document.querySelectorAll('[data-zoom]').forEach(o=>o.classList.toggle('on',o===b));draw()});
+['grid','coll','view'].forEach(id=>document.getElementById(id).onchange=draw);
+document.getElementById('solo').onclick=()=>{Object.values(checks).forEach(ch=>ch.checked=true);draw()};
+document.getElementById('png').onclick=()=>{const o=document.createElement('canvas');o.width=W;o.height=H;render(o.getContext('2d'));const a=document.createElement('a');a.download='EAN1_vue_tick'+String(tick).padStart(3,'0')+'.png';a.href=o.toDataURL('image/png');a.click()};
+Promise.all([...L.flatMap(l=>l.frames),coll].map(i=>i.decode())).then(()=>{draw();requestAnimationFrame(loop)});
+</script>
+</html>
