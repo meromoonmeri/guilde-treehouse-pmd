@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Grotte des Cascades — format 4:3 vaste, réf. Waterfall Cave Ledge (26 septembre 2026)
+
+- Aperçu interactif : `apercu_entree_grotte_cascade_sud_nord_v1.html`.
+- Lot : `renders/entree_grotte_cascade_sud_nord_v1/` (`EGC1_projet_pmdo_0812.zip`, `EGC1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_grotte_cascade_sud_nord_v1/`.
+
+Nouvelle carte au standard 4:3 : 768 × 576 px, 96 × 72 cases de 8 px, entrée au sud et seuil au nord. Composition complète générée sur magenta d’après `Waterfall_Cave_ledge_TDS.png`, avec sol séparé et matière d’eau générée; aucun fragment de map source n’est collé. L’eau a 12 phases × 10 ticks. **Terrain et eau générés, non pixel-exacts de tiles natives.** Neuf tests d’assets PASS ; aucune validation PMDO en jeu ni destination de warp. Les anciens lots sont laissés intacts.
+
 ## Entrée Jungle — format 4:3 vaste, réf. Southern Jungle (26 septembre 2026)
 
 - Aperçu : `apercu_entree_jungle_sud_nord_v1.html`.

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrée Grotte des Cascades · 4:3</title>
+<style>
+:root{color-scheme:dark}body{background:#10191d;color:#e4ecef;font:15px/1.55 system-ui,sans-serif;margin:0;padding:24px}main{max-width:1280px;margin:auto}h1{font-size:30px;margin:0 0 6px}p{color:#b8c7cc;max-width:84ch}.wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}.stage{position:relative;background:#071014;overflow:auto;max-height:86vh;border:1px solid #31464c;border-radius:8px}canvas{display:block;image-rendering:pixelated}aside{flex:1;min-width:280px;max-width:440px}fieldset{border:1px solid #31464c;border-radius:8px;margin:0 0 14px;padding:10px 14px}legend{color:#81d8db;padding:0 6px}label{display:block;padding:3px 0;cursor:pointer}button{background:#cde9e9;color:#123038;border:0;border-radius:6px;padding:8px 14px;margin:2px 4px 2px 0;cursor:pointer;font-weight:600}button.on{background:#81d8db}.note{border-left:3px solid #81d8db;padding-left:12px;font-size:14px}code{color:#cde9e9}
+</style>
+<main>
+<h1>Entrée Grotte des Cascades — 4:3 vaste (768×576)</h1>
+<p>Nouvelle composition sud → nord guidée par <em>Waterfall Cave Ledge</em>, dessinée au générateur sur fond magenta comme les lots précédents. Le décor et le sol sont générés séparément, normalisés uniformément, puis découpés en calques alignés. L’eau possède 12 phases de palette-cycling. <strong>Le terrain et l’eau sont des dessins générés, pas des pixels natifs certifiés.</strong></p>
+<div class="wrap"><div class="stage" id="stage"><canvas id="c"></canvas></div><aside>
+<fieldset><legend>Lecture</legend><button id="play">Pause</button><button id="step">+10 ticks</button><div id="phase"></div></fieldset>
+<fieldset><legend>Affichage</legend><button data-zoom="1" class="on">1×</button><button data-zoom="2">2×</button><button data-zoom="3">3×</button><label><input type="checkbox" id="grid"> Grille 8 px</label><label><input type="checkbox" id="coll"> Collisions et marqueurs</label><label><input type="checkbox" id="view"> Cadre viewport PMDO ×1 (320×240) à l’arrivée</label></fieldset>
+<fieldset><legend>Calques (bas → haut)</legend><div id="layers"></div><button id="all">Tout afficher</button><button id="none">Tout masquer</button></fieldset>
+<fieldset><legend>Export</legend><button id="png">PNG de la vue actuelle (1×)</button></fieldset>
+<p class="note">Jaune = <code>entrance</code>, cyan = <code>donjon_seuil</code>. Aucun warp. Le seuil doit être raccordé au donjon de destination. Les collisions calculées ne remplacent pas un test de déplacement dans PMDO. L’archive fournit le Ground 0.8.12 et les calques PNG 8 px.</p>
+</aside></div></main>
+<script>
+const D=__DATA__;const [W,H]=D.size;const c=document.getElementById('c'),x=c.getContext('2d');
+function img(uri){const i=new Image();i.src=uri;return i}
+const L=D.stack.map(l=>({id:l.id,ticks:l.ticks,frames:l.frames.map(img)})),coll=img(D.collisions),box=document.getElementById('layers'),checks={};
+L.forEach(l=>{const label=document.createElement('label'),ch=document.createElement('input');ch.type='checkbox';ch.checked=true;ch.onchange=draw;checks[l.id]=ch;label.append(ch,' '+l.id+(l.frames.length>1?' ('+l.frames.length+'×'+l.ticks+' ticks)':''));box.append(label)});
+let zoom=1,tick=0,playing=true,last=performance.now();const STEP=2,MS=STEP*1000/60;
+function render(ctx){ctx.clearRect(0,0,W,H);L.forEach(l=>{if(checks[l.id].checked)ctx.drawImage(l.frames[Math.floor(tick/l.ticks)%l.frames.length],0,0)});if(document.getElementById('coll').checked)ctx.drawImage(coll,0,0)}
+function draw(){c.width=W*zoom;c.height=H*zoom;x.imageSmoothingEnabled=false;x.save();x.scale(zoom,zoom);render(x);x.restore();if(document.getElementById('grid').checked){x.strokeStyle='rgba(255,255,255,.18)';x.lineWidth=1;x.beginPath();for(let i=0;i<=W;i+=8){x.moveTo(i*zoom+.5,0);x.lineTo(i*zoom+.5,H*zoom)}for(let j=0;j<=H;j+=8){x.moveTo(0,j*zoom+.5);x.lineTo(W*zoom,j*zoom+.5)}x.stroke()}if(document.getElementById('view').checked){const cx=Math.min(Math.max(D.entry[0]+8-160,0),W-320),cy=Math.min(Math.max(D.entry[1]+8-120,0),H-240);x.strokeStyle='#ffe066';x.lineWidth=2;x.strokeRect(cx*zoom,cy*zoom,320*zoom,240*zoom)}document.getElementById('phase').textContent='tick '+tick+' / '+D.loop+' · eau '+(Math.floor(tick/D.waterTicks)%D.waterFrames+1)+'/'+D.waterFrames}
+function advance(){tick=(tick+10)%D.loop;draw()}
+function loop(now){if(playing&&now-last>=MS){last=now;tick=(tick+STEP)%D.loop;draw()}requestAnimationFrame(loop)}
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Lecture'};document.getElementById('step').onclick=advance;
+document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{zoom=+b.dataset.zoom;document.querySelectorAll('[data-zoom]').forEach(o=>o.classList.toggle('on',o===b));draw()});
+['grid','coll','view'].forEach(id=>document.getElementById(id).onchange=draw);document.getElementById('all').onclick=()=>{Object.values(checks).forEach(ch=>ch.checked=true);draw()};document.getElementById('none').onclick=()=>{Object.values(checks).forEach(ch=>ch.checked=false);draw()};
+document.getElementById('png').onclick=()=>{const o=document.createElement('canvas');o.width=W;o.height=H;render(o.getContext('2d'));const a=document.createElement('a');a.download='EGC1_vue_tick'+String(tick).padStart(3,'0')+'.png';a.href=o.toDataURL('image/png');a.click()};
+Promise.all([...L.flatMap(l=>l.frames),coll].map(i=>i.decode())).then(()=>{draw();requestAnimationFrame(loop)});
+</script>
+</html>

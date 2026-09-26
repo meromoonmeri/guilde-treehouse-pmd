@@ -1,0 +1,749 @@
+{
+  "lot": "entree_grotte_cascade_sud_nord_v1",
+  "name": "Entrée Grotte des Cascades",
+  "reference": {
+    "file": "Waterfall_Cave_ledge_TDS.png",
+    "sha256": "c641e3470108bd0478f7c19598d5554dd8fc77053ca637766534691a03e7a711",
+    "role": "référence d’ambiance et de composition; aucun pixel de la map source n’est assemblé"
+  },
+  "method": "Générateur : décor complet sur magenta + sol complet séparé + matière d’eau sur magenta; normalisation uniforme et segmentation en calques alignés. Pas d’assemblage de morceaux de maps.",
+  "terrain_origin": "dessin généré en DA PMD; pas une texture native pixel-exacte et pas un tileset officiel",
+  "size_px": [
+    768,
+    576
+  ],
+  "ratio": "4:3",
+  "grid_8px": [
+    96,
+    72
+  ],
+  "normalization": {
+    "raw_px": [
+      1200,
+      896
+    ],
+    "scale": 0.6428571428571429,
+    "scaled_px": [
+      771,
+      576
+    ],
+    "crop_x_px": [
+      1,
+      2
+    ],
+    "method": "réduction BOX uniforme, couleurs pondérées par classe, attribution exclusive; jamais d’étirement anisotrope"
+  },
+  "raw_inputs": [
+    {
+      "file": "source/entree_grotte_cascade_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "f4dd1eca075bb7d0a03bc59acfdda6ee0ffda9b09528e456da7debfe22c41011",
+      "size_px": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_grotte_cascade_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "75d97363e2d7b76da8730176043af6282cd6f25cac871e267bb5888d01735a98",
+      "size_px": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_grotte_cascade_sud_nord_v1/bruts/eau_matiere_magenta.png",
+      "sha256": "ee5768edaf3eb9ca73f8474b6b6fa0200407303f4b8d95d490ecde99247d38d4",
+      "size_px": [
+        880,
+        1191
+      ]
+    }
+  ],
+  "magenta_key": {
+    "rule": "R>35, B>45, G<1.20×min(R,B), |R-B|<130 (tolérance élargie aux franges magenta/violettes anti-crénelées)",
+    "water_components": [
+      {
+        "id": 12,
+        "pixels": 16116,
+        "is_water": true,
+        "touches_canvas": false
+      },
+      {
+        "id": 13,
+        "pixels": 17717,
+        "is_water": true,
+        "touches_canvas": false
+      },
+      {
+        "id": 14,
+        "pixels": 15771,
+        "is_water": true,
+        "touches_canvas": false
+      },
+      {
+        "id": 15,
+        "pixels": 15787,
+        "is_water": true,
+        "touches_canvas": false
+      },
+      {
+        "id": 20,
+        "pixels": 15661,
+        "is_water": false,
+        "touches_canvas": true
+      }
+    ],
+    "selected_water_component_min_px": 800,
+    "small_internal_key_pixels": "remplis avec le sol généré sous-jacent"
+  },
+  "static_palette": {
+    "colors_max": 96,
+    "shared_palette_rgb": [
+      [
+        88,
+        124,
+        154
+      ],
+      [
+        87,
+        122,
+        151
+      ],
+      [
+        87,
+        121,
+        151
+      ],
+      [
+        89,
+        120,
+        149
+      ],
+      [
+        86,
+        120,
+        149
+      ],
+      [
+        83,
+        122,
+        149
+      ],
+      [
+        78,
+        121,
+        145
+      ],
+      [
+        80,
+        119,
+        144
+      ],
+      [
+        88,
+        118,
+        148
+      ],
+      [
+        86,
+        118,
+        147
+      ],
+      [
+        84,
+        118,
+        146
+      ],
+      [
+        82,
+        118,
+        144
+      ],
+      [
+        75,
+        118,
+        140
+      ],
+      [
+        87,
+        117,
+        148
+      ],
+      [
+        84,
+        117,
+        146
+      ],
+      [
+        82,
+        117,
+        144
+      ],
+      [
+        75,
+        117,
+        139
+      ],
+      [
+        89,
+        116,
+        149
+      ],
+      [
+        87,
+        116,
+        149
+      ],
+      [
+        88,
+        116,
+        146
+      ],
+      [
+        86,
+        116,
+        149
+      ],
+      [
+        86,
+        116,
+        145
+      ],
+      [
+        84,
+        116,
+        148
+      ],
+      [
+        84,
+        116,
+        143
+      ],
+      [
+        82,
+        116,
+        147
+      ],
+      [
+        81,
+        116,
+        141
+      ],
+      [
+        78,
+        116,
+        140
+      ],
+      [
+        72,
+        116,
+        135
+      ],
+      [
+        89,
+        114,
+        149
+      ],
+      [
+        88,
+        114,
+        149
+      ],
+      [
+        88,
+        114,
+        148
+      ],
+      [
+        88,
+        114,
+        147
+      ],
+      [
+        89,
+        112,
+        149
+      ],
+      [
+        85,
+        115,
+        150
+      ],
+      [
+        86,
+        114,
+        148
+      ],
+      [
+        86,
+        114,
+        147
+      ],
+      [
+        86,
+        113,
+        148
+      ],
+      [
+        88,
+        114,
+        145
+      ],
+      [
+        86,
+        114,
+        145
+      ],
+      [
+        87,
+        112,
+        144
+      ],
+      [
+        85,
+        114,
+        146
+      ],
+      [
+        84,
+        114,
+        143
+      ],
+      [
+        84,
+        112,
+        142
+      ],
+      [
+        82,
+        114,
+        145
+      ],
+      [
+        79,
+        114,
+        142
+      ],
+      [
+        80,
+        112,
+        143
+      ],
+      [
+        78,
+        114,
+        135
+      ],
+      [
+        78,
+        111,
+        131
+      ],
+      [
+        73,
+        113,
+        136
+      ],
+      [
+        73,
+        112,
+        125
+      ],
+      [
+        69,
+        112,
+        129
+      ],
+      [
+        64,
+        112,
+        125
+      ],
+      [
+        78,
+        107,
+        132
+      ],
+      [
+        73,
+        106,
+        120
+      ],
+      [
+        67,
+        105,
+        117
+      ],
+      [
+        63,
+        106,
+        118
+      ],
+      [
+        62,
+        103,
+        109
+      ],
+      [
+        62,
+        100,
+        104
+      ],
+      [
+        72,
+        96,
+        117
+      ],
+      [
+        63,
+        97,
+        105
+      ],
+      [
+        60,
+        97,
+        103
+      ],
+      [
+        68,
+        90,
+        110
+      ],
+      [
+        65,
+        84,
+        105
+      ],
+      [
+        58,
+        102,
+        109
+      ],
+      [
+        54,
+        102,
+        108
+      ],
+      [
+        54,
+        98,
+        104
+      ],
+      [
+        56,
+        94,
+        104
+      ],
+      [
+        56,
+        94,
+        99
+      ],
+      [
+        47,
+        94,
+        102
+      ],
+      [
+        55,
+        89,
+        100
+      ],
+      [
+        54,
+        89,
+        94
+      ],
+      [
+        54,
+        84,
+        93
+      ],
+      [
+        49,
+        85,
+        92
+      ],
+      [
+        43,
+        86,
+        97
+      ],
+      [
+        62,
+        78,
+        101
+      ],
+      [
+        54,
+        79,
+        89
+      ],
+      [
+        49,
+        79,
+        90
+      ],
+      [
+        48,
+        78,
+        85
+      ],
+      [
+        52,
+        74,
+        89
+      ],
+      [
+        52,
+        68,
+        84
+      ],
+      [
+        42,
+        78,
+        90
+      ],
+      [
+        43,
+        73,
+        86
+      ],
+      [
+        44,
+        68,
+        79
+      ],
+      [
+        38,
+        68,
+        83
+      ],
+      [
+        44,
+        62,
+        76
+      ],
+      [
+        42,
+        59,
+        68
+      ],
+      [
+        38,
+        59,
+        70
+      ],
+      [
+        34,
+        60,
+        80
+      ],
+      [
+        34,
+        59,
+        73
+      ],
+      [
+        34,
+        56,
+        74
+      ],
+      [
+        36,
+        53,
+        62
+      ],
+      [
+        33,
+        49,
+        54
+      ],
+      [
+        31,
+        48,
+        47
+      ],
+      [
+        31,
+        47,
+        47
+      ],
+      [
+        30,
+        48,
+        50
+      ],
+      [
+        29,
+        41,
+        52
+      ]
+    ],
+    "alpha": "droit, 0 ou 255"
+  },
+  "layers_bottom_to_top": [
+    {
+      "name": "00 Sol complet",
+      "origin": "sol généré séparément; sous-couche éditable"
+    },
+    {
+      "name": "01 Eau caverne — palette-cycling",
+      "frames": 12,
+      "frame_length_ticks": 10,
+      "origin": "matière générée séparément; animation proposée"
+    },
+    {
+      "name": "02 Parois rocheuses",
+      "origin": "composition générée sur magenta"
+    },
+    {
+      "name": "03 Chemin sud → nord",
+      "origin": "composition générée sur magenta"
+    },
+    {
+      "name": "04 Voûte et seuil nord",
+      "origin": "composition générée sur magenta"
+    },
+    {
+      "name": "05 Top",
+      "origin": "calque vide prévu pour les éléments d’avant-plan"
+    }
+  ],
+  "water": {
+    "source": "source/entree_grotte_cascade_sud_nord_v1/bruts/eau_matiere_magenta.png",
+    "source_role": "matière générée sur magenta, référencée Waterfall Cave Ledge; non native",
+    "palette_size": 16,
+    "palette_rgb_by_luminance": [
+      [
+        8,
+        86,
+        104
+      ],
+      [
+        5,
+        90,
+        106
+      ],
+      [
+        4,
+        91,
+        107
+      ],
+      [
+        43,
+        68,
+        124
+      ],
+      [
+        6,
+        91,
+        108
+      ],
+      [
+        5,
+        92,
+        109
+      ],
+      [
+        50,
+        66,
+        126
+      ],
+      [
+        6,
+        92,
+        108
+      ],
+      [
+        29,
+        79,
+        115
+      ],
+      [
+        6,
+        92,
+        109
+      ],
+      [
+        5,
+        93,
+        109
+      ],
+      [
+        7,
+        92,
+        109
+      ],
+      [
+        43,
+        75,
+        121
+      ],
+      [
+        30,
+        138,
+        148
+      ],
+      [
+        38,
+        159,
+        166
+      ],
+      [
+        54,
+        172,
+        178
+      ]
+    ],
+    "patch_px": [
+      96,
+      112
+    ],
+    "cycle_frames": 12,
+    "frame_length_ticks": 10,
+    "loop_seconds": 2.0,
+    "animation": "palette-cycling spatial et scintillement subtil; masque constant; mouvement proposé, non officiel"
+  },
+  "scene_loop_ticks": 120,
+  "scene_loop_seconds": 2.0,
+  "access": {
+    "entry_px": [
+      384,
+      560
+    ],
+    "threshold_px": [
+      384,
+      216
+    ],
+    "clearance_px": [
+      16,
+      16
+    ],
+    "path_found": true,
+    "cells_explored": 976,
+    "blocked_cells": 5465,
+    "total_cells": 6912,
+    "collision_method": "corridor généré réduit à la grille; à contrôler avec le collider PMDO en jeu"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "serialization": "0.8.12.0",
+    "asset": "egc1_entree_grotte_cascade",
+    "namespace": "entree_grotte_cascade_sud_nord",
+    "tex_size": 1,
+    "tile_px": 8,
+    "layer_count_including_empty_top": 6,
+    "tile_banks": {
+      "EGC1_00_00": 6632,
+      "EGC1_01_01": 4153,
+      "EGC1_02_02": 3485,
+      "EGC1_03_03": 1583,
+      "EGC1_04_04": 1938
+    },
+    "runtime_tested": false,
+    "warp": "aucun; le marqueur donjon_seuil reste à raccorder"
+  },
+  "art_approved": false,
+  "gameplay_validated": false
+}
