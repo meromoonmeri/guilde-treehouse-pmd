@@ -476,7 +476,7 @@ Papillons : planche 2 × 6 (2 couleurs × 6 poses), extraction centrée ×1/11 �
 
 La consigne de méthode la plus récente a été donnée dans la session sœur `arena/01a0dc9b` (commit `f6647b7c`, **non fusionné ici**) : « tu dois utiliser ton générateur d'image tu as mal audité l'ancienne méthode ». Dans la série des entrées sud → nord, **« textures canoniques » = rendu généré RÉFÉRENCÉ** : le rip canonique du biome est passé au générateur en image de référence (`images=[rip]`), et le décor reproduit ses textures, sa palette et son style de pixel sur un layout nouveau (« même endroit, autre lieu »). Ensuite, la chaîne habituelle : décor sur magenta et sol séparé, segmentation, réduction par classe, calques, animations sur leurs propres calques, PNG 8 px et Ground. Ce n'est PAS un relayout de pixels natifs (`zones_south_north_v3`, Cascade V1), réservé au cas où l'utilisateur le nomme explicitement. Mesurer la fidélité de la matière principale contre le rip (tests `test_canonical_*` de la branche `arena/01a0dc8e`), ne jamais présenter les pixels générés comme des tuiles natives, et demander avant le build si le sens de « canonique », la référence ou la portée est ambigu (consigne `arena/01a0db11`).
 
-**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2, EMF1 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
 
 ### Entrée Waterfall Cave V1 (EWC1) — génération fond magenta multicalque (26 septembre)
 
@@ -530,3 +530,33 @@ Pièges rencontrés :
 
 15 tests PASS. Mutations vérifiées : un pixel `clair` sur la rive fait échouer le test de l'eau, et une phase d'ouverture dupliquée fait échouer le test des états. Les 13 tests EWC1 passent toujours ; seul l'ORA EWC1, réécrit par le rebuild, a été restauré. Pas de runtime.
 
+### Entrée Mystifying Forest (EMF1) — map suivante (26 septembre)
+
+Demande : « passe à la suite ! », après EWC2. Le biome a été choisi par l'agent : **à confirmer**. Les branches ont été revérifiées avant le choix : aucun lot parallèle nouveau.
+
+- Lot `source/entree_mystifying_forest_sud_nord_v1/`, préfixe `EMF1`, namespace `entree_mystifying_forest_sud_nord`, aperçu `apercu_entree_mystifying_forest_sud_nord_v1.html`.
+- Référence : `Mystifying_Forest_entrance_TDS.png`. Trois bruts générés avec la capture en référence :
+  - le décor, avec la mare en magenta ;
+  - l'herbe complète, éditée depuis le décor ;
+  - la planche de feuilles et de lucioles.
+- `build.py` charge EWC2 (`V2 = loadmod(...)`) pour l'eau sans liseré, et EWC1 pour les utilitaires (`down_class`, palettes par groupe, `place`, `cell_grid`).
+
+Pièges rencontrés :
+
+- **Sol complet** :
+  - Trois réponses du générateur sont revenues sans image (deux éditions du décor, un texte avec la capture). Le prompt court qui a fonctionné est dans le manifest.
+  - Le brut obtenu contient une bande sombre en haut et un rectangle sombre en bas. Ils sont recouverts par de l'herbe du même brut, les coordonnées sont dans le manifest, et un test vérifie qu'il ne reste pas de sombre.
+- **`binary_opening(..., border_value=1)`** dilate aussi un anneau plein au bord de l'image. Suivi de `binary_fill_holes`, il remplissait toute la carte (chemin = 96 %). Utiliser une ouverture à bord répliqué (`open_`, pad `edge`).
+- **Herbe praticable** :
+  - Un critère pixel (lum > 100) trouait la clairière : les ombres des brins, puis les coutures de 2-3 px entre chemin et herbe, faisaient des lignes de cases bloquées qui coupaient le chemin.
+  - Il faut un critère régional (luminance et b/g lissés), puis combler les coutures (fermeture de l'union herbe + chemin) et les trous de moins de 600 px.
+- **Houppiers contre herbes hautes** : la couleur seule ne suffit pas. Deux indices marchent : le dessous bleuté (b/g lissé > 0,74) et la densité de reflets clairs (lum > 115 sur 15 px), hors clairière. Les herbes hautes, d'un vert moyen uniforme, n'ont ni l'un ni l'autre.
+- **Rochers contre racines** : la teinte moyenne des blobs est bimodale. Les rochers sont gris-vert (r − b de −5 à +7), les troncs et racines beiges (r − b de 13 à 24). Le seuil est à 10. Un critère « pas de contact avec un houppier » rangeait à tort les rochers d'orée avec les arbres.
+- **Berge** : la mare du décor n'a pas de rive distincte (123 px). Pas de calque berge plutôt qu'un calque presque vide.
+- **Test de boucle des sprites mobiles** : compter les pixels changés entre phases ne détecte pas un saut, car une feuille qui bouge change déjà tous ses pixels. Il faut plutôt :
+  - recalculer les images depuis le manifeste ;
+  - vérifier que la phase 48 égale la phase 0 ;
+  - vérifier la continuité des centroïdes, en tolérant les apparitions aux points de départ.
+  - Ces tests sont validés par mutation : la phase 47 remplacée par la phase 20 fait échouer les tests.
+
+13 tests PASS, mutations vérifiées (pixel `clair` sur la rive, phase de feuilles et de lucioles dupliquée). Pas de runtime.

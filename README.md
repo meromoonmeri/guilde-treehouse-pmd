@@ -1,5 +1,26 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Mystifying Forest — 4:3, clairière et ouverture sombre au nord, réf. Mystifying Forest (26 septembre 2026)
+
+- Aperçu : `apercu_entree_mystifying_forest_sud_nord_v1.html`.
+- Lot : `renders/entree_mystifying_forest_sud_nord_v1/` (`EMF1_projet_pmdo_0812.zip`, `EMF1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_mystifying_forest_sud_nord_v1/`.
+
+**Demande de l'utilisateur** : « passe à la suite ! » (après EWC2). Le biome **Mystifying Forest a été choisi par l'agent : à confirmer**. Méthode des textures canoniques = **rendu généré référencé** : la capture `Mystifying_Forest_entrance_TDS.png` est passée au générateur, qui produit trois bruts :
+
+- le décor complet en 4:3, avec la mare en magenta ;
+- une herbe complète, dont deux zones sombres parasites sont réparées par recopie d'herbe du même brut ;
+- une planche de feuilles et de lucioles sur magenta.
+
+Le chemin part du sud, serpente dans une grande clairière et mène à une ouverture sombre entre les arbres, au nord. La map compte 11 calques : sol, herbe, chemin, herbes hautes, rochers, arbres et profondeur, avec quatre animations :
+
+- mare façon Métano, en couleurs Métano exactes, **sans liseré clair** (4 × 10 ticks) ;
+- scintillements Métano natifs ;
+- feuilles qui tombent des houppiers (48 × 5 ticks) ;
+- lucioles qui clignotent à l'orée (48 × 5 ticks).
+
+Toutes les boucles sont fermées (testé). Fidélité au rip mesurée par test : herbe 4,1, chemin 6,4, feuillage 2,9, rochers 3,9. 13 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Waterfall Cave V2 — cascade en deux temps, sans liseré de rive ni eau devant la grotte (26 septembre 2026)
 
 - Aperçu : `apercu_entree_waterfall_cave_sud_nord_v2.html`, avec les boutons « Ouvrir la cascade » et « Refermer » et une démo automatique.
