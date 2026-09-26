@@ -1,0 +1,247 @@
+{
+  "lot": "entree_cascade_sud_nord_v2",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "method": "rendu genere reference PMD : les deux rips Waterfall Cave passes au generateur, decor complet sur magenta (eau = magenta), sol complet edite par quilting depuis le sol du decor",
+  "reference_da": [
+    "Waterfall_Cave_ledge_TDS.png",
+    "Waterfall_Cave_gem_TDS.png"
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/entree_cascade_sud_nord_v2/bruts/decor_magenta.png",
+      "sha256": "fe8baff945fbcb5079a5f8f9432424c07d9a28077d6d5f6c63ec0d459f243c88",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_cascade_sud_nord_v2/bruts/sol_complet.png",
+      "sha256": "3522aac84aeb8838cd00dfa8d9633371260dbb65341799f9f991486f9304462b",
+      "size": [
+        1200,
+        896
+      ]
+    }
+  ],
+  "normalization": {
+    "scale": 0.6428571428571429,
+    "scaled": [
+      771,
+      576
+    ],
+    "crop_x": [
+      1,
+      2
+    ],
+    "methode": "moyenne ponderee par classe (BOX), attribution exclusive par poids maximal, palette commune 96 couleurs sauf cristaux (couleurs propres)"
+  },
+  "segmentation": "eau = magenta dilate 2 px, cascade = composante reliee au bord haut ; sol = (b-r lisse 5 px > 52) & (lum lisse > 92), composante reliee au bord sud, trous remplis ; pierres = lum < 70 dans le sol (30..1500 px) ; cristaux = saturation > 110 ; vide = lum < 52 & sat < 32 ; parois = reste avec lum lisse >= 78 (fermeture 6 px) ; plafond = reste",
+  "layer_order_bottom_to_top": [
+    "animation/eau/ECN2_00_eau_bassins_fX.png",
+    "animation/cascade/ECN2_01_cascade_fX.png",
+    "animation/scintillements/ECN2_02_scintillements_fX.png",
+    "calques/ECN2_03_sol_complet.png",
+    "calques/ECN2_04_fond_vide.png",
+    "calques/ECN2_05_plafond_stalactites.png",
+    "calques/ECN2_06_parois_rochers.png",
+    "calques/ECN2_07_pierres.png",
+    "calques/ECN2_08_cristaux.png"
+  ],
+  "water": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "couleurs": {
+      "surface": [
+        31,
+        151,
+        167
+      ],
+      "bande": [
+        31,
+        119,
+        135
+      ],
+      "inter": [
+        31,
+        143,
+        159
+      ],
+      "accent": [
+        39,
+        175,
+        191
+      ],
+      "clair": [
+        215,
+        215,
+        215
+      ]
+    },
+    "modele": "structure et cadence riviere Metano, palette = couleurs exactes des sources turquoise de Waterfall Cave",
+    "origine": "pixels recalcules, pas de tuiles natives"
+  },
+  "cascade": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "mapping": {
+      "x_left": 337,
+      "y_bottom": 238,
+      "rows": [
+        66,
+        102,
+        120
+      ],
+      "cols": [
+        8,
+        56
+      ]
+    },
+    "origine": "cascade_frame_1..4 Metano NATIVES : pied lignes 102..119, corps lignes 66..101 tuile, colonnes 8..55 tuilees ; translation pure",
+    "cadence": "proposee (10 ticks), non prouvee par la map Metano"
+  },
+  "sparkles": {
+    "source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile",
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          232,
+          280
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          544,
+          312
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          296,
+          400
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          464,
+          352
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          480,
+          392
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          256,
+          320
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          304,
+          336
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          464,
+          264
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          520,
+          360
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          224,
+          312
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          496,
+          272
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          568,
+          344
+        ]
+      }
+    ],
+    "origine": "pixels et couleurs Metano NATIFS inchanges"
+  },
+  "scene_loop_ticks": 40,
+  "access": {
+    "entry_px": [
+      392,
+      560
+    ],
+    "threshold_px": [
+      376,
+      240
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 1005,
+    "blocked_cells": 5641,
+    "total_cells": 6912,
+    "rule": "case bloquee si > 25 % hors sol visible"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ecn2_entree_cascade",
+    "namespace": "entree_cascade_sud_nord_v2",
+    "tiles_per_bank": {
+      "ECN2_00_EAU": 1181,
+      "ECN2_01_CASCADE": 300,
+      "ECN2_02_SCINTILLEMENTS": 52,
+      "ECN2_03_SOL": 5889,
+      "ECN2_04_FOND": 1350,
+      "ECN2_05_PLAFOND": 3092,
+      "ECN2_06_PAROIS": 2547,
+      "ECN2_07_PIERRES": 77,
+      "ECN2_08_CRISTAUX": 68
+    },
+    "banks": [
+      "ECN2_00_EAU",
+      "ECN2_01_CASCADE",
+      "ECN2_02_SCINTILLEMENTS",
+      "ECN2_03_SOL",
+      "ECN2_04_FOND",
+      "ECN2_05_PLAFOND",
+      "ECN2_06_PAROIS",
+      "ECN2_07_PIERRES",
+      "ECN2_08_CRISTAUX"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

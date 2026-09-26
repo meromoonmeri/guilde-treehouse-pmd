@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Cascade V2 — 4:3 vaste, rendu généré **référencé Waterfall Cave** (26 septembre 2026)
+
+- Aperçu : `apercu_entree_cascade_sud_nord_v2.html`.
+- Lot : `renders/entree_cascade_sud_nord_v2/` (`ECN2_projet_pmdo_0812.zip`, `ECN2_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_cascade_sud_nord_v2/`.
+
+**Correction de l'utilisateur : « tu dois utiliser ton générateur d'image, tu as mal audité l'ancienne méthode ».** La méthode de la série est le rendu généré **référencé** : le générateur reçoit les rips canoniques (`Waterfall_Cave_ledge_TDS.png` + `Waterfall_Cave_gem_TDS.png`) en référence et reproduit leurs textures ; c'est cela que « textures canoniques » désigne. Décor 1200 × 896 sur magenta, normalisé ×0,643 par classe (sol, fond, plafond/stalactites, parois, pierres, cristaux à palette propre) ; sol complet édité par quilting depuis le sol du décor. Bassins façon Métano (4 × 10 ticks) avec les couleurs exactes des sources turquoise du rip, **cascade = frames Métano natives** (translation pure), scintillements natifs. Arrivée sud, chaussée entre les bassins, plateforme au pied de la chute = `donjon_seuil`. 9 tests PASS. Pas de test PMDO en jeu. La V1 en pixels natifs exacts (ci-dessous) est conservée, mais ce n'était pas la méthode demandée.
+
 ## Entrée Cascade — 4:3 vaste, **pixels natifs exacts** réf. Waterfall Cave (26 septembre 2026)
 
 - Aperçu : `apercu_entree_cascade_sud_nord_v1.html`.
