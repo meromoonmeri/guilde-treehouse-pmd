@@ -1,5 +1,17 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Foggy Forest — camp de base 4:3, tentes Grodoudou, brume tramée, réf. Foggy Forest Base Camp (26 septembre 2026)
+
+- Aperçu : `apercu_entree_foggy_forest_sud_nord_v1.html`.
+- Lot : `renders/entree_foggy_forest_sud_nord_v1/` (`EFF1_projet_pmdo_0812.zip`, `EFF1_calques_png_8px.zip`, ORA, WebP animé, planche des nappes).
+- Source : `source/entree_foggy_forest_sud_nord_v1/`.
+
+**Demande de l'utilisateur** : « enchaîne avec Foggy Forest Base Camp, mais n'oublie pas que la méthode doit être employée ». Méthode des textures canoniques = **rendu généré référencé**. La capture `Foggy_Forest_Base_Camp_TDS.png` est passée au générateur, qui produit trois bruts : le décor complet en 4:3 avec la mare en magenta, l'herbe pâle complète et une planche de 8 nappes de brume sur magenta.
+
+Le chemin part du sud, traverse un grand camp avec quatre tentes et mène à une grotte encadrée de pierre, au nord. La map compte 12 calques : sol, herbe du camp, chemin, sous-bois, buissons, rochers, tentes, arbres, grotte, plus l'eau, les scintillements et la brume. Elle a trois animations : mare façon Métano sans liseré (4 × 10 ticks), scintillements Métano natifs, et brume générée tramée en damier (alpha 0/255) qui dérive en boucle fermée (48 × 5 ticks).
+
+**Réserve** : le rendu généré est plus laiteux que la capture ; les écarts de couleur par matière vont de 25 à 38, contre 3 à 15 sur les lots précédents. Ils n'ont pas été corrigés, pour ne pas recolorer. 12 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Underground Lake — 4:3, lac souterrain lumineux et chaussée jusqu'à la grotte, réf. Underground Lake (26 septembre 2026)
 
 - Aperçu : `apercu_entree_underground_lake_sud_nord_v1.html`.

@@ -616,3 +616,7 @@ Règles et recettes :
 
 15 tests PASS, dont : pas d'eau sous la bouche, lueur et gouttes recalculées depuis le manifeste avec les phases 12 = 0 et 24 = 0, et scintillements sur la lueur. 6 mutations vérifiées : liseré clair sur la rive, phase de lueur remplacée, scintillements sur l'eau sombre, phase de gouttes dupliquée, eau devant l'entrée, ombres aussi claires que le sable. Build reproductible (74 fichiers identiques hors ORA), en 25 s environ. Pas de runtime.
 
+
+## EFF1 — Foggy Forest Base Camp (26 septembre 2026)
+
+Demandé par l'utilisateur, avec la consigne d'employer la méthode : rendu généré RÉFÉRENCÉ, 3 bruts (décor magenta, herbe complète, planche de brume). Lot : `source/entree_foggy_forest_sud_nord_v1/`, `renders/entree_foggy_forest_sud_nord_v1/`. Nouveauté réutilisable : brume en damier fixe (alpha 0/255, sans prémultiplication), dérive sinusoïdale fermée, `fog_frames`. Fidélité faible (25-38, seuil de test relevé à 40) : le générateur a rendu la scène plus laiteuse que le rip ; non recoloré. Si l'utilisateur la juge trop pâle, régénérer le décor plutôt que de recolorer. 12 tests PASS, pas de test PMDO.
