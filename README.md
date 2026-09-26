@@ -24,6 +24,21 @@ Fidélité au rip : sol 11,0, bordures 32,5, paroi 32,9. 11 tests PASS. Pas de t
 L'arrivée est au sud, sur un chemin de pierre entre des rebords en pointes. Il mène à un grand plateau, puis un pont de pierre monte jusqu'à la grotte dans un grand mur noir. La lave garde le motif généré, ramené aux 11 couleurs exactes de la capture, et s'anime par cycle de palette (12 × 8 ticks). Des bulles générées éclatent (24 × 4 ticks).
 
 Fidélité : pierre 5,1, roche 16,0, lave 10,0. 11 tests PASS. Pas de test PMDO en jeu.
+## Entrée Grotte de cristal — 4:3, bassins et cristaux scintillants, réf. salle du joyau de Waterfall Cave (26 septembre 2026)
+
+- Aperçu : `apercu_entree_crystal_cave_sud_nord_v1.html`.
+- Lot : `renders/entree_crystal_cave_sud_nord_v1/` (`ECC1_projet_pmdo_0812.zip`, `ECC1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_crystal_cave_sud_nord_v1/`.
+
+**Demande** : « passe à la suite stp ». Biome choisi par l'agent : salle du joyau de Waterfall Cave (`Waterfall_Cave_gem_TDS.png`, jamais utilisée comme référence principale). Méthode = **rendu généré référencé** avec trois bruts : décor 4:3 aux bassins magenta, sol de galets complet et planche d'éclats sur magenta.
+
+- **Carte** : on arrive au sud par un chemin de galets, qui débouche sur une grande salle semée de cristaux, entre deux bassins. Au nord, un joyau rose et un tunnel dans la paroi de stalactites.
+- **Calques** (11) : sol complet, sol de galets, vide, fond, stalactites, rochers, racines, cristaux, tunnel, plus les bassins et les éclats.
+- **Animations** : bassins façon Métano aux couleurs exactes de la capture, sans liseré ; scintillements Métano natifs ; éclats générés sur les 18 plus gros cristaux (48 × 5 ticks).
+- **Fidélité** : sol 14,9, roche 20,4, fond 4,2.
+- **Réserve** : le tunnel est sur la paroi du fond, derrière les rochers ; le seuil est en haut du sol.
+
+12 tests PASS. Pas de test PMDO en jeu.
 
 ## Entrée Foggy Forest V2 — sans tentes, arbres en trois calques (ombres, troncs, houppiers) (26 septembre 2026)
 

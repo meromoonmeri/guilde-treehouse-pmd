@@ -632,3 +632,6 @@ Mêmes bruts qu'EFF1, sans régénération. Retrait d'un objet : recopier une zo
 ## ECF1 — fosse du Dark Crater, doublon d'EDP1 (même capture, produit en parallèle ; les deux sont gardés) (26 septembre 2026)
 
 « passe à la suite » : biome choisi par l'agent. Rendu généré RÉFÉRENCÉ, lave en magenta. La lave est animée par `lava_frames` : Voronoï aux 11 couleurs exactes du rip, palette cycling, 12 × 8 ticks. Le pont n'a qu'une case de sol gris, donc les rebords à plus de 3 px de la lave sont praticables. Restent inutilisées : `Sealed_Ruin_pit_TDS.png`, `Waterfall_Cave_gem/ledge_TDS.png`, `Southern_Jungle_exit(_2)_S.png`. 11 tests PASS, pas de test PMDO.
+## ECC1 — Grotte de cristal (26 septembre 2026)
+
+« passe à la suite » : biome choisi par l'agent, `Waterfall_Cave_gem_TDS.png`. Rendu généré RÉFÉRENCÉ, 3 bruts. L'eau aux couleurs du rip réutilise `lake_water` d'EUL1 en réassignant `UL.WPAL`. Les éclats (`glint_frames`) sont posés sur les plus gros cristaux. Le tunnel est sur la paroi du fond, non praticable : le seuil est en haut du sol. Fidélité : sol 14,9, roche 20,4. 12 tests PASS. Réf. encore libres : Dark_Crater_Pit, Sealed_Ruin_pit, Southern_Jungle_exit(_2), Waterfall_Cave_ledge.
