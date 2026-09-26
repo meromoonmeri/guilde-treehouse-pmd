@@ -1,0 +1,1423 @@
+{
+  "lot": "entree_cascade_sud_nord_v1",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "method": "pixels natifs exacts : rectangles et objets masques copies tels quels (aucune rotation, miroir, echelle ou recoloration) ; sol et eau par quilting de blocs natifs avec coutures a cout minimal ; provenance par pixel dans provenance/",
+  "sources": {
+    "1": {
+      "file": "Waterfall_Cave_ledge_TDS.png",
+      "sha256": "c641e3470108bd0478f7c19598d5554dd8fc77053ca637766534691a03e7a711",
+      "size": [
+        408,
+        552
+      ]
+    },
+    "2": {
+      "file": "Waterfall_Cave_gem_TDS.png",
+      "sha256": "7fb9a83c6b1dc920422eef1a9db59e269feb3d923fe2652309ca86576be498be",
+      "size": [
+        504,
+        432
+      ]
+    },
+    "3": {
+      "file": "sprites/eau_metano/cascade_frame_1.png",
+      "sha256": "528a45a97d1bbf75e660efe2ddd5d304a66f1cec51a7ecc467078dc497850490",
+      "size": [
+        64,
+        136
+      ]
+    },
+    "4": {
+      "file": "sprites/eau_metano/cascade_frame_2.png",
+      "sha256": "0ec4620b77d6f981d7a10f1c42a4eb4cf99dbd6fdf1f471500e83ae2c2aa1c60",
+      "size": [
+        64,
+        136
+      ]
+    },
+    "5": {
+      "file": "sprites/eau_metano/cascade_frame_3.png",
+      "sha256": "46da1df2ff379c7b58b7161c9808f60f260d8f0f17f1d8cae8197451513532d2",
+      "size": [
+        64,
+        136
+      ]
+    },
+    "6": {
+      "file": "sprites/eau_metano/cascade_frame_4.png",
+      "sha256": "83f1f66f4b46aebf1e5c0680945bb1fb7da9c174debbbb21ef439d4df0ddc558",
+      "size": [
+        64,
+        136
+      ]
+    }
+  },
+  "sparkles_source": "source/eau_metano/natifs/Metano_Town_River_Sparkles.tile (pixels natifs, aplat de surface retire)",
+  "guide_composition": {
+    "file": "source/entree_cascade_sud_nord_v1/bruts/decor_magenta.png",
+    "role": "rendu genere utilise UNIQUEMENT comme guide de composition ; aucun pixel dans les exports"
+  },
+  "operations": [
+    {
+      "calque": "fond",
+      "source": "L",
+      "op": "aplat du pixel natif (4,4) = vide (31,47,47)"
+    },
+    {
+      "calque": "plafond",
+      "source": "L",
+      "box": [
+        252,
+        0,
+        408,
+        262
+      ],
+      "pos": [
+        132,
+        0
+      ],
+      "op": "bloc natif, couture verticale, bas coupé sur contours sombres",
+      "px": 36809
+    },
+    {
+      "calque": "plafond",
+      "source": "L",
+      "box": [
+        0,
+        0,
+        156,
+        262
+      ],
+      "pos": [
+        264,
+        0
+      ],
+      "op": "bloc natif, couture verticale, bas coupé sur contours sombres",
+      "px": 34988
+    },
+    {
+      "calque": "plafond",
+      "source": "L",
+      "box": [
+        252,
+        0,
+        408,
+        262
+      ],
+      "pos": [
+        396,
+        0
+      ],
+      "op": "bloc natif, couture verticale, bas coupé sur contours sombres",
+      "px": 34791
+    },
+    {
+      "calque": "plafond",
+      "source": "L",
+      "box": [
+        0,
+        0,
+        156,
+        262
+      ],
+      "pos": [
+        528,
+        0
+      ],
+      "op": "bloc natif, couture verticale, bas coupé sur contours sombres",
+      "px": 34988
+    },
+    {
+      "calque": "parois",
+      "source": "L",
+      "box": [
+        0,
+        0,
+        156,
+        470
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "op": "paroi native entière, pied coupé sur contours sombres",
+      "px": 70277
+    },
+    {
+      "calque": "parois",
+      "source": "L",
+      "box": [
+        252,
+        0,
+        408,
+        470
+      ],
+      "pos": [
+        612,
+        0
+      ],
+      "op": "paroi native entière, pied coupé sur contours sombres",
+      "px": 70277
+    },
+    {
+      "calque": "sol",
+      "source": "L",
+      "box": [
+        156,
+        190,
+        252,
+        456
+      ],
+      "pos": [
+        156,
+        190
+      ],
+      "op": "couloir natif exact (raccord sans couture avec la paroi voisine)"
+    },
+    {
+      "calque": "sol",
+      "source": "L",
+      "box": [
+        156,
+        190,
+        252,
+        456
+      ],
+      "pos": [
+        516,
+        190
+      ],
+      "op": "couloir natif exact (raccord sans couture avec la paroi voisine)"
+    },
+    {
+      "calque": "sol",
+      "source": "L",
+      "rect_source": [
+        156,
+        190,
+        252,
+        456
+      ],
+      "op": "quilting blocs 48 px, chevauchement 16, phase verticale 24 px"
+    },
+    {
+      "calque": "eau",
+      "source": "G",
+      "rects_source": [
+        [
+          0,
+          162,
+          150,
+          256
+        ],
+        [
+          354,
+          162,
+          504,
+          256
+        ]
+      ],
+      "op": "quilting blocs 48 px, chevauchement 12 (eau statique)"
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        184,
+        262
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        552,
+        262
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        292,
+        176
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        416,
+        176
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        296,
+        270
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        420,
+        270
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        236,
+        226
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        500,
+        226
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        168,
+        390
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        238,
+        414
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        306,
+        428
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        304,
+        456
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        470,
+        428
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        526,
+        414
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        596,
+        392
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        470,
+        458
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        30,
+        446
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        96,
+        456
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        660,
+        446
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        720,
+        456
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1046
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        6,
+        500
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        60,
+        520
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g4",
+      "box": [
+        451,
+        264,
+        504,
+        295
+      ],
+      "pos": [
+        700,
+        500
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1085
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g3",
+      "box": [
+        0,
+        264,
+        53,
+        295
+      ],
+      "pos": [
+        660,
+        528
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1083
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g2",
+      "box": [
+        402,
+        257,
+        462,
+        294
+      ],
+      "pos": [
+        588,
+        436
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "g1",
+      "box": [
+        42,
+        257,
+        102,
+        294
+      ],
+      "pos": [
+        648,
+        470
+      ],
+      "op": "paire de rochers native (masque vide/eau/noir)",
+      "px": 1496
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objets": [
+        "s1",
+        "s2"
+      ],
+      "op": "liseré de 55 pierres natives sur le bord des bassins (pas 15 px)",
+      "points": [
+        [
+          294,
+          427
+        ],
+        [
+          350,
+          414
+        ],
+        [
+          573,
+          305
+        ],
+        [
+          223,
+          400
+        ],
+        [
+          437,
+          328
+        ],
+        [
+          461,
+          270
+        ],
+        [
+          331,
+          284
+        ],
+        [
+          333,
+          376
+        ],
+        [
+          332,
+          356
+        ],
+        [
+          193,
+          342
+        ],
+        [
+          525,
+          411
+        ],
+        [
+          262,
+          269
+        ],
+        [
+          476,
+          264
+        ],
+        [
+          575,
+          325
+        ],
+        [
+          539,
+          272
+        ],
+        [
+          281,
+          269
+        ],
+        [
+          241,
+          269
+        ],
+        [
+          334,
+          313
+        ],
+        [
+          510,
+          264
+        ],
+        [
+          499,
+          421
+        ],
+        [
+          473,
+          429
+        ],
+        [
+          263,
+          420
+        ],
+        [
+          219,
+          274
+        ],
+        [
+          571,
+          372
+        ],
+        [
+          561,
+          388
+        ],
+        [
+          348,
+          387
+        ],
+        [
+          416,
+          389
+        ],
+        [
+          429,
+          381
+        ],
+        [
+          434,
+          290
+        ],
+        [
+          195,
+          357
+        ],
+        [
+          439,
+          365
+        ],
+        [
+          302,
+          270
+        ],
+        [
+          443,
+          277
+        ],
+        [
+          278,
+          429
+        ],
+        [
+          438,
+          347
+        ],
+        [
+          416,
+          407
+        ],
+        [
+          434,
+          310
+        ],
+        [
+          329,
+          427
+        ],
+        [
+          449,
+          428
+        ],
+        [
+          557,
+          280
+        ],
+        [
+          331,
+          339
+        ],
+        [
+          548,
+          396
+        ],
+        [
+          317,
+          272
+        ],
+        [
+          196,
+          373
+        ],
+        [
+          238,
+          404
+        ],
+        [
+          494,
+          267
+        ],
+        [
+          575,
+          347
+        ],
+        [
+          206,
+          386
+        ],
+        [
+          193,
+          314
+        ],
+        [
+          432,
+          424
+        ],
+        [
+          200,
+          288
+        ],
+        [
+          314,
+          430
+        ],
+        [
+          525,
+          266
+        ],
+        [
+          357,
+          400
+        ],
+        [
+          569,
+          290
+        ]
+      ]
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s1",
+      "box": [
+        166,
+        283,
+        184,
+        296
+      ],
+      "pos": [
+        210,
+        470
+      ],
+      "op": "pierre native",
+      "px": 157
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s2",
+      "box": [
+        224,
+        306,
+        249,
+        323
+      ],
+      "pos": [
+        448,
+        500
+      ],
+      "op": "pierre native",
+      "px": 224
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s1",
+      "box": [
+        166,
+        283,
+        184,
+        296
+      ],
+      "pos": [
+        560,
+        300
+      ],
+      "op": "pierre native",
+      "px": 157
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s2",
+      "box": [
+        224,
+        306,
+        249,
+        323
+      ],
+      "pos": [
+        176,
+        330
+      ],
+      "op": "pierre native",
+      "px": 224
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s1",
+      "box": [
+        166,
+        283,
+        184,
+        296
+      ],
+      "pos": [
+        630,
+        540
+      ],
+      "op": "pierre native",
+      "px": 157
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s2",
+      "box": [
+        224,
+        306,
+        249,
+        323
+      ],
+      "pos": [
+        120,
+        560
+      ],
+      "op": "pierre native",
+      "px": 224
+    },
+    {
+      "calque": "rochers",
+      "source": "L",
+      "objet": "s1",
+      "box": [
+        166,
+        283,
+        184,
+        296
+      ],
+      "pos": [
+        340,
+        536
+      ],
+      "op": "pierre native",
+      "px": 157
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c1",
+      "box": [
+        160,
+        248,
+        176,
+        272
+      ],
+      "pos": [
+        170,
+        452
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 122
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c2",
+      "box": [
+        304,
+        225,
+        328,
+        248
+      ],
+      "pos": [
+        588,
+        468
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 126
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c8",
+      "box": [
+        184,
+        190,
+        224,
+        224
+      ],
+      "pos": [
+        226,
+        492
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 213
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c4",
+      "box": [
+        168,
+        224,
+        184,
+        240
+      ],
+      "pos": [
+        640,
+        350
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 36
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c5",
+      "box": [
+        216,
+        184,
+        232,
+        200
+      ],
+      "pos": [
+        150,
+        400
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 36
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c2",
+      "box": [
+        304,
+        225,
+        328,
+        248
+      ],
+      "pos": [
+        700,
+        548
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 126
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c9",
+      "box": [
+        272,
+        218,
+        316,
+        254
+      ],
+      "pos": [
+        540,
+        536
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 213
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c1",
+      "box": [
+        160,
+        248,
+        176,
+        272
+      ],
+      "pos": [
+        60,
+        486
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 122
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c4",
+      "box": [
+        168,
+        224,
+        184,
+        240
+      ],
+      "pos": [
+        300,
+        246
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 36
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c5",
+      "box": [
+        216,
+        184,
+        232,
+        200
+      ],
+      "pos": [
+        470,
+        250
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 36
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c8",
+      "box": [
+        184,
+        190,
+        224,
+        224
+      ],
+      "pos": [
+        606,
+        236
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 213
+    },
+    {
+      "calque": "rochers",
+      "source": "G",
+      "objet": "c9",
+      "box": [
+        272,
+        218,
+        316,
+        254
+      ],
+      "pos": [
+        176,
+        236
+      ],
+      "op": "cristal natif (masque = hors palette du sol de G)",
+      "px": 213
+    },
+    {
+      "calque": "cascade",
+      "source": "cascade_frame_1..4",
+      "box": [
+        8,
+        24,
+        56,
+        120
+      ],
+      "pos": [
+        [
+          336,
+          190
+        ],
+        [
+          384,
+          190
+        ]
+      ],
+      "op": "translation pure, 4 phases natives, 10 ticks par phase (cadence proposée)"
+    }
+  ],
+  "layer_order_bottom_to_top": [
+    "calques/ECN1_00_fond_vide.png",
+    "calques/ECN1_01_sol_galets.png",
+    "calques/ECN1_02_eau_profonde.png",
+    "calques/ECN1_03_plafond_parois_nord.png",
+    "calques/ECN1_04_murs_lateraux.png",
+    "animation/cascade/ECN1_05_cascade_fX.png",
+    "calques/ECN1_06_rochers_pierres_cristaux.png",
+    "animation/scintillements/ECN1_07_scintillements_fX.png"
+  ],
+  "cascade": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "rect": [
+      336,
+      190,
+      432,
+      286
+    ],
+    "origine": "cascade_frame_1..4 Metano natives, corps lignes 24..119 colonnes 8..55, deux bandes cote a cote (translation pure)",
+    "cadence": "proposee (10 ticks), non prouvee par la map Metano"
+  },
+  "water": {
+    "origine": "mailles de Waterfall_Cave_gem_TDS.png, statiques (aucun cycle natif recupere)",
+    "phases": 1
+  },
+  "sparkles": {
+    "phases": 4,
+    "frame_length_ticks": 10,
+    "placements": [
+      {
+        "famille": "A_16x24",
+        "xy": [
+          312,
+          296
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          448,
+          304
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          496,
+          368
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          504,
+          272
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          472,
+          336
+        ]
+      },
+      {
+        "famille": "A_16x24",
+        "xy": [
+          232,
+          368
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          512,
+          344
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          448,
+          392
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          320,
+          392
+        ]
+      },
+      {
+        "famille": "B_24x16",
+        "xy": [
+          528,
+          320
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          208,
+          312
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          280,
+          304
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          248,
+          328
+        ]
+      },
+      {
+        "famille": "C_16x32",
+        "xy": [
+          528,
+          272
+        ]
+      }
+    ],
+    "origine": "pixels Metano NATIFS inchanges"
+  },
+  "scene_loop_ticks": 40,
+  "access": {
+    "entry_px": [
+      376,
+      560
+    ],
+    "threshold_px": [
+      376,
+      292
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 824,
+    "blocked_cells": 5228,
+    "total_cells": 6912,
+    "rule": "case bloquee si > 25 % de pixels non sol visible"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ecn1_entree_cascade",
+    "namespace": "entree_cascade_sud_nord",
+    "tiles_per_bank": {
+      "ECN1_00_FOND": 2,
+      "ECN1_01_SOL": 1311,
+      "ECN1_02_EAU": 726,
+      "ECN1_03_PLAFOND": 760,
+      "ECN1_04_MURS": 1598,
+      "ECN1_05_CASCADE": 201,
+      "ECN1_06_ROCHERS": 1050,
+      "ECN1_07_SCINTILLEMENTS": 57
+    },
+    "banks": [
+      "ECN1_00_FOND",
+      "ECN1_01_SOL",
+      "ECN1_02_EAU",
+      "ECN1_03_PLAFOND",
+      "ECN1_04_MURS",
+      "ECN1_05_CASCADE",
+      "ECN1_06_ROCHERS",
+      "ECN1_07_SCINTILLEMENTS"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

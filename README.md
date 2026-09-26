@@ -1,5 +1,13 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Cascade — 4:3 vaste, **pixels natifs exacts** réf. Waterfall Cave (26 septembre 2026)
+
+- Aperçu : `apercu_entree_cascade_sud_nord_v1.html`.
+- Lot : `renders/entree_cascade_sud_nord_v1/` (`ECN1_projet_pmdo_0812.zip`, `ECN1_calques_png_8px.zip` avec `provenance.npz`, ORA, WebP animé, planche des cadres sources).
+- Source : `source/entree_cascade_sud_nord_v1/`.
+
+**Correction de l'utilisateur en cours de lot : « je demande les textures canoniques ».** Cette map n'utilise donc **aucun pixel généré** : plafond, parois (avec leurs sources turquoise natives), sol de galets et petites pierres viennent de `Waterfall_Cave_ledge_TDS.png` ; eau profonde, paires de rochers et cristaux de `Waterfall_Cave_gem_TDS.png` ; la **cascade est la cascade Métano native** (`cascade_frame_1..4`, corps 48 × 96 posé deux fois, 4 × 10 ticks) et les scintillements sont Métano natifs. Aucune rotation, miroir, échelle ni recoloration ; sol et eau par quilting de blocs natifs à coutures de coût minimal ; chaque pixel opaque a sa provenance (source, x, y) relue par les tests. Composition 768 × 576 : arrivée sud, chaussée entre deux bassins liserés de pierres, plateforme au pied de la chute = `donjon_seuil`. Le rendu généré `bruts/decor_magenta.png` n'a servi que de guide de composition. L'eau profonde est statique (aucun cycle natif récupéré). 10 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Jungle — format 4:3 vaste, réf. Southern Jungle (26 septembre 2026)
 
 - Aperçu : `apercu_entree_jungle_sud_nord_v1.html`.
