@@ -1,5 +1,18 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Foggy Forest V2 — sans tentes, arbres en trois calques (ombres, troncs, houppiers) (26 septembre 2026)
+
+- Aperçu : `apercu_entree_foggy_forest_sud_nord_v2.html`.
+- Lot : `renders/entree_foggy_forest_sud_nord_v2/` (`EFF2_projet_pmdo_0812.zip`, `EFF2_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_foggy_forest_sud_nord_v2/`.
+
+**Demande** : version sans tentes, avec les arbres sur leurs propres calques, ombres comprises, et la même méthode avec aperçu HTML. La V2 repart des mêmes bruts générés qu'EFF1, qui reste intact.
+
+- **Tentes** : chaque tente est recouverte par de l'herbe du camp recopiée du même décor, sans retournement, avant le découpage. Sa place devient praticable : 1727 cases contre 1475.
+- **Arbres** : trois calques, les ombres portées (aplat sombre et bleuté), les troncs et racines (palette brune séparée) et les houppiers.
+
+14 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Foggy Forest — camp de base 4:3, tentes Grodoudou, brume tramée, réf. Foggy Forest Base Camp (26 septembre 2026)
 
 - Aperçu : `apercu_entree_foggy_forest_sud_nord_v1.html`.

@@ -620,3 +620,7 @@ Règles et recettes :
 ## EFF1 — Foggy Forest Base Camp (26 septembre 2026)
 
 Demandé par l'utilisateur, avec la consigne d'employer la méthode : rendu généré RÉFÉRENCÉ, 3 bruts (décor magenta, herbe complète, planche de brume). Lot : `source/entree_foggy_forest_sud_nord_v1/`, `renders/entree_foggy_forest_sud_nord_v1/`. Nouveauté réutilisable : brume en damier fixe (alpha 0/255, sans prémultiplication), dérive sinusoïdale fermée, `fog_frames`. Fidélité faible (25-38, seuil de test relevé à 40) : le générateur a rendu la scène plus laiteuse que le rip ; non recoloré. Si l'utilisateur la juge trop pâle, régénérer le décor plutôt que de recolorer. 12 tests PASS, pas de test PMDO.
+
+## EFF2 — Foggy Forest sans tentes, arbres en calques (26 septembre 2026)
+
+Mêmes bruts qu'EFF1, sans régénération. Retrait d'un objet : recopier une zone du MÊME décor (décalage le plus proche entièrement sur le bon sol, sans retournement). Le sol complet généré faisait des rustines visibles. Arbres : `split_trees` (ombre b/g lissé > 0,72 ; troncs bruns avec palette séparée, sinon ils virent au vert à la quantification ; houppiers). Pas de faces cachées. 14 tests PASS, pas de test PMDO.
