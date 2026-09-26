@@ -1,0 +1,760 @@
+{
+  "lot": "thunder_meadow_arene_v1",
+  "prefix": "TMA1",
+  "format": "4:3",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "demande": "falaise magnifique en plusieurs calques de Thunder Meadow (« tiny meadow »), arene, au-dessus de nuages electriques, fond de nuages en spirale avec foudre, textures et couleurs canoniques",
+  "references": {
+    "rip": {
+      "file": "Rescue_Team_Friend_Area_-_Thunder_Meadow.png",
+      "sha256": "d7a7b0f3ece7b32ab9da4375b04b29b2c7f8a71428de8719c44f251a1b3051f7",
+      "origine": "branche arena/01a0d8a8-guilde-treehouse-pmd"
+    },
+    "planche": {
+      "file": "source/thunder_meadow_arene_v1/bruts/ref_5394.png",
+      "sha256": "1ac59cc5b902f073c9bc099c2cb5f642586d87404cbaaeeb0f8aa3b4cd1b4297",
+      "origine": "Toastypk (spriters-resource 5394), branche arena/01a0d8a8"
+    }
+  },
+  "method": "rendu genere REFERENCE (rip en images=) pour la falaise, le fond et la foudre ; couleurs du fond = palette de flash CANONIQUE exacte (8 couleurs x 6 niveaux de la planche) ; etincelles = pixels natifs",
+  "generation": [
+    {
+      "file": "falaise_magenta.png",
+      "images": [
+        "Rescue_Team_Friend_Area_-_Thunder_Meadow.png"
+      ],
+      "prompt": "Use EXACTLY the same textures, palette and pixel-art style as the reference image (Pokemon Mystery Dungeon Rescue Team, Thunder Meadow): bright yellow-green meadow grass with olive tufts, brown-pink layered cliff faces under grassy overhangs, blue-grey boulders, dead twisted tree. NEW MAGNIFICENT top-down 3/4 map, WIDE 4:3: tall cliff mountain top in several stacked tiers of grassy plateaus with cliff walls; on the highest plateau a round ARENA (pale worn grass ring bordered by standing blue-grey stones); a path climbs from the south with steps up to the arena; floating grassy rock pillars left and right. Sky and void = flat pure magenta #FF00FF. No clouds, characters, text."
+    },
+    {
+      "file": "fond_spirale.png",
+      "images": [
+        "Rescue_Team_Friend_Area_-_Thunder_Meadow.png"
+      ],
+      "prompt": "Same cloud textures, palette and pixel-art style as the reference storm clouds. Full-frame WIDE 4:3 background seen from high above: upper half a huge dark SPIRAL storm vortex of scalloped clouds around a dark eye; lower half an endless sea of layered storm clouds far below. Only clouds, 8 teal-grey greens, no lightning, no land."
+    },
+    {
+      "file": "foudre_poses.png",
+      "images": [
+        "source/thunder_meadow_arene_v1/bruts/ref_5394.png"
+      ],
+      "prompt": "Pixel-art sprite sheet on flat pure magenta #FF00FF, exact pale yellow and white colors of the reference lightning. 2 rows of 4 tall jagged forked LIGHTNING BOLTS striking downward, white-yellow core, pale yellow edges, no halo."
+    }
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/thunder_meadow_arene_v1/bruts/falaise_magenta.png",
+      "sha256": "3eb4307c844586000b067bff447829bd6ebb5fef2684049b726ba5c62a909054",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/thunder_meadow_arene_v1/bruts/fond_spirale.png",
+      "sha256": "1bbbf8520994de59c93ae992052a934625278096fc478a0de4a627b766d7f29a",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/thunder_meadow_arene_v1/bruts/foudre_poses.png",
+      "sha256": "e573e5c71e9b78f6dd4409c543020e63e04b8e30f038e520f732b7180b43ff7b",
+      "size": [
+        1293,
+        832
+      ]
+    }
+  ],
+  "fidelite_rip": {
+    "brut": {
+      "herbe": {
+        "rip_rgb": [
+          245.9,
+          242.5,
+          109.4
+        ],
+        "decor_rgb": [
+          202.0,
+          214.5,
+          77.0
+        ],
+        "distance": 61.4
+      },
+      "falaise": {
+        "rip_rgb": [
+          142.8,
+          111.8,
+          77.7
+        ],
+        "decor_rgb": [
+          164.9,
+          110.7,
+          101.9
+        ],
+        "distance": 32.7
+      },
+      "pierre": {
+        "rip_rgb": [
+          92.3,
+          117.4,
+          118.8
+        ],
+        "decor_rgb": [
+          126.3,
+          151.9,
+          173.1
+        ],
+        "distance": 72.7
+      }
+    },
+    "calques_finaux": {
+      "herbe": {
+        "calque": "prairie",
+        "rgb": [
+          245.9,
+          242.5,
+          109.4
+        ],
+        "distance_rip": 0.1
+      },
+      "falaise": {
+        "calque": "falaises",
+        "rgb": [
+          140.0,
+          109.7,
+          76.7
+        ],
+        "distance_rip": 3.6
+      },
+      "pierre": {
+        "calque": "pierres",
+        "rgb": [
+          133.1,
+          158.1,
+          182.6
+        ],
+        "distance_rip": 86.0
+      }
+    },
+    "couleurs_canoniques": {
+      "prairie": "couleurs EXACTES du rip (herbe), rang de luminance",
+      "falaises": "couleurs EXACTES du rip (falaise), rang de luminance",
+      "ilots": "couleurs EXACTES du rip (herbe (dessus) + falaise (parois)), rang de luminance",
+      "pierres": "couleurs EXACTES du rip (pierre), rang de luminance"
+    },
+    "non_canonique": "chemin, arene, arbre : couleurs du rendu (matieres absentes du rip ou sans equivalent)"
+  },
+  "flash": {
+    "palette_niveaux": [
+      [
+        [
+          72,
+          96,
+          96
+        ],
+        [
+          120,
+          144,
+          136
+        ],
+        [
+          88,
+          120,
+          112
+        ],
+        [
+          104,
+          136,
+          128
+        ],
+        [
+          96,
+          128,
+          120
+        ],
+        [
+          112,
+          136,
+          136
+        ],
+        [
+          128,
+          152,
+          144
+        ],
+        [
+          144,
+          168,
+          160
+        ]
+      ],
+      [
+        [
+          80,
+          104,
+          104
+        ],
+        [
+          128,
+          152,
+          144
+        ],
+        [
+          96,
+          128,
+          120
+        ],
+        [
+          112,
+          144,
+          136
+        ],
+        [
+          104,
+          136,
+          128
+        ],
+        [
+          120,
+          144,
+          144
+        ],
+        [
+          136,
+          160,
+          152
+        ],
+        [
+          152,
+          176,
+          168
+        ]
+      ],
+      [
+        [
+          88,
+          112,
+          112
+        ],
+        [
+          136,
+          160,
+          152
+        ],
+        [
+          104,
+          136,
+          128
+        ],
+        [
+          120,
+          152,
+          144
+        ],
+        [
+          112,
+          144,
+          136
+        ],
+        [
+          128,
+          152,
+          152
+        ],
+        [
+          144,
+          168,
+          160
+        ],
+        [
+          160,
+          184,
+          176
+        ]
+      ],
+      [
+        [
+          96,
+          120,
+          112
+        ],
+        [
+          144,
+          168,
+          160
+        ],
+        [
+          112,
+          144,
+          136
+        ],
+        [
+          128,
+          160,
+          152
+        ],
+        [
+          120,
+          152,
+          144
+        ],
+        [
+          136,
+          160,
+          160
+        ],
+        [
+          152,
+          176,
+          168
+        ],
+        [
+          168,
+          192,
+          184
+        ]
+      ],
+      [
+        [
+          96,
+          120,
+          120
+        ],
+        [
+          144,
+          168,
+          160
+        ],
+        [
+          112,
+          144,
+          136
+        ],
+        [
+          128,
+          160,
+          152
+        ],
+        [
+          120,
+          152,
+          144
+        ],
+        [
+          136,
+          160,
+          160
+        ],
+        [
+          152,
+          176,
+          168
+        ],
+        [
+          168,
+          192,
+          184
+        ]
+      ],
+      [
+        [
+          104,
+          128,
+          120
+        ],
+        [
+          152,
+          176,
+          168
+        ],
+        [
+          120,
+          152,
+          144
+        ],
+        [
+          136,
+          168,
+          160
+        ],
+        [
+          128,
+          160,
+          152
+        ],
+        [
+          144,
+          168,
+          168
+        ],
+        [
+          160,
+          184,
+          176
+        ],
+        [
+          176,
+          200,
+          192
+        ]
+      ]
+    ],
+    "sequence": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      5,
+      4,
+      3,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      5,
+      5,
+      3,
+      2,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    "indexation": "rang de luminance du fond (8 quantiles) -> colonne de la planche triee par luminance"
+  },
+  "foudre": {
+    "poses": 8,
+    "palette": [
+      [
+        255,
+        255,
+        247
+      ],
+      [
+        251,
+        250,
+        151
+      ],
+      [
+        229,
+        207,
+        119
+      ]
+    ],
+    "placements": [
+      [
+        0,
+        110,
+        20,
+        8
+      ],
+      [
+        5,
+        650,
+        10,
+        9
+      ],
+      [
+        3,
+        380,
+        -10,
+        26
+      ],
+      [
+        7,
+        700,
+        40,
+        27
+      ],
+      [
+        1,
+        60,
+        60,
+        28
+      ],
+      [
+        6,
+        250,
+        0,
+        42
+      ]
+    ],
+    "duree_phases": 3,
+    "masque": "visible seulement sur le vide (derriere la falaise)"
+  },
+  "etincelles": {
+    "poses_natives": 42,
+    "placements": [
+      [
+        39,
+        112,
+        136,
+        32
+      ],
+      [
+        37,
+        96,
+        128,
+        37
+      ],
+      [
+        35,
+        24,
+        192,
+        2
+      ],
+      [
+        12,
+        32,
+        208,
+        41
+      ],
+      [
+        38,
+        0,
+        40,
+        23
+      ],
+      [
+        34,
+        8,
+        672,
+        38
+      ],
+      [
+        5,
+        64,
+        160,
+        39
+      ],
+      [
+        12,
+        40,
+        592,
+        13
+      ],
+      [
+        30,
+        24,
+        688,
+        47
+      ],
+      [
+        18,
+        64,
+        640,
+        24
+      ],
+      [
+        24,
+        88,
+        40,
+        24
+      ],
+      [
+        41,
+        192,
+        56,
+        38
+      ],
+      [
+        29,
+        112,
+        112,
+        16
+      ],
+      [
+        41,
+        64,
+        144,
+        10
+      ],
+      [
+        35,
+        16,
+        184,
+        41
+      ],
+      [
+        25,
+        8,
+        536,
+        2
+      ],
+      [
+        18,
+        0,
+        296,
+        6
+      ],
+      [
+        21,
+        272,
+        712,
+        22
+      ],
+      [
+        33,
+        232,
+        680,
+        39
+      ],
+      [
+        26,
+        56,
+        672,
+        24
+      ],
+      [
+        11,
+        72,
+        64,
+        18
+      ],
+      [
+        10,
+        520,
+        0,
+        0
+      ]
+    ],
+    "origine": "pixels NATIFS de la planche, inchanges"
+  },
+  "layers": [
+    {
+      "file": "animation/fond_nuages/TMA1_00_fond_nuages_fNN.png",
+      "phases": 48,
+      "ticks": 5
+    },
+    {
+      "file": "animation/foudre/TMA1_01_foudre_fNN.png",
+      "phases": 48,
+      "ticks": 5
+    },
+    {
+      "file": "animation/etincelles/TMA1_02_etincelles_fNN.png",
+      "phases": 48,
+      "ticks": 5
+    },
+    {
+      "file": "calques/TMA1_03_ilots.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_04_falaises.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_05_prairie.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_06_chemin.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_07_arene.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_08_pierres.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/TMA1_09_arbre.png",
+      "phases": 1,
+      "ticks": 60
+    }
+  ],
+  "scene_loop_ticks": 240,
+  "access": {
+    "entry_px": [
+      384,
+      560
+    ],
+    "arene_centre_px": [
+      368,
+      96
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 2520,
+    "blocked_cells": 2729,
+    "walkable_cells": 4183,
+    "rule": "case bloquee si > 25 % hors prairie, chemin et arene ; falaises, pierres, arbre, ilots et vide bloques"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "tma1_thunder_meadow_arene",
+    "namespace": "thunder_meadow_arene",
+    "tiles_per_bank": {
+      "TMA1_00_FOND": 30767,
+      "TMA1_01_FOUDRE": 275,
+      "TMA1_02_ETINCELLES": 44,
+      "TMA1_03_ILOTS": 215,
+      "TMA1_04_FALAISES": 1001,
+      "TMA1_05_PRAIRIE": 3548,
+      "TMA1_06_CHEMIN": 849,
+      "TMA1_07_ARENE": 292,
+      "TMA1_08_PIERRES": 520,
+      "TMA1_09_ARBRE": 105
+    },
+    "banks": [
+      "TMA1_00_FOND",
+      "TMA1_01_FOUDRE",
+      "TMA1_02_ETINCELLES",
+      "TMA1_03_ILOTS",
+      "TMA1_04_FALAISES",
+      "TMA1_05_PRAIRIE",
+      "TMA1_06_CHEMIN",
+      "TMA1_07_ARENE",
+      "TMA1_08_PIERRES",
+      "TMA1_09_ARBRE"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}
