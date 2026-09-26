@@ -624,3 +624,7 @@ Demandé par l'utilisateur, avec la consigne d'employer la méthode : rendu gén
 ## EFF2 — Foggy Forest sans tentes, arbres en calques (26 septembre 2026)
 
 Mêmes bruts qu'EFF1, sans régénération. Retrait d'un objet : recopier une zone du MÊME décor (décalage le plus proche entièrement sur le bon sol, sans retournement). Le sol complet généré faisait des rustines visibles. Arbres : `split_trees` (ombre b/g lissé > 0,72 ; troncs bruns avec palette séparée, sinon ils virent au vert à la quantification ; houppiers). Pas de faces cachées. 14 tests PASS, pas de test PMDO.
+
+## EDP1 — Dark Crater Pit (26 septembre 2026)
+
+« passe à la suite » : biome choisi par l'agent. Pour la lave (ou tout liquide texturé), générer un 4e brut `lave_complete` en éditant le décor magenta (décor et rip en références). Le ramener aux couleurs exactes du rip, puis l'animer en cycle de palette (indice ± 1, onde). La planche de bulles avait des fonds rectangulaires : choisir les poses détourables par position. 11 tests PASS, pas de test PMDO.

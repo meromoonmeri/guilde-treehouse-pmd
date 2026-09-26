@@ -1,5 +1,17 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Dark Crater — fosse de lave 4:3, lave en cycle de palette aux couleurs exactes, réf. Dark Crater Pit (26 septembre 2026)
+
+- Aperçu : `apercu_entree_dark_crater_pit_sud_nord_v1.html`.
+- Lot : `renders/entree_dark_crater_pit_sud_nord_v1/` (`EDP1_projet_pmdo_0812.zip`, `EDP1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_dark_crater_pit_sud_nord_v1/`.
+
+**Demande** : « passe à la suite stp ». Biome choisi par l'agent : Dark Crater Pit. Méthode = **rendu généré référencé**, avec quatre bruts : décor 4:3 avec la lave en magenta, lave complétée par édition du décor, pierre complète et planche de bulles.
+
+L'arrivée est au sud, sur un chemin de pierre entre des rebords en pointes. Il mène à un grand plateau, puis un pont de pierre monte jusqu'à la grotte dans un grand mur noir. La lave garde le motif généré, ramené aux 11 couleurs exactes de la capture, et s'anime par cycle de palette (12 × 8 ticks). Des bulles générées éclatent (24 × 4 ticks).
+
+Fidélité : pierre 5,1, roche 16,0, lave 10,0. 11 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Foggy Forest V2 — sans tentes, arbres en trois calques (ombres, troncs, houppiers) (26 septembre 2026)
 
 - Aperçu : `apercu_entree_foggy_forest_sud_nord_v2.html`.
