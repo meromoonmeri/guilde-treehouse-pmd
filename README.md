@@ -1,5 +1,22 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Waterfall Cave — 4:3, génération fond magenta multicalque, réf. entrancecascade (26 septembre 2026)
+
+- Aperçu : `apercu_entree_waterfall_cave_sud_nord_v1.html`.
+- Lot : `renders/entree_waterfall_cave_sud_nord_v1/` (`EWC1_projet_pmdo_0812.zip`, `EWC1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_waterfall_cave_sud_nord_v1/`.
+
+**Demande de l'utilisateur** : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». Le lot repart de la seule branche parente (Jungle V1). Textures canoniques = **rendu généré référencé** : la capture de l'entrée de Waterfall Cave (`entrancecascade.png`) est passée au générateur, qui produit le décor complet en 4:3 avec l'eau plate en magenta, un sol de sable complet et une planche d'écume sur magenta.
+
+Le résultat compte 16 calques : sol, sable, cailloux, touffes, plateaux, berge, falaises, arbres, bouche sombre et écume du pied, avec cinq animations :
+- bassins et vasque façon Métano, en couleurs Métano exactes (4 × 10 ticks) ;
+- scintillements Métano natifs ;
+- rideau de cascade défilant vers le sud (12 × 4 ticks, translation pure testée) ;
+- bouillons d'écume générés ;
+- embruns générés.
+
+Fidélité au rip mesurée par test : sable 6,5, roche 5,0, feuillage 2,3, rideau 8,8. Des palettes séparées corrigent le virage du rideau et de la bouche. 13 tests PASS, build reproductible. Pas de test PMDO en jeu.
+
 ## Entrée Jungle — format 4:3 vaste, réf. Southern Jungle (26 septembre 2026)
 
 - Aperçu : `apercu_entree_jungle_sud_nord_v1.html`.

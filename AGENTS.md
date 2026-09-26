@@ -476,4 +476,32 @@ Papillons : planche 2 × 6 (2 couleurs × 6 poses), extraction centrée ×1/11 �
 
 La consigne de méthode la plus récente a été donnée dans la session sœur `arena/01a0dc9b` (commit `f6647b7c`, **non fusionné ici**) : « tu dois utiliser ton générateur d'image tu as mal audité l'ancienne méthode ». Dans la série des entrées sud → nord, **« textures canoniques » = rendu généré RÉFÉRENCÉ** : le rip canonique du biome est passé au générateur en image de référence (`images=[rip]`), et le décor reproduit ses textures, sa palette et son style de pixel sur un layout nouveau (« même endroit, autre lieu »). Ensuite, la chaîne habituelle : décor sur magenta et sol séparé, segmentation, réduction par classe, calques, animations sur leurs propres calques, PNG 8 px et Ground. Ce n'est PAS un relayout de pixels natifs (`zones_south_north_v3`, Cascade V1), réservé au cas où l'utilisateur le nomme explicitement. Mesurer la fidélité de la matière principale contre le rip (tests `test_canonical_*` de la branche `arena/01a0dc8e`), ne jamais présenter les pixels générés comme des tuiles natives, et demander avant le build si le sens de « canonique », la référence ou la portée est ambigu (consigne `arena/01a0db11`).
 
-**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave : ne pas en refaire une quatrième, et ne pas fusionner sans l'accord de l'utilisateur. Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+
+### Entrée Waterfall Cave V1 (EWC1) — génération fond magenta multicalque (26 septembre)
+
+Lot `source/entree_waterfall_cave_sud_nord_v1/`, aperçu `apercu_entree_waterfall_cave_sud_nord_v1.html`, préfixe `EWC1` (inédit dans toutes les branches). La bonne référence pour l'**entrée** est `entrancecascade.png` (« Entrée cascade », ref_01 de `references_fideles_v1`) : grande cascade au nord, promontoire de sable, falaises à bonsaïs. Les rips `Waterfall_Cave_ledge/gem` montrent l'intérieur de la grotte.
+
+Trois générations, toutes avec le rip en `images=` (prompts complets dans `manifest.json` → `generation`) :
+- décor complet en 4:3, eau plate en magenta, cascade et vasque dessinées : bon du premier coup ;
+- sol de sable complet, édité depuis le décor ;
+- planche d'écume sur magenta : grille 4 × 4 rendue au lieu de 2 × 6, cases choisies à la main.
+
+`build.py` réutilise `down_class`, `down_full` et `rgba` du gabarit Jungle, ainsi que `water_phases` (couleurs Métano exactes), `sparkle_families`, `place` et `cell_grid` de Bristle, via `JM = loadmod(jungle)` et `BM = JM.BM`.
+
+Segmentation mesurée :
+- sable : lum > 158, sat > 112, écart local 9 px < 12 ; la plus grande composante reliée au sud est praticable, le reste (hauts de falaise, poches) forme les plateaux ;
+- bouche : aplat (34,34,34) plus un rebord de 9 px ;
+- rideau : au-dessus de y = 268 en pleine résolution ; l'écume du pied est entre 268 et 306 ; la vasque dessinée passe dans l'eau Métano ;
+- touffes : composantes vertes de moins de 300 px ; au-delà, ce sont des morceaux d'arbres coupés.
+
+Pièges corrigés :
+- **Palette commune** : le rideau virait au vert-gris (bleu moyen 204 → 143) et la bouche au brun. Palettes séparées : terrain 96, arbres 24, eau dessinée 24, bouche 12, avec des tests de régression.
+- **Bords rongés** : `binary_closing` ronge les bords de l'image, et les premières rangées du rideau sortaient du masque. Fermer avec un bord répliqué (`close_`).
+- **Cascade** : chaque colonne reprend sa **propre** texture verticale, dans la bande y 4-100 ou une période plus bas (le rideau est plus étroit en haut), ce qui garde la phase des crêtes. La période est de 72 px (autocorrélation, 74 mesuré), avec un fondu de 24 px et un pas de 6 px × 12 phases. Recopier horizontalement le pixel voisin pour les longues portions manquantes créait des stries qui défilaient. Seuls les petits trous sous les arbres en surplomb se bouchent rangée par rangée. Le test vérifie une translation pure, 11 → 0 compris.
+- **Fidélité** : comparer ce qui est comparable. La matière « eau » globale du rip, qui inclut mer et écume, donnait 74 contre le rideau ; rideau contre rideau, on obtient 11,0 sur le brut et 8,8 sur le calque final.
+- **ORA** : le `write_ora` de Bristle a un titre codé en dur (« Entree Bristle »), repris tel quel par Jungle. EWC1 a son propre `write_ora`.
+- **Appels parallèles** : ne pas lire une image dans le même lot d'appels que le script qui la crée.
+- **HEAD revenu à la base entre deux tours** (encore) : le HEAD local était à `0eaa002c` alors que le distant portait `deec1b5c` ; l'arbre de travail, lui, était à jour. Correctif : `git fetch --depth=10 origin <branche>` puis `git reset --mixed FETCH_HEAD`, et vérifier que le diff ne contient que le travail du tour.
+
+Pas de calque d'ombres : aucune ombre portée séparable dans le rendu, et aucune n'a été inventée. 13 tests PASS, build reproductible (104 fichiers identiques d'un build à l'autre). Pas de runtime.
