@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrée fosse du Dark Crater · ECF1 · 4:3</title>
+<style>
+body{background:#0e1a12;color:#e4efe4;font:15px/1.55 system-ui,sans-serif;margin:0;padding:24px}
+main{max-width:1180px;margin:auto}
+h1{font-size:30px;margin:0 0 6px}
+p{color:#b3c9d3;max-width:80ch}
+.wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.stage{position:relative;background:#081116;overflow:auto;max-height:86vh;border:1px solid #29404c}
+canvas{display:block;image-rendering:pixelated}
+aside{flex:1;min-width:280px;max-width:420px}
+fieldset{border:1px solid #29404c;border-radius:8px;margin:0 0 14px;padding:10px 14px}
+legend{color:#e7c77f;padding:0 6px}
+label{display:block;padding:3px 0;cursor:pointer}
+button{background:#cfe4ee;color:#10303e;border:0;border-radius:6px;padding:8px 14px;margin:2px 4px 2px 0;cursor:pointer;font-weight:600}
+button.on{background:#e7c77f}
+.note{border-left:3px solid #e7c77f;padding-left:12px;font-size:14px}
+code{color:#cfe4ee}
+</style>
+<main>
+<h1>Entrée fosse du Dark Crater (ECF1) — 4:3 (768×576)</h1>
+<p>Rendu généré <strong>référencé sur la capture <em>Dark Crater Pit</em></strong> (<code>Dark_Crater_Pit_TDS.png</code>). Biome choisi par l'agent après « passe à la suite ». Le générateur a reçu la capture en référence et a produit le décor complet en 4:3, toute la lave peinte en magenta. La roche complète et une planche de bulles de lave sur magenta ont été générées à part. Calques : sol, bordures de roche, pics noirs, paroi nord et bouche de la grotte. La <strong>lave</strong> est recalculée en cellules aux <strong>11 couleurs exactes de la capture</strong> qui respirent (12 phases de 8 ticks), avec une bande rouge contre la roche. Des <strong>bulles</strong> générées gonflent et éclatent (24 phases de 4 ticks). L'arrivée est au sud ; le pont de roche sinueux mène au seuil, devant la grotte au nord.</p>
+<div class="wrap">
+  <div class="stage" id="stage"><canvas id="c"></canvas></div>
+  <aside>
+    <fieldset><legend>Lecture</legend><button id="play">Pause</button><button id="step">+2 ticks</button><div id="phase"></div></fieldset>
+    <fieldset><legend>Affichage</legend>
+      <button data-zoom="1" class="on">1×</button><button data-zoom="2">2×</button><button data-zoom="3">3×</button>
+      <label><input type="checkbox" id="grid"> Grille 8 px</label>
+      <label><input type="checkbox" id="coll"> Collisions et marqueurs</label>
+      <label><input type="checkbox" id="view"> Cadre viewport PMDO ×1 (320×240) à l'arrivée</label>
+    </fieldset>
+    <fieldset><legend>Calques (bas → haut)</legend><div id="layers"></div><button id="solo">Tout afficher</button></fieldset>
+    <fieldset><legend>Poses générées (×4) : bulle de lave</legend><div id="poses" style="display:flex;flex-wrap:wrap;gap:6px"></div></fieldset>
+    <fieldset><legend>Export</legend><button id="png">PNG de la vue actuelle (1×)</button></fieldset>
+    <p class="note">Le terrain et les bulles sont générés à partir de la capture. Le motif de lave, sa respiration et la chronologie des bulles sont créées par nous : ce ne sont pas des animations officielles. La lave garde les couleurs exactes de la capture. Marqueurs : jaune = <code>entrance</code>, cyan = <code>donjon_seuil</code>. Aucun test fait dans PMDO.</p>
+  </aside>
+</div>
+</main>
+<script>
+const D=__DATA__;const [W,H]=D.size;const c=document.getElementById('c'),x=c.getContext('2d');
+function img(u){const i=new Image();i.src=u;return i}
+const L=D.stack.map(l=>({id:l.id,ticks:l.ticks,frames:l.frames.map(img)})),coll=img(D.collisions);
+const box=document.getElementById('layers'),checks={};
+L.forEach(l=>{const lab=document.createElement('label'),ch=document.createElement('input');ch.type='checkbox';ch.checked=true;ch.onchange=draw;checks[l.id]=ch;lab.append(ch,' '+l.id+(l.frames.length>1?' ('+l.frames.length+'×'+l.ticks+' ticks)':''));box.append(lab)});
+D.poses.forEach(p=>{const i=img(p.uri);i.width=p.w*4;i.height=p.h*4;i.title=p.id;i.style.cssText='image-rendering:pixelated;background:'+D.surface;document.getElementById('poses').append(i)});
+let zoom=1,tick=0,playing=true,last=performance.now();const STEP=2,MS=STEP*1000/60;
+function render(ctx){ctx.clearRect(0,0,W,H);L.forEach(l=>{if(checks[l.id].checked)ctx.drawImage(l.frames[Math.floor(tick/l.ticks)%l.frames.length],0,0)});
+ if(document.getElementById('coll').checked)ctx.drawImage(coll,0,0);}
+function draw(){c.width=W*zoom;c.height=H*zoom;x.imageSmoothingEnabled=false;x.save();x.scale(zoom,zoom);render(x);x.restore();
+ if(document.getElementById('grid').checked){x.strokeStyle='rgba(255,255,255,.18)';x.lineWidth=1;x.beginPath();
+  for(let i=0;i<=W;i+=8){x.moveTo(i*zoom+.5,0);x.lineTo(i*zoom+.5,H*zoom)}for(let j=0;j<=H;j+=8){x.moveTo(0,j*zoom+.5);x.lineTo(W*zoom,j*zoom+.5)}x.stroke()}
+ if(document.getElementById('view').checked){const cx=Math.min(Math.max(D.entry[0]+8-160,0),W-320),cy=Math.min(Math.max(D.entry[1]+8-120,0),H-240);
+  x.strokeStyle='#ffe066';x.lineWidth=2;x.strokeRect(cx*zoom,cy*zoom,320*zoom,240*zoom)}
+ document.getElementById('phase').textContent='tick '+tick+' / '+D.loop;}
+function adv(){tick=(tick+STEP)%D.loop;draw()}
+function loop(t){if(playing&&t-last>=MS){last=t;adv()}requestAnimationFrame(loop)}
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Lecture'};
+document.getElementById('step').onclick=adv;
+document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{zoom=+b.dataset.zoom;document.querySelectorAll('[data-zoom]').forEach(o=>o.classList.toggle('on',o===b));draw()});
+['grid','coll','view'].forEach(id=>document.getElementById(id).onchange=draw);
+document.getElementById('solo').onclick=()=>{Object.values(checks).forEach(ch=>ch.checked=true);draw()};
+document.getElementById('png').onclick=()=>{const o=document.createElement('canvas');o.width=W;o.height=H;render(o.getContext('2d'));const a=document.createElement('a');a.download='EFF1_vue_tick'+String(tick).padStart(3,'0')+'.png';a.href=o.toDataURL('image/png');a.click()};
+Promise.all([...L.flatMap(l=>l.frames),coll].map(i=>i.decode())).then(()=>{draw();requestAnimationFrame(loop)});
+</script>
+</html>

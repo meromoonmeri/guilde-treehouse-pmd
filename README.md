@@ -1,5 +1,18 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée fosse du Dark Crater, 2ᵉ version (ECF1) — 4:3, lave aux couleurs exactes du rip, pont de roche jusqu'à la grotte (26 septembre 2026)
+
+- Aperçu : `apercu_entree_cratere_fosse_sud_nord_v1.html`.
+- Lot : `renders/entree_cratere_fosse_sud_nord_v1/` (`ECF1_projet_pmdo_0812.zip`, `ECF1_calques_png_8px.zip`, ORA, WebP animé).
+- Source : `source/entree_cratere_fosse_sud_nord_v1/`.
+
+**Doublon d'EDP1** : même demande (« passe à la suite stp ») et même capture, produit en parallèle. Les deux lots sont gardés pour comparaison. Le biome a été choisi par l'agent : `Dark_Crater_Pit_TDS.png`, jamais utilisé comme référence principale. Méthode des textures canoniques = rendu généré référencé : décor 4:3 avec toute la lave en magenta, roche complète éditée depuis le décor et planche de bulles sur magenta. Calques : sol, bordures, pics noirs, paroi nord et bouche de la grotte. Deux animations :
+
+- la lave, en cellules aux 11 couleurs exactes de la capture qui respirent, avec une bande rouge contre la roche (12 × 8 ticks) ;
+- des bulles générées qui gonflent et éclatent (24 × 4 ticks).
+
+Fidélité au rip : sol 11,0, bordures 32,5, paroi 32,9. 11 tests PASS. Pas de test PMDO en jeu.
+
 ## Entrée Dark Crater — fosse de lave 4:3, lave en cycle de palette aux couleurs exactes, réf. Dark Crater Pit (26 septembre 2026)
 
 - Aperçu : `apercu_entree_dark_crater_pit_sud_nord_v1.html`.

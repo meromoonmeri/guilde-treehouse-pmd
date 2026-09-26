@@ -1,0 +1,497 @@
+{
+  "lot": "entree_cratere_fosse_sud_nord_v1",
+  "prefix": "ECF1",
+  "format": "4:3 vaste",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "base": "branche de session (EMF1 pour les utilitaires) ; aucun emprunt aux branches soeurs",
+  "biome": "fosse du Dark Crater, choisi par l agent (« passe a la suite »)",
+  "method": "textures canoniques = rendu genere REFERENCE : rip passe au generateur ; decor complet sur magenta (lave = magenta), roche complete editee depuis le decor, planche de bulles sur magenta",
+  "reference_da": {
+    "file": "Dark_Crater_Pit_TDS.png",
+    "sha256": "3e4cc9b113789a1c63b21ba70b8f1a7e6095475b61c81c5b5e95557806a2e691",
+    "titre": "Fosse du Dark Crater (PMD Explorers)"
+  },
+  "generation": [
+    {
+      "file": "decor_magenta.png",
+      "images": [
+        "Dark_Crater_Pit_TDS.png"
+      ],
+      "prompt": "Use EXACTLY the same textures, palette and pixel-art style as the reference image (Pokemon Mystery Dungeon Explorers of Sky, Dark Crater pit): same flat grey-brown volcanic rock ground with fine stippled texture, same jagged dark brown-black rock rims with lighter edge highlights around the rock island, same black pointed rock spikes. Make a NEW, larger top-down map. WIDE LANDSCAPE 4:3, zoomed out so the crater feels vast. Layout: the player arrives at the SOUTH (bottom edge center) on a rock path bordered by jagged dark rims; the path widens into a large irregular rock plateau in the middle; from the plateau a narrow winding rock bridge goes NORTH up to a dark cave opening in a tall black rock wall at the top center; a few black rock spikes stand around. Everything that is not rock is molten lava: IMPORTANT fill ALL lava areas with flat pure magenta #FF00FF, no lava texture, no glow. No characters, no text, no UI, no border."
+    },
+    {
+      "file": "sol_complet.png",
+      "images": [
+        "source/entree_cratere_fosse_sud_nord_v1/bruts/decor_magenta.png"
+      ],
+      "prompt": "Same image, same framing and pixel-art style, but only plain grey-brown rock ground everywhere, nothing else.",
+      "essais": "deuxieme essai ; le premier (prompt plus long) a rendu une reponse sans image. Paroi nord et bouche gardees"
+    },
+    {
+      "file": "bulles_lave_poses.png",
+      "images": [
+        "Dark_Crater_Pit_TDS.png"
+      ],
+      "prompt": "Pixel-art sprite sheet on a flat pure magenta #FF00FF background, same style and lava colors as the reference image (Pokemon Mystery Dungeon Explorers of Sky, Dark Crater). 2 rows of 6 separate small sprites. Row 1: a lava bubble growing, swelling and bursting (yellow-orange-red). Row 2: a small ember spark rising and fading. Sprites well separated with wide magenta spacing, no text, no grid lines."
+    }
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/entree_cratere_fosse_sud_nord_v1/bruts/decor_magenta.png",
+      "sha256": "cf99ff929454271a3ee8fe9d6ab25f7d4e80c41b9509a171ef7b72c7f021eb53",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_cratere_fosse_sud_nord_v1/bruts/sol_complet.png",
+      "sha256": "e14154a9cf5fdde175f855948cafbcbab6517c824773a3b7a23a92ac06a2bc16",
+      "size": [
+        1200,
+        896
+      ]
+    },
+    {
+      "file": "source/entree_cratere_fosse_sud_nord_v1/bruts/bulles_lave_poses.png",
+      "sha256": "851cd1afcaa9f21a5198b8960e9b85a9ae18f84a044c66f80fea22c0580700a8",
+      "size": [
+        1376,
+        768
+      ]
+    }
+  ],
+  "fidelite_rip": {
+    "methode": "moyenne RGB par matiere, meme classifieur pixel sur le rip et sur le brut ; distance euclidienne",
+    "brut": {
+      "sol": {
+        "rip_rgb": [
+          90.1,
+          84.6,
+          80.1
+        ],
+        "decor_rgb": [
+          101.5,
+          90.3,
+          80.5
+        ],
+        "distance": 12.7
+      },
+      "bordures": {
+        "rip_rgb": [
+          107.7,
+          71.5,
+          41.3
+        ],
+        "decor_rgb": [
+          97.3,
+          71.0,
+          53.3
+        ],
+        "distance": 15.9
+      },
+      "roche_noire": {
+        "rip_rgb": [
+          44.3,
+          32.7,
+          30.5
+        ],
+        "decor_rgb": [
+          21.5,
+          19.1,
+          19.5
+        ],
+        "distance": 28.8
+      }
+    },
+    "calques_finaux": {
+      "sol": {
+        "calque": "sol",
+        "rgb": [
+          100.1,
+          89.2,
+          79.6
+        ],
+        "distance_rip": 11.0
+      },
+      "bordures": {
+        "calque": "bordures",
+        "rgb": [
+          78.1,
+          58.8,
+          44.9
+        ],
+        "distance_rip": 32.5
+      },
+      "roche_noire": {
+        "calque": "paroi",
+        "rgb": [
+          17.8,
+          17.5,
+          18.2
+        ],
+        "distance_rip": 32.9
+      }
+    },
+    "lave": "couleurs EXACTES du rip (rampe de 11 teintes, test : sous-ensemble des couleurs du rip)"
+  },
+  "normalization": {
+    "scale": 0.6428571428571429,
+    "scaled": [
+      771,
+      576
+    ],
+    "crop_x": [
+      1,
+      2
+    ],
+    "methode": "moyenne ponderee par classe (BOX), attribution exclusive par poids maximal",
+    "palettes": {
+      "terrain": {
+        "calques": [
+          "sol_complet",
+          "sol",
+          "bordures"
+        ],
+        "couleurs": 96
+      },
+      "pics": {
+        "calques": [
+          "pics"
+        ],
+        "couleurs": 16
+      },
+      "paroi": {
+        "calques": [
+          "paroi"
+        ],
+        "couleurs": 32
+      },
+      "grotte": {
+        "calques": [
+          "grotte"
+        ],
+        "couleurs": 8
+      }
+    }
+  },
+  "segmentation": "lave = magenta dilate 2 px ; grotte = plus grand aplat sombre uniforme (lum<40, ecart-type<4) du haut-centre ; sol = gris-brun peu sature (lum lissee 70-130, sat lissee < 30), composantes > 800 px ; paroi = roche sombre reliee au bord haut ; pics = composantes cernees de lave (anneau 4 px > 97 %) ; bordures = le reste",
+  "layers": [
+    {
+      "file": "animation/lave/ECF1_00_lave_fNN.png",
+      "phases": 12,
+      "ticks": 8
+    },
+    {
+      "file": "animation/bulles/ECF1_01_bulles_fNN.png",
+      "phases": 24,
+      "ticks": 4
+    },
+    {
+      "file": "calques/ECF1_02_sol_complet.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ECF1_03_sol.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ECF1_04_bordures.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ECF1_05_pics.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ECF1_06_paroi.png",
+      "phases": 1,
+      "ticks": 60
+    },
+    {
+      "file": "calques/ECF1_07_grotte.png",
+      "phases": 1,
+      "ticks": 60
+    }
+  ],
+  "lave": {
+    "phases": 12,
+    "frame_length_ticks": 8,
+    "rampe": [
+      [
+        247,
+        39,
+        31
+      ],
+      [
+        247,
+        63,
+        31
+      ],
+      [
+        247,
+        95,
+        31
+      ],
+      [
+        247,
+        119,
+        31
+      ],
+      [
+        247,
+        135,
+        31
+      ],
+      [
+        247,
+        151,
+        39
+      ],
+      [
+        255,
+        167,
+        39
+      ],
+      [
+        255,
+        175,
+        39
+      ],
+      [
+        255,
+        199,
+        47
+      ],
+      [
+        255,
+        223,
+        55
+      ],
+      [
+        255,
+        255,
+        47
+      ]
+    ],
+    "cellule_px": 18,
+    "modele": "cellules de Voronoi (graine 21), indice de rampe par distance au bord de cellule, respiration round(2 sin(2 pi t/12 + phi_cellule)), bande rouge <= 3 px et orangee <= 6 px contre la roche",
+    "origine": "couleurs EXACTES du rip ; motif et mouvement crees par nous (pas une animation officielle)"
+  },
+  "bulles": {
+    "poses": 6,
+    "fenetres": {
+      "x": [
+        118,
+        343,
+        573,
+        800,
+        1030,
+        1258
+      ],
+      "y": 200,
+      "cote": 176
+    },
+    "reduction": "x1/8",
+    "palette": [
+      [
+        254,
+        207,
+        22
+      ],
+      [
+        253,
+        155,
+        1
+      ],
+      [
+        250,
+        119,
+        6
+      ],
+      [
+        252,
+        96,
+        2
+      ],
+      [
+        241,
+        64,
+        6
+      ],
+      [
+        233,
+        21,
+        3
+      ],
+      [
+        132,
+        18,
+        16
+      ],
+      [
+        144,
+        0,
+        11
+      ]
+    ],
+    "chronologie": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "points": [
+      [
+        65,
+        443,
+        0
+      ],
+      [
+        506,
+        575,
+        7
+      ],
+      [
+        140,
+        281,
+        14
+      ],
+      [
+        755,
+        448,
+        21
+      ],
+      [
+        296,
+        530,
+        4
+      ],
+      [
+        525,
+        148,
+        11
+      ],
+      [
+        747,
+        548,
+        18
+      ],
+      [
+        625,
+        279,
+        1
+      ],
+      [
+        70,
+        531,
+        8
+      ],
+      [
+        216,
+        217,
+        15
+      ],
+      [
+        148,
+        445,
+        22
+      ],
+      [
+        163,
+        539,
+        5
+      ],
+      [
+        41,
+        347,
+        12
+      ],
+      [
+        739,
+        263,
+        19
+      ]
+    ],
+    "phases": 24,
+    "frame_length_ticks": 4,
+    "origine": "dessin GENERE (rangee 1 de la planche) ; chronologie et placement crees par nous"
+  },
+  "scene_loop_ticks": 96,
+  "access": {
+    "entry_px": [
+      384,
+      560
+    ],
+    "threshold_px": [
+      368,
+      80
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 849,
+    "blocked_cells": 5896,
+    "total_cells": 6912,
+    "walkable_cells": 1016,
+    "rule": "case bloquee si > 25 % hors sol gris et bordures a plus de 3 px de la lave",
+    "seuil": "devant la bouche de la grotte, en haut du pont de roche"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ecf1_entree_cratere_fosse",
+    "namespace": "entree_cratere_fosse_sud_nord",
+    "tiles_per_bank": {
+      "ECF1_00_LAVE": 37161,
+      "ECF1_01_BULLES": 536,
+      "ECF1_02_SOL": 2859,
+      "ECF1_03_SOL": 921,
+      "ECF1_04_BORDURES": 722,
+      "ECF1_05_PICS": 101,
+      "ECF1_06_PAROI": 1469,
+      "ECF1_07_GROTTE": 45
+    },
+    "banks": [
+      "ECF1_00_LAVE",
+      "ECF1_01_BULLES",
+      "ECF1_02_SOL",
+      "ECF1_03_SOL",
+      "ECF1_04_BORDURES",
+      "ECF1_05_PICS",
+      "ECF1_06_PAROI",
+      "ECF1_07_GROTTE"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

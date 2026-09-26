@@ -628,3 +628,7 @@ Mêmes bruts qu'EFF1, sans régénération. Retrait d'un objet : recopier une zo
 ## EDP1 — Dark Crater Pit (26 septembre 2026)
 
 « passe à la suite » : biome choisi par l'agent. Pour la lave (ou tout liquide texturé), générer un 4e brut `lave_complete` en éditant le décor magenta (décor et rip en références). Le ramener aux couleurs exactes du rip, puis l'animer en cycle de palette (indice ± 1, onde). La planche de bulles avait des fonds rectangulaires : choisir les poses détourables par position. 11 tests PASS, pas de test PMDO.
+
+## ECF1 — fosse du Dark Crater, doublon d'EDP1 (même capture, produit en parallèle ; les deux sont gardés) (26 septembre 2026)
+
+« passe à la suite » : biome choisi par l'agent. Rendu généré RÉFÉRENCÉ, lave en magenta. La lave est animée par `lava_frames` : Voronoï aux 11 couleurs exactes du rip, palette cycling, 12 × 8 ticks. Le pont n'a qu'une case de sol gris, donc les rebords à plus de 3 px de la lave sont praticables. Restent inutilisées : `Sealed_Ruin_pit_TDS.png`, `Waterfall_Cave_gem/ledge_TDS.png`, `Southern_Jungle_exit(_2)_S.png`. 11 tests PASS, pas de test PMDO.
