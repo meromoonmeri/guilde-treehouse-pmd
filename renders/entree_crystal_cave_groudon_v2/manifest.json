@@ -1,0 +1,520 @@
+{
+  "lot": "entree_crystal_cave_groudon_v2",
+  "prefix": "ECC2",
+  "size_px": [
+    768,
+    576
+  ],
+  "grid_8px": [
+    96,
+    72
+  ],
+  "base": {
+    "lot": "entree_crystal_cave_sud_nord_v1",
+    "calques": "copies octet par octet (prefixe ECC2)",
+    "collisions_marqueurs": "relus dans ECC1_projet_pmdo_0812.zip"
+  },
+  "demande": "colonnes de flamme a l arrivee du legendaire (Groudon), VFX lie a la carte",
+  "method": "VFX genere REFERENCE : planche de colonnes de flamme sur magenta (reference Dark_Crater_Pit_TDS.png, couleurs de lave PMD) ; poses reduites x1/3, palette commune de 16 couleurs ; halo et voile tramés en damier aux couleurs de la planche ; placement et chronologie crees par nous",
+  "generation": [
+    {
+      "file": "colonnes_flamme_poses.png",
+      "images": [
+        "Dark_Crater_Pit_TDS.png"
+      ],
+      "prompt": "Pixel-art VFX sprite sheet on a flat pure magenta #FF00FF background, Pokemon Mystery Dungeon Explorers of Sky style, lava and fire colors of the reference (deep red, orange, yellow, white-hot core). 2 rows of 4 separate sprites, each a vertical ERUPTING FLAME COLUMN seen from a top-down 3/4 view, bursting up from a small glowing crack in the ground: row 1 = eruption growing: 1 glowing crack with embers, 2 short fire burst, 3 half-height roaring column, 4 full tall roaring flame pillar with white-yellow core and swirling edges. Row 2 = 3 different flicker poses of the full tall pillar, then a collapsing pillar breaking into sparks and smoke. Tall narrow sprites, all same scale, well separated with wide magenta spacing, no text, no grid lines.",
+      "note": "premier essai, grille 2 x 4 respectee"
+    }
+  ],
+  "raw_inputs": [
+    {
+      "file": "source/entree_crystal_cave_groudon_v2/bruts/colonnes_flamme_poses.png",
+      "sha256": "75dda6b2218ed561609a8b8e8dda54045bfbc14c9db39b8d299d24858c0c84b8",
+      "size": [
+        1376,
+        768
+      ]
+    }
+  ],
+  "poses": {
+    "fissure": {
+      "fenetre": [
+        115,
+        190,
+        370
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "jaillissement": {
+      "fenetre": [
+        345,
+        190,
+        370
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "mi_hauteur": {
+      "fenetre": [
+        575,
+        100,
+        370
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "pleine": {
+      "fenetre": [
+        808,
+        10,
+        370
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "flamme_a": {
+      "fenetre": [
+        120,
+        395,
+        760
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "flamme_b": {
+      "fenetre": [
+        365,
+        395,
+        760
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "flamme_c": {
+      "fenetre": [
+        610,
+        395,
+        760
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    },
+    "effondrement": {
+      "fenetre": [
+        890,
+        380,
+        760
+      ],
+      "taille_px": [
+        120,
+        76
+      ]
+    }
+  },
+  "palette": [
+    [
+      255,
+      253,
+      231
+    ],
+    [
+      255,
+      251,
+      192
+    ],
+    [
+      252,
+      235,
+      95
+    ],
+    [
+      250,
+      197,
+      29
+    ],
+    [
+      249,
+      159,
+      9
+    ],
+    [
+      245,
+      120,
+      9
+    ],
+    [
+      218,
+      86,
+      18
+    ],
+    [
+      94,
+      75,
+      68
+    ],
+    [
+      201,
+      48,
+      12
+    ],
+    [
+      149,
+      7,
+      19
+    ],
+    [
+      88,
+      64,
+      59
+    ],
+    [
+      102,
+      13,
+      31
+    ],
+    [
+      71,
+      59,
+      56
+    ],
+    [
+      58,
+      47,
+      45
+    ],
+    [
+      55,
+      38,
+      40
+    ],
+    [
+      56,
+      4,
+      19
+    ]
+  ],
+  "couleurs_halo": {
+    "chaud": 0,
+    "orange": 4,
+    "rouge": 5
+  },
+  "evenement": {
+    "phases": 48,
+    "frame_length_ticks": 4,
+    "duree_ticks": 192,
+    "joue_une_fois": true,
+    "arrivee": [
+      384,
+      300
+    ],
+    "colonnes": [
+      [
+        198,
+        284,
+        6
+      ],
+      [
+        570,
+        284,
+        6
+      ],
+      [
+        226,
+        309,
+        4
+      ],
+      [
+        542,
+        309,
+        4
+      ],
+      [
+        278,
+        328,
+        2
+      ],
+      [
+        490,
+        328,
+        2
+      ],
+      [
+        347,
+        339,
+        0
+      ],
+      [
+        421,
+        339,
+        0
+      ]
+    ],
+    "montee": [
+      "fissure",
+      "fissure",
+      "jaillissement",
+      "jaillissement",
+      "mi_hauteur",
+      "mi_hauteur",
+      "pleine"
+    ],
+    "crepitement": [
+      "flamme_a",
+      "flamme_b",
+      "flamme_c",
+      "pleine"
+    ],
+    "effondrement_phase": 36,
+    "calques": [
+      12,
+      13,
+      14
+    ],
+    "derniere_phase_vide": true,
+    "script": "init.lua arrivee_legendaire(), NON TESTE"
+  },
+  "scene_loop_ticks": 240,
+  "layers": [
+    {
+      "file": "animation/eau/ECC2_00_eau_fNN.png",
+      "phases": 4,
+      "ticks": 10,
+      "source": "ECC1"
+    },
+    {
+      "file": "animation/scintillements/ECC2_01_scintillements_fNN.png",
+      "phases": 4,
+      "ticks": 10,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_02_sol_complet.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_03_sol.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_04_vide.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_05_fond.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_06_stalactites.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_07_rochers.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_08_racines.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_09_cristaux.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "calques/ECC2_10_grotte.png",
+      "phases": 1,
+      "ticks": 60,
+      "source": "ECC1"
+    },
+    {
+      "file": "animation/eclats/ECC2_11_eclats_fNN.png",
+      "phases": 48,
+      "ticks": 5,
+      "source": "ECC1"
+    },
+    {
+      "file": "animation/lueur_sol/ECC2_12_lueur_sol_fNN.png",
+      "phases": 48,
+      "ticks": 4,
+      "evenement": true,
+      "visible_au_chargement": false
+    },
+    {
+      "file": "animation/colonnes_flamme/ECC2_13_colonnes_flamme_fNN.png",
+      "phases": 48,
+      "ticks": 4,
+      "evenement": true,
+      "visible_au_chargement": false
+    },
+    {
+      "file": "animation/ecran_chaleur/ECC2_14_ecran_chaleur_fNN.png",
+      "phases": 48,
+      "ticks": 4,
+      "evenement": true,
+      "visible_au_chargement": false
+    }
+  ],
+  "access": {
+    "entry_px": [
+      384,
+      560
+    ],
+    "threshold_px": [
+      376,
+      224
+    ],
+    "path_found_16x16": true,
+    "cells_explored": 636,
+    "blocked_cells": 5799,
+    "total_cells": 6912,
+    "walkable_cells": 1113,
+    "rule": "case bloquee si > 25 % hors sol de galets (petits cristaux < 120 px traversables)",
+    "seuil": "case libre la plus au nord, au plus pres de l axe du tunnel ; le tunnel est sur la paroi du fond, derriere la rangee de rochers : le raccord reste a scripter"
+  },
+  "fidelite_rip_carte": {
+    "methode": "moyenne RGB par matiere, meme classifieur pixel sur le rip et sur le brut ; distance euclidienne",
+    "brut": {
+      "sol_galets": {
+        "rip_rgb": [
+          57.1,
+          111.1,
+          152.5
+        ],
+        "decor_rgb": [
+          66.1,
+          107.2,
+          143.1
+        ],
+        "distance": 13.6
+      },
+      "roche": {
+        "rip_rgb": [
+          51.7,
+          66.9,
+          84.2
+        ],
+        "decor_rgb": [
+          58.1,
+          83.8,
+          100.6
+        ],
+        "distance": 24.3
+      },
+      "fond": {
+        "rip_rgb": [
+          56.6,
+          4.9,
+          35.2
+        ],
+        "decor_rgb": [
+          54.7,
+          5.1,
+          34.4
+        ],
+        "distance": 2.0
+      }
+    },
+    "calques_finaux": {
+      "sol_galets": {
+        "calque": "sol",
+        "rgb": [
+          63.2,
+          105.0,
+          140.4
+        ],
+        "distance_rip": 14.9
+      },
+      "roche": {
+        "calque": "rochers",
+        "rgb": [
+          52.0,
+          81.3,
+          98.7
+        ],
+        "distance_rip": 20.4
+      },
+      "fond": {
+        "calque": "fond",
+        "rgb": [
+          53.3,
+          3.9,
+          32.9
+        ],
+        "distance_rip": 4.2
+      }
+    },
+    "eau": "couleurs EXACTES du rip (test : sous-ensemble des couleurs du rip)"
+  },
+  "pmdo": {
+    "target": "0.8.12",
+    "asset": "ecc2_grotte_cristal_groudon",
+    "namespace": "entree_crystal_cave_groudon",
+    "tiles_per_bank": {
+      "ECC2_00_EAU": 702,
+      "ECC2_01_SCINTILLEMENTS": 52,
+      "ECC2_02_SOL": 6151,
+      "ECC2_03_SOL": 1360,
+      "ECC2_04_VIDE": 729,
+      "ECC2_05_FOND": 1477,
+      "ECC2_06_STALACTITES": 1315,
+      "ECC2_07_ROCHERS": 1568,
+      "ECC2_08_RACINES": 404,
+      "ECC2_09_CRISTAUX": 328,
+      "ECC2_10_GROTTE": 46,
+      "ECC2_11_ECLATS": 208,
+      "ECC2_12_LUEUR": 849,
+      "ECC2_13_COLONNES": 4424,
+      "ECC2_14_ECRAN": 22
+    },
+    "banks": [
+      "ECC2_00_EAU",
+      "ECC2_01_SCINTILLEMENTS",
+      "ECC2_02_SOL",
+      "ECC2_03_SOL",
+      "ECC2_04_VIDE",
+      "ECC2_05_FOND",
+      "ECC2_06_STALACTITES",
+      "ECC2_07_ROCHERS",
+      "ECC2_08_RACINES",
+      "ECC2_09_CRISTAUX",
+      "ECC2_10_GROTTE",
+      "ECC2_11_ECLATS",
+      "ECC2_12_LUEUR",
+      "ECC2_13_COLONNES",
+      "ECC2_14_ECRAN"
+    ],
+    "runtime_tested": false,
+    "warp": "aucun"
+  },
+  "art_approved": false
+}

@@ -1,0 +1,19 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>ECC2 — Arrivée de Groudon</title>
+<style>body{background:#140c10;color:#eee;font:14px sans-serif;margin:16px}canvas{image-rendering:pixelated;border:1px solid #444;max-width:100%}
+button{font-size:15px;padding:6px 14px;margin:4px;background:#b3261e;color:#fff;border:0;border-radius:4px;cursor:pointer}label{margin-right:10px}</style>
+<h2>ECC2 — Grotte de cristal : colonnes de flamme à l'arrivée de Groudon</h2>
+<p>Carte ECC1 (calques identiques) + 3 calques d'événement invisibles au chargement, joués une fois (48 phases × 4 ticks = 3,2 s). Script PMDO <b>non testé</b>.</p>
+<button id="go">🔥 Arrivée de Groudon</button> <label><input type="checkbox" id="z" checked> zoom ×2</label><span id="st"></span><br>
+<canvas id="c"></canvas>
+<script>
+const D=__DATA__;const c=document.getElementById('c'),g=c.getContext('2d');c.width=D.size[0];c.height=D.size[1];
+const zoom=()=>{c.style.width=(document.getElementById('z').checked?2:1)*D.size[0]+'px'};zoom();document.getElementById('z').onchange=zoom;
+let pending=0;const L=D.stack.map(s=>({...s,img:s.frames.map(u=>{pending++;const i=new Image();i.onload=()=>pending--;i.src=u;return i})}));
+let tick=0,evt=-1;document.getElementById('go').onclick=()=>{evt=0};
+function draw(){tick++;g.clearRect(0,0,c.width,c.height);
+ for(const s of L){if(s.evt){if(evt<0)continue;const f=Math.floor(evt/s.ticks);if(f>=s.img.length)continue;g.drawImage(s.img[f],0,0)}
+  else g.drawImage(s.img[Math.floor(tick/s.ticks)%s.img.length],0,0)}
+ if(evt>=0){evt++;if(evt>=D.evtTicks)evt=-1}
+ document.getElementById('st').textContent=evt>=0?' événement : tick '+evt+' / '+D.evtTicks:'';requestAnimationFrame(draw)}
+requestAnimationFrame(draw);
+</script></html>
