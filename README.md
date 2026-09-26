@@ -1,5 +1,20 @@
 # Guilde Treehouse — passages ouverts PMD
 
+## Entrée Waterfall Cave V3 — la cascade se fend en deux et s'écarte devant la paroi (26 septembre 2026)
+
+- Aperçu : `apercu_entree_waterfall_cave_sud_nord_v3.html`, avec les boutons « Ouvrir la cascade » et « Refermer » et une démo automatique.
+- Lot : `renders/entree_waterfall_cave_sud_nord_v3/` (`EWC3_projet_pmdo_0812.zip`, `EWC3_calques_png_8px.zip`, ORA, WebP animé, planche de l'ouverture, comparaison de l'état ouvert V2 / V3).
+- Source : `source/entree_waterfall_cave_sud_nord_v3/`.
+
+**Même demande qu'EWC2** (retours sur EWC1) ; les deux versions restent disponibles. EWC3 garde tout ce que fait EWC2 : rives sans liseré clair, couloir de sable jusqu'à la grotte, états PMDO. Un test vérifie que ces calques sont identiques pixel pour pixel. Elle change la lecture de « la cascade se fend ». Dans EWC2, une fente en forme de grotte se découpe dans le rideau. Dans EWC3, le rideau **se fend en deux sur toute sa hauteur** :
+
+- une fissure part de la lèvre de la falaise et descend jusqu'à la grotte, avec une gerbe à sa pointe ;
+- les deux moitiés **s'écartent** : l'eau est repoussée et se tasse sur les côtés, elle n'est pas découpée ;
+- derrière apparaît une **paroi rocheuse générée** : un 4e brut, le décor EWC1 édité par le générateur sans la cascade, recalé au pixel près et ramené à la palette du terrain ;
+- une fois ouverte, la cascade tombe en deux chutes de part et d'autre de la grotte dégagée.
+
+L'ouverture dure 24 × 4 ticks et se joue une fois, entre l'état fermé et l'état ouvert, qui sont des boucles de 12 × 4 ticks. Paroi à 10,4 du rip et à 5,5 des falaises de la carte. 17 tests PASS, dont les raccords fermée → ouverture → ouverte, la pointe qui descend, la paroi sans trou et au moins 2 px de roche autour de la grotte ; 6 mutations vérifiées. `init.lua` : `ouvrir_cascade()`, **non testée dans PMDO**. Pas de test PMDO en jeu.
+
 ## Entrée Mystifying Forest — 4:3, clairière et ouverture sombre au nord, réf. Mystifying Forest (26 septembre 2026)
 
 - Aperçu : `apercu_entree_mystifying_forest_sud_nord_v1.html`.

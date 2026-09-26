@@ -476,7 +476,7 @@ Papillons : planche 2 × 6 (2 couleurs × 6 poses), extraction centrée ×1/11 �
 
 La consigne de méthode la plus récente a été donnée dans la session sœur `arena/01a0dc9b` (commit `f6647b7c`, **non fusionné ici**) : « tu dois utiliser ton générateur d'image tu as mal audité l'ancienne méthode ». Dans la série des entrées sud → nord, **« textures canoniques » = rendu généré RÉFÉRENCÉ** : le rip canonique du biome est passé au générateur en image de référence (`images=[rip]`), et le décor reproduit ses textures, sa palette et son style de pixel sur un layout nouveau (« même endroit, autre lieu »). Ensuite, la chaîne habituelle : décor sur magenta et sol séparé, segmentation, réduction par classe, calques, animations sur leurs propres calques, PNG 8 px et Ground. Ce n'est PAS un relayout de pixels natifs (`zones_south_north_v3`, Cascade V1), réservé au cas où l'utilisateur le nomme explicitement. Mesurer la fidélité de la matière principale contre le rip (tests `test_canonical_*` de la branche `arena/01a0dc8e`), ne jamais présenter les pixels générés comme des tuiles natives, et demander avant le build si le sens de « canonique », la référence ou la portée est ambigu (consigne `arena/01a0db11`).
 
-**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2, EMF1 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
+**Branches sœurs** : plusieurs sessions peuvent repartir de la même base ; une branche parente immobile ne prouve pas l'absence de travail parallèle. Au démarrage, lister `git ls-remote --heads origin` et inspecter les branches `arena/*` récentes. Au 26 septembre, trois branches sœurs non fusionnées contiennent 6 lots (7 commits) : EGC1 (`01a0db11`) ; EAN1, EHN1 et EWN1 (`01a0dc8e`) ; ECN1-cascade et ECN2 (`01a0dc9b`). Trois de ces entrées reprennent Waterfall Cave. **Décision de l'utilisateur** (même session) : « tu dois utiliser la méthode et reprendre seulement de ta branche parente. Et refaire waterfall avec la génération fond majenta multicalque ». On ne fusionne donc rien et on ne reprend rien des branches sœurs ; Waterfall est refaite ici (EWC1, section suivante). Préfixes déjà pris, toutes branches confondues : ESN1, ESN2, ECN1 (Cratère **et** Cascade V1), ERN1, EGN1, EBN1, EJN1, EGC1, EAN1, EHN1, EWN1, ECN2, EWC1, EWC2, EMF1, EWC3 ; en choisir un inédit. Environnement vérifié dans cette reprise : `.venv` recréée, build Jungle byte-identique (hors horodatages de l'ORA), 9 tests PASS. Détail, outils et résumé opératoire : `REPRISE_MAPS.md`.
 
 ### Entrée Waterfall Cave V1 (EWC1) — génération fond magenta multicalque (26 septembre)
 
@@ -560,3 +560,33 @@ Pièges rencontrés :
   - Ces tests sont validés par mutation : la phase 47 remplacée par la phase 20 fait échouer les tests.
 
 13 tests PASS, mutations vérifiées (pixel `clair` sur la rive, phase de feuilles et de lucioles dupliquée). Pas de runtime.
+
+### Entrée Waterfall Cave V3 (EWC3) — la cascade se fend en deux (26 septembre)
+
+**Contexte : commits parallèles sur la branche de session elle-même.** Au démarrage de ce tour, `origin/arena/01a0dd03-guilde-treehouse-pmd` avait déjà EWC2 (`a1c7d73c`, 10:38 UTC) et EMF1 (`e21f9878`, 11:01 UTC). Une exécution précédente de la même demande les avait poussés. Mais l'espace de travail restauré était resté à EWC1, avec HEAD revenu à `0eaa002c`. Procédure suivie :
+
+1. Vérifier que l'arbre de travail est identique au dernier commit connu. On l'a fait avec un index temporaire, `GIT_INDEX_FILE=/tmp/idx git read-tree 380e08f8 && git add -A && git diff --cached --stat 380e08f8`, ce qui donne un diff vide.
+2. Faire `git fetch --depth=15 origin <branche>` puis `git reset --hard FETCH_HEAD`.
+3. Rebâtir les trois lots et relancer leurs tests. Résultats : EWC1 13, EWC2 15, EMF1 13 PASS, renders byte-identiques hors ORA.
+4. Ne rien réécrire de ces lots.
+
+À retenir : **une branche de session peut recevoir des commits d'une autre exécution du même tour**. `git ls-remote` avant tout travail, pas seulement avant le commit.
+
+EWC3 est une autre lecture du point 3 des retours sur EWC1 (« la cascade se fend pour ouvrir la grotte »). EWC2 découpe dans le rideau une fente en forme de grotte, alors qu'EWC3 fend le rideau en deux sur toute sa hauteur et en écarte les moitiés.
+
+- Lot `source/entree_waterfall_cave_sud_nord_v3/`, préfixe `EWC3`, namespace `entree_waterfall_cave_v3`, aperçu `apercu_entree_waterfall_cave_sud_nord_v3.html`.
+- `build.py` charge EWC2 (`V2 = loadmod(...)`) et reprend tel quel l'eau sans liseré, le couloir, la texture du rideau, la porte, l'écume et les collisions. Un test compare 16 calques à ceux d'EWC2, pixel pour pixel.
+- **Nouveau brut** : `bruts/falaise_sans_cascade.png`. C'est le décor EWC1 édité par le générateur, avec `images=[decor_magenta.png]` et un prompt court (« remove the waterfall and its white foam… keep the dark cave entrance »). Le brut est revenu au même cadrage, recalé (0, 0), avec un écart de 5,4 contre 9,4 à 1 px. Seule la zone que la fente peut montrer est utilisée, ramenée à la palette terrain.
+
+Règles et recettes :
+
+- **Découvrir ce qui est derrière un élément dessiné** (cascade, rideau, porte) : éditer le décor avec le générateur pour retirer l'élément, puis vérifier le recalage par SSD sur les falaises loin de la zone. Le générateur a gardé le cadrage au pixel près. Ne pas inventer la paroi par quilting quand une édition suffit.
+- **Écarter plutôt que découper** : une colonne source s va en s − largeur × u^1,4 (u = 0 au bord extérieur du rideau, 1 au centre). Le champ est monotone tant que 1,4 × largeur < demi-rideau. La texture visible glisse vers l'extérieur et se tasse près de la fente, ce qui se lit comme de l'eau poussée.
+- **Ondulation du bord sur le masque seulement** : si l'ondulation (±1 px) entre dans le champ de déplacement, l'état ouvert n'est plus une translation pure. Le champ utilise donc les largeurs sans ondulation, et l'ondulation ne décale que le bord.
+- **Tests d'une animation à champ variable** : dans l'arrondi de la pointe, le champ change d'une rangée à l'autre, donc la translation pure n'y vaut pas. Le test l'exclut, et vérifie à la place que le pas 11 → 0 change autant de pixels que les autres pas.
+- **Aire de la fente** : l'ondulation fait fluctuer l'aire de ±3 px en fin d'ouverture. On teste la croissance de l'aire à 1 % près, plus la monotonie du cœur (`binary_erosion(fente[k-1]) ⊆ fente[k]`).
+- **Marge autour de la grotte** : il faut 4 px, et non 3, pour garder au moins 2 px de roche entre l'eau et la bouche malgré l'ondulation. Le test a détecté le cas à 1 px.
+- **Fidélité du rideau ouvert** : elle monte à 18,1, parce que les deux chutes restantes sont les côtés du dessin, déjà bordés de blanc. Mesurer le rideau sur l'état fermé (9,2), et l'état ouvert sans ses 2 px de bord (14,7).
+
+17 tests PASS. 6 mutations vérifiées : phase ouverte dupliquée, fente découpée au lieu d'écartée, trou dans la paroi, eau sur la grotte, fissure qui monte, couleur nouvelle dans la paroi. Build d'environ 70 s. Pas de runtime.
+
